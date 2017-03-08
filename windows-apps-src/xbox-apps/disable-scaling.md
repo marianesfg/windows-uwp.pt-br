@@ -2,16 +2,24 @@
 author: payzer
 title: "Como desativar a colocação em escala"
 description: "Instruções para desativar o fator de escala padrão."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 translationtype: Human Translation
-ms.sourcegitcommit: 582f5677c15f7cd62c398103b48743ba4bea6c5b
-ms.openlocfilehash: 8079be9685558277565766fa8d0ebbfd4a555904
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 908620cd9f8bb3b1155b3e5d1fd777a91d254ef1
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Como desativar a colocação em escala   
+# <a name="how-to-turn-off-scaling"></a>Como desativar a colocação em escala   
 Por padrão, os aplicativos são dimensionados em 200% para XAML e em 150% para aplicativos HTML. É possível desativar o fator de escala padrão. Isso fará com que seu aplicativo use as dimensões em pixels reais do dispositivo (1910x1080 pixels).   
    
-## HTML   
+## <a name="html"></a>HTML   
 Você pode recusar o fator de escala usando o seguinte trecho de código: 
    
 ```
@@ -28,22 +36,17 @@ Ou, você pode usar um método próprio para a Web:
 }   
 ```
 
-## XAML
+## <a name="xaml"></a>XAML
 Você pode recusar o fator de escala usando o seguinte trecho de código:   
    
 ```
 bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
 ```
    
-## DirectX/C++   
+## <a name="directxc"></a>DirectX/C++   
 Os aplicativos em DirectX/C++ não são dimensionados. O dimensionamento automático só se aplica a aplicativos HTML e XAML.  
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Práticas recomendadas para Xbox](tailoring-for-xbox.md)
 - [UWP no Xbox One](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

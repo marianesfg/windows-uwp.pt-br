@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "Ferramentas de criação de perfil e desempenho"
 description: "A Microsoft oferece várias ferramentas para ajudar a melhorar o desempenho do aplicativo da Plataforma Universal do Windows (UWP)."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51304d873261466afc9014224b918b82603f00e8
+ms.lasthandoff: 02/07/2017
 
 ---
-# Ferramentas de criação de perfil e desempenho
+# <a name="tools-for-profiling-and-performance"></a>Ferramentas de criação de perfil e de desempenho
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -26,10 +33,5 @@ Consulte também:
 | [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx) | Incluído no Kit de Avaliação e Implantação do Windows (Windows ADK), o Windows Performance Analyzer (WPA) é uma ferramenta que cria gráficos e tabelas de dados de eventos de Rastreamento de Eventos para Windows (ETW), que são registrados pelo Windows Performance Recorder (WPR), Xperf ou uma avaliação que é executada na Plataforma de Avaliação. O WPA pode abrir qualquer arquivo de log do rastreamento de eventos (ETL) para análise. |
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

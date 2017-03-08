@@ -2,13 +2,21 @@
 author: WilliamsJason
 title: "Referência de API de carregamento da pasta do Device Portal"
 description: "Saiba como acessar as APIs de carregamento da pasta de maneira programática."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 translationtype: Human Translation
-ms.sourcegitcommit: fdc25fa4bd7bd5bfa598b993f23cd0ae9783dd0e
-ms.openlocfilehash: 6c3eeccdbb2bca315dc84293a36d0923f46e746d
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8c2251c5c78fed10959b89de0d81ff563d0fa3e3
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Carregar uma pasta para o diretório de desenvolvimento
+# <a name="upload-a-folder-to-the-development-directory"></a>Carregar uma pasta para o diretório de desenvolvimento
 
 **Solicitação**
 
@@ -50,10 +58,5 @@ Código de status HTTP      | Descrição
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

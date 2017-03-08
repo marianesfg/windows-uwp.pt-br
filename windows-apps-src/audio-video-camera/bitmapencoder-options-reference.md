@@ -3,15 +3,22 @@ author: laurenhughes
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: "Este artigo lista as opções de codificação que podem ser usadas com BitmapEncoder."
 title: "Referência de opções de BitmapEncoder"
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 4edf119d0f8830fec9ece34f1a7eb8f3ffbe67dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c29c05e7397e87851ebb0fa5fa29df3b9b58907b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Referência de opções de BitmapEncoder
+# <a name="bitmapencoder-options-reference"></a>Referência de opções de BitmapEncoder
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esse artigo lista as opções de codificação que podem ser usadas com [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Uma opção de codificação é definida pelo seu nome, que é uma cadeia de caracteres e um valor em um tipo de dados particular ([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871)). Para obter informações sobre como trabalhar com imagens, consulte [Criar, editar e salvar imagens de bitmap](imaging.md).
 
@@ -31,7 +38,7 @@ Esse artigo lista as opções de codificação que podem ser usadas com [**Bitma
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar, editar e salvar imagens de bitmap](imaging.md)
 * [Codecs compatíveis](supported-codecs.md)
@@ -40,10 +47,5 @@ Esse artigo lista as opções de codificação que podem ser usadas com [**Bitma
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

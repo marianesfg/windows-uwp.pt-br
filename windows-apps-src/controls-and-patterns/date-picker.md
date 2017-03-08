@@ -6,9 +6,16 @@ ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
 label: Date picker
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 76d5cd756f462ebaad5a200cf4bcf7f4076e4652
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19551174cebd33785ac21910b52adf31e354373b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="date-picker"></a>Seletor de data
@@ -65,9 +72,4 @@ O seletor de data resultante tem esta aparência:
 - [Seletor de data do calendário](calendar-date-picker.md)
 - [Exibição de calendário](calendar-view.md)
 - [Seletor de hora](time-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

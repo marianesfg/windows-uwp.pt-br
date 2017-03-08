@@ -1,20 +1,27 @@
 ---
 author: Jwmsft
-Description: "O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens."
+Description: "O switch de alternância representa um comutador físico que permite que os usuários ativem ou desativem itens."
 title: "Diretrizes para controles de switches de alternância"
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3d98936788057d4bd16f1ef44841ef0d8fb0648b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="toggle-switches"></a>Switches de alternância
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-O switch de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens. Use controles **ToggleSwitch** para apresentar aos usuários exatamente duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção resulta em uma ação imediata.
+O switch de alternância representa um comutador físico que permite que os usuários ativem ou desativem itens. Use controles **ToggleSwitch** para apresentar aos usuários exatamente duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção resulta em uma ação imediata.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -161,8 +168,3 @@ Você também pode usar conteúdo mais complexo, definindo as propriedades [**On
 - [Botões de opção](radio-button.md)
 - [Switches de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
-
-
-<!--HONumber=Dec16_HO2-->
-
-

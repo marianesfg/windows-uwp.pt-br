@@ -3,17 +3,24 @@ author: mcleblanc
 title: "Introdução à navegação"
 description: "Introdução à navegação"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: febafd9a36f021bdbf06692a34c8691d1008018f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução: navegação
+# <a name="getting-started-navigation"></a>Introdução: navegação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Adicionando navegação
+## <a name="adding-navigation"></a>Adicionando navegação
 
 O iOS oferece a classe **UINavigationController** para auxiliar a navegação no aplicativo: você pode inserir e remover exibições para criar a hierarquia de **UIViewControllers** que definem o seu aplicativo.
 
@@ -80,13 +87,8 @@ Para saber mais sobre navegação, consulte [Navegação](https://msdn.microsoft
 
 **Observação**  Para saber mais sobre navegação para aplicativos da Windows Store usando JavaScript e HTML, consulte [Guia de início rápido: usando a navegação de página única (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
-### Próxima etapa
+### <a name="next-step"></a>Próxima etapa
 
 [Introdução: Animação](getting-started-animation.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

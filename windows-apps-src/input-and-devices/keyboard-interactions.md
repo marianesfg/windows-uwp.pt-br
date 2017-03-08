@@ -1,20 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Responda às ações de pressionamento de tecla de teclados de hardware ou de software nos aplicativos usando o teclado e manipuladores de eventos de classe."
+Description: "Responda às ações de pressionamento de tecla de teclados de hardware ou de software nos apps usando o teclado e manipuladores de eventos de classe."
 title: "Interações por teclado"
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
+keywords: "teclado, acessibilidade, navegação, foco, texto, entrada e interação do usuário"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 1226d097e911e79c800a16c33fcbb9bd524bd17a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 53ee08b33bcbbd895d0c6ea6cd621eeec2af40f5
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="keyboard-interactions"></a>Interações por teclado
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-A entrada por teclado é uma parte importante da experiência geral da interação do usuário com aplicativos. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um aplicativo. Por exemplo, os usuários devem ser capazes de navegar pelo seu aplicativo usando as teclas Tab e de direção, de ativar elementos da interface do usuário ao usar as teclas Barra de Espaços e Enter, e acessar comandos ao usar atalhos de teclado.  
+A entrada por teclado é uma parte importante da experiência geral da interação do usuário com apps. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um app. Por exemplo, os usuários devem ser capazes de navegar pelo seu app usando as teclas Tab e de direção, de ativar elementos da interface do usuário ao usar as teclas Barra de Espaços e Enter, e acessar comandos ao usar atalhos de teclado.  
 
 ![imagem hero do teclado](images/input-patterns/input-keyboard-small.jpg)
 
@@ -29,9 +36,9 @@ A entrada por teclado é uma parte importante da experiência geral da interaç�
  
 
 
-Uma interface de usuário do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um aplicativo e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e, em vez disso, usem diversas tecnologias assistenciais, como ferramentas avançadas de teclado, teclados virtuais, ampliadores de tela, leitores de tela e utilitários de entrada de voz.
+Uma interface de usuário do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um app e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e, em vez disso, usem diversas tecnologias assistenciais, como ferramentas avançadas de teclado, teclados virtuais, ampliadores de tela, leitores de tela e utilitários de entrada de voz.
 
-Os usuários podem interagir com aplicativos universais por meio de teclado de hardware e dois teclados de software: o teclado virtual (OSK) e o teclado touch.
+Os usuários podem interagir com apps universais por meio de teclado de hardware e dois teclados de software: o teclado virtual (OSK) e o teclado touch.
 
 Teclado virtual  
 O teclado virtual é um teclado de software visual, que você pode usar no lugar do teclado físico para digitar e inserir dados usando touch, mouse, caneta ou outro dispositivo apontador (uma tela touch não é necessária). O teclado virtual é fornecido para sistemas que não têm um teclado físico ou para usuários cujos problemas de mobilidade impedem o uso de dispositivos de entrada físicos tradicionais. O teclado virtual emula a maior parte, se não toda a funcionalidades de um teclado de hardware.
@@ -57,7 +64,7 @@ Dependendo do dispositivo, o teclado virtual aparece quando um campo de texto ou
 
  
 
-Se o seu aplicativo define o foco por meio de programação para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
+Se o seu app define o foco por meio de programação para um controle de entrada de texto, o teclado virtual não é invocado. Isso elimina comportamentos inesperados não instigados diretamente pelo usuário. No entanto, o teclado é ocultado automaticamente quando o foco é movido por meio de programação para um controle de entrada que não é de texto.
 
 Normalmente, o teclado virtual permanece visível enquanto o usuário navega entre controles em um formulário. Esse comportamento pode variar com base nos outros tipos de controle no formulário.
 
@@ -99,30 +106,30 @@ Consulte aqui exemplos de modos diferentes do teclado virtual. A primeira imagem
 </table>
 
 
-Interações de teclado bem-sucedidas permitem que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão. Diversos fatores podem afetar o grau de sucesso, incluindo a navegação por teclado, as teclas de acesso para acessibilidade e as teclas de aceleração (atalho) para usuários avançados.
+Interações de teclado bem-sucedidas permitem que os usuários utilizem cenários básicos de apps apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão. Diversos fatores podem afetar o grau de sucesso, incluindo a navegação por teclado, as teclas de acesso para acessibilidade e as teclas de aceleração (atalho) para usuários avançados.
 
 **Observações**  O teclado virtual não dá suporte à alternância e a maioria dos comandos do sistema (consulte [Padrões](#keyboard_command_patterns)).
 
 ## <a name="navigation"></a>Navegação
 
 
-Para usar um controle (incluindo os elementos de navegação) com o teclado, o controle precisa ter foco. Uma maneira de um controle receber o foco do teclado é torná-lo acessível via navegação por tabulação. Um modelo de navegação de teclado bem projetado oferece uma ordem de tabulação previsível e lógica que permite que um usuário explore e use seu aplicativo de forma rápida e eficiente.
+Para usar um controle (incluindo os elementos de navegação) com o teclado, o controle precisa ter foco. Uma maneira de um controle receber o foco do teclado é torná-lo acessível via navegação por tabulação. Um modelo de navegação de teclado bem projetado oferece uma ordem de tabulação previsível e lógica que permite que um usuário explore e use seu app de forma rápida e eficiente.
 
 Todos os controles interativos devem ter paradas de tabulação (a menos que estejam em um grupo), enquanto os controles não interativos, como rótulos, não devem.
 
 Um conjunto de controles relacionados pode ser incluído em um grupo de controles e ter atribuída uma única parada de tabulação. Grupos de controle são usados para conjuntos de controles que se comportam como um único controle, como botões de opção. Eles também podem ser usados quando há muitos controles para navegar de forma eficiente somente com a tecla Tab. As teclas de seta, Home, End, Page Up e Page Down movem o foco de entrada entre os controles dentro de um grupo (não é possível navegar para fora de um grupo de controles usando essas teclas).
 
-Você deve definir o foco de teclado inicial no elemento com o qual os usuários intuitivamente (ou mais provavelmente) vão interagir primeiro quando seu aplicativo for iniciado. Frequentemente, esse é o modo de exibição de conteúdo principal do aplicativo para que um usuário possa iniciar usando as teclas de seta para rolar o conteúdo do aplicativo.
+Você deve definir o foco de teclado inicial no elemento com o qual os usuários intuitivamente (ou mais provavelmente) vão interagir primeiro quando seu app for iniciado. Frequentemente, esse é o modo de exibição de conteúdo principal do app para que um usuário possa iniciar usando as teclas de seta para rolar o conteúdo do app.
 
 Não defina o foco inicial do teclado em um elemento com resultados potencialmente negativos ou até mesmo desastrosos. Isso pode impedir a perda de dados ou o acesso ao sistema.
 
-Experimente classificar e apresentar os comandos, os controles e os conteúdos mais importantes primeiro na ordem de tabulação e na ordem de exibição (ou hierarquia visual). Entretanto, a posição de exibição real pode depender do contêiner de layout pai e de certas propriedades dos elementos filho que influenciam o layout. Em particular, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem de leitura bem diferente da ordem de tabulação. Isso não é sempre um problema, mas você deve testar a funcionalidade do aplicativo, como uma interface do usuário com touch e uma interface do usuário acessível por teclado.
+Experimente classificar e apresentar os comandos, os controles e os conteúdos mais importantes primeiro na ordem de tabulação e na ordem de exibição (ou hierarquia visual). Entretanto, a posição de exibição real pode depender do contêiner de layout pai e de certas propriedades dos elementos filho que influenciam o layout. Em particular, layouts que usam uma metáfora de grade ou uma metáfora de tabela podem ter uma ordem de leitura bem diferente da ordem de tabulação. Isso não é sempre um problema, mas você deve testar a funcionalidade do app, como uma interface do usuário com touch e uma interface do usuário acessível por teclado.
 
 A ordem de tabulação deve seguir a ordem de leitura, sempre que possível. Isso pode reduzir a confusão e depende da localidade e do idioma.
 
-Associe botões de teclado à interface do usuário adequada (botões Voltar e Avançar) no seu aplicativo.
+Associe botões de teclado à interface do usuário adequada (botões Voltar e Avançar) no seu app.
 
-Tente tornar a navegação de volta para a tela inicial de seu aplicativo e entre o conteúdo principal tão fácil e simples quanto possível.
+Tente tornar a navegação de volta para a tela inicial de seu app e entre o conteúdo principal tão fácil e simples quanto possível.
 
 Use as teclas de seta como atalhos de teclado para permitir uma navegação interna adequada entre elementos filho de elementos compostos. Se os nós de exibição de árvore tiverem elementos filho separados para lidar com expansão e recolhimento e ativação de nós, use as teclas de seta para esquerda e direita para obter a funcionalidade de expansão e recolhimento. Isso é consistente com os controles da plataforma.
 
@@ -141,9 +148,9 @@ Um controle poderá ser ativado de diversas formas diferentes, se ele tiver foco
 Barra de espaços, Enter e Esc  
 A barra de espaços deve ativar o controle com foco de entrada. A tecla Enter deve ativar o controle com foco de entrada ou um controle padrão. Um controle padrão é o controle com foco inicial ou que responde exclusivamente à tecla Enter (geralmente ele é alterado com foco de entrada). Além disso, a tecla Esc deve fechar ou sair da interface do usuário transitória, como menus e caixas de diálogo.
 
-O aplicativo Calculadora mostrado aqui usa a barra de espaços para ativar o botão com foco, bloqueia a tecla Enter para o botão "=" e bloqueia a tecla Esc para o botão "C".
+O app Calculadora mostrado aqui usa a barra de espaços para ativar o botão com foco, bloqueia a tecla Enter para o botão "=" e bloqueia a tecla Esc para o botão "C".
 
-![o aplicativo calculadora](images/input-patterns/calculator.png)
+![o app calculadora](images/input-patterns/calculator.png)
 
 Modificadores de teclado  
 Os modificadores de teclado se enquadram nas seguintes categorias:
@@ -151,10 +158,10 @@ Os modificadores de teclado se enquadram nas seguintes categorias:
 
 | Categoria | Descrição |
 |----------|-------------|
-| Tecla de atalho | Execute uma ação comum sem interface do usuário, como"Ctrl-S" para **Salvar**. Implemente os atalhos de teclado para a funcionalidade principal do aplicativo. Nem todo comando tem ou exige um atalho. |   
+| Tecla de atalho | Execute uma ação comum sem interface do usuário, como"Ctrl-S" para **Salvar**. Implemente os atalhos de teclado para a funcionalidade principal do app. Nem todo comando tem ou exige um atalho. |   
 | Tecla de acesso | Atribuída a cada controle visível, de nível superior, como "Alt-F" para o menu **Arquivo**. Uma tecla de acesso não invoca ou ativa um comando. |
-| Tecla aceleradora | Execute comandos definidos pelo aplicativo ou sistema padrão, como "Alt-PrtScrn" para captura de tela, "Alt-Tab" para alternar entre aplicativos ou "F1" para obter ajuda. Um comando associado a uma tecla aceleradora não precisa ser um item de menu. |
-| Tecla do aplicativo/Tecla do menu | Mostre o menu de contexto. |
+| Tecla aceleradora | Execute comandos definidos pelo app ou sistema padrão, como "Alt-PrtScrn" para captura de tela, "Alt-Tab" para alternar entre apps ou "F1" para obter ajuda. Um comando associado a uma tecla aceleradora não precisa ser um item de menu. |
+| Tecla do app/Tecla do menu | Mostre o menu de contexto. |
 | Tecla de janela/Tecla de comando | Ative comandos do sistema, como **Menu do sistema**, **Tela de bloqueio** ou **Mostrar área de trabalho**. |
 
 As teclas de acesso e as teclas aceleradoras dão suporte à interação com controles diretamente em vez do uso da tecla Tab.
@@ -172,7 +179,7 @@ Aqui, o valor do campo de texto Recuo à esquerda está realçado após a inser�
 ## <a name="usability-and-accessibility"></a>Usabilidade e acessibilidade
 
 
-Uma experiência de interação do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um aplicativo e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e devem, em vez disso, contar com diversas tecnologias assistenciais que incluem ferramentas avançadas de teclado e teclados virtuais (junto com ampliadores de tela, leitores de tela e utilitários de entrada de voz). Para esses usuários, a capacidade de abrangência é mais importante do que consistência.
+Uma experiência de interação do teclado bem projetada é um aspecto importante da acessibilidade do software. Ela permite que os usuários com deficiência visual ou que possuam determinadas deficiências motoras naveguem em um app e interajam com seus recursos. Esses usuários talvez não consigam usar um mouse e devem, em vez disso, contar com diversas tecnologias assistenciais que incluem ferramentas avançadas de teclado e teclados virtuais (junto com ampliadores de tela, leitores de tela e utilitários de entrada de voz). Para esses usuários, a capacidade de abrangência é mais importante do que consistência.
 
 Os usuários experientes muitas vezes têm uma forte preferência por usar o teclado, pois os comandos de teclado podem ser inseridos mais rapidamente e não exigem remover as mãos do teclado. Para esses usuários, eficiência e consistência são cruciais; capacidade de abrangência é importante apenas para os comandos usados com mais frequência.
 
@@ -180,7 +187,7 @@ Há distinções sutis ao projetar para usabilidade e acessibilidade, por isso, 
 
 Teclas de acesso têm as seguintes características:
 
--   Uma tecla de acesso é um atalho para um elemento da interface do usuário em seu aplicativo.
+-   Uma tecla de acesso é um atalho para um elemento da interface do usuário em seu app.
 -   Elas usam a tecla Alt mais uma tecla alfanumérica.
 -   Elas são principalmente para acessibilidade.
 -   Elas são atribuídas a todos os menus e a maioria dos controles de caixa de diálogo.
@@ -193,7 +200,7 @@ Como as teclas de acesso não precisam ser memorizadas, a elas são atribuídos 
 
 Em compensação, as teclas aceleradoras têm as seguintes características:
 
--   Uma tecla aceleradora é um atalho para um comando do aplicativo.
+-   Uma tecla aceleradora é um atalho para um comando do app.
 -   Elas usam principalmente as sequências de tecla Ctrl e Função (teclas de atalho de sistema do Windows também usam teclas Alt + teclas não alfanuméricas e o logotipo do Windows).
 -   Elas são principalmente para eficiência de usuários avançados.
 -   Elas são atribuídas apenas a comandos usados mais comumente.
@@ -204,9 +211,9 @@ Em compensação, as teclas aceleradoras têm as seguintes características:
 
 Como as teclas aceleradoras destinam-se a ser memorizadas, idealmente, as teclas aceleradoras usadas com mais frequência usam letras dos primeiros caracteres ou dos caracteres mais memorizáveis nas palavras-chave do comando, como Ctrl + C para Copiar e Ctrl + Q para Solicitar.
 
-Os usuários devem conseguir realizar todas as tarefas com suporte em seu aplicativo usando somente o teclado de hardware ou o Teclado Virtual.
+Os usuários devem conseguir realizar todas as tarefas com suporte em seu app usando somente o teclado de hardware ou o Teclado Virtual.
 
-Você deve oferecer aos usuários que dependem de leitores de tela e outras tecnologias auxiliares uma maneira fácil de descobrir as teclas aceleradoras em seu aplicativo. Comunique as teclas aceleradoras usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de acesso e aceleradoras devem ser bem documentadas no conteúdo da Ajuda do seu aplicativo.
+Você deve oferecer aos usuários que dependem de leitores de tela e outras tecnologias auxiliares uma maneira fácil de descobrir as teclas aceleradoras em seu app. Comunique as teclas aceleradoras usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de acesso e aceleradoras devem ser bem documentadas no conteúdo da Ajuda do seu app.
 
 Não atribua teclas aceleradoras conhecidas ou padrão à outra funcionalidade. Por exemplo, Ctrl + F normalmente é usado para localizar ou pesquisar.
 
@@ -216,14 +223,14 @@ Não altere comandos usando modificadores de teclado. Isso não pode ser descobe
 
 Não desabilite um controle enquanto ele tem foco de entrada. Isso pode interferir na entrada do teclado.
 
-Para garantir experiências de interação do teclado bem-sucedidas, é fundamental testar seu aplicativo completamente e exclusivamente com o teclado.
+Para garantir experiências de interação do teclado bem-sucedidas, é fundamental testar seu app completamente e exclusivamente com o teclado.
 
 ## <a name="text-input"></a>Entrada de texto
 
 
 Sempre consulte as funcionalidades do dispositivo ao contar com a entrada do teclado. Em alguns dispositivos (como um telefone), o teclado virtual só pode ser usado para entrada de texto, já que ele não fornece muitos teclas aceleradoras ou de comando encontradas em um teclado de hardware, (como a tecla Alt, as teclas de função ou a tecla do logotipo do Windows).
 
-Não faça com que os usuários tenham de navegar o aplicativo usando o teclado virtual. Dependendo do controle que tem o foco, o teclado virtual pode ser ignorado.
+Não faça com que os usuários tenham de navegar o app usando o teclado virtual. Dependendo do controle que tem o foco, o teclado virtual pode ser ignorado.
 
 Tente exibir o teclado virtual durante toda a interação com seu formulário. Isso elimina a variação de interface do usuário que pode confundir o usuário no meio de um fluxo de entrada de texto ou de formulário.
 
@@ -239,23 +246,23 @@ Um teclado de hardware padrão ou teclado virtual consiste em sete tipos de tecl
 -   Tecla de alternância: coloca o sistema em um modo, como as teclas Caps Lock, ScrLk e Num Lock.
 -   Tecla de comando: executa uma tarefa ou um comando de ativação do sistema, como as teclas Barra de espaços, Enter, Esc, Pause/Break e Print Screen.
 
-Além dessas categorias, existe uma classe de secundária de teclas e combinações de teclas que pode ser usada como atalhos para a funcionalidade do aplicativo:
+Além dessas categorias, existe uma classe de secundária de teclas e combinações de teclas que pode ser usada como atalhos para a funcionalidade do app:
 
 -   Tecla de acesso: expõe controles ou itens de menu, quando pressionada a tecla Alt com uma tecla de caractere, indicada pelo sublinhado da atribuição de caractere da tecla de acesso em um menu, ou pela exibição do(s) caractere(s) de tecla de acesso em uma sobreposição.
--   Tecla aceleradora: expõe comandos do aplicativo, pressionando uma tecla de função ou a tecla Ctrl com uma tecla de caractere. Seu aplicativo pode ou não ter uma interface do usuário que corresponde exatamente ao comando.
+-   Tecla aceleradora: expõe comandos do app, pressionando uma tecla de função ou a tecla Ctrl com uma tecla de caractere. Seu app pode ou não ter uma interface do usuário que corresponde exatamente ao comando.
 
-Outra classe de combinações de teclas, conhecida como sequência segura (SAS), não pode ser interceptada por um aplicativo. Esse é um recurso de segurança destinado a proteger o sistema do usuário durante o logon e inclui Ctrl-Alt-Del e Win-L.
+Outra classe de combinações de teclas, conhecida como sequência segura (SAS), não pode ser interceptada por um app. Esse é um recurso de segurança destinado a proteger o sistema do usuário durante o logon e inclui Ctrl-Alt-Del e Win-L.
 
-O aplicativo Bloco de notas é mostrado aqui com menu Arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.
+O app Bloco de notas é mostrado aqui com menu Arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.
 
-![o a aplicativo bloco de notas com o menu arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.](images/input-patterns/notepad.png)
+![o a app bloco de notas com o menu arquivo expandido que inclui as teclas de acesso e as teclas aceleradoras.](images/input-patterns/notepad.png)
 
 ## <a name="keyboard-commands"></a>Comandos de teclado
 
 
 A seguir há uma lista abrangente das interações de teclado fornecidas em vários dispositivos que dão suporte à entrada de teclado. Alguns dispositivos e plataformas exigem interações e pressionamentos de teclas nativos; eles são indicados.
 
-Ao projetar interações e controles personalizados, use este idioma do teclado consistentemente para tornar seu aplicativo familiar, confiável e fácil de aprender.
+Ao projetar interações e controles personalizados, use este idioma do teclado consistentemente para tornar seu app familiar, confiável e fácil de aprender.
 
 Não redefina os atalhos de teclado padrão.
 
@@ -276,7 +283,7 @@ As tabelas seguintes listam os comandos de teclado usados ​​com frequência.
 | Próxima página                            | Page Up, Page Down ou Barra de Espaço                   |
 | Guia Próximo                             | Ctrl+Tab                                         |
 | Guia Anterior                         | Ctrl+Shift+Tab                                   |
-| Abrir barra de aplicativos                         | Windows+Z                                        |
+| Abrir barra de apps                         | Windows+Z                                        |
 | Ativar ou navegar em um item    | Tecla Enter                                            |
 | Selecionar                               | Barra de espaço                                         |
 | Selecionar continuamente                  | Shift+Tecla de cursor                                  |
@@ -311,7 +318,7 @@ As tabelas seguintes listam os comandos de teclado usados ​​com frequência.
 
  
 
-Observação: os comandos de tecla de navegação de mídia para Reproduzir/Pausar e Próximo item são iguais aos comandos de tecla para Imprimir e Localizar, respectivamente. Comandos comuns devem ter prioridade sobre comandos de navegação de mídia. Por exemplo, se um aplicativo der suporte para reprodução de mídia e impressão, o comando de tecla Ctrl+P deverá imprimir.
+Observação: os comandos de tecla de navegação de mídia para Reproduzir/Pausar e Próximo item são iguais aos comandos de tecla para Imprimir e Localizar, respectivamente. Comandos comuns devem ter prioridade sobre comandos de navegação de mídia. Por exemplo, se um app der suporte para reprodução de mídia e impressão, o comando de tecla Ctrl+P deverá imprimir.
 ## <a name="visual-feedback"></a>Comentários visuais
 
 
@@ -413,7 +420,7 @@ O evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
 
 ### <a name="modifier-keys"></a>Teclas modificadoras
 
-As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalmente pressionam em combinação com outras teclas. Seu aplicativo pode usar essas combinações como atalhos de teclado para chamar comandos do aplicativo.
+As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalmente pressionam em combinação com outras teclas. Seu app pode usar essas combinações como atalhos de teclado para chamar comandos do app.
 
 É possível detectar combinações de teclas de atalho usando os manipuladores de evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Você pode controlar o estado pressionado das teclas modificadoras em que tem interesse. Quando ocorre um evento de teclado para uma tecla não modificadora, é possível verificar se uma tecla modificadora está no estado pressionado ao mesmo tempo.
 
@@ -425,9 +432,9 @@ As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalme
 ### <a name="shortcut-keys-example"></a>Amostra de teclas de atalho
 
 
-O exemplo a seguir mostra como implementar as teclas de atalho. Neste exemplo, os usuários podem controlar a reprodução de mídia usando os botões Play, Pause e Stop, ou os atalhos de teclado Ctrl+P, Ctrl+A e Ctrl+S. O botão XAML mostra os atalhos usando dicas de ferramentas e propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) nos rótulos dos botões. Esta autodocumentação é importante para aumentar a usabilidade e acessibilidade de seu aplicativo. Para obter mais informações, consulte [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347).
+O exemplo a seguir mostra como implementar as teclas de atalho. Neste exemplo, os usuários podem controlar a reprodução de mídia usando os botões Play, Pause e Stop, ou os atalhos de teclado Ctrl+P, Ctrl+A e Ctrl+S. O botão XAML mostra os atalhos usando dicas de ferramentas e propriedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) nos rótulos dos botões. Esta autodocumentação é importante para aumentar a usabilidade e acessibilidade de seu app. Para obter mais informações, consulte [Acessibilidade do teclado](https://msdn.microsoft.com/library/windows/apps/mt244347).
 
-Observe também que a página define o foco de entrada para si própria quando é carregada. Sem essa etapa, nenhum controle terá foco de entrada inicial e o aplicativo não acionará eventos de entrada até que o usuário defina o foco de entrada manualmente (por exemplo, pressionando TAB ou clicando em um controle).
+Observe também que a página define o foco de entrada para si própria quando é carregada. Sem essa etapa, nenhum controle terá foco de entrada inicial e o app não acionará eventos de entrada até que o usuário defina o foco de entrada manualmente (por exemplo, pressionando TAB ou clicando em um controle).
 
 ```xaml
 <Grid KeyDown="Grid_KeyDown">
@@ -584,7 +591,7 @@ End Sub
 > [!NOTE]
 > A configuração de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) no XAML oferece informações sobre cadeia de caracteres, que documentam a tecla de atalho para chamar a ação em particular. As .informações são capturadas por clientes de Automação da Interface do Usuário da Microsoft como o Narrador e são tipicamente fornecidas diretamente ao usuário.
 >
-> A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
+> A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu app. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
  
 
@@ -684,7 +691,7 @@ Se você criar um controle personalizado que exige entrada de texto, mas não de
 
 O pressionamento das teclas no teclado virtual aciona os eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) assim como o pressionamento das teclas no teclado físico. No entanto, o teclado virtual não acionará eventos de entrada para Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C e Ctrl+V, os quais são reservados para a manipulação de texto no controle de entrada.
 
-Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu aplicativo definindo o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada. Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) como [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). Isso informa ao sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN. Para obter mais detalhes, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
+Você pode tornar a entrada de dados muito mais rápida e fácil para os usuários em seu app definindo o escopo de entrada do controle de texto para corresponder ao tipo de dados que o usuário deve inserir. O escopo de entrada oferece uma dica sobre o tipo de entrada de texto esperado pelo controle, para que o sistema possa fornecer um layout de teclado virtual especializado para o tipo de entrada. Por exemplo, se uma caixa de texto for usada somente para a inserção de um PIN de 4 dígitos, defina a propriedade [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) como [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). Isso informa ao sistema para mostrar o layout do teclado numérico, facilitando a inserção do PIN. Para obter mais detalhes, consulte [Usar o escopo de entrada para alterar o teclado virtual](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 
 ## <a name="additional-articles-in-this-section"></a>Artigos adicionais nesta seção
@@ -703,7 +710,7 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Responder à presença do teclado virtual](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
-<td align="left"><p>Saiba como adaptar a interface do usuário do seu aplicativo ao mostrar ou ocultar o teclado virtual.</p></td>
+<td align="left"><p>Saiba como adaptar a interface do usuário do seu app ao mostrar ou ocultar o teclado virtual.</p></td>
 </tr>
 </tbody>
 </table>
@@ -722,7 +729,7 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo morto**
+**Exemplos de arquivo**
 * [Amostra de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: amostra de recursos de dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
@@ -731,9 +738,4 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

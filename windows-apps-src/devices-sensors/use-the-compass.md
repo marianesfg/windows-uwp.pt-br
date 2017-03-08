@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: "Usar a bússola"
 description: "Saiba como usar a bússola para determinar a direção atual."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 05c13ff71e1c6dcfb84d46e37445c1699211951a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 07c6447a2f28c087c18e37e0036b43e7d7b312e5
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar a bússola
+# <a name="use-the-compass"></a>Usar a bússola
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Bússola**](https://msdn.microsoft.com/library/windows/apps/BR225705)
@@ -23,17 +30,17 @@ Saiba como usar a bússola para determinar a direção atual.
 
 Um aplicativo pode recuperar a direção atual com relação ao norte magnético ou verdadeiro. Os aplicativos de navegação usam a bússola para determinar a direção para qual um dispositivo está voltado e orientar o mapa de acordo.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para uma bússola.
 
-## Criar um aplicativo simples de bússola
+## <a name="create-a-simple-compass-app"></a>Criar um aplicativo simples de bússola
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de bússola do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-### Instruções
+### <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -66,8 +73,8 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
         public sealed partial class MainPage : Page
         {
             private Compass _compass; // Our app' s compass object
-     
-            // This event handler writes the current compass reading to 
+
+            // This event handler writes the current compass reading to
             // the textblocks on the app' s main page.
 
             private async void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
@@ -134,7 +141,7 @@ Quando o aplicativo estiver em execução, você poderá alterar os valores da b
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-### Explicação
+### <a name="explanation"></a>Explicação
 
 O exemplo anterior comprova que você precisará escrever pouco código para integrar a entrada da bússola ao seu aplicativo.
 
@@ -155,7 +162,7 @@ _compass.ReportInterval = reportInterval;
 Os novos dados da bússola são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_compass.ReadingChanged += new TypedEventHandler<Compass, 
+_compass.ReadingChanged += new TypedEventHandler<Compass,
 CompassReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -164,23 +171,14 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 ```xml
  <TextBlock HorizontalAlignment="Left" Height="22" Margin="8,18,0,0" TextWrapping="Wrap" Text="Magnetic Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFFBF9F9"/>
  <TextBlock HorizontalAlignment="Left" Height="18" Margin="8,58,0,0" TextWrapping="Wrap" Text="True North Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFF3F3F3"/>
- <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/> 
+ <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/>
  <TextBlock x:Name="txtNorth" HorizontalAlignment="Left" Height="18" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFF5F1F1"/>
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de bússola](http://go.microsoft.com/fwlink/p/?linkid=241378)
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

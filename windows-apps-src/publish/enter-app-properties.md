@@ -3,31 +3,38 @@ author: jnHs
 Description: "A página Propriedades do aplicativo do processo de envio de aplicativo permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações."
 title: Insira as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 345350cea16b850e49f6f958e304654aba1299bb
-ms.openlocfilehash: d2eb9a62dcaadca599136f4505f85e3ba94c0189
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 008c073844332aadbc17def774aae16f3ae01513
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Insira as propriedades do aplicativo
+# <a name="enter-app-properties"></a>Insira as propriedades do aplicativo
 
 A página **Propriedades do aplicativo** do [processo de envio de aplicativo](app-submissions.md) permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
 
 > **Observação**  Classificações etárias agora são uma página separada do processo de envio. Para saber mais, consulte [Classificações etárias](age-ratings.md).
 
-## Categoria e subcategoria
+## <a name="category-and-subcategory"></a>Categoria e subcategoria
 
 Nesta seção, você indica a categoria (e subcategoria, se aplicável) que a Loja deve usar para categorizar seu aplicativo. Especificar uma categoria é necessário para enviar seu aplicativo.
 
 Para saber mais, consulte [Tabela de categoria e subcategoria](category-and-subcategory-table.md).
 
-## Declarações de produto
+## <a name="product-declarations"></a>Declarações de produto
 
 Você pode marcar caixas nesta seção para indicar se qualquer uma das declarações se aplicam ao seu aplicativo. Isso pode afetar a forma em que seu aplicativo é exibido, se ele é oferecido para determinados clientes, ou como os clientes podem usá-lo.
 
 Para saber mais, consulte [Declarações de aplicativo](app-declarations.md).
 
-## Requisitos do sistema
+## <a name="system-requirements"></a>Requisitos do sistema
 
 Nesta seção, você tem a opção de indicar se determinados recursos de hardware são necessários ou recomendados para executar e interagir com seu aplicativo corretamente. Você pode marcar a caixa (ou indicar a opção adequada) para cada item de hardware onde deseja especificar **Hardware mínimo** e/ou **Hardware recomendado**.
 
@@ -50,10 +57,5 @@ Também recomendamos adicionar verificações de tempo de execução para o hard
 
 > **Dica**  Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

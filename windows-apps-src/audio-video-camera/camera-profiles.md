@@ -3,25 +3,32 @@ author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
 description: "Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR."
 title: "Descobrir e selecionar as funcionalidades da câmera com perfis de câmera"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
-ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4e37c2e3bd2ed8738ebba88c55ceaf795e6ca084
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
+# <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR.
 
 > [!NOTE] 
-> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu app já tenha uma instância de MediaCapture inicializada corretamente.
 
  
 
-## Sobre perfis de câmera
+## <a name="about-camera-profiles"></a>Sobre perfis de câmera
 
 As câmeras em diferentes dispositivos oferecem suporte a várias funcionalidades, inclusive ao conjunto de resoluções de captura com suporte, à taxa de quadros para capturas de vídeo ou a capturas de taxa de quadros variáveis ou HDR. A estrutura de captura de mídia da Plataforma Universal do Windows (UWP) armazena esse cojnunto de funcionalidades em uma [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695). Um perfil de câmera, representado por um objeto [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694), tem três conjuntos de descrições de mídia: um para captura de fotos, um para captura de vídeos e outro para visuaçização de vídeos.
 
@@ -31,7 +38,7 @@ Antes de inicializar seu objeto [MediaCapture](capture-photos-and-video-with-med
 
 Os exemplos de código neste artigo substituem essa inicialização mínima pela descoberta de perfis de câmera que oferecem suporte a diversas funcionalidades, que são usados para inicializar o dispositivo de captura de mídia.
 
-## Encontre um dispositivo de vídeo que ofereça suporte a perfis de câmera
+## <a name="find-a-video-device-that-supports-camera-profiles"></a>Encontre um dispositivo de vídeo que ofereça suporte a perfis de câmera
 
 Antes de procurar perfis de câmera com suporte, você deve encontrar um dispositivo de captura que ofereça suporte ao uso de perfis de câmera. O método auxiliar **GetVideoProfileSupportedDeviceIdAsync** definido no exemplo a seguir usa o método [**DeviceInformaion.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) para recuperar uma lista de todos os dispositivos de captura de vídeo disponíveis. Ele executa um loop em todos os dispositivos na lista, chamando o método estático, [**IsVideoProfileSupported**](https://msdn.microsoft.com/library/windows/apps/dn926714), para cada dispositivo a fim de verificar se ele oferece suporte a perfis de vídeo. Também há a propriedade [**EnclosureLocation.Panel**](https://msdn.microsoft.com/library/windows/apps/br229906) para cada dispositivo, que permite especificar se você deseja uma câmera na frente ou atrás do dispositivo.
 
@@ -43,7 +50,7 @@ Se a ID do dispositivo retornada do método auxiliar **GetVideoProfileSupportedD
 
 [!code-cs[GetDeviceWithProfileSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetDeviceWithProfileSupport)]
 
-## Selecionar um perfil com base na resolução e na taxa de quadros com suporte
+## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Selecionar um perfil com base na resolução e na taxa de quadros com suporte
 
 Para selecionar um perfil com determinadas funcionalidades, como a capacidade de alcançar uma determinada resolução e uma taxa de quadros, você deve primeiro chamar o método auxiliar definido acima para obter a ID de um dispositivo de captura que ofereça suporte ao uso de perfil de câmeras.
 
@@ -57,7 +64,7 @@ Depois que você preencher **MediaCaptureInitializationSettings** com o perfil d
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## Selecionar um perfil que ofereça suporte à simultaneidade
+## <a name="select-a-profile-that-supports-concurrence"></a>Selecionar um perfil que ofereça suporte à simultaneidade
 
 Você pode usar perfis de câmera para determinar se um dispositivo oferece suporte à captura de vídeo de várias câmeras simultaneamente. Para esse cenário, será necessário criar dois conjuntos de objetos de captura: um para a câmera frontal e outro para a câmera traseira. Para cada câmera, crie **MediaCapture**, **MediaCaptureInitializationSettings** e uma cadeia de caracteres para manter a ID do dispositivo de captura. Além disso, adicione uma variável booliana que detectará se a simultaneidade tem ou não suporte.
 
@@ -67,11 +74,11 @@ O método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.micro
 
 [!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
 
-Chame **MediaCapture.InitializeAsync** para a câmera principal do cenário de seu aplicativo. Se houver suporte para a simultaneidade, inicialize também a segunda câmera.
+Chame **MediaCapture.InitializeAsync** para a câmera principal do cenário de seu app. Se houver suporte para a simultaneidade, inicialize também a segunda câmera.
 
 [!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
 
-## Usar perfis conhecidos para encontrar um perfil com suporte a vídeo HDR
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>Usar perfis conhecidos para encontrar um perfil com suporte a vídeo HDR
 
 A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Crie **MediaCaptureInitializationSettings** e uma cadeia de caracteres para conter a ID do dispositivo de captura. Adicione uma variável booliana que detectará se o vídeo HDR tem suporte.
 
@@ -87,7 +94,7 @@ Execute um loop pela lista retornada de perfis de câmera. Para cada perfil de c
 
 [!code-cs[FindHDRProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindHDRProfile)]
 
-## Determinar se um dispositivo oferece suporte à captura simultânea de fotos e vídeos
+## <a name="determine-if-a-device-supports-simultaneous-photo-and-video-capture"></a>Determinar se um dispositivo oferece suporte à captura simultânea de fotos e vídeos
 
 Muitos dispositivos oferecem suporte à captura simultânea de fotos e vídeos. Para determinar se um dispositivo de captura oferece esse suporte, chame [**MediaCapture.FindAllVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926708) para obter todos os perfis de câmera compatíveis com o dispositivo. Use a consulta de link para encontrar um perfil que tenha pelo menos uma entrada para [**SupportedPhotoMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926703) e [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705), o que significa que o perfil oferece suporte à captura simultânea.
 
@@ -95,7 +102,7 @@ Muitos dispositivos oferecem suporte à captura simultânea de fotos e vídeos. 
 
 Você pode refinar essa consulta para procurar perfis com suporte a resoluções específicas ou outras funcionalidades, além da gravação simultânea de vídeo. Você também pode usar [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710) e especificar o valor [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843) para recuperar perfis com suporte à captura simultânea, mas realizar a consulta de todos os perfis fornecerá resultados mais completos.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -105,10 +112,5 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

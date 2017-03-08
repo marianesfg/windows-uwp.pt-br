@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: "Dados de amostra na superfície de design e para a criação de protótipo"
 description: "Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
-ms.openlocfilehash: 6f157688cba014ffc1f8d09c2a291d62c564c8c9
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
+ms.lasthandoff: 01/19/2017
 
 ---
-Dados de amostra na superfície de design e para a criação de protótipo
+<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -18,7 +25,7 @@ Dados de amostra na superfície de design e para a criação de protótipo
 
 Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio. Para que seus controles sejam populados com dados (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos.
 
-Definindo DataContext na marcação
+<a name="setting-datacontext-in-markup"></a>Definindo DataContext na marcação
 -----------------------------
 
 Uma prática bastante comum entre os desenvolvedores é usar um código imperativo (no code-behind) para definir uma página ou o [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de um controle de usuário para visualizar uma instância de modelo.
@@ -67,7 +74,7 @@ else
 
 Você pode usar um localizador de modelo de exibição se for necessário passar parâmetros para o código de inicialização. Um localizador de modelo de exibição é uma classe que você pode colocar nos recursos do aplicativo. Ela tem uma propriedade que expõe o modelo de exibição, e o **DataContext** se associa a essa propriedade. Outro padrão que o localizador ou o modelo de exibição pode usar é a injeção de dependências, que pode construir um provedor de dados em tempo de design ou de execução (cada um deles implementa uma interface comum), conforme aplicável.
 
-"Dados de exemplo da classe" e atributos de tempo de design
+<a name="sample-data-from-class-and-design-time-attributes"></a>"Dados de exemplo da classe" e atributos de tempo de design
 ---------------------------------------------------------------------------------------
 
 Se, por qualquer motivo, nenhuma das opções na seção anterior funcionar para você, ainda há diversas opções de dados de tempo de design disponíveis por meio de recursos de ferramentas XAML e atributos de tempo de design. Uma boa opção é o recurso **Criar Dados de Exemplo da Classe** no Blend for Visual Studio. Você pode encontrar esse comando em um dos botões na parte superior do painel **Dados**.
@@ -132,7 +139,7 @@ Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de d
 
 A propriedade **IsDesignTimeCreatable** indica que a ferramenta de design deve, na verdade, criar uma instância da classe, o que sugere que a classe tem um construtor público padrão e que é populada com dados (reais ou de exemplo). Se você não definir **IsDesignTimeCreatable** (ou se definir como **False**), os dados de exemplo não serão exibidos na superfície de design. Nesse caso, a ferramenta de design analisa a classe para suas propriedades associáveis e exibe-as no painel **Dados** e na caixa de diálogo **Criar Associação de Dados**.
 
-Dados de exemplo para criação de protótipo
+<a name="sample-data-for-prototyping"></a>Dados de exemplo para criação de protótipo
 --------------------------------------------------------
 
 Para a criação de protótipo, você quer dados de exemplo em tempo de design e em tempo de execução. Para esse caso de uso, o Blend for Visual Studio tem o recurso **Novos Dados de Exemplo**. Você pode encontrar esse comando em um dos botões na parte superior do painel **Dados**.
@@ -142,9 +149,4 @@ Em vez de especificar uma classe, você pode projetar o esquema da fonte de dado
 O recurso **Novos Dados de Exemplo** usa [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e não **d:DataContext**, para que os dados de exemplo estejam disponíveis quando você executar seu esboço ou protótipo e durante a criação. E o painel **Dados** realmente acelera as tarefas de design e associação. Por exemplo, basta arrastar uma propriedade de coleção do painel **Dados** para a superfície de design para gerar um controle de itens de ligação de dados e os modelos necessários, tudo pronto para compilação e execução.
 
 ![Dados de exemplo para criação de protótipo.](images/displaying-data-in-the-designer-04.png)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -2,9 +2,17 @@
 author: shawjohn
 Description: "Saiba como criar segmentos de cliente para que você possa segmentar um subconjunto de sua base de clientes para fins promocionais ou de envolvimento."
 title: Criar segmentos de cliente
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 translationtype: Human Translation
-ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
-ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -18,13 +26,13 @@ Por exemplo, você poderia criar um segmento que inclua apenas os clientes que t
 
 ## <a name="to-create-a-customer-segment"></a>Para criar um segmento de cliente
 
-1.  No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), selecione **Clientes** no menu principal.
-2.  Na página **Grupos de clientes**, siga um destes procedimentos:
+1.    No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), selecione **Clientes** no menu principal.
+2.    Na página **Grupos de clientes**, siga um destes procedimentos:
  - Na seção **Meu grupos de clientes**, selecione **Criar novo grupo** para definir um segmento do zero. Verifique se **Segmento** está selecionado na lista suspensa **Tipo de grupo**.
  - Na seção **Modelos de segmento**, selecione **Cópia para usar um segmento predefinido** que você pode usar como está ou modificar para atender às suas necessidades.
-3.  Na lista **Incluir clientes desse aplicativo**, selecione um dos seus aplicativos para direcionar.
-4.  Na caixa **Nome do segmento**, escolha um nome para o segmento.
-5.  Na seção **Definir condições de inclusão**, escolha os critérios de filtro para o segmento.
+3.    Na lista **Incluir clientes desse app**, selecione um dos seus apps para direcionar.
+4.    Na caixa **Nome do segmento**, escolha um nome para o segmento.
+5.    Na seção **Definir condições de inclusão**, escolha os critérios de filtro para o segmento.
 
     Você pode escolher entre uma variedade de critérios de filtro, incluindo **Fonte de aquisição**, **Aquisições**, **Demografia**, **Classificação**, **Aquisições da Loja**, **Compras na Loja** e **Gasto da Loja**.
 
@@ -37,29 +45,24 @@ Por exemplo, você poderia criar um segmento que inclua apenas os clientes que t
     ![Exemplo de critérios de filtro de um segmento](images/create-segment-inclusions.png)
 6. Selecione **Salvar**.
 
-> **Importante** Não será possível usar um segmento que inclui poucos clientes. Se sua definição de segmento não incluir suficiente clientes, você poderá ajustar os critérios de segmento ou tentar novamente mais tarde, quando seu aplicativo talvez tiver adquirido mais clientes que atendem aos critérios de segmento.
+> **Importante** Não será possível usar um segmento que inclui poucos clientes. Se sua definição de segmento não incluir suficiente clientes, você poderá ajustar os critérios de segmento ou tentar novamente mais tarde, quando seu app talvez tiver adquirido mais clientes que atendem aos critérios de segmento.
 
 Observações importantes sobre segmentos de cliente:
 - Depois de salvar um segmento, leva 24 horas para você poder usá-lo para [notificações por push direcionadas](send-push-notifications-to-your-apps-customers.md).
 - Os resultados de segmento são atualizados diariamente. Assim, você pode ver a contagem total de clientes em um segmento mudar de um dia para outro conforme os clientes passam a satisfazer os critérios de segmento.
-- A maioria desses atributos é calculada usando todos os dados históricos, embora haja algumas exceções. Por exemplo, **Data de aquisição do aplicativo**, **ID da campanha**, **Data de visualização da página da Loja** e **Domínio de URI de referência** são limitados aos últimos 90 dias de dados.
-- O segmento incluirá apenas os clientes que compraram o aplicativo no Windows 10. Se seu aplicativo oferecer suporte a versões mais antigas do sistema operacional, os clientes que usam essas versões mais antigas do sistema operacional não serão incluídos em nenhum segmento que você criar.
+- A maioria desses atributos é calculada usando todos os dados históricos, embora haja algumas exceções. Por exemplo, **Data de aquisição do app**, **ID da campanha**, **Data de visualização da página da Loja** e **Domínio de URI de referência** são limitados aos últimos 90 dias de dados.
+- O segmento incluirá apenas os clientes que compraram o app no Windows 10. Se seu app oferecer suporte a versões mais antigas do sistema operacional, os clientes que usam essas versões mais antigas do sistema operacional não serão incluídos em nenhum segmento que você criar.
 - Os segmentos excluem automaticamente todos os clientes com menos de 17 anos.
 
 
-## <a name="app-statistics"></a>Estatísticas de aplicativo
+## <a name="app-statistics"></a>Estatísticas de app
 
-A seção **Estatísticas de aplicativo** do segmento fornece algumas informações sobre seu aplicativo, bem como o tamanho do segmento que acabou de criar.
+A seção **Estatísticas de app** do segmento fornece algumas informações sobre seu app, bem como o tamanho do segmento que acabou de criar.
 
-Observe que **Clientes disponíveis do aplicativo** não reflete o número real dos clientes que compraram o aplicativo, mas apenas o número de clientes que estão disponíveis para serem incluídos em segmentos (ou seja, os clientes que podemos comprovar que satisfazem os requisitos de idade, adquiriram seu aplicativo no Windows 10 e que estão associados a uma conta da Microsoft válida).
+Observe que **Clientes disponíveis do app** não reflete o número real dos clientes que compraram o app, mas apenas o número de clientes que estão disponíveis para serem incluídos em segmentos (ou seja, os clientes que podemos comprovar que satisfazem os requisitos de idade, adquiriram seu app no Windows 10 e que estão associados a uma conta da Microsoft válida).
 
 Se você exibir os resultados e **Clientes neste segmento** for **Pequeno**, o segmento não inclui clientes suficientes e o segmento é marcado como inativo. Segmentos inativos não podem ser usados para notificações ou outros recursos. Você poderá ativar e usar um segmento seguindo um destes procedimentos:
 
 - Na seção **Definir condições de inclusão**, ajuste os critérios de filtro para que o segmento inclua mais clientes.
-- Na página **Grupos de clientes**, na seção **Segmentos inativos**, selecione **Atualizar** para ver se o segmento atualmente contém clientes suficientes. Essa tática poderá funcionar, por exemplo, se os clientes que satisfizerem os critérios de segmento tiverem baixado seu aplicativo desde que o primeiro segmento foi criado.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+- Na página **Grupos de clientes**, na seção **Segmentos inativos**, selecione **Atualizar** para ver se o segmento atualmente contém clientes suficientes. Essa tática poderá funcionar, por exemplo, se os clientes que satisfizerem os critérios de segmento tiverem baixado seu app desde que o primeiro segmento foi criado.
 

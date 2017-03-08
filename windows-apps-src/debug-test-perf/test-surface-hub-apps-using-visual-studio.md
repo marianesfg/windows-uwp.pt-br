@@ -3,18 +3,25 @@ author: mcleblanc
 ms.assetid: A5320094-DF53-42FC-A6BA-A958F8E9210B
 title: Testar aplicativos Surface Hub usando o Visual Studio
 description: O simulador do Visual Studio fornece um ambiente para projetar, desenvolver, depurar e testar aplicativos UWP, incluindo aplicativos criados para o Surface Hub.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 1939508e8ace2fe3ed9210d6969d1c68843c32a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Testar aplicativos Surface Hub usando o Visual Studio
+# <a name="test-surface-hub-apps-using-visual-studio"></a>Testar aplicativos Surface Hub usando o Visual Studio
 O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos de Plataforma Universal do Windows (UWP), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar a aparência e o comportamento de seu aplicativo no tamanho de tela e resolução do Surface Hub.
 
 Para obter mais informações, consulte [Executar aplicativos da Windows Store no simulador](https://msdn.microsoft.com/library/hh441475.aspx).
 
-## Adicionar resoluções do Surface Hub ao simulador
+## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Adicionar resoluções do Surface Hub ao simulador
 Para adicionar resoluções do Surface Hub ao simulador:
 
 1. Crie uma configuração para o 55" Surface Hub salvando o XML a seguir em um arquivo chamado **HardwareConfigurations SurfaceHub55.xml**.  
@@ -65,10 +72,10 @@ Para adicionar resoluções do Surface Hub ao simulador:
 
    > **Dica**&nbsp;&nbsp;[Ativa o modo Tablet](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) para melhor simular a experiência em um Surface Hub.
 
-## Implantar aplicativos em um Surface Hub do Visual Studio
+## <a name="deploy-apps-to-a-surface-hub-from-visual-studio"></a>Implantar aplicativos em um Surface Hub do Visual Studio
 Implantar manualmente um aplicativo é um processo simples.
 
-### Habilitar o modo de desenvolvedor
+### <a name="enable-developer-mode"></a>Habilitar o modo de desenvolvedor
 Por padrão, o Surface Hub só instala aplicativos da Windows Store. Para instalar aplicativos assinados por outras fontes, você deve habilitar o modo de desenvolvedor.
 
 > **Observação**&nbsp;&nbsp;Após a habilitação do modo de desenvolvedor, você precisará redefinir o Surface Hub para desativá-lo novamente. Redefinir o dispositivo remove todas as configurações e arquivos de usuário local e reinstala o Windows.
@@ -81,7 +88,7 @@ Por padrão, o Surface Hub só instala aplicativos da Windows Store. Para instal
 
 3. Escolha **Modo de desenvolvedor** e aceite o prompt de aviso.
 
-### Implantar seu aplicativo no Visual Studio
+### <a name="deploy-your-app-from-visual-studio"></a>Implantar seu aplicativo no Visual Studio
 Para obter mais informações, consulte [Implantando e depurando aplicativos da Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > **Observação**&nbsp;&nbsp;Esse recurso requer pelo menos o **Visual Studio 2015 Update 1**.
@@ -99,9 +106,4 @@ Para obter mais informações, consulte [Implantando e depurando aplicativos da 
 3. Escolha **Iniciar Depuração (F5)** para implantar e depurar seu aplicativo no Surface Hub ou pressione Ctrl + F5 para apenas implantar seu aplicativo.
 
    > **Dica**&nbsp;&nbsp;Se o Surface Hub estiver na tela de boas-vindas, ignore-o escolhendo qualquer botão.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

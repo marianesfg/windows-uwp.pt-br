@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: "Usar sensor de orientação"
 description: "Saiba como usar os sensores de orientação para determinar a orientação do dispositivo."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1265697f03e0de74444fc936a3041d1e88147e77
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 349a28f1980b863091cedd4515737a48de51b390
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar sensor de orientação
+# <a name="use-the-orientation-sensor"></a>Usar o sensor de orientação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
@@ -33,17 +40,17 @@ A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps
 | Portrait Down   | Rotated180DegreesCounterclockwise  |
 | Landscape Right | Rotated270DegreesCounterclockwise  |
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ser compatível com um sensor de orientação.
 
-## Criar um aplicativo OrientationSensor
+## <a name="create-an-orientationsensor-app"></a>Criar um aplicativo OrientationSensor
 
 Esta seção está dividida em duas subseções. A primeira subseção levará você pelas etapas necessárias para criar um aplicativo de orientação do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-###  Instruções
+###  <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -107,7 +114,7 @@ Esta seção está dividida em duas subseções. A primeira subseção levará v
             {
                 this.InitializeComponent();
                 _sensor = OrientationSensor.GetDefault();
-     
+
                 // Establish the report interval for all scenarios
                 uint minReportInterval = _sensor.MinimumReportInterval;
                 uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
@@ -174,7 +181,7 @@ Quando o aplicativo estiver em execução, você poderá alterar a orientação.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-###  Explicação
+###  <a name="explanation"></a>Explicação
 
 O exemplo anterior comprova que você precisará escrever pouco código para integrar a entrada do sensor de orientação ao seu aplicativo.
 
@@ -195,17 +202,17 @@ _sensor.ReportInterval = reportInterval;
 Os novos dados do sensor são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_sensor.ReadingChanged += new TypedEventHandler<OrientationSensor, 
+_sensor.ReadingChanged += new TypedEventHandler<OrientationSensor,
 OrientationSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
 Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
 
-## Criar um aplicativo SimpleOrientation
+## <a name="create-a-simpleorientation-app"></a>Criar um aplicativo SimpleOrientation
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de orientação do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-### Instruções
+### <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -240,7 +247,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
             // Sensor and dispatcher variables
             private SimpleOrientationSensor _simpleorientation;
 
-            // This event handler writes the current sensor reading to 
+            // This event handler writes the current sensor reading to
             // a text block on the app' s main page.
 
             private async void OrientationChanged(object sender, SimpleOrientationSensorOrientationChangedEventArgs e)
@@ -320,7 +327,7 @@ Quando o aplicativo estiver em execução, você poderá alterar a orientação.
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-### Explicação
+### <a name="explanation"></a>Explicação
 
 O exemplo anterior comprova que você precisará escrever pouco código para integrar a entrada do sensor simples de orientação ao seu aplicativo.
 
@@ -333,7 +340,7 @@ _simpleorientation = SimpleOrientationSensor.GetDefault();
 Os novos dados do sensor são capturados no método **OrientationChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientationSensor, 
+_simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientationSensor,
 SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 ```
 
@@ -344,15 +351,9 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
  <TextBlock x:Name="txtOrientation" HorizontalAlignment="Left" Height="24" Margin="118,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="175" Foreground="#FFFEFAFA"/>
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Amostra de OrientationSensor](http://go.microsoft.com/fwlink/p/?linkid=241382)
 * [Amostra de sensor SimpleOrientation](http://go.microsoft.com/fwlink/p/?linkid=241383)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

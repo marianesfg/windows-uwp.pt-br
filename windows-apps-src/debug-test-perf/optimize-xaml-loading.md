@@ -2,19 +2,26 @@
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: "Otimizar sua marcação XAML"
-description: "Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo."
+description: "Analisar a marcação XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu app."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Otimizar sua marcação XAML
+# <a name="optimize-your-xaml-markup"></a>Otimizar sua marcação XAML
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
+Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu app.
 
-Na inicialização do aplicativo, limite a marcação XAML que é carregada para apenas o que você precisa para sua interface do usuário inicial. Examine a marcação em sua página inicial e confirmar se ela contém apenas o que é necessário. Se a página fizer referência a um controle de usuário ou um recurso definido em um arquivo diferente, a estrutura analisará esse arquivo também.
+Na inicialização do app, limite a marcação XAML que é carregada para apenas o que você precisa para sua interface do usuário inicial. Examine a marcação em sua página inicial e confirmar se ela contém apenas o que é necessário. Se a página fizer referência a um controle de usuário ou um recurso definido em um arquivo diferente, a estrutura analisará esse arquivo também.
 
 Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary.xaml, todo o ExampleResourceDictionary.xaml deve ser analisado na inicialização.
 
@@ -47,7 +54,7 @@ Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary
 </ResourceDictionary>
 ```
 
-Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o em App.xaml é uma boa prática e evita a duplicação. Mas App.xaml é analisado na inicialização do aplicativo para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este contraexemplo mostra um App.xaml que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do aplicativo.
+Se você usar um recurso em várias páginas em todo o app, armazenando-o em App.xaml é uma boa prática e evita a duplicação. Mas App.xaml é analisado na inicialização do app para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este contraexemplo mostra um App.xaml que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do app.
 
 **InitialPage.xaml.**
 
@@ -82,11 +89,11 @@ Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush`  pode permanecer em App.xaml porque os recursos de aplicativo devem ser analisados na inicialização do aplicativo em qualquer caso.
+A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush`  pode permanecer em App.xaml porque os recursos de app devem ser analisados na inicialização do app em qualquer caso.
 
-## Minimizar a contagem de elementos
+## <a name="minimize-element-count"></a>Minimizar a contagem de elementos
 
-Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, você pode fazer com que a disposição e a renderização de seu aplicativo sejam mais rápidas, usando a menor quantidade de elementos para alcançar os elementos visuais desejados.
+Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, você pode fazer com que a disposição e a renderização de seu app sejam mais rápidas, usando a menor quantidade de elementos para alcançar os elementos visuais desejados.
 
 -   Os painéis de layout têm uma propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512), então não é preciso puxar um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) na frente de um painel apenas para colori-lo.
 
@@ -106,7 +113,7 @@ Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, 
 
 -   Se você reutilizar bastante o mesmo elemento baseado em vetor, se torna mais eficiente usar um elemento [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) ao invés. Os elementos baseados em vetor podem ser mais caros porque a CPU precisa criar cada elemento individual separadamente. O arquivo de imagem precisa ser decodificado apenas uma vez.
 
-## Consolide vários pinceis com a mesma aparência em um recurso
+## <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolide vários pinceis com a mesma aparência em um recurso
 
 A plataforma XAML tenta armazenar objetos comumente usados em cache de forma que eles possam ser reutilizados com mais frequência possível. Porém, o XAML não consegue dizer facilmente se um pincel declarado em um pedaço de marcação é o mesmo que um pincel declarado em outro. O exemplo aqui usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) para demonstrar, mas o caso é mais provável e mais importante com [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
 
@@ -146,7 +153,7 @@ Além disso, procure por pinceis que usam cores pré-definidas: `"Orange"` e `"#
 </Page>
 ```
 
-## Minimizar o excesso de desenho
+## <a name="minimize-overdrawing"></a>Minimizar o excesso de desenho
 
 O excesso de desenho se dá quando mais de um objeto é desenhado nos mesmos pixels de tela. Às vezes, há um compromisso entre essa orientação e o desejo de minimizar a contagem de elementos.
 
@@ -240,7 +247,7 @@ Se o [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) precis
 
 Use [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) como um diagnóstico visual. Você pode encontrar objetos sendo desenhados que você não sabia que estavam na cena.
 
-## Armazenar conteúdo estático em cache
+## <a name="cache-static-content"></a>Armazenar conteúdo estático em cache
 
 Outra fonte de excesso de desenho é uma forma feita a partir de muitos elementos sobrepostos. Se você definir [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) para **BitmapCache** no [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) que contém a forma composta, então a plataforma renderiza o elemento em um bitmap uma vez e, depois, o utiliza a cada quadro, em vez de exceder os desenhos.
 
@@ -272,25 +279,20 @@ A imagem acima é o resultado, mas este é um mapa das regiões com excesso de d
 
 Observe o uso de [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). Não use essa técnica se qualquer uma das subformas for animada, porque o cache de bitmap provavelmente precisará ser regenerado a cada quadro, destruindo o propósito.
 
-## ResourceDictionaries
+## <a name="resourcedictionaries"></a>ResourceDictionaries
 
-ResourceDictionaries geralmente são usados para armazenar seus recursos em um nível um pouco global. Os recursos aos quais seu aplicativo fará referência em vários lugares. Por exemplo, estilos, pincéis, modelos e assim por diante. No geral, otimizamos ResourceDictionaries para não instanciar recursos, a menos que seja solicitado. Mas há alguns lugares onde você precisa ter um pouco de cuidado.
+ResourceDictionaries geralmente são usados para armazenar seus recursos em um nível um pouco global. Os recursos aos quais seu app fará referência em vários lugares. Por exemplo, estilos, pincéis, modelos e assim por diante. No geral, otimizamos ResourceDictionaries para não instanciar recursos, a menos que seja solicitado. Mas há alguns lugares onde você precisa ter um pouco de cuidado.
 
-**Recurso com x:Name**. Os recursos com x:Name não se beneficiarão com a otimização da plataforma, mas em vez disso, eles serão instanciados assim que ResourceDictionary for criado. Isso ocorre porque x:Name instrui a plataforma de que seu aplicativo precisa de acesso de campo a esse recurso de forma que a plataforma precise criar algo para o qual irá criar um referência.
+**Recurso com x:Name**. Os recursos com x:Name não se beneficiarão com a otimização da plataforma, mas em vez disso, eles serão instanciados assim que ResourceDictionary for criado. Isso ocorre porque x:Name instrui a plataforma de que seu app precisa de acesso de campo a esse recurso de forma que a plataforma precise criar algo para o qual irá criar um referência.
 
 **ResourceDictionaries em um UserControl**. ResourceDictionaries definidos dentro de um UserControl provocam uma penalidade. A plataforma criará uma cópia de tal ResourceDictionary para cada instância do UserControl. Se você tiver um UserControl que é muito usado, mova ResourceDictionary do UserControl e coloque-o no nível de página.
 
-## Usar o XBF2
+## <a name="use-xbf2"></a>Usar o XBF2
 
-XBF2 é uma representação binária da marcação XAML que evita todos os custos da análise de texto em tempo de execução. Ele também otimiza o binário para a criação de árvore e o carregamento, além de proporcionar um "caminho rápido" para que tipos XAML melhorem os custos de criação de objeto e de heap, por exemplo VSM, ResourceDictionary, Styles e assim por diante. Ele é totalmente mapeado por memória de forma que não haja uma volume de heap no carregamento e leitura de uma página XAML. Além disso, ele reduz o volume de disco das páginas XAML armazenadas em um appx. XBF2 é uma representação mais compacta e pode reduzir o volume de disco de arquivos XAML/XBF1 comparativos em até 50%. Por exemplo, o aplicativo Fotos integrado experimentou uma redução em torno de 60% após a conversão para XBF2, baixando de cerca de ~ 1mb de ativos XBF1 para ~ 400kb de ativos XBF2. Também vimos aplicativos se beneficiarem entre 15 e 20% em termos de uso de CPU e 10 e 15% em relação ao heap do Win32.
+XBF2 é uma representação binária da marcação XAML que evita todos os custos da análise de texto em tempo de execução. Ele também otimiza o binário para a criação de árvore e o carregamento, além de proporcionar um "caminho rápido" para que tipos XAML melhorem os custos de criação de objeto e de heap, por exemplo VSM, ResourceDictionary, Styles e assim por diante. Ele é totalmente mapeado por memória de forma que não haja uma volume de heap no carregamento e leitura de uma página XAML. Além disso, ele reduz o volume de disco das páginas XAML armazenadas em um appx. XBF2 é uma representação mais compacta e pode reduzir o volume de disco de arquivos XAML/XBF1 comparativos em até 50%. Por exemplo, o app Fotos integrado experimentou uma redução em torno de 60% após a conversão para XBF2, baixando de cerca de ~ 1mb de ativos XBF1 para ~ 400kb de ativos XBF2. Também vimos apps se beneficiarem entre 15 e 20% em termos de uso de CPU e 10 e 15% em relação ao heap do Win32.
 
-Dicionários e controles XAML internos que a estrutura fornece já são totalmente habilitados para XBF2. Para seu próprio aplicativo, assegure-se de que o arquivo de projeto declare TargetPlatformVersion 8.2 ou posterior.
+Dicionários e controles XAML internos que a estrutura fornece já são totalmente habilitados para XBF2. Para seu próprio app, assegure-se de que o arquivo de projeto declare TargetPlatformVersion 8.2 ou posterior.
 
-Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o 12º e o 13º bytes são 00 02 se você tiver o XBF2.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+Para verificar se você tem o XBF2, abra seu app em um editor binário; o 12º e o 13º bytes são 00 02 se você tiver o XBF2.
 
 

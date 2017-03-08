@@ -3,13 +3,20 @@ title: "Restrições de exportação na criptografia"
 description: "Use estas informações para determinar se seu aplicativo usa criptografia de forma que possa impedir que ele seja listado na Windows Store."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Restrições de exportação na criptografia
+# <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -26,7 +33,7 @@ Para saber mais sobre o Departamento de Comércio dos EUA e o Bureau of Industry
 
 Para saber mais sobre os regulamentos EAR (Controle de exportações dos EUA) que regem a exportação de tecnologia que inclui criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## Usos controlados
+## <a name="governed-uses"></a>Usos controlados
 
 Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pelos regulamentos do Controle de exportação dos EUA. A questão inclui os exemplos mostrados nesta lista; mas lembre-se de que esta lista não inclui todos os aplicativos possíveis de criptografia.
 
@@ -42,7 +49,7 @@ Primeiro, determine se seu aplicativo usa um tipo de criptografia controlado pel
 
 Para obter a lista completa e atualizada de aplicativos de criptografia, consulte [Controles de EAR para itens que usam criptografia](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
-## Usos não restritos
+## <a name="non-restricted-uses"></a>Usos não restritos
 
 Observe que alguns dos aplicativos de criptografia não são restritos. Estas são as tarefas sem restrições:
 
@@ -57,9 +64,4 @@ Para obter a lista completa e atualizada de aplicativos de criptografia, consult
 Se seu aplicativo chamar, der suporte, contiver ou usar criptografia para qualquer tarefa que não esteja nessa lista, ele precisará de um ECCN (Número de classificação de mercadoria de exportação).
 
 Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

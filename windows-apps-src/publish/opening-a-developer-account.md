@@ -3,16 +3,23 @@ author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
 description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
-ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
 Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
 
-> **Observação**  Quando você se inscrever para obter uma conta de desenvolvedor, usaremos o endereço de email que você fornecer nas suas informações de contato para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
+> **Observação**  Quando você se inscrever para obter uma conta de desenvolvedor, usaremos o endereço de email que você fornecer nas suas informações de contato para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu app foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
 
 ## <a name="the-account-signup-process"></a>O processo de inscrição de conta
 
@@ -27,7 +34,7 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
    Se você estiver se registrando como empresa, também precisará inserir o nome, o endereço de email e o telefone da pessoa que aprovará a conta da sua empresa.
 
-5.  Para contas individuais, informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome.
+5.  Para contas individuais, informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus apps por esse nome.
 
     Para contas empresariais, insira o **Nome registrado** da sua empresa (nome comercial ou registrado da sua organização). Isso será usado como o nome de exibição do editor.
     
@@ -77,17 +84,12 @@ Recomendamos designar os computadores que você usa com frequência como disposi
 
 As contas dos desenvolvedores não expiram, então, não há necessidade de renovar sua conta a fim de mantê-la aberto. Se você decidir fechar sua conta completamente, pode fazê-lo entrando em contato com o suporte.
 
-Quando você fechar sua conta, é importante entender o que acontece com qualquer aplicativo que você tenha publicado na Windows Store:
+Quando você fechar sua conta, é importante entender o que acontece com qualquer app que você tenha publicado na Windows Store:
 
--   Clientes atuais do seu aplicativo ainda poderão usar o aplicativo. Entretanto, eles não poderão fazer compras no aplicativo.
--   Mesmo que o aplicativo continue disponível para os clientes que já o compraram, os detalhes do aplicativo serão removidos da Loja. Novos clientes não poderão comprar seu aplicativo.
--   O nome de seu aplicativo será liberado para possível uso de outro desenvolvedor.
--   Se houver algum saldo resultante de vendas anteriores do aplicativo, você pode solicitar o pagamento dessa quantia mesmo que o valor devido não obedeça o limite usual de pagamento.
+-   Clientes atuais do seu app ainda poderão usar o app. Entretanto, eles não poderão fazer compras no aplicativo.
+-   Mesmo que o app continue disponível para os clientes que já o compraram, os detalhes do app serão removidos da Loja. Novos clientes não poderão comprar seu app.
+-   O nome de seu app será liberado para possível uso de outro desenvolvedor.
+-   Se houver algum saldo resultante de vendas anteriores do app, você pode solicitar o pagamento dessa quantia mesmo que o valor devido não obedeça o limite usual de pagamento.
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

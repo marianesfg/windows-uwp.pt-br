@@ -3,21 +3,28 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos."
 title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas"
 translationtype: Human Translation
-ms.sourcegitcommit: e44392a1dc69a98655ba7e576d2af102a608acaa
-ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
 
-Este artigo fornece diretrizes para proporcionar ótimas experiências com anúncios em faixa e intersticiais em seus apps. Para obter diretrizes gerais sobre como elaborar o visual dos apps, consulte [Design e interface do usuário](https://developer.microsoft.com/windows/design).
+Este artigo fornece diretrizes para proporcionar ótimas experiências com anúncios em faixa e intersticiais em seus apps. Para obter diretrizes gerais sobre como elaborar o visual dos apps, consulte [Design e interface do usuário](https://developer.microsoft.com/windows/apps/design).
 
->**Importante**&nbsp;&nbsp;Qualquer uso de publicidade em seu app deve estar em conformidade com as políticas da Windows Store – incluindo, sem limitação, a [política 10.10](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) (Conteúdo e Conduta de Publicidade). Em particular, a implementação de anúncios em faixa ou intersticiais em seu app deve atender aos requisitos na política da Windows Store [política 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10). Este artigo contém exemplos de implementações que poderiam violar essa política. Estes exemplos são fornecidos apenas para fins informativos, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar as políticas da Windows Store que não estão listadas neste artigo.
+>**Importante**&nbsp;&nbsp;Qualquer uso de publicidade em seu app deve estar em conformidade com as políticas da Windows Store – incluindo, sem limitação, a [política 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Conteúdo e Conduta de Publicidade). Em particular, a implementação de anúncios em faixa ou intersticiais em seu app deve atender aos requisitos na política da Windows Store [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10). Este artigo contém exemplos de implementações que poderiam violar essa política. Estes exemplos são fornecidos apenas para fins informativos, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar as políticas da Windows Store que não estão listadas neste artigo.
 
 ## <a name="guidelines-for-banner-ads"></a>Diretrizes para anúncios em faixa
 
-As seções a seguir fornecem recomendações sobre como implementar anúncios em faixa em seu app usando o [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store.
+As seções a seguir fornecem recomendações sobre como implementar anúncios em faixa em seu app usando o [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store.
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
@@ -49,7 +56,7 @@ Recomendamos que você evite estas práticas ao implementar anúncios em faixa e
 <span />
 ### <a name="examples-of-policy-violations"></a>Exemplos de violações da política
 
-Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [política 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Estes exemplos são fornecidos apenas para fins de instrução, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar a política 10.10.1 que não estejam listadas aqui.
+Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Estes exemplos são fornecidos apenas para fins de instrução, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar a política 10.10.1 que não estejam listadas aqui.
 
 * Fazer algo para interferir na capacidade do usuário de ver o anúncio em faixa, como alterar a opacidade do [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou colocar outro controle sobre o **AdControl** (sem primeiro chamar [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx)).
 
@@ -68,7 +75,7 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 
 Quando usados com elegância, os anúncios intersticiais podem aumentar consideravelmente a receita do app, sem afetar negativamente a satisfação do usuário. Quando usado inadequadamente, esses anúncios podem ter exatamente o efeito oposto.
 
-As seções a seguir fornecem recomendações sobre como implementar anúncios intersticiais em seu app usando o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Como você conhece seu aplicativo melhor do que ninguém, exceto no que diz respeito à política, deixamos para você tomar a decisão final. O que é mais importante ter em mente é que suas classificações de aplicativo e receita estão intimamente ligadas.
+As seções a seguir fornecem recomendações sobre como implementar anúncios intersticiais em seu app usando o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Como você conhece seu aplicativo melhor do que ninguém, exceto no que diz respeito à política, deixamos para você tomar a decisão final. O que é mais importante ter em mente é que suas classificações de aplicativo e receita estão intimamente ligadas.
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
@@ -132,7 +139,7 @@ Recomendamos que você evite estas práticas ao implementar anúncios interstici
 <span />
 ### <a name="examples-of-policy-violations"></a>Exemplos de violações da política
 
-Esta seção fornece exemplos de cenários de anúncios intersticiais que violam a [política 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Estes exemplos são fornecidos apenas para fins de instrução, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar a política 10.10.1 que não estejam listadas aqui.
+Esta seção fornece exemplos de cenários de anúncios intersticiais que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Estes exemplos são fornecidos apenas para fins de instrução, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar a política 10.10.1 que não estejam listadas aqui.
 
 * Colocar um elemento de interface do usuário sobre o contêiner do anúncio intersticial.
 
@@ -153,9 +160,4 @@ Esta seção fornece exemplos de cenários de anúncios intersticiais que violam
  
 
  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

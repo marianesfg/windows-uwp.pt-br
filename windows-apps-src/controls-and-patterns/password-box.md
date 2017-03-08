@@ -6,9 +6,16 @@ ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 1addc6eee8ae4819fa388332998ac8a69e01cdf3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1f4af88235615226954f5a8ca7fd038568d08012
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="password-box"></a>Caixa de senha
@@ -108,7 +115,7 @@ Você pode usar as propriedades [Header](https://msdn.microsoft.com/library/wind
 
 ### <a name="maximum-length"></a>Comprimento máximo
 
-Especifique o número máximo de caracteres que o usuário pode inserir configurando a propriedade [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.maxlength.aspx). Não há nenhuma propriedade para especificar um comprimento mínimo, mas você pode verificar o comprimento da senha, e realizar outras validações, no código do aplicativo.
+Especifique o número máximo de caracteres que o usuário pode inserir configurando a propriedade [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.maxlength.aspx). Não há nenhuma propriedade para especificar um comprimento mínimo, mas você pode verificar o comprimento da senha, e realizar outras validações, no código do app.
 
 ## <a name="password-reveal-mode"></a>Modo de revelação de senha
 
@@ -122,7 +129,7 @@ Por padrão, o botão de revelação de senha (ou botão de "espiada") é exibid
 
 O valor da propriedade [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) não é único fator que determina se um botão de revelar a senha é visível para o usuário. Outros fatores incluem se o controle é exibido acima de uma largura mínima, se a PasswordBox tem foco e se o campo de entrada de texto contém pelo menos um caractere. O botão de revelar a senha é exibido apenas quando a PasswordBox recebe foco pela primeira vez e um caractere é inserido. Se a PasswordBox perde foco e o retoma em seguida, o botão de revelar não é exibido novamente, a menos que a senha seja apagada e a entrada de caracteres recomece.
 
-> **Cuidado**&nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu aplicativo exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
+> **Cuidado**&nbsp;&nbsp;Antes do Windows 10, o botão de revelar a senha não era exibido por padrão. Se a segurança de seu app exigir que a senha esteja sempre oculta, certifique-se de definir PasswordRevealMode como Hidden.
 
 ### <a name="hidden-and-visible-modes"></a>Modos ocultos e visíveis
 
@@ -130,7 +137,7 @@ Os outros valores de enumeração [PasswordRevealMode](https://msdn.microsoft.co
 
 Para sempre ocultar a senha, defina PasswordRevealMode como Hidden. A menos que precise que a senha seja sempre oculta, você pode fornecer uma interface do usuário personalizada para permitir que o usuário alterne o PasswordRevealMode entre Oculto e Visível.
 
-Em versões anteriores do Windows Phone, a PasswordBox usava uma caixa de seleção para alternar entre senha oculta ou não. Você pode criar uma interface do usuário semelhante para seu aplicativo, conforme mostrado no exemplo a seguir. Você também pode usar outros controles, como [ToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.togglebutton.aspx), para deixar os usuários alternarem os modos.
+Em versões anteriores do Windows Phone, a PasswordBox usava uma caixa de seleção para alternar entre senha oculta ou não. Você pode criar uma interface do usuário semelhante para seu app, conforme mostrado no exemplo a seguir. Você também pode usar outros controles, como [ToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.togglebutton.aspx), para deixar os usuários alternarem os modos.
 
 Este exemplo mostra como uma [CheckBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.checkbox.aspx) para permitir que um usuário alterne o modo de revelação de uma PasswordBox.
 
@@ -171,7 +178,7 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 ## <a name="recommendations"></a>Recomendações
 
 -   Se o propósito da caixa de senha não for claro, use um rótulo ou um texto de espaço reservado. Um rótulo fica visível independentemente da caixa de entrada de texto ter um valor ou não. O texto de espaço reservado é exibido dentro da caixa de entrada de texto e desaparece assim que um valor for inserido.
--   Dê à caixa de senha uma largura adequada para o intervalo de valores que pode ser inserido. O comprimento das palavras varia entre os idiomas, então leve a localização em conta, se quiser que seu aplicativo atenda todo mundo.
+-   Dê à caixa de senha uma largura adequada para o intervalo de valores que pode ser inserido. O comprimento das palavras varia entre os idiomas, então leve a localização em conta, se quiser que seu app atenda todo mundo.
 -   Não coloque outro controle bem próximo de uma caixa de entrada de senha. A caixa de senha tem um botão de revelar senha para que os usuários verifiquem as senhas que já digitaram, sendo que ter outro controle muito próximo pode fazer com que os usuários revelem acidentalmente suas senhas quando tentarem interagir com o outro controle. Para evitar que isso aconteça, coloque um espaço entre a caixa de entrada de senha e o outro controle, ou o coloque na próxima linha.
 -   Considere a possibilidade de apresentar duas caixas de senha para a criação de conta: uma para a nova senha e outra para confirmação dela.
 -   Mostre uma caixa de senha apenas para logons.
@@ -189,9 +196,4 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: "Use este método na API de envio da Windows Store para atualizar um envio de versão de pacote de pré-lançamento existente."
 title: "Atualize um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, envio de versão de pré-lançamento, atualização"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: baf9f4a3b72ab439439be4f73ca7fc11d48a3c84
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbd8447808c1446805f179fd1181ae88dd847083
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atualize um envio do pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="update-a-package-flight-submission-using-the-windows-store-submission-api"></a>Atualize um envio do pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 Use este método na API de envio da Windows Store para atualizar um envio de versão de pacote de pré-lançamento existente. Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-a-flight-submission.md) para ingestão e publicação.
 
 Para obter mais informações sobre como esse método se encaixa no processo de criação de um envio de pacote de pré-lançamento usando a API de envio da Windows Store, consulte [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md).
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -26,7 +33,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -37,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -55,7 +62,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 O corpo da solicitação tem os parâmetros a seguir.
 
@@ -69,7 +76,7 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como atualizar um envio do pacote de pré-lançamento para um aplicativo.
 
@@ -102,7 +109,7 @@ Content-Type: application/json
 }
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o envio atualizado. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso de envio de pacote de pré-lançamento](manage-flight-submissions.md#flight-submission-object).
 
@@ -145,7 +152,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -157,7 +164,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 <span/>
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md)
@@ -166,9 +173,4 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
 * [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
 * [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

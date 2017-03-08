@@ -3,13 +3,20 @@ author: jwmsft
 description: "Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário."
 title: "Visão geral de eventos e eventos roteados"
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 1debd0c60fbfb12ff63e27140c4a769565d98f2a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f3bb487619d7ab1a800224f40ce5eb63ae5d915b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Visão geral de eventos e eventos roteados
+# <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 1debd0c60fbfb12ff63e27140c4a769565d98f2a
 
 Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêiners de layout.
 
-## Eventos como um conceito de programação
+## <a name="events-as-a-programming-concept"></a>Eventos como um conceito de programação
 
 De um modo geral, os conceitos de eventos na programação de um aplicativo do Windows Runtime são semelhantes ao modelo de evento nas linguagens de programação mais usadas. Se você sabe como trabalhar com eventos do Microsoft .NET ou C++, já começa em vantagem. Você não precisa saber muito sobre os conceitos de modelo de evento para executar algumas tarefas básicas – como, por exemplo, anexar manipuladores.
 
@@ -27,7 +34,7 @@ Quando você usa C#, Visual Basic ou C++/CX como linguagem de programação, a i
 
 **Observação**  O código que fornece a lógica do tempo de execução para uma interface do usuário definida em XAML costuma ser chamado de *code-behind* ou arquivo code-behind. Nas visualizações de soluções do Microsoft Visual Studio, essa relação é mostrada graficamente, com o arquivo code-behind sendo um arquivo dependente e aninhado em contraposição à página XAML à qual ele se refere.
 
-## Button.Click: uma introdução a eventos e XAML
+## <a name="buttonclick-an-introduction-to-events-and-xaml"></a>Button.Click: uma introdução a eventos e XAML
 
 Uma das tarefas de programação mais comuns para um aplicativo do Tempo de Execução do Windows é a captura de entrada do usuário na interface do usuário. Por exemplo, a sua interface do usuário pode ter um botão em que o usuário deve clicar para enviar informações ou mudar o estado.
 
@@ -69,13 +76,13 @@ Neste exemplo, o método `showUpdatesButton_Click` baseia-se no delegado de [**R
 
 **Dica**  O Visual Studio fornece um jeito bem conveniente de nomear o manipulador de eventos e definir o método do manipulador enquanto você está editando o XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em **&lt;Novo Manipulador de Eventos&gt;** na lista, o Microsoft Visual Studio sugerirá um nome de método com base no **x:Name** do elemento (ou nome do tipo), no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá no menu suspenso de preenchimento automático com a opção **&lt;Novo Manipulador de Eventos&gt;**. Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
 
-## Definindo um manipulador de eventos
+## <a name="defining-an-event-handler"></a>Definindo um manipulador de eventos
 
 Para objetos que são elementos da interface do usuário e foram declarados em XAML, o código de manipulador de eventos é definido na classe parcial que opera como o code-behind de uma página XAML. Manipuladores de eventos são métodos que você escreve como parte da classe parcial associada ao XAML. Esses manipuladores de eventos se baseiam nos delegados utilizados por um determinado evento. Os métodos de manipulador de eventos podem ser públicos ou particulares. O acesso particular funciona porque o manipulador e a instância criada no XAML são finalmente unidos pela geração de código. Em geral, recomendamos que você torne particulares os métodos de manipulador de eventos, na classe.
 
 **Observação**  Manipuladores de eventos para C++ não são definidos em classes parciais, mas declarados no cabeçalho como membros de uma classe particular. As ações de compilação para um projeto em C++ cuidam da geração do código que dá suporte ao sistema de tipos XAML e do modelo code-behind para C++.
 
-### O parâmetro *sender* e dados do evento
+### <a name="the-sender-parameter-and-event-data"></a>O parâmetro *sender* e dados do evento
 
 O manipulador que você escreve para o evento pode acessar dois valores que ficam disponíveis como entrada para cada caso em que o seu manipulador é invocado. O primeiro desses valores é *sender*, que é uma referência ao objeto ao qual o manipulador está conectado. O parâmetro *sender* é digitado como o tipo **Object** de base. Uma técnica comum consiste em converter *sender* em um tipo mais preciso. Essa técnica é útil se você pretende verificar ou alterar o estado no próprio objeto *sender*. Com base no design do seu aplicativo, você geralmente espera um tipo que seja seguro para converter *sender*, baseado no local onde o manipulador foi anexado ou em outras especificidades do design.
 
@@ -83,13 +90,13 @@ O segundo valor são dados de evento. Esse valor geralmente aparece em definiç�
 
 Para alguns eventos, os valores de propriedade específicos dos dados de evento são tão importantes quanto saber que o evento ocorreu. Isso é especialmente verdadeiro para os eventos de entrada. Para os eventos de ponteiro, a posição do ponteiro quando ocorreu o evento pode ser importante. Para eventos de teclado, todas as teclas possíveis acionam um evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) e um evento [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Para determinar a tecla que foi pressionada pelo usuário, acesse os [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) disponíveis para o manipulador de eventos. Para saber mais sobre como manipular eventos de entrada, consulte [Interações de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607) e [Identificar entrada do ponteiro](https://msdn.microsoft.com/library/windows/apps/mt404610). Eventos de entrada e cenários de entrada costumam incluir considerações adicionais e não são abordados neste tópico; por exemplo, captura de ponteiro para eventos de ponteiro e teclas modificadoras e códigos de teclas da plataforma para eventos de teclado.
 
-### Manipuladores de eventos que usam o padrão **async**
+### <a name="event-handlers-that-use-the-async-pattern"></a>Manipuladores de eventos que usam o padrão **async**
 
 Em alguns casos, você desejará usar APIs que usam um padrão **async** em um manipulador de eventos. Por exemplo, talvez você use [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) em [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para exibir um seletor de arquivos e interagir com ele. No entanto, muitas das APIs de seletor de arquivos são assíncronas. Elas precisam ser chamadas dentro de um escopo **async**/awaitable, e o compilador fará essa imposição. Portanto, o que você pode fazer é adicionar a palavra-chave **async** ao manipulador de eventos, de forma que ele agora seja **async** **void**. Agora, o seu manipulador de eventos pode fazer chamadas **async**/awaitable.
 
 Para conhecer um exemplo de manipulação de eventos de interação do usuário usando o padrão **async**, consulte [Acesso a arquivos e seletores](https://msdn.microsoft.com/library/windows/apps/jj655411) (parte da série [Criar seu primeiro aplicativo do Windows Runtime em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Veja também [Chamar APIs assíncronas em C).
 
-## Adicionando manipuladores de eventos em código
+## <a name="adding-event-handlers-in-code"></a>Adicionando manipuladores de eventos em código
 
 A XAML não é a única forma de atribui um manipulador de eventos a um objeto. Para adicionar manipuladores de eventos a qualquer objeto em código, inclusive objetos não utilizáveis em XAML, você pode usar a sintaxe específica a uma linguagem para adicionar manipuladores de eventos.
 
@@ -147,7 +154,7 @@ textBlock1->PointerEntered +=
 ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 ```
 
-### Removendo manipuladores de eventos em código
+### <a name="removing-event-handlers-in-code"></a>Removendo manipuladores de eventos em código
 
 Normalmente não é necessário remover manipuladores de eventos em código, mesmo se você adicioná-los em código. O comportamento de vida útil do objeto para a maioria dos objetos do Windows Runtime como páginas e controles destruirá os objetos quando forem desconectados da [**Janela**](https://msdn.microsoft.com/library/windows/apps/br209041) principal e de sua árvore visual, e todas as referências a delegados serão destruídas também. O .NET faz isso através de coleta de lixo, e o Tempo de Execução do Windows com C++/CX usa referências fracas por padrão.
 
@@ -175,7 +182,7 @@ Você também pode remover manipuladores para os casos em que o evento foi adici
 
 Se você precisar remover um manipulador de eventos em C++/CX, precisará de um token de registro, que deveria ter recebido do valor de retorno do registro de manipulador de eventos `+=`. Isso ocorre porque o valor usado para o lado direito do cancelamento de registro de `-=` na sintaxe C++/CX é o token, e não o nome do método. Para C++/CX, você não pode remover os manipuladores que foram adicionados como um atributo XAML porque o código gerado C++/CX não salva um token.
 
-## Eventos roteados
+## <a name="routed-events"></a>Eventos roteados
 
 O Windows Runtime com C#, Microsoft Visual Basic ou C++/CX aceita o conceito de um evento roteado para um conjunto de eventos presentes na maioria dos elementos da interface do usuário. Esses eventos são para cenários de entrada e interação do usuário e são implementados na classe base [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Veja a seguir uma lista de eventos de entrada que são eventos roteados:
 
@@ -211,7 +218,7 @@ Se conhecer tecnologias da Web, como DHTML (HTML Dinâmico) ou HTML5, talvez voc
 
 Quando um evento roteado se propaga pela rota de evento, todos os manipuladores de eventos anexados acessam uma instância compartilhada de dados de evento. Portanto, se houver dados de evento que possam ser gravados por um manipulador, todas as alterações feitas nos dados de evento serão passadas para o próximo manipulador e poderão não representar mais os dados de evento originais do evento. Quando um evento apresenta um comportamento de evento roteado, a documentação de referência inclui comentários e outras anotações sobre o comportamento roteado.
 
-### A propriedade **OriginalSource** de **RoutedEventArgs**
+### <a name="the-originalsource-property-of-routedeventargs"></a>A propriedade **OriginalSource** de **RoutedEventArgs**
 
 Quando um evento se propaga uma rota de eventos acima, *sender* não é mais o mesmo objeto que ergueu o evento. Em vez disso, *sender* é o objeto no qual o manipulador que está sendo invocado está conectado.
 
@@ -219,7 +226,7 @@ Em alguns casos, *sender* não é o objeto de interesse e, em vez disso, você e
 
 **Dica**  A propagação de eventos de entrada é especialmente útil na criação de um controle modelo. Qualquer controle que tenha um modelo pode ter um novo modelo aplicado pelo seu consumidor. O consumidor que está tentando recriar um modelo de trabalho pode eliminar inadvertidamente uma parte da manipulação de eventos declarada no modelo padrão. Você ainda pode fornecer manipulação de eventos em nível de controle anexando manipuladores como parte da substituição de [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) na definição de classe. Em seguida, pode apanhar os eventos de entrada propagados rumo à raiz do controle na instanciação.
 
-### A propriedade **Handled**
+### <a name="the-handled-property"></a>A propriedade **Handled**
 
 Várias classes de dados de eventos para eventos roteados específicos contêm uma propriedade chamada **Handled**. Para ver exemplos, confira [**PointerRoutedEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/hh943079), [**KeyRoutedEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) e [**DragEventArgs.Handled**](https://msdn.microsoft.com/library/windows/apps/br242375). Em todos os casos, **Handled** é uma propriedade booliana configurável.
 
@@ -227,21 +234,21 @@ A definição da propriedade **Handled** como **true** influencia o comportament
 
 Nem todos os eventos roteados podem cancelar um rota dessa maneira, e você pode deduzir isso porque eles não terão uma propriedade **Handled**. Por exemplo, [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) e [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) são propagados, mas isso sempre acontece em direção à raiz, e suas classes de dados de eventos não têm uma propriedade **Handled** capaz de influenciar esse comportamento.
 
-##  Manipuladores de eventos de entrada em controles
+##  <a name="input-event-handlers-in-controls"></a>Manipuladores de eventos de entrada em controles
 
 Às vezes, controles específicos do Windows Runtime usam o conceito **Handled** internamente para eventos de entrada. Isso pode dar a impressão de que um evento de entrada nunca ocorre, pois o código do usuário não pode manipulá-lo. Por exemplo, a classe [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) inclui lógica que manipula deliberadamente o evento de entrada geral [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Isso ocorre porque botões acionam um evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) que é iniciado por entrada do ponteiro pressionado, assim como por outros modos de entrada como teclas de manipulação, tais como a tecla Enter, que podem invocar o botão quando são focadas. Para os objetivos do design de classe **Button**, o evento de dados brutos é manipulado conceitualmente. Os consumidores da classe, como seu código de usuário, podem, em vez disso, interagir com o evento relevante de controle **Click**. Tópicos para classes de controle específicas da API do Windows Runtime costumam registrar o comportamento de manipulação de eventos implementado pela classe. Em alguns casos, é possível alterar o comportamento por meio da substituição dos métodos **On***Event*. Por exemplo, você pode alterar como a sua classe derivada [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) reage à entrada de tecla substituindo [**Control.OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982).
 
-##  Registrando manipuladores para eventos roteados já manipulados
+##  <a name="registering-handlers-for-already-handled-routed-events"></a>Registrando manipuladores para eventos roteados já manipulados
 
 Nós explicamos antes que a definição de **Handled** como **true** impede a chamada da maioria dos manipuladores. Mas o método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) oferece uma técnica para você anexar um manipulador que seja sempre invocado para a rota, mesmo que algum outro manipulador já tenha definido **Handled** como **true** nos dados compartilhados do evento. Essa técnica é útil quando você usa um controle que manipulou o evento na sua composição interna ou para a lógica específica do controle, mas você ainda quer responder a ele em uma instância de controle ou na interface do usuário do seu aplicativo. Porém, essa técnica deve ser usada com cuidado, pois pode opor-se ao propósito de **Handled** e possivelmente violar as interações pretendidas de um controle.
 
 Apenas os eventos roteados que têm um identificador de evento roteado correspondente podem usar a técnica de manipulação de eventos [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399), pois o identificador é uma entrada obrigatória do método **AddHandler**. Veja a documentação de referência de [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para obter uma lista de eventos que têm identificadores de eventos roteados disponíveis. Para a maior parte, essa é a mesma lista dos eventos roteados que mostramos anteriormente. A exceção é que os dois últimos na lista, [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) e [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943), não têm um identificador de eventos roteados, por isso você não pode usar **AddHandler** para eles.
 
-## Eventos roteados fora da árvore de objetos
+## <a name="routed-events-outside-the-visual-tree"></a>Eventos roteados fora da árvore de objetos
 
 Certos objetos participam de uma relação com a árvore visual primária que é conceitualmente semelhante a possuir uma sobreposição sobre os elementos visuais principais. Esses objetos não são parte das relações entre pai e filho comuns que conectam todos os três elementos à raiz visual. Esse é o caso para qualquer [**Popup**](https://msdn.microsoft.com/library/windows/apps/br227842) ou [**ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608) exibido. Se quiser manipular eventos roteados em um **Popup** ou em uma **ToolTip**, posicione os manipuladores sobre elementos específicos da interface do usuário que estão no **Popup** ou na **ToolTip**, e não nos elementos **Popup** ou **ToolTip**. Não dependa do roteamento dentro de qualquer composição executada para o conteúdo do **Popup** ou da **ToolTip**. Isso porque o roteamento de eventos para eventos roteados funciona apenas ao longo da árvore visual principal. Um **Popup** ou uma **ToolTip** não é considerado um pai de elementos subsidiários da interface do usuário e nunca recebe o evento roteado, mesmo que esteja tentando usar algo como a tela de fundo padrão de **Popup** como a área de captura de eventos de entrada.
 
-## Teste de clique e eventos de entrada
+## <a name="hit-testing-and-input-events"></a>Teste de clique e eventos de entrada
 
 Determinar se um elemento está visível para a entrada por mouse, toque e de caneta é chamado de *teste de clique*. Para ações de toque e também para eventos específicos de interação ou de manipulação resultantes de uma ação de toque, é preciso que o elemento esteja visível para teste de clique, para ser a origem do evento e acionar o evento associado à ação. Caso contrário, a ação passa pelo elemento em direção a qualquer elemento subjacente ou aos elementos pai na árvore visual que interage com essa entrada. Há vários fatores que influenciam o teste de clique, mas é possível determinar se um determinado elemento pode acionar eventos de entrada verificando sua propriedade [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933). Esta propriedade retorna **true** apenas quando o elemento segue estes critérios:
 
@@ -259,11 +266,11 @@ A maioria das classes [**Panel**](https://msdn.microsoft.com/library/windows/app
 
 Você pode determinar quais elementos estão localizados na mesma posição de um evento de entrada do usuário, independentemente de se os elementos são passíveis de teste de hit. Para fazer isso, chame o método [**FindElementsInHostCoordinates**](https://msdn.microsoft.com/library/windows/apps/br243039). Como o nome sugere, esse método localiza os elementos em um local em relação a um elemento host especificado. Entretanto, transformações aplicadas e mudanças de layout podem ajustar o sistema de coordenadas relativas de um elemento e, portanto, influenciar quais elementos são encontrados em um determinado local.
 
-## Comando
+## <a name="commanding"></a>Comando
 
 Um pequeno número de elementos da interface do usuário dão suporte a *comandos*. Comandos usam eventos roteados relacionados a entrada na sua implementação subjacente e permite o processamento de entrada relacionada da interface do usuário (uma determinada ação do ponteiro, uma tecla de aceleração específica) invocando um único manipulador de comandos. Se comandos estiverem disponíveis para um elemento da interface do usuário, considere usar as respectivas APIs de comando em vez de qualquer evento de entrada à parte. Em geral, você usa uma referência **Binding** em propriedades de uma classe que define o modelo de exibição para dados. As propriedades mantêm comandos nomeados que implementam o padrão de comandos **ICommand** específico de cada linguagem. Para obter mais informações, consulte [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740).
 
-## Eventos personalizados no Windows Runtime
+## <a name="custom-events-in-the-windows-runtime"></a>Eventos personalizados no Windows Runtime
 
 Para fins de definir eventos personalizados, o modo de adicionar o evento e o que isso significa para seu design de classe dependem bastante da linguagem de programação sendo usada.
 
@@ -279,7 +286,7 @@ Você não pode declarar um evento roteado personalizado para o Tempo de Execuç
 
 A definição de um evento personalizado normalmente é feita como parte do exercício de definir um controle personalizado. É um padrão comum ter uma propriedade de dependência que tem um retorno de chamada de propriedades alteradas, e também definir um evento personalizado que é acionado pelo retorno de chamada de propriedades de dependência em alguns ou todos os casos. Os consumidores do seu controle não têm acesso ao retorno de chamada de propriedades alteradas que você definiu, mas ter um evento de notificação disponível é o próximo passo interessante. Para saber mais, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral da XAML](xaml-overview.md)
 * [Guia de início rápido: entrada por toque](https://msdn.microsoft.com/library/windows/apps/xaml/hh465387)
@@ -288,10 +295,5 @@ A definição de um evento personalizado normalmente é feita como parte do exer
 * [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

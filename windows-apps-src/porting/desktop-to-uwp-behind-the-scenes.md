@@ -1,28 +1,36 @@
 ---
 author: awkoren
-Description: "Este artigo se aprofunda em como a ponte da área de trabalho para UWP funciona nos bastidores."
-title: "Nos bastidores da ponte da área de trabalho"
+Description: Este artigo se aprofunda em como a Ponte de Desktop para UWP funciona nos bastidores.
+title: Nos bastidores da Ponte de Desktop
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: c261f40734ab40475ca3a8e0b7c3bea7b64afacd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e9a26e201d5059a0e5f7d41f6f11afbb41549596
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Nos bastidores da ponte da área de trabalho
+# <a name="behind-the-scenes-of-the-desktop-bridge"></a>Nos bastidores da Ponte de Desktop
 
-Este artigo se aprofunda em como a ponte da área de trabalho para UWP funciona nos bastidores.
+Este artigo se aprofunda em como a Ponte de Desktop para UWP funciona nos bastidores.
 
 Uma das metas principais da ponte da área de trabalho para UWP é separar o estado do aplicativo do estado do sistema o máximo possível, mantendo a compatibilidade com outros aplicativos. A ponte faz isso colocando o aplicativo dentro de um pacote da Plataforma Universal do Windows (UWP) e, em seguida, detectando e redirecionando algumas alterações feitas no sistema de arquivos e no Registro em tempo de execução.
 
 Os pacotes de aplicativos convertidos são aplicativos apenas de área de trabalho, totalmente confiáveis e que não são virtualizados nem estão em área restrita. Isso permite que eles interajam com outros aplicativos da mesma maneira que aplicativos da área de trabalho clássicos.
 
-## Instalação 
+## <a name="installation"></a>Instalação 
 
 Os pacotes de aplicativos são instalados em *C:\Program Files\WindowsApps\package_name*, com o executável intitulado *app_name.exe*. Cada pasta de pacote contém um manifesto (chamado AppxManifest.xml) que contém um namespace XML especial para aplicativos convertidos. Dentro desse arquivo de manifesto está um elemento ```<EntryPoint>```, que faz referência ao aplicativo de confiança total. Quando é iniciado, esse aplicativo não é executado dentro de um contêiner de aplicativo, e sim executado como o usuário normalmente faria.
 
 Depois da implantação, os arquivos do pacote serão marcados como somente leitura e totalmente bloqueados pelo sistema operacional. O Windows evitará a inicialização dos aplicativos se esses arquivos forem adulterados. 
 
-## Sistema de arquivos
+## <a name="file-system"></a>Sistema de arquivos
 
 Para conter o estado do aplicativo, a ponte tenta capturar as alterações que o aplicativo faz em AppData. Todas as gravações feitas na pasta AppData do usuário (por exemplo, *C:\Users\user_name\AppData*), inclusive criar, excluir e atualizar, são copiadas na gravação para um local privado por usuário e por aplicativo. Isso gera a ilusão de que o aplicativo convertido está editando a AppData real quando está, na verdade, modificando uma cópia particular. Redirecionando gravações dessa maneira, o sistema pode acompanhar todas as modificações de arquivo feitas pelo aplicativo. Isso permitirá que o sistema limpe esses arquivos quando o aplicativo for desinstalado, o que reduz o "rot" do sistema e proporciona uma experiência de remoção de aplicativo melhor para o usuário. 
 
@@ -30,7 +38,7 @@ Além de redirecionar AppData, a ponte também mescla dinamicamente pastas conhe
 
 As gravações em arquivos/pastas no pacote do aplicativo convertido não são permitidas. As gravações em arquivos e pastas que não fazem parte do pacote são ignoradas pela ponte e são permitidas desde que o usuário tenha permissão.
 
-### Operações comuns
+### <a name="common-operations"></a>Operações comuns
 
 Esta tabela de referência curta mostra operações comuns do sistema de arquivos e como a ponte as manipula. 
 
@@ -41,7 +49,7 @@ Gravar em AppData | Copiar gravação por usuário, local de cada aplicativo. | 
 Gravar no pacote | Não permitido. O pacote é somente leitura. | Gravações em *C:\Program Files\WindowsApps\package_name* não são permitidas.
 Gravações fora do pacote | Ignorado pela ponte. Permitido se o usuário tiver permissões. | Uma gravação em *C:\Windows\System32\foo.dll* será permitida se o pacote não contiver *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\foo.dll* e o usuário tiver permissões.
 
-### Locais dos pacotes VFS
+### <a name="packaged-vfs-locations"></a>Locais dos pacotes VFS
 
 A tabela a seguir mostra onde os arquivos fornecidos como parte do pacote são sobrepostos no sistema para o aplicativo. O aplicativo perceberá que esses arquivos estão em locais do sistema listado quando, na verdade, estão nos locais redirecionados dentro de *C:\Program Files\WindowsApps\package_name\VFS*. Os locais de FOLDERID são das constantes [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx).
 
@@ -62,7 +70,7 @@ FOLDERID_System\driverstore | AppVSystem32Driverstore | x86, amd64
 FOLDERID_System\logfiles | AppVSystem32Logfiles | x86, amd64 
 FOLDERID_System\spool | AppVSystem32Spool | x86, amd64 
 
-## Registro
+## <a name="registry"></a>Registro
 
 A ponte manipula o Registro de maneira semelhante ao sistema de arquivos. Os pacotes de aplicativos convertidos contêm um arquivo registry.dat, que funciona como o equivalente lógico de *HKLM\Software* no Registro real. Em tempo de execução, esse Registro virtual mescla o conteúdo desse hive ao hive do sistema nativo para oferecer uma visão singular de ambos. Por exemplo, se registry.dat contiver uma única chave "Foo", uma leitura de *HKLM\Software* em tempo de execução também conterá aparentemente "Foo" (além de todas as chaves do sistema nativo). 
 
@@ -72,7 +80,7 @@ Todas as gravações em HKCU são cópias em gravações para um local particula
 
 Todas as gravações são mantidas durante a atualização do pacote e só são excluídas quando o aplicativo é totalmente removido. 
 
-### Operações comuns
+### <a name="common-operations"></a>Operações comuns
 
 Esta tabela de referência curta mostra operações comuns do Registro e como a ponte as manipula. 
 
@@ -83,12 +91,7 @@ Gravações em HKCU | Copiar gravação por usuário, local particular de cada a
 Grava no pacote. | Não permitido. O pacote é somente leitura. | As gravações em *HKLM\Software* não serão permitidas, se um par chave/valor correspondente existir no hive do pacote.
 Gravações fora do pacote | Ignorado pela ponte. Permitido se o usuário tiver permissões. | As gravações em *HKLM\Software* são permitidas desde que um par chave/valor correspondente não exista no hive do pacote e o usuário tenha permissões de acesso corretas.
 
-## Desinstalação 
+## <a name="uninstallation"></a>Desinstalação 
 
 Quando um pacote é desinstalado pelo usuário, todos os arquivos e pastas localizados em *C:\Program Files\WindowsApps\package_name* são removidos, bem como todas as gravações redirecionadas para AppData ou do Registro que foram capturadas pela ponte. 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

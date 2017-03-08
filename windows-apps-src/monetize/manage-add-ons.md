@@ -1,19 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
-description: "Use estes métodos na API de envio da Windows Store para gerenciar complementos dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
+description: "Use estes métodos na API de envio da Windows Store para gerenciar complementos dos apps que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar complementos usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, complemento, produto no app, IAP
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 058d11938dd6efc961da58a9d937be76beac5978
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 55a6b548246e801c9fcc0392265263123f24de00
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="manage-add-ons-using-the-windows-store-submission-api"></a>Gerenciar complementos usando a API de envio da Windows Store
 
-Use os métodos a seguir na API de envio da Windows Store para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs) para os aplicativos. Para obter uma introdução à API de envio da Windows Store, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio da Windows Store para gerenciar complementos (também conhecidos como produtos no app ou IAPs) para os apps. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada. Esses métodos só podem ser usados para obter, criar ou excluir os complementos. Para criar envios para complementos, consulte os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
+>**Observação**&nbsp;&nbsp;Estes métodos podem ser usados somente para contas do Centro de Desenvolvimento do Windows com permissão para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
+
+Esses métodos só podem ser usados para obter, criar ou excluir os complementos. Para criar envios para complementos, consulte os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
 <table>
 <colgroup>
@@ -32,7 +41,7 @@ Use os métodos a seguir na API de envio da Windows Store para gerenciar complem
 <tr>
 <td align="left">GET</td>
 <td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts```</td>
-<td align="left">[Obter todos os complementos para os aplicativos](get-all-add-ons.md)</td>
+<td align="left">[Obter todos os complementos para os apps](get-all-add-ons.md)</td>
 </tr>
 <tr>
 <td align="left">GET</td>
@@ -94,7 +103,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor      | Tipo   | Descrição        |
 |------------|--------|--------------|
-| applications      | matriz  | Uma matriz que contém um [recurso de aplicativo](#application-object) que representa o aplicativo ao qual esse complemento está associado. Somente um item é compatível nessa matriz.  |
+| applications      | matriz  | Uma matriz que contém um [recurso de app](#application-object) que representa o app ao qual esse complemento está associado. Somente um item é compatível nessa matriz.  |
 | id | cadeia de caracteres  | A ID da Loja do complemento. Esse valor é fornecido pela Loja. Uma ID da Loja de exemplo é 9NBLGGH4TNMP.  |
 | productId | string  | A ID do produto do complemento. Essa é a ID que foi fornecida pelo desenvolvedor quando o complemento foi criado. Para obter mais informações, consulte [Definir seu tipo de produto e a ID do produto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
 | productType | string  | O tipo de produto do complemento. Há suporte para os seguintes valores: **Durável** e **Consumíveis**.  |
@@ -102,9 +111,9 @@ Esse recurso tem os valores a seguir.
 | pendingInAppProductSubmission        | objeto  |  Um [recurso de envio](#submission-object) que fornece informações sobre o envio pendente atual para o complemento.  |   |
 
 <span id="application-object" />
-### <a name="application-resource"></a>Recurso de aplicativo
+### <a name="application-resource"></a>Recurso de app
 
-Esse recurso descreve o aplicativo ao qual um complemento está associado. O exemplo a seguir demonstra o formato desse recurso.
+Esse recurso descreve o app ao qual um complemento está associado. O exemplo a seguir demonstra o formato desse recurso.
 
 ```json
 {
@@ -124,8 +133,8 @@ Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|-----------|
-| value            | object  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Loja do aplicativo. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do aplicativo.</li></ul>   |
-| totalCount   | int  | O número de objetos de aplicativo na matriz *applications* do corpo da resposta.                                                                                                                                                 |
+| value            | object  |  Um objeto que contém os seguintes valores: <br/><br/> <ul><li>*id*. A ID da Loja do app. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de app](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar os dados completos do app.</li></ul>   |
+| totalCount   | int  | O número de objetos de app na matriz *applications* do corpo da resposta.                                                                                                                                                 |
 
 <span id="submission-object" />
 ### <a name="submission-resource"></a>Recurso de envio
@@ -157,9 +166,4 @@ Este recurso tem os seguintes valores.
 * [Obter um complemento](get-an-add-on.md)
 * [Criar um complemento](create-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

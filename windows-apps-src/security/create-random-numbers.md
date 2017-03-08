@@ -1,20 +1,27 @@
 ---
 title: "Criar números aleatórios"
-description: "Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um aplicativo UWP (Plataforma Universal do Windows)."
+description: "Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um app UWP (Plataforma Universal do Windows)."
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 71ac4a6bffe5004a044ee6feba21eb44762ab781
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 362bb264320fcf1256559543ce4607abd50260ed
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar números aleatórios
+# <a name="create-random-numbers"></a>Criar números aleatórios
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um aplicativo UWP (Plataforma Universal do Windows).
+Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um app UWP (Plataforma Universal do Windows).
 
 ```cs
 public string GenerateRandomData()
@@ -38,8 +45,3 @@ public uint GenerateRandomNumber()
     return random;
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

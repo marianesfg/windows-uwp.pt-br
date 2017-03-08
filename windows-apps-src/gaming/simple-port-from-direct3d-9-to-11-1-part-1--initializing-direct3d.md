@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: Inicializar o Direct3D 11.
-description: "Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca."
+description: "Mostra como converter o código de inicialização do Direct3D 9 para o Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 723321983418a714ec375db99a0df7f8455c0464
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Inicializar o Direct3D 11.
+# <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11.
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: 723321983418a714ec375db99a0df7f8455c0464
 
 Consulte como converter o código de inicialização do Direct3D 9 para usá-lo no Direct3D 11. Saiba também como obter identificadores para o dispositivo Direct3D e o contexto de dispositivo e como usar DXGI para configurar uma cadeia de troca. Parte 1 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Inicializar o dispositivo Direct3D
+## <a name="initialize-the-direct3d-device"></a>Inicializar o dispositivo Direct3D
 
 
 No Direct3D 9, criamos um identificador para o dispositivo Direct3D chamando [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313). Começamos pela obtenção de um ponteiro para [**IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300) e especificamos alguns parâmetros para controlar a configuração do dispositivo Direct3D e da cadeia de troca. Antes disso, chamamos [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877) para garantir que não estávamos solicitando ao dispositivo algo que não pudesse fazer.
@@ -115,7 +122,7 @@ device.As(&m_d3dDevice);
 context.As(&m_d3dContext);
 ```
 
-## Criar uma cadeia de troca
+## <a name="create-a-swap-chain"></a>Criar uma cadeia de troca
 
 
 O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elementos gráficos do DirectX). A interface DXGI nos permite (por exemplo) controlar a configuração da cadeia de permuta e configurar dispositivos compartilhados. Nesta etapa da inicialização do Direct3D, vamos usar DXGI para criar uma cadeia de permuta. Como criamos o dispositivo, podemos seguir uma cadeia da interface até o adaptador DXGI.
@@ -178,7 +185,7 @@ dxgiDevice->SetMaximumFrameLatency(1);
 
 Agora já podemos configurar o buffer de fundo para renderização.
 
-## Configure-o como destino de renderização.
+## <a name="configure-the-back-buffer-as-a-render-target"></a>Configure-o como destino de renderização.
 
 
 Primeiro, precisamos obter um identificador para esse buffer (Observe que o buffer de fundo pertence à cadeia de troca DXGI; no DirectX 9 ele pertencia ao dispositivo Direct3D.) Em seguida, pediremos que o dispositivo Direct3D use-o como o destino de renderização, criando um destino de renderização *exibição* usando o buffer de fundo.
@@ -227,10 +234,5 @@ Agora que temos um identificador de dispositivo e um destino de renderização e
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,29 +3,36 @@ author: mcleanbyron
 ms.assetid: 96C090C1-88F8-42E7-AED1-AFA9031E952B
 description: "Use este método na API de envio da Windows Store para excluir um envio de aplicativo existente."
 title: Excluir um envio de aplicativo usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, envio de aplicativo, excluir
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 4109414e684fc38f461f9e97af38839cb83330fc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fe85515d9baaaf0d36cdcdce12a0e81561bb6787
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Excluir um envio de aplicativo usando a API de envio da Windows Store
+# <a name="delete-an-app-submission-using-the-windows-store-submission-api"></a>Excluir um envio de aplicativo usando a API de envio da Windows Store
 
 
 
 
 Use este método na API de envio da Windows Store para excluir um envio de aplicativo existente.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
-* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para o envio da API da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
+* Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows as quais foram dadas permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
+>**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
 
@@ -36,7 +43,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -53,13 +60,13 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
-Não fornece um corpo da solicitação para esse método.
+Não forneça um corpo da solicitação para esse método.
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como excluir um envio de aplicativo.
 
@@ -68,11 +75,11 @@ DELETE https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -85,7 +92,7 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 <span/>
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter um envio de aplicativo](get-an-app-submission.md)
@@ -93,9 +100,4 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

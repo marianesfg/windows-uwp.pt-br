@@ -3,19 +3,26 @@ author: jwmsft
 description: "Identifica de forma exclusiva os elementos que são criados e usados como referência de recursos e que existam em um ResourceDictionary."
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:Key
+# <a name="xkey-attribute"></a>atributo x:Key
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica de forma exclusiva os elementos que são criados e referenciados como origens e que existem em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <ResourceDictionary>
@@ -23,7 +30,7 @@ Identifica de forma exclusiva os elementos que são criados e referenciados como
 </ResourceDictionary>
 ```
 
-## Uso do atributo XAML (**ResourceDictionary** implícito)
+## <a name="xaml-attribute-usage-implicit-resourcedictionary"></a>Uso do atributo XAML (**ResourceDictionary** implícito)
 
 ``` syntax
 <object.Resources>
@@ -31,14 +38,14 @@ Identifica de forma exclusiva os elementos que são criados e referenciados como
 </object.Resources>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | objeto | Qualquer objeto compartilhável. Veja [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273). |
 | stringKeyValue | Uma cadeia de caracteres verdadeira usada como chave, que deve estar de acordo com a gramática _XamlName_>. Veja a seção "Gramática XamlName" mais adiante. | 
 
-##  Gramática XamlName
+##  <a name="xamlname-grammar"></a>Gramática XamlName
 
 Veja a seguir a gramática normativa de uma cadeia de caracteres usada como chave na implementação XAML da Plataforma Universal do Windows (UWP):
 
@@ -55,7 +62,7 @@ CombiningCharacter::= none
 -   Não há suporte à faixa de caracteres Unicode.
 -   Um nome não pode começar com um dígito.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Geralmente, os elementos filhos de um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) incluem um atributo **x:Key** que especifica um valor de chave exclusivo nesse dicionário. A exclusividade da chave é fiscalizada em tempo de carregamento pelo processador XAML. Os valores **x:Key** que não são exclusivos geram exceções de análise de XAML. Se for solicitado por [Extensão de marcação {StaticResource}](staticresource-markup-extension.md), uma chave não resolvida também vai gerar exceções de análise de XAML.
 
@@ -66,10 +73,5 @@ Na sintaxe mostrada, observe que o objeto [**ResourceDictionary**](https://msdn.
 O código equivalente à especificação de **x:Key** é qualquer operação que use uma chave com o [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) subjacente. Por exemplo, um **x:Key** aplicado na marcação de um recurso equivale ao valor do parâmetro *key* de **Insert** quando você adiciona o recurso a um **ResourceDictionary**.
 
 Um item no dicionário de recursos pode omitir um valor para **x:Key** quando for um [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) ou [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) de destino; em cada um desses casos, a chave implícita do item de recurso é o valor **TargetType** interpretado como uma cadeia de caracteres. Para saber mais, veja [Guia de início rápido: estilo de controles](https://msdn.microsoft.com/library/windows/apps/hh465498) e [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

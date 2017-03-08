@@ -1,33 +1,40 @@
 ---
 author: jwmsft
-description: "Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary."
+description: "Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Os recursos são definidos em um ResourceDictionary, e o uso de StaticResource faz referência à chave desse recurso no ResourceDictionary."
 title: "Extensão de marcação StaticResource"
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 48cdfd86705ff29e4ffc7e9f69de2f01e75f7f2a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 539bc6b0a43491c9ef75701bc574c7e31d2c02e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {StaticResource}
+# <a name="staticresource-markup-extension"></a>Extensão de marcação {StaticResource}
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um valor para qualquer atributo XAML analisando uma referência a um recurso já definido. Recursos são definidos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), e o uso de **StaticResource** faz referência à chave desse recurso no **ResourceDictionary**.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object property="{StaticResource key}" .../>
 ```
 
-## Valores XAML
+## <a name="xaml-values"></a>Valores XAML
 
 | Termo | Descrição |
 |------|-------------|
 | chave | A chave para o recurso solicitado. Essa chave é inicialmente atribuída pelo [ **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Uma chave de recurso pode ser qualquer cadeia de caracteres definida na gramática de XamlName. |
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 **StaticResource** é uma técnica para obtenção de valores referentes a um atributo XAML definidos em outro lugar em um dicionário de recursos XAML. Os valores podem ser colocados em um dicionário de recursos porque sua finalidade de uso é a de serem compartilhados por diversos valores de propriedades, ou porque um dicionário de recursos XAML é usado como uma técnica de empacotamento ou fatoramento XAML. Um exemplo de técnica de empacotamento XAML é o dicionário temático de um controle. Outro exemplo são os dicionários de recursos mesclados usados para fallback de recursos.
 
@@ -46,7 +53,7 @@ A [extensão de marcação {ThemeResource}](themeresource-markup-extension.md) �
 
 **StaticResource** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "\{" e "\}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
 
-### Exemplo de uso {StaticResource}
+### <a name="an-example-staticresource-usage"></a>Exemplo de uso {StaticResource}
 
 Este exemplo de XAML foi obtido do [exemplo de vinculação de dados XAML](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
@@ -71,22 +78,17 @@ O recurso é solicitado apenas um pouco mais no XAML, em que você vê `{StaticR
 
 Observe como o uso da extensão de marcação {StaticResource} está definindo uma propriedade de outra extensão de marcação [{Binding}](binding-markup-extension.md), por isso há dois usos de extensão de marcação aninhada aqui. A interna é avaliada primeiro, por isso o recurso é obtido primeiro e pode ser usado como um valor. Este mesmo exemplo também é mostrado na extensão de marcação {Binding}.
 
-## Suporte de ferramentas de tempo de design para a extensão de marcação **{StaticResource}**
+## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>Suporte de ferramentas de tempo de design para a extensão de marcação **{StaticResource}**
 
 O Microsoft Visual Studio 2013 pode incluir valores-chave possíveis nos menus suspensos do Microsoft IntelliSense quando você usa a extensão de marcação **{StaticResource}** em uma página XAML. Por exemplo, assim que você digita "{StaticResource", as chaves de recurso do escopo de pesquisa são exibidas nos menus suspensos IntelliSense. Além dos recursos típicos, você estaria no nível da página ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) e no nível do aplicativo ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)), e também veria os [recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274), e recursos de qualquer extensão que seu projeto esteja usando.
 
 Como uma chave de recurso existe como parte de qualquer uso de **{StaticResource}**, o recurso **Ir para Definição** (F12) pode resolver esse recurso e mostrar a você o dicionário em que ele está definido. Para os recursos de tema, ele vai para generic.xaml do tempo de design.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo x:Key](x-key-attribute.md)
 * [extensão de marcação {ThemeResource}](themeresource-markup-extension.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

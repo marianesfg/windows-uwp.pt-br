@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
 description: "Obtenha as informações gerais para desenvolvedor sobre as bibliotecas do Microsoft Advertising no Microsoft Store Services SDK."
 title: "Informações para desenvolvedores sobre as bibliotecas do Microsoft Advertising"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44b5266a104b2f706537cea2167b395487f275d2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informações para desenvolvedores sobre as bibliotecas do Microsoft Advertising
+# <a name="developer-information-about-the-microsoft-advertising-libraries"></a>Informações para desenvolvedores sobre as bibliotecas do Microsoft Advertising
 
 
 
@@ -18,7 +24,7 @@ ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
 Os tópicos nesta seção fornecem informações úteis para desenvolvedores sobre as bibliotecas do Microsoft advertising no Microsoft Store Services SDK (para aplicativos UWP) e o Microsoft Advertising SDK para Windows e Windows Phone 8.x (para aplicativos do Windows 8.1 e Windows Phone 8.x).
 
 
-## Nesta seção
+## <a name="in-this-section"></a>Nesta seção
 
 | Tópico                                                                                                       | Descrição                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -35,9 +41,4 @@ Os tópicos nesta seção fornecem informações úteis para desenvolvedores sob
  
 
  
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

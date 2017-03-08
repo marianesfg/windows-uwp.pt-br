@@ -3,16 +3,23 @@ author: mtoepke
 title: Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
 description: "Caso esteja fazendo a portabilidade de um jogo das plataformas iOS ou Android, você provavelmente investiu bastante no OpenGL ES 2.0."
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, opengl, direct3d
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 84f13d6507d141c468fcfd6a2bcf75f5419d65da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
+# <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -26,7 +33,7 @@ Geralmente, a maioria dos esforços de portabilidade envolve a transição inici
 
 Consulte algumas coisas a se prestar atenção ao fazer a portabilidade dos gráficos do OpenGL ES 2.0 para o Direct3D 11.
 
-## Observações sobre provedores específicos do OpenGL ES 2.0
+## <a name="notes-on-specific-opengl-es-20-providers"></a>Observações sobre provedores específicos do OpenGL ES 2.0
 
 
 Os tópicos sobre portabilidade nesta seção fazem referência à implementação de Windows da especificação OpenGL ES 2.0, criada pelo Khronos Group. Todos os exemplos de códigos do OpenGL ES 2.0 foram desenvolvidos usando o Visual Studio 2012 e a sintaxe C básica do Windows. Se você estiver mudando de uma base de código Objective-C (iOS) ou Java (Android), lembre-se de que os exemplos de código OpenGL ES 2.0 fornecidos talvez não usem sintaxe ou parâmetros semelhantes de chamada a APIs. Estas instruções foram elaboradas de modo a independerem de plataformas na medida do possível.
@@ -35,19 +42,19 @@ Esta documentação usa apenas a as APIs da especificação 2.0 do código e da 
 
 Os exemplos de Direct3D 11 destes tópicos usam o Microsoft Windows C++ com CX (extensões de componentes). Para saber mais sobre essa versão da sintaxe C++, leia os tópicos sobre [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx), [extensões de componentes para plataformas de Tempo de Execução](https://msdn.microsoft.com/library/windows/apps/xey702bw.aspx) e [referência rápida (C++\\CX)](https://msdn.microsoft.com/library/windows/apps/br212455.aspx).
 
-## Compreenda os requisitos e recursos de hardware
+## <a name="understand-your-hardware-requirements-and-resources"></a>Compreenda os requisitos e recursos de hardware
 
 
 O conjunto de recursos de processamento gráfico compatível com o OpenGL ES 2.0 corresponde, em linhas gerais, aos recursos fornecidos no Direct3D 9.1. Se quiser aproveitar os recursos mais avançados fornecidos no Direct3D 11, leia a documentação do [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) ao planejar a portabilidade ou os tópicos de [portabilidade do DirectX 9 para a UWP (Plataforma Universal do Windows)](porting-your-directx-9-game-to-windows-store.md) ao concluir o trabalho inicial.
 
-Para facilitar o trabalho de portabilidade inicial, comece com um modelo de Direct3D do Visual Studio. Ele fornece um renderizador básico já configurado para você e é compatível com recursos de aplicativos UWP, como a recriação de recursos depois de alterações em janelas e níveis de recursos do Direct3D.
+Para facilitar o trabalho de portabilidade inicial, comece com um modelo de Direct3D do Visual Studio. Ele fornece um renderizador básico já configurado para você e é compatível com recursos de apps UWP, como a recriação de recursos depois de alterações em janelas e níveis de recursos do Direct3D.
 
-## Compreenda os níveis de recursos do Direct3D
+## <a name="understand-direct3d-feature-levels"></a>Compreenda os níveis de recursos do Direct3D
 
 
 O Direct3D 11 oferece suporte a "níveis de recursos" de hardware, do 9\_1 (Direct3D 9.1) ao 11\_1. Esses níveis indicam a disponibilidade de certos recursos gráficos. Normalmente, a maioria das plataformas do OpenGL ES 2.0 oferece suporte ao conjunto de recursos do Direct3D 9.1 (nível 9\_1).
 
-## Confira as APIs e os recursos gráficos do DirectX
+## <a name="review-directx-graphics-features-and-apis"></a>Confira as APIs e os recursos gráficos do DirectX
 
 
 | Família de APIs                                                | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -61,10 +68,10 @@ O Direct3D 11 oferece suporte a "níveis de recursos" de hardware, do 9\_1 (Dire
 
  
 
-## Confira as APIs e a biblioteca de modelos do Windows Runtime
+## <a name="review-the-windows-runtime-apis-and-template-library"></a>Confira as APIs e a biblioteca de modelos do Windows Runtime
 
 
-As APIs do Windows Runtime fornecem a infraestrutura geral dos aplicativos UWP. Confira-as [aqui](https://msdn.microsoft.com/library/windows/apps/br211377).
+As APIs do Windows Runtime fornecem a infraestrutura geral dos apps UWP. Confira-as [aqui](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 As principais APIs do Windows Runtime usadas na portabilidade do pipeline de elementos gráficos incluem:
 
@@ -73,9 +80,9 @@ As principais APIs do Windows Runtime usadas na portabilidade do pipeline de ele
 -   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
 -   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
-Além disso a WRL (Biblioteca de Modelos C++ do Windows Runtime) é uma biblioteca de modelos que proporciona um modo específico de modificar e usar os componentes do Tempo de Execução do Windows. As APIs do Direct3D 11 para aplicativos UWP são mais bem utilizadas em conjunto com as interfaces e os tipos dessa biblioteca, como ponteiros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para saber mais sobre a WRL, leia [Biblioteca de Modelos C++ do Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
+Além disso a WRL (Biblioteca de Modelos C++ do Windows Runtime) é uma biblioteca de modelos que proporciona um modo específico de modificar e usar os componentes do Tempo de Execução do Windows. As APIs do Direct3D 11 para apps UWP são mais bem utilizadas em conjunto com as interfaces e os tipos dessa biblioteca, como ponteiros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para saber mais sobre a WRL, leia [Biblioteca de Modelos C++ do Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
 
-## Altere o sistema de coordenadas
+## <a name="change-your-coordinate-system"></a>Altere o sistema de coordenadas
 
 
 Uma diferença que causa confusão durante o trabalho inicial de portabilidade é a mudança do sistema de coordenadas tradicional (mão direita) do OpenGL para o sistema de coordenadas padrão do Direct3D, de mão esquerda. Essa mudança no modelo de coordenadas afeta muitas partes de seu jogo, desde a instalação e configuração dos buffers de vértice até muitas das funções matemáticas de matrizes. As duas alterações mais importantes que devem ser feitas são:
@@ -104,7 +111,7 @@ Mas o Direct3D é compatível com um sistema de coordenadas de mão direita. O D
 
  
 
-## Perguntas frequentes sobre portabilidade do OpenGL ES2.0 para Direct3D 11
+## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>Perguntas frequentes sobre portabilidade do OpenGL ES2.0 para Direct3D 11
 
 
 -   Pergunta: "De modo geral, posso pesquisar certas cadeias ou padrões em meu código OpenGL e substituí-los por equivalentes em Direct3D?"
@@ -116,10 +123,5 @@ Mas o Direct3D é compatível com um sistema de coordenadas de mão direita. O D
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

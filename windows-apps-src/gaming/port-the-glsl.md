@@ -3,16 +3,23 @@ author: mtoepke
 title: Fazer a portabilidade do GLSL
 description: "Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL)."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, glsl, porta
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 883f4423f72f044435ffc0ee9eccdcd5b0d63bfa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Fazer a portabilidade do GLSL
+# <a name="port-the-glsl"></a>Fazer a portabilidade do GLSL
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -53,10 +60,10 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 Aqui, o buffer constante usa registro b0 para colocar em espera o buffer em pacote. Todos os registros são referidos na forma b\#. Para saber mais sobre a implementação HLSL de buffers constantes, registros e remessa de dados, leia [Shader Constants (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581).
 
-Instruções
+<a name="instructions"></a>Instruções
 ------------
 
-### Etapa 1: compatibilizar o sombreador de vértice
+### <a name="step-1-port-the-vertex-shader"></a>Etapa 1: compatibilizar o sombreador de vértice
 
 No nosso exemplo simples de OpenGL ES 2.0, o sombreador de vértice tem três entradas: uma matriz 4x4 de projeção de exibição constante de modelo e dois vetores de 4 coordenadas. Esses dois vetores contêm a posição do vértice e sua cor. O sombreador transforma o vetor posição em coordenadas de perspectiva e o atribui ao intrínseco gl\_Position para rasterização. A cor de vértice é copiada para uma variável, que varia, para interpolação durante a rasterização também.
 
@@ -115,7 +122,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 O tipo de dados de saída, PixelShaderInput, é populado durante a rasterização e fornecido ao sombreador de fragmento (pixel).
 
-### Etapa 2: compatibilizar o sombreador de fragmento
+### <a name="step-2-port-the-fragment-shader"></a>Etapa 2: compatibilizar o sombreador de fragmento
 
 Nosso exemplo de sombreador de fragmento em GLSL é extremamente simples: fornecer o intrínseco gl\_FragColor com o valor de cor interpolado. O OpenGL ES 2.0 o reescreverá no destino de renderização padrão.
 
@@ -150,7 +157,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 A cor do pixel na posição é gravada no destino de renderização. Agora, vamos ver como exibir os conteúdos daquele destino de renderização em [Desenhar na tela](draw-to-the-screen.md)!
 
-## Etapa anterior
+## <a name="previous-step"></a>Etapa anterior
 
 
 [Fazer a portabilidade de buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md) Próxima etapa
@@ -168,14 +175,14 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 -   Certifique-se de que sabe qual nível de recurso do Direct3D você tem como objetivo para cada sombreador. A semântica para o nível de recursos 9\_\* é diferente da do 11\_1.
 -   A semântica SV\_POSITION resolve os dados associados de posição de pós-interpolação para coordenar valores em que x está entre 0 e a largura do destino de renderização, y está entre 0 e a altura do destino de renderização e z está dividido pelo valor homogêneo original da coordenada w (z/w) e w é 1 dividido pelo valor original de w (1/w).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
-[Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+[Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
 [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 
-[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
 
 [Desenhar na tela](draw-to-the-screen.md)
 
@@ -185,10 +192,5 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

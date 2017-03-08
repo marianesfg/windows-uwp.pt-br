@@ -3,9 +3,16 @@ author: mcleblanc
 description: "O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele."
 title: Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: fedba87189e6ee5b6f8f81dfa06703b2011adf6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -92,10 +99,5 @@ O equivalente ao aplicativo UWP das propriedades **PhoneApplicationPage.Supporte
 Entretanto, você é incentivado a projetar a interface do usuário do aplicativo UWP de maneira que ela tenha boa aparência, independentemente do tamanho da tela e da orientação do dispositivo. Há mais informações sobre isso em [Portabilidade para fatores forma e experiência do usuário](wpsl-to-uwp-form-factors-and-ux.md), que é o tópico após o próximo.
 
 O próximo tópico é [Portando negócios e as camadas de dados](wpsl-to-uwp-business-and-data.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

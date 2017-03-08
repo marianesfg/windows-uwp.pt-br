@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Saiba como habilitar compras no aplicativo e avaliações em aplicativos UWP destinados a versões antes do Windows 10, versão 1607."
 title: "Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ee2a52a54be8510b962f1ef5c40570f3836d28c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -537,9 +544,4 @@ Este elemento descreve um complemento consumível. **Product** é um filho opcio
 |  **TransactionId**  |     Sim       |   Contém um GUID (como uma cadeia de caracteres) usado pelo app para acompanhar a transação de compra de um consumível pelo processo de atendimento. Consulte [Habilitar compras de produtos consumíveis realizada em aplicativo](enable-consumable-in-app-product-purchases.md).            |
 |  **Status**  |      Sim      |  Contém a cadeia de caracteres usada pelo app para indicar o status de atendimento de um consumível. Os valores podem ser **Active**, **PurchaseReverted**, **PurchasePending** ou **ServerError**.             |
 |  **OfferId**  |     Não       |    Contém a cadeia de caracteres usada pelo app para identificar a categoria à qual pertence o consumível. Isso fornece suporte para catálogos abrangentes de itens, conforme descrito em [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md).           |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para celulares
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea4f755afbf16d4ba5043ebb6be586f19dcc4370
-ms.openlocfilehash: c39c1a843c4f466e1999b4e80bf87f5842ad1996
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54660777706fbfdc54b08da025c2f280f194c010
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para celulares
@@ -75,8 +82,3 @@ O Device Portal em dispositivos móveis fornece o conjunto padrão de páginas. 
 - Rastreamento de desempenho (WPR) 
 - Dispositivos
 - Rede
-
-
-<!--HONumber=Dec16_HO1-->
-
-

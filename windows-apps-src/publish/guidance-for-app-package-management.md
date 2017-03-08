@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos."
-title: "Orientação para gerenciamento de pacote de aplicativo"
+title: "Orientação para gerenciamento do pacote de aplicativo"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54f6d6c786eb0787a441628452d26e46f353b3d8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Orientação para gerenciamento de pacote de aplicativo
+# <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
 
 Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e como gerenciar cenários de pacotes específicos.
@@ -20,7 +27,7 @@ Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e c
 -   [Removendo um aplicativo da Loja](#removing-an-app-from-the-store)
 -   [Removendo pacotes para uma família de dispositivos com suporte anterior](#removing-packages-for-a-previously-supported-device-family)
 
-## Versões do sistema operacional e distribuição de pacote
+## <a name="os-versions-and-package-distribution"></a>Versões do sistema operacional e distribuição de pacote
 
 
 Diferentes sistemas operacionais podem executar diferentes tipos de pacotes. Se mais de um dos seus pacotes puder ser executado no dispositivo do cliente, a Windows Store fornecerá a melhor correspondência disponível.
@@ -31,7 +38,7 @@ Por exemplo, os dispositivos Windows 10 podem executar todas as versões anterio
 
 Os exemplos a seguir ilustram diversos cenários para um aplicativo que inclui pacotes para diferentes versões do sistema operacional. Em alguns casos, restrições específicas dos seus pacotes podem não permitir que eles sejam executados em todas as versões do sistema operacional e nos tipos de dispositivo listados aqui (por exemplo, a arquitetura deve ser apropriada), mas esses exemplos devem ajudar você a compreender quais versões do sistema operacional podem executar seus pacotes específicos.
 
-### Aplicativo de exemplo 1
+### <a name="example-app-1"></a>Aplicativo de exemplo 1
 
 | Sistema operacional específico do pacote | Sistemas operacionais que receberão esse pacote |
 |-------------------------------------|----------------------------------------------|
@@ -42,7 +49,7 @@ Os exemplos a seguir ilustram diversos cenários para um aplicativo que inclui p
 
 No exemplo de aplicativo 1, o aplicativo ainda não possui pacotes da UWP (Plataforma Universal do Windows) criados especificamente para dispositivos Windows 10, mas os clientes do Windows 10 ainda podem obter o aplicativo. Esses clientes obterão os melhores pacotes disponíveis, dependendo do tipo de dispositivo.
 
-### Aplicativo de exemplo 2
+### <a name="example-app-2"></a>Aplicativo de exemplo 2
 
 | Sistema operacional específico do pacote  | Sistemas operacionais que receberão esse pacote |
 |--------------------------------------|----------------------------------------------|
@@ -53,7 +60,7 @@ No exemplo de aplicativo 1, o aplicativo ainda não possui pacotes da UWP (Plata
 
 No exemplo de aplicativo 2, não há nenhum pacote que possa ser executado no Windows 8. Os clientes que estejam executando todas as outras versões do sistema operacional podem obter o aplicativo.
 
-### Aplicativo de exemplo 3
+### <a name="example-app-3"></a>Aplicativo de exemplo 3
 
 | Sistema operacional específico do pacote | Sistemas operacionais que receberão esse pacote                  |
 |-------------------------------------|---------------------------------------------------------------|
@@ -64,7 +71,7 @@ No exemplo de aplicativo 3, como não há nenhum pacote UWP destinado à famíli
 
 Observe também que este exemplo de aplicativo não inclui nenhum pacote que pode ser executado no Windows 7.x.
 
-### Aplicativo de exemplo 4
+### <a name="example-app-4"></a>Aplicativo de exemplo 4
 
 | Sistema operacional específico do pacote  | Sistemas operacionais que receberão esse pacote |
 |--------------------------------------|----------------------------------------------|
@@ -72,7 +79,7 @@ Observe também que este exemplo de aplicativo não inclui nenhum pacote que pod
 
 No exemplo de aplicativo 4, qualquer dispositivo que execute o Windows 10 pode obter o aplicativo, mas não estará disponível para clientes com uma versão anterior do sistema operacional. Como o pacote UWP é direcionado à família de dispositivos universal, ele estará disponível para dispositivos móveis e de desktop Windows 10.
 
-## Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente
+## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente
 
 
 Se você tiver um aplicativo na Loja e quiser atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes .appxupload UWP durante a etapa [Pacotes](upload-app-packages.md). Depois que seu aplicativo passar pelo processo de certificação, os clientes que já tinham seu aplicativo antes de atualizar para o Windows 10 poderão baixar o pacote UWP como uma atualização na Loja. O pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
@@ -95,7 +102,7 @@ Para obter mais informações sobre o empacotamento de aplicativos UWP para a Lo
 > 
 > Para saber mais sobre famílias de dispositivos, veja [Guia para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-## Mantendo a compatibilidade de pacote para o Windows Phone 8.1
+## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Mantendo a compatibilidade de pacote para o Windows Phone 8.1
 
 
 Determinados requisitos de tipos de pacotes se aplicam durante a atualização de aplicativos que já foram publicados para o Windows Phone 8.1:
@@ -107,7 +114,7 @@ Determinados requisitos de tipos de pacotes se aplicam durante a atualização d
 
 Se essas regras não forem seguidas, haverá erros de carregamento de pacote que impedirão a conclusão do envio.
 
-## Removendo um aplicativo da Loja
+## <a name="removing-an-app-from-the-store"></a>Removendo um aplicativo da Loja
 
 
 Às vezes, você pode desejar cancelar completamente a oferta de um aplicativo aos clientes efetivamente "cancelando sua publicação". Para fazer isso, clique em **Tornar aplicativo indisponível** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método, incluindo códigos promocionais.
@@ -120,7 +127,7 @@ Depois de tornar o aplicativo indisponível, você continuará a vê-lo em seu p
 
 > **Observação**  Se você desejar manter seu aplicativo disponível, mas não desejar continuar a oferecê-lo aos clientes em uma determinada versão do sistema operacional, poderá criar um novo envio e remover todos os pacotes para a versão do sistema operacional na qual você deseja impedir novas aquisições. Por exemplo, se antes você tinha pacotes para Windows Phone 8, Windows Phone 8.1 e Windows 10, e agora não deseja continuar oferecendo o aplicativo para novos clientes no Windows Phone 8, remova os pacotes do Windows Phone 8 do envio. Depois que a atualização for publicada, os novos clientes do Windows Phone 8 não poderão adquirir o aplicativo (embora os clientes que já o tenham possam continuar a usá-lo). O aplicativo ainda estará disponível para novos clientes no Windows Phone 8.1 e no Windows 10.
 
-## Removendo pacotes para uma família de dispositivos com suporte anterior
+## <a name="removing-packages-for-a-previously-supported-device-family"></a>Removendo pacotes para uma família de dispositivos com suporte anterior
 
 
 Se você remover todos os pacotes para uma determinada família de dispositivos que contava com o suporte de seu aplicativo anteriormente, deverá confirmar que é essa a sua intenção para poder salvar suas alterações na página **Pacotes**.
@@ -135,10 +142,5 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

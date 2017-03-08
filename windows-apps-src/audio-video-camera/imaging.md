@@ -3,13 +3,20 @@ author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: Este artigo explica como carregar e salvar arquivos de imagem usando BitmapDecoder e BitmapEncoder e como usar o objeto SoftwareBitmap para representar imagens de bitmap.
 title: Criar, editar e salvar imagens de bitmap
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8aa20d434b4ea89d972712e48131e9a965476d1d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar, editar e salvar imagens de bitmap
+# <a name="create-edit-and-save-bitmap-images"></a>Criar, editar e salvar imagens de bitmap
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -28,7 +35,7 @@ O código de exemplo neste artigo usa APIs dos namespaces a seguir.
 
 [!code-cs[Namespaces](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
 
-## Criar um SoftwareBitmap de um arquivo de imagem com BitmapDecoder
+## <a name="create-a-softwarebitmap-from-an-image-file-with-bitmapdecoder"></a>Criar um SoftwareBitmap de um arquivo de imagem com BitmapDecoder
 
 Para criar um [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) de um arquivo, obtenha uma instância de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que contenha os dados da imagem. Este exemplo usa um [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir que o usuário selecione um arquivo de imagem.
 
@@ -38,7 +45,7 @@ Chame o método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/
 
 [!code-cs[CreateSoftwareBitmapFromFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromFile)]
 
-## Salvar um SoftwareBitmap em um arquivo com BitmapEncoder
+## <a name="save-a-softwarebitmap-to-a-file-with-bitmapencoder"></a>Salvar um SoftwareBitmap em um arquivo com BitmapEncoder
 
 Para salvar um **SoftwareBitmap** em um arquivo, obtenha uma instância de **StorageFile** na qual a imagem será salva. Este exemplo usa um [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que o usuário selecione um arquivo de saída.
 
@@ -56,7 +63,7 @@ Você pode especificar opções de codificação adicionais ao criar o **BitmapE
 
 [!code-cs[UseEncodingOptions](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetUseEncodingOptions)]
 
-## Usar SoftwareBitmap com um controle de imagem XAML
+## <a name="use-softwarebitmap-with-a-xaml-image-control"></a>Usar SoftwareBitmap com um controle de imagem XAML
 
 Para exibir uma imagem em uma página XAML usando o controle [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), defina primeiro um controle **Image** em sua página XAML.
 
@@ -70,13 +77,13 @@ Crie um novo objeto [**SoftwareBitmapSource**](https://msdn.microsoft.com/librar
 
 Você também pode usar **SoftwareBitmapSource** para definir um **SoftwareBitmap** como o [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/br210105) para um [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101).
 
-## Criar um SoftwareBitmap de um WriteableBitmap
+## <a name="create-a-softwarebitmap-from-a-writeablebitmap"></a>Criar um SoftwareBitmap de um WriteableBitmap
 
 Você pode criar um **SoftwareBitmap** de um **WriteableBitmap** existente chamando [**SoftwareBitmap.CreateCopyFromBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887370) e fornecendo a propriedade **PixelBuffer** do **WriteableBitmap** para definir os dados de pixel. O segundo argumento permite que você solicite um formato de pixel para o **WriteableBitmap** recém-criado. Você pode usar as propriedades [**PixelWidth**](https://msdn.microsoft.com/library/windows/apps/br243253) e [**PixelHeight**](https://msdn.microsoft.com/library/windows/apps/br243251) do **WriteableBitmap** para especificar as dimensões da nova imagem.
 
 [!code-cs[WriteableBitmapToSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteableBitmapToSoftwareBitmap)]
 
-## Criar ou editar um SoftwareBitmap programaticamente
+## <a name="create-or-edit-a-softwarebitmap-programmatically"></a>Criar ou editar um SoftwareBitmap programaticamente
 
 Até agora este tópico mostrou como trabalhar com arquivos de imagem. Você também pode criar um novo **SoftwareBitmap** programaticamente no código e usar a mesma técnica para acessar e modificar os dados de pixel do **SoftwareBitmap**.
 
@@ -96,7 +103,7 @@ Crie um novo **SoftwareBitmap** com o formato de pixel e o tamanho desejados. Ou
 
 Como esse método acessa o buffer bruto subjacente aos tipos do Windows Runtime, ele deve ser declarado usando a palavra-chave **unsafe**. Você também deve configurar seu projeto no Microsoft Visual Studio para permitir a compilação de código não seguro. Para fazer isso, abra a página **Propriedades** do projeto, clique na página de propriedade **Build** e selecione a caixa de seleção **Permitir Código Não Seguro**.
 
-## Criar um SoftwareBitmap de uma superfície de Direct3D
+## <a name="create-a-softwarebitmap-from-a-direct3d-surface"></a>Criar um SoftwareBitmap de uma superfície de Direct3D
 
 Para criar um objeto **SoftwareBitmap** de uma superfície de Direct3D, você deve incluir o namespace [**Windows.Graphics.DirectX.Direct3D11**](https://msdn.microsoft.com/library/windows/apps/dn895104) em seu projeto.
 
@@ -106,19 +113,19 @@ Chame [**CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/library/window
 
 [!code-cs[CreateSoftwareBitmapFromSurface](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromSurface)]
 
-## Converter um SoftwareBitmap em um formato de pixel diferente
+## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>Converter um SoftwareBitmap em um formato de pixel diferente
 
 A classe **SoftwareBitmap** fornece o método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) que permite criar facilmente um novo **SoftwareBitmap** que usa o formato de pixel e o modo alfa especificados de um **SoftwareBitmap** existente. Observe que o bitmap recém-criado tem uma cópia separada dos dados de imagem. As modificações no novo bitmap não afetarão o bitmap de origem.
 
 [!code-cs[Converter](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
-## Transcodificar um arquivo de imagem
+## <a name="transcode-an-image-file"></a>Transcodificar um arquivo de imagem
 
 Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) para um [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206). Crie um [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) do arquivo a ser transcodificado. Crie um novo **BitmapDecoder** do fluxo de entrada. Crie um novo [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720) para o codificador a ser gravado e chame [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214) passando o fluxo de memória e o objeto de decodificador. Defina as propriedades de codificação que você deseja. Todas as propriedades de arquivo de imagem de entrada que não são definidas especificamente no codificador são gravadas no arquivo de saída inalteradas. Chame [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216) para fazer com que o codificador codifique o fluxo de memória. Por fim, procure o fluxo do arquivo e o fluxo de memória no início e chame [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827) para gravar o fluxo de memória no fluxo de arquivo.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Referência de opções de BitmapEncoder](bitmapencoder-options-reference.md)
 * [Metadados de imagem](image-metadata.md)
@@ -128,10 +135,5 @@ Você pode transcodificar um arquivo de imagem diretamente de um [**BitmapDecode
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

@@ -3,13 +3,20 @@ author: mtoepke
 title: "Guia passo a passo – implementar volumes de sombra usando buffers de profundidade no Direct3D 11"
 description: "Este guia passo a passo demonstra como renderizar volumes de sombra com mapas de profundidade, usando o Direct3D 11 em dispositivos com todos os níveis de recursos do Direct3D."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx, volumes de sombra, buffers de profundidade, directx 11
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 00e823b667a4622f6fa2dd213c3277bec9d616a2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Guia passo a passo - implementar volumes de sombra usando buffers de profundidade no Direct3D 11
+# <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -49,7 +56,7 @@ Este guia passo a passo demonstra como renderizar volumes de sombra com mapas de
 
  
 
-## Aplicativo de mapeamento de sombra para portabilidade de área de trabalho no Direct3D 9
+## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Aplicativo de mapeamento de sombra para portabilidade de área de trabalho no Direct3D 9
 
 
 O Windows 8 adicionou a funcionalidade de comparação de profundidade aos níveis de recursos 9\_1 e 9\_3. Agora você pode migrar o código de renderização com volumes de sombra para o DirectX 11, e o renderizador do Direct3D 11 será compatível com dispositivos de nível 9. Este guia passo a passo mostra como qualquer aplicativo ou jogo em Direct3D 11 pode implementar volumes de sombra tradicionais usando testes de profundidade. O código abrange o seguinte processo:
@@ -62,12 +69,12 @@ O Windows 8 adicionou a funcionalidade de comparação de profundidade aos níve
 
 Após a conclusão deste guia passo a passo, você estará familiarizado com a implementação de uma técnica básica de volume de sombra no Direct3D 11 que é compatível com o nível 9\_1 e acima.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Você deve [Preparar seu ambiente de desenvolvimento de jogos UWP (Plataforma Universal do Windows) no DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Você ainda não precisa de um modelo, mas é necessário que o Microsoft Visual Studio 2015 crie o código de exemplo neste guia passo a passo.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 **Direct3D**
@@ -86,10 +93,5 @@ Você deve [Preparar seu ambiente de desenvolvimento de jogos UWP (Plataforma Un
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

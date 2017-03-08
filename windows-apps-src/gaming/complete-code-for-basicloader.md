@@ -1,47 +1,54 @@
 ---
 author: mtoepke
 title: "Concluir código para BasicLoader"
-description: "Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores."
+description: "Conclua o código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, basicloader
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: ab16033c05273a0cd483fdc7a5302a3ff461e4b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Concluir código para BasicLoader
+# <a name="complete-code-for-basicloader"></a>Concluir código para BasicLoader
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
+Conclua o código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
 
 Este tópico contém estas seções:
 
 -   [Tecnologias](#technologies)
 -   [Requisitos](#requirements)
--   [Exibir o código (C++)](#view-the-code-c-)
+-   [Exibir o código (C++)](#view-the-code-c)
 
 <span id="download_locations"></span>
-## Local de download
+## <a name="download-location"></a>Local de download
 
 
 Este exemplo não está disponível para download.
 
-## Tecnologias
+## <a name="technologies"></a>Tecnologias
 
 **Linguagens de programação** - C++  
 **Modelos de programação** -Windows Runtime
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 **Cliente mínimo com suporte** - Windows 10                              
 **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
 
 
-## Exibir o código (C++)
+## <a name="view-the-code-c"></a>Exibir o código (C++)
 
-## BasicLoader.h
+## <a name="basicloaderh"></a>BasicLoader.h
 
 ```cpp
 //// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
@@ -222,7 +229,7 @@ private:
 };
 ```
 
-## BasicLoader.cpp
+## <a name="basicloadercpp"></a>BasicLoader.cpp
 
 
 ```cpp
@@ -1107,10 +1114,5 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,17 +3,24 @@ author: QuinnRadich
 title: "Novidades no Windows 10, versão 1607, versão prévia"
 description: "O Windows 10 versão 1607 Preview e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows."
 keywords: "novidades, novidades, atualizar, atualizações, recursos, novo, Windows 10, 1607 preview"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 835d5393-427f-4155-a737-d509ea1de99f
 translationtype: Human Translation
-ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
-ms.openlocfilehash: 33c1888620d4e3c2d95cbf701e9128ce006961da
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 51076aed4ae55956164efaf3a3c01461e4b7338b
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Novidades no Windows
+# <a name="whats-new-in-windows"></a>Novidades no Windows
 
 O Windows 10 versão 1607 Preview e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
-## Windows 10, versão 1607 preview
+## <a name="windows-10-version-1607-preview"></a>Windows 10, versão 1607 preview
 
 Recurso | Descrição
  :---- | :----
@@ -22,14 +29,9 @@ Extensões | Uma novidade no Microsoft Edge é a capacidade de usar extensões. 
 APIs Bluetooth | Aplicativos agora são capazes de acessar os serviços RFCOMM em periféricos Bluetooth remotos via [Windows.Devices.Bluetooth e Windows.Devices.Bluetooth.Rfcomm](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.aspx#_blank) sem a necessidade de primeiramente emparelhar-se com o periférico. Novos métodos permitem que aplicativos pesquisem e acessem serviços RFCOMM em dispositivos não emparelhados.
 APIs de chat | Com a nova classe [ChatSyncManager](https://msdn.microsoft.com/library/windows/apps/mt414181.aspx#_blank), você pode sincronizar as mensagens de texto de e para a nuvem.
 [Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS](https://msdn.microsoft.com/windows/uwp/porting/android-ios-uwp-map#_blank) | Se você for um desenvolvedor com habilidades e/ou código para Android ou iOS e quiser mudar para o Windows 10 e para a UWP (Plataforma Universal do Windows), este método tem tudo o que você precisa para mapear recursos de plataforma, e seu conhecimento, entre as três plataformas.
-[EDP (proteção de dados empresariais)](https://msdn.microsoft.com/windows/uwp/enterprise/edp-hub?branch=build2016#_blank) | EDP é um conjunto de recursos em desktops, notebooks, tablets e telefones para o Gerenciamento de Dispositivos Móveis (MDM). O EDP dá às empresas maior controle sobre como seus dados (arquivos empresariais e blobs de dados) são tratados nos dispositivos que a empresa gerencia.
+[EDP (proteção de dados empresariais)](https://msdn.microsoft.com/windows/uwp/enterprise/wip-hub) | EDP é um conjunto de recursos em desktops, notebooks, tablets e telefones para o Gerenciamento de Dispositivos Móveis (MDM). O EDP dá às empresas maior controle sobre como seus dados (arquivos empresariais e blobs de dados) são tratados nos dispositivos que a empresa gerencia.
 [Windows.ApplicationModel.AppExtensions](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appextensions.aspx#_blank) | O novo namespace AppExtensions permite que seu aplicativo da Windows Store hospede o conteúdo fornecido por outros aplicativos da Windows Store. Você pode descobrir, enumerar e acessar conteúdo somente leitura desses aplicativos.
 Windows IoT | O Windows 10 IoT Core permite que você crie aplicativos IoT na familiaridade do Windows e agora está disponível na Raspberry Pi 3, a mais nova placa Raspberry Pi.
 APIs de mídia | As novas APIs MediaBreak no namespace Windows.Media.Playback permitem que você agende e gerencie pausas de mídia com facilidade durante a reprodução de mídia usando MediaSource e MediaPlaybackItem. As novas APIs AudioGraph no namespace Windows.Media.Audio adicionam processamento de áudio espacial que permite atribuir os emissores e ouvintes posicionados em 3D a nós do gráfico de áudio.
 APIs de mapas | O [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) foi aprimorado para permitir que os desenvolvedores obtenham uma região visível que esteja próxima da câmera, excluindo regiões que estão distantes e perto do horizonte em uma exibição profundamente densa. A classe [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) foi estendida, permitindo que os desenvolvedores otimizem o tráfego de rede na geocodificação reversa por meio de especificação de uma precisão desejada. Agora os desenvolvedores podem aproveitar o download de mapas offline usando o método [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) e especificando a latitude e longitude. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

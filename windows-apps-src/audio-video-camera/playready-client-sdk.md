@@ -1,27 +1,34 @@
 ---
 author: eliotcowley
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
-description: "Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP)."
+description: "Este tópico descreve como adicionar conteúdo de mídia protegido do PlayReady ao seu app da Plataforma Universal do Windows (UWP)."
 title: DRM do PlayReady
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3c0b72b674ce02a1802a50c512e98b9aeba3bfe1
-ms.openlocfilehash: 97a3002c1e61d8f7d31b81a3a80d7473a5dc6077
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="playready-drm"></a>DRM do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este tópico descreve como adicionar conteúdos de mídia protegida do PlayReady ao seu aplicativo da Plataforma Universal do Windows (UWP).
+Este tópico descreve como adicionar conteúdo de mídia protegido do PlayReady ao seu app da Plataforma Universal do Windows (UWP).
 
-O DRM do PlayReady permite que desenvolvedores criem aplicativos UWP que possam fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve as alterações feitas ao DRM do Microsoft PlayReady para Windows 10 e como modificar o seu aplicativo UWP PlayReady para dar suporte às alterações feitas desde a versão anterior do Windows 8.1 até a versão do Windows 10.
+O DRM do PlayReady permite que desenvolvedores criem apps UWP que possam fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve as alterações feitas ao DRM do Microsoft PlayReady para Windows 10 e como modificar o seu app UWP PlayReady para dar suporte às alterações feitas desde a versão anterior do Windows 8.1 até a versão do Windows 10.
  
 | Tópico                                                                     | Descrição                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [DRM de hardware](hardware-drm.md)                                           | Este tópico fornece uma visão geral de como adicionar hardware do PlayReady com base em gerenciamento de direitos digitais (DRM) ao seu aplicativo UWP.                                                                                                                                                                 |
-| [Streaming adaptável com PlayReady](adaptive-streaming-with-playready.md) | Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP). |
+| [DRM de hardware](hardware-drm.md)                                           | Este tópico fornece uma visão geral de como adicionar hardware do PlayReady com base em gerenciamento de direitos digitais (DRM) ao seu app UWP.                                                                                                                                                                 |
+| [Streaming adaptável com PlayReady](adaptive-streaming-with-playready.md) | Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um app UWP (Plataforma Universal do Windows). Atualmente, esse recurso oferece suporte à reprodução de conteúdo HLS (Http Live Streaming) e DASH (Dynamic Streaming over HTTP). |
 
 ## <a name="whats-new-in-playready-drm"></a>Novidades no DRM do PlayReady
 
@@ -35,21 +42,21 @@ A lista a seguir descreve os novos recursos e alterações feitas ao DRM do Play
 -   Os seguintes cabeçalhos definindo os códigos de erro do PlayReady agora fazem parte do Software Development Kit do Windows (SDK do Windows): Windows.Media.Protection.PlayReadyErrors.h e Windows.Media.Protection.PlayReadyResults.h.
 -   Fornece aquisição proativa de licenças não persistentes.
 
-    Versões anteriores ao DRM do PlayReady não davam suporte à aquisição proativa de licenças não persistentes. Esse recurso foi adicionado nesta versão. Isso pode reduzir o tempo para o primeiro quadro. Para obter mais informações, consulte [Adquirir uma licença não persistente de forma proativa antes da reprodução](#proactively_acquire_a_non_persistent_license_before_playback).
+    Versões anteriores ao DRM do PlayReady não davam suporte à aquisição proativa de licenças não persistentes. Esse recurso foi adicionado nesta versão. Isso pode reduzir o tempo para o primeiro quadro. Para obter mais informações, consulte [Adquirir uma licença não persistente de forma proativa antes da reprodução](#proactively-acquire-a-non-persistent-license-before-playback).
 
 -   Fornece a aquisição de várias licenças em uma mensagem.
 
-    Permite que o aplicativo cliente adquira várias licenças não persistentes em uma mensagem de aquisição de licença. Isso pode reduzir o tempo para o primeiro quadro pela aquisição de licenças para várias partes de conteúdo, enquanto o usuário ainda estiver navegando em sua biblioteca de conteúdo; isso impede um atraso na aquisição de licença quando o usuário seleciona o conteúdo a ser reproduzido. Além disso, ele permite a criptografia dos fluxos de áudio e vídeo para chaves separadas, por meio da habilitação de um cabeçalho de conteúdo que inclui vários identificadores de chave (KIDs); isso permite que uma aquisição de licença simples para adquirir todas as licenças para todos os fluxos dentro de um arquivo de conteúdo em vez de usar uma lógica personalizada e várias solicitações de aquisição de licença para obter o mesmo resultado.
+    Permite que o app cliente adquira várias licenças não persistentes em uma mensagem de aquisição de licença. Isso pode reduzir o tempo para o primeiro quadro pela aquisição de licenças para várias partes de conteúdo, enquanto o usuário ainda estiver navegando em sua biblioteca de conteúdo; isso impede um atraso na aquisição de licença quando o usuário seleciona o conteúdo a ser reproduzido. Além disso, ele permite a criptografia dos fluxos de áudio e vídeo para chaves separadas, por meio da habilitação de um cabeçalho de conteúdo que inclui vários identificadores de chave (KIDs); isso permite que uma aquisição de licença simples para adquirir todas as licenças para todos os fluxos dentro de um arquivo de conteúdo em vez de usar uma lógica personalizada e várias solicitações de aquisição de licença para obter o mesmo resultado.
 
 -   Suporte de vencimento em tempo real ou licença de duração limitada (LDL) adicionada.
 
-    Fornece a capacidade de definir a expiração em tempo real em licenças e a transição uniforme de uma licença que esteja vencendo para outra licença (válida) no meio de reprodução. Quando combinado com aquisição de várias licenças em uma mensagem, isso permite que um aplicativo adquira várias LDLs de forma assíncrona enquanto o usuário ainda estiver navegando na biblioteca de conteúdo e adquira uma licença de duração mais longa depois que o usuário tiver selecionado conteúdo para a reprodução. A reprodução será iniciada de forma mais rápida (porque uma licença já está disponível) e, desde que o aplicativo tenha adquirido uma licença de duração mais longa no momento em que a LDL expirar, continuará a ser reproduzida uniformemente até o fim do conteúdo sem interrupção.
+    Fornece a capacidade de definir a expiração em tempo real em licenças e a transição uniforme de uma licença que esteja vencendo para outra licença (válida) no meio de reprodução. Quando combinado com aquisição de várias licenças em uma mensagem, isso permite que um app adquira várias LDLs de forma assíncrona enquanto o usuário ainda estiver navegando na biblioteca de conteúdo e adquira uma licença de duração mais longa depois que o usuário tiver selecionado conteúdo para a reprodução. A reprodução será iniciada de forma mais rápida (porque uma licença já está disponível) e, desde que o app tenha adquirido uma licença de duração mais longa no momento em que a LDL expirar, continuará a ser reproduzida uniformemente até o fim do conteúdo sem interrupção.
 
 -   Inclusão de cadeias de licença não persistentes.
 -   Inclusão de suporte a restrições baseadas em tempo (incluindo expiração, expiração depois da primeira opção e expiração em tempo real) de licenças não persistentes.
 -   Inclusão de suporte à política do HDCP Tipo 1 (versão 2.2 no Windows 10).
 
-    Consulte [O que deve ser considerado](#things_to_consider) para saber mais.
+    Consulte [O que deve ser considerado](#things-to-consider) para saber mais.
 
 -   O método Miracast agora está implícito como uma saída.
 -   Inclusão de parada segura.
@@ -80,7 +87,7 @@ Uma nova amostra foi criada para demonstrar como usar os novos recursos DRM do P
 
 -   O DRM do PlayReady agora dá suporte à HDCP Tipo 1 (compatível com HDCP versão 2.1 ou posterior). O PlayReady carrega uma política de restrição de tipo HDCP na licença para ser imposta pelo dispositivo. No Windows 10, essa política impõe que a HDCP 2.2 ou posterior seja ativada. Esse recurso pode ser habilitado na sua licença do servidor v3.0 SDK do PlayReady (o servidor controla essa política na licença usando o GUID da Restrição de Tipo HDCP). Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
 -   Não há suporte para o Windows Media Video (também conhecido como VC-1) no DRM de hardware (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
--   O DRM do PlayReady agora dá suporte ao padrão de compactação de vídeo de codificação de vídeo de alta eficiência (HEVC /H.265). Para dar suporte ao HEVC, seu aplicativo deve usar conteúdo de versão 2 do esquema de criptografia comum (CENC) que inclui deixar cabeçalhos de fração de conteúdo não criptografados. Para mais informações, consulte ISO/IEC 23001-7 Information technology -- MPEG systems technologies -- Part 7: Common encryption in ISO base media file format files (Versão de especificação ISO/IEC 23001-7:2015 ou superior necessária). A Microsoft também recomenda a utilização do CENC versão 2 para todo o conteúdo HWDRM. Além disso, alguns itens do DRM de hardware darão suporte ao HEVC, e outros não (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
+-   O DRM do PlayReady agora dá suporte ao padrão de compactação de vídeo de codificação de vídeo de alta eficiência (HEVC /H.265). Para dar suporte ao HEVC, seu app deve usar conteúdo de versão 2 do esquema de criptografia comum (CENC) que inclui deixar cabeçalhos de fração de conteúdo não criptografados. Para mais informações, consulte ISO/IEC 23001-7 Information technology -- MPEG systems technologies -- Part 7: Common encryption in ISO base media file format files (Versão de especificação ISO/IEC 23001-7:2015 ou superior necessária). A Microsoft também recomenda a utilização do CENC versão 2 para todo o conteúdo HWDRM. Além disso, alguns itens do DRM de hardware darão suporte ao HEVC, e outros não (consulte [Substituir DRM de hardware](hardware-drm.md#override-hardware-drm)).
 -   Para usufruir determinados recursos novos do PlayReady 3.0 (incluindo, mas não se limitando a, SL3000 para clientes baseados em hardware, a aquisição de várias licenças não persistentes em uma mensagem de aquisição de licença e restrições baseadas em tempo em licenças não persistentes), é necessário que o servidor PlayReady seja o Microsoft PlayReady Server Software Development Kit v3.0.2769 ou posterior.
 -   Dependendo da política de proteção de saída especificada na licença do conteúdo, pode ocorrer falha na reprodução de mídia para os usuários finais se sua saída conectada não oferecer suporte a esses requisitos. A tabela a seguir lista o conjunto de erros comuns que ocorrem como resultado. Para saber mais, consulte [Regras de conformidade e robustez do PlayReady](http://www.microsoft.com/playready/licensing/compliance/) (em inglês).
 
@@ -131,13 +138,13 @@ A tabela a seguir descreve os mapeamentos entre vários OPLs na licença do Play
     </tr>
     <tr>
         <th>100</th>
-        <td rowspan="6">N/D\*</td>
+        <td rowspan="6">N/A\*</td>
         <td colspan="2">Passa o conteúdo</td>
         <td>Passa o conteúdo</td>
     </tr>
     <tr>
         <th>150</th>
-        <td colspan="2" rowspan="2">N/D\*</td>
+        <td colspan="2" rowspan="2">N/A\*</td>
         <td>Passa o conteúdo quando o CGMS-A CopyNever está ativado ou se o CGMS-A não pode ser ativado</td>
     </tr>
     <tr>
@@ -147,7 +154,7 @@ A tabela a seguir descreve os mapeamentos entre vários OPLs na licença do Play
     <tr>
         <th>250</th>
         <td colspan="2">Tenta acionar a HDCP, mas passa conteúdo independentemente do resultado</td>
-        <td rowspan="5">N/D\*</td>
+        <td rowspan="5">N/A\*</td>
     </tr>
     <tr>
         <th>270</th>
@@ -168,7 +175,7 @@ A tabela a seguir descreve os mapeamentos entre vários OPLs na licença do Play
     <tr>
         <th>400</th>
         <td rowspan="2">O Windows 10 nunca passa o conteúdo de vídeo digital compactado para saídas, independentemente do valor do OPL subsequente. Para saber mais sobre o conteúdo de vídeo digital compactado, consulte as [Regras de conformidade para os produtos PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).</td>
-        <td colspan="2" rowspan="2">N/D\*</td>
+        <td colspan="2" rowspan="2">N/A\*</td>
     </tr>
     <tr>
         <th>500</th>
@@ -232,13 +239,13 @@ O DRM do PlayReady permite reproduzir conteúdo pela saída Miracast assim que a
         <th>100</th>
         <td rowspan="4">Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
         <td>Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
-        <td rowspan="6">N/D\*</td>
+        <td rowspan="6">N/A\*</td>
         <td>Passa o conteúdo quando a HDCP 2.0 ou posterior está ativada. Se houver falha de ativação, o conteúdo NÃO será passado</td>
     </tr>
     <tr>
         <th>150</th>
         <td rowspan="3">NÃO passa o conteúdo</td>
-        <td rowspan="2">N/D\*</td>
+        <td rowspan="2">N/A\*</td>
     </tr>
     <tr>
         <th>200</th>
@@ -249,7 +256,7 @@ O DRM do PlayReady permite reproduzir conteúdo pela saída Miracast assim que a
     </tr>
     <tr>
         <th>270</th>
-        <td colspan="2">N/D\*</td>
+        <td colspan="2">N/A\*</td>
     </tr>
     <tr>
         <th>300</th>
@@ -266,9 +273,9 @@ O DRM do PlayReady permite reproduzir conteúdo pela saída Miracast assim que a
     </tr>
     <tr>
         <th>400</th>
-        <td rowspan="2" colspan="2">N/D\*</td>
+        <td rowspan="2" colspan="2">N/A\*</td>
         <td rowspan="2">O Windows 10 nunca passa o conteúdo de vídeo digital compactado para saídas, independentemente do valor do OPL subsequente. Para saber mais sobre o conteúdo de vídeo digital compactado, consulte as [Regras de conformidade para os produtos PlayReady](https://www.microsoft.com/playready/licensing/compliance/) (em inglês).</td>
-        <td rowspan="2">N/D\*</td>
+        <td rowspan="2">N/A\*</td>
     </tr>
     <tr>
         <th>500</th>
@@ -392,18 +399,19 @@ A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
+Antes de começar a criar seu app UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
 -   Windows 10.
--   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar Microsoft Visual Studio 2015 ou superior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio 2013 para compilar qualquer uma das amostras do DRM do PlayReady DRM para aplicativos da Loja do Windows 8.1.
+-   Se você estiver compilando alguma das amostras para o DRM do PlayReady para apps UWP, você deve usar Microsoft Visual Studio 2015 ou superior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio 2013 para compilar qualquer uma das amostras do DRM do PlayReady DRM para apps da Loja do Windows 8.1.
 
-Se pretende reproduzir conteúdo MPEG-2/H.262 em seu aplicativo, você também deverá baixar e instalar o [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).
+<!--This is no longer available-->
+<!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
-## <a name="playready-windows-store-app-migration-guide"></a>Guia de migração de aplicativos PlayReady da Windows Store
+## <a name="playready-windows-store-app-migration-guide"></a>Guia de migração de apps PlayReady da Windows Store
 
-Esta seção inclui informações sobre como migrar seus aplicativos PlayReady existentes da Loja do Windows 8.x para o Windows 10.
+Esta seção inclui informações sobre como migrar seus apps PlayReady existentes da Loja do Windows 8.x para o Windows 10.
 
-O namespace para aplicativos UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele é parte do windows.media.winmd nos sistema operacional do Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
+O namespace para apps UWP do PlayReady no Windows 10 foi alterado de **Microsoft.Media.PlayReadyClient** para [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454). Isso significa que você precisará pesquisar e substituir o namespace antigo pelo novo em seu código. Você ainda fará referência a um arquivo winmd. Ele é parte do windows.media.winmd nos sistema operacional do Windows 10. Ele está em windows.winmd como parte do SDK do Windows do TH. Para UWP, ele está referenciado em windows.foundation.univeralappcontract.winmd.
 
 Para reproduzir conteúdo HD (alta definição) (1080p) e UHD (ultra-alta definição) protegido por PlayReady, será necessário implementar o DRM de hardware do PlayReady. Para obter mais informações sobre como implementar o DRM de hardware do PlayReady, consulte [DRM de hardware](hardware-drm.md).
 
@@ -467,25 +475,25 @@ Em versões anteriores do PlayReady DRM, as licenças não persistentes eram adq
     
 ## <a name="add-secure-stop"></a>Adicionar parada segura
 
-Esta seção descreve como adicionar uma parada segura ao seu aplicativo UWP.
+Esta seção descreve como adicionar uma parada segura ao seu app UWP.
 
 A parada segura fornece os meios para um dispositivo PlayReady afirmar com confiança para um serviço de streaming de mídia que a reprodução de mídia foi interrompida para determinada parte do conteúdo. Esse recurso garante que seus serviços de streaming de mídia forneçam relatórios e imposição precisos de limitações de uso em dispositivos diferentes para uma determinada conta.
 
 Há dois cenários principais para enviar um desafio de parada segura:
 
 -   Quando a apresentação de mídia é interrompida porque foi alcançado o fim do conteúdo ou quando o usuário interrompeu a apresentação de mídia em algum ponto intermediário.
--   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no aplicativo). O aplicativo precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
+-   Quando a sessão anterior é encerrada inesperadamente (por exemplo, devido a uma falha no sistema ou no app). O app precisará consultar, na inicialização ou no desligamento, qualquer sessão de parada segura pendente e enviar desafio(s) separadamente de qualquer outra reprodução de mídia.
 
 Para obter uma implementação de exemplo de parada segura, consulte o arquivo securestop.cs no exemplo de PlayReady localizado em [http://go.microsoft.com/fwlink/p/?linkid=331670&clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670).
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Usar PlayReady DRM em Xbox One
 
-Para usar PlayReady DRM em um aplicativo UWP no Xbox One, você precisará registrar inicialmente a conta do Centro de Desenvolvimento que está usando para publicar o aplicativo para autorização a fim de usar o PlayReady. É possível fazer isso de duas maneiras:
+Para usar PlayReady DRM em um app UWP no Xbox One, você precisará registrar inicialmente a conta do Centro de Desenvolvimento que está usando para publicar o app para autorização a fim de usar o PlayReady. É possível fazer isso de duas maneiras:
 
 * Fazer o contato na Microsoft solicitar permissão.
 * Solicitar autorização enviando a conta do Centro de Desenvolvimento e o nome da empresa para [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
-Depois de receber a autorização, você precisará incluir um `<DeviceCapability>` adicional ao manifesto do aplicativo. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
+Depois de receber a autorização, você precisará incluir um `<DeviceCapability>` adicional ao manifesto do app. Você precisará adicioná-lo manualmente porque não há configuração disponível no momento no Designer de Manifesto do Aplicativo. Siga estas etapas para configurá-lo:
 
 1. Com o projeto aberto no Visual Studio, abra o **Gerenciador de Soluções** e clique com o botão direito do mouse em **Package. appxmanifest**.
 2. Selecione **Abrir Com...**, escolha **Editor (Texto) de XML**e clique em **OK**.
@@ -497,7 +505,7 @@ Depois de receber a autorização, você precisará incluir um `<DeviceCapabilit
 
 4. Salve o arquivo.
 
-Por fim, há uma última consideração durante o uso do PlayReady no Xbox One: em kits de desenvolvimento, existe um limite de SL150 (ou seja, eles não conseguem reproduzir conteúdo SL2000 ou SL3000). Os dispositivos de varejo são capazes de reproduzir conteúdo com níveis de segurança mais altos, mas para testar o aplicativo em um kit de desenvolvimento, você precisará usar conteúdo SL150. É possível testar esse conteúdo das seguintes maneiras:
+Por fim, há uma última consideração durante o uso do PlayReady no Xbox One: em kits de desenvolvimento, existe um limite de SL150 (ou seja, eles não conseguem reproduzir conteúdo SL2000 ou SL3000). Os dispositivos de varejo são capazes de reproduzir conteúdo com níveis de segurança mais altos, mas para testar o app em um kit de desenvolvimento, você precisará usar conteúdo SL150. É possível testar esse conteúdo das seguintes maneiras:
 
 * Use o conteúdo de teste coletado que exige licenças SL150.
 * Implemente uma lógica de maneira que apenas determinadas contas de teste autenticadas sejam capazes de adquirir licenças SL150 para um determinado conteúdo.
@@ -509,10 +517,5 @@ Use a abordagem mais razoável para a empresa e o produto.
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

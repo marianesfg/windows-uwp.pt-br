@@ -1,15 +1,22 @@
 ---
 author: QuinnRadich
 Description: "O Windows 10 versão 1507 e as atualizações das ferramentas de desenvolvedor continuarão a fornecer as ferramentas, os recursos e as experiências avançadas da Plataforma Universal do Windows."
-title: "Novidades no Windows 10, versão 1507 – julho de 2015"
+title: "Novidades no Windows 10, versão 1507"
 keywords: "novidades, novidades, atualizar, atualizações, recursos, novo, Windows 10, 1507"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 translationtype: Human Translation
-ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
-ms.openlocfilehash: 0388f444431f9716a1f311c8c2dfc8db2de83df3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 4650eaa22f299910bd7956972bd7099ea6d78943
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Novidades no Windows 10, versão 1507
+# <a name="whats-new-in-windows-10-version-1507"></a>Novidades no Windows 10, versão 1507
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -18,7 +25,7 @@ O Windows 10 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os
 
 Esta é uma visão recurso por recurso do que há de novo para você no Windows 10, versão 1507.
 
-## Layouts adaptáveis
+## <a name="adaptive-layouts"></a>Layouts adaptáveis
 
 Recurso | Descrição
  :---- | ----:
@@ -27,7 +34,7 @@ StateTriggers | Usando o novo recurso [VisualState.StateTriggers](https://msdn.m
 Setters | Usando a nova sintaxe [VisualState.Setters](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.setters.aspx), você pode usar a marcação simplificada para definir alterações de propriedade no [VisualStateManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager.aspx). Anteriormente, você precisava usar um Storyboard e criar animações para aplicar alterações de propriedade, como mudança da orientação de um [StackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx) de Horizontal para Vertical. Em aplicativos Universais do Windows, você pode usar esta sintaxe Setter mais simples: <setter target="stackPanel1.Orientation" value="Vertical" />
 
 
-## Recursos XAML
+## <a name="xaml-features"></a>Recursos XAML
 
 Recurso | Descrição
  :---- | :----
@@ -45,7 +52,7 @@ Mapeamento de botões de entrada | A classe [Windows.UI.Xaml.Input.KeyEventArgs]
 Escrita à tinta | Agora é mais simples usar a funcionalidade robusta de escrita à tinta em aplicativos do Windows Runtime em C++, C# ou Visual Basic, graças ao controle [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e às classes [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) subjacentes. O controle [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) define uma área de sobreposição para desenhar e renderizar traços de tinta. A funcionalidade deste controle (entrada, processamento e renderização) vem das classes [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [InkStroke](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkstroke.aspx), [InkRecognizers](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.aspx) e [InkSynchronizer](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inksynchronizer.aspx). **Importante:** essas classes não são compatíveis com aplicativos do Windows que usam JavaScript.
 
 
-## Recursos XAML atualizados
+## <a name="updated-xaml-features"></a>Recursos XAML atualizados
 
 Recurso | Descrição
  :---- | :----
@@ -71,7 +78,7 @@ AutoSuggestBox | Agora o controle [AutoSuggestBox](https://msdn.microsoft.com/li
 ContentDialog | Agora o controle [ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx) do Windows Phone 8.1 está disponível para aplicativos Universais do Windows em todas as famílias de dispositivos. ContentDialog permite exibir uma caixa de diálogo modal personalizável que funcione bem em toda a gama de dispositivos.
 Pivot | Agora o controle [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.aspx) do Windows Phone 8.1 está disponível para aplicativos Universais do Windows em todas as famílias de dispositivos. Agora você pode usar o mesmo controle Pivot em seu aplicativo para dispositivos móveis e de área de trabalho. Pivot proporciona comportamento adaptável com base no tamanho da tela e no tipo de entrada. Você pode definir o estilo de um controle Pivot para fornecer o comportamento de guia, com diferentes modos de exibição de informações em cada item de pivô.
 
-## Texto
+## <a name="text"></a>Texto
 
 Recurso | Descrição
  :---- | :----
@@ -82,7 +89,7 @@ Eventos de composição de texto | [TextBox](https://msdn.microsoft.com/library/
 Manuseio aprimorado de texto bidirecional | Os controles de texto XAML têm uma nova API para melhorar a manipulação de texto bidirecional, resultando em melhor alinhamento de texto e direcionalidade de parágrafo em uma variedade de idiomas de entrada. O valor padrão da propriedade TextReadingOrder foi alterado para DetectFromContent, para que o suporte para detecção da ordem de leitura seja habilitado por padrão. A propriedade TextReadingOrder também foi adicionada a TextBox, PasswordBox e RichEditBox. Você pode definir a propriedade TextAlignment em controles de texto para o novo valor de DetectFromContent para optar por ter o alinhamento detectado automaticamente a partir do conteúdo.
 Renderização de texto | No Windows 10, o texto em aplicativos XAML agora é renderizado, na maioria das situações, em quase duas vezes a velocidade do Windows 8.1. Na maioria dos casos, os aplicativos se beneficiarão dessa melhoria sem qualquer alteração. Além da renderização mais rápida, essas melhorias também reduzem em 5% o consumo de memória típico de aplicativos XAML.
 
-## Modelo de aplicativo
+## <a name="application-model"></a>Modelo de aplicativo
 
 Recurso | Descrição
  :---- | :----
@@ -94,7 +101,7 @@ Comunicação de aplicativo a aplicativo | As novas APIs de [comunicação de ap
 Serviços de aplicativo | Um serviço de aplicativo é uma maneira de um aplicativo fornecer serviços a outros aplicativos no Windows 10. Um serviço de aplicativo assume a forma de tarefa em segundo plano. Os aplicativos em primeiro plano podem chamar um serviço de aplicativo em outro aplicativo para executar tarefas em segundo plano. Para obter informações de referência sobre a API de serviço de aplicativo, consulte [Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.appservice.aspx).
 Manifesto do pacote do aplicativo | As atualizações para a referência de [esquemas de manifesto de pacote](https://msdn.microsoft.com/library/windows/apps/br211474.aspx) para o Windows 10 incluem elementos que foram adicionados, removidos e alterados. Consulte [Hierarquia de elementos](https://msdn.microsoft.com/library/windows/apps/dn934819.aspx) para obter informações de referência sobre todos os elementos, atributos e tipos no esquema.
 
-## Dispositivos
+## <a name="devices"></a>Dispositivos
 
 Recurso | Descrição
  :---- | :----
@@ -107,7 +114,7 @@ Dispositivos MIDI | O novo namespace [Windows.Devices.Midi](https://msdn.microso
 Suporte para sensor personalizado | O namespace [Windows.Devices.Sensors.Custom](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.custom.aspx) permite que os desenvolvedores de hardware definam novos tipos de sensores personalizados, como um sensor de CO2.
 Emulação de cartão com base em host (HCE) | A emulação de cartão host permite que você implemente serviços de emulação de cartão NFC hospedados no sistema operacional e ainda se comunique com o terminal do leitor externo via rádio NFC. Para disparar uma tarefa em segundo plano para emular um cartão inteligente via NFC, use a classe [SmartCardTrigger](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.background.smartcardtrigger.aspx). O valor de EmulatorHostApplicationActivated na enumeração [SmartCardTriggerType](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.smartcards.smartcardtriggertype.aspx) permite que seu aplicativo saiba que ocorreu um evento HCE.
 
-## Elementos gráficos
+## <a name="graphics"></a>Elementos gráficos
 
 Recurso | Descrição
  :---- | :----
@@ -115,7 +122,7 @@ DirectX | O DirectX 12 no Windows 10 apresenta a próxima versão do Microsoft D
 SoftwareBitmapSource | Em aplicativos Universais do Windows, você pode usar o novo tipo [SoftwareBitmapSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.softwarebitmapsource.aspx) como fonte de imagem XAML. Isso permite transmitir imagens descodificadas para a estrutura XAML ser exibida imediatamente na tela, ignorando a decodificação da imagem pela estrutura XAML. Você pode conseguir uma renderização de imagem muito mais rápida, como a renderização de fotos de baixa latência diretamente da câmera, usando decodificadores de imagem personalizados, capturando quadros de superfícies do DirectX ou até mesmo criando imagens na memória do zero e renderizando-as diretamente em XAML com baixa latência e sobrecarga de memória baixa.
 Câmera de perspectiva | Em aplicativos Universais do Windows, o XAML tem uma nova API Transform3D que permite aplicar transformações de perspectiva a uma árvore (ou cena) XAML, que transforma todos os elementos filho XAML de acordo com essa única transformação de cena (ou câmera). Você podia fazer isso anteriormente usando MatrixTransform e cálculos complexos, mas o Transform3D simplifica esse efeito e também permite que o efeito seja animado. Para saber mais, confira a propriedade [UIElement.Transform3D](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [Transform3D](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.transform3d.aspx), [CompositeTransform3D](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx) e [PerspectiveTransform3D](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx).
 
-## Mídia
+## <a name="media"></a>Mídia
 
 Recurso | Descrição
  :---- | :----
@@ -130,7 +137,7 @@ Codificação e decodificação JPEG de acesso aleatório | Os novos métodos WI
 Sobreposições para composições de mídia | As novas APIs [MediaOverlay](https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.editing.mediaoverlay.aspx) e [MediaOverlayLayer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.editing.mediaoverlaylayer.aspx) facilitam adicionar várias camadas de conteúdo de mídia estático ou dinâmico a uma composição de mídia. Opacidade, posição e tempo podem ser ajustados para cada camada, e você ainda pode implementar seu próprio compositor personalizado para camadas de entrada.
 Nova estrutura de efeitos | O namespace [Windows.Media.Effects](https://msdn.microsoft.com/library/windows/apps/windows.media.effects.aspx) fornece uma estrutura simples e intuitiva para adicionar efeitos a fluxos de áudio e vídeo. A estrutura inclui interfaces básicas que você pode implementar para criar efeitos de vídeo e áudio personalizados e inseri-los no pipeline da mídia.
 
-## Rede
+## <a name="networking"></a>Rede
 
 Recurso | Descrição
  :---- | :----
@@ -140,16 +147,16 @@ Suporte a Bluetooth para anúncios | Com o namespace [Windows.Devices.Bluetooth.
 Atualização da API do Wi-Fi Direct | O agente de dispositivo está atualizado para habilitar o emparelhamento com dispositivos sem sair do aplicativo. Adições ao namespace [Windows.Devices.WiFiDirect](https://msdn.microsoft.com/library/windows/apps/windows.devices.wifidirect.aspx) também permitem que um dispositivo torne-se detectável por outros dispositivos e permitem que ele escute as notificações de conexão de entrada.<br /><br />**Observação:** nesta versão, as melhorias do recurso Wi-Fi Direct não são incorporadas à experiência do usuário e oferecem suporte apenas para o emparelhamento com o pressionar de um botão. Além disso, essa versão oferece suporte apenas a uma conexão ativa.
 Melhorias do suporte para JSON | Agora o namespace [Windows.Data.Json](https://msdn.microsoft.com/library/windows/apps/windows.data.json.aspx) oferece melhor suporte às definições padrão existentes e à experiência do desenvolvedor ao converter objetos JSON durante sessões de depuração.
 
-## Segurança
+## <a name="security"></a>Segurança
 
 Recurso | Descrição
  :---- | :----
 Criptografia ECC | As novas APIs no namespace [Windows.Security.Cryptography](https://msdn.microsoft.com/library/windows/apps/windows.security.cryptography.aspx) oferecem suporte à criptografia ECC (Elliptical Curve Cryptography), uma implementação de criptografia de chave pública com base em curvas elípticas sobre campos finitos. A ECC é matematicamente mais complexa que a RSA, fornece tamanhos de chave menores, reduz o consumo de memória e melhora o desempenho. Ela oferece a clientes e serviços Microsoft uma alternativa para chaves RSA e parâmetros de curva NIST aprovados.
 Microsoft Passport | Microsoft Passport é um método alternativo de autenticação que substitui as senhas por criptografia assimétrica e um gesto. As classes no namespace Credentials, como [KeyCredentialManger](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.keycredentialmanager.aspx), tornam mais fácil para os desenvolvedores criarem aplicativos usando o Microsoft Passport sem a complexidade da criptografia ou biometria.
-Microsoft Passport for Work | Microsoft Passport for Work é um método alternativo para entrar no Windows usando sua conta do Active Directory do Azure que não usa senhas, cartões inteligentes físicos e virtuais. Você pode optar por habilitar ou desabilitar essa configuração de política.
+Microsoft Passport for Work | Microsoft Passport for Work é um método alternativo para entrar no Windows usando sua conta do Active Directory do Microsoft Azure que não usa senhas, cartões inteligentes físicos e virtuais. Você pode optar por habilitar ou desabilitar essa configuração de política.
 Token Broker | O Token Broker é uma nova estrutura de autenticação que torna mais fácil para os aplicativos se conectarem a provedores de identidade online (como o Facebook). Recursos como gerenciamento de nome de usuário e senha da conta e uma interface do usuário simplificada oferecem uma experiência de autenticação aprimorada para os usuários.
 
-## Serviços do sistema
+## <a name="system-services"></a>Serviços do sistema
 
 Recurso | Descrição
  :---- | :----
@@ -158,20 +165,20 @@ Versão | Você pode usar as [funções auxiliares de versão](https://msdn.micr
 Informações do usuário | Novas APIs no namespace [Windows.System](https://msdn.microsoft.com/library/windows/apps/windows.system.aspx) facilitam o acesso a informações sobre um usuário, como seu nome de usuário e imagem da conta. Também fornecem a capacidade de responder a eventos do usuário, como logon e logoff.
 Gerenciamento de memória e criação de perfil | O suporte à API de criação de perfil de memória [Windows.System](https://msdn.microsoft.com/library/windows/apps/windows.system.aspx) foi estendido a todas as plataformas, e sua funcionalidade geral foi aprimorada com novas classes e funções.
 
-## Armazenamento
+## <a name="storage"></a>Armazenamento
 
 Recurso | Descrição
  :---- | :----
 APIs de pesquisa de arquivo disponíveis para o Windows Phone | Como fornecedor de aplicativos, você pode registrar seu aplicativo para compartilhar uma pasta de armazenamento com outros aplicativos que publica. Basta adicionar extensões no manifesto do aplicativo. Em seguida, chame o método [Windows.Storage.ApplicationData.GetPublisherCacheFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.getpublishercachefolder.aspx) para obter o local de armazenamento compartilhado. O modelo de segurança forte dos aplicativos do Windows Runtime normalmente impede que aplicativos compartilhem dados entre si. Mas pode ser útil para aplicativos do mesmo fornecedor compartilharem arquivos e configurações por usuário.
 
-## Ferramentas
+## <a name="tools"></a>Ferramentas
 
 Recurso | Descrição
  :---- | :----
 Árvore Visual Dinâmica no Visual Studio | O Visual Studio tem um novo recurso Árvore Visual Dinâmica. Você pode usá-lo durante a depuração para saber rapidamente o estado da árvore visual de seu aplicativo e descobrir como as propriedades dos elementos foram definidas. Ele também permite alterar os valores de propriedade enquanto seu aplicativo está em execução, para que você possa ajustar e experimentar sem precisar abrir novamente.
 Log de rastreamento | [TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636(v=vs.85).aspx) é uma nova API de rastreamento de eventos para aplicativos de modo de usuário e drivers de modo kernel; ela é baseada no ETW ([Rastreamento de Eventos para Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803(v=vs.85).aspx)). Essa API oferece uma maneira simplificada de instrumentar código e incluir dados estruturados com eventos sem a necessidade de um arquivo XML de manifesto de instrumentação separado. As APIs WinRT, .NET e C/C++ TraceLogging estão disponíveis para atender a diferentes públicos de desenvolvedores.
 
-## Experiência do usuário
+## <a name="user-experience"></a>Experiência do usuário
 
 Recurso | Descrição
  :---- | :----
@@ -179,7 +186,7 @@ Reconhecimento de fala | O reconhecimento de fala contínua para cenários de di
 Recursos de arrastar e soltar entre plataformas de aplicativos diferentes | Os novos namespaces [Windows.ApplicationModel.DataTransfer.DragDrop](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.dragdrop.aspx) levam a funcionalidade de arrastar e soltar para aplicativos Universais do Windows. Anteriormente, os cenários comuns de arrastar e soltar de programas de área de trabalho — como arrastar um documento de uma pasta para uma mensagem de email do Outlook para anexá-lo — não são possíveis com aplicativos Universais do Windows. Usando essas novas APIs, seu aplicativo pode permitir que os usuários movam dados facilmente entre diferentes aplicativos Universais do Windows e a área de trabalho. <br /><br />Para oferecer suporte a Arrastar e Soltar entre aplicativos, estas novas APIs foram adicionadas ao XAML: [ListViewBase.DragItemsCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.dragitemscompleted.aspx); <br />UIElement: [CanDrag](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.candrag.aspx), [DragStarting](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.dragstarting.aspx), [StartDragAsync](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.startdragasync.aspx), [DropCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.dropcompleted.aspx);  <br />[DragOperationDeferral](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dragoperationdeferral.aspx), [DragUI](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dragui.aspx), [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.draguioverride.aspx); <br />DragEventArgs: [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.drageventargs.acceptedoperation.aspx), [DataView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.drageventargs.dataview.aspx), [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.drageventargs.draguioverride.aspx), [GetDeferral](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.drageventargs.getdeferral.aspx), [Modifiers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.drageventargs.modifiers.aspx); <br />[DragItemsCompletedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.dragitemscompletedeventargs.aspx), [DropCompletedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dropcompletedeventargs.aspx), [DragStartingEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dragstartingeventargs.aspx)
 Barras de título de janela personalizadas | Para aplicativos UWP para a família de dispositivos de desktop, agora você pode usar a classe [ApplicationViewTitleBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.applicationviewtitlebar.aspx) com a propriedade [ApplicationView.TitleBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.applicationview.titlebar.aspx) e o método [Window.SetTitleBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.applicationview.titlebar.aspx) para substituir o conteúdo da barra de título padrão do Windows por seu próprio conteúdo XAML personalizado. O XAML é tratado como "cromo do sistema", para que o Windows manipule os eventos de entrada em vez de seu aplicativo. Isso significa que o usuário ainda pode arrastar e redimensionar a janela, mesmo ao clicar no conteúdo da barra de título personalizada.
 
-## Web
+## <a name="web"></a>Web
 
 Recurso | Descrição
  :---- | :----
@@ -198,9 +205,4 @@ Método WebView.ClearTemporaryWebDataAsync | Quando um usuário interage com o c
 
 
 ---
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

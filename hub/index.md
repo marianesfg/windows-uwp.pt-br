@@ -3,6 +3,16 @@ layout: HubPage
 hide_bc: true
 title: "Documentação do Windows"
 description: "Encontre o desenvolvedor, o hardware e a documentação para profissionais de IT que irão ajudá-lo a criar e manter sua solução do Windows."
+ms.assetid: 56bbc230-b855-426e-b849-4f65a747b944
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: hub-page
+ms.prod: windows
+translationtype: Human Translation
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cb15f417c4254776af4548a5b962392431c9a75b
+ms.lasthandoff: 02/08/2017
+
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -127,7 +137,7 @@ description: "Encontre o desenvolvedor, o hardware e a documentação para profi
                                                 <a href="https://developer.microsoft.com/windows/desktop/app-compatibility">Compatibilidade</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/desktop/test-deploy">Testar e implantar</a>
+                                                <a href="https://developer.microsoft.com/windows/desktop/test-deploy">Teste e implantação</a>
                                             </p>
                                         </div>
                                     </div>
@@ -529,7 +539,4 @@ description: "Encontre o desenvolvedor, o hardware e a documentação para profi
         </li>
     </ul>
 </div>
-
-
-<!--HONumber=Jan17_HO5-->
 

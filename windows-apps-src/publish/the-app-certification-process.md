@@ -3,22 +3,29 @@ author: jnHs
 Description: "Quando você terminar de criar o envio do seu aplicativo, clique em Enviar à Loja. Ele entrará na etapa de certificação."
 title: "O processo de certificação de aplicativos"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 865d71374cf7d678804ce16548edd819faafed33
-ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c63668b9699e641bb89fa79f5febc3397aac78a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# O processo de certificação de aplicativos
+# <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
 
 Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Loja**. Ele entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio é aprovado na certificação, pode levar até 16 horas para que os clientes vejam os detalhes do aplicativo (ou suas atualizações para um aplicativo publicado anteriormente) na loja. Você verá uma notificação quando seu envio for publicado e estiver disponível para os clientes, e o status do aplicativo no painel será **Na Loja**.
 
-## Pré-processamento
+## <a name="preprocessing"></a>Pré-processamento
 
 Depois que você carrega os pacotes do aplicativo com êxito e envia o aplicativo para certificação, os pacotes são colocados em fila para testes automatizados. Exibiremos uma mensagem se detectamos eventuais erros durante o pré-processamento. Para obter mais informações sobre possíveis erros, consulte [Resolver erros de envio](resolve-submission-errors.md).
 
-## Certificação
+## <a name="certification"></a>Certificação
 
 Durante essa fase, vários testes são realizados:
 
@@ -28,17 +35,17 @@ Durante essa fase, vários testes são realizados:
 
 Após a conclusão do processo de certificação, você receberá um relatório de certificação informando se o aplicativo passou ou não na certificação. Se ele não for aprovado, o relatório indicará em qual teste ele falhou ou qual [política](https://msdn.microsoft.com/library/windows/apps/dn764944) não foi atendida. Depois de corrigir o problema, você pode criar um novo envio para o seu aplicativo para iniciar o processo de certificação novamente.
 
-## Versão
+## <a name="release"></a>Versão
 
 Quando seu aplicativo for aprovado na certificação, ele estará pronto para ser movido para o processo **Publicação**. Se você indicou que seu envio deve ser publicado assim que possível, isso acontecerá imediatamente. Se você tiver especificado que ele não deve ser lançado antes de uma data específica, vamos aguardar até essa data, a menos que você clique no link **Change release date**. Se você indicou que deseja publicar o envio manualmente, não o publicaremos até você indicar que deveríamos, clicando no botão **Publicar agora**, ou se você clicar no link **Alterar data do lançamento** e selecionar uma data específica.
 
-## Publicação
+## <a name="publishing"></a>Publicação
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
 Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo o avisará quando seus novos pacotes e detalhes de listagem da Loja forem disponibilizados para clientes em cada uma das versões de seu sistema operacional com suporte. Seu aplicativo permanecerá na fase de publicação até os novos pacotes e detalhes estarem disponíveis para todos os clientes em potencial do seu aplicativo, o que pode levar até 16 horas. 
 
-## Na Loja 
+## <a name="in-the-store"></a>Na Loja 
 
 Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Loja**. Seu envio estarão disponível na Windows Store para download (a menos que você tenha escolhido outra opção de [distribuição e a visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility)). 
 
@@ -52,10 +59,5 @@ Depois de passar pelas etapas acima com êxito, o status do envio será alterado
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

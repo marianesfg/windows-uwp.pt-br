@@ -3,13 +3,20 @@ author: mtoepke
 title: Fazer a portabilidade do loop do jogo
 description: Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma IFrameworkView para controlar uma CoreWindow em tela inteira.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Fazer a portabilidade do loop do jogo
+# <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
 
 Mostra como implementar uma janela para um jogo da Plataforma Universal do Windows (UWP) e como ativar o loop do jogo, inclusive como criar uma [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) em tela inteira. Parte 3 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Criar uma janela
+## <a name="create-a-window"></a>Criar uma janela
 
 
 Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era necessário implementar a estrutura original de janelas para aplicativos de área de trabalho. Tínhamos que criar um HWND, definir o tamanho da janela, fornecer um retorno de chamada de processamento de janela, torná-la visível, entre outras coisas.
@@ -69,7 +76,7 @@ public:
 };
 ```
 
-## Fazer a portabilidade do loop do jogo
+## <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
 
 Consultemos o loop do jogo na implementação do Direct3D 9. Este código existe na função principal do aplicativo. Cada iteração desse loop processa uma mensagem na janela ou renderiza um quadro.
@@ -121,7 +128,7 @@ while (true)
 
 Agora temos um aplicativo UWP que configura a mesma infraestrutura de elementos gráficos básica e renderiza o mesmo cubo colorido, como o exemplo em DirectX 9.
 
-## Para onde ir em seguida?
+## <a name="where-do-i-go-from-here"></a>Para onde ir em seguida?
 
 
 Adicione as [perguntas frequentes sobre portabilidade do DirectX 11](directx-porting-faq.md) aos favoritos.
@@ -140,10 +147,5 @@ Visite os seguintes artigos aprofundados sobre desenvolvimento de jogos da Windo
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

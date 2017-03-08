@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
 description: "Este artigo mostra como usar as APIs no namespace Windows.Media.Audio para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio."
 title: "Gráficos de áudio"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 26e9820a0a4a91462b1952f7ed8dc8eb5f3536f7
-ms.openlocfilehash: 087db9c426a643cc4c7ecfa7686409ed219b07a5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Gráficos de áudio
+# <a name="audio-graphs"></a>Gráficos de áudio
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar as APIs no namespace [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341) para criar gráficos de áudio para cenários de roteamento, mixagem e processamento de áudio.
@@ -29,9 +36,9 @@ Depois que todos os nós forem criados e as conexões entre eles forem configura
 Cenários adicionais são habilitados com a adição de efeitos de áudio ao gráfico de áudio. Cada nó em um gráfico de áudio pode ser preenchido com zeros ou mais efeitos de áudio que executam o processamento de áudio no áudio que passa pelo nó. Há vários efeitos internos como eco, equalizador, limitação e reverberação que podem ser anexados a um nó de áudio com apenas algumas linhas de código. Você também pode criar seus próprios efeitos de áudio que funcionem exatamente como os efeitos internos.
 
 > [!NOTE]  
-> A [amostra AudioGraph UWP](http://go.microsoft.com/fwlink/?LinkId=619481) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio aplicativo.
+> A [amostra AudioGraph UWP](http://go.microsoft.com/fwlink/?LinkId=619481) implementa o código abordado nesta visão geral. Você pode baixar a amostra para ver o código usado no contexto ou usá-lo como ponto de partida para seu próprio app.
 
-## Escolhendo AudioGraph ou XAudio2 do Windows Runtime
+## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Escolhendo AudioGraph ou XAudio2 do Windows Runtime
 
 As APIs de gráfico de áudio do Windows Runtime oferecem a funcionalidade que também pode ser implementada usando-se as [APIs do XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049) baseadas em COM. A seguir estão os recursos da estrutura de gráfico de áudio do Windows Runtime que diferem do XAudio2.
 
@@ -43,7 +50,7 @@ As APIs de gráfico de áudio do Windows Runtime:
 -   Podem usar o pipeline de áudio de baixa latência no Windows 10.
 -   Oferecem suporte à troca automática de ponto de extremidade quando são usados parâmetros de ponto de extremidade padrão. Por exemplo, se o usuário alterna do alto-falante do dispositivo para um fone de ouvido, o áudio é automaticamente redirecionado para a nova entrada.
 
-## Classe AudioGraph
+## <a name="audiograph-class"></a>Classe AudioGraph
 
 A classe [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn914176) é pai de todos os nós que compõem o gráfico. Use esse objeto para criar instâncias de todos os tipos de nós de áudio. Crie uma instância da classe **AudioGraph** inicializando um objeto [**AudioGraphSettings**](https://msdn.microsoft.com/library/windows/apps/dn914185) contendo definições de configuração para o gráfico e chame [**AudioGraph.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn914216). O [**CreateAudioGraphResult**](https://msdn.microsoft.com/library/windows/apps/dn914273) retornado dá acesso ao gráfico de áudio criado ou fornece um valor de erro em caso de falha na criação do gráfico de áudio.
 
@@ -67,7 +74,7 @@ Você pode permitir que o gráfico de áudio use o dispositivo de renderização
 
 [!code-cs[EnumerateAudioRenderDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioRenderDevices)]
 
-##  Nó de entrada de dispositivo
+##  <a name="device-input-node"></a>Nó de entrada de dispositivo
 
 Um nó de entrada de dispositivo passa áudio para o gráfico a partir de um dispositivo de captura de áudio conectado ao sistema, como um microfone. Crie um objeto [**DeviceInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914082) que usa o dispositivo de captura de áudio padrão do sistema chamando [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218). Forneça uma [**AudioRenderCategory**](https://msdn.microsoft.com/library/windows/apps/dn297724) para permitir que o sistema otimize o pipeline de áudio para a categoria especificada.
 
@@ -80,7 +87,7 @@ Se você quiser especificar um dispositivo de captura de áudio específico para
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
-##  Nó de saída do dispositivo
+##  <a name="device-output-node"></a>Nó de saída do dispositivo
 
 Um nó de saída do dispositivo empurra áudio do gráfico para um dispositivo de renderização de áudio, como alto-falantes ou um fone de ouvido. Crie um [**DeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098) chamando [**CreateDeviceOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn958525). O nó de saída usa o [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) do gráfico de áudio.
 
@@ -88,7 +95,7 @@ Um nó de saída do dispositivo empurra áudio do gráfico para um dispositivo d
 
 [!code-cs[CreateDeviceOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceOutputNode)]
 
-##  Nó de entrada do arquivo
+##  <a name="file-input-node"></a>Nó de entrada do arquivo
 
 Um nó de entrada de arquivo permite que você alimente dados de um arquivo de áudio no gráfico. Crie um [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108) chamando [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914226).
 
@@ -103,7 +110,7 @@ Um nó de entrada de arquivo permite que você alimente dados de um arquivo de �
 -   Habilite o loop do arquivo de áudio definindo a propriedade [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120). Quando não é nulo, esse valor indica o número de vezes em que o arquivo será reproduzido após a reprodução inicial. Assim, por exemplo, a definição de **LoopCount** como 1 fará com que o arquivo seja reproduzido 2 vezes no total e defini-lo como 5 fará com que o arquivo seja reproduzido 6 vezes no total. A definição de **LoopCount** como nulo fará com que o arquivo entre em um loop infinito. Para interromper o loop, defina o valor como 0.
 -   Ajuste a velocidade em que o arquivo de áudio é reproduzido definindo [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123). Um valor 1 indica a velocidade original do arquivo, 0,5 indica metade da velocidade e 2 é velocidade dupla.
 
-##  Nó de saída de arquivo
+##  <a name="file-output-node"></a>Nó de saída de arquivo
 
 Um nó de saída de arquivo permite que você direcione dados de áudio do gráfico para um arquivo de áudio. Crie um [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133) chamando [**CreateFileOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914227).
 
@@ -115,7 +122,7 @@ Um nó de saída de arquivo permite que você direcione dados de áudio do gráf
 -   Nós de saída do arquivo oferecem suporte aos seguintes formatos de arquivo: mp3, wav, wma, m4a.
 -   Você deve chamar [**AudioFileOutputNode.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914144) para parar o processamento do nó antes de chamar [**AudioFileOutputNode.FinalizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914140). Caso contrário, uma exceção será gerada.
 
-##  Nó de entrada de quadro de áudio
+##  <a name="audio-frame-input-node"></a>Nó de entrada de quadro de áudio
 
 Um nó de entrada de quadro de áudio permite que você envie dados de áudio que você gera em seu próprio código para o gráfico de áudio. Isso habilita cenários como a criação de um sintetizador de software personalizado. Crie um [**AudioFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914147) chamando [**CreateFrameInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914230).
 
@@ -147,7 +154,7 @@ O código a seguir mostra um exemplo de implementação de um método auxiliar *
 -   Obtenha um ponteiro para dados de buffer de áudio bruto chamando [**IMemoryBufferByteAccess.GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/mt297506) e transmita-o para o tipo de dados de amostra dos dados de áudio.
 -   Preencha o buffer com dados e retorne o [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) para envio para o gráfico de áudio.
 
-##  Nó de saída de quadro de áudio
+##  <a name="audio-frame-output-node"></a>Nó de saída de quadro de áudio
 
 Um nó de saída de quadro de áudio permite receber e processar a saída de dados de áudio do gráfico de áudio com o código personalizado que você criar. Um cenário de exemplo para isso é a análise do sinal na saída de áudio. Crie um [**AudioFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914166) chamando [**CreateFrameOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914233).
 
@@ -169,7 +176,7 @@ O evento [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/wi
 -   Obtenha uma instância da interface COM **IMemoryBufferByteAccess** do buffer de áudio chamando [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn958457).
 -   Obtenha um ponteiro para dados de buffer de áudio bruto chamando **IMemoryBufferByteAccess.GetBuffer** e transmita-o para o tipo de dados de amostra dos dados de áudio.
 
-## Conexões de nós e nós de submixagem
+## <a name="node-connections-and-submix-nodes"></a>Conexões de nós e nós de submixagem
 
 Todos os nós a exposição de tipos de entrada do método **AddOutgoingConnection** que encaminha o áudio produzido pelo nó para o nó que é passado para o método. O exemplo a seguir conecta um [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108) a um [**AudioDeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098), que é uma configuração simples para reproduzir um arquivo de áudio no alto-falante do dispositivo.
 
@@ -187,7 +194,7 @@ Embora nós de saída possam aceitar conexões de vários nós, convém criar um
 
 [!code-cs[CreateSubmixNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateSubmixNode)]
 
-## Iniciando e interrompendo nós de gráfico de áudio
+## <a name="starting-and-stopping-audio-graph-nodes"></a>Iniciando e interrompendo nós de gráfico de áudio
 
 Quando [**AudioGraph.Start**](https://msdn.microsoft.com/library/windows/apps/dn914244) é chamado, o gráfico de áudio começa a processar dados de áudio. Cada tipo de nó fornece métodos **Start** e **Stop** que fazem com que o nó individual inicie ou pare o processamento de dados. Quando [**AudioGraph.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914245) é chamado, todo o processamento de áudio em todos os nós é parado independentemente do estado dos nós individuais, mas o estado de cada nó pode ser definido enquanto o gráfico de áudio é interrompido. Por exemplo, você pode chamar **Stop** em um nó individual enquanto o gráfico é parado e, em seguida, chamar **AudioGraph.Start** para que o nó individual permaneça no estado parado.
 
@@ -195,7 +202,7 @@ Todos os tipos de nó expõem a propriedade **ConsumeInput** que, quando definid
 
 Todos os tipos de nó expõem o método **Reset** que faz o nó descartar todos os dados de áudio no buffer no momento.
 
-## Adicionando efeitos de áudio
+## <a name="adding-audio-effects"></a>Adicionando efeitos de áudio
 
 A API do gráfico de áudio permite que você adicione efeitos de áudio a cada tipo de nó em um gráfico. Nós de saída, nós de entrada e nós de submixagem podem ter um número ilimitado de efeitos de áudio, limitado somente pelos recursos do hardware. O exemplo a seguir demonstra a adição do efeito de eco interno a um nó de submixagem.
 
@@ -210,10 +217,10 @@ A API do gráfico de áudio permite que você adicione efeitos de áudio a cada 
 -   Você pode criar seus próprios efeitos de áudio que implementam [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) e aplicá-los a qualquer nó em um gráfico de áudio.
 -   Cada nó expõe um método **DisableEffectsByDefinition** que desabilita todos os efeitos na lista **EffectDefinitions** do nó que foram adicionados usando a definição especificada. **EnableEffectsByDefinition** habilita os efeitos com a definição especificada.
 
-## Áudio espacial
+## <a name="spatial-audio"></a>Áudio espacial
 A partir do Windows 10, versão 1607, **AudioGraph** oferece suporte ao áudio espacial, que permite que você especifique o local no espaço 3D do qual o audio de qualquer entrada ou nó de submixagem seja emitido. Você também pode especificar uma forma e a direção em que o áudio é emitido, uma velocidade que será usada para fazer a mudança de Doppler do áudio do nó e definir um modelo de decaimento que descreve como o áudio é atenuado com a distância. 
 
-Para criar um emissor, primeiro você pode criar uma forma na qual o som é projetado a partir do emissor, que pode ser um cone ou unidirecional. A classe [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape) fornece métodos estáticos para criar cada uma dessas formas. Em seguida, crie um modelo de decaimento. Isso define como o volume do áudio do emissor diminui à medida que a distância do ouvinte aumenta. O método [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740) cria um modelo de decaimento que emula o decaimento natural de som usando um modelo de queda do quadrado da distância. Por fim, crie um objeto [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings). Atualmente, esse objeto é usado somente para habilitar e desabilitar atenuações de Doppler baseadas na velocidade do áudio do emissor. Chame o construtor [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.#ctor), transmitindo os objetos de inicialização que você acabou de criar. Por padrão, o emissor é colocado na origem, mas você pode definir a posição do emissor com a propriedade [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position).
+Para criar um emissor, primeiro você pode criar uma forma na qual o som é projetado a partir do emissor, que pode ser um cone ou unidirecional. A classe [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape) fornece métodos estáticos para criar cada uma dessas formas. Em seguida, crie um modelo de decaimento. Isso define como o volume do áudio do emissor diminui à medida que a distância do ouvinte aumenta. O método [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740) cria um modelo de decaimento que emula o decaimento natural de som usando um modelo de queda do quadrado da distância. Por fim, crie um objeto [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings). Atualmente, esse objeto é usado somente para habilitar e desabilitar atenuações de Doppler baseadas na velocidade do áudio do emissor. Chame o construtor [**AudioNodeEmitter**](https://msdn.microsoft.com/en-us/library/windows/apps/mt694324.aspx), transmitindo os objetos de inicialização que você acabou de criar. Por padrão, o emissor é colocado na origem, mas você pode definir a posição do emissor com a propriedade [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position).
 
 > [!NOTE] 
 > Os emissores de nó de áudio somente podem processar o áudio formatado em mono com uma taxa de amostragem de 48 kHz. A tentativa de usar o áudio estéreo ou o áudio com uma taxa de amostragem diferente resultará em uma exceção.
@@ -236,7 +243,7 @@ Você também pode atualizar a localização, a velocidade e a orientação do o
 
 Por padrão, o áudio espacial é calculado usando o algoritmo de função de transferência relativas à cabeça (HRTF) da Microsoft para atenuar o áudio com base em sua forma, velocidade e posição relativa ao ouvinte. Você pode definir a propriedade [**SpatialAudioModel**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.SpatialAudioModel) como **FoldDown** para usar um método simples de mixagem estéreo de simulação de áudio espacial que é menos preciso, mas exige menos recursos de CPU e de memória.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Reprodução de mídia](media-playback.md)
  
 
@@ -244,10 +251,5 @@ Por padrão, o áudio espacial é calculado usando o algoritmo de função de tr
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: mtoepke
 title: "Áudio para jogos"
 description: "Aprenda como desenvolver e incorporar música e sons a seu jogo do DirectX e como processar sinais de áudio para criar sons dinâmicos e posicionais."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, áudio, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2fd568b8424585106c83d128a55f85909f35f2b8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Áudio para jogos
+# <a name="audio-for-games"></a>Áudio para jogos
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -20,7 +27,7 @@ Para programação de áudio, recomendamos usar a biblioteca XAudio2 no DirectX,
 
 Você também pode implementar sons e simples e reprodução de músicas com a [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197). A Microsoft Media Foundation foi desenvolvida para reprodução de arquivos e fluxos de mídia (de áudio e vídeo), mas também pode ser usada em jogos e é particularmente útil para cenas cinemáticas ou componentes sem interação de seu jogo.
 
-## Conceitos básicos
+## <a name="concepts-at-a-glance"></a>Conceitos básicos
 
 
 Consulte alguns conceitos de programação de áudio que usamos nesta seção.
@@ -33,17 +40,17 @@ Consulte alguns conceitos de programação de áudio que usamos nesta seção.
 -   Emissores (ou origens) de sons. No XAudio2, os emissores de sons são locais que emitem um som, de um simples ruído em um barulho de fundo até uma agressiva faixa de rock reproduzida por uma jukebox no jogo. Especifique os emissores por coordenadas do ambiente.
 -   Ouvintes de sons. Geralmente, um ouvinte de sons é o jogador, mas pode ser uma entidade com inteligência artificial em um jogo mais avançado, que processa os sons recebidos de um ouvinte. Você pode submixar o som no fluxo de áudio para que seja reproduzido ao jogador ou usá-lo para realizar uma ação específica no jogo, como acordar um guarda com inteligência artificial marcado como ouvinte.
 
-## Considerações de design
+## <a name="design-considerations"></a>Considerações de design
 
 
 O áudio é uma parte extremamente importante do design e desenvolvimento de jogos. Muitos jogadores podem lembrar de um jogo medíocre que foi elevado a um status lendário simplesmente em função de uma trilha sonora memorável, trabalhos incríveis de dublagem e mixagem de sons ou produção de áudio geral fora de série. A música e o som definem a personalidade de um jogo e estabelecem o motivo principal que define o jogo, fazendo-o se destacar de outros jogos semelhantes. O esforço de design e desenvolvimento do perfil de áudio de seu jogo será muito bem recompensado.
 
 O áudio 3D posicional pode proporcionar um nível de imersão além do fornecido por gráficos 3D. Se você estiver desenvolvendo um jogo complexo que simule um mundo ou exija estilo cinemático, pense em usar técnicas de áudio posicional 3D para fazer com que o jogador realmente entre no jogo.
 
-## Mapa de desenvolvimento de áudio em DirectX
+## <a name="directx-audio-development-roadmap"></a>Mapa de desenvolvimento de áudio em DirectX
 
 
-### Recursos conceituais do XAudio2
+### <a name="xaudio2-conceptual-resources"></a>Recursos conceituais do XAudio2
 
 XAudio2 é uma biblioteca de mixagem de áudio para DirectX e destina-se, principalmente, ao desenvolvimento de mecanismos de áudio de alto desempenho para jogos. Para os desenvolvedores de jogos que desejam adicionar efeitos sonoros e música de fundo aos jogos modernos, o XAudio2 oferece um mecanismo de gráfico e mixagem de áudio com baixa latência e suporte para buffers dinâmicos, reprodução precisa de amostra síncrona e conversão implícita de taxa de origem.
 
@@ -104,7 +111,7 @@ XAudio2 é uma biblioteca de mixagem de áudio para DirectX e destina-se, princi
 
  
 
-### Recursos orientadores do XAudio2
+### <a name="xaudio2-how-to-resources"></a>Recursos orientadores do XAudio2
 
 <table>
 <colgroup>
@@ -191,7 +198,7 @@ XAudio2 é uma biblioteca de mixagem de áudio para DirectX e destina-se, princi
 
  
 
-### Recursos Media Foundation
+### <a name="media-foundation-resources"></a>Recursos Media Foundation
 
 MF (Media Foundation) é uma plataforma de mídia para streaming de reprodução de áudio e vídeo. Você pode usar as APIs do Media Foundation para fazer o streaming de áudio e vídeo codificado e compactado com vários algoritmos. Essa plataforma não foi projetada para cenários de jogos em tempo real: em vez disso, ela oferece ferramentas poderosas e suporte abrangente de codificação para captura e apresentação mais lineares de componentes de áudio e vídeo.
 
@@ -252,7 +259,7 @@ MF (Media Foundation) é uma plataforma de mídia para streaming de reprodução
 
  
 
-### Tipos de mídia XAML do Windows Runtime
+### <a name="windows-runtime-xaml-media-types"></a>Tipos de mídia XAML do Windows Runtime
 
 Se estiver usando o [Interop DirectX-XAML](https://msdn.microsoft.com/library/windows/apps/hh825871), será possível incorporar as APIs de mídia XAML do Windows Runtime aos seus aplicativos da Windows Store usando DirectX com C++ para cenários de jogos mais simples.
 
@@ -293,7 +300,7 @@ Se estiver usando o [Interop DirectX-XAML](https://msdn.microsoft.com/library/wi
 
  
 
-## Referência
+## <a name="reference"></a>Referência
 
 
 -   [Introdução ao XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)
@@ -305,7 +312,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 -   [Guia de Programação em XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737)
@@ -316,10 +323,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

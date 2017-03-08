@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "Converter a estrutura de renderização"
-description: "Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11."
+description: "Mostra como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, estrutura de renderização, conversão, direct3d 9, direct3d 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Converter a estrutura de renderização
+# <a name="convert-the-rendering-framework"></a>Converter a estrutura de renderização
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
 
 Veja como converter uma estrutura de renderização simples do Direct3D 9 para o Direct3D 11. Saiba também como fazer a portabilidade de buffers de geometria, como compilar e carregar programas sombreadores HLSL e como implementar a cadeia de renderização no Direct3D 11. Parte 2 do guia passo a passo de [portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a Plataforma Universal do Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Converter efeitos em sombreadores HLSL
+## <a name="convert-effects-to-hlsl-shaders"></a>Converter efeitos em sombreadores HLSL
 
 
 O exemplo a seguir é uma técnica simples de D3DX, escrita para a API herdada de efeitos, voltada à transformação de vértices de hardware e passagem de dados de cores.
@@ -180,7 +187,7 @@ PS_OUTPUT main(PS_INPUT In)
 }
 ```
 
-## Compilar e carregar sombreadores
+## <a name="compile-and-load-shaders"></a>Compilar e carregar sombreadores
 
 
 Geralmente, os jogos em Direct3D 9 usavam a biblioteca de efeitos como um modo conveniente de implementar pipelines programáveis. Era possível compilar efeitos em tempo de execução usando o método [**D3DXCreateEffectFromFile function**](https://msdn.microsoft.com/library/windows/desktop/bb172768).
@@ -262,7 +269,7 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 };
 ```
 
-## Criar recursos de geometria
+## <a name="create-geometry-resources"></a>Criar recursos de geometria
 
 
 No Direct3D 9, armazenávamos recursos de geometria criando buffers no dispositivo Direct3D, bloqueando a memória e copiando dados da memória da CPU para a da GPU.
@@ -315,7 +322,7 @@ m_d3dDevice->CreateBuffer(
     );
 ```
 
-## Implementar a cadeia de renderização
+## <a name="implement-the-rendering-chain"></a>Implementar a cadeia de renderização
 
 
 Às vezes os jogos em Direct3D 9 usavam uma cadeia de renderização baseada em efeitos. O tipo de cadeia de renderização configura o objeto de efeito, fornece a ele os recursos necessários e permite a renderização de cada passagem.
@@ -489,10 +496,5 @@ A cadeia de renderização criada será chamada a partir de um loop do jogo impl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

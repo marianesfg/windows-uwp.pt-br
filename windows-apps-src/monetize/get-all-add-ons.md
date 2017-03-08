@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: "Use este método na API de envio da Windows Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Obter todos os complementos usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de envio da Windows Store, complementos, produtos no aplicativo, IAPs
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 64d40badaa4664e4f516900e82d290f60a499149
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 568dfb5dd47414a6ca4bb0c52ab36437bd119b73
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obter todos os complementos usando a API de envio da Windows Store
+# <a name="get-all-add-ons-using-the-windows-store-submission-api"></a>Obter todos os complementos usando a API de envio da Windows Store
 
 
 
 
 Use este método na API de envio da Windows Store para recuperar dados de todos os complementos (também conhecidos como produtos no aplicativo ou IAPs) para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -25,7 +32,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -36,7 +43,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 Todos os parâmetros de solicitação são opcionais para esse método. Se você chamar esse método sem parâmetros, a resposta conterá dados para todos os complementos de todos os aplicativos que estão registrados em sua conta.
  
@@ -55,11 +62,11 @@ Todos os parâmetros de solicitação são opcionais para esse método. Se você
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
 
-### Exemplos de solicitação
+### <a name="request-examples"></a>Exemplos de solicitação
 
 O exemplo a seguir demonstra como recuperar todos os dados de complemento de todos os aplicativos que estão registrados em sua conta.
 
@@ -75,7 +82,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicitação bem-sucedida para os 5 primeiros complementos que são registrados para uma conta de desenvolvedor com 1072 complementos no total. Para abreviar, este exemplo mostra apenas os dados dos dois primeiros complementos retornados pela solicitação. Para obter mais detalhes sobre os valores no corpo da resposta, veja a seção a seguir.
 
@@ -134,7 +141,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 }
 ```
 
-### Corpo da resposta
+### <a name="response-body"></a>Corpo da resposta
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -144,7 +151,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -155,16 +162,11 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar envios de complemento](manage-add-on-submissions.md)
 * [Obter um complemento](get-an-add-on.md)
 * [Criar um complemento](create-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -1,17 +1,25 @@
 ---
 author: awkoren
-Description: "Implante e depure um aplicativo da Plataforma Universal do Windows (UWP) convertido de um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms), usando a ponte da área de trabalho para UWP."
+Description: "Implante e depure um aplicativo da Plataforma Universal do Windows (UWP) convertido de um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms), usando a Ponte de Desktop para UWP."
 Search.Product: eADQiWindows 10XVcnh
-title: "Depurar apps convertidos usando a ponte da área de trabalho"
+title: Depurar aplicativos convertidos usando a Ponte de Desktop
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 translationtype: Human Translation
-ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
-ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9660d14a1ca28929a213d4ed5a59cdcda73ccc39
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar apps convertidos usando a ponte da área de trabalho
+# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar aplicativos convertidos usando a Ponte de Desktop
 
-Este tópico contém informações para ajudar você a depurar o aplicativo com êxito depois de convertê-lo usando a ponte da área de trabalho para UWP. Você tem algumas opções para depurar seu aplicativo convertido.
+Este tópico contém informações para ajudar você a depurar o aplicativo com êxito depois de convertê-lo usando a Ponte de Desktop para UWP. Você tem algumas opções para depurar seu aplicativo convertido.
 
 ## <a name="attach-to-process"></a>Anexar ao processo
 
@@ -53,7 +61,7 @@ Veja como começar:
 
     Defina o PackageLayout como o local raiz do AppX que foi criado pelo conversor (acima). Em seguida, escolha qual bloco executar.
 
-8.  Abra e edite o AppXFileList.xml. Esse arquivo define como copiar a saída da compilação de depuração Win32 para o layout de AppX que o conversor criou. Por padrão, temos um espaço reservado no arquivo com uma marca de exemplo e comentário:
+8.    Abra e edite o AppXFileList.xml. Esse arquivo define como copiar a saída da compilação de depuração Win32 para o layout de AppX que o conversor criou. Por padrão, temos um espaço reservado no arquivo com uma marca de exemplo e comentário:
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -118,9 +126,9 @@ Veja como começar:
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10. Por fim, você pode definir um ponto de interrupção no código Win32 e pressionar F5 para iniciar o depurador. Isso copiará as atualizações feitas em seu aplicativo Win32 para o pacote AppX e permitirá que você depure diretamente no Visual Studio.
+10.    Por fim, você pode definir um ponto de interrupção no código Win32 e pressionar F5 para iniciar o depurador. Isso copiará as atualizações feitas em seu aplicativo Win32 para o pacote AppX e permitirá que você depure diretamente no Visual Studio.
 
-11. Se você atualizar seu aplicativo, será preciso usar o MakeAppX para empacotar o aplicativo novamente. Para obter mais informações, consulte [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
+11.    Se você atualizar seu aplicativo, será preciso usar o MakeAppX para empacotar o aplicativo novamente. Para obter mais informações, consulte [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
 
 Caso tenha várias configurações de compilação (por exemplo, para depurar e liberar), você poderá adicionar o seguinte ao arquivo AppXFileList.xml para copiar a compilação Win32 de locais diferentes:
 
@@ -134,7 +142,7 @@ Caso tenha várias configurações de compilação (por exemplo, para depurar e 
 
 Você também pode usar a compilação condicional para habilitar caminhos de código em particular, se você atualizar seu aplicativo para UWP, mas ainda deseja criá-lo para Win32. 
 
-1.  No exemplo a seguir, o código só será compilado para DesktopUWP e mostrará um bloco usando a API do WinRT. 
+1.    No exemplo a seguir, o código só será compilado para DesktopUWP e mostrará um bloco usando a API do WinRT. 
 
     ```C#
     [Conditional("DesktopUWP")]
@@ -148,17 +156,17 @@ Você também pode usar a compilação condicional para habilitar caminhos de c�
     }
     ```
 
-2.  Você pode usar o Gerenciador de Configurações para adicionar a nova configuração de compilação:
+2.    Você pode usar o Gerenciador de Configurações para adicionar a nova configuração de compilação:
 
     ![alt](images/desktop-to-uwp/debug-6.png)
 
     ![alt](images/desktop-to-uwp/debug-7.png)
 
-3.  Em seguida, nas propriedades do projeto, adicione suporte para os símbolos de compilação condicional:
+3.    Em seguida, nas propriedades do projeto, adicione suporte para os símbolos de compilação condicional:
 
     ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.  Agora você pode alternar o destino de compilação para DesktopUWP, se quiser compilar no destino a API de UWP que você adicionou.
+4.    Agora você pode alternar o destino de compilação para DesktopUWP, se quiser compilar no destino a API de UWP que você adicionou.
 
 ## <a name="plmdebug"></a>PLMDebug 
 
@@ -174,9 +182,4 @@ Você pode chamar processos personalizados dentro do contêiner de um pacote do 
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

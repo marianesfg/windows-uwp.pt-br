@@ -3,14 +3,21 @@ author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: "Criar um item de trabalho periódico"
 description: "Saiba como criar um item de trabalho periódico que se repete periodicamente."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, item de trabalho periódico, threading, temporizadores"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 11e4c5d2ece918854620a89062e164fba7f48953
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 66e8b283631e6a74aa1dabeb53bfc86c304a642c
+ms.lasthandoff: 02/07/2017
 
 ---
-# Criar um item de trabalho periódico
+# <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 11e4c5d2ece918854620a89062e164fba7f48953
 
 Saiba como criar um item de trabalho periódico que se repete periodicamente.
 
-## Criar o item de trabalho periódico
+## <a name="create-the-periodic-work-item"></a>Criar o item de trabalho periódico
 
 Use o método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para criar um item de trabalho periódico. Forneça um lambda que realize o trabalho e use o parâmetro *period* para especificar o intervalo entre os envios. O período é especificado usando uma estrutura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996). O item de trabalho será reenviado sempre que o período acabar, assim, verifique se o período é longo o suficiente para o trabalho ser concluído.
 
@@ -34,153 +41,153 @@ O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > TimeSpan period = TimeSpan.FromSeconds(60);
-> 
+>
 > ThreadPoolTimer PeriodicTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
 >     {
->         // 
+>         //
 >         // TODO: Work
->         // 
+>         //
 >         
->         // 
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher.RunAsync(CoreDispatcherPriority.High,
 >             () =>
 >             {
->                 // 
+>                 //
 >                 // UI components can be accessed within this scope.
->                 // 
-> 
+>                 //
+>
 >             });
-> 
+>
 >     }, period);
 > ```
 > ``` cpp
 > TimeSpan period;
 > period.Duration = 60 * 10000000; // 10,000,000 ticks per second
-> 
+>
 > ThreadPoolTimer ^ PeriodicTimer = ThreadPoolTimer::CreatePeriodicTimer(
 >         ref new TimerElapsedHandler([this](ThreadPoolTimer^ source)
 >         {
->             // 
+>             //
 >             // TODO: Work
->             // 
+>             //
 >             
->             // 
+>             //
 >             // Update the UI thread by using the UI core dispatcher.
->             // 
+>             //
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([this]()
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
+>                     //
 >                         
 >                 }));
-> 
+>
 >         }), period);
 > ```
 
-## Manipular o cancelamento do item de trabalho periódico (opcional)
+## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>Tratar o cancelamento do item de trabalho periódico (opcional)
 
-Se necessário, você pode manipular o cancelamento do temporizador periódico com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para fornecer um lambda adicional que manipula o cancelamento do item de trabalho periódico.
+Se necessário, você pode tratar o cancelamento do temporizador periódico com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para fornecer um lambda adicional que manipula o cancelamento do item de trabalho periódico.
 
 O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 segundos, e também fornece um manipulador de cancelamento:
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
 > using Windows.System.Threading;
-> 
+>
 >     TimeSpan period = TimeSpan.FromSeconds(60);
-> 
+>
 >     ThreadPoolTimer PeriodicTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
 >     {
->         // 
+>         //
 >         // TODO: Work
->         // 
+>         //
 >         
->         // 
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher.RunAsync(CoreDispatcherPriority.High,
 >             () =>
 >             {
->                 // 
+>                 //
 >                 // UI components can be accessed within this scope.
->                 // 
-> 
+>                 //
+>
 >             });
 >     },
 >     period,
 >     (source) =>
 >     {
->         // 
+>         //
 >         // TODO: Handle periodic timer cancellation.
->         // 
-> 
->         // 
+>         //
+>
+>         //
 >         // Update the UI thread by using the UI core dispatcher.
->         // 
+>         //
 >         Dispatcher->RunAsync(CoreDispatcherPriority.High,
 >             ()=>
 >             {
->                 // 
+>                 //
 >                 // UI components can be accessed within this scope.
 >                 //                 
-> 
+>
 >                 // Periodic timer cancelled.
-> 
+>
 >             }));
 >     });
 > ```
 > ``` cpp
 > using namespace Windows::System::Threading;
 > using namespace Windows::UI::Core;
-> 
+>
 > TimeSpan period;
 > period.Duration = 60 * 10000000; // 10,000,000 ticks per second
-> 
+>
 > ThreadPoolTimer ^ PeriodicTimer = ThreadPoolTimer::CreatePeriodicTimer(
 >         ref new TimerElapsedHandler([this](ThreadPoolTimer^ source)
 >         {
->             // 
+>             //
 >             // TODO: Work
->             // 
+>             //
 >                 
->             // 
+>             //
 >             // Update the UI thread by using the UI core dispatcher.
->             // 
+>             //
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([this]()
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
-> 
+>                     //
+>
 >                 }));
-> 
+>
 >         }),
 >         period,
 >         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
->             // 
+>             //
 >             // TODO: Handle periodic timer cancellation.
->             // 
-> 
+>             //
+>
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
 >                 ref new DispatchedHandler([&]()
 >                 {
->                     // 
+>                     //
 >                     // UI components can be accessed within this scope.
->                     // 
-> 
+>                     //
+>
 >                     // Periodic timer cancelled.
-> 
+>
 >                 }));
 >         }));
 > ```
 
-## Cancelar o temporizador
+## <a name="cancel-the-timer"></a>Cancelar o temporizador
 
 Quando necessário, chame o método [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx) para impedir que o item de trabalho periódico se repita. Se o item de trabalho estiver sendo executado quando o temporizador periódico for cancelado, ele poderá ser concluído. O [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926) (se fornecido) é chamado quando todas as instâncias do item de trabalho periódico foram concluídas.
 
@@ -192,20 +199,14 @@ Quando necessário, chame o método [**Cancel**](https://msdn.microsoft.com/libr
 > PeriodicTimer->Cancel();
 > ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Para obter mais informações sobre temporizadores de uso único, consulte [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)
 * [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

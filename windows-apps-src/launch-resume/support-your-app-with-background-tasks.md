@@ -3,13 +3,20 @@ author: TylerMSFT
 title: Dar suporte a seu app com tarefas em segundo plano
 description: "Os tópicos nesta seção mostram como fazer um código leve funcionar em segundo plano em resposta aos gatilhos."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 9f83717657fddf2df51589aae75a3aa21c6ef5da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a9ac85483c3d7e252f24147088b928de6e781dc6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
+# <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu aplicativo com tarefas em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +24,7 @@ Os tópicos nesta seção mostram como fazer um código leve funcionar em segund
 
 ## <a name="playing-media-in-the-background"></a>Execução de mídia no segundo plano
 
-Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está muito mais fácil. Consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obter mais informações.
+Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está muito mais fácil. Consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio) para obter mais informações.
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>Tarefas em segundo plano dentro do processo e fora do processo
 
@@ -162,7 +169,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 **Diretrizes relacionadas para tarefas em segundo plano**
 
-* [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
+* [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Acessar sensores e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Criar e registrar uma tarefa em segundo plano fora do processo.](create-and-register-a-background-task.md)
@@ -179,9 +186,4 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Sincronização e atualização de dispositivos para aplicativos de dispositivos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,13 +3,20 @@ author: TylerMSFT
 title: "Manipular a ativação do URI"
 description: "Saiba como registrar um aplicativo para ser o manipulador padrão de um nome de esquema de URI (Uniform Resource Identifier)."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 233044095bc8e994ef1a425ec7069fc7fdc93b86
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Manipular a ativação do URI
+# <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -28,7 +35,7 @@ Essas etapas mostram como registrar um nome de esquema de URI personalizado, als
 
 > **Observação**  Nos aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos nativos e pelo sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Veja [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, de esquemas de URI que você não pode registrar para seus aplicativos UWP porque eles são reservados ou proibidos.
 
-## Etapa 1: especificar o ponto de extensão no manifesto do pacote
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Etapa 1: especificar o ponto de extensão no manifesto do pacote
 
 
 O aplicativo recebe os eventos de ativação somente para os nomes de esquema de URI listados no manifesto do pacote. Veja como indicar se seu aplicativo manipula o nome de esquema de URI `alsdk`.
@@ -67,7 +74,7 @@ O aplicativo recebe os eventos de ativação somente para os nomes de esquema de
           </Extensions>
     ```
 
-## Etapa 2: adicionar os ícones apropriados
+## <a name="step-2-add-the-proper-icons"></a>Etapa 2: adicionar os ícones apropriados
 
 
 Os aplicativos que se tornam padrão para um nome de esquema de URI terão seus ícones exibidos em vários locais em todo o sistema; por exemplo, no painel de controle de programas padrão.
@@ -76,7 +83,7 @@ Recomendamos que você inclua no seu projeto os ícones apropriados para que seu
 
 ![o gerenciador de soluções com uma exibição dos arquivos na pasta imagens. há 16, 32, 48 e 256 versões de pixels de 'icon.targetsize' e 'smalltile-sdk'](images/seviewofimages.png)
 
-## Etapa 3: manipular o evento ativado
+## <a name="step-3-handle-the-activated-event"></a>Etapa 3: manipular o evento ativado
 
 
 O manipulador de eventos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) recebe todos os eventos de ativação. A propriedade **Kind** indica o tipo de evento de ativação. Este exemplo é configurado para manipular os eventos de ativação [**Protocolo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol).
@@ -126,7 +133,7 @@ O manipulador de eventos [**OnActivated**](https://msdn.microsoft.com/library/wi
 
 Quando iniciado por Ativação de protocolo, os aplicativos devem considerar incluir uma interface do usuário que permita ao usuário voltar para o início da página do aplicativo.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os maliciosos. Assim, qualquer dado que você obtenha no URI pode vir de uma fonte não confiável. Recomendamos que você nunca execute uma ação permanente com base nos parâmetros recebidos no URI. Por exemplo, os parâmetros de URI podem ser usados para iniciar o aplicativo em uma página de conta de usuário, mas nunca devem ser usados para modificar diretamente a conta do usuário.
@@ -143,7 +150,7 @@ Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://m
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 **Exemplo completo**
@@ -173,9 +180,4 @@ Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://m
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,25 +3,32 @@ author: jwmsft
 description: "A extensão de marcação Binding é convertida, em um tempo de carregamento XAML, para uma instância da classe Binding."
 title: "Extensão de marcação Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49
-ms.openlocfilehash: a6431aed9941079bd05c623229f4ae3236a1b327
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c2d6590d21607cec7718617a0657e28ba56c072e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {Binding}
+# <a name="binding-markup-extension"></a>Extensão de marcação {Binding}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Observação**  Um novo mecanismo de associação está disponível para Windows 10, que é otimizado para o desempenho e a produtividade do desenvolvedor. Consulte [extensão de marcação {x: Bind}](x-bind-markup-extension.md).
 
-**Observação**  Para informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{Binding}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**  Para informações gerais sobre o uso da vinculação de dados no seu app com **{Binding}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 A extensão de marcação **{Binding}** é usada para propriedades de associação de dados nos controles para valores provenientes de uma fonte de dados, como o código. A extensão de marcação **{Binding}** é convertida, em um tempo de carregamento XAML, para uma instância da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Esse objeto de associação obtém um valor de uma propriedade em uma fonte de dados e empurra-o para a propriedade no controle. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações. Ele também pode ser configurado opcionalmente para enviar as alterações para o valor de controle de volta para a propriedade de origem. A propriedade alvo de uma vinculação de dados deve ser uma propriedade de dependência. Para obter mais informações, consulte [Dependency properties overview](dependency-properties-overview.md).
 
 **{Binding}** tem a mesma propriedade de dependência precedente como um valor local, e definir um valor local em código imperativo remove o efeito de qualquer **{Binding}** definido em marcações.
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 
 ``` syntax
@@ -41,7 +48,7 @@ A extensão de marcação **{Binding}** é usada para propriedades de associaç�
 | *propName* | O nome da cadeia de caracteres da propriedade a ser definido no objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Por exemplo, "Converter". |
 | *value* | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade da seção [Propriedades da classe Binding que podem ser definidas com {Binding}](#properties-of-binding) abaixo. |
 
-## Caminho de propriedade
+## <a name="property-path"></a>Caminho de propriedade
 
 [**Caminho**](https://msdn.microsoft.com/library/windows/apps/br209830) descreve a propriedade à qual você está se associando (a propriedade de origem). Caminho é um parâmetro de posição, o que significa que você pode usar o nome do parâmetro explicitamente (`{Binding Path=EmployeeID}`), ou pode especificá-lo como o primeiro parâmetro sem nome (`{Binding EmployeeID}`).
 
@@ -57,7 +64,7 @@ Um objeto intermediário de caminho de propriedade é armazenado como um objeto 
 
 Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propriedade, caminhos de propriedade em áreas com recursos de animação e sobre construir um objeto [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259), consulte: [Property-path syntax](property-path-syntax.md).
 
-## Propriedades da classe Binding que podem ser definidas com {Binding}
+## <a name="properties-of-the-binding-class-that-can-be-set-with-binding"></a>Propriedades da classe Binding que podem ser definidas com {Binding}
 
 
 **{Binding}** é ilustrado com a sintaxe de espaço reservado *bindingProperties* porque há várias propriedades de leitura/escrita de um [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) que podem ser definidas na extensão de marcação. As propriedades podem ser definidas em qualquer ordem com pares *propName*=*value* separados por vírgula. Algumas das propriedades exigem tipos que não têm uma conversão de tipo específica, então são necessárias extensões de marcação próprias aninhadas no **{Binding}**.
@@ -81,13 +88,13 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** estão todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booleano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu app deve ser 14393 ou posterior. Você não poderá usá-lo se seu app for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) e [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especificam uma fonte de associação, portanto são mutualmente exclusivas.
 
 **Dica**  Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 ```XML
 <!-- binding a UI element to a view model -->    
@@ -118,14 +125,9 @@ O segundo exemplo define quatro propriedades [**Binding**](https://msdn.microsof
 
 Observe como o valor da propriedade [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) usa outra extensão de marcação, [{StaticResource} markup extension](staticresource-markup-extension.md), para que haja duas extensões de marcação aninhadas. A interna é avaliada primeiro para que, quando o recurso for obtido, haja um [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) prático (uma classe personalizada exemplificada pelo elemento `local:S2Formatter` em recursos) que a associação possa usar.
 
-## Suporte a ferramentas
+## <a name="tools-support"></a>Suporte a ferramentas
 
 O Microsoft IntelliSense no Microsoft Visual Studio exibe as propriedades de contexto dos dados enquanto cria o **{Binding}** no editor de marcações XAML. Assim que você digita "{Binding", propriedades de contexto dos dados associadas ao [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) são exibidas no menu suspenso. IntelliSense também ajuda com as outras propriedades do [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Para que isso funcione, você deve ter o contexto de dados ou o contexto dos dados de tempo de design definido na página de marcação. **Ir para definição** (F12) também funciona com **{Binding}**. Como alternativa, você pode usar a caixa de diálogo de vinculação de dados.
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

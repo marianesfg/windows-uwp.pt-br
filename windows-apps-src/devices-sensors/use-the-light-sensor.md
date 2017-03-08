@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Usar o sensor de luz
 description: "Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminação."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fe1b9a508e3b540f202e187dbe1696423c7cd373
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f3ebf555d943e302ed5f505a91659bf1d9489e17
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar o sensor de luz
+# <a name="use-the-light-sensor"></a>Usar o sensor de luz
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
@@ -21,17 +28,17 @@ Aprenda a usar o sensor de luz ambiente para detectar alterações na iluminaç�
 
 Um sensor de luz ambiente é um dos vários tipos de sensores de ambiente que permitem aos aplicativos reagir a alterações no ambiente do usuário.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ter um sensor de luz ambiente.
 
-## Criar um aplicativo simples de sensor de luz
+## <a name="create-a-simple-light-sensor-app"></a>Criar um aplicativo simples de sensor de luz
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de sensor de luz do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-###  Instruções
+###  <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -65,8 +72,8 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
         public sealed partial class BlankPage : Page
         {
             private LightSensor _lightsensor; // Our app' s lightsensor object
-           
-            // This event handler writes the current light-sensor reading to 
+
+            // This event handler writes the current light-sensor reading to
             // the textbox named "txtLUX" on the app' s main page.
 
             private void ReadingChanged(object sender, LightSensorReadingChangedEventArgs e)
@@ -133,7 +140,7 @@ Quando o aplicativo estiver em execução, você poderá alterar os valores do s
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-###  Explicação
+###  <a name="explanation"></a>Explicação
 
 O exemplo anterior demonstra a codificação mínima que será necessária gravar para integrar a entrada do sensor de luz ao aplicativo.
 
@@ -153,7 +160,7 @@ _lightsensor.ReportInterval = reportInterval;
 Os novos dados do sensor de luz são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_lightsensor.ReadingChanged += new TypedEventHandler<LightSensor, 
+_lightsensor.ReadingChanged += new TypedEventHandler<LightSensor,
 LightSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -164,14 +171,8 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
  <TextBlock x:Name="txtLuxValue" HorizontalAlignment="Left" Height="44" Margin="224,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="217"/>
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de LightSensor](http://go.microsoft.com/fwlink/p/?linkid=241381)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

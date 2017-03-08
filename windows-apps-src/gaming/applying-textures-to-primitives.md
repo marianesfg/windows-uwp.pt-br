@@ -1,24 +1,31 @@
 ---
 author: mtoepke
 title: Aplicar texturas a primitivas
-description: Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
+description: Aqui, carregamos dados de textura bruta e os aplicamos em uma primitiva 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, texturas, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Aplicar texturas a primitivas
+# <a name="apply-textures-to-primitives"></a>Aplicar texturas a primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
+Aqui, carregamos dados de textura bruta e os aplicamos em uma primitiva 3D usando o cubo que criamos em [Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
 
 **Objetivo:** aplicar texturas a primitivas.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Partimos do princípio de que você conhece C++. Você também precisa ter experiência básica com conceitos de programação de elementos gráficos.
@@ -27,10 +34,10 @@ Também partimos do princípio de que você passou pelos artigos [Quickstart: se
 
 **Tempo para concluir:** 20 minutos.
 
-Instruções
+<a name="instructions"></a>Instruções
 ------------
 
-### 1. Definindo variáveis para um cubo texturizado
+### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definindo variáveis para um cubo texturizado
 
 Primeiro, precisamos definir as estruturas **BasicVertex** e **ConstantBuffer** para o cubo texturizado. Essas estruturas especificam as posições, as orientações e as texturas de vértice para o cubo e como ele será exibido. Caso contrário, declaramos as variáveis similarmente ao tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
@@ -63,11 +70,11 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Criando sombreadores de vértice e pixel com elementos de superfície e textura
+### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Criando sombreadores de vértice e pixel com elementos de superfície e textura
 
-Aqui, criamos sombreadores de vértice e pixel mais complexos do que no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). O sombreador de vértice desse aplicativo transforma cada posição de vértice em espaço de projeção e as coordenadas de textura de vértice para o sombreador de pixel.
+Aqui, criamos sombreadores de vértice e pixel mais complexos do que no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). O sombreador de vértice desse app transforma cada posição de vértice em espaço de projeção e as coordenadas de textura de vértice para o sombreador de pixel.
 
-A matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) do aplicativo que descrevem o layout do código do sombreador de vértice tem três elementos: um define a posição de vértice, outro define o vetor normal de superfície (a direção para que a superfície fica normalmente voltada) e o terceiro elemento define as coordenadas de textura.
+A matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) do app que descrevem o layout do código do sombreador de vértice tem três elementos: um define a posição de vértice, outro define o vetor normal de superfície (a direção para que a superfície fica normalmente voltada) e o terceiro elemento define as coordenadas de textura.
 
 Criamos índice de vértice e buffers constantes que definem um cubo texturizado em órbita.
 
@@ -267,7 +274,7 @@ Criamos índice de vértice e buffers constantes que definem um cubo texturizado
        });
 ```
 
-### 3. Criando texturas e amostras
+### <a name="3-creating-textures-and-samplers"></a>3. Criando texturas e amostras
 
 Aqui, aplicamos dados de textura a um cubo, em vez de aplicar cores como no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
@@ -391,7 +398,7 @@ Usamos dados de textura brutos para criar texturas.
         float degree = 0.0f;
 ```
 
-### 4. Girando e desenhando o cubo texturizado e apresentando a imagem renderizada
+### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. Girando e desenhando o cubo texturizado e apresentando a imagem renderizada
 
 Como nos tutoriais anteriores, inserimos um loop infinito para renderizar e exibir continuamente a cena. Chamamos a função em linha (BasicMath.h) **rotationY** com uma quantidade de rotação para definir valores que vão girar a matriz de modelo do cubo em torno do eixo Y. Em seguida, chamamos [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para atualizar o buffer constante e girar o modelo de cubo. Depois, chamamos [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar o destino de renderização e a exibição de profundidade e estêncil. Chamamos [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para limpar o destino de renderização para uma cor azul sólida e chamamos [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para limpar o buffer de profundidade.
 
@@ -512,21 +519,16 @@ Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://ms
                 );
 ```
 
-## Resumo
+## <a name="summary"></a>Resumo
 
 
-Carregamos dados de textura bruta e os aplicamos a um primitivo 3D.
-
- 
+Carregamos dados de textura bruta e os aplicamos a uma primitiva 3D.
 
  
 
+ 
 
 
 
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

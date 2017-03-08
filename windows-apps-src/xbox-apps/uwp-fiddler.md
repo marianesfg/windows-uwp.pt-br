@@ -2,13 +2,21 @@
 author: WilliamsJason
 title: Como usar o Fiddler com o Xbox One ao desenvolver para UWP
 description: "Descreve como usar a ferramenta de Fiddler gratuita para ver o tráfego de rede em um kit de desenvolvimento UWP do Xbox One."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 translationtype: Human Translation
-ms.sourcegitcommit: 11c6cffab7934937b6d89c30e4d03ae752f6b3b7
-ms.openlocfilehash: 241fa495c7277fe2bf4feafeb4062842f97e59b1
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: c7ebd56205db2674df5da6d64ecc9332aa96230e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Como usar o Fiddler com o Xbox One ao desenvolver para UWP
+# <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Como usar o Fiddler com o Xbox One ao desenvolver para UWP
 
 Fiddler é uma Web proxy de depuração que registra todo o tráfego HTTP e HTTPS entre seu kit de desenvolvimento do Xbox One e a Internet. Você o usará para fazer logon e inspecionar o tráfego de/para os serviços do Xbox e confiar em serviços web de terceiros, para compreender e depurar chamadas de serviço web. 
 
@@ -18,7 +26,7 @@ Fiddler é gratuito e pode ser baixado no [próprio site](http://www.fiddler2.co
 
 Fiddler pode impactar no status de rede relatado pelo console. Se uma conexão upstream é desativada da máquina executando o Fiddler, o console não pode detectar essa desconexão até que a autenticação do console expire. Se você estiver usando o Fiddler, certifique-se de desconectar a conexão entre o console e o computador executando o Fiddler, em vez de usar o Fiddler para simular uma desconexão.
 
-### Para instalar e habilitar o Fiddler no seu computador de desenvolvimento
+### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>Para instalar e habilitar o Fiddler no seu computador de desenvolvimento
 Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego do seu kit de desenvolvimento:
 
 1. Instale o Fiddler no seu computador de desenvolvimento seguindo as instruções do [site do Fiddler](http://www.fiddler2.com/fiddler2/). 
@@ -52,7 +60,7 @@ Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego 
   4. Clique em **Exportar certificado raiz para área de trabalho**.
 7. Saia e reinicie o Fiddler.
 
-### Para configurar um kit de desenvolvimento para usar o Fiddler como seu proxy para a Internet
+### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a>Para configurar um kit de desenvolvimento para usar o Fiddler como seu proxy para a Internet
 
 1. Navegue até a ferramenta **Rede** na interface do usuário do Device Portal do Xbox.
 2. Procure o certificado raiz Fiddler exportado para a área de trabalho. 
@@ -60,7 +68,7 @@ Siga estas etapas para instalar e habilitar o Fiddler para monitorar o tráfego 
 4. Digite o número da porta onde o Fiddler estiver recebendo (por padrão, o Fiddler usa a porta 8888). 
 5. Clique em **Habilitar**. Isso reiniciará o kit de desenvolvimento.
 
-### Para parar de usar o Fiddler
+### <a name="to-stop-using-fiddler"></a>Para parar de usar o Fiddler
 Para parar de usar o Fiddler como um proxy para a Internet (e parar o rastreamento de todo o tráfego do kit de desenvolvimento de rede pelo Fiddler), faça o seguinte:
 
 1. Navegue até a ferramenta **Rede** na interface do usuário do Device Portal do Xbox.
@@ -69,16 +77,11 @@ Para parar de usar o Fiddler como um proxy para a Internet (e parar o rastreamen
 > [!NOTE]
 > Cada computador com o Fiddler instalado usa um certificado raiz Fiddler diferente. Se você tiver mais de um computador que pode ser usado para fornecer um proxy Fiddler para o kit de desenvolvimento, você precisará selecionar o novo certificado raiz ao alternar entre eles. Se você estiver usando apenas um computador, você precisa selecionar o certificado raiz apenas na primeira vez que habilitar o Fiddler. Você ainda deve especificar o endereço IP e a porta.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Referência de API de configurações Fiddler](wdp-fiddler-api.md)
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

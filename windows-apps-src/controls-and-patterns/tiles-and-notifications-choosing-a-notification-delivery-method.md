@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "Este artigo aborda as quatro opções de notificação&\\#8212;local, agendada, periódica e por push&\\#8212que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema."
+Description: "Este artigo aborda as quatro opções de notificação&\\#8212;local, agendada, periódica e por push&\\#8212;que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema."
 title: "Escolher um método de entrega de notificação"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 71b1255c25adcb4a99d082ba5e83af60b316abe1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 42cb565c9cb1592d90d9f46d2faf783117d0a8bd
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
@@ -15,7 +22,7 @@ ms.openlocfilehash: 71b1255c25adcb4a99d082ba5e83af60b316abe1
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
+Este artigo aborda as quatro opções de notificação – local, agendada, periódica e por push – que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
 
 ## <a name="notification-delivery-methods-overview"></a>Visão geral de métodos de entrega de notificações
 
@@ -168,10 +175,5 @@ Para obter mais informações, consulte:
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

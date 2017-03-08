@@ -1,39 +1,46 @@
 ---
 title: "Introdução a certificados"
-description: Este artigo discute o uso de certificados em aplicativos da Plataforma Universal do Windows (UWP).
+description: Este artigo discute o uso de certificados em apps da Plataforma Universal do Windows (UWP).
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: e46d31e2f90b9336ea19632099741c1957521578
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 84187230ee8e10c5e9a1a75f67065e202c4bff00
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução a certificados
+# <a name="intro-to-certificates"></a>Introdução a certificados
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo discute o uso de certificados em aplicativos da Plataforma Universal do Windows (UWP). Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados.
+Este artigo discute o uso de certificados em apps da Plataforma Universal do Windows (UWP). Os certificados digitais são usados na criptografia de chave pública para associar uma chave pública a uma pessoa, um computador ou uma organização. As identidades associadas são usadas com mais frequência para autenticar uma entidade em outra. Por exemplo, os certificados são geralmente usados para autenticar um servidor Web em um usuário e um usuário em um servidor Web. É possível criar solicitações de certificados e instalar ou importar os certificados emitidos. Também é possível inscrever um certificado em uma hierarquia de certificados.
 
-### Repositórios de certificados compartilhados
+### <a name="shared-certificate-stores"></a>Repositórios de certificados compartilhados
 
-Os aplicativos UWP usam o novo modelo de aplicativo isolationist introduzido no Windows 8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
+Os apps UWP usam o novo modelo de app isolationist introduzido no Windows 8. Nesse modelo, os apps são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de app, que proíbe o app de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
 
-### Repositório de certificados por contêiner de aplicativo
+### <a name="certificate-storage-per-app-container"></a>Repositório de certificados por contêiner de app
 
-Certificados para uso em um contêiner de aplicativo específico são armazenados com base no usuário e nos locais dos contêineres de aplicativo. Um aplicativo executado em um contêiner de aplicativo tem acesso de gravação apenas a seu próprio armazenamento de certificado. Se o aplicativo adiciona certificados a qualquer um dos seus repositórios, esses certificados não podem ser lidos por outros aplicativos. Quando um aplicativo é desinstalado, todos os seus certificados específicos também são removidos. Um aplicativo também tem acesso de leitura a repositórios de certificados do computador local, diferentes do MY e do REQUEST.
+Certificados para uso em um contêiner de app específico são armazenados com base no usuário e nos locais dos contêineres de app. Um app executado em um contêiner de app tem acesso de gravação apenas a seu próprio armazenamento de certificado. Se o app adiciona certificados a qualquer um dos seus repositórios, esses certificados não podem ser lidos por outros apps. Quando um app é desinstalado, todos os seus certificados específicos também são removidos. Um app também tem acesso de leitura a repositórios de certificados do computador local, diferentes do MY e do REQUEST.
 
-### Cache
+### <a name="cache"></a>Cache
 
-Cada contêiner de aplicativo possui um cache isolado no qual ele pode armazenar certificados de emissor necessários para validação, listas de revogação de certificados (CRL) e respostas do protocolo de status de certificado on-line (OCSP).
+Cada contêiner de app possui um cache isolado no qual ele pode armazenar certificados de emissor necessários para validação, listas de revogação de certificados (CRL) e respostas do protocolo de status de certificado on-line (OCSP).
 
-### Certificados e chaves compartilhados
+### <a name="shared-certificates-and-keys"></a>Certificados e chaves compartilhados
 
-Quando um cartão inteligente é inserido no leitor, os certificados e as chaves contidos no cartão são propagados para o MEU repositório do usuário, onde podem ser compartilhados por qualquer aplicativo de confiança total que o usuário esteja executando. Por padrão, contudo, contêineres de aplicativo não têm acesso ao MEU repositório por usuário.
+Quando um cartão inteligente é inserido no leitor, os certificados e as chaves contidos no cartão são propagados para o MEU repositório do usuário, onde podem ser compartilhados por qualquer app de confiança total que o usuário esteja executando. Por padrão, contudo, contêineres de app não têm acesso ao MEU repositório por usuário.
 
-Para corrigir esse problema e permitir que grupos de entidades acessem grupos de recursos, o modelo de isolamento do contêiner de aplicativo dá suporte ao conceito de funcionalidades. Uma funcionalidade permite que um processo de contêiner de aplicativo acesse um recurso específico. A funcionalidade sharedUserCertificates concede, ao contêiner do aplicativo, acesso aos certificados e chaves contidos no repositório MY e no repositório Raízes Confiáveis do Cartão Inteligente do usuário. A funcionalidade não concede acesso de leitura ao repositório de SOLICITAÇÃO do usuário.
+Para corrigir esse problema e permitir que grupos de entidades acessem grupos de recursos, o modelo de isolamento do contêiner de app dá suporte ao conceito de funcionalidades. Uma funcionalidade permite que um processo de contêiner de app acesse um recurso específico. A funcionalidade sharedUserCertificates concede, ao contêiner do app, acesso aos certificados e chaves contidos no repositório MY e no repositório Raízes Confiáveis do Cartão Inteligente do usuário. A funcionalidade não concede acesso de leitura ao repositório de SOLICITAÇÃO do usuário.
 
 Você especifica a funcionalidade sharedUserCertificates no manifesto conforme demonstrado no exemplo a seguir.
 
@@ -43,7 +50,7 @@ Você especifica a funcionalidade sharedUserCertificates no manifesto conforme d
 </Capabilities>
 ```
 
-## Campos do certificado
+## <a name="certificate-fields"></a>Campos do certificado
 
 
 O padrão de certificado de chave pública X.509 foi revisado ao longo do tempo. Todas as versões sucessivas da estrutura de dados mantiveram os campos que existiam nas versões anteriores e adicionaram mais, conforme mostrado na ilustração a seguir.
@@ -52,7 +59,7 @@ O padrão de certificado de chave pública X.509 foi revisado ao longo do tempo.
 
 Alguns destes campos e extensões podem ser especificados diretamente quando você usa a classe [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079) para criar uma solicitação de certificado. A maioria não pode. Esses campos podem ser preenchidos pela autoridade de emissão ou podem ser deixados em branco. Para saber mais sobre os campos, consulte as seguintes seções:
 
-### Campos da versão 1
+### <a name="version-1-fields"></a>Campos da versão 1
 
 | Campo               | Descrição                                                                                                                                                                                                                                                                 |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ Alguns destes campos e extensões podem ser especificados diretamente quando voc
 
  
 
-### Campos da versão 2
+### <a name="version-2-fields"></a>Campos da versão 2
 
 Um certificado X.509 versão 2 contém os campos básicos definidos na versão 1 e adiciona os campos a seguir.
 
@@ -76,7 +83,7 @@ Um certificado X.509 versão 2 contém os campos básicos definidos na versão 1
 | Identificador Exclusivo de Entidade | Contém um valor exclusivo que pode ser usado para tornar o nome X.500 da entidade do certificado não ambíguo quando reutilizado por entidades diferentes com o tempo. |
  
 
-### Extensões da versão 3
+### <a name="version-3-extensions"></a>Extensões da versão 3
 
 Um certificado X.509 versão 3 contém os campos definidos na versão 1 e 2, e adiciona extensões de certificado.
 
@@ -96,10 +103,5 @@ Um certificado X.509 versão 3 contém os campos definidos na versão 1 e 2, e a
 | Nome Alternativo para a Entidade     | Especifica uma ou mais formas de nome alternativas para a entidade da solicitação de certificado. Dentre os exemplos de formas alternativas incluem-se endereços de email, nomes DNS, endereços IP e URIs.                           |
 | Atributos do Diretório de Entidade | Expressa atributos de identificação, como a nacionalidade da entidade do certificado. O valor da extensão é uma sequência de pares de valores OID.                                                              |
 | Identificador da Chave da Entidade       | Diferencia entre várias chaves públicas mantidas pela entidade do certificado. O valor da extensão é geralmente um hash SHA-1 da chave.                                                                   |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

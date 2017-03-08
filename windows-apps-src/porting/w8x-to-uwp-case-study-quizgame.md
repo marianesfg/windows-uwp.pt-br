@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: "Este tópico apresenta um estudo de caso de portabilidade de um exemplo de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10."
 title: Estudo de caso do Windows Runtime 8.x para UWP, exemplo de aplicativo QuizGame ponto a ponto
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 62d747a06f26bd2d069d2f23f36f48249fd11e95
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2756fc75b7a780ae0361671127423dcb898cae4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -193,9 +200,4 @@ Com esse último ajuste, o aplicativo se comportará e parecerá como antes da p
 ## <a name="conclusion"></a>Conclusão
 
 O aplicativo que portamos este estudo de caso era relativamente complexo, envolvendo vários projetos, uma biblioteca de classes e um volume relativamente grande de código e interface do usuário. Mesmo assim, a portabilidade foi simples. Parte da facilidade de portabilidade está diretamente relacionada à semelhança entre a plataforma de desenvolvimento do Windows 10 e as plataformas do Windows 8.1 e do Windows Phone 8.1. Além disso, também à forma como o aplicativo original foi projetado para manter os modelos, os modelos de exibição e os modos de exibição separados.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

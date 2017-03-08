@@ -3,13 +3,20 @@ author: jwmsft
 description: "A extensão de marcação xBind é uma alternativa a Binding. xBind não tem alguns dos recursos de Binding, mas ele é executado em menos tempo e usando menos memória do que Binding e suporta melhor a depuração."
 title: "Extensão de marcação xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2dc706412684ded7fe4e98c6d01fb75ae65abd5f
-ms.openlocfilehash: b7d1dd183ba35e4b694a80d3e43628c928b218e5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a82cb66c66b593c0241a651e4df34e3998a106c6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensão de marcação {x:Bind}
+# <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -25,7 +32,7 @@ Em tempo de compilação XAML, **{x: Bind}** é convertido em código que irá o
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
 -   [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=619992)
 
-## Uso do atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
 ``` syntax
 <object property="{x:Bind}" .../>
@@ -45,11 +52,11 @@ Em tempo de compilação XAML, **{x: Bind}** é convertido em código que irá o
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
 | _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-you-can-set) a seguir. | 
 
-## Caminho de propriedade
+## <a name="property-path"></a>Caminho de propriedade
 
 *PropertyPath* define a propriedade **Path** de uma expressão **{x:Bind}**. **Path** é um caminho de propriedade que especifica o valor da propriedade, da subpropriedade, do campo ou do método ao qual você está se associando (à origem). Você pode mencionar o nome da propriedade **Path** explicitamente: `{Binding Path=...}`. Ou você pode omiti-lo: `{Binding ...}`.
 
-### Resolução de caminho da propriedade
+### <a name="property-path-resolution"></a>Resolução de caminho da propriedade
 
 **{x:Bind}** não usa o **DataContext** como uma fonte padrão; em vez disso, usa o controle de página ou do usuário propriamente dito. Portanto, ele aparecerá no code-behind de sua página ou controle de usuário para métodos, propriedades e campos. Para expor seu modelo de exibição **{x:Bind}**, você geralmente deseja adicionar novos campos ou propriedades para o code-behind para sua página ou controle de usuário. Etapas de um caminho de propriedade são delimitadas por pontos (.), e você pode incluir vários delimitadores para percorrer subpropriedades sucessivas. Use o ponto delimitador independentemente da linguagem de programação usada para implementar o objeto sendo associado.
 
@@ -59,7 +66,7 @@ Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propr
 
 Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Com **x:Bind**, você pode usar o nome do elemento como a primeira parte do caminho para a associação, porque elementos nomeados tornam-se campos dentro do controle de página ou de usuário que representa a origem da associação raiz
 
-### Coleções
+### <a name="collections"></a>Coleções
 
 Se a fonte de dados for uma coleção, um caminho de propriedade pode especificar itens na coleção pela posição ou índice. Por exemplo, "Teams\[0\].Players", em que o "\[\]" literal contém o "0" que solicita o primeiro item em uma coleção com índice zero.
 
@@ -69,18 +76,18 @@ Se a fonte de dados for um dicionário ou um mapa, um caminho de propriedade pod
 
 Para usar um indexador da cadeia de caracteres, o modelo precisa implementar **IDictionary&lt;string, T&gt;** ou **IMap&lt;string, T&gt;** no tipo da propriedade que será indexada. Se o tipo da propriedade indexada suportar **IObservableMap** e a associação for OneWay ou TwoWay, então registrará e escutará notificações de alteração nessas interfaces. A lógica de detecção de alteração irá atualizar com base em todas as alterações de coleção, mesmo que não afete o valor indexado específico. Isso ocorre porque a lógica de escuta é comum em todas as instâncias da coleção.
 
-### Propriedades Anexadas
+### <a name="attached-properties"></a>Propriedades Anexadas
 
 Para associar a propriedades anexadas, você precisa colocar o nome de classe e propriedade entre parênteses depois do ponto. Por exemplo **Text="{x:Bind Button22.(Grid.Row)}"**. Se a propriedade não é declarada em um namespace Xaml, você precisará prefixá-la com um namespace xml, que você deve mapear para um namespace de código no head do documento.
 
-### Transmissão
+### <a name="casting"></a>Transmissão
 
 Associações compiladas são fortemente tipadas e resolverão o tipo de cada etapa em um caminho. Se o tipo retornado não tiver o membro, falhará no momento da compilação. Você pode especificar uma conversão para informar o tipo real do objeto de associação. No caso a seguir, **obj** é uma propriedade do objeto de tipo, mas que contém uma caixa de texto, para que possamos usar **Text="{x:Bind ((TextBox)obj).Text}"** ou **Text="{x:Bind obj.(TextBox.Text)}"**.
 O campo **groups3** em **Text="{x:Bind ((data:SampleDataGroup)groups3\[0\]).Title}"** é um dicionário de objetos, portanto, você deve convertê-lo para **data:SampleDataGroup**. Observe o uso do prefixo de namespace xml **data:** para mapear o tipo de objeto para um namespace de código que não seja parte do namespace XAML padrão.
 
 _Observação: A sintaxe de conversão em estilo C# é mais flexível do que a sintaxe de propriedade anexada, e será a sintaxe recomendada futuramente._
 
-## Funções em caminhos de associação
+## <a name="functions-in-binding-paths"></a>Funções em caminhos de associação
 
 Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Assim, é possível
 - Uma maneira mais simples de conseguir a conversão de valor
@@ -116,13 +123,13 @@ class ColorEntry
 }
 
 ```
-### Sintaxe da função
+### <a name="function-syntax"></a>Sintaxe da função
 ``` Syntax
 Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
              |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
 ```
 
-### Caminho para a função
+### <a name="path-to-the-function"></a>Caminho para a função
 O caminho para a função é especificado como outros caminhos de propriedade e pode incluir pontos (.), indexadores ou conversões para localizar a função.
 
 As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** será mapeado para a função DateTime.Parse, pressupondo-se que **xmlns:sys="using:System"** esteja especificado na parte superior da página.
@@ -136,7 +143,7 @@ A função associada precisa:
 - O tipo de retorno da função precisa corresponder ao tipo da propriedade que está usando a associação
 
 
-### Argumentos de função
+### <a name="function-arguments"></a>Argumentos de função
 Vários argumentos de função podem ser especificados, separados por vírgula (,)
 - Caminho de associação – a mesma sintaxe como se você estivesse associando diretamente esse objeto.
   - Se o modo for OneWay/TwoWay, a detecção de alteração será realizada, e a associação será reavaliada mediante a alteração do objeto
@@ -144,10 +151,10 @@ Vários argumentos de função podem ser especificados, separados por vírgula (
 - Número da constante - por exemplo -123,456
 - Booliano – especificado como "x:True" ou "x:False"
 
-### Associações de função bidirecional
+### <a name="two-way-function-bindings"></a>Associações de função bidirecional
 Em um cenário de associação bidirecional, uma segunda função deve ser especificada para a direção inversa da associação. Isso é feito usando-se a propriedade de associação **BindBack**, por exemplo **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. A função deve utilizar um argumento que é o valor que precisa ser reenviado para o modelo.
 
-## Associação de evento
+## <a name="event-binding"></a>Associação de evento
 
 Associação de evento é um recurso exclusivo para associação compilada. Permite que você especifique o manipulador para um evento usando uma associação, em vez de ele ter de ser um método no code-behind. Por exemplo: **Click="{x:Bind rootFrame.GoForward}"**.
 
@@ -161,7 +168,7 @@ No code-behind gerado, associação compilada manipula o evento e o encaminha pa
 
 Para saber mais sobre a sintaxe de cadeia de caracteres de um caminho de propriedade, veja [Sintaxe de caminho de propriedade](property-path-syntax.md), tendo em mente as diferenças descritas aqui para **{x:Bind}**.
 
-##  Propriedades que você pode definir com {x: Bind}
+##  <a name="properties-that-you-can-set-with-xbind"></a>Propriedades que você pode definir com {x: Bind}
 
 
 **{x:Bind}** é ilustrado com a sintaxe de espaço reservado *bindingProperties* porque há várias propriedades de leitura/gravação que podem ser definidas na extensão de marcação. As propriedades podem ser definidas em qualquer ordem com pares *propName*=*value* separados por vírgula. Observe que você não pode incluir quebras de linha na expressão de associação. Algumas das propriedades exigem tipos que não têm uma conversão de tipo específica, então são necessárias extensões de marcação próprias aninhadas no **{x:Bind}**.
@@ -181,7 +188,7 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 
 **Observação** Se você estiver convertendo a marcação de **{Binding}** para **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
  
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Como **{x:Bind}** usa código gerado para atingir seus benefícios, requer informações de tipo em tempo de compilação. Isso significa que você não pode associar a propriedades onde você não souber o tipo antes do tempo. Por isso, você não pode usar **{x:Bind}** com a propriedade **DataContext**, que é do tipo **Object** e também está sujeita a alterações no tempo de execução.
 
@@ -203,7 +210,7 @@ Páginas e controles de usuário que incluem associações compiladas terão uma
 
 **{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral do XAML](xaml-overview.md).
 
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 ```XML
 <Page x:Class="QuizGame.View.HostView" ... >
@@ -221,9 +228,4 @@ Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate*
     </StackPanel>
   </DataTemplate>
 ```
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

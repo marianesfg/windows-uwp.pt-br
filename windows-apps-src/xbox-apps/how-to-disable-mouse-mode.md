@@ -2,16 +2,24 @@
 author: payzer
 title: Como desabilitar o modo do mouse
 description: "Instruções para desabilitar o modo de mouse padrão."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 translationtype: Human Translation
-ms.sourcegitcommit: b4df1f944d909640791e4ed7e3bcf8d8bdf7a0d1
-ms.openlocfilehash: 91e530a3313d53c4e693b88a64b849f3188a72de
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 6848d1783df4489571fcf493a55447f67e5d6fd9
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Como desabilitar o modo do mouse
+# <a name="how-to-disable-mouse-mode"></a>Como desabilitar o modo do mouse
 O modo de mouse está ativado por padrão para todos os aplicativos, o que significa que todos os aplicativos que não o desativaram receberão um ponteiro de mouse (semelhante ao do navegador Edge no console). É altamente recomendável desativar essa opção e otimizar para navegação direcional de controlador.   
    
-## HTML   
+## <a name="html"></a>HTML   
 Para ativar a navegação de controlador direcional em um aplicativo da Plataforma Universal do Windows (UWP) JavaScript, use a biblioteca JavaScript de [navegação direcional TVHelpers](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation). Inclua o arquivo JavaScript de navegação direcional no pacote do aplicativo e adicione uma referência a ele em todas as páginas HTML que exigem navegação de controlador direcional:
 
 ```code
@@ -27,7 +35,7 @@ navigator.gamepadInputEmulation = "gamepad";
 
    Essa propriedade assume `mouse` como padrão, o que habilita o modo de mouse. Definir como `keyboard` desativa o modo de mouse e, em vez disso, a entrada de gamepad gera eventos de teclado do DOM. Definir como `gamepad` desativa o modo de mouse e não gera eventos de teclado do DOM e permite que você use apenas as APIs de gamepad DOM ou WinRT.
 
-## XAML    
+## <a name="xaml"></a>XAML    
 Para desativar o modo de mouse, adicione o seguinte ao construtor do seu aplicativo:   
    
 ```code
@@ -38,16 +46,11 @@ public App() {
 }
 ```
 
-## C++/DirectX   
+## <a name="cdirectx"></a>C++/DirectX   
 Se você estiver escrevendo um aplicativo em C++/DirectX, não há nada a fazer. O modo do mouse só se aplica a aplicativos HTML e XAML.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Práticas recomendadas para Xbox](tailoring-for-xbox.md)
 - [UWP no Xbox One](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

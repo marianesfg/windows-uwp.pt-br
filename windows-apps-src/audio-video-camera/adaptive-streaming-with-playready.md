@@ -1,19 +1,26 @@
 ---
 author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: "Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows)."
+description: "Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um app UWP (Plataforma Universal do Windows)."
 title: "Streaming adaptável com PlayReady"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8534598b1f3cf49b15a73d03f6f19e67877b25d0
-ms.openlocfilehash: 22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Streaming adaptável com PlayReady
+# <a name="adaptive-streaming-with-playready"></a>Streaming adaptável com PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows). 
+Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um app UWP (Plataforma Universal do Windows). 
 
 Esse recurso atualmente oferece suporte à reprodução de conteúdo Dynamic Streaming over HTTP (DASH).
 
@@ -58,9 +65,9 @@ Também convém declarar a constante a seguir:
 private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
-## Configurando o MediaProtectionManager
+## <a name="setting-up-the-mediaprotectionmanager"></a>Configurando o MediaProtectionManager
 
-Para adicionar proteção de conteúdo PlayReady ao seu aplicativo UWP, você precisará configurar um objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Você fará isso ao inicializar seu objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
+Para adicionar proteção de conteúdo PlayReady ao seu app UWP, você precisará configurar um objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Você fará isso ao inicializar seu objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
 
 O código a seguir configura um [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040):
 
@@ -95,7 +102,7 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 }
 ```
 
-Este código pode simplesmente ser copiado para o seu aplicativo, já que ele é obrigatório para configurar a proteção de conteúdo.
+Este código pode simplesmente ser copiado para o seu app, já que ele é obrigatório para configurar a proteção de conteúdo.
 
 O evento [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) é acionado quando a carga de dados binários falha. Precisamos adicionar um manipulador de eventos para lidar com isso, indicando que a carga não foi concluída:
 
@@ -136,7 +143,7 @@ private async void ProtectionManager_ServiceRequested(
 }
 ```
 
-## Solicitações de serviço de individualização
+## <a name="individualization-service-requests"></a>Solicitações de serviço de individualização
 
 O código a seguir cria reativamente uma solicitação de serviço de individualização do PlayReady. Passamos a solicitação como um parâmetro para a função. Colocamos a chamada em um bloco try/catch e se não houver exceções, dizemos que a solicitação foi concluída com êxito:
 
@@ -187,7 +194,7 @@ async void ProActiveIndivRequest()
 }
 ```
 
-## Solicitações de serviço de aquisição de licença
+## <a name="license-acquisition-service-requests"></a>Solicitações de serviço de aquisição de licença
 
 Se em vez disso a solicitação era [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285), chamamos a função a seguir para solicitar e obter a licença do PlayReady. Informamos ao objeto **MediaProtectionServiceCompletion** que passamos se a solicitação foi bem-sucedida ou não, e concluímos a solicitação:
 
@@ -269,7 +276,7 @@ async void LicenseAcquisitionRequest(
 }
 ```
 
-## Inicializando o AdaptiveMediaSource
+## <a name="initializing-the-adaptivemediasource"></a>Inicializando o AdaptiveMediaSource
 
 Por fim, você precisará de uma função para inicializar o [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912), criada de um determinado [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) e [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926). O **Uri** deve ser o link para o arquivo de mídia (HLS ou DASH); o **MediaElement** deve ser definido em seu XAML.
 
@@ -290,17 +297,12 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-Você pode chamar essa função em qualquer evento que manipular o início do streaming adaptável; por exemplo, em um evento de clique de um botão.
+Você pode chamar essa função em qualquer evento que tratar o início do streaming adaptável; por exemplo, em um evento de clique de um botão.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [DRM do PlayReady](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

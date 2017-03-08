@@ -3,9 +3,16 @@ author: mtoepke
 title: "Manipular Cenários removidos de dispositivos no Direct3D 11"
 description: "Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx 11, dispositivo perdido
 translationtype: Human Translation
-ms.sourcegitcommit: 5ed3815397b076ab3ee14fd3c22b235b46da5f09
-ms.openlocfilehash: b88d85c78ba5d08718b7e2c844f94beb71e5134a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -173,10 +180,5 @@ O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramen
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -2,16 +2,24 @@
 author: WilliamsJason
 title: "Referência de API Fiddler do Device Portal"
 description: Saiba como habilitar/desabilitar o rastreamento Fiddler programaticamente.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 translationtype: Human Translation
-ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
-ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referência de API de configurações Fiddler   
+# <a name="fiddler-settings-api-reference"></a>Referência de API de configurações Fiddler   
 Você pode habilitar e desabilitar o rastreamento de rede Fiddler no seu devkit usando essa API REST.
 
-## Habilite o rastreamento Fiddler
+## <a name="enable-fiddler-tracing"></a>Habilite o rastreamento Fiddler
 
 **Solicitação**
 
@@ -54,7 +62,7 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 
-## Desativar o rastreamento de Fiddler no devkit
+## <a name="disable-fiddler-tracing-on-the-devkit"></a>Desativar o rastreamento de Fiddler no devkit
 
 **Solicitação**
 
@@ -78,7 +86,7 @@ DELETE | /ext/fiddler
 
 **Resposta**   
 
-- Nenhum 
+- Nenhuma 
 
 **Código de status**
 
@@ -95,12 +103,7 @@ Código de status HTTP      | Descrição
 
 * Windows Xbox
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Configurando o Fiddler para UWP no Xbox](uwp-fiddler.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

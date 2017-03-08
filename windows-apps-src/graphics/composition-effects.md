@@ -2,21 +2,28 @@
 author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: "Efeitos de composição"
-description: "O efeito de APIs permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada."
+description: "As APIs de efeito permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7330af081021788a17bf6ec320267b4ea2fc3115
-ms.openlocfilehash: 197a4b32afc82724803fb93949b288b38de52cc4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ecf1c8a35838c1a05fabb5d76a2d0574c90a98db
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="composition-effects"></a>Efeitos de composição
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A API do WinRT [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permite efeitos em tempo real que serão aplicados a imagens e interface do usuário com propriedades de efeitos que podem ser animados. Nesta visão geral, vamos realizar a execução por meio de funcionalidade disponível que permite adicionar efeitos a serem aplicados a uma composição visual.
 
-Para dar suporte a consistência da [Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para desenvolvedores descrevendo efeitos em seus aplicativos, os efeitos de composição aproveitam a interface IGraphicsEffect do Win2D para usar as descrições do efeito via Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) Namespace.
+Para dar suporte a consistência da [Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para desenvolvedores descrevendo efeitos em seus apps, os efeitos de composição aproveitam a interface IGraphicsEffect do Win2D para usar as descrições do efeito via Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) Namespace.
 
-Efeitos de pincel são usados para pintar áreas de um aplicativo pela aplicação de efeitos a um conjunto de imagens existentes. As APIs de efeito de composição do Windows 10 APIs estão concentradas em sprites visuais. O SpriteVisual oferece excelente flexibilidade e relacionamento na criação de cores, imagens e efeitos. O SpriteVisual é um tipo de visual de composição que pode preencher um retângulo 2D com um pincel. O visual define os limites do retângulo e o pincel define os pixels usados para desenhar o retângulo.
+Efeitos de pincel são usados para pintar áreas de um app pela aplicação de efeitos a um conjunto de imagens existentes. As APIs de efeito de composição do Windows 10 APIs estão concentradas em sprites visuais. O SpriteVisual oferece excelente flexibilidade e relacionamento na criação de cores, imagens e efeitos. O SpriteVisual é um tipo de visual de composição que pode preencher um retângulo 2D com um pincel. O visual define os limites do retângulo e o pincel define os pixels usados para desenhar o retângulo.
 
 Os pincéis de efeito são usados em elementos visuais de árvore de composição cujo conteúdo vem da saída de um gráfico de efeito. Os efeitos podem fazer referência a superfícies/texturas existentes, mas não à saída das outras árvores de composição.
 
@@ -55,7 +62,7 @@ Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github
 
 ### <a name="chaining-effects"></a>Efeitos de encadeamento
 
-Os efeitos podem ser encadeados, o que permite a um aplicativo usar simultaneamente vários efeitos em uma imagem. Os gráficos de efeito podem dar suporte a vários efeitos que podem fazer referência um aos outros. Ao descrever seu efeito, basta adicionar um efeito como entrada para o efeito.
+Os efeitos podem ser encadeados, o que permite a um app usar simultaneamente vários efeitos em uma imagem. Os gráficos de efeito podem dar suporte a vários efeitos que podem fazer referência um aos outros. Ao descrever seu efeito, basta adicionar um efeito como entrada para o efeito.
 
 ```cs
 IGraphicsEffect graphicsEffect =
@@ -224,7 +231,7 @@ if (result.Status == CompositionImageLoadStatus.Success)
 brush.Surface = imageSource.Surface;
 ```
 
-6.) Execute o aplicativo – seus resultados devem ser um gato sem saturação:
+6.) Execute o app – seus resultados devem ser um gato sem saturação:
 
 ![Imagem sem saturação](images/composition-cat-desaturated.png)
 ## <a name="more-information"></a>Mais informações
@@ -244,10 +251,5 @@ brush.Surface = imageSource.Surface;
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

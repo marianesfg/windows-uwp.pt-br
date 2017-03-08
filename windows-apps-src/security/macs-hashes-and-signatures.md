@@ -1,23 +1,30 @@
 ---
 title: MACs, hashes e assinaturas
-description: "Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem."
+description: "Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em apps da Plataforma Universal do Windows (UWP) para detectar violação de mensagem."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MACs, hashes e assinaturas
+# <a name="macs-hashes-and-signatures"></a>MACs, hashes e assinaturas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem.
+Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em apps da Plataforma Universal do Windows (UWP) para detectar violação de mensagem.
 
-## Códigos de autenticação de mensagem (MACs)
+## <a name="message-authentication-codes-macs"></a>Códigos de autenticação de mensagem (MACs)
 
 
 A criptografia ajuda a impedir que pessoas não autorizadas leiam uma mensagem, mas não as impede de adulterá-la. A alteração de uma mensagem (ainda que resulte apenas em tolices) pode resultar em prejuízos. O MAC (Message Authentication Code) ajuda a impedir a adulteração de mensagens. Por exemplo, imagine a seguinte situação:
@@ -122,10 +129,10 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## Hashes
+## <a name="hashes"></a>Hashes
 
 
-Uma função hash criptográfica assume um bloco de dados arbitrariamente longo e devolve uma sequência de caracteres de bit de tamanho fixo. As funções hash são usadas normalmente quando da assinatura de dados. Como a maioria das operações de assinaturas de chaves públicas, geralmente é mais eficiente assinar (criptografar) um hash de mensagem do que assinar a mensagem original. O seguinte procedimento representa um cenário comum e simplificado:
+Uma função hash criptográfica assume um bloco de dados arbitrariamente longo e devolve uma cadeia de caracteres de bit de tamanho fixo. As funções hash são usadas normalmente quando da assinatura de dados. Como a maioria das operações de assinaturas de chaves públicas, geralmente é mais eficiente assinar (criptografar) um hash de mensagem do que assinar a mensagem original. O seguinte procedimento representa um cenário comum e simplificado:
 
 -   Bob e Alice compartilham uma chave secreta e concordaram em usar uma função MAC.
 -   Bob cria uma mensagem e a insere, juntamente com a chave secreta, em uma função MAC para recuperar um valor MAC.
@@ -179,7 +186,7 @@ public void SampleReusableHash()
 
 ```
 
-## Assinaturas digitais
+## <a name="digital-signatures"></a>Assinaturas digitais
 
 
 As assinaturas digitais são as chaves públicas equivalentes aos códigos de autenticação de mensagens de chaves (MACs). Enquanto MACs utilizam chaves particulares para habilitar um destinatário de mensagem a verificar se uma mensagem não foi alterada durante a transmissão, as assinaturas usam um par de chaves particulares/públicas.
@@ -189,8 +196,3 @@ Como a maioria das operações de assinaturas de chaves públicas, geralmente é
 A assinatura garante somente que a mensagem original não foi alterada e, ao usar a chave pública do remetente, assegura também que o hash da mensagem foi assinado por alguém com acesso à chave particular.
 
 Você pode usar um objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar os algoritmos de assinaturas disponíveis e gerar ou importar um par de chaves. É possível usar métodos estáticos na classe [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para assinar uma mensagem ou verificar uma assinatura.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

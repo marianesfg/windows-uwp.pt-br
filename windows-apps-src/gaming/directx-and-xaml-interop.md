@@ -3,13 +3,20 @@ author: mtoepke
 title: Interoperabilidade entre DirectX e XAML
 description: "Você pode usar a XAML (Extensible Application Markup Language) e o Microsoft DirectX juntos no seu jogo UWP (Plataforma Universal do Windows)."
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx, interoperabilidade com xaml
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6934ac8bfbff487e57d0097cb129faf853a3eb9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Interoperabilidade entre DirectX e XAML
+# <a name="directx-and-xaml-interop"></a>Interoperabilidade entre DirectX e XAML
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,7 +29,7 @@ Se seu aplicativo se preocupar principalmente com renderização 2D, convém usa
 
  
 
-## XAML e DirectX
+## <a name="xaml-and-directx"></a>XAML e DirectX
 
 O DirectX fornece duas bibliotecas poderosas para gráficos 2D e 3D: Direct2D e Microsoft Direct3D. Embora a XAML dê suporte para primitivos e efeitos básicos 2D, muitos aplicativos, como de modelagem e jogos, precisam de suporte gráfico mais complexo. Para esses, você pode usar o Direct2D e o Direct3D para renderizar parte dos gráficos, ou todos eles, e usar a XAML para todo o resto.
 
@@ -41,7 +48,7 @@ Depois de determinar como pretende usar o DirectX, você pode usar um destes tip
 
 -   Se você estiver usando o DirectX para apresentar gráficos atualizados em tempo real ou em uma situação na qual as atualizações devem vir em intervalos regulares de baixa latência, use a classe [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para que você possa atualizar os gráficos sem sincronizar com o timer de atualização da estrutura da XAML. Esse tipo permite acessar diretamente a cadeia de troca do dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) e a camada da XAML sobre o destino da renderização. Esse tipo funciona muito bem para jogos e aplicativos do DirectX em tela inteira que necessitam de uma interface de usuário baseada em XAML. É necessário conhecer bem o DirectX para usar essa abordagem, incluindo as tecnologias Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D e Direct3D. Para saber mais, consulte [Guia de programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
-## SurfaceImageSource
+## <a name="surfaceimagesource"></a>SurfaceImageSource
 
 
 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) fornece superfícies compartilhadas do Microsoft DirectX nas quais desenhar e depois compôs os bits no conteúdo do aplicativo.
@@ -124,7 +131,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SurfaceIma
 
  
 
-## VirtualSurfaceImageSource
+## <a name="virtualsurfaceimagesource"></a>VirtualSurfaceImageSource
 
 
 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) estende a [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) quando o conteúdo é potencialmente maior que o que cabe na tela e, portanto, precisa ser virtualizado para ser renderizado de forma ideal.
@@ -256,7 +263,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**VirtualSur
 
     3.  Chame [**IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324). O resultado será um bitmap.
 
-## SwapChainPanel e jogos
+## <a name="swapchainpanel-and-gaming"></a>SwapChainPanel e jogos
 
 
 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) é o tipo do Windows Runtime desenvolvido para dar suporte a gráficos de alto desempenho e jogos, no qual você gerencia a cadeia de troca diretamente. Nesse caso, você cria a sua própria cadeia de troca do DirectX e gerencia a apresentação do seu conteúdo renderizado.
@@ -353,7 +360,7 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SwapChainP
 
     Os elementos XAML são atualizados quando o Tempo de execução Windows organiza/renderiza sinais lógicos de uma atualização.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [**Win2D**](http://microsoft.github.io/Win2D/html/Introduction.htm)
 * [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)
@@ -368,10 +375,5 @@ Veja a seguir um processo básico para criar e atualizar um objeto [**SwapChainP
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

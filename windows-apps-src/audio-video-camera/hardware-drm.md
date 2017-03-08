@@ -2,14 +2,21 @@
 author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de direitos digitais) baseado em hardware PlayReady ao seu aplicativo UWP (Plataforma Universal do Windows)."
-title: DRM de hardware
+title: DRM de Hardware
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 56d79a93704021fc18d3e72d00738d0ce7acba91
-ms.openlocfilehash: 643b67c3975a8aea6791c834a9ca3178b9762257
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a6d2ea23cb0720d8fe6c7aa581c42db6e025d146
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DRM de hardware
+# <a name="hardware-drm"></a>DRM de Hardware
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -20,7 +27,7 @@ Este tópico fornece uma visão geral de como adicionar DRM (gerenciamento de di
 
 Cada vez mais, os provedores de conteúdo estão migrando para proteções baseadas em hardware para conceder permissão para reproduzir conteúdo completo de alto valor em aplicativos. O suporte robusto a uma implementação de hardware do núcleo criptográfico foi adicionado ao PlayReady para atender a essa necessidade. Esse suporte permite a reprodução segura de conteúdo de alta definição (1080p) e ultra-alta definição (UHD) em várias plataformas de dispositivos. O material de chave (incluindo chaves privadas, chaves de conteúdo e qualquer outro material de chave usado para derivar ou desbloquear essas chaves) e amostras de vídeo compactadas e não compactadas descriptografadas são protegidos ao aproveitar a segurança do hardware.
 
-## Implementação do ambiente de execução confiável do Windows
+## <a name="windows-tee-implementation"></a>Implementação do ambiente de execução confiável do Windows
 
 Este tópico fornece uma breve visão geral de como o Windows 10 implementa o ambiente de execução confiável (TEE).
 
@@ -28,7 +35,7 @@ Os detalhes da implementação do ambiente de execução confiável do Windows e
 
 ![diagrama de componente de tee do Windows](images/windowsteecomponentdiagram720.jpg)
 
-## Considerações sobre como usar o DRM de hardware
+## <a name="considerations-for-using-hardware-drm"></a>Considerações sobre como usar o DRM de hardware
 
 Este tópico fornece uma breve lista de itens que devem ser considerados ao desenvolver aplicativos projetados para usar DRM de hardware. Conforme explicado em [DRM do PlayReady](playready-client-sdk.md#output-protection), com o HWDRM do PlayReady para Windows 10, todas as proteções de saída são impostas dentro da implementação do ambiente de execução confiável do Windows, que tem algumas consequências sobre os comportamentos de proteção de saída:
 
@@ -54,7 +61,7 @@ Para lidar com licenças persistentes em computadores com várias GPUs, consider
 
 Para impedir falha na reprodução porque as licenças não podem ser descriptografadas pelo hardware, o PlayReady usa um HDS separado para cada placa gráfica que ele encontrar. Isso fará com que o PlayReady tente a aquisição de licença para uma parte do conteúdo do qual o PlayReady normalmente teria uma licença (ou seja, no caso de DRM de software ou em qualquer caso sem uma alteração de hardware, o PlayReady não precisa readquirir uma licença). Portanto, se o aplicativo adquirir uma licença persistente enquanto usa o DRM de hardware, é necessário que seu aplicativo consiga lidar com o caso em que a licença é efetivamente "perdida" se o usuário final instalar (ou desinstalar) uma placa gráfica. Como isso não é um cenário comum, você pode optar por manipular as chamadas de suporte quando o conteúdo não for mais reproduzido após uma alteração de hardware em vez de descobrir como lidar com uma alteração de hardware no código de servidor/cliente.
 
-## Substituir DRM de hardware
+## <a name="override-hardware-drm"></a>Substituir DRM de hardware
 
 Esta seção descreve como substituir DRM de hardware (HWDRM) se o conteúdo a ser reproduzido não oferecer suporte a ele.
 
@@ -82,7 +89,7 @@ A melhor maneira de saber se você está em DRM de hardware ou software é verif
 -   Se houver outro arquivo \*.hds, você estará em DRM de hardware.
 -   Você também pode excluir a pasta PlayReady inteira e repetir o teste.
 
-## Detectar o tipo de DRM de hardware
+## <a name="detect-the-type-of-hardware-drm"></a>Detectar o tipo de DRM de hardware
 
 Esta seção descreve como detectar qual tipo de DRM de hardware tem suporte no sistema.
 
@@ -96,11 +103,6 @@ A enumeração [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/lib
 
 Você também pode usar a propriedade [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) para obter o nível de segurança do certificado do cliente e determinar se há suporte para o DRM de hardware. A menos que o nível de segurança do certificado retornado seja maior ou igual a 3000, o cliente não é individualizado ou provisionado (nesse caso, a propriedade retorna 0) ou o DRM de hardware não está em uso (nesse caso, essa propriedade retorna um valor menor que 3000).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [DRM do PlayReady](playready-client-sdk.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,21 +1,28 @@
 ---
 author: QuinnRadich
-title: Novidades no Windows 10 para desenvolvedores, ferramentas e recursos
-description: "O Windows 10 versão 1607 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova Plataforma Universal do Windows."
+title: Novidades no Windows 10 para desenvolvedores
+description: "O Windows 10, versão 1607 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova UWP (Plataforma Universal do Windows)."
 keywords: "novidades, novidades, atualizar, atualizações, recursos, novos, Windows 10, 1607, julho, mais novo"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 translationtype: Human Translation
-ms.sourcegitcommit: 860019e351f6fc6ce1ff00646413d3727e48de9c
-ms.openlocfilehash: d292d48489fa5001d3cd8af95aa72019107836c1
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: fff2eb225bcadaefa6bead622d953dd8b8ed4a76
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Novidades no Windows 10 para desenvolvedores
+# <a name="whats-new-in-windows-version-1607"></a>Novidades no Windows versão 1607
 
 O Windows 10 versão 1607 e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
 Esta é uma lista de recursos novos e aprimorados de interesse dos desenvolvedores. Para obter uma lista bruta de namespaces novos adicionados ao SDK do Windows, consulte as [alterações de API do Windows 10 versão 1607](windows-10-version-1607-api-diff.md). Para obter mais informações sobre os recursos destacados dessa atualização, consulte [Novidades no Windows 10](http://go.microsoft.com/fwlink/?LinkId=823181).
 
-## Windows 10 versão 1607 - julho de 2016
+## <a name="windows-10-version-1607---july-2016"></a>Windows 10 versão 1607 - julho de 2016
 
 Recurso | Descrição
  :---- | :----
@@ -58,9 +65,4 @@ APIs de Windows Information Protection (WIP) | [**WIP**](https://msdn.microsoft.
 Windows IOT Core | O Windows IoT Core agora oferece suporte total ao Raspberry Pi 3 e a uma experiência de exibição remota, permitindo que os usuários exibam remotamente e controlem aplicativos UWP executados em um dispositivo IoT Core.
 Desbloqueio do Windows com dispositivos complementares (IoT) | Dispositivo complementar é um dispositivo que pode atuar em conjunto com sua área de trabalho do Windows 10 para melhorar a experiência de autenticação do usuário. Usando a [Estrutura de Dispositivo Complementar](https://msdn.microsoft.com/windows/uwp/security/companion-device-unlock), um dispositivo complementar pode fornecer uma experiência avançada para o Microsoft Passport mesmo quando o Windows Hello não está disponível (por exemplo, se a área de trabalho do Windows 10 não tiver uma câmera para autenticação de face ou dispositivo de leitor de impressão digital, por exemplo).
 Winsock | Soquetes TCP agora podem ser configurados com [Winsock](https://tools.ietf.org/html/rfc7413) para usar TCP Fast Open [RFC 7413](https://tools.ietf.org/html/rfc7413) ao definir a opção de soquete TCP_FASTOPEN.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

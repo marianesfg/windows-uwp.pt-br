@@ -1,22 +1,24 @@
 ---
-description: "Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP."
-keywords: "layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP"
-title: "Downloads de design para aplicativos UWP – Desenvolvimento de aplicativos do Windows"
+description: "Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de apps UWP."
+keywords: "layout de app UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP"
+title: "Downloads de design para apps UWP – Desenvolvimento de aplicativos do Windows"
 author: mijacobs
 ms.author: mijacobs
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
+ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: d18696de51451552aef14c55d2a1b62c6037fb59
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 57c29414deadcf4f1ba5c462b8fe81faa0b38d49
+ms.lasthandoff: 02/08/2017
 
 ---
-# <a name="design-downloads-for-uwp-apps"></a>Downloads de design para aplicativos UWP
+# <a name="design-downloads-for-uwp-apps"></a>Downloads de design para apps UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Esta seção contém downloads relacionados a design e à interface do usuário para aplicativos UWP. Para ferramentas adicionais, como o Visual Studio, consulte [nossa página principal de downloads](https://developer.microsoft.com/downloads). 
+Esta seção contém downloads relacionados a design e à interface do usuário para apps UWP. Para ferramentas adicionais, como o Visual Studio, consulte [nossa página principal de downloads](https://developer.microsoft.com/downloads). 
 
 
 ## <a name="design-templates"></a>Modelos de design
@@ -25,7 +27,7 @@ Esta seção contém downloads relacionados a design e à interface do usuário 
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
     <p><b>PowerPoint</b><br/>
-Este conjunto contém tudo o que você precisa para simular rapidamente esboços para aplicativos UWP, inclusive controles e layouts.<br/>[Baixar os modelos de design para PowerPoint](https://go.microsoft.com/fwlink/p/?LinkId=534632)</p>
+Este conjunto contém tudo o que você precisa para simular rapidamente esboços para apps UWP, inclusive controles e layouts.<br/>[Baixar os modelos de design para PowerPoint](https://go.microsoft.com/fwlink/p/?LinkId=534632)</p>
   </div>
   <div class="side-by-side-content-right">
 <a href="https://go.microsoft.com/fwlink/p/?LinkId=534632"><img src="images/powerpoint.jpg" alt="Download the PowerPoint design templates" /></a>
@@ -37,7 +39,7 @@ Este conjunto contém tudo o que você precisa para simular rapidamente esboços
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Adobe Illustrator</b><br/>
-Estes modelos do Adobe Illustrator fornecem controles e layouts para o design de aplicativos UWP.<br/>[Baixar os modelos de design para Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534634)</p>    
+Estes modelos do Adobe Illustrator fornecem controles e layouts para o design de apps UWP.<br/>[Baixar os modelos de design para Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534634)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="https://go.microsoft.com/fwlink/p/?LinkId=534634"><img src="images/illustrator.jpg" alt="Download the design templates for Adobe Illustrator" /></a>
@@ -49,7 +51,7 @@ Estes modelos do Adobe Illustrator fornecem controles e layouts para o design de
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Adobe Photoshop</b><br/>
-Os controles e layouts para criar aplicativos UWP no Adobe Photoshop.<br/>[Baixar os modelos de design para Adobe Photoshop](http://go.microsoft.com/fwlink/p/?LinkId=626453)</p>    
+Os controles e layouts para criar apps UWP no Adobe Photoshop.<br/>[Baixar os modelos de design para Adobe Photoshop](http://go.microsoft.com/fwlink/p/?LinkId=626453)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=626453"><img src="images/photoshop.jpg" alt="Download the design templates for Adobe Photoshop" /></a>
@@ -78,7 +80,7 @@ Esse conjunto de ações para o Adobe Photoshop gera os 68 ativos recomendados d
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Aplicativo de compartilhamento de fotos</b> <br/>
-Este aplicativo de exemplo demonstra o compartilhamento de fotos com mídias sociais reais. Ele demonstra design responsivo, compra no aplicativo, serviços do Azure, notificações por push e muito mais. <br/>[Baixe a amostra do aplicativo de compartilhamento de fotos](http://go.microsoft.com/fwlink/p/?LinkId=760402)<br/>[Leia mais sobre o PhotoSharingApp](http://go.microsoft.com/fwlink/p/?LinkId=760401)</p>    
+Este app de exemplo demonstra o compartilhamento de fotos com mídias sociais reais. Ele demonstra design responsivo, compra no aplicativo, serviços do Azure, notificações por push e muito mais. <br/>[Baixe a amostra do app de compartilhamento de fotos](http://go.microsoft.com/fwlink/p/?LinkId=760402)<br/>[Leia mais sobre o PhotoSharingApp](http://go.microsoft.com/fwlink/p/?LinkId=760401)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=760402"><img src="images/photo-sharing.png" alt="Download the Photo sharing app sample" /></a>
@@ -97,9 +99,4 @@ Esta amostra se integra aos recursos do Windows com a automação doméstica int
   </div>
 </div>
 </div>
-<b>Quer mais código?</b> Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de aplicativos UWP. [Acesse o portal de amostras](https://developer.microsoft.com/samples)
-
-
-<!--HONumber=Dec16_HO2-->
-
-
+<b>Quer mais código?</b> Confira a página de exemplo do Windows para obter uma lista completa de todos as nossas amostras de apps UWP. [Acesse o portal de amostras](https://developer.microsoft.com/samples)

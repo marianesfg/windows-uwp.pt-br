@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: "Virtualização de dados de ListView e GridView"
 description: "Melhore o desempenho e o tempo de inicialização de ListView e GridView por meio da virtualização de dados."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e44dd5c2c3c9fb252062af3a6a9f409e1777a878
-ms.openlocfilehash: 0a16dc27db6fb1e04e1ab0c575077ca10b97f12d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0b1dfaeb098ac4b73c89f4d1a51ec658312aee4e
+ms.lasthandoff: 02/07/2017
 
 ---
-# Virtualização de dados de ListView e GridView
+# <a name="listview-and-gridview-data-virtualization"></a>Virtualização de dados de ListView e GridView
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Observação**  Para obter mais detalhes, consulte a sessão //build/ sobre como [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
@@ -21,13 +28,13 @@ Um método de virtualização de dados é necessário para um conjunto de dados 
 -   O tamanho do conjunto de dados
 -   O tamanho de cada item
 -   A fonte do conjunto de dados (disco local, rede ou nuvem)
--   O consumo de memória geral do seu aplicativo
+-   O consumo de memória geral do seu app
 
 **Observação**  Lembre-se de que um recurso é habilitado por padrão para ListView e GridView que exibe os elementos visuais de espaço reservado temporário enquanto o usuário está aplicando panorâmica/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aqui estão mais detalhes sobre as técnicas de virtualização de dados incremental e de acesso aleatório.
 
-## Virtualização de dados incremental
+## <a name="incremental-data-virtualization"></a>Virtualização de dados incremental
 
 A virtualização de dados incremental carrega dados sequencialmente. Um [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa virtualização de dados incremental pode ser usado para exibir uma coleção de um milhão de itens, mas apenas 50 itens são carregados inicialmente. Conforme o usuário faz um movimento panorâmico/rolagem, os próximos 50 são carregados. À medida que os itens são carregados, o tamanho do elevador da barra de rolagem diminui. Para esse tipo de virtualização de dados, você escreve uma classe de fonte de dados que implementa estas interfaces.
 
@@ -39,7 +46,7 @@ Uma fonte de dados como essa é uma lista carregada na memória que pode ser est
 
 Quando o controle de itens se aproximar do fim dos dados existentes, ele chamará [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Se você retornar **true**, ele chamará [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passando um número aconselhado de itens para carregar. Dependendo de onde você estiver carregando dados (disco local, rede ou nuvem), você pode optar por carregar um número diferente de itens do que o aconselhado. Por exemplo, se seu serviço aceitar lotes de 50 itens, mas o controle de itens apenas solicitar 10, você poderá carregar 50. Carregue os dados do back-end, adicione-os à sua lista e gere uma notificação de alteração via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) para que o controle de itens saiba sobre os novos itens. Retorne também uma contagem dos itens que você realmente carregou. Se você carregar menos itens do que o aconselhado, ou o controle de itens foi panoramizado/rolado ainda mais nesse ínterim, sua fonte de dados será chamada novamente para mais itens e o ciclo continuará. Você pode saber mais baixando ao [exemplo de associação de dados XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
-## Virtualização de dados de acesso aleatório
+## <a name="random-access-data-virtualization"></a>Virtualização de dados de acesso aleatório
 
 A virtualização de dados de acesso aleatório permite o carregamento de um ponto arbitrário do conjunto de dados. Um [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa a virtualização de dados de acesso aleatório, usada para exibir uma coleção de um milhão de itens, pode carregar os itens 100.000 – 100.050. Se o usuário for para o início da lista, o controle carregará os itens 1 – 50. O elevador da barra de rolagem sempre indica que o **ListView** contém um milhão de itens. A posição do elevador da barra de rolagem é relativa a onde os itens visíveis estão localizados no conjunto de dados inteiro da coleção. Esse tipo de virtualização de dados pode reduzir significativamente os requisitos de memória e os tempos de carregamento da coleção. Para habilitá-lo, você precisa gravar uma classe de fonte de dados que busque dados sob demanda, gerencie um cache local e implemente estas interfaces.
 
@@ -66,7 +73,7 @@ Esta é a estratégia básica para sua fonte de dados de virtualização de dado
     -   Use a solicitação de um item (ou as informações do intervalo de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber quais itens são necessários, além de buscar dados dos itens do back-end de maneira assíncrona. Depois de recuperar os dados, acione uma notificação de alteração via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) de maneira que o controle de itens saiba mais sobre o novo item.
 -   (Opcionalmente) À medida que o visor do controle de itens muda, identifique quais itens da fonte de dados são necessários implementando [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
 
-Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu aplicativo. Algumas considerações gerais para lembrar:
+Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu app. Algumas considerações gerais para lembrar:
 
 -   Faça solicitações assíncronas de dados; não bloqueie o thread de interface do usuário.
 -   Encontre o ponto forte no tamanho dos lotes nos que você busca os itens. Prefira os "robustos" aos "tagarelas". Não tão pequenos a ponto de você fazer solicitações pequenas demais; não tão grandes a ponto de levarem muito tempo para recuperar.
@@ -79,10 +86,5 @@ Além disso, a estratégia de quando carregar itens de dados, quantos dados carr
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO4-->
 
 

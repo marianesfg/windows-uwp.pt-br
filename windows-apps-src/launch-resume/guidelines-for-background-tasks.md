@@ -3,13 +3,20 @@ author: TylerMSFT
 title: Diretrizes para tarefas em segundo plano
 description: Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5e03fbb7971e5526d542d409bccb1c7fee6fd3ee
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="guidelines-for-background-tasks"></a>Diretrizes para tarefas em segundo plano
+# <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +26,7 @@ Verifique se seu aplicativo atende aos requisitos para executar tarefas em segun
 
 Considere as diretrizes a seguir ao desenvolver a tarefa em segundo plano e antes de publicar o aplicativo.
 
-Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plano, consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obter informações sobre os aprimoramentos no Windows 10, versão 1607, que tornam a tarefa mais fácil.
+Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plano, consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio) para obter informações sobre os aprimoramentos no Windows 10, versão 1607, que tornam a tarefa mais fácil.
 
 **Tarefas em segundo plano dentro do processo versus fora do processo:** o Windows 10, versão 1607, introduziu [tarefas em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md) que permitem executar código em segundo plano no mesmo processo que o seu aplicativo em primeiro plano. Leve em consideração os seguintes fatores ao decidir se deseja ter tarefas em segundo plano dentro X fora do processo:
 
@@ -27,14 +34,14 @@ Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plan
 |--------------|--------|
 |Resiliência   | Se o seu processo em segundo plano está em execução em outro processo, uma falha em seu processo em segundo plano não prejudica seu aplicativo em primeiro plano. Além disso, a atividade em segundo plano poderá ser encerrada, mesmo em seu aplicativo, se ela ultrapassar os limites de tempo de execução. Separar o trabalho em segundo plano em uma tarefa separada do aplicativo em primeiro plano pode ser uma opção melhor quando não é necessário que os processos em primeiro e segundo planos se comuniquem uns com os outros (uma vez que uma das principais vantagens de tarefas em segundo plano dentro do processo é que eles eliminam a necessidade de comunicação entre processos). |
 |Simplicidade    | Tarefas em segundo plano dentro do processo único não exigem comunicação entre processos e são menos complexas de escrever.  |
-|Gatilhos disponíveis | Tarefas em segundo plano no processo não dão suporte aos seguintes gatilhos: [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**. |
+|Gatilhos disponíveis | Tarefas em segundo plano no processo não dão suporte aos seguintes gatilhos: [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**. |
 |VoIP | Tarefas em segundo plano dentro do processo único não dão suporte à ativação de uma tarefa em segundo plano VoIP em seu aplicativo. |  
 
 **Cotas de CPU:**as tarefas em segundo plano são limitadas pela quantidade de tempo de uso que elas obtêm com base no tipo de gatilho. A maioria dos gatilhos são limitados a 30 segundos de uso de relógio, embora alguns tenham a capacidade de serem executados até 10 minutos para concluir tarefas de uso intensivo. As tarefas em segundo plano devem ser leves para economizar a duração da bateria e proporcionar melhor experiência do usuário para aplicativos em primeiro plano. Consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md) para conhecer as restrições de recursos que se aplicam às tarefas em segundo plano.
 
 **Gerenciar tarefas em segundo plano:**seu aplicativo deve obter uma lista de tarefas em segundo plano registradas, registrar os manipuladores de progresso e conclusão e tratar esses eventos de forma adequada. Suas classes de tarefa em segundo plano devem relatar progresso, cancelamento e conclusão. Para obter mais informações, consulte [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)e [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md).
 
-**Usar [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):**  se sua classe de tarefa em segundo plano executar código assíncrono, use adiamentos. Caso contrário, sua tarefa em segundo plano poderá ser encerrada prematuramente quando o método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (ou [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) no caso de tarefas em segundo plano dentro do processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
+**Usar [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):**  se sua classe de tarefa em segundo plano executar código assíncrono, use adiamentos. Caso contrário, sua tarefa em segundo plano poderá ser encerrada prematuramente quando o método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (ou [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) no caso de tarefas em segundo plano dentro do processo). Para obter mais informações, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 
 Se preferir, solicite um adiamento e use **async/await** para concluir as chamadas de método assíncronas. Feche o adiamento após as chamadas do método **await**.
 
@@ -93,7 +100,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 * [Criar e registrar uma tarefa em segundo plano em processamento](create-and-register-an-inproc-background-task.md).
 * [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
-* [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
+* [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
@@ -108,9 +115,4 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

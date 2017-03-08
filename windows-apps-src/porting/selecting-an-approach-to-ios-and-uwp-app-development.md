@@ -3,23 +3,30 @@ author: mcleblanc
 description: "Quais são as opções ao desenvolver aplicativos de plataforma cruzada?"
 title: Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53e6c50b7a1b4262f738cd798aa2bd02291512fe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
+# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Quais são as opções ao desenvolver aplicativos de plataforma cruzada?
 
-## Qual é a melhor maneira de dar suporte a iOS e Windows?
+## <a name="whats-the-best-way-to-support-both-ios-and-windows"></a>Qual é a melhor maneira de dar suporte a iOS e Windows?
 
 O Windows e o iOS podem parecer criaturas muito diferentes, mas um número cada vez maior de ferramentas e técnicas pode ajudá-lo muito se você precisar escrever aplicativos que dão suporte a ambas as plataformas (e ao Android também). A melhor solução depende do tipo de aplicativo que você está escrevendo, e se você estiver começando a partir do zero ou fazendo a portabilidade de um projeto existente.
 
-## Criando um novo aplicativo
+## <a name="writing-a-new-app"></a>Criando um novo aplicativo
 
 Com um slate limpo, você tem muitas opções à sua disposição, incluindo:
 
@@ -39,7 +46,7 @@ Com um slate limpo, você tem muitas opções à sua disposição, incluindo:
 
     O sucessor espiritual do XNA. Agora é uma estrutura de plataforma cruzada de código-fonte aberto, o que significa que é possível escrever aplicativos em C# para muitas plataformas com suporte para mecanismos físicos e elementos gráficos 2D e 3D.
 
-## Adaptando um aplicativo existente
+## <a name="adapting-an-existing-app"></a>Adaptando um aplicativo existente
 
 Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. No entanto, nem tudo certamente é perdido.
 
@@ -55,7 +62,7 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 
     Uma etapa intermediária para portabilidade de seu projeto do OpenGL ES 2.0 é usar o ANGLE. O ANGLE permite executar conteúdo do OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
 
-## Outras ferramentas de criação de plataforma cruzada
+## <a name="other-cross-platform-authoring-tools"></a>Outras ferramentas de criação de plataforma cruzada
 
 -   [GameSalad](http://go.microsoft.com/fwlink/p/?LinkID=320480)
 
@@ -92,10 +99,5 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 -   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Uma ferramenta para desenvolvimento de jogos baseados em HTML.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

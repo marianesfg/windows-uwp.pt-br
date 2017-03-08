@@ -3,25 +3,32 @@ author: mtoepke
 title: Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 description: "A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
+#  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows. Isso inclui propriedades do Windows Runtime, como manipulação de eventos de suspensão/retomada, foco da janela e ajuste, além de eventos, interações e transições da interface do usuário. Vamos examinar como o jogo de exemplo é estruturado e como ele define a máquina de estado de alto nível para a interação entre jogador e sistema.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Configurar a estrutura de um jogo UWP DirectX e implementar a máquina de estado que define o fluxo geral do jogo.
 
-## Inicializando e iniciando o provedor de visualização
+## <a name="initializing-and-starting-the-view-provider"></a>Inicializando e iniciando o provedor de visualização
 
 
 Em qualquer jogo UWP DirectX, você precisa obter um provedor de exibição que o singleton do aplicativo (o objeto do Windows Runtime que define uma instância do aplicativo em execução) possa usar para acessar os recursos gráficos necessários. Por meio do Windows Runtime, o aplicativo estabelece conexão direta com a interface gráfica, mas você deve especificar os recursos de que precisa e a forma de tratá-los.
@@ -38,7 +45,7 @@ Basta dizer que você deve fornecer a implementação de cinco métodos chamados
 -   [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)
 -   [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523)
 
-No modelo do aplicativo DirectX11 (Universal do Windows), esses cinco métodos são definidos no objeto **App** em [App.h](#code_sample). Vamos dar uma olhada no modo como eles são implementados neste jogo.
+No modelo do aplicativo DirectX11 (Universal do Windows), esses cinco métodos são definidos no objeto **App** em [App.h](#complete-sample-code-for-this-section). Vamos dar uma olhada no modo como eles são implementados neste jogo.
 
 O método Initialize do provedor de visualização
 
@@ -237,7 +244,7 @@ No jogo de exemplo, permitimos que o singleton do aplicativo do jogo organize tu
 
 Nós voltaremos a esses cinco métodos neste tutorial. Por isso, lembre-se deles. Agora, veremos a estrutura geral da engine do jogo e as máquinas de estado que a definem.
 
-## Inicializando o estado da engine do jogo
+## <a name="initializing-the-game-engine-state"></a>Inicializando o estado da engine do jogo
 
 
 Como um usuário pode retomar um aplicativo de jogo UWP a partir de um estado suspenso, a qualquer momento, o aplicativo pode ter qualquer quantidade de estados possíveis.
@@ -289,12 +296,12 @@ Dependendo do estado, diferentes opções são apresentadas para o jogador. Se o
 
 O exemplo de jogo não diferencia entre o início a frio do jogo em si, que é um jogo que está sendo iniciado pela primeira vez sem um evento suspenso e o jogo que está sendo retomado a partir de um estado suspenso. Este é o design adequado para qualquer aplicativo UWP.
 
-## Manipulando eventos
+## <a name="handling-events"></a>Manipulando eventos
 
 
 Nosso código de exemplo registrou vários manipuladores de eventos específicos em **Initialize**, **SetWindow** e **Load**. Provavelmente, você notou que esses eventos eram importantes, pois o código de exemplo fez esse trabalho bem antes de se envolver com a mecânica do jogo ou com o desenvolvimento de elementos gráficos. Você está certo! Esses eventos são fundamentais para uma experiência adequada com um aplicativo UWP. Além disso, como um aplicativo UWP pode ser ativado, desativado, redimensionado, ajustado, desajustado, suspenso ou retomado a qualquer momento, o jogo deve ser registrado para esses eventos o mais cedo possível e deve manipulá-los de modo a manter a experiência fluida e previsível para o jogador.
 
-Consulte os manipuladores de eventos na amostra e os eventos que manipulam. Você pode encontrar o código completo desses manipuladores de eventos em [Código completo desta seção](#code_sample).
+Consulte os manipuladores de eventos na amostra e os eventos que manipulam. Você pode encontrar o código completo desses manipuladores de eventos em [Código completo desta seção](#complete-sample-code-for-this-section).
 
 <table>
 <colgroup>
@@ -354,7 +361,7 @@ Observação</strong> As coordenadas [<strong>CoreWindow</strong>](https://msdn.
 
 Seu jogo deve manipular esses eventos, pois eles fazem parte do design do aplicativo UWP.
 
-## Atualizando o mecanismo do jogo
+## <a name="updating-the-game-engine"></a>Atualizando o mecanismo do jogo
 
 
 No loop do jogo em **Run**, o exemplo implementou uma máquina de estado básico para manipular todas as ações principais que o jogador pode realizar. O nível mais alto dessa máquina de estado lida com ações como carregar um jogo, jogar um nível específico ou continuar um nível depois que um jogo foi pausado (pelo sistema ou pelo jogador).
@@ -365,7 +372,7 @@ No exemplo de jogo, há três estados principais (UpdateEngineState) em que o jo
 -   **Aguardando pressionar**. O loop do jogo está em exibição cíclica, aguardando uma entrada específica do usuário. Esta entrada é um ação do jogador para carregar um jogo, iniciar um nível ou continuar um nível. O código de exemplo se refere a esses subestados como valores de enumeração PressResultState.
 -   **Dynamics**. O loop do jogo está sendo executado com o usuário jogando. Enquanto o usuário está jogando, o jogo verifica três condições para as quais ele pode transitar: a expiração do tempo definido para um nível, a conclusão de um nível pelo jogador ou a conclusão de todos os níveis pelo jogador.
 
-Consulte a estrutura do código. O código completo está em [Código completo desta seção](#code_sample).
+Consulte a estrutura do código. O código completo está em [Código completo desta seção](#complete-sample-code-for-this-section).
 
 A estrutura da máquina de estado usada para atualizar o mecanismo do jogo
 
@@ -474,7 +481,7 @@ Falaremos sobre a lógica do jogo em si com mais detalhes em [Definindo o objeto
 
 Como você pôde observar, é claro que há máquinas de estado dentro de máquinas de estado. Há uma para o controlador, que manipula todas as entradas aceitáveis que o jogador pode gerar. No diagrama, pressionar é uma forma de entrada do usuário. A máquina de estado não se importa com o que é isso, pois ela trabalha em um nível superior, partindo do pressuposto de que a máquina de estado do controlador manipulará todas as transições que afetam comportamentos de movimento e tiro, além das atualizações de renderização associadas. Falaremos sobre o gerenciamento de estados de entrada no tópico sobre [adição de controles](tutorial--adding-controls.md).
 
-## Atualizando a interface do usuário
+## <a name="updating-the-user-interface"></a>Atualizando a interface do usuário
 
 
 Precisamos manter o jogador informado a respeito do estado do sistema e permitir que ele mude o estado de alto nível de acordo com as regras do jogo. Para a maioria dos jogos (inclusive esta amostra), isso é feito com uma exibição informativa que contém representações do estado de jogo, além de outras informações específicas ao jogo, como pontuação, munição ou o número de chances restantes. Chamamos isso de sobreposição, pois ela é renderizada separadamente do pipeline gráfico principal e posicionada sobre a projeção 3D. No jogo de exemplo, criamos essa sobreposição usando APIs Direct2D. Também podemos criar essa sobreposição usando XAML. Isso será abordado no tópico sobre [extensão do jogo de amostra](tutorial-resources.md).
@@ -526,14 +533,14 @@ Há seis telas de estado exibidas pela sobreposição dependendo do estado do jo
 
 Separar a interface do usuário do pipeline gráfico do jogo permite trabalhar nele independentemente da engine de renderização gráfica do jogo, reduzindo consideravelmente a complexidade do código do jogo.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Este tópico aborda a estrutura básica do jogo de exemplo e apresenta um modelo bem adequado ao desenvolvimento de aplicativos de jogos UWP com DirectX. Claro, há mais que isso. Só passamos pelo esqueleto do jogo. Agora, nos aprofundaremos no jogo e sua mecânica e veremos como ela é implementada como objeto principal do jogo. Revisaremos essa parte no tópico sobre [definição do objeto principal do jogo](tutorial--defining-the-main-game-loop.md).
 
 Também é hora de observar a engine gráfica do jogo de amostra com mais detalhes. Essa parte é abordada em [Montando o pipeline de renderização](tutorial--assembling-the-rendering-pipeline.md).
 
-## Código de exemplo completo desta seção
+## <a name="complete-sample-code-for-this-section"></a>Código de exemplo completo desta seção
 
 
 App.h
@@ -1424,10 +1431,5 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

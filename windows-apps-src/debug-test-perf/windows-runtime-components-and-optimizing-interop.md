@@ -3,22 +3,29 @@ author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: "Componentes da Plataforma Universal do Windows e otimização de interoperabilidade"
 description: Crie aplicativos da Plataforma Universal do Windows (UWP) que usam componentes UWP e interoperam entre tipos nativos e gerenciados, evitando problemas de desempenho de interoperabilidade.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5c7a49558ed11f82b7afea1ea96271c45c2f9139
-ms.openlocfilehash: bfbf4a630b1874f718a1ebd41caf96c72e2f05c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 722a14b7fbad2a8914888a6d6a135e88d1aa8095
+ms.lasthandoff: 02/07/2017
 
 ---
-# Componentes da Plataforma Universal do Windows e otimização de interoperabilidade
+# <a name="universal-windows-platform-components-and-optimizing-interop"></a>Componentes da Plataforma Universal do Windows e otimização de interoperabilidade
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) que usam componentes UWP e interoperam entre tipos nativos e gerenciados, evitando problemas de desempenho de interoperabilidade.
 
-## Práticas recomendadas de interoperabilidade com componentes UWP
+## <a name="best-practices-for-interoperability-with-uwp-components"></a>Práticas recomendadas de interoperabilidade com componentes UWP
 
 Se não houver cautela, o uso de componentes UWP pode ter um grande impacto no desempenho do seu aplicativo. Esta seção discute como obter bom desempenho quando seu aplicativo usar componentes UWP.
 
-### Introdução
+### <a name="introduction"></a>Introdução
 
 Interoperabilidade pode ter um grande impacto no desempenho, e talvez você a esteja usando sem perceber. A UWP manipula grande parte da interoperabilidade, para que você possa ser mais produtivo e reutilizar códigos escritos em outras linguagens. É recomendável tirar proveito do que a UWP faz por você, mas tenha em mente que isso pode afetar o desempenho. Esta seção discute o que pode ser feito para diminuir o impacto que a interoperabilidade tem no desempenho do seu aplicativo.
 
@@ -35,37 +42,37 @@ Neste tópico, a expressão "componentes UWP" refere-se a componentes escritos e
 
 Sempre que você acessa uma propriedade ou chama um método em um componente UWP, há um custo de interoperabilidade. Na verdade, o custo de criar um componente UWP é superior ao de criar um objeto .NET. Os motivos são que a UWP deve executar um código que transite entre a linguagem do seu aplicativo e a do componente. Além disso, se você passar dados para o componente, eles devem ser convertidos entre tipos gerenciados e não gerenciados.
 
-### Usando componentes UWP com eficiência
+### <a name="using-uwp-components-efficiently"></a>Usando componentes UWP com eficiência
 
 Se você achar que precisa melhorar o desempenho, poderá verificar se o seu código usa componentes UWP da forma mais eficiente possível. Esta seção apresenta algumas dicas para melhorar o desempenho ao usar componentes UWP.
 
 O impacto sobre o desempenho só se torna perceptível após um número significativo de chamadas em um curto período. Um aplicativo bem projetado que encapsule chamadas para componentes UWP da lógica de negócios e de outro código gerenciado não deve apresentar altos custos de interoperabilidade. Mas se seus testes indicarem que o uso de componentes UWP está afetando o desempenho do aplicativo, as dicas aqui apresentadas ajudam a aprimorar o desempenho.
 
-### Considerar o uso de .NET para aplicativos UWP
+### <a name="consider-using-net-for-uwp-apps"></a>Considerar o uso de .NET para aplicativos UWP
 
 Há certos casos em que você pode realizar uma tarefa usando UWP ou .NET para aplicativos UWP. É recomendável tentar não misturar tipos .NET e UWP. Tente permanecer em um ou outro. Por exemplo, você pode analisar um fluxo de xml usando o tipo [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173) (um tipo UWP) ou o tipo [**System.Xml.XmlReader**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.xmlreader.aspx) (um tipo .NET). Use a API proveniente da mesma tecnologia que o fluxo. Por exemplo, se você ler xml de um [**MemoryStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.memorystream.aspx), use o tipo **System.Xml.XmlReader**, pois ambos são tipos .NET. Se você ler de um arquivo, use o tipo **Windows.Data.Xml.Dom.XmlDocument**, pois as APIs do arquivo e o **XmlDocument** são componentes UWP.
 
-### Copiar objetos do Windows Runtime para tipos .NET
+### <a name="copy-window-runtime-objects-to-net-types"></a>Copiar objetos do Windows Runtime para tipos .NET
 
 Quando um componente UWP retorna um objeto UWP, pode ser benéfico copiar o objeto retornado em um objeto .NET. Dois momentos em que isso é especialmente importante ocorrem no trabalho com coleções e fluxos.
 
 Se você chamar uma API UWP que retorne uma coleção e salvar e acessar essa coleção muitas vezes, pode ser benéfico copiar a coleção em uma coleção .NET e, daí em diante, usar a versão .NET.
 
-### Armazenar em cache os resultados das chamadas a componentes UWP para uso posterior
+### <a name="cache-the-results-of-calls-to-uwp-components-for-later-use"></a>Armazenar em cache os resultados das chamadas a componentes UWP para uso posterior
 
 Você pode obter melhor desempenho salvando os valores como variáveis locais em vez de acessar várias vezes um tipo UWP. Isso pode ser muito benéfico se você usar um valor dentro de um loop. Avalie sua aplicação para observar se o uso de variáveis locais aprimora o seu desempenho. O uso de valores armazenados em cache pode aumentar a velocidade do aplicativo, pois o tempo gasto em interoperabilidade será menor.
 
-### Combinar chamadas a componentes UWP
+### <a name="combine-calls-to-uwp-components"></a>Combinar chamadas a componentes UWP
 
 Tente concluir as tarefas com o menor número possível de chamadas a objetos UWP. Por exemplo, normalmente é melhor ler um grande volume de dados de um fluxo do que pequenos volumes por vez.
 
 Use APIs que agrupem o trabalho no menor número possível de chamadas, em vez de APIs que executem menos trabalho e exijam mais chamadas. Por exemplo, prefira criar um objeto chamando construtores que inicializem várias propriedades em vez de chamar o construtor padrão e atribuí-las uma por vez.
 
-### Criando um componente UWP
+### <a name="building-a-uwp-components"></a>Criando um componente UWP
 
 Se você escrever um componente UWP que possa ser usado por aplicativos escritos em C++ ou em JavaScript, certifique-se de que seu componente tenha sido projetado para obter bom desempenho. Todas as sugestões com vistas ao bom desempenho nas aplicações são extensivas aos componentes. Avalie seu componente para observar quais APIs têm altos padrões de tráfego e, nessas áreas, considere o fornecimento de APIs que permitam aos seus usuários trabalhar com poucas chamadas.
 
-## Manter seu aplicativo rápido ao usar a interoperabilidade em código gerenciado
+## <a name="keep-your-app-fast-when-you-use-interop-in-managed-code"></a>Manter seu aplicativo rápido ao usar a interoperabilidade em código gerenciado
 
 A UWP facilita a interoperabilidade entre o código nativo e o gerenciado, mas, se você não tiver cuidado, poderá haver custos de desempenho. Consulte como obter bom desempenho ao usar a interoperabilidade em seus aplicativos UWP gerenciados.
 
@@ -79,17 +86,12 @@ Meça seu aplicativo e determine se a interoperabilidade está ocupando uma part
 
 Se seu aplicativo está lento devido à sobrecarga de interoperabilidade, você pode melhorar seu desempenho reduzindo as chamadas a APIs UWP em caminhos de código executados intensivamente. Por exemplo, um mecanismo de jogo que esteja executando uma grande quantidade de cálculos de física consultando constantemente a posição e as dimensões de [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911) pode poupar muito tempo armazenando as informações necessárias de **UIElements** em variáveis locais, fazendo cálculos nesses valores armazenados em cache e atribuindo o resultado final novamente a **UIElements** após a conclusão dos cálculos. Outro exemplo: se uma coleção é intensamente acessada por código em C# ou Visual Basic, é mais eficiente usar uma coleção do namespace [**System.Collections**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.aspx), em vez de uma coleção do namespace [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657). Você também pode considerar o uso de chamadas combinadas a componentes UWP, por exemplo, com o uso de APIs [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676).
 
-### Criando um componente UWP
+### <a name="building-a-uwp-component"></a>Criando um componente UWP
 
 Se você criou um componente UWP para usar em aplicativos escritos em C++ ou em JavaScript, certifique-se de que o componente foi projetado para obter bom desempenho. Sua superfície de API define o limite de interoperabilidade e o quanto os usuários precisarão pensar sobre as orientações neste tópico. Esse fator é especialmente importante se você está distribuindo seus componentes a terceiros.
 
 Todas as sugestões com vistas ao bom desempenho nos aplicativos são extensivas aos componentes. Avalie seu componente para observar quais APIs têm altos padrões de tráfego e, nessas áreas, considere o fornecimento de APIs que permitam aos seus usuários trabalhar com poucas chamadas. Envidamos esforços significativos durante o desenvolvimento da UWP para permitir que os aplicativos a utilizem sem precisarem transpor o limite da interoperabilidade com frequência.
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

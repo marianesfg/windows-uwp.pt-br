@@ -3,13 +3,20 @@ author: TylerMSFT
 title: "Introdução à Plataforma Universal do Windows"
 description: "Saiba mais sobre os aplicativos UWP (Plataforma Universal do Windows) que podem ser executados em uma ampla variedade de dispositivos nos quais o Windows 10 esteja em execução."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
-ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f1e69b302f9b979423e2b38a11cd477b1b805a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução à Plataforma Universal do Windows
+# <a name="intro-to-the-universal-windows-platform"></a>Introdução à Plataforma Universal do Windows
 
 Neste guia, você aprenderá sobre:
 
@@ -27,7 +34,7 @@ O Windows 10 apresenta a UWP (Plataforma Universal do Windows), que desenvolve a
 
 Como seu aplicativo UWP é executado em uma ampla variedade de dispositivos com diferentes fatores forma e modalidades de entrada, você quer ser adaptado para cada dispositivo e ser capaz de desbloquear os recursos exclusivos de cada dispositivo. Os dispositivos adicionam suas próprias APIs exclusivas para a camada de API garantida. Você pode escrever código para acessar essas APIs exclusivas condicionalmente para que seu aplicativo incremente os recursos específicos para um tipo de dispositivo durante a apresentação de uma experiência diferente em outros dispositivos. Controles de interface do usuário adaptáveis e novos painéis de layout ajudam você a adaptar sua interface do usuário em uma ampla variedade de resoluções de tela.
 
-## Famílias de dispositivo
+## <a name="device-families"></a>Famílias de dispositivo
 
 Aplicativos do Windows 8.1 e Windows Phone 8.1 são executados em um SO (sistema operacional): Windows ou Windows Phone. Com o Windows 10 não é mais preciso focar em um sistema operacional; em vez disso, você direciona seu aplicativo para uma ou mais famílias de dispositivos. Uma família de dispositivos identifica as APIs, as características do sistema e os comportamentos esperados entre dispositivos dentro da família de dispositivos. Ela também determina o conjunto de dispositivos nos quais seu aplicativo pode ser instalado na Loja. Aqui está a hierarquia de família de dispositivos.
 
@@ -71,7 +78,7 @@ Em casos raros, você pode querer que seu aplicativo seja executado em todos os 
 
 Por padrão, o Microsoft Visual Studio especifica **Windows.Universal** como a família de dispositivos de destino no arquivo de manifesto do pacote do aplicativo. Para especificar a família ou as famílias de dispositivos para as quais seu aplicativo é oferecido na Loja, configure manualmente o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) no arquivo Package.appxmanifest.
 
-## Interface do usuário e entrada universal
+## <a name="ui-and-universal-input"></a>Interface do usuário e entrada universal
 
 Um aplicativo UWP pode ser executado em vários tipos diferentes de dispositivos que possuem diferentes formas de entrada, resoluções de tela, densidade de DPI e outras características exclusivas. O Windows 10 oferece novos controles universais, painéis de layout e ferramentas para ajudá-lo a adaptar a interface do usuário aos dispositivos em que o aplicativo pode ser executado. Por exemplo, você pode adaptar a interface do usuário para tirar proveito da diferença na resolução da tela quando seu aplicativo é executado em um computador desktop contra um dispositivo móvel.
 
@@ -84,7 +91,7 @@ O Windows ajuda a direcionar sua interface do usuário para vários dispositivos
 -   Ferramentas ajudam você a criar a interface do usuário que pode se adaptar a diferentes resoluções de tela
 -   O dimensionamento adaptável ajusta a resolução e as diferenças de DPI entre dispositivos
 
-### Controles universais e painéis de layout
+### <a name="universal-controls-and-layout-panels"></a>Controles universais e painéis de layout
 
 O Windows 10 inclui novos controles, como o calendário e o modo de exibição dividido. O controle de pivô, que estava disponível somente para o Windows Phone, agora também está disponível para a família de dispositivos universais.
 
@@ -100,7 +107,7 @@ No entanto, quando o aplicativo é executado em um telefone, devido ao menor tam
 
 Para ajudá-lo a adaptar o layout da interface do usuário geral com base na quantidade de espaço disponível na tela, o Windows 10 apresenta painéis adaptáveis e estados de projeto.
 
-### Projetar a interface do usuário adaptável com os painéis adaptáveis
+### <a name="design-adaptive-ui-with-adaptive-panels"></a>Projetar a interface do usuário adaptável com os painéis adaptáveis
 
 Os painéis de layout especificam as posições e tamanhos para seus filhos, dependendo do espaço disponível. Por exemplo, o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) chama seus filhos de forma sequencial (horizontal ou verticalmente). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) é como uma grade CSS que coloca seus filhos em células.
 
@@ -118,7 +125,7 @@ No exemplo a seguir, **blueButton** será exibido à direita de **textBox1**, in
 </RelativePanel>
 ```
 
-### Usar gatilhos de estado visual para criar a interface do usuário que pode se adaptar ao espaço disponível na tela
+### <a name="use-visual-state-triggers-to-build-ui-that-can-adapt-to-available-screen-space"></a>Usar gatilhos de estado visual para criar a interface do usuário que pode se adaptar ao espaço disponível na tela
 
 Talvez seja necessário que sua interface do usuário se adapte a alterações no tamanho da janela. Estados visuais adaptáveis permitem que você altere o estado visual em resposta a mudanças no tamanho da janela.
 
@@ -162,7 +169,7 @@ Aqui está o XAML dos gatilhos de estado visual descritos acima. A definição d
 </Grid>
 ```
 
-### Ferramentas
+### <a name="tooling"></a>Ferramentas
 
 Por padrão, você provavelmente vai querer focar na família de dispositivos mais ampla possível. Quando estiver pronto para ver como seu aplicativo se apresenta e se dispõe em um dispositivo específico, use a barra de ferramentas de visualização de dispositivo no Visual Studio para visualizar sua interface do usuário em um dispositivo móvel pequeno ou médio, em um computador ou em uma tela grande de TV. Dessa forma, você pode personalizar e testar seus estados visuais adaptáveis:
 
@@ -170,13 +177,13 @@ Por padrão, você provavelmente vai querer focar na família de dispositivos ma
 
 Você não precisa tomar uma decisão com antecedência sobre cada tipo de dispositivo ao qual vai dar suporte. Você pode adicionar um tamanho de dispositivo adicional ao seu projeto mais tarde.
 
-### Dimensionamento adaptável
+### <a name="adaptive-scaling"></a>Dimensionamento adaptável
 
 O Windows 10 apresenta uma evolução do modelo de dimensionamento existente. Além do dimensionamento de conteúdo com vetor, há um conjunto de fatores de escala unificado que fornece um tamanho consistente para os elementos de interface do usuário em uma variedade de tamanhos e resoluções de tela. Os fatores de escala também são compatíveis com os fatores de escala de outros sistemas operacionais, como iOS e Android. Isso torna mais fácil de compartilhar ativos entre essas plataformas.
 
 A Loja seleciona os ativos a serem baixados com base, em parte, no DPI do dispositivo. Apenas os ativos que melhor correspondem ao dispositivo são baixados.
 
-### Manipulação de entrada comum
+### <a name="common-input-handling"></a>Manipulação de entrada comum
 
 Você pode criar um Aplicativo Universal do Windows usando controles universais que lidam com várias entradas, como mouse, teclado, toque, caneta e controlador (por exemplo, o controlador do Xbox). Tradicionalmente, a tinta foi associada somente à entrada à caneta, mas com o Windows 10, você pode usar tinta com entrada por toque em alguns dispositivos e com qualquer entrada de ponteiro. A tinta é compatível com muitos dispositivos (incluindo dispositivos móveis) e pode ser facilmente incorporada com uma apenas algumas linhas de código.
 
@@ -187,7 +194,7 @@ As seguintes APIs dão acesso à entrada:
 -   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
 -   O novo controle XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e as APIs do Windows Runtime [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) permitem acessar dados de traço de tinta.
 
-## Escrevendo código
+## <a name="writing-code"></a>Escrevendo código
 
 As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode optar por desenhar com DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML, e é claro, o HTML é um padrão da plataforma de toda a web. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
 
@@ -249,7 +256,7 @@ Um aplicativo UWP ou um componente do Tempo de Execução do Windows escrito em 
 
 Para obter a lista completa de APIs do Win32 disponíveis para aplicativos UWP, consulte [Conjuntos de APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) e [Dlls para aplicativos UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 
-## Experiência do usuário
+## <a name="user-experience"></a>Experiência do usuário
 
 Um Aplicativo Universal do Windows permite que você aproveite os recursos exclusivos do dispositivo no qual ele é executado. Seu aplicativo pode fazer uso de todo o poder de um dispositivo desktop, da interação natural de manipulação direta de um tablet (incluindo entrada por toque e caneta), da portabilidade e conveniência de dispositivos móveis, da capacidade de colaboração do [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) e outros dispositivos que suportam aplicativos UWP.
 
@@ -271,18 +278,13 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
     Consulte as [Diretrizes para texto e entrada de texto](https://msdn.microsoft.com/library/windows/apps/dn611864) por obter mais experiências de interação tradicionais.
 
-## Enviar um Aplicativo Universal do Windows por meio do seu Painel
+## <a name="submit-a-universal-windows-app-through-your-dashboard"></a>Enviar um Aplicativo Universal do Windows por meio do seu Painel
 
 
 O novo painel unificado do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um local. Os novos recursos simplificam os processos, dando mais controle para você. Você também encontrará [relatórios de análise](https://msdn.microsoft.com/library/windows/apps/mt148522) detalhados, [detalhes de pagamento](https://msdn.microsoft.com/library/windows/apps/dn986925) combinados, formas de [promover seu aplicativo e atrair os seus clientes](https://msdn.microsoft.com/library/windows/apps/mt148526), e muito mais.
 
 Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar seus aplicativos para publicação na Windows Store.
 
-## Veja também ##
-Para mais material introdutório, consulte [Windows 10 - Uma Introdução sobre Como Compilar Aplicativos para Dispositivos Windows 10](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+## <a name="see-also"></a>Veja também ##
+Para mais material introdutório, consulte [Windows 10 - Uma Introdução sobre Como Compilar Aplicativos para Dispositivos Windows 10](https://msdn.microsoft.com/magazine/dn973012.aspx)
 

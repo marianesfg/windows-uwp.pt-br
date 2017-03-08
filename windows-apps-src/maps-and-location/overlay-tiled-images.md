@@ -3,25 +3,32 @@ author: msatranjr
 title: Sobrepor imagens lado a lado em um mapa
 description: "Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, local, imagens, sobreposição"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Sobrepor imagens lado a lado em um mapa
+# <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sobreponha imagens lado a lado de terceiros ou personalizadas em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 
-**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre o uso de mapas em seu app, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Visão geral da imagem lado a lado
+## <a name="tiled-image-overview"></a>Visão geral da imagem lado a lado
 
 
 Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
@@ -41,7 +48,7 @@ Aqui está um exemplo da propriedade [**UriFormatString**](https://msdn.microsof
 
 Para obter mais informações sobre o sistema de blocos usado pelos serviços de mapeamento, consulte [Sistema lado a lado do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=626692).
 
-### Sobreponha blocos de uma fonte de blocos
+### <a name="overlay-tiles-from-a-tile-source"></a>Sobreponha blocos de uma fonte de blocos
 
 Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141).
 
@@ -81,7 +88,7 @@ Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**Map
          MapControl1.TileSources.Add(tileSource);
     ```
 
-## Sobreponha blocos de um serviço Web
+## <a name="overlay-tiles-from-a-web-service"></a>Sobreponha blocos de um serviço Web
 
 
 Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986).
@@ -93,9 +100,9 @@ Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMa
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
+    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#provide-a-custom-uri) posteriormente neste tópico.
 
-3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
+3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tiled-image-overview).
 
 O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da América do Norte. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é especificado no construtor do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Neste exemplo, os blocos são exibidos apenas nos limites geográficos especificados pela propriedade [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) opcional.
 
@@ -144,10 +151,10 @@ void MainPage::AddHttpMapTileSource()
 }
 ```
 
-## Sobreponha blocos de um armazenamento local
+## <a name="overlay-tiles-from-local-storage"></a>Sobreponha blocos de um armazenamento local
 
 
-Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
+Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu app.
 
 1.  Instancie um [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
 2.  Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base. Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é:
@@ -156,24 +163,24 @@ Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local 
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
+    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#provide-a-custom-uri) posteriormente neste tópico.
 
-3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
+3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tiled-image-overview).
 
 Você pode usar os seguintes protocolos e locais para carregar blocos do armazenamento local:
 
 | Uri | Mais informações |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| ms-appx:/// | Aponta para a raiz da pasta de instalação do aplicativo. |
+| ms-appx:/// | Aponta para a raiz da pasta de instalação do app. |
 |  | Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
-| ms-appdata:///local | Aponta para a raiz do armazenamento local do aplicativo. |
+| ms-appdata:///local | Aponta para a raiz do armazenamento local do app. |
 |  | Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). |
-| ms-appdata:///temp | Aponta para a pasta temporária do aplicativo. |
+| ms-appdata:///temp | Aponta para a pasta temporária do app. |
 |  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
  
 
-O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
+O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do app usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
 
 ```csharp
         void AddLocalMapTileSource()
@@ -195,7 +202,7 @@ O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de
         }
 ```
 
-## Forneça um URI personalizado
+## <a name="provide-a-custom-uri"></a>Forneça um URI personalizado
 
 
 Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) ou a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**. O evento **UriRequested** é gerado para cada bloco individual.
@@ -241,7 +248,7 @@ using System.Threading.Tasks;
         }
 ```
 
-## Sobreponha blocos de uma fonte personalizada
+## <a name="overlay-tiles-from-a-custom-source"></a>Sobreponha blocos de uma fonte personalizada
 
 
 Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte.
@@ -317,16 +324,16 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
        int pixelHeight = 256;
        int pixelWidth = 256;
        int bpp = 4;
- 
+
        Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
-       
+
        for (int y = 0; y < pixelHeight; y++)
        {
               for (int x = 0; x < pixelWidth; x++)
               {
                      int pixelIndex = y * pixelWidth + x;
                      int byteIndex = pixelIndex * bpp;
- 
+
                      // Set the current pixel bytes.
                      bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
                      bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
@@ -334,23 +341,23 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
                      bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
               }
        }
- 
+
        // Create RandomAccessStream from byte array.
        InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
        IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
        DataWriter^ writer = ref new DataWriter(outputStream);
        writer->WriteBytes(bytes);
- 
+
        create_task(writer->StoreAsync()).then([writer](unsigned int)
        {
               create_task(writer->FlushAsync());
        });
- 
+
        return randomAccessStream;
 }
 ```
 
-## Substituir o mapa padrão
+## <a name="replace-the-default-map"></a>Substituir o mapa padrão
 
 
 Para substituir o mapa padrão inteiramente com blocos de terceiros ou personalizados:
@@ -358,17 +365,11 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 -   Especifique [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** como o valor da propriedade [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
 -   Especifique [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como o valor da propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus apps do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo do app de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 

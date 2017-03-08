@@ -1,36 +1,43 @@
 ---
 author: DelfCo
-Description: "Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões."
-title: "Preparar um aplicativo para tradução"
+Description: "Prepare o seu app para localização para outros mercados, idiomas ou regiões."
+title: "Preparar um app para localização"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 4eb57a836cace6cc41ccd15b74ecc9f62f8b0f60
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a56e0940539928723f6fb3b906d1212f80676768
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="prepare-your-app-for-localization"></a>Preparar um aplicativo para tradução
+# <a name="prepare-your-app-for-localization"></a>Preparar um app para localização
 
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Prepare o seu aplicativo para localização para outros mercados, idiomas ou regiões. Antes de começar, certifique-se de ler [o que fazer e o que não fazer](guidelines-and-checklist-for-globalizing-your-app.md).
+Prepare o seu app para localização para outros mercados, idiomas ou regiões. Antes de começar, certifique-se de ler [o que fazer e o que não fazer](guidelines-and-checklist-for-globalizing-your-app.md).
 
 ## <a name="use-resource-files-and-qualifiers"></a>Use qualificadores e arquivos de recurso.
 
 
-Certifique-se de especificar as cadeias de caracteres de interface do usuário do seu aplicativo nos arquivos de recurso, em vez de colocá-las no seu código. Para obter mais detalhes, consulte [Colocar cadeias de caracteres da interface do usuário em recursos](put-ui-strings-into-resources.md).
+Certifique-se de especificar as cadeias de caracteres de interface do usuário do seu app nos arquivos de recurso, em vez de colocá-las no seu código. Para obter mais detalhes, consulte [Colocar cadeias de caracteres da interface do usuário em recursos](put-ui-strings-into-resources.md).
 
 Especifique imagens ou outros recursos de arquivo com a marca do idioma adequado em seu arquivo ou pasta. Saiba que localizar imagens, áudio e vídeo consome uma grande quantidade de recursos do sistema, portanto é melhor usar ativos de mídia neutros sempre que possível. Para saber mais, consulte [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
 ## <a name="add-contextual-comments"></a>Adicione comentários contextuais.
 
 
-Adicione comentários de localização aos arquivos de recurso do aplicativo. Os comentários ficam visíveis para o tradutor e devem fornecer informações contextuais que ajudem o tradutor a traduzir os recursos com precisão. Os comentários também devem fornecer informações de restrições suficientes sobre o recurso, para que a tradução não corrompa o software. Opcionalmente, os comentários podem ser registrados pela ferramenta Makepri.exe.
+Adicione comentários de localização aos arquivos de recurso do app. Os comentários ficam visíveis para o tradutor e devem fornecer informações contextuais que ajudem o tradutor a traduzir os recursos com precisão. Os comentários também devem fornecer informações de restrições suficientes sobre o recurso, para que a tradução não corrompa o software. Opcionalmente, os comentários podem ser registrados pela ferramenta Makepri.exe.
 
-**XAML:** arquivos Resw (recursos criados no Visual Studio para aplicativos usando XAML) têm um elemento de comentário. Por exemplo:
+**XAML:** arquivos Resw (recursos criados no Visual Studio para apps usando XAML) têm um elemento de comentário. Por exemplo:
 
 ```XML
 <data name="String1">
@@ -60,12 +67,12 @@ Para resolver este problema, localize a frase inteira em vez de apenas uma palav
 
 -   Uma mensagem sem erros será exibida para todos os idiomas.
 -   Seu tradutor não precisará perguntar pelo o que as cadeias de caracteres serão substituídas.
--   Você não precisará implementar uma correção de código custosa quando um problema assim aparecer depois de o seu aplicativo estar concluído.
+-   Você não precisará implementar uma correção de código custosa quando um problema assim aparecer depois de o seu app estar concluído.
 
 ## <a name="ensure-the-correct-parameter-order"></a>Assegure a ordem correta do parâmetros.
 
 
-Não suponha que todos os idiomas usam parâmetros na mesma ordem. Por exemplo, considere a cadeia de caracteres "Every %s %s", em que o primeiro %s seja substituído pelo nome de um mês e o segundo %s seja substituído pela data de um mês. Esse exemplo funciona em inglês, mas falhará quando o aplicativo for localizado para o português, em que a data e o mês são exibidos na ordem contrária.
+Não suponha que todos os idiomas usam parâmetros na mesma ordem. Por exemplo, considere a cadeia de caracteres "Every %s %s", em que o primeiro %s seja substituído pelo nome de um mês e o segundo %s seja substituído pela data de um mês. Esse exemplo funciona em inglês, mas falhará quando o app for localizado para o português, em que a data e o mês são exibidos na ordem contrária.
 
 Para resolver esse problema, mude a cadeia de caracteres para "Every %1 %2", para que a ordem seja intercambiável de acordo com o idioma.
 
@@ -130,11 +137,11 @@ Além disso, considere as seguintes sugestões:
 ## <a name="support-furigana-for-japanese-strings-that-can-be-sorted"></a>Forneça suporte para Furigana para cadeias de caracteres japoneses que possam ser classificadas.
 
 
-Os caracteres Kanji japoneses apresentam a propriedade exclusiva de ter mais de uma pronúncia, dependendo da palavra e/ou do contexto em que são usados. Isso é um problema quanto tentamos classificar os objetos nomeados em japonês, como nomes de aplicativos, arquivos, músicas etc. No passado, o Kanji japonês era classificado em uma ordem chamada XJIS, que podia ser compreendida pelo computador. Infelizmente, por essa ordem de classificação não ser fonética, ela não é muito útil para humanos.
+Os caracteres Kanji japoneses apresentam a propriedade exclusiva de ter mais de uma pronúncia, dependendo da palavra e/ou do contexto em que são usados. Isso é um problema quanto tentamos classificar os objetos nomeados em japonês, como nomes de apps, arquivos, músicas etc. No passado, o Kanji japonês era classificado em uma ordem chamada XJIS, que podia ser compreendida pelo computador. Infelizmente, por essa ordem de classificação não ser fonética, ela não é muito útil para humanos.
 
-O Furigana resolve esse problema permitindo que o usuário ou criador especifique a fonética dos caracteres em uso. Se você usar o seguinte procedimento para adicionar Furigana ao nome do aplicativo, poderá garantir que ele seja classificado no local adequado da lista de aplicativos. Se o nome do aplicativo contiver os caracteres Kanji e o Furigana não for fornecido quando o idioma da interface do usuário ou a ordem de classificação for definida em japonês, o Windows se esforçará ao máximo para gerar a pronúncia adequada. Entretanto, existe a possibilidade de os nomes de aplicativos, que contêm leituras raras ou exclusivas, serem classificados em uma leitura mais comum. Portanto, a melhor prática para aplicativos em japonês (principalmente os que contêm caracteres Kanji em seus nomes) é fornecer uma versão em Furigana do nome do aplicativo como parte do processo de localização para japonês.
+O Furigana resolve esse problema permitindo que o usuário ou criador especifique a fonética dos caracteres em uso. Se você usar o seguinte procedimento para adicionar Furigana ao nome do app, poderá garantir que ele seja classificado no local adequado da lista de apps. Se o nome do app contiver os caracteres Kanji e o Furigana não for fornecido quando o idioma da interface do usuário ou a ordem de classificação for definida em japonês, o Windows se esforçará ao máximo para gerar a pronúncia adequada. Entretanto, existe a possibilidade de os nomes de apps, que contêm leituras raras ou exclusivas, serem classificados em uma leitura mais comum. Portanto, a melhor prática para apps em japonês (principalmente os que contêm caracteres Kanji em seus nomes) é fornecer uma versão em Furigana do nome do app como parte do processo de localização para japonês.
 
-1.  Adicione "ms-resource:Appname" como o Nome de exibição do pacote e o Nome de exibição do aplicativo.
+1.  Adicione "ms-resource:Appname" como o Nome de exibição do pacote e o Nome de exibição do app.
 2.  Crie uma pasta ja-JP em cadeias de caracteres e adicione dois arquivos de recursos, como a seguir:
 
     ``` syntax
@@ -148,7 +155,7 @@ O Furigana resolve esse problema permitindo que o usuário ou criador especifiqu
 3.  Em Resources.resw para ja-JP geral: adicione um recurso de cadeia de caracteres para Appname "希蒼"
 4.  Em Resources.altform-msft-phonetic.resw para recursos Furigana para japonês: adicione o valor Furigana para AppName "のあ"
 
-O usuário pode pesquisar o nome do aplicativo "希蒼" usando tanto o valor Furigana "のあ" (noa), quanto o valor fonético (usando a função **GetPhonetic** do Editor de Método de Entrada (IME)) "まれあお" (mare-ao).
+O usuário pode pesquisar o nome do app "希蒼" usando tanto o valor Furigana "のあ" (noa), quanto o valor fonético (usando a função **GetPhonetic** do Editor de Método de Entrada (IME)) "まれあお" (mare-ao).
 
 A classificação segue o formato do **Painel de Controle Regional**.
 
@@ -170,10 +177,5 @@ A classificação segue o formato do **Painel de Controle Regional**.
  
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

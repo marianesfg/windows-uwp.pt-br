@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Use este método na API de envio da Windows Store para atualizar um envio de complemento existente."
 title: Atualizar um envio de complemento usando a API de envio da Windows Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, envio de complemento, atualização, produto no aplicativo, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -206,9 +213,4 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de complemento](commit-an-add-on-submission.md)
 * [Excluir um envio de complemento](delete-an-add-on-submission.md)
 * [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

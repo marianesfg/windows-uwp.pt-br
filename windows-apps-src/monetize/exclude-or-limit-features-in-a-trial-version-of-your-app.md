@@ -1,12 +1,18 @@
 ---
 author: mcleanbyron
-Description: "Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação."
+Description: "Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação."
 title: "Excluir ou limitar recursos em uma versão de avaliação"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "amostra de código de avaliação gratuita"
+keywords: "windows 10, uwp, compra no aplicativo, avaliação, IAP, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -120,9 +126,4 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

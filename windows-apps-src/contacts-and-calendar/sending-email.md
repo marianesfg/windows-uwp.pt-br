@@ -4,13 +4,19 @@ description: "Mostra como iniciar a caixa de diálogo de email para permitir que
 title: Enviar email
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: contatos, email, envio
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
-ms.openlocfilehash: ff09393af072eb8aee8c3001e7323cc20201da70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b14f1a0fc77a8b7df241afbb92f4db223545d81f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Enviar email
+# <a name="send-email"></a>Enviar email
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -23,7 +29,7 @@ Mostra como iniciar a caixa de diálogo de email para permitir que o usuário en
 -   [Resumo e próximas etapas](#summary-and-next-steps)
 -   [Tópicos relacionados](#related-topics)
 
-## Iniciar a caixa de redação de email
+## <a name="launch-the-compose-email-dialog"></a>Iniciar a caixa de redação de email
 
 Crie um novo objeto [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) e defina os dados que você quer que sejam previamente populados na caixa de redação de email. Chame [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269) para mostrar a caixa de diálogo.
 
@@ -58,11 +64,11 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 }
 ```
 
-## Resumo e próximas etapas
+## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
 Este tópico mostrou como iniciar a caixa de redação de email. Para obter mais informações sobre como selecionar contatos para usar como destinatários de uma mensagem de email, consulte [Selecionar contatos](selecting-contacts.md). Veja [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) para selecionar um arquivo a ser usado como um anexo de email.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Selecionando contatos](selecting-contacts.md)
 * [Como continuar seu aplicativo do Windows Phone após chamar um Seletor de arquivo](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
@@ -72,10 +78,5 @@ Este tópico mostrou como iniciar a caixa de redação de email. Para obter mais
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

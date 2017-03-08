@@ -1,48 +1,55 @@
 ---
 author: mtoepke
 title: "Concluir código para BasicReaderWriter"
-description: "Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral."
+description: "Conclua o código para classe e métodos de leitura e gravação de arquivos de dados binários em geral."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, basicreaderwriter
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: de6ab2687cfbe7b485e51bc90811b1988e29fb7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Concluir código para BasicReaderWriter
+# <a name="complete-code-for-basicreaderwriter"></a>Concluir código para BasicReaderWriter
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Conclua código para classe e métodos de leitura e gravação de arquivos de dados binários em geral. Usado pela classe [BasicLoader](complete-code-for-basicloader.md).
+Conclua o código para classe e métodos de leitura e gravação de arquivos de dados binários em geral. Usado pela classe [BasicLoader](complete-code-for-basicloader.md).
 
 Este tópico contém estas seções:
 
 -   [Tecnologias](#technologies)
 -   [Requisitos](#requirements)
--   [Exibir o código (C++)](#view-the-code-c-)
+-   [Exibir o código (C++)](#view-the-code-c)
 
 
-## Local de download
+## <a name="download-location"></a>Local de download
 
 Este exemplo não está disponível para download.
 
 
-## Tecnologias
+## <a name="technologies"></a>Tecnologias
 
 **Linguagens de programação** - C++  
 **Modelos de programação** -Windows Runtime
 
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
  **Cliente mínimo com suporte** - Windows 10       
  **Servidor mínimo com suporte** - Windows Server 2016 Technical Preview 
 
-## Exibir o código (C++)
+## <a name="view-the-code-c"></a>Exibir o código (C++)
 
 
-## BasicReaderWriter.h
+## <a name="basicreaderwriterh"></a>BasicReaderWriter.h
 
 
 ```cpp
@@ -91,7 +98,7 @@ internal:
 };
 ```
 
-## BasicReaderWriter.cpp
+## <a name="basicreaderwritercpp"></a>BasicReaderWriter.cpp
 
 
 ```cpp
@@ -262,10 +269,5 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

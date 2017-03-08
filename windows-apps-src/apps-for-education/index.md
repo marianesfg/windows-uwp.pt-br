@@ -1,42 +1,48 @@
 ---
 author: TylerMSFT
-title: "Desenvolva aplicativos de educação."
-description: "Esta seção descreve os recursos de Aplicativos Universais do Windows que estão disponíveis para escrever aplicativos de educação para a plataforma Windows 10."
+title: "Desenvolva apps de educação."
+description: "Esta seção descreve os recursos de Aplicativos Universais do Windows que estão disponíveis para escrever apps de educação para a plataforma Windows 10."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 translationtype: Human Translation
-ms.sourcegitcommit: 48fcfe2b033614b445a1be6d757a8d208c7b1292
-ms.openlocfilehash: bb401b73432c072d551814dec9504a7d1742b7d4
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: abeadc4fe27858afcdddfeff08362fff69ce713b
+ms.lasthandoff: 02/08/2017
 
 ---
-# Desenvolver aplicativos Universais do Windows para educação
-Os recursos a seguir ajudarão você a gravar um aplicativo Universal do Windows para educação.
 
-### Acessibilidade
-Os aplicativos de educação precisam ser acessíveis. Consulte [Desenvolvendo aplicativos para acessibilidade](https://developer.microsoft.com/windows/accessible-apps) para obter mais informações.
+# <a name="develop-universal-windows-apps-for-education"></a>Desenvolver aplicativos universais do Windows para educação
+![captura de tela do app fazer um teste](images/take-a-test-screen-small.png)
+
+Os recursos a seguir ajudarão você a gravar um aplicativo universal do Windows para educação.
+
+### <a name="accessibility"></a>Acessibilidade
+Os apps de educação precisam ser acessíveis. Consulte [Desenvolvendo apps para acessibilidade](https://developer.microsoft.com/windows/accessible-apps) para obter mais informações.
 
 
-### Avaliações seguras
-Aplicativos de avaliação/teste geralmente precisam produzir um ambiente *bloqueado* para impedir que os alunos usem outros computadores ou recursos de Internet durante um teste. Essa funcionalidade está disponível por meio da [API Fazer um Teste](take-a-test-api.md). Consulte o aplicativo Web [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) no Centro de TI do Windows para obter um exemplo de um ambiente de teste com acesso online bloqueado para testes de alto interesse.
+### <a name="secure-assessments"></a>Avaliações seguras
+Aplicativos de avaliação/teste geralmente precisam produzir um ambiente *bloqueado* para impedir que os alunos usem outros computadores ou recursos de Internet durante um teste. Essa funcionalidade está disponível por meio da [API Fazer um Teste](take-a-test-api.md). Consulte o app Web [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) no Centro de TI do Windows para obter um exemplo de um ambiente de teste com acesso online bloqueado para testes de alto interesse.
 
-### Entrada do usuário
-A entrada do usuário é uma parte essencial dos aplicativos de educação; os controles de interface do usuário devem ser responsivos e intuitivos para não distrair os usuários. Para obter uma visão geral das opções de entrada disponíveis em um aplicativo Universal do Windows, consulte a [Cartilha de entrada](https://msdn.microsoft.com/windows/uwp/input-and-devices/input-primer) e os tópicos abaixo na seção Design e interface do usuário. Além disso, os seguintes aplicativos de amostra mostram a manipulação básica da interface do usuário na Plataforma Universal do Windows.
+### <a name="user-input"></a>Entrada do usuário
+A entrada do usuário é uma parte essencial dos apps de educação; os controles de interface do usuário devem ser responsivos e intuitivos para não distrair os usuários. Para obter uma visão geral das opções de entrada disponíveis em um aplicativo universal do Windows, consulte a [Cartilha de entrada](https://msdn.microsoft.com/windows/uwp/input-and-devices/input-primer) e os tópicos abaixo na seção Design e interface do usuário. Além disso, os seguintes apps de amostra mostram a manipulação básica da interface do usuário na Plataforma Universal do Windows.
 - [Amostra de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput) mostra como manipular a entrada em Aplicativos Universais do Windows.
 - [Amostra do modo de interação do usuário](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode) mostra como detectar e responder ao modo de interação do usuário.
 - [Amostra de elementos visuais de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals) mostra como tirar proveito dos novos elementos visuais de foco desenhados pelo sistema ou criar seus próprios elementos visuais de foco personalizados caso os elementos desenhados pelo sistema não atendam às suas necessidades.
 
-A plataforma do Windows Ink pode promover aplicativos de educação ajustando-os com um modo de entrada com o qual os alunos estão acostumados. Consulte [Windows Ink e interações de caneta](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) e os tópicos abaixo para obter um guia abrangente de implementação do Windows Ink em seu aplicativo. Os aplicativos de exemplo a seguir fornecem exemplos práticos dessa API.
-- [Amostra de tinta](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink) demonstra como usar a funcionalidade de tinta (como capturar, manipular e interpretar traços de tinta) em aplicativos Universais do Windows usando JavaScript.
-- [Amostra de tinta simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstra como usar a funcionalidade de tinta (como capturar tinta da entrada do usuário e executar o reconhecimento de manuscrito em traços de tinta) em aplicativos Universais do Windows usando C#.
+A plataforma do Windows Ink pode promover apps de educação ajustando-os com um modo de entrada com o qual os alunos estão acostumados. Consulte [Windows Ink e interações de caneta](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) e os tópicos abaixo para obter um guia abrangente de implementação do Windows Ink em seu app. Os apps de exemplo a seguir fornecem exemplos práticos dessa API.
+- [Amostra de tinta](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink) demonstra como usar a funcionalidade de tinta (como capturar, manipular e interpretar traços de tinta) em aplicativos universais do Windows usando JavaScript.
+- [Amostra de tinta simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstra como usar a funcionalidade de tinta (como capturar tinta da entrada do usuário e executar o reconhecimento de manuscrito em traços de tinta) em aplicativos universais do Windows usando C#.
 - [Amostra de tinta complexa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) demonstra como usar a funcionalidade avançada InkPresenter para intercalar a tinta com outros objetos, selecionar a tinta, copiar/colar e manipular eventos. Ela foi criada na Plataforma Universal do Windows em C++ e pode ser executada em SKUs Desktop e Mobile do Windows 10.
 
 
-### Windows Store
-Os aplicativos de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir aplicativos de linha de negócios para empresas](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
+### <a name="windows-store"></a>Windows Store
+Os apps de educação geralmente são lançados em circunstâncias especiais para uma organização específica. Consulte [Distribuir apps de linha de negócios para empresas](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obter informações sobre isso.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 - [Windows 10 para educação](https://technet.microsoft.com/edu/windows/index) no Centro de TI do Windows
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

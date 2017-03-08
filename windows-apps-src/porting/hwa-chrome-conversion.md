@@ -3,9 +3,17 @@ author: seksenov
 title: Aplicativos Web hospedados - Converter seu aplicativo Chrome em um aplicativo da Plataforma Universal do Windows
 description: "Converter seu aplicativo Chrome ou Extensão Chrome em um aplicativo da Plataforma Universal do Windows (UWP) para a Windows Store."
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Enquadramento extensões para o Windows, aplicativos do Chrome para Windows, hwa-cli, crX convert para. AppX"
+ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 84cdd12e2a38aafeb989c0f33b1212077dc1d98e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -46,9 +54,10 @@ Preencha os avisos na Windows Store.
     During the conversion process, you will be prompted for an Identity Name, Publisher Identity, and Publisher Display Name. To retrieve these values, visit the Dashboard in the [Windows Dev Center](https://developer.microsoft.com/windows).
     - Click on "[Create a new app](https://developer.microsoft.com/dashboard/Application/New)" and reserve your app name.
 ![Reservar um nome no Painel do Centro de Desenvolvimento do Windows](images/hwa-to-uwp/reserve_a_name.png)
-    - Em seguida, clique em "Identidade do aplicativo" no menu à esquerda na seção "Gerenciamento de aplicativo".
-    ![Identidade do aplicativo do Painel do Centro de Desenvolvimento do Windows](images/hwa-to-uwp/app_identity.png)
-    - Você deve ver os três valores os quais será solicitado listados na página: 1. Nome do identificador: `Package/Identity/Name`
+    - Em seguida, clique em "Identidade de aplicativo" no menu à esquerda na seção "Gerenciamento de aplicativo".
+    ![Identidade de aplicativo de painel do Centro de Desenvolvimento do Windows](images/hwa-to-uwp/app_identity.png)
+    - Você deve ver os três valores para os quais você é solicitado listados na página: 
+        1. Nome do identificador: `Package/Identity/Name`
         2. Identidade do editor: `Package/Identity/Publisher`
         3. Nome de exibição do editor: `Package/Properties/PublisherDisplayName`
 
@@ -59,13 +68,13 @@ Depois de empacotar d]o aplicativo da web para a Windows Store, personalize para
 
 ### <a name="application-content-uri-rules"></a>Regras de URI de conteúdo do aplicativo
 
-[Regras de URI de conteúdo do aplicativo (ACURs)](/hwa-access-features.md) ou URIs de conteúdo definem o escopo do seu Aplicativo Web hospedado por meio de uma lista de permissão de URL no manifesto do pacote do aplicativo. Para controlar a comunicação para o/do conteúdo remoto, você deve definir quais URLs estão incluídas e/ou excluídas da lista. Se um usuário clicar em uma URL que não está incluída explicitamente, o Windows abrirá o caminho de destino no navegador padrão. Com ACURs, você também é capaz de conceder um acesso por URL às [APIs do universais do Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+[Regras de URI de conteúdo do aplicativo (ACURs)](./hwa-access-features.md) ou URIs de conteúdo definem o escopo do seu Aplicativo Web hospedado por meio de uma lista de permissão de URL no manifesto do pacote do aplicativo. Para controlar a comunicação para o/do conteúdo remoto, você deve definir quais URLs estão incluídas e/ou excluídas da lista. Se um usuário clicar em uma URL que não está incluída explicitamente, o Windows abrirá o caminho de destino no navegador padrão. Com ACURs, você também é capaz de conceder um acesso por URL às [APIs do universais do Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 No mínimo, as regras devem incluir a página inicial do aplicativo. A ferramenta de conversão criará automaticamente um conjunto de ACURs para você, com base na sua página inicial e domínio. No entanto, se houver quaisquer redirecionamentos programáticos, seja no servidor ou no cliente, os destinos precisarão ser adicionados à lista de permissões.
 
 *Observação: ACURs são aplicáveis somente a navegação de página. Imagens, bibliotecas JavaScript e outros ativos semelhantes não são afetados por essas restrições.*
 
-Diversos aplicativos usam sites de terceiros para seus fluxos de logon, por exemplo, Facebook e Google. A ferramenta de conversão criará automaticamente um conjunto de ACURs para você, com base nos sites mais populares. Se seu método de autenticação não está incluído na lista, e é um fluxo de redirecionamento, você precisará adicionar seu(s) caminho(s) como um ACUR. Você também pode considerar o uso de um [agente de autenticação da web](/hwa-access-features.md).
+Diversos aplicativos usam sites de terceiros para seus fluxos de logon, por exemplo, Facebook e Google. A ferramenta de conversão criará automaticamente um conjunto de ACURs para você, com base nos sites mais populares. Se seu método de autenticação não está incluído na lista, e é um fluxo de redirecionamento, você precisará adicionar seu(s) caminho(s) como um ACUR. Você também pode considerar o uso de um [agente de autenticação da web](./hwa-access-features.md).
 
 ### <a name="flash"></a>Flash
 
@@ -95,12 +104,7 @@ O Chrome fornece aplicativos com [APIs de finalidade especial](https://developer
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-- [Melhorar seu aplicativo Web ao acessar recursos da Plataforma Universal do Windows(UWP)](/hwa-access-features.md)
+- [Melhorar seu aplicativo Web ao acessar recursos da Plataforma Universal do Windows(UWP)](./hwa-access-features.md)
 - [Guia para aplicativos UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Baixar ativos de design para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: "Use este método na API de envio da Windows Store para obter dados para um pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
 title: "Obter um pacote de pré-lançamento usando a API de envio da Windows Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envio da Windows Store, versão de pré-lançamento, pacote de pré-lançamento"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: fb8328981a45e353987a62d7794158c2e1179087
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae8014dadfb838cfd14202a673654be3a012c8bf
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obter um pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="get-a-package-flight-using-the-windows-store-submission-api"></a>Obter um pacote de pré-lançamento usando a API de envio da Windows Store
 
 
 
 
 Use este método na API de envio da Windows Store para obter dados para um pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar este método, primeiro você precisa do seguinte:
 
@@ -25,7 +32,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
@@ -36,7 +43,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 <span/>
  
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 
 | Nome        | Tipo   | Descrição                                                                 |
@@ -54,13 +61,13 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 <span/>
 
-### Corpo da solicitação
+### <a name="request-body"></a>Corpo da solicitação
 
 Não forneça um corpo da solicitação para esse método.
 
 <span/>
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como recuperar informações sobre um pacote de pré-lançamento com a ID 43e448df-97c9-4a43-a0bc-2a445e736bcd para um aplicativo com o valor de ID da Loja 9WZDNCRD91MD.
 
@@ -69,7 +76,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fli
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. Para obter mais detalhes sobre os valores no corpo da resposta, veja as seções a seguir.
 
@@ -92,7 +99,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 }
 ```
 
-### Corpo da resposta
+### <a name="response-body"></a>Corpo da resposta
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,7 +111,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 | rankHigherThan           | string  | O nome amigável do pacote de pré-lançamento que ficou imediatamente abaixo do pacote de pré-lançamento atual. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 <span id="submission_object" />
-### Objeto de envio
+### <a name="submission-object"></a>Objeto de envio
 
 Os valores *lastPublishedFlightSubmission* e *pendingFlightSubmission* no corpo da resposta contêm objetos que fornecem informações do recurso sobre um envio para o pacote de pré-lançamento. Esses objetos possuem os seguintes valores.
 
@@ -115,7 +122,7 @@ Os valores *lastPublishedFlightSubmission* e *pendingFlightSubmission* no corpo 
  
 <span/>
 
-## Códigos de erro
+## <a name="error-codes"></a>Códigos de erro
 
 Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
@@ -127,14 +134,9 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 
 <span/>
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Criar um pacote de pré-lançamento](create-a-flight.md)
 * [Excluir um pacote de pré-lançamento](delete-a-flight.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

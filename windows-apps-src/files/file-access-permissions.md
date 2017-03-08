@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Permissões de acesso a arquivo"
 description: "Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3a5069620fa665d4508af70df5543a2d42744210
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
@@ -162,9 +169,4 @@ A tabela a seguir lista locais adicionais que você pode acessar declarando os r
 | Bibliotecas de grupo doméstico  | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | Dispositivos do servidor de mídia (DLNA) | Pelo menos um dos seguintes recursos é necessário. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | Pastas UNC (Convenção de Nomenclatura Universal) | Uma combinação dos seguintes recursos é necessária. <br><br>O recurso de redes de trabalho e domésticas: <br>- PrivateNetworkClientServer <br><br>E pelo menos um recurso de internet e de redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>E, se aplicável, o recurso de credenciais de domínio:<br>- EnterpriseAuthentication <br><br>Observação: você deve adicionar Associações de tipo de arquivo ao manifesto do aplicativo que declarem tipos específicos de arquivos que seu aplicativo pode acessar neste local. | Recupere uma pasta usando: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Recupere um arquivo usando: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -5,9 +5,16 @@ title: "Criar blocos adaptáveis"
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
@@ -354,10 +361,10 @@ new AdaptiveText()
 
 ![texto do bloco adaptável](images/adaptive-tiles-text.png)
 
-## <a name="text-wrapping"></a>Disposição do texto
+## <a name="text-wrapping"></a>Encapsulamento de texto
 
 
-Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o atributo **hint-wrap** para definir a disposição do texto em um elemento de texto. Você também pode controlar o número mínimo e máximo de linhas usando **hint-minLines** e **hint-maxLines**, que aceitam números inteiros positivos.
+Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o atributo **hint-wrap** para definir o encapsulamento de texto em um elemento de texto. Você também pode controlar o número mínimo e máximo de linhas usando **hint-minLines** e **hint-maxLines**, que aceitam números inteiros positivos.
 
 ```XML
 <text hint-wrap="true">This is a line of wrapping text</text>
@@ -374,7 +381,7 @@ new AdaptiveText()
 
 **Resultado:**
 
-![bloco adaptável com disposição do texto](images/adaptive-tiles-textwrapping.png)
+![bloco adaptável com encapsulamento de texto](images/adaptive-tiles-textwrapping.png)
 
 ## <a name="text-styles"></a>Estilos de texto
 
@@ -1399,10 +1406,5 @@ TileWide = new TileBinding()
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

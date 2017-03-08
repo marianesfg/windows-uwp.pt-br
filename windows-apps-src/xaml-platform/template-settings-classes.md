@@ -3,21 +3,28 @@ author: jwmsft
 description: Classes TemplateSettings
 title: Classes TemplateSettings
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 8a52535e54a321bab6b34b6a73c53222e88d2151
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 983158dfa258eeac6305a7aa000afba7311500d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Classes TemplateSettings
+# <a name="template-settings-classes"></a>Classes TemplateSettings
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Presumimos que você saiba adicionar controles à sua interface do usuário, definir as suas propriedades e atribuir manipuladores de eventos. Para obter instruções sobre como adicionar controles ao seu aplicativo, consulte [Adicionar controles e manipular eventos](https://msdn.microsoft.com/library/windows/apps/mt228345). Também presumimos que você tem noções básicas sobre como definir um modelo personalizado para um controle, fazendo uma cópia do modelo padrão e editando-a. Para saber mais sobre isso, consulte [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
-## O cenário para classes **TemplateSettings**
+## <a name="the-scenario-for-templatesettings-classes"></a>O cenário para classes **TemplateSettings**
 
 As classes **TemplateSettings** fornecem um conjunto de propriedades que são usadas quando você define um novo modelo de controle de um controle. As propriedades têm valores como medidas de pixel para o tamanho de determinadas partes do elemento de interface do usuário. Às vezes, os valores são valores calculados que são provenientes da lógica do controle que normalmente não é fácil de substituir ou até mesmo acessar. Algumas das propriedades servem como valores **From** e **To** que controlam as transições e as animações de partes e, portanto, as propriedades **TemplateSettings** relevantes vêm em pares.
 
@@ -34,7 +41,7 @@ Há várias classes **TemplateSettings**. Todas elas estão no namespace [**Wind
 
 As propriedades **TemplateSettings** sempre devem ser usadas em XAML, não o código. Elas são subpropriedades somente leitura de uma propriedade **TemplateSettings** somente leitura de um controle pai. Em um cenário de controle personalizado avançado, no qual você está criando uma nova classe baseada em [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e portanto pode influenciar a lógica do controle, considere a definição de uma propriedade **TemplateSettings** personalizada no controle para comunicar informações que podem ser úteis para qualquer um que esteja remodelando o controle. Assim como esse valor somente leitura da propriedade, defina uma nova classe **TemplateSettings** para o seu controle, que tenha propriedades somente leitura para cada um dos itens de informação, seja relevante para as medidas do modelo, posicionamento da animação, e assim por diante, e forneça aos chamados a instância do tempo de execução dessa classe que é inicializada através da lógica do controle. As classes **TemplateSettings** são derivadas de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), de forma que as propriedades possam usar o sistema de propriedade de relevância dos retornos de chamada com propriedade alterada. Mas os identificadores de propriedade de dependência da propriedades não são expostos como API pública, pois as propriedades **TemplateSettings** não se destinam a ser somente leitura para os chamadores.
 
-## Como usar **TemplateSettings** a um modelo de controle.
+## <a name="how-to-use-templatesettings-in-a-control-template"></a>Como usar **TemplateSettings** a um modelo de controle.
 
 Aqui está um exemplo que vêm dos modelos de controle XAML padrão iniciais. Este em especial é do modelo padrão de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538):
 
@@ -95,13 +102,8 @@ Novamente, existem muitos XAML no modelo, portanto, mostramos apenas um trecho. 
 **Observação**  
 Quando você usar valores **TemplateSettings** como parte de seu modelo de controle, certifique-se de configurar propriedades que correspondem ao tipo do valor. Caso contrário, talvez você precise criar um conversor de valor para a associação de forma que o tipo de destino da associação possa ser convertido de um tipo de origem diferente do valor **TemplateSettings**. Para saber mais, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Início rápido: modelos de controle](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

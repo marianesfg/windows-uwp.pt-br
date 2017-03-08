@@ -5,9 +5,16 @@ ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desenvolvendo aplicativos inclusivos do Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -37,7 +44,7 @@ Ao projetar a navegação de teclado, examine sua interface do usuário e pense 
 * Como os controles são dispostos ou agrupados na interface do usuário?
 * Há alguns grupos significativos de controles?
     * Em caso afirmativo, esses grupos contêm outro nível de grupos?
-*   Entre os controles pares, a navegação deve ser feita por tabulação ou via navegação especial (como teclas de direção), ou ambos?
+*     Entre os controles pares, a navegação deve ser feita por tabulação ou via navegação especial (como teclas de direção), ou ambos?
 
 O objetivo é ajudar o usuário a entender como a interface do usuário é disposta e identificar os controles que são acionáveis. Se você estiver achando que existem muitas tabulações antes de o usuário concluir o loop de navegação, considere a possibilidade de agrupar os controles relacionados. Alguns controles relacionados, como um controle híbrido, talvez precisem ser abordados neste estágio de exploração inicial. Depois que você começar a desenvolver seu produto, é difícil fazer reformulações na navegação de teclado, portanto, planeje com cuidado e antecipadamente!  
 
@@ -83,9 +90,4 @@ Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilida
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
 * [Acessibilidade](accessibility.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

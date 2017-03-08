@@ -3,20 +3,27 @@ author: mtoepke
 title: Como retomar um aplicativo (DirectX e C++)
 description: "Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP (Plataforma Universal do Windows) DirectX."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, retomar, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 978f779eaeb732b549657751c11cd2192728999b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Como retomar um aplicativo (DirectX e C++)
+# <a name="how-to-resume-an-app-directx-and-c"></a>Como retomar um aplicativo (DirectX e C++)
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
-## Registrar o manipulador de eventos de retomada
+## <a name="register-the-resuming-event-handler"></a>Registrar o manipulador de eventos de retomada
 
 
 Registre para manipular o evento [**CoreApplication::Resuming**](https://msdn.microsoft.com/library/windows/apps/br205859) que indica que o usuário alternou para outro aplicativo que não o seu e, depois, retornou.
@@ -37,7 +44,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Atualizar o conteúdo exibido após a suspensão
+## <a name="refresh-displayed-content-after-suspension"></a>Atualizar o conteúdo exibido após a suspensão
 
 
 Quando seu aplicativo manipula o evento Resuming, ele tem a oportunidade de atualizar o conteúdo exibido. Restaure qualquer aplicativo que você tenha salvo com seu manipulador para [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) e reinicie o processamento. Desenvolvedores de jogos: se você suspendeu seu mecanismo de áudio, agora é o momento de reiniciá-lo.
@@ -80,12 +87,12 @@ void App::Run()
 }
 ```
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 
 O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicativo ou para a área de trabalho. O sistema retoma o seu aplicativo sempre que o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema restaura o aplicativo exatamente como ele havia parado, de maneira que o usuário tem impressão de que ele estava sendo executado em tela de fundo. Porém, o aplicativo pode ter sido suspenso durante um período de tempo significativo, assim ele deve atualizar qualquer conteúdo exibido que pode ter alterado enquanto o aplicativo estava suspenso,e reinicie quaisquer threads de renderização ou processamento de áudio. Se você salvou quaisquer dados de estado de jogo durante um evento suspenso anterior, restaure-o agora.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Como suspender um aplicativo (DirectX e C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [Como ativar um aplicativo (DirectX e C++)](how-to-activate-an-app-directx-and-cpp.md)
@@ -96,10 +103,5 @@ O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicat
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,14 +1,22 @@
 ---
 author: TylerMSFT
-Description: "A API JavaScript do aplicativo Fazer um Teste Microsoft permite fazer avaliações seguras. Fazer um Teste oferece um navegador seguro que impede que alunos usem outros recursos de computador ou internet durante um teste."
-title: API JavaScript Fazer um Teste.
+Description: "A API JavaScript do aplicativo Fazer um Teste Microsoft permite fazer avaliações seguras. Fazer um teste oferece um navegador seguro que impede que alunos usem outros recursos de computador ou internet durante um teste."
+title: API do JavaScript do Fazer um Teste.
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 translationtype: Human Translation
-ms.sourcegitcommit: 7f578d73a9a625b0ac7d9c10f6dc8118c36b07d0
-ms.openlocfilehash: c2e1832489d36f4ccbeae4e2f67e18caf941a68f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ac1a9b38a9857ae536025e682f98d01135850a19
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# API JavaScript Fazer um Teste
+# <a name="take-a-test-javascript-api"></a>API do JavaScript do Fazer um Teste
 
 [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo baseado em navegador que renderiza avaliações online bloqueadas para testes de alto risco. Ele dá suporte ao padrão da API do navegador SBAC para testes básicos comuns importantes e permite se concentrar no conteúdo de avaliação, em vez de como bloquear o Windows.
 
@@ -16,14 +24,14 @@ Fazer um Teste, da plataforma do navegador Microsoft Edge, apresenta uma API Jav
 
 A API (com base na [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) fornece os recursos de conversão de texto em fala e de consulta se o dispositivo estiver bloqueado, quais processos de usuários e do sistema estão em execução e muito mais.
 
-Consulte A [Referência técnica do aplicativo Fazer um Teste](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter informações sobre o próprio aplicativo.
+Consulte A [Referência técnica do aplicativo Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical) para obter informações sobre o próprio aplicativo.
 
 > [!Important]
 > Essas APIs não funcionam em uma sessão remota.  
 
 Para a solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos](troubleshooting.md).
 
-## Documentação de referência
+## <a name="reference-documentation"></a>Documentação de referência
 A API de Fazer um Teste consiste nos seguintes namespaces. 
 
 | Namespace | Descrição |
@@ -32,7 +40,7 @@ A API de Fazer um Teste consiste nos seguintes namespaces.
 |[namespace tts](#tts-namespace)|Funcionalidade conversão de texto em fala|
 
 
- ### Namespace de segurança
+ ### <a name="security-namespace"></a>Namespace de segurança
 
 O namespace de segurança permite bloquear o dispositivo, verificar a lista de processos de usuário e sistema, obter endereços MAC e IP e limpar recursos da web em cache.
 
@@ -48,7 +56,7 @@ O namespace de segurança permite bloquear o dispositivo, verificar a lista de p
 
 ---
 <span id="clearCache"/>
-### void clearCache()
+### <a name="void-clearcache"></a>void clearCache()
 Limpe recursos da web em cache.
 
 **Sintaxe**  
@@ -66,7 +74,7 @@ Windows 10, versão 1607
 ---
 
 <span id="close"/>
-### close(boolean restart)
+### <a name="closeboolean-restart"></a>close(boolean restart)
 Fecha o navegador e desbloqueia o dispositivo.
 
 **Sintaxe**  
@@ -84,14 +92,14 @@ Windows 10, versão 1607
 ---
 
 <span id="enableLockDown"/>
-### enableLockdown(boolean lockdown)
+### <a name="enablelockdownboolean-lockdown"></a>enableLockdown(boolean lockdown)
 Bloqueia o dispositivo. Também usado para desbloquear o dispositivo.
 
 **Sintaxe**  
 `browser.security.enableLockDown(true|false);`
 
 **Parâmetros**  
-`lockdown` - `true` para executar o aplicativo Fazer um Teste acima da tela de bloqueio e aplicar políticas debatidas neste [documento](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). `False` para a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o aplicativo não esteja bloqueado; neste caso, não há efeito.
+`lockdown` - `true` para executar o aplicativo Fazer um Teste acima da tela de bloqueio e aplicar políticas debatidas neste [documento](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). `False` para a execução de Fazer um Teste acima da tela de bloqueio e o fecha, a menos que o aplicativo não esteja bloqueado; neste caso, não há efeito.
 
 **Valor de retorno**  
 `None`
@@ -102,7 +110,7 @@ Windows 10, versão 1607
 ---
 
 <span id="getIPAddressList"/>
-### string[] getIPAddressList()
+### <a name="string-getipaddresslist"></a>string[] getIPAddressList()
 Obtém a lista de endereços IP do dispositivo.
 
 **Sintaxe**  
@@ -117,7 +125,7 @@ Obtém a lista de endereços IP do dispositivo.
 ---
 
 <span id="getMACAddress" />
-### string[] getMACAddress()
+### <a name="string-getmacaddress"></a>string[] getMACAddress()
 Obtém a lista de endereços MAC do dispositivo.
 
 **Sintaxe**  
@@ -135,7 +143,7 @@ Windows 10, versão 1607
 ---
 
 <span id="getProcessList" />
-### string[] getProcessList()
+### <a name="string-getprocesslist"></a>string[] getProcessList()
 Obtém a lista dos processos em execução do usuário.
 
 **Sintaxe**  
@@ -155,7 +163,7 @@ Windows 10, versão 1607
 ---
 
 <span id="isEnvironmentSecure" />
-### boolean isEnvironmentSecure()
+### <a name="boolean-isenvironmentsecure"></a>boolean isEnvironmentSecure()
 Determina se o contexto de bloqueio continua aplicado ao dispositivo.
 
 **Sintaxe**  
@@ -172,7 +180,7 @@ Windows 10, versão 1607
 
 ---
 
-### Namespace tts
+### <a name="tts-namespace"></a>Namespace tts
 
 O namespace tts trata da funcionalidade do aplicativo conversão de texto em fala.
 
@@ -191,7 +199,7 @@ O namespace tts trata da funcionalidade do aplicativo conversão de texto em fal
 ---
 
 <span id="getStatus" />
-### string getStatus()
+### <a name="string-getstatus"></a>string getStatus()
 Obtém o status de reprodução do controle por voz.
 
 **Sintaxe**  
@@ -209,7 +217,7 @@ Windows 10, versão 1607
 ---
 
 <span id="getVoices" />
-### string[] getVoices()
+### <a name="string-getvoices"></a>string[] getVoices()
 Obtém uma lista de pacotes de voz disponíveis.
 
 **Sintaxe**  
@@ -227,7 +235,7 @@ Windows 10, versão 1607
 ---
 
 <span id="pause" />
-### void pause()
+### <a name="void-pause"></a>void pause()
 
 Pausa a sintetização do controle por voz.
 
@@ -248,7 +256,7 @@ Windows 10, versão 1607
 ---
 
 <span id="resume" />
-### void resume()
+### <a name="void-resume"></a>void resume()
 Retome a sintetização de voz pausada.
 
 **Sintaxe**  
@@ -266,7 +274,7 @@ Windows 10, versão 1607
 ---
 
 <span id="speak" />
-### void speak(string text, object options, function callback)
+### <a name="void-speakstring-text-object-options-function-callback"></a>void speak(string text, object options, function callback)
 Inicia a sintetização da conversão de texto em fala no lado do cliente.
 
 **Sintaxe**  
@@ -298,7 +306,7 @@ Windows 10, versão 1607
 ---
 
 <span id="stop" />
-### void stop()
+### <a name="void-stop"></a>void stop()
 Para sintetização do controle por voz.
 
 **Sintaxe**  
@@ -312,9 +320,4 @@ Para sintetização do controle por voz.
 
 **Requisitos**  
 Windows 10, versão 1607
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

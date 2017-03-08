@@ -1,19 +1,26 @@
 ---
 author: QuinnRadich
-title: "Novidades no Windows10, versão 1511 – novembro de 2015"
+title: "Novidades no Windows 10 versão 1511"
 description: "O Windows 10, versão 1511 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da nova UWP (Plataforma Universal do Windows)."
 keywords: "novidades, novidades, atualizar, atualizações, recursos, novo, Windows 10, 1511, novembro"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 translationtype: Human Translation
-ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
-ms.openlocfilehash: 7f6a0879db5e3ec660866c0c08b9b7c7ca773644
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: d1acbde95d3d36cade7242a9f89a2bc01aaf8914
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Novidades no Windows
+# <a name="whats-new-in-windows-version-1511"></a>Novidades no Windows versão 1511
 
 O Windows 10 versão 1511 e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
-## Windows 10, versão 1511 – novembro de 2015
+## <a name="windows-10-version-1511---november-2015"></a>Windows 10, versão 1511 – novembro de 2015
 
 Recurso | Descrição
  :---- | :----
@@ -29,9 +36,4 @@ APIs de cartão inteligente | Várias APIs SmartCardCryptogram foram adicionadas
 APIs de armazenamento atualizadas | Na [classe Windows.Storage.DownloadsFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.aspx), seu aplicativo agora pode [criar um arquivo](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfileforuserasync.aspx) ou [criar uma pasta](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfolderforuserasync.aspx) dentro da pasta Downloads para um [Usuário](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx) específico. Na [classe Windows.Storage.StorageLibrary](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.aspx), seu aplicativo pode agora [obter uma Biblioteca especificada](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.getlibraryforuserasync.aspx) para um determinado [Usuário](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx).
 Kit de Certificação de Aplicativos Windows | O Kit de Certificação de Aplicativos Windows foi atualizado com testes aprimorados. Para obter uma lista completa de atualizações, visite a página do [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit).
 Downloads de design | Confira nossos novos modelos de design de aplicativo UWP para Adobe Photoshop. Nós também atualizamos nossos modelos do Microsoft PowerPoint e Adobe Illustrator e disponibilizamos uma versão em PDF de nossas diretrizes. [Visite a página de Downloads de design](https://developer.microsoft.com/windows/design/assets).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

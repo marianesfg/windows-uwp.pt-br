@@ -1,10 +1,18 @@
 ---
 author: TylerMSFT
 title: Iniciar um app em um dispositivo remoto
-description: Learn how to launch an app on a remote device using Project "Rome".
+description: Saiba como iniciar um app em um dispositivo remoto usando o projeto &quot;Roma&quot;.
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 translationtype: Human Translation
-ms.sourcegitcommit: 4e94ee5b3c56f3ec20e3592b97348c291297a670
-ms.openlocfilehash: d429ea4a6f8d52445c99cb170bb41c3fc1515dde
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -12,13 +20,13 @@ ms.openlocfilehash: d429ea4a6f8d52445c99cb170bb41c3fc1515dde
 
 Este artigo explica como iniciar um aplicativo do Windows em um dispositivo remoto.
 
-A partir do Windows 10, versão 1607, um aplicativo UWP pode iniciar um aplicativo UWP ou um aplicativo da área de trabalho do Windows remotamente em outro dispositivo que também executa o Windows 10, versão 1607 ou posterior, desde que ambos os dispositivos sejam conectados com a mesma conta da Microsoft (MSA).
+A partir do Windows 10, versão 1607, um app UWP pode iniciar um app UWP ou um app da área de trabalho do Windows remotamente em outro dispositivo que também executa o Windows 10, versão 1607 ou posterior, desde que ambos os dispositivos sejam conectados com a mesma conta da Microsoft (MSA).
 
 O recurso de inicialização remota proporciona experiências de usuário orientadas à tarefa, em que um usuário pode iniciar uma tarefa em um dispositivo e concluí-la em outro. Por exemplo, se o usuário estiver ouvindo música pelo telefone no carro, ele pode transferir a reprodução para o Xbox One quando chegar em casa. A inicialização remota permite passar dados contextuais para o app remoto que será iniciado para retomar a tarefa de onde ela foi interrompida.
 
 ## <a name="add-the-remotesystem-capability"></a>Adicionar a funcionalidade remoteSystem
 
-Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando **Sistema Remoto** na guia **Recursos**, ou adicionar manualmente a linha a seguir ao arquivo Package.appxmanifest do projeto.
+Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do app. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando **Sistema Remoto** na guia **Recursos**, ou adicionar manualmente a linha a seguir ao arquivo Package.appxmanifest do projeto.
 
 ``` xml
 <Capabilities>
@@ -33,7 +41,7 @@ O código nestes exemplos pressupõe que você tenha uma instrução `using Wind
 
 [!code-cs[Principal](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetBuildDeviceList)]
 
-A primeira coisa que você deve fazer antes de fazer uma inicialização remota é chamar `RemoteSystem.RequestAccessAsync()`. Verifique o valor de retorno para confirmar se seu aplicativo tem permissão para acessar dispositivos remotos. Uma razão para essa verificação falhar seria você não ter adicionado a funcionalidade `remoteSystem` ao seu aplicativo.
+A primeira coisa que você deve fazer antes de fazer uma inicialização remota é chamar `RemoteSystem.RequestAccessAsync()`. Verifique o valor de retorno para confirmar se seu app tem permissão para acessar dispositivos remotos. Uma razão para essa verificação falhar seria você não ter adicionado a funcionalidade `remoteSystem` ao seu app.
 
 Os manipuladores de eventos do inspetor de sistema são chamados quando um dispositivo ao qual nos conectamos é descoberto ou não está mais disponível. Usaremos esses manipuladores de eventos para manter uma lista atualizada de dispositivos ao quais podemos nos conectar.
 
@@ -43,11 +51,11 @@ Rastrearemos os dispositivos por ID de sistema remoto usando um **Dicionário**.
 
 [!code-cs[Principal](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetMembers)]
 
-Adicione uma chamada para `BuildDeviceList()` no código de inicialização do aplicativo antes de tentar iniciar um aplicativo remoto.
+Adicione uma chamada para `BuildDeviceList()` no código de inicialização do app antes de tentar iniciar um app remoto.
 
 ## <a name="launch-an-app-on-a-remote-device"></a>Iniciar um app em um dispositivo remoto
 
-Inicie um app remotamente passando o dispositivo ao qual você deseja se conectar à API [**RemoteLauncher.LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelauncher.launchuriasync.aspx). Há três sobrecargas para esse método. A mais simples, que este exemplo demonstra, especifica o URI que ativará o app no dispositivo remoto. Neste exemplo o URI abre o aplicativo Mapas no computador remoto com uma exibição 3D do Space Needle.
+Inicie um app remotamente passando o dispositivo ao qual você deseja se conectar à API [**RemoteLauncher.LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelauncher.launchuriasync.aspx). Há três sobrecargas para esse método. A mais simples, que este exemplo demonstra, especifica o URI que ativará o app no dispositivo remoto. Neste exemplo o URI abre o app Mapas no computador remoto com uma exibição 3D do Space Needle.
 
 Outras sobrecargas **RemoteLauncher.LaunchUriAsync** permitem especificar opções como o URI do site para visualizar se nenhum app adequado pode ser iniciado no dispositivo remoto e uma lista opcional de nomes da família de pacotes que pode ser usada para iniciar o URI no dispositivo remoto. Você também pode fornecer dados na forma de pares chave/valor. Você pode passar dados ao app que está ativando para fornecer contexto para o app remoto, como o nome da música a ser reproduzida e o local de reprodução atual ao transferir a reprodução de um dispositivo para outro.
 
@@ -59,13 +67,8 @@ O objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Referência de API de Sistemas Remotos](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)  
+[Referência de API de Sistemas Remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Visão geral de apps e dispositivos conectados (Project "Rome")](connected-apps-and-devices.md)  
 [Descobrir dispositivos remotos](discover-remote-devices.md)  
 [Exemplo de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) demonstra como descobrir um sistema remoto, iniciar um apps em um sistema remoto e usar os serviços de apps para enviar mensagens entre apps em execução em dois sistemas.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

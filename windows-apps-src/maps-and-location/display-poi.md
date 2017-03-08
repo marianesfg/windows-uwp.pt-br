@@ -3,9 +3,16 @@ author: msatranjr
 title: Exibir pontos de interesse (POI) em um mapa
 description: "Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, localização, pinos de pressão"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: c8fdc16b99a9d2d57f71e32e008fa668c3404835
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -27,10 +34,10 @@ Exiba elementos da interface do usuário XAML como um [**Button**](https://msdn.
 
 Resumindo:
 
--   [Adicione um MapIcon ao mapa](#mapicon) para exibir uma imagem como um pino com texto opcional.
--   [Adicione um MapPolygon ao mapa de](#mappolygon) para exibir uma forma de vários pontos.
--   [Adicione um MapPolyline ao mapa](#mappolyline) para exibir linhas no mapa.
--   [Adicione XAML ao mapa](#mapxaml) para exibir elementos de interface do usuário personalizados.
+-   [Adicione um MapIcon ao mapa](#add-a-mapicon) para exibir uma imagem como um pino com texto opcional.
+-   [Adicione um MapPolygon ao mapa de](#add-a-mappolygon) para exibir uma forma de vários pontos.
+-   [Adicione um MapPolyline ao mapa](#add-a-mappolyline) para exibir linhas no mapa.
+-   [Adicione XAML ao mapa](#add-xaml) para exibir elementos de interface do usuário personalizados.
 
 Caso você tenha um grande número de elementos a serem colocados no mapa, leve em consideração [sobrepor imagens lado a lado no mapa](overlay-tiled-images.md). Para exibir rodovias no mapa, consulte [Exibir rotas e trajetos](routes-and-directions.md).
 
@@ -104,7 +111,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
 
    });
-           
+
    mapPolygon.ZIndex = 1;
    mapPolygon.FillColor = Colors.Red;
    mapPolygon.StrokeColor = Colors.Blue;
@@ -129,7 +136,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
          new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
    });
-              
+
    mapPolyline.StrokeColor = Colors.Black;
    mapPolyline.StrokeThickness = 3;
    mapPolyline.StrokeDashed = true;
@@ -226,11 +233,4 @@ Este exemplo exibe uma coleção de elementos XAML vinculados a um [**MapItemsCo
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

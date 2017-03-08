@@ -3,25 +3,32 @@ author: mtoepke
 title: "Montar a estrutura de renderização"
 description: "Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, renderização"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b97a70094c953e9614a84979c9f98fc91a82451
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Montar a estrutura de renderização
+# <a name="assemble-the-rendering-framework"></a>Montar a estrutura de renderização
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Até aqui, você aprendeu a estruturar um jogo da Plataforma Universal do Windows (UWP) para trabalhar com o Windows Runtime e viu como definir uma máquina de estado para lidar com o fluxo do jogo. Agora chegou o momento de examinar como o jogo de exemplo usa essa estrutura e esse estado para exibir seus elementos gráficos. Aqui vemos a implementação de uma estrutura de renderização, desde a inicialização do dispositivo gráfico até a apresentação dos objetos gráficos para exibição.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Entender como configurar uma estrutura de renderização básica para exibir a saída gráfica de um jogo DirectX UWP.
 
-> **Observação**   Os seguintes arquivos de código não são abordados aqui, mas fornecem classes e métodos mencionados neste tópico e são [fornecidos como código no final deste tópico](#code_sample):
+> **Observação**   Os seguintes arquivos de código não são abordados aqui, mas fornecem classes e métodos mencionados neste tópico e são [fornecidos como código no final deste tópico](#complete-sample-code-for-this-section):
 -   **Animate.h/.cpp**.
 -   **BasicLoader.h/.cpp**. Fornece métodos para carregar malhas, sombreadores e texturas, tanto sincronicamente como assincronicamente. Isso é muito útil!
 -   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** e **WorldMesh.h/.cpp**. Contém as definições das primitivas do objeto usadas no jogo, como as esferas de munição, o cilindro e os obstáculos de cone, e as paredes da galeria de tiros. (**GameObject.cpp**, brevemente descrito neste tópico, contém o método para renderização dessas primitivas).
@@ -32,7 +39,7 @@ Esses arquivos contêm um código que não é específico para os jogos UWP em D
 
  
 
-Esta seção abrange três arquivos principais do exemplo de jogo ([fornecido como código no final deste tópico](#code_sample)):
+Esta seção abrange três arquivos principais do exemplo de jogo ([fornecido como código no final deste tópico](#complete-sample-code-for-this-section)):
 
 -   **Camera.h/.cpp**
 -   **GameRenderer.h/.cpp**
@@ -41,7 +48,7 @@ Esta seção abrange três arquivos principais do exemplo de jogo ([fornecido co
 Novamente, presumimos que você compreende os conceitos básicos de programação 3D como malhas, vértices e texturas. Para saber mais sobre programação Direct3D 11 em geral, veja [Guia de Programação para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 Tendo dito isso, examinaremos agora o trabalho que deve ser feito para colocar nosso jogo na tela.
 
-## Visão geral do Windows Runtime e do DirectX
+## <a name="an-overview-of-the-windows-runtime-and-directx"></a>Visão geral do Windows Runtime e do DirectX
 
 
 DirectX é uma parte fundamental do Windows Runtime e da experiência do Windows 10. Todos os elementos visuais do Windows 10 se baseiam no DirectX, e você dispõe da mesma linha direta para a mesma interface gráfica de baixo nível, [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534), que fornece uma camada de abstração para o hardware gráfico e seus drivers. Todas as APIs do Direct3D 11 estão disponíveis para você se comunicar diretamente com a DXGI. O resultado são gráficos rápidos e de alto desempenho em seus jogos, permitindo que você acesse todos os recursos do hardware gráfico mais avançado.
@@ -50,7 +57,7 @@ Para adicionar o suporte ao DirectX a um aplicativo UWP, crie um provedor de exi
 
 Em [Definindo a estrutura UWP do jogo](tutorial--building-the-games-metro-style-app-framework.md), analisamos como o renderizador se encaixa na estrutura do aplicativo do jogo de exemplo. Agora veremos como o renderizador do jogo se conecta à visualização e constrói os elementos gráficos que definem a aparência do jogo.
 
-## Definindo o renderizador
+## <a name="defining-the-renderer"></a>Definindo o renderizador
 
 
 O tipo abstrato **GameRenderer** herda do tipo de renderizador **DirectXBase**, adiciona suporte a 3D estéreo e declara buffers e recursos constantes para os sombreadores que criam e definem nossas primitivas gráficas.
@@ -143,7 +150,7 @@ O renderizador também define os objetos de recurso do sombreador que contêm as
 
 Agora, chegou o momento de ver como esse objeto é criado!
 
-## Inicializando o renderizador
+## <a name="initializing-the-renderer"></a>Inicializando o renderizador
 
 
 O jogo de exemplo chama este método **Initialize** como parte da sequência de inicialização do CoreApplication no **App::SetWindow**.
@@ -179,7 +186,7 @@ Depois disso, o processo de inicialização do renderizador executa a implementa
 
 Quando a inicialização do DirectXBase é concluída, o objeto **GameInfoOverlay** é inicializado. Tendo concluído a inicialização, chegou a hora de examinarmos os métodos para a criação e carregamento dos recursos gráficos do jogo.
 
-## Criando e carregando recursos gráficos DirectX
+## <a name="creating-and-loading-directx-graphics-resources"></a>Criando e carregando recursos gráficos DirectX
 
 
 A primeira providência em qualquer jogo é estabelecer uma conexão com a interface gráfica, criar os recursos necessários para desenhar os elementos gráficos e configurar um destino de renderização no qual esses elementos gráficos possam ser desenhados. No jogo de exemplo (e no modelo **DirectX 11 App (Universal Windows)** do Microsoft Visual Studio), esse processo é implementado com três métodos:
@@ -689,7 +696,7 @@ Por último, o **FinalizeCreateGameDeviceResources** define a variável global B
 
 O jogo tem os recursos para exibir os elementos gráficos na janela atual e pode recriar esses recursos conforme a janela mude. Agora examinaremos a câmera usada para definir a visão da cena pelo jogador nessa janela.
 
-## Implementando o objeto de câmera
+## <a name="implementing-the-camera-object"></a>Implementando o objeto de câmera
 
 
 O jogo já dispõe do código necessário para atualizar o mundo em seu próprio sistema de coordenadas (também conhecido como espaço do mundo ou espaço da cena). Todos os objetos, inclusive a câmera, são posicionados e orientados nesse espaço. No exemplo de jogo, a posição da câmera, juntamente com os vetores de visão (o vetor "olhar para" que aponta diretamente para a cena a partir da câmera e o vetor "olhar para cima" que sobe perpendicularmente dele), definem o espaço da câmera. Os parâmetros de projeção determinam quanto do espaço será efetivamente visível na cena final; o campo de visão (FoV), a taxa de proporção e os planos de recorte definem a transformação da projeção. Um shader de vértice executa o trabalho pesado de conversão das coordenadas do modelo para os coordenadas do dispositivo por meio do seguinte algoritmo (onde V é um vetor e M uma matriz):
@@ -851,7 +858,7 @@ Obtemos a visualização e os dados de projeção resultantes chamando os métod
 
 Agora veremos como o jogo cria a estrutura para desenhar os elementos gráficos do jogo usando a câmera. Isso inclui a definição das primitivas que formam o mundo do jogo e seus elementos.
 
-## Definindo as primitivas
+## <a name="defining-the-primitives"></a>Definindo as primitivas
 
 
 No código de exemplo do jogo, definimos e implementamos as primitivas em duas classes base e as especializações correspondentes para cada tipo de primitiva.
@@ -963,7 +970,7 @@ A maioria dos campos contém dados sobre o estado, as propriedades visuais ou a 
 
 Agora examinaremos a renderização básica de uma primitiva no exemplo de jogo.
 
-## Renderizando as primitivas
+## <a name="rendering-the-primitives"></a>Renderizando as primitivas
 
 
 As primitivas no exemplo de jogo usam o método base **Render** implementado na classe pai **GameObject**, como aqui:
@@ -1048,7 +1055,7 @@ Agora, o método **MeshObject::Render** do exemplo de jogo adiciona o comando de
 
 Isso ocorre no processo de renderização real!
 
-## Criando os shaders de vértice e de pixel
+## <a name="creating-the-vertex-and-pixel-shaders"></a>Criando os shaders de vértice e de pixel
 
 
 Neste ponto, o exemplo de jogo definiu as primitivas para desenhar e os buffers constantes que definem sua renderização. Esses buffers constantes servem como os conjuntos de parâmetros para os sombreadores que são executados no dispositivo gráfico. Esses programas de sombreador são de dois tipos:
@@ -1181,7 +1188,7 @@ A função **main** em **PixelShader.hlsl** recebe as projeções 2D das superf�
 
 Agora juntaremos todos esses conceitos (primitivas, câmera e shaders) e veremos como o exemplo de jogo constrói o processo de renderização completo.
 
-## Renderizando o quadro para saída
+## <a name="rendering-the-frame-for-output"></a>Renderizando o quadro para saída
 
 
 Esse método foi abordado sucintamente em [Definindo o objeto principal do jogo](tutorial--defining-the-main-game-loop.md). Agora nós o examinaremos com mais detalhes.
@@ -1348,12 +1355,12 @@ Agora examinaremos o processo que junta tudo isso.
 
 Com isso, o jogo acaba de atualizar a tela! Tomado em conjunto, esse é o processo básico de implementação da estrutura gráfica de um jogo. Evidentemente, quando maior for o jogo, mais abstrações terão que ser empregadas para lidar com essa complexidade, tais como hierarquias inteiras de tipos de objeto e comportamentos de animação, e mais complexos serão os métodos para carregar e gerenciar ativos, como malhas e texturas.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Seguindo em frente, examinaremos agora algumas partes importantes do exemplo de jogo que só foram abordadas de passagem: [a sobreposição da interface do usuário](tutorial--adding-a-user-interface.md), [os controles de entrada](tutorial--adding-controls.md) e [o som](tutorial--adding-sound.md).
 
-## Código de exemplo completo desta seção
+## <a name="complete-sample-code-for-this-section"></a>Código de exemplo completo desta seção
 
 
 Camera.h
@@ -6311,7 +6318,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -6322,10 +6329,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

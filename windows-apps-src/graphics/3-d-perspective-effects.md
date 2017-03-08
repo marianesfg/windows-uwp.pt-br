@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
 title: "Efeitos da perspectiva 3D na interface do usuário XAML"
 description: "Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
-ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b0855392c9e9e3f18d08a16cf39cdfa5c0910701
+ms.lasthandoff: 02/07/2017
 
 ---
-# Efeitos em perspectiva 3D para interface do usuário XAML
+# <a name="3-d-perspective-effects-for-xaml-ui"></a>Efeitos da perspectiva 3D na interface do usuário XAML
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo.
 
@@ -43,7 +50,7 @@ Aqui, focamos nas propriedades do [**PlaneProjection**](https://msdn.microsoft.c
 
 [Execute esta amostra.](http://go.microsoft.com/fwlink/p/?linkid=236112)
 
-## Classe PlaneProjection
+## <a name="planeprojection-class"></a>Classe PlaneProjection
 
 Você pode aplicar efeitos 3D a qualquer [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), configurando a propriedade [**Projeção**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) do UIElement usando um [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). O **PlaneProjection** define como a transformação é renderizada no espaço. O próximo exemplo mostra um caso simples.
 
@@ -141,7 +148,7 @@ Usa o [**CenterOfRotationZ**](https://msdn.microsoft.com/library/windows/apps/wi
 
 [Execute esta amostra deslizante](http://go.microsoft.com/fwlink/p/?linkid=236112) para testar girar o objeto em torno de locais diferentes do centro de rotação.
 
-## Posicionando um objeto
+## <a name="positioning-an-object"></a>Posicionando um objeto
 
 Até agora, você aprendeu como girar um objeto no espaço. Você pode posicionar estes objetos girados no espaço em relação um ao outro usando estas propriedades:
 
@@ -180,12 +187,7 @@ A próxima amostra anima o [**GlobalOffsetX**](https://msdn.microsoft.com/librar
 
 Perceba que, nesta amostra, o objeto não muda de direção conforme gira. Isso ocorre porque o objeto está sendo movido ao longo do eixo x da tela sem levar em consideração a sua rotação.
 
-## Posicionando um objeto
+## <a name="positioning-an-object"></a>Posicionando um objeto
 
 Você pode usar os tipos [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) e [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) para cenários semi-3D mais complexos que são possíveis com o [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). O **Matrix3DProjection** fornece uma matriz de transformação 3D completa para ser aplicada a qualquer [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), para que você possa aplicar um modelo arbitrário de matrizes de transformação e de perspectiva aos elementos. Não se esqueça de que essas APIs são mínimas e, logo, se você usá-las, precisará escrever o código que cria corretamente as matrizes de transformação 3D. Por causa disso, é mais fácil usar o **PlaneProjection** para cenários 3D simples.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,9 +3,16 @@ author: mithom
 title: Entrada para jogos
 description: "Esta seção demonstra como trabalhar com gamepads e outros dispositivos de entrada para jogos da Plataforma Universal do Windows (UWP)."
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, entrada
 translationtype: Human Translation
-ms.sourcegitcommit: 858bf6a0862d6459b2bac22d8ab9431b51332fef
-ms.openlocfilehash: 8d1cfa840e359ad1f6a890ed7e7425d387393e15
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ee6017648974d5283f59708550092f26d88388ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -17,7 +24,7 @@ Esta seção descreve os diferentes tipos de dispositivos de entrada que podem s
 
 ## <a name="gaming-input-devices"></a>Dispositivos de entrada para jogos
 
-Os dispositivos de entrada para jogos são compatíveis em jogos e aplicativos UWP para Windows 10 e Xbox One pelo namespace [Windows.Gaming.Input][].
+Os dispositivos de entrada para jogos são compatíveis em jogos e apps UWP para Windows 10 e Xbox One pelo namespace [Windows.Gaming.Input][].
 
 ### <a name="gamepads"></a>Gamepads
 
@@ -61,9 +68,4 @@ Para obter informações sobre como gerenciar usuários e os dispositivos de ent
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.Custom]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.gaming.input.custom.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

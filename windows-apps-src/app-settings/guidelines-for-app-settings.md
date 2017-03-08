@@ -5,22 +5,29 @@ title: "Diretrizes para configurações de aplicativos"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
-Configurações do aplicativo são as partes de seu aplicativo personalizáveis pelo usuário e as partes dinâmicas na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
+As configurações do aplicativo são as partes de seu aplicativo personalizáveis pelo usuário e as partes dinâmicas na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
 
 ![exemplo de um painel de configurações](images/app-settings.png)
 
 ## <a name="should-i-include-a-settings-page-in-my-app"></a>Devo incluir uma página de configurações em meu aplicativo?
 
-Aqui estão exemplos de opções do aplicativo que pertencem a uma página de configurações do aplicativo: 
+Aqui estão exemplos de opções do aplicativo que pertencem a uma página de configurações do aplicativo:
 
 -   Opções de configuração que afetam o comportamento do aplicativo e que não necessitam de reajuste frequente, como a seleção entre Celsius ou Fahrenheit como a unidade padrão de temperatura em um aplicativo de previsão do tempo, a alteração das configurações da conta do aplicativo de email, as configurações de notificações ou opções de acessibilidade.
 -   Opções que dependem das preferências do usuário, como músicas, efeitos sonoros ou temas de cores.
@@ -51,17 +58,17 @@ Para um layout de painel de navegação, as configurações do aplicativo devem 
 
 **Barra de aplicativos**
 
-Se você estiver usando uma barra de aplicativos ou uma barra de ferramentas, que normalmente faça parte de um layout de navegação de Hub ou de guias/pivôs, coloque o último item do ponto de entrada no menu do submenu "Mais". Se for importante para o aplicativo ter maior capacidade de descoberta do ponto de entrada de configurações, coloque-o diretamente na barra de aplicativos, e não no menu do submenu "Mais".
+Se você estiver usando uma [barra de aplicativos](../controls-and-patterns/app-bars.md) ou barra de ferramentas, coloque o ponto de entrada de configurações como o último item no menu de excedentes "Mais". Se for importante para o aplicativo ter maior capacidade de descoberta do ponto de entrada de configurações, coloque-o diretamente na barra de aplicativos, e não na área de excedentes.
 
 ![ponto de entrada de configurações do aplicativo para a barra de aplicativos](images/appsettings-entrypoint-tabs.png)
 
 **Hub**
 
-Se você estiver usando um layout de Hub, o ponto de entrada de configurações do aplicativo deve ser colocado no menu do submenu "Mais" de uma barra de aplicativos.
+Se você estiver usando um layout de Hub, o ponto de entrada de configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
 
 **Guias/pivôs**
 
-Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada das configurações do aplicativo deve ser colocado no menu do submenu "Mais" de uma barra de aplicativos.
+Para um layout de guias ou pivôs, não recomendamos colocar o ponto de entrada das configurações do aplicativo como um dos primeiros itens da navegação. Em vez disso, o ponto de entrada das configurações do aplicativo deve ser colocado no menu de excedentes "Mais" de uma barra de aplicativos.
 
 **Mestre/detalhes**
 
@@ -80,22 +87,36 @@ Celular:
 
 ![layout da página de configurações do aplicativo em celular](images/appsettings-layout-navpane-mobile.png)
 
-## <a name="about-section-and-give-feedback-button"></a>Seção "Sobre" e botão "Fornecer comentários"
+## <a name="color-mode-settings"></a>Configurações de "Modo de cor"
+
+
+Se seu aplicativo permite que os usuários escolham o modo de cor do aplicativo, apresente essas opções usando [botões de opção](../controls-and-patterns/radio-button.md) ou uma [caixa de combinação](../controls-and-patterns/lists.md#drop-down-lists) com o cabeçalho "Escolher um modo". Leia as opções
+- Claro
+- Escuro
+- Padrão do Windows
+
+Também recomendamos adicionar um hiperlink para a página de cores do aplicativo Configurações do Windows onde os usuários podem verificar o tema padrão do Windows. Use a cadeia de caracteres "Configurações de cores do Windows" para o texto de hiperlink.
+
+![Seção "Escolher um modo"](images/appsettings_mode.png)
+
+<div class=”microsoft-internal-note”>
+Linhas vermelhas detalhadas mostrando cadeias de caracteres de texto preferencial para a seção "Escolher um modo" estão disponíveis em [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
+</div>
+
+## <a name="about-section-and-give-feedback-button"></a>Seção "Sobre" e botão "Fornecer feedback"
 
 
 Se você precisar de uma seção "Sobre este aplicativo" em seu aplicativo, crie uma página de configurações do aplicativo dedicada a isso. Se você desejar um botão "Fornecer comentários", coloque-o na parte inferior da página "Sobre este aplicativo".
 
 "Termos de uso" e "Política de privacidade" devem ser [botões de hiperlink](../controls-and-patterns/hyperlinks.md) com texto de encapsulamento.
 
-![seção "sobre este aplicativo" com o botão "fornecer comentários"](images/appsettings-about.png)
-
-## <a name="recommendations"></a>Recomendações
+![seção "sobre este aplicativo" com o botão "fornecer feedback"](images/appsettings-about.png)
 
 
-## <a name="app-settings-page-content"></a>Conteúdo da página de configurações do aplicativo
+## <a name="recommended-page-content"></a>Conteúdo recomendado da página
 
 
-Assim que você tiver uma lista de itens que deseja incluir na página de configurações do aplicativo, considere estas diretrizes:
+Assim que você tiver uma lista dos itens que deseja incluir na página de configurações do aplicativo, considere estas diretrizes:
 
 -   Agrupe configurações semelhantes ou relacionadas em um rótulo de configurações.
 -   Tente manter o número total de configurações em um máximo de quatro ou cinco.
@@ -105,9 +126,7 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 -   Combine configurações menos utilizadas em uma única entrada para que as configurações mais comuns possam ter sua própria entrada. Coloque conteúdo ou links que incluam somente informações em uma configuração "Sobre".
 -   Não duplique a funcionalidade no painel "Permissões". O Windows fornece esse painel por padrão e não é possível modificá-lo.
 
-##  <a name="add-settings-content-to-settings-flyouts"></a>Adicionar conteúdo de configurações a submenus Configurações
-
-
+-   Adicionar conteúdo de configurações a submenus Configurações
 -   Apresente o conteúdo de cima para baixo em uma única coluna, com rolagem, se necessário. Limite a rolagem para no máximo de duas vezes a altura da tela.
 -   Use os seguintes controles para configurações do aplicativo:
 
@@ -131,10 +150,4 @@ Assim que você tiver uma lista de itens que deseja incluir na página de config
 * [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [Armazenar e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

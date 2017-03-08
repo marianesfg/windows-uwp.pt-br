@@ -3,13 +3,20 @@ author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: "Este artigo lista as propriedades de DeviceInformation relacionadas a dispositivos de áudio"
 title: "Propriedades de informações do dispositivo de áudio"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0745e96715ba49582ab762d4b25f1b8e681116f5
-ms.openlocfilehash: 08ebb37679d1dd93458a3ffe846d8bd33574635d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 647a0228299e90026307fdd516ac71da2473ff0d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Propriedades de informações do dispositivo de áudio
+# <a name="audio-device-information-properties"></a>Propriedades de informações do dispositivo de áudio
 
 Este artigo lista as propriedades de informações de dispositivo relacionadas a dispositivos de áudio. No Windows, cada dispositivo de hardware tem propriedades [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) associados que fornecem informações detalhadas sobre um dispositivo que você pode usar quando precisa de informações específicas sobre o dispositivo ou quando está criando um seletor de dispositivo. Para obter informações gerais sobre a enumeração de dispositivos no Windows, veja [Enumerar dispositivos](../devices-sensors/enumerate-devices.md) e [Propriedades de informações do dispositivo](../devices-sensors/device-information-properties.md).
 
@@ -22,7 +29,7 @@ Este artigo lista as propriedades de informações de dispositivo relacionadas a
 |**System.Devices.AudioDevice.RawProcessingSupported**|Booleano|Indica se o dispositivo de áudio dá suporte para processamento bruto.|
 |**System.Devices.MicrophoneArray.Geometry**|caractere sem sinal[]|Dados de geometria para uma matriz de microfones.|
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enumerar dispositivos](../devices-sensors/enumerate-devices.md)
 * [Propriedades de informações do dispositivo](../devices-sensors/device-information-properties.md)
@@ -31,10 +38,5 @@ Este artigo lista as propriedades de informações de dispositivo relacionadas a
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

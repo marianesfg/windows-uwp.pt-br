@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
-description: Saiba como manipular os eventos da classe AdControl.
+description: Saiba como tratar os eventos da classe AdControl.
 title: Eventos AdControl em C#
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, AdControl, eventos"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: e25e0f915c0b9b6ec2423d2a95386b45b4502253
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cf285ebb4207b9a9a215bfb4a739b0bc6a2d934b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -14,7 +21,7 @@ ms.openlocfilehash: e25e0f915c0b9b6ec2423d2a95386b45b4502253
 
 Os exemplos a seguir demonstram manipuladores de eventos básicos para os seguintes eventos [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx): [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.erroroccurred.aspx), [AdRefreshed](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.adrefreshed.aspx) e [IsEngagedChanged](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isengagedchanged.aspx). Esses exemplos pressupõem que você já atribuiu os manipuladores de eventos aos eventos em seu código XAML. Para obter mais informações sobre como fazer isso, consulte [Exemplo de propriedades XAML](xaml-properties-example.md).
 
-Para obter mais informações sobre como manipular eventos em C#, consulte [Visão geral de eventos e eventos roteados (aplicativos universais do Windows em C#/VB/C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/hh758286).
+Para obter mais informações sobre como tratar eventos em C#, consulte [Visão geral de eventos e eventos roteados (apps universais do Windows em C#/VB/C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/hh758286).
 
 ## <a name="examples"></a>Exemplos
 
@@ -30,9 +37,4 @@ Para obter mais informações sobre como manipular eventos em C#, consulte [Vis�
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

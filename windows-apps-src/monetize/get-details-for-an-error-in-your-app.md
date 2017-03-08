@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
-ms.assetid: 
-description: "Use este método na API de análise da Windows Store para obter dados detalhados de um erro específico do seu app."
-title: Obter detalhes de um erro em seu app
+ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
+description: "Use este método na API de análise da Windows Store para obter dados detalhados de um erro específico do seu aplicativo."
+title: Obter detalhes de um erro em seu aplicativo
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, erros, detalhes"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: cd72e58ec252c556cf0f2e5ce071744e8fac6c9e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1aaf5b6864c678d26289270be6a9ad96f5b5e004
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="get-details-for-an-error-in-your-app"></a>Obter detalhes de um erro em seu app
+# <a name="get-details-for-an-error-in-your-app"></a>Obter detalhes de um erro em seu aplicativo
 
 Use este método na API de análise da Windows Store para obter dados detalhados de um erro específico do seu app no formato JSON. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. Os dados de erros detalhados também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
 
@@ -160,9 +167,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: jwmsft
 description: "Este tópico explica os mapeamentos de namespace XML/XAML (xmlns) conforme encontrados no elemento raiz da maioria dos arquivos XAML. Descreve também como produzir mapeamentos similares para tipos e assemblies personalizados."
 title: Namespaces XAML e mapeamento de namespace
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 626af2ba6e1b8616f8d23419d94e621f3ce7d043
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11a99a1a68a37b8c60974193c8cab51247a25711
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -111,10 +118,5 @@ Se você estiver fazendo referência a propriedades anexadas, a parte do tipo de
 * [Modelos de projeto C#, VB e C++ para Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrando do XAML/código de Silverlight ou WPF para um aplicativo do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/br229571)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

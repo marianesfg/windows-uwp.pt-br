@@ -3,9 +3,16 @@ author: mcleblanc
 description: "É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado."
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -51,10 +58,5 @@ As informações de solução da tabela destinam-se a dar instruções suficient
 | O compilador C# mostra o erro "*O nome do tipo ou do namespace '<name>' não foi encontrado \[...\]*" ou "*O nome do tipo ou do namespace '<name>' não existe no namespace \[...\]*" ou "*O nome do tipo ou do namespace '<name>' não existe no contexto atual*". | Isso provavelmente significa que o tipo é implementado em um SDK de extensão (embora possa haver casos em que a solução não seja tão simples). Use o conteúdo de referência [APIs do Windows](https://msdn.microsoft.com/library/windows/apps/bg124285) para determinar qual SDK de extensão implementa a API e, em seguida, use o comando **Adicionar** > **Referência** do Visual Studio para adicionar uma referência a esse SDK ao seu projeto. Caso o aplicativo esteja direcionado para o conjunto de APIs conhecido como a família de dispositivos universais, é essencial que você use a classe [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para testar em tempo de execução a presença do SDK de extensão antes de chamá-los (isso é chamado de código adaptável). Caso haja uma API universal, ela é sempre preferível a uma API no SDK de extensão. Para obter mais informações, consulte [SDKs de extensão](w8x-to-uwp-porting-to-a-uwp-project.md). |
 
 O próximo tópico é [Portando XAML e a interface do usuário](w8x-to-uwp-porting-xaml-and-ui.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

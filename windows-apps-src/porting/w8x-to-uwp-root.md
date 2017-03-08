@@ -3,13 +3,20 @@ author: mcleblanc
 description: "Se você tem um aplicativo Universal 8.1&\\#8212;voltado para o Windows 8.1, Windows Phone 8.1 ou ambos&\\#8212;, saiba que seu código-fonte e suas habilidades serão portados perfeitamente para o Windows 10."
 title: Mudar do Windows Runtime 8.x para a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e1f0e9727a36536fe292902fa7313dcc851932f6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a4ee1fd29b276958ed6a18b4eadcd89d5ea914b6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Mudar do Windows Runtime 8.x para a UWP
+# <a name="move-from-windows-runtime-8x-to-uwp"></a>Mudar do Windows Runtime 8.x para a UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +24,7 @@ Se você tem um aplicativo Universal 8.1 voltado para o Windows 8.1, Windows Pho
 
 Ao fazer a portabilidade, você perceberá que o Windows 10 compartilha a maioria das APIs com as plataformas anteriores, bem como a marcação XAML, a estrutura da IU e as ferramentas. E você achará tudo isso muito familiar. Assim como antes, você ainda pode escolher entre C++, C# e Visual Basic como a linguagem de programação a ser usada com a estrutura da IU XAML. Seus primeiros passos ao planejar exatamente o que fazer com seu aplicativo atual ou aplicativos dependerá dos tipos de aplicativos e projetos que você tem. Isso é explicado nas seções a seguir.
 
-## Se você já tiver um aplicativo Universal 8.1
+## <a name="if-you-have-a-universal-81-app"></a>Se você já tiver um aplicativo Universal 8.1
 
 Um aplicativo Universal 8.1 é criado a partir de um projeto de Aplicativo Universal 8.1. Digamos que o nome do projeto é AppName\_81. Ele contém estes subprojetos.
 
@@ -34,19 +41,19 @@ Outras vezes, o formato Windows 8.1 e/ou Windows Phone 8.1 do aplicativo contêm
 3.  Porte o conteúdo do projeto do Windows para um aplicativo destinado à família de dispositivos Universal. Se aplicável, resgate qualquer outro conteúdo do projeto do WindowsPhone, usando-o incondicionalmente ou de modo adaptável.
 4.  Porte o conteúdo do projeto do Windows para um aplicativo direcionado à família de dispositivos Universal ou da área de trabalho, e porte também o conteúdo do projeto do WindowsPhone para um aplicativo direcionado para a família de dispositivos Universal ou móveis. É possível criar uma solução com um projeto compartilhado e continuar compartilhando código-fonte, arquivos de marcação e outros ativos e recursos entre os dois projetos. Ou é possível criar soluções diferentes e ainda compartilhar os mesmos itens usando links.
 
-## Se você já tiver um aplicativo do Windows 8.1
+## <a name="if-you-have-a-windows-81-app"></a>Se você já tiver um aplicativo do Windows 8.1
 
 Porte o projeto para um aplicativo direcionado à família de dispositivos Universal ou da área de trabalho. Se escolher a família de dispositivos Universal e o aplicativo chamar as APIs que são implementadas somente na família de dispositivos Desktop, você poderá proteger essas chamadas com código adaptável.
 
-## Se você já tiver um aplicativo do Windows Phone 8.1
+## <a name="if-you-have-a-windows-phone-81-app"></a>Se você já tiver um aplicativo do Windows Phone 8.1
 
 Porte o projeto para um aplicativo direcionado à família de dispositivos Universal ou móveis. Se escolher a família de dispositivos Universal e o aplicativo chamar as APIs que são implementadas somente na família de dispositivos móveis, você poderá proteger essas chamadas com código adaptável.
 
-## Adaptanso seu aplicativo a vários fatores forma
+## <a name="adapting-your-app-to-multiple-form-factors"></a>Adaptanso seu aplicativo a vários fatores forma
 
 A opção que você escolher entre as seções anteriores determinará a gama de dispositivos em que seu aplicativo ou aplicativos serão executados, e pode ser uma ampla variedade de dispositivos. Até mesmo limitar seu aplicativo à família de dispositivos móveis ainda exige uma ampla variedade de tamanhos de tela para as quais dar suporte. Assim, se o aplicativo for executado em fatores forma a que ele não dava suporte anteriormente, teste a interface do usuário nesses fatores forma e faça qualquer alteração necessária de maneira que a interface do usuário se adapte corretamente a cada um. É possível pensar nisso como uma tarefa pós-portabilidade ou uma meta além da portabilidade, e existem alguns exemplos disso na prática nos casos de estudo [Bookstore2](w8x-to-uwp-case-study-bookstore2.md) e [QuizGame](w8x-to-uwp-case-study-quizgame.md).
 
-## Abordagem de portabilidade camada por camada
+## <a name="approaching-porting-layer-by-layer"></a>Abordagem de portabilidade camada por camada
 
 Ao portar um aplicativo Universal 8.1 para o modelo de aplicativos UWP, praticamente todo o seu conhecimento e a sua experiência serão transferidos, assim como grande parte do seu código-fonte e marcação, assim como os padrões de software que você usa.
 
@@ -56,7 +63,7 @@ Ao portar um aplicativo Universal 8.1 para o modelo de aplicativos UWP, praticam
 
 Antes ou durante a portabilidade, considere se o seu aplicativo pode ser melhorado por meio de refatoração, de forma que o código com finalidade semelhante seja agrupado em camadas e não fique espalhado arbitrariamente. A fatoração de seu aplicativo em camadas como as descritas acima facilita a correção do seu aplicativo, a aplicação de testes nele e, subsequentemente, a leitura e a manutenção dele. Você pode tornar a funcionalidade mais reutilizável seguindo o padrão Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Esse padrão mantém partes de dados, comercial e da interface do usuário de seu aplicativo separadas umas das outras. Mesmo na interface do usuário, ele mantém o estado e o comportamento separados, e testáveis separadamente, dos elementos visuais. Com o MVVM, você pode escrever seus dados e sua lógica de negócios uma vez e usá-los em todos os dispositivos, independentemente da interface do usuário. É provável que você também consiga reutilizar grande parte do modelo de exibição e do modo de exibição entre dispositivos.
 
-## Se você tiver um projeto do Microsoft Visual Studio 2015 RC
+## <a name="if-you-have-a-microsoft-visual-studio-2015-rc-project"></a>Se você tiver um projeto do Microsoft Visual Studio 2015 RC
 
 Se você tiver um projeto do Windows 10 que você criou com o Microsoft Visual Studio 2015 RC, consulte [Atualizar seu projeto UWP Microsoft Visual Studio 2015 RC para RTM](update-your-visual-studio-2015-rc-project-to-rtm.md).
  
@@ -70,16 +77,11 @@ Se você tiver um projeto do Windows 10 que você criou com o Microsoft Visual S
 | [Estudo de caso: Bookstore2](w8x-to-uwp-case-study-bookstore2.md) | Este estudo de caso, que se baseia nas informações fornecidas do controle [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601). No modelo de exibição, cada instância da classe Author representa o grupo dos livros escritos por esse autor e, no SemanticZoom, podemos exibir a lista de livros agrupados por autor ou reduzir o zoom para ver uma lista de atalhos de autores. |
 | [Estudo de caso: QuizGame](w8x-to-uwp-case-study-quizgame.md) | Este tópico apresenta um estudo de caso de portabilidade de uma amostra de aplicativo do WinRT 8.1 de um jogo de teste ponto a ponto em funcionamento para um aplicativo UWP do Windows 10. |
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 **Documentação**
 * [Referência do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
 * [Criando aplicativos Universais do Windows para todos os dispositivos Windows](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Criando a experiência do usuário para aplicativos](https://msdn.microsoft.com/library/windows/apps/hh767284)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

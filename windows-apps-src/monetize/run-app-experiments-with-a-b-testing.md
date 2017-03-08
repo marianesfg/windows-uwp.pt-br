@@ -1,21 +1,28 @@
 ---
 author: mcleanbyron
 Description: "Você pode usar o painel do Centro de Desenvolvimento do Windows para executar experimentos para os seus aplicativos UWP (Plataforma Universal do Windows) com testes A/B."
-title: Executar experimentos de aplicativo com testes A/B
+title: Executar experimentos de aplicativo com teste A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
-ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Executar experimentos de aplicativo com testes A/B
+# <a name="run-app-experiments-with-ab-testing"></a>Executar experimentos de aplicativo com teste A/B
 
-Você pode usar o painel do Centro de Desenvolvimento do Windows para definir variáveis remotas que pode recuperar em tempo de execução dos aplicativos da Plataforma Universal do Windows (UWP) e pode testar variações desses valores com os usuários para identificar os valores mais efetivos para conseguir o comportamento desejado do usuário. O aplicativo pode usar variáveis remotas para configurar experiências de aplicativo, como compras realizadas em aplicativo, fluxo de assinaturas, legendas e veiculações de anúncios.
+Você pode usar o painel do Centro de Desenvolvimento do Windows para definir variáveis remotas que você pode recuperar em tempo de execução dos aplicativos da Plataforma Universal do Windows (UWP), e é possível testar variações desses valores com os usuários para identificar os valores mais efetivos para conseguir o comportamento desejado do usuário. O aplicativo pode usar variáveis remotas para configurar experiências de aplicativo, como compras realizadas em aplicativo, fluxo de assinaturas, legendas e veiculações de anúncios.
 
 A meta do teste A/B deve ser identificar uma variação dos valores variáveis remotos que deve resultar em taxas de conversão melhores (por exemplo, mais compras realizadas em aplicativo), oferecendo uma experiência de aplicativo mais atraente. Depois de ter identificado uma variação bem-sucedida, você poderá imediatamente finalizar o experimento e habilitar essa variação para todo o seu público de usuários no painel do Centro de Desenvolvimento, sem precisar republicar o aplicativo.
 
-## Criar e executar um teste A/B
+## <a name="create-and-run-an-ab-test"></a>Criar e executar um teste A/B
 
 Para criar e executar um teste A/B, siga estas etapas:
 
@@ -26,16 +33,16 @@ Para criar e executar um teste A/B, siga estas etapas:
 
 Para obter um guia passo a passo que demonstra o processo de ponta a ponta, consulte [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 Testes A/B no Centro de Desenvolvimento do Windows têm suporte apenas para aplicativos UWP.
 
 Antes de poder executar experimentos com testes A/B, você deve configurar seu computador de desenvolvimento:
 
 * Siga as instruções [aqui](../get-started/get-set-up.md) para configurar seu computador de desenvolvimento para o desenvolvimento da UWP.
-* [Instale o Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Além da API para experimentos, esse SDK também fornece APIs para outros recursos, como a exibição de anúncios e o direcionamento dos seus clientes ao Hub de Feedback para coletar comentários sobre o seu aplicativo. 
+* [Instale o Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Além da API para experimentos, esse SDK também fornece APIs para outros recursos, como a exibição de anúncios e o direcionamento dos seus clientes ao Hub de Feedback para coletar comentários sobre o seu aplicativo.
 
-## Práticas recomendadas
+## <a name="best-practices"></a>Práticas recomendadas
 
 Para obter os resultados mais úteis, convém seguir estas recomendações ao executar experimentos com testes A/B:
 
@@ -43,7 +50,7 @@ Para obter os resultados mais úteis, convém seguir estas recomendações ao ex
 * Execute experimentos por pelo menos de 2 a 4 semanas para coletar dados suficientes que são estatisticamente significativos e acionáveis.
 
 <span id="terms" />
-## Termos relacionados
+## <a name="related-terms"></a>Termos relacionados
 
 |  Termo  |  Definição  |
 |--------|--------------|
@@ -55,16 +62,11 @@ Para obter os resultados mais úteis, convém seguir estas recomendações ao ex
 | Exibir evento    |  Uma cadeia de caracteres arbitrária que representa uma atividade quando o usuário começa a exibir uma variação que faz parte do seu experimento. Normalmente, esse é o nome de um evento no seu código. O código do seu aplicativo enviará essa cadeia de caracteres de evento de exibição para o Centro de Desenvolvimento, quando o usuário começar a exibir uma variação. Para obter mais informações, veja [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md).
 | Evento de conversão    |  Uma cadeia de caracteres arbitrária que representa um objetivo de uma meta de um experimento. Normalmente, esse é o nome de um evento no seu código. O código do seu aplicativo enviará essa cadeia de caracteres de evento de conversão para o Centro de Desenvolvimento quando o usuário atingir um objetivo. Para obter mais informações, veja [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md).  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
 * [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

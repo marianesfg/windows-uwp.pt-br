@@ -3,13 +3,20 @@ author: mtoepke
 title: Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 description: "Esta seção da documentação descreve como usar o DirectX e o Visual C++ para criar um jogo 3D UWP (Plataforma Universal do Windows)."
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, jogos, amostra, directx, 3d
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 738be6a129158fbd6058ff7407aca0b8ece7ea3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
+# <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,7 +32,7 @@ Esta seção da documentação descreve como usar o DirectX e o Visual C++ para 
 
  
 
-## Apresentando o Marble Maze
+## <a name="introducing-marble-maze"></a>Apresentando o Marble Maze
 
 
 Escolhemos o Marble Maze porque ele é relativamente básico, mas ainda demonstra a amplitude de recursos que estão disponíveis na maioria dos jogos. Ele mostra como usar elementos gráficos, manipulação de entrada e áudio. Ele também demonstra a mecânica do jogo, como regras e metas.
@@ -36,7 +43,7 @@ O Marble Maze oferece várias maneiras de um usuário interagir com o tabuleiro 
 
 ![captura de tela do jogo marble maze.](images/marblemaze.png)
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 -   Windows 10
@@ -45,14 +52,14 @@ O Marble Maze oferece várias maneiras de um usuário interagir com o tabuleiro 
 -   Familiaridade com DirectX e terminologia do DirectX
 -   Conhecimentos básicos de COM
 
-## Quem deve ler isto?
+## <a name="who-should-read-this"></a>Quem deve ler isto?
 
 
 Se você está interessado em criar jogos 3D ou outros aplicativos do Windows 10 que usam elementos gráficos intensivamente, este documento é ideal para você. Esperamos que você use os princípios e as práticas descritos nesta documentação para criar seu próprio jogo UWP. Ter conhecimento ou interesse em programação C++ e DirectX irá ajudar você a tirar o máximo proveito desta documentação. Se você não tem experiência com DirectX, ainda poderá se beneficiar se tiver experiência com ambientes semelhantes de programação de elementos gráficos 3D.
 
 O documento [Passo a passo: criar um jogo simples da UWP com DirectX](tutorial--create-your-first-metro-style-directx-game.md) descreve outra amostra que implementa um jogo básico de tiro 3D usando DirectX e C++.
 
-## Conteúdo discutido nesta documentação
+## <a name="what-this-documentation-covers"></a>Conteúdo discutido nesta documentação
 
 
 Esta documentação ensina a:
@@ -62,7 +69,7 @@ Esta documentação ensina a:
 -   Integrar mecanismos de entrada, como toque, acelerômetro e o controlador do Xbox 360.
 -   Usar o [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049) para incorporar música e efeitos sonoros.
 
-## Conteúdo não discutido nesta documentação
+## <a name="what-this-documentation-does-not-cover"></a>Conteúdo não discutido nesta documentação
 
 
 Esta documentação não discute os seguintes aspectos do desenvolvimento de jogos. Esses aspectos são seguidos por recursos adicionais que os discutem.
@@ -78,12 +85,12 @@ O Marble Maze também usa a biblioteca [DirectXMath](https://msdn.microsoft.com/
 
 Embora o Marble Maze forneça muitos componentes reutilizáveis, ele não é uma estrutura completa para o desenvolvimento de jogos. Quando consideramos que um componente do Marble Maze é reutilizável no seu jogo, enfatizamos isso na documentação.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 
 Recomendamos que você comece com os princípios básicos da amostra do Marble Maze para saber mais sobre a estrutura do Marble Maze e algumas das diretrizes de codificação e estilo seguidas pelo seu código-fonte. A tabela a seguir apresenta os documentos nesta seção para que você possa consultá-los com mais facilidade.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 | Título                                                                                                                    | Descrição                                                                                                                                                                                                                                        |
@@ -102,10 +109,5 @@ Recomendamos que você comece com os princípios básicos da amostra do Marble M
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

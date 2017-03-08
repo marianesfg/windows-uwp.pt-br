@@ -3,13 +3,20 @@ author: mcleanbyron
 Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve definir seu experimento no painel do Centro de Desenvolvimento."
 title: Definir seu experimento no painel do Centro de Desenvolvimento
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: b33e003af6e12df5eedfe150155db6777c5c62f6
-ms.openlocfilehash: fa209464e247e7073da2197ddd0b9a5344f3763b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f07e842ebdcb25056218b96d192b4ff0f086bd0c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Definir seu experimento no painel do Centro de Desenvolvimento
+# <a name="define-your-experiment-in-the-dev-center-dashboard"></a>Definir seu experimento no painel do Centro de Desenvolvimento
 
 Após [criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para criar um experimento no projeto. Quando você cria o experimento, você definirá os objetivos e as variações as quais os usuários receberão.
 
@@ -17,7 +24,7 @@ Para um guia passo a passo que demonstra o processo de criação e execução de
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />
-## Criar seu experimento
+## <a name="create-your-experiment"></a>Criar seu experimento
 
 1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
 2. Em **Seus aplicativos**, selecione o aplicativo para o qual você deseja criar um experimento.
@@ -38,7 +45,7 @@ Para um guia passo a passo que demonstra o processo de criação e execução de
   >**Observação**&nbsp;&nbsp;O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada modo de exibição do usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu aplicativo em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a impedir que um usuário único distorça os resultados do experimento de um grupo de amostra de usuários quando o objetivo é maximizar o número de usuários que executam uma conversão.
 
 <span id="define-the-variations-and-settings-for-the-experiment" />
-### Defina as variáveis remotas e as variações de seu experimento
+### <a name="define-the-remote-variables-and-variations-for-your-experiment"></a>Defina as variáveis remotas e as variações de seu experimento
 
 Em seguida, defina as [variáveis](run-app-experiments-with-a-b-testing.md#terms) remotas e as [variações](run-app-experiments-with-a-b-testing.md#terms) de seu experimento.
 
@@ -50,7 +57,7 @@ Em seguida, defina as [variáveis](run-app-experiments-with-a-b-testing.md#terms
 4. Edite os valores de variáveis para cada variação exclusiva no experimento (ou seja, as variações que não sejam variações de controle).
 
 <span id="save-and-activate-your-experiment" />
-### Salve e ative seu experimento
+### <a name="save-and-activate-your-experiment"></a>Salve e ative seu experimento
 
 Quando você terminar de inserir os campos obrigatórios do seu experimento, clique em **Salvar** para salvar seu experimento.
 
@@ -59,7 +66,7 @@ Se você estiver satisfeito com os parâmetros de seu experimento e estiver pron
 > **Importante**  Um projeto pode conter apenas um experimento ativo de cada vez. Depois de ativar um experimento, você não pode mais modificar os parâmetros dele, a menos que tenha selecionado a caixa de seleção **Experimento editável** quando criou o experimento. Recomendamos que você codifique o experimento em seu aplicativo antes de ativar seu experimento.
 
 <span id="test_experiments"/>
-## Crie um experimento para testes internos
+## <a name="create-an-experiment-for-internal-testing"></a>Crie um experimento para testes internos
 
 Você pode querer testar seu experimento com um público controlado (por exemplo, um conjunto de testadores internos) e confirmar se todas as variações estão funcionando conforme o esperado antes de você ativar o experimento para seus clientes. Você pode fazer isso criando um experimento que tem a opção **Experimento editável** selecionada.
 
@@ -73,20 +80,15 @@ Para testar seu experimento antes de liberá-lo aos clientes, siga este processo
 4. Certifique-se de que a distribuição de variação de destino está correta no experimento clonado.
 5. Ative o experimento clonado para liberar o experimento para seus clientes.
 
-## Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 Depois de definir seu experimento no painel do Centro de Desenvolvimento e codificá-lo no seu aplicativo, você estará pronto para [executar e gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
 * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
-* [Executar experimentos de aplicativo com testes A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+* [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)
 

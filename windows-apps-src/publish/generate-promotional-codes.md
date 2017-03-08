@@ -3,13 +3,20 @@ author: jnHs
 Description: "É possível pode gerar códigos promocionais para um aplicativo ou um complemento que você tiver publicado na Windows Store."
 title: "Gerar códigos promocionais"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a92f642b2d28eb801106388648455752c10e013a
-ms.openlocfilehash: cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb56
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb97ccb1555e214871603861a3e5edeaaf3a55d7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Gerar códigos promocionais
+# <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
 
 É possível pode gerar códigos promocionais para um aplicativo ou um complemento que você tiver publicado na Windows Store. Códigos promocionais são um modo fácil de oferecer a usuários influentes acesso gratuito ao seu aplicativo ou complemento. Você também pode usar códigos promocionais em situações de atendimento ao cliente oferecendo aos usuários acesso gratuito ao seu aplicativo ou complemento, ou para [testes beta](beta-testing-and-targeted-distribution.md) com o Windows 10.
@@ -26,7 +33,7 @@ No painel do Centro de Desenvolvimento do Windows, você pode:
 
 > **Observação**  Você pode gerar códigos promocionais mesmo se tiver selecionado a opção **Ocultar este aplicativo e evitar a aquisição. Os clientes com um código promocional ainda poderão baixá-lo em dispositivos Windows 10** na página do painel [Preço e disponibilidade](set-app-pricing-and-availability.md) de seu aplicativo. Seu aplicativo deve passar a fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) antes que os usuários possam resgatar um código promocional para instalá-lo.
 
-## Políticas para códigos promocionais
+## <a name="promotional-code-policies"></a>Políticas para códigos promocionais
 
 
 Lembre-se das seguintes políticas para códigos promocionais:
@@ -36,7 +43,7 @@ Lembre-se das seguintes políticas para códigos promocionais:
 -   Para cada um de seus aplicativos ou complementos, você pode gerar até 500 códigos promocionais a cada seis meses. O período de seis meses começa quando o primeiro pedido de código promocional é enviado.
 -   Você deve seguir os requisitos definidos no [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058), incluindo a seção **3k. Códigos promocionais**.
 
-## Solicitar códigos promocionais
+## <a name="order-promotional-codes"></a>Solicitar códigos promocionais
 
 
 Para solicitar códigos promocionais para um aplicativo ou complemento publicado na Windows Store:
@@ -57,7 +64,7 @@ Para solicitar códigos promocionais para um aplicativo ou complemento publicado
 
 Em geral, os códigos promocionais ficam disponíveis para download dentro de 60 minutos após o pedido ser efetuado, embora alguns pedidos possam levar mais tempo para serem processados. Após o pedido ser atendido e os códigos se tornarem disponíveis para download, o status do pedido muda para **Disponível**.
 
-## Baixar e distribuir códigos promocionais
+## <a name="download-and-distribute-promotional-codes"></a>Baixar e distribuir códigos promocionais
 
 
 Para baixar um pedido atendido de códigos promocionais e distribuir os códigos a usuários do seu aplicativo:
@@ -91,7 +98,7 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
     -   A URL resgatável do código.
     -   Instruções que orientam o usuário a visitar a URL resgatável, fazer logon usando sua conta da Microsoft e seguir as instruções para baixar e instalar o aplicativo.
 
-## Experiência do usuário de resgate do código
+## <a name="code-redemption-user-experience"></a>Experiência do usuário de resgate do código
 
 
 Depois que você distribui uma URL resgatável a um usuário, as etapas a seguir descrevem a experiência que o usuário seguirá para resgatar seu aplicativo.
@@ -114,7 +121,7 @@ Depois que você distribui uma URL resgatável a um usuário, as etapas a seguir
 
     > **Observação**  Em alguns casos, a página do aplicativo pode exibir um botão **Comprar** em vez de **Instalar**, mesmo que o aplicativo tenha sido resgatado com êxito pelo código promocional. O usuário pode clicar em **Comprar** para instalar o aplicativo sem custos.
 
-## Analisar seus códigos promocionais
+## <a name="review-your-promotional-codes"></a>Analisar seus códigos promocionais
 
 
 Há diversas maneiras de analisar o uso dos seus códigos promocionais.
@@ -136,10 +143,5 @@ Você também pode baixar um pedido ativo dessa tabela.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO4-->
 
 

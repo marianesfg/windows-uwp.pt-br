@@ -5,13 +5,19 @@ description: "Parabéns! A esta altura, você já entende os componentes princip
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords:
 - DirectX, XAML
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 17d34f0edcbe6729fe63204123faf4b7393beea7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e3f4abdb0a0f42d1b25a3adc1a78ab414affa77a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Estender o exemplo de jogo
+# <a name="extend-the-game-sample"></a>Estender o exemplo de jogo
 
 
 \[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,7 +28,7 @@ Parabéns! A esta altura, você já entende os componentes principais de um jogo
 -   [Visão geral do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 -   [Referência do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
-## Estendendo o jogo de amostra: usando XAML para a sobreposição
+## <a name="extending-the-game-sample-using-xaml-for-the-overlay"></a>Estendendo o jogo de amostra: usando XAML para a sobreposição
 
 
 Uma alternativa sobre a qual não falamos com detalhes é o uso de XAML em vez do Direct2D para a sobreposição. A linguagem XAML tem muitos benefícios em relação ao Direct2D para desenhar elementos de interface do usuário, e o mais importante deles é que a incorporação da aparência do Windows 10 ao jogo DirectX é mais conveniente. Muitos dos elementos, estilos e comportamentos comuns que definem um aplicativo UWP são integrados de forma muito próxima ao modelo XAML, fazendo com que o desenvolvedor do jogo tenha bem menos trabalho na implementação. Se o design do seu jogo tiver uma interface do usuário complexa, considere o uso de XAML em vez de Direct2D.
@@ -191,7 +197,7 @@ Para associar a cadeia de troca configurada à instância do painel [**SwapChain
 
 Para obter mais informações sobre esse processo, consulte [Interoperabilidade entre DirectX e XAML](https://msdn.microsoft.com/library/windows/apps/hh825871).
 
-## Código completo para codebehinds XAML da amostra de jogo em XAML
+## <a name="complete-code-for-the-xaml-game-sample-xaml-codebehinds"></a>Código completo para codebehinds XAML da amostra de jogo em XAML
 
 
 Aqui está o código completo dos codebehinds encontrados na versão em XAML da amostra de jogo de tiro em Direct3D 11.1
@@ -1517,10 +1523,5 @@ Para baixar uma versão do jogo de exemplo que usa XAML para sobreposição, vá
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

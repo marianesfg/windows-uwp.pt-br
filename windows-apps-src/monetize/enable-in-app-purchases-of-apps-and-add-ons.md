@@ -2,15 +2,21 @@
 author: mcleanbyron
 ms.assetid: B356C442-998F-4B2C-B550-70070C5E4487
 description: Saiba como usar o namespace Windows.Services.Store para comprar um aplicativo ou um dos seus complementos.
-title: Habilitar compras nos aplicativos e complementos
-keywords: "exemplo de código de oferta no aplicativo"
+title: Habilitar compras no aplicativo e complementos no aplicativo
+keywords: windows 10, uwp, complementos, compras no aplicativo, IAPs, Windows.Services.Store
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 05a93f3124324d7308f5494ad14a15bfd6a4e698
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b45d8b34bed361471c1fc95594ad6fd28e41fa6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras nos aplicativos e complementos
+# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras no aplicativo e complementos no aplicativo
 
 Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar membros no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para solicitar a compra do aplicativo atual ou um de seus complementos (também conhecidos como produtos no aplicativo ou IAPs) para o usuário. Por exemplo, se o usuário tem uma versão de avaliação do aplicativo, você pode usar esse processo para adquirir uma licença completa para o usuário. Como alternativa, você pode usar esse processo para adquirir um complemento, como um novo nível de jogo para o usuário.
 
@@ -52,9 +58,4 @@ Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://gith
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

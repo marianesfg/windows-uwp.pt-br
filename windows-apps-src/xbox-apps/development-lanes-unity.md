@@ -2,13 +2,21 @@
 author: JordanEllis6809
 title: Trazendo o jogos Unity para UWP no Xbox
 description: Desenvolvimento de UWP Unity no Xbox.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
 translationtype: Human Translation
-ms.sourcegitcommit: ea3bea2e5d6de0e55615de701a69e90d81f0f553
-ms.openlocfilehash: 73f701a2608c6ce8d10cab817683ada4e9eecc08
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 6c01cc5afa3b3c1266464c9f04c79cea533c9741
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Trazendo o jogos Unity para UWP no Xbox
+# <a name="bringing-unity-games-to-uwp-on-xbox"></a>Trazendo o jogos Unity para UWP no Xbox
 
 
 Neste tutorial passo a passo, presumimos que você já tenha um jogo no Unity, pronto para ser compilado e implantado.
@@ -17,13 +25,13 @@ Consulte também uma [versão em vídeo deste tutorial](https://www.youtube.com/
 
 Procurando a versão do seu projeto Unity UWP? Consulte [Controle de versão do seu projeto UWP](development-lanes-unity-versioning.md).
 
-## Etapa 0: Verifique se o Unity está instalado corretamente
+## <a name="step-0-ensure-unity-is-installed-correctly"></a>Etapa 0: Verifique se o Unity está instalado corretamente
 
 Ao instalar o Unity, estes componentes devem ser selecionados:
 
 ![Componentes de instalação do Unity](images/unity-install-components.png)
 
-## Etapa 1: Criando a solução UWP
+## <a name="step-1-building-the-uwp-solution"></a>Etapa 1: Criando a solução UWP
 
 No seu projeto de jogo Unity, abra as janelas **Configurações da Compilação** localizadas em **Arquivo -> Configurações da Compilação** e vá para o menu de opções da Windows Store mostrado abaixo.
 
@@ -37,7 +45,7 @@ O Unity criou uma nova solução do Visual Studio que usaremos para implantar se
 
 ![Solução do VS da UWP](images/uwp-vs-solution.png)
 
-## Etapa 2: Implementando seu jogo
+## <a name="step-2-deploying-your-game"></a>Etapa 2: Implementando seu jogo
 
 Abra a solução recentemente gerada na pasta **UWP** e, em seguida, altere a plataforma de destino para **x64**.
 
@@ -45,20 +53,15 @@ Abra a solução recentemente gerada na pasta **UWP** e, em seguida, altere a pl
 
 Agora que você tem uma solução do Visual Studio da UWP para seu jogo, [seguir estas etapas](getting-started.md) permitirá que você implante com êxito seu jogo em seu Xbox One de varejo!
 
-## Etapa 3: Modificar e recriar
+## <a name="step-3-modify-and-rebuild"></a>Etapa 3: Modificar e recriar
 
 Se forem feitas alterações em algo que não seja um script, para que essas alterações sejam mostradas na versão UWP do jogo, o projeto deve ser recriado no Editor (conforme descrito na __Etapa 1__).
 
-## Controle de versão do seu projeto UWP
+## <a name="versioning-your-uwp-project"></a>Controle de versão do seu projeto UWP
 
 Há algumas situações comuns onde adicionar partes desse diretório UWP recentemente gerado ao controle de versão se torna necessário. Por exemplo, se você estiver adicionando uma nova dependência ao projeto UWP (por exemplo, SDK do Xbox Live).  Vamos examinar este exemplo em detalhes em [Controle de versão do seu projeto UWP](development-lanes-unity-versioning.md).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Trazendo jogos existentes para o Xbox](development-lanes-landing.md)
 - [UWP no Xbox One](index.md)
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

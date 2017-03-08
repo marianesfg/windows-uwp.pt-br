@@ -3,25 +3,32 @@ author: mtoepke
 title: "Adicionar uma interface do usuário"
 description: "Você viu no exemplo como é implementado o objeto principal do jogo, bem como a estrutura básica de renderização."
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, interface do usuário, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4f4ca9626e38ce7449b6476345205d136b3d9a2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adicionar uma interface do usuário
+# <a name="add-a-user-interface"></a>Adicionar uma interface do usuário
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você viu no exemplo como é implementado o objeto principal do jogo, bem como a estrutura básica de renderização. Agora examinaremos como o exemplo fornece feedback sobre o estado do jogo ao jogador. Aqui você aprenderá como adicionar opções de menu simples e componentes do visor frontal HUD (Heads-Up Display) sobre a saída do pipeline gráfico 3D.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Adicionar elementos gráficos e comportamentos básicos da interface do usuário a um jogo DirectX da Plataforma Universal do Windows (UWP).
 
-## A sobreposição da interface do usuário
+## <a name="the-user-interface-overlay"></a>A sobreposição da interface do usuário
 
 
 Embora existam muitas maneiras de exibir texto e elementos da interface do usuário em um jogo DirectX, enfocaremos apenas uma delas, [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) (com [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) para os elementos de texto).
@@ -34,7 +41,7 @@ Direct2D é um conjunto de APIs de desenho 2D usadas para desenhar primitivas e 
 
 Neste exemplo de jogo, nós temos dois componentes principais da interface do usuário: o painel transparente para a pontuação e os controles do jogo e uma sobreposição usada para exibir o texto e as opções de estado de jogo (como as opções de inicialização de nível e as informações de pausa).
 
-### Usando o Direct2D para um painel transparente
+### <a name="using-direct2d-for-a-heads-up-display"></a>Usando o Direct2D para um painel transparente
 
 Esta é o painel transparente no jogo aplicado durante a execução do exemplo de jogo, sem os elementos visuais do jogo. É simples e despojado, permitindo que o jogador se concentre em navegar pelo mundo 3D e atirar nos alvos. Uma boa interface ou painel transparente nunca deve prejudicar a capacidade do jogador de processar e reagir aos eventos do jogo.
 
@@ -177,7 +184,7 @@ Nesse código, o destino da renderização Direct2D estabelecido para a sobrepos
 
  
 
-### Exibindo informações de estado do jogo com uma sobreposição
+### <a name="displaying-game-state-information-with-an-overlay"></a>Exibindo informações de estado do jogo com uma sobreposição
 
 Além do painel transparente, o exemplo de jogo possui uma sobreposição que representa cinco estados de jogo, todos consistindo em uma grande primitiva retangular preta com texto para ser lido pelo jogador. (Lembre-se de que os retângulos do controlador move-look não são desenhados porque não estão ativos nesses estados). Esses estados de sobreposição são:
 
@@ -203,7 +210,7 @@ Além do painel transparente, o exemplo de jogo possui uma sobreposição que re
 
 Agora veremos como inicializar e desenhar a sobreposição para esses cinco estados.
 
-### Inicializando e desenhando a sobreposição
+### <a name="initializing-and-drawing-the-overlay"></a>Inicializando e desenhando a sobreposição
 
 Os cinco estados explícitos têm algumas características em comum: primeiro, todos usam um retângulo preto no centro da tela como tela de fundo; segundo, o texto exibido é texto de título ou corpo de texto; e, finalmente, o texto usa a fonte Segoe UI e é desenhado sobre o retângulo preto. Consequentemente, os recursos de que eles necessitam e os métodos que os implementam são muito semelhantes.
 
@@ -370,7 +377,7 @@ O método **Initialize** obtém um alocador do objeto [**ID2D1Device**](https://
 
 Agora só falta algum texto para ser exibido pela sobreposição!
 
-### Representando o estado do jogo na sobreposição
+### <a name="representing-game-state-in-the-overlay"></a>Representando o estado do jogo na sobreposição
 
 Cada um dos cinco estados de sobreposição no exemplo de jogo possui um método correspondente no objeto **GameInfoOverlay**. Esses métodos desenham uma variação da sobreposição para fornecer ao jogador informações explícitas sobre o próprio jogo. Essa comunicação, evidentemente, é representada como duas cadeias de caracteres: uma cadeia de título e uma cadeia de corpo de texto. Como os recursos e o layout para essas informações já foram configurados no método **RecreateDeviceResources**, o exemplo só precisa fornecer as cadeias de caracteres específicas do estado de sobreposição.
 
@@ -502,11 +509,11 @@ void DirectXApp::SetGameInfoOverlay(GameInfoOverlayState state)
 
 Agora o exemplo de jogo tem uma maneira de comunicar informações de texto ao jogador com base no estado do jogo.
 
-### Próximas etapas
+### <a name="next-steps"></a>Próximas etapas
 
 No próximo tópico, [Adicionando controles](tutorial--adding-controls.md), examinaremos como o jogador interage com a amostra de jogo e como a entrada altera o estado do jogo.
 
-### Código de exemplo completo desta seção
+### <a name="complete-sample-code-for-this-section"></a>Código de exemplo completo desta seção
 
 GameHud.h
 
@@ -1478,7 +1485,7 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 }
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1489,10 +1496,5 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

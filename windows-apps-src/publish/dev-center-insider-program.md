@@ -2,9 +2,17 @@
 title: Programa Insider do Centro de Desenvolvimento
 description: "Experimente os novos recursos do Centro de Desenvolvimento antes que eles se tornem disponíveis para todos os desenvolvedores e conte-nos a sua opinião."
 author: JnHs
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 translationtype: Human Translation
-ms.sourcegitcommit: 0e962fbb1df32b9006cabf3b0925d5566916edb9
-ms.openlocfilehash: 96ce11cd78b1398f4079f63b17da26bd7776a140
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: fe553fafdf4a6f6175cb4f64514e2572f23968e4
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -21,19 +29,12 @@ Veja a seguir alguns dos recursos que disponibilizamos exclusivamente para membr
 
 | Recurso Programa Insider do Centro de Desenvolvimento   | Como os participantes do Programa Insider do Centro de Desenvolvimento podem experimentá-lo | Data da inclusão |
 |--------------------------------------|------------------------------------|------------|
-|**Campanhas de promoção de aplicativo universal**: além de aplicativos, agora suas campanhas publicitárias visarão o MSN.com, o Outlook.com, o Skype e outras propriedades Premium da Microsoft. | Para alcançar esse conjunto maior de novos clientes em potencial, basta criar uma nova campanha de anúncios (**Promoções > Campanhas de anúncios**). |Dezembro de 2016|
-|**Relatório de instalação**: obtenha detalhes sobre quantas vezes os clientes instalaram seu app com êxito. | Selecione um dos seus apps e escolha **Instalações** no menu esquerdo em **Análise**. Você pode filtrar por mercado, tipo de dispositivo e muito mais. |Dezembro de 2016|
-|**Análise em tempo real**: veja detalhes sobre aquisições mais recentes de seu app e complementos. O novo relatório usa a coleção de eventos em tempo real de seus clientes do Windows 10. | Escolha o relatório em tempo real no menu esquerdo em Análise. Selecione o intervalo de tempo para analisar os dados nos últimos 7 dias ou até a última hora em uma base por minuto. Observe que o relatório inclui apenas os dados de clientes no Windows 10.  |Agosto de 2016|
+|**Escolher quais produtos para mostrar em seu painel**: se você tiver criado aplicativos nos quais você não pretende trabalhar por um tempo, você agora pode ocultá-los de seu painel. | Na sua página de visão geral do painel, selecione **Escolher quais produtos mostrar**. Selecione os aplicativos que você não quer ver e, em seguida, clique em **Ocultar do painel**. Você pode mostrá-los novamente mais tarde, selecionando **Restaurar para o painel**. |Janeiro de 2017| 
+|**Campanhas de promoção de aplicativo universal**: além de aplicativos, agora suas campanhas publicitárias visarão o MSN.com, o Outlook.com, o Skype e outras propriedades premium da Microsoft. | Para alcançar esse conjunto maior de novos clientes em potencial, basta criar uma nova campanha de anúncios (**Promoções > Campanhas de anúncios**). |Dezembro de 2016|
+|**Análise em tempo real**: veja detalhes sobre aquisições mais recentes de seu aplicativo e complementos. O novo relatório usa a coleção de eventos em tempo real de seus clientes do Windows 10. | Escolha o **Relatório em tempo real** no menu esquerdo em **Análise**. Selecione o intervalo de tempo para analisar os dados nos últimos 7 dias ou até a última hora em uma base por minuto. Observe que o relatório inclui apenas os dados de clientes no Windows 10.  |Agosto de 2016|
 |**Gerenciar complementos em massa**: faça alterações em vários complementos ao mesmo tempo, em vez de enviar cada atualização individualmente. | Clique em **Gerenciar complementos em massa** na página Visão geral ou Complementos de um aplicativo. |Junho de 2016|
-|**Página Histórico para contas de vários usuários**: os proprietários das contas podem acessar o histórico de navegação detalhado de quaisquer usuários adicionais que você incluiu na conta.|Na página **Gerenciar usuários**, clique no link mostrado em "Última atividade" para o usuário cujo histórico de navegação você deseja revisar.|Abril de 2016|
 
 
 
-
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

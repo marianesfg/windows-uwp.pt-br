@@ -3,12 +3,19 @@ author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: "Baixar e instalar atualizações de pacote para seu aplicativo"
 description: "Saiba como marcar pacotes como obrigatórios no painel do Centro de Desenvolvimento e escrever código no aplicativo para baixar e instalar atualizações do pacote."
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b96d4074a8960db314313c612955900c6a05dc48
-ms.openlocfilehash: 4da8ffe72435501876a1e859d10a16cf19eb11fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ffd1af9475791b8190f9364d85f7a7fa23548856
+ms.lasthandoff: 02/07/2017
 
 ---
-# Baixar e instalar atualizações de pacote para seu aplicativo
+# <a name="download-and-install-package-updates-for-your-app"></a>Baixar e instalar atualizações de pacote para seu aplicativo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -16,7 +23,7 @@ Desde o Windows 10, versão 1607, você pode usar uma API no namespace [Windows.
 
 Esses recursos ajudam a manter a base de usuários atualizada automaticamente com a versão mais recente do aplicativo e os serviços relacionados.
 
-## Visão geral de API
+## <a name="api-overview"></a>Visão geral de API
 
 Os aplicativos voltados para o Windows 10, versão 1607, ou posteriores, podem usar os seguintes métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para baixar e instalar atualizações de pacote.
 
@@ -37,7 +44,7 @@ Esses métodos utilizam objetos [StorePackageUpdate](https://msdn.microsoft.com/
 
 <span/>
 
-## Exemplos de código
+## <a name="code-examples"></a>Exemplos de código
 
 Os exemplos de código a seguir demonstram como baixar e instalar atualizações de pacote no aplicativo. Os exemplos pressupõem:
 * O código é executado no contexto de uma [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
@@ -47,7 +54,7 @@ Os exemplos de código a seguir demonstram como baixar e instalar atualizações
 
 <span/>
 
-### Baixar e instalar todas as atualizações de pacote
+### <a name="download-and-install-all-package-updates"></a>Baixar e instalar todas as atualizações de pacote
 
 O exemplo de código a seguir demonstra como baixar e instalar todas as atualizações de pacote disponíveis.  
 
@@ -98,7 +105,7 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-### Manipular atualizações de pacote obrigatórias
+### <a name="handle-mandatory-package-updates"></a>Manipular atualizações de pacote obrigatórias
 
 O exemplo de código a seguir parte do exemplo anterior e demonstra como determinar se algum pacote de atualizações foi [marcado como obrigatório no painel do Centro de Desenvolvimento do Windows](#mandatory-dashboard). Normalmente, você deverá fazer downgrade da experiência do aplicativo normalmente para o usuário se uma atualização de pacote obrigatória não puder ser baixada ou instalada.
 
@@ -213,7 +220,7 @@ private void HandleMandatoryPackageError()
 ```
 
 <span id="mandatory-dashboard" />
-## Tornar o envio de um pacote obrigatório no painel do Centro de Desenvolvimento
+## <a name="make-a-package-submission-mandatory-in-the-dev-center-dashboard"></a>Tornar o envio de um pacote obrigatório no painel do Centro de Desenvolvimento
 
 Ao criar um envio de pacote para um aplicativo destinado ao Windows 10, versão 1607, ou posterior, você pode marcar o pacote como obrigatório e a data/hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível usando-se a API descrita anteriormente neste artigo, o aplicativo pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).
 
@@ -228,9 +235,4 @@ Para marcar um envio de pacote como obrigatório:
 Para obter mais informações sobre como configurar pacotes no painel do Centro de Desenvolvimento, consulte [Carregue os pacotes do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages).
 
   >**Observação**&nbsp;&nbsp;Se criar um [pacote de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights), você poderá marcar os pacotes como obrigatórios usando uma interface do usuário semelhante na página **Pacotes** da versão de pré-lançamento. Nesse caso, a atualização de pacote obrigatória só se aplica a clientes que façam parte do grupo da versão de pré-lançamento.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

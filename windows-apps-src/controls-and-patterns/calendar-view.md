@@ -1,16 +1,23 @@
 ---
 author: Jwmsft
 Description: "Uma exibição de calendário permite que um usuário visualize e interaja com um calendário em que ele pode navegar por mês, ano ou década."
-title: "Exibição de calendário"
+title: "Exibição de Calendário"
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 86062f744efa487cc70adb9648ff3f3584226000
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c3779262c24ef1bd124330fc7709b38abead1a7a
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="calendar-view"></a>Exibição de calendário
+# <a name="calendar-view"></a>Exibição de Calendário
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -66,7 +73,7 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 
 Um usuário poderá desmarcar uma data selecionada, clicando ou tocando nela na grade do calendário.
 
-Você pode manipular o evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para ser notificado quando a coleção [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) for alterada.
+Você pode tratar o evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para ser notificado quando a coleção [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) for alterada.
 
 > [!NOTE]
 > Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
@@ -133,7 +140,7 @@ Este exemplo mostra a renderização em fases de uma exibição de calendário p
 - Na fase 1, você escurece datas que não podem ser registradas. Isso inclui datas passadas, domingos e datas que já estão totalmente reservadas. 
 - Na fase 2, você verifica cada compromisso que está reservado para o dia. Você exibe uma barra de densidade verde para cada compromisso confirmado e uma barra de densidade azul para cada compromisso provisório. 
 
-A classe `Bookings` neste exemplo é de um aplicativo de reserva de compromisso fictício, e não é exibida.
+A classe `Bookings` neste exemplo é de um app de reserva de compromisso fictício, e não é exibida.
 
 ```xaml
 <CalendarView CalendarViewDayItemChanging="CalendarView_CalendarViewDayItemChanging"/>
@@ -200,9 +207,4 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Seletor de data do calendário](calendar-date-picker.md)
 - [Seletor de data](date-picker.md)
 - [Seletor de hora](time-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

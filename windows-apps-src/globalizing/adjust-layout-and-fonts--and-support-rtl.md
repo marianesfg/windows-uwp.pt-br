@@ -1,25 +1,32 @@
 ---
 author: DelfCo
-Description: "Desenvolva seu aplicativo para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda)."
+Description: "Desenvolva seu app para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda)."
 title: Ajustar layout e fontes e fornecer suporte para RTL
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 05208607b148a48e8a680691de90161feeea7700
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b7d34aaf891497af80ed8c94609e6a8fbbd3bec
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar layout e fontes e fornecer suporte para RTL
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Desenvolva seu aplicativo para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda).
+Desenvolva seu app para dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda).
 
 ## <a name="layout-guidelines"></a>Diretrizes de layout
 
 
-Alguns idiomas, como alemão e finlandês, exigem mais espaço de texto do que o inglês. As fontes para alguns idiomas, como japonês, exigem mais altura. E alguns idiomas, como árabe e hebraico, exigem que o layout do texto e o layout do aplicativo tenham a ordem de leitura da direita para a esquerda.
+Alguns idiomas, como alemão e finlandês, exigem mais espaço de texto do que o inglês. As fontes para alguns idiomas, como japonês, exigem mais altura. E alguns idiomas, como árabe e hebraico, exigem que o layout do texto e o layout do app tenham a ordem de leitura da direita para a esquerda.
 
 Use mecanismos de layout flexíveis em vez de posicionamento absoluto, larguras fixas ou alturas fixas. Quando necessário, determinados elementos de interface do usuário podem ser ajustados com base no idioma.
 
@@ -33,9 +40,9 @@ Verifique se o arquivo ResW do app tem um recurso para Block1.Width, que você p
 
 Para aplicativos da Windows Store em C++, C# ou Visual Basic, use a propriedade [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) com preenchimento e margens simétricos, para permitir a localização para outras direções de layout.
 
-Controles de layout XAML como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) são dimensionados e invertidos automaticamente com a propriedade [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716). Exponha sua própria propriedade **FlowDirection** no seu aplicativo como um recurso para tradutores.
+Controles de layout XAML como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) são dimensionados e invertidos automaticamente com a propriedade [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716). Exponha sua própria propriedade **FlowDirection** no seu app como um recurso para tradutores.
 
-Especifique um **Uid** para a página principal do seu aplicativo:
+Especifique um **Uid** para a página principal do seu app:
 
 ```XML
 <Page x:Uid="MainPage">
@@ -57,7 +64,7 @@ Se o seu app tiver imagens que devem ser espelhadas (ou seja, a mesma imagem pod
 ```
 
 
-Se o seu app requer uma imagem diferente para inverter a imagem corretamente, você pode usar o sistema de gerenciamento de recursos com o [qualificador layoutdir](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). O sistema escolhe uma imagem chamada file.layoutdir-rtl.png quando o [idioma do aplicativo](manage-language-and-region.md) é definido como um idioma da direita para a esquerda (RTL) Essa abordagem pode ser necessária quando alguma parte da imagem é invertida, mas outra parte não.
+Se o seu app requer uma imagem diferente para inverter a imagem corretamente, você pode usar o sistema de gerenciamento de recursos com o [qualificador layoutdir](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). O sistema escolhe uma imagem chamada file.layoutdir-rtl.png quando o [idioma do app](manage-language-and-region.md) é definido como um idioma da direita para a esquerda (RTL) Essa abordagem pode ser necessária quando alguma parte da imagem é invertida, mas outra parte não.
 
 ## <a name="fonts"></a>Fontes
 
@@ -65,7 +72,7 @@ Use as APIs de mapeamento de fonte [**LanguageFont**](https://msdn.microsoft.com
 
 ## <a name="best-practices-for-handling-right-to-left-rtl-languages"></a>Práticas recomendadas para lidar com idiomas escritos da direita para a esquerda (RTL)
 
-Quando seu aplicativo está traduzido para idiomas escritos da direita para a esquerda, use APIs para definir a direção de texto padrão para o RootFrame. Isso fará com que todos os controles contidos no RootFrame respondam adequadamente à direção de texto padrão.  Quando mais de um idioma for compatível, use LayoutDirection para o idioma preferencial superior para definir a propriedade FlowDirection. A maioria dos controles incluídos no Windows já usam FlowDirection. Se você estiver implementando controles personalizados, eles deverão usar FlowDirection para fazer alterações de layout apropriado para idiomas RTL e LTR.
+Quando seu app está traduzido para idiomas escritos da direita para a esquerda, use APIs para definir a direção de texto padrão para o RootFrame. Isso fará com que todos os controles contidos no RootFrame respondam adequadamente à direção de texto padrão.  Quando mais de um idioma for compatível, use LayoutDirection para o idioma preferencial superior para definir a propriedade FlowDirection. A maioria dos controles incluídos no Windows já usam FlowDirection. Se você estiver implementando controles personalizados, eles deverão usar FlowDirection para fazer alterações de layout apropriado para idiomas RTL e LTR.
 
 C#
 ```csharp    
@@ -110,9 +117,4 @@ C++:
 
 ## <a name="related-topics"></a>Tópicos relacionados
 [FlowDirection](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.flowdirection.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

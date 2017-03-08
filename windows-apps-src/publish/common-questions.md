@@ -1,17 +1,24 @@
 ---
-author: jnHs
+author: shawjohn
 Description: "Perguntas comuns sobre campanhas publicitárias"
 title: "Perguntas comuns sobre campanhas publicitárias"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 584407ea0e0fee4ec74dac0b656db59b7f694391
-ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="common-questions-about-ad-campaigns"></a>Perguntas comuns sobre campanhas publicitárias
 
-## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>Quanto custa para executar um anúncio do meu aplicativo?
+## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>Quanto custa para executar um anúncio do meu app?
 
 Realmente depende de você, mas lembre-se: quanto mais você gastar, mais pessoas verão o seu anúncio. Quanto mais pessoas veem o seu anúncio, mais cliques e instalações você obtém. Consulte [este artigo](create-an-ad-campaign-for-your-app.md) para saber mais sobre como criar uma campanha publicitária para seu app.
 
@@ -23,9 +30,9 @@ Se você pretende gastar mais de US$ 10.000 por mês em suas campanhas publicit�
 
 Sim. Chamamos isso de *anúncios domésticos* e você pode executá-los gratuitamente. Confira [este artigo](about-house-ads.md) para saber mais sobre anúncios de comunidade.
 
-## <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a>Posso promover meu aplicativo com aplicativos de outros desenvolvedores na Loja?
+## <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a>Posso promover meu app com apps de outros desenvolvedores na Loja?
 
-Sim. Chamamos isso de *anúncios de comunidade*, e você pode executá-los gratuitamente. Depois que você [aceitar os anúncios de comunidade](about-community-ads.md#how-to-opt-in-to-community-ads), você poderá [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md) e seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão anúncios de comunidade. Confira [este artigo](about-community-ads.md) para saber mais.
+Sim. Chamamos isso de *anúncios de comunidade*, e você pode executá-los gratuitamente. Depois que você [aceitar os anúncios de comunidade](about-community-ads.md#how-to-opt-in-to-community-ads), você poderá [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md) e seu app compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão anúncios de comunidade. Confira [este artigo](about-community-ads.md) para saber mais.
 
 ## <a name="how-can-i-customize-my-ad"></a>Como posso personalizar meu anúncio?
 
@@ -33,7 +40,7 @@ Se usar um dos modelos de anúncios padrão, você poderá escolher o tamanho, a
 
 ## <a name="where-will-my-ad-appear"></a>Onde aparecerá o meu anúncio?
 
-Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação etária e versão do sistema operacional. Você define essas propriedades ao publicar seu aplicativo na Windows Store.
+Seu anúncio aparecerá em apps que compartilharem a sua classificação etária e versão do sistema operacional. Você define essas propriedades ao publicar seu app na Windows Store. Para campanhas "Universal", seus anúncios também aparecerão em MSN.com, Outlook.com, Skype e outras propriedades de premium da Microsoft.
 
 As campanhas publicitárias atualmente têm suporte nestes países e regiões:
 
@@ -64,9 +71,4 @@ Vá para <http://commerce.microsoft.com>, faça logon com suas credenciais de co
 * [Sobre anúncios domésticos](about-house-ads.md)
 * [Sobre anúncios de comunidade](about-community-ads.md)
 * [Relatório de anúncios de instalação de apps](app-install-ads-reports.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

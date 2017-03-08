@@ -3,23 +3,30 @@ author: jnHs
 Description: "Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Centro de Desenvolvimento, apresentamos algumas informações para você começar."
 title: "Informações sobre IVA"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9ff913999f0697b379df868277fb45597150aa6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a26cb43d230cd7dbb050254cceb70d3158c3af5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informações sobre IVA
+# <a name="vat-info"></a>Informações sobre IVA
 
 
 Se for solicitado que você forneça um número de ID de IVA durante o processo de registro do Centro de Desenvolvimento, apresentamos algumas informações para você começar.
 
-## Noções básicas sobre números de IVA
+## <a name="understanding-vat-numbers"></a>Noções básicas sobre números de IVA
 
 
 Um número do imposto sobre valor agregado (IVA) é um identificador usado para países ou regiões na União Europeia. Para obter mais informações, consulte o [site da VIES](http://go.microsoft.com/fwlink/p/?LinkId=258372) oficial da União Europeia.
 
-## Formatos aceitos para números de IVA
+## <a name="accepted-formats-for-vat-numbers"></a>Formatos aceitos para números de IVA
 
 
 Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é fornecida apenas como orientação. Você deve verificar com as autoridades fiscais locais quaisquer alterações recentes se esta orientação não for suficiente para você fornecer um número de IVA à Microsoft.
@@ -247,10 +254,5 @@ Observe que a Microsoft não oferece consultoria fiscal, e a tabela a seguir é 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

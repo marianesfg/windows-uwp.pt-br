@@ -3,18 +3,25 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "Árvore visual de composição"
 description: "Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e6e40d60708189235c02a21df7e232d52ecfbfe4
+ms.lasthandoff: 02/07/2017
 
 ---
-# Árvore visual de composição
+# <a name="composition-visual-tree"></a>Árvore visual de composição
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Elementos visuais de composição compõem a estrutura da árvore visual que todos os outros recursos da API de composição usam e têm como referência. A API permite que os desenvolvedores definam e criem um ou vários objetos visuais, cada um representando um único nó em uma árvore visual.
 
-## Elementos visuais
+## <a name="visuals"></a>Elementos visuais
 
 Há três tipos de elementos visuais que compõem a estrutura da árvore visual, além de uma classe de pincel de base com várias subclasses que afetam o conteúdo de um elemento visual:
 
@@ -23,7 +30,7 @@ Há três tipos de elementos visuais que compõem a estrutura da árvore visual,
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – é derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e adiciona a capacidade de associar um pincel para que o elemento visual possa renderizar pixels, incluindo imagens, efeitos ou uma cor sólida.
 -   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – permite a aplicação de um efeito ao conteúdo de um elemento visual. Há uma série de subclasses de CompositionBrush.
 
-## Amostra CompositionVisual
+## <a name="the-compositionvisual-sample"></a>Amostra CompositionVisual
 
 Na amostra, há uma série de quadrados de cor sólida que podem ser clicados e arrastados na tela. Quando você clica em um quadrado, ele vai para frente, gira 45 graus e fica opaco quando arrastado.
 
@@ -44,7 +51,7 @@ Na amostra, também há três elementos visuais diferentes no trabalho:
 
 Embora esta amostra não abranja conceitos como animações ou efeitos mais complexos, ela contém os blocos de construção que todos esses sistemas usam.
 
-## Criar um compositor
+## <a name="creating-a-compositor"></a>Criar um compositor
 
 Criar um [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) e armazená-lo para uso como alocador em uma variável é uma tarefa simples. O trecho a seguir mostra como criar um novo **Compositor**:
 
@@ -52,7 +59,7 @@ Criar um [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn7067
 _compositor = new Compositor();
 ```
 
-## Criar um SpriteVisual e ColorBrush
+## <a name="creating-a-spritevisual-and-colorbrush"></a>Criar um SpriteVisual e ColorBrush
 
 Com o [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789), é fácil criar objetos sempre que você precisar deles, como um [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) e um [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
 
@@ -63,7 +70,7 @@ visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xF
 
 Embora isso seja apenas algumas linhas de código, ele demonstra um conceito útil: os objetos [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) são o coração do sistema de efeitos. O **SpriteVisual** oferece excelente flexibilidade e relacionamento na criação de cores, imagens e efeitos. O **SpriteVisual** é um tipo de elemento visual único que pode preencher um retângulo 2D com um pincel, neste caso, uma cor sólida.
 
-## Recortar um elemento visual
+## <a name="clipping-a-visual"></a>Recortar um elemento visual
 
 O [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) também pode ser usado para criar clipes para um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). A seguir está um exemplo da amostra do uso de [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) para cortar cada lado do elemento visual:
 
@@ -78,7 +85,7 @@ _currentVisual.Clip = clip;
 
 Observação: como outros objetos na API, [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) pode ter animações aplicadas às suas propriedades.
 
-## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Girar um clipe
+## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Girar um clipe
 
 Um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) pode ser transformado com uma rotação. Observe que [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) aceita radianos e graus. Esse elemento assume radianos como padrão, mas é fácil especificar graus, conforme mostrado no trecho a seguir:
 
@@ -88,7 +95,7 @@ child.RotationAngleInDegrees = 45.0f;
 
 Rotation é apenas um exemplo de um conjunto de componentes de transformação fornecidos pela API para facilitar essas tarefas. Outros exemplos incluem Offset, Scale, Orientation, RotationAxis e 4x4 TransformMatrix.
 
-## Definir a opacidade
+## <a name="setting-opacity"></a>Definir a opacidade
 
 Definir a opacidade de um elemento visual é uma operação simples que usa um valor flutuante. Por exemplo, na amostra, todos os quadrados começam na opacidade 0.8:
 
@@ -98,7 +105,7 @@ visual.Opacity = 0.8f;
 
 Assim como a rotação, a propriedade [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) pode ser animada.
 
-## Alterar a posição do elemento visual na coleção
+## <a name="changing-the-visuals-position-in-the-collection"></a>Alterar a posição do elemento visual na coleção
 
 A API de composição permite que a posição de um elemento visual em um [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection) seja alterada de várias formas. Ele pode ser colocado acima de outro elemento visual com [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove), colocado abaixo com [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow), ser movido para o início com [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop) ou para o final com [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom).
 
@@ -108,7 +115,7 @@ Na amostra, um [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn70
 parent.Children.InsertAtTop(_currentVisual);
 ```
 
-## Exemplo completo
+## <a name="full-example"></a>Exemplo completo
 
 No exemplo completo, todos os conceitos acima são usados juntos para construir e movimentar uma árvore simple de objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) para alterar a opacidade sem usar XAML, WWA ou DirectX. Este exemplo mostra como objetos **Visual** filho são criados e adicionados e como as propriedades são alteradas.
 
@@ -504,10 +511,5 @@ namespace compositionvisual
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

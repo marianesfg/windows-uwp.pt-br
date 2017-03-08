@@ -2,13 +2,21 @@
 author: WilliamsJason
 title: "Referência de API da captura de mídia"
 description: "Saiba como acessar a API de captura de mídia de maneira programática."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 translationtype: Human Translation
-ms.sourcegitcommit: 4356bd2cfc7697905ed91d60b5829c06d850e109
-ms.openlocfilehash: 2f77c565acf272a1a8f147eb07ac6c7f08bf8ef0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9819e632ab6de58eee4358866d3186c0fa31f69f
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referência de API da captura de mídia #
+# <a name="media-capture-api-reference"></a>Referência de API da captura de mídia #
 
 **Solicitação**
 
@@ -37,7 +45,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 * Nenhum
 
-###Resposta###
+###<a name="response"></a>Resposta###
 
 **Código de status**
 
@@ -52,10 +60,5 @@ Esta API tem os códigos de status esperados a seguir.
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

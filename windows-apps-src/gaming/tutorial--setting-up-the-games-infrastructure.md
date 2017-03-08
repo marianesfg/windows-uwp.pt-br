@@ -3,30 +3,37 @@ author: mtoepke
 title: Configurar o projeto de jogo
 description: "O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, instalação, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3bf9e6f70f71dc0b70a2f8af148c44acc1a329fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Configurar o projeto de jogo
+# <a name="set-up-the-game-project"></a>Configurar o projeto de jogo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O primeiro passo na montagem do jogo é configurar um projeto no Microsoft Visual Studio de modo a minimizar a quantidade de trabalho de infraestrutura de código necessária. Você pode poupar muito tempo e problemas usando os modelos certos e configurando o projeto especificamente para o desenvolvimento de jogos. Guiaremos você em meio à instalação e à configuração de um projeto de jogo simples.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Saber como configurar um projeto de jogo Direct3D no Visual Studio.
 
-## Configurando o projeto de jogo
+## <a name="setting-up-the-game-project"></a>Configurando o projeto de jogo
 
 
 Você pode criar um jogo do zero, com apenas um editor de texto, alguns exemplos e uma cabeça cheia de ideias. Mas essa provavelmente não é a melhor maneira de dedicar seu tempo. Se você for estiver começando no desenvolvimento de UWP (Plataforma Universal do Windows), deixe o Visual Studio ajudar você. Consulte o que fazer para iniciar seu projeto de maneira incrível.
 
-## 1. Escolha o modelo correto.
+## <a name="1-pick-the-right-template"></a>1. Escolha o modelo correto.
 
 
 Um modelo do Visual Studio é uma coleção de configurações e arquivos de código voltados para um tipo específico de aplicativo com base na linguagem e na tecnologia de preferência. No Microsoft Visual Studio 2015, você encontrará vários modelos que podem facilitar consideravelmente o desenvolvimento de aplicativos gráficos e jogos. Se você não usar um modelo, será necessário desenvolver grande parte da estrutura básica de exibição e renderização de elementos gráficos por conta própria. Isso pode ser um pouco complexo para um novo desenvolvedor de jogos.
@@ -120,7 +127,7 @@ void App::Run()
 
 Se a janela do jogo não estiver fechada, ocorrerá o envio de todos os eventos, atualização do temporizador e renderização/apresentação dos resultados do pipeline de elementos gráficos. Abordamos isso com mais detalhes em [Definindo a estrutura UWP do jogo](tutorial--building-the-games-metro-style-app-framework.md) e [Montando o pipeline de renderização](tutorial--assembling-the-rendering-pipeline.md). A esta altura, você deve ter uma noção da estrutura de código básica de um jogo UWP DirectX.
 
-## 2. Examine e atualize o arquivo package.appxmanifest
+## <a name="2-review-and-update-the-packageappxmanifest-file"></a>2. Examine e atualize o arquivo package.appxmanifest
 
 
 Os arquivos de códigos não são os únicos elementos do modelo. O arquivo **package.appxmanifest** contém metadados sobre o projeto que serão usados para empacotar e iniciar o jogo e enviá-lo à Windows Store. Ele também contém informações importante usadas pelo sistema do jogador para fornecer acesso aos recursos do sistema de que o jogo precisa para ser executado.
@@ -137,7 +144,7 @@ Se você não selecionar as funcionalidades usadas pelo jogo, como o acesso à *
 
 Agora vejamos o restante dos arquivos que acompanham o modelo **Aplicativo DirectX 11 (Universal Windows)**.
 
-## 3. Revise as bibliotecas e os calendários incluídos
+## <a name="3-review-the-included-libraries-and-headers"></a>3. Revise as bibliotecas e os calendários incluídos
 
 
 Nós ainda não examinamos alguns arquivos. Esses arquivos fornecem ferramentas adicionais e suporte comuns aos cenários de desenvolvimento do jogo em Direct3D.
@@ -153,7 +160,7 @@ Nós ainda não examinamos alguns arquivos. Esses arquivos fornecem ferramentas 
 
  
 
-### Próximas etapas
+### <a name="next-steps"></a>Próximas etapas
 
 Neste ponto, você pode criar um projeto de jogo DirectX com UWP e identificar os componentes e arquivos fornecidos pelo modelo Aplicativo DirectX 11 (Universal Windows).
 
@@ -165,10 +172,5 @@ No próximo tutorial, [Definindo a estrutura UWP do jogo](tutorial--building-the
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

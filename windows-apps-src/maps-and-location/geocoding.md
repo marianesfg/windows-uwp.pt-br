@@ -3,13 +3,20 @@ author: PatrickFarley
 title: "Executar geocódigo e geocódigo reverso"
 description: "Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe MapLocationFinder no namespace Windows.Services.Maps."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, geocodificação, mapa, localização"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16be7bcafaf286a71e79fb4bca01511ddc7a1ae0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Executar geocódigo e geocódigo reverso
+# <a name="perform-geocoding-and-reverse-geocoding"></a>Executar geocódigo e geocódigo reverso
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -32,7 +39,7 @@ Veja como as classes de geocódigo e geocódigo reverso estão relacionadas:
 
  
 
-## Obter uma localização (geocódigo)
+## <a name="get-a-location-geocode"></a>Obter uma localização (geocódigo)
 
 
 Converta um endereço ou dê um nome para uma localização geográfica (geocódigo) executando as seguintes etapas.
@@ -81,7 +88,7 @@ Esse código exibe os seguintes resultados na caixa de texto `tbOutputText` .
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## Obter um endereço (geocódigo reverso)
+## <a name="get-an-address-reverse-geocode"></a>Obter um endereço (geocódigo reverso)
 
 
 Converta uma localização geográfica em um endereço (geocódigo reverso) realizando as etapas a seguir.
@@ -123,7 +130,7 @@ Esse código exibe os seguintes resultados na caixa de texto `tbOutputText`.
 town = Redmond
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -133,11 +140,4 @@ town = Redmond
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

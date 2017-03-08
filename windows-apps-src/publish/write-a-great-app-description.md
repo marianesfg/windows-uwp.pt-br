@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo."
-title: "Escreva uma ótima descrição do aplicativo"
+title: "Escrever uma ótima descrição do aplicativo"
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 1591a9a84db2d0b00345d522ee5fc076142e0054
-ms.openlocfilehash: 01bc284b74568651012acfc7fb29c8912bb1f4d1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 632d18270a34a7d975aa8d7216e49769a3cd7b84
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Escreva uma ótima descrição do aplicativo
+# <a name="write-a-great-app-description"></a>Escrever uma ótima descrição do aplicativo
 
 
 Uma ótima descrição pode fazer o seu aplicativo se destacar na Windows Store e ajudar a incentivar os clientes a baixá-lo. [A descrição que você insere quando envia o seu aplicativo](create-app-store-listings.md#description) é exibida nos listagem da Loja do aplicativo. As primeiras linhas também poderão ser exibidas nos resultados da pesquisa e em listas de algoritmos na Loja.
@@ -36,10 +43,5 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

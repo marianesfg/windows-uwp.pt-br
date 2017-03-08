@@ -4,12 +4,20 @@ Description: "Usar interface do usuário aninhada para permitir várias ações 
 title: "Interface do usuário aninhada em itens de lista"
 label: Nested UI in list items
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
+ms.lasthandoff: 02/08/2017
 
 ---
-# Interface do usuário aninhada em itens de lista
+# <a name="nested-ui-in-list-items"></a>Interface do usuário aninhada em itens de lista
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -28,7 +36,7 @@ Neste artigo, usamos os termos *lista*, *item de lista* e *interface do usuário
 
 > OBSERVAÇÃO&nbsp;&nbsp; Os controles ListView e GridView são derivados da classe [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre listas, as informações se aplicam aos controles ListView e GridView.
 
-## Ações principais e secundárias
+## <a name="primary-and-secondary-actions"></a>Ações principais e secundárias
 
 Ao criar a interface do usuário com uma lista, considere quais ações o usuário pode executar dentre os itens de lista.  
 
@@ -43,23 +51,23 @@ A *ação principal* é o que o usuário espera acontecer ao pressionar o item d
 
 *Ações secundárias* são normalmente aceleradores associados a itens de lista. Esses aceleradores podem ser para gerenciamento de lista ou ações relacionadas ao item de lista.
 
-## Opções para ações secundárias
+## <a name="options-for-secondary-actions"></a>Opções para ações secundárias
 
 Ao criar a interface do usuário de lista, você precisa primeiro considerar todos os métodos de entrada que a UWP aceita. Para saber mais sobre os diferentes tipos de entrada, consulte a [Cartilha de entrada](../input-and-devices/input-primer.md).
 
-Depois de confirmar que seu aplicativo aceita todas as entradas que a UWP aceita, você deve decidir se as ações secundárias de seu aplicativo são importantes o suficiente para serem expostas como aceleradores na lista principal. Lembre-se de que quanto mais ações que você expõe, mais complicado sua interface do usuário se torna. Você realmente precisa expor as ações secundárias na lista principal da interface do usuário ou pode colocá-las em outro lugar?
+Depois de confirmar que seu app aceita todas as entradas que a UWP aceita, você deve decidir se as ações secundárias de seu app são importantes o suficiente para serem expostas como aceleradores na lista principal. Lembre-se de que quanto mais ações que você expõe, mais complicado sua interface do usuário se torna. Você realmente precisa expor as ações secundárias na lista principal da interface do usuário ou pode colocá-las em outro lugar?
 
 Você pode considerar expor ações adicionais na lista principal da interface do usuário quando essas ações precisam ser acessadas por qualquer entrada sempre.
 
 Se você decidir que não é necessário colocar as ações secundárias na lista principal da interface do usuário, há várias outras maneiras de apresentá-las ao usuário. Aqui estão algumas opções de lugar em que você pode considerar colocar as ações secundárias.
 
-### Colocar as ações secundárias na página de detalhes
+### <a name="put-secondary-actions-on-the-detail-page"></a>Colocar as ações secundárias na página de detalhes
 
 Colocar as ações secundárias na página para onde o item de lista navega quando é pressionado. Quando você usa o padrão mestre/detalhes, a página de detalhes é geralmente um bom lugar para colocar ações secundárias.
 
 Para saber mais, veja o [Padrão mestre/detalhes](master-details.md).
 
-### Colocar as ações secundárias em um menu de contexto
+### <a name="put-secondary-actions-in-a-context-menu"></a>Colocar as ações secundárias em um menu de contexto
 
 Coloque as ações secundárias em um menu de contexto que o usuário possa acessar ao clicar com o botão direito ou ao pressionar e segurar. Isso oferece a vantagem de permitir que o usuário execute uma ação, como excluir um email, sem precisar carregar a página de detalhes. Também é recomendável disponibilizar essas opções na página de detalhes, pois os menus de contexto devem ser aceleradores, em vez da interface do usuário principal.
 
@@ -67,16 +75,16 @@ Para expor as ações secundárias quando a entrada é de um gamepad ou controle
 
 Para obter mais informações, consulte [Menus de contexto e submenus](menus.md).
 
-### Colocar as ações secundárias na interface do usuário de foco para otimizar para entrada de ponteiro
+### <a name="put-secondary-actions-in-hover-ui-to-optimize-for-pointer-input"></a>Colocar as ações secundárias na interface do usuário de foco para otimizar para entrada de ponteiro
 
-Se você espera que seu aplicativo seja usado com frequência com entrada de ponteiro, como mouse e caneta, e deseja disponibilizar ações secundárias prontamente somente para essas entradas, é possível mostrar as ações secundárias apenas em foco. Esse acelerador fica visível somente quando uma entrada de ponteiro é usada, então, use as outras opções para dar suporte a outros tipos de entrada também.
+Se você espera que seu app seja usado com frequência com entrada de ponteiro, como mouse e caneta, e deseja disponibilizar ações secundárias prontamente somente para essas entradas, é possível mostrar as ações secundárias apenas em foco. Esse acelerador fica visível somente quando uma entrada de ponteiro é usada, então, use as outras opções para dar suporte a outros tipos de entrada também.
 
 ![Interface do usuário aninhada mostrada em foco](images/nested-ui-hover.png)
 
 
 Para obter mais informações, consulte [Interações por mouse](../input-and-devices/mouse-interactions.md).
 
-## Posicionamento da interface do usuário para ações principais e secundárias
+## <a name="ui-placement-for-primary-and-secondary-actions"></a>Posicionamento da interface do usuário para ações principais e secundárias
 
 Se você decidir que as ações secundárias devem ser expostas na interface do usuário da lista principal, recomendamos as diretrizes a seguir.
 
@@ -84,15 +92,15 @@ Quando você criar um item de lista com ações principais e secundárias, coloq
 
 Nestes exemplos, falaremos sobre a interface do usuário de lista em que o item flui mais horizontalmente (é mais larga do que sua altura). No entanto, você pode ter itens de lista que têm a forma mais quadrados ou a altura maior do que a largura. Normalmente, esses itens são usados em uma grade. Para esses itens, se a lista não rolar verticalmente, você poderá colocar as ações secundárias na parte inferior do item de lista, em vez do lado direito.
 
-## Considerar todas as entradas
+## <a name="consider-all-inputs"></a>Considerar todas as entradas
 
 Ao decidir usar a interface do usuário aninhada, avalie também a experiência do usuário com todos os tipos de entrada. Conforme mencionado anteriormente, a interface do usuário aninhada funciona bem para alguns tipos de entrada. No entanto, ela nem sempre funciona bem para outros tipos. Em particular, entradas por teclado, controlador e remotas podem ter dificuldade para acessar elementos da interface do usuário aninhada. Certifique-se de seguir as orientações para garantir que sua UWP funcione com todos os tipos de entrada.
 
-## Manipulação da interface do usuário aninhada
+## <a name="nested-ui-handling"></a>Manipulação da interface do usuário aninhada
 
 Quando você tiver mais de uma ação aninhada no item de lista, recomendamos estas orientações para manipular a navegação com teclado, gamepad, controle remoto ou outra entrada sem ponteiro.
 
-### Interface do usuário aninhada onde os itens de lista executam uma ação
+### <a name="nested-ui-where-list-items-perform-an-action"></a>Interface do usuário aninhada onde os itens de lista executam uma ação
 
 Se a interface do usuário de lista com elementos aninhados aceitar ações como invocar, seleção (única ou vários) ou operações de arrastar e soltar, recomendamos estas técnicas de seta para navegar pelos elementos da interface do usuário aninhada.
 
@@ -130,7 +138,7 @@ Para chegar a essa interface do usuário, defina [IsItemClickEnabled](https://ms
 
 Para saber o código para implementar isso, consulte a seção [Exemplo](#example) deste artigo.
 
-### Interface do usuário aninhada onde os itens de lista não executam uma ação
+### <a name="nested-ui-where-list-items-do-not-perform-an-action"></a>Interface do usuário aninhada onde os itens de lista não executam uma ação
 
 Você pode usar uma exibição de lista porque ela fornece o comportamento de virtualização e rolagem otimizado, mas não têm uma ação associada a um item de lista. Essas interfaces do usuário geralmente usam o item de lista somente para agrupar elementos e garantir a rolagem como um conjunto.
 
@@ -175,7 +183,7 @@ Quando a entrada é de um teclado, esta é a experiência que o usuário tem:
 - De um dos itens da interface do usuário aninhada, pressionar a tecla tab percorre os itens da interface do usuário aninhada na ordem de tabulação.  Depois que todos os itens da interface do usuário aninhada são percorridos, coloca o foco no próximo controle na ordem de tabulação após ListView.
 - A combinação Shift + Tab tem o comportamento na direção inversa do comportamento da tecla Tab.
 
-## Exemplo
+## <a name="example"></a>Exemplo
 
 Este exemplo mostra como implementar uma [interface do usuário aninhada onde os itens de lista executam uma ação](#nested-ui-where-list-items-perform-an-action).
 
@@ -302,9 +310,4 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

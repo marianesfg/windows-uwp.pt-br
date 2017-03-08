@@ -3,21 +3,28 @@ author: mtoepke
 title: Renderizar o mapa de sombra para o buffer de profundidade
 description: "Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, renderização, mapa de sombra, buffer de profundidade, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Renderizar o mapa de sombra para o buffer de profundidade
+# <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Limpar o buffer de profundidade
+## <a name="clear-the-depth-buffer"></a>Limpar o buffer de profundidade
 
 
 Sempre limpe o buffer de profundidade antes de renderizar com ele.
@@ -27,7 +34,7 @@ context->ClearRenderTargetView(m_deviceResources->GetBackBufferRenderTargetView(
 context->ClearDepthStencilView(m_shadowDepthView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 ```
 
-## Renderizar o mapa de sombra para o buffer de profundidade
+## <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 
 
 Para a passagem de renderização de sombra, especifique um buffer de profundidade, mas não defina um destino de renderização.
@@ -124,7 +131,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 
 **Otimizar o tronco de exibição:** garanta que a implementação calcule um tronco de exibição firme, para obter o máximo de precisão com o buffer de profundidade. Consulte as [técnicas comuns para melhorar mapas de profundidade de sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324) para conhecer mais dicas sobre técnicas de sombreamento.
 
-## Sombreador de vértice para passagem de sombra
+## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértice para passagem de sombra
 
 
 Use uma versão simplificada do sombreador de vértice para renderizar somente a posição do vértice no espaço de luz. Não inclua normais de iluminação, transformações secundárias, entre outros.
@@ -153,10 +160,5 @@ Na próxima parte deste guia passo a passo, veremos como adicionar sombras pela 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: msatranjr
 title: "Diagnóstico das condições de erro do componente do Tempo de Execução do Windows"
 description: "Este artigo fornece informações adicionais sobre restrições em componentes do Tempo de Execução do Windows escritos com código gerenciado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: da02ed10336ea2381213fd5fada153db4cc06ab1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
+# <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnóstico das condições de erro do componente do Tempo de Execução do Windows
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -19,7 +26,7 @@ Este artigo fornece informações adicionais sobre restrições em componentes d
 
 Este artigo não aborda todos os erros. Os erros debatidos aqui são agrupados por categoria geral, e cada categoria inclui uma tabela de mensagens de erro associadas. Procure o texto da mensagem (omitindo valores específicos de espaços reservados) ou o número da mensagem. Caso você não encontre as informações de que precisa aqui, ajude-nos a melhorar a documentação usando o botão de feedback ao final deste artigo. Inclua a mensagem de erro. Também é possível registrar um bug no site Microsoft Connect.
 
-## A mensagem de erro de implementação da interface assíncrona apresenta um tipo incorreto
+## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>A mensagem de erro de implementação da interface assíncrona apresenta um tipo incorreto
 
 
 Os componentes do Tempo de Execução do Windows gerenciados não podem implementar as interfaces da UWP (Plataforma Universal do Windows) que representam ações ou operações assíncronas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) ou [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Em vez disso, o .NET Framework fornece a classe [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para gerar operações assíncronas em componentes do Tempo de Execução do Windows. A mensagem de erro que Winmdexp.exe exibe quando você tenta implementar uma interface async se refere incorretamente a essa classe pelo nome anterior, AsyncInfoFactory. O .NET Framework não inclui mais a classe AsyncInfoFactory.
@@ -34,7 +41,7 @@ Os componentes do Tempo de Execução do Windows gerenciados não podem implemen
 
  
 
-## Referências não encontradas a mscorlib. dll ou System.Runtime.dll
+## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>Referências não encontradas a mscorlib. dll ou System.Runtime.dll
 
 
 Esse problema só ocorre quando você usa Winmdexp.exe na linha de comando. Recomendamos usar a opção /reference para incluir referências a mscorlib. dll e System.Runtime.dll nos assemblies de referência básicos do .NET Framework, que estão em "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\..." em um computador 32 bits).
@@ -46,7 +53,7 @@ Esse problema só ocorre quando você usa Winmdexp.exe na linha de comando. Reco
 
  
 
-## Não é permitida a sobrecarga do operador
+## <a name="operator-overloading-is-not-allowed"></a>Não é permitida a sobrecarga do operador
 
 
 Em um componente do Tempo de Execução do Windows escrito em código gerenciado, não é possível expor operadores sobrecarregados em tipos públicos.
@@ -61,7 +68,7 @@ Em um componente do Tempo de Execução do Windows escrito em código gerenciado
 
  
 
-## Construtores em uma classe têm o mesmo número de parâmetros
+## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>Construtores em uma classe têm o mesmo número de parâmetros
 
 
 No UWP, uma classe pode ter apenas um construtor com um determinado número de parâmetros; por exemplo, não é possível ter um construtor com um único parâmetro de tipo **String** e outro com um parâmetro único de tipo **int** (**Integer** no Visual Basic). A única solução alternativa é usar um número diferente de parâmetros para cada construtor.
@@ -72,7 +79,7 @@ No UWP, uma classe pode ter apenas um construtor com um determinado número de p
 
  
 
-## É preciso especificar um padrão para sobrecargas com o mesmo número de parâmetros
+## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>É preciso especificar um padrão para sobrecargas com o mesmo número de parâmetros
 
 
 Na UWP, os métodos sobrecarregados só podem ter o mesmo número de parâmetros caso uma sobrecarga seja especificada como a sobrecarga padrão. Consulte "Métodos sobrecarregados" em [Criação de componentes de Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
@@ -84,7 +91,7 @@ Na UWP, os métodos sobrecarregados só podem ter o mesmo número de parâmetros
 
  
 
-## Erros de namespace e nomes inválidos para o arquivo de saída
+## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>Erros de namespace e nomes inválidos para o arquivo de saída
 
 
 Na Plataforma Universal do Windows, todos os tipos públicos em um arquivo de metadados do Windows (. winmd) devem estar em um namespace que compartilha o nome do arquivo .winmd ou em subnamespaces do nome do arquivo. Por exemplo, caso o projeto do Visual Studio se chame A.B (ou seja, o componente do Tempo de Execução do Windows é A.B.winmd), ele pode conter classes públicas A.B.Class1 e A.B.C.Class2, mas não A.Class3 (WME0006) ou D.Class4 (WME1044).
@@ -118,7 +125,7 @@ Um tipo em um componente do Tempo de Execução do Windows não pode ter um nome
 
  
 
-## Exportação de tipos que não sejam tipos da Plataforma Universal do Windows válidos
+## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>Exportação de tipos que não sejam tipos da Plataforma Universal do Windows válidos
 
 
 A interface pública do componente deve expor somente tipos UWP. No entanto, o .NET Framework fornece mapeamentos para vários tipos mais usados que sejam um pouco diferentes no .NET Framework e na UWP. Isso permite que o desenvolvedor do .NET Framework trabalhe com tipos familiares, em vez de aprender novos. É possível usar esses tipos do .NET Framework mapeados na interface pública do componente. Veja "Declaração de tipos em componentes do Tempo de Execução do Windows" e "Passagem de tipos de Plataforma Universal do Windows para código gerenciado" em [Criação de componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Mapeamentos do .NET Framework dos tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
@@ -168,7 +175,7 @@ Em geral, a melhor opção é a interface mais próxima do tipo. Por exemplo, pa
 
  
 
-## Estruturas que contêm campos de tipos não permitidos
+## <a name="structures-that-contain-fields-of-disallowed-types"></a>Estruturas que contêm campos de tipos não permitidos
 
 
 Na UWP, uma estrutura só pode conter campos, e apenas estruturas podem conter campos. Esses campos devem ser públicos. Entre os tipos de campo válidos estão enumerações, estruturas e tipos primitivos.
@@ -179,7 +186,7 @@ Na UWP, uma estrutura só pode conter campos, e apenas estruturas podem conter c
 
  
 
-## Restrições de matrizes em assinaturas de membro
+## <a name="restrictions-on-arrays-in-member-signatures"></a>Restrições de matrizes em assinaturas de membro
 
 
 Na UWP, as matrizes em assinaturas de membro devem ser unidimensionais com um limite inferior de 0 (zero). Tipos de matrizes aninhados como `myArray[][]` (`myArray()()` em Visual Basic) não são permitidos.
@@ -196,7 +203,7 @@ Na UWP, as matrizes em assinaturas de membro devem ser unidimensionais com um li
 
  
 
-## Os parâmetros de matriz devem especificar se o conteúdo da matriz é legível ou gravável
+## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Os parâmetros de matriz devem especificar se o conteúdo da matriz é legível ou gravável
 
 
 Na UWP, os parâmetros devem ser somente leitura ou somente gravação. Os parâmetros não podem ser marcados **ref** (**ByRef** sem o atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) em Visual Basic). Isso se aplica ao conteúdo das matrizes, logo, os parâmetros da matriz devem indicar se o conteúdo da matriz é somente leitura ou somente gravação. A direção é clara para parâmetros **out** (parâmetro **ByRef** com o atributo OutAttribute no Visual Basic), mas parâmetros de matriz passados por valor (ByVal no Visual Basic) devem ser marcados. Consulte [Passagem de matrizes para um componente do Tempo de Execução do Windows](passing-arrays-to-a-windows-runtime-component.md).
@@ -211,7 +218,7 @@ Na UWP, os parâmetros devem ser somente leitura ou somente gravação. Os parâ
 | WME1106      | O método '{0}' tem um parâmetro '{1}', que é uma matriz. No Tempo de Execução do Windows, o conteúdo dos parâmetros de matriz deve ser legível ou gravável. Aplique {2} ou {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
-## Membro com um parâmetro chamado "value"
+## <a name="member-with-a-parameter-named-value"></a>Membro com um parâmetro chamado "value"
 
 
 Na UWP, os valores de retorno são considerados parâmetros de saída e os nomes dos parâmetros devem ser exclusivos. Por padrão, Winmdexp.exe dá ao valor de retorno o nome "value". Se o método tiver um parâmetro chamado "value", você receberá o erro WME1092. Existem duas maneiras de corrigir isso:
@@ -245,13 +252,8 @@ O código JavaScript pode acessar os parâmetros de saída de um método por nom
 | WME1092 | O método '\{0}' tem um parâmetro chamado '\{1}', que é o mesmo nome do valor de retorno padrão. Leve em consideração usar outro nome para o parâmetro ou usar o System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explicitamente o nome do valor de retorno.<br/>**Observação**  O nome padrão é "returnValue" para acessadores de propriedade e "value" para todos os outros métodos. |
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criando componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](https://msdn.microsoft.com/library/hh925576.aspx)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

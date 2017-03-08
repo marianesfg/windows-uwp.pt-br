@@ -3,10 +3,16 @@ author: mcleanbyron
 ms.assetid: FD381669-F962-465E-940B-AED9C8D19C90
 description: "Saiba como usar o namespace Windows.Services.Store para trabalhar com complementos consumíveis."
 title: "Habilitar compras de complementos consumíveis"
-keywords: "exemplo de código de oferta no aplicativo"
+keywords: "windows 10, uwp, consumíveis, complementos, compras no aplicativo, IAPs, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 12191a946ec080c8e386191363617a9c437671c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d4cc4d526dfbfb2a120bc0a214b5b9287ec1acb3
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -84,9 +90,4 @@ Este exemplo demonstra como usar o método [GetConsumableBalanceRemainingAsync](
 * [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

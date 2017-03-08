@@ -2,9 +2,17 @@
 author: Mtoepke
 title: Problemas conhecidos com o Programa de desenvolvedor UWP no Xbox One
 description: 
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 translationtype: Human Translation
-ms.sourcegitcommit: 3f0647bb76340ccbd538e9e4fefe173924d6baf4
-ms.openlocfilehash: 18c8d1fcd696f336601dc6c531424fe8bfb78304
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -16,7 +24,7 @@ Este tópico descreve problemas conhecidos com o Programa de desenvolvedor UWP n
 
 A lista a seguir destaca alguns problemas conhecidos que podem ocorrer, embora essa não seja uma lista completa. 
 
-**Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Desenvolvendo aplicativos da Plataforma Universal do Windows](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop). 
+**Queremos receber seu feedback**, portanto, relate todos os problemas que você encontrar no fórum [Desenvolvendo apps da Plataforma Universal do Windows](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop). 
 
 Se você se perder, leia as informações neste tópico. Consulte [Perguntas frequentes](frequently-asked-questions.md) e use os fóruns para pedir ajuda.
 
@@ -27,7 +35,7 @@ Se você se perder, leia as informações neste tópico. Consulte [Perguntas fre
 Às vezes, pode acontecer de você não consegui sair do Modo de Desenvolvedor nem usando DevHome, nem usando as Configurações do Desenvolvedor.
 Existem duas soluções alternativas possíveis para isso: 
 1. Desmarque a caixa **Delete side loaded games and apps** ao sair do Modo de Desenvolvedor
-2. Ir até Meus jogos e apps e desinstalar todos os aplicativos de desenvolvedor instalados no console
+2. Ir até Meus jogos e apps e desinstalar todos os apps de desenvolvedor instalados no console
  
 <!--## Memory limits for background apps are partially enforced
  
@@ -37,20 +45,20 @@ There is currently no workaround for this issue. Apps should govern their memory
  
 ## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>A implantação com base em VS falha com os Controles dos Pais ativados
 
-A inicialização do aplicativo com base em VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
+A inicialização do app com base em VS falhará se o console tiver os Controles dos Pais ativados em Configurações.
 
 Para contornar esse problema, desabilite temporariamente os Controles dos Pais ou:
-1. Implante seu aplicativo no console com os Controles dos Pais desativados.
+1. Implante seu app no console com os Controles dos Pais desativados.
 2. Ative os Controles dos Pais.
-3. Inicie seu aplicativo a partir do console.
-4. Digite um PIN ou uma senha para permitir a inicialização do aplicativo.
-5. O aplicativo será iniciado.
-6. Feche o aplicativo.
-7. Inicie a partir do VS usando F5, e o aplicativo será iniciado sem aviso.
+3. Inicie seu app a partir do console.
+4. Digite um PIN ou uma senha para permitir a inicialização do app.
+5. O app será iniciado.
+6. Feche o app.
+7. Inicie a partir do VS usando F5, e o app será iniciado sem aviso.
 
-Nesse caso, a permissão é _fixa_ até você desconectar o usuário, mesmo se você desinstalar e reinstalar o aplicativo.
+Nesse caso, a permissão é _fixa_ até você desconectar o usuário, mesmo se você desinstalar e reinstalar o app.
  
-Há outro tipo de isenção disponível apenas para contas de crianças. Uma conta de criança requer que o pai conecte-se para conceder permissão. Ao conectar, o pai tem a opção de escolher **Sempre** para permitir que a criança inicie o aplicativo. Essa isenção é armazenada na nuvem e persistirá mesmo que a criança saia e entre novamente.   
+Há outro tipo de isenção disponível apenas para contas de crianças. Uma conta de criança requer que o pai conecte-se para conceder permissão. Ao conectar, o pai tem a opção de escolher **Sempre** para permitir que a criança inicie o app. Essa isenção é armazenada na nuvem e persistirá mesmo que a criança saia e entre novamente.   
 
 <!--### x86 vs. x64
 
@@ -99,7 +107,7 @@ Developers can still use HTTP and WebSockets.
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Portas de rede bloqueadas no Xbox One
 
-Os aplicativos da Plataforma Universal do Windows (UWP) em dispositivos do Xbox One não podem se associar a portas na faixa [57344, 65535], inclusive. Embora a associação a essas portas possa parecer ter sido bem-sucedida em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir o aplicativo. Seu aplicativo deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+Os apps da Plataforma Universal do Windows (UWP) em dispositivos do Xbox One não podem se associar a portas na faixa [57344, 65535], inclusive. Embora a associação a essas portas possa parecer ter sido bem-sucedida em tempo de execução, o tráfego de rede pode diminuir silenciosamente antes de atingir o app. Seu app deverá se associar à porta 0 sempre que possível, o que permite que o sistema selecione a porta local. Se você precisar usar uma porta específica, o número da porta deverá estar no intervalo [1025, 49151], e você deve verificar e evitar conflitos com o registro IANA. Para obter mais informações, consulte o [Nome do serviço e registro de número de porta de protocolo de transporte](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
 ## <a name="uwp-api-coverage"></a>Cobertura de API UWP
 
@@ -177,12 +185,52 @@ Você receberá um aviso sobre o certificado que foi fornecido, semelhante à ca
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
+## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>Limitação de KnownFolders.MediaServerDevices no Xbox
+
+Na Área de trabalho, os servidores de mídia são "emparelhados" ao computador e o Serviço de associação de dispositivos sempre rastreia quais servidores estão online no momento para que uma consulta inicial do sistema de arquivo imediatamente possa retornar uma lista dos servidores emparelhados online no momento.
+
+No Xbox, não há nenhuma interface do usuário para adicionar ou remover servidores, portanto, a consulta inicial do sistema de arquivos sempre retornará vazia. Você deve criar uma consulta e assinar o evento ContentsChanged, em seguida, atualizar a consulta sempre que receber uma notificação. Os servidores oferecem informações e a maioria será descoberta em três segundos.
+
+Código de exemplo simples:
+
+```
+namespace TestDNLA {
+
+    public sealed partial class MainPage : Page {
+        public MainPage() {
+            this.InitializeComponent();
+        }
+
+        private async void FindFiles_Click(object sender, RoutedEventArgs e) {
+            try {
+                StorageFolder library = KnownFolders.MediaServerDevices;
+                var folderQuery = library.CreateFolderQuery();
+                folderQuery.ContentsChanged += FolderQuery_ContentsChanged;
+                IReadOnlyList<StorageFolder> rootFolders = await folderQuery.GetFoldersAsync();
+                if (rootFolders.Count == 0) {
+                    Debug.WriteLine("No Folders found");
+                } else {
+                    Debug.WriteLine("Folders found");
+                }
+            } catch (Exception ex) {
+                Debug.WriteLine("Error: " + ex.Message);
+            } finally {
+                Debug.WriteLine("Done");
+            }
+        }
+
+        private async void FolderQuery_ContentsChanged(Windows.Storage.Search.IStorageQueryResultBase sender, object args) {
+            Debug.WriteLine("Folder added " + sender.Folder.Name);
+            IReadOnlyList<StorageFolder> topLevelFolders = await sender.Folder.GetFoldersAsync();
+            foreach (StorageFolder topLevelFolder in topLevelFolders) {
+                Debug.WriteLine(topLevelFolder.Name);
+            }
+        }
+    }
+}
+```
+
 ## <a name="see-also"></a>Consulte também
 - [Perguntas frequentes](frequently-asked-questions.md)
 - [UWP no Xbox One](index.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

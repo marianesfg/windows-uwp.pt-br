@@ -3,16 +3,23 @@ author: PatrickFarley
 title: "Configurar uma cerca geográfica"
 description: "Configure uma cerca geográfica no aplicativo e saiba como manipular notificações em primeiro e segundo planos."
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, mapa, localização, cerca geográfica, notificações"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: e91f0bbb203ef1c77ad1435b1a3f10aa53c3a483
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8a143359948e536d30efb425055969ae8ac0987f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Configurar uma cerca geográfica
+# <a name="set-up-a-geofence"></a>Configurar uma cerca geográfica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
@@ -21,7 +28,7 @@ Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows
 
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Habilitar a funcionalidade de local
+## <a name="enable-the-location-capability"></a>Habilitar a funcionalidade de local
 
 
 1.  Em **Gerenciador de Soluções**, clique duas vezes em **package.appxmanifest** e selecione a guia **Recursos**.
@@ -34,10 +41,10 @@ Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows
   </Capabilities>
 ```
 
-## Configurar uma cerca geográfica
+## <a name="set-up-a-geofence"></a>Configurar uma cerca geográfica
 
 
-### Etapa 1: Solicitar acesso ao local do usuário
+### <a name="step-1-request-access-to-the-users-location"></a>Etapa 1: Solicitar acesso ao local do usuário
 
 **Importante** Você deverá solicitar acesso ao local do usuário usando o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de tentar acessar o local do usuário. É necessário chamar o método **RequestAccessAsync** no thread da interface do usuário e o aplicativo deve estar em segundo plano. O aplicativo não será capaz de acessar informações de local do usuário até o usuário conceder permissão ao aplicativo.
 
@@ -49,7 +56,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 O método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) solicita ao usuário permissão para acessar o local. O usuário é solicitado apenas uma vez (por aplicativo). Após a primeira vez em que a permissão é concedida ou negada, esse método deixa de solicitar a permissão ao usuário. Para ajudar o usuário a alterar as permissões de localização depois que elas tiverem sido solicitadas, é recomendável fornecer um link para as configurações de localização, conforme demonstrado mais adiante neste tópico.
 
-### Etapa 2: Registrar-se para alterações em permissões de localização e estado de cerca geográfica
+### <a name="step-2-register-for-changes-in-geofence-state-and-location-permissions"></a>Etapa 2: Registrar-se para alterações em permissões de localização e estado de cerca geográfica
 
 Neste exemplo, uma instrução **switch** é usada com **accessStatus** (do exemplo anterior) para funcionar somente quando o acesso ao local do usuário for permitido. Caso o acesso ao local do usuário seja permitido, o código acessa as cercas geográficas atuais, registra alterações de estado da cerca geográfica e registra alterações em permissões de localização.
 
@@ -91,7 +98,7 @@ protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 }
 ```
 
-### Etapa 3: Criar a cerca geográfica
+### <a name="step-3-create-the-geofence"></a>Etapa 3: Criar a cerca geográfica
 
 Agora você está pronto para definir e configurar um objeto [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587). Há várias sobrecargas do construtor diferentes para se escolher, dependendo de suas necessidades. No construtor de cerca geográfica mais básico, especifique somente [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) e [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718) conforme mostrado aqui.
 
@@ -139,9 +146,9 @@ Geocircle geocircle = new Geocircle(position, radius);
 bool singleUse = true;
 
 // Set the monitored states.
-MonitoredGeofenceStates monitoredStates = 
-                MonitoredGeofenceStates.Entered | 
-                MonitoredGeofenceStates.Exited | 
+MonitoredGeofenceStates monitoredStates =
+                MonitoredGeofenceStates.Entered |
+                MonitoredGeofenceStates.Exited |
                 MonitoredGeofenceStates.Removed;
 
 // Set how long you need to be in geofence for the enter event to fire.
@@ -157,7 +164,7 @@ DateTimeOffset startTime = DateTime.Now;
 Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse, dwellTime, startTime, duration);
 ```
 
-### Etapa 4: Manipular alterações em permissões de localização
+### <a name="step-4-handle-changes-in-location-permissions"></a>Etapa 4: Manipular alterações em permissões de localização
 
 O objeto [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) dispara o evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) para indicar que as configurações de localização do usuário mudaram. Esse evento transmite o status correspondente por meio da propriedade **sender.Status** do argumento (do tipo [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Observe que esse método não é chamado no thread de interface do usuário, e o objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca as alterações de interface do usuário.
 
@@ -209,7 +216,7 @@ public async void OnGeofenceStatusChanged(GeofenceMonitor sender, object e)
 }
 ```
 
-## Configurar notificações em primeiro plano
+## <a name="set-up-foreground-notifications"></a>Configurar notificações em primeiro plano
 
 
 Após a criação das cercas geográficas, você deve adicionar a lógica para manipular o que acontece quando um evento de cerca geográfica ocorre. Dependendo dos [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) configurados, você pode receber um evento quando:
@@ -220,7 +227,7 @@ Após a criação das cercas geográficas, você deve adicionar a lógica para m
 
 Você pode escutar eventos diretamente de seu aplicativo em execução ou registrar uma tarefa em segundo plano, para que você receba uma notificação em segundo plano quando ocorrer um evento.
 
-### Etapa 1: Registrar eventos de alteração de estado de cerca geográfica
+### <a name="step-1-register-for-geofence-state-change-events"></a>Etapa 1: Registrar eventos de alteração de estado de cerca geográfica
 
 Para seu aplicativo receber uma notificação em primeiro plano sobre a alteração de estado de uma cerca geográfica, registre um manipulador de eventos. Normalmente, isso é configurado quando você cria a cerca geográfica.
 
@@ -234,7 +241,7 @@ private void Initialize()
 
 ```
 
-### Etapa 2: Implementar o manipulador de eventos de cerca geográfica
+### <a name="step-2-implement-the-geofence-event-handler"></a>Etapa 2: Implementar o manipulador de eventos de cerca geográfica
 
 A próxima etapa é implementar os manipuladores de eventos. A ação executada aqui depende do motivo pelo qual seu aplicativo usa a cerca geográfica.
 
@@ -280,7 +287,7 @@ public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
 
 ```
 
-## Configurar notificações em segundo plano
+## <a name="set-up-background-notifications"></a>Configurar notificações em segundo plano
 
 
 Após a criação das cercas geográficas, você deve adicionar a lógica para manipular o que acontece quando um evento de cerca geográfica ocorre. Dependendo dos [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) configurados, você pode receber um evento quando:
@@ -295,7 +302,7 @@ Para escutar um evento de cerca geográfica em segundo plano
 -   Registre a tarefa em segundo plano no aplicativo. Se seu aplicativo necessitar de acesso à Internet, digamos para acesso a um serviço em nuvem, você pode definir um sinalizador para isso quando o evento for disparado. Você pode também definir um sinalizador para verificar se o usuário está presente quando o evento for disparado, para assegurar que ele receba a notificação.
 -   Enquanto seu aplicativo estiver sendo executado em primeiro plano, peça ao usuário para conceder permissões de localização ao aplicativo.
 
-### Etapa 1: Registrar eventos de alteração de estado de cerca geográfica
+### <a name="step-1-register-for-geofence-state-change-events"></a>Etapa 1: Registrar eventos de alteração de estado de cerca geográfica
 
 No manifesto do aplicativo, na guia **Declarações**, adicione uma declaração para uma tarefa em segundo plano de localização. Para isso:
 
@@ -303,9 +310,9 @@ No manifesto do aplicativo, na guia **Declarações**, adicione uma declaração
 -   Defina um tipo de tarefa de propriedade de **Localização**.
 -   Defina um ponto de entrada em seu aplicativo para chamar quando um evento for disparado.
 
-### Etapa 2: Registrar a tarefa em segundo plano
+### <a name="step-2-register-the-background-task"></a>Etapa 2: Registrar a tarefa em segundo plano
 
-O código nesta etapa registra a tarefa em segundo plano de cerca geográfica. Lembre-se de que, quando a cerca geográfica foi criada, nós verificamos as permissões de localização. Para obter mais informações, consulte [Configurar uma cerca geográfica](#setup).
+O código nesta etapa registra a tarefa em segundo plano de cerca geográfica. Lembre-se de que, quando a cerca geográfica foi criada, nós verificamos as permissões de localização.
 
 ```csharp
 async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
@@ -355,7 +362,7 @@ async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
 
 ```
 
-### Etapa 3: Manipulação da notificação em segundo plano
+### <a name="step-3-handling-the-background-notification"></a>Etapa 3: Manipulação da notificação em segundo plano
 
 A ação executada para notificar o usuário depende do que o aplicativo faz, mas é possível exibir uma notificação do sistema, reproduzir um som de áudio ou atualizar um bloco dinâmico. O código nesta etapa manipula a notificação.
 
@@ -374,7 +381,7 @@ async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTas
                 e.CheckResult();
 
                 // Update the UI with the completion status of the background task.
-                // The Run method of the background task sets the LocalSettings. 
+                // The Run method of the background task sets the LocalSettings.
                 var settings = ApplicationData.Current.LocalSettings;
 
                 // Get the status.
@@ -398,14 +405,14 @@ async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTas
 
 ```
 
-## Alterar as configurações de privacidade
+## <a name="change-the-privacy-settings"></a>Alterar as configurações de privacidade
 
 
 Se as configurações de privacidade da localização não permitirem que seu aplicativo acesse a localização do usuário, é recomendável fornecer um link conveniente para as **configurações de privacidade de localização** no aplicativo **Configurações**. Neste exemplo, um controle Hyperlink é usado navegar até o URI `ms-settings:privacy-location`.
 
 ```xml
 <!--Set Visibility to Visible when access to the user's location is denied. -->  
-<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
+<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic"
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
           <Run Text="This app is not able to access Location. Go to " />
               <Hyperlink NavigateUri="ms-settings:privacy-location">
@@ -423,7 +430,7 @@ using Windows.System;
 bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-location"));
 ```
 
-## Testar e depurar o aplicativo
+## <a name="test-and-debug-your-app"></a>Testar e depurar o aplicativo
 
 
 O teste e a depuração de aplicativos com localização geográfica podem ser um desafio, pois esses aplicativos dependem da localização de um dispositivo. Aqui, destacamos vários métodos para testar cercas geográficas de primeiro e segundo plano.
@@ -434,7 +441,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 2.  Teste a entrada em uma cerca geográfica criando de uma região de cerca geográfica que inclua a sua localização física atual. Dessa forma, você já estará dentro da cerca geográfica, e o evento de entrada em cerca geográfica será disparado imediatamente.
 3.  Use o emulador do Microsoft Visual Studio para simular localizações para o dispositivo.
 
-### Testar e depurar um aplicativo com cerca geográfica em execução em primeiro plano
+### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-foreground"></a>Testar e depurar um aplicativo com cerca geográfica em execução em primeiro plano
 
 **Para testar seu aplicativo com cerca geográfica em execução no primeiro plano**
 
@@ -443,7 +450,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 3.  Use estas ferramentas para simular várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o período especificado pela propriedade [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo. Para saber mais sobre como simular localizações, consulte [Definir a localização geográfica simulada do dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  Você também pode usar o emulador para estimar se o tamanho das cercas e duração dos testes aproximadamente necessitam ser detectados em diferentes velocidades.
 
-### Testar e depurar um aplicativo com cerca geográfica em execução em segundo plano
+### <a name="test-and-debug-a-geofencing-app-that-is-running-in-the-background"></a>Testar e depurar um aplicativo com cerca geográfica em execução em segundo plano
 
 **Para testar seu aplicativo com cerca geográfica em execução em segundo plano**
 
@@ -454,7 +461,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 5.  No emulador, simule várias localizações dentro e fora da sua região de cerca geográfica. Espere o tempo suficiente após o [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para disparar o evento. Observe que você deve aceitar o prompt para habilitar permissões de localização para o aplicativo.
 6.  Use o Visual Studio para disparar a tarefa de segundo plano de localização. Para obter mais informações sobre como disparar tarefas em segundo plano no Visual Studio, consulte [Como disparar tarefas em segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378).
 
-## Solucionar problemas do aplicativo
+## <a name="troubleshoot-your-app"></a>Solucionar problemas do aplicativo
 
 
 Para que o aplicativo possa acessar a localização, é necessário habilitar **Localização** no dispositivo. No aplicativo **Configurações**, verifique se as seguintes **configurações de privacidade de localização** estão ativadas:
@@ -463,16 +470,9 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 -   A configuração de serviços de localização, **Localização**, está **ativada**
 -   Em **Escolher aplicativos que podem usar sua localização**, seu aplicativo está definido como **ativado**
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

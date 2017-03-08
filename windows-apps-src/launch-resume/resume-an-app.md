@@ -1,27 +1,34 @@
 ---
 author: TylerMSFT
-title: Manipular a retomada do aplicativo
-description: "Saiba como atualizar o conteúdo exibido quando o sistema retomar o aplicativo."
+title: Tratar a retomada do app
+description: "Saiba como atualizar o conteúdo exibido quando o sistema retomar o app."
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 231161ba576a140859952a7e9a4e8d3bd0ba4596
-ms.openlocfilehash: 2813a112f9d60c5b133284903c98a152bd027bee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 113f0ce8e59bab716443c0a74ca39649a1bb83ac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Manipular a retomada do aplicativo
+# <a name="handle-app-resume"></a>Tratar a retomada do app
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs Importantes**
 
 -   [**Retomando**](https://msdn.microsoft.com/library/windows/apps/br242339)
 
-Saiba onde atualizar a interface do usuário quando o sistema retomar o aplicativo. O exemplo deste tópico registra um manipulador de evento para o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
+Saiba onde atualizar a interface do usuário quando o sistema retomar o app. O exemplo deste tópico registra um manipulador de evento para o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
 
-## Registrar o manipulador de eventos de retomada
+## <a name="register-the-resuming-event-handler"></a>Registrar o manipulador de eventos de retomada
 
-Registre para manipular o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), que indica que o usuário alternou para outro aplicativo que não o seu e, depois, de volta.
+Registre para manipular o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), que indica que o usuário alternou para outro app que não o seu e, depois, de volta.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -53,13 +60,13 @@ Registre para manipular o evento [**Resuming**](https://msdn.microsoft.com/libra
 > }
 > ```
 
-## Atualizar conteúdo exibido e readquirir recursos
+## <a name="refresh-displayed-content-and-reacquire-resources"></a>Atualizar conteúdo exibido e readquirir recursos
 
-O sistema suspende o aplicativo após alguns segundos depois que o usuário alterna para outro aplicativo ou para a área de trabalho. O sistema retoma o seu aplicativo quando o usuário alterna de volta para ele. Quando o sistema retoma o aplicativo, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do aplicativo pelo sistema. O sistema restaura o aplicativo onde ele parou. Para o usuário, ele seria exibido como se o aplicativo tivesse executado no segundo plano.
+O sistema suspende o app após alguns segundos depois que o usuário alterna para outro app ou para a área de trabalho. O sistema retoma o seu app quando o usuário alterna de volta para ele. Quando o sistema retoma o app, o conteúdo das variáveis e estruturas de dados é o mesmo de antes da suspensão do app pelo sistema. O sistema restaura o app onde ele parou. Para o usuário, ele seria exibido como se o app tivesse executado no segundo plano.
 
-Quando o aplicativo manipula o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), o aplicativo pode ter sido suspenso por horas ou dias. Ele deve atualizar qualquer conteúdo que possa ter ficado obsoleto quando o aplicativo foi suspenso, como feeds de notícias ou a localização do usuário.
+Quando o app manipula o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), o app pode ter sido suspenso por horas ou dias. Ele deve atualizar qualquer conteúdo que possa ter ficado obsoleto quando o app foi suspenso, como feeds de notícias ou a localização do usuário.
 
-Esse também é um bom momento para restaurar todos os recursos exclusivos lançados quando o aplicativo foi suspenso, como identificadores de arquivo, câmeras, dispositivos E/S, dispositivos externos e recursos de rede.
+Esse também é um bom momento para restaurar todos os recursos exclusivos lançados quando o app foi suspenso, como identificadores de arquivo, câmeras, dispositivos E/S, dispositivos externos e recursos de rede.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -91,20 +98,15 @@ Esse também é um bom momento para restaurar todos os recursos exclusivos lanç
 
 > **Observação**  Como o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) não é gerado do thread da interface do usuário, um dispatcher deverá ser usado no identificador para despachar todas as chamadas para a interface do usuário.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
-Quando seu aplicativo está anexado ao depurador do Visual Studio, ele não será suspenso. Porém, você pode suspendê-lo no depurador e enviar um evento **Resume** de maneira que você possa depurar seu código. Verifique se a **barra de ferramentas Local de Depuração** está visível e clique no menu suspenso ao lado do ícone **Suspender**. Escolha **Retomar**.
+Quando seu app está anexado ao depurador do Visual Studio, ele não será suspenso. Porém, você pode suspendê-lo no depurador e enviar um evento **Resume** de maneira que você possa depurar seu código. Verifique se a **barra de ferramentas Local de Depuração** está visível e clique no menu suspenso ao lado do ícone **Suspender**. Escolha **Retomar**.
 
-Para aplicativos da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) sempre é seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando seu aplicativo está suspenso e o usuário inicia novamente seu aplicativo de um bloco principal ou da lista de aplicativos. Os aplicativos podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o aplicativo foi aberto de um bloco principal ou secundário e, com base nisso, decidir se você deve ou não retomar a experiência de aplicativo a partir daquele ponto ou apresentar uma nova.
+Para apps da Loja do Windows Phone, o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) sempre é seguido por [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), mesmo quando seu app está suspenso e o usuário inicia novamente seu app de um bloco principal ou da lista de apps. Os apps podem pular a inicialização se já houver conteúdo definido na janela atual. Você pode verificar a propriedade [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar se o app foi aberto de um bloco principal ou secundário e, com base nisso, decidir se você deve ou não retomar a experiência de app a partir daquele ponto ou apresentar uma nova.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
-* [Ciclo de vida do aplicativo](app-lifecycle.md)
-* [Tratar a ativação do aplicativo](activate-an-app.md)
-* [Tratar a suspensão do aplicativo](suspend-an-app.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+* [Ciclo de vida do app](app-lifecycle.md)
+* [Tratar a ativação do app](activate-an-app.md)
+* [Tratar a suspensão do app](suspend-an-app.md)
 

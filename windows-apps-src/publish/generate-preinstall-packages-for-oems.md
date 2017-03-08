@@ -3,25 +3,32 @@ author: jnHs
 Description: "Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você poderá gerar e baixar pacotes de pré-instalação que um OEM pode usar para incluir seu aplicativo na imagem dele."
 title: "Gerar pacotes de pré-instalação para OEMs"
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1c08ab2e29e70e198ee72798f29e7667254272fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 962b6b7361da8b88d13b37219fab538e1510c961
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Gerar pacotes de pré-instalação para OEMs
+# <a name="generate-preinstall-packages-for-oems"></a>Gerar pacotes de pré-instalação para OEMs
 
 
 Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você poderá gerar e baixar pacotes de pré-instalação que um OEM pode usar para incluir seu aplicativo na imagem dele. Permissões de pré-instalação são habilitadas somente em contas de desenvolvedor patrocinadas pelos OEMs.
 
-## Política e limitações de pré-instalação importantes
+## <a name="important-preinstall-policy--limitations"></a>Política e limitações de pré-instalação importantes
 
 
 Aplicativos de pré-instalação devem ser certificados por meio do Centro de Desenvolvimento do Windows para terem a licença mais recente da Loja, de forma a poderem se conectar à Loja e receber atualizações do aplicativo.
 
 Qualquer aplicativo que seja pré-instalado deve ser e permanecer gratuito em todos os mercados.
 
-## Gerando pacotes de pré-instalação
+## <a name="generating-preinstall-packages"></a>Gerando pacotes de pré-instalação
 
 
 Quando uma conta tiver sido habilitada com permissões de pré-instalação, conclua as seguintes etapas:
@@ -36,7 +43,7 @@ Quando uma conta tiver sido habilitada com permissões de pré-instalação, con
 
 Em seguida, você pode fornecer esse arquivo. zip para o OEM para inclusão na imagem do sistema operacional.
 
-## Suporte
+## <a name="support"></a>Suporte
 
 
 Se você ainda tiver dúvidas sobre a geração de pacotes de pré-instalação, envie um email para <partnerops@microsoft.com>.
@@ -47,10 +54,5 @@ Se você ainda tiver dúvidas sobre a geração de pacotes de pré-instalação,
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

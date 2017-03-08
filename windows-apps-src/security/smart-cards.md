@@ -1,28 +1,35 @@
 ---
 title: "Cartões inteligentes"
-description: "Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes."
+description: "Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários a serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes."
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
-ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 42062dc9dcc11e3db6ddbb761e158d75e1259950
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Cartões inteligentes
+# <a name="smart-cards"></a>Cartões inteligentes
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes. 
 
-## Configure o manifesto do aplicativo
+## <a name="configure-the-app-manifest"></a>Configure o manifesto do aplicativo
 
 
 Para que o seu aplicativo possa autenticar usuários usando cartões inteligentes ou cartões inteligentes virtuais, você deve configurar o recurso **Certificados de Usuário Compartilhado** no arquivo do projeto Package.appxmanifest.
 
-## Acesse leitores de cartões conectados e cartões inteligentes
+## <a name="access-connected-card-readers-and-smart-cards"></a>Acesse leitores de cartões conectados e cartões inteligentes
 
 
 Você pode consultar leitores e cartões inteligentes conectados passando a ID de dispositivo (especificada em [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)) para o método [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890). Para acessar os cartões inteligentes atualmente conectados a um dispositivo leitor retornado, chame [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887).
@@ -56,7 +63,7 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 
 Em seguida, você pode passar cada objeto [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565) retornado para [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) acessar os métodos que permitem ao seu aplicativo acessar e personalizar sua configuração.
 
-## Crie um cartão inteligente virtual
+## <a name="create-a-virtual-smart-card"></a>Crie um cartão inteligente virtual
 
 
 Para criar um cartão inteligente virtual usando [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801), seu aplicativo precisará primeiro fornecer um nome amigável, uma chave de administração e um [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642). O nome amigável é geralmente algo fornecido para o aplicativo, mas o seu aplicativo ainda precisará fornecer uma chave de administração e gerar uma instância do **SmartCardPinPolicy** atual antes de passar os três valores para [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830).
@@ -80,7 +87,7 @@ SmartCardProvisioning provisioning = await
 
 Depois que [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830) tiver retornado o objeto [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) associado, o cartão inteligente virtual será provisionado e estará pronto para o uso.
 
-## Trate os desafios da autenticação
+## <a name="handle-authentication-challenges"></a>Trate os desafios da autenticação
 
 
 Para autenticar com cartões inteligentes ou cartões inteligentes virtuais, o seu aplicativo deve fornecer o comportamento para concluir os desafios entre os dados da chave de administração armazenados no cartão e os dados da chave de administração mantidos pelo servidor de autenticação ou pela ferramenta de gerenciamento.
@@ -107,7 +114,7 @@ static class ChallengeResponseAlgorithm
 
 Você verá esse código referenciado em todo o restante deste tópico enquanto revisamos como concluir a ação de autenticação e como aplicar mudanças nas informações do cartão inteligente e do cartão inteligente virtual.
 
-## Verifique a resposta de autenticação do cartão inteligente ou do cartão inteligente virtual
+## <a name="verify-smart-card-or-virtual-smart-card-authentication-response"></a>Verifique a resposta de autenticação do cartão inteligente ou do cartão inteligente virtual
 
 
 Agora que temos a lógica definida para os desafios de autenticação, podemos nos comunicar com o leitor para acessar o cartão inteligente, ou então, acessar um cartão inteligente virtual para autenticação.
@@ -135,7 +142,7 @@ using (SmartCardChallengeContext context =
 }
 ```
 
-## Altere ou redefina um PIN do usuário
+## <a name="change-or-reset-a-user-pin"></a>Altere ou redefina um PIN do usuário
 
 
 Para alterar o PIN associado a um cartão inteligente:
@@ -184,7 +191,7 @@ bool result = await provisioning.RequestPinResetAsync(
 }
 ```
 
-## Remova um cartão inteligente ou um cartão inteligente virtual
+## <a name="remove-a-smart-card-or-virtual-smart-card"></a>Remova um cartão inteligente ou um cartão inteligente virtual
 
 
 Quando um cartão inteligente físico é removido, um evento [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875) é disparado quando o cartão é excluído.
@@ -202,8 +209,3 @@ A remoção de um cartão inteligente virtual é tratada de forma programática,
 bool result = await SmartCardProvisioning
     .RequestVirtualSmartCardDeletionAsync(card);
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

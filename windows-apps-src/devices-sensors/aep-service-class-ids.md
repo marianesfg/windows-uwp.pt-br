@@ -3,25 +3,32 @@ author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: "IDs de classe de serviço AEP"
 description: "Os serviços do Ponto de Extremidade de Associação (AEP) oferecem um contrato de programação para serviços compatível com um dispositivo via um determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 61d8891a97403057fe34c66dbecc6962b05e087e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d2259c82acf700d21f4c3f51a367180bb976f636
+ms.lasthandoff: 02/07/2017
 
 ---
-# IDs de classe de serviço AEP
+# <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-<span class="sidebar_heading" style="font-weight: bold;">APIs importantes</span>
+**APIs importantes**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
-Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
+Um desenvolvedor de apps deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um app pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
 
-## Serviços Bluetooth e Bluetooth LE
+## <a name="bluetooth-and-bluetooth-le-services"></a>Serviços Bluetooth e Bluetooth LE
 
 Os serviços Bluetooth se enquadram em um destes dois protocolos: o protocolo de Bluetooth ou o protocolo de Bluetooth LE. Os identificadores desses protocolos são:
 
@@ -70,13 +77,13 @@ O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesm
 
 Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](http://go.microsoft.com/fwlink/p/?LinkID=619586) e [aqui](http://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) para obter alguns serviços GATT comuns.
 
-## Serviços Bluetooth LE personalizados
+## <a name="custom-bluetooth-le-services"></a>Serviços Bluetooth LE personalizados
 
 Os serviços Bluetooth LE personalizados usam o seguinte identificador de protocolo: {bb7bb05e-5972-42b5-94fc76eaa7084d49}
 
 Perfis personalizados são definidos com seus próprios GUIDs definidos. O GUID personalizado deve ser usado para **System.Devices.AepService.ServiceClassId**.
 
-## Serviços UPnP
+## <a name="upnp-services"></a>Serviços UPnP
 
 Os serviços UPnP usam o seguinte identificador de protocolo: {0e261de4-12f0-46e6-91ba428607ccef64}
 
@@ -99,7 +106,7 @@ Em geral, todos os serviços UPnP têm seus nomes com hash em um GUID usando o a
 
  
 
-## Serviços WSD
+## <a name="wsd-services"></a>Serviços WSD
 
 Os serviços WSD usam o seguinte identificador de protocolo: {782232aa-a2f9-4993-971baedc551346b0}
 
@@ -112,25 +119,16 @@ Em geral, todos os serviços WSD têm seus nomes com hash em um GUID usando o al
 
  
 
-## Amostra de AQS
+## <a name="aqs-sample"></a>Amostra de AQS
 
 Esse AQS filtrará para todos os objetos **AssociationEndpointService** UPnP que ofereçam suporte para DIAL. Neste caso, [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) é definido como **AsssociationEndpointService**.
 
 ``` syntax
-System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND 
+System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}"
 ```
 
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

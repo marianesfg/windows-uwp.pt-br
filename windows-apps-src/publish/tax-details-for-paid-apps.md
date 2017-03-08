@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo."
-title: Detalhes de impostos para apps pagos
+title: Detalhes de impostos para aplicativos pagos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 56421bc1ce426310189ddcb1c9893437469c075a
-ms.openlocfilehash: 69ae8d29df626f6a1e2ce1bb4a8a09e99353a0ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: beaf73f0bf4709bcda2edda4afb97869eaccc27b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para apps pagos
+# <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
 
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
@@ -161,9 +168,9 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Filipinas                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                  | 70% do preço selecionado                 | Desenvolvedor          |
 | Polônia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
 | Portugal                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
-| Porto Rico                      | Os impostos são adicionados ao preço sendo selecionado. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countries-regions)                                                                                                     | 70% do preço selecionado                 | Microsoft          |
+| Porto Rico                      | Os impostos são adicionados ao preço sendo selecionado. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                                                     | 70% do preço selecionado                 | Microsoft          |
 | Catar                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Romênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 24%) | Microsoft          |
+| Romênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% da (preço selecionado menos imposto de 19%) | Microsoft          |
 | Rússia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 18%) | Microsoft          |
 | Ruanda                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | São Cristóvão e Névis            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -220,7 +227,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 ## <a name="mixed-remittance-countriesregions"></a>Países/regiões de remessa misturados
 
 
-Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Loja nos seguintes países/regiões: Os relatórios que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Loja. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
+Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Loja nos seguintes países/regiões: Os [relatórios](payout-summary.md#downloading-payment-transactions) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Loja. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
 
 | Países/regiões de remessa misturados |
 |------------------------------------|
@@ -279,10 +286,5 @@ Cada linha do relatório contém a data e hora da transação e, se disponível,
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO5-->
 
 

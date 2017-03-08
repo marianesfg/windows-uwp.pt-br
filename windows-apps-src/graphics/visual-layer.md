@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Camada visual
 description: "A API Windows.UI.Composition concede acesso a uma camada de composição entre a camada de estrutura (XAML) e a camada de elementos gráficos (DirectX)."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
-ms.openlocfilehash: de6fe0688bec196fc90433ab9274f2e4c4fd9b90
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d1c676808b8b63f42b89a22862eaab63ddc94141
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="visual-layer"></a>Camada visual
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 No Windows 10, foi realizado um trabalho significativo para criar um novo mecanismo unificado de composição e renderização para todos os aplicativos Windows, sejam eles para área de trabalho ou dispositivos móveis. Um resultado desse trabalho foi a API de composição unificada do WinRT, chamada Windows.UI.Composition, que oferece acesso a novos objetos de composição leves juntamente com novas animações e efeitos controlados pelo Compositor.
 
@@ -30,7 +37,7 @@ Elementos visuais podem ser contêineres de outros elementos visuais ou podem ho
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – O objeto base. A maioria das propriedades estão aqui e são herdadas por outros objetos visuais.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – É derivado de [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) e adiciona a capacidade de inserir elementos visuais filho.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – É derivado de [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e tem conteúdo na forma de imagens, efeitos e cadeias de troca.
--   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) - Um ContainerVisual cujos filhos são achatados em uma única camada.  
+-   [**LayerVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.layervisual.aspx) - Um ContainerVisual cujos filhos são achatados em uma única camada.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – O alocador de objetos que gerencia a relação entre um aplicativo e o processo do compositor do sistema.
 
 O compositor também é um alocador de uma série de outros objetos de composição usados para recortar ou transformar elementos visuais na árvore, bem como um conjunto avançado de animações e efeitos.
@@ -66,7 +73,7 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 -   Leia o artigo de Kenny Kerr no MSDN sobre essa API: [Elementos Gráficos e Animação - Opções de Composição do Windows 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Exemplos de Interface do usuário avançada e composição no [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [**Documentação de referência completa da API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   [Problemas conhecidos](http://go.microsoft.com/fwlink/?LinkId=823237).
+
 
  
 
@@ -74,10 +81,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

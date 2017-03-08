@@ -3,23 +3,30 @@ author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: "ESC/POS Epson com formatação"
 description: "Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: b645e41d7456f1dff664e3f61721a3564d554202
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 70b737625f5301d3147f4570b4e6f7216c2212c7
+ms.lasthandoff: 02/07/2017
 
 ---
-# Epson ESC/POS com formatação
+# <a name="epson-escpos-with-formatting"></a>ESC/POS Epson com formatação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
--   [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**Impressora PointofService**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
 -   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
 Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço.
 
-## Uso de ESC/POS
+## <a name="escpos-usage"></a>Uso de ESC/POS
 
 O Ponto do Serviço do Windows proporciona o uso de uma variedade de impressoras, incluindo várias impressoras da série Epson TM (para obter uma lista completa de impressoras com suporte, consulte a página [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) ). O Windows dá suporte à impressão usando a linguagem de controle de impressora ESC/POS, que fornece comandos eficientes e funcionais para comunicação com sua impressora.
 
@@ -29,14 +36,14 @@ Todos os comandos começam com o caractere ESC (ASCII 27, HEX 1B) ou GS (ASCII 2
 
 A [**API PointOfService do Windows **](https://msdn.microsoft.com/library/windows/apps/Dn298071) fornece uma grande parte dessa funcionalidade para você por meio dos métodos **Print()** ou **PrintLine()**. Entretanto, para obter uma determinada formatação ou para enviar comandos específicos, você deve usar comandos ESC/POS, criados como uma cadeia de caracteres e enviados à impressora.
 
-## Exemplo usando caracteres em negrito e de tamanho duplo
+## <a name="example-using-bold-and-double-size-characters"></a>Exemplo usando caracteres em negrito e de tamanho duplo
 
 O exemplo a seguir mostra como usar comandos ESC/POS para imprimir caracteres em negrito e de tamanho duplo. Observe que cada comando é criado como uma cadeia de caracteres, e depois inserido nas chamadas a printJob.
 
 ```csharp
 // … prior plumbing code removed for brevity
 // this code assumed you've already created a receipt print job (printJob)
-// and also that you've already checked the PosPrinter Capabilities to 
+// and also that you've already checked the PosPrinter Capabilities to
 // verify that the printer supports Bold and DoubleHighDoubleWide print modes
 
 const string ESC = "\u001B";
@@ -56,11 +63,4 @@ printJob.ExecuteAsync();
 ```
 
 Para saber mais sobre ESC/POS, incluindo os comandos disponíveis, consulte as [Perguntas frequentes sobre ESC/POS Epson](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Para obter detalhes sobre [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) e todas as funcionalidades disponíveis, consulte [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) no MSDN.
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

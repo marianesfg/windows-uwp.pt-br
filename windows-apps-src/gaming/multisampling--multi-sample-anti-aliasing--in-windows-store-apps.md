@@ -1,27 +1,34 @@
 ---
 author: mtoepke
-title: Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
-description: Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
+title: Multisampling nos apps UWP (Plataforma Universal do Windows)
+description: Saiba como utilizar o multisampling em apps da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, várias amostras, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cf82c34e23a1c66bfc2d59f9ea3b4ebce99ab52e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling nos aplicativos UWP (Plataforma Universal do Windows)
+# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Multisampling nos apps UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
+Saiba como utilizar o multisampling em apps da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
-## Várias amostras e a cadeia de troca do modelo de virar a página
+## <a name="multisampling-and-the-flip-model-swap-chain"></a>Várias amostras e a cadeia de troca do modelo de virar a página
 
 
-Os aplicativos UWP em DirectX devem usar cadeias de troca do modelo de inversão. As cadeias de troca do modelo de inversão não dão suporte a várias amostras diretamente, mas esse método ainda pode ser aplicado de uma forma diferente, renderizando a cena para um modo de exibição de destino de renderização com várias amostras e, depois, resolvendo o destino de renderização com várias amostras para o buffer de fundo antes da apresentação. Este artigo explica as etapas necessárias para adicionar várias amostras a seu aplicativo UWP.
+Os apps UWP em DirectX devem usar cadeias de troca do modelo de inversão. As cadeias de troca do modelo de inversão não dão suporte a várias amostras diretamente, mas esse método ainda pode ser aplicado de uma forma diferente, renderizando a cena para um modo de exibição de destino de renderização com várias amostras e, depois, resolvendo o destino de renderização com várias amostras para o buffer de fundo antes da apresentação. Este artigo explica as etapas necessárias para adicionar várias amostras a seu app UWP.
 
-### Como usar várias amostras
+### <a name="how-to-use-multisampling"></a>Como usar várias amostras
 
 Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específicas de contagem mínima de amostras e garantem que determinados formatos de buffer que dão suporte a várias amostras estarão disponíveis. Os dispositivos gráficos costumam dar suporte a um número maior do que o mínimo necessário de formatos e contagens de amostras. O suporte ao multisampling pode ser determinado no tempo de execução verificando o suporte ao recurso de multisampling para formatos DXGI específicos e, em seguida, verificando o número de amostras que podem ser usadas com cada formato com suporte.
 
@@ -206,10 +213,5 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

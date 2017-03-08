@@ -1,21 +1,28 @@
 ---
 author: Jwmsft
 Description: "O controle hub usa um padrão de navegação hierárquico para oferecer suporte a aplicativos com uma arquitetura de informação relacional."
-title: Controles Hub
+title: Controles hub
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 32a558866457c4a9e9a359f12d43af317fc0f84a
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="hub-controlpattern"></a>Controle/padrão Hub
+# <a name="hub-controlpattern"></a>Controle/padrão hub
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
+Um controle hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
 
 ![Exemplo de um hub](images/hub_example_tablet.png)
 
@@ -120,9 +127,4 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 - [Noções básicas de navegação](../layout/navigation-basics.md)
 - [Como usar um hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 - [Exemplo de controle do Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

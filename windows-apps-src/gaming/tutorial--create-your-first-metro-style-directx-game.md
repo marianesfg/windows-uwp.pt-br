@@ -7,13 +7,19 @@ keywords:
 - Jogo de exemplo DirectX
 - exemplo de jogo, Plataforma Universal do Windows (UWP)
 - Jogo Direct3D 11
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0e409f846c0f2e24c469c84610b22a0171e65018
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3ffce29c3ad7088dd24b848cb159b85a4db158e3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar um jogo simples UWP (Plataforma Universal do Windows) com DirectX
+# <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Criar um jogo simples UWP (Plataforma Universal do Windows) com DirectX
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,12 +28,12 @@ Este conjunto de tutoriais mostra como criar um jogo básico UWP (Plataforma Uni
 
 Apresentamos técnicas e considerações referentes ao desenvolvimento de jogos UWP. Não fornecemos um jogo completo de ponta a ponta. Em vez disso, nos concentramos em conceitos de desenvolvimento de jogos UWP DirectX e fazemos considerações específicas sobre o Windows Runtime referentes a esses conceitos.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Usar os conceitos e componentes básicos de um jogo DirectX UWP e ficar mais confortável com o design de jogos UWP com DirectX.
 
-## O que você precisa saber antes de começar
+## <a name="what-you-need-to-know-before-starting"></a>O que você precisa saber antes de começar
 
 
 Antes de começar este tutorial, você precisar se familiarizar com estes assuntos.
@@ -38,7 +44,7 @@ Antes de começar este tutorial, você precisar se familiarizar com estes assunt
 -   Conceitos básicos de programação no Windows.
 -   Familiaridade básica com APIs de [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) e [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
-##  O jogo de tiro de exemplo da Windows Store em Direct3D
+##  <a name="the-windows-store-direct3d-shooting-game-sample"></a>O jogo de tiro de exemplo da Windows Store em Direct3D
 
 
 Essa amostra implementa uma galeria de tiro simples em primeira pessoa, onde o jogador lança bolas contra alvos em movimento. Cada tiro no alvo concede um certo número de pontos, e o jogador pode passar por seis níveis com desafio crescente. No fim dos níveis, os pontos são calculados e o jogador recebe uma pontuação final.
@@ -74,10 +80,5 @@ O exemplo demonstra os conceitos do jogo:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

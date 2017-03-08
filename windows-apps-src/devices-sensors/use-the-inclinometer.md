@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "Usar o inclinômetro"
 description: "Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 17828018f2c8db8a5a60d839e7f73904de7a1a24
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8ebfaf4c294fccf61534203bce0326f9dbec977
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar o inclinômetro
+# <a name="use-the-inclinometer"></a>Usar o inclinômetro
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
@@ -21,17 +28,17 @@ Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a ro
 
 Alguns jogos 3-D requerem um inclinômetro como dispositivo de entrada. Um exemplo comum é o simulador de voo, que mapeia os eixos do inclinômetro (X, Y e Z) para as entradas de elevador, aileron e leme da aeronave.
 
- ## Pré-requisitos
+ ## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para um inclinômetro.
 
- ## Criar um aplicativo simples de inclinômetro
+ ## <a name="create-a-simple-inclinometer-app"></a>Criar um aplicativo simples de inclinômetro
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de inclinômetro do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-###  Instruções
+###  <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -65,7 +72,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
         {
             private Inclinometer _inclinometer;
 
-            // This event handler writes the current inclinometer reading to 
+            // This event handler writes the current inclinometer reading to
             // the three text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, InclinometerReadingChangedEventArgs e)
@@ -83,7 +90,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
             {
                 this.InitializeComponent();
                 _inclinometer = Inclinometer.GetDefault();
-     
+
 
                 if (_inclinometer != null)
                 {
@@ -134,7 +141,7 @@ Quando o aplicativo estiver em execução, você poderá alterar os valores do i
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-###  Explicação
+###  <a name="explanation"></a>Explicação
 
 O exemplo anterior demonstra quão pouco código você precisará para escrever a fim de integrar a entrada do girômetro em seu aplicativo.
 
@@ -155,7 +162,7 @@ _inclinometer.ReportInterval = reportInterval;
 Os novos dados do inclinômetro são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
+_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer,
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -170,13 +177,7 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## Tópicos relacionados
+ ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo do inclinômetro](http://go.microsoft.com/fwlink/p/?linkid=241380)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

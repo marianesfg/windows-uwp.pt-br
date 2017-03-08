@@ -3,17 +3,24 @@ author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para Xbox
 description: Saiba como habilitar o Device Portal para Xbox One.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4321e799e8633dc31cc0d73889a0b0b6056f6d3b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Device Portal para Xbox
+# <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
 
-## Configurar o Device Portal no Xbox
+## <a name="set-up-device-portal-on-xbox"></a>Configurar o Device Portal no Xbox
 
-### Habilitar o Device Portal
+### <a name="enable-device-portal"></a>Habilitar o Device Portal
 
 **Para habilitar o Device Portal**
 
@@ -28,16 +35,11 @@ ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
 8. Você receberá um aviso sobre o Certificado que foi fornecido, semelhante ao mostrado a seguir. Você deve clicar em **Continuar para este site** para acessar o Windows Device Portal na visualização.
 ![Erro de certificado do Device Portal](images/device-portal/xbox-certificate-error.png)
 
-## Páginas do Device Portal
+## <a name="device-portal-pages"></a>Páginas do Device Portal
 
 O Device Portal no Xbox fornece um conjunto padrão de páginas. Para obter descrições detalhadas, consulte [Visão geral do Windows Device Portal](device-portal.md).
 
 - Aplicativos
 - Desempenho
 - Rede
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

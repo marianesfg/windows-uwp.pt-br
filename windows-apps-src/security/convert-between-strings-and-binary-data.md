@@ -1,20 +1,27 @@
 ---
 title: "Converter entre cadeias de caracteres e dados binários"
-description: "Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um aplicativo da Plataforma Universal do Windows (UWP)."
+description: "Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um app da Plataforma Universal do Windows (UWP)."
 ms.assetid: AED4C74F-E63B-4980-BB4D-28ACCC1AB58B
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 06c035e336039fd08cc5f3b9bcbb7d2783cff089
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e1a1768734bb220fdfa292ff28ff6ef19f22ad41
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Converter entre cadeias de caracteres e dados binários
+# <a name="convert-between-strings-and-binary-data"></a>Converter entre cadeias de caracteres e dados binários
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um aplicativo da Plataforma Universal do Windows (UWP).
+Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um app da Plataforma Universal do Windows (UWP).
 
 ```cs
 public void ConvertData()
@@ -32,8 +39,3 @@ public void ConvertData()
     IBuffer buffUTF8 = CryptographicBuffer.ConvertStringToBinary(strIn, BinaryStringEncoding.Utf8);
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

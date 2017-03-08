@@ -2,16 +2,24 @@
 author: payzer
 title: "Referência de API da área restrita do Xbox Live do Device Portal"
 description: "Saiba como acessar a área restrita do Xbox Live de maneira programática."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 translationtype: Human Translation
-ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
-ms.openlocfilehash: 2a0bfa2eecffb2b0f5ed0bc691cb90bcd7191321
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 629e8c3d35c9b9730c07e9f810909298558ae700
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referência de API da área restrita do Xbox Live   
+# <a name="xbox-live-sandbox-api-reference"></a>Referência de API da área restrita do Xbox Live   
 Você pode obter e definir a área restrita do Xbox Live usando essa API REST.
 
-## Obter a área restrita do Xbox Live
+## <a name="get-the-xbox-live-sandbox"></a>Obter a área restrita do Xbox Live
 
 **Solicitação**
 
@@ -46,7 +54,7 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 
-## Definir a área restrita do Xbox Live
+## <a name="set-the-xbox-live-sandbox"></a>Definir a área restrita do Xbox Live
 Você pode alterar a área restrita do Xbox Live do dispositivo usando a solicitação a seguir. No Xbox One, o dispositivo precisa ser reiniciado antes da configuração entrar em vigor.
 
 **Solicitação**
@@ -86,10 +94,5 @@ Código de status HTTP      | Descrição
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

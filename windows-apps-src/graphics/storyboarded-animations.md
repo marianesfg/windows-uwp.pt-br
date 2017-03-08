@@ -3,19 +3,26 @@ author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: "Animações com storyboard"
 description: "As animações com storyboard não são apenas animações no sentido visual."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 361765de700af2a701e16fc27a5867d80907865a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5de5007327b86b401b2f85d6f80adbc2bed820a8
+ms.lasthandoff: 02/07/2017
 
 ---
-# Animações com storyboard
+# <a name="storyboarded-animations"></a>Animações de storyboard
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 As animações com storyboard não são apenas animações no sentido visual. Uma animação com storyboard é uma maneira de alterar o valor de uma propriedade de dependência como uma função de tempo. Um dos principais motivos pelos quais você pode precisar de uma animação com storyboard que não faça parte da Biblioteca de Animação é para definir o estado visual de um controle, como parte de um modelo de controle ou de uma definição de página.
 
-## Diferenças com o Silverlight e WPF
+## <a name="differences-with-silverlight-and-wpf"></a>Diferenças com o Silverlight e WPF
 
 Se você conhece o Microsoft Silverlight ou o WPF (Windows Presentation Foundation), leia esta seção; caso contrário, pode ignorá-la.
 
@@ -26,7 +33,7 @@ Em geral, a criação de animações com storyboard em um aplicativo do Windows 
 -   Nem todas as animações personalizadas que você cria podem ser executadas por padrão em um aplicativo do Windows Runtime quando o sistema de animação determina que elas podem comprometer o desempenho da sua interface do usuário. As animações nas quais o sistema determina que pode haver um impacto no desempenho são denominadas *animações dependentes*. É dependente porque a sincronia de sua animação está funcionando diretamente em relação ao thread de interface do usuário, que é onde a entrada do usuário ativo e outras atualizações também estão tentando aplicar as alterações de tempo de execução para a interface do usuário. Uma animação dependente que está consumindo muitos recursos de sistema no thread de interface do usuário pode fazer com que o aplicativo pareça não responder em determinadas situações. Quando sua animação gera uma alteração de layout ou tem a capacidade de afetar o desempenho no thread de interface do usuário, você geralmente precisa habilitá-la explicitamente para que ela seja executada. É para isso que serve a propriedade **EnableDependentAnimation** em classes de animação específicas. Para obter mais informações, consulte [Animações dependentes e independentes](./storyboarded-animations.md#dependent-and-independent-animations) .
 -   No momento, não há suporte a funções de easing personalizadas no Windows Runtime.
 
-## Definindo animações de storyboard
+## <a name="defining-storyboarded-animations"></a>Definindo animações de storyboard
 
 Uma animação de storyboard é uma maneira de alterar o valor de uma propriedade de dependência como uma função de tempo. A propriedade que você está animando nem sempre é uma propriedade que afeta diretamente a interface do usuário do seu aplicativo. Porém, como o XAML envolve a definição da interface de um aplicativo, geralmente, são propriedades relacionadas à interface do usuário que são animadas. Por exemplo, é possível animar o ângulo de um [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) ou o valor de cor da tela de fundo de um botão.
 
@@ -53,13 +60,13 @@ Consultemos um exemplo simples. Neste XAML de exemplo, a propriedade [**Opacity*
       Width="300" Height="200" Fill="Blue"/>
 ```
       
-### Identificando o objeto a ser animado
+### <a name="identifying-the-object-to-animate"></a>Identificando o objeto a ser animado
 
 No exemplo anterior, o storyboard animou a propriedade [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) de um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371). As animações não são declaradas no objeto propriamente dito. Em vez disso, isso é feito na definição da animação de um storyboard. Normalmente, os storyboards são definidos no XAML que não está nas proximidades imediatas da definição da interface do usuário do XAML do objeto a ser animado. Em vez disso, eles geralmente são configurados como um recurso XAML.
 
 Para conectar uma animação a um destino, você deve referenciar o destino por seu nome de programação de identificação. Sempre aplique o [atributo x:Name](https://msdn.microsoft.com/library/windows/apps/Mt204788) na definição da interface do usuário do XAML para nomear o objeto que você deseja animar. Em seguida, direcione o objeto a ser animado definindo [**Storyboard.TargetName**](https://msdn.microsoft.com/library/windows/apps/Hh759823) na definição da animação. Para o valor de **Storyboard.TargetName**, use a cadeia de caracteres do nome do objeto de destino que foi definido anteriormente em outro lugar com o atributo x:Name.
 
-### Direcionando a propriedade de dependência a ser animada
+### <a name="targeting-the-dependency-property-to-animate"></a>Direcionando a propriedade de dependência a ser animada
 
 Defina um valor para [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824) na animação. Isso determina qual propriedade específica do objeto direcionado será animada.
 
@@ -93,7 +100,7 @@ Você também pode animar propriedades anexadas XAML. Sempre coloque o nome comp
 
 Para saber mais sobre como usar um caminho de propriedade para o direcionamento indireto da propriedade a ser animada, consulte [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586) ou [**Propriedade anexada Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824).
 
-### Tipos de animação
+### <a name="animation-types"></a>Tipos de animação
 
 O sistema de animação do Windows Runtime possui três tipos específicos aos quais animações de storyboard podem ser aplicadas:
 
@@ -103,7 +110,7 @@ O sistema de animação do Windows Runtime possui três tipos específicos aos q
 
 Também há um tipo de animação [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) generalizado para valores de referência de objetos que abordaremos mais adiante.
 
-### Especificando os valores animados
+### <a name="specifying-the-animated-values"></a>Especificando os valores animados
 
 Até agora, mostramos como direcionar o objeto e a propriedade a ser animada, mas ainda não descrevemos o que a animação faz com o valor da propriedade durante sua execução.
 
@@ -138,21 +145,21 @@ Para saber mais sobre os valores [**Duration**](https://msdn.microsoft.com/libra
 
  
 
-### From/To/By permitem valor nulo
+### <a name="fromtoby-are-nullable"></a>From/To/By permitem valor nulo
 
-Mencionamos anteriormente que você pode omitir **From**, **To** ou **By** e, assim, usar valores não animados atuais como substitutos de um valor ausente. Não é possível adivinhar as propriedades **From**, **To** ou **By** de uma animação. Por exemplo, o tipo da propriedade [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) não é [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Em vez disso, é um [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Além disso, seu valor padrão é **null**, não 0. É com esse valor **null** que o sistema de animação distingue que você não definiu especificamente um valor para uma propriedade **From**, **To** ou **By**. As extensões de componente do VisualC++ (C++/CX) não têm um tipo **Nullable** e, em vez dele, usam [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
+Mencionamos anteriormente que você pode omitir **From**, **To** ou **By** e, assim, usar valores não animados atuais como substitutos de um valor ausente. Não é possível adivinhar as propriedades **From**, **To** ou **By** de uma animação. Por exemplo, o tipo da propriedade [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) não é [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Em vez disso, é um [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) para **Double**. Além disso, seu valor padrão é **null**, não 0. É com esse valor **null** que o sistema de animação distingue que você não definiu especificamente um valor para uma propriedade **From**, **To** ou **By**. As extensões de componente do Visual C++ (C++/CX) não têm um tipo **Nullable** e, em vez dele, usam [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
 
-### Outras propriedades de uma animação
+### <a name="other-properties-of-an-animation"></a>Outras propriedades de uma animação
 
 As próximas propriedades descritas nesta seção são todas opcionais, pois têm padrões que são adequados para a maioria das animações.
 
-### **AutoReverse**
+### **<a name="autoreverse"></a>AutoReverse**
 
 Se você não especificar [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) ou [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) em uma animação, essa animação será executada uma única vez e durante o tempo especificado com [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207).
 
 A propriedade [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) especifica se uma linha do tempo será executada ao contrário após atingir o final de [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207). Se você defini-la como **true**, a animação será invertida depois que atingir o final de sua [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) declarada, alterando o valor do valor final (**To**) para o valor inicial (**From**). Desse modo, a animação será efetivamente executada pelo dobro do tempo em [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207).
 
-### **RepeatBehavior**
+### **<a name="repeatbehavior"></a>RepeatBehavior**
 
 A propriedade [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) especifica quantas vezes uma linha do tempo deve ser executada ou uma duração maior na qual a linha do tempo deve ser repetida. Por padrão, uma linha do tempo tem uma contagem de iteração de "1x", o que significa que será executada uma vez por sua [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) e não será repetida.
 
@@ -160,19 +167,19 @@ A propriedade [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/ap
 
 Para saber mais sobre os valores [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) e a sintaxe XAML, consulte [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411).
 
-### **FillBehavior="Stop"**
+### **<a name="fillbehaviorstop"></a>FillBehavior="Stop"**
 
 Por padrão, quando uma animação termina, ela deixa o valor da propriedade como o **To** final ou o valor modificado por **By** mesmo depois que sua duração é ultrapassada. No entanto, se você definir o valor da propriedade [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) como [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306), o valor do valor animado será revertido para o valor anterior à aplicação da animação ou, mais precisamente, o valor efetivo atual conforme determinado pelo sistema de propriedades de dependência (para saber mais sobre essa distinção, consulte [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)).
 
-### **BeginTime**
+### **<a name="begintime"></a>BeginTime**
 
 Por padrão, o [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204) de uma animação é "0:0:0", de modo que ele é iniciado assim que o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que o contém é executado. É possível alterar isso se o **Storyboard** contiver mais de uma animação e você desejar programar horários de início diferentes para a animação inicial e as outras animações ou criar um pequeno atraso deliberado.
 
-### **SpeedRatio**
+### **<a name="speedratio"></a>SpeedRatio**
 
 Se houver mais de uma animação em um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), você pode alterar a taxa de tempo de uma ou mais das animações relativamente ao **Storyboard**. É o **Storyboard** pai que acabará controlando como o tempo de [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) é transcorrido durante a execução da animação. Essa propriedade não é usada com frequência. Para obter mais informações, consulte [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/BR243213).
 
-## Definindo mais de uma animação em um **Storyboard**
+## <a name="defining-more-than-one-animation-in-a-storyboard"></a>Definindo mais de uma animação em um **Storyboard**
 
 Um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) pode conter mais de uma definição de animação. Você pode ter mais de uma animação se for aplicar animações relacionadas a duas propriedades do mesmo objeto de destino. Por exemplo, você pode alterar as propriedades [**TranslateX**](https://msdn.microsoft.com/library/windows/apps/BR228122) e [**TranslateY**](https://msdn.microsoft.com/library/windows/apps/BR228124) de um [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) usado como o [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) de um elemento da interface do usuário. Isso fará com que o elemento seja convertido diagonalmente. Você precisa de duas animações diferentes para fazer isso, mas as animações devem fazer parte do mesmo **Storyboard** porque elas sempre deverão ser executadas juntas.
 
@@ -186,7 +193,7 @@ Um storyboard não pode conter duas animações que tentam direcionar e animar a
 
 O sistema de animação pode aplicar mais de uma animação ao valor de uma propriedade quando essas entradas vierem de vários storyboards. Não é comum usar esse comportamento deliberadamente para executar storyboards simultaneamente. No entanto, é possível que uma animação definida por aplicativo que você aplica a uma propriedade de controle modifique o valor **HoldEnd** de uma animação que foi executada anteriormente como parte do modelo de estado visual do controle.
 
-## Definindo um storyboard como um recurso
+## <a name="defining-a-storyboard-as-a-resource"></a>Definindo um storyboard como um recurso
 
 Um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) é o contêiner no qual você coloca objetos de animação. Você geralmente define o **Storyboard** como um recurso disponível para o objeto que desejar animar no [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) ou [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/BR242338) no nível da página.
 
@@ -219,7 +226,7 @@ A definição de recursos na raiz do XAML de um arquivo XAML, como page.xaml ou 
 
 Você também pode colocar suas animações em uma unidade de [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) quando está declarando as animações de estado visual para uma aparência visual do controle. Nesse caso, os elementos **Storyboard** definidos vão para um contêiner de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) que está aninhado mais profundamente em um [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849) (é o **Style** que representa o recurso de chave). Você não precisa de uma chave nem nome para seu **Storyboard** nesse caso, porque é o **VisualState** que tem um nome de destino a ser invocado pelo [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Os estilos para controles são geralmente divididos em arquivos XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) separados em vez de serem colocados em uma página ou coleção de **Resources** do aplicativo. Para obter mais informações, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
-## Animações dependentes e independentes
+## <a name="dependent-and-independent-animations"></a>Animações dependentes e independentes
 
 Neste ponto, precisamos introduzir alguns aspectos importantes sobre como o sistema de animação funciona. Em particular, a animação interage fundamentalmente com a forma como um aplicativo do Windows Runtime é renderizado na tela e com a forma como essa renderização usa threads de processamento. Um aplicativo do Windows Runtime sempre tem um thread principal da interface do usuário e esse thread é responsável por atualizar a tela com as informações atuais. Além disso, um aplicativo do Windows Runtime tem um thread de composição, que é usado para pré-calcular os layouts imediatamente antes de serem exibidos. Quando você anima a interface do usuário, há a possibilidade de causar uma grande quantidade de trabalho para o thread da interface do usuário. O sistema precisa redesenhar áreas grandes da tela usado intervalos de tempo relativamente curtos entre cada atualização. Isso é necessário para capturar o valor mais recente da propriedade animada. Se você não tomar cuidado, há um risco de uma animação diminuir a capacidade de resposta da interface do usuário ou comprometer o desempenho de outros recursos do aplicativo que também estão no mesmo thread da interface do usuário.
 
@@ -259,7 +266,7 @@ Como um desenvolvedor de aplicativo, você também pode optar por aplicar uma co
 
  
 
-## Iniciando e controlando uma animação
+## <a name="starting-and-controlling-an-animation"></a>Iniciando e controlando uma animação
 
 Tudo que mostramos até agora não faz com que uma animação seja realmente executada ou aplicada. Até que a animação seja iniciada e esteja em execução, as alterações de valores que uma animação declara no XAML são latentes e ainda não ocorrerão. Você deve iniciar explicitamente uma animação de alguma maneira relacionada ao tempo de vida do aplicativo ou à experiência do usuário. No nível mais simples, você inicia uma animação chamando o método [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) no [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é o pai dessa animação. Você pode chamar métodos diretamente do XAML, de modo que, seja lá o que fizer para habilitar suas animações, o fará a partir do código. Isso será o code-behind das páginas ou dos componentes do seu aplicativo ou talvez a lógica do seu controle se você estiver definindo uma classe de controle personalizada.
 
@@ -267,7 +274,7 @@ Geralmente, você chama [**Begin**](https://msdn.microsoft.com/library/windows/a
 
 Quando você chama [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) em um storyboard que contém animações que são repetidas infinitamente (`RepeatBehavior="Forever"`), a animação é executada até que a página que a contém seja descarregada ou até que você chame especificamente [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) ou [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop).
 
-### Iniciando uma animação a partir do código do aplicativo
+### <a name="starting-an-animation-from-app-code"></a>Iniciando uma animação a partir do código do aplicativo
 
 Você pode iniciar animações automaticamente ou em resposta a ações do usuário. Para o caso automático, você geralmente usa um evento de tempo de vida de objeto como [**Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) para atuar como o gatilho da animação. O evento **Loaded** é um bom evento a ser usado para essa finalidade porque, nesse ponto, a interface do usuário está pronta para interação e a animação não será cortada no início porque outra parte da interface do usuário ainda está sendo carregada.
 
@@ -298,23 +305,23 @@ Você pode manipular o evento [**Completed**](https://msdn.microsoft.com/library
 
  
 
-### Animações para estados visuais
+### <a name="animations-for-visual-states"></a>Animações para estados visuais
 
 O comportamento de execução de um [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) que é usado para definir o estado visual de um controle é diferente da maneira como um aplicativo pode executar um storyboard diretamente. Quando aplicado a uma definição de estado visual no XAML, o **Storyboard** é um elemento de um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) contêiner e o estado como um todo é controlado pelo uso da API [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Qualquer animação interna será executada de acordo com seus valores de animação e propriedades [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) quando o **VisualState** contêiner for usado por um controle. Para obter mais informações, consulte [Storyboards para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para estados visuais, o [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente é diferente. Se um estado visual for alterado para outro estado, todas as alterações de propriedade aplicadas pelo estado visual anterior e suas animações serão cancelados, mesmo se o novo estado visual não aplicar especificamente uma nova animação a uma propriedade.
 
-### **Storyboard** e **EventTrigger**
+### <a name="storyboard-and-eventtrigger"></a>**Storyboard** e **EventTrigger**
 
 Só há uma maneira de iniciar uma animação que pode ser declarada completamente no XAML. No entanto, essa técnica já não é mais usada com freqüência. Trata-se de uma sintaxe herdada do WPF e de versões anteriores do Silverlight antes do suporte a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Essa sintaxe [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ainda funciona no XAML do Windows Runtime para fins de importação/compatibilidade, mas só funciona para um comportamento de gatilho baseado no evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). Uma tentativa de acionar outros eventos lançará exceções ou causará falha na compilação. Para obter mais informações, consulte [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) ou [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
 
-## Animando propriedades anexadas XAML
+## <a name="animating-xaml-attached-properties"></a>Animando propriedades anexadas XAML
 
 Não é um cenário comum, mas é possível aplicar um valor animado a uma propriedade anexada XAML. Para saber mais sobre o que são as propriedades anexadas e como elas funcionam, consulte [Visão geral das propriedades anexadas](https://msdn.microsoft.com/library/windows/apps/Mt185579). O direcionamento de uma propriedade anexada exige uma [sintaxe de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586) que coloca o nome da propriedade entre parênteses. Você pode animar as propriedades anexadas internas, como [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773), usando uma [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) que aplica valores inteiros discretos. Entretanto, uma limitação existente da implementação XAML de Windows Runtime é que não é possível animar uma propriedade anexada personalizada.
 
-## Mais tipos de animação e próximas etapas para saber mais sobre como animar a interface do usuário
+## <a name="more-animation-types-and-next-steps-for-learning-about-animating-your-ui"></a>Mais tipos de animação e próximas etapas para saber mais sobre como animar a interface do usuário
 
 Até agora, mostramos as animações personalizadas que são animadas entre dois valores e depois interpolam linearmente os valores conforme necessário durante a execução da animação. Elas são chamadas de animações **From**/**To**/**By** Mas há outro tipo de animação que permite declarar valores intermediários que ficam entre o início e o fim. Elas são chamadas de *animações de quadro chave*. Há também uma maneira de alterar a lógica de interpolação em uma animação **From**/**To**/**By** ou uma animação de quadro chave. Isso envolve a aplicação de uma função de easing. Para saber mais sobre esses conceitos, consulte [Animações de quadro chave e com função de easing](key-frame-and-easing-function-animations.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Sintaxe de Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586)
 * [Visão geral das propriedades de dependência](https://msdn.microsoft.com/library/windows/apps/Mt185583)
@@ -329,10 +336,5 @@ Até agora, mostramos as animações personalizadas que são animadas entre dois
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

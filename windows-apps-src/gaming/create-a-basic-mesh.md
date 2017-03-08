@@ -3,16 +3,23 @@ author: mtoepke
 title: "Criar e exibir uma malha básica"
 description: "Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp, jogos, malha, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b8795438053adebfbd36cada86a8ef13afb3eef2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7dc55c0a7653616a86f1cca41521c7b25c070f9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criar e exibir uma malha básica
+# <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo. As listas de vértices que compõem a estrutura desses objetos e superfícies poligonais são chamadas de malhas. Aqui, vamos criar uma malha básica para um objeto cúbico e fornecê-lo no pipeline de sombreador para renderização e exibição.
 
@@ -20,23 +27,23 @@ Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos 
 
  
 
-## O que você precisa saber
+## <a name="what-you-need-to-know"></a>O que você precisa saber
 
 
-### Tecnologias
+### <a name="technologies"></a>Tecnologias
 
 -   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
 
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 -   Conhecimento básico de álgebra linear e sistemas de coordenadas 3D
 -   Um modelo do Visual Studio 2015 Direct3D
 
-## Instruções
+## <a name="instructions"></a>Instruções
 
-### Etapa 1: construir a malha do modelo
+### <a name="step-1-construct-the-mesh-for-the-model"></a>Etapa 1: construir a malha do modelo
 
-Na maioria dos jogos, a malha de um objeto de jogo é carregada de um arquivo que contém os dados de vértice específicos. A ordenação desses vértices depende do aplicativo, mas eles geralmente são serializados como faixas ou leques. Os dados de vértice podem se originar em qualquer fonte de software ou podem ser criados manualmente. Cabe ao seu jogo interpretar os dados de maneira que o sombreador de vértice possa efetivamente processá-los.
+Na maioria dos jogos, a malha de um objeto de jogo é carregada de um arquivo que contém os dados de vértice específicos. A ordenação desses vértices depende do app, mas eles geralmente são serializados como faixas ou leques. Os dados de vértice podem se originar em qualquer fonte de software ou podem ser criados manualmente. Cabe ao seu jogo interpretar os dados de maneira que o sombreador de vértice possa efetivamente processá-los.
 
 No nosso exemplo, usamos uma malha simples para um cubo. O cubo, assim como qualquer malha de objeto nesse estágio do pipeline, é representado por meio de seu próprio sistema de coordenadas. O sombreador de vértice obtém as coordenadas e, aplicando as matrizes de transformação fornecidas por você, retorna a projeção final de exibição 2D em um sistema de coordenadas homogêneo.
 
@@ -63,7 +70,7 @@ Em cada emparelhamento entre parênteses, o segundo grupo de valores DirectX::XM
 
 Portanto, você tem 8 vértices, cada um com uma cor específica. Cada vértice/emparelhamento entre parênteses representa os dados completos de um vértice, no nosso exemplo. Ao especificar o buffer do vértices, tenha em mente esse layout específico. Nós fornecemos esse layout de entrada para o sombreador de vértice, para que ele possa entender os seus dados de vértice.
 
-### Etapa 2: configurar o layout de entrada
+### <a name="step-2-set-up-the-input-layout"></a>Etapa 2: configurar o layout de entrada
 
 Agora, os vértices estão na memória. O dispositivo gráfico, porém, tem sua própria memória e você usa o Direct3D para acessá-la. Para que os seus dados sejam disponibilizados no dispositivo gráfico para processamento, é preciso limpar o caminho e deixá-lo como era: declare como os dados de vértice são organizados para que o dispositivo gráfico possa interpretá-los quando eles forem obtidos do seu jogo. Para isso, use [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
 
@@ -102,7 +109,7 @@ Para obter uma lista completa de formatos, consulte [**DXGI\_FORMAT**](https://m
 
 Chame [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) e crie o layout de entrada no dispositivo Direct3D. Agora, você precisa criar um buffer que possa realmente manter os dados.
 
-### Etapa 3: popular os buffers de vértices
+### <a name="step-3-populate-the-vertex-buffers"></a>Etapa 3: popular os buffers de vértices
 
 Os buffers de vértices contêm a lista de vértices de cada triângulo da malha. Cada vértice deve ser exclusivo nessa lista. Em nosso exemplo, há 8 vértices para o cubo. O sombreador de vértice é executado no dispositivo gráfico e lê o buffer de vértices, e interpreta os dados com base no layout de entrada especificado na etapa anterior.
 
@@ -135,7 +142,7 @@ m_d3dDevice->CreateBuffer(
 
 Vértices carregados. Mas, qual é a ordem de processamento desses vértices? Esse aspecto é tratado quando você fornece uma lista de índices para os vértices: a ordenação desses índices é a ordem em que o sombreador de vértice os processa.
 
-### Etapa 4: popular os buffers de índices
+### <a name="step-4-populate-the-index-buffers"></a>Etapa 4: popular os buffers de índices
 
 Agora, forneça uma lista dos índices de cada um dos vértices. Esses índices correspondem à posição do vértice no buffer de vértices, começando com 0. Para ajudar você a visualizar isso, considere que cada vértice exclusivo na sua malha tem um número exclusivo atribuído a ele, como uma ID. Essa ID é a posição inteira do vértice no buffer de vértices.
 
@@ -179,7 +186,7 @@ Trinta e seis elementos de índice no buffer indicam redundância em excesso, po
 
 Para obter mais informações sobre as diferentes técnicas de lista de índices, consulte [Topologias primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
 
-### Etapa 5: criar um buffer constante para as matrizes de transformação
+### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Etapa 5: criar um buffer constante para as matrizes de transformação
 
 Para dar início ao processamento de vértices, você precisa fornecer as matrizes de transformação que serão aplicadas (multiplicadas) em cada vértice, quando ele for executado. Para a maioria dos jogos em 3D, há três delas:
 
@@ -300,7 +307,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 Muito bem! Assembly de entrada concluído. Está tudo pronto para renderização. Vamos acionar o sombreador de vértice.
 
-### Etapa 6: processar a malha com o sombreador de vértice
+### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Etapa 6: processar a malha com o sombreador de vértice
 
 Agora que você tem um buffer de vértices contendo os vértices definidos para a malha e o buffer de índices que define a ordem de processamento dos vértices, envie-os para o sombreador de vértice. O código do sombreador de vértice, expresso como linguagem compilada de sombreador de alto nível, é executado uma vez para ada vértice no buffer de vértices, permitindo que você execute suas transformações por vértice. O resultado final é tipicamente uma projeção 2D.
 
@@ -369,7 +376,7 @@ Está vendo **cbuffer** na parte superior? É o HLSL análogo para o mesmo buffe
 
 **PixelShaderInput** especifica o layout dos dados que são retornados pela função principal do sombreador de vértice. Ao concluir o processamento de um vértice, você retornará uma posição de vértice no espaço de projeção 2D e uma cor usada para iluminação por vértice. A placa gráfica usa a saída de dados do sombreador para calcular os "fragmentos" (pixels possíveis) que deverão ser coloridos quando o sombreador de pixel for executado no próximo estágio do pipeline.
 
-### Etapa 7: passar a malha pelo sombreador de pixel
+### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Etapa 7: passar a malha pelo sombreador de pixel
 
 Nesse estágio do pipeline gráfico, geralmente você executa operações por pixel nas superfícies projetadas visíveis dos objetos. (As pessoas gostam de texturas.) Para fins de amostragem, porém, basta passar isso por meio desse estágio.
 
@@ -398,7 +405,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 Coloque esse código em um arquivo HLSL separado do HLSL de sombreador de vértice (por exemplo, SimplePixelShader.hlsl). Esse código é executado uma vez para cada pixel visível no visor (uma representação na memória da parte da tela em que você está desenhando), o que, nesse caso, mapeia toda a tela. Agora, o pipeline gráfico está totalmente definido.
 
-### Etapa 8: rasterizar e exibir a malha
+### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Etapa 8: rasterizar e exibir a malha
 
 Vamos executar o pipeline. É fácil: chame [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
 
@@ -426,16 +433,16 @@ m_swapChain->Present(1, 0);
 
 E pronto! Para um cenário repleto de modelos, use vários buffers de vértices e índices. É possível ter diferentes sombreadores para diferentes tipos de modelo. Lembre-se: cada modelo tem seu próprio sistema de coordenadas. Você precisa transformá-lo no sistema compartilhado de coordenadas de mundo usando as matrizes definidas no buffer constante.
 
-## Comentários
+## <a name="remarks"></a>Comentários
 
 Este tópico abrange a criação e a exibição de geometria simples que você mesmo cria. Para saber mais sobre o carregamento de geometria complexa de um arquivo e a conversão dessa geometria no formato do objeto de buffer de vértices específico do exemplo (.vbo), consulte [Como carregar recursos no jogo em DirectX](load-a-game-asset.md).
 
 > **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem apps UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Como carregar recursos no jogo em DirectX](load-a-game-asset.md)
@@ -446,10 +453,5 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

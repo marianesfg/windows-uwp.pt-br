@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Use este método na API de análise da Windows Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais."
-title: "Obter classificações de aplicativos"
+title: "Obter classificações de aplicativo"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, classificações"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 86685984256459e0bb125340daa1616b09982429
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 25f057eba5827be34b4fcf9d31a6e0ae71dc9893
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-app-ratings"></a>Obter classificações de aplicativos
+# <a name="get-app-ratings"></a>Obter classificações de aplicativo
 
 Use este método na API de análise da Windows Store para obter dados de classificações agregadas em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de classificações](../publish/ratings-report.md) no painel do Centro de Desenvolvimento do Windows.
 
@@ -156,9 +163,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter avaliações de app](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

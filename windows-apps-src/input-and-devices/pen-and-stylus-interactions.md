@@ -1,23 +1,24 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Crie aplicativos da Plataforma Universal do Windows (UWP) compatíveis com interações personalizadas de dispositivos de caneta, incluindo tinta digital para experiências naturais de escrita e de desenho"
-title: "Interações com caneta e Windows Ink em aplicativos UWP"
+Description: "Crie apps da Plataforma Universal do Windows (UWP) compatíveis com interações personalizadas de dispositivos de caneta, incluindo tinta digital para experiências naturais de escrita e de desenho"
+title: "Interações com caneta e Windows Ink em apps UWP"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
-keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+keywords: "Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, InkCanvas, reconhecimento de manuscrito, interação do usuário, entrada"
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: c5e42f812cc0ed128ebb5c533ef72539baeef93d
-ms.openlocfilehash: f2de946ca7210cf3f4c170c73902c1a727067e7c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fd65e2ea02ea52425656e584b3fa495512030c76
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em aplicativos UWP
+# <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em apps UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 <!--
@@ -34,7 +35,7 @@ ms.openlocfilehash: f2de946ca7210cf3f4c170c73902c1a727067e7c
 
 ## <a name="overview"></a>Visão geral
 
-Otimize seu aplicativo da Plataforma Universal do Windows (UWP) para entrada de caneta para fornecer o recurso padrão [**dispositivo de ponteiro**](https://msdn.microsoft.com/library/windows/apps/br225633) e a melhor experiência com o Windows Ink para seus usuários.
+Otimize seu app da Plataforma Universal do Windows (UWP) para entrada de caneta para fornecer o recurso padrão [**dispositivo de ponteiro**](https://msdn.microsoft.com/library/windows/apps/br225633) e a melhor experiência com o Windows Ink para seus usuários.
 
 > [!NOTE]
 > Este tópico se concentra na plataforma Windows Ink. Para manipulação de entrada de ponteiro geral (semelhante ao mouse, toque e touchpad), consulte [Identificar entrada do ponteiro](handle-pointer-input.md).
@@ -42,14 +43,14 @@ Otimize seu aplicativo da Plataforma Universal do Windows (UWP) para entrada de 
 | Vídeos |   |
 | --- | --- |
 | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *Usando escrita à tinta em seu aplicativo UWP* | *Usar a caneta e o Windows Ink para compilar aplicativos corporativos mais envolventes* |
+| *Usando escrita à tinta em seu app UWP* | *Usar a caneta e o Windows Ink para compilar apps corporativos mais envolventes* |
 
 A plataforma Windows Ink, juntamente com um dispositivo de caneta, oferece uma maneira natural de criar anotações manuscritas digitais, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, gerenciamento e geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída e conversão de tinta em texto por meio do reconhecimento de manuscrito.
 
-Além de capturar os movimentos e posições básicos da caneta enquanto o usuário escreve ou desenha, seu aplicativo também pode rastrear e coletar os diferentes valores de pressão usados em um traço. Estas informações, juntamente com configurações de formato da ponta da caneta, tamanho, rotação, cor da tinta, rotação e função (tinta simples, apagar, destacar e selecionar) permitem que você ofereça experiências ao usuário que se aproximam do ato de escrever ou desenhar em papel com caneta, lápis ou pincel.
+Além de capturar os movimentos e posições básicos da caneta enquanto o usuário escreve ou desenha, seu app também pode rastrear e coletar os diferentes valores de pressão usados em um traço. Estas informações, juntamente com configurações de formato da ponta da caneta, tamanho, rotação, cor da tinta, rotação e função (tinta simples, apagar, destacar e selecionar) permitem que você ofereça experiências ao usuário que se aproximam do ato de escrever ou desenhar em papel com caneta, lápis ou pincel.
 
 > [!NOTE]
-> Seu aplicativo também pode ser compatível com a entrada à tinta de outros dispositivos baseados em ponteiro, inclusive digitalizadores touch e mouses. 
+> Seu app também pode ser compatível com a entrada à tinta de outros dispositivos baseados em ponteiro, inclusive digitalizadores touch e mouses. 
 
 A plataforma de tinta é muito flexível. Ele é projetado para dar suporte a vários níveis de funcionalidade, dependendo dos seus requisitos.
 
@@ -61,8 +62,8 @@ Para obter diretrizes sobre a experiência do usuário com o Windows Ink, consul
 | --- | --- |
 | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Controle da plataforma da interface do usuário XAML que, por padrão, recebe e exibe todas as entradas de uma caneta como um traço de tinta ou um traço para apagar.<br/>Para obter mais informações sobre como usar o InkCanvas, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Objeto code-behind, instanciado juntamente com um controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (exposto por meio da propriedade [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)). Esse objeto fornece todas as funcionalidades de escrita à tinta expostas pelo **InkCanvas**, juntamente com um conjunto que compreende APIs de customização e personalização adicional.<br/>Para obter mais informações sobre como usar o InkPresenter, consulte [Reconhecer traços do Windows Ink como texto](convert-ink-to-text.md) e [Armazenar e recuperar dados de traço do Windows Ink](save-and-load-ink.md). |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a um controle da plataforma de interface do usuário XAML definition.A que contém uma coleção de botões extensíveis que ativam recursos relacionados a tinta em InkCanvas associado.<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
-| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo Universal do Windows, em vez do controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Isso permite a personalização completa da experiência de escrita à tinta.<br/>Para obter mais informações, consulte o [Exemplo de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Adicione um InkToolbar padrão a um app de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a um controle da plataforma de interface do usuário XAML definition.A que contém uma coleção de botões extensíveis que ativam recursos relacionados a tinta em InkCanvas associado.<br/>Para obter mais informações sobre como usar o InkToolbar, consulte [Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)](ink-toolbar.md). |
+| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Permite a renderização de traços de tinta para o contexto de dispositivo Direct2D designado de um aplicativo universal do Windows, em vez do controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Isso permite a personalização completa da experiência de escrita à tinta.<br/>Para obter mais informações, consulte o [Exemplo de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Escrita à tinta básica com InkCanvas
 
@@ -108,7 +109,7 @@ Para escrita à tinta básica, você não precisa se preocupar com o [**InkPrese
 
 Um objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) é instanciado com cada controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-Além de fornecer todos os comportamentos padrão de escrita à tinta do seu controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) correspondente, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) fornece um conjunto que compreende APIs para personalização adicional de traços. Isso inclui propriedades de traços, tipos de dispositivos de entrada com suporte e se a entrada é processada pelo objeto ou passada para o aplicativo.
+Além de fornecer todos os comportamentos padrão de escrita à tinta do seu controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) correspondente, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) fornece um conjunto que compreende APIs para personalização adicional de traços. Isso inclui propriedades de traços, tipos de dispositivos de entrada com suporte e se a entrada é processada pelo objeto ou passada para o app.
 
 > [!NOTE]
 > O [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) não pode ser instanciado diretamente. Em vez disso, ele é acessado pela propriedade [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) do [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). 
@@ -134,7 +135,7 @@ public MainPage()
 }
 ```
 
-Atributos de traço de tinta podem ser definidos dinamicamente para acomodar as preferências do usuário ou requisitos do aplicativo.
+Atributos de traço de tinta podem ser definidos dinamicamente para acomodar as preferências do usuário ou requisitos do app.
 
 Aqui, permitimos que um usuário escolha suas preferências em uma lista de cores de tinta.
 
@@ -206,7 +207,7 @@ Estas imagens mostram como a entrada de caneta é processada e personalizada pel
 | --- | --- |
 | O [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) com traços de tinta preta padrão. | O [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) com traços de tinta vermelha selecionados pelo usuário. | 
 
-Para oferecer funcionalidades além de escrever à tinta e apagar, como seleção de traço, seu aplicativo deve identificar entrada específica para o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) passar por não processado por manipular pelo seu aplicativo.
+Para oferecer funcionalidades além de escrever à tinta e apagar, como seleção de traço, seu app deve identificar entrada específica para o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) passar por não processado por manipular pelo seu app.
 
 ## <a name="pass-through-input-for-advanced-processing"></a>Entrada de passagem para processamento avançado
 
@@ -214,9 +215,9 @@ Por padrão, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/app
 
 Ao usar essas funcionalidades secundárias, os usuários normalmente esperam algumas funcionalidades adicionais ou um comportamento modificado.
 
-Em alguns casos, talvez seja necessário expor a funcionalidade básica de tinta para canetas sem funcionalidades secundárias (funcionalidade geralmente não associada à ponta da caneta), outros tipos de dispositivos de entrada, ou funcionalidade adicional de entrada, ou comportamento modificado, com base na seleção de um usuário na interface do usuário do seu aplicativo.
+Em alguns casos, talvez seja necessário expor a funcionalidade básica de tinta para canetas sem funcionalidades secundárias (funcionalidade geralmente não associada à ponta da caneta), outros tipos de dispositivos de entrada, ou funcionalidade adicional de entrada, ou comportamento modificado, com base na seleção de um usuário na interface do usuário do seu app.
 
-Para dar suporte a isso, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) pode ser configurado para deixar uma entrada específica não processada. Essa entrada não processada é, então, passada pelo seu aplicativo para processamento.
+Para dar suporte a isso, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) pode ser configurado para deixar uma entrada específica não processada. Essa entrada não processada é, então, passada pelo seu app para processamento.
 
 As etapas de exemplo de código a seguir mostram como habilitar a seleção de traço quando a entrada é modificada com um botão de caneta (ou o botão direito do mouse).
 
@@ -261,7 +262,7 @@ Para este exemplo, usamos os arquivos MainPage.xaml e MainPage.xaml.cs para hosp
 
 3.  Em seguida, configuramos o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para interpretar dados de entrada tanto da caneta quanto do mouse como traços de tinta, e definimos alguns atributos iniciais de traço de tinta usados para renderizar traços para o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-    E, o mais importante, usamos a propriedade [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que qualquer entrada modificada deve ser processada pelo aplicativo. A entrada modificada é especificada atribuindo a **InputProcessingConfiguration.RightDragAction** um valor de [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
+    E, o mais importante, usamos a propriedade [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que qualquer entrada modificada deve ser processada pelo app. A entrada modificada é especificada atribuindo a **InputProcessingConfiguration.RightDragAction** um valor de [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
 
     Então, atribuímos ouvintes para os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) não processados passados pelo [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). Todas as funcionalidades de seleção são implementadas nos manipuladores para esses eventos.
 
@@ -442,19 +443,19 @@ Para este exemplo, usamos os arquivos MainPage.xaml e MainPage.xaml.cs para hosp
 
 ## <a name="custom-ink-rendering"></a>Renderização de tinta personalizada
 
-Por padrão, a entrada de tinta é processada em um thread em segundo plano e renderizada como "molhada" conforme é desenhada. Quando o traço está concluído (caneta ou dedo param de pressionar ou botão do mouse é liberado), o traço é processado do thread de interface do usuário e renderizado como "seco" na camada [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (acima do conteúdo do aplicativo e substituindo a tinta molhada).
+Por padrão, a entrada de tinta é processada em um thread em segundo plano e renderizada como "molhada" conforme é desenhada. Quando o traço está concluído (caneta ou dedo param de pressionar ou botão do mouse é liberado), o traço é processado do thread de interface do usuário e renderizado como "seco" na camada [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (acima do conteúdo do app e substituindo a tinta molhada).
 
 A plataforma de tinta permite substituir esse comportamento e personalizar completamente a experiência de escrita à tinta secando de forma personalizada a entrada de tinta.
 
-Secar de forma personalizada exige que um objeto [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) gerencie a entrada de tinta e a renderize para o contexto de dispositivo Direct2D do seu aplicativo Universal do Windows, em vez de o controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+Secar de forma personalizada exige que um objeto [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) gerencie a entrada de tinta e a renderize para o contexto de dispositivo Direct2D do seu aplicativo universal do Windows, em vez de o controle padrão [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-Chamar [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) ser carregado) faz com que um aplicativo crie um objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar como um traço de tinta é renderizado como seco para um [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) ou [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por exemplo, um traço de tinta poderia ser rasterizado e integrado no conteúdo de um aplicativo em vez de uma camada **InkCanvas** separada.
+Chamar [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de o [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) ser carregado) faz com que um app crie um objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar como um traço de tinta é renderizado como seco para um [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) ou [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por exemplo, um traço de tinta poderia ser rasterizado e integrado no conteúdo de um app em vez de uma camada **InkCanvas** separada.
 
 Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314).
 
 > [!NOTE]
 > Secagem personalizada e o [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
-> Se o aplicativo substituir o comportamento de renderização da tinta padrão do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) por uma implementação de secagem personalizada, os traços da tinta renderizada não estarão mais disponíveis para o InkToolbar e os comandos de exclusão internos do InkToolbar não funcionarão conforme esperado. Para oferecer uma funcionalidade de exclusão, você deve lidar com todos os eventos de ponteiro, realizar o teste de clique em cada traço e substituir o comando "Apagar toda a tinta" interno.
+> Se o app substituir o comportamento de renderização da tinta padrão do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) por uma implementação de secagem personalizada, os traços da tinta renderizada não estarão mais disponíveis para o InkToolbar e os comandos de exclusão internos do InkToolbar não funcionarão conforme esperado. Para oferecer uma funcionalidade de exclusão, você deve lidar com todos os eventos de ponteiro, realizar o teste de clique em cada traço e substituir o comando "Apagar toda a tinta" interno.
 
 ## <a name="other-articles-in-this-section"></a>Outros artigos nesta seção
 
@@ -462,7 +463,7 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 | --- | --- |
 | [Reconhecer traços de tinta](convert-ink-to-text.md) | Converta traços de tinta em texto usando o reconhecimento de manuscrito, ou em formas usando o reconhecimento personalizado. |
 | [Armazenar e recuperar traços de tinta](save-and-load-ink.md) | Armazene dados de traço de tinta em um arquivo Graphics Interchange Format (GIF) usando metadados incorporados Ink Serialized Format (ISF). |
-| [Adicionar um InkToolbar a um aplicativo de escrita à tinta de UWP](ink-toolbar.md) | Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada. |
+| [Adicionar um InkToolbar a um app de escrita à tinta de UWP](ink-toolbar.md) | Adicione um InkToolbar padrão a um app de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada. |
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -486,7 +487,7 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
 * [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Exemplos de arquivo morto**
+**Exemplos de arquivo**
 * [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -494,9 +495,4 @@ Para ver um exemplo completo dessa funcionalidade, consulte [Amostra de tinta co
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

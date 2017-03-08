@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "Propriedades de informações do dispositivo"
 description: "Cada dispositivo tem propriedades DeviceInformation associadas que você poderá usar quando precisar de informações específicas ou quando estiver criando um seletor de dispositivo."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbe72dd476903083518dcf4b9d299b04e87f6e85
+ms.lasthandoff: 02/07/2017
 
 ---
-# Propriedades de informações do dispositivo
+# <a name="device-information-properties"></a>Propriedades de informações do dispositivo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** APIs importantes **
+**APIs importantes**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Cada dispositivo tem propriedades [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) associadas que você poderá usar quando precisar de informações específicas ou quando estiver criando um seletor de dispositivo. Essas propriedades podem ser especificadas como um filtro AQS para limitar os dispositivos sobre os quais você está enumerando para localizar os dispositivos com as características especificadas. Você também pode usar essas propriedades para indicar quais informações devem ser retornadas para cada dispositivo. Isso permite especificar as informações do dispositivo que são retornadas para seu aplicativo.
 
@@ -23,17 +30,17 @@ Para obter mais informações sobre como usar propriedades [**DeviceInformation*
 
 Um objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) é composto por uma identidade ([**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)), um tipo ([**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)) e um recipiente de propriedades ([**DeviceInformation.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx)). Todas as outras propriedades de um objeto **DeviceInformation** são derivadas do recipiente de propriedades **Properties**. Por exemplo, [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name) é derivado de **System.ItemNameDisplay**. Isso significa que o recipiente de propriedades sempre contém as informações necessárias para determinar as outras propriedades.
 
-## Solicitando propriedades
+## <a name="requesting-properties"></a>Solicitando propriedades
 
 Um objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) tem algumas propriedades básicas, como [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) e [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx), mas a maioria das propriedades é armazenada em um recipiente de propriedades em [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx). Por isso, o recipiente de propriedades contém as propriedades usadas para fornecer as propriedades desse recipiente. Por exemplo, use [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770) para fornecer a propriedade [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name). Esse é um caso de uma propriedade comum e bem conhecida que tem um nome amigável. O Windows fornece vários desses nomes amigáveis para tornar a consulta de propriedades mais fácil.
 
 Na solicitação de propriedades, você não é limitado às propriedades comuns com nomes amigáveis. Você pode especificar o GUID e a ID da propriedade (PID) subjacentes para solicitar qualquer propriedade que esteja disponível, mesmo as propriedades personalizadas que são fornecidas por um driver ou dispositivo individual. O formato para especificar uma propriedade personalizada é "`{GUID} PID`". Por exemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"
 
-Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind), mas a maioria é exclusiva para um tipo específico. As seções a seguir listam algumas propriedades comuns classificadas pelo **DeviceInformationKind**. Para obter mais informações sobre como os diferentes tipos estão relacionados um ao outro, consulte **DeviceInformationKind**.
+Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), mas a maioria é exclusiva para um tipo específico. As seções a seguir listam algumas propriedades comuns classificadas pelo **DeviceInformationKind**. Para obter mais informações sobre como os diferentes tipos estão relacionados um ao outro, consulte **DeviceInformationKind**.
 
-## Propriedades de DeviceInterface
+## <a name="deviceinterface-properties"></a>Propriedades de DeviceInterface
 
-**DeviceInterface** é o objeto [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind) padrão e mais comum usado em cenários de aplicativo. Esse é o tipo de objeto que você deve usar, a menos que a API de dispositivo indique um **DeviceInformationKind** diferente específico.
+**DeviceInterface** é o objeto [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind) padrão e mais comum usado em cenários de aplicativo. Esse é o tipo de objeto que você deve usar, a menos que a API de dispositivo indique um **DeviceInformationKind** diferente específico.
 
 | Nome                                  | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +55,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades do dispositivo
+## <a name="device-properties"></a>Propriedades do dispositivo
 
 | Nome                                  | Tipo       | Descrição                                                                                                                                                                                                                                                                              |
 |---------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades de DeviceContainer
+## <a name="devicecontainer-properties"></a>Propriedades de DeviceContainer
 
 | Nome                              | Tipo       | Descrição                                                                                                                                                        |
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +93,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades de DeviceInterfaceClass
+## <a name="deviceinterfaceclass-properties"></a>Propriedades de DeviceInterfaceClass
 
 | Nome                       | Tipo   | Descrição                            |
 |----------------------------|--------|----------------------------------------|
@@ -94,7 +101,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades de AssociationEndpoint
+## <a name="associationendpoint-properties"></a>Propriedades de AssociationEndpoint
 
 | Nome                                  | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -115,7 +122,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades de AssociationEndpointContainer
+## <a name="associationendpointcontainer-properties"></a>Propriedades de AssociationEndpointContainer
 
 | Nome                                                | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,7 +144,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 
  
 
-## Propriedades de AssociationEndpointService
+## <a name="associationendpointservice-properties"></a>Propriedades de AssociationEndpointService
 
 | Nome                                            | Tipo    | Descrição                                                                                                      |
 |-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
@@ -154,13 +161,4 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

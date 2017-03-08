@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Armazenamento compartilhado corporativo
 description: "O armazenamento compartilhado corporativo define localizações de dados locais para aplicativos de linha de negócios para compartilhar dados."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: bd4663b25c351551cd2f4e1e780a76431d1c3a19
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6a6ad55a134a45bf3feb7092cdad78d9f6ee196b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Armazenamento compartilhado corporativo
+# <a name="enterprise-shared-storage"></a>Armazenamento compartilhado corporativo
 
 O armazenamento compartilhado consiste em duas localizações nas quais aplicativos com a funcionalidade restrita **enterpriseDeviceLockdown** e um certificado corporativo têm total acesso de leitura e gravação. Observe que a funcionalidade **enterpriseDeviceLockdown** permite que os aplicativos usem a API de bloqueio do dispositivo e acessem as pastas de armazenamento compartilhado corporativo. Para saber mais sobre a API, consulte o namespace [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331).  
 
@@ -16,7 +23,7 @@ Essas localizações são definidas na unidade local:
 - \Data\SharedData\Enterprise\Persistent
 - \Data\SharedData\Enterprise\Non-Persistent
 
-## Cenários
+## <a name="scenarios"></a>Cenários
 
 O armazenamento compartilhado corporativo dá suporte aos cenários a seguir.
 
@@ -24,7 +31,7 @@ O armazenamento compartilhado corporativo dá suporte aos cenários a seguir.
 - Você pode armazenar dados no disco rígido local, na pasta \Data\SharedData\Enterprise\Persistent, e eles manterão a persistência mesmo após a redefinição do dispositivo.
 - Manipule arquivos, incluindo a leitura, a gravação e a exclusão de arquivos, em um dispositivo por meio do serviço MDM (Gerenciamento de Dispositivo Móvel). Para saber mais sobre como usar o armazenamento compartilhado corporativo por meio do serviço MDM, consulte [EnterpriseExtFileSystem CSP](http://go.microsoft.com/fwlink/?LinkId=699333).
 
-## Acessar o armazenamento compartilhado corporativo
+## <a name="access-enterprise-shared-storage"></a>Acessar o armazenamento compartilhado corporativo
 
 O exemplo a seguir mostra como declarar a funcionalidade para acessar o armazenamento compartilhado corporativo no manifesto do pacote e como acessar as pastas de armazenamento compartilhadas usando a classe Windows.Storage.StorageFolder.
 
@@ -70,10 +77,5 @@ IReadOnlyList<StorageFile> sortedItems =
 foreach (StorageFile file in sortedItems)
     Debug.WriteLine(file.Name + ", " + file.DateCreated);
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

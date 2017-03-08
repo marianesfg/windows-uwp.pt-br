@@ -3,13 +3,20 @@ author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: "A classe SystemMediaTransportControls permite que seu aplicativo use os controles de transporte de mídia do sistema que estão integrados ao Windows e atualize os metadados que os controles exibem sobre a mídia que seu aplicativo está reproduzindo atualmente."
 title: "Controle manual dos controles de transporte de mídia do sistema"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
-ms.openlocfilehash: 471cf095109fc9bbfcb241dd6eb480603c3df655
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b8af1942ed50df9f382773113a903360f8cb19b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controle manual dos controles de transporte de mídia do sistema
+# <a name="manual-control-of-the-system-media-transport-controls"></a>Controle manual dos controles de transporte de mídia do sistema
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +24,7 @@ A partir do Windows 10, versão 1607, os aplicativos UWP que usam a classe [**Me
 
 Existem alguns cenários em que talvez você precise implementar o controle manual do SMTC. Entre eles, se você estiver usando um [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) para controlar a reprodução de um ou mais media players. Ou se você estiver usando vários media players e apenas deseja ter uma instância de SMTC para seu aplicativo. Você deverá controlar o SMTC manualmente se estiver usando [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaElement) para reproduzir mídia.
 
-## Configurar os controles de transporte
+## <a name="set-up-transport-controls"></a>Configurar os controles de transporte
 Se você estiver usando o **MediaPlayer** para reproduzir mídia, poderá obter uma instância da classe [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.SystemMediaTransportControls) acessando a propriedade [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.SystemMediaTransportControls). Se você pretende controlar manualmente o SMTC, deverá desabilitar a integração automática fornecida pelo **MediaPlayer** definindo a propriedade [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) como false.
 
 > [!NOTE] 
@@ -37,7 +44,7 @@ Registre um manipulador para o evento [**ButtonPressed**](https://msdn.microsoft
 
 [!code-cs[RegisterButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterButtonPressed)]
 
-## Manipular pressionamentos de botões de controles de transporte de mídia do sistema
+## <a name="handle-system-media-transport-controls-button-presses"></a>Manipular pressionamentos de botões de controles de transporte de mídia do sistema
 
 O evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) é acionado pelos controles de transporte do sistema quando um dos botões ativados é pressionado. A propriedade [**Button**](https://msdn.microsoft.com/library/windows/apps/dn278685) dos [**SystemMediaTransportControlsButtonPressedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn278683) passados para o manipulador de eventos é membro da enumeração [**SystemMediaTransportControlsButton**](https://msdn.microsoft.com/library/windows/apps/dn278681) que indica quais dos botões ativados foram pressionados.
 
@@ -45,13 +52,13 @@ Para atualizar objetos no thread da interface do usuário no manipulador de even
 
 [!code-cs[SystemMediaTransportControlsButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsButtonPressed)]
 
-## Atualizar os controles de transporte de mídia do sistema com o status atual da mídia
+## <a name="update-the-system-media-transport-controls-with-the-current-media-status"></a>Atualizar os controles de transporte de mídia do sistema com o status atual da mídia
 
 Você deve notificar os [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) quando o estado da mídia mudar para que o sistema possa atualizar os controles para refletir o estado atual. Para fazer isso, configure a propriedade [**PlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278719) com o valor [**MediaPlaybackStatus**](https://msdn.microsoft.com/library/windows/apps/dn278665) apropriado no evento [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) do [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), que é lançado quando o estado da mídia muda.
 
 [!code-cs[SystemMediaTransportControlsStateChange](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsStateChange)]
 
-## Atualizar os controles de transporte de mídia do sistema com miniaturas e informações de mídia
+## <a name="update-the-system-media-transport-controls-with-media-info-and-thumbnails"></a>Atualizar os controles de transporte de mídia do sistema com miniaturas e informações de mídia
 
 Use a classe [**SystemMediaTransportControlsDisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278686) para atualizar as informações da mídia mostradas pelos controles de transporte, como o título da música ou a capa do álbum do item de mídia atualmente em reprodução. Obtenha uma instância dessa classe com a propriedade [**SystemMediaTransportControls.DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707). Para cenários típicos, a maneira recomendada de passar os metadados é chamar [**CopyFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn278694), passando o arquivo de mídia atualmente em execução. O atualizador de exibição extrairá automaticamente os metadados e a imagem em miniatura do arquivo.
 
@@ -63,7 +70,7 @@ Se seu cenário exigir, você poderá atualizar os metadados exibidos pelos cont
 
 [!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
 
-## Atualizar as propriedades de linha do tempo dos controles de transporte de mídia do sistema
+## <a name="update-the-system-media-transport-controls-timeline-properties"></a>Atualizar as propriedades de linha do tempo dos controles de transporte de mídia do sistema
 
 Os controles de transporte do sistema exibem informações sobre a linha do tempo do item de mídia atualmente em execução, incluindo a posição de reprodução atual, a hora de início e a hora de término do item de mídia. Para atualizar as propriedades de linha do tempo dos controles de transporte do sistema, crie um novo objeto [**SystemMediaTransportControlsTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218746). Configure as propriedades do objeto para refletir o estado atual do item de mídia em reprodução. Chame [**SystemMediaTransportControls.UpdateTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218760) para fazer com que os controles atualizem a linha do tempo.
 
@@ -77,7 +84,7 @@ Os controles de transporte do sistema exibem informações sobre a linha do temp
 
 -   É recomendável manter os controles do sistema em sincronia com a reprodução da mídia, atualizando essas propriedades aproximadamente a cada 5 segundos durante a reprodução e novamente sempre que o estado da reprodução mudar, por exemplo, ao pausar ou buscar uma nova posição.
 
-## Responder às alterações de propriedade do player
+## <a name="respond-to-player-property-changes"></a>Responder às alterações de propriedade do player
 
 Há um conjunto de propriedades de controles de transporte do sistema que se relacionam ao estado atual do player de mídia em si, em vez do estado do item de mídia em reprodução. Cada uma dessas propriedades é relacionada a um evento que é lançado quando o usuário ajusta o controle associado. Essas propriedades e eventos incluem:
 
@@ -98,7 +105,7 @@ No manipulador do evento, certifique-se primeiramente de que o valor solicitado 
 
 -   Para que um desses eventos de propriedade do player seja lançado, você deve definir um valor inicial para a propriedade. Por exemplo, [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757) não será lançado até que você tenha definido um valor para a propriedade [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756) pelo menos uma vez.
 
-## Usar os controles de transporte de mídia do sistema para áudio em segundo plano
+## <a name="use-the-system-media-transport-controls-for-background-audio"></a>Usar os controles de transporte de mídia do sistema para áudio em segundo plano
 
 Se você não estiver usando a integração de SMTC automática fornecida pelo **MediaPlayer** manualmente, deverá efetuar a integração com o SMTC para habilitar o áudio em segundo plano. No mínimo, seu aplicativo deverá habilitar os botões de reprodução e pausa definindo [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) e [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713) como true. O aplicativo também deve manipular o evento [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706). Se seu aplicativo não cumprir esses requisitos, reprodução de áudio será interrompida quando seu aplicativo for movido para segundo plano.
 
@@ -106,7 +113,7 @@ Aplicativos que usam o novo modelo de um processo para áudio em segundo plano d
 
 Para obter informações sobre como reproduzir áudio em segundo plano, consulte [Reproduzir mídia em segundo plano](background-audio.md).
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)
 * [Integrar aos Controles de transporte de mídia do sistema](integrate-with-systemmediatransportcontrols.md) 
 * [Exemplo de transporte de mídia do sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
@@ -115,10 +122,5 @@ Para obter informações sobre como reproduzir áudio em segundo plano, consulte
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

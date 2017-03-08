@@ -3,13 +3,20 @@ author: TylerMSFT
 title: Declarar tarefas em segundo plano no manifesto do aplicativo
 description: "Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Declarar tarefas em segundo plano no manifesto do aplicativo
+# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -29,7 +36,7 @@ As tarefas em segundo plano fora do processo devem ser declaradas no manifesto d
 
 Este tópico considera que você criou uma ou mais classes de tarefa em segundo plano e que o seu aplicativo registra cada tarefa em segundo plano para execução em resposta a pelo menos um gatilho.
 
-## Adicionar extensões manualmente
+## <a name="add-extensions-manually"></a>Adicionar extensões manualmente
 
 
 Abra o manifesto do aplicativo (Package.appxmanifest) e vá para o elemento Application. Crie um elemento Extensions (caso não haja um).
@@ -55,7 +62,7 @@ O seguinte trecho foi retirado do [exemplo de tarefa de segundo plano](http://go
  </Application>
 ```
 
-## Adicionar uma extensão de tarefa em segundo plano
+## <a name="add-a-background-task-extension"></a>Adicionar uma extensão de tarefa em segundo plano
 
 
 Declare sua primeira tarefa em segundo plano.
@@ -102,7 +109,7 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 ```
 
 
-## Adicionar outras extensões de tarefa em segundo plano
+## <a name="add-additional-background-task-extensions"></a>Adicionar outras extensões de tarefa em segundo plano
 
 Repita a etapa 2 para cada classe adicional de tarefa em segundo plano registrada pelo aplicativo.
 
@@ -147,11 +154,11 @@ O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa 
 </Applications>
 ```
 
-## Declare sua tarefa em segundo plano para ser executada em um processo diferente
+## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Declare sua tarefa em segundo plano para ser executada em um processo diferente
 
 Nova funcionalidade no Windows 10, versão 1507, permite que você execute a tarefa em segundo plano em um processo diferente do BackgroundTaskHost.exe (o processo em que tarefas em segundo plano são executadas por padrão).  Há duas opções: executar no mesmo processo de seu aplicativo em primeiro plano; executar em uma instância do BackgroundTaskHost.exe separada de outras instâncias das tarefas em segundo plano do mesmo aplicativo.  
 
-### Executar no aplicativo em primeiro plano
+### <a name="run-in-the-foreground-application"></a>Executar no aplicativo em primeiro plano
 
 Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada no mesmo processo como o aplicativo em primeiro plano. Observe o atributo `Executable`:
 
@@ -168,7 +175,7 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 > [!Note]
 > Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
 
-### Executar em um processo de host de segundo plano diferente
+### <a name="run-in-a-different-background-host-process"></a>Executar em um processo de host de segundo plano diferente
 
 Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada em um processo do BackgroundTaskHost.exe, mas em um separado de outras instâncias de tarefas em segundo plano do mesmo aplicativo. Observe o atributo `ResourceGroup`, que identifica quais tarefas em segundo plano serão executadas juntas.
 
@@ -203,15 +210,10 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 ```
 
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: "Usar o girômetro"
 description: "Saiba como usar o girômetro para detectar mudanças no movimento do usuário."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: f53ae8de70ddca0d8293283012bedb8a39ac7ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c5e02bcd4912a5db5d691f4172baeff2378433e4
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar o girômetro
+# <a name="use-the-gyrometer"></a>Usar o girômetro
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Girômetro**](https://msdn.microsoft.com/library/windows/apps/BR225718)
@@ -23,17 +30,17 @@ Saiba como usar o girômetro para detectar mudanças no movimento do usuário.
 
 Os girômetros complementam os acelerômetros como controladores de jogos. O acelerômetro pode medir movimento linear enquanto o girômetro mede a velocidade angular ou movimento rotacional.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
 
 O dispositivo ou emulador que você está usando deve ter suporte para um girômetro.
 
-## Criar um aplicativo simples de girômetro
+## <a name="create-a-simple-gyrometer-app"></a>Criar um aplicativo simples de girômetro
 
 Esta seção está dividida em duas subseções. A primeira subseção guiará você pelas etapas necessárias para criar um aplicativo simples de girômetro do zero. A subseção seguintes explica o aplicativo que você acabou de criar.
 
-###  Instruções
+###  <a name="instructions"></a>Instruções
 
 -   Crie um novo projeto. Escolha um **Aplicativo (Universal do Windows) em Branco** nos modelos de projetos do **Visual C#**.
 
@@ -66,8 +73,8 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
         public sealed partial class MainPage : Page
         {
             private Gyrometer _gyrometer; // Our app' s gyrometer object
-     
-            // This event handler writes the current gyrometer reading to 
+
+            // This event handler writes the current gyrometer reading to
             // the three textblocks on the app' s main page.
 
             private async void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
@@ -85,7 +92,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
             {
                 this.InitializeComponent();
                 _gyrometer = Gyrometer.GetDefault(); // Get the default gyrometer sensor object
-                
+
                 if (_gyrometer != null)
                 {
                     // Establish the report interval for all scenarios
@@ -106,7 +113,7 @@ Você precisará substituir o nome do namespace no trecho anterior pelo nome que
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 
-```xml 
+```xml
         <Page
         x:Class="App1.MainPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -136,7 +143,7 @@ Quando o aplicativo estiver em execução, você poderá alterar os valores do g
 
 -   Pare o aplicativo. Basta retornar ao Visual Studio e pressionar Shift + F5 ou selecionar **Depurar** > **Parar Depuração** para parar o aplicativo.
 
-###  Explicação
+###  <a name="explanation"></a>Explicação
 
 O exemplo anterior comprova que você precisará escrever pouco código para integrar a entrada do girômetro ao seu aplicativo.
 
@@ -157,7 +164,7 @@ _gyrometer.ReportInterval = reportInterval;
 Os novos dados do girômetro são capturados no método **ReadingChanged**. Toda vez que o driver do sensor recebe novos dados do sensor, ele transmite o valor para seu aplicativo usando este manipulador de eventos. O aplicativo registra este manipulador de eventos na seguinte linha.
 
 ```csharp
-_gyrometer.ReadingChanged += new TypedEventHandler<Gyrometer, 
+_gyrometer.ReadingChanged += new TypedEventHandler<Gyrometer,
 GyrometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -172,13 +179,7 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
         <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="21" Margin="54,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Foreground="#FFF8F3F3"/>
 ```
 
- ## Tópicos relacionados
+ ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplo de girômetro](http://go.microsoft.com/fwlink/p/?linkid=241379)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,13 +3,20 @@ author: mcleblanc
 description: "Introdução à UWP para desenvolvedores de iOS"
 title: "Introdução à UWP para desenvolvedores de iOS"
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14f93a3cc8f5ada23f95a503acd2703044defe61
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b1d7259d16ba963d19c7656ff2572fa659a1710
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introdução à UWP para desenvolvedores de iOS
+# <a name="getting-started-with-uwp-for-ios-developers"></a>Introdução à UWP para desenvolvedores de iOS
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,7 +28,7 @@ O Windows 10 introduz uma nova plataforma para criar aplicativos envolventes no 
 
 O resultado é este: não apenas portar seu aplicativo, mas **reinventar** seu aplicativo e tirar proveito dos novos recursos e dos novos dispositivos. Não se conforme com o menor denominador comum, mas crie experiências sofisticadas que usem os recursos exclusivos do Windows 10, como blocos dinâmicos, notificações e interação com a Cortana.
 
-Para começar com estes tutoriais, você precisa ter um computador com o Windows 10 e o Microsoft Visual Studio instalados. Você pode baixá-los em [Downloads de desenvolvedor para programar aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=302144). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
+Para começar com estes tutoriais, você precisa ter um computador com o Windows 10 e o Microsoft Visual Studio instalados. Você pode baixá-los em [Downloads de desenvolvedor para programar aplicativos da Windows Store](https://developer.microsoft.com/en-us/windows/downloads). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -39,9 +46,4 @@ Para começar com estes tutoriais, você precisa ter um computador com o Windows
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

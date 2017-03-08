@@ -3,27 +3,34 @@ author: mtoepke
 title: "Dimensionamento e sobreposições de cadeia de troca"
 description: "Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, jogos, escala de sobreposições, sobreposições, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 1eea87b2175872e5a3bc7c41e82cda47bb555f82
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Dimensionamento e sobreposições de cadeia de troca
+# <a name="swap-chain-scaling-and-overlays"></a>Dimensionamento e sobreposições de cadeia de troca
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual.
 
-## Cadeias de troca no DirectX 11.2
+## <a name="swap-chains-in-directx-112"></a>Cadeias de troca no DirectX 11.2
 
 
-O Direct3D 11.2 permite criar aplicativos UWP (Plataforma Universal do Windows) com cadeias de troca que são ampliadas a partir de resoluções não nativas (reduzidas), permitindo taxas de preenchimento mais rápidas. O Direct3D 11.2 também inclui APIs para renderização com sobreposições de hardware para que você possa apresentar uma interface do usuário em outra cadeia de troca com resolução nativa. Isso permite que o seu jogo desenhe a interface do usuário em resolução nativa total, ao mesmo tempo que mantém uma alta taxa de quadros, fazendo o melhor uso dos dispositivos móveis e de monitores com alto DPI (como 3840 x 2160). Este artigo explica como usar cadeias de troca sobrepostas.
+O Direct3D 11.2 permite criar apps UWP (Plataforma Universal do Windows) com cadeias de troca que são ampliadas a partir de resoluções não nativas (reduzidas), permitindo taxas de preenchimento mais rápidas. O Direct3D 11.2 também inclui APIs para renderização com sobreposições de hardware para que você possa apresentar uma interface do usuário em outra cadeia de troca com resolução nativa. Isso permite que o seu jogo desenhe a interface do usuário em resolução nativa total, ao mesmo tempo que mantém uma alta taxa de quadros, fazendo o melhor uso dos dispositivos móveis e de monitores com alto DPI (como 3840 x 2160). Este artigo explica como usar cadeias de troca sobrepostas.
 
 O Direct3D 11.2 também introduz um novo recurso para permitir latência reduzida com cadeias de troca de modelo invertido. Consulte [Reduzir latência com cadeias de troca DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md)
 
-## Usar redimensionamento das cadeias de troca
+## <a name="use-swap-chain-scaling"></a>Usar redimensionamento das cadeias de troca
 
 
 Quando seu jogo está sendo executado em hardware de nível inferior, ou hardware otimizado para economizar energia, pode ser vantajoso renderizar conteúdo de jogo em tempo real em resolução mais baixa do que a capacidade nativa do vídeo. Para fazer isso, a cadeia de troca que é usada para renderizar conteúdo de jogo precisa ser menor do que a resolução nativa, ou então uma sub-região da cadeia de troca precisa ser usada.
@@ -113,7 +120,7 @@ Quando seu jogo está sendo executado em hardware de nível inferior, ou hardwar
 
 4.  Se o Direct2D estiver sendo usado, a transformação de rotação precisará ser ajustada para compensar a região de origem.
 
-## Criar uma cadeia de troca de sobreposição de hardware para elementos da interface do usuário
+## <a name="create-a-hardware-overlay-swap-chain-for-ui-elements"></a>Criar uma cadeia de troca de sobreposição de hardware para elementos da interface do usuário
 
 
 Ao usar redimensionamento da cadeia de troca, há uma desvantagem inerente no sentido de que a interface do usuário também é reduzida, possivelmente tornando-a desfocada e mais difícil de usar. Em dispositivos com suporte de hardware a cadeia de troca de sobreposição, esse problema é totalmente solucionado pela renderização da interface do usuário em resolução nativa em uma cadeia de troca que esteja separada do conteúdo do jogo em tempo real. Observe que essa técnica aplica-se somente a cadeias de troca [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), e não pode ser usada com interoperabilidade XAML.
@@ -196,7 +203,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
 4.  As cadeias de troca de primeiro plano sempre usam alfa premultiplicado. Espera-se que os valores de cor de cada pixel já estejam multiplicados pelo valor alfa antes de o quadro ser apresentado. Por exemplo, um pixel BGRA de 100% branco em alfa de 50% é definido como (0,5 - 0,5 - 0,5 - 0,5).
 
-    A etapa de pré-multiplicação de alfa pode ser realizada no estágio de fusão de saída aplicando um estado de mesclagem de aplicativo (consulte [**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) com o campo **SrcBlend** da estrutura [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) definido como **D3D11\_SRC\_ALPHA**. Os ativos com valores de alfa pré-multiplicado também podem ser usados.
+    A etapa de pré-multiplicação de alfa pode ser realizada no estágio de fusão de saída aplicando um estado de mesclagem de app (consulte [**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) com o campo **SrcBlend** da estrutura [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) definido como **D3D11\_SRC\_ALPHA**. Os ativos com valores de alfa pré-multiplicado também podem ser usados.
 
     Se a etapa de premultiplicação de alfa não for executada, as cores na cadeia de troca de primeiro plano estarão mais brilhantes do que o esperado.
 
@@ -325,10 +332,5 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

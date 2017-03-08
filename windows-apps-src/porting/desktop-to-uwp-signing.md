@@ -3,21 +3,29 @@ author: awkoren
 Description: "Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Assinar um aplicativo convertido usando a ponte da área de trabalho para UWP."
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 232c3012-71ff-4f76-a81e-b1758febb596
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b5936030f09e52933053f2465659157083b9eec2
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Assinar um aplicativo convertido usando a ponte da área de trabalho
+# <a name="sign-an-app-converted-with-the-desktop-bridge"></a>Assinar um aplicativo convertido usando a ponte da área de trabalho
 
 Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP). Você deve assinar o pacote .appx com um certificado antes de implantá-lo.
 
-## Entrar automaticamente usando o Desktop App Converter (DAC)
+## <a name="automatically-sign-using-the-desktop-app-converter-dac"></a>Entrar automaticamente usando o Desktop App Converter (DAC)
 
 Use o sinalizador ```-Sign``` ao executar o DAC para entrar automaticamente no pacote .appx. Para obter mais detalhes, consulte [Visualizar Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
 
-## Entrar manualmente usando SignTool.exe
+## <a name="manually-sign-using-signtoolexe"></a>Entrar manualmente usando SignTool.exe
 
 Primeiro, crie um certificado usando MakeCert.exe. Se você for solicitado a digitar uma senha, selecione "None". 
 
@@ -40,9 +48,9 @@ Para obter mais detalhes, consulte [Como assinar um pacote de aplicativo usando 
 
 Todas as três ferramentas acima são incluídas no SDK do Microsoft Windows 10. Para chamá-las diretamente, chame o script ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat``` em um prompt de comando.
 
-## Erros comuns
+## <a name="common-errors"></a>Erros comuns
 
-### O fornecedor e algumas incompatibilidades causam um erro Signtool "Error: SignerSign() Failed" (-2147024885/0x8007000b)
+### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>O fornecedor e algumas incompatibilidades causam um erro Signtool "Error: SignerSign() Failed" (-2147024885/0x8007000b)
 
 A entrada de Fornecedor no manifesto do appx deve coincidir com o Assunto do certificado que você esteja assinando.  Você pode usar qualquer um dos seguintes métodos para ver o assunto do certificado. 
 
@@ -66,7 +74,7 @@ Execute o **certutil** na linha de comando no arquivo PFX e copie o campo *Assun
 certutil -dump <cert_file.pfx>
 ```
 
-### Assinaturas Authenticode corrompidas ou malformadas
+### <a name="corrupted-or-malformed-authenticode-signatures"></a>Assinaturas Authenticode corrompidas ou malformadas
 
 Esta seção contém detalhes sobre como identificar problemas com arquivos PE em seu pacote AppX que pode conter assinaturas Authenticode corrompidas ou malformadas. Assinaturas Authenticode inválidas em seus arquivos PE, que podem estar em qualquer formato binário (por exemplo, .exe,. dll,. chm, etc.), impedirão que o pacote seja assinado adequadamente e, portanto, impedirá que ele seja implantado de um pacote AppX. 
 
@@ -85,13 +93,8 @@ Observe que SignTool.exe pode gerar uma lista dos binários corrompidos ou malfo
 
 Para corrigir esses binários malformados, certifique-se de que eles estejam em conformidade com os requisitos acima.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
 - [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Como assinar um pacote do aplicativo usando a SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

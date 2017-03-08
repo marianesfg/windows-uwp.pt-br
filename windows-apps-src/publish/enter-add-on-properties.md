@@ -3,18 +3,25 @@ author: jnHs
 Description: "Ao enviar um complemento, as opções da página Propriedades ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes."
 title: Inserir propriedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e3bc74fab0ae75c35581e33323100376ad755e9c
-ms.openlocfilehash: 1c030f7d79de37e20620cf56a30b1c1570e9b90b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 186088f249c2e6fe116c970bd1969fcb59863ba6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Inserir propriedades de complemento
+# <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
 
 Ao enviar um complemento, as opções da página **Propriedades** ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes.
 
-## Tipo de produto
+## <a name="product-type"></a>Tipo de produto
 
 O tipo de produto é selecionado quando você [cria o complemento primeiro](set-your-add-on-product-id.md). O tipo de produto que você selecionou é exibido aqui, mas não é possível alterá-lo.
 
@@ -22,13 +29,13 @@ O tipo de produto é selecionado quando você [cria o complemento primeiro](set-
 
 Dependendo do tipo de produto selecionado, você pode ver um dos seguintes campos:
 
-### Tempo de vida do produto
+### <a name="product-lifetime"></a>Tempo de vida do produto
 Se você selecionou **Durável** para seu tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se preferir, você pode definir o **Ciclo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1 a 365 dias). 
 
-### Quantidade
+### <a name="quantity"></a>Quantidade
 Se você selecionou **Consumível gerenciado pela Loja** para seu tipo de produto, a **Quantidade** será mostrada aqui. Você precisará inserir um número entre 1 e 1000000. Essa quantidade será concedida para o cliente quando ele adquirir o complemento, e a Loja detectará o equilíbrio conforme o aplicativo relatar o consumo do cliente do complemento.
 
-## Tipo de conteúdo
+## <a name="content-type"></a>Tipo de conteúdo
 
 Independentemente do tipo de produto do complemento, você também precisará indicar o tipo de conteúdo que está oferecendo. Para a maioria dos complementos, o tipo de conteúdo deve ser **Download de software eletrônico**. Se outra opção da lista parecer descrever melhor seu complemento (por exemplo, se você estiver oferecendo um download de música ou um livro eletrônico), selecione essa opção. 
 
@@ -45,17 +52,17 @@ Estas são as opções de tipo de conteúdo possíveis do complemento:
 -   Streaming de vídeos
 -   Software como um serviço
 
-## Palavras-chave
+## <a name="keywords"></a>Palavras-chave
 
 Você tem a opção de fornecer até dez as palavras-chave de até 30 caracteres para cada complemento que você enviar. Em seguida, seu aplicativo pode consultar complementos que correspondam a essas palavras. Esse recurso permite que você crie telas em seu aplicativo que podem carregar complementos sem precisar especificar a ID do produto diretamente no código do seu aplicativo. Em seguida, você pode alterar as palavras-chave do complemento a qualquer momento, sem precisar fazer alterações no código em seu aplicativo ou enviar o aplicativo novamente.
 
 > **Observação**  Palavras-chave não estão disponíveis para uso em pacotes para o Windows 8 e o Windows 8.1.
 
-## Dados de desenvolvedor personalizados
+## <a name="custom-developer-data"></a>Dados de desenvolvedor personalizados
 
-Você pode digitar até 3000 caracteres no campo **Dados de desenvolvedor personalizados** para fornecer contexto extra para seu produto no aplicativo.
+Você pode digitar até 3000 caracteres no campo **Dados de desenvolvedor personalizados** (chamado antigamente de **Marcação**) para fornecer contexto extra para seu produto no aplicativo. Geralmente, isso é na forma de uma cadeia de caracteres XML, mas você pode inserir qualquer coisa que você gostaria nesse campo.
 
-> **Observação** Esse campo antes era chamado de **Tag**.
+Para consultar este campo, use a propriedade [StoreSku.CustomDeveloperData](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.storesku.customdeveloperdata.aspx) no [namespace Windows.Services.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx). (Ou, se você estiver usando o [namespace Windows.ApplicationModel.Store](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx), use a propriedade [ProductListing.Tag](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.productlisting.tag.aspx).)
 
 Por exemplo, digamos que você tenha um jogo, e está vendendo uma bolsa de moedas de ouro como um complemento. Usando o campo **Dados de desenvolvedor personalizados**, o aplicativo pode consultar essa bolsa de ouro. Você pode ajustar o valor a qualquer momento (neste caso, o número de moedas em sua bolsa) atualizando as informações do campo **Dados de desenvolvedor personalizados** do complemento, sem precisar fazer alterações no código em seu aplicativo ou enviar o aplicativo novamente.
 
@@ -69,10 +76,5 @@ Por exemplo, digamos que você tenha um jogo, e está vendendo uma bolsa de moed
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

@@ -3,20 +3,27 @@ author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: "Este artigo descreve como usar SceneAnalysisEffect e FaceDetectionEffect para analisar o conteúdo do fluxo de visualização de captura de mídia."
 title: "Efeitos para análise de quadros de câmera"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f46130feac43211bccf57191d940acb8198965
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Efeitos para análise de quadros de câmera
+# <a name="effects-for-analyzing-camera-frames"></a>Efeitos para análise de quadros de câmera
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como usar [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) e [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) para analisar o conteúdo do fluxo de visualização de captura de mídia.
 
-## Efeito de análise de cena
+## <a name="scene-analysis-effect"></a>Efeito de análise de cena
 
 [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) analisa os quadros de vídeo no fluxo de visualização de captura de mídia e recomenda opções de processamento para melhorar o resultado da captura. Atualmente, o efeito permite detectar se a captura poderia ser melhorada usando o processamento em HDR (High Dynamic Range).
 
@@ -28,13 +35,13 @@ Se o efeito recomendar o uso de HDR, você pode fazer isso das seguintes maneira
 
 -   Use [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573) para capturar uma sequência de quadros com os quais você pode fazer uma composição usando uma implementação personalizada em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md).
 
-### Namespaces de análise de cena
+### <a name="scene-analysis-namespaces"></a>Namespaces de análise de cena
 
 Para usar a análise de cena, seu aplicativo deve incluir os namespaces a seguir, além dos namespaces necessários para a captura de mídia básica.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### Inicializar o efeito de análise de cena e adicioná-lo ao fluxo de visualização
+### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>Inicializar o efeito de análise de cena e adicioná-lo ao fluxo de visualização
 
 Os efeitos de vídeo são implementados usando-se duas APIs, uma definição de efeito, que fornece as configurações que o dispositivo de captura precisa para inicializar o efeito, e uma instância de efeito, que pode ser usada para controlar o efeito. Como você pode querer acessar a instância de efeito de vários locais dentro do seu código, normalmente você deve declarar uma variável de membro para manter o objeto.
 
@@ -50,7 +57,7 @@ Atualmente, o efeito de análise de cena inclui somente o analisador de HDR. Hab
 
 [!code-cs[CreateSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateSceneAnalysisEffectAsync)]
 
-### Implementar o manipulador de eventos SceneAnalyzed
+### <a name="implement-the-sceneanalyzed-event-handler"></a>Implementar o manipulador de eventos SceneAnalyzed
 
 Os resultados da análise de cena são retornados no manipulador de eventos **SceneAnalyzed**. O objeto [**SceneAnalyzedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948922) passado para o manipulador tem um objeto [**SceneAnalysisEffectFrame**](https://msdn.microsoft.com/library/windows/apps/dn948907) que possui um objeto [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830). A propriedade [**Certainty**](https://msdn.microsoft.com/library/windows/apps/dn948833) da saída de HDR fornece um valor entre 0 e 1,0, onde 0 indica que o processamento em HDR não ajudaria a melhorar o resultado da captura e 1,0 indica que o processamento em HDR ajudaria. Você pode decidir o ponto de limite no qual deseja usar HDR ou mostrar os resultados ao usuário e permitir que ele decida.
 
@@ -58,23 +65,23 @@ Os resultados da análise de cena são retornados no manipulador de eventos **Sc
 
 O objeto [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) passado para o manipulador também tem uma propriedade [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834), que contém controladores de quadro sugeridos para capturar uma sequência de fotos variável para processamento em HDR. Para obter mais informações, consulte [Sequência de fotos variável](variable-photo-sequence.md).
 
-### Limpar o efeito da análise de cena
+### <a name="clean-up-the-scene-analysis-effect"></a>Limpar o efeito da análise de cena
 
 Quando seu aplicativo terminar a captura, antes de descartar o objeto **MediaCapture**, você deve desabilitar o efeito de análise de cena definindo a propriedade [**HighDynamicRangeAnalyzer.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827) do efeito como false e cancelar o registro de seu manipulador de eventos [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920). Chame [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592) especificando o fluxo de visualização de vídeo, desde que tenha sido o fluxo ao qual o efeito foi adicionado. Por fim, defina a variável de membro como nula.
 
 [!code-cs[CleanUpSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpSceneAnalysisEffectAsync)]
 
-## Efeito de detecção de rosto
+## <a name="face-detection-effect"></a>Efeito de detecção de rosto
 
 O [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifica a localização de rostos dentro do fluxo de visualização da captura de mídia. O efeito permite que você receba uma notificação sempre que um rosto for detectado no fluxo de visualização e fornece a caixa delimitadora para cada rosto detectado dentro do quadro de visualização. Em dispositivos com suporte, o efeito de detecção de rosto também fornece exposição avançada e foco no rosto mais importante na cena.
 
-### Namespaces de detecção de rosto
+### <a name="face-detection-namespaces"></a>Namespaces de detecção de rosto
 
 Para usar a detecção de rosto, seu aplicativo deve incluir os namespaces a seguir, além dos namespaces necessários para a captura de mídia básica.
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### Inicializar o efeito de detecção de rosto e adicioná-lo ao fluxo de visualização
+### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>Inicializar o efeito de detecção de rosto e adicioná-lo ao fluxo de visualização
 
 Os efeitos de vídeo são implementados usando-se duas APIs, uma definição de efeito, que fornece as configurações que o dispositivo de captura precisa para inicializar o efeito, e uma instância de efeito, que pode ser usada para controlar o efeito. Como você pode querer acessar a instância de efeito de vários locais dentro do seu código, normalmente você deve declarar uma variável de membro para manter o objeto.
 
@@ -88,7 +95,7 @@ Habilite ou desabilite os efeitos definindo a propriedade [**FaceDetectionEffect
 
 [!code-cs[CreateFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFaceDetectionEffectAsync)]
 
-### Receber notificações quando os rostos forem detectados
+### <a name="receive-notifications-when-faces-are-detected"></a>Receber notificações quando os rostos forem detectados
 
 Se você deseja executar algumas ações quando rostos forem detectados, como desenhar uma caixa ao redor dos rostos detectados na visualização de vídeo, você pode registrar o evento [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820).
 
@@ -98,19 +105,19 @@ No manipulador do evento, você pode obter uma lista de todos os rostos detectad
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
-### Limpar o efeito de detecção de rosto
+### <a name="clean-up-the-face-detection-effect"></a>Limpar o efeito de detecção de rosto
 
 Quando seu aplicativo terminar a captura, antes de descartar o objeto **MediaCapture**, você deve desabilitar o efeito de detecção de rosto com [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818) e cancelar o registro do seu manipulador de eventos [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820) se tiver registrado um anteriormente. Chame [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592) especificando o fluxo de visualização de vídeo, desde que tenha sido o fluxo ao qual o efeito foi adicionado. Por fim, defina a variável de membro como nula.
 
 [!code-cs[CleanUpFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpFaceDetectionEffectAsync)]
 
-### Verificar se há suporte para foco e exposição para os rostos detectados
+### <a name="check-for-focus-and-exposure-support-for-detected-faces"></a>Verificar se há suporte para foco e exposição para os rostos detectados
 
 Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco e a exposição com base nos rostos detectados. Como a detecção de rosto consome recursos do dispositivo, você pode querer apenas ativar a detecção de rosto em dispositivos que possam usar o recurso para aprimorar a captura. Para ver se a otimização de captura com base no rosto está disponível, obtenha o [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) para sua [MediaCapture](capture-photos-and-video-with-mediacapture.md) inicializada e baixe o [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064) do controlador de dispositivo de vídeo. Verifique se o [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069) dá suporte a pelo menos uma região. Em seguida, verifique se [**AutoExposureSupported**](https://msdn.microsoft.com/library/windows/apps/dn279065) ou [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066) estão definidas como true. Se essas condições forem atendidas, o dispositivo poderá aproveitar a detecção de rosto para melhorar a captura.
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -120,10 +127,5 @@ Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

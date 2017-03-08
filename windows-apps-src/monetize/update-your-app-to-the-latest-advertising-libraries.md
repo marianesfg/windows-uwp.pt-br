@@ -1,29 +1,43 @@
 ---
 author: mcleanbyron
 description: "Saiba como atualizar o aplicativo para usar as bibliotecas do Microsoft Advertising compatíveis mais recentes e verifique se o aplicativo continua recebendo anúncios em faixa."
-title: Atualize o aplicativo para as bibliotecas do Microsoft Advertising mais recentes
+title: Atualize o aplicativo com as bibliotecas do Microsoft Advertising mais recentes
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl, migração"
+ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
-
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 3cdb1f41fda7bd4e4af1ce9e5f8fb4396da53f63
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>Atualize o aplicativo para as bibliotecas do Microsoft Advertising mais recentes
+# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>Atualize o aplicativo com as bibliotecas do Microsoft Advertising mais recentes
 
-A partir de janeiro de 2017, não veicularemos mais anúncios em faixa para aplicativos que usem versões do SDK de publicidade mais antigas da Microsoft. Se você tiver um aplicativo existente (já na Loja ou ainda em desenvolvimento) que exiba anúncios em faixa usando **AdControl** ou **AdMediatorControl**, será preciso atualizar o aplicativo para usar o SDK de publicidade mais recente para o aplicativo continuar recebendo anúncios em faixa em janeiro de 2017. Siga as instruções neste artigo para determinar se o aplicativo é afetado por essa mudança e saiba como atualizá-lo, se necessário.
+Somente os seguintes SDKs são suportados para mostrar anúncios em faixa do Microsoft advertising em seus aplicativos usando um **AdControl** ou **AdMediatorControl**:
 
-Se o aplicativo for afetado por essa mudança e você não atualizar o aplicativo para usar o SDK de publicidade mais recente, você notará o seguinte comportamento a partir de janeiro de 2017:
+* [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicativos UWP)
+* [Microsoft Advertising SDK para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicativos do Windows 8.1 e Windows Phone 8.x)
 
-* Os anúncios em faixa não serão mais veiculados para controles **AdControl** ou **AdMediatorControl** no aplicativo, e você deixará de receber receita de publicidade desses controles.
+Antes que esses SDKs estivessem disponíveis, lançamos anteriormente diversas versões mais antigas do SDK de publicidade para aplicativos do Windows e Windows Phone. Essas versões do SDK de publicidade mais antigas não são mais suportadas. No futuro, planejamos interromper a veiculação de anúncios em faixa em aplicativos que usam esses SDKs mais antigos.
 
-* Quando **AdControl** ou **AdMediatorControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
+Se você tiver um aplicativo existente (já na Loja ou ainda em desenvolvimento) que exiba anúncios em faixa usando **AdControl** ou **AdMediatorControl**, será preciso atualizar o aplicativo para usar o SDK de publicidade mais recente para sua plataforma de destino para o aplicativo continuar recebendo anúncios em faixa no futuro. Siga as instruções neste artigo para determinar se o aplicativo é afetado por essa mudança e saiba como atualizá-lo, se necessário.
+
+Se seu aplicativo é afetado por essa mudança e você não atualizar seu aplicativo para usar o SDK de publicidade mais recente, você verá o comportamento a seguir se interrompermos a veiculação de anúncios em faixa em aplicativos que usam as versões do SDK de publicidade sem suporte:
+
+* Os anúncios em faixa não serão mais veiculados para controles **AdControl** ou **AdMediatorControl** no aplicativo, e você deixará de receber a receita de publicidade desses controles.
+
+* Quando **AdControl** ou **AdMediatorControl** no aplicativo solicitam um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor de **NoAdAvailable**.
 
 Para contextualizar mais essa alteração, estamos removendo o suporte para versões do SDK de publicidade anteriores não compatíveis com um conjunto mínimo de recursos, inclusive a capacidade de oferecer mídia avançada HTML5 por meio da [Especificação Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) da Interactive Advertising Bureau (IAB). Muitos dos anunciantes procuram esses recursos, e estamos fazendo essa alteração para ajudar a tornar o ecossistema de aplicativos mais atraente para anunciantes e, por fim, gerar mais receita para você.
 
 Se você tiver algum problema ou precisar de ajuda, [contate o suporte](http://go.microsoft.com/fwlink/?LinkId=393643).
 
->**Observação**&nbsp;&nbsp;Se você tiver atualizado anteriormente o aplicativo para usar o [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicativos UWP) ou o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicativos do Windows 8.1 e do Windows Phone 8.x), o aplicativo já usará o SDK de publicidade mais recente disponível, e você não precisará fazer outras alterações no aplicativo.
+>**Observação**&nbsp;&nbsp;Se seu aplicativo já utiliza [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (para aplicativos UWP) ou o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicativos do Windows 8.1 e do Windows Phone 8.x), ou se você já atualizou o aplicativo para usar um desses SDKs, o aplicativo já usará o SDK mais recente disponível, e você não precisará fazer outras alterações no aplicativo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -123,13 +137,13 @@ Se o aplicativo usar **AdControl** para exibir anúncios em faixa, siga estas in
 
 **Aplicativos do Windows 8.0**
 
-* Os aplicativos que segmentam o Windows 8.0 deixarão de receber anúncios em faixa a partir de janeiro de 2017. Para evitar impressões perdidas, recomendamos converter o projeto em um aplicativo UWP que segmente o Windows 10. A maioria do tráfego de aplicativo do Windows 8.0 agora está em execução em dispositivos com o Windows 10.
+* Os aplicativos que segmentam o Windows 8.0 podem não mais receber anúncios em faixa no futuro. Para evitar impressões perdidas, recomendamos converter o projeto em um aplicativo UWP que segmente o Windows 10. A maioria do tráfego de aplicativos do Windows 8.0 agora está em execução em dispositivos com o Windows 10.
 
 <span/>
 
 **Aplicativos do Windows Phone 7.x**
 
-* Os aplicativos que segmentam o Windows Phone 7.x não receberão mais anúncios em faixa a partir de janeiro de 2017. Para evitar impressões perdidas, recomendamos converter o projeto para segmentar o aplicativo do Windows Phone 8.1 ou um aplicativo UWP que segmente o Windows 10. A maior parte do tráfego do aplicativo do Windows 7.x agora está em execução em dispositivos com o Windows Phone 8.1 ou o Windows 10.
+* Os aplicativos que segmentam o Windows Phone 7.x podem não mais receber anúncios em faixa no futuro. Para evitar impressões perdidas, recomendamos converter o projeto para segmentar o aplicativo do Windows Phone 8.1 ou um aplicativo UWP que segmente o Windows 10. A maior parte do tráfego do aplicativo do Windows 7.x agora está em execução em dispositivos com o Windows Phone 8.1 ou o Windows 10.
 
 <span/>
 
@@ -167,9 +181,9 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
 
   >**Observação**&nbsp;&nbsp;Se o Visual Studio estiver aberto no computador de desenvolvimento, feche-o antes de realizar as etapas a seguir.
 
-1.  Desinstale todas as versões anteriores do SDK do Microsoft Advertising e do SDK do Ad Mediator do computador de desenvolvimento.
+1.    Desinstale todas as versões anteriores do SDK do Microsoft Advertising e do SDK do Ad Mediator do computador de desenvolvimento.
 
-2.  Abra uma janela do **Prompt de Comando** e execute estes comandos para limpar todas as versões do SDK anteriores que possam ter sido instaladas com o Visual Studio, mas que talvez não sejam exibidas na lista de programas instalados no computador:
+2.    Abra uma janela do **Prompt de Comando** e execute estes comandos para limpar todas as versões do SDK anteriores que possam ter sido instaladas com o Visual Studio, mas que talvez não sejam exibidas na lista de programas instalados no computador:
 
   > [!div class="tabbedCodeSnippets"]
   ```syntax
@@ -178,7 +192,7 @@ Se o aplicativo usar uma versão do SDK anterior, siga estas instruções para s
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
   ```
 
-3.  Instale o SDK mais recente para o aplicativo:
+3.    Instale o SDK mais recente para o aplicativo:
   * Para aplicativos UWP no Windows 10, instale o [Microsoft Store Services SDK](http://aka.ms/store-services-sdk).
   * Para aplicativos segmentados para uma versão anterior do sistema operacional, instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk).
 
@@ -238,16 +252,11 @@ Observe o seguinte:
 
 Teste o aplicativo para garantir que ele exiba anúncios em faixa conforme o esperado.
 
-Se a versão anterior do aplicativo já estiver disponível na Loja, [crie um novo envio](https://msdns.microsoft.com/windows/uwp/publish/app-submissions) para o aplicativo atualizado no painel do Centro de Desenvolvimento do Windows para republicá-lo.
+Se a versão anterior do aplicativo já estiver disponível na Loja, [crie um novo envio](../publish/app-submissions.md) para o aplicativo atualizado no painel do Centro de Desenvolvimento do Windows para republicá-lo.
 
 
 
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

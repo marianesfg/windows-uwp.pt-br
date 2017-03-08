@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
-ms.assetid: 
-description: "Use este método na API de análise da Windows Store para obter os rastreamentos de pilha de um erro em seu app."
-title: Obter o rastreamento de pilha de um erro em seu app
+ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
+description: "Use este método na API de análise da Windows Store para obter os rastreamentos de pilha de um erro em seu aplicativo."
+title: Obter o rastreamento de pilha de um erro em seu aplicativo
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, rastreamento de pilha, erro"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: 90481b5f85d010a142e86ca67ac94c3ec25d89c6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8b10c7f9e2de962aca719055a26d8c3954ea052f
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obter o rastreamento de pilha de um erro em seu app
+# <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obter o rastreamento de pilha de um erro em seu aplicativo
 
 Use este método na API de análise da Windows Store para obter os rastreamentos de pilha de um erro em seu app. Este método pode apenas baixar o rastreamento de pilha de um erro de app que ocorreu nos últimos 30 dias. Os rastreamentos de pilha também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
 
@@ -125,9 +132,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
 description: "Use esse método na API de análise da Windows Store para obter os dados de desempenho do anúncio agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter dados de desempenho de anúncios"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, anúncios, desempenho"
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 551416caf19e16b6d6ab95fcd98aa8fbbb1587f1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a9d6226ebb06c1a9322ab44c3001a8b86aab1e5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obter dados de desempenho de anúncios
+# <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 
 
 Use esse método na API de análise da Windows Store para obter os dados de desempenho dos aplicativos agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
 Esse método retorna os mesmos dados fornecidos pelo [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento do Windows.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 
 Para usar este método, primeiro você precisa do seguinte:
@@ -26,10 +33,10 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md).
 
-## Solicitação
+## <a name="request"></a>Solicitação
 
 
-### Sintaxe da solicitação
+### <a name="request-syntax"></a>Sintaxe da solicitação
 
 | Método | URI da solicitação                                                              |
 |--------|--------------------------------------------------------------------------|
@@ -37,7 +44,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 <span />
 
-### Cabeçalho da solicitação
+### <a name="request-header"></a>Cabeçalho da solicitação
 
 | Cabeçalho        | Tipo   | Descrição           |
 |---------------|--------|--------------------------------|
@@ -45,7 +52,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 <span />
 
-### Parâmetros solicitados
+### <a name="request-parameters"></a>Parâmetros solicitados
 
 Para recuperar dados de desempenho do anúncio de um aplicativo específico, use o parâmetro *applicationId*. Para recuperar dados de desempenho do anúncio de todos os aplicativos associados à conta de desenvolvedor, omita o parâmetro *applicationId*.
 
@@ -63,7 +70,7 @@ Para recuperar dados de desempenho do anúncio de um aplicativo específico, use
 
 <span />
  
-### Campos de filtro
+### <a name="filter-fields"></a>Campos de filtro
 
 O parâmetro *filter* do corpo da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Aqui está um parâmetro *filter* de exemplo:
 
@@ -82,7 +89,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 <span /> 
 
-### Exemplo de solicitação
+### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra várias solicitações para obter dados de desempenho do anúncio. Substitua o valor de *applicationId* pela ID da Loja de seu aplicativo.
 
@@ -94,10 +101,10 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance?appl
 Authorization: Bearer <your access token>
 ```
 
-## Resposta
+## <a name="response"></a>Resposta
 
 
-### Corpo da resposta
+### <a name="response-body"></a>Corpo da resposta
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,13 +113,13 @@ Authorization: Bearer <your access token>
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
 <span id="ad-performance-values" />
-### Valores de desempenho do anúncio
+### <a name="ad-performance-values"></a>Valores de desempenho do anúncio
 
 Os elementos na matriz *Value* contêm os seguintes valores.
 
 | Valor               | Tipo   | Descrição                                                                                                                                                                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date                | string | A primeira data no intervalo de datas dos dados de desempenho do anúncio. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, esse valor será a primeira data nesse intervalo de datas. |
+| date                | string | A primeira data no intervalo de datas dos dados de desempenho do anúncio. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
 | applicationId       | string | A ID da Loja do aplicativo do qual você está recuperando dados de desempenho do anúncio.     |
 | applicationName     | string | O nome de exibição do aplicativo.                         |
 | adUnitId           | string | A ID da unidade de anúncio.        |
@@ -130,7 +137,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 <span />
 
-### Exemplo de resposta
+### <a name="response-example"></a>Exemplo de resposta
 
 O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
@@ -172,13 +179,8 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ```
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 * [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
