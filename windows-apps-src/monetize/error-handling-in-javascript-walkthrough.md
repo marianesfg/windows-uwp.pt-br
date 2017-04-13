@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, tratamento de erros, java script"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 935ce9ca17d2b9d4a63496ab0b254960bd68e23d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5b3e9b66ea0b52e9a44b6c71c3d7107a86b038df
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="error-handling-in-javascript-walkthrough"></a>Tratamento de erros no guia passo a passo do JavaScript
 
 
@@ -86,4 +83,3 @@ Estes exemplos pressupõem que você tenha um aplicativo JavaScript/HTML que con
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
  
-

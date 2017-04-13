@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10523df0297013573dad62d32901c597ba850175
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1bc2ce82688db20315113efc9b080b449a850f05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
 
@@ -107,7 +104,6 @@ Se o envio for uma atualização para um aplicativo publicado anteriormente, voc
 Para obter mais informações, consulte [Baixar e instalar atualizações de pacote para seu aplicativo](../packaging/self-install-package-updates.md).
 
  
-
 
 
 

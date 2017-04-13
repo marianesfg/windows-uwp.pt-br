@@ -9,26 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, intersticial, javascript, código de exemplo"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91a54bdd2e41b3e7df0ee0aad32448ab9ed66ac0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 192ea42e9d55bbafcd6c6dbd463681832ac28c86
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de exemplo de anúncio intersticial em JavaScript
 
-Este tópico fornece o exemplo de código completo para um app básico da Plataforma Universal do Windows (UWP) em JavaScript e HTML que mostra um anúncio intersticial. Para obter instruções passo a passo que mostram como configurar o projeto para usar esse código, consulte [Anúncios intersticiais](interstitial-ads.md). Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Este tópico fornece o exemplo de código completo para um aplicativo básico da Plataforma Universal do Windows (UWP) em JavaScript e HTML que mostra um anúncio intersticial. Para obter instruções passo a passo que mostram como configurar o projeto para usar esse código, consulte [Anúncios intersticiais](interstitial-ads.md). Para obter um projeto de exemplo completo, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
 ## <a name="code-example"></a>Exemplo de código
 
-Esta seção mostra o conteúdo dos arquivos em HTML e JavaScript em um app básico que mostra um anúncio intersticial. Para usar esses exemplos, copie esse código para um projeto JavaScript **Aplicativo WinJS (Universal do Windows)** no Visual Studio 2015.
+Esta seção mostra o conteúdo dos arquivos em HTML e JavaScript em um aplicativo básico que mostra um anúncio intersticial. Para usar esses exemplos, copie esse código para um projeto JavaScript **Aplicativo WinJS (Universal do Windows)** no Visual Studio 2015.
 
-Este app de exemplo usa dois botões para solicitar e, em seguida, iniciar um anúncio intersticial. Os arquivos main.js e index.html gerados pelo Visual Studio foram modificados e são mostrados abaixo. O arquivo script.js mostrado abaixo contém a maior parte do código no exemplo, e você deve adicionar esse arquivo à pasta **js** no projeto.
+Este aplicativo de exemplo usa dois botões para solicitar e, em seguida, iniciar um anúncio intersticial. Os arquivos main.js e index.html gerados pelo Visual Studio foram modificados e são mostrados abaixo. O arquivo script.js mostrado abaixo contém a maior parte do código no exemplo, e você deve adicionar esse arquivo à pasta **js** no projeto.
 
 >**Observação para o Windows 8.x e o Windows Phone 8.1**&nbsp;&nbsp;Se o projeto destinar-se ao Windows 8.1 ou ao Windows Phone 8.1, o arquivo HTML padrão no projeto se chamará default.html, e não index.html, e o arquivo JavaScript padrão no projeto se chamará default.js, e não main.js.
 
-Substitua os valores das variáveis ```applicationId``` e ```adUnitId``` por valores ativos do Centro de Desenvolvimento do Windows antes de enviar o app para a Loja. Para obter mais informações, consulte [Configurar unidades de anúncio no app](set-up-ad-units-in-your-app.md).
+Substitua os valores das variáveis ```applicationId``` e ```adUnitId``` por valores ativos do Centro de Desenvolvimento do Windows antes de enviar o aplicativo para a Loja. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](set-up-ad-units-in-your-app.md).
+
+>**Observação**&nbsp;&nbsp;para alterar este exemplo e mostrar um anúncio intersticial de banner em vez de um anúncio intersticial em vídeo, passe o valor **InterstitialAdType.display** para o primeiro parâmetro do método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) em vez de **InterstitialAdType.video**. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).
 
 ### <a name="indexhtml"></a>index.html
 
@@ -53,4 +52,3 @@ Substitua os valores das variáveis ```applicationId``` e ```adUnitId``` por val
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
  
-

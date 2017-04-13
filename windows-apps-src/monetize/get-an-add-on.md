@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
 description: "Use este método na API de envio da Windows Store para recuperar informações sobre um complemento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
-title: Obter um complemento usando a API de envio da Windows Store
+title: Obter um complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complemento, produto in-App, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e000c435b8a271085872bfb1ce42dd09352847c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a79c93c1ed7d38b4de1da2bbd05456fd0884692e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-add-on-using-the-windows-store-submission-api"></a>Obter um complemento usando a API de envio da Windows Store
+# <a name="get-an-add-on"></a>Obter um complemento
 
 
 
@@ -105,7 +102,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -121,4 +118,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Obter todos os complementos](get-all-add-ons.md)
 * [Criar um complemento](create-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)
-

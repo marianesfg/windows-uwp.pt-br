@@ -9,22 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e05c1b2e8c8391901c28c12b57415ec0e599859d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9b9ec40eb3411252c46286e44744a8ab7ef9c431
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-attached-properties"></a>Propriedades anexadas personalizadas
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Uma *propriedade anexada* é um conceito de XAML. Propriedades anexadas são geralmente definidas como uma forma especializada de propriedade de dependência. Este tópico explica como implementar uma propriedade anexada como uma propriedade de dependência e como definir a convenção do acessador necessário para que a propriedade anexada possa ser usada no XAML.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Pressupomos que você compreende as propriedades de dependência sob a perspectiva de um consumidor de propriedades de dependência existentes e que você leu [Visão geral de propriedades de dependência](dependency-properties-overview.md). Você também deverá ter lido [Visão geral de propriedades anexadas](attached-properties-overview.md). Para seguir os exemplos deste tópico, você também tem que conhecer XAML e saber como gravar um app básico do Tempo de Execução do Windows em C++, C# ou Visual Basic.
+Pressupomos que você compreende as propriedades de dependência sob a perspectiva de um consumidor de propriedades de dependência existentes e que você leu [Visão geral de propriedades de dependência](dependency-properties-overview.md). Você também deverá ter lido [Visão geral de propriedades anexadas](attached-properties-overview.md). Para seguir os exemplos deste tópico, você também tem que conhecer XAML e saber como gravar um aplicativo básico do Tempo de Execução do Windows em C++, C# ou Visual Basic.
 
 ## <a name="scenarios-for-attached-properties"></a>Cenários para propriedades anexadas
 
@@ -112,7 +109,7 @@ Public Class GameService
 End Class
 ```
 
-A definição da propriedade anexada em C++ é um pouco mais complexa. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). Em C++, defina explicitamente essa relação propriedade-campo, em vez de confiar na palavra-chave **readonly** do .NET e na existência implícita de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o app é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) no código de seu arquivo app.xaml.
+A definição da propriedade anexada em C++ é um pouco mais complexa. Você precisa decidir como fatorar entre o cabeçalho e o arquivo de código. Além disso, você deve expor o identificador como uma propriedade com apenas um acessador **get**, pelos motivos abordados em [Propriedades de dependência personalizadas](custom-dependency-properties.md). Em C++, defina explicitamente essa relação propriedade-campo, em vez de confiar na palavra-chave **readonly** do .NET e na existência implícita de propriedades simples. Você também precisa executar o registro da propriedade anexada em uma função auxiliar que é executada apenas uma vez, quando o aplicativo é iniciado pela primeira vez, mas antes de qualquer página XAML que precisa da propriedade anexada seja carregada. O local típico para chamar as funções do auxiliar de registro da propriedade para qualquer e toda dependência ou propriedades anexadas está dentro do construtor **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) no código de seu arquivo app.xaml.
 
 ```cpp
 //
@@ -183,7 +180,7 @@ GameService::RegisterDependencyProperties() {
 
 ## <a name="using-your-custom-attached-property-in-xaml"></a>Usando sua propriedade anexada personalizada no XAML
 
-Depois de definir a propriedade anexada e incluir seus membros de suporte como parte de um tipo personalizado, disponibilize as definições para uso do XAML. Para isso, mapeie um namespace XAML que faça referência ao namespace do código contendo a classe relevante. Nos casos em que você tiver definido a propriedade anexada como parte de uma biblioteca, inclua essa biblioteca no pacote do app.
+Depois de definir a propriedade anexada e incluir seus membros de suporte como parte de um tipo personalizado, disponibilize as definições para uso do XAML. Para isso, mapeie um namespace XAML que faça referência ao namespace do código contendo a classe relevante. Nos casos em que você tiver definido a propriedade anexada como parte de uma biblioteca, inclua essa biblioteca no pacote do aplicativo.
 
 Um mapeamento de namespace XML para XAML é geralmente colocado no elemento raiz de uma página XAML. Por exemplo, para uma classe com o nome `GameService` no namespace `UserAndCustomControls` que contém as definições de propriedade anexada mostradas nos trechos anteriores, o mapeamento poderá ter esta aparência.
 
@@ -213,7 +210,7 @@ Se estiver definindo a propriedade em um elemento que também está no mesmo nam
 
 O tipo usado como o tipo de valor de uma propriedade anexada personalizada afeta o uso, a definição ou ambas. O tipo de valor da propriedade anexada é declarado em vários lugares: nas assinaturas dos métodos de acessador **Get** e **Set** e também como o parâmetro *propertyType* da chamada [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833).
 
-O tipo de valor mais comum para propriedades anexadas (personalizadas ou não) é uma cadeia de caracteres simples. Isso porque as propriedades anexadas geralmente são criadas para uso de atributo XAML, e o uso de uma cadeia de caracteres como o tipo de valor deixa as propriedades mais leves. Outras primitivas que têm conversão nativa para os métodos de cadeia de caracteres – como inteiro, duplo ou um valor de enumeração – também são tipos de valor comuns para propriedades anexadas. Você pode usar outros tipos de valor (aqueles que não dão suporte para conversão nativa de cadeia de caracteres) como o valor de propriedade anexada. Entretanto, isso envolve inevitavelmente fazer uma escolha de uso ou de implementação:
+O tipo de valor mais comum para propriedades anexadas (personalizadas ou não) é uma cadeia de caracteres simples. Isso porque as propriedades anexadas geralmente são criadas para uso de atributo XAML, e o uso de uma cadeia de caracteres como o tipo de valor deixa as propriedades mais leves. Outros primitivos que têm conversão nativa para os métodos de cadeia de caracteres – como inteiro, duplo ou um valor de enumeração – também são tipos de valor comuns para propriedades anexadas. Você pode usar outros tipos de valor (aqueles que não dão suporte para conversão nativa de cadeia de caracteres) como o valor de propriedade anexada. Entretanto, isso envolve inevitavelmente fazer uma escolha de uso ou de implementação:
 
 - Você pode deixar a propriedade anexada como está, mas ela poderá dar suporte ao uso apenas quando for um elemento de propriedade e se o valor for declarado como um elemento de objeto. Nesse caso, o tipo de propriedade não permite o uso de XAML como um elemento de objeto. Para classes de referência existentes do Tempo de Execução do Windows, verifique a sintaxe XAML para garantir que o tipo dá suporte ao uso de elemento de objeto XAML.
 - Você pode deixar a propriedade anexada como está, mas use-a somente em um uso de atributo via técnica de referência XAML, como **Binding** ou **StaticResource**, que possa ser expresso como uma cadeia de caracteres.
@@ -250,5 +247,4 @@ O código fica mais ou menos parecido com este pseudocódigo:
 * [Visão geral das propriedades anexadas](attached-properties-overview.md)
 * [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 * [Visão geral do XAML](xaml-overview.md)
-
 

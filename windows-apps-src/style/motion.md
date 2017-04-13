@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Animações significativas e bem desenvolvidas dão vida aos apps e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais."
+Description: "Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais."
 title: "Movimento e animação em apps UWP"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
@@ -11,31 +11,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fc0c4f50cc7970fe6ff4cfa5c631a03a9f216470
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9478cb5669d38008d42bbd57ba07fb9b47a81eef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="motion-for-uwp-apps"></a>Movimento para apps UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Animações significativas e bem desenvolvidas dão vida aos apps e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
+Animações significativas e bem desenvolvidas dão vida aos aplicativos e tornam a experiência avançada e refinada. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais.
 
 ## <a name="benefits-of-animation"></a>Benefícios da animação
 
 
-Animação é mais do que fazer coisas se mexerem. A animação é uma ferramenta para criar um ecossistema físico dentro do qual o usuário pode viver, e o qual pode manipular por touch. A qualidade da experiência depende de quão bem o app responde ao usuário, e que tipo de personalidade a interface de usuário comunica.
+Animação é mais do que fazer coisas se mexerem. A animação é uma ferramenta para criar um ecossistema físico dentro do qual o usuário pode viver, e o qual pode manipular por touch. A qualidade da experiência depende de quão bem o aplicativo responde ao usuário, e que tipo de personalidade a interface de usuário comunica.
 
-Certifique-se de que a animação tenha um propósito em seu app. Os melhores apps da Plataforma Universal do Windows (UWP) usam animação para dar vida à interface do usuário. A animação deve:
+Certifique-se de que a animação tenha um propósito em seu aplicativo. Os melhores aplicativos da Plataforma Universal do Windows (UWP) usam animação para dar vida à interface do usuário. A animação deve:
 
 -   Fornecer feedback baseado no comportamento do usuário.
 -   Ensinar ao usuário como interagir com a interface do usuário.
 -   Indicar como navegar a exibições anteriores ou para as próximas.
 
-Conforme um usuário passa mais tempo dentro de seu app, ou conforme as tarefas em seu app se tornam mais sofisticadas, a animação de alta qualidade torna-se cada vez mais importante: ela pode ser utilizada para modificar o modo como o usuário percebe sua carga cognitiva e a facilidade de uso de seu app. A animação também tem muitos outros benefícios diretos:
+Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as tarefas em seu aplicativo se tornam mais sofisticadas, a animação de alta qualidade torna-se cada vez mais importante: ela pode ser utilizada para modificar o modo como o usuário percebe sua carga cognitiva e a facilidade de uso de seu aplicativo. A animação também tem muitos outros benefícios diretos:
 
 -   **A animação adiciona dicas para a interação.**
 
@@ -47,11 +44,11 @@ Conforme um usuário passa mais tempo dentro de seu app, ou conforme as tarefas 
 
 -   **A animação acrescenta personalidade.**
 
-    A benquista interface de usuário do Windows Phone utiliza movimento para criar a impressão de que um app está preocupado com o aqui e o agora, e ajuda a neutralizar a sensação de que o usuário está entrando em hierarquias encadeadas.
+    A benquista interface de usuário do Windows Phone utiliza movimento para criar a impressão de que um aplicativo está preocupado com o aqui e o agora, e ajuda a neutralizar a sensação de que o usuário está entrando em hierarquias encadeadas.
 
 -   **A animação acrescenta consistência.**
 
-    Transições podem ajudar os usuários a aprender como operar novos apps desenhando analogias para tarefas com as quais o usuário já está familiarizado.
+    Transições podem ajudar os usuários a aprender como operar novos aplicativos desenhando analogias para tarefas com as quais o usuário já está familiarizado.
 
 -   **A animação acrescenta elegância.**
 
@@ -79,7 +76,7 @@ Conforme um usuário passa mais tempo dentro de seu app, ou conforme as tarefas 
     <tr>
         <td>[Borda](motion-edgebased.md)
         </td>
-        <td>Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo app. A interface do usuário pode sobrepor o app ou fazer parte da superfície principal do app. Se a interface do usuário fizer parte da superfície do app, talvez seja necessário redimensionar o restante do app para acomodá-la.
+        <td>Animações de borda mostram ou ocultam a interface do usuário que tem origem na borda da tela. As ações de mostrar e ocultar podem ser iniciadas pelo usuário ou pelo aplicativo. A interface do usuário pode sobrepor o aplicativo ou fazer parte da superfície principal do aplicativo. Se a interface do usuário fizer parte da superfície do aplicativo, talvez seja necessário redimensionar o restante do aplicativo para acomodá-la.
         </td>
     </tr>   
     <tr>
@@ -97,7 +94,7 @@ Conforme um usuário passa mais tempo dentro de seu app, ou conforme as tarefas 
     <tr>
         <td>[Animações pop-up](motion-popup-animations.md)
         </td>
-        <td>Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do app e desaparecem quando o usuário toca ou clica fora do elemento pop-up.
+        <td>Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do aplicativo e desaparecem quando o usuário toca ou clica fora do elemento pop-up.
         </td>
     </tr>     
     <tr>
@@ -113,4 +110,3 @@ Conforme um usuário passa mais tempo dentro de seu app, ou conforme as tarefas 
  
 
  
-

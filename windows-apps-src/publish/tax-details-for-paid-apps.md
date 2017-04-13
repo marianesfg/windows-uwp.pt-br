@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: beaf73f0bf4709bcda2edda4afb97869eaccc27b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c660e480402c584fad2b0f6444d7051d1cd234b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
 
@@ -170,7 +167,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Portugal                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
 | Porto Rico                      | Os impostos são adicionados ao preço sendo selecionado. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                                                     | 70% do preço selecionado                 | Microsoft          |
 | Catar                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Romênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% da (preço selecionado menos imposto de 19%) | Microsoft          |
+| Romênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 19%) | Microsoft          |
 | Rússia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 18%) | Microsoft          |
 | Ruanda                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | São Cristóvão e Névis            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -247,7 +244,6 @@ Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos 
 | México                             |
 | Peru                               |
 | Filipinas                        |
-| Porto Rico                        |
 | África do Sul                       |
 | Vietnã                            |
 
@@ -283,7 +279,6 @@ Cada linha do relatório contém a data e hora da transação e, se disponível,
  
 
  
-
 
 
 

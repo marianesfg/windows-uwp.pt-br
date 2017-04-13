@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 039B8810-5C9E-4DB9-A6AF-33E7401311FF
 description: "Use este método na API de envio da Windows Store para obter o status de um envio de aplicativo."
-title: Obter o status de um envio de aplicativo usando a API de envio da Windows Store
+title: Obter o status de um envio de aplicativo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, criar envio de aplicativo, status
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 757a5e0d09cc7c8c6838b595dba34670d93a8536
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f8bfae09e44f02b740885709e9c22f370412538c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-the-status-of-an-app-submission-using-the-windows-store-submission-api"></a>Obter o status de um envio de aplicativo usando a API de envio da Windows Store
+# <a name="get-the-status-of-an-app-submission"></a>Obter o status de um envio de aplicativo
 
 
 
@@ -92,14 +89,14 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para obter mais informações, consulte [Recurso de detalhes sobre o status](manage-app-submissions.md#status-details-object). |
 
 <span/>
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -117,4 +114,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
-

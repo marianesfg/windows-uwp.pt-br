@@ -8,13 +8,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Aplicativos Web hospedados, converter um site em aplicativo do Windows, aplicativos web na Windows Store, aplicativos do Chrome para Windows
-translationtype: Human Translation
-ms.sourcegitcommit: 2e230e95be01f0b14fa6346be9fa836c66a812cf
 ms.openlocfilehash: c9239f3a3c14bf9da99e60cfef8154eefb4305b4
-ms.lasthandoff: 01/20/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hosted-web-apps---access-windows-10-features-from-your-web-app"></a>Aplicativos Web hospedados - Acessar recursos do Windows 10 a partir do seu aplicativo Web
 
 Seu aplicativo Web pode ter acesso completo à Plataforma Universal do Windows (UWP), incluindo chamar APIs do Windows Runtime diretamente de um script hospedado em um servidor, aproveitar a integração com a Cortana e usar um provedor de autenticação online. Também há suporte para aplicativos híbridos, pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
@@ -43,10 +40,9 @@ Se você estiver em um Mac ou PC, você pode criar um Aplicativo Web hospedado e
 
 ## <a name="convert-your-existing-chrome-app"></a>Converter seu aplicativo Chrome existente
 
-Tornamos fácil [converter seu aplicativo hospedado Chrome existente](hwa-chrome-conversion.md) em um Aplicativo Web hospedado do Windows. [ManifoldJS](http://manifoldjs.com/) agora aceita manifestos do Chrome como uma forma de entrada. Desenvolvemos também uma [ferramenta CLI](https://github.com/MicrosoftEdge/hwa-cli) que gera um `.appx` pacote com seus arquivos `.zip` ou `.crx` existentes.
+Tornamos fácil [converter seu aplicativo hospedado Chrome existente](hwa-chrome-conversion.md) em um Aplicativo Web hospedado do Windows. [ManifoldJS](http://manifoldjs.com/) agora aceita manifestos do Chrome como uma forma de entrada. Desenvolvemos também uma [ferramenta CLI](https://github.com/MicrosoftEdge/hwa-cli) que gera um `.appx` pacote do seu `.zip` existente ou arquivos `.crx`.
 
 ## <a name="demos"></a>Demonstrações
 
 - [Aplicativo de viagens Contoso](http://contosotravel.azurewebsites.net/)
-
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ecf24a0a51734d159a412824d6b43d76d92b3002
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d27afd09d5805604a09aba91f57b20625df4d95b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-add-on-store-listings"></a>Criar listagens de complementos da Loja
 
 
@@ -24,7 +21,7 @@ Ao enviar um complemento, as informações que você fornece na etapa de **Lista
 ## <a name="languages"></a>Idiomas
 
 
-Antes de poder inserir informações da listagem da Loja, você precisa especificar um ou mais [idiomas](supported-languages.md). É recomendável fornecer as listagens da Loja para cada idioma ao qual o seu app dá suporte.
+Antes de poder inserir informações da listagem da Loja, você precisa especificar um ou mais [idiomas](supported-languages.md). É recomendável fornecer as listagens da Loja para cada idioma ao qual o seu aplicativo dá suporte.
 
 Na seção **listagem da Loja** de envio do complemento, clique em **Gerenciar idiomas de listagem da Loja**, clique em **Gerenciar idiomas** na próxima página. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas de listagem da Loja** da página. Para remover um ou mais desses idiomas, clique em **Remover** (ou clique em **Gerenciar idiomas** e desmarque a caixa de idiomas que você deseja remover). Clique em **Salvar** quando estiver satisfeito com a lista de idiomas.
 
@@ -47,7 +44,6 @@ Você também tem a opção de fornecer uma imagem que pode ser exibida para o c
  
 
  
-
 
 
 

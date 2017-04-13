@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6fbcf24984fde4b86e94481d6ad1104a827a8c31
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5cbff0011a4a96c61d7f7bad7e57bd130e09c39b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sign-an-app-package-using-signtool"></a>Assinar um pacote de aplicativos usando a SignTool
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **SignTool** é uma ferramenta de linha de comando usada para assinar digitalmente um pacote ou lote de aplicativos com um certificado. O certificado pode ser criado pelo usuário (para fins de teste) ou emitido por uma empresa (para distribuição). Assinar um pacote do aplicativo fornece ao usuário uma verificação de que os dados do aplicativo não foram modificados depois que ele foi assinado enquanto também confirma a identidade do usuário ou empresa que assinou. **SignTool** pode assinar pacotes e lotes de aplicativos criptografados ou não criptografados.
+
+> [!IMPORTANT] 
+> Se você usou o Visual Studio para desenvolver seu aplicativo, é recomendável que você use o Assistente do Visual Studio para criar e assinar seu pacote de aplicativo. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 Para obter mais informações sobre assinatura de código e certificados em geral, consulte [Introdução à Assinatura de Código](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing).
 

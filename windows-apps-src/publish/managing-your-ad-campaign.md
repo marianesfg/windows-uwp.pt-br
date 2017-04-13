@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Para gerenciar as campanhas publicitárias do seu app, clique em Monetização &gt; Promover seu app na página do seu app no painel do Centro de Desenvolvimento do Windows."
+Description: "Para gerenciar as campanhas publicitárias do seu aplicativo, clique em Monetização &gt; Promover seu aplicativo na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows."
 title: "Gerenciando sua campanha publicitária"
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b73b8c1ac467bce3d1edcec3582d247e7a90bd29
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 642049a5356ec276b5cf629a7ca1c431e5c00476
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="managing-your-ad-campaign"></a>Gerenciando sua campanha publicitária
 
 
-Para gerenciar as campanhas publicitárias do seu app, clique em **Monetização** &gt; **Promover seu app** na página do seu app no painel do Centro de Desenvolvimento do Windows. A página **Promover seu app** lista todas as campanhas publicitárias associadas ao seu app e exibe as impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de anúncios de instalação de app](app-install-ads-reports.md).
+Para gerenciar as campanhas publicitárias do seu aplicativo, clique em **Monetização** &gt; **Promover seu aplicativo** na página do seu aplicativo no painel do Centro de Desenvolvimento do Windows. A página **Promover seu aplicativo** lista todas as campanhas publicitárias associadas ao seu aplicativo e exibe as impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
 
 Para filtrar a lista de campanhas publicitárias, clique no menu suspenso **Filtros de seção** e escolha os filtros a seguir:
 
@@ -34,7 +31,7 @@ Para filtrar a lista de campanhas publicitárias, clique no menu suspenso **Filt
 ## <a name="report"></a>Relatório
 
 
-Para ver o desempenho de suas campanhas publicitárias, clique em **Análises** &gt; **Anúncios de instalação de app** no painel de navegação do painel. Para saber mais sobre esse relatório, consulte [Relatório de anúncios de instalação de app](app-install-ads-reports.md).
+Para ver o desempenho de suas campanhas publicitárias, clique em **Análises** &gt; **Anúncios de instalação de aplicativo** no painel de navegação do painel. Para saber mais sobre esse relatório, consulte [Relatório de anúncios de instalação de aplicativo](app-install-ads-reports.md).
 
 ## <a name="edit-an-ad-campaign"></a>Editar uma campanha publicitária
 
@@ -44,14 +41,13 @@ Para fazer alterações em uma campanha publicitária, clique no nome dela para 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Criar uma campanha publicitária para seu app](create-an-ad-campaign-for-your-app.md)
+* [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md)
 * [Sobre anúncios domésticos](about-house-ads.md)
-* [Relatório de anúncios de instalação de apps](app-install-ads-reports.md)
+* [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
 * [Perguntas comuns](common-questions.md)
  
 
  
-
 
 
 

@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: "Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu app ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
+description: "Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário."
 title: "Declarar produtos consumíveis como providenciados"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de coleção da Windows Store, providenciado, consumível"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 201e4fedc5f36202cba4c495ae9344d5a7975d62
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 
-Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu app ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
+Use esse método na API da coleção da Windows Store para declarar um produto consumível como providenciado para um determinado cliente. Para que um usuário possa recomprar um produto consumível, seu aplicativo ou serviço deve declarar que o produto consumível já foi providenciado para esse usuário.
 
 Há duas maneiras de usar esse método para declarar um produto consumível como providenciado:
 
@@ -40,7 +37,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ### <a name="request-syntax"></a>Sintaxe da solicitação
 
-| Método | URI da Solicitação                                                   |
+| Método | URI da solicitação                                                   |
 |--------|---------------------------------------------------------------|
 | POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
@@ -76,7 +73,7 @@ O objeto UserIdentity contém os parâmetros a seguir.
 |----------------------|--------|-------------------|----------|
 | identityType         | string | Especifique o valor de cadeia de caracteres **b2b**.    | Sim      |
 | identityValue        | cadeia de caracteres | Uma [chave ID da Windows Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário para o qual você quer declarar um produto consumível como providenciado.      | Sim      |
-| localTicketReference | cadeia de caracteres | O identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a [declaração](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) *userId* na chave ID da Windows Store. | Sim      |
+| localTicketReference | string | O identificador solicitado para resposta retornada. Recomendamos que você use o mesmo valor que a [declaração](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) *userId* na chave ID da Windows Store. | Sim      |
 
 <span/> 
 
@@ -156,4 +153,3 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 * [Consulta por produtos](query-for-products.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
 * [Renovar uma chave ID da Windows Store](renew-a-windows-store-id-key.md)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xphase-attribute"></a>atributo x:Phase
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -84,5 +81,4 @@ Números de fase não precisam ser contíguos e são os mesmos do valor de [**Co
 O atributo Phase afeta apenas associações [{x: Bind}](x-bind-markup-extension.md), não associações [{Binding}](binding-markup-extension.md).
 
 O atributo Phase será aplicado somente quando o modelo de item for renderizado, usando um controle que está ciente do atributo Phase. Para o Windows 10, isso significa [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). O atributo Phase não será aplicado aos modelos de dados usados em outros controles de item, ou para outros cenários, como as seções [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) ou [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843), nesses casos, todos os elementos de interface do usuário serão dados associados ao mesmo tempo.
-
 

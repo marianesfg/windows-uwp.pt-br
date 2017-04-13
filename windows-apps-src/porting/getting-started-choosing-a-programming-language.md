@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 440fb76aac128490366677278254a5f5b2e095ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b20066ffbd32984d20fdbdcc0915ef10332c6f12
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-choosing-a-programming-language"></a>Introdução: escolhendo uma linguagem de programação
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -149,4 +146,3 @@ C# é uma linguagem fácil de usar e vem com as muitas classes de suporte e estr
 ## <a name="next-step"></a>Próxima etapa
 
 [Introdução: conhecendo o Visual Studio](getting-started-getting-around-in-visual-studio.md)
-

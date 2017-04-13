@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c8aba48fba1badcfeebc9868215b904c76ac6b98
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 76307f16fddc094331847f11855d2dbf0467dddf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-creating-a-project"></a>Ponto de Partida: criando um projeto
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -60,4 +57,3 @@ No Visual Studio, também há vários modelos de projeto para escolher, como mos
 ## <a name="next-step"></a>Próxima etapa
 
 [Introdução: escolhendo uma linguagem de programação](getting-started-choosing-a-programming-language.md)
-

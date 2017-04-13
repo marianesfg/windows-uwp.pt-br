@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5df57d0bd5d2104278f653d78b1e478a034a38ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portabilidade do Windows Phone Silverlight para a UWP para modelo de aplicativo, dispositivo e E/S
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -99,5 +96,4 @@ O equivalente ao aplicativo UWP das propriedades **PhoneApplicationPage.Supporte
 Entretanto, você é incentivado a projetar a interface do usuário do aplicativo UWP de maneira que ela tenha boa aparência, independentemente do tamanho da tela e da orientação do dispositivo. Há mais informações sobre isso em [Portabilidade para fatores forma e experiência do usuário](wpsl-to-uwp-form-factors-and-ux.md), que é o tópico após o próximo.
 
 O próximo tópico é [Portando negócios e as camadas de dados](wpsl-to-uwp-business-and-data.md).
-
 

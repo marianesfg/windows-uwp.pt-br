@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a17a489944fdc2d78831549c1afdc2bd87deabdf
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 43e4bb289d12439bbc0f6de347d187b067288d51
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developer-settings-api-reference"></a>Referência da API de configurações do desenvolvedor   
 É possível acessar configurações do Xbox One que sejam úteis para o desenvolvimento usando essa API.
 
@@ -31,15 +28,15 @@ GET | /ext/settings
 <br />
 **Parâmetros do URI**
 
-- Nenhuma
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Resposta**   
 A resposta é uma matriz JSON de configurações que contém todas as configurações. Todo objeto de configurações contém os seguintes campos:   
@@ -66,21 +63,21 @@ As configurações também podem ser recuperadas individualmente.
 
 É possível usar a solicitação a seguir para obter informações sobre uma configuração individual.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /ext/settings/\<nome da configuração\>
 <br />
 **Parâmetros do URI**
 
-- Nenhuma
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Resposta**   
 A resposta é um objeto JSON com os seguintes campos:   
@@ -107,17 +104,17 @@ Código de status HTTP      | Descrição
 
 É possível usar a solicitação a seguir para definir o valor de uma configuração.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 PUT | /ext/settings/\<nome da configuração\>
 <br />
 **Parâmetros do URI**
 
-- Nenhuma
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Corpo da solicitação**   
 O corpo da solicitação é um objeto JSON contendo o seguinte campo:   
@@ -125,7 +122,7 @@ Value – (sequência) o novo valor da configuração.
 
 **Resposta**   
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -141,5 +138,4 @@ Código de status HTTP      | Descrição
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-
 

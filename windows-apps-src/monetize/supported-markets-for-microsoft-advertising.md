@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
-description: "Saiba mais sobre os países e regiões com suporte para anúncios intersticiais e em barra de notificação."
+description: "Saiba mais sobre os países e regiões com suporte para anúncios intersticiais e em banner."
 title: Mercados aceitos no Microsoft Advertising
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, mercados"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6150c885c4159911932bf8d7c3848b1e182b2f61
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 822c8a3bc9b427edbadb47293bfa1f75aa94a880
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="supported-markets-for-microsoft-advertising"></a>Mercados aceitos no Microsoft Advertising
 
 
 
 
-Os anúncios intersticiais e em barra de notificação têm suporte nos seguintes países e regiões.
+Anúncios intersticiais e em banner têm suporte nos seguintes países e regiões.
 
 <span id="interstitialads"/>
 ## <a name="interstitial-ads"></a>Anúncios intersticiais
@@ -280,7 +277,7 @@ Os anúncios intersticiais e em barra de notificação têm suporte nos seguinte
 
 -   Taiwan
 
--   Tajiquistão
+-   Tadjiquistão
 
 -   Tanzânia
 
@@ -319,4 +316,3 @@ Os anúncios intersticiais e em barra de notificação têm suporte nos seguinte
  
 
  
-

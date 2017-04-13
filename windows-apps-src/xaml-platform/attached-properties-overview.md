@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5185eb704f94e33031684aef761c701398c0dbd7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e3e4ba56438746c257ac917f61d9f1703f20ecdd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Uma *propriedade anexada* é um conceito de XAML. As propriedades anexadas habilitam pares de propriedade/valor adicionais a serem definidas em um objeto, mas as propriedades não fazem parte da definição do objeto original. Tipicamente, as propriedades anexadas são definidas como uma forma especializada de propriedade de dependência que não tem um wrapper de propriedade convencional no modelo de objeto do tipo de proprietário.
 
@@ -72,7 +69,7 @@ Para obter o valor de uma propriedade anexada no código, chame o método [**Get
 
 ### <a name="using-the-xaml-accessor-pattern"></a>Usando o padrão de acessador XAML
 
-Um processador XAML deve ser capaz de definir esses valores de propriedade anexada quando o XAML é analisado em uma árvore de objetos. O tipo proprietário da propriedade anexada deve implementar métodos acessadores dedicados denominados segundo a forma **Get***NomeDaPropriedade* e **Set***NomeDaPropriedade*. Esses métodos acessadores dedicados também são uma boa maneira de obter ou definir a propriedade anexada em código. Sob a perspectiva de código, uma propriedade anexada é similar a um campo existente que contém acessadores de método em vez de acessadores de propriedade. Esse campo existente pode existir em qualquer objeto, não sendo obrigatório defini-lo especificamente.
+Um processador XAML deve ser capaz de definir esses valores de propriedade anexada quando o XAML é analisado em uma árvore de objetos. O tipo proprietário da propriedade anexada deve implementar métodos acessadores dedicados denominados segundo a forma **Get***NomeDaPropriedade* e **Set***NomeDaPropriedade*. Esses métodos acessadores dedicados também são uma boa maneira de obter ou definir a propriedade anexada em código. Sob a perspectiva de código, uma propriedade anexada é similar a um campo existente que contém acessadores de método em vez de acessadores de propriedade. Esse campo existente pode existir em qualquer objeto, não sendo necessário defini-lo especificamente.
 
 O próximo exemplo mostra como você pode definir uma propriedade anexada no código usando a API do acessador XAML. Neste exemplo, `myCheckBox` é uma instância da classe [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316). A última linha é o código que efetivamente define o valor; as linhas anteriores apenas estabelecem as instâncias e o relacionamento pai-filho. A última linha não comentada será a sintaxe se você usar o sistema de propriedades. A última linha comentada será a sintaxe se você usar o padrão do acessador XAML.
 
@@ -124,5 +121,4 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 * [Início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/hh943060)
 * [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)
 * [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)
-
 

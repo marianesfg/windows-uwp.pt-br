@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3f3f3dd3b594e174def693b7decd21a5753172b9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f79c8491c04c21fb3933d6bcde0d942bd1629fb0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ad-mediation-report"></a>Relatório de controle de anúncios
 
 
 O relatório de **controle de anúncios** permite que você veja sua taxa de preenchimento efetiva e as taxas de preenchimento respectivas para as redes de publicidade que está usando. Ele também mostra as taxas de adoção de cada uma das suas configurações de controle e dá visibilidade aos erros relatados por redes de publicidade e pelo mediador. Você pode visualizar esses dados em seu painel ou [baixar o relatório](download-analytic-reports.md) para vê-lo offline.
 
-**Importante**  O relatório de **controle de anúncios** fornece dados apenas se você estiver usando o [controle de anúncios do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) em seu app.
+**Importante**  O relatório de **controle de anúncios** fornece dados apenas se você estiver usando o [controle de anúncios do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) em seu aplicativo.
 
  
 
@@ -32,9 +29,9 @@ Na parte superior da página, você pode expandir os **Filtros de página** para
 
 -   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 12 meses**.
 -   **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as classificações de clientes desse mercado.
--   **Plataforma**: o ajuste padrão é **Todas as plataformas**. Se o seu app servir para várias plataformas, você poderá escolher uma plataforma específica.
+-   **Plataforma**: o ajuste padrão é **Todas as plataformas**. Se o seu aplicativo servir para várias plataformas, você poderá escolher uma plataforma específica.
 
-As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado nos **Filtros de página**. Por padrão, isso incluirá dados de todos os mercados e plataformas nos quais seus app está listado, a menos que você tenha usado os **Filtros de página** para especificar um mercado e/ou uma plataforma específicos.
+As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado nos **Filtros de página**. Por padrão, isso incluirá dados de todos os mercados e plataformas nos quais seus aplicativo está listado, a menos que você tenha usado os **Filtros de página** para especificar um mercado e/ou uma plataforma específicos.
 
 ## <a name="ad-mediation-performance"></a>Desempenho da controle de anúncios
 
@@ -68,7 +65,6 @@ O gráfico **Erros por tipo** mostra os erros específicos ocorridos em cada red
  
 
  
-
 
 
 

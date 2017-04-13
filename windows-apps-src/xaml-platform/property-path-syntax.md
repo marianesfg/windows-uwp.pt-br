@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: "Você pode usar a classe PropertyPath e a sintaxe de cadeia de caracteres para instanciar um valor PropertyPath em XAML ou em código."
-title: Sintaxe de Property-path&quot;
+title: Sintaxe de caminho de propriedade
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 301f411f1911e12163ba123b93f99f5f15b5e479
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3209028f151608c83e69d6750e978132a6c8b83c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="property-path-syntax"></a>Sintaxe de caminho de propriedade
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você pode usar a classe [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) e a sintaxe de cadeia de caracteres para instanciar um valor **PropertyPath** vem XAML ou em código. Valores **PropertyPath** são usados por vinculação de dados. Uma sintaxe semelhante é usada para direcionar animações em storyboard. Nos dois cenários, um caminho de propriedade descreve uma passagem de uma ou mais relações objeto-propriedade que eventualmente são resolvidas para uma única propriedade.
 
@@ -26,7 +23,7 @@ Você pode definir uma cadeia de caracteres de caminho de propriedade a um atrib
 
 ## <a name="property-path-for-objects-in-data-binding"></a>Caminho de propriedade para objetos na vinculação de dados
 
-No Tempo de Execução do Windows, você pode associar ao valor de destino de qualquer propriedade de dependência. O valor de propriedade de origem para uma vinculação de dados não precisa ser uma propriedade de dependência; pode ser uma propriedade em um objeto comercial (por exemplo, uma classe escrita em linguagem Microsoft .NET ou C++). Ou o objeto de origem do valor da associação pode ser um objeto de dependência existente já definido pelo app. A fonte pode ser referenciada por um simples nome de propriedade ou por um percurso das relações objeto-propriedade no gráfico do objeto do objeto comercial.
+No Tempo de Execução do Windows, você pode associar ao valor de destino de qualquer propriedade de dependência. O valor de propriedade de origem para uma vinculação de dados não precisa ser uma propriedade de dependência; pode ser uma propriedade em um objeto comercial (por exemplo, uma classe escrita em linguagem Microsoft .NET ou C++). Ou o objeto de origem do valor da associação pode ser um objeto de dependência existente já definido pelo aplicativo. A fonte pode ser referenciada por um simples nome de propriedade ou por um percurso das relações objeto-propriedade no gráfico do objeto do objeto comercial.
 
 Você pode associar a um valor de propriedade individual ou pode associar a uma propriedade de destino que mantenha listas ou coleções. Se sua fonte for uma coleção ou se caminho especificar uma propriedade de coleção, o mecanismo de vinculação de dados corresponde aos itens de coleção da fonte do destino de associação, resultando em comportamentos como popular um [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868) com uma lista de itens de uma coleção de fonte de dados sem precisar prever os itens específicos em tal coleção.
 
@@ -122,5 +119,4 @@ Na maioria das vezes, é possível aplicar um [**PropertyPath**](https://msdn.mi
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**Construtor de associação**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)
-
 

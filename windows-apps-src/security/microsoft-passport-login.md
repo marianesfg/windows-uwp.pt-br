@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ffec3d72ab0b3ca87a5cc0ec9325fe805ae9b6f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 336bb3b58e9f6cfeb3c173a8bb1c9e72bc7929b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
 
@@ -37,8 +34,8 @@ Para criar esse projeto, você precisará de alguma experiência em C# e XAML. V
 
 -   Abra o Visual Studio 2015 e selecione File > New > Project.
 -   Isso abrirá uma janela "New Project". Navegação para Templates > Visual C#.
--   Escolha o app em branco (Windows Universal) e nomeie seu app "PassportLogin".
--   Compile e execute o novo app (F5); você deve ver uma janela em branco na tela. Feche o app.
+-   Escolha o aplicativo em branco (Windows Universal) e nomeie seu aplicativo "PassportLogin".
+-   Compile e execute o novo aplicativo (F5); você deve ver uma janela em branco na tela. Feche o app.
 
 ![Novo projeto do Windows Hello](images/passport-login-1.png)
 
@@ -491,7 +488,7 @@ Neste exercício, você aprenderá como verificar se o Windows Hello está confi
     }
     ```
 
--   Compile e execute o app. Você será levado para a página de logon. Digite "sampleUsername" e clique em login. Será exibido um prompt do Windows Hello solicitando que você insira seu PIN. Quando seu PIN for inserido corretamente, o método CreatePassportKeyAsync será capaz de criar uma chave do Windows Hello. Monitore as janelas de saída para ver se as mensagens indicando êxito são mostradas.
+-   Compile e execute o aplicativo. Você será levado para a página de logon. Digite "sampleUsername" e clique em login. Será exibido um prompt do Windows Hello solicitando que você insira seu PIN. Quando seu PIN for inserido corretamente, o método CreatePassportKeyAsync será capaz de criar uma chave do Windows Hello. Monitore as janelas de saída para ver se as mensagens indicando êxito são mostradas.
 
     ![Prompt de pin de logon do Windows Hello](images/passport-login-8.png)
 
@@ -629,7 +626,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
     }
     ```
 
--   Compile e execute o app. Faça logon com "sampleUsername" e clique em login. Insira seu PIN e, se bem-sucedido, você deverá ser direcionado para a tela de boas-vindas. Tente clicar em forget user e monitore a janela de saída para ver se o usuário foi excluído. Observe que, quando o usuário é excluído, você permanece na página de boas-vindas. Você precisará criar uma página de seleção do usuário para a qual app pode navegar.
+-   Compile e execute o aplicativo. Faça logon com "sampleUsername" e clique em login. Insira seu PIN e, se bem-sucedido, você deverá ser direcionado para a tela de boas-vindas. Tente clicar em forget user e monitore a janela de saída para ver se o usuário foi excluído. Observe que, quando o usuário é excluído, você permanece na página de boas-vindas. Você precisará criar uma página de seleção do usuário para a qual app pode navegar.
 
     ![Tela de boas-vindas do Windows Hello](images/passport-login-9.png)
 
@@ -716,7 +713,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
 
 <!-- -->
 
--   Há alguns lugares no app onde você quer navega para a página UserSelection. Em MainPage.xaml.cs, você deve navegar para a página UserSelection em vez da página de logon. Enquanto estiver no evento loaded na MainPage, você precisará carregar a lista de contas para que a página UserSelection possa verificar se existem contas. Isso exigirá mudar o método loaded para assíncrono e adicionar uma referência à pasta Utils.
+-   Há alguns lugares no aplicativo onde você quer navega para a página UserSelection. Em MainPage.xaml.cs, você deve navegar para a página UserSelection em vez da página de logon. Enquanto estiver no evento loaded na MainPage, você precisará carregar a lista de contas para que a página UserSelection possa verificar se existem contas. Isso exigirá mudar o método loaded para assíncrono e adicionar uma referência à pasta Utils.
 
     ```cs
     using PassportLogin.Utils;
@@ -877,7 +874,7 @@ Neste exercício, você continuará do exercício anterior. Quando um usuário f
     }
     ```
 
--   Compile e execute o app. Faça logon com "sampleUsername". Digite o PIN e, se bem-sucedido, você será direcionado para tela de boas-vindas. Clique em voltar para a lista de usuários. Agora você deve ver um usuário na lista. Clicar neste Passport permite que você se conecte novamente sem precisar digitar novamente quaisquer senhas.
+-   Compile e execute o aplicativo. Faça logon com "sampleUsername". Digite o PIN e, se bem-sucedido, você será direcionado para tela de boas-vindas. Clique em voltar para a lista de usuários. Agora você deve ver um usuário na lista. Clicar neste Passport permite que você se conecte novamente sem precisar digitar novamente quaisquer senhas.
 
     ![Lista de usuários selecionados do Windows Hello](images/passport-login-10.png)
 
@@ -966,11 +963,11 @@ Neste exercício, você criará uma nova página que criará uma nova conta com 
     }
     ```
 
--   Compile e execute o app. Tente registrar um novo usuário. Em seguida, retorne à lista de usuários e valide que você pode selecionar esse usuário e logon.
+-   Compile e execute o aplicativo. Tente registrar um novo usuário. Em seguida, retorne à lista de usuários e valide que você pode selecionar esse usuário e logon.
 
     ![Registro de novo usuário do Windows Hello](images/passport-login-11.png)
 
-Neste laboratório, você aprendeu as habilidades essenciais de que precisa para usar a nova API do Windows Hello para autenticar usuários existentes e criar contas para novos usuários. Com esse conhecimento novo, você pode começar a eliminar a necessidade de os usuários se lembrarem de senhas para seu app, permanecendo confiante de que seus apps continuam protegidos pela autenticação do usuário. O Windows 10 usa a nova tecnologia de autenticação do Windows Hello para oferecer suporte às opções de logon por biometria.
+Neste laboratório, você aprendeu as habilidades essenciais de que precisa para usar a nova API do Windows Hello para autenticar usuários existentes e criar contas para novos usuários. Com esse conhecimento novo, você pode começar a eliminar a necessidade de os usuários se lembrarem de senhas para seu aplicativo, permanecendo confiante de que seus aplicativos continuam protegidos pela autenticação do usuário. O Windows 10 usa a nova tecnologia de autenticação do Windows Hello para oferecer suporte às opções de logon por biometria.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

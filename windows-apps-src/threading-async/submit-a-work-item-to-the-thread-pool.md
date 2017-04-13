@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, threads, pool de threads
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5141467e474f26a8aa681b4478cf60c979ae83b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 00d354e531dca1e4b8a31d77ea09da20425b1512
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -257,7 +255,7 @@ Observe que o manipulador de conclusão verifica se o item de trabalho foi cance
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Você pode saber mais baixando o código deste guia de início rápido em [Criando uma amostra de item de trabalho ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows 8.1 e usando novamente o código-fonte em um aplicativo win\_unap para Windows 10.
+Você pode saber mais baixando o código deste guia de início rápido em [Criando uma amostra de item de trabalho ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) escrito para Windows8.1 e usando novamente o código-fonte em um aplicativo win\_unap para Windows10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -265,4 +263,3 @@ Você pode saber mais baixando o código deste guia de início rápido em [Crian
 * [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
  
-

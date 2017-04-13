@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de complemento existente."
-title: Obter um envio de complemento usando a API de envio da Windows Store
+title: Obter um envio de complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, envio de complemento, produto in-App, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: 2f6211c1ec399c5b6234ee4181dd319130c606b4
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 21bed5bd2b0c3b4e1fb2224cce9f6e3c9a2fd6b4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-add-on-submission-using-the-windows-store-submission-api"></a>Obter um envio de complemento usando a API de envio da Windows Store
+# <a name="get-an-add-on-submission"></a>Obter um envio de complemento
 
 Use este método na API de envio da Windows Store para obter dados para um envio de complemento (também conhecido como produto no aplicativo ou IAP) existente. Para obter mais informações sobre o processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -25,7 +22,7 @@ Use este método na API de envio da Windows Store para obter dados para um envio
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de complemento para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um envio de complemento](create-an-add-on-submission.md).
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
@@ -108,7 +105,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     },
     "sales": [],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -141,7 +138,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -159,4 +156,3 @@ Se a solicitação não puder ser concluída com êxito, a resposta conterá um 
 * [Atualizar um envio de complemento](update-an-add-on-submission.md)
 * [Excluir um envio de complemento](delete-an-add-on-submission.md)
 * [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
-

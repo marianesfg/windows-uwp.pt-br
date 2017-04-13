@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d055f576cfa56502da845e849c100f66dd0c7ccf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Mudar do Windows Phone Silverlight para a UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -94,5 +91,4 @@ No nível do recurso, a boa notícia é que há poucos itens sem suporte na UWP.
 **Apresentações**
 * [A história de migrar o Nokia Music do Windows Phone para Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 30849b23e9fbdca38f8401afe0f6f7df4b498121
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-getting-around-in-visual-studio"></a>Introdução: conhecendo o Visual Studio
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -129,5 +126,4 @@ Para encerrar o aplicativo, volte ao Visual Studio, toque no menu **Depurar** e,
 ## <a name="next-step"></a>Próxima etapa
 
 [Introdução: controles comuns](getting-started-common-controls.md)
-
 

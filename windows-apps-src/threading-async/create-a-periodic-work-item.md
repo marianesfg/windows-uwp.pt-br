@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, item de trabalho periódico, threading, temporizadores"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 66e8b283631e6a74aa1dabeb53bfc86c304a642c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 89c633f9ab6da23c4b8417a9a75f87c706a3546f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -88,9 +86,9 @@ O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 >         }), period);
 > ```
 
-## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>Tratar o cancelamento do item de trabalho periódico (opcional)
+## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>Manipular o cancelamento do item de trabalho periódico (opcional)
 
-Se necessário, você pode tratar o cancelamento do temporizador periódico com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para fornecer um lambda adicional que manipula o cancelamento do item de trabalho periódico.
+Se necessário, você pode manipular o cancelamento do temporizador periódico com um [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Use a sobrecarga [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) para fornecer um lambda adicional que manipula o cancelamento do item de trabalho periódico.
 
 O exemplo a seguir cria um item de trabalho periódico que se repete a cada 60 segundos, e também fornece um manipulador de cancelamento:
 
@@ -209,4 +207,3 @@ Para obter mais informações sobre temporizadores de uso único, consulte [Usar
 * [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
  
-

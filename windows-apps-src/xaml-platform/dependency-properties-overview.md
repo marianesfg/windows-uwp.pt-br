@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: eaf52a930b5419f0c2a53aa14c9dc0fba5b404f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e46a092298ce183212384155492ea73a79ebe86f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -30,7 +27,7 @@ Para dar suporte a uma propriedade de dependência, o objeto que define a propri
 
 A finalidade das propriedades de dependência é oferecer uma forma sistêmica de computar o valor de uma propriedade com base em outras entradas (outras propriedades, eventos e estados que ocorrem em seu aplicativo enquanto ele é executado). Essas outras entradas podem incluir:
 
--   Entrada externa; por exemplo, preferência do usuário
+-    Entrada externa; por exemplo, preferência do usuário
 -   Mecanismos de determinação de propriedade just-in-time; por exemplo, vinculação de dados, animações e storyboards.
 -   Padrões de modelagem para múltiplos usos; por exemplo, recursos e estilos
 -   Valores conhecidos por meio das relações pai-filho com outros elementos da árvore de objetos
@@ -56,9 +53,9 @@ Aqui está uma somatória da terminologia que usamos na documentação ao discut
 |------|-------------|
 | Propriedade de dependência | Uma propriedade que existe em um identificador [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) (veja abaixo). Geralmente, esse identificador está disponível como um membro estático da classe derivada **DependencyObject** de definição. |
 | Identificador de propriedade de dependência | Um valor constante para identificar a propriedade, é normalmente público e somente leitura. |
-| Wrapper de propriedade | As implementações **get** e **set** que podem ser chamadas para uma propriedade do Windows Runtime. Ou, a projeção específica da linguagem da definição original. Uma implementação do wrapper de propriedade **get** chama [**GetValue**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx), passando o identificador de propriedade de dependência relevante. | 
+| Wrapper de propriedade | As implementações **get** e **set** que podem ser chamadas para uma propriedade do Windows Runtime. Ou, a projeção específica da linguagem da definição original. Uma implementação do wrapper de propriedade **get** chama [**GetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx), passando o identificador de propriedade de dependência relevante. | 
 
-O wrapper da propriedade não é apenas conveniência para os chamadores, ele também apresenta a propriedade de dependência a qualquer processo, ferramenta ou projeção que use as definições do Windows Runtime para propriedades.
+O wrapper da propriedade não é apenas conveniência para os chamadores, ele também apresenta a propriedade de dependência a qualquer processo, ferramenta ou projeção que use as  definições do Windows Runtime para propriedades.
 
 O exemplo a seguir define uma propriedade de dependência personalizada "IsSpinning", conforme definida para C#, e mostra a relação do identificador de propriedade de dependência com o wrapper de propriedade.
 
@@ -80,13 +77,15 @@ public bool IsSpinning
 
 **Observação**  O exemplo anterior não pretende ser um exemplo completo de como criar uma propriedade de dependência personalizada. Ele tem a finalidade de mostrar os conceitos de propriedade de dependência para qualquer um que prefira conceitos de aprendizagem através de código. Para um exemplo mais complexo, consulte [Propriedades de dependência personalizada](custom-dependency-properties.md).
 
-## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência
+## <a name="dependency-property-value-precedence"></a>Precedência do valor da propriedade de dependência 
+
 
 Quando você obtém o valor de uma propriedade de dependência, está obtendo um valor que foi definido para essa propriedade por meio de qualquer uma das entradas que participam do sistema de propriedades do Tempo de execução do Windows. A precedência do valor de propriedade de dependência existe de forma que o sistema de propriedades do Tempo de Execução do Windows possa calcular valores de uma forma previsível, e é importante que você também esteja familiarizado com a ordem de precedência básica. Caso contrário, você pode se encontrar em uma situação em que esteja tentando definir uma propriedade em um nível, mas algo (o sistema, chamadores de terceiros, parte de seu próprio código) a está definindo em outro nível, e você ficará frustrado tentando descobrir qual valor da propriedade é usado e de onde esse valor veio.
 
 Por exemplo, os estilos e modelos destinam-se a ser um ponto de partida compartilhado para estabelecer valores de propriedade e, assim, a aparência de um controle. Mas, em uma ocorrência específica do controle, pode ser preciso alterar esse valor em relação ao valor de modelo comum, como aplicar a esse controle uma cor da tela de fundo diferente ou uma cadeia de caracteres de texto diferente como conteúdo. O sistema de propriedades do Tempo de execução do Windows considera valores locais em precedência maior que os valores fornecidos por estilos e modelos. Isso permite que o cenário de valores específicos do aplicativo substituam os modelos, de modo que os controles sejam úteis para o próprio uso deles na interface do usuário do aplicativo.
 
-### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência
+### <a name="dependency-property-precedence-list"></a>Lista de precedência das propriedades de dependência 
+
 
 A seguir está a ordem definitiva que o sistema de propriedades usa ao atribuir o valor do tempo de execução de uma propriedade de dependência. A maior precedência é listada primeiro. Você encontrará explicações mais detalhadas logo após essa lista.
 
@@ -186,7 +185,7 @@ O princípio de máquina de estado é consagrado pelo uso de animações com sto
 
 O comportamento de propriedade alterado é a origem da parte "dependência" da terminologia de propriedade de dependência. A manutenção de valores válidos de uma propriedade em que outra propriedade pode influenciar o valor da primeira propriedade é um problema de desenvolvimento difícil em muitas estruturas. No sistema de propriedades do Tempo de Execução do Windows, cada propriedade de dependência pode especificar um retorno de chamada que é invocado quando o respectivo valor de propriedade é alterado. Esse retorno de chamada pode ser usado para notificar ou alterar valores de propriedades relacionados de forma geralmente síncrona. Muitas propriedades de dependência existentes têm um comportamento de propriedade alterado. Você também pode adicionar comportamento semelhante de retorno de chamada para propriedades de dependência personalizadas e implementar os seus próprios retornos de chamada de propriedade alterada. Consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md) para ver um exemplo.
 
-O Windows 10 apresenta o método [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx). Isso permite que o código do aplicativo se registre para receber notificações de alteração quando a propriedade de dependência especificada é alterada em uma instância de [**DependencyObject**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.aspx).
+O Windows 10 apresenta o método [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx). Isso permite que o código do aplicativo se registre para receber notificações de alteração quando a propriedade de dependência especificada é alterada em uma instância de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.aspx).
 
 ### <a name="default-value-and-clearvalue"></a>Valor padrão e **ClearValue**
 
@@ -212,5 +211,4 @@ Os aspectos de threading de [**DependencyObject**](https://msdn.microsoft.com/li
 **APIs relacionadas às propriedades de dependência**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
-
 

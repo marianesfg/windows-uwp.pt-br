@@ -1,20 +1,25 @@
----  
+---
 author: WilliamsJason
 title: "Referência da API de Gerenciamento do usuário de teste da Xbox Live"
 description: "Saiba como acessar as APIs de Gerenciamento do usuário de maneira programática."
-translationtype: Human Translation
-ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
-
----  
-
-#Gerenciamento do usuário do Xbox Live#
+ms.author: jaswill
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
+ms.openlocfilehash: c1a2517aa8716cff9201351a12a3c391110aafab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
+---
+#<a name="xbox-live-user-management"></a>Gerenciamento do usuário do Xbox Live#
 
 **Solicitação**
 
 Você pode obter a lista de usuários no console ou atualizar a lista adicionando, removendo, entrando, saindo ou modificando usuários existentes.
 
-| Método        | URI da Solicitação     | 
+| Método        | URI da solicitação     | 
 | ------------- |-----------------|
 | GET           | /ext/user |
 | PUT           | /ext/user |
@@ -22,11 +27,11 @@ Você pode obter a lista de usuários no console ou atualizar a lista adicionand
 
 **Parâmetros do URI**
 
-* Nenhum
+* Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-* Nenhum
+* Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -41,7 +46,7 @@ As chamadas para PUT devem incluir uma matriz JSON com a seguinte estrutura:
   * SponsoredUser (opcional): bool especificando se é necessário adicionar um usuário patrocinado ou não.
   * Excluir (opcional): bool especificando a exclusão desse usuário do console
 
-###Resposta###
+###<a name="response"></a>Resposta###
 
 **Corpo da resposta**
 
@@ -67,11 +72,5 @@ Esta API tem os códigos de status esperados a seguir.
 | 4XX                | Diversos erros de dados ou formato de solicitação inválidos |
 | 5XX                | Códigos de erro de falhas inesperadas |
 <br>
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

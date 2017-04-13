@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 93319caaa16afe84a897dbc4bd6370a5cef3cdd1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dcceab233f19696f11075fdc4e46fe4a3aa7e5b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar seu ambiente de desenvolvimento da UWP no Xbox
 
 A Plataforma Universal do Windows (UWP) no ambiente de desenvolvimento do Xbox consiste em um computador de desenvolvimento conectado a um console Xbox One por meio de uma rede local.
@@ -119,4 +116,3 @@ Parabéns! Você criou e implantou com êxito o seu primeiro aplicativo UWP no X
 - [UWP no Xbox One](index.md)
 
 ----
-

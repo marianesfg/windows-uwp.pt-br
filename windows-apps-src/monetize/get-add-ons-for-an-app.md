@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
 description: "Use este método na API de envio da Windows Store para recuperar informações sobre as compras no aplicativo para um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
-title: Obtenha os complementos de um aplicativo usando a API de envio da Windows Store
+title: Obter complementos para um app
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complementos, produtos no aplicativo, IAPs
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73ce08bfa72a8508d71811267f8cd8e2377a3613
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 198db630fbba8d4145454a6912f118225b13ac1c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-add-ons-for-an-app-using-the-windows-store-submission-api"></a>Obtenha os complementos de um aplicativo usando a API de envio da Windows Store
+# <a name="get-add-ons-for-an-app"></a>Obter complementos para um aplicativo
 
 
 
@@ -53,7 +50,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
 
-|  Nome  |  Tipo  |  Descrição  |  Necessário  |
+|  Nome  |  Tipo  |  Descrição  |  Obrigatório  |
 |------|------|------|------|
 |  applicationId  |  string  |  A ID da Loja do aplicativo para o qual você deseja recuperar os complementos. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sim  |
 |  top  |  int  |  O número de itens a serem retornados na solicitação (ou seja, o número de complementos a serem retornados). Se o aplicativo tiver mais complementos que o valor especificado na consulta, o corpo da resposta incluirá um caminho relativo do URI que você pode acrescentar ao URI do método para solicitar a próxima página de dados.  |  Não  |
@@ -108,7 +105,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 50 complementos para o aplicativo, o corpo da resposta incluirá um valor @nextLink ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` para solicitar os próximos 10 complementos. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 50 complementos para o aplicativo, o corpo da resposta incluirá um valor @nextLink de ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` para solicitar os próximos 10 complementos. |
 | value      | array  | Uma matriz de objetos que listam a ID da Loja de cada complemento para o aplicativo especificado. Para obter mais informações sobre os dados em cada objeto, consulte [recurso do complemento](get-app-data.md#add-on-object).                                                                                                                           |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de complementos do aplicativo especificado).                                                                                                                                                                                                                             |
 
@@ -116,7 +113,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -131,4 +128,3 @@ Se a solicitação não puder ser concluída com êxito, a resposta conterá um 
 * [Obter todos os aplicativos](get-all-apps.md)
 * [Obter um aplicativo](get-an-app.md)
 * [Obter pacotes de pré-lançamento de um aplicativo](get-flights-for-an-app.md)
-

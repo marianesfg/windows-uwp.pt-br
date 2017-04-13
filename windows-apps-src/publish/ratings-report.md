@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu app na Windows Store."
+Description: "O relatório Classificações no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store."
 title: "Relatório de classificações"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 ms.author: wdg-dev-content
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 19364d7d3e8e29364f527c09f931ef637cbf03d9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fa9d9fcb7f82a5dbe75e3b7249b32226552422ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ratings-report"></a>Relatório de classificações
 
 
-O relatório **Classificações** no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu app na Windows Store. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Você também pode recuperar programaticamente esses dados usando o método [obter classificações de app](../monetize/get-app-ratings.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Classificações** no painel do Centro de Desenvolvimento do Windows permite que você consulte a distribuição de como os clientes classificam seu aplicativo na Windows Store. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Você também pode recuperar programaticamente esses dados usando o método [obter classificações de aplicativo](../monetize/get-app-ratings.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Nesse relatório, uma classificação significa o número de estrelas (de 1 a 5) que um cliente deu ao seu app quando o classificou na Loja. O relatório **Classificações** não inclui informações sobre todos os comentários individuais deixados como análises. Esses comentários estão disponíveis no [Relatório de avaliações](reviews-report.md).
+Nesse relatório, uma classificação significa o número de estrelas (de 1 a 5) que um cliente deu ao seu aplicativo quando o classificou na Loja. O relatório **Classificações** não inclui informações sobre todos os comentários individuais deixados como análises. Esses comentários estão disponíveis no [Relatório de avaliações](reviews-report.md).
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
@@ -37,12 +34,12 @@ As informações em todos os gráficos listados a seguir refletirão o período 
 ## <a name="average-rating"></a>Classificação média
 
 
-O **Classificação média** mostra a classificação média do seu app durante o período de tempo selecionado.
+O **Classificação média** mostra a classificação média do seu aplicativo durante o período de tempo selecionado.
 
 ## <a name="number-of-ratings"></a>Número de classificações
 
 
-O gráfico **Número de classificações** mostra o número total de classificações do seu app durante o período de tempo selecionado.
+O gráfico **Número de classificações** mostra o número total de classificações do seu aplicativo durante o período de tempo selecionado.
 
 ## <a name="new-and-revised-ratings"></a>Classificações novas e revisadas
 
@@ -57,9 +54,9 @@ O gráfico **Classificações novas e revisadas** mostra o número de classifica
 ## <a name="average-rating-over-time"></a>Classificação média ao longo do tempo
 
 
-O gráfico **Classificação média ao longo do tempo** mostra como a classificação média do app foi alterada durante o período de tempo selecionado.
+O gráfico **Classificação média ao longo do tempo** mostra como a classificação média do aplicativo foi alterada durante o período de tempo selecionado.
 
-Em vez de calcular a média de todas as classificações feitas durante o período de tempo selecionado (como no gráfico **Classificação média**), o gráfico **Classificação média ao longo do tempo** mostra como os clientes classificaram o app em um determinado dia ou semana durante o período. Isso ajuda a identificar tendências ou determinar se classificações foram afetadas por atualizações ou outros fatores.
+Em vez de calcular a média de todas as classificações feitas durante o período de tempo selecionado (como no gráfico **Classificação média**), o gráfico **Classificação média ao longo do tempo** mostra como os clientes classificaram o aplicativo em um determinado dia ou semana durante o período. Isso ajuda a identificar tendências ou determinar se classificações foram afetadas por atualizações ou outros fatores.
 
 Se você filtrou as informações por **Últimos 30 dias** ou **Últimos três meses**, o gráfico exibe a classificação média por dia. Se você filtrou por **Últimos 6 meses** ou **Últimos 12 meses**, o gráfico exibe a classificação média por semana (com uma nova semana considerada para iniciar na segunda-feira; a média de classificação mostrada é da semana anterior).
 
@@ -72,9 +69,8 @@ O gráfico **Mercados** mostra a classificação média e o número de classific
 
 Por padrão, podemos mostrar o mercado que tinha mais críticas e continuar para baixo, mas você pode reverter essa ordem, alternando a seta na coluna **Número de classificações** deste gráfico. Você também pode classificar os dados por **Média de classificação** ou **Mercado**, clicando nessas colunas.
 
-> **Observação** É provável que você consulte um número diferente de classificações ao comparar o relatório **Classificações** no Centro de Desenvolvimento do Windows com o relatório Críticas no app móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o app mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
+> **Observação** É provável que você consulte um número diferente de classificações ao comparar o relatório **Classificações** no Centro de Desenvolvimento do Windows com o relatório Críticas no aplicativo móvel mais antigo do Centro de Desenvolvimento. Isso ocorre porque o aplicativo mostra apenas os dados de avaliações de clientes no Windows Phone 8.1 e versões anteriores. Isso também pode ser resultado do trabalho da Microsoft de remover avaliações da Windows Store que foram identificadas como spam, inadequadas, ofensivas ou que violam a política de outra forma. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
  
 
  
-

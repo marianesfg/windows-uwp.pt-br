@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: "Use este método na API de envio da Windows Store para atualizar um envio de versão de pacote de pré-lançamento existente."
-title: "Atualize um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Atualizar um envio de pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envio de versão de pré-lançamento, atualização"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dbd8447808c1446805f179fd1181ae88dd847083
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 89ef86cdf3243322f3d8725e40ef13bf43f31a8e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-a-package-flight-submission-using-the-windows-store-submission-api"></a>Atualize um envio do pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
 
 
 Use este método na API de envio da Windows Store para atualizar um envio de versão de pacote de pré-lançamento existente. Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-a-flight-submission.md) para ingestão e publicação.
@@ -37,7 +34,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}``` |
 
@@ -96,7 +93,7 @@ Content-Type: application/json
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -138,7 +135,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -173,4 +170,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
 * [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
 * [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
-

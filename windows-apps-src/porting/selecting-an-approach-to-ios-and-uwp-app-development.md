@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ccacfc1257af529fcc2363285c6dd9e4ab2315ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selecionando uma abordagem para o desenvolvimento de aplicativos iOS e UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -99,5 +96,4 @@ Com um aplicativo existente do iOS, suas opções são um pouco mais limitadas. 
 -   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Uma ferramenta para desenvolvimento de jogos baseados em HTML.
-
 

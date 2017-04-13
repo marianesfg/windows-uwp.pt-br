@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ee88a22fe50fc3d782febafdc82c2a68c386dab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4cbb423d8fdddfc6cc158c1cbca2398b21dc205c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -59,21 +56,21 @@ Use [HttpClient](httpclient.md) (e o restante da API namespace [**Windows.Web.Ht
 ### <a name="when-to-use-httpclient"></a>Quando usar um HttpClient
 
 -   Quando usar HTTP(S) para se comunicar com serviços Web.
--   Quando fizer upload ou download de um pequeno número de arquivos menores.
+-   Quando fizer upload ou transferência de um pequeno número de arquivos menores.
 -   Se os WebSockets (as classes [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) e [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)) atenderem às suas necessidades de comunicações (TCP de/para um servidor Web), e o servidor Web em questão suportar WebSockets, considere a possibilidade de usá-los em vez de desperdiçar tempo e recursos de desenvolvimento para implementar funcionalidade semelhante com HttpClient.
 -   Quando você está transmitindo conteúdo através da rede.
 
 ### <a name="when-not-to-use-httpclient"></a>Quando não usar HttpClient
 
 -   Se você estiver transferindo arquivos grandes ou grande número de arquivos, considere usar transferências em segundo plano.
--   Se quiser restringir os limites de download/upload com base no tipo de conexão ou se quiser salvar o andamento e retomar o download/upload após uma interrupção, você deverá usar transferências em segundo plano.
+-   Se quiser restringir os limites de transferência/upload com base no tipo de conexão ou se quiser salvar o andamento e retomar o transferência/upload após uma interrupção, você deverá usar transferências em segundo plano.
 -   Se você estiver se comunicando com dois dispositivos e nenhum deles for projetado para atuar como um servidor HTTP(S), você deverá usar soquetes. Não tente implementar seu próprio servidor HTTP e usar [HttpClient](httpclient.md) para se comunicar com ele.
 
 ## <a name="background-transfers"></a>Transferências em segundo plano
 
-Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e download que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
+Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e transferência que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de transferência se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para transferências.
 
-Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo é concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
+Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo é concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando uma transferência for concluída.
 
 ### <a name="when-to-use-background-transfers"></a>Quando usar transferências em segundo plano
 
@@ -140,5 +137,4 @@ A API [**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/libra
 ### <a name="sms"></a>SMS
 
 O namespace [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) lida com SMS e mensagens relacionadas como entidades de nível inferior. Ele é fornecido para uso por operadoras móveis para uso em SMS direcionado a aplicativos e é controlado por um recurso que não será aprovado para ser usado pela maioria dos desenvolvedores de aplicativos. Caso esteja escrevendo um aplicativo para lidar com mensagens, você deve usar a API [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321), porque ela foi projetada para tratar não apenas mensagens SMS, mas também mensagens de outras origens, como aplicativos de chat em tempo real, o que possibilita uma experiência de chat/mensagens muito mais avançada.
-
 

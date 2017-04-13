@@ -9,23 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a0c0b2cee4512bdd6dd888aceae53eec061dac72
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 98735ce2d102c1a0b7b054b9d70038fe5f9dc40c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>Arquivo reservado e nomes de esquemas de URI
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Você pode usar associações de URI para iniciar automaticamente seu app quando outro app iniciar um esquema de URI específico. Mas há algumas associações de URI que você não pode usar porque são reservadas. Se seu app for registrado para uma associação reservada, esse registro será ignorado. Este tópico lista os arquivos reservados e os nomes de esquemas de URI que não estão disponíveis para seu app.
+Você pode usar associações de URI para iniciar automaticamente seu aplicativo quando outro aplicativo iniciar um esquema de URI específico. Mas há algumas associações de URI que você não pode usar porque são reservadas. Se seu aplicativo for registrado para uma associação reservada, esse registro será ignorado. Este tópico lista os arquivos reservados e os nomes de esquemas de URI que não estão disponíveis para seu app.
 
 ## <a name="reserved-file-types"></a>Tipos de arquivos reservados
 
-Existem dois tipos de arquivos reservados: tipos de arquivos reservados para apps nativos e tipos de arquivos reservados para o sistema operacional. Quando um tipo de arquivo reservado para um app nativo é iniciado, somente o app nativo será iniciado. Qualquer tentativa de registrar seu app com esse tipo de arquivo é ignorada. Da mesma forma, qualquer tentativa de registrar seu app com um tipo de arquivo reservado para o sistema operacional também será ignorada.
+Existem dois tipos de arquivos reservados: tipos de arquivos reservados para aplicativos nativos e tipos de arquivos reservados para o sistema operacional. Quando um tipo de arquivo reservado para um aplicativo nativo é iniciado, somente o aplicativo nativo será iniciado. Qualquer tentativa de registrar seu aplicativo com esse tipo de arquivo é ignorada. Da mesma forma, qualquer tentativa de registrar seu aplicativo com um tipo de arquivo reservado para o sistema operacional também será ignorada.
 
-Tipos de arquivos reservados para apps nativos
+Tipos de arquivos reservados para aplicativos nativos
 
 <table>
 <tr><td>.aac</td><td>.icon</td><td>.pem</td><td>.wdp</td></tr>
@@ -122,4 +120,3 @@ Os seguintes tipos de arquivos são reservados para o sistema operacional
 <tr><td>inffile</td><td>ms-settings:network-dialup</td><td>scrfile</td><td></td></tr>
 <tr><td>insfile</td><td>ms-settings:network-ethernet</td><td>scriptletfile</td><td></td></tr>
 </table>
-

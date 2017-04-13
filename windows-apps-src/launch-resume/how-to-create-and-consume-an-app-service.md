@@ -9,13 +9,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3dcf6a8191553deac5821346718a202bc362c7ff
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fe6d70394af430e34e26b3fdbce2da61ca0572b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-consume-an-app-service"></a>Criar e consumir um serviço de app
 
 
@@ -25,6 +22,8 @@ ms.lasthandoff: 02/07/2017
 Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços.
 
 A partir do Windows 10, versão 1607, você pode criar serviços de aplicativo que são executados no mesmo processo do aplicativo host. Este artigo se concentra na criação de serviços de aplicativo que são executados em um processo separado em segundo plano. Consulte [Converter um serviço de app para ser executado no mesmo processo de seu app host](convert-app-service-in-process.md) para obter mais detalhes sobre os serviços de aplicativo que são executados no mesmo processo do provedor.
+
+Para obter mais exemplos de serviço de aplicativo, consulte [amostras de aplicativos da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices).
 
 ## <a name="create-a-new-app-service-provider-project"></a>Criar um novo projeto de provedor de serviços de aplicativo
 
@@ -382,5 +381,5 @@ namespace MyAppService
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Converter um serviço de app para ser executado no mesmo processo de seu app host](convert-app-service-in-process.md)
-* [Dar suporte a seu app com tarefas em segundo plano](support-your-app-with-background-tasks.md)
-
+* [Torne seu aplicativo compatível com tarefas em segundo plano](support-your-app-with-background-tasks.md)
+* [Exemplos de aplicativos UWP (Plataforma Universal do Windows)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)

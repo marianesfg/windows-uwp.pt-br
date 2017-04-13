@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2c1bf910303f0c26761a3c63c3e1159dd2d0c6bb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cad84be24836bc6a33a4ab08f1ca4fa2d9e97512
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xfieldmodifier-attribute"></a>Atributo x:FieldModifier
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -41,5 +38,4 @@ O acesso **Private** é o padrão.
 **x:FieldModifier** só é relevante para elementos com um [atributo x:Name](x-name-attribute.md), pois esse nome é usado para fazer referência ao campo já que ele é público.
 
 **Observação** O XAML do Windows Runtime não aceita **x:ClassModifier** ou **x:Subclass**.
-
 

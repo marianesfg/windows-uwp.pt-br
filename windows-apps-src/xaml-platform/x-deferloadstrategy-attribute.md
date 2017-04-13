@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0fd1e58549ba19397948864fe5fe0b31fcaf01d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xdeferloadstrategy-attribute"></a>Atributo x:DeferLoadStrategy
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -36,7 +33,7 @@ As restrições para usar **x: DeferLoadStrategy** são:
 
 -   Exige um [x:Name](x-name-attribute.md) definido, porque deve existir uma maneira de encontrar o elemento depois.
 -   Apenas um [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) pode ser marcado como adiado, com exceção dos tipos derivados de [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
--   Elementos raiz não podem ser adiados em um [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) ou [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+-   Elementos raiz não podem ser adiados em um [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) ou [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 -   Elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) não podem ser adiados.
 -   Não funciona com XAML flexível carregado com [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
 -   Mover um elemento pai apagará todos os elementos não obtidos.
@@ -93,5 +90,4 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
 

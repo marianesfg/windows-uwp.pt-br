@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: "Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows"
-description: "O suporte do .NET framework para componentes do Tempo de Execução do Windows facilita a declaração de componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework."
+description: "O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,24 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6bac2575b3855357076d4272a423c9c689118b2b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8b759684d07c1fa8265ed958ac9c736aa12a488c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-O suporte do .NET framework para componentes do Tempo de Execução do Windows facilita a declaração de componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework. No entanto, ao declarar acessadores de eventos personalizado em um componente do Tempo de Execução do Windows, você deve seguir o padrão usado na UWP.
+O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework. No entanto, ao declarar acessadores de eventos personalizado em um componente do Tempo de Execução do Windows, você deve seguir o padrão usado na UWP.
 
 ## <a name="registering-events"></a>Registro de eventos
 
 
-Quando você se registra para tratar um evento na UWP, acessador add retorna um token. Para cancelar o registro, você passa esse token para o acessador remove. Isso significa que os acessadores add e remove de eventos da UWP têm assinaturas diferentes dos acessadores a que você está acostumado.
+Quando você se registra para manipular um evento na UWP, acessador add retorna um token. Para cancelar o registro, você passa esse token para o acessador remove. Isso significa que os acessadores add e remove de eventos da UWP têm assinaturas diferentes dos acessadores a que você está acostumado.
 
 Felizmente, os compiladores de Visual Basic e C# simplificam esse processo: quando você declara um evento usando acessadores personalizados em um componente do Tempo de Execução do Windows, os compiladores usam automaticamente o padrão UWP. Por exemplo, você obtém um erro de compilador caso o acessador add não retorne um token. O .NET Framework fornece dois tipos para dar suporte à implementação:
 
@@ -114,7 +111,7 @@ Entre os outros membros da classe EventRegistrationTokenTable&lt;T&gt; que são 
 
     >**Observação**  Os métodos AddEventHandler e RemoveEventHandler(EventRegistrationToken) bloqueiam a tabela para ajudar a garantir a segurança do thread.
 
--   A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para tratar o evento. Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente.
+-   A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento. Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente.
 
     >**Observação**  Recomendamos seguir o padrão mostrado no exemplo fornecido anteriormente neste artigo e copiar o representante para uma variável temporária antes de chamá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante. Como os representantes são imutáveis, a cópia continua sendo válida.
 
@@ -129,6 +126,5 @@ Usuários do Visual Basic: no .NET Framework, um evento é apenas um representan
 * [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Eventos (guia de programação de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
 * [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [.NET para apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [Procedimento passo a passo: criação de um componente do Tempo de Execução do Windows básico chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
+* [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

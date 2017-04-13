@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: "Use a API de promoções da Windows Store para gerenciar de forma programática campanhas publicitárias promocionais para aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows."
-title: "Executar campanhas publicitárias usando serviços da Windows Store"
+title: "Veicular campanhas publicitárias usando os serviços da Loja"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de promoções da Windows Store, campanhas publicitárias"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ec245f07098a662c80517de49ba5637a69b30f35
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d1575c686080fb8c4c35c032cdc1beca587aeb37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="run-ad-campaigns-using-windows-store-services"></a>Executar campanhas publicitárias usando serviços da Windows Store
+# <a name="run-ad-campaigns-using-store-services"></a>Veicular campanhas publicitárias usando os serviços da Loja
 
 Use a *API de promoções da Windows Store* para gerenciar de forma programática campanhas publicitárias promocionais para aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você crie, atualize e monitore suas campanhas e outros ativos relacionados, como direcionamento e criativos. Essa API é especialmente útil para desenvolvedores que criam grandes volumes de campanhas e que desejam fazer isso sem usar o painel do Centro de Desenvolvimento do Windows. Essa API usa o Azure Active Directory (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
@@ -35,6 +32,8 @@ Como alternativa, você pode criar e gerenciar as campanhas publicitárias usand
 
 Antes de começar a escrever o código para chamar a API de promoções da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
+* Antes de poder criar e iniciar uma campanha publicitária usando essa API com êxito, primeiro você deve [criar uma campanha de anúncios pagos usando a página **Promover seu aplicativo** no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e, em seguida, é necessário adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. As linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
+
 * Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sem nenhum custo adicional.
 
 * Você deve associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de promoções da Windows Store. Você precisa da ID do locatário, ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
@@ -45,7 +44,7 @@ Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e
 
 1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para as gerenciar campanhas promocionais de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+2.  Na página **Gerenciar usuários**, clique em **Adicionar apps do Azure AD**, adicione o app do Azure AD que representa o app ou o serviço que você usará para gerenciar campanhas promocionais de sua conta do Centro de Desenvolvimento e atribua a ele a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
@@ -112,4 +111,3 @@ O exemplo de código a seguir demonstra como obter um token de acesso do Azure A
 
 
  
-

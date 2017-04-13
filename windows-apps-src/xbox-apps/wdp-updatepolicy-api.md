@@ -2,42 +2,40 @@
 author: payzer
 title: "Referência de API da política de atualização devkit do desenvolvedor Xbox do portal de dispositivos"
 description: "Saiba como definir programaticamente a política de atualização para o console."
-translationtype: Human Translation
-ms.sourcegitcommit: 8f02e0c2f6fa30a3ac56945347c5bec253189bd8
 ms.openlocfilehash: f9313d3c8b93ba13074c547f1f63c9f3204f0f58
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 OBSERVAÇÃO: Esta API estará disponível na próxima prévia do desenvolvedor.
 
-# Referência de API da política de atualização do sistema   
+# <a name="system-update-policy-api-reference"></a>Referência de API da política de atualização do sistema   
 Você pode usar essa API para ver qual política de atualização é aplicada ao console e alterar a política de atualização para uma nova.
 
 IMPORTANTE: A maioria dos consoles receberá uma resposta "acesso negado" ao tentar chamar essa API. Isso porque nem todos os consoles de desenvolvimento têm a capacidade de alterar a política de atualização.
 
 Esta API afeta a política de atualização para consoles em modo de desenvolvedor, e não para consoles de varejo.
 
-## Obter a política de atualização do console
+## <a name="get-the-console-update-policy"></a>Obter a política de atualização do console
 
 **Solicitação**
 
 Você pode usar a solicitação a seguir para obter a política de atualização do console.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /ext/update/policy
 <br />
 **Parâmetros do URI**
 
-- Nenhuma
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Resposta**   
 A resposta é uma matriz JSON que contém membros do grupo de atualizações de sistema do console. Cada objeto tem os seguintes campos:   
@@ -58,7 +56,7 @@ Código de status HTTP      | Descrição
 4XX | Códigos de erro
 5XX | Códigos de erro
 
-## Definir a política de atualização do sistema do console
+## <a name="set-a-consoles-system-update-policy"></a>Definir a política de atualização do sistema do console
 Você pode usar essa API para alternar a associação ao grupo de atualização de sistema do console.
 
 Observação: Os consoles só podem estar em um grupo de atualização do sistema por vez.
@@ -67,17 +65,17 @@ Observação: Os consoles só podem estar em um grupo de atualização do sistem
 
 Você pode usar a solicitação a seguir para definir a associação ao grupo de atualização do sistema de um conole.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 POST | /ext/update/policy
 <br />
 **Parâmetros do URI**
 
-- Nenhuma
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhuma
+- Nenhum(a)
 
 **Corpo da solicitação**   
 O corpo da solicitação é um objeto JSON contendo os seguintes campos:   
@@ -93,7 +91,7 @@ Os GroupIDs possíveis são:
 
 **Resposta**   
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -109,10 +107,4 @@ Código de status HTTP      | Descrição
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,6 +1,6 @@
 ---
 author: shawjohn
-Description: "O relatório de Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu app."
+Description: "O relatório de Canais e conversões no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo."
 title: "Relatório Canais e conversões"
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
 ms.author: johnshaw
@@ -9,31 +9,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, canais, conversões, relatório, análises"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60f639c6bad73273a6cc7f83cf65fdf321211ba1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cbdd2e530594b97847196941580e2837d71698d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="channels-and-conversions-report"></a>Relatório Canais e conversões
 
 
-O relatório de **Canais e conversões** no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu app. Ele permite acompanhar [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md) de seu app ou seus complementos e saber quantas dessas visitas resultaram em novas aquisições. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline.
+O relatório de **Canais e conversões** no painel Centro de Desenvolvimento do Windows permite saber como os clientes no Windows 10 chegaram à listagem de seu aplicativo. Ele permite acompanhar [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md) de seu aplicativo ou seus complementos e saber quantas dessas visitas resultaram em novas aquisições. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline.
 
 > **Importante**   Esse relatório mostra apenas os dados de exibição de página e conversão de clientes no Windows 10.
 
  
 
-Nesse relatório, um *canal* se refere ao método em que um cliente chegou à página de listagem do seu app (por exemplo, navegação e pesquisa na Loja, um link de um site externo, um link de uma das suas campanhas personalizadas, etc.). Os seguintes tipos de canal estão incluídos:
+Nesse relatório, um *canal* se refere ao método em que um cliente chegou à página de listagem do seu aplicativo (por exemplo, navegação e pesquisa na Loja, um link de um site externo, um link de uma das suas campanhas personalizadas, etc.). Os seguintes tipos de canal estão incluídos:
 
 -   **Tráfego da Loja:** o cliente estava navegando ou pesquisando a Loja quando visualizou os detalhes do seu app.
 -   **Campanha personalizada:** o cliente seguiu um link que usava uma [ID da campanha personalizada](create-a-custom-app-promotion-campaign.md).
 -   **Outros:** o cliente seguiu um link externo (sem qualquer ID de campanha personalizada) de um site para a listagem do seu app ou o cliente seguiu um link de um mecanismo de pesquisa para a listagem do seu app.
 
-Uma *exibição de página* significa que um cliente viu a página de listagem da Loja do seu app, por meio da Loja baseada na Web ou dentro do app Loja no Windows 10.
+Uma *exibição de página* significa que um cliente viu a página de listagem da Loja do seu aplicativo, por meio da Loja baseada na Web ou dentro do aplicativo Loja no Windows 10.
 
-Uma *conversão* significa que um cliente obteve recentemente uma licença para o seu app (seja paga ou gratuita) ou para um complemento.
+Uma *conversão* significa que um cliente obteve recentemente uma licença para o seu aplicativo (seja paga ou gratuita) ou para um complemento.
 
 Nós não exibimos uma taxa de conversão nesse relatório porque nossos modos de exibição de página e os números de conversão não são contagens de clientes exclusivos.
 
@@ -53,14 +50,14 @@ Na parte superior da página, você pode expandir **Aplicar filtros** para filtr
 
 As informações em todos os gráficos listados a seguir refletirão o período de tempo selecionado na seção **Aplicar filtros** e refletirá todos os outros filtros que você tenha escolhido aqui.
 
-## <a name="app-page-views-and-conversions-by-channel"></a>Exibições e conversões de página de app por canal
+## <a name="app-page-views-and-conversions-by-channel"></a>Exibições e conversões de página de aplicativo por canal
 
 
-O gráfico **Exibições e conversões de página de app por canal** mostra com que frequência a página de listagem do app foi visualizada e como os clientes chegaram lá. Ele também mostra o número de conversões de campanhas personalizadas durante o período de tempo selecionado.
+O gráfico **Exibições e conversões de página de aplicativo por canal** mostra com que frequência a página de listagem do aplicativo foi visualizada e como os clientes chegaram lá. Ele também mostra o número de conversões de campanhas personalizadas durante o período de tempo selecionado.
 
-A guia **Exibições de página** deste gráfico mostra o número de vezes em que a página de listagem do app foi visualizada durante o período de tempo selecionado. As exibições são agrupadas de acordo com o tipo de canal pelo qual o cliente encontrou a listagem do app.
+A guia **Exibições de página** deste gráfico mostra o número de vezes em que a página de listagem do aplicativo foi visualizada durante o período de tempo selecionado. As exibições são agrupadas de acordo com o tipo de canal pelo qual o cliente encontrou a listagem do aplicativo.
 
-A guia **Conversões** deste gráfico mostra o número de conversões (novas aquisições) no período de tempo selecionado para clientes que chegaram à listagem de seu app por meio de uma campanha personalizada.
+A guia **Conversões** deste gráfico mostra o número de conversões (novas aquisições) no período de tempo selecionado para clientes que chegaram à listagem de seu aplicativo por meio de uma campanha personalizada.
 
 Para obter informações sobre todas as aquisições do seu app, inclusive aquelas que não ocorreram por meio de um link de campanha personalizada e aquelas de clientes em outras versões do sistema operacional, consulte o [relatório Aquisições](acquisitions-report.md).
 
@@ -81,7 +78,7 @@ O gráfico **Exibições e conversões de página de app por ID de campanha** mo
 
 O gráfico **Conversões de complementos por ID da campanha** mostra o número de conversões de complementos por ID da campanha personalizada.
 
-Quando uma instalação de app é contabilizada como uma conversão para uma campanha personalizada, as compras de complementos nesse app também são contabilizadas como conversões para a mesma campanha personalizada.
+Quando uma instalação de aplicativo é contabilizada como uma conversão para uma campanha personalizada, as compras de complementos nesse aplicativo também são contabilizadas como conversões para a mesma campanha personalizada.
 
 Por padrão, o relatório inclui qualquer complemento que apresentava uma conversão resultante de um link usando-se uma ID de campanha personalizada durante o período de tempo selecionado. Para exibir os dados de um complemento específico, selecione-o nos **Filtros de seção**.
 
@@ -99,4 +96,3 @@ O gráfico **Divisão de conversões** mostra os seguintes detalhes sobre os mod
  
 
  
-

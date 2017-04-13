@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 2332abe43732299dfb0f4bc265bf1b12877a17aa
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 47bd2d7db1517c7cb54b018ee014e3714e71cf3e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-certificate-for-package-signing"></a>Criar um certificado para a assinatura de pacote
 
 \[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo explica como criar e exportar um certificado para a assinatura de pacote de apps usando as ferramentas do PowerShell. É recomendável que você use o Visual Studio para [Empacotar apps UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps), mas você ainda pode empacotar um app da Loja pronto manualmente se você não usou o Visual Studio para desenvolver seu app.
+
+> [!IMPORTANT] 
+> Se você usou o Visual Studio para desenvolver seu app, é recomendável que você use o Assistente do Visual Studio para importar um certificado e assinar seu pacote de app. Para obter mais informações, consulte [Empacotar um aplicativo UWP com Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

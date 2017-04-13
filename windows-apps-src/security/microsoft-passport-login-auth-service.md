@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7dbc74ff80441e0b128a2f5da53c809145b37325
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e33c7bd29fe8750d81ca1304c3854dc1c93d0929
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-windows-hello-login-service"></a>Criar um serviço de logon do Windows Hello
 
 
@@ -31,7 +28,7 @@ Para criar esse projeto, você precisará de alguma experiência em C# e XAML. V
 ## <a name="exercise-1-server-side-logic"></a>Exercício 1: Lógica de servidor
 
 
-Neste exercício, você começará com o app Windows Hello criado no primeiro laboratório, além da criação de um servidor e um banco de dados locais fictícios. Este laboratório prático foi projetado para ensinar como o Windows Hello poderia ser integrado a um sistema existente. Usando um servidor e um banco de dados fictícios, grande parte da configuração não relacionada é eliminada. Em seus próprios apps, você precisará substituir os objetos fictícios por serviços e bancos de dados reais.
+Neste exercício, você começará com o app Windows Hello criado no primeiro laboratório, além da criação de um servidor e um banco de dados locais fictícios. Este laboratório prático foi projetado para ensinar como o Windows Hello poderia ser integrado a um sistema existente. Usando um servidor e um banco de dados fictícios, grande parte da configuração não relacionada é eliminada. Em seus próprios aplicativos, você precisará substituir os objetos fictícios por serviços e bancos de dados reais.
 
 -   Para começar, abra a solução PassportLogin do primeiro laboratório prático do Passport.
 -   Você começará implementando o servidor e o banco de dados fictícios. Crie uma nova pasta chamada "AuthService". No gerenciador de soluções, clique com o botão direito do mouse na solução "PassportLogin (Universal do Windows)" e selecione Add > New Folder.
@@ -254,7 +251,7 @@ Neste exercício, você começará com o app Windows Hello criado no primeiro la
     }
     ```
 
--   A lista de contas de usuários no repositório fictício agora pode ser salva e carregada. Outras partes do app precisarão ter acesso a essa lista, portanto, será necessário haver alguns métodos para recuperar esses dados. Sob o método InitializeSampleUserAccounts, adicione os métodos get seguintes. Eles permitem que você obtenha uma ID de usuário, um usuário único, uma lista de usuários de um dispositivo específico do Windows Hello e também a chave pública do usuário em um dispositivo específico.
+-   A lista de contas de usuários no repositório fictício agora pode ser salva e carregada. Outras partes do aplicativo precisarão ter acesso a essa lista, portanto, será necessário haver alguns métodos para recuperar esses dados. Sob o método InitializeSampleUserAccounts, adicione os métodos get seguintes. Eles permitem que você obtenha uma ID de usuário, um usuário único, uma lista de usuários de um dispositivo específico do Windows Hello e também a chave pública do usuário em um dispositivo específico.
 
     ```cs
     public Guid GetUserId(string username)
@@ -994,7 +991,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Compile e execute o app (F5). Entre na conta de usuário de exemplo, com as credenciais "sampleUsername" e "samplePassword". Na tela de boas-vindas, você pode observar que o botão Forget devices é exibido, mas não há dispositivos. Quando você está criando ou migrando um usuário para trabalhar com o Windows Hello, as informações do Passport não são enviadas para a AuthService.
+-   Compile e execute o aplicativo (F5). Entre na conta de usuário de exemplo, com as credenciais "sampleUsername" e "samplePassword". Na tela de boas-vindas, você pode observar que o botão Forget devices é exibido, mas não há dispositivos. Quando você está criando ou migrando um usuário para trabalhar com o Windows Hello, as informações do Passport não são enviadas para a AuthService.
 
     ![Tela de logon do Windows Hello](images/passport-auth-3.png)
 
@@ -1174,7 +1171,7 @@ Neste exercício, você alterará os modos de exibição e as classes auxiliares
     }
     ```
 
--   Durante este exercício, você atualizou o app do lado do cliente para usar a AuthService. Ao fazer isso, você conseguiu eliminar a necessidade da classe Account e da classe AccountHelper. Exclua a classe Account, a pasta Models e a classe AccountHelper na pasta Utils. Você precisará remover todas as referências ao namespace Models em todo o app para que a solução seja compilada com êxito.
+-   Durante este exercício, você atualizou o aplicativo do lado do cliente para usar a AuthService. Ao fazer isso, você conseguiu eliminar a necessidade da classe Account e da classe AccountHelper. Exclua a classe Account, a pasta Models e a classe AccountHelper na pasta Utils. Você precisará remover todas as referências ao namespace Models em todo o app para que a solução seja compilada com êxito.
 -   Compile e execute o app, e divirta-se usando o Windows Hello com o serviço e o banco de dados fictícios.
 
 Neste laboratório prático, você aprendeu a usar as APIs do Windows Hello para substituir as senhas ao usar autenticação em um computador com Windows 10. Quando você pensa na quantidade de energia que as pessoas gastam mantendo senhas e dando suporte a senhas perdidas nos sistemas existentes, você deve ver a vantagem de mudar para esse novo sistema de autenticação chamado Windows Hello.

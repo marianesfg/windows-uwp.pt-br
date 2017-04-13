@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-description: "Coisas que você deve fazer para qualquer app habilitado por rede."
+description: "Coisas que você deve fazer para qualquer aplicativo habilitado por rede."
 title: "Noções básicas de rede"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ms.author: bobdel
@@ -9,56 +9,53 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d24d1ff9408585246aae4c4849d3af5e8f4846be
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a2220b8c31877efdbef6a102efdb32158a709939
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="networking-basics"></a>Noções básicas de rede
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Coisas que você deve fazer para qualquer app habilitado por rede.
+Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
 
 ## <a name="capabilities"></a>Recursos
 
-Para usar a rede, você deve adicionar elementos de recurso apropriados ao manifesto do app. Se nenhum recurso de rede for especificado no manifesto do app, o app não terá nenhum recurso de rede, e qualquer tentativa de conexão com a rede falhará.
+Para usar a rede, você deve adicionar elementos de recurso apropriados ao manifesto do aplicativo. Se nenhum recurso de rede for especificado no manifesto do aplicativo, o aplicativo não terá nenhum recurso de rede, e qualquer tentativa de conexão com a rede falhará.
 
 Estes são os recursos de rede mais usados.
 
 | Funcionalidade | Descrição |
 |------------|-------------|
-| **internetClient** | Dá acesso de saída para a Internet e redes em lugares públicos, como aeroportos e restaurantes. A maioria dos apps que precisam de acesso à Internet deve usar esta funcionalidade. |
-| **internetClientServer** | Dá ao app acesso à rede de entrada e de saída a partir da Internet e de redes em lugares públicos, como aeroportos e restaurantes. |
-| **privateNetworkClientServer** | Dá ao app acesso à rede de entrada e de saída nos lugares confiáveis do usuário, como a residência e o trabalho. |
+| **internetClient** | Dá acesso de saída para a Internet e redes em lugares públicos, como aeroportos e restaurantes. A maioria dos aplicativos que precisam de acesso à Internet deve usar esta funcionalidade. |
+| **internetClientServer** | Dá ao aplicativo acesso à rede de entrada e de saída a partir da Internet e de redes em lugares públicos, como aeroportos e restaurantes. |
+| **privateNetworkClientServer** | Dá ao aplicativo acesso à rede de entrada e de saída nos lugares confiáveis do usuário, como a residência e o trabalho. |
 
-Há outros recursos que podem ser necessários para o seu app, em determinadas circunstâncias.
+Há outros recursos que podem ser necessários para o seu aplicativo, em determinadas circunstâncias.
 
 | Funcionalidade | Descrição |
 |------------|-------------|
-| **enterpriseAuthentication** | Permite que um app se conecte a recursos de rede que exigem credenciais de domínio. Esse recurso exigirá que um administrador do domínio habilite a funcionalidade em todos os apps. Um exemplo seria um app que recupera dados de servidores do SharePoint em uma intranet privada. <br/> Com esse recurso, suas credenciais podem ser usadas para acessar os recursos de rede em uma rede que exige credenciais. Um app com esse recurso pode representá-lo na rede. <br/> Essa funcionalidade não é obrigatória para que um app acesse a Internet por meio de um proxy de autenticação. |
-| **proximity** | Obrigatório para comunicação por proximidade a curta distância com dispositivos próximos ao computador. A proximidade a curta distância pode ser usada para enviar para ou se conectar a um app em um dispositivo próximo. <br/> Essa funcionalidade permite que um app acesse a rede para conectar-se a um dispositivo em proximidade a curta distância, com o consentimento do usuário para enviar ou aceitar um convite. |
-| **sharedUserCertificates** | Esta funcionalidade permite que um app acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no app. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
+| **enterpriseAuthentication** | Permite que um aplicativo se conecte a recursos de rede que exigem credenciais de domínio. Esse recurso exigirá que um administrador do domínio habilite a funcionalidade em todos os aplicativos. Um exemplo seria um aplicativo que recupera dados de servidores do SharePoint em uma intranet privada. <br/> Com esse recurso, suas credenciais podem ser usadas para acessar os recursos de rede em uma rede que exige credenciais. Um aplicativo com esse recurso pode representá-lo na rede. <br/> Essa funcionalidade não é obrigatória para que um aplicativo acesse a Internet por meio de um proxy de autenticação. |
+| **proximity** | Obrigatório para comunicação por proximidade a curta distância com dispositivos próximos ao computador. A proximidade a curta distância pode ser usada para enviar para ou se conectar a um aplicativo em um dispositivo próximo. <br/> Essa funcionalidade permite que um aplicativo acesse a rede para conectar-se a um dispositivo em proximidade a curta distância, com o consentimento do usuário para enviar ou aceitar um convite. |
+| **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
 
-## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicando-se quando seu app não está em primeiro plano
+## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicando-se quando seu aplicativo não está em primeiro plano
 
-[Dar suporte a seu app com tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o app não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o app em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de canal de controle com essa finalidade no Windows 8, e ainda há suporte para eles no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://msdn.microsoft.com/library/windows/apps/hh701032). Uma nova tecnologia no Windows 10 oferece uma funcionalidade melhor com menos sobrecarga para alguns cenários, como soquetes de fluxo habilitados por push: os gatilhos de agente de soquete e atividade de soquete.
+[Dar suporte a seu app com tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o aplicativo não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o aplicativo em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de canal de controle com essa finalidade no Windows 8, e ainda há suporte para eles no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://msdn.microsoft.com/library/windows/apps/hh701032). Uma nova tecnologia no Windows 10 oferece uma funcionalidade melhor com menos sobrecarga para alguns cenários, como soquetes de fluxo habilitados por push: os gatilhos de agente de soquete e atividade de soquete.
 
-Se o seu app usa [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), então ele pode transferir a propriedade de um soquete aberto para um agente de soquete fornecido pelo sistema, e sair do primeiro plano ou, até mesmo, terminar. Quando uma conexão é estabelecida no soquete transferido, ou quando chega tráfego nesse soquete, seu app ou a tarefa em segundo plano designada é ativada. Se seu app não estiver em execução, ele será iniciado. Em seguida, usando um [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), o agente de soquete notifica o app de que novo tráfego chegou. O app recupera o soquete de agente de soquete e processa o tráfego no soquete. Isso significa que seu app consome muito menos recursos do sistema quando não está processando ativamente o tráfego de rede.
+Se o seu aplicativo usa [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), então ele pode transferir a propriedade de um soquete aberto para um agente de soquete fornecido pelo sistema, e sair do primeiro plano ou, até mesmo, terminar. Quando uma conexão é estabelecida no soquete transferido, ou quando chega tráfego nesse soquete, seu aplicativo ou a tarefa em segundo plano designada é ativada. Se seu aplicativo não estiver em execução, ele será iniciado. Em seguida, usando um [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), o agente de soquete notifica o aplicativo de que novo tráfego chegou. O aplicativo recupera o soquete de agente de soquete e processa o tráfego no soquete. Isso significa que seu aplicativo consome muito menos recursos do sistema quando não está processando ativamente o tráfego de rede.
 
-O agente de soquete destina-se a substituir gatilhos de canal de controle, onde for aplicável, pois ele fornece a mesma funcionalidade, mas com menos restrições e um menor volume de memória. O agente de soquete pode ser usado por apps que não são apps de tela de bloqueio e ele é usado da mesma maneira em telefones como em outros dispositivos. Os apps não precisam ser executados quando o tráfego chega para ser ativado pelo agente de soquete. E o agente de soquete dá suporte à escuta em soquetes TCP, que não são suportados por gatilhos de canal de controle.
+O agente de soquete destina-se a substituir gatilhos de canal de controle, onde for aplicável, pois ele fornece a mesma funcionalidade, mas com menos restrições e um menor volume de memória. O agente de soquete pode ser usado por aplicativos que não são aplicativos de tela de bloqueio e ele é usado da mesma maneira em telefones como em outros dispositivos. Os aplicativos não precisam ser executados quando o tráfego chega para ser ativado pelo agente de soquete. E o agente de soquete dá suporte à escuta em soquetes TCP, que não são suportados por gatilhos de canal de controle.
 
 
 ### <a name="choosing-a-network-trigger"></a>Escolhendo um gatilho de rede
 
-Existem alguns cenários onde qualquer tipo de gatilho seria adequado. Ao escolher o tipo de gatilho para usar em seu app, considere o seguinte aviso.
+Existem alguns cenários onde qualquer tipo de gatilho seria adequado. Ao escolher o tipo de gatilho para usar em seu aplicativo, considere o seguinte aviso.
 
 -   Se estiver usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 -   Se você está usando **StreamSockets** habilitados por push, pode usar gatilhos de canal de controle, mas prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). Esta última opção permite que o sistema libere memória e reduza os requisitos de energia quando a conexão não está sendo usada ativamente.
--   Se você deseja minimizar o volume de memória de seu app quando ele não está atendendo ativamente as solicitações de rede, prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) quando possível.
--   Se você deseja que seu app seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
+-   Se você deseja minimizar o volume de memória de seu aplicativo quando ele não está atendendo ativamente as solicitações de rede, prefira [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) quando possível.
+-   Se você deseja que seu aplicativo seja capaz de receber dados enquanto o sistema estiver no modo de espera conectado, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
 
 Para obter detalhes e exemplos de como usar o agente de soquete, consulte [Comunicações de rede em segundo plano](network-communications-in-the-background.md).
 
@@ -73,11 +70,11 @@ Um objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br2
 Há duas maneiras de proteger uma conexão [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) com SSL/TLS:
 
 -   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) - estabeleça a conexão inicial com um serviço de rede e negocie imediatamente para usar SSL/TLS em todas as comunicações.
--   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - conecte inicialmente a um serviço de rede sem criptografia. O app pode enviar ou receber dados. Feito isso, atualize a conexão para usar SSL/TLS em todas as comunicações adicionais.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - conecte inicialmente a um serviço de rede sem criptografia. O aplicativo pode enviar ou receber dados. Feito isso, atualize a conexão para usar SSL/TLS em todas as comunicações adicionais.
 
 O valor SocketProtectionLevel que você fornece define o nível de proteção mínimo que está disposto a permitir. No entanto, o nível de proteção eventual da conexão estabelecida é determinado em um processo de negociação entre ambos os pontos de extremidade da conexão. O resultado pode ser um nível de proteção mais seguro do que aquele especificado, se o outro ponto de extremidade exigir um nível superior. A força da SSL efetivamente negociada usando [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) ou [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) pode ser determinada obtendo-se a propriedade [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) depois que a operação assíncrona for concluída com êxito.
 
-> **Observação**  Seu código jamais deve depender implicitamente do uso de um determinado nível de proteção ou da suposição de que um dado nível de segurança é usado por padrão. O panorama da segurança muda constantemente, e protocolos e níveis de proteção padrão serão alterados com o passar do tempo para evitar o uso de protocolos com pontos fracos conhecidos. Os padrões podem variar dependendo da configuração do computador individual ou de qual software está instalado e de quais patches foram aplicados. Se o seu app depende do uso de um determinado nível de segurança, você deve especificar explicitamente esse nível e, em seguida, verificar se ele está efetivamente em uso na conexão estabelecida.
+> **Observação**  Seu código jamais deve depender implicitamente do uso de um determinado nível de proteção ou da suposição de que um dado nível de segurança é usado por padrão. O panorama da segurança muda constantemente, e protocolos e níveis de proteção padrão serão alterados com o passar do tempo para evitar o uso de protocolos com pontos fracos conhecidos. Os padrões podem variar dependendo da configuração do computador individual ou de qual software está instalado e de quais patches foram aplicados. Se o seu aplicativo depende do uso de um determinado nível de segurança, você deve especificar explicitamente esse nível e, em seguida, verificar se ele está efetivamente em uso na conexão estabelecida.
 
 ### <a name="use-connectasync"></a>Usar ConnectAsync
 
@@ -171,9 +168,9 @@ using Windows::Networking::Sockets;
 
 ### <a name="use-upgradetosslasync"></a>Usar UpgradeToSslAsync
 
-Quando o código usa [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922), primeiro ele estabelece uma conexão com um serviço de rede sem criptografia. O app pode enviar ou receber alguns dados e, em seguida, atualizar a conexão para usar SSL/TLS em todas as demais comunicações.
+Quando o código usa [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922), primeiro ele estabelece uma conexão com um serviço de rede sem criptografia. O aplicativo pode enviar ou receber alguns dados e, em seguida, atualizar a conexão para usar SSL/TLS em todas as demais comunicações.
 
-O método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) aceita dois parâmetros. O parâmetro *protectionLevel* indica o nível de proteção desejado. O parâmetro *validationHostName* é o nome do host do destino de rede remoto usado para validação durante a atualização para SSL. Normalmente *validationHostName* será o mesmo nome de host que o app usou para estabelecer inicialmente a conexão. Se o parâmetro *protectionLevel* é definido como **Windows.System.Socket.SocketProtectionLevel.Ssl** ao chamar **UpgradeToSslAsync**, o [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) deve usar SSL/TLS para criptografia em comunicações posteriores pelo soquete. Esse valor exige criptografia e jamais permite o uso de uma criptografia NULL.
+O método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) aceita dois parâmetros. O parâmetro *protectionLevel* indica o nível de proteção desejado. O parâmetro *validationHostName* é o nome do host do destino de rede remoto usado para validação durante a atualização para SSL. Normalmente *validationHostName* será o mesmo nome de host que o aplicativo usou para estabelecer inicialmente a conexão. Se o parâmetro *protectionLevel* é definido como **Windows.System.Socket.SocketProtectionLevel.Ssl** ao chamar **UpgradeToSslAsync**, o [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) deve usar SSL/TLS para criptografia em comunicações posteriores pelo soquete. Esse valor exige criptografia e jamais permite o uso de uma criptografia NULL.
 
 A sequência normal a ser usada com o método [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) é a seguinte:
 
@@ -374,7 +371,7 @@ Como fornecer as credenciais de autenticação ao conectar-se pela rede.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado de cliente com a classe StreamSocket
 
-A classe [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o app se comunica. Em certos casos, o app também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado cliente sobre o objeto [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
+A classe [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o aplicativo se comunica. Em certos casos, o aplicativo também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado cliente sobre o objeto [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
 
 Veja a seguir um trecho de código que mostra como implementar isso:
 
@@ -387,34 +384,31 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 ### <a name="providing-authentication-credentials-to-a-web-service"></a>Fornecendo a autenticação de credenciais para um servidor Web
 
-As APIs de rede que habilitam os apps a interagir com serviços Web seguros fornecem seus próprios métodos para inicializar um cliente ou definir um cabeçalho de solicitação com credenciais de autenticação de servidor e proxy. Cada método é definido com um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061), o qual indica um nome de usuário, uma senha e o recurso para o qual as credenciais são usadas. A tabela a seguir fornece um mapeamento dessas APIs:
+As APIs de rede que habilitam os aplicativos a interagir com serviços Web seguros fornecem seus próprios métodos para inicializar um cliente ou definir um cabeçalho de solicitação com credenciais de autenticação de servidor e proxy. Cada método é definido com um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061), o qual indica um nome de usuário, uma senha e o recurso para o qual as credenciais são usadas. A tabela a seguir fornece um mapeamento dessas APIs:
 
 | **WebSockets** | [**MessageWebSocketControl.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br226848) |
 |-------------------------|----------------------------------------------------------------------------------------------------------|
 |  | [**MessageWebSocketControl.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br226847) |
 |  | [**StreamWebSocketControl.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br226928) |
 |  | [**StreamWebSocketControl.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br226927) |
-|  |  |
 | **Transferência em segundo plano** | [**BackgroundDownloader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701076) |
 |  | [**BackgroundDownloader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701068) |
 |  | [**BackgroundUploader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701184) |
 |  | [**BackgroundUploader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701178) |
-|  |  |
 | **Sindicalização** | [**SyndicationClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702355) |
 |  | [**SyndicationClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461) |
 |  | [**SyndicationClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459) |
-|  |  |
 | **AtomPub** | [**AtomPubClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702262) |
 |  | [**AtomPubClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243428) |
 |  | [**AtomPubClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243423) |
  
 ## <a name="handling-network-exceptions"></a>Manipulando exceções de rede
 
-Na maioria das áreas de programação, uma exceção indica um problema ou uma falha grave, causada por algum defeito no programa. Na programação de rede, há uma fonte adicional para exceções: a rede em si e a natureza das comunicações de rede. As comunicações de rede são inerentemente não confiáveis e propensas a falhas inesperadas. Para cada uma das maneiras de que seu app usa a rede, você deverá manter algumas informações de estado; e o código do app deve tratar exceções de rede atualizando essas informações de estado e inicializando a lógica apropriada para o seu app restabelecer ou repetir falhas de comunicação.
+Na maioria das áreas de programação, uma exceção indica um problema ou uma falha grave, causada por algum defeito no programa. Na programação de rede, há uma fonte adicional para exceções: a rede em si e a natureza das comunicações de rede. As comunicações de rede são inerentemente não confiáveis e propensas a falhas inesperadas. Para cada uma das maneiras de que seu aplicativo usa a rede, você deverá manter algumas informações de estado; e o código do aplicativo deve tratar exceções de rede atualizando essas informações de estado e inicializando a lógica apropriada para o seu aplicativo restabelecer ou repetir falhas de comunicação.
 
-Quando um aplicativo universal do Windows lança uma exceção, seu manipulador de exceção pode recuperar informações mais detalhadas sobre a causa da exceção para melhor compreender a falha e tomar decisões apropriadas.
+Quando um aplicativo Universal do Windows lança uma exceção, seu manipulador de exceção pode recuperar informações mais detalhadas sobre a causa da exceção para melhor compreender a falha e tomar decisões apropriadas.
 
-Cada projeção de linguagem dá suporte a um método para acessar essas informações mais detalhadas. Uma exceção é projetada como um valor **HRESULT** em aplicativos universais do Windows. O arquivo de inclusão *Winerror.h* contém uma lista muito grande de valores **HRESULT** possíveis, incluindo erros de rede.
+Cada projeção de linguagem dá suporte a um método para acessar essas informações mais detalhadas. Uma exceção é projetada como um valor **HRESULT** em aplicativos Universais do Windows. O arquivo de inclusão *Winerror.h* contém uma lista muito grande de valores **HRESULT** possíveis, incluindo erros de rede.
 
 As APIs de rede dão suporte a métodos diferentes para recuperar essas informações detalhadas sobre a causa de uma exceção.
 
@@ -425,5 +419,4 @@ As APIs de rede dão suporte a métodos diferentes para recuperar essas informa�
 
 * [Melhorias de API de rede no Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
  
-
 

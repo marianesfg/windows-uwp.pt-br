@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
 description: "Use este método na API de envio da Windows Store para recuperar informações sobre todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
-title: Obter todos os aplicativos usando a API de envio da Windows Store
+title: Obter todos os aplicativos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, aplicativos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12466a50c6cabe5ceca907cdd2f0d600ec95121f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93e973eb20835160e6b580bc932ce559b47e0ce1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-all-apps-using-the-windows-store-submission-api"></a>Obter todos os aplicativos usando a API de envio da Windows Store
+# <a name="get-all-apps"></a>Obter todos os aplicativos
 
 
 
@@ -125,14 +122,14 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | array  | Uma matriz de objetos que contêm informações sobre cada aplicativo que está registrado em sua conta. Para obter mais informações sobre os dados em cada objeto, consulte [Recurso do aplicativo](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 20 aplicativos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink ```applications?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar os próximos 10 aplicativos. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 20 aplicativos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de ```applications?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar os próximos 10 aplicativos. |
 | totalCount | int    | O número total de linhas no resultado dos dados da consulta (ou seja, o número total de aplicativos que estão registrados em sua conta).                                                                                                                                                                                                                             |
 
 <span/>
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -147,4 +144,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Obter um aplicativo](get-an-app.md)
 * [Obter pacotes de pré-lançamento de um aplicativo](get-flights-for-an-app.md)
 * [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)
-

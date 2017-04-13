@@ -12,11 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aba82e911a0641378378bee66d0b07e665ac4b5a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 86052c0d3224ffe2a9312d2e48c5398a7466eeb0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="alignment-margin-and-padding"></a>Alinhamento, margem e preenchimento
 
@@ -27,12 +25,12 @@ Além das propriedades de dimensão (largura, altura e restrições), os element
 As propriedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) e [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749) descrevem como um elemento filho deve ser posicionado dentro do espaço de layout alocado do elemento pai. Ao usar essas propriedades juntas, a lógica do layout para um contêiner pode posicionar elementos filho dentro do contêiner (um painel ou um controle). A finalidade das propriedades de alinhamento é dar dicas do layout desejado para um contêiner de layout adaptável, por isso elas são definidas em [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) filho e interpretadas por outro contêiner pai **FrameworkElement**. Os valores de alinhamento podem especificar se os elementos se alinham a uma das bordas de uma orientação ou são centralizados. Contudo, o valor padrão para as duas propriedades é **Stretch**. Com o alinhamento **Stretch**, os elementos preenchem o espaço fornecido no layout. **Stretch** é o padrão para que seja mais fácil usar as técnicas de layout adaptável nos casos em que não haja medição explícita ou não haja valor [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que venha do cálculo de medição do layout. Com esse padrão, não há risco de uma largura/altura explícita não caber dentro do contêiner e ser recortada até que você dimensione cada contêiner.
 
 > [!NOTE]
-> Como um princípio geral do layout, é melhor apenas aplicar medições a determinados elementos-chave e usar o comportamento do layout adaptável para os outros elementos. Isso oferece comportamento de layout flexível para quando o usuário dimensiona a janela superior do app, o que geralmente é possível de ser feito a qualquer momento.
+> Como um princípio geral do layout, é melhor apenas aplicar medições a determinados elementos-chave e usar o comportamento do layout adaptável para os outros elementos. Isso oferece comportamento de layout flexível para quando o usuário dimensiona a janela superior do aplicativo, o que geralmente é possível de ser feito a qualquer momento.
 
  
 Se houver valores de [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) ou recortes dentro de um contêiner adaptável, mesmo que **Stretch** seja definido como um valor de alinhamento, o layout será controlado pelo comportamento de seu contêiner. Em painéis, um valor **Stretch** que tenha sido tornado óbvio por **Height** e **Width** age como se o valor fosse **Center**.
 
-Se não houver valores de altura e largura naturais ou calculados, esses valores de dimensão serão matematicamente **NaN** (Não É um Número). Os elementos estão aguardando que seu contêiner de layout dê-lhes dimensões. Após a execução do layout, haverá valores para as propriedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) para elementos nos quais foi usado um alinhamento **Stretch**. Os valores **NaN** permanecem em [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) para os elementos filho, para que o comportamento adaptável possa ser executado novamente, por exemplo, se as alterações relacionadas ao layout, como o dimensionamento da janela do app, causarem outro ciclo de layout.
+Se não houver valores de altura e largura naturais ou calculados, esses valores de dimensão serão matematicamente **NaN** (Não É um Número). Os elementos estão aguardando que seu contêiner de layout dê-lhes dimensões. Após a execução do layout, haverá valores para as propriedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) para elementos nos quais foi usado um alinhamento **Stretch**. Os valores **NaN** permanecem em [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) e [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) para os elementos filho, para que o comportamento adaptável possa ser executado novamente, por exemplo, se as alterações relacionadas ao layout, como o dimensionamento da janela do aplicativo, causarem outro ciclo de layout.
 
 Elementos de texto, como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), geralmente não tem uma largura declarada explicitamente, mas têm uma largura calculada que você pode consultar com [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709), e essa largura também cancela um alinhamento **Stretch**. (A propriedade [**FontSize**](https://msdn.microsoft.com/library/windows/apps/br209657) e outras propriedades de texto, bem como o texto propriamente dito, já indicam o tamanho pretendido do layout. Em geral, não é desejável que o texto seja esticado.) O texto usado como conteúdo dentro de um controle tem o mesmo efeito; a presença de texto que precisa ser apresentado faz com que um **ActualWidth** seja calculado e isso comuta a largura e o tamanho desejados para o controle que o contém. Os elementos de texto também têm um [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) baseado no tamanho da fonte por linha, em quebras de linha e em outras propriedades de texto.
 
@@ -83,4 +81,3 @@ As propriedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br2
 * [**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
 * [**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
 * [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
-

@@ -2,26 +2,23 @@
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: "Saiba como usar a classe AdScheduler para adicionar anúncios ao conteúdo de vídeo."
-title: "Adicionar anúncios ao conteúdo de vídeo em HTML 5 e JavaScript"
+title: "Adicionar anúncios ao conteúdo de vídeo"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b42b57f385857301bb74037dbb5c0c7200653316
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 88e0bb4ceb9cba12d1eb5857761f5b59afaa15f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="add-advertisements-to-video-content"></a>Adicionar anúncios ao conteúdo de vídeo
 
-# <a name="add-advertisements-to-video-content-in-html-5-and-javascript"></a>Adicionar anúncios ao conteúdo de vídeo em HTML 5 e JavaScript
 
+Este passo a passo mostra como usar a classe [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) para adicionar anúncios ao conteúdo de vídeo em um aplicativo UWP (Plataforma Universal do Windows) que foi escrito em JavaScript com HTML.
 
-Este passo a passo mostra como usar a classe [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) para adicionar anúncios ao conteúdo de vídeo em um app UWP (Plataforma Universal do Windows) que foi escrito em JavaScript com HTML.
-
->**Observação**&nbsp;&nbsp;No momento, este recurso é suportado somente para apps UWP que foram escritos usando JavaScript com HTML.
+>**Observação**&nbsp;&nbsp;No momento, este recurso é suportado somente para aplicativos UWP que foram escritos usando JavaScript com HTML.
 
 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) funciona tanto com mídia progressiva quanto com mídia de streaming e usa o padrão IAB Video Ad Serving Template (VAST) 2.0/3.0 e os formatos de carga útil VMAP. Usando os padrões, [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) é indiferente ao serviço de publicidade com o qual ele interage.
 
@@ -86,7 +83,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
 
 7.  Use os métodos [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) ou [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx) para solicitar uma programação de anúncios do servidor e insira-a na linha do tempo do **MediaPlayer** e, em seguida, reproduza a mídia de vídeo.
 
-  * Se você for um parceiro da Microsoft que recebeu permissão para solicitar uma programação de anúncios do servidor de anúncios da Microsoft, use [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) e especifique a ID do app e a ID da unidade de anúncio que foram fornecidas a você por seu representante da Microsoft. Esse método assume a forma de uma **Promessa**, que é uma construção assíncrona na qual dois ponteiros de função são passados para lidar com os casos de sucesso e falha, respectivamente. Para obter mais informações, consulte [Padrões assíncronos no UWP usando JavaScript](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript).
+  * Se você for um parceiro da Microsoft que recebeu permissão para solicitar uma programação de anúncios do servidor de anúncios da Microsoft, use [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) e especifique a ID do aplicativo e a ID da unidade de anúncio que foram fornecidas a você por seu representante da Microsoft. Esse método assume a forma de uma **Promessa**, que é uma construção assíncrona na qual dois ponteiros de função são passados para lidar com os casos de sucesso e falha, respectivamente. Para obter mais informações, consulte [Padrões assíncronos no UWP usando JavaScript](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript).
 
       > [!div class="tabbedCodeSnippets"]
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
@@ -99,8 +96,7 @@ Publicidade para conteúdo de vídeo dependendo se o programa tem menos de 10 mi
     <span/>
     >**Observação**&nbsp;&nbsp;Você deve chamar a **reprodução** mesmo que a função falhe porque o [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) dirá ao **MediaPlayer** para ignorar os anúncios e ir direto para o conteúdo. Você pode ter um requisito de negócios diferente, como a inserção de um anúncio interno se um anúncio não puder ser obtido com êxito remotamente.
 
-8.  Durante a reprodução, você pode tratar eventos adicionais que permitem que seu app acompanhe o progresso e/ou erros que possam ocorrer após o processo inicial de correspondência de anúncios. O código a seguir mostra alguns desses eventos, incluindo [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx), [onPodEnd](https://msdn.microsoft.com/library/windows/apps/mt732205.aspx), [onPodCountdown](https://msdn.microsoft.com/library/windows/apps/mt732204.aspx), [onAdProgress](https://msdn.microsoft.com/library/windows/apps/mt732201.aspx), [onAllComplete](https://msdn.microsoft.com/library/windows/apps/mt732202.aspx) e [onErrorOccurred](https://msdn.microsoft.com/library/windows/apps/mt732203.aspx).
+8.  Durante a reprodução, você pode manipular eventos adicionais que permitem que seu aplicativo acompanhe o progresso e/ou erros que possam ocorrer após o processo inicial de correspondência de anúncios. O código a seguir mostra alguns desses eventos, incluindo [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx), [onPodEnd](https://msdn.microsoft.com/library/windows/apps/mt732205.aspx), [onPodCountdown](https://msdn.microsoft.com/library/windows/apps/mt732204.aspx), [onAdProgress](https://msdn.microsoft.com/library/windows/apps/mt732201.aspx), [onAllComplete](https://msdn.microsoft.com/library/windows/apps/mt732202.aspx) e [onErrorOccurred](https://msdn.microsoft.com/library/windows/apps/mt732203.aspx).
 
   > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, promover, app, campanha, relatório, instalações"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
-ms.openlocfilehash: af719bbb4cc9def4e9b202c8815320698c6148d0
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 25127b8f7214a712b10a1beda1e9b277370e6df2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="promote-your-app-report"></a>Relatório Promover seu app
 
 O relatório **Promover seu app** no painel do Centro de Desenvolvimento do Windows permite que você veja o desempenho de suas campanhas de anúncios de promoção de app.
@@ -35,7 +32,7 @@ Você pode exibir dados de desempenho de até seis campanhas publicitárias dife
 
 Executar uma campanha publicitária de instalação por meio de **Promover seu app** no Centro de Desenvolvimento oferece a exposição tão necessária para anunciar seus apps. Impressões de anúncio são mostradas para clientes que têm mais probabilidade de se interessar pelo app, e os clientes clicam no anúncio e instalam o app da Loja. Anteriormente, era difícil distinguir entre instalações que foram o resultado de uma campanha publicitária versus instalações que vieram de outras fontes.
 
-O relatório **Promover seu app** mostra quantas instalações que você ganhou devido à sua campanha publicitária. Isso só representa downloads que são um resultado direto de sua campanha publicitária e não inclui downloads de outras fontes.
+O relatório **Promover seu app** mostra quantas instalações que você ganhou devido à sua campanha publicitária. Isso só representa transferências que são um resultado direto de sua campanha publicitária e não inclui transferências de outras fontes.
 
 Monitorando instalações de suas campanhas publicitárias, você pode medir o verdadeiro retorno sobre o investimento de seu dinheiro gasto para promover seus apps. Isso também ajuda a comparar o custo da obtenção de um novo cliente com o valor de tempo de vida dos seus clientes.
 
@@ -51,7 +48,7 @@ Uma instalação é rastreada na Loja (pelo telefone, tablet, computador e outro
 2.  O cliente está conectado em uma conta da Microsoft.
 3.  O cliente atende aos requisitos de [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (clientes que não atendem aos requisitos de COPPA não podem ser rastreados).
 
-Consequentemente, é possível que o rastreamento de instalação do app *subnotifique* o número real de instalações geradas por uma campanha **Promover seu app**. Observe que o número total de downloads de um app fica visível no relatório **Aquisições** no Centro de Desenvolvimento.
+Consequentemente, é possível que o rastreamento de instalação do aplicativo *subnotifique* o número real de instalações geradas por uma campanha **Promover seu aplicativo**. Observe que o número total de transferências de um aplicativo fica visível no relatório **Aquisições** no Centro de Desenvolvimento.
 
 ## <a name="account-billing-history"></a>Histórico de cobrança da conta
 
@@ -59,15 +56,14 @@ Para ver todas as transações associadas à sua conta, selecione **Histórico d
 
 Para cada transação, mostramos d **Data de transação**, o **Nome da campanha** apropriado, a **Forma de pagamento** cobrada, **ID de pagamento**, **Data de início da cobrança**, **Data de término de cobrança**, **Valor Total** da cobrança e **Status de pagamento**.
 
-Você também pode baixar seu histórico de cobrança de conta como um documento do Microsoft Word clicando no link **Download**.
+Você também pode baixar seu histórico de cobrança de conta como um documento do Microsoft Word clicando no link **Baixar**.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar uma campanha publicitária para seu app](create-an-ad-campaign-for-your-app.md)
+* [Criar uma campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md)
 * [Gerenciando sua campanha publicitária](managing-your-ad-campaign.md)
 * [Sobre anúncios domésticos](about-house-ads.md)
 * [Perguntas comuns](common-questions.md)
  
 
  
-

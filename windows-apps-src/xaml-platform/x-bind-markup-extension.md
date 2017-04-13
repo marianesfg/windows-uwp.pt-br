@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a82cb66c66b593c0241a651e4df34e3998a106c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ba08e426fea4c494276978d96cf0b36f6956bdb8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -50,7 +47,7 @@ Em tempo de compilação XAML, **{x: Bind}** é convertido em código que irá o
 | _bindingProperties_ |
 | _propName_=_value_\[, _propName_=_value_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
-| _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-you-can-set) a seguir. | 
+| _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-that-you-can-set-with-xbind) a seguir. | 
 
 ## <a name="property-path"></a>Caminho de propriedade
 
@@ -228,4 +225,3 @@ Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate*
     </StackPanel>
   </DataTemplate>
 ```
-

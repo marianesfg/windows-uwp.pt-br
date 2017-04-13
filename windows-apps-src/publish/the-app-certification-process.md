@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c63668b9699e641bb89fa79f5febc3397aac78a1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 87fc6e35a2a9818478aca4119850ae20165d2a64
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
 
@@ -47,7 +44,7 @@ Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes
 
 ## <a name="in-the-store"></a>Na Loja 
 
-Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Loja**. Seu envio estarão disponível na Windows Store para download (a menos que você tenha escolhido outra opção de [distribuição e a visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility)). 
+Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Loja**. Seu envio estarão disponível na Windows Store para transferência (a menos que você tenha escolhido outra opção de [distribuição e a visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility)). 
 
 **Observação**  Também fazemos verificações específicas nos aplicativos após eles serem publicados, para que possamos identificar problemas potenciais e garantir que seu aplicativo esteja em conformidade com todas as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944). Se encontrarmos quaisquer problemas, você será notificado sobre o erro e como corrigi-lo, se aplicável, ou se ele foi removido da loja.
 
@@ -56,7 +53,6 @@ Depois de passar pelas etapas acima com êxito, o status do envio será alterado
  
 
  
-
 
 
 

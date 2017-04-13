@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: acf14f886f36d74941769954041325514a386e86
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b994d4c46a319f7f5714685666295f079c31d8df
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="define-pricing-and-market-selection"></a>Definir preço e seleção de mercado
 
 
@@ -53,7 +50,7 @@ Se deseja definir preços personalizados para o seu aplicativo em mercados espec
 
 Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e restrições ou outros fatores podem impedir que certos aplicativos sejam listados em alguns países e regiões. Além disso, alguns mercados podem ter requisitos específicos relacionados às classificações etárias. Se o seu aplicativo não cumprir esses requisitos, não poderemos oferecer o seu aplicativo nesse mercado. Veja [Classificações etárias](age-ratings.md) para saber mais.
 
-> **Observação**  Para aplicativos destinados ao Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Também tenha em mente que os clientes no Windows 8 ou Windows 8.1 verão apenas o aplicativo listado com seu preço base, mesmo que você altere o preço nos respectivos mercados.
+> **Observação**  Para aplicativos destinados ao Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para saber mais, veja [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x). Também tenha em mente que os clientes no Windows 8 ou Windows 8.1 verão apenas o aplicativo listado com seu preço base, mesmo que você altere o preço nos respectivos mercados.
 
  
 
@@ -193,7 +190,7 @@ Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos me
 -   RAE de Macau
 -   Macedônia (ARIM)
 -   Madagascar
--   Malaui
+-   Maláui
 -   Malásia
 -   Maldivas
 -   Mali
@@ -559,4 +556,3 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 -   Zimbábue
 
 > **Observação**  Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, consulte [Tipos de conta, locais e tarifas](https://msdn.microsoft.com/library/windows/apps/jj863494).
-

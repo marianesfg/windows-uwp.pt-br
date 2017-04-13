@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4a7c10d93a3145466007bfe4fac63422400a9830
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef76bf9a26336f89b1b1a93099dec56191823a2e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-your-app-appears-in-the-store-for-windows-10-customers"></a>Como seu aplicativo aparece na Loja para clientes do Windows 10
 
 
@@ -25,7 +22,7 @@ Se você tiver publicado aplicativos anteriormente na Loja para Windows ou para 
 
  
 
-## <a name="consideration-for-apps-that-shared-identity-in-the-windows-store-and-windows-phone-store"></a>Consideração para aplicativos que compartilhavam a identidade na Windows Store e na Loja do Windows Phone
+## <a name="apps-that-shared-identity-in-the-windows-store-and-windows-phone-store"></a>Aplicativos que compartilhavam a identidade na Windows Store e na Loja do Windows Phone
 
 
 Se você usou o mesmo nome reservado para um aplicativo publicado nas duas Lojas (frequentemente chamado de compartilhar a identidade do seu aplicativo), eles agora serão considerados como um aplicativo, não dois. No painel, você os verá como um único aplicativo com pacotes para Windows e Windows Phone.
@@ -53,7 +50,7 @@ As opções de avaliação eram diferentes nas duas Lojas anteriores. Se você a
 Seu aplicativo estará disponível para os clientes do Windows 10 em todos os mercados em que o aplicativo foi publicado anteriormente. Isso se aplica mesmo que tenha feito seleções de mercado diferentes para cada Loja.
 
 ### <a name="categories"></a>Categorias
-Se seu aplicativo aparecia em categorias diferentes nas duas Lojas, usaremos a categoria da Windows Store para determinar a nova categoria. Observe que algumas categorias são diferentes na Loja para clientes do Windows 10. Por isso, revise a [tabela](#cat) a seguir.
+Se seu aplicativo aparecia em categorias diferentes nas duas Lojas, usaremos a categoria da Windows Store para determinar a nova categoria. Observe que algumas categorias são diferentes na Loja para clientes do Windows 10. Por isso, revise a [tabela](#category-changes) a seguir.
 
 ### <a name="age-rating"></a>Classificação etária
 Se você forneceu classificações etárias diferentes, a mais estrita (idade maior) será usada.
@@ -126,4 +123,3 @@ Em muitos casos, as novas [categorias e subcategorias](category-and-subcategory-
 | Jogos &gt; família           | Jogos &gt; Família + crianças             |
 | Jogos &gt; Desafios           | Jogos &gt; Desafios           |
 | Jogos &gt; Corrida           | Jogos &gt; Corrida + voo           |
-

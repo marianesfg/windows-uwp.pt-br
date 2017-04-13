@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "Use este método na API de envio da Windows Store para atualizar a porcentagem da distribuição de pacote para o envio de um pacote de pré-lançamento."
-title: "Atualizar a porcentagem da distribuição de pacote para o envio de um pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,14 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, distribuição de pacote, envio de versão de pré-lançamento, atualização, porcentagem"
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bb09e5ff3c60a56a69c5a52d47e3c791b206a84c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 55b9a67be032e3c2d3497bba0061afcb8218ce33
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-the-package-rollout-percentage-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Atualizar a porcentagem da distribuição de pacote para o envio de um pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
 
 
 Use esse método na API de envio da Windows Store para [atualizar a porcentagem da distribuição de pacote](../publish/gradual-package-rollout.md#setting-the-rollout-percentage) para o envio de um pacote de pré-lançamento. Para obter mais informações sobre o processo de criação de um envio de pacote de pré-lançamento usando a API de envio da Windows Store, consulte [Gerenciar envios do pacote de pré-lançamento](manage-flight-submissions.md).
@@ -26,7 +23,7 @@ Use esse método na API de envio da Windows Store para [atualizar a porcentagem 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
 * Habilite uma distribuição de pacote gradual para o envio. Você pode fazer isso no [painel do Centro de Desenvolvimento](../publish/gradual-package-rollout.md) ou [usando a API de envio da Windows Store](manage-flight-submissions.md#manage-gradual-package-rollout).
 
@@ -82,7 +79,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -105,4 +102,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Distribuição de pacote gradual](../publish/gradual-package-rollout.md)
 * [Gerenciar envios de pacote de pré-lançamento usando a API de envio da Windows Store](manage-flight-submissions.md)
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-

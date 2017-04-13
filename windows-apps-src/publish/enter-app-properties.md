@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 008c073844332aadbc17def774aae16f3ae01513
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 31385fe3edb9d9f38a4f444c84ef189faed49985
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="enter-app-properties"></a>Insira as propriedades do aplicativo
 
 A página **Propriedades do aplicativo** do [processo de envio de aplicativo](app-submissions.md) permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
@@ -56,6 +53,5 @@ O comportamento dos clientes varia de acordo com os requisitos específicos e a 
 Também recomendamos adicionar verificações de tempo de execução para o hardware especificado em seu aplicativo, pois a Loja nem sempre pode detectar se os recursos selecionados estão ausentes no dispositivo do cliente e ele ainda poderá baixar seu aplicativo, mesmo se um aviso for exibido.
 
 > **Dica**  Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
-
 
 

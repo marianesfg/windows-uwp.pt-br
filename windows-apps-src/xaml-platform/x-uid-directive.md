@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 21d73b60ba3856f81a6d93331982135e188e122e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xuid-directive"></a>Diretiva x:Uid
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -53,5 +50,4 @@ A linguagem XAML da UWP tem regras um pouco diferentes de exclusividade **x:Uid*
 Em alguns casos, você usará um caminho de recurso, em vez de funcionalidade interna do sistema PRI (índice de recursos de pacote). Qualquer cadeia de caracteres usada como um valor **x:Uid** define um caminho de recurso que começa com ms-resource:///Resources/ e inclui a cadeia de caracteres **x:Uid**. O caminho é completado pelos nomes das propriedades que você especifica em um arquivo de recursos ou de outro modo está direcionando.
 
 Não coloque **x:Uid** em elementos de propriedade, o que não é permitido no XAML do Windows Runtime.
-
 

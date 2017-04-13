@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: c73a1d1695e3b8a2eee8f073a5d25586a24a9d24
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="setting-up-your-mac-with-windows-10"></a>Configurando o seu Mac com o Windows 10
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -28,7 +25,7 @@ Você está pronto para começar a desenvolver aplicativos Universais do Windows
 
 **Observação**  Será necessário ter uma imagem inicializável do Windows 10 no disco ou em uma unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador poderá ser adquirido na [Windows Store](http://apps.microsoft.com/windows/app). Você também pode baixá-lo [deste local](http://go.microsoft.com/fwlink/?LinkId=623906), o que é útil se você já estiver executando o Windows e deseja atualizar.
 
-Depois que você tiver o Windows em execução, será possível instalar o Visual Studio 2015 a partir do [Downloads de desenvolvedor para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) e começar a criar aplicativos!
+Depois que você tiver o Windows em execução, será possível instalar o Visual Studio 2015 a partir do [Transferências de desenvolvedor para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) e começar a criar aplicativos!
 
 **Observação**  Se você pretende usar os emuladores de dispositivo do Visual Studio, **deverá** instalar uma versão de 64 bits (x64) do Windows 10 Pro ou melhor. Infelizmente, alguns Macs mais antigos não podem executar Windows de 64 bits. Verifique junto à Apple se seu hardware é compatível nesta[página de suporte da Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959).
 
@@ -47,5 +44,4 @@ O Fusion 8 da VMWare permitirá que você execute o Visual Studio diretamente em
 ## <a name="oracle-virtualbox"></a>Oracle VirtualBox
 
 O VirtualBox é um aplicativo gratuito para máquinas virtuais em execução no computador, e ele dá suporte à execução do Windows no Mac. É uma opção sem ornamentos, mas o preço é atraente. Para obter mais informações, consulte [VirtualBox](http://go.microsoft.com/fwlink/p/?LinkId=280599).
-
 

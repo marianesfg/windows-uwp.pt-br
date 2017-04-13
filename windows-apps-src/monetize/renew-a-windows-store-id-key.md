@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de coleção da Windows Store, API de compra da Windows Store, chave ID da Windows Store, renovar"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 22db5f1ae693c26ecf727c94a9f6746225325f74
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="renew-a-windows-store-id-key"></a>Renovar uma chave ID da Windows Store
 
 
@@ -35,7 +32,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ### <a name="request-syntax"></a>Sintaxe da solicitação
 
-| Tipo de chave    | Método | URI da Solicitação                                              |
+| Tipo de chave    | Método | URI da solicitação                                              |
 |-------------|--------|----------------------------------------------------------|
 | Coleções | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
 | Compra    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
@@ -120,4 +117,3 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 * [Consulta por produtos](query-for-products.md)
 * [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
-

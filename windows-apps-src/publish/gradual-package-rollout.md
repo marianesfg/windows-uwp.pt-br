@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 2255897b53367e0bdb7ff60d82487f9923d18b83
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: a58d68f868687893340c8077ecc9624c321243d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="gradual-package-rollout"></a>Distribuição de pacote gradual
 
 Quando você publica uma atualização para um envio, pode optar por distribuir gradualmente os pacotes atualizados para um percentual de clientes do seu aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
@@ -45,4 +42,3 @@ Se você tiver confiança na atualização e quiser disponibilizá-la para todos
 > **Dica** Alterar a porcentagem de distribuição para 100% não garante que todos os clientes receberão os pacotes dos envios mais recentes, pois alguns clientes podem usar versões do sistema operacional que não suportam distribuição. Você deve finalizar a distribuição para parar de distribuir os pacotes mais antigos e atualizar todos os clientes existentes para os mais recentes.
 
 Se você achar que há problemas com a atualização e não quiser mais distribuí-la, clique em **Interromper distribuição de pacote** parar parar de distribuir pacotes do envio mais recente. Depois que você interromper uma distribuição do pacote, esses pacotes não serão distribuídos para os clientes; apenas os pacotes do envio anterior serão usados para todos os clientes novos ou da atualização. No entanto, os clientes que já tinham os pacotes mais recentes manterão esses pacotes; eles não voltarão para a versão anterior. Para fornecer uma atualização para esses clientes, você precisará criar um novo envio com os pacotes que deseja que eles tenham. Observe que, se você usar uma distribuição gradual em seu próximo envio, os clientes que tinham o pacote interrompido receberão a nova atualização na mesma ordem em que receberam o pacote interrompido. A nova distribuição será entre seu último envio finalizado e seu envio mais recente. Depois que você interromper uma distribuição do pacote, esses pacotes não serão mais distribuídos para os clientes.
-

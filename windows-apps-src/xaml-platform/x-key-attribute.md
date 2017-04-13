@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4b76c16d276af295a1b2eed292ebeffc56b2e604
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xkey-attribute"></a>atributo x:Key
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -73,5 +70,4 @@ Na sintaxe mostrada, observe que o objeto [**ResourceDictionary**](https://msdn.
 O código equivalente à especificação de **x:Key** é qualquer operação que use uma chave com o [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) subjacente. Por exemplo, um **x:Key** aplicado na marcação de um recurso equivale ao valor do parâmetro *key* de **Insert** quando você adiciona o recurso a um **ResourceDictionary**.
 
 Um item no dicionário de recursos pode omitir um valor para **x:Key** quando for um [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) ou [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) de destino; em cada um desses casos, a chave implícita do item de recurso é o valor **TargetType** interpretado como uma cadeia de caracteres. Para saber mais, veja [Guia de início rápido: estilo de controles](https://msdn.microsoft.com/library/windows/apps/hh465498) e [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
 

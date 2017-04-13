@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: d1acbde95d3d36cade7242a9f89a2bc01aaf8914
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 90cdd188ba9c2c271badd5467156e16f7ca42df4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-in-windows-version-1511"></a>Novidades no Windows versão 1511
 
 O Windows 10 versão 1511 e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
@@ -35,5 +32,4 @@ APIs Bluetooth | Várias APIs foram adicionadas e atualizadas para estender o su
 APIs de cartão inteligente | Várias APIs SmartCardCryptogram foram adicionadas para o namespace [Windows.Devices.SmartCards](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.aspx) para dar suporte a protocolos de pagamento criptografados seguros. Os aplicativos de pagamento usam a emulação de cartão de host para dar suporte ao encostar para pagar possa usar essas APIs para desempenho e segurança adicionais. Os aplicativos podem criar uma chave e proteger chaves de transação de uso limitado usando o TPM. Os aplicativos também podem aproveitar a estrutura NGC (Credenciais de próxima geração) para proteger as chaves com o PIN do usuário. Essas APIs delegam a geração de criptogramas para o sistema para melhorar o desempenho. Isso também impede qualquer acesso às chaves e criptogramas por outros aplicativos.
 APIs de armazenamento atualizadas | Na [classe Windows.Storage.DownloadsFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.aspx), seu aplicativo agora pode [criar um arquivo](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfileforuserasync.aspx) ou [criar uma pasta](https://msdn.microsoft.com/library/windows/apps/windows.storage.downloadsfolder.createfolderforuserasync.aspx) dentro da pasta Downloads para um [Usuário](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx) específico. Na [classe Windows.Storage.StorageLibrary](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.aspx), seu aplicativo pode agora [obter uma Biblioteca especificada](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagelibrary.getlibraryforuserasync.aspx) para um determinado [Usuário](https://msdn.microsoft.com/library/windows/apps/windows.system.user.aspx).
 Kit de Certificação de Aplicativos Windows | O Kit de Certificação de Aplicativos Windows foi atualizado com testes aprimorados. Para obter uma lista completa de atualizações, visite a página do [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit).
-Downloads de design | Confira nossos novos modelos de design de aplicativo UWP para Adobe Photoshop. Nós também atualizamos nossos modelos do Microsoft PowerPoint e Adobe Illustrator e disponibilizamos uma versão em PDF de nossas diretrizes. [Visite a página de Downloads de design](https://developer.microsoft.com/windows/design/assets).
-
+Transferências de design | Confira nossos novos modelos de design de aplicativo UWP para Adobe Photoshop. Nós também atualizamos nossos modelos do Microsoft PowerPoint e Adobe Illustrator e disponibilizamos uma versão em PDF de nossas diretrizes. [Visite a página de Transferências de design](https://developer.microsoft.com/windows/design/assets).

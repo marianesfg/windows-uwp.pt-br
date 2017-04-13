@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de aplicativo existente."
-title: Obter um envio de aplicativo usando a API de envio da Windows Store
+title: Obter um envio de aplicativo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, envio de aplicativo
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: 1763ba9ebf95c37afbbb219244010f0d6e7cfee4
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2ecdb66818c020dc3bc608fbd65a97d43b8688ab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-app-submission-using-the-windows-store-submission-api"></a>Obter um envio de aplicativo usando a API de envio da Windows Store
+# <a name="get-an-app-submission"></a>Obter um envio de aplicativo
 
 
 Use este método na API de envio da Windows Store para obter dados para um envio de aplicativo existente. Para obter mais informações sobre o processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
@@ -26,7 +23,7 @@ Use este método na API de envio da Windows Store para obter dados para um envio
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
@@ -85,7 +82,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "marketSpecificPricings": {},
     "sales": [],
     "priceId": "Tier2",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -94,13 +91,17 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+           "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -111,9 +112,13 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1"
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -157,7 +162,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -179,7 +184,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -197,4 +202,3 @@ Se a solicitação não puder ser concluída com êxito, a resposta conterá um 
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-

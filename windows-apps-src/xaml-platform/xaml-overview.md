@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12cb0c8b911c0ddb3a45e49568c5846d4359eeba
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 60b47a2c2c072efbf3ccedfcc48b9cba1611a370
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-overview"></a>Visão geral de XAML
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -243,5 +240,4 @@ Depois que o aplicativo for executado, se houver erros de análise de XAML não 
 **Observação**  Os aplicativos que usam C++/CX para o código não recebem [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774) específica. Mas a mensagem na exceção esclarece que a origem do erro está relacionada ao XAML, e inclui informações de contexto, como números de linha em um arquivo XAML, assim como o **XamlParseException** faz.
 
 Para saber sobre a depuração de um aplicativo do Windows Runtime, veja [Iniciar uma sessão de depuração](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx).
-
 

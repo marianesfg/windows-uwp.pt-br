@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a2d2582150146ed8f7eb416e9d6e2c8f990ff818
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
 
@@ -64,4 +61,3 @@ Para obter a lista completa e atualizada de aplicativos de criptografia, consult
 Se seu aplicativo chamar, der suporte, contiver ou usar criptografia para qualquer tarefa que não esteja nessa lista, ele precisará de um ECCN (Número de classificação de mercadoria de exportação).
 
 Se você não tiver um ECCN, consulte [Perguntas e respostas sobre ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
-

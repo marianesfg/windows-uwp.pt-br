@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: A listagem do app na categoria e subcategoria corretas ajuda os clientes a encontrarem o app e a saber mais sobre ele.
+Description: A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
 title: Tabela de categoria e subcategoria
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.author: wdg-dev-content
@@ -9,29 +9,26 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1234a1209f7cc32901b093a44c2b71fc90a6f3b5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="category-and-subcategory-table"></a>Tabela de categoria e subcategoria
 
 
-A listagem do app na categoria e subcategoria corretas ajuda os clientes a encontrarem o app e a saber mais sobre ele.
+A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes a encontrarem o aplicativo e a saber mais sobre ele.
 
-Escolha a categoria que melhor descreve seu app. Em seguida, escolha uma subcategoria, se disponível.
+Escolha a categoria que melhor descreve seu aplicativo. Em seguida, escolha uma subcategoria, se disponível.
 
 > **Observação**  Se você escolher **Jogos** como sua categoria, será necessária uma subcategoria.
 
-Um app só pode ser listado em uma categoria (e uma subcategoria, se disponível). Se você não sabe ao certo qual categoria ou subcategoria usar, escolha a que você acha que os usuários vão pesquisar na hora de procurar apps como o seu.
+Um aplicativo só pode ser listado em uma categoria (e uma subcategoria, se disponível). Se você não sabe ao certo qual categoria ou subcategoria usar, escolha a que você acha que os usuários vão pesquisar na hora de procurar aplicativos como o seu.
 
-Se você quiser alterar a categoria ou a subcategoria de um app que já está na Loja, será possível fazer isso [criando um novo envio](app-submissions.md) e selecionando a nova categoria.
+Se você quiser alterar a categoria ou a subcategoria de um aplicativo que já está na Loja, será possível fazer isso [criando um novo envio](app-submissions.md) e selecionando a nova categoria.
 
-> **Importante** Se você publicar o app na categoria **Jogos**, você não poderá escolher uma categoria diferente em um novo envio. Você também não pode escolher a categoria **Jogos** em uma atualização para um app que você publicou anteriormente em uma categoria diferente.
+> **Importante** Se você publicar o aplicativo na categoria **Jogos**, você não poderá escolher uma categoria diferente em um novo envio. Você também não pode escolher a categoria **Jogos** em uma atualização para um aplicativo que você publicou anteriormente em uma categoria diferente.
 
-A Windows Store organiza apps nas seguintes categorias e subcategorias.
+A Windows Store organiza aplicativos nas seguintes categorias e subcategorias.
 
 Apenas algumas categorias possuem subcategorias. Lembre-se que só é possível usar uma subcategoria pertencente à categoria escolhida.
 
@@ -66,6 +63,5 @@ Apenas algumas categorias possuem subcategorias. Lembre-se que só é possível 
 | Utilitários + ferramentas           | Backup + gerenciar <br> Gerenciadores de arquivos                |
  
 
-> **Observação**  Para saber mais sobre as categorias usadas na Windows Store para Windows 8.1 e versões anteriores e na Loja do Windows Phone, e como elas se relacionam com a lista de categorias acima, consulte [Como seu app aparece na Loja para clientes do Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
-
+> **Observação**  Para saber mais sobre as categorias usadas na Windows Store para Windows 8.1 e versões anteriores e na Loja do Windows Phone, e como elas se relacionam com a lista de categorias acima, consulte [Como seu aplicativo aparece na Loja para clientes do Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 

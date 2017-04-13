@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, aquisições de complemento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: be69a45586f4b7d66740d141dcc350eafd16bb53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cdd43c6e5df73ec1983593eb6198eba77c9df6e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
 
@@ -29,7 +26,7 @@ Use este método na API de análise da Windows Store para obter dados agregados 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -56,7 +53,7 @@ O parâmetro *applicationId* ou *inAppProductId* é obrigatório. Para recuperar
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento. A ID da Loja está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | string | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento. A ID da Loja está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | inAppProductId | string | A ID da Loja do complemento para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na URL da página de visão geral do complemento no painel do Centro de Desenvolvimento do Windows. Por exemplo, se a URL da página do painel de um complemento for ```https://developer.microsoft.com/en-us/dashboard/iaps/9NBLGGH4SCZS?appId=9NBLGGH29DM8```, a ID da Loja do complemento será a string 9NBLGGH4SCZS. | Sim  |
 | startDate | date | A data de início no intervalo de datas de dados de aquisição de complemento a serem recuperados. O padrão é a data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas de dados de aquisição de complemento a serem recuperados. O padrão é a data atual. |  Não  |
@@ -114,7 +111,7 @@ Authorization: Bearer <your access token>
 | Valor      | Tipo   | Descrição         |
 |------------|--------|------------------|
 | Valor      | array  | Uma matriz de objetos que contém dados agregados de aquisição de complemento. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de aquisição de complemento](#add-on-acquisition-values) a seguir.                                                                                                              |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados de aquisição de complemento para a consulta. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados de aquisição de complemento para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                                 |
 
 <span/>
@@ -184,4 +181,3 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
  
 
  
-

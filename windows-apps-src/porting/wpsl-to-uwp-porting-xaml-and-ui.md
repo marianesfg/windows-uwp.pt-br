@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1ec72aec1e94ff92ef30fcc206456c7614107c98
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 83e63d76e0fc1c1b0e8465ad5b5656779ac43f09
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-xaml-and-ui-to-uwp"></a>Fazendo a portabilidade de XAML e da interface do usuário do Windows Phone Silverlight para a UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -313,7 +310,9 @@ A bandeja do sistema (definida na marcação XAML com `shell:SystemTray.IsVisibl
 
 Texto (ou tipografia) é um aspecto importante de um aplicativo UWP e, durante a portabilidade, convém revisitar os designs visuais dos modos de exibição de maneira que eles fiquem em harmonia com a nova linguagem de design. Use estas ilustrações para encontrar os estilos de sistema **TextBlock** da UWP que estão disponíveis. Encontre aqueles que correspondam aos estilos do Windows Phone Silverlight que você usou. Como alternativa, você pode criar seus próprios estilos universais e copiar as propriedades dos estilos de sistema do Windows Phone Silverlight para eles.
 
-![estilos de textblock do sistema para aplicativos windows 10](images/label-uwp10stylegallery.png) estilos TextBlock do sistema para os aplicativos de Windows 10
+![estilos de sistema textblock para aplicativos do windows 10](images/label-uwp10stylegallery.png)  
+
+Estilos de sistema TextBlock para aplicativos do Windows 10
 
 Em um aplicativo Windows Phone Silverlight, a família de fontes padrão é Segoe WP. Em um aplicativo do Windows 10, a família de fontes padrão é a Segoe UI. Como resultado, as métricas de fonte em seu aplicativo podem parecer diferentes. Se deseja reproduzir a aparência do seu texto do Windows Phone Silverlight, você pode definir suas próprias métricas usando propriedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) e [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362). Para obter mais informações, consulte [Diretrizes para fontes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) e [Crie aplicativos UWP](http://dev.windows.com/design).
 
@@ -398,5 +397,4 @@ O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativ
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
-
 

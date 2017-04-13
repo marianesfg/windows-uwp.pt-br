@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 46b48e8e1ef1efbff7248ddf54c22e5a8bc29deb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8827e579a595146b72fd71092609aebb90e3c211
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="relativesource-markup-extension"></a>Extensão de marcação {RelativeSource}
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Fornece um meio para especificar o origem de uma associação em termos de uma relação relativa no gráfico do objeto de tempo de execução.
 
@@ -73,5 +70,4 @@ Outro uso de `RelativeSource={RelativeSource Self}` é como uma maneira de defin
 * [Extensão de marcação {Binding}](binding-markup-extension.md)
 * [**Associação**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
-
 

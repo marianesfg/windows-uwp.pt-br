@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: "Use este método na API de análises da Windows Store para enviar respostas às críticas ao seu aplicativo."
-title: "Enviar respostas às críticas do aplicativo"
+title: "Enviar respostas às críticas"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análises da Windows Store, aquisições de complemento"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1531059831b4c20d11661eb87fceda7b8dcb7f02
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d418e64bf1608591e877da8339d1dda308611285
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="submit-responses-to-app-reviews"></a>Enviar respostas às críticas do aplicativo
+# <a name="submit-responses-to-reviews"></a>Enviar respostas às críticas
 
 
 Use este método na API de análises da Windows Store para enviar respostas às críticas ao seu aplicativo de forma programada. Quando você chamar esse método, será necessário especificar as IDs das críticas que você deseja responder. As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de aplicativo](get-app-reviews.md) na API de análise da Windows Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md).
@@ -69,7 +66,7 @@ Cada objeto na matriz *Respostas* contém os seguintes valores.
 
 | Valor        | Tipo   | Descrição           |  Necessário  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | cadeia |  A ID da Loja do aplicativo com a crítica que você deseja responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8.   |  Sim  |
+| ApplicationId | cadeia |  A ID da Loja do aplicativo com a crítica que você deseja responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.   |  Sim  |
 | ReviewId | cadeia |  A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de aplicativo](get-app-reviews.md) na API de análise da Windows Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md).   |  Sim  |
 | ResponseText | cadeia | A resposta que você deseja enviar. Sua resposta deve seguir [estas diretrizes](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sim  |
 | SupportEmail | cadeia | Endereço de email de suporte do seu aplicativo, que o cliente pode usar para contatá-lo diretamente. Este deve ser um endereço de email válido.     |  Sim  |
@@ -149,4 +146,3 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Responder às críticas usando serviços da Windows Store](respond-to-reviews-using-windows-store-services.md)
 * [Obter informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
-

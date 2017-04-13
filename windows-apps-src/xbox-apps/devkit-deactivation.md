@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 857b1529a933f416a1c61f3afd844f6cb820f3f3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 46e9e013336f19aedafdb21e0417c878c7c7e8a1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-one-developer-mode-deactivation"></a>Desativação do Modo de Desenvolvedor do Xbox One
 
 * [Alternar para o Modo de Varejo](#switch-to-retail-mode)
@@ -93,4 +90,3 @@ Se você ainda não retornou o console Xbox One para o Modo de Varejo, faça iss
 ## <a name="see-also"></a>Consulte também
 - [Ativação do Modo de Desenvolvedor do Xbox One](devkit-activation.md)
 - [UWP no Xbox One](index.md)
-

@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 0cfa8e22-7345-47b7-b132-880bbc050d44
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a66e94ca26a089ffd08b0ba7a4ffb42aa5d8685c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: c7bf5db6eb7a624766438c60067c311b9e137138
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-best-practices"></a>Práticas recomendadas para o Xbox
 Por padrão, todos os aplicativos UWP serão executados em Xbox One sem nenhum esforço extra de sua parte. No entanto, se quiser que o aplicativo brilhe, encante os clientes e concorra com as melhores experiências de aplicativo em Xbox, você deverá seguir as práticas abaixo.
   > [!NOTE]
@@ -57,5 +54,4 @@ A seguir, no [Channel 9](https://channel9.msdn.com/), uma excelente fonte de inf
 
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
-
 

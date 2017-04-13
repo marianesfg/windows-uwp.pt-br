@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: C78176D6-47BB-4C63-92F8-426719A70F04
 description: "Use este método na API de envio da Windows Store para obter o status de um envio de pacote de pré-lançamento."
-title: "Obter o status de um envio de pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Obter o status de um envio de pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envio de versão de pré-lançamento, status"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5bc88cd8c7cdf2e56ac719d33cc2abf228b0803b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06367fd2110b66fc36babf137a12b482df4f7d40
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-the-status-of-a-package-flight-submission-using-the-windows-store-submission-api"></a>Obter o status de um envio de pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="get-the-status-of-a-package-flight-submission"></a>Obter o status de um envio de pacote de pré-lançamento
 
 
 
@@ -94,7 +91,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>   |
+| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contém detalhes adicionais sobre o status do envio, incluindo informações sobre os erros. Para obter mais informações, consulte [Recurso de detalhes sobre o status](manage-flight-submissions.md#status-details-object). |
 
 
@@ -102,7 +99,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -121,4 +118,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
-

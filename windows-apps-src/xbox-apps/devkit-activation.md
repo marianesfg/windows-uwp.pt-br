@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 12022ad5ca1b70307b3d5b780ffbc366172113e3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d8ce552ef05ae1f5a02ed402bd800080ef177e6a
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="xbox-one-developer-mode-activation"></a>Ativação do Modo de Desenvolvedor do Xbox One
 
 * [Como o Modo de Desenvolvedor funciona](#how-developer-mode-works)
@@ -38,36 +35,24 @@ O Modo de Desenvolvedor pode ser habilitado em qualquer console Xbox One de vare
 2.    Procure e instale o app Ativação do Modo de Desenvolvedor na loja do Xbox One.  
     ![Instalar o app Ativação do Modo de Desenvolvedor](images/activation-store-search.png)
 
-3.    Navegue até **Meus jogos e apps** > **Apps**.
-
+3.    Navegue até **Meus jogos e apps** > **Apps**.  
     ![App Ativação do Modo de Desenvolvedor](images/activation-step-3.png)
-4. Abra o app Ativação do Modo de Desenvolvedor.    
-    
-    > [!NOTE]
-    > Para jogar jogos e executar aplicativos, você deve alternar para o Modo de Varejo. Aplicativos de sideload apenas funcionarão no Modo de Desenvolvedor.
+
+4. Abra o app Ativação do Modo de Desenvolvedor. Para jogar jogos e executar aplicativos, você deve alternar para o Modo de Varejo. Aplicativos de sideload apenas funcionarão no Modo de Desenvolvedor.
 
 5.    Observe o código exibido no aplicativo Ativação do Modo de Desenvolvedor.  
-
     ![Etapa de Ativação 5](images/activation-step-5.png)  
     
 6.    Acesse o endereço [developer.microsoft.com/xboxactivate](https://developer.microsoft.com/xboxactivate).
 7.    Entre no Centro de Desenvolvimento com a sua conta do Centro de Desenvolvimento.  
-8.    Insira o código de ativação exibido no aplicativo Ativação do Modo de Desenvolvedor.   
-   
-    > [!NOTE]
-    > Você tem um número limitado de ativações associadas à sua conta. Após a ativação do Modo de Desenvolvedor, o Centro de Desenvolvimento indicará que você usou uma das ativações associadas à sua conta. 
-    
+8.    Insira o código de ativação exibido no aplicativo Ativação do Modo de Desenvolvedor. Você tem um número limitado de ativações associadas à sua conta. Após a ativação do Modo de Desenvolvedor, o Centro de Desenvolvimento indicará que você usou uma das ativações associadas à sua conta.  
     ![Etapa de Ativação 8](images/activation-step-8.png)    
     
-9.    Clique em **Concordar e ativar**. Isso fará com que a página seja recarregada, e você verá seu dispositivo preenchido na tabela.
-    
-    > [!NOTE]
-    > Os termos para o contrato do Programa de Ativação do Modo de Desenvolvedor do Xbox One pode ser encontrado em [Programa de Ativação do Modo de Desenvolvedor do Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=760399).
+9.    Clique em **Concordar e ativar**. Isso fará com que a página seja recarregada, e você verá seu dispositivo preenchido na tabela. Os termos para o contrato do Programa de Ativação do Modo de Desenvolvedor do Xbox One pode ser encontrado em [Programa de Ativação do Modo de Desenvolvedor do Xbox One](http://go.microsoft.com/fwlink/p/?LinkId=760399).
 
 10.    Após a inserção do código de ativação, seu console exibirá uma tela de andamento referente ao processo de ativação.  
     
 11.    Concluída a ativação, abra o aplicativo Ativação do Modo de Desenvolvedor e clique em **Alternar e iniciar** para acessar o Modo de Desenvolvedor. Observe que essa etapa demorará mais do que o esperado.  
-
     ![Etapa de Ativação 12](images/activation-step-12.png)   
     
 
@@ -86,4 +71,3 @@ Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev H
 ## <a name="see-also"></a>Consulte também
 - [Desativação do Modo de Desenvolvedor do Xbox One](devkit-deactivation.md)
 - [UWP no Xbox One](index.md)
-

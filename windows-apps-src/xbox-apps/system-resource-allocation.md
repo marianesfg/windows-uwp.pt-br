@@ -1,6 +1,6 @@
 ---
 author: Mtoepke
-title: Recursos do sistema para jogos e aplicativos UWP no Xbox One
+title: Recursos do sistema para aplicativos UWP e jogos no Xbox One
 description: UWP em recursos do sistema do Xbox
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8d6876ee6235546e74341609a55db995a77323d6
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 81a437807332ff60a1401c00abdcff78e41a7496
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
 Aplicativos UWP e jogos em execução no Xbox One compartilham recursos com o sistema e outros aplicativos. Portanto, jogos e aplicativos UWP terão acesso os seguintes recursos:
@@ -31,7 +28,7 @@ Aplicativos UWP e jogos em execução no Xbox One compartilham recursos com o si
 
 * Compartilhamento de 45% de GPU dependendo do número de aplicativos e jogos executados no sistema.
 
-* A UWP no Xbox One dá suporte ao DirectX 11 Feature Level 10. Não há suporte para o DirectX 12 no momento.
+* O UWP no Xbox One dá suporte ao DirectX 11 Feature Level 10. Não há suporte para o DirectX 12 no momento.
 
 * Todos os aplicativos devem ter como destino a arquitetura x64 para serem desenvolvidos ou enviados para a loja da Xbox.  
 
@@ -41,4 +38,3 @@ Para **desenvolvimento de jogos**, é importante ter em mente que o Xbox One, co
 
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
-

@@ -1,26 +1,24 @@
 ---
-author: awkoren
+author: normesta
 Description: "Este artigo explica como assinar um aplicativo de área de trabalho convertido para a Plataforma Universal do Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
-title: "Suporte para APIs da UWP para aplicativos da área de trabalho convertidos"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: APIs UWP com suporte da Ponte de Desktop para UWP
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f5ee6f103fa9a7e5f13dc68eb9c6060e6b66e227
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 34b29f8e68c77acdb19a1b0005f039097c8d2cbb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="supported-uwp-apis-for-apps-converted-with-the-desktop-bridge"></a>APIs UWP compatíveis para apps convertidos com a ponte da área de trabalho
+# <a name="desktop-to-uwp-bridge-supported-uwp-apis"></a>Ponte de Desktop para UWP: APIs UWP com suporte
 
-Os aplicativos de desktop convertidos podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo convertido pode usar. 
+Os aplicativos de desktop convertidos podem usar uma ampla variedade de APIs da Plataforma Universal do Windows (UWP), mesmo se eles não tiverem sido totalmente convertidos em aplicativos UWP. Este artigo lista as classes disponíveis que seu aplicativo convertido pode usar.
 
-A maioria das APIs UWP funciona bem em aplicativos de desktop convertidos. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada. 
+A maioria das APIs UWP funciona bem em aplicativos da área de trabalho convertidos. No entanto, algumas áreas de recursos ainda não foram totalmente testadas ou não estão funcionando da forma planejada.
 
 <table><tr><th>Área do recurso</th><th>Detalhes</th><tr>
 <tr><td>Emails, contatos e compromissos</td><td>Nem todas as APIs têm suporte para aplicativos convertidos.</td></tr>
@@ -42,15 +40,15 @@ A maioria das APIs UWP funciona bem em aplicativos de desktop convertidos. No en
 </table>
 
 
-Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No entanto, se uma API não estiver listada explicitamente como compatível, evite usá-la, pois seu uso poderá surtir efeitos colaterais ou comportamento não intencionais. O suporte para essas APIs pode se tornar disponível em versões futuras. Por enquanto, seu aplicativo deve usar APIS Win32 ou .NET correspondentes. 
+Ocasionalmente, as APIs nessas áreas podem aparecer funcionar corretamente. No entanto, se uma API não estiver listada explicitamente como compatível, evite usá-la, pois seu uso poderá surtir efeitos colaterais ou comportamento não intencionais. O suporte para essas APIs pode se tornar disponível em versões futuras. Por enquanto, seu aplicativo deve usar APIS Win32 ou .NET correspondentes.
 
 Não há suporte para algumas APIs UWP para aplicativos de desktop completos para aplicativos convertidos. Se seu aplicativo de desktop usa APIs UWP antes da conversão, verifique se essas APIs ainda têm suporte. Para saber mais, consulte [APIs do Windows Runtime para aplicativos de desktop](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
 ## <a name="list-of-apis"></a>Lista de APIs
 
-Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos convertidos. Você pode exibir [APIs com suporte recente em aplicativos convertidos](#new) ou [APIs com suporte em aplicativos de desktop e aplicativos convertidos](#both). 
+Veja a seguir uma lista completa de APIs UWP com suporte em aplicativos convertidos. Você pode exibir [APIs com suporte recente em aplicativos convertidos](#new) ou [APIs com suporte em aplicativos de desktop e aplicativos convertidos](#both).
 
-Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub. Você também pode consultar a postagem do blog Compilando aplicativos para Windows [chamar APIs de uma área de trabalho do aplicativo do Windows 10](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application). 
+Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de aplicativo da área de trabalho para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) e [Exemplos de aplicativo da Plataforma Universal do Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) no GitHub. Você também pode consultar a postagem do blog Compilando aplicativos para Windows [chamar APIs de uma área de trabalho do aplicativo do Windows 10](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application).
 
 <span id="new" />
 ### <a name="apis-supported-in-newly-converted-apps"></a>APIs com suporte em aplicativos recentemente convertidos
@@ -1045,4 +1043,3 @@ Para obter exemplos sobre como usar APIs WinRT, consulte [Exemplos de ponte de a
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
-

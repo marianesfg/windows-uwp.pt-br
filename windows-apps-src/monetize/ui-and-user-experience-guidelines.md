@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Saiba mais sobre diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos."
-title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos"
+title: "Diretrizes para a interface do usuário e experiência do usuário para anúncios"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios em aplicativos
+# <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
 Este artigo fornece diretrizes para proporcionar ótimas experiências com anúncios em faixa e intersticiais em seus apps. Para obter diretrizes gerais sobre como elaborar o visual dos apps, consulte [Design e interface do usuário](https://developer.microsoft.com/windows/apps/design).
 
@@ -75,7 +72,7 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 
 Quando usados com elegância, os anúncios intersticiais podem aumentar consideravelmente a receita do app, sem afetar negativamente a satisfação do usuário. Quando usado inadequadamente, esses anúncios podem ter exatamente o efeito oposto.
 
-As seções a seguir fornecem recomendações sobre como implementar anúncios intersticiais em seu app usando o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Como você conhece seu aplicativo melhor do que ninguém, exceto no que diz respeito à política, deixamos para você tomar a decisão final. O que é mais importante ter em mente é que suas classificações de aplicativo e receita estão intimamente ligadas.
+As seções a seguir fornecem recomendações sobre como implementar anúncios de vídeo e banner intersticiais no aplicativo usando o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e exemplos de implementações que violam a [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) da Windows Store. Como você conhece seu aplicativo melhor do que ninguém, exceto no que diz respeito à política, deixamos para você tomar a decisão final. O que é mais importante ter em mente é que suas classificações de aplicativo e receita estão intimamente ligadas.
 
 ### <a name="best-practices"></a>Práticas recomendadas
 
@@ -91,7 +88,7 @@ Recomendamos que você siga estas práticas recomendadas ao implementar anúncio
 
     * Recursos de avatar personalizados, como uma tatuagem ou um chapéu.
 
-* Se seu app requer que um anúncio em vídeo seja visto até o final, mencione essa regra antecipadamente para que eles não fiquem surpresos com uma mensagem de erro ao pressionar o botão Fechar.
+* Se o aplicativo requer que um anúncio em vídeo intersticial seja visto até o final, mencione essa regra antecipadamente para que eles não fiquem surpresos com uma mensagem de erro ao pressionar o botão Fechar.
 
 * Faça uma busca prévia do anúncio (chamando [InterstitialAd.RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)), de preferência, de 30 a 60 segundos antes do momento em que você precisa mostrá-lo.
 
@@ -105,13 +102,13 @@ Recomendamos que você siga estas práticas recomendadas ao implementar anúncio
 
     * Se você optar por economizar largura de banda do usuário com base em [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx), existem APIs na classe **ConnectionProfile** que podem ajudar.
 
-* Use o tempo limite padrão (30 segundos), a menos que você tenha um motivo válido para não fazê-lo. Nesse caso, não use menos do que 10 segundos. Anúncios em vídeo levam consideravelmente mais tempo para baixar do que em banner, especialmente em mercados que não têm conexões de alta velocidade.
+* Use o tempo limite padrão (30 segundos), a menos que você tenha um motivo válido para não fazê-lo. Nesse caso, não use menos do que 10 segundos. Anúncios intersticiais em vídeo levam consideravelmente mais tempo para baixar do que em banner padrão, especialmente em mercados que não têm conexões de alta velocidade.
 
 <span/>
 
-* Preste atenção ao plano de dados do usuário. Por exemplo, não mostre ou aviso o usuário antes de mostrar um vídeo em um dispositivo móvel que esteja próximo/acima de seu limite de dados. Existem APIs na classe [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) que podem ajudar.
+* Preste atenção ao plano de dados do usuário. Por exemplo, não mostre ou avise o usuário antes de mostrar um vídeo intersticial em um dispositivo móvel que esteja próximo/acima de seu limite de dados. Existem APIs na classe [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) que podem ajudar.
 
-* Melhore continuamente seu aplicativo após o envio inicial. Analise os [relatórios de anúncios](../publish/advertising-performance-report.md) e faça alterações no design para melhorar as taxas de preenchimento e conclusão de vídeos.
+* Melhore continuamente seu aplicativo após o envio inicial. Analise os [relatórios de anúncios](../publish/advertising-performance-report.md) e faça alterações no design para melhorar as taxas de preenchimento e conclusão de vídeos intersticiais.
 
 <span />
 ### <a name="practices-to-avoid"></a>Práticas que devem ser evitadas
@@ -120,13 +117,13 @@ Recomendamos que você evite estas práticas ao implementar anúncios interstici
 
 * Não exagere. Não mostre mais anúncios do que a cada 5 minutos, a menos que o usuário explicitamente se envolva com um benefício tangível opcional, além de apenas jogar.
 
-* Não mostre anúncios intersticiais em vídeo na inicialização do aplicativo, pois os usuários podem achar que clicaram no bloco errado.
+* Não mostre anúncios intersticiais na inicialização do aplicativo, pois os usuários podem achar que clicaram no bloco errado.
 
-* Não mostre anúncios intersticiais em vídeo ao sair. Isso é ruim, já que as taxas de conclusão estão próximas de zero.
+* Não mostre anúncios intersticiais ao sair. Isso é ruim, já que as taxas de conclusão estão próximas de zero.
 
 * Não mostre dois ou mais anúncios intersticiais consecutivos. Os usuários ficarão frustrados ao verem a barra de progresso do anúncio voltar ao ponto inicial. Muitos pensarão que é apenas um bug de codificação ou de serviço de anúncios.
 
-* Não busque um anúncio em vídeo mais de 5 minutos antes de chamar [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx). Uma boa prática de inventário maximizará a conversão de anúncios buscados previamente em impressões rentáveis.
+* Não busque um anúncio intersticial em vídeo mais de 5 minutos antes de chamar [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx). Uma boa prática de inventário maximizará a conversão de anúncios buscados previamente em impressões rentáveis.
 
 * Não prejudique um usuário por falhas na apresentação de anúncios, como a falta de disponibilidade de anúncios. Por exemplo, se você mostrar uma opção de interface do usuário para "Assista a um anúncio para obter *xxx*", você deverá fornecer *xxx* se o usuário fizer sua parte. Duas opções a serem consideradas:
 
@@ -160,4 +157,3 @@ Esta seção fornece exemplos de cenários de anúncios intersticiais que violam
  
 
  
-

@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 description: "Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e ao copiar seus arquivos nele."
-title: Portando um projeto Windows Phone Silverlight para um projeto UWP
+title: Portando projetos Windows Phone Silverlight para projetos UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,14 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 95cd7958979dd5c2a7955bb098c8b34fbf024b0f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 558bbe9947c32c98010bb658e3fd482224b272ed
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Portando um projeto Windows Phone Silverlight para um projeto UWP
+# <a name="porting-windows-phone-silverlight-projects-to-uwp-projects"></a>Portando projetos Windows Phone Silverlight para projetos UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -65,7 +62,7 @@ Você descobrirá que refatorar um pouco, e/ou adicionar código adaptável (que
 -   Arquivos que são comuns a todas as famílias de dispositivos não precisam de nenhuma atenção especial. Esses arquivos serão usados pelo aplicativo em todas as famílias de dispositivos em que ele for executado. Isso inclui arquivos de marcação XAML, arquivos de código-fonte imperativo e arquivos de ativos.
 -   É possível que seu aplicativo detecte a família de dispositivos em que ele esteja sendo executado e navegue para um modo de exibição que foi projetado especificamente para essa família de dispositivos. Para saber mais, confira [Detectando a plataforma em que seu aplicativo é executado](wpsl-to-uwp-input-and-sensors.md).
 -   Uma técnica semelhante que pode ser útil, caso não haja alternativa, é dar um nome especial a um arquivo de marcação ou arquivo **ResourceDictionary** (ou à pasta que contém o arquivo), de maneira que ele seja carregado automaticamente no tempo de execução somente quando o aplicativo é executado em uma família de dispositivos em especial. Essa técnica é ilustrada no estudo de caso [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
--   Para usar recursos que não estão disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
+-   Para usar recursos que não estejam disponíveis em todas as famílias de dispositivos (por exemplo, impressoras, scanners ou o botão da câmera), você pode escrever um código adaptável. Consulte o terceiro exemplo em [Compilação condicional e código adaptável](#conditional-compilation-and-adaptive-code) neste tópico.
 -   Se você quiser dar suporte para o Windows Phone Silverlight e o Windows 10, poderá compartilhar arquivos de código-fonte entre projetos. Veja como: no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, selecione **Adicionar Item Existente**, selecione os arquivos a serem compartilhados e clique em **Adicionar como Link**. Armazene seus arquivos de código-fonte em uma pasta comum no sistema de arquivos onde os projetos vinculados a eles possam vê-los, e não se esqueça de adicioná-los ao controle do código-fonte. Caso possa fatorar o código-fonte imperativo de maneira que a maior parte de um arquivo, se não todo ele, funcione em ambas as plataformas, você não precisa ter duas cópias dele. É possível encapsular qualquer lógica específica da plataforma no arquivo dentro das diretivas de compilação condicional, onde possível, ou das condições de tempo de execução, onde necessário. Consulte a próxima seção abaixo e [Diretivas de pré-processador C#](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
 -   Para reutilização no nível binário, em vez do nível do código-fonte, há Bibliotecas de Classes Portáveis, que oferecem suporte ao subconjunto de APIs .NET disponíveis no Windows Phone Silverlight e ao subconjunto de aplicativos do Windows 10 (.NET Core). As assemblies da Biblioteca de Classes Portátil são compatíveis com binários nas plataformas .NET e mais. Use o Visual Studio para criar um projeto direcionado a uma Biblioteca de Classes Portátil. Consulte [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx).
 
@@ -152,5 +149,4 @@ Vale a pena saber como editar o manifesto do pacote do aplicativo, pois os tópi
 Consulte [Referência do esquema do manifesto do pacote do Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 O próximo tópico é [Solução de problemas](wpsl-to-uwp-troubleshooting.md).
-
 

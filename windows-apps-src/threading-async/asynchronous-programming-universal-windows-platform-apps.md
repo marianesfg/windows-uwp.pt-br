@@ -9,20 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, assíncrona"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1f157db0dc9124ce839f608e5f1a2325c1ce922f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06eceae9c7736ce59bc0ab1b842425c3dc56d299
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve a programação assíncrona na Plataforma Universal do Windows (UWP) e sua representação em C#, Microsoft Visual Basic .NET, extensões de componente do Visual C++ (C++/CX) e JavaScript.
 
-Usar a programação assíncrona permite que seu app permaneça responsivo quando ele realiza trabalhos que podem levar uma grande quantidade de tempo. Por exemplo, um app que baixa conteúdo da Internet pode passar diversos segundos aguardando a chegada do conteúdo. Se você usar um método síncrono no thread de IU para recuperar o conteúdo, o app ficará bloqueado até que o método retorne. O app não responderá à interação do usuário e, como ele parecerá não responsivo, o usuário poderá ficar frustrado. Uma maneira muito melhor é usar a programação assíncrona, na qual o app continua a ser executado e a responder à IU enquanto aguarda a conclusão de uma operação.
+Usar a programação assíncrona permite que seu aplicativo permaneça responsivo quando ele realiza trabalhos que podem levar uma grande quantidade de tempo. Por exemplo, um aplicativo que baixa conteúdo da Internet pode passar diversos segundos aguardando a chegada do conteúdo. Se você usar um método síncrono no thread de IU para recuperar o conteúdo, o aplicativo ficará bloqueado até que o método retorne. O aplicativo não responderá à interação do usuário e, como ele parecerá não responsivo, o usuário poderá ficar frustrado. Uma maneira muito melhor é usar a programação assíncrona, na qual o aplicativo continua a ser executado e a responder à IU enquanto aguarda a conclusão de uma operação.
 
 Nos métodos que podem levar mais tempo para serem concluídos, a programação assíncrona é a norma e não a exceção na UWP. JavaScript, C#, Visual Basic e C++/CX oferecem suporte de linguagem para os métodos assíncronos.
 
@@ -30,7 +28,7 @@ Nos métodos que podem levar mais tempo para serem concluídos, a programação 
 
 Muitos recursos da UWP, como as APIs [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) e [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171), são expostos como APIs assíncronas. Por convenção, os nomes de APIs assíncronas terminam com "Async" para indicar que parte de sua execução pode ocorrer após a API ser invocada.
 
-Quando você usa APIs assíncronas no seu app Plataforma Universal do Windows (UWP), o código faz chamadas não bloqueadoras de maneira consistente. Quando você implementa esses padrões assíncronos em suas definições de API, os chamadores reconhecem e usam seu código de forma previsível.
+Quando você usa APIs assíncronas no seu aplicativo Plataforma Universal do Windows (UWP), o código faz chamadas não bloqueadoras de maneira consistente. Quando você implementa esses padrões assíncronos em suas definições de API, os chamadores reconhecem e usam seu código de forma previsível.
 
 Aqui encontram-se algumas tarefas comuns que requerem a chamada de APIs assíncronas da UWP.
 
@@ -84,4 +82,3 @@ Em muitos casos, chamar uma função assíncrona é quase tão simples quando ch
 * [Chamar APIs assíncronas no Visual Basic ou C#](call-asynchronous-apis-in-csharp-or-visual-basic.md)
 * [Programação assíncrona com Async e Await (C# e Visual Basic)](http://msdn.microsoft.com/library/hh191443(vs.110).aspx)
 * [Cenários de recursos de exemplo de Reversi: código assíncrono](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)
-

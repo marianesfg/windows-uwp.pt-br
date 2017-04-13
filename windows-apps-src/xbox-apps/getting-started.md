@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6e033ffa-502e-4daa-b5b2-6f853f68b66c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 59090536600e3e45345832c6ca61baa3fe1f5b15
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5b70e6376dbea0e3858a2a12542ff26dfe61ed20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 
-Siga estas etapas **com cuidado** para configurar com êxito o seu computador e Xbox One para desenvolvimento da Plataforma Universal do Windows (UWP). Depois que você tiver configurado tudo, saiba mais sobre o Modo de Desenvolvedor do Xbox One e sobre como desenvolver aplicativos UWP na página [UWP for Xbox One](index.md). 
+Siga estas etapas **com cuidado** para configurar com êxito o seu computador e Xbox One para desenvolvimento da Plataforma Universal do Windows. Depois que você tiver configurado tudo, saiba mais sobre o Modo de Desenvolvedor do Xbox One e sobre como desenvolver aplicativos UWP na página [UWP for Xbox One](index.md). 
 
 ## <a name="before-you-start"></a>Antes de começar
 Antes de começar, você precisará fazer o seguinte:
@@ -70,4 +67,3 @@ Para obter informações mais detalhadas, veja [Configuração do ambiente de de
 - [Perguntas frequentes](frequently-asked-questions.md)  
 - [Problemas conhecidos](known-issues.md)
 - [UWP no Xbox One](index.md) 
-

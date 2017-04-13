@@ -1,6 +1,6 @@
 ---
 author: shawjohn
-Description: "Você pode visualizar análises detalhadas de seus apps no painel do Centro de Desenvolvimento do Windows."
+Description: "Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows."
 title: "Análises"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: johnshaw
@@ -9,25 +9,22 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, análises, relatórios, painel, apps"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
 ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.lasthandoff: 02/08/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="analytics"></a>Análises
 
-Você pode visualizar análises detalhadas de seus apps no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus apps, desde quantos clientes você conseguiu até como eles estão usando seu app e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do app, o uso de anúncios e muito mais. Visualize os relatórios no painel ou [baixe os relatórios de que você precisa](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
+Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do aplicativo, o uso de anúncios e muito mais. Visualize os relatórios no painel ou [baixe os relatórios de que você precisa](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
 
 > [!NOTE]
 > Além dos relatórios do painel, é possível acessar programaticamente alguns dados analíticos usando a API REST de análises da [Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-## <a name="analytics-for-all-your-apps"></a>Análises para todos os seus apps
+## <a name="analytics-for-all-your-apps"></a>Análises para todos os seus aplicativos
 
-Para exibir análises importantes sobre seus apps mais baixados, no menu de navegação superior, selecione **Visão geral** > **de análises**. Por padrão, a página **Visão geral de análises** mostra informações sobre os cinco apps que têm mais aquisições durante seu ciclo de vida. Para escolher apps diferentes a serem mostrados, selecione **Alterar filtros**.
+Para exibir análises importantes sobre seus aplicativos mais baixados, no menu de navegação superior, selecione **Visão geral** > **de análises**. Por padrão, a página **Visão geral de análises** mostra informações sobre os cinco aplicativos que têm mais aquisições durante seu ciclo de vida. Para escolher aplicativos diferentes a serem mostrados, selecione **Alterar filtros**.
 
-## <a name="available-reports-for-each-app"></a>Relatórios disponíveis para cada app
+## <a name="available-reports-for-each-app"></a>Relatórios disponíveis para cada aplicativo
 
 Nesta seção, você encontrará detalhes sobre as informações apresentadas em cada um dos seguintes relatórios:
 
@@ -63,7 +60,7 @@ Além dos relatórios analíticos do painel, há várias outras maneiras de aces
 
 ### <a name="windows-store-analytics-api"></a>API de análise da Windows Store
 
-Use a [API de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md) para recuperar programaticamente os dados analíticos de seus apps. Essa API REST permite que você recupere dados de app e aquisições de complementos, erros e classificações e avaliações de app. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu app ou serviço.
+Use a [API de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md) para recuperar programaticamente os dados analíticos de seus aplicativos. Essa API REST permite que você recupere dados de aplicativo e aquisições de complementos, erros e classificações e avaliações de aplicativo. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>O pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI
 
@@ -80,8 +77,7 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 
 ### <a name="dev-center-app"></a>Aplicativo do Centro de Desenvolvimento
 
-Instale o app [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus apps em qualquer dispositivo Windows 10.
+Instale o aplicativo [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus aplicativos em qualquer dispositivo Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Publique aplicativos do Windows](index.md)
-

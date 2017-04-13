@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54f6d6c786eb0787a441628452d26e46f353b3d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fade9058a1b6bf7896d853745bef4b119c0bff5d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
 
@@ -23,7 +20,7 @@ Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e c
 
 -   [Versões do sistema operacional e distribuição de pacote](#os-versions-and-package-distribution)
 -   [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](#adding-packages-for-windows-10-to-a-previously-published-app)
--   [Mantendo a compatibilidade de pacote para o Windows Phone 8.1](#maintaining-package-compatibility-for-windows-phone-8-1)
+-   [Mantendo a compatibilidade de pacote para o Windows Phone 8.1](#maintaining-package-compatibility-for-windows-phone-81)
 -   [Removendo um aplicativo da Loja](#removing-an-app-from-the-store)
 -   [Removendo pacotes para uma família de dispositivos com suporte anterior](#removing-packages-for-a-previously-supported-device-family)
 
@@ -82,28 +79,27 @@ No exemplo de aplicativo 4, qualquer dispositivo que execute o Windows 10 pode o
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente
 
 
-Se você tiver um aplicativo na Loja e quiser atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes .appxupload UWP durante a etapa [Pacotes](upload-app-packages.md). Depois que seu aplicativo passar pelo processo de certificação, os clientes que já tinham seu aplicativo antes de atualizar para o Windows 10 poderão baixar o pacote UWP como uma atualização na Loja. O pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
+Se você tiver um aplicativo na Loja que tenha como destino o Windows 8.x e/ou o Windows Phone 8.x e se quiser atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes .appxupload UWP durante a etapa [Pacotes](upload-app-packages.md). Depois que seu aplicativo passar pelo processo de certificação, os clientes que já tinham seu app poderão baixar o pacote UWP como uma atualização da Loja. O pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
 
 > **Importante**  Depois que um cliente no Windows 10 obtiver seu pacote UWP, você não poderá reverter esse cliente para usar um pacote para qualquer versão anterior do sistema operacional. Não se esqueça de testar exaustivamente seus pacotes UWP no Windows 10 antes de adicioná-los ao seu envio.
 
 Você pode atualizar qualquer um dos seus outros pacotes ao mesmo tempo ou fazer outras alterações no envio (por exemplo, você pode [criar descrições específicas da plataforma](create-platform-specific-descriptions.md) para serem exibidas para clientes em versões anteriores do sistema operacional). Você também pode deixar tudo exatamente igual, se preferir.
 
-> **Observação**  O número de versão de seus pacotes do Windows 10 deve ser maior que os dos pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você estiver publicando (ou pacotes para as versões do sistema operacional que você publicou anteriormente) para o mesmo aplicativo. Para obter mais informações sobre numeração de versão no Windows 10, consulte [Numeração de versão do pacote](package-version-numbering.md).
+> **Observação**  O número de versão de seus pacotes do Windows 10 deve ser maior que os dos pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você estiver publicando (ou pacotes para as versões do sistema operacional que você publicou anteriormente) para o mesmo aplicativo. Para saber mais, veja [Numeração de versão do pacote](package-version-numbering.md).
 
 Depois que o novo envio concluir o processo de certificação, os pacotes UWP estarão disponíveis, juntamente com todos os outros pacotes que você disponibilizou para os clientes que ainda não estão no Windows 10.
 
 Para obter mais informações sobre o empacotamento de aplicativos UWP para a Loja, consulte [Empacotando aplicativos universais do Windows para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
-> **Importante**  Tenha em mente que, se você fornecer pacotes destinados à família de dispositivos universal, todo cliente que já tiver seu aplicativo em algum sistema operacional anterior (Windows Phone 8, Windows 8.1 etc.) e atualizar para o Windows 10 será atualizado para o pacote universal do Windows 10.
+> **Importante**  Tenha em mente que, se você fornecer pacotes destinados à família de dispositivos Universal, todo cliente que já tiver seu aplicativo em algum sistema operacional anterior (Windows Phone 8, Windows 8.1 etc.) e atualizar para o Windows 10, será atualizado para o seu pacote do Windows 10.
 > 
-> Isso acontece mesmo se você excluiu uma família de dispositivos específica na etapa [Preço e disponibilidade](set-app-pricing-and-availability.md#windows-10-device-families) de seu envio, pois a seleção **Famílias de dispositivos** só se aplica a novas aquisições. Se não quiser que cada cliente anterior obtenha o novo pacote do Windows 10, atualize o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) em seu manifesto appx para incluir somente a família de dispositivos específica à qual você deseja dar suporte.
+> Isso acontece mesmo se você excluiu uma família de dispositivos específica na etapa [Disponibilidade da família de dispositivos](upload-app-packages.md#device-family-availability) de seu envio, pois a seleção **Disponibilidade da família de dispositivos** só se aplica a novas aquisições. Se não quiser que cada cliente anterior obtenha o novo pacote do Windows 10, atualize o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) em seu manifesto appx para incluir somente a família de dispositivos específica à qual você deseja dar suporte.
 > 
-> Por exemplo, digamos que você deseje que apenas os clientes do Windows 8 e do Windows 8.1 que atualizaram para o Windows 10 obtenham seu aplicativo UWP e queira que os clientes no Windows Phone 8.1 e em versões anteriores mantenham os pacotes disponibilizados anteriormente (para Windows Phone 8 ou Windows Phone 8.1). Para fazer isso, você precisará atualizar o [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) em seu manifesto appx para incluir somente **Windows.Desktop** (para a família de dispositivos de desktop), em vez de deixá-lo como o valor **Windows.Universal** (para a família de dispositivos universal) que o Microsoft Visual Studio inclui no manifesto appx por padrão. Não envie nenhum pacote UWP destinado a famílias de dispositivos universais ou móveis (**Windows.Universal** ou **Windows.Universal**). Dessa forma, seus clientes móveis do Windows 10 não obterão nenhum dos seus pacotes UWP.
+> Por exemplo, digamos que você deseje que apenas os clientes do Windows 8 e do Windows 8.1 que atualizaram para o Windows 10 obtenham seu aplicativo UWP e queira que os clientes no Windows Phone 8.1 e em versões anteriores mantenham os pacotes disponibilizados anteriormente (para Windows Phone 8 ou Windows Phone 8.1). Para fazer isso, você precisará atualizar o [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) em seu manifesto appx para incluir somente **Windows.Desktop** (para a família de dispositivos de desktop), em vez de deixá-lo como o valor **Windows.Universal** (para a família de dispositivos universal) que o Microsoft Visual Studio inclui no manifesto appx por padrão. Não envie nenhum pacote UWP destinado às famílias de dispositivos Universal ou Mobile (**Windows.Universal** ou **Windows.Universal**). Dessa forma, seus clientes do Windows 10 Mobile não obterão nenhum dos seus pacotes UWP.
 > 
-> Para saber mais sobre famílias de dispositivos, veja [Guia para aplicativos UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/windows/apps/dn894631).
+> Para saber mais sobre famílias de dispositivos, veja [Guia para aplicativos UWP (Plataforma Universal do Windows)](../get-started/universal-application-platform-guide.md).
 
 ## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Mantendo a compatibilidade de pacote para o Windows Phone 8.1
-
 
 Determinados requisitos de tipos de pacotes se aplicam durante a atualização de aplicativos que já foram publicados para o Windows Phone 8.1:
 
@@ -112,10 +108,9 @@ Determinados requisitos de tipos de pacotes se aplicam durante a atualização d
 -   Quando um aplicativo tiver um .appx do Windows Phone 8.1 publicado, as atualizações posteriores deverão ter um .appx do Windows Phone 8.1. ou .appxbundle do Windows Phone 8.1. Em outras palavras, um XAP do Windows Phone 8.1 não é permitido. Isso se aplica a um .appxupload que contenha um .appx do Windows Phone 8.1 também.
 -   Depois que um aplicativo tiver um .appxbundle do Windows Phone 8.1 publicado, as atualizações posteriores deverão ter um .appxbundle do Windows Phone 8.1. Em outras palavras, um XAP do Windows Phone 8.1 ou .appx do Windows Phone 8.1 não é permitido. Isso se aplica a um .appxupload que contenha um .appxbundle do Windows Phone 8.1 também.
 
-Se essas regras não forem seguidas, haverá erros de carregamento de pacote que impedirão a conclusão do envio.
+Se essas regras não forem seguidas, isso poderá resultar em erros de carregamento de pacote que impedirão a conclusão do envio.
 
 ## <a name="removing-an-app-from-the-store"></a>Removendo um aplicativo da Loja
-
 
 Às vezes, você pode desejar cancelar completamente a oferta de um aplicativo aos clientes efetivamente "cancelando sua publicação". Para fazer isso, clique em **Tornar aplicativo indisponível** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método, incluindo códigos promocionais.
 
@@ -129,7 +124,6 @@ Depois de tornar o aplicativo indisponível, você continuará a vê-lo em seu p
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Removendo pacotes para uma família de dispositivos com suporte anterior
 
-
 Se você remover todos os pacotes para uma determinada família de dispositivos que contava com o suporte de seu aplicativo anteriormente, deverá confirmar que é essa a sua intenção para poder salvar suas alterações na página **Pacotes**.
 
 Quando você publicar um envio que remove pacotes de uma família de dispositivos que contava anteriormente com o suporte de seu aplicativo, os novos clientes não poderão adquirir o aplicativo nessa família de dispositivos. Você sempre pode publicar outra atualização posteriormente para fornecer pacotes para essa família de dispositivos novamente.
@@ -139,7 +133,6 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, localização, funcionalidade de localização"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fec870534c7e028ea85e8aa5242f09569e082b96
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 05fa3330f5346f69061cb60cf8b54de451845e06
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-the-users-location"></a>Obter a localização do usuário
 
 
@@ -252,7 +249,7 @@ Se as configurações de privacidade de localização não permitirem que seu ap
 </TextBlock>
 ```
 
-Opcionalmente, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para inicializar o aplicativo **Configurações** a partir do código. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
+Como alternativa, seu aplicativo pode chamar o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar o aplicativo **Configurações** do código. Para obter mais informações, consulte [Iniciar o aplicativo Configurações do Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
 ```csharp
 using Windows.System;
@@ -274,4 +271,3 @@ Para que o aplicativo possa acessar a localização do usuário, **Localização
 * [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
-

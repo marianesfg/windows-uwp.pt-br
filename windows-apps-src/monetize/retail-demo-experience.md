@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, aplicativo de demonstração varejo"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 843f98782410559d47bdb8dc0b23b50fa96552d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2fa839c3a559ff0065c98712f73b9bb3ed81b276
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="create-a-retail-demo-experience-rdx-app"></a>Crie um aplicativo de experiência de demonstração de varejo (RDX)
 
-Quando os clientes entram em uma loja de varejo ou localização, os clientes esperam encontrar os computadores e celulares mais recentes na vitrine, e esses dispositivos na vitrine são conhecidos como dispositivos de demonstração de varejo.
+Quando entram em uma loja ou local de revenda, os clientes esperam encontrar os computadores e os celulares mais recentes na vitrine, e esses dispositivos na vitrine são conhecidos como dispositivos de demonstração de revenda.
 Os dispositivos de demonstração de revenda e o conteúdo instalado neles são amplamente responsáveis pela experiência do cliente nas lojas porque os clientes normalmente passam uma parte considerável do tempo experimentando esses dispositivos.
 
 Os aplicativos instalados nesses computadores e celulares em lojas de revenda devem ser aplicativos de experiência de demonstração de revenda (RDX). Este artigo apresenta uma visão geral de como projetar e desenvolver uma versão de demonstração de revenda de um aplicativo a ser instalado em computadores e dispositivos de demonstração móveis em uma loja de revenda.
@@ -264,4 +262,3 @@ namespace MyCompany.MyApp
  
 
  
-

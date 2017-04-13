@@ -2,32 +2,34 @@
 author: mcleanbyron
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
 description: "Use este método na API de promoções da Windows Store para gerenciar linhas de entrega de campanhas publicitárias promocionais."
-title: "Gerenciar linhas de entrega de campanhas publicitárias"
+title: Gerenciar linhas de entrega
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de promoções da Windows Store, campanhas publicitárias"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f9ede6a2e645a644e4650f3af7e5476bd52dd53
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 419dbc2ef8de66b0cb8cf51b483174f5c086a092
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-delivery-lines-for-ad-campaigns"></a>Gerenciar linhas de entrega de campanhas publicitárias
+# <a name="manage-delivery-lines"></a>Gerenciar linhas de entrega
 
 Use esses métodos na API de promoções da Windows Store a fim de criar uma ou mais *linhas de entrega* para comprar inventário e disponibilizar seus anúncios de uma campanha publicitária promocional. Para cada linha de entrega, você pode definir direcionamento, o preço da oferta e decidir quanto deseja gastar ao definir um orçamento e vincular aos criativos que deseja usar.
 
 Para saber mais sobre a relação entre linhas de entrega e campanhas publicitárias, perfis de direcionamento e criativos, consulte [Veicular campanhas publicitárias usando serviços da Windows Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
+
+>**Observação**&nbsp;&nbsp;Antes de poder criar linhas de veiculação de campanhas publicitárias com essa API, primeiro você deve [criar uma campanha de anúncios pagos usando a página **Promover seu aplicativo** no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e, em seguida, é necessário adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. As campanhas publicitárias criadas usando a API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Windows Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+
+  >**Observação**&nbsp;&nbsp;como parte dos pré-requisitos, certifique-se de [criar pelo menos uma campanha publicitária no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e adicionar pelo menos um método de pagamento para a campanha publicitária no painel. As linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
+
+* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -44,7 +46,7 @@ Esses métodos têm os seguintes URIs.
 
 | Cabeçalho        | Tipo   | Descrição         |
 |---------------|--------|---------------------|
-| Autorização | cadeia | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 <span/>
@@ -160,4 +162,3 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 * [Gerenciar perfis de direcionamento de campanhas publicitárias](manage-targeting-profiles-for-ad-campaigns.md)
 * [Gerenciar criativos de campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
 * [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
-

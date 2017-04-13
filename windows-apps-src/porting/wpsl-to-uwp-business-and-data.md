@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40b3d2b5b4bafac25726e27fd19a2cd5d71c4fa3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 860b42ca05c95768ca694d13971da278e2129142
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-business-and-data-layers-to-uwp"></a>Portando camadas de negócios e dados do Windows Phone Silverlight para UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -145,5 +142,4 @@ O próximo tópico é [Portabilidade para o fator forma e a experiência do usu�
 
 * [Mapeamentos de namespace e de classe](wpsl-to-uwp-namespace-and-class-mappings.md)
  
-
 

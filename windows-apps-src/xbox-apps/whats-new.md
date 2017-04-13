@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 96f9c9ef355382c72423187a7f81635571762071
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5546177401630e8938f0d25d77ea42afdbfb55d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Novidades para desenvolvedores na atualização mais recente da UWP em Xbox One
 
 A versão de julho de 2016 da Plataforma Universal do Windows (UWP) no Xbox One contém os seguintes novos recursos, atualizações para os recursos existentes, e correções de bugs.
@@ -58,4 +55,3 @@ As seguintes melhorias foram feitas na ferramenta Windows Device Portal (WDP) pa
 ## <a name="see-also"></a>Consulte também
 - [Problemas conhecidos](known-issues.md)
 - [UWP no Xbox One](index.md)
-

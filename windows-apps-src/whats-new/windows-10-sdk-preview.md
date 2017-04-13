@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 835d5393-427f-4155-a737-d509ea1de99f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 51076aed4ae55956164efaf3a3c01461e4b7338b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7e37846e7696213093e84d7409c6900e0aad5ed5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-in-windows"></a>Novidades no Windows
 
 O Windows 10 versão 1607 Preview e as atualizações das ferramentas de desenvolvedor do Windows continuam fornecendo as ferramentas, os recursos e as experiências da Plataforma Universal do Windows. [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) ou descobrir como pode usar seu [código de aplicativo existente no Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
@@ -33,5 +30,4 @@ APIs de chat | Com a nova classe [ChatSyncManager](https://msdn.microsoft.com/li
 [Windows.ApplicationModel.AppExtensions](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appextensions.aspx#_blank) | O novo namespace AppExtensions permite que seu aplicativo da Windows Store hospede o conteúdo fornecido por outros aplicativos da Windows Store. Você pode descobrir, enumerar e acessar conteúdo somente leitura desses aplicativos.
 Windows IoT | O Windows 10 IoT Core permite que você crie aplicativos IoT na familiaridade do Windows e agora está disponível na Raspberry Pi 3, a mais nova placa Raspberry Pi.
 APIs de mídia | As novas APIs MediaBreak no namespace Windows.Media.Playback permitem que você agende e gerencie pausas de mídia com facilidade durante a reprodução de mídia usando MediaSource e MediaPlaybackItem. As novas APIs AudioGraph no namespace Windows.Media.Audio adicionam processamento de áudio espacial que permite atribuir os emissores e ouvintes posicionados em 3D a nós do gráfico de áudio.
-APIs de mapas | O [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) foi aprimorado para permitir que os desenvolvedores obtenham uma região visível que esteja próxima da câmera, excluindo regiões que estão distantes e perto do horizonte em uma exibição profundamente densa. A classe [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) foi estendida, permitindo que os desenvolvedores otimizem o tráfego de rede na geocodificação reversa por meio de especificação de uma precisão desejada. Agora os desenvolvedores podem aproveitar o download de mapas offline usando o método [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) e especificando a latitude e longitude. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).
-
+APIs de mapas | O [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) foi aprimorado para permitir que os desenvolvedores obtenham uma região visível que esteja próxima da câmera, excluindo regiões que estão distantes e perto do horizonte em uma exibição profundamente densa. A classe [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) foi estendida, permitindo que os desenvolvedores otimizem o tráfego de rede na geocodificação reversa por meio de especificação de uma precisão desejada. Agora os desenvolvedores podem aproveitar a transferência de mapas offline usando o método [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) e especificando a latitude e longitude. Para saber mais, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).

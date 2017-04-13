@@ -1,19 +1,17 @@
 ---
 author: rmpablos
-title: "Configurar compilações automáticas para seu app UWP"
+title: "Configurar compilações automáticas para seu aplicativo UWP"
 description: "Como configurar compilações automáticas para produzir pacotes de sideload e/ou armazenamento."
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 54dcebb0dc4b1a41acdae655b9caf14f72161f36
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -21,7 +19,7 @@ Você pode usar o Visual Studio Team Services (VSTS) para criar compilações au
 
 ## <a name="select-the-right-type-of-build-agent"></a>Selecione o tipo certo de agente de compilação
 
-Escolha o tipo de agente de compilação que você deseja que o VSTS use ao executar o processo de compilação. Um agente de compilação hospedado é implantado com as ferramentas e sdks mais comuns, e funciona para a maioria dos cenários. Consulte o artigo [Software no servidor de compilação hospedado](https://www.visualstudio.com/en-us/docs/build/admin/agents/hosted-pool#software). No entanto, você pode criar um agente de compilação personalizado se precisar de mais controle sobre as etapas de criação. Você pode usar a tabela a seguir para ajudá-lo a tomar essa decisão.
+Escolha o tipo de agente de compilação que você deseja que o VSTS use ao executar o processo de compilação. Um agente de compilação hospedado é implantado com as ferramentas e sdks mais comuns, e funciona para a maioria dos cenários. Consulte o artigo [Software no servidor de compilação hospedado](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software). No entanto, você pode criar um agente de compilação personalizado se precisar de mais controle sobre as etapas de criação. Você pode usar a tabela a seguir para ajudá-lo a tomar essa decisão.
 
 |**Cenário**|**Agente personalizado**|**Agente de compilação hospedado**|
 -------------|----------------|----------------------|
@@ -33,13 +31,13 @@ Escolha o tipo de agente de compilação que você deseja que o VSTS use ao exec
 |Executar testes de unidade|:white_check_mark:||
 |Usar compilações incrementais|:white_check_mark:||
 
->Observação: se você pretende direcionar o SDK da Atualização de Aniversário do Windows (compilação 14393), precisará configurar seu agente de compilação personalizado, pois o pool de compilação hospedado só dá suporte ao SDK 10586 e 10240. Mais informações para [escolher uma versão de UWP](https://msdn.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version)
+>Observação: se você pretende direcionar o SDK da Atualização de Aniversário do Windows (compilação 14393), precisará configurar seu agente de compilação personalizado, pois o pool de compilação hospedado só dá suporte ao SDK 10586 e 10240. Mais informações para [escolher uma versão de UWP](https://msdn.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version)
 
 #### <a name="create-a-custom-build-agent-optional"></a>Criar um agente de compilação personalizado (opcional)
 
 Se você optar por criar um agente de compilação personalizado, precisará das ferramentas da Plataforma Universal do Windows. Essas ferramentas fazem parte do Visual Studio. Você pode usar a edição da comunidade do Visual Studio.
 
-Para saber mais, consulte [Implantar um agente no Windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows). 
+Para saber mais, consulte [Implantar um agente no Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows). 
 
 Para executar testes de unidade UWP, você precisará fazer o seguinte: •    Implantar e iniciar o app. •    Executar o agente VSTS no modo interativo. •    Configurar seu agente para logon automático após uma reinicialização.
 
@@ -113,7 +111,7 @@ Essa tarefa armazena os artefatos gerados no VSTS. Você pode vê-los na guia Ar
 Como definimos a propriedade `UapAppxPackageBuildMode` como `StoreUpload`, a pasta de artefatos inclui o pacote que você carrega para a Loja (appxupload), bem como os pacotes que permitem sideload (appxbundle).
 
 
->Observação: por padrão, o agente de VSTS mantém os últimos pacotes appx gerados. Se você quiser armazenar somente os artefatos da compilação atual, configure a compilação para limpar o diretório de binários. Para fazer isso, adicione uma variável chamada `Build.Clean` e defina-a como o valor `all`. Para saber mais, consulte [Especificar o repositório](https://www.visualstudio.com/en-us/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
+>Observação: por padrão, o agente de VSTS mantém os últimos pacotes appx gerados. Se você quiser armazenar somente os artefatos da compilação atual, configure a compilação para limpar o diretório de binários. Para fazer isso, adicione uma variável chamada `Build.Clean` e defina-a como o valor `all`. Para saber mais, consulte [Especificar o repositório](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
 
 #### <a name="the-types-of-automated-builds"></a>Os tipos de compilações automáticas
 Em seguida, você usará sua definição de compilação para criar uma compilação automática. A tabela a seguir descreve cada tipo de compilação automática que você pode criar. 
@@ -132,7 +130,7 @@ Esse tipo de compilação ajuda você a diagnosticar problemas relacionados a c�
 
 Se você quiser executar testes de unidade UWP como parte de sua compilação CI, precisará usar um agente de compilação personalizado em vez do agente de compilação hospedado.
 
->Observação: se você incluir mais de um app na mesma solução, poderá receber um erro. Consulte o seguinte tópico de ajuda para resolver esse erro: [Corrigir erros que aparecem quando você inclui mais de um app na mesma solução](#bundle-errors). 
+>Observação: se você incluir mais de um aplicativo na mesma solução, poderá receber um erro. Consulte o seguinte tópico de ajuda para resolver esse erro: [Corrigir erros que aparecem quando você inclui mais de um aplicativo na mesma solução](#bundle-errors). 
 
 
 ### <a name="configure-a-ci-build-definition"></a>Configurar uma definição de compilação CI
@@ -184,14 +182,14 @@ Para fazer isso, abra o arquivo de projeto e, nas propriedades do projeto, defin
 >Observação. Usar a cadeia de ferramentas do .NET Native é ainda uma parte importante do fluxo de trabalho. Portanto, você ainda deve usá-la para testar compilações. 
 
 <span id="bundle-errors" />
-#### <a name="address-errors-that-appear-when-you-bundle-more-than-one-app-in-the-same-solution"></a>Corrigir erros que aparecem quando você inclui mais de um app na mesma solução 
+#### <a name="address-errors-that-appear-when-you-bundle-more-than-one-app-in-the-same-solution"></a>Corrigir erros que aparecem quando você inclui mais de um aplicativo na mesma solução 
 Se você adicionar mais de um projeto UWP à sua solução e, em seguida, tentar criar um pacote, poderá receber um erro como este: 
 
 ```
 MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "AppOne.UnitTests_0.1.2595.0_x86.appx" and package full name "8ef641d1-4557-4e33-957f-6895b122f1e6_0.1.2595.0_x86__scrj5wvaadcy6" is not valid in the bundle because it has a different package family name than other packages in the bundle
 ```
 
-Esse erro é exibido porque, no nível da solução, não está claro qual app deve aparecer no pacote. Para resolver esse problema, abra cada arquivo de projeto e adicione as seguintes propriedades ao final do primeiro elemento `<PropertyGroup>`:
+Esse erro é exibido porque, no nível da solução, não está claro qual aplicativo deve aparecer no pacote. Para resolver esse problema, abra cada arquivo de projeto e adicione as seguintes propriedades ao final do primeiro elemento `<PropertyGroup>`:
 
 |**Projeto**|**Propriedades**|
 |-------|----------|
@@ -201,12 +199,12 @@ Esse erro é exibido porque, no nível da solução, não está claro qual app d
 Em seguida, remova o argumento `AppxBundle` msbuild da etapa de compilação.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Configurar uma compilação de implantação contínua para sideload
-Quando esse tipo de compilação é concluído, os usuários podem baixar o arquivo appxbundle da seção Artefatos da página de resultados da compilação. Se quiser fazer o teste beta do app pela criação de uma distribuição mais completa, você pode usar o serviço HockeyApp. Esse serviço oferece recursos avançados para testes beta, análise do usuário e diagnóstico de falhas.
+Quando esse tipo de compilação é concluído, os usuários podem baixar o arquivo appxbundle da seção Artefatos da página de resultados da compilação. Se quiser fazer o teste beta do aplicativo pela criação de uma distribuição mais completa, você pode usar o serviço HockeyApp. Esse serviço oferece recursos avançados para testes beta, análise do usuário e diagnóstico de falhas.
 
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Aplicação de números de versão a compilações
 
-O arquivo de manifesto contém o número de versão do app.  Atualize o arquivo de manifesto no seu repositório de controle de origem para alterar o número de versão. Outra maneira de atualizar o número da versão do seu app é usar o número de compilação que é gerado pelo VSTS e, em seguida, modificar o manifesto do app antes de compilar o app. Não basta confirmar essas alterações no repositório de código-fonte.
+O arquivo de manifesto contém o número de versão do aplicativo.  Atualize o arquivo de manifesto no seu repositório de controle de origem para alterar o número de versão. Outra maneira de atualizar o número da versão do seu aplicativo é usar o número de compilação que é gerado pelo VSTS e, em seguida, modificar o manifesto do aplicativo antes de compilar o aplicativo. Não basta confirmar essas alterações no repositório de código-fonte.
 
 Você precisará definir o formato de número de compilação do controle de versão na definição da compilação e, em seguida, usar o número de versão resultante para atualizar o AppxManifest e, opcionalmente, os arquivos AssemblyInfo.cs antes de compilar.
 
@@ -242,15 +240,15 @@ Primeiro, instale a extensão [HockeyApp](https://marketplace.visualstudio.com/i
 
 ![hockey app](images/building-screen14.png) 
 
-Em seguida, configure a conexão do HockeyApp usando este guia: [Como usar o HockeyApp com o Visual Studio Team Services (VSTS) ou o Team Foundation Server (TFS).](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) Você pode usar sua conta da Microsoft, conta de mídia social ou apenas um endereço de email para configurar sua conta do HockeyApp. O plano gratuito vem com dois apps, um proprietário e nenhuma restrição de dados.
+Em seguida, configure a conexão do HockeyApp usando este guia: [Como usar o HockeyApp com o Visual Studio Team Services (VSTS) ou o Team Foundation Server (TFS).](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) Você pode usar sua conta da Microsoft, conta de mídia social ou apenas um endereço de email para configurar sua conta do HockeyApp. O plano gratuito vem com dois aplicativos, um proprietário e nenhuma restrição de dados.
 
-Em seguida, você pode criar um app HockeyApp manualmente, ou carregar um arquivo de pacote appx existente. Para saber mais, consulte [Como criar um novo app](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
+Em seguida, você pode criar um aplicativo HockeyApp manualmente, ou carregar um arquivo de pacote appx existente. Para saber mais, consulte [Como criar um novo aplicativo](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
 
 Para usar um arquivo de pacote appx existente, adicione uma etapa de compilação e defina o parâmetro Caminho do arquivo binário da etapa de compilação. 
 
 ![configurar o hockey app](images/building-screen15.png) 
 
-Para definir esse parâmetro, combine o nome do app, a variável AppxVersion e as plataformas com suporte em uma string como esta:
+Para definir esse parâmetro, combine o nome do aplicativo, a variável AppxVersion e as plataformas com suporte em uma string como esta:
 
 ``` 
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
@@ -262,13 +260,13 @@ Nós ajudaremos você a instalar e executar um pacote de sideload [posteriorment
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar uma compilação de implantação contínua que envia um pacote para a Loja 
 
-Para gerar pacotes de envio da Loja, associe seu app à Loja usando o Assistente de Associação à Loja no Visual Studio.
+Para gerar pacotes de envio da Loja, associe seu aplicativo à Loja usando o Assistente de Associação à Loja no Visual Studio.
 
 ![associar à Loja](images/building-screen16.png) 
 
->Observação: esse assistente gera um arquivo chamado Package.StoreAssociation.xml que contém as informações de associação à Loja. Se você armazenar seu código-fonte em um repositório público, como o GitHub, esse arquivo irá conter todos os nomes de app reservados para essa conta. Você pode excluir esse arquivo antes de torná-lo público.
+>Observação: esse assistente gera um arquivo chamado Package.StoreAssociation.xml que contém as informações de associação à Loja. Se você armazenar seu código-fonte em um repositório público, como o GitHub, esse arquivo irá conter todos os nomes de aplicativo reservados para essa conta. Você pode excluir esse arquivo antes de torná-lo público.
 
-Se você não tiver acesso à conta do DevCenter que foi usada para publicar o app, siga as instruções neste documento: [Criando um app para terceiros? Como empacotar seu app da Loja.](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97) 
+Se você não tiver acesso à conta do DevCenter que foi usada para publicar o aplicativo, siga as instruções neste documento: [Criando um aplicativo para terceiros? Como empacotar seu aplicativo da Loja.](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97) 
 
 Em seguida, você precisa verificar se a etapa de compilação inclui o seguinte parâmetro:
 
@@ -283,9 +281,9 @@ Isso irá gerar o arquivo appxupload que pode ser enviado para a Loja.
 
 Use a extensão do Visual Studio Team Services para a Windows Store para integrar-se à API da Loja e envie seu pacote appxupload para a Loja.
 
-Você precisa conectar sua conta do Centro de Desenvolvimento ao Azure Active Directory (AD) e, em seguida, criar um app no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso. 
+Você precisa conectar sua conta do Centro de Desenvolvimento ao Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso. 
 
-Depois que você tiver configurado a extensão, adicione a tarefa de compilação e configure-a com sua ID do app e o local do arquivo appxupload.
+Depois que você tiver configurado a extensão, adicione a tarefa de compilação e configure-a com sua ID do aplicativo e o local do arquivo appxupload.
 
 ![configurar o Centro de Desenvolvimento](images/building-screen17.png) 
 
@@ -296,19 +294,19 @@ $(Build.ArtifactStagingDirectory)\
 AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 ```
 
->Observação. Você precisa ativar manualmente essa compilação. Você pode usá-la para atualizar os apps existentes, mas não pode usá-la para seu primeiro envio à Loja. Para saber mais, consulte [Criar e gerenciar envios à Loja usando serviços da Windows Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+>Observação. Você precisa ativar manualmente essa compilação. Você pode usá-la para atualizar os aplicativos existentes, mas não pode usá-la para seu primeiro envio à Loja. Para saber mais, consulte [Criar e gerenciar envios à Loja usando serviços da Windows Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
 <span id="sideloading-best-practices"/>
-### <a name="best-practices-for-sideloading-apps"></a>Práticas recomendadas para apps de sideload
+### <a name="best-practices-for-sideloading-apps"></a>Práticas recomendadas para aplicativos de sideload
 
-Se você quiser distribuir seu app sem publicá-lo na Loja, faça o sideload do seu app diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do app. 
+Se você quiser distribuir seu aplicativo sem publicá-lo na Loja, faça o sideload do seu aplicativo diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do aplicativo. 
 
-Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar apps. Esse script adicionará o certificado à seção Certificação Confiável da máquina local e, em seguida, irá instalar ou atualizar o arquivo appx.
+Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script adicionará o certificado à seção Certificação Confiável da máquina local e, em seguida, irá instalar ou atualizar o arquivo appx.
 
-#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Sideload de seu app com a Atualização de Aniversário do Windows 10
-Na Atualização de Aniversário do Windows 10, você pode clicar duas vezes no arquivo appxbundle e instalar seu app escolhendo o botão Instalar em uma caixa de diálogo. 
+#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Sideload de seu aplicativo com a Atualização de Aniversário do Windows 10
+Na Atualização de Aniversário do Windows 10, você pode clicar duas vezes no arquivo appxbundle e instalar seu aplicativo escolhendo o botão Instalar em uma caixa de diálogo. 
 
 
 ![sideload em rs1](images/building-screen18.png) 
@@ -319,11 +317,11 @@ Se você quiser distribuir seus pacotes appx em um site como VSTS ou HockeyApp, 
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Práticas recomendadas para certificados de assinatura 
-O Visual Studio gera um certificado para cada projeto. Isso dificulta manter uma lista gerenciada de certificados válidos. Se você pretende criar vários apps, pode criar um único certificado para assinar todos os seus apps. Em seguida, cada dispositivo que confia no certificado será capaz de fazer o sideload de qualquer um dos seus apps sem precisar instalar outro certificado. Para saber mais, consulte [Como criar um certificado de assinatura de pacote do app](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx).
+O Visual Studio gera um certificado para cada projeto. Isso dificulta manter uma lista gerenciada de certificados válidos. Se você pretende criar vários aplicativos, pode criar um único certificado para assinar todos os seus aplicativos. Em seguida, cada dispositivo que confia no certificado será capaz de fazer o sideload de qualquer um dos seus aplicativos sem precisar instalar outro certificado. Para saber mais, consulte [Como criar um certificado de assinatura de pacote do aplicativo](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx).
 
 
 #### <a name="create-a-signing-certificate"></a>Criar um certificado de assinatura
-Use a ferramenta [MakeCert.exe](https://msdn.microsoft.com/en-us/library/windows/desktop/ff548309(%09v=vs.85).aspx) para criar um certificado. O exemplo a seguir cria um certificado usando a ferramenta MakeCert.exe.
+Use a ferramenta [MakeCert.exe](https://msdn.microsoft.com/library/windows/desktop/ff548309.aspx) para criar um certificado. O exemplo a seguir cria um certificado usando a ferramenta MakeCert.exe.
 
 ```
 MakeCert /n publisherName /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e expirationDate /sv MyKey.pvk MyKey.cer
@@ -341,8 +339,8 @@ Forneça esses certificados para cada função de computador:
 
 >Observação: você também pode usar um certificado corporativo que já é confiável para seus usuários.
 
-#### <a name="sign-your-uwp-app"></a>Assinar seu app UWP
-O Visual Studio e o MSBuild oferecem diversas opções para gerenciar o certificado que você usa para assinar o app:
+#### <a name="sign-your-uwp-app"></a>Assinar seu aplicativo UWP
+O Visual Studio e o MSBuild oferecem diversas opções para gerenciar o certificado que você usa para assinar o aplicativo:
 
 Uma opção é incluir o certificado com a chave privada (normalmente na forma de um arquivo .PFX) em sua solução e fazer referência a pfx no arquivo do projeto. Você pode gerenciar isso usando a guia Pacote do editor de manifesto.
 
@@ -352,15 +350,14 @@ Uma opção é incluir o certificado com a chave privada (normalmente na forma d
 Outra opção é instalar o certificado na máquina de compilação (Usuário atual/pessoal) e, em seguida, usar a opção Escolher no Repositório de Certificados. Isso especifica a impressão digital do certificado no arquivo de projeto para que o certificado deva ser instalado em todas as máquinas que serão usadas para compilar o projeto.
 
 #### <a name="trust-the-signing-certificate-in-the-target-devices"></a>Confiar no certificado de assinatura em dispositivos de destino
-Um dispositivo de destino precisa confiar no certificado para que o app possa ser instalado nele. 
+Um dispositivo de destino precisa confiar no certificado para que o aplicativo possa ser instalado nele. 
 
 Registre a chave pública do certificado no local Pessoas confiáveis ou Raiz de confiança no repositório de certificados do computador local.
 
 A maneira mais fácil de registrar o certificado é clicar duas vezes no arquivo .cer e seguir as etapas no assistente para salvar o certificado na máquina local e no repositório de pessoas confiáveis.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Criar seu app .NET para Windows](https://www.visualstudio.com/en-us/docs/build/get-started/dot-net) 
-* [Empacotando apps UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-* [Sideload de apps LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Como criar um certificado de assinatura de pacote do app](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
-
+* [Criar seu aplicativo .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
+* [Empacotando aplicativos UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+* [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
+* [Como criar um certificado de assinatura de pacote do aplicativo](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)

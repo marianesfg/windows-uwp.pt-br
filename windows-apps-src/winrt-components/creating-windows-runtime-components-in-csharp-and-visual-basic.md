@@ -9,32 +9,29 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 31fddae1c163f46a56fb78f5ac29e11a84e2ddd9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a5fd89757817c06be55020d74e677369725af5a2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criando componentes do Windows Runtime em C# e Visual Basic
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em apps da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este artigo descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
+A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em aplicativos da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este artigo descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
 
-Caso você esteja criando um componente a ser usado apenas em apps UWP com Visual Basic ou C# e o componente não contenha controles UWP, leve em consideração usar o modelo **Biblioteca de Classes**, em vez do modelo **Componente do Tempo de Execução do Windows**. Existem menos restrições em uma biblioteca de classes simples.
+Caso você esteja criando um componente a ser usado apenas em aplicativos UWP com Visual Basic ou C# e o componente não contenha controles UWP, leve em consideração usar o modelo **Biblioteca de Classes**, em vez do modelo **Componente do Tempo de Execução do Windows**. Existem menos restrições em uma biblioteca de classes simples.
 
 Este artigo contém as seguintes seções:
 
 ## <a name="declaring-types-in-windows-runtime-components"></a>Declaração de tipos em componentes do Windows Runtime
 
 
-Internamente, os tipos do Windows Runtime no componente podem usar qualquer funcionalidade do .NET Framework permitida em um aplicativo universal do Windows. (Confira a visão geral [.NET para apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) para obter mais informações.) Externamente, os membros de seus tipos podem expor somente tipos do Windows Runtime para os parâmetros e valores de retorno. A lista a seguir descreve as limitações em tipos do .NET Framework expostos em componentes do Windows Runtime.
+Internamente, os tipos do Windows Runtime no componente podem usar qualquer funcionalidade do .NET Framework permitida em um aplicativo Universal do Windows. (Confira a visão geral [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) para obter mais informações.) Externamente, os membros de seus tipos podem expor somente tipos do Windows Runtime para os parâmetros e valores de retorno. A lista a seguir descreve as limitações em tipos do .NET Framework expostos em componentes do Windows Runtime.
 
 -   Os campos, os parâmetros e os valores de retorno de todos os tipos públicos e membros no componente devem ser tipos do Windows Runtime.
 
-    Essa restrição inclui os tipos do Windows Runtime que você cria, bem como os tipos fornecidos pelo Windows Runtime propriamente dito. Ele também inclui vários tipos do .NET Framework. A inclusão desses tipos faz parte do suporte que o .NET Framework fornece para habilitar o uso natural do Windows Runtime em código gerenciado: o código aparentemente usa tipos do .NET Framework familiares, em vez dos tipos do Windows Runtime subjacentes. Por exemplo, é possível usar tipos de primitivas do .NET Framework, como Int32 e Double, determinados tipos fundamentais como DateTimeOffset e Uri, e alguns tipos de interface genérica mais usados, como IEnumerable&lt;T&gt; (IEnumerable(Of T) em Visual Basic) e IDictionary&lt;TKey,TValue&gt;. (Observe que os argumentos de tipo desses tipos genéricos devem ser tipos do Windows Runtime.) Isso é discutido nas seções Passagem de tipos do Windows Runtime para código gerenciado e Passagem de tipos gerenciados para o Windows Runtime, mais adiante neste artigo.
+    Essa restrição inclui os tipos do Windows Runtime que você cria, bem como os tipos fornecidos pelo Windows Runtime propriamente dito. Ele também inclui vários tipos do .NET Framework. A inclusão desses tipos faz parte do suporte que o .NET Framework fornece para habilitar o uso natural do Windows Runtime em código gerenciado: o código aparentemente usa tipos do .NET Framework familiares, em vez dos tipos do Windows Runtime subjacentes. Por exemplo, é possível usar tipos primitivos do .NET Framework, como Int32 e Double, determinados tipos fundamentais como DateTimeOffset e Uri, e alguns tipos de interface genérica mais usados, como IEnumerable&lt;T&gt; (IEnumerable(Of T) em Visual Basic) e IDictionary&lt;TKey,TValue&gt;. (Observe que os argumentos de tipo desses tipos genéricos devem ser tipos do Windows Runtime.) Isso é discutido nas seções Passagem de tipos do Windows Runtime para código gerenciado e Passagem de tipos gerenciados para o Windows Runtime, mais adiante neste artigo.
 
 -   Classes públicas e interfaces podem conter métodos, propriedades e eventos. É possível declarar representantes para os eventos ou usar o representante EventHandler&lt;T&gt;. Uma classe pública ou interface não pode:
 
@@ -51,9 +48,9 @@ Internamente, os tipos do Windows Runtime no componente podem usar qualquer func
 ## <a name="debugging-your-component"></a>Depuração do componente
 
 
-Caso o aplicativo universal do Windows e o componente sejam compilados com código gerenciado, é possível depurá-los ao mesmo tempo.
+Caso o aplicativo Universal do Windows e o componente sejam compilados com código gerenciado, é possível depurá-los ao mesmo tempo.
 
-Ao testar o componente como parte de um aplicativo universal do Windows em C++, você pode depurar código gerenciado e nativo ao mesmo tempo. O padrão é somente código nativo.
+Ao testar o componente como parte de um aplicativo Universal do Windows em C++, você pode depurar código gerenciado e nativo ao mesmo tempo. O padrão é somente código nativo.
 
 ## **<a name="to-debug-both-native-c-code-and-managed-code"></a>Para depurar códigos em C++ nativo e gerenciado**
 
@@ -62,7 +59,7 @@ Ao testar o componente como parte de um aplicativo universal do Windows em C++, 
 3.  Escolha **Tipo de Depurador** e, na caixa de listagem suspensa, altere **Native Only** para **Misto (Gerenciado e Nativo)**. Escolha **OK**.
 4.  Defina pontos de interrupção nos códigos nativo e gerenciado.
 
-Quando você está testando o componente como parte de um aplicativo universal do Windows usando JavaScript, por padrão, a solução está no modo de depuração de JavaScript. No Visual Studio, não é possível depurar JavaScript e código gerenciado ao mesmo tempo.
+Quando você está testando o componente como parte de um aplicativo Universal do Windows usando JavaScript, por padrão, a solução está no modo de depuração de JavaScript. No Visual Studio, não é possível depurar JavaScript e código gerenciado ao mesmo tempo.
 
 ## **<a name="to-debug-managed-code-instead-of-javascript"></a>Para depurar código gerenciado em vez de JavaScript**
 
@@ -74,9 +71,9 @@ Quando você está testando o componente como parte de um aplicativo universal d
 ## <a name="passing-windows-runtime-types-to-managed-code"></a>Passagem de tipos do Windows Runtime para código gerenciado
 
 
-Conforme mencionado anteriormente na seção Declaração de tipos em componentes do Windows Runtime, determinados tipos .NET Framework podem ser exibidos nas assinaturas de membros de classes públicas. Isso faz parte do suporte que o .NET Framework oferece para habilitar o uso natural do Windows Runtime em código gerenciado. Ele inclui tipos de primitivas e algumas classes e interfaces. Quando o componente é usado em JavaScript ou em código C++, é importante saber como os tipos do .NET Framework são exibidos para o chamador. Consulte [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md) para obter exemplos com JavaScript. Esta seção aborda os tipos mais usados.
+Conforme mencionado anteriormente na seção Declaração de tipos em componentes do Windows Runtime, determinados tipos .NET Framework podem ser exibidos nas assinaturas de membros de classes públicas. Isso faz parte do suporte que o .NET Framework oferece para habilitar o uso natural do Windows Runtime em código gerenciado. Ele inclui tipos primitivos e algumas classes e interfaces. Quando o componente é usado em JavaScript ou em código C++, é importante saber como os tipos do .NET Framework são exibidos para o chamador. Consulte [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md) para obter exemplos com JavaScript. Esta seção aborda os tipos mais usados.
 
-No .NET Framework, tipos de primitivas como a estrutura Int32 têm muitas propriedades e métodos úteis, como o método TryParse. Por outro lado, tipos de primitivas e estruturas no Windows Runtime só têm campos. Quando você passa esses tipos para código gerenciado, eles aparentam ser tipos do .NET Framework, e é possível usar as propriedades e os métodos dos tipos do .NET Framework, como faria normalmente. A lista a seguir resume as substituições que são feitas automaticamente no IDE:
+No .NET Framework, tipos primitivos como a estrutura Int32 têm muitas propriedades e métodos úteis, como o método TryParse. Por outro lado, tipos primitivos e estruturas no Windows Runtime só têm campos. Quando você passa esses tipos para código gerenciado, eles aparentam ser tipos do .NET Framework, e é possível usar as propriedades e os métodos dos tipos do .NET Framework, como faria normalmente. A lista a seguir resume as substituições que são feitas automaticamente no IDE:
 
 -   Para as primitivas do Windows Runtime, Int32, Int64, Single, Double, Boolean, String (uma coleção imutável de caracteres Unicode), Enum, UInt32, UInt64 e Guid, use o tipo de mesmo nome no namespace System.
 -   Para UInt8, use System.Byte.
@@ -85,7 +82,7 @@ No .NET Framework, tipos de primitivas como a estrutura Int32 têm muitas propri
 
 Caso C# ou Visual Basic forneça uma palavra-chave de linguagem para qualquer um desses tipos, você pode usar a palavra-chave de linguagem em seu lugar.
 
-Além de tipos de primitivas, alguns tipos do Windows Runtime básicos mais usados são exibidos em código gerenciado como os equivalentes do .NET Framework. Por exemplo, suponhamos que o código JavaScript use a classe Windows.Foundation.Uri e você queira passá-lo para um método C# ou Visual Basic. O tipo equivalente em código gerenciado é a classe System.Uri do .NET Framework, e esse é o tipo a ser usado para o parâmetro do método. É possível dizer quando um tipo do Windows Runtime é exibido como um tipo do .NET Framework, porque o IntelliSense no Visual Studio oculta o tipo do Windows Runtime quando você está escrevendo código gerenciado e apresenta o tipo .NET Framework equivalente. (Normalmente, os dois tipos têm o mesmo nome. No entanto, observe que a estrutura Windows.Foundation.DateTime é exibida em código gerenciado como DateTimeOffset, e não como System. DateTime.)
+Além de tipos primitivos, alguns tipos do Windows Runtime básicos mais usados são exibidos em código gerenciado como os equivalentes do .NET Framework. Por exemplo, suponhamos que o código JavaScript use a classe Windows.Foundation.Uri e você queira passá-lo para um método C# ou Visual Basic. O tipo equivalente em código gerenciado é a classe System.Uri do .NET Framework, e esse é o tipo a ser usado para o parâmetro do método. É possível dizer quando um tipo do Windows Runtime é exibido como um tipo do .NET Framework, porque o IntelliSense no Visual Studio oculta o tipo do Windows Runtime quando você está escrevendo código gerenciado e apresenta o tipo .NET Framework equivalente. (Normalmente, os dois tipos têm o mesmo nome. No entanto, observe que a estrutura Windows.Foundation.DateTime é exibida em código gerenciado como DateTimeOffset, e não como System. DateTime.)
 
 Para alguns tipos de coleção mais usados, o mapeamento é entre as interfaces implementadas por um tipo do Windows Runtime e as interfaces implementadas pelo tipo .NET Framework correspondente. Assim como acontece com os tipos mencionados acima, você declara tipos de parâmetro usando o tipo .NET Framework. Isso oculta algumas diferenças entre os tipos e deixa a escrita do código .NET Framework mais natural. A tabela a seguir lista os tipos de interface genérica mais comuns, além de outros mapeamentos de classe e interface comuns. Para obter uma lista completa dos tipos do Windows Runtime que o .NET Framework mapeia, consulte os mapeamentos do .NET Framework dos tipos do Windows Runtime.
 
@@ -219,7 +216,7 @@ Para ações e operações assíncronas que não dão suporte ao cancelamento ou
 > End Function
 > ```
 
-O código JavaScript a seguir mostra como o método pode ser chamado usando-se um objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx). A função passada para o método then é executada quando a chamada assíncrona é concluída. O parâmetro stringList contém a lista de cadeias de caracteres retornada pelo método DownloadAsStringAsync, e a função faz o processamento obrigatório.
+O código JavaScript a seguir mostra como o método pode ser chamado usando-se um objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx). A função passada para o método then é executada quando a chamada assíncrona é concluída. O parâmetro stringList contém a lista de cadeias de caracteres retornada pelo método DownloadAsStringAsync, e a função faz o processamento necessário.
 
 ```javascript
 function asyncExample(id) {
@@ -267,7 +264,7 @@ Caso você crie um método assíncrono que possa dar suporte ao cancelamento ou 
 
 Caso o componente não manipule a exceção, uma exceção correspondente é acionada no código que chamou o componente. A maneira como a exceção é exibida para o chamador depende da maneira como a linguagem de chamada dá suporte ao Windows Runtime.
 
--   Em JavaScript, a exceção é exibida como um objeto no qual a mensagem de exceção é substituída por um rastreamento de pilha. Ao depurar o app no Visual Studio, você pode ver o texto da mensagem original exibido na caixa de diálogo de exceção do depurador, identificado como "Informações de WinRT". Não é possível acessar o texto da mensagem original no código JavaScript.
+-   Em JavaScript, a exceção é exibida como um objeto no qual a mensagem de exceção é substituída por um rastreamento de pilha. Ao depurar o aplicativo no Visual Studio, você pode ver o texto da mensagem original exibido na caixa de diálogo de exceção do depurador, identificado como "Informações de WinRT". Não é possível acessar o texto da mensagem original no código JavaScript.
 
     > **Dica**  Atualmente, o rastreamento de pilha contém o tipo de exceção gerenciado, mas não recomendamos analisar o rastreamento para identificar o tipo de exceção. Em vez disso, use um valor HRESULT conforme descrito mais à frente nesta seção.
 
@@ -280,7 +277,7 @@ Ao acionar uma exceção no componente, você pode facilitar para um chamador Ja
 
 ## <a name="declaring-and-raising-events"></a>Declaração e acionamento de eventos
 
-Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx) como o tipo do evento e use o tipo de argumento do evento como o argumento de tipo genérico. Acione o evento, assim como você faria em um app do .NET Framework.
+Quando você declara um tipo para manter os dados do evento, derive de Object, em vez de EventArgs, porque EventArgs não é um tipo do Windows Runtime. Use [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx) como o tipo do evento e use o tipo de argumento do evento como o argumento de tipo genérico. Acione o evento, assim como você faria em um aplicativo do .NET Framework.
 
 Quando o componente do Tempo de Execução do Windows é usado em JavaScript ou C++, o evento segue o padrão de evento do Windows Runtime que essas linguagens esperam. Quando você usa o componente de C# ou Visual Basic, o evento é exibido como um evento do .NET Framework comum. Um exemplo é dado em [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript]().
 
@@ -296,6 +293,5 @@ Para saber mais sobre recursos da linguagem Visual Basic e C# e o suporte do .NE
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [.NET para apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-

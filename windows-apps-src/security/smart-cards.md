@@ -1,6 +1,6 @@
 ---
 title: "Cartões inteligentes"
-description: "Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários a serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes."
+description: "Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes."
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
 ms.author: alkoren
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 42062dc9dcc11e3db6ddbb761e158d75e1259950
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9eb45cd5e8f30e530cd88e05c7e7ed5f3d5ac1cd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="smart-cards"></a>Cartões inteligentes
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico explica como os aplicativos da Plataforma Universal do Windows (UWP) podem usar cartões inteligentes para conectar os usuários à serviços de rede seguros, incluindo como acessar os leitores de cartão inteligente físicos, criar cartões inteligentes virtuais, se comunicar com cartões inteligentes, autenticar usuários, redefinir PINs de usuário e como remover ou desconectar cartões inteligentes. 

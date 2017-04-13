@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4650eaa22f299910bd7956972bd7099ea6d78943
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8f7f3f6b3436c987324a1072a1fbab1bd045c5bd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-in-windows-10-version-1507"></a>Novidades no Windows 10, versão 1507
 
 
@@ -153,7 +150,7 @@ Recurso | Descrição
  :---- | :----
 Criptografia ECC | As novas APIs no namespace [Windows.Security.Cryptography](https://msdn.microsoft.com/library/windows/apps/windows.security.cryptography.aspx) oferecem suporte à criptografia ECC (Elliptical Curve Cryptography), uma implementação de criptografia de chave pública com base em curvas elípticas sobre campos finitos. A ECC é matematicamente mais complexa que a RSA, fornece tamanhos de chave menores, reduz o consumo de memória e melhora o desempenho. Ela oferece a clientes e serviços Microsoft uma alternativa para chaves RSA e parâmetros de curva NIST aprovados.
 Microsoft Passport | Microsoft Passport é um método alternativo de autenticação que substitui as senhas por criptografia assimétrica e um gesto. As classes no namespace Credentials, como [KeyCredentialManger](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.keycredentialmanager.aspx), tornam mais fácil para os desenvolvedores criarem aplicativos usando o Microsoft Passport sem a complexidade da criptografia ou biometria.
-Microsoft Passport for Work | Microsoft Passport for Work é um método alternativo para entrar no Windows usando sua conta do Active Directory do Microsoft Azure que não usa senhas, cartões inteligentes físicos e virtuais. Você pode optar por habilitar ou desabilitar essa configuração de política.
+Microsoft Passport for Work | Microsoft Passport for Work é um método alternativo para entrar no Windows usando sua conta do Active Directory do Azure que não usa senhas, cartões inteligentes físicos e virtuais. Você pode optar por habilitar ou desabilitar essa configuração de política.
 Token Broker | O Token Broker é uma nova estrutura de autenticação que torna mais fácil para os aplicativos se conectarem a provedores de identidade online (como o Facebook). Recursos como gerenciamento de nome de usuário e senha da conta e uma interface do usuário simplificada oferecem uma experiência de autenticação aprimorada para os usuários.
 
 ## <a name="system-services"></a>Serviços do sistema
@@ -205,4 +202,3 @@ Método WebView.ClearTemporaryWebDataAsync | Quando um usuário interage com o c
 
 
 ---
-

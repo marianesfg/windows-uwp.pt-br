@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91ca9a29609cd52db24ddddecf60307e808cc064
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e861ce5d7c34098616fdc57c884402df4e4b0a7f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="feedback-report"></a>Relatório de comentários
 
 O **relatório de comentários** no painel do Centro de Desenvolvimento do Windows permite que você veja problemas, sugestões e aprovações que os clientes do Windows 10 enviaram através do Hub de Feedback. Você pode exibir esses dados em seu painel ou exportar os dados para exibição offline.
@@ -61,4 +58,3 @@ Observe que os comentários são traduzidos por um sistema de tradução automá
 ## <a name="launching-feedback-hub-directly-from-your-app"></a>Iniciando o Hub de Feedback diretamente em seu aplicativo
 
 Como observado acima, recomendamos a incorporação de um link para o Hub de Feedback diretamente em seu aplicativo para incentivar os clientes a fornecer comentários. Para obter mais informações, consulte [Iniciar o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md).
-

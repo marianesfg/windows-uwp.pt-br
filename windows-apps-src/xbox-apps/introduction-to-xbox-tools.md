@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6f2744a571e7a601eca058957cbe181a14143b68
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 536502316db43ccc04a42b935064294dc5173151
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-xbox-one-tools"></a>Introdução às ferramentas do Xbox One
 
 Esta seção aborda a ferramenta _Dev Home_ específica ao Xbox One usando o Windows Device Portal
@@ -37,10 +34,10 @@ A interface do usuário Dev Home é dividida em áreas descritas nas seções a 
 O cabeçalho contém informações importantes "em um relance" sobre o kit de desenvolvimento. Isso inclui o nome do console, seu endereço IP, a área restrita do Xbox Live na qual ele se encontra e a versão do sistema operacional que ele está executando. À direita do cabeçalho, a data e hora atual do sistema é mostrada por conveniência.
 
 #### <a name="tool-windows"></a>Janelas da ferramenta
-Sob o cabeçalho está a área principal do app que contém um conjunto de janelas de ferramentas configuráveis. Elas têm o objetivo de permitir que os desenvolvedores personalizem o app para fornecer acesso a várias ferramentas e conjuntos de informações. Para obter mais detalhes sobre as ferramentas, consulte as descrições de cada ferramenta a seguir. Para obter informações sobre como configurar o layout e a aparência das janelas da ferramenta, consulte a seção [Personalizando a Dev Home](#customizing-dev-home) posteriormente nesta página.
+Sob o cabeçalho está a área principal do aplicativo que contém um conjunto de janelas de ferramentas configuráveis. Elas têm o objetivo de permitir que os desenvolvedores personalizem o aplicativo para fornecer acesso a várias ferramentas e conjuntos de informações. Para obter mais detalhes sobre as ferramentas, consulte as descrições de cada ferramenta a seguir. Para obter informações sobre como configurar o layout e a aparência das janelas da ferramenta, consulte a seção [Personalizando a Dev Home](#customizing-dev-home) posteriormente nesta página.
 
 #### <a name="main-menu"></a>Menu principal
-Pressionando o botão **Menu** em seu controlador ou navegando para o botão ("Hambúrguer") do menu na parte superior esquerda da tela, você pode acessar o menu principal que permite que você configure a cor do tema e a imagem de plano de fundo do espaço de trabalho do app e fornecer comentários sobre o app.
+Pressionando o botão **Menu** em seu controlador ou navegando para o botão ("Hambúrguer") do menu na parte superior esquerda da tela, você pode acessar o menu principal que permite que você configure a cor do tema e a imagem de plano de fundo do espaço de trabalho do aplicativo e fornecer comentários sobre o aplicativo.
 
   ![Menu principal](images/devhome_mainmenu.png)
 
@@ -58,10 +55,10 @@ A Dev Home será ajustada à direita. Você pode alternar o contexto tocando dua
 #### <a name="tool-descriptions"></a>Descrições das ferramentas
 | Ferramenta    | Recursos |
 |-------|--------------|
-| Jogos e apps    | Lista os títulos e os apps instalados no kit de desenvolvimento e a capacidade de abri-los rapidamente. Você também pode exibir o estado do PLM (Gerenciamento do Tempo de Vida do Processo) de jogos e apps e alterar os estados do PLM de um menu de contexto. |
+| Jogos e aplicativos    | Lista os títulos e os aplicativos instalados no kit de desenvolvimento e a capacidade de abri-los rapidamente. Você também pode exibir o estado do PLM (Gerenciamento do Tempo de Vida do Processo) de jogos e aplicativos e alterar os estados do PLM de um menu de contexto. |
 | Usuários    | Lista os usuários registrados atualmente no console. Habilita a entrada de um clique de entrada/saída do usuário, adicionando os usuários e convidados e exibindo detalhes de usuários e convidados. |
 | [Configurações do console](#console-settings) | Fornece uma exibição "em um relance" e as opções de edição das configurações e informações do console. |
-| Visual Studio | Permite que você emparelhe o console com uma instância do Visual Studio para permitir a implantação. Se necessário, desmarque as instâncias emparelhadas existentes do VS para evitar a implantação do app UWP em um kit. |
+| Visual Studio | Permite que você emparelhe o console com uma instância do Visual Studio para permitir a implantação. Se necessário, desmarque as instâncias emparelhadas existentes do VS para evitar a implantação do aplicativo UWP em um kit. |
 | [Windows Device Portal](#windows-device-portal) |    Habilita o WDP (uma ferramenta de gerenciamento de dispositivos baseada em navegador) no kit. |
 | Status do Xbox Live | Fornece o status atual do serviço Xbox Live. |
 <br/>
@@ -127,7 +124,7 @@ Para habilitar o WDP no console do Xbox One:
   ![Aviso de certificado segurança](images/security_cert_warning.jpg)
 
 ## <a name="xbox-dev-mode-companion"></a>Complemento do modo de desenvolvimento do Xbox
-Complemento do modo de desenvolvimento do Xbox é uma ferramenta que permite que você trabalhe no seu console sem deixar seu computador. O app permite que você exiba a tela do console e envie a entrada para ele. Para obter mais informações, consulte [Complemento do modo de desenvolvimento do Xbox](xbox-dev-mode-companion.md).
+Complemento do modo de desenvolvimento do Xbox é uma ferramenta que permite que você trabalhe no seu console sem deixar seu computador. O aplicativo permite que você exiba a tela do console e envie a entrada para ele. Para obter mais informações, consulte [Complemento do modo de desenvolvimento do Xbox](xbox-dev-mode-companion.md).
 
 ## <a name="see-also"></a>Consulte também
 - [Como usar o Fiddler com o Xbox One ao desenvolver para UWP](uwp-fiddler.md)
@@ -136,4 +133,3 @@ Complemento do modo de desenvolvimento do Xbox é uma ferramenta que permite que
 
 
 ----
-

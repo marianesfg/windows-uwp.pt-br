@@ -1,27 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: "Use este método na API de envio da Windows Store para criar um novo envio de complemento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows."
-title: Criar um envio de complemento usando a API de envio da Windows Store
+description: "Use este método na API de envio da Windows Store para criar um novo envio de complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Criar um envio de complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, criar envio de complemento, produto in-App, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: f824fe7d37a4a2db4e336fd43c335047e09aa323
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3bf7379856a5011d5323351d7952091b0ff9d179
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-an-add-on-submission-using-the-windows-store-submission-api"></a>Criar um envio de complemento usando a API de envio da Windows Store
-
+# <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
 
 
-Use este método na API de envio da Windows Store para criar um novo envio de complemento (também conhecido como produto no app ou IAP) para um app que está registrado para sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-add-on-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-add-on-submission.md) para inclusão e publicação.
+
+Use este método na API de envio da Windows Store para criar um novo envio de complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-add-on-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-add-on-submission.md) para inclusão e publicação.
 
 Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -33,7 +30,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um complemento para um app em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um complemento](create-an-add-on.md).
+* Crie um complemento para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um complemento](create-an-add-on.md).
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
@@ -41,7 +38,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
 
@@ -60,7 +57,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | cadeia de caracteres | Obrigatório. A ID da Loja do complemento para o qual você deseja criar um envio. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
+| inAppProductId | string | Obrigatório. A ID da Loja do complemento para o qual você deseja criar um envio. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
 
 <span/>
 
@@ -124,7 +121,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
       }
     ],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -161,7 +158,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | O envio não pôde ser criado porque a solicitação não é válida. |
-| 409  | Não foi possível criar o envio por causa do estado atual do app, ou o app usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Não foi possível criar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
@@ -175,4 +172,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Atualizar um envio de complemento](update-an-add-on-submission.md)
 * [Excluir um envio de complemento](delete-an-add-on-submission.md)
 * [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
-

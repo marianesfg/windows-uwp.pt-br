@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras no aplicativo, IAPs, recebimentos, Windows.ApplicationModel.Store
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ada9038f9bd355bb4ab9f81967ebb2d47701cd8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4e167bf24f1f8362e7bd1e343ae34d9e0d2dde1c
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para verificar compras de produtos
 
 
->**Observação**&nbsp;&nbsp;Este artigo mostra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para obter e validar um recibo de uma compra realizada em aplicativo. Se você estiver usando o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) alternativo para realizar compras em aplicativo (introduzido no Windows 10, versão 1607), esse namespace não fornecerá uma API para a obtenção de recibos de compra realizada em aplicativo. No entanto, você pode usar um método REST na API de coleção da Windows Store para obter dados de uma transação de compra. Para obter mais informações, consulte [Recibos para compras realizadas em aplicativo](in-app-purchases-and-trials.md#receipts).
+> [!NOTE]
+> Este artigo mostra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para obter e validar um recibo de uma compra realizada em aplicativo. Se você estiver usando o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) alternativo para realizar compras em aplicativo (introduzido no Windows 10, versão 1607), esse namespace não fornecerá uma API para a obtenção de recibos de compra realizada em aplicativo. No entanto, você pode usar um método REST na API de coleção da Windows Store para obter dados de uma transação de compra. Para obter mais informações, consulte [Recibos para compras realizadas em aplicativo](in-app-purchases-and-trials.md#receipts).
 
 
 Cada transação da Windows Store que resulta em uma compra do produto bem-sucedida, pode retornar, opcionalmente, um recibo da transação. Esse recibo fornece informações sobre o produto listado e o custo monetário ao cliente.
@@ -148,4 +146,3 @@ Esse elemento contém informações sobre uma compra realizada em aplicativo par
  
 
  
-

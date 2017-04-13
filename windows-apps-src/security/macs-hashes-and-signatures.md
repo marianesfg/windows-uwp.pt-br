@@ -1,6 +1,6 @@
 ---
 title: MACs, hashes e assinaturas
-description: "Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em apps da Plataforma Universal do Windows (UWP) para detectar violação de mensagem."
+description: "Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
 ms.author: alkoren
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4de3b93cb6f86f409d6f915386b9d763056e89fa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="macs-hashes-and-signatures"></a>MACs, hashes e assinaturas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em apps da Plataforma Universal do Windows (UWP) para detectar violação de mensagem.
+Esse artigo discute como códigos de autenticação de mensagem (MACs), hashes e assinaturas podem ser usados em aplicativos da Plataforma Universal do Windows (UWP) para detectar violação de mensagem.
 
 ## <a name="message-authentication-codes-macs"></a>Códigos de autenticação de mensagem (MACs)
 
@@ -132,7 +129,7 @@ namespace SampleMacAlgorithmProvider
 ## <a name="hashes"></a>Hashes
 
 
-Uma função hash criptográfica assume um bloco de dados arbitrariamente longo e devolve uma cadeia de caracteres de bit de tamanho fixo. As funções hash são usadas normalmente quando da assinatura de dados. Como a maioria das operações de assinaturas de chaves públicas, geralmente é mais eficiente assinar (criptografar) um hash de mensagem do que assinar a mensagem original. O seguinte procedimento representa um cenário comum e simplificado:
+Uma função hash criptográfica assume um bloco de dados arbitrariamente longo e devolve uma sequência de caracteres de bit de tamanho fixo. As funções hash são usadas normalmente quando da assinatura de dados. Como a maioria das operações de assinaturas de chaves públicas, geralmente é mais eficiente assinar (criptografar) um hash de mensagem do que assinar a mensagem original. O seguinte procedimento representa um cenário comum e simplificado:
 
 -   Bob e Alice compartilham uma chave secreta e concordaram em usar uma função MAC.
 -   Bob cria uma mensagem e a insere, juntamente com a chave secreta, em uma função MAC para recuperar um valor MAC.

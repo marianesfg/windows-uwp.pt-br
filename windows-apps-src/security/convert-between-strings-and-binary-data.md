@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e1a1768734bb220fdfa292ff28ff6ef19f22ad41
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3317c1c05c8a9a51f0a4d3c363db9c92809c1919
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-between-strings-and-binary-data"></a>Converter entre cadeias de caracteres e dados binários
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um app da Plataforma Universal do Windows (UWP).
+Este exemplo de código mostra como converter entre cadeias de caracteres e dados binários em um aplicativo da Plataforma Universal do Windows (UWP).
 
 ```cs
 public void ConvertData()

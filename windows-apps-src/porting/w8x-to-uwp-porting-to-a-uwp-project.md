@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d711d981a674d1516b12ee11c379e679c45dcb60
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Portabilidade de um projeto do Windows Runtime 8.x para um projeto UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -180,5 +177,4 @@ O próximo tópico é [Solução de problemas](w8x-to-uwp-troubleshooting.md).
 * [Iniciar rapidamente seu aplicativo da Windows Store usando modelos (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Desenvolvimento entre Plataformas com a Biblioteca de Classes Portátil](http://msdn.microsoft.com/library/gg597391.aspx)
-
 

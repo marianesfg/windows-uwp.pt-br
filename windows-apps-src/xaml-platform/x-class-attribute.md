@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d44b9fafa0687bdd9f5e507fc7444313eff4ca3b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xclass-attribute"></a>Atributo x:Class
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -49,5 +46,4 @@ O valor do atributo **x:Class** deve ser uma cadeia de caracteres que especifica
 ## <a name="clr-language-rules"></a>Regras da linguagem CLR
 
 Embora seu arquivo code-behind possa ser um arquivo em C++, há certas convenções que ainda seguem a forma de linguagem CLR, para que não haja qualquer diferença na sintaxe XAML. Em particular, o separador entre os componentes namespace e classname de um valor **x:Class** é sempre um ponto ("."), mesmo que o separador entre namespace e classname do arquivo de código C++ associado ao XAML seja "::". Caso você declare namespaces aninhados em C++, o separador entre as cadeias de caracteres de namespaces aninhados sucessivos também deve ser "." em vez de "::" quando especifica a parte *namespace* do valor **x:Class**.
-
 

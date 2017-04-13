@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Enquadramento extensões para o Windows, aplicativos do Chrome para Windows, hwa-cli, crX convert para. AppX"
+keywords: "Extensões do Chrome para o Windows, aplicativos do Chrome para Windows, hwa-cli, converter .crx em .AppX"
 ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2168242d5464dbf41f12c777aa5672753a4ae6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="convert-your-existing-chrome-app-to-a-uwp-app"></a>Converter seu aplicativo Chrome existente em um aplicativo UWP
 
-# <a name="convert-your-existing-chrome-app-to-a-universal-windows-platform-app"></a>Converter seu aplicativo Chrome existente em um aplicativo da Plataforma Universal do Windows
-
-Tornamos fácil a conversão do seu aplicativo hospedado Chrome existente em um aplicativo em execução na Plataforma Universal do Windows (UWP). Há duas maneiras de converter seu aplicativo Chrome:
+Facilitamos a conversão do seu aplicativo hospedado Chrome existente em um aplicativo em execução na Plataforma Universal do Windows (UWP). Há duas maneiras de converter seu aplicativo Chrome:
 
 - Opção 1: [ManifoldJS](http://manifoldjs.com/) agora aceita manifestos do Chrome como uma forma de entrada. 
 
@@ -80,9 +77,9 @@ Diversos aplicativos usam sites de terceiros para seus fluxos de logon, por exem
 
 Flash não é permitido em aplicativos do Windows 10. Você precisará certificar-se de que sua experiência de aplicativo não é afetada por sua ausência.
 
-Para anúncios, você precisará certificar-se de que seu provedor de anúncios possui uma opção de HTML5. Você pode conferir [Anúncios do Bing](https://bingads.microsoft.com/) e [Anúncios em aplicativos](http://adsinapps.microsoft.com/).
+Para anúncios, você precisará certificar-se de que seu provedor de anúncios possui uma opção de HTML5. Você pode conferir o [Bing Ads](https://bingads.microsoft.com/) e as [bibliotecas do Microsoft Advertising](../monetize/display-ads-in-your-app.md). 
 
-Vídeos do YouTube ainda devem funcionar, já que agora são por [padrão, do tipo HTML5 `<video>`,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html) desde que esteja usando o [método de inserção `<iframe>`](https://developers.google.com/youtube/iframe_api_reference). Se seu aplicativo ainda usa a API Flash, você precisará alternar para o estilo de incorporar mencionado anteriormente.
+Os vídeos do YouTube ainda devem funcionar, já que o padrão deles agora é [o HTML5 `<video>`,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html), desde que você esteja usando o [método de inserção `<iframe>`](https://developers.google.com/youtube/iframe_api_reference). Se seu aplicativo ainda usa a API Flash, você precisará alternar para o estilo de incorporar mencionado anteriormente.
 
 ### <a name="image-assets"></a>Ativos de imagem
 
@@ -107,4 +104,3 @@ O Chrome fornece aplicativos com [APIs de finalidade especial](https://developer
 - [Melhorar seu aplicativo Web ao acessar recursos da Plataforma Universal do Windows(UWP)](./hwa-access-features.md)
 - [Guia para aplicativos UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Baixar ativos de design para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-

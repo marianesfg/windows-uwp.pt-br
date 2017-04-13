@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a4ee1fd29b276958ed6a18b4eadcd89d5ea914b6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mudar do Windows Runtime 8.x para a UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -63,10 +60,6 @@ Ao portar um aplicativo Universal 8.1 para o modelo de aplicativos UWP, praticam
 
 Antes ou durante a portabilidade, considere se o seu aplicativo pode ser melhorado por meio de refatoração, de forma que o código com finalidade semelhante seja agrupado em camadas e não fique espalhado arbitrariamente. A fatoração de seu aplicativo em camadas como as descritas acima facilita a correção do seu aplicativo, a aplicação de testes nele e, subsequentemente, a leitura e a manutenção dele. Você pode tornar a funcionalidade mais reutilizável seguindo o padrão Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Esse padrão mantém partes de dados, comercial e da interface do usuário de seu aplicativo separadas umas das outras. Mesmo na interface do usuário, ele mantém o estado e o comportamento separados, e testáveis separadamente, dos elementos visuais. Com o MVVM, você pode escrever seus dados e sua lógica de negócios uma vez e usá-los em todos os dispositivos, independentemente da interface do usuário. É provável que você também consiga reutilizar grande parte do modelo de exibição e do modo de exibição entre dispositivos.
 
-## <a name="if-you-have-a-microsoft-visual-studio-2015-rc-project"></a>Se você tiver um projeto do Microsoft Visual Studio 2015 RC
-
-Se você tiver um projeto do Windows 10 que você criou com o Microsoft Visual Studio 2015 RC, consulte [Atualizar seu projeto UWP Microsoft Visual Studio 2015 RC para RTM](update-your-visual-studio-2015-rc-project-to-rtm.md).
- 
 | Tópico | Descrição |
 |-------|-------------|
 | [Portando o projeto](w8x-to-uwp-porting-to-a-uwp-project.md) | Você tem duas opções ao começar o processo de portabilidade. Uma é editar uma cópia dos arquivos do seu projeto existente, inclusive o manifesto do pacote do aplicativo (para essa opção, consulte as informações sobre como atualizar seus arquivos de projeto em [Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/library/mt148501.aspx)). A outra opção é criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos para ele. |
@@ -83,5 +76,3 @@ Se você tiver um projeto do Windows 10 que você criou com o Microsoft Visual S
 * [Referência do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377)
 * [Criando aplicativos Universais do Windows para todos os dispositivos Windows](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Criando a experiência do usuário para aplicativos](https://msdn.microsoft.com/library/windows/apps/hh767284)
-
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Windows Store."
-title: "Exemplos de código Java para a API de envio da Windows Store"
+title: "Exemplos de código Java para a API de envio"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="java-code-examples-for-the-windows-store-submission-api"></a>Exemplos de código Java para a API de envio da Windows Store
+# <a name="java-code-examples-for-the-submission-api"></a>Exemplos de código Java para a API de envio
 
 Este artigo fornece exemplos de código Java para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
@@ -25,11 +22,11 @@ Estes exemplos de códigos demonstram as seguintes tarefas:
 * [Obter um token de acesso do Azure AD](#token)
 * [Criar um complemento](#create-add-on)
 * [Criar um pacote de pré-lançamento](#create-package-flight)
-* [Criar um envio de app](#create-app-submission)
+* [Criar um envio de aplicativo](#create-app-submission)
 * [Criar um envio de complemento](#create-add-on-submission)
 * [Criar um envio de pacote de pré-lançamento](#create-flight-submission)
 
-É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um app de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
+É possível examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para a listagem de código completo, consulte a seção [listagem de códigos](java-code-examples-for-the-windows-store-submission-api.md#code-listing) no final deste artigo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -48,14 +45,14 @@ O exemplo a seguir mostra as instruções de importação usadas por todos os ex
 <span id="token" />
 ## <a name="obtain-an-azure-ad-access-token"></a>Obtenha um token de acesso do Azure AD
 
-O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que é possível usar para chamar métodos na API de envio da Windows Store. Depois de obter um token, você terá 60 minutos para usá-lo em chamadas à API de envio da Windows Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
+O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) que é possível usar para chamar métodos na API de envio da Windows Store. Depois de obter um token, você tem 60 minutos para usá-lo em chamadas para a API de envio da Windows Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L65-L95)]
 
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Criar um complemento
 
-O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no app ou IAPs).
+O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 
@@ -67,13 +64,13 @@ O exemplo a seguir demonstra como [criar](create-a-flight.md) e depois [excluir]
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L185-L221)]
 
 <span id="create-app-submission" />
-## <a name="create-an-app-submission"></a>Criar um envio de app
+## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
-O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de app. Para isso, o método ```SubmitNewApplicationSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewApplicationSubmission``` realiza estas tarefas:
+O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows Store para criar um envio de aplicativo. Para isso, o método ```SubmitNewApplicationSubmission``` cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```SubmitNewApplicationSubmission``` realiza estas tarefas:
 
-1. Para começar, o método [obtém dados do app especificado](get-an-app.md).
+1. Para começar, o método [obtém dados do aplicativo especificado](get-an-app.md).
 2. Em seguida, ele [exclui o envio pendente para o app](delete-an-app-submission.md), caso haja um.
-3. Em seguida, ele [cria um novo envio para o app](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
+3. Em seguida, ele [cria um novo envio para o aplicativo](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
 5. Em seguida, ele [atualiza](update-an-app-submission.md) e [confirma](commit-an-app-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
@@ -113,7 +110,7 @@ O exemplo a seguir mostra como usar diversos métodos na API de envio da Windows
 
 Os seguintes métodos de utilitário demonstram estas tarefas:
 
-* Como carregar um arquivo ZIP contendo novos ativos para um envio de app ou complemento no armazenamento do Blob do Azure. Para obter mais informações sobre como carregar um arquivo ZIP no armazenamento do Blob do Azure para envios de app e complemento, consulte as instruções relevantes em [Criar um envio de app](manage-app-submissions.md#create-an-app-submission), [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission) e [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
+* Como carregar um arquivo ZIP contendo novos ativos para um envio de aplicativo ou complemento no armazenamento do Blob do Azure. Para obter mais informações sobre como carregar um arquivo ZIP no armazenamento do Blob do Azure para envios de aplicativo e complemento, consulte as instruções relevantes em [Criar um envio de aplicativo](manage-app-submissions.md#create-an-app-submission), [Criar um envio de complemento](manage-add-on-submissions.md#create-an-add-on-submission) e [Criar um envio de pacote de pré-lançamento](manage-flight-submissions.md#create-a-package-flight-submission).
 * Como manipular respostas à solicitação
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L433-L490)]
@@ -128,4 +125,3 @@ A listagem de código a seguir contém todos os exemplos anteriores organizados 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-

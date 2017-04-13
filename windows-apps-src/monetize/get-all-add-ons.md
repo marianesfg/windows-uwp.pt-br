@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: "Use este método na API de envio da Windows Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
-title: Obter todos os complementos usando a API de envio da Windows Store
+title: Obter todos os complementos
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complementos, produtos no aplicativo, IAPs
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 568dfb5dd47414a6ca4bb0c52ab36437bd119b73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bb31d8cbe60703aff179913648556f408ba65586
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-all-add-ons-using-the-windows-store-submission-api"></a>Obter todos os complementos usando a API de envio da Windows Store
+# <a name="get-all-add-ons"></a>Obter todos os complementos
 
 
 
@@ -145,7 +142,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 100 complementos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink ```inappproducts?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar os próximos 10 complementos. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres terá um caminho relativo que você pode acrescentar ao URI básico da solicitação ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar a próxima página de dados. Por exemplo, se o parâmetro *top* do corpo da solicitação inicial for definido como 10, mas houver 100 complementos registrados em sua conta, o corpo da resposta incluirá um valor @nextLink de ```inappproducts?skip=10&top=10```, o que indica que você pode chamar ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?skip=10&top=10``` para solicitar os próximos 10 complementos. |
 | value            | array  |  Uma matriz que contém objetos que fornecem informações sobre cada complemento. Para saber mais, veja [recurso de complemento](manage-add-ons.md#add-on-object).   |
 | totalCount   | int  | O número de objetos de aplicativo na matriz *value* do corpo da resposta.                                                                                                                                                 |
 
@@ -153,7 +150,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON retornado por uma solicita
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -169,4 +166,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Obter um complemento](get-an-add-on.md)
 * [Criar um complemento](create-an-add-on.md)
 * [Excluir um complemento](delete-an-add-on.md)
-

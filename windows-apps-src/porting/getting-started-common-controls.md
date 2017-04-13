@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-common-controls"></a>Introdução: controles comuns
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -66,4 +63,3 @@ Para ainda mais controles, consulte [Lista de controles](https://msdn.microsoft.
 * [Compilação 2014: e quanto a IU XAML e controles?](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [Compilação 2014: desenvolvendo aplicativos usando a estrutura da IU XAML comum](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [build 2014: usando o Visual Studio para compilar aplicativos convergidos para XAML](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-

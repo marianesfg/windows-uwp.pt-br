@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, AdControl, InterstitialAd"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93b56259314c54a56cd8ebbef89694319a95e41c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="workflows-for-creating-apps-with-ads"></a>Fluxos de trabalho para criar apps com anúncios
 
 
@@ -54,7 +51,7 @@ Use as instruções nos guias passo a passo a seguir para adicionar um [AdContro
 
 Ao usar um **AdControl** ou **InterstitialAd** para exibir anúncios em seu aplicativo, você deve especificar uma ID de aplicativo e a ID da unidade de anúncio em seu código para vincular seu aplicativo à sua conta do Centro de Desenvolvimento do Windows e para veicular anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do aplicativo de teste e ID da unidade de anúncio para ver como seu aplicativo renderiza anúncios durante o teste. Isso permite que você veja como o aplicativo está recebendo e renderizando anúncios durante o teste. Para obter mais informações, consulte [Valores de modo de teste](test-mode-values.md).
 
-Para obter projetos de exemplo completos que demonstram como adicionar anúncios intersticiais em faixa e vídeo a aplicativos JavaScript/HTML e XAML usando C# e C++, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
+Para obter projetos de exemplo completos que demonstram como adicionar anúncios intersticiais em faixa a apps JavaScript/HTML e XAML usando C# e C++, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
 ## <a name="configure-your-app-to-receive-live-ads"></a>Configure seu aplicativo para receber anúncios ativos
 
@@ -69,4 +66,3 @@ Depois que o aplicativo for publicado e disponibilizado na Windows Store, você 
  
 
  
-

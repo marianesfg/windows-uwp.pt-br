@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Portabilidade do Windows Runtime 8.x XAML e da interface do usuário para a UWP
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -198,7 +195,7 @@ Esta tabela descreve as alterações feitas nos estados visuais e nos grupos de 
 |                     | PointerOver             |                   | PointerOver         |
 |                     | Pressed                 |                   | Pressed             |
 |                     | PointerOverPressed      |                   | [indisponível]       |
-|                     | Disabled                |                   | [indisponível]       |
+|                     | Desabilitada                |                   | [indisponível]       |
 |                     | [indisponível]           |                   | PointerOverSelected |
 |                     | [indisponível]           |                   | Selected            |
 |                     | [indisponível]           |                   | PressedSelected     |
@@ -488,5 +485,4 @@ Para um aplicativo Universal 8.1, o elemento de manifesto do aplicativo [**Appli
 ```
 
 O próximo tópico é [Portabilidade para E/S, dispositivo e modelo de aplicativo](w8x-to-uwp-input-and-sensors.md).
-
 

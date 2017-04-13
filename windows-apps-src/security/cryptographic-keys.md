@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1396382c90b370aa9d610749a92dd256c92dedab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4026f1fa95261d9b05c8d1e8c7ace12b11503a17
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="cryptographic-keys"></a>Chaves criptográficas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar funções de derivação de chaves padrão para derivar chaves e como criptografar conteúdo usando chaves simétricas e assimétricas. 
@@ -29,7 +26,7 @@ Este artigo mostra como usar funções de derivação de chaves padrão para der
 
 A criptografia de chave simétrica, também chamada de criptografia de chave secreta, exige o uso da mesma chave para criptografia e descriptografia. Você pode usar uma classe [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) para especificar um algoritmo simétrico e criar ou importar uma chave. Você pode usar métodos estáticos na classe [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para criptografar e descriptografar dados usando o algoritmo e a chave.
 
-A criptografia de chave simétrica geralmente usa codificações de bloco e modos de codificação de bloco. Uma codificação de bloco é uma função de criptografia simétrica que opera em blocos de tamanho fixo. Se a mensagem que você quer criptografar é mais longa do que o comprimento do bloco, você deve usar um modo de codificação de bloco. Um modo de codificação de bloco é uma função de criptografia simétrica construída usando uma codificação de bloco. Ele criptografa texto sem formatação como uma série de blocos de tamanho fixo. Os seguintes modos são permitidos nos apps:
+A criptografia de chave simétrica geralmente usa codificações de bloco e modos de codificação de bloco. Uma codificação de bloco é uma função de criptografia simétrica que opera em blocos de tamanho fixo. Se a mensagem que você quer criptografar é mais longa do que o comprimento do bloco, você deve usar um modo de codificação de bloco. Um modo de codificação de bloco é uma função de criptografia simétrica construída usando uma codificação de bloco. Ele criptografa texto sem formatação como uma série de blocos de tamanho fixo. Os seguintes modos são permitidos nos aplicativos:
 
 -   O modo ECB (livro de código eletrônico) criptografa cada bloco da mensagem separadamente. Esse não é considerado um modo de criptografia seguro.
 -   O modo CBC (encadeamento de blocos de codificação) usa o bloco de texto cifrado anterior para obstruir o bloco atual. Você deve determinar qual valor usar para o primeiro bloco. Esse valor é chamado de vetor de inicialização (IV).
@@ -80,4 +77,3 @@ Geralmente é necessário derivar chaves adicionais de um segredo compartilhado.
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Cria um objeto KeyDerivationParameters para uso na função de derivação de chaves SP800-56A.                                                 |
 
  
-

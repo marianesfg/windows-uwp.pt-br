@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, thread, pool de threads
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: db5231c925575bef21b3d412feda367cd89fe7f4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Práticas recomendadas para usar o pool de threads
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tópico descreve práticas recomendadas para trabalhar com o pool de threads.
@@ -25,7 +23,7 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 ## <a name="dos"></a>Fazer
 
 
--   Use o pool de threads para realizar trabalho em paralelo em seu app.
+-   Use o pool de threads para realizar trabalho em paralelo em seu aplicativo.
 
 -   Use os itens de trabalho para realizar tarefas estendidas sem bloquear o thread de interface do usuário.
 
@@ -60,4 +58,3 @@ Este tópico descreve práticas recomendadas para trabalhar com o pool de thread
 * [Criar um item de trabalho periódico](create-a-periodic-work-item.md)
 * [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
-

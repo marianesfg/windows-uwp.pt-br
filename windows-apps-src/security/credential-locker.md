@@ -1,6 +1,6 @@
 ---
 title: Cofre de credenciais
-description: "Este artigo descreve como apps UWP (Plataforma Universal do Windows) podem usar o Cofre de credenciais para armazenar com segurança e recuperar credenciais do usuário, e alternar entre os dispositivos com a conta da Microsoft do usuário."
+description: "Este artigo descreve como aplicativos UWP (Plataforma Universal do Windows) podem usar o Cofre de credenciais para armazenar com segurança e recuperar credenciais do usuário, e alternar entre os dispositivos com a conta da Microsoft do usuário."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
 ms.author: alkoren
@@ -9,22 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d72432aa5f9ccc40d4f822f5d76c1e09b606e33a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 86862ae7eb630515f45ca2a5705c325e235e9bc0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="credential-locker"></a>Cofre de credenciais
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo descreve como apps UWP (Plataforma Universal do Windows) podem usar o Cofre de credenciais para armazenar com segurança e recuperar credenciais do usuário, e alternar entre os dispositivos com a conta da Microsoft do usuário.
+Este artigo descreve como aplicativos UWP (Plataforma Universal do Windows) podem usar o Cofre de credenciais para armazenar com segurança e recuperar credenciais do usuário, e alternar entre os dispositivos com a conta da Microsoft do usuário.
 
-Por exemplo, você possui um app que se conecta a um serviço para acessar recursos protegidos, como arquivos de mídia ou rede social. O seu serviço requer informações de logon para cada usuário. Você criou a interface do usuário em seu app que obtém o nome do usuário e a senha que são então usados para fazer logon do usuário no serviço. Usando a API do Cofre de credenciais, você pode armazenar o nome do usuário e a senha do seu usuário e recuperá-los com facilidade e fazer logon do usuário automaticamente na próxima vez em que ele abrir o app, independentemente do app em que ele está.
+Por exemplo, você possui um aplicativo que se conecta a um serviço para acessar recursos protegidos, como arquivos de mídia ou rede social. O seu serviço requer informações de logon para cada usuário. Você criou a interface do usuário em seu aplicativo que obtém o nome do usuário e a senha que são então usados para fazer logon do usuário no serviço. Usando a API do Cofre de credenciais, você pode armazenar o nome do usuário e a senha do seu usuário e recuperá-los com facilidade e fazer logon do usuário automaticamente na próxima vez em que ele abrir o aplicativo, independentemente do aplicativo em que ele está.
 
 O Cofre de credenciais funciona um pouco diferente para contas de domínio. Se houver credenciais armazenadas à sua conta da Microsoft e você associar essa conta a uma conta de domínio (como a conta que você usa no trabalho), suas credenciais se moverão para essa conta de domínio. No entanto, quaisquer credenciais novas adicionadas ao se conectar à conta de domínio não se moverão. Isso garante que credenciais privadas para o domínio não serão expostas fora do domínio.
 
@@ -32,7 +29,7 @@ O Cofre de credenciais funciona um pouco diferente para contas de domínio. Se h
 
 
 1.  Obtenha uma referência para o Cofre de credenciais usando o objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) do namespace [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089).
-2.  Crie um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contenha um identificador para o seu app, o nome de usuário e a senha, e passe isso para o método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para adicionar a credencial ao cofre.
+2.  Crie um objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contenha um identificador para o seu aplicativo, o nome de usuário e a senha, e passe isso para o método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para adicionar a credencial ao cofre.
 
 ```cs
 var vault = new Windows.Security.Credentials.PasswordVault();
@@ -45,7 +42,7 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
 
 Você tem várias opções para recuperar credenciais do usuário do Cofre de credenciais depois que tiver uma referência para o objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081).
 
--   É possível recuperar todas as credenciais do usuário fornecidas para o seu app no cofre com o método [**PasswordVault.RetrieveAll**](https://msdn.microsoft.com/library/windows/apps/br227088).
+-   É possível recuperar todas as credenciais do usuário fornecidas para o seu aplicativo no cofre com o método [**PasswordVault.RetrieveAll**](https://msdn.microsoft.com/library/windows/apps/br227088).
 
 -   Se você souber o nome do usuário para as credenciais armazenadas, poderá recuperar todas elas para esse nome de usuário com o método [**PasswordVault.FindAllByUserName**](https://msdn.microsoft.com/library/windows/apps/br227084).
 
@@ -53,7 +50,7 @@ Você tem várias opções para recuperar credenciais do usuário do Cofre de cr
 
 -   Finalmente, se você souber o nome do usuário e o nome do recurso de uma credencial, poderá recuperar apenas essa credencial, com o método [**PasswordVault.Retrieve**](https://msdn.microsoft.com/library/windows/apps/br227087).
 
-Vejamos um exemplo em que armazenamos o nome do recurso globalmente em um app e faremos logon automaticamente do usuário se encontrarmos uma credencial para ele. No caso de encontrarmos várias credenciais para o mesmo usuário, pediremos a ele para selecionar uma credencial padrão a ser usada ao fazer logon.
+Vejamos um exemplo em que armazenamos o nome do recurso globalmente em um aplicativo e faremos logon automaticamente do usuário se encontrarmos uma credencial para ele. No caso de encontrarmos várias credenciais para o mesmo usuário, pediremos a ele para selecionar uma credencial padrão a ser usada ao fazer logon.
 
 ```cs
 private string resourceName = "My App";
@@ -136,4 +133,4 @@ Salve senhas no cofre de credenciais somente se os seguintes critérios forem at
 -   O usuário entrou com êxito.
 -   O usuário optou por salvar senhas.
 
-Nunca armazene credenciais em texto sem formatação usando dados de app ou configurações de roaming.
+Nunca armazene credenciais em texto sem formatação usando dados de aplicativo ou configurações de roaming.

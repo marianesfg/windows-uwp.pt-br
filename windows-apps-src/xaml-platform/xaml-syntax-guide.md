@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 36fb575659b5334c6215e1686aeb02d74b9f8fd5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c8d44bdbbad763ad4c24b37b3bd7760c8d630c1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-syntax-guide"></a>Guia de sintaxe do XAML
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -321,5 +318,4 @@ As seções de uso XAML também empregam diversos espaços reservados generaliza
 * [Namespaces XAML e mapeamento de namespace](xaml-namespaces-and-namespace-mapping.md)
 * [Referências de recursos de ResourceDictionary e XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
  
-
 

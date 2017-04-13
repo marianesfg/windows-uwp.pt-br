@@ -1,28 +1,32 @@
 ---
-author: shawjohn
-Description: "Confira como enviar notificações por push direcionadas do Centro de Desenvolvimento do Windows ao seu aplicativo para incentivar os clientes a executar uma ação, como classificar um aplicativo ou comprar um complemento."
+author: JnHs
+Description: "Saiba como enviar notificações por push direcionadas do Centro de Desenvolvimento do Windows ao seu aplicativo para incentivar os clientes a executar uma ação, como classificar um aplicativo ou comprar um complemento."
 title: "Enviar notificações por push direcionadas para clientes do seu aplicativo"
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a2bd3308863b6343a7616bf86e0b0036f1631bcd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ca57ff45d440ebd68f7fb85b7d6a5da0a9f1995c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="send-targeted-push-notifications-to-your-apps-customers"></a>Enviar notificações por push direcionadas para clientes do seu aplicativo
 
-Interagir com seus clientes no momento certo e com a mensagem certa é essencial para seu sucesso como um desenvolvedor de aplicativos. O Centro de Desenvolvimento do Windows fornece uma plataforma de engajamento do cliente controlada por dados que pode ser usada para enviar notificações por push a todos os seus clientes ou apenas a um subconjunto de seus clientes do Windows 10 que atendem aos critérios que você definiu em um [segmento do cliente](create-customer-segments.md).
+Interagir com seus clientes no momento certo e com a mensagem certa é essencial para o sucesso como um desenvolvedor de aplicativos. O Centro de Desenvolvimento do Windows fornece uma plataforma de engajamento do cliente controlada por dados que pode ser usada para enviar notificações por push a todos os seus clientes ou apenas a um subconjunto de seus clientes do Windows 10 que atendem aos critérios que você definiu em um [segmento do cliente](create-customer-segments.md).
 
 Você pode usar notificações por push direcionadas para incentivar os clientes a executar uma ação, como classificar um aplicativo, comprar um complemento, experimentar um novo recurso ou baixar outro aplicativo.
 
 > **Importante** Notificações por push direcionadas só podem ser usadas com aplicativos UWP.
+
+Ao considerar o conteúdo de suas notificações, tenha em mente:
+- O conteúdo em suas notificações deve estar de acordo com as [Políticas de Conteúdo da Loja](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies).
+- Seu conteúdo da notificação não deve incluir informações confidenciais ou potencialmente sensíveis.
+- Embora nos esforçamos para entregar a notificação conforme agendado, pode haver, ocasionalmente, problemas de latência que impactam a entrega.
+- Certifique-se de não enviar notificações muitas vezes. Mais de uma vez a cada 30 minutos pode parecer intrusivo (e para muitos cenários, menos frequência do que isso é preferível).
+- Saiba que, se um cliente que usa seu aplicativo (e está atribuído a sua conta da Microsoft no momento em que a associação de segmento é determinada), e o usuário da conta fornece seu dispositivo para outra pessoa usar, a outra pessoa pode ver a notificação que era para o cliente original. Para obter mais informações, consulte [Configurar seu aplicativo para notificações por push direcionada](../monetize/configure-your-app-to-receive-dev-center-notifications.md#notification-customers).
 
 ## <a name="getting-started-with-push-notifications"></a>Introdução a notificações por push
 
@@ -33,18 +37,21 @@ Em um nível superior, você precisa fazer três coisas para usar notificações
 
 ## <a name="to-create-and-send-a-targeted-push-notification"></a>Para criar e enviar uma notificação por push direcionada.
 
-1. Se você ainda não fez isso, instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) e chame o método [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) no código de inicialização em seu aplicativo para registrar o aplicativo para receber notificações. Para obter mais informações sobre como chamar esse método, consulte [Configurar seu aplicativo para receber notificações do Centro de Desenvolvimento](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
-2.    No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), selecione seu aplicativo.
-3.    No menu de navegação esquerdo, expanda **Serviços** e selecione **notificações por Push**.
-4.    Na página **Notificações por push direcionadas**, selecione **Nova notificação**.
-5.    Na seção **Selecionar um modelo**, escolha o tipo de notificação que deseja enviar. Para obter detalhes, consulte [Tipos de modelo de notificação](#notification-template-types).
+Siga estas etapas para criar uma notificação por push no painel e enviá-la para um segmento de cliente específico.
+
+> **Observação** Antes de seu aplicativo poder receber notificações por push direcionadas do Centro de Desenvolvimento, você deverá primeiro chamar o método [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) em seu aplicativo para registrar seu aplicativo e receber notificações. Esse método está disponível no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar seu aplicativo para receber notificações do Centro de Desenvolvimento](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+
+1.    No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), selecione seu aplicativo.
+2.    No menu de navegação esquerdo, expanda **Serviços** e selecione **notificações por Push**.
+3.    Na página **Notificações por push direcionadas**, selecione **Nova notificação**.
+4.    Na seção **Selecionar um modelo**, escolha o tipo de notificação que deseja enviar. Para obter detalhes, consulte [Tipos de modelo de notificação](#notification-template-types).
   ![Modelos de notificação](images/push-notifications-template.png)
-6.    Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e escolha o **Grupo de clientes** para o qual deseja enviar a notificação.
+5.    Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e escolha o **Grupo de clientes** para o qual deseja enviar a notificação.
 Se você ainda não criou um segmento, selecione **Criar novo grupo de clientes**. Observe que leva 24 horas para que um novo segmento esteja disponível para usar notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
-7.    Se você quiser especificar quando enviar a notificação, limpe a caixa de seleção **Enviar notificação imediatamente** e escolha data e hora específicas.
-8.    Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas.
-9.    Na seção **Conteúdo da notificação**, no menu **Idioma**, escolha os idiomas em que você deseja que sua notificação seja exibida. Para obter mais informações, consulte [Traduzir suas notificações](#translate-your-notifications).
-10.    Na seção **Opções**, insira texto e configure as outras opções que desejar. Se você começou com um modelo, parte disso é fornecido por padrão, mas você pode fazer quaisquer alterações que desejar.
+6.    Se você quiser especificar quando enviar a notificação, limpe a caixa de seleção **Enviar notificação imediatamente** e escolha data e hora específicas.
+7.    Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas.
+8.    Na seção **Conteúdo da notificação**, no menu **Idioma**, escolha os idiomas em que você deseja que sua notificação seja exibida. Para obter mais informações, consulte [Traduzir suas notificações](#translate-your-notifications).
+9.    Na seção **Opções**, insira texto e configure as outras opções que desejar. Se você começou com um modelo, parte disso é fornecido por padrão, mas você pode fazer quaisquer alterações que desejar.
    As opções disponíveis variam, dependendo de qual tipo de notificação você está usando. Algumas das opções são:
    - **Tipo de ativação** (tipo de notificação do sistema interativa). Você pode escolher **Em primeiro plano**, **Em segundo plano**, ou **Protocolo**.
    - **Iniciar** (tipo de notificação do sistema interativa). Você pode optar por ter a notificação abrir um aplicativo ou site.
@@ -54,14 +61,12 @@ Se você ainda não criou um segmento, selecione **Criar novo grupo de clientes*
    - **URI base** (tipo de notificação do sistema interativa). Para obter mais detalhes, veja [BaseUri](https://msdn.microsoft.com/library/windows/apps/br208712).
    - **Adicionar consulta de imagem** (tipo de notificação do sistema interativa). Para obter mais detalhes, consulte [addImageQuery](https://msdn.microsoft.com/library/windows/apps/br230847).
    - **Visual**. Uma imagem, vídeo ou som. Para obter mais detalhes, consulte [visual](https://msdn.microsoft.com/library/windows/apps/br230847).
-   - **Entrada**/**Ação**/**Seleção** (tipo de notificação do sistema interativa). Permite que você possibilite aos usuários interagirem com a notificação. Para obter mais informações, consulte [Notificações do sistema interativas e adaptáveis](../controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts.md#actions)
+   - **Entrada**/**Ação**/**Seleção** (tipo de notificação do sistema interativa). Permite que você possibilite aos usuários interagirem com a notificação. Para obter mais informações, consulte [Notificações do sistema interativas e adaptáveis](../controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts.md#actions).
    - **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, veja [binding](https://msdn.microsoft.com/library/windows/apps/br230843).
 
    > **Dica**  Tente usar o aplicativo [Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1) para projetar e testar seus blocos adaptáveis e notificações do sistema interativas.
 
-11.    Selecione **Salvar como rascunho** para continuar trabalhando na notificação mais tarde, ou selecione **Enviar** se você tiver terminado.
-
-> **Observação** O conteúdo em suas notificações deve estar de acordo com as [Políticas de Conteúdo](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies) da Loja.
+10.    Selecione **Salvar como rascunho** para continuar trabalhando na notificação mais tarde, ou selecione **Enviar** se você tiver terminado.
 
 ## <a name="notification-template-types"></a>Tipos de modelo de notificação
 
@@ -79,7 +84,7 @@ Você pode escolher dentre uma variedade de modelos de notificação.
 
   ![Caixa Iniciar da notificação do sistema de promover](images/push-notifications-promote-toast-launch-box.png)
 -    **Promover uma venda (Notificação do sistema).** Uma notificação do sistema que você pode usar para anunciar uma promoção para seu aplicativo. Quando o cliente seleciona a notificação, os detalhes de seu aplicativo na Loja são exibidos.
-- **Solicitação de atualização (Notificação do sistema).** Uma notificação do sistema que incentiva os clientes que estejam executando uma versão mais antiga do seu aplicativo a instalarem a versão mais recente. Quando o cliente seleciona a notificação, a lista **Downloads e atualizações** no aplicativo da Loja é exibida. Observe que você não precisa criar um segmento de cliente para usar esse modelo. Agendaremos essa notificação dentro de 24 horas e nos esforçaremos ao máximo para ter como alvo todos os usuários que ainda não estejam executando a versão mais recente do seu aplicativo.
+- **Solicitação de atualização (Notificação do sistema).** Uma notificação do sistema que incentiva os clientes que estejam executando uma versão mais antiga do seu aplicativo a instalarem a versão mais recente. Quando o cliente seleciona a notificação, a lista **Transferência e atualizações** no aplicativo da Loja é exibida. Observe que você não precisa criar um segmento de cliente para usar esse modelo. Agendaremos essa notificação dentro de 24 horas e nos esforçaremos ao máximo para ter como alvo todos os usuários que ainda não estejam executando a versão mais recente do seu aplicativo.
 
 ## <a name="measure-notification-performance"></a>Avalie o desempenho das notificações
 
@@ -126,4 +131,3 @@ Coisas a serem lembradas sobre tradução:
 - [Aplicativo Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | método registerNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
 - [Segmentação de clientes e notificações por push: um novo recurso do Programa Insider do Centro de Desenvolvimento do Windows (postagem de blog)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)
-

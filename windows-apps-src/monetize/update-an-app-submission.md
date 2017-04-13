@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Use este método na API de envio da Windows Store para atualizar um envio de aplicativo existente."
-title: Atualizar um envio de aplicativo usando a API de envio da Windows Store
+title: Atualizar um envio de aplicativo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envio de aplicativo, atualização"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: df52b5de7751d8428a92bd3892f91159c5fdd518
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a4b7816d0d6e47282864992044eea58eaaa05d1d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-an-app-submission-using-the-windows-store-submission-api"></a>Atualizar um envio de aplicativo usando a API de envio da Windows Store
+# <a name="update-an-app-submission"></a>Atualizar um envio de aplicativo
 
 Use este método na API de envio da Windows Store para atualizar um envio de aplicativo existente. Depois de atualizar com êxito um envio usando esse método, você deverá [confirmar o envio](commit-an-app-submission.md) para ingestão e publicação.
 
@@ -27,7 +24,7 @@ Para obter mais informações sobre como esse método se adapta ao processo de c
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
@@ -36,7 +33,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | PUT   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}  ``` |
 
@@ -110,13 +107,17 @@ Content-Type: application/json
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+          "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -127,9 +128,13 @@ Content-Type: application/json
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1"
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -152,7 +157,7 @@ Content-Type: application/json
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -192,13 +197,17 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+           "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -209,9 +218,13 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1",
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -255,7 +268,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -295,4 +308,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Excluir um envio de aplicativo](delete-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-

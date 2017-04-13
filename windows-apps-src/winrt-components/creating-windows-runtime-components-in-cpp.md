@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Criando componentes do Windows Runtime em C++
-description: "Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++."
+description: "Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo Universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,20 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 28d03486f6fb2f7a249af82d2c3be6006c9d80ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2adebf94f016baf014788062f82d7fe933b7fb10
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="creating-windows-runtime-components-in-c"></a>Criando componentes do Windows Runtime em C++
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++.
+Este artigo mostra como usar C++ para criar um componente do Tempo de Execução do Windows, que é uma DLL que pode ser chamada em um aplicativo Universal do Windows compilado com JavaScript – ou C#, Visual Basic ou C++.
 
 Aqui estão vários motivos para a compilação desse componente:
 
@@ -32,7 +28,7 @@ Aqui estão vários motivos para a compilação desse componente:
 
 Quando você compila uma solução que contém um projeto JavaScript ou .NET e um projeto de componente do Tempo de Execução do Windows, os arquivos de projeto JavaScript e a DLL compilada são mesclados em um único pacote, que é possível depurar localmente no simulador ou remotamente em um dispositivo vinculado. Também é possível distribuir apenas o projeto de componente como um SDK de extensão. Para obter mais informações, consulte [Criação de um Software Development Kit](https://msdn.microsoft.com/library/hh768146.aspx).
 
-Em geral, ao codificar o componente em C++, use a biblioteca C++ regular e os tipos internos, exceto no limite da interface binária abstrata (ABI) onde você passa dados para e de código em outro pacote .winmd. Lá, use tipos do Windows Runtime e a sintaxe especial a que o Visual C++ dá suporte para criar e tratar esses tipos. Além disso, no código em Visual C++, use tipos como representantes e eventos para implementar eventos que possam ser disparados no componente e manipulados em JavaScript, Visual Basic ou C#. Para obter mais informações sobre a nova sintaxe do Visual C++, consulte [ Referência da linguagem Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+Em geral, ao codificar o componente em C++, use a biblioteca C++ regular e os tipos internos, exceto no limite da interface binária abstrata (ABI) onde você passa dados para e de código em outro pacote .winmd. Lá, use tipos do Windows Runtime e a sintaxe especial a que o Visual C++ dá suporte para criar e manipular esses tipos. Além disso, no código em Visual C++, use tipos como representantes e eventos para implementar eventos que possam ser disparados no componente e manipulados em JavaScript, Visual Basic ou C#. Para obter mais informações sobre a nova sintaxe do Visual C++, consulte [ Referência da linguagem Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Uso de maiúsculas e regras de nomenclatura
 
@@ -374,7 +370,7 @@ private void GetDictionary()
 ## <a name="properties"></a>Propriedades
 
 
-Uma classe ref pública em extensões de componente Visual C++ expõe membros de dados públicos como propriedades usando a palavra-chave property. O conceito é idêntico a propriedades do .NET Framework. Uma propriedade trivial se parece com um membro de dados porque a funcionalidade é implícita. Uma propriedade não trivial tem acessadores get e set explícitos e uma variável privada nomeada que é o "armazenamento de backup" para o valor. Neste exemplo, a variável de membro privado \_propertyAValue é o repositório de suporte de PropertyA. Uma propriedade pode acionar um evento quando o valor é alterado e um app cliente pode se registrar para receber esse evento.
+Uma classe ref pública em extensões de componente Visual C++ expõe membros de dados públicos como propriedades usando a palavra-chave property. O conceito é idêntico a propriedades do .NET Framework. Uma propriedade trivial se parece com um membro de dados porque a funcionalidade é implícita. Uma propriedade não trivial tem acessadores get e set explícitos e uma variável privada nomeada que é o "armazenamento de backup" para o valor. Neste exemplo, a variável de membro privado \_propertyAValue é o repositório de suporte de PropertyA. Uma propriedade pode acionar um evento quando o valor é alterado e um aplicativo cliente pode se registrar para receber esse evento.
 
 ```cpp
 //Properties
@@ -602,4 +598,3 @@ Caso remova um projeto de componente do Tempo de Execução do Windows C++ de um
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Procedimento passo a passo: criando um componente do Tempo de Execução do Windows básico em C++ e chamando-o em JavaScript ou C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
-

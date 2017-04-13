@@ -9,14 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 7da8727d3f901cfbab7c68d0b7f7362438d3fc65
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
 O tempo estimado para transferir pagamentos, os limites de pagamento aplicáveis e os marketplaces Microsoft dos quais você pode receber pagamentos podem variar dependendo do país/região e do tipo de conta de pagamento. Este tópico descreve os limites e as formas de pagamento compatíveis em cada país/região.
@@ -44,6 +40,11 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 
 > **Observação** Os limites de pagamento estão listados em USD. Em alguns mercados, é usado o equivalente em moeda local. 
 
+- [Windows Store](#windows-store)
+- [Microsoft Advertising](#microsoft-advertising)
+- [Azure Marketplace](#azure-marketplace)
+- [Office Store](#office-store)
+
 ### <a name="windows-store"></a>Windows Store 
 
 <table>
@@ -63,50 +64,50 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Afeganistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Albânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argélia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Antígua e Barbuda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Armênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Austrália</td>
@@ -126,29 +127,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Azerbaijão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bahrein</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bélgica</td>
@@ -161,71 +162,71 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Benim</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bolívia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bósnia e Herzegovina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Botsuana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Brasil</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bulgária</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burquina Faso</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camboja</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camarões</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Canadá</td>
@@ -238,22 +239,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>República Centro-Africana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chade</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
@@ -266,50 +267,50 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Colômbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Comores</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Côte d’Ivoire</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Croácia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chipre</td>
@@ -336,43 +337,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Dominica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>República Dominicana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Equador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Egito</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Eritreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Estônia</td>
@@ -385,15 +386,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Etiópia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Fiji</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Finlândia</td>
@@ -413,8 +414,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Geórgia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Alemanha</td>
@@ -427,8 +428,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Gana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Grécia</td>
@@ -441,29 +442,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Guatemala</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Guiné</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>RAE de Hong Kong</td>
@@ -483,29 +484,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Islândia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Índia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Indonésia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Iraque</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Irlanda</td>
@@ -532,8 +533,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jamaica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Japão</td>
@@ -546,64 +547,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jordânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cazaquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Quênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Coreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Letônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Líbano</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Libéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
@@ -616,8 +617,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Luxemburgo</td>
@@ -630,36 +631,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Macedônia (ARIM)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Maláui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malásia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Máli</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -672,8 +673,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Maurício</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>México</td>
@@ -686,43 +687,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Mônaco</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Mongólia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Marrocos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Moçambique</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Países Baixos</td>
@@ -742,22 +743,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Nicarágua</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Níger</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nigéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Noruega</td>
@@ -770,36 +771,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Omã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Panamá</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paraguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Filipinas</td>
@@ -826,15 +827,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Catar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Romênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Rússia</td>
@@ -847,43 +848,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Ruanda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>São Vicente e Granadinas</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Arábia Saudita</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Sérvia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Serra Leoa</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cingapura</td>
@@ -910,15 +911,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Somália</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>África do Sul</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Espanha</td>
@@ -931,8 +932,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Sri Lanka</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Suécia</td>
@@ -959,15 +960,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Tadjiquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tanzânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tailândia</td>
@@ -980,64 +981,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Timor-Leste</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tonga</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Trinidad e Tobago</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tunísia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turquia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turcomenistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Ucrânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
@@ -1064,43 +1065,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Uruguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uzbequistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Vietnã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zâmbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zimbábue</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
 
@@ -1125,50 +1126,50 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Afeganistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Albânia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argélia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Antígua e Barbuda</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Armênia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Austrália</td>
@@ -1188,29 +1189,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Azerbaijão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bahrein</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bélgica</td>
@@ -1223,71 +1224,71 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Benim</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bolívia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bósnia e Herzegovina</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Botsuana</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Brasil</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bulgária</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burquina Faso</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camboja</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camarões</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Canadá</td>
@@ -1300,22 +1301,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>República Centro-Africana</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chade</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
@@ -1328,50 +1329,50 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Colômbia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Comores</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Côte d’Ivoire</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Croácia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chipre</td>
@@ -1398,43 +1399,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Dominica</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>República Dominicana</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Equador</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Egito</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Eritreia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Estônia</td>
@@ -1447,15 +1448,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Etiópia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Fiji</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Finlândia</td>
@@ -1475,8 +1476,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Geórgia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Alemanha</td>
@@ -1489,8 +1490,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Gana</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Grécia</td>
@@ -1503,29 +1504,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Guatemala</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Guiné</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>RAE de Hong Kong</td>
@@ -1545,29 +1546,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Islândia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Índia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Indonésia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Iraque</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Irlanda</td>
@@ -1594,8 +1595,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jamaica</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Japão</td>
@@ -1608,64 +1609,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jordânia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cazaquistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Quênia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Coreia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Letônia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Líbano</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Libéria</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
@@ -1678,8 +1679,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Lituânia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Luxemburgo</td>
@@ -1692,36 +1693,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Macedônia (ARIM)</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Maláui</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malásia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Máli</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -1734,8 +1735,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Maurício</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>México</td>
@@ -1748,43 +1749,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Mônaco</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Mongólia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Marrocos</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Moçambique</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Países Baixos</td>
@@ -1804,22 +1805,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Nicarágua</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Níger</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nigéria</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Noruega</td>
@@ -1832,36 +1833,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Omã</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paquistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Panamá</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paraguai</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Filipinas</td>
@@ -1888,15 +1889,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Catar</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Romênia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Rússia</td>
@@ -1909,43 +1910,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Ruanda</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>São Vicente e Granadinas</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Arábia Saudita</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Sérvia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Serra Leoa</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cingapura</td>
@@ -1972,15 +1973,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Somália</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>África do Sul</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Espanha</td>
@@ -1993,8 +1994,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Sri Lanka</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Suécia</td>
@@ -2021,15 +2022,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Tadjiquistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tanzânia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tailândia</td>
@@ -2042,64 +2043,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Timor-Leste</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tonga</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Trinidad e Tobago</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tunísia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turquia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turcomenistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Ucrânia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
@@ -2126,43 +2127,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Uruguai</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uzbequistão</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Vietnã</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zâmbia</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zimbábue</td>
     <td>50 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
 
@@ -2187,50 +2188,50 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Afeganistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Albânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argélia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 <tr>
     <td>Antígua e Barbuda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  <tr>
     <td>Argentina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Armênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Austrália</td>
@@ -2250,29 +2251,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Azerbaijão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bahrein</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
     <tr>
     <td>Bélgica</td>
@@ -2285,71 +2286,71 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Benim</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bolívia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bósnia e Herzegovina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Botsuana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Brasil</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Bulgária</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 <tr>
     <td>Burquina Faso</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camboja</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camarões</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
     <tr>
     <td>Canadá</td>
@@ -2362,71 +2363,71 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>República Centro-Africana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chade</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Colômbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Comores</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Côte d’Ivoire</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Croácia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chipre</td>
@@ -2453,43 +2454,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Dominica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>República Dominicana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Equador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Egito</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Eritreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Estônia</td>
@@ -2502,15 +2503,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Etiópia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Fiji</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Finlândia</td>
@@ -2530,8 +2531,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Geórgia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  <tr>
     <td>Alemanha</td>
@@ -2544,8 +2545,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Gana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  <tr>
     <td>Grécia</td>
@@ -2558,29 +2559,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Guatemala</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Guiné</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>RAE de Hong Kong</td>
@@ -2600,29 +2601,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Islândia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Índia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Indonésia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Iraque</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Irlanda</td>
@@ -2649,8 +2650,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jamaica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  <tr>
     <td>Japão</td>
@@ -2663,64 +2664,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jordânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cazaquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Quênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Coreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Letônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Líbano</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Libéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
@@ -2733,8 +2734,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Luxemburgo</td>
@@ -2747,36 +2748,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Macedônia (ARIM)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Maláui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malásia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Máli</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Malta</td>
@@ -2789,8 +2790,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Maurício</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>México</td>
@@ -2803,43 +2804,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Mônaco</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Mongólia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Marrocos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Moçambique</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Países Baixos</td>
@@ -2852,22 +2853,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Nicarágua</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Níger</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nigéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Noruega</td>
@@ -2880,36 +2881,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Omã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Panamá</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paraguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Filipinas</td>
@@ -2936,15 +2937,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Catar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Romênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  <tr>
     <td>Rússia</td>
@@ -2957,43 +2958,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Ruanda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>São Vicente e Granadinas</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Arábia Saudita</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Sérvia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Serra Leoa</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cingapura</td>
@@ -3020,15 +3021,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Somália</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>África do Sul</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
    <tr>
     <td>Espanha</td>
@@ -3041,8 +3042,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Sri Lanka</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Suécia</td>
@@ -3069,15 +3070,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Tadjiquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tanzânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tailândia</td>
@@ -3090,64 +3091,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Timor-Leste</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tonga</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Trinidad e Tobago</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tunísia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turquia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turcomenistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Ucrânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
@@ -3174,43 +3175,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Uruguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uzbequistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Vietnã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zâmbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zimbábue</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
  </table>
 
@@ -3234,36 +3235,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Albânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argélia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Andorra</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Angola</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Argentina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Austrália</td>
@@ -3283,29 +3284,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Azerbaijão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bahrein</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bangladesh</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Belarus</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bélgica</td>
@@ -3318,64 +3319,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Benim</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bolívia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bósnia e Herzegovina</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Brasil</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Bulgária</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burquina Faso</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Burundi</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camboja</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Camarões</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Canadá</td>
@@ -3388,22 +3389,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>República Centro-Africana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chade</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chile</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>China</td>
@@ -3416,43 +3417,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Colômbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Congo (República Democrática)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Côte d’Ivoire</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Croácia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Chipre</td>
@@ -3479,36 +3480,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>República Dominicana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Equador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Egito</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>El Salvador</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Eritreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Estônia</td>
@@ -3521,8 +3522,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Etiópia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Finlândia</td>
@@ -3542,8 +3543,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Geórgia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Alemanha</td>
@@ -3556,8 +3557,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Gana</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Grécia</td>
@@ -3570,29 +3571,29 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Guatemala</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Guiné</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Haiti</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Honduras</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>RAE de Hong Kong</td>
@@ -3612,22 +3613,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Islândia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Índia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Indonésia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Irlanda</td>
@@ -3654,8 +3655,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jamaica</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Japão</td>
@@ -3668,64 +3669,64 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Jordânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cazaquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Quênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Coreia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Kuwait</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Quirguistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Laos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Letônia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Libéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Liechtenstein</td>
@@ -3738,8 +3739,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Lituânia</td>
     <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Luxemburgo</td>
@@ -3752,36 +3753,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Macedônia (ARIM)</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Madagascar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Maláui</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malásia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Máli</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Malta</td>
@@ -3801,36 +3802,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Mongólia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Montenegro</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Marrocos</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Moçambique</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nepal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Países Baixos</td>
@@ -3850,22 +3851,22 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Nicarágua</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Níger</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Nigéria</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Noruega</td>
@@ -3878,36 +3879,36 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Omã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paquistão</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Panamá</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Paraguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Peru</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Filipinas</td>
@@ -3934,57 +3935,57 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Porto Rico</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Catar</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Romênia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Ruanda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Arábia Saudita</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Senegal</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Sérvia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Serra Leoa</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Cingapura</td>
@@ -4011,15 +4012,15 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Somália</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>África do Sul</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Espanha</td>
@@ -4032,8 +4033,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Sri Lanka</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Suécia</td>
@@ -4060,8 +4061,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Tanzânia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tailândia</td>
@@ -4074,43 +4075,43 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Timor-Leste</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Togo</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Trinidad e Tobago</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Tunísia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Turquia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Uganda</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
@@ -4137,36 +4138,35 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
     <td>Uruguai</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Venezuela</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Vietnã</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zâmbia</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
   <tr>
     <td>Zimbábue</td>
     <td>200 USD</td>
     <td>Transferência eletrônica</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td>N/D</td>
+    <td>N/D</td>
   </tr>
 </table>
-

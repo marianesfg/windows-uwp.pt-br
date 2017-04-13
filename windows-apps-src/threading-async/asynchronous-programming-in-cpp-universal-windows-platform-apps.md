@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: "Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe de tarefa definida no namespace de simultaneidade em ppltasks.h."
+description: "Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe task definida no namespace concurrency em ppltasks.h."
 title: "Programação assíncrona em C++"
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, threads, assíncrono, C++"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 112b5d58064ae6cd006d791a2c4534848baee259
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c74a2d18a0852d28cf33715a540356a61438ff48
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="asynchronous-programming-in-c"></a>Programação assíncrona em C++
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe `task` definida no namespace `concurrency` em ppltasks.h.
 
@@ -26,7 +23,7 @@ Este artigo descreve a maneira recomendada para consumir métodos assíncronos e
 
 A Plataforma Universal do Windows (UWP) apresenta um modelo bem definido para chamar métodos assíncronos e fornece os tipos necessários para consumir esses métodos. Se você não estiver familiarizado com o modelo assíncrono UWP, leia [Programação Assíncrona][AsyncProgramming] antes de continuar a ler este artigo.
 
-Embora seja possível consumir as APIS UWP assíncronas diretamente em C++, a abordagem preferida é usar a [**classe de tarefa**][task-class] e suas funções e tipos relacionados, que estão contidos no namespace de [**simultaneidade**][concurrencyNamespace] e definidos em `<ppltasks.h>`. A **concurrency::task** é um tipo de finalidade geral, mas quando é usado o switch do compilador **/ZW**, que é obrigatório para apps e componentes da Plataforma Universal do Windows (UWP), a classe de tarefa encapsula os tipos assíncronos UWP para que seja mais fácil:
+Embora seja possível consumir as APIS UWP assíncronas diretamente em C++, a abordagem preferida é usar a [**classe de tarefa**][task-class] e suas funções e tipos relacionados, que estão contidos no namespace de [**simultaneidade**][concurrencyNamespace] e definidos em `<ppltasks.h>`. A **concurrency::task** é um tipo de finalidade geral, mas quando é usado o switch do compilador **/ZW**, que é obrigatório para aplicativos e componentes Plataforma Universal do Windows (UWP), a classe task encapsula os tipos assíncronos UWP para que seja mais fácil:
 
 -   encadear diversas operações assíncronas e síncronas
 
@@ -123,7 +120,7 @@ O exemplo anterior ilustra quatro pontos importantes:
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>Tipos de retorno da função lambda e tipos de retorno de tarefas
 
-Em uma continuação de tarefa, o tipo de retorno da função lambda é encapsulado em um objeto **tarefa**. Se lambda retornar um **double**, então, o tipo de tarefa de continuação será **task<double>**. No entanto, o objeto task foi desenvolvido para que não produza tipos de retorno desnecessariamente aninhados. Se uma lambda retorna um **IAsyncOperation<SyndicationFeed^>^**, a continuação retorna um **task<SyndicationFeed^>** e não um **task<task<SyndicationFeed^>>** ou **task<IAsyncOperation<SyndicationFeed^>^>^**. Esse processo é conhecido como *não encapsulamento assíncrono* e assegura que a operação assíncrona dentro da continuação seja concluída antes que a próxima continuação seja invocada.
+Em uma continuação de tarefa, o tipo de retorno da função lambda é encapsulado em um objeto **task**. Se lambda retornar um **double**, então, o tipo de tarefa de continuação será **task<double>**. No entanto, o objeto task foi desenvolvido para que não produza tipos de retorno desnecessariamente aninhados. Se uma lambda retorna um **IAsyncOperation<SyndicationFeed^>^**, a continuação retorna um **task<SyndicationFeed^>** e não um **task<task<SyndicationFeed^>>** ou **task<IAsyncOperation<SyndicationFeed^>^>^**. Esse processo é conhecido como *não encapsulamento assíncrono* e assegura que a operação assíncrona dentro da continuação seja concluída antes que a próxima continuação seja invocada.
 
 No exemplo anterior, observe que a tarefa retorna uma **tarefa<void>** apesar de seu lambda ter retornado um objeto [**IAsyncInfo**][IAsyncInfo]. A tabela a seguir resume as conversões de tipo que ocorrem entre uma função lambda e a tarefa que a delimita:
 
@@ -165,7 +162,7 @@ Para obter mais informações, consulte [Cancellation in the PPL](https://msdn.m
 
 Se você deseja que uma continuação seja executada mesmo que a antecedente tenha sido cancelada ou tenha lançado uma exceção, torne-a uma continuação baseada em tarefa especificando a entrada de sua função lambda como uma **tarefa<TResult>** ou **tarefa<void>** se a lambda da tarefa antecedente retorna uma [**IAsyncAction^**][IAsyncAction].
 
-Para tratar erros e cancelamentos em uma cadeia de tarefa, não é necessário transformar cada baseada em tarefa ou encapsular toda operação que possa lançar em um bloco `try…catch`. Em vez disso, adicione uma continuação baseada em tarefa no fim da cadeia e manipule todos os erros nela. Qualquer exceção, incluindo uma exceção [**task\_canceled**][taskCanceled] será propagada adiante na cadeia da tarefa e ignorará todas as continuações baseadas em valores, de modo que você pode manipulá-la na continuação baseada em tarefa de manipulação de erros. Podemos recriar o exemplo anterior para usar uma continuação baseada em tarefas de tratamento de erro:
+Para manipular erros e cancelamentos em uma cadeia de tarefa, não é necessário transformar cada baseada em tarefa ou encapsular toda operação que possa lançar em um bloco `try…catch`. Em vez disso, adicione uma continuação baseada em tarefa no fim da cadeia e manipule todos os erros nela. Qualquer exceção, incluindo uma exceção [**task\_canceled**][taskCanceled] será propagada adiante na cadeia da tarefa e ignorará todas as continuações baseadas em valores, de modo que você pode manipulá-la na continuação baseada em tarefa de manipulação de erros. Podemos recriar o exemplo anterior para usar uma continuação baseada em tarefas de tratamento de erro:
 
 ``` cpp
 #include <ppltasks.h>
@@ -203,7 +200,7 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
 
 Em uma continuação baseada em tarefa, a função membro [**task::get**][taskGet] é chamada para obter os resultados da tarefa. Ainda é obrigatório chamar **task::get** mesmo que a operação seja uma [**IAsyncAction**][IAsyncAction] que não produz resultados porque **task::get** também obtém todas as exceções que foram transportadas adiante para a tarefa. Se a tarefa de entrada armazena uma exceção, ela será lançada na chamada de **task::get**. Se você não chamar **task::get**, não usar uma continuação baseada em tarefas no fim da cadeia ou não capturar o tipo de exceção lançada, uma **unobserved\_task\_exception** será lançada quando todas as referências à tarefa forem excluídas.
 
-Capture somente as exceções que você pode tratar. Se o app encontrar um erro do qual não possa se recuperar, será melhor deixar que o app falhe em vez de deixar que ele continue a ser executado em um estado desconhecido. Além disso, em geral, não tente capturar a **unobserved\_task\_exception** propriamente dita. A finalidade principal dessa exceção é diagnóstico. Quando **unobserved\_task\_exception** é lançada, geralmente ela indica um bug no código. A causa costuma ser uma exceção que precisa ser manipulada ou uma exceção irrecuperável causada por outro erro no código.
+Capture somente as exceções que você pode manipular. Se o aplicativo encontrar um erro do qual não possa se recuperar, será melhor deixar que o aplicativo falhe em vez de deixar que ele continue a ser executado em um estado desconhecido. Além disso, em geral, não tente capturar a **unobserved\_task\_exception** propriamente dita. A finalidade principal dessa exceção é diagnóstico. Quando **unobserved\_task\_exception** é lançada, geralmente ela indica um bug no código. A causa costuma ser uma exceção que precisa ser manipulada ou uma exceção irrecuperável causada por outro erro no código.
 
 ## <a name="managing-the-thread-context"></a>Gerenciando o contexto do thread
 
@@ -232,7 +229,7 @@ Se uma tarefa não retorna uma [**IAsyncAction**][IAsyncAction] ou [**IAsyncOper
 
 Você pode substituir o contexto do thread padrão para os dois tipos de tarefa usando a sobrecarga de [**task::then**][taskThen] que aceita um [**task\_continuation\_context**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749968.aspx). Por exemplo, em alguns casos, pode ser desejável agendar a continuação de uma tarefa que reconhece o apartment em um thread de segundo plano. Nesse caso, você pode passar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para agendar o trabalho da tarefa no próximo thread disponível em um apartment de vários threads. Isso pode melhorar o desempenho da continuação, pois a sua execução não precisa ser sincronizada com as demais execuções realizadas no thread da interface do usuário.
 
-O exemplo a seguir demonstra quando é útil especificar a opção [**task\_continuation\_context::use\_arbitrary**][useArbitrary] e também mostra como o contexto de continuação padrão é útil para sincronizar operações simultâneas em coleções não seguras de thread. Nesse código, executamos um loop por uma lista de URLs para RSS Feeds e, para cada URL, iniciamos uma operação assíncrona para recuperar os dados de feed. Não é possível controlar a ordem na qual os feeds são recuperados, mas isso não é relevante. Quando cada operação [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) é concluída, a primeira continuação aceita o objeto [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) e o usa para inicializar um objeto `FeedData^` definido pelo app. Como cada uma dessas operações é independente das demais, é possível agilizar o processo especificando o contexto de continuação **task\_continuation\_context::use\_arbitrary**. No entanto, depois que cada objeto `FeedData` é inicializado, é obrigatório adicioná-lo a um [**Vector**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx), que não é uma coleção não segura de threads. Por isso, deve-se criar uma continuação e especificar [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) para garantir que todas as chamadas a [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) ocorram no mesmo contexto single-threaded apartment de app (ASTA). Como [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) é o contexto padrão, não é obrigatório especificá-lo explicitamente, mas isso é feito aqui para fins de esclarecimento.
+O exemplo a seguir demonstra quando é útil especificar a opção [**task\_continuation\_context::use\_arbitrary**][useArbitrary] e também mostra como o contexto de continuação padrão é útil para sincronizar operações simultâneas em coleções não seguras de thread. Nesse código, executamos um loop por uma lista de URLs para RSS Feeds e, para cada URL, iniciamos uma operação assíncrona para recuperar os dados de feed. Não é possível controlar a ordem na qual os feeds são recuperados, mas isso não é relevante. Quando cada operação [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) é concluída, a primeira continuação aceita o objeto [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) e o usa para inicializar um objeto `FeedData^` definido pelo aplicativo. Como cada uma dessas operações é independente das demais, é possível agilizar o processo especificando o contexto de continuação **task\_continuation\_context::use\_arbitrary**. No entanto, depois que cada objeto `FeedData` é inicializado, é necessário adicioná-lo a um [**Vector**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx), que não é uma coleção não segura de threads. Por isso, deve-se criar uma continuação e especificar [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) para garantir que todas as chamadas a [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) ocorram no mesmo contexto single-threaded apartment de aplicativo (ASTA). Como [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) é o contexto padrão, não é necessário especificá-lo explicitamente, mas isso é feito aqui para fins de esclarecimento.
 
 ``` cpp
 #include <ppltasks.h>
@@ -323,4 +320,3 @@ Os métodos que dão suporte a [**IAsyncOperationWithProgress**](https://msdn.mi
 [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de Tarefas"
 [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
-

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
-description: "Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer app que você escreve."
+description: "Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer aplicativo que você escreve."
 title: Plataforma XAML
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1930f3a215b7bc0980b1fb4a8c83b6cfadd1e373
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3a5a638a2b8caf63cc3353d7bd6a43068ec61119
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-platform"></a>Plataforma XAML
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer app que você desenvolve, usando as extensões de componente (C++/CX) do C#, do Microsoft Visual Basic ou do Visual C++ como a linguagem de programação e, XAML como a definição da interface do usuário. Isso inclui conceitos de programação básicos, tais como o uso de propriedades e eventos, e como eles se aplicam à programação de apps da Plataforma Universal do Windows (UWP). A Plataforma Universal do Windows (UWP) estende os conceitos de propriedades do C#, Visual Basic ou C++/CX e seus valores, adicionando o sistema de propriedade de dependência. Os tópicos desta seção também documentam a linguagem XAML como é usada pela UWP e aborda cenários básicos e tópicos avançados que explicam como usar o XAML para definir a interface do usuário de seu app UWP.
+Esta seção inclui tópicos que explicam os conceitos de programação que geralmente são aplicáveis a qualquer aplicativo que você desenvolve, usando as extensões de componente (C++/CX) do C#, do Microsoft Visual Basic ou do Visual C++ como a linguagem de programação e, XAML como a definição da interface do usuário. Isso inclui conceitos de programação básicos, tais como o uso de propriedades e eventos, e como eles se aplicam à programação de aplicativos da Plataforma Universal do Windows (UWP). A Plataforma Universal do Windows (UWP) estende os conceitos de propriedades do C#, Visual Basic ou C++/CX e seus valores, adicionando o sistema de propriedade de dependência. Os tópicos desta seção também documentam a linguagem XAML como é usada pela UWP e aborda cenários básicos e tópicos avançados que explicam como usar o XAML para definir a interface do usuário de seu aplicativo UWP.
  
 | Tópico | Descrição |
 |-------|-------------|
@@ -32,4 +29,3 @@ Esta seção inclui tópicos que explicam os conceitos de programação que gera
 | [Visão geral de eventos e eventos roteados](events-and-routed-events-overview.md) | Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente C#, Visual Basic ou C++/CX como a linguagem de programação e o XAML para a definição da interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a **eventos roteados**: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêineres de layout. |
 
  
-

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "O relatório Avaliações no painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
+Description: "O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
 title: "Relatório de avaliações"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54666642e67581bebbb35049f7779086d23939a0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2b9cc9142655efc8123fdcde0eef464cb86df070
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="reviews-report"></a>Relatório de avaliações
 
 
-O relatório **Avaliações** no painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 > **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
 
@@ -81,7 +78,7 @@ Você pode usar o painel do Centro de Desenvolvimento da Windows Store para envi
 Veja algumas ações adicionais que você pode realizar com base nas classificações e críticas observadas.
 
 -   Caso veja muitas críticas sugerindo um recurso novo ou alterado ou com reclamações sobre um problema, pense em lançar uma nova versão que atenda especificamente a esses comentários (Não se esqueça de atualizar a [descrição](create-app-descriptions.md) do aplicativo para indicar que o problema foi corrigido).
--   Caso a classificação média seja alta, mas o número de downloads seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](app-promotion-and-customer-engagement.md), já que ele foi é bem-recebido pelos usuários que o testaram.
+-   Caso a classificação média seja alta, mas o número de transferências seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](app-promotion-and-customer-engagement.md), já que ele foi é bem-recebido pelos usuários que o testaram.
 
 
  
@@ -89,4 +86,3 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
  
 
  
-

@@ -9,17 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
+# <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de produtos consumíveis no app
 
-# <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de produtos consumíveis no aplicativo
 
-
->**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+> [!NOTE]
+> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos.
 
@@ -42,7 +40,8 @@ O próximo exemplo mostra uma solicitação de compra de produto no aplicativo c
 
 Ao conceder ao seu cliente acesso ao produto consumível no aplicativo, é importante manter o controle de qual produto é atendido (*productId*) e a qual transação o atendimento está associado (*transactionId*).
 
->**Importante**&nbsp;&nbsp;Seu app é responsável por relatar o atendimento com precisão à Loja. Essa etapa é essencial para manter uma experiência de compras justa e confiável para os seus clientes.
+> [!IMPORTANT]
+> O aplicativo é responsável pelo atendimento de relatórios precisos junto à Windows Store. Essa etapa é essencial para manter uma experiência de compras justa e confiável para os seus clientes.
 
 O exemplo a seguir demonstra o uso das propriedades [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) da chamada a [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381) na etapa anterior para identificar o produto comprado para atendimento. Uma coleção é usada para armazenar as informações do produto em um local que, mais tarde, pode ser referenciado para confirmar se o atendimento local foi bem-sucedido.
 
@@ -51,7 +50,8 @@ O exemplo a seguir demonstra o uso das propriedades [PurchaseResults](https://ms
 
 Este próximo exemplo mostra como usar a matriz do exemplo anterior para acessar pares de ID do produto/ID da transação que, mais tarde, serão usados para relatar o atendimento à Loja.
 
->**Importante**&nbsp;&nbsp;Seja qual for a metodologia usada pelo app para controlar e confirmar o atendimento, ele precisa demonstrar discernimento para garantir que os clientes não sejam cobrados por itens que não receberam.
+> [!IMPORTANT]
+> Seja qual for a metodologia que seu aplicativo use para controlar e confirmar o atendimento, o aplicativo precisa demonstrar discernimento para garantir que os clientes não sejam cobrados por itens que não receberam.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
@@ -60,7 +60,8 @@ Este próximo exemplo mostra como usar a matriz do exemplo anterior para acessar
 
 Concluído o atendimento local, o app deve fazer uma chamada a [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/dn263380) que inclua a *productId* e a transação na qual a compra do produto está incluída.
 
->**Importante**&nbsp;&nbsp;Se um produto consumível atendido no aplicativo não for relatado à Loja, o usuário não poderá comprar esse produto novamente enquanto o atendimento da compra anterior não for relatado.
+> [!IMPORTANT]
+> A falha em gerar relatórios de produtos no aplicativo consumíveis atendidos para a Loja fará com que o usuário não possa comprar o produto novamente enquanto o atendimento da compra anterior não for relatado.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
@@ -82,4 +83,3 @@ O exemplo a seguir demonstra como [GetUnfulfilledConsumablesAsync](https://msdn.
  
 
  
-

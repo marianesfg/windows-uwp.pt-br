@@ -9,37 +9,41 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, testes"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 89818e91ff1c1b8fee2ca82951742ed7e55a2a5a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ec5b1c1723a7f58b20234d703fc786647268a3b3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="test-mode-values"></a>Valores de modo de teste
 
-Ao usar um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID de aplicativo e de unidade de anúncio. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do aplicativo e a ID da unidade de anúncios de teste para ver como seu aplicativo renderiza anúncios durante o teste.
+Quando você usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID do aplicativo e de unidade de anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do aplicativo e a ID da unidade de anúncios de teste para ver como seu aplicativo renderiza anúncios durante o teste.
 
-
-Se você tentar usar valores de teste em seu aplicativo depois de publicá-lo, seu aplicativo dinâmico não receberá anúncios. Para receber anúncios em seu aplicativo publicado, você deve atualizar seu código para usar um ID do aplicativo um ID da unidade de anúncios fornecidos pelo painel do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [Configurar unidades de anúncios em seu aplicativo](set-up-ad-units-in-your-app.md).
+Se você tentar usar valores de teste em seu aplicativo depois de publicá-lo, seu aplicativo dinâmico não receberá anúncios. Para receber anúncios em seu aplicativo publicado, você deve atualizar seu código para usar um ID do aplicativo um ID da unidade de anúncios fornecidos pelo painel do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [Configurar unidades de publicidade no aplicativo](set-up-ad-units-in-your-app.md).
  
-Veja a seguir os valores de teste a serem usados para anúncios intersticiais em vídeo e em banner.
+Veja a seguir os valores de teste a serem usados para anúncios intersticiais e em banner.
 
-* Para anúncios intersticiais em vídeo:
+* Para os anúncios intersticiais:
 
     <table>
     <colgroup>
-    <col width="50%" />
-    <col width="50%" />
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
     </colgroup>
     <thead>
     <tr class="header">
+    <th align="left">Sistema operacional de destino</th>
     <th align="left">AdUnitId</th>
     <th align="left">AppId</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
+    <td align="left"><p>UWP (Windows 10)</p></td>
+    <td align="left"><p>teste</p></td>
+    <td align="left"><p>d25517cb-12d4-4699-8bdc-52040c712cab</p></td>
+    </tr>
+    <tr class="odd">
+    <td align="left"><p>Windows 8.x e Windows Phone 8.x</p></td>
     <td align="left"><p>11389925</p></td>
     <td align="left"><p>d25517cb-12d4-4699-8bdc-52040c712cab</p></td>
     </tr>
@@ -51,17 +55,25 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais em
 
     <table>
     <colgroup>
-    <col width="50%" />
-    <col width="50%" />
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
     </colgroup>
     <thead>
     <tr class="header">
+    <th align="left">Sistema operacional de destino</th>
     <th align="left">AdUnitId</th>
     <th align="left">AppId</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
+    <td align="left"><p>UWP (Windows 10)</p></td>
+    <td align="left"><p>teste</p></td>
+    <td align="left"><p>3f83fe91-d6be-434d-a0ae-7351c5a997f1</p></td>
+    </tr>
+    <tr class="even">
+    <td align="left"><p>Windows 8.x e Windows Phone 8.x</p></td>
     <td align="left"><p>10865270</p></td>
     <td align="left"><p>3f83fe91-d6be-434d-a0ae-7351c5a997f1</p></td>
     </tr>
@@ -69,11 +81,9 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais em
     </table>
 
 
-> **Importante**&nbsp;&nbsp;O tamanho de um anúncio em tempo real é definido pelas propriedades **Width** e **Height** do **AdControl**. Para obter melhores resultados, certifique-se de que as propriedades **Width** e **Height** em seu código correspondam a [tamanhos aceitos para anúncios em banner](supported-ad-sizes-for-banner-ads.md). As propriedades **Width** e **Height** não mudarão com base no tamanho de um anúncio em tempo real.
-
+> **Importante**&nbsp;&nbsp;Para um **AdControl**, o tamanho de um anúncio em tempo real é definido pelas propriedades **Width** e **Height**. Para obter melhores resultados, certifique-se de que as propriedades **Width** e **Height** em seu código correspondam a [tamanhos aceitos para anúncios em banner](supported-ad-sizes-for-banner-ads.md). As propriedades **Width** e **Height** não mudarão com base no tamanho de um anúncio em tempo real.
 
 
  
 
  
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-what-next"></a>Introdução: o que vem depois?
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -42,4 +39,3 @@ Achamos que o Windows 10 abrirá novas oportunidades de criação de aplicativos
 * [Controles Windows para desenvolvedores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [Guia Windows para desenvolvedores de iOS](https://msdn.microsoft.com/library/windows/apps/dn263256)
 * [Blog Criando aplicativos para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af5c30aae3927f901bb93fd2c79bfee202754a1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-paid"></a>Sendo pago
 Veja algumas informações importantes de que você precisará para garantir o recebimento de pagamentos pelos seus aplicativos e complementos, além de lucros do Microsoft Advertising.
 
@@ -61,7 +58,6 @@ Depois de definir o status de espera de pagamento para **Ativado**, todos os pag
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, AdControl, HTML, propriedades"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a879944dc14ca161c3e52a49ffe4a8cebfa7d69f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: efc94b723b3bfe97b35484882ae784e9ef4d6807
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-html-properties-example"></a>Exemplo de propriedades HTML AdControl
 
 O exemplo a seguir mostra como atribuir propriedades [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em HTML. O **applicationId** e o **adUnitId** são propriedades obrigatórias. As outras propriedades e eventos são opcionais. Se você não fornecer valores de propriedades opcionais, o controle usará os valores padrão que criar um anúncio consistente com a experiência do usuário do aplicativo.
@@ -44,4 +41,3 @@ Estes valores são exemplos. No código, você definirá os valores dessas funç
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
 
  
-

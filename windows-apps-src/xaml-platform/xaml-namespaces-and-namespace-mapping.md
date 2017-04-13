@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11a99a1a68a37b8c60974193c8cab51247a25711
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5a3a0350a7a28cc31a1207abd4590a0fa3cbbc3e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Namespaces XAML e mapeamento de namespace
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -118,5 +115,4 @@ Se você estiver fazendo referência a propriedades anexadas, a parte do tipo de
 * [Modelos de projeto C#, VB e C++ para Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrando do XAML/código de Silverlight ou WPF para um aplicativo do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/br229571)
  
-
 

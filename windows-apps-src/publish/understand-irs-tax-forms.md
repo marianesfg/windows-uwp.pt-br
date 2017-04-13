@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
 Dependendo de sua localização e da quantidade de vendas e/ou pagamentos que você recebe, você poderá receber um ou mais formulários fiscais da Microsoft por ano. A Microsoft é obrigada a emitir esses formulários e declará-los para a Receita Federal dos EUA.
@@ -127,4 +124,3 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **Observação** Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](http://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.
-

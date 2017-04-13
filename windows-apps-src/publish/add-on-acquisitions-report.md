@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "O relatório de Aquisições de complemento do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma."
+Description: "O relatório de aquisições de Complemento do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma."
 title: "Relatório de aquisições de complemento"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
@@ -9,21 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 189b15728fd5013a1f976803ffb0e55f57e95142
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c2001e93fd06cc93fa5cfe9d2a10a029e13c82d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complemento
 
 
-O relatório de **Aquisições de complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complemento](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório de **aquisições de Complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complemento](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Nesse relatório, uma aquisição de complemento significa que um cliente comprou um complemento de você. Várias compras do mesmo complemento consumível pelo mesmo cliente são contadas como aquisições de complementos separadas.
 
-> **Importante**  O relatório de **aquisições de Complemento** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu app, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
+> **Importante**  O relatório de **aquisições de Complemento** não inclui dados sobre reembolsos, reversões, estornos etc. Para estimar a receita do seu aplicativo, visite [Resumo de pagamento](payout-summary.md). Na seção **Reservado**, clique no link **Download reserved transactions**.
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
@@ -43,7 +40,7 @@ As informações de todos os gráficos listados abaixo refletirão o período de
 
 O gráfico **Aquisições de Complemento** mostra o número de aquisições diárias ou semanais de seus complementos durante o período de tempo selecionado. (Quando você usa **Aplicar filtros** para filtrar os dados por uma duração maior, os dados serão agrupados por semana).
 
-Você também pode ver o número de aquisições do tempo de vida dos seus complementos. Isso mostra o total cumulativo de todas as aquisições, desde quando o seu app foi publicado pela primeira vez.
+Você também pode ver o número de aquisições do tempo de vida dos seus complementos. Isso mostra o total cumulativo de todas as aquisições, desde quando o seu aplicativo foi publicado pela primeira vez.
 
 O gráfico também mostra o preço que um cliente pagou para adquirir o complemento.
 
@@ -70,4 +67,3 @@ O catálogo em destaque **Versão do sistema operacional** mostra o número tota
  
 
  
-

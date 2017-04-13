@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Se você encontrar erros ao carregar pacotes do app durante o processo de envio do app, precisará resolvê-los antes de enviar seu app para a Loja."
+Description: "Se você encontrar erros ao carregar pacotes do aplicativo durante o processo de envio do aplicativo, precisará resolvê-los antes de enviar seu aplicativo para a Loja."
 title: Resolver erros de carregamento de pacote
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
 ms.author: wdg-dev-content
@@ -9,21 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 92a46c556303b88f8d506f5315e23d4e2b2edf5f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bba3cd7bc2f1ffde7c77c7e2de35a49963a8158c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resolve-package-upload-errors"></a>Resolver erros de carregamento de pacote
 
 
-Se você encontrar erros ao [carregar pacotes do app](upload-app-packages.md) durante o processo de [envio do app](app-submissions.md), precisará resolvê-los antes de enviar seu app para a Loja. A mensagem de erro indicará qual é o problema e o que talvez você precise fazer para corrigir o problema. Aqui estão alguns indicadores para informações adicionais para ajudá-lo a resolver esses erros.
+Se você encontrar erros ao [carregar pacotes do aplicativo](upload-app-packages.md) durante o processo de [envio do aplicativo](app-submissions.md), precisará resolvê-los antes de enviar seu aplicativo para a Loja. A mensagem de erro indicará qual é o problema e o que talvez você precise fazer para corrigir o problema. Aqui estão alguns indicadores para informações adicionais para ajudá-lo a resolver esses erros.
 
 ## <a name="package-type-errors-for-windows-phone-81"></a>Erros de tipo de pacote do Windows Phone 8.1
 
-Ao atualizar os apps que foram publicados anteriormente para o Windows Phone 8.1, você pode encontrar erros relacionados aos tipos de pacote. Para saber mais sobre requisitos de tipo de pacote, consulte [Mantendo a compatibilidade de pacote do Windows Phone 8.1](guidance-for-app-package-management.md#maintaining-package-compatibility-for-windows-phone-81).
+Ao atualizar os aplicativos que foram publicados anteriormente para o Windows Phone 8.1, você pode encontrar erros relacionados aos tipos de pacote. Para saber mais sobre requisitos de tipo de pacote, consulte [Mantendo a compatibilidade de pacote do Windows Phone 8.1](guidance-for-app-package-management.md#maintaining-package-compatibility-for-windows-phone-81).
 
 Se esses requisitos não forem seguidos, haverá erros de carregamento de pacote que impedirão a conclusão do envio.
 
@@ -41,7 +38,6 @@ Além disso, lembre-se de que, se o seu envio tiver mais de um XAP do Windows Ph
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a80a5cdeae5adc2af59072400aa42428eac28431
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xname-attribute"></a>Atributo x:Name
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -74,5 +71,4 @@ Se **Name** estiver disponível como uma propriedade definível em um elemento, 
 ### <a name="xname-and-xkey"></a>x:Name e x:Key
 
 **x:Name** pode ser aplicado como um atributo aos elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) para atuar como substituto do [atributo x:Key](x-key-attribute.md). (É regra que todos os elementos em uma **ResourceDictionary** deve ser um atributo x:Key ou x:Name). Isso é comum para [animações Storyboarded](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obter mais informações, consulte a seção de [Referências de ResourceDictionary e recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
 

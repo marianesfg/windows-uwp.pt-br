@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: "Use este método na API de envio da Windows Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows."
-title: Obter um aplicativo usando a API de envio da Windows Store
+title: Obter um aplicativo
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, aplicativo
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 176e3b584137e503c4adfe2eb612d9329226baac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6087bf65ac297b12f92a9082db4e6a12e93130ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-app-using-the-windows-store-submission-api"></a>Obter um aplicativo usando a API de envio da Windows Store
+# <a name="get-an-app"></a>Obter um aplicativo
 
 
 
@@ -99,7 +96,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -114,4 +111,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Obter todos os aplicativos](get-all-apps.md)
 * [Obter pacotes de pré-lançamento de um aplicativo](get-flights-for-an-app.md)
 * [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)
-

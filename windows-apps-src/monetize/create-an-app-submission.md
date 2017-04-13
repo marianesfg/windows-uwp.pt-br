@@ -1,29 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: "Use este método na API de envio da Windows Store para criar um novo envio para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows."
-title: Criar um envio de app usando a API de envio da Windows Store
+description: "Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Criar um envio de app
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, criar envio de app
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: ecc701016ff37e7cc7de0723793efdfe89118c48
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 13b1b1cc83b6a8659bf38f5a97caf8b2f50a3ee0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-an-app-submission-using-the-windows-store-submission-api"></a>Criar um envio de app usando a API de envio da Windows Store
-
+# <a name="create-an-app-submission"></a>Criar um envio de app
 
 
 
-Use este método na API de envio da Windows Store para criar um novo envio para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
 
-Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de app, usando a API de envio da Windows Store, consulte [Gerenciar envios de app](manage-app-submissions.md).
+Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
+
+Para obter mais informações sobre como esse método se adapta ao processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -32,7 +29,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Verifique se o app já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
+* Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
 >**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
@@ -40,7 +37,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` |
 
@@ -59,7 +56,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadeia de caracteres | Obrigatório. A ID da Loja do app para o qual você deseja criar um envio. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de app](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja criar um envio. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 <span/>
 
@@ -69,7 +66,7 @@ Não forneça um corpo da solicitação para esse método.
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra como criar um novo envio para um app.
+O exemplo a seguir demonstra como criar um novo envio para um aplicativo.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions HTTP/1.1
@@ -78,7 +75,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>Resposta
 
-O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, veja [Recurso do envio de app](manage-app-submissions.md#app-submission-object).
+O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-sucedida para esse método. O corpo da resposta contém informações sobre o novo envio. Para obter mais detalhes sobre os valores no corpo da resposta, veja [Recurso do envio de aplicativo](manage-app-submissions.md#app-submission-object).
 
 ```json
 {
@@ -89,7 +86,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "marketSpecificPricings": {},
     "sales": [],
     "priceId": "Tier2",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -98,13 +95,17 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "en-us": {
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
-        "keywords": [],
+        "keywords": [
+           "epub"
+        ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
-        "features": [],
+        "features": [
+          "Free ebook reader"
+        ],
         "releaseNotes": "",
         "images": [
           {
@@ -115,9 +116,13 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
           }
         ],
         "recommendedHardware": [],
-        "title": "ApiTestApp For Devbox"
+        "title": "Contoso ebook reader"
       },
-      "platformOverrides": {}
+      "platformOverrides": {
+        "Windows81": {
+          "description": "Ebook reader for Windows 8.1"
+        }
+      }
     }
   },
   "hardwarePreferences": [
@@ -161,7 +166,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -188,7 +193,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | O envio não pôde ser criado porque a solicitação não é válida. |
-| 409  | Não foi possível criar o envio por causa do estado atual do app, ou o app usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Não foi possível criar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
@@ -196,9 +201,8 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Obter um envio de app](get-an-app-submission.md)
-* [Confirmar um envio de app](commit-an-app-submission.md)
-* [Atualizar um envio de app](update-an-app-submission.md)
-* [Excluir um envio de app](delete-an-app-submission.md)
-* [Obter o status de um envio de app](get-status-for-an-app-submission.md)
-
+* [Obter um envio de aplicativo](get-an-app-submission.md)
+* [Confirmar um envio de aplicativo](commit-an-app-submission.md)
+* [Atualizar um envio de aplicativo](update-an-app-submission.md)
+* [Excluir um envio de aplicativo](delete-an-app-submission.md)
+* [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)

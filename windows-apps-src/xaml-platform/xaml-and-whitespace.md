@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 260aa6c4bae2f7e9d051e172f83563f430e4e6c4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-and-whitespace"></a>XAML e espaço em branco
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -57,5 +54,4 @@ Várias técnicas de preservação de espaços em branco no código XAML de orig
 `xml:space="preserve"`: especifique esse atributo no nível do elemento em que a preservação de espaços em branco é desejada. Observe que isso preserva todos os espaços em branco, inclusive os espaços que podem ser adicionados por editores de código ou áreas de design, para alinhar elementos de marcação como um aninhamento visualmente intuitivo. Se esses espaços são renderizados ou não é, mais uma vez, uma questão do modelo de conteúdo do respectivo elemento. Não recomendamos que você especifique `xml:space="preserve"` no nível da raiz, pois a maioria dos modelos de objeto não considera os espaços em branco como um meio significativo. É prática recomendada somente definir o atributo especificamente no nível dos elementos que renderizam espaços em branco em cadeias de caracteres ou que sejam coleções significativas de espaços em branco.
 
 Entidades e espaços sem quebra: o XAML dá suporte à inserção de qualquer entidade Unicode em um modelo de objeto de texto. Você pode usar entidades dedicadas, como espaços sem quebras (na codificação UTF-8). Você também pode usar controles de texto avançados com suporte a caracteres de espaço sem quebras. Seja cauteloso se estiver usando entidades para simular características de layout, como recuos, pois a saída das entidades em tempo de execução vai variar com base em um número maior de fatores do que as unidades de layout gerais, como uso adequado de painéis e margens.
-
 

@@ -1,29 +1,26 @@
 ---
-author: awkoren
-Description: "Distribuir o aplicativo UWP convertido usando a ponte da área de trabalho para UWP"
+author: normesta
+Description: Distribuir o app UWP convertido usando a ponte de Desktop para UWP
 Search.Product: eADQiWindows 10XVcnh
-title: Distribuir o aplicativo UWP convertido usando a Ponte de Desktop para UWP
-ms.author: alkoren
-ms.date: 02/08/2017
+title: "Distribuição da ponte de Desktop para UWP"
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0acb144d79c1d05d68cc7430f4cc99efeadc7c6b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ee38bd22b6d4737cf5bb64eb489365e3f83efd53
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="distribute-apps-converted-with-the-desktop-bridge"></a>Distribuir aplicativos convertidos usando a Ponte de Desktop
+# <a name="desktop-to-uwp-bridge-distribute"></a>Ponte de Desktop para UWP: distribuição
 
 Existem três maneiras principais de implantar o aplicativo convertido: a Windows Store, o sideload e o registro de arquivo flexível.  
 
 ## <a name="windows-store"></a>Windows Store
 
-A Windows Store é a maneira mais prática dos clientes obterem o aplicativo. Para começar, preencha o formulário em [Trazer os aplicativos e jogos existentes para a Windows Store usando a ponte da área de trabalho](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de integração. 
+A Windows Store é a maneira mais prática dos clientes obterem o aplicativo. Para começar, preencha o formulário em [Trazer os aplicativos e jogos existentes para a Windows Store usando a ponte da área de trabalho](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de integração.
 
 Você precisa ser o desenvolvedor e/ou publicador do aplicativo ou do jogo a fim de levá-lo para a Windows Store. Assim, certifique-se de que o nome e o endereço de email correspondam aos do site que você envia como a URL abaixo, de maneira que possamos validar você como o desenvolvedor e/ou o publicador.
 
@@ -31,9 +28,9 @@ Você precisa ser o desenvolvedor e/ou publicador do aplicativo ou do jogo a fim
 
 O sideload oferece uma maneira fácil de implantar em vários computadores. Isso é especialmente útil em cenários de empresa/linha de negócio (LOB) onde você queira um controle mais refinado sobre a experiência de distribuição e não deseja se envolver com o certificado da Loja.
 
-Antes de implantar o aplicativo via sideload, você precisará assiná-lo usando um certificado. Para obter informações sobre a criação de um certificado, consulte [Assinar seu pacote .AppX](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
+Antes de implantar o aplicativo via sideload, você precisará assiná-lo usando um certificado. Para obter informações sobre a criação de um certificado, consulte [Assinar seu pacote de aplicativo do Windows](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx).
 
-Veja a seguir como importar um certificado que você criou anteriormente. Você pode importar o certificado diretamente com o CERTUTIL, ou pode instalá-lo de um appx que você assinou, como o cliente fará. 
+Veja a seguir como importar um certificado que você criou anteriormente. Você pode importar o certificado diretamente com o CERTUTIL, ou pode instalá-lo de um pacote de aplicativo do Windows que você assinou, como o cliente fará.
 
 Para instalar o certificado via CERTUTIL, execute o seguinte comando em um prompt de comando de administrador:
 
@@ -41,9 +38,9 @@ Para instalar o certificado via CERTUTIL, execute o seguinte comando em um promp
 Certutil -addStore TrustedPeople <testcert.cer>
 ```
 
-Para importar o certificado de appx como um cliente faria:
+Para importar o certificado do pacote de aplicativo do Windows como um cliente faria:
 
-1.    No Explorador de Arquivos, clique com botão direito do mouse em um appx que você assinou com um certificado de teste e escolha **Propriedades** no menu de contexto.
+1.    No Explorador de Arquivos, clique com botão direito do mouse em um pacote de aplicativo do Windows que você assinou com um certificado de teste e escolha **Propriedades** no menu de contexto.
 2.    Clique ou toque na guia **Assinaturas Digitais**.
 3.    Clique ou toque no certificado e escolha **Detalhes**.
 4.    Clique ou toque em **Exibir Certificado**.
@@ -64,7 +61,7 @@ but terminated in a rootcertificate which is not trusted by the trust provider.
 in the app package must be trusted."
 ```
 
-Agora que o certificado foi marcado como confiável, há 2 maneiras de instalar o pacote, por meio do powershell ou clicando duas vezes no arquivo de pacote de appx para instalá-lo.  Para instalar por meio do powershell, execute o seguinte cmdlet:
+Agora que o certificado foi marcado como confiável, há 2 maneiras de instalar o pacote, por meio do powershell ou clicando duas vezes no arquivo de pacote de aplicativo do Windows para instalá-lo.  Para instalar por meio do powershell, execute o seguinte cmdlet:
 
 ```powershell
 Add-AppxPackage <MyApp>.appx
@@ -74,13 +71,13 @@ Add-AppxPackage <MyApp>.appx
 
 O registro de arquivo flexível é útil para fins onde os arquivos são dispostos em disco em um local que você pode acessar facilmente e atualização e não requer um certificado ou assinatura de depuração.  
 
-Para implantar seu aplicativo durante o desenvolvimento, execute o seguinte cmdlet do PowerShell: 
+Para implantar seu aplicativo durante o desenvolvimento, execute o seguinte cmdlet do PowerShell:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 Para atualizar os arquivos .exe ou .dll do seu aplicativo, simplesmente substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
 
-Observe o seguinte: 
+Observe o seguinte:
 
 * Qualquer unidade em que você instale seu aplicativo convertido deve ser formatada para o formato NTFS.
 * Um aplicativo convertido sempre é executado como o usuário interativo.

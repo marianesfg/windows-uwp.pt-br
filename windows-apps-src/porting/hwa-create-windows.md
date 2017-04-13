@@ -10,13 +10,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Aplicativos Web hospedados, fazer a portabilidade de aplicativos web para o Windows 10, converter o site para o Windows, empacotamento de aplicativos web para a Windows Store
 ms.assetid: a58d2c67-77f8-4d01-bea3-a6ebce2d73b9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b6781883a3e48d35a558798f369e91c4a7ea3bec
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e135b63e2ba5f455dbbf6524e5519a33acd822b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-your-web-application-to-a-universal-windows-platform-uwp-app"></a>Converter o seu aplicativo Web em um aplicativo UWP (Plataforma Universal do Windows)
 
 Aprenda a criar rapidamente um aplicativo da Plataforma Universal do Windows para Windows 10, começando com apenas uma URL do site. 
@@ -104,4 +101,3 @@ function cameraCapture() {
 - [Melhorar seu aplicativo Web ao acessar recursos da Plataforma Universal do Windows(UWP)](hwa-access-features.md)
 - [Guia para aplicativos UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Baixar ativos de design para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
