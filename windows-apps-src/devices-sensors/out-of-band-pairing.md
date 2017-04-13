@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef9d4c390112be66035ab2ace6b6b799ee9d99ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="out-of-band-pairing"></a>Emparelhamento fora de banda
 
-O emparelhamento fora de banda permite que os apps se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta. Os apps devem usar o namespace [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) passar uma cadeia de caracteres formatada especificamente (blob fora de banda) para o método **FromIdAsync** adequado para o periférico desejado. Quando **FromIdAsync** é executado, o dispositivo host se emparelha e se conecta ao periférico antes que a operação retorne ao chamador.
+O emparelhamento fora de banda permite que os aplicativos se conectem a um periférico Ponto de Serviço sem a necessidade de descoberta. Os aplicativos devem usar o namespace [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) passar uma cadeia de caracteres formatada especificamente (blob fora de banda) para o método **FromIdAsync** adequado para o periférico desejado. Quando **FromIdAsync** é executado, o dispositivo host se emparelha e se conecta ao periférico antes que a operação retorne ao chamador.
 
 ## <a name="out-of-band-blob-format"></a>Formato de blob fora de banda
 
@@ -94,4 +92,3 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-

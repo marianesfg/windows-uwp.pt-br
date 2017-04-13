@@ -11,17 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: fd8d538e6431bbff011c99ce8d17736d70f0c0ea
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 57fd59c54b7dfe3a8c12519bbac1dcd47d8c0854
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview"></a>ListView e GridView
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-A maioria dos apps manipula e exibe conjuntos de dados, como uma galeria de imagens ou um conjunto de mensagens de email. A estrutura da IU XAML fornece controles ListView e GridView que tornam mais fácil exibir e manipular dados em seu app.  
+A maioria dos aplicativos manipula e exibe conjuntos de dados, como uma galeria de imagens ou um conjunto de mensagens de email. A estrutura da IU XAML fornece controles ListView e GridView que tornam mais fácil exibir e manipular dados em seu aplicativo.  
 
 Os controles ListView e GridView são derivados da classe ListViewBase, portanto, eles têm a mesma funcionalidade, mas exibem dados de modo diferente. Neste artigo, ao falarmos sobre ListView, as informações se aplicam aos controles ListView e GridView, a menos que especificado de outra forma. Poderemos nos referir a classes, como ListView ou ListViewItem, mas o prefixo "List" poderá ser substituído por "Grid" para o equivalente a grade correspondente (GridView ou GridViewItem). 
 
@@ -401,7 +399,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 
 ### <a name="click-mode"></a>Modo de clique
 
-Você pode alterar a exibição de lista para que um usuário clique em itens como botões em vez de selecioná-los. Por exemplo, isso é útil quando o seu app navega para uma nova página quando o seu usuário clica em um item em uma lista ou grade. Para habilitar esse comportamento:
+Você pode alterar a exibição de lista para que um usuário clique em itens como botões em vez de selecioná-los. Por exemplo, isso é útil quando o seu aplicativo navega para uma nova página quando o seu usuário clica em um item em uma lista ou grade. Para habilitar esse comportamento:
 - Defina **SelectionMode** como **Nenhum**.
 - Defina **IsItemClickEnabled** como **verdadeiro**.
 - Manipule o evento **ItemClick** para fazer algo quando o usuário clicar em um item.
@@ -522,4 +520,3 @@ Os controles ListView e GridView permitem arrastar e soltar itens dentro deles m
 - [Listas](lists.md)
 - [Modelos de item de exibição de lista](listview-item-templates.md)
 - [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
-

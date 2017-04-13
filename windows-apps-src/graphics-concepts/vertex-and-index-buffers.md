@@ -2,21 +2,17 @@
 title: "Buffers de vértice e índice"
 description: "Os buffers de vértice são buffers de memória que contêm dados de vértice; vértices em um buffer de vértice são processados para executar a transformação, iluminação e corte."
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
-keywords:
-- "Buffers de vértice e índice"
+keywords: "Buffers de vértice e índice"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdf65da6504114029c4937ee7db531a1339ed4c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f06ee013f5c09522df387d69afa0096f7a3f7044
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vertex-and-index-buffers"></a>Buffers de vértice e índice
 
 
@@ -47,7 +43,7 @@ A flexibilidade dos buffers de vértice os torna pontos de preparo ideais para a
 </tr>
 <tr class="even">
 <td align="left"><p>[Buffers de índice](index-buffers.md)</p></td>
-<td align="left"><p><em>Os buffers de índice</em> são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice, usados para renderizar primitivos.</p></td>
+<td align="left"><p><em>Buffers de índice</em> são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice usados para renderizar primitivas.</p></td>
 </tr>
 </tbody>
 </table>
@@ -62,7 +58,6 @@ A flexibilidade dos buffers de vértice os torna pontos de preparo ideais para a
  
 
  
-
 
 
 

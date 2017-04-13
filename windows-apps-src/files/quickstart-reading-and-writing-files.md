@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ae2754f543a3bc799b3d5af4c5c3c46f654c1ed7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6b69a2e69948e1d774abe78ba0958aa48ba4d318
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-write-and-read-a-file"></a>Criar, gravar e ler um arquivo
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -34,9 +31,9 @@ Leia e grave um arquivo usando um objeto [**StorageFile**](https://msdn.microsof
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   **Entender a programação assíncrona para apps da Plataforma Universal do Windows (UWP)**
+-   **Entender a programação assíncrona para aplicativos da Plataforma Universal do Windows (UWP)**
 
-    Você pode aprender a escrever apps assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever apps assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Você pode aprender a escrever aplicativos assíncronos em C# ou Visual Basic, consulte [Chamar APIs assíncronas em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para saber como escrever aplicativos assíncronos em C++, consulte [Programação assíncrona em C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
 -   **Saiba como obter o arquivo que você quer ler, gravar ou ambos.**
 
@@ -44,7 +41,7 @@ Leia e grave um arquivo usando um objeto [**StorageFile**](https://msdn.microsof
 
 ## <a name="creating-a-file"></a>Criando um arquivo
 
-Consulte aqui como criar um arquivo na pasta local do app. Se ele já existir, nós o substituiremos.
+Consulte aqui como criar um arquivo na pasta local do aplicativo. Se ele já existir, nós o substituiremos.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 // Create sample file; replace if exists.
@@ -263,4 +260,3 @@ Dim dataReader As New DataReader(inputStream)
  
 
  
-

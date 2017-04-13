@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
-Description: "Antes de executar um experimento em seu app UWP (Plataforma Universal do Windows) com os testes A/B, você deve criar um projeto e definir suas variáveis remotas no painel do Centro de Desenvolvimento."
-title: "Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento"
+Description: "Antes de executar um experimento em seu aplicativo UWP (Plataforma Universal do Windows) com os testes A/B, você deve criar um projeto e definir suas variáveis remotas no painel do Centro de Desenvolvimento."
+title: Criar um projeto experimental no painel
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ad24e9a52458b826f3ce1bc7aba3dbdcf302f87d
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp, Microsoft Store Services SDK, testes comparativos, experimentos
+ms.openlocfilehash: bc38e5cc7438ff2dede5267b60bc925369defa51
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
+# <a name="create-an-experiment-project-in-the-dashboard"></a>Criar um projeto experimental no painel
 
-# <a name="create-a-project-and-define-remote-variables-in-the-dev-center-dashboard"></a>Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento
-
-Para começar a usar experimentação, crie uma experimentação [projeto](run-app-experiments-with-a-b-testing.md#terms) para seu app no painel do Centro de Desenvolvimento e defina as variáveis remotas que seu app pode acessar.
+Para começar a usar experimentação, crie uma experimentação [projeto](run-app-experiments-with-a-b-testing.md#terms) para seu aplicativo no painel do Centro de Desenvolvimento e defina as variáveis remotas que seu aplicativo pode acessar.
 
 As instruções a seguir descrevem as etapas principais para criar um projeto. Para um guia passo a passo detalhado que demonstra o processo de criação de um projeto e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 ## <a name="instructions"></a>Instruções
 
 1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
-2. Em **Seus apps**, selecione o app para o qual você deseja criar um experimento.
+2. Em **Seus aplicativos**, selecione o aplicativo para o qual você deseja criar um experimento.
 3. No painel de navegação, selecione **Serviços** e, em seguida, selecione **Experimentação**.
 4. Na página **Experimentação**, clique no botão **Novo projeto** na seção **Projetos**. Se você já criou um ou mais projetos, eles estarão listados na seção **Projetos**.
 5. Na página **Novo projeto**, digite um nome para seu novo projeto.
@@ -33,20 +30,20 @@ As instruções a seguir descrevem as etapas principais para criar um projeto. P
   1. Se a seção **Variáveis remotas** estiver recolhida, clique em **Mostrar** no cabeçalho da seção.
   2. Clique em **Adicionar variável** para criar uma cada nova variável que deverá estar disponível para qualquer experimento nesse projeto e digite o nome da variável e o valor padrão.
   3. Quando terminar de adicionar variáveis, clique em **Salvar**.
-3. Na seção **Integração do SDK**, anote o valor da [ID do Projeto](run-app-experiments-with-a-b-testing.md#terms). Ao [codificar seu app para experimentação](code-your-experiment-in-your-app.md), você deve fazer referência a essa ID de projeto em seu código para que receber dados de variação e relatar eventos de exibição e conversão no Centro de Desenvolvimento.
+3. Na seção **Integração do SDK**, anote o valor da [ID do Projeto](run-app-experiments-with-a-b-testing.md#terms). Ao [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você deve fazer referência a essa ID de projeto em seu código para que receber dados de variação e relatar eventos de exibição e conversão no Centro de Desenvolvimento.
 
->**Observação**&nbsp;&nbsp;Não é possível editar, adicionar nem remover variáveis remotas enquanto um experimento do projeto está ativo. Essa limitação ajuda a proteger a integridade dos dados para o grupo de controle do experimento ativo.
+> [!NOTE]
+> Não é possível editar, adicionar nem remover variáveis remotas enquanto um experimento do projeto está ativo. Essa limitação ajuda a proteger a integridade dos dados para o grupo de controle do experimento ativo.
 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Depois de criar um projeto, você pode [codificar seu app para experimentação](code-your-experiment-in-your-app.md) iniciar a recuperação dos valores de variáveis remotas em seu app e [criar um experimento no projeto](define-your-experiment-in-the-dev-center-dashboard.md).
+Depois de criar um projeto, você pode [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md) iniciar a recuperação dos valores de variáveis remotas em seu aplicativo e [criar um experimento no projeto](define-your-experiment-in-the-dev-center-dashboard.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Codificar seu app para experimentação](code-your-experiment-in-your-app.md)
+* [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
 * [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Gerenciar seu experimento no painel do Centro de Desenvolvimento](manage-your-experiment.md)
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)
-

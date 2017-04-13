@@ -1,5 +1,5 @@
 ---
-description: "Este artigo explica como receber conteúdo em seu app UWP (Plataforma Universal do Windows) compartilhado de outro app usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu app seja apresentado como uma opção quando o usuário invoca o compartilhamento."
+description: "Este artigo explica como receber conteúdo em seu aplicativo UWP (Plataforma Universal do Windows) compartilhado de outro aplicativo usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu aplicativo seja apresentado como uma opção quando o usuário invoca o compartilhamento."
 title: Receber dados
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1d15bfb6bfed16d1b71313fd5a5f29ceeef3bd3e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b460a20dd88da1745008ea84fe252137df8a82d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="receive-data"></a>Receber dados
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo explica como receber conteúdo em seu app UWP (Plataforma Universal do Windows) compartilhado de outro app usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu app seja apresentado como uma opção quando o usuário invoca o compartilhamento.
+Este artigo explica como receber conteúdo em seu aplicativo UWP (Plataforma Universal do Windows) compartilhado de outro aplicativo usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu aplicativo seja apresentado como uma opção quando o usuário invoca o compartilhamento.
 
-## <a name="declare-your-app-as-a-share-target"></a>Declarar o app como um compartilhamento de destino
+## <a name="declare-your-app-as-a-share-target"></a>Declarar o aplicativo como um compartilhamento de destino
 
-O sistema exibe uma lista de possíveis apps de destino quando um usuário invoca o compartilhamento. Para aparecer na lista, seu app precisa declarar que ele oferece suporte ao contrato de Compartilhamento. Isso permite que o sistema saiba que seu app está disponível para receber conteúdo.
+O sistema exibe uma lista de possíveis aplicativos de destino quando um usuário invoca o compartilhamento. Para aparecer na lista, seu aplicativo precisa declarar que ele oferece suporte ao contrato de Compartilhamento. Isso permite que o sistema saiba que seu aplicativo está disponível para receber conteúdo.
 
 1.  Abra o arquivo de manifesto. Ele deve ser nomeado como algo semelhante a **package.appxmanifest**.
 2.  Abra a guia **Declarações**.
@@ -33,9 +30,9 @@ O sistema exibe uma lista de possíveis apps de destino quando um usuário invoc
 
 ## <a name="choose-file-types-and-formats"></a>Escolher tipos de arquivo e formatos
 
-Em seguida, decida quais tipos de arquivo e formatos de dados terão suporte. As APIs de Compartilhamento oferecem suporte a vários formatos padrão, como Texto, HTML e Bitmap. Também é possível especificar tipos de arquivo personalizado e formatos de dados. Se você especificar, lembre-se de que os apps de origem precisam saber quais são esses tipos e formatos; caso contrário, eles não poderão usar os formatos para compartilhar dados.
+Em seguida, decida quais tipos de arquivo e formatos de dados terão suporte. As APIs de Compartilhamento oferecem suporte a vários formatos padrão, como Texto, HTML e Bitmap. Também é possível especificar tipos de arquivo personalizado e formatos de dados. Se você especificar, lembre-se de que os aplicativos de origem precisam saber quais são esses tipos e formatos; caso contrário, eles não poderão usar os formatos para compartilhar dados.
 
-Registre somente os formatos que seu app pode manipular. São exibidos somente os apps de destino que oferecem suporte aos dados que estão sendo compartilhados quando o usuário invoca o compartilhamento.
+Registre somente os formatos que seu aplicativo pode manipular. São exibidos somente os aplicativos de destino que oferecem suporte aos dados que estão sendo compartilhados quando o usuário invoca o compartilhamento.
 
 Para definir os tipos de arquivo:
 
@@ -51,7 +48,7 @@ Para definir os formatos de dados:
 
 ## <a name="handle-share-activation"></a>Manipular a ativação de compartilhamento
 
-Quando um usuário seleciona seu app (geralmente selecionando-o em uma lista de apps de destino disponíveis na interface do usuário de compartilhamento), um evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)) é gerado. Seu app precisa manipular esse evento para processar os dados que o usuário deseja compartilhar.
+Quando um usuário seleciona seu aplicativo (geralmente selecionando-o em uma lista de aplicativos de destino disponíveis na interface do usuário de compartilhamento), um evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)) é gerado. Seu aplicativo precisa manipular esse evento para processar os dados que o usuário deseja compartilhar.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -77,41 +74,41 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 
 ## <a name="report-sharing-status"></a>Relatar status do compartilhamento
 
-Em alguns casos, pode levar algum tempo para seu app processar os dados que deseja compartilhar. Exemplos incluem usuários que compartilham coleções de arquivos ou imagens. Esses itens são maiores do que uma cadeia de texto simples, por isso demoram mais tempo para processar.
+Em alguns casos, pode levar algum tempo para seu aplicativo processar os dados que deseja compartilhar. Exemplos incluem usuários que compartilham coleções de arquivos ou imagens. Esses itens são maiores do que uma cadeia de texto simples, por isso demoram mais tempo para processar.
 
 ```cs
 shareOperation.ReportDataRetreived(); 
 ```
 
-Depois de chamar [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted), não espere mais interação do usuário com seu app. Como resultado, você não deverá chamá-lo, a menos que o app esteja em um ponto onde possa ser ignorado pelo usuário.
+Depois de chamar [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted), não espere mais interação do usuário com seu aplicativo. Como resultado, você não deverá chamá-lo, a menos que o aplicativo esteja em um ponto onde possa ser ignorado pelo usuário.
 
-Com um compartilhamento estendido, é possível que o usuário ignore o app de origem antes que seu app tenha todos os dados do objeto DataPackage. Como resultado, recomendamos que o sistema saiba quando o app adquiriu os dados necessários. Dessa forma, o sistema pode suspender ou encerrar o app de origem conforme necessário.
+Com um compartilhamento estendido, é possível que o usuário ignore o aplicativo de origem antes que seu aplicativo tenha todos os dados do objeto DataPackage. Como resultado, recomendamos que o sistema saiba quando o aplicativo adquiriu os dados necessários. Dessa forma, o sistema pode suspender ou encerrar o aplicativo de origem conforme necessário.
 
 ```cs
 shareOperation.ReportSubmittedBackgroundTask(); 
 ```
 
-Se algo der errado, chame [**ReportError**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError(System.String)) para enviar uma mensagem de erro ao sistema. O usuário verá a mensagem quando verificar o status do compartilhamento. Nesse ponto, o app é desligado e o compartilhamento é encerrado. O usuário precisará iniciar novamente para compartilhar o conteúdo com seu app. Dependendo do cenário, você pode considerar que um determinado erro não é tão sério assim para finalizar a operação de compartilhamento. Nesse caso, opte por não chamar **ReportError** e continue com o compartilhamento.
+Se algo der errado, chame [**ReportError**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError(System.String)) para enviar uma mensagem de erro ao sistema. O usuário verá a mensagem quando verificar o status do compartilhamento. Nesse ponto, o aplicativo é desligado e o compartilhamento é encerrado. O usuário precisará iniciar novamente para compartilhar o conteúdo com seu aplicativo. Dependendo do cenário, você pode considerar que um determinado erro não é tão sério assim para finalizar a operação de compartilhamento. Nesse caso, opte por não chamar **ReportError** e continue com o compartilhamento.
 
 ```cs
 shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
-Por fim, quando o app tiver processado o conteúdo compartilhado, chame [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted) para informar ao sistema.
+Por fim, quando o aplicativo tiver processado o conteúdo compartilhado, chame [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted) para informar ao sistema.
 
 ```cs
 shareOperation.ReportCompleted();
 ```
 
-Ao usar esses métodos, você costuma chamá-los na ordem descrita e apenas uma vez. Porém, tem vezes que um app de destino pode chamar [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por exemplo, o app pode recuperar os dados como parte de uma tarefa no manipulador de ativação, mas não pode chamar **ReportStarted** até que o usuário clique no botão **Compartilhar**.
+Ao usar esses métodos, você costuma chamá-los na ordem descrita e apenas uma vez. Porém, tem vezes que um aplicativo de destino pode chamar [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por exemplo, o aplicativo pode recuperar os dados como parte de uma tarefa no manipulador de ativação, mas não pode chamar **ReportStarted** até que o usuário clique no botão **Compartilhar**.
 
 ## <a name="return-a-quicklink-if-sharing-was-successful"></a>Retornar um QuickLink se o compartilhamento tiver sido bem-sucedido
 
-Quando um usuário seleciona seu app para receber conteúdo, recomendamos que você crie um [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink). Um **QuickLink** é como um atalho que facilita o compartilhamento de informações com seu app. Por exemplo, você pode criar um **QuickLink** que abre uma nova mensagem de email pré-configurada com o endereço de email de um amigo.
+Quando um usuário seleciona seu aplicativo para receber conteúdo, recomendamos que você crie um [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink). Um **QuickLink** é como um atalho que facilita o compartilhamento de informações com seu aplicativo. Por exemplo, você pode criar um **QuickLink** que abre uma nova mensagem de email pré-configurada com o endereço de email de um amigo.
 
-Um **QuickLink** deve ter um título, um ícone e uma ID. O título (como "Email Mom") e o ícone aparecem quando o usuário toca no botão Compartilhar. A ID é o que o app usa para acessar qualquer informação personalizada, como um endereço de email ou credenciais de logon. Quando o seu app cria um **QuickLink**, ele retorna o **QuickLink** ao sistema chamando [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted).
+Um **QuickLink** deve ter um título, um ícone e uma ID. O título (como "Email Mom") e o ícone aparecem quando o usuário toca no botão Compartilhar. A ID é o que o aplicativo usa para acessar qualquer informação personalizada, como um endereço de email ou credenciais de logon. Quando o seu aplicativo cria um **QuickLink**, ele retorna o **QuickLink** ao sistema chamando [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted).
 
-Um **QuickLink** não armazena realmente nenhum dado. Em vez disso, ele contém um identificador que, quando selecionado, é enviado para o app. Seu app é responsável por armazenar a ID do **QuickLink** e os dados de usuário correspondentes. Quando o usuário toca no **QuickLink**, você pode obter sua ID por meio da propriedade [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId).
+Um **QuickLink** não armazena realmente nenhum dado. Em vez disso, ele contém um identificador que, quando selecionado, é enviado para o aplicativo. Seu aplicativo é responsável por armazenar a ID do **QuickLink** e os dados de usuário correspondentes. Quando o usuário toca no **QuickLink**, você pode obter sua ID por meio da propriedade [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId).
 
 ```cs
 async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, string quickLinkTitle)
@@ -137,7 +134,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 ## <a name="see-also"></a>Consulte também 
 
-* [Comunicação de app a app](index.md)
+* [Comunicação de aplicativo a aplicativo](index.md)
 * [Compartilhar dados](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
@@ -147,4 +144,3 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
 * [QuickLink](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.aspx)
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
-

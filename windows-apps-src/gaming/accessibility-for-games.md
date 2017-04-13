@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, acessibilidade, jogos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 74a3e3bf3b4f614a112bedd8a2777f8d641237a9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="making-games-accessible"></a>Tronando os jogos acessíveis
 
@@ -64,8 +62,8 @@ Deficiência é definida como uma "incompatibilidade entre as necessidades do in
 
 ### <a name="vision"></a>Visão
 
-*   Condições médicas, a longo prazo, como glaucoma, catarata, daltonismo, miopia e retinopatia diabética
-*   Condições de curto prazo, situacionais, como um tamanho de monitor ou tela pequeno, uma tela de baixa resolução ou reflexo de tela por causa de fontes de luz brilhantes em um monitor
+*    Condições médicas, a longo prazo, como glaucoma, catarata, daltonismo, miopia e retinopatia diabética
+*    Condições de curto prazo, situacionais, como um tamanho de monitor ou tela pequeno, uma tela de baixa resolução ou reflexo de tela por causa de fontes de luz brilhantes em um monitor
         
 ### <a name="hearing"></a>Audição
 
@@ -154,21 +152,21 @@ Durante o design das legendas ocultas e das legendas do jogo, o objetivo é forn
 
 Aqui estão algumas diretrizes básicas a serem consideradas durante o design de legendas ocultas e legendas:
 
-*   Selecione uma fonte legível simples.
-*   Selecione um tamanho de fonte suficientemente grande pense em ter uma opção de tamanho de fonte ajustável para mais flexibilidade. (O tamanho de fonte ideal depende do tamanho da tela, da distância da tela na exibição etc.)
-*   Crie alto contraste entre as cores de fundo e da fonte. (Para obter mais informações, consulte [Informações sobre o índice de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
+*    Selecione uma fonte legível simples.
+*    Selecione um tamanho de fonte suficientemente grande pense em ter uma opção de tamanho de fonte ajustável para mais flexibilidade. (O tamanho de fonte ideal depende do tamanho da tela, da distância da tela na exibição etc.)
+*    Crie alto contraste entre as cores de fundo e da fonte. (Para obter mais informações, consulte [Informações sobre o índice de contraste](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Exiba sentenças curtas na tela. (Lembre-se não revelar o jogo exibindo o texto antes do evento ocorrer.)
-*   Diferencie o que está fazendo o som ou quem está falando. (Exemplo: "Daniel: Olá!")
-*   Dê a opção para ativar e desativar legendas ocultas e legendas. (Recurso adicional: capacidade de selecionar quantas informações sobre o som são exibidas com base na importância.)
+*    Diferencie o que está fazendo o som ou quem está falando. (Exemplo: "Daniel: Olá!")
+*    Dê a opção para ativar e desativar legendas ocultas e legendas. (Recurso adicional: capacidade de selecionar quantas informações sobre o som são exibidas com base na importância.)
 
 ### <a name="sound-feedback"></a>Retorno sonoro
 
 O som fornece um retorno para o jogador, além de um retorno visual. Um bom design de áudio de jogo pode melhorar a acessibilidade para jogadores com deficiência visual. Veja a seguir algumas diretrizes que devem ser levadas em consideração:
 
-*   Use indicações de áudio 3D para fornecer informações espaciais adicionais.
+*    Use indicações de áudio 3D para fornecer informações espaciais adicionais.
 * Separe os controles de volume de música, fala e efeitos sonoros.
-*   Projete uma fala que dê informações significativas para os jogadores. (Exemplo: "Inimigos se aproximando" x "Inimigos estão entrando pela porta de trás".)
-*   Certifique-se de que a fala esteja em uma velocidade razoável e ofereça um controle de velocidade para melhor acessibilidade.
+*    Projete uma fala que dê informações significativas para os jogadores. (Exemplo: "Inimigos se aproximando" x "Inimigos estão entrando pela porta de trás".)
+*    Certifique-se de que a fala esteja em uma velocidade razoável e ofereça um controle de velocidade para melhor acessibilidade.
 
 ### <a name="fully-mappable-controls"></a>Controles totalmente mapeáveis
 
@@ -192,9 +190,9 @@ Há vários fatores que podem causar uma reação fotossensível durante a execu
 
 Como um desenvolvedor, aqui estão algumas dicas para desenvolver um jogo a fim de incluir jogadores que tenham a tendência de epilepsia fotossensível:
 
-*   Evite luzes piscantes com uma frequência de 5 a 30 piscadas por segundo (Hertz) porque luzes piscando nessa faixa têm mais probabilidade de causar convulsões.
-*   Use um sistema automatizado para verificar o jogo em busca de estímulos que possam causar epilepsia fotossensível. (Exemplo: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desenvolvido pela Cambridge Research System Ltd e pelo Professor Graham Harding.) 
-*   Projete tendo em vista pausas entre níveis de jogos, incentivando jogadores a fazer uma pausa do jogo ininterrupto.
+*    Evite luzes piscantes com uma frequência de 5 a 30 piscadas por segundo (Hertz) porque luzes piscando nessa faixa têm mais probabilidade de causar convulsões.
+*    Use um sistema automatizado para verificar o jogo em busca de estímulos que possam causar epilepsia fotossensível. (Exemplo: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desenvolvido pela Cambridge Research System Ltd e pelo Professor Graham Harding.) 
+*    Projete tendo em vista pausas entre níveis de jogos, incentivando jogadores a fazer uma pausa do jogo ininterrupto.
 
 ## <a name="other-accessibility-resources"></a>Outros recursos de acessibilidade
 
@@ -219,6 +217,5 @@ Aqui estão alguns sites externos que fornecem informações adicionais sobre ac
 ## <a name="related-links"></a>Links relacionados
 * [Design inclusivo](https://www.microsoft.com/design/inclusive)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
-* [Desenvolvendo apps UWP acessíveis](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
+* [Desenvolvendo aplicativos UWP acessíveis](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Livro eletrônico sobre software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
-

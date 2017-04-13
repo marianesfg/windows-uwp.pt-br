@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6b5d2e6a41c1566c7c03b61b91bf9c641f674cea
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 189358c20ce934a946e4f4c034dc058d904b05d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rotation"></a>Rotação
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -115,7 +112,7 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 **Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo-morto**
@@ -130,7 +127,6 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
  
 
  
-
 
 
 

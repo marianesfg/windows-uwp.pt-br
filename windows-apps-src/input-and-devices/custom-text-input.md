@@ -1,6 +1,6 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um app UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows."
+Description: "As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um aplicativo UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows."
 title: "Visão geral da entrada de texto personalizada"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
@@ -11,18 +11,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6c9afe44006f173f7f261e1013024b6412d68703
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e1138c23985325f7b22470336e723ef745949cd6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-As APIs de texto básicas no namespace [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) permitem que um app UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows. As APIs são semelhantes às APIs [Estrutura de Serviços de Texto](https://msdn.microsoft.com/library/windows/desktop/ms629032) em que o app não precisa ter conhecimento detalhado dos serviços de texto. Isso permite que o app receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
+As APIs de texto básicas no namespace [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) permitem que um aplicativo UWP (Plataforma Universal do Windows) receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows. As APIs são semelhantes às APIs [Estrutura de Serviços de Texto](https://msdn.microsoft.com/library/windows/desktop/ms629032) em que o aplicativo não precisa ter conhecimento detalhado dos serviços de texto. Isso permite que o aplicativo receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
 
 <div class="important-apis" >
 <b>APIs Importantes</b><br/>
@@ -35,16 +32,16 @@ As APIs de texto básicas no namespace [**Windows.UI.Text.Core**](https://msdn.m
 ## <a name="why-use-core-text-apis"></a>Por que usar APIs de texto básicas?
 
 
-Para muitos apps, os controles de caixa de texto XAML ou HTML são suficientes para entrada de texto e edição. No entanto, caso seu app trate cenários de texto complexos, como um app de processamento de texto, talvez você precise da flexibilidade de um controle de edição de texto personalizado. Você pode usar as APIs de teclado [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para criar o controle de edição de texto, mas elas não oferecem uma maneira de receber entrada de texto com base na composição, algo obrigatório para dar suporte a idiomas do leste asiático.
+Para muitos aplicativos, os controles de caixa de texto XAML ou HTML são suficientes para entrada de texto e edição. No entanto, caso seu aplicativo trate cenários de texto complexos, como um aplicativo de processamento de texto, talvez você precise da flexibilidade de um controle de edição de texto personalizado. Você pode usar as APIs de teclado [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para criar o controle de edição de texto, mas elas não oferecem uma maneira de receber entrada de texto com base na composição, algo necessário para dar suporte a idiomas do leste asiático.
 
-Em vez disso, use as APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) quando você precisar criar um controle de edição de texto personalizado. Essas APIs foram projetadas para dar muita flexibilidade no processamento de entrada de texto, em qualquer idioma e permitir que você ofereça a experiência de texto mais adequada ao seu app. Os controles de edição e entrada de texto criados com APIs de texto básicas podem receber entrada de texto de todos os métodos de entrada de texto em dispositivos Windows, dos Editores de Método de Entrada (IMEs) baseados na [Estrutura de Serviços de Texto](https://msdn.microsoft.com/library/windows/desktop/ms629032) e manuscrito em computadores até o teclado WordFlow (que fornece correção automática, previsão e ditado) em dispositivos móveis.
+Em vez disso, use as APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) quando você precisar criar um controle de edição de texto personalizado. Essas APIs foram projetadas para dar muita flexibilidade no processamento de entrada de texto, em qualquer idioma e permitir que você ofereça a experiência de texto mais adequada ao seu aplicativo. Os controles de edição e entrada de texto criados com APIs de texto básicas podem receber entrada de texto de todos os métodos de entrada de texto em dispositivos Windows, dos Editores de Método de Entrada (IMEs) baseados na [Estrutura de Serviços de Texto](https://msdn.microsoft.com/library/windows/desktop/ms629032) e manuscrito em computadores até o teclado WordFlow (que fornece correção automática, previsão e ditado) em dispositivos móveis.
 
 ## <a name="architecture"></a>Arquitetura
 
 
 A seguir, uma representação simples do sistema de entrada de texto.
 
--   "Application" representa um app UWP que hospeda um controle de edição personalizado criado usando-se as APIs de texto básicas.
+-   "Application" representa um aplicativo UWP que hospeda um controle de edição personalizado criado usando-se as APIs de texto básicas.
 -   As APIs [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) facilitam a comunicação com serviços de texto por meio do Windows. A comunicação entre o controle de edição de texto e os serviços de texto é tratada principalmente por meio de um objeto [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) que fornece os métodos e os eventos para facilitar a comunicação.
 
 ![diagrama da arquitetura de texto básica](images/coretext/architecture.png)
@@ -54,7 +51,7 @@ A seguir, uma representação simples do sistema de entrada de texto.
 
 Os controles de edição dão espaço para entrada de texto, e os usuários esperam editar texto em qualquer lugar nesse espaço. Aqui, explicamos o sistema de posicionamento de texto usado pelas APIs de texto básicas e como os intervalos e as seleções são representados nesse sistema.
 
-### <a name="application-caret-position"></a>Posição do sinal de interpolação do app
+### <a name="application-caret-position"></a>Posição do sinal de interpolação do aplicativo
 
 Os intervalos de texto usados com as APIs de texto básicas são expressados em termos de posições de sinal de interpolação. Uma "Application Caret Position (ACP)" é um número baseado em zero que indica a contagem de caracteres desde o início do fluxo de texto pouco antes do sinal de interpolação, conforme mostrado aqui.
 
@@ -78,7 +75,7 @@ A posição do sinal de interpolação atual, normalmente conhecida como o ponto
 
 ### <a name="noncontiguous-selection"></a>Seleção não contígua
 
-Alguns controles de edição dão suporte a seleções não contíguas. Por exemplo, os apps do Microsoft Office dão suporte a seleções arbitrárias, e muitos editores de código-fonte dão suporte à seleção de coluna. No entanto, as APIs de texto básicas não dão suporte a seleções não contíguas. Os controles de edição devem informar somente uma seleção contígua única, normalmente o subintervalo ativo das seleções não contíguas.
+Alguns controles de edição dão suporte a seleções não contíguas. Por exemplo, os aplicativos do Microsoft Office dão suporte a seleções arbitrárias, e muitos editores de código-fonte dão suporte à seleção de coluna. No entanto, as APIs de texto básicas não dão suporte a seleções não contíguas. Os controles de edição devem informar somente uma seleção contígua única, normalmente o subintervalo ativo das seleções não contíguas.
 
 Por exemplo, considere este fluxo de texto:
 
@@ -167,6 +164,5 @@ Haverá vezes em que o [**Range**](https://msdn.microsoft.com/library/windows/ap
  
 **Exemplos de arquivo**
 * [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
-
 
 

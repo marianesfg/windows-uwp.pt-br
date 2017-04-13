@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Iniciar um aplicativo para obter resultados
-description: "Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de &quot;iniciar&quot; um aplicativo para obter resultados."
+description: "Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de &quot;iniciar&quot; um aplicativo para obter resultados."
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec46f3287deefca67dab96fe12b3380c7dbd6ed9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-an-app-for-results"></a>Iniciar um aplicativo para obter resultados
 
 
@@ -208,4 +205,3 @@ Em seguida, passá-lo para o aplicativo iniciado por meio de **LaunchUriForResul
  
 
  
-

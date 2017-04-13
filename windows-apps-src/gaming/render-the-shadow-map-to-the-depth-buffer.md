@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, renderização, mapa de sombra, buffer de profundidade, direct3d"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Faça a renderização do ponto de vista da luz para criar um mapa de profundidade bidimensional que representa o volume de sombra. O mapa de profundidade mascara o espaço que será renderizado com sombras. Parte 2 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -157,7 +154,6 @@ Na próxima parte deste guia passo a passo, veremos como adicionar sombras pela 
  
 
  
-
 
 
 

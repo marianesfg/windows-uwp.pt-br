@@ -9,24 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ba9c5c1a59452295a07efd371ccfd632f290c837
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2492d8c50b6f2e35a137eae6e1a002af0f46afd1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo.
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu app não estiver em primeiro plano. Este tópico demonstra como criar e registrar uma tarefa em segundo plano que é executada em um processo separado do seu app. Para fazer o trabalho em segundo plano diretamente no app em primeiro plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
+Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu aplicativo não estiver em primeiro plano. Este tópico demonstra como criar e registrar uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo. Para fazer o trabalho em segundo plano diretamente no aplicativo em primeiro plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
 
 > [!Note]
 > Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plano, consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obter informações sobre os aprimoramentos no Windows 10, versão 1607, que tornam a tarefa mais fácil.
@@ -38,11 +35,11 @@ Você pode executar código em segundo plano criando classes que implementam a i
 As seguintes etapas mostram como escrever uma nova classe que implementa a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Antes de iniciar, crie um novo projeto na sua solução para tarefas em segundo plano. Adicione uma nova classe vazia para a sua tarefa em segundo plano e importe o namespace [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847).
 
 1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para isso, clique com botão direito do mouse no nó da solução no **Gerenciador de Soluções** e selecione Adicionar-&gt;Novo Projeto. Em seguida, selecione o tipo de projeto **Componente do Tempo de Execução do Windows (Universal do Windows)**, dê um nome ao projeto e clique em OK.
-2.  Referencie o projeto das tarefa em segundo plano no projeto de app da Plataforma Universal do Windows (UWP).
+2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP).
 
-    Para app em C++, clique com o botão direito do mouse no seu app de projeto e selecione **Propriedades**. Então, vá para **Propriedades comuns** e clique em **Adicionar nova referência**, marque a caixa de marcação próxima ao projeto de tarefa em segundo plano e clique em **OK** nas duas caixas de diálogo.
+    Para aplicativo em C++, clique com o botão direito do mouse no seu aplicativo de projeto e selecione **Propriedades**. Então, vá para **Propriedades comuns** e clique em **Adicionar nova referência**, marque a caixa de marcação próxima ao projeto de tarefa em segundo plano e clique em **OK** nas duas caixas de diálogo.
 
-    Para um app C#, no seu projeto de app, clique com o botão direito em **Referências** e selecione **Adicionar nova referência**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
+    Para um aplicativo C#, no seu projeto de aplicativo, clique com o botão direito em **Referências** e selecione **Adicionar nova referência**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
 
 3.  Crie uma nova classe que implemente a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). O método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) é o ponto de entrada obrigatório que será chamado quando eventos específicos forem acionados. Esse método é obrigatório em todas as tarefas em segundo plano.
 
@@ -154,14 +151,14 @@ As seguintes etapas mostram como escrever uma nova classe que implementa a inter
 
 Para mais informações sobre padrões assíncronos, consulte [Programação assíncrona](https://msdn.microsoft.com/library/windows/apps/mt187335). Para exemplos adicionais sobre como usar os adiamentos para evitar que uma tarefa em segundo plano pare antecipadamente, consulte a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
-O procedimento abaixo é concluído em uma de suas classes de app (por exemplo, MainPage.xaml.cs).
+O procedimento abaixo é concluído em uma de suas classes de aplicativo (por exemplo, MainPage.xaml.cs).
 
 > [!NOTE]
 > Você também pode criar uma função dedicada a registrar tarefas em segundo plano. Consulte [Registrar uma tarefa em segundo plano](register-a-background-task.md). Nesse caso, em vez de usar as próximas três etapas, você pode simplesmente construir o gatilho e oferecê-lo à função de registro junto com o nome da tarefa, o ponto de entrada da tarefa e (opcionalmente) uma condição.
 
 ## <a name="register-the-background-task-to-run"></a>Registre a tarefa em segundo plano a ser executada
 
-1.  Veja se a tarefa em segundo plano já está registrada iterando através da propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787). Esta etapa é importante; se seu app não verificar a existência de registros de tarefas em segundo plano, ele poderá facilmente registrar a tarefa várias vezes, causando problemas de desempenho e extrapolando o tempo de CPU disponível para a tarefa antes que esta possa ser concluída.
+1.  Veja se a tarefa em segundo plano já está registrada iterando através da propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787). Esta etapa é importante; se seu aplicativo não verificar a existência de registros de tarefas em segundo plano, ele poderá facilmente registrar a tarefa várias vezes, causando problemas de desempenho e extrapolando o tempo de CPU disponível para a tarefa antes que esta possa ser concluída.
 
     O seguinte exemplo itera na propriedade AllTasks e define uma variável de sinalização como true se a tarefa já tiver sido registrada:
 
@@ -247,17 +244,17 @@ O procedimento abaixo é concluído em uma de suas classes de app (por exemplo, 
     > ```
 
 > [!NOTE]
-> Os aplicativos universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+> Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
-Para garantir que seu aplicativo universal do Windows continue sendo executado corretamente depois que você liberar uma atualização, use o gatilho **ServicingComplete** (veja [SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839)) para realizar quaisquer alterações de configuração pós-atualização, como migrar do banco de dados do app e registrar tarefas em segundo plano. É recomendável cancelar o registro de tarefas em segundo plano associadas à versão anterior do app (veja [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471)) e registrar tarefas em segundo plano para a nova versão do app (veja [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)) neste momento.
+Para garantir que seu aplicativo Universal do Windows continue sendo executado corretamente depois que você liberar uma atualização, use o gatilho **ServicingComplete** (veja [SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839)) para realizar quaisquer alterações de configuração pós-atualização, como migrar do banco de dados do aplicativo e registrar tarefas em segundo plano. É recomendável cancelar o registro de tarefas em segundo plano associadas à versão anterior do aplicativo (veja [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471)) e registrar tarefas em segundo plano para a nova versão do aplicativo (veja [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)) neste momento.
 
 Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
-## <a name="handle-background-task-completion-using-event-handlers"></a>Tratar a conclusão da tarefa em segundo plano usando manipuladores de eventos
+## <a name="handle-background-task-completion-using-event-handlers"></a>Manipular a conclusão da tarefa em segundo plano usando manipuladores de eventos
 
-Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Dessa forma, seu app poderá obter resultados da tarefa em segundo plano. Quando o app for iniciado ou retomado, o método mark será chamado se a tarefa em segundo plano tiver sido concluída, desde a última vez que o app estava em primeiro plano. (O método OnCompleted será chamado imediatamente se a tarefa em segundo plano for concluída enquanto o app estiver em primeiro plano.)
+Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Dessa forma, seu aplicativo poderá obter resultados da tarefa em segundo plano. Quando o aplicativo for iniciado ou retomado, o método mark será chamado se a tarefa em segundo plano tiver sido concluída, desde a última vez que o aplicativo estava em primeiro plano. (O método OnCompleted será chamado imediatamente se a tarefa em segundo plano for concluída enquanto o aplicativo estiver em primeiro plano.)
 
-1.  Escreva um método OnCompleted para tratar a conclusão das tarefas em segundo plano. Por exemplo, o resultado da tarefa em segundo plano pode ocasionar uma atualização da interface do usuário. O volume do método mostrado aqui é obrigatório para o método do manipulador de eventos OnCompleted, mesmo que este exemplo não use o parâmetro *args*.
+1.  Escreva um método OnCompleted para manipular a conclusão das tarefas em segundo plano. Por exemplo, o resultado da tarefa em segundo plano pode ocasionar uma atualização da interface do usuário. O volume do método mostrado aqui é necessário para o método do manipulador de eventos OnCompleted, mesmo que este exemplo não use o parâmetro *args*.
 
     O seguinte código de exemplo reconhece a conclusão da tarefa em segundo plano e chama um método de atualização de interface de usuário de exemplo que leva a cadeia de caracteres da mensagem.
 
@@ -297,9 +294,9 @@ Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn
     >     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &ExampleBackgroundTask::OnCompleted);
     > ```
 
-## <a name="declare-that-your-app-uses-background-tasks-in-the-app-manifest"></a>Declarar que o seu app usa tarefas em segundo plano no manifesto do app
+## <a name="declare-that-your-app-uses-background-tasks-in-the-app-manifest"></a>Declarar que o seu aplicativo usa tarefas em segundo plano no manifesto do aplicativo
 
-Antes de o seu app conseguir executar tarefas em segundo plano, você deve declarar cada tarefa em segundo plano no manifesto do app. Se o app tentar registrar uma tarefa em segundo plano com um disparador que não esteja listado no manifesto, o registro falhará.
+Antes de o seu aplicativo conseguir executar tarefas em segundo plano, você deve declarar cada tarefa em segundo plano no manifesto do aplicativo. Se o aplicativo tentar registrar uma tarefa em segundo plano com um disparador que não esteja listado no manifesto, o registro falhará.
 
 1.  Abra o designer de manifesto do pacote abrindo o arquivo chamado Package.appxmanifest.
 2.  Abra a guia **Declarações**.
@@ -322,15 +319,15 @@ Antes de o seu app conseguir executar tarefas em segundo plano, você deve decla
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Agora você deve compreender os fundamentos de como escrever uma classe de tarefa em segundo plano, como registrar a tarefa em segundo plano no app e como fazer o app reconhecer quando a tarefa em segundo plano é concluída. Você também deve saber atualizar o manifesto do app para que seu app possa registrar com êxito a tarefa em segundo plano.
+Agora você deve compreender os fundamentos de como escrever uma classe de tarefa em segundo plano, como registrar a tarefa em segundo plano no aplicativo e como fazer o aplicativo reconhecer quando a tarefa em segundo plano é concluída. Você também deve saber atualizar o manifesto do aplicativo para que seu aplicativo possa registrar com êxito a tarefa em segundo plano.
 
 > [!NOTE]
-> Baixe o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver exemplos de código semelhantes, no contexto de um app UWP completo e robusto, que usa tarefas em segundo plano.
+> Baixe o [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver exemplos de código semelhantes, no contexto de um aplicativo UWP completo e robusto, que usa tarefas em segundo plano.
 
-Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever apps que usam tarefas em segundo plano.
+Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever aplicativos que usam tarefas em segundo plano.
 
 > [!NOTE]
-> Este artigo destina-se a desenvolvedores do Windows 10 que escrevem apps da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Este artigo destina-se a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -340,7 +337,7 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 * [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
@@ -348,11 +345,10 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 
 **Diretrizes da tarefa em segundo plano**
 
-* [Diretrizes de tarefas em segundo plano](guidelines-for-background-tasks.md)
+* [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 **Referência de API de tarefa em segundo plano**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
-

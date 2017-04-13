@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Guias e pivôs permitem que os usuários naveguem no conteúdo acessado frequentemente."
+Description: "Guias e pivôs permitem que os usuários naveguem entre conteúdo acessado frequentemente."
 title: "Guias e pivôs"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 93df9051bc0ae724e2c47f5ce5f73da3910c30ce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 197feb30f769f4e34a576abeb52bd17d4006bb42
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="pivot-and-tabs"></a>Guias e pivôs
 
@@ -143,4 +141,3 @@ Aplicativos que personalizaram Pivot e incorporam o sublinhado em elementos visu
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Noções básicas de design de navegação](../layout/navigation-basics.md)
 - [**Amostra Pivot**](http://go.microsoft.com/fwlink/p/?LinkId=619903)
-

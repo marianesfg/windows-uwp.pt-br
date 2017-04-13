@@ -2,26 +2,23 @@
 author: mcleanbyron
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
 description: "Use este método na API de envio da Windows Store para confirmar um envio de complemento novo ou atualizado para o Centro de Desenvolvimento do Windows."
-title: Confirmar um envio de complemento usando a API de envio da Windows Store
+title: Confirmar um envio de complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, confirmar envio de complemento, produto in-App, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bb8fb30a8dace9c9e32cc233bf6b73046263a22d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3ab65675822f9b9c88e5c613c4394b295e7430e1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="commit-an-add-on-submission-using-the-windows-store-submission-api"></a>Confirmar um envio de complemento usando a API de envio da Windows Store
-
+# <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 
 
 
-Use este método na API de envio da Windows Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto no app ou IAP) para o Centro de Desenvolvimento do Windows. A ação de confirmação alerta o Centro de Desenvolvimento de que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Centro de Desenvolvimento confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio serão mostradas no painel do Centro de Desenvolvimento.
+
+Use este método na API de envio da Windows Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto no aplicativo ou IAP) para o Centro de Desenvolvimento do Windows. A ação de confirmação alerta o Centro de Desenvolvimento de que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Centro de Desenvolvimento confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio serão mostradas no painel do Centro de Desenvolvimento.
 
 Para obter mais informações sobre como a operação de confirmação se adapta ao processo de envio de um complemento, usando a API de envio da Windows Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -39,7 +36,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}/commit``` |
 
@@ -59,7 +56,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja confirmar. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Obter todos os complementos](get-all-add-ons.md) e [Criar um complemento](create-an-add-on.md). |
-| submissionId | cadeia de caracteres | Obrigatório. A ID do envio que você deseja confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [Criar um envio de complemento](create-an-add-on-submission.md).  |
+| submissionId | string | Obrigatório. A ID do envio que você deseja confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [Criar um envio de complemento](create-an-add-on-submission.md).  |
 
 <span/>
 
@@ -90,7 +87,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>  |
+| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>  |
 
 <span/>
 
@@ -115,4 +112,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Atualizar um envio de complemento](update-an-add-on-submission.md)
 * [Excluir um envio de complemento](delete-an-add-on-submission.md)
 * [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
-

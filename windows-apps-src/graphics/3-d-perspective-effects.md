@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b0855392c9e9e3f18d08a16cf39cdfa5c0910701
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c16506ddb58043b5cba9af7989c34c7f453fe6e8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>Efeitos da perspectiva 3D na interface do usuário XAML
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Você pode aplicar efeitos 3D ao conteúdo em seus aplicativos do Windows Runtime usando transformações de perspectiva. Por exemplo, você pode criar a ilusão de que um objeto está sendo girado em sua direção ou para longe de você, como mostrado abaixo.
 
@@ -190,4 +188,3 @@ Perceba que, nesta amostra, o objeto não muda de direção conforme gira. Isso 
 ## <a name="positioning-an-object"></a>Posicionando um objeto
 
 Você pode usar os tipos [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) e [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) para cenários semi-3D mais complexos que são possíveis com o [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). O **Matrix3DProjection** fornece uma matriz de transformação 3D completa para ser aplicada a qualquer [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), para que você possa aplicar um modelo arbitrário de matrizes de transformação e de perspectiva aos elementos. Não se esqueça de que essas APIs são mínimas e, logo, se você usá-las, precisará escrever o código que cria corretamente as matrizes de transformação 3D. Por causa disso, é mais fácil usar o **PlaneProjection** para cenários 3D simples.
-

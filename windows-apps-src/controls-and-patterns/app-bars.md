@@ -12,17 +12,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b14f83d9e834fcefbb3f9d1f9870f81686b44084
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6dc3c9d15ebbda67dd055adb4b9d5548b6ac81e3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="app-bar-and-command-bar"></a>Barra de aplicativos e barra de comandos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-As barras de comandos (também conhecidas como "barras de apps") dão aos usuários acesso fácil às tarefas mais comuns do app e podem ser usadas para mostrar comandos ou opções específicas ao contexto do usuário, como uma seleção de fotos ou o modo de desenho. Elas também podem ser usadas para navegação entre páginas ou seções do app. As barras de comandos podem ser usadas com qualquer padrão de navegação.
+As barras de comandos (também conhecidas como "barras de aplicativos") dão aos usuários acesso fácil às tarefas mais comuns do aplicativo e podem ser usadas para mostrar comandos ou opções específicas ao contexto do usuário, como uma seleção de fotos ou o modo de desenho. Elas também podem ser usadas para navegação entre páginas ou seções do aplicativo. As barras de comandos podem ser usadas com qualquer padrão de navegação.
 
 ![Exemplo de uma barra de comandos com ícones](images/controls_appbar_icons.png)
 
@@ -41,16 +39,16 @@ As barras de comandos (também conhecidas como "barras de apps") dão aos usuár
 
 O controle CommandBar é um controle de finalidade geral, flexível e leve que pode exibir conteúdo complexo, como imagens ou blocos de texto, e comandos simples, como os controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) e [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
-XAML fornece os controles AppBar e CommandBar. Use AppBar somente quando você estiver atualizando um aplicativo universal do Windows 8 que usa AppBar e precisar minimizar as alterações. Para novos apps no Windows 10, recomendamos usar o controle CommandBar. Este documento pressupõe que você está usando o controle CommandBar.
+XAML fornece os controles AppBar e CommandBar. Use AppBar somente quando você estiver atualizando um aplicativo Universal do Windows 8 que usa AppBar e precisar minimizar as alterações. Para novos aplicativos no Windows 10, recomendamos usar o controle CommandBar. Este documento pressupõe que você está usando o controle CommandBar.
 
 ## <a name="examples"></a>Exemplos
-Uma barra de comandos expandida no app Fotos da Microsoft.
+Uma barra de comandos expandida no aplicativo Fotos da Microsoft.
 
-![Barra de comandos no app Fotos da Microsoft](images/control-examples/command-bar-photos.png)
+![Barra de comandos no aplicativo Fotos da Microsoft](images/control-examples/command-bar-photos.png)
 
 Uma barra de comandos no calendário do Outlook no Windows Phone.
 
-![Barra de comandos no app de Calendário do Outlook](images/control-examples/command-bar-calendar-phone.png)
+![Barra de comandos no aplicativo de Calendário do Outlook](images/control-examples/command-bar-calendar-phone.png)
 
 ## <a name="anatomy"></a>Anatomia
 
@@ -67,7 +65,7 @@ Esta é a mesma barra de comandos em seu estado aberto. Os rótulos identificam 
 ![Uma barra de comandos fechada](images/commandbar_anatomy_open.png)
 
 A barra de comandos é dividida em 4 áreas principais:
-- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. A propriedade [**OverflowButtonVisibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que os apps alterem esse comportamento de se ocultar automaticamente por padrão.
+- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. A propriedade [**OverflowButtonVisibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que os aplicativos alterem esse comportamento de se ocultar automaticamente por padrão.
 - A área de conteúdo está alinhada à esquerda da barra. Ela será mostrada se a propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) estiver preenchida.
 - A área de comando principal está alinhada à direita da barra, próxima ao botão "veja mais" \[•••\]. Ela será mostrada se a propriedade [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) estiver preenchida.  
 - O menu de estouro é mostrado somente quando a barra de comandos está aberta e a propriedade [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) está preenchida. O novo comportamento de estouro dinâmico moverá automaticamente comandos principais para a área SecondaryCommands quando espaço é limitado.
@@ -113,7 +111,7 @@ A área de excedentes padrão é estilizada para ser distinta da barra. Você po
 Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário. 
 
 <div class="microsoft-internal-note">
-Os comandos também podem entrar ou sair automaticamente do estouro com as alterações de largura da barra de comandos, por exemplo, quando os usuários redimensionam a janela do app. O estouro dinâmico está ativado por padrão, mas os apps podem desativar esse comportamento alterando o valor da propriedade `IsDynamicOverflowEnabled`.
+Os comandos também podem entrar ou sair automaticamente do estouro com as alterações de largura da barra de comandos, por exemplo, quando os usuários redimensionam a janela do aplicativo. O estouro dinâmico está ativado por padrão, mas os aplicativos podem desativar esse comportamento alterando o valor da propriedade `IsDynamicOverflowEnabled`.
 </div>
 
 ### <a name="app-bar-buttons"></a>Botões da barra de aplicativos
@@ -122,7 +120,7 @@ PrimaryCommands e SecondaryCommands podem ser preenchidos somente com os element
 
 Os controles de botão da barra de aplicativos são caracterizados por um ícone e um rótulo associado. Eles têm dois tamanhos: normal e compacto. Por padrão, o rótulo de texto é mostrado. Quando a propriedade [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.iscompact.aspx) é definida como **true**, o rótulo de texto fica oculto. Quando usada em um controle CommandBar, a barra de comandos sobrescreve automaticamente a propriedade IsCompact do botão, conforme a barra de comandos é aberta ou fechada.
 
-Para posicionar os rótulos dos botões da barra de aplicativos à direita do seus ícones, os apps podem usar a nova propriedade [**DefaultLabelPosition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) do CommandBar.
+Para posicionar os rótulos dos botões da barra de aplicativos à direita do seus ícones, os aplicativos podem usar a nova propriedade [**DefaultLabelPosition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) do CommandBar.
 
 ```xaml
 <CommandBar DefaultLabelPosition="Right">
@@ -131,7 +129,7 @@ Para posicionar os rótulos dos botões da barra de aplicativos à direita do se
 </CommandBar>
 ```
 
-O trecho de código acima é semelhante ao seguinte quando desenhado por um app.
+O trecho de código acima é semelhante ao seguinte quando desenhado por um aplicativo.
 
 ![Barra de comandos com rótulos à direita](images/app-bar-labels-on-right.png)
 
@@ -142,11 +140,11 @@ Quando você colocar um botão de barra de aplicativos no menu de estouro (Secon
 ![Botão de barra de aplicativos como comando principal e secundário](images/app-bar-toggle-button-two-modes.png)
 
 - *Se houver um comando que deva aparecer consistentemente em várias páginas, é melhor manter esse comando em um local consistente.*
-- *Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e os ajuda a transferir seu conhecimento da navegação no app de um produto para outro.*
+- *Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e os ajuda a transferir seu conhecimento da navegação no aplicativo de um produto para outro.*
 
 ### <a name="button-labels"></a>Rótulos de botão
 
-É recomendável manter os rótulos de botões da barra do app curtos, preferencialmente com uma única palavra. Rótulos mais longos posicionados abaixo do ícone de um botão da barra de aplicativos serão ajustados em várias linhas, aumentando assim a altura geral da barra de comandos aberta. Você pode incluir um caractere de hífen condicional (0x00AD) no texto de um rótulo para indicar o limite do caractere onde uma quebra de palavra deve ocorrer. Em XAML, isso é expresso usando-se uma sequência de escape, como esta:
+É recomendável manter os rótulos de botões da barra do aplicativo curtos, preferencialmente com uma única palavra. Rótulos mais longos posicionados abaixo do ícone de um botão da barra de aplicativos serão ajustados em várias linhas, aumentando assim a altura geral da barra de comandos aberta. Você pode incluir um caractere de hífen condicional (0x00AD) no texto de um rótulo para indicar o limite do caractere onde uma quebra de palavra deve ocorrer. Em XAML, isso é expresso usando-se uma sequência de escape, como esta:
 
 ```xaml
 <AppBarButton Icon="Back" Label="Areally&#x00AD;longlabel"/>
@@ -175,7 +173,7 @@ Você pode usar os eventos [**Opening**](https://msdn.microsoft.com/library/wind
 - Os eventos Opening e Closing ocorrem antes de começar a animação de transição.
 - Os eventos Opened e Closed ocorrem após a conclusão da transição.
 
-Neste exemplo, os eventos Opening e Closing são usados para alterar a opacidade da barra de comandos. Quando a barra de comandos está fechada, ela é semitransparente para que o plano de fundo do app apareça. Quando a barra de comandos está aberta, ela se torna opaca para que o usuário possa se concentrar nos comandos.
+Neste exemplo, os eventos Opening e Closing são usados para alterar a opacidade da barra de comandos. Quando a barra de comandos está fechada, ela é semitransparente para que o plano de fundo do aplicativo apareça. Quando a barra de comandos está aberta, ela se torna opaca para que o usuário possa se concentrar nos comandos.
 
 ```xaml
 <CommandBar Opening="CommandBar_Opening"
@@ -244,13 +242,13 @@ A alteração de ClosedDisplayMode para fornecer mais ou menos dicas para o usu�
 
 ### <a name="issticky"></a>IsSticky
 
-Depois de aberta a barra de comandos, se o usuário interagir com o app em qualquer lugar fora do controle, por padrão, o menu de estouro será ignorado e os rótulos serão ocultados. Esse modo de fechamento é chamado de *light dismiss*. Você pode controlar como a barra é ignorada definindo a propriedade [**IsSticky**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando a barra é fixa (`IsSticky="true"`), ela não é fechada por um gesto de light dismiss. A barra permanece aberta até que o usuário pressione o botão "veja mais" \[•••\] ou selecionar um item de menu de estouro. Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
+Depois de aberta a barra de comandos, se o usuário interagir com o aplicativo em qualquer lugar fora do controle, por padrão, o menu de estouro será ignorado e os rótulos serão ocultados. Esse modo de fechamento é chamado de *light dismiss*. Você pode controlar como a barra é ignorada definindo a propriedade [**IsSticky**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando a barra é fixa (`IsSticky="true"`), ela não é fechada por um gesto de light dismiss. A barra permanece aberta até que o usuário pressione o botão "veja mais" \[•••\] ou selecionar um item de menu de estouro. Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
 ### <a name="placement"></a>Colocação
 
-As barras de comandos podem ser colocadas na parte superior da janela do app, na parte inferior da janela do app e embutidas.
+As barras de comandos podem ser colocadas na parte superior da janela do aplicativo, na parte inferior da janela do aplicativo e embutidas.
 
 ![Exemplo 1 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement1.png)
 
@@ -262,7 +260,7 @@ As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em 
 
 ![Exemplo 2 de colocação de barra de aplicativos](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos de toque**: caso seja obrigatório que a barra de comandos fique visível para o usuário quando o teclado virtual ou o painel de entrada virtual (SIP) for exibido, você poderá atribuir a barra de comandos à propriedade [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de uma página e ela será movida para permanecer visível quando o SIP estiver presente. Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do app.
+>**Dispositivos de toque**: caso seja necessário que a barra de comandos fique visível para o usuário quando o teclado virtual ou o painel de entrada virtual (SIP) for exibido, você poderá atribuir a barra de comandos à propriedade [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de uma página e ela será movida para permanecer visível quando o SIP estiver presente. Caso contrário, você deve colocar a barra de comandos embutida e posicionada em relação ao conteúdo do aplicativo.
 
 ### <a name="actions"></a>Ações
 
@@ -272,13 +270,13 @@ Priorize as ações na barra de comandos de acordo com sua visibilidade.
 -   Coloque comandos menos importantes no espaço de ação da barra ou dentro dos primeiros slots da área de excedentes. Esses comandos estarão visíveis quando a barra tiver espaço suficiente na tela, mas entrarão no menu suspenso da área de estouro quando não houver espaço suficiente.
 -   Coloque os comandos menos importantes dentro da área de excedentes. Esses comandos sempre aparecerão no menu suspenso.
 
-Se houver um comando que deva aparecer consistentemente em várias páginas, é melhor manter esse comando em um local consistente. Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e os ajuda a transferir seu conhecimento da navegação no app de um produto para outro.
+Se houver um comando que deva aparecer consistentemente em várias páginas, é melhor manter esse comando em um local consistente. Recomendamos colocar os comandos Aceitar, Sim e OK à esquerda de Rejeitar, Não e Cancelar. A consistência dá aos usuários a confiança para se movimentar no sistema e os ajuda a transferir seu conhecimento da navegação no aplicativo de um produto para outro.
 
 Embora seja possível colocar todas as ações dentro da área de estouro para que somente o botão "veja mais" \[•••\] esteja visível na barra de comandos, lembre-se de que a ocultação de todas as ações pode confundir os usuários.
 
 ### <a name="command-bar-flyouts"></a>Submenus da barra de comandos
 
-Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responder, Responder a Todos e Encaminhar em um menu Responder. Em geral, embora um botão da barra do app ative um único comando, ele também pode ser usado para mostrar um [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx) ou um [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx) com conteúdo personalizado.
+Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responder, Responder a Todos e Encaminhar em um menu Responder. Em geral, embora um botão da barra do aplicativo ative um único comando, ele também pode ser usado para mostrar um [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx) ou um [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx) com conteúdo personalizado.
 
 ![Exemplo de submenus em uma barra de comandos](images/AppbarGuidelines_Flyouts.png)
 
@@ -288,16 +286,16 @@ Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responde
 
 -   O menu de estouro é representado pelo botão "veja mais" \[•••\], o ponto de entrada visível do menu. Ele fica à extrema direita da barra de ferramentas, ao lado das ações principais.
 -   A área de estouro é alocada para ações que são usadas com menos frequência.
--   As ações podem alternar entre o espaço de ação principal e o menu de estouro nos pontos de interrupção. Você também pode designar ações para sempre permanecer no espaço de ação principal, independentemente do tamanho da tela ou da janela do app.
+-   As ações podem alternar entre o espaço de ação principal e o menu de estouro nos pontos de interrupção. Você também pode designar ações para sempre permanecer no espaço de ação principal, independentemente do tamanho da tela ou da janela do aplicativo.
 -   Ações usadas com pouca frequência podem permanecer no menu estouro de mesmo quando a barra de aplicativos é expandida em telas maiores.
 
 ## <a name="adaptability"></a>Capacidade de adaptação
 
 -   O mesmo número de ações na barra de aplicativos deve ficar visível na orientação retrato e na paisagem, reduzindo a carga cognitiva do usuário. O número de ações disponíveis deve ser determinado pela largura do dispositivo na orientação retrato.
--   Em telas pequenas que provavelmente serão usadas com uma única mão, barras de app devem ser posicionadas perto da parte inferior da tela.
--   Em telas maiores, colocar barras de app mais próxima ao topo da janela as torna mais perceptíveis e detectáveis.
+-   Em telas pequenas que provavelmente serão usadas com uma única mão, barras de aplicativo devem ser posicionadas perto da parte inferior da tela.
+-   Em telas maiores, colocar barras de aplicativo mais próxima ao topo da janela as torna mais perceptíveis e detectáveis.
 -   Direcionando pontos de interrupção, você pode mover ações para dentro e para fora do menu à medida que o tamanho da janela muda.
--   Direcionando a tela na diagonal, você pode modificar a posição da barra do app com base no tamanho de tela do dispositivo.
+-   Direcionando a tela na diagonal, você pode modificar a posição da barra do aplicativo com base no tamanho de tela do dispositivo.
 -   Considere mover os rótulos para a direita dos ícones de botões da barra de aplicativos para melhorar a legibilidade. Os rótulos na parte inferior exigem que os usuários abram a barra de comandos para revelar rótulos, enquanto os rótulos à direita ficam visíveis mesmo quando a barra de comandos é fechada. Essa otimização funciona bem em janelas maiores.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
@@ -306,6 +304,5 @@ Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responde
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Noções básicas de design de comandos para apps UWP](../layout/commanding-basics.md)
+* [Noções básicas de design de comandos para aplicativos UWP](../layout/commanding-basics.md)
 * [**Classe CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
-

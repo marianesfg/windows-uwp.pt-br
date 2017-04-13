@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 58847adcb94f7e730bcdcd98767282811d555016
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
 
@@ -444,7 +441,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>   Observação   DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>   DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
  
@@ -674,7 +671,6 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
  
 
  
-
 
 
 

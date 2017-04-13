@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
-description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um app Silverlight para Windows Phone 8.1 ou Windows Phone 8.0."
+description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0."
 title: AdControl no Windows Phone Silverlight
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, AdControl, Silverlight, Windows Phone"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1f4606f5bb5446d8749f80e2bf4772a0b6db48b3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 743b9faccaa120f1904b592fc09a965dc7878e03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-in-windows-phone-silverlight"></a>AdControl no Windows Phone Silverlight
 
-Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para exibir anúncios em faixa em um app Silverlight para Windows Phone 8.1 ou Windows Phone 8.0.
+Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0.
 
-> **Observação para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Os anúncios em faixa ainda são compatíveis com os apps existentes do Windows Phone 8.0 Silverlight que usam um **AdControl** de uma versão anterior do SDK do Universal Ad Client ou do SDK do Microsoft Advertising e que já estão disponíveis na Loja. No entanto, anúncios em faixa não são mais compatíveis com os novos projetos do Windows Phone 8.0 Silverlight. Além disso, alguns cenários de depuração e testes são limitados nos projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Exibir anúncios no seu app](display-ads-in-your-app.md#silverlight_support).
+> **Observação para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Os anúncios em faixa ainda são compatíveis com os aplicativos existentes do Windows Phone 8.0 Silverlight que usam um **AdControl** de uma versão anterior do SDK do Universal Ad Client ou do SDK do Microsoft Advertising e que já estão disponíveis na Loja. No entanto, anúncios em faixa não são mais compatíveis com os novos projetos do Windows Phone 8.0 Silverlight. Além disso, alguns cenários de depuração e testes são limitados nos projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md#silverlight_support).
 
 ## <a name="add-the-advertising-assemblies-to-your-project"></a>Adicione os assemblies de publicidade ao seu projeto
 
@@ -48,7 +45,7 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
     Depois de inserir o comando, todos os assemblies necessários do Microsoft Advertising para o Silverlight serão baixados para o seu projeto local por meio de pacotes NuGet, e as referências a esses assemblies serão adicionadas automaticamente ao seu projeto.
 
-## <a name="code-your-app"></a>Codificar seu app
+## <a name="code-your-app"></a>Codificar seu aplicativo
 
 
 1.  Adicione os seguintes recursos ao nó **Recursos** no arquivo WMAppManifest.xml.
@@ -104,7 +101,7 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
 6.  Na marca **Grade**, adicione o código a seguir do **AdControl**. Atribua as propriedades **ApplicationId** e **AdUnitId** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md), e ajuste as propriedades **Height** e **Width** para um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
-  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **ApplicationId** e **AdUnitId** por valores dinâmicos antes de enviar seu app.
+  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **ApplicationId** e **AdUnitId** por valores dinâmicos antes de enviar seu aplicativo.
 
   > [!div class="tabbedCodeSnippets"]
   ``` xml
@@ -119,20 +116,19 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
   </Grid>
   ```
 
-7.  Compile e execute o seu projeto. Confirme que seu app exibe um anúncio, semelhante ao seguinte:
+7.  Compile e execute o seu projeto. Confirme que seu aplicativo exibe um anúncio, semelhante ao seguinte:
 
   ![wp81silverlight\-emulatorwithad](images/13-8db1492f-ae1d-439b-9b78-bed8e22fe996.jpg)
 
-## <a name="release-your-app-with-live-ads-using-dev-center"></a>Lançar seu app com anúncios dinâmicos usando o Centro de Desenvolvimento
+## <a name="release-your-app-with-live-ads-using-dev-center"></a>Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento
 
-1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu app e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do app.
+1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
 
 2.  Em seu código, substitua os valores da unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-3.  [Envie seu app](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
 
 4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
 
 
  
-

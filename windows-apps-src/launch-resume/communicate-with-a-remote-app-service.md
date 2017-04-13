@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
 title: "Comunicar-se com um serviço de app remoto"
-description: "Troque mensagens com um serviço de app em execução em um dispositivo remoto usando o projeto &quot;Roma&quot;."
+description: "Troque mensagens com um serviço de app em execução em um dispositivo remoto usando o projeto Roma."
 ms.assetid: a0261e7a-5706-4f9a-b79c-46a3c81b136f
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0cac219625fbc7b6526c81cf11f010589d2bf000
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3848ab99538ab198f92890ac06da733169084f6a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="communicate-with-a-remote-app-service"></a>Comunicar-se com um serviço de app remoto
 
 Além de iniciar um app em um dispositivo remoto usando um URI, você também pode executar e se comunicar com *serviços de app* em dispositivos remotos. Qualquer dispositivo baseado no Windows pode ser usado como o dispositivo cliente ou host. Isso proporciona um número praticamente ilimitado de maneiras de interagir com dispositivos conectados sem a necessidade de trazer um app para o primeiro plano.
@@ -23,7 +20,7 @@ Além de iniciar um app em um dispositivo remoto usando um URI, você também po
 ## <a name="set-up-the-app-service-on-the-host-device"></a>Configurar o serviço de app no dispositivo host
 Para executar um serviço de app em um dispositivo remoto, você já deve ter um provedor desse serviço de app instalado no dispositivo. Este guia usará o serviço de app de gerador de número aleatório, que está disponível no [Repositório de exemplos universais do Windows](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). Para obter instruções sobre como criar seu próprio serviço de app, consulte [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md).
 
-Se você estiver usando um serviço de app já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço de app e selecione o arquivo Package.appxmanifest. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Encontre o elemento **Extension** que define o projeto como um serviço de app e nomeia seu projeto pai.
+Se você estiver usando um serviço de aplicativo já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço de aplicativo e selecione o arquivo Package.appxmanifest. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Encontre o elemento **Extension** que define o projeto como um serviço de aplicativo e nomeia seu projeto pai.
 
 ``` xml
 ...
@@ -66,10 +63,10 @@ As seguintes instruções **using** são necessárias para o código nesta seç�
 [!code-cs[Principal](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
 
 
-Primeiro você deve instanciar um objeto [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection), como se estivesse chamando um serviço de app localmente. Esse processo é explicado com mais detalhes em [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md). Neste exemplo, o serviço de app de destino é o serviço de gerador de número aleatório.
+Primeiro você deve instanciar um objeto [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection), como se estivesse chamando um serviço de aplicativo localmente. Esse processo é explicado com mais detalhes em [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md). Neste exemplo, o serviço de app de destino é o serviço de gerador de número aleatório.
 
 > [!NOTE]
-> Presume-se que um objeto [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) já tenha sido adquirido por outros meios no código que chama o método a seguir. Consulte [Iniciar um app remoto](launch-a-remote-app.md) para obter instruções sobre como configurá-lo.
+> Presume-se que um objeto [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) já tenha sido adquirido por outros meios no código que chama o método a seguir. Consulte [Iniciar um aplicativo remoto](launch-a-remote-app.md) para obter instruções sobre como configurá-lo.
 
 [!code-cs[Principal](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
 
@@ -89,9 +86,8 @@ Agora que você já está conectado a um serviço de app em um dispositivo host 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Visão geral de apps e dispositivos conectados (Project "Rome")](connected-apps-and-devices.md)  
+[Visão geral de aplicativos e dispositivos conectados (projeto Roma)](connected-apps-and-devices.md)  
 [Iniciar um app remoto](launch-a-remote-app.md)  
 [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md)  
 [Referência de API de Sistemas Remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Exemplo de Sistemas Remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)
-

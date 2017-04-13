@@ -2,18 +2,16 @@
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Melhore o desempenho de coleta de lixo
-description: "Os aplicativos da Plataforma Universal do Windows (UWP) em C# e Visual Basic fazem o gerenciamento de memória automático a partir do coletor de lixo do .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP."
+description: "Aplicativos da Plataforma Universal do Windows (UWP) escritos em C# e Visual Basic obtém gerenciamento de memória automático do coletor de lixo .NET. Esta seção resume as melhores práticas de comportamento e desempenho para o coletor de lixo .NET em aplicativos UWP."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b33388429f72dcc7acb9803d00a407ed35589a0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd469f2a037871b04e67227ad132261711a17511
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
@@ -84,7 +82,6 @@ Substituir referências de objeto por índices pode ser uma alteração prejudic
  
 
  
-
 
 
 

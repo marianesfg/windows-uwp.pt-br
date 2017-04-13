@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b7bda3b25e2c268926223da429abf559524ad38c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-while-minimized-with-extended-execution"></a>Executar enquanto minimizado com execução estendida
 
 Este artigo mostra como usar a execução estendida para adiar quando o aplicativo é suspenso, de maneira que ele possa ser executado minimizado.
@@ -24,7 +21,7 @@ Quando o usuário minimiza ou sai de um aplicativo, este é colocado em um estad
 
 Há casos em que um aplicativo pode precisar continuar em execução, em vez de ser suspenso, enquanto ele está minimizado. Se um aplicativo precisar continuar em execução, o sistema operacional poderá mantê-lo em execução ou ele pode solicitar que continue em execução. Por exemplo, durante a reprodução de áudio em segundo plano, o sistema operacional poderá manter um aplicativo em execução por mais tempo se você seguir estas etapas para [Reprodução de mídia em segundo plano](../audio-video-camera/background-audio.md). Do contrário, você deve solicitar manualmente mais tempo.
 
-Crie um [ExtendedExecutionSession](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) a fim de solicitar mais tempo para concluir uma operação em segundo plano. O tipo de **ExtendedExecutionSession** criado é determinado pelo [ExtendedExecutionReason](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) fornecido ao criá-lo. Existem três valores de enumeração **ExtendedExecutionReason**: **Unspecified, LocationTracking** e **SavingData**.
+Crie um [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) a fim de solicitar mais tempo para concluir uma operação em segundo plano. O tipo de **ExtendedExecutionSession** criado é determinado pelo [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) fornecido ao criá-lo. Existem três valores de enumeração **ExtendedExecutionReason**: **Unspecified, LocationTracking** e **SavingData**.
 
 ## <a name="run-while-minimized"></a>Executar enquanto minimizado
 
@@ -36,7 +33,7 @@ Em todas as edições de sistema operacional, esse tipo de sessão de execução
 
 ## <a name="track-the-users-location"></a>Acompanhar o local do usuário
 
-Especifique **ExtendedExecutionReason.LocationTracking** quando você criar um **ExtendedExecutionSession** se o aplicativo precisar registrar em log regularmente o local com base no [Geolocalizador](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.geolocation.geolocator.aspx). Aplicativos para monitoramento de exercícios e navegação que precisam monitorar regularmente a localização do usuário e devem usar esse motivo.
+Especifique **ExtendedExecutionReason.LocationTracking** quando você criar um **ExtendedExecutionSession** se o aplicativo precisar registrar em log regularmente o local com base no [Geolocalizador](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx). Aplicativos para monitoramento de exercícios e navegação que precisam monitorar regularmente a localização do usuário e devem usar esse motivo.
 
 A sessão de execução estendida de acompanhamento da localização pode ser executada pelo tempo necessário. No entanto, só pode haver uma sessão assim em execução por dispositivo. Uma sessão de execução estendida de rastreamento do local só pode ser solicitada em primeiro plano, e o aplicativo deve estar no estado **Running**. Isso garante que o usuário esteja ciente de que o aplicativo iniciou uma sessão de rastreamento do local estendida. Ainda é possível usar o Geolocalizador enquanto o aplicativo está em segundo plano usando uma tarefa em segundo plano, ou um serviço de aplicativo, sem solicitar uma sessão de execução estendida de rastreamento do local.
 
@@ -44,7 +41,7 @@ A sessão de execução estendida de acompanhamento da localização pode ser ex
 
 Especifique **ExtendedExecutionReason.SavingData** quando você criar um **ExtendedExecutionSession** para salvar os dados do usuário caso os dados não sejam salvos antes do aplicativo ser encerrado, o que resultará na perda de dados e em uma experiência do usuário negativa.
 
-Não use esse tipo de sessão para prolongar a vida útil de um aplicativo para carregar ou baixar dados. Se você precisar carregar dados, solicite uma [transferência em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers) ou registre um **MaintenanceTrigger** para manusear a transferência quando houver energia CA disponível. A sessão de execução estendida **ExtendedExecutionReason.SavingData** pode ser solicitada quando o aplicativo está em primeiro plano e no estado **Running** ou em segundo plano e no estado **Suspending**.
+Não use esse tipo de sessão para prolongar a vida útil de um aplicativo para carregar ou baixar dados. Se você precisar carregar dados, solicite uma [transferência em segundo plano](https://msdn.microsoft.com/windows/uwp/networking/background-transfers) ou registre um **MaintenanceTrigger** para manusear a transferência quando houver energia CA disponível. A sessão de execução estendida **ExtendedExecutionReason.SavingData** pode ser solicitada quando o aplicativo está em primeiro plano e no estado **Running** ou em segundo plano e no estado **Suspending**.
 
 O estado **Suspending** é a última oportunidade durante o ciclo de vida do aplicativo em que um aplicativo pode fazer o trabalho antes de ser encerrado. A solicitação de uma sessão de execução estendida **ExtendedExecutionReason.SavingData** com o aplicativo no estado **Suspending** cria um possível problema do qual você deve estar ciente. Se for solicitada uma sessão de execução estendida ainda no estado **Suspending** e o usuário solicitar que o aplicativo seja reiniciado, ele poderá demorar muito tempo para ser iniciado. Isso ocorre porque o período da sessão de execução estendida deve terminar antes da instância anterior do aplicativo ser fechada e uma nova instância do aplicativo ser iniciada. O tempo de desempenho de inicialização é sacrificado para garantir que o estado do usuário não seja perdido.
 
@@ -77,7 +74,7 @@ switch (result)
 
 A chamada de **RequestExtensionAsync** verifica junto ao sistema operacional se o usuário aprovou uma atividade em segundo plano para o aplicativo e se o sistema tem os recursos disponíveis para permitir a execução em segundo plano.
 
-É possível verificar o [BackgroundExecutionManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) com antecedência para determinar o [BackgroundAccessStatus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396), que é a configuração do usuário que indica se o aplicativo pode ser executado em segundo plano ou não. Para saber mais sobre essas configurações do usuário, consulte [Atividade em segundo plano e reconhecimento de energia](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97).
+É possível verificar o [BackgroundExecutionManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) com antecedência para determinar o [BackgroundAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396), que é a configuração do usuário que indica se o aplicativo pode ser executado em segundo plano ou não. Para saber mais sobre essas configurações do usuário, consulte [Atividade em segundo plano e reconhecimento de energia](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97).
 
 O **ExtendedExecutionReason** indica a operação que o aplicativo está realizado em segundo plano. A cadeia de caracteres **Description** é uma cadeia de caracteres legível por humanos que explica por que o aplicativo precisa realizar a operação. O manipulador de eventos **Revoked** é necessário para que uma sessão de execução estendida possa ser interrompida normalmente se o usuário, ou o sistema, decidir que o aplicativo não pode mais ser executado em segundo plano.
 
@@ -237,16 +234,16 @@ static class ExtendedExecutionHelper
 
 ## <a name="ensure-that-your-app-uses-resources-well"></a>Verificar se o aplicativo usa bem os recursos
 
-Ajustar o uso da memória e da energia do aplicativo é fundamental para garantir que o sistema operacional permita que o aplicativo continue sendo executado quando não for mais o aplicativo em primeiro plano. Use as [APIs de gerenciamento de memória](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx) para saber quanta memória o aplicativo está usando. Quanto mais memória o aplicativo usa, mais difícil fica para o sistema operacional manter o aplicativo em execução quando outro aplicativo está em primeiro plano. O usuário acaba ficando no controle de toda a atividade em segundo plano que o aplicativo pode realizar e tem visibilidade do impacto que o aplicativo tem sobre o uso da bateria.
+Ajustar o uso da memória e da energia do aplicativo é fundamental para garantir que o sistema operacional permita que o aplicativo continue sendo executado quando não for mais o aplicativo em primeiro plano. Use as [APIs de gerenciamento de memória](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) para saber quanta memória o aplicativo está usando. Quanto mais memória o aplicativo usa, mais difícil fica para o sistema operacional manter o aplicativo em execução quando outro aplicativo está em primeiro plano. O usuário acaba ficando no controle de toda a atividade em segundo plano que o aplicativo pode realizar e tem visibilidade do impacto que o aplicativo tem sobre o uso da bateria.
 
-Use [Backgroundexecutionmanager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) para determinar se o usuário decidiu que a atividade em segundo plano do aplicativo deve ser limitada. Lembre-se do uso da bateria e só execute em segundo plano quando for necessário concluir uma ação desejada pelo usuário.
+Use [Backgroundexecutionmanager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx) para determinar se o usuário decidiu que a atividade em segundo plano do aplicativo deve ser limitada. Lembre-se do uso da bateria e só execute em segundo plano quando for necessário concluir uma ação desejada pelo usuário.
 
 ## <a name="see-also"></a>Consulte também
 
 [Exemplo de execução estendida](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
-[Ciclo de vida do aplicativo](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/app-lifecycle)  
-[Gerenciamento de memória em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/reduce-memory-usage)  
-[Transferências em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers)  [Reconhecimento de bateria e atividade em segundo plano](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
-[Classe MemoryManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)  
-[Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)  
-
+[Ciclo de vida do aplicativo](https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle)  
+[Gerenciamento de memória em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/reduce-memory-usage)  
+[Transferências em segundo plano](https://msdn.microsoft.com/windows/uwp/networking/background-transfers)  
+[Reconhecimento de bateria e atividade em segundo plano](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
+[Classe MemoryManager](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)  
+[Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)  

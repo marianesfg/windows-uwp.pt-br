@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a8b28295a21d020d41f7416dd039a9a4003fb9b2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9398efedb5d4818e247be42132bdb752067b5426
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
 
@@ -38,7 +35,7 @@ Este guia será atualizado à medida que recursos e materiais adicionais de dese
 
 De documentação a programas, fóruns, blogs e exemplos para desenvolvedores, há muitos recursos disponíveis para ajudar você em sua jornada de desenvolvimento de jogos. Este é um resumo dos recursos que você deve conhecer para desenvolver seu jogo do Windows 10.
 
-> **Observação**   Os recursos de desenvolvimento do Xbox One e alguns recursos de jogos do Windows 10 (Serviços Xbox Live, por exemplo) são gerenciados por meio de programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, então, você pode descobrir que alguns recursos não são acessíveis dependendo do programa em que você está ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#developer-programs).
+> **Observação**   Os recursos de desenvolvimento do Xbox One e alguns recursos de jogos do Windows 10 (Serviços Xbox Live, por exemplo) são gerenciados por meio de diversos programas. Este guia abrange uma ampla variedade de recursos, então, você pode descobrir que alguns recursos não são acessíveis dependendo do programa em que você está ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#developer-programs).
 
 ### <a name="game-development-documentation"></a>Documentação de desenvolvimento de jogos
 
@@ -78,6 +75,10 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
         <td>[Criar aplicativos UWP no Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)</td>
     </tr>
     <tr>
+        <td>UWP no HoloLens</td>
+        <td>[Criar aplicativos UWP no HoloLens](https://developer.microsoft.com/windows/mixed-reality/development_overview)</td>
+    </tr>
+    <tr>
         <td>Documentação do Xbox Live</td>
         <td>[SDK do Xbox Live](http://aka.ms/xsapi2)</td>
     </tr>
@@ -112,7 +113,7 @@ Registrar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows é 
 
 #### <a name="idxbox"></a>ID@Xbox
 
-O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. Antes de se inscrever no ID@Xbox, registre uma conta de desenvolvedor no Centro de Desenvolvimento do Windows.
+O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. Antes de se inscrever na ID@Xbox, registre uma conta de desenvolvedor no Centro de Desenvolvimento do Windows.
 
 <table>
     <colgroup>
@@ -120,12 +121,29 @@ O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Programa de desenvolvedor ID@Xbox</td>
+        <td>ID@Xbox programas para desenvolvedores</td>
         <td>[Programa de desenvolvedor independente para Xbox One](http://go.microsoft.com/fwlink/p/?LinkID=526271)</td>
     </tr>
     <tr>
-        <td>Site para consumidores do ID@Xbox</td>
+        <td>ID@Xbox site do consumidor</td>
         <td>[ID@Xbox](http://www.idatxbox.com/)</td>
+    </tr>
+</table>
+
+#### <a name="xbox-live-creators-program"></a>Programa de criadores do Xbox Live
+
+O Programa de criadores do Xbox Live está no modo de Visualização. Esse programa permite a qualquer pessoa integrar o Xbox Live em seu título e publicar no Xbox One e no Windows 10. Para começar a desenvolver com o Programa de criadores do Xbox Live, inscreva-se para a Visualização de hoje. As inscrições para o programa de Visualização estão limitada no momento, no entanto, mais espaços serão disponibilizados periodicamente.
+
+Se você deseja acessar mais recursos do Xbox Live, ganhar destaque na loja principal do Xbox One ou receber marketing dedicado e suporte para desenvolvimento, você pode se inscrever no programa [ID@Xbox](http://www.xbox.com/Developers/id).
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>Visualização do Programa de criadores do Xbox Live</td>
+        <td>[Integrar o Xbox Live ao seu título](https://developer.microsoft.com/games/xbox/xboxlive/creator)</td>
     </tr>
 </table>
 
@@ -212,16 +230,16 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     </colgroup>
     <tr>
         <td>Fóruns de desenvolvedores de aplicativos do Windows</td>
-        <td>[Fóruns de aplicativos e Windows Store](https://social.msdn.microsoft.com/Forums/home?category=windowsapps)</td>
+        <td>[Fóruns de aplicativos e Windows Store](https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps)</td>
     </tr>
     <tr>
         <td>Fórum do desenvolvedor de aplicativos UWP</td>
-        <td>[Desenvolvendo aplicativos da Plataforma Universal do Windows](https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop)</td>
+        <td>[Desenvolvendo aplicativos da Plataforma Universal do Windows](https://social.msdn.microsoft.com/Forums/en-us/home?forum=wpdevelop)</td>
     </tr>
 
     <tr>
         <td>Fóruns de desenvolvedores de aplicativos da área de trabalho</td>
-        <td>[Fóruns de aplicativos da área de trabalho do Windows](https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev)</td>
+        <td>[Fóruns de aplicativos da área de trabalho do Windows](https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsdesktopdev)</td>
     </tr>
     <tr>
         <td>Jogos da Windows Store com DirectX (postagens arquivadas no fórum)</td>
@@ -232,8 +250,8 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
         <td>[Fóruns de desenvolvedores XBOX: Windows 10](http://aka.ms/win10devforums)</td>
     </tr>
     <tr>
-        <td>Fóruns do programa de acesso antecipado ao DirectX</td>
-        <td>[Fórum do DirectX 12](http://directx12forum.azurewebsites.net/index.php)</td>
+        <td>Fóruns do DirectX</td>
+        <td>[Fórum do DirectX 12](http://forums.directxtech.com/index.php)</td>
     </tr>
 </table>
 
@@ -280,8 +298,8 @@ Os blogs de desenvolvedores são outro recurso excelente para as informações m
         <td>[Blog da equipe do Visual C++](http://blogs.msdn.com/b/vcblog/)</td>
     </tr>
     <tr>
-        <td>Blog de desenvolvedores do ID@Xbox</td>
-        <td>[Blog de desenvolvedores do ID@Xbox](http://www.idatxbox.com/category/developer-blog/)</td>
+        <td>ID@Xbox blog de desenvolvedores</td>
+        <td>[ID@XBOX Blog de desenvolvedores](http://www.idatxbox.com/category/developer-blog/)</td>
     </tr>
 </table>
  
@@ -605,7 +623,7 @@ Pontes de Plataforma Universal do Windows são tecnologias que levam seu aplicat
 
 O Unity 5 representa a próxima geração da premiada plataforma de desenvolvimento para a criação de jogos e experiências interativas em 2D e 3D. O Unity 5 reúne capacidade artística renovada, recursos gráficos aprimorados e melhor eficiência.
 
-No [Unity roadmap](https://unity3d.com/unity/roadmap), o suporte para o DirectX 12 estará disponível em uma versão futura do Unity.
+A partir do Unity 5.4, o Unity oferece suporte ao desenvolvimento do Direct3D 12.
 
 <table>
     <colgroup>
@@ -955,7 +973,7 @@ Estes são alguns links para ajudá-lo a mover seu jogo de área de trabalho do 
 
 ### <a name="process-lifetime-management"></a>Gerenciamento do tempo de vida do processo
 
-O gerenciamento do tempo de vida do processo, ou ciclo de vida do aplicativo, descreve os vários estados de ativação pelos quais um aplicativo da Plataforma Universal do Windows pode passar. Seu jogo pode ser ativado, suspenso, retomado ou encerrado e pode passar por esses estados em uma variedade de maneiras.
+Gerenciamento do tempo de vida do processo, ou ciclo de vida do aplicativo, descreve os vários estados de ativação pelos quais um aplicativo da Plataforma Universal do Windows pode passar. Seu jogo pode ser ativado, suspenso, retomado ou encerrado e pode passar por esses estados em uma variedade de maneiras.
 
 <table>
     <colgroup>
@@ -1505,7 +1523,7 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
 ## <a name="adding-xbox-live-to-your-game"></a>Adicionando o Xbox Live ao seu jogo
 
 
-> **Observação**   O desenvolvimento para o Xbox Live é gerenciado por programas como ID@Xbox e Microsoft Studios. Este guia abrange uma ampla variedade de recursos, e você pode descobrir que alguns recursos não são acessíveis dependendo de sua participação no programa ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#developer-programs).
+> **Observação**   O desenvolvimento do Xbox Live é gerenciado por vários programas. Este guia abrange uma ampla variedade de recursos, e você pode descobrir que alguns recursos não são acessíveis dependendo de sua participação no programa ou de sua função de desenvolvimento específica. Os exemplos são links que se resolvem em developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com ou no Game Developer Network (GDN). Para obter informações sobre parcerias com a Microsoft, consulte [Programas de desenvolvedor](#developer-programs).
 
 <table>
     <colgroup>
@@ -1571,4 +1589,3 @@ Para atualizar seu jogo publicado, envie um novo pacote do aplicativo com um nú
  
 
  
-

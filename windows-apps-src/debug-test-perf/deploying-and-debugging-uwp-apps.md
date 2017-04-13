@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, depuração, teste, desempenho"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7ce6c003c24a1efd03cc48419438b59e4f2ec11
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando apps UWP
 
-# <a name="deploying-and-debugging-universal-windows-platform-uwp-apps"></a>Implantar e depurar aplicativos UWP (Plataforma Universal do Windows)
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este artigo apresenta as etapas para abordar vários destinos de depuração e implantação.
 
@@ -95,7 +92,7 @@ Para fazer isso, pesquise **Depurador Remoto** no menu **Iniciar**, inicie-o e, 
 
 Para alterá-lo para **nenhuma autenticação**, em **Depurador Remoto**, acesse **Ferramentas** -&gt; **Opções** e, em seguida, selecione **Nenhuma autenticação**. Depois que o depurador remoto estiver configurado, você também deve garantir que você configurou o dispositivo host para [Modo de Desenvolvedor](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Depois disso, você poderá implementar do seu computador de desenvolvimento.
 
-Para obter mais informações, consulte a página de download [Ferramentas Remotas para o Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=717039).
+Para obter mais informações, consulte a página [Centro de Download Visual Studio](https://www.visualstudio.com/downloads/).
 
 ## <a name="authentication-modes"></a>Modos de autenticação
 
@@ -229,4 +226,3 @@ Para obter uma lista completa de todos os comandos WinDbg, consulte [Comandos do
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)](testing-debugging-plm.md)
 - [Depuração, teste e desempenho](index.md)
-

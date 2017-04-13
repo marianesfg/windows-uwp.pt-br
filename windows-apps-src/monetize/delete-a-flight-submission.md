@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 1A69A388-B1CC-4D2C-886B-EA07E6E60252
 description: "Use este método na API de envio da Windows Store para excluir um envio de pacote de pré-lançamento existente do pacote."
-title: "Exclua um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Excluir um envio de pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envio de versão de pré-lançamento, excluir, pacote de pré-lançamento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e720b8551949335faa0407cbc159c217d4b91343
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1b69fb04742e30a80b258613385b40ce8999306c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-a-package-flight-submission-using-the-windows-store-submission-api"></a>Exclua um envio do pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="delete-a-package-flight-submission"></a>Excluir um envio de pacote de pré-lançamento
 
 
 
@@ -34,7 +31,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ## <a name="request"></a>Solicitação
 
-Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
@@ -47,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -82,7 +79,7 @@ Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -101,4 +98,3 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
 * [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
 * [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
-

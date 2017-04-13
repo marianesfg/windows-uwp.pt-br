@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b8d695dbf3aa662a760f162b6fcb818d90f45c38
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0ea40ff57bf6923b8fea05de6d07863e13e5ad9c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="raw-notification-overview"></a>Visão geral de notificações brutas
@@ -103,7 +101,7 @@ A tarefa em segundo plano tem que ser registrada com um [**PushNotificationTrigg
 
 A tarefa em segundo plano disparada por uma notificação bruta permite que o serviço em nuvem de seu aplicativo entre em contato com o aplicativo, mesmo quando ele não estiver em execução (ele pode dispará-lo para ser executado). Isso acontece sem que o aplicativo tenha que manter uma conexão contínua. As notificações brutas são o único tipo de notificação capaz de disparar tarefas em segundo plano. Entretanto, embora as notificações por push do sistema e de bloco não possam disparar tarefas em segundo plano, as tarefas em segundo plano disparadas pelas notificações brutas podem atualizar blocos e invocar notificações do sistema através de chamadas locais à API.
 
-Para ilustrar como funcionam as tarefas em segundo plano disparadas por notificações brutas, vamos imaginar um aplicativo usado para ler livros eletrônicos. Primeiro, o usuário compra um livro online, possivelmente em outro dispositivo. Como resposta, o serviço em nuvem do aplicativo envia uma notificação bruta para cada um dos dispositivos do usuário, com uma carga informando que o livro foi comprado e que o aplicativo precisa baixá-lo. O aplicativo entra em contato diretamente com o serviço em nuvem do aplicativo para começar o download em segundo plano do novo livro para que mais tarde, quando o usuário iniciar o aplicativo, o livro já esteja lá, pronto para a leitura.
+Para ilustrar como funcionam as tarefas em segundo plano disparadas por notificações brutas, vamos imaginar um aplicativo usado para ler livros eletrônicos. Primeiro, o usuário compra um livro online, possivelmente em outro dispositivo. Como resposta, o serviço em nuvem do aplicativo envia uma notificação bruta para cada um dos dispositivos do usuário, com uma carga informando que o livro foi comprado e que o aplicativo precisa baixá-lo. O aplicativo entra em contato diretamente com o serviço em nuvem do aplicativo para começar a transferência em segundo plano do novo livro para que mais tarde, quando o usuário iniciar o aplicativo, o livro já esteja lá, pronto para a leitura.
 
 Para usar uma notificação bruta para acionar uma tarefa em segundo plano, o aplicativo deve:
 
@@ -117,7 +115,7 @@ Para cada aplicativo, apenas uma tarefa em segundo plano pode ser executada de c
 ## <a name="other-resources"></a>Outros recursos
 
 
-Você pode saber mais baixando a [Amostra de notificações de dados brutos](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 e a [Amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 e reutilizando o código-fonte no aplicativo do Windows 10.
+Você pode saber mais baixando a [Amostra de notificações de dados brutos](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 e a [Amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 e reutilizando o código-fonte no aplicativo do Windows10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -129,7 +127,6 @@ Você pode saber mais baixando a [Amostra de notificações de dados brutos](htt
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: Iniciar o app Pessoas
+title: Iniciar o aplicativo Pessoas
 description: "Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ms.author: twhitney
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 25abea87eaf374a1a8b5432c522d51bd7bbc1c1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f16ea404d4a458949fce7ae0ec8756aa3a17aa01
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-people-app"></a>Iniciar o app Pessoas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este tópico descreve o esquema de URI **ms-people:**. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas.
+Este tópico descreve o esquema de URI **ms-people:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Pessoas para ações específicas.
 
 ## <a name="ms-people-uri-scheme-reference"></a>Referência do esquema de URI ms-people:
 
@@ -40,15 +37,15 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu app pode usar esse es
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Permite que outros apps iniciem a página principal do app Pessoas.</td>
+<td align="left">Permite que outros aplicativos iniciem a página principal do aplicativo Pessoas.</td>
 <td align="left">ms-people:</td>
 </tr>
 <tr class="even">
-<td align="left">Permite que outros apps iniciem a página Configurações do app Pessoas.</td>
+<td align="left">Permite que outros aplicativos iniciem a página Configurações do aplicativo Pessoas.</td>
 <td align="left">ms-people:settings</td>
 </tr>
 <tr class="odd">
-<td align="left">Permite que os outros apps forneçam uma cadeia de caracteres de pesquisa que iniciará o app Pessoas com a página de resultados da pesquisa.
+<td align="left">Permite que os outros aplicativos forneçam uma cadeia de caracteres de pesquisa que iniciará o aplicativo Pessoas com a página de resultados da pesquisa.
 <div class="alert">
 **Observação**  
 <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
@@ -60,7 +57,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu app pode usar esse es
 <td align="left">ms-people:search?SearchString=&lt;contactsearchinfo&gt;</td>
 </tr>
 <tr class="even">
-<td align="left">Inicia um cartão de visita existente, caso o contato seja encontrado. Ou inicia um cartão de visita temporário, caso nenhum contato seja encontrado. Se nenhum parâmetro de entrada for fornecido, iniciaremos o app Pessoas usando uma lista de contatos.
+<td align="left">Inicia um cartão de visita existente, caso o contato seja encontrado. Ou inicia um cartão de visita temporário, caso nenhum contato seja encontrado. Se nenhum parâmetro de entrada for fornecido, iniciaremos o aplicativo Pessoas usando uma lista de contatos.
 <div class="alert">
 **Observação**  
 <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
@@ -73,7 +70,7 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu app pode usar esse es
 <td align="left">ms-people:viewcontact:?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
-<td align="left">Inicia uma página para salvar contato no app Pessoas a fim de salvar o contato indicado com o número de telefone ou o endereço de email fornecido.
+<td align="left">Inicia uma página para salvar contato no aplicativo Pessoas a fim de salvar o contato indicado com o número de telefone ou o endereço de email fornecido.
 <div class="alert">
 **Observação**  
 <p>Os parâmetros diferenciam maiúsculas de minúsculas.</p>
@@ -213,4 +210,3 @@ Este tópico descreve o esquema de URI **ms-people:**. Seu app pode usar esse es
  
 
  
-

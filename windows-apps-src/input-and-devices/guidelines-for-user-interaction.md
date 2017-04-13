@@ -6,13 +6,11 @@ ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
 redirect_url: https://msdn.microsoft.com/windows/uwp/input-and-devices/touch-interactions
-translationtype: Human Translation
-ms.sourcegitcommit: 2db7aaccfd56b1bdfda099b197a695bad8a9cba1
 ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Diretrizes de design de toque
+# <a name="touch-design-guidelines"></a>Diretrizes de design de toque
 
 
 
@@ -20,18 +18,18 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 
 Crie aplicativos para a UWP (Plataforma Universal do Windows) com a experiência de interação exclusiva e diferenciada otimizada para toque, mas funcionalmente consistente com todos os tipos de dispositivos de entrada.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
 
 
 -   Aplicativos de design com interação por toque como o método de entrada primário esperado.
--   Fornecer comentários visuais para interações de todos os tipos (toque, caneta, stylus, mouse etc.)
+-   Fornecer feedback visual para interações de todos os tipos (toque, caneta, stylus, mouse etc.)
 -   Otimize alvos ajustando tamanho do alvo de toque, geometria de contato, esfregar e balançar.
 -   Otimize a acuidade por meio do uso de pontos de ajuste e "trilhos" direcionais.
 -   Forneça dicas de ferramenta e manipuladores para auxiliar a melhorar a acuidade de toque de itens da interface do usuário com pouco espaçamento.
 -   Não use interações cronometradas sempre que possível (exemplos de uso apropriado: tocar e segurar).
 -   Não use o número de dedos usados para distinguir a manipulação sempre que possível.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
 
 
 Primeiro e mais importante, projete o seu aplicativo com a expectativa de que o toque será o método de entrada principal dos usuários. Se você usar os controles da plataforma, o suporte para touchpad, mouse e caneta não exigirá qualquer programação adicional, pois o Windows 8 o fornece gratuitamente.
@@ -83,7 +81,7 @@ A entrada indireta conta com os benefícios de mais de 25 anos de refinamento. R
 
 **Usar comentário por toque**
 
-O feedback visual apropriado durante as interações com o aplicativo ajudam os usuários a reconhecer, aprender e adaptar a forma como suas interações são interpretadas pelo aplicativo e pelo Windows 8. Os comentários visuais podem indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
+O feedback visual apropriado durante as interações com o aplicativo ajudam os usuários a reconhecer, aprender e adaptar a forma como suas interações são interpretadas pelo aplicativo e pelo Windows 8. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
 
 A resposta visual é importante quando o usuário recorre à entrada por toque em atividades que exigem exatidão e precisão com base no local. A exibição do feedback sempre que a entrada por toque for detectada ajudará o usuário a entender as regras de direcionamento personalizadas definidas pelo aplicativo e seus respectivos controles.
 
@@ -93,7 +91,7 @@ As técnicas a seguir aprimoram a experiência imersiva de aplicativos da Window
 
 **Direcionamento**
 
-O direcionamento é otimizado através de:
+O direcionamento é otimizado por meio de:
 
 -   Tamanhos de destino de toque
 
@@ -163,7 +161,7 @@ Além disso, as dicas a seguir são altamente recomendadas:
 
 -   Descrições e indicações visuais adequadas têm um grande efeito sobre o uso das interações avançadas.
 
-## <span id="related_topics"></span>Artigos relacionados
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Artigos relacionados
 
 **Para desenvolvedores (XAML)**
 * [Interações por toque](https://msdn.microsoft.com/library/windows/apps/mt185617)
@@ -173,11 +171,5 @@ Além disso, as dicas a seguir são altamente recomendadas:
  
 
 
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
 
 

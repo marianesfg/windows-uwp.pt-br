@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, rota, mapa, localização, direções"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 62f0f26cc9a78a29e6fab5a8f762e0b28b7df6a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="display-routes-and-directions-on-a-map"></a>Exibir rotas e trajetos em um mapa
 
 
@@ -193,9 +190,8 @@ Esse exemplo exibe o seguinte em um [**MapControl**](https://msdn.microsoft.com/
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-

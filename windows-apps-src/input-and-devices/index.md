@@ -1,8 +1,8 @@
 ---
-description: "Personalize seu app UWP para tipos específicos de entrada e dispositivos. Tire proveito dos comandos de voz e toque. Execute seus apps no Xbox, telefone e até mesmo TV."
-title: "Design de entrada do app UWP e dispositivo – Desenvolvimento de aplicativos do Windows"
+description: "Personalize seu aplicativo UWP para tipos específicos de entrada e dispositivos. Tire proveito dos comandos de voz e toque. Execute seus aplicativos no Xbox, telefone e até mesmo TV."
+title: "Design de entrada do aplicativo UWP e dispositivo – Desenvolvimento de aplicativos do Windows"
 author: kbridge
-keywords: cartilha de dispositivos, entradas de app, personalizar o app UWP
+keywords: cartilha de dispositivos, entradas de aplicativo, personalizar o aplicativo UWP
 label: Input & devices
 template: detail.hbs
 ms.author: wdg-dev-content
@@ -11,19 +11,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6be02f9ec4163df510827552e04be78fffe1a8a5
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6bcc81d80bb3e2167b6d6e5ee078279bd830f04c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inputs-and-devices"></a>Entradas e dispositivos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Os apps UWP processam automaticamente uma ampla variedade de entradas e funcionam em uma variedade de dispositivos — você não precisa de mais nada para habilitar a entrada por toque ou fazer seu app funcionar em um telefone, por exemplo.
+Os aplicativos UWP processam automaticamente uma ampla variedade de entradas e funcionam em uma variedade de dispositivos — você não precisa de mais nada para habilitar a entrada por toque ou fazer seu aplicativo funcionar em um telefone, por exemplo.
 
-Mas há momentos em que você pode querer otimizar seu app para certos tipos de entrada ou dispositivos. Por exemplo, se você estiver criando um app de pintura, convém personalizar a maneira como a entrada de caneta é processada.
+Mas há momentos em que você pode querer otimizar seu aplicativo para certos tipos de entrada ou dispositivos. Por exemplo, se você estiver criando um aplicativo de pintura, convém personalizar a maneira como a entrada de caneta é processada.
 
 As instruções de design e codificação nesta seção ajudam você a personalizar seu app UWP para tipos específicos de entradas e dispositivos.
 
@@ -71,7 +69,7 @@ Otimize seu app UWP para entrada por caneta para fornecer a funcionalidade padr�
 <div class="side-by-side-content-right">
 <p>
 <b>[Teclado](keyboard-interactions.md)</b><br/>
-A entrada por teclado é uma parte importante da experiência geral da interação do usuário com apps. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um app.
+A entrada por teclado é uma parte importante da experiência geral da interação do usuário com aplicativos. O teclado é indispensável para pessoas portadoras de determinadas deficiências ou usuários que simplesmente o consideram um método mais eficiente de interagir com um aplicativo.
 </p>
 </div>
 </div>
@@ -105,7 +103,7 @@ A entrada via mouse é a mais adequada às interações que exigem precisão do 
 <div class="side-by-side-content-right">
 <p>
 <b>[Gamepad e controle remoto](gamepad-and-remote-interactions.md)</b><br/>
-Os apps UWP agora dão suporte a entrada por gamepad e controle remoto. Gamepads e controles remotos são os dispositivos de entrada principais para Xbox e experiências com TV.
+Os aplicativos UWP agora dão suporte a entrada por gamepad e controle remoto. Gamepads e controles remotos são os dispositivos de entrada principais para Xbox e experiências com TV.
 </p>
 </div>
 </div>
@@ -115,7 +113,7 @@ Os apps UWP agora dão suporte a entrada por gamepad e controle remoto. Gamepads
 <div class="side-by-side-content">
 <p>
 <b>[Várias entradas](multiple-input-design-guidelines.md)</b><br/>
-Para acomodar o máximo possível de usuários e dispositivos, recomendamos que você desenvolva seus apps para funcionar com o máximo possível de tipos de entrada (gesto, controle por voz, toque, touchpad, mouse e teclado). Fazer isso maximizará a flexibilidade, a usabilidade e a acessibilidade.
+Para acomodar o máximo possível de usuários e dispositivos, recomendamos que você desenvolva seus aplicativos para funcionar com o máximo possível de tipos de entrada (gesto, controle por voz, toque, touchpad, mouse e teclado). Fazer isso maximizará a flexibilidade, a usabilidade e a acessibilidade.
 </p>
 </div>
 </div>
@@ -141,13 +139,13 @@ Receber, processar e gerenciar dados de entrada de dispositivos apontadores, com
 <div class="side-by-side-content">
 <div class="side-by-side-content-left">
 <p><b>[Entrada de texto personalizado](custom-text-input.md)</b><br/>
-As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um app UWP receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows. Isso permite que o app receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
+As APIs de texto básicas no namespace Windows.UI.Text.Core permitem que um aplicativo UWP receba a entrada de texto de qualquer serviço de texto compatível em dispositivos Windows. Isso permite que o app receba texto em qualquer idioma e de qualquer tipo de entrada, como teclado, fala ou caneta.
 </p>
 </div>
 <div class="side-by-side-content-right">
 <p>
 <b>[Selecionando texto e imagens](guidelines-for-textselection.md)</b><br/>
-Este artigo descreve a seleção e a manipulação de texto, imagens e controles e fornece diretrizes da experiência do usuário que devem ser consideradas ao usar esses mecanismos em seus apps.
+Este artigo descreve a seleção e a manipulação de texto, imagens e controles e fornece diretrizes da experiência do usuário que devem ser consideradas ao usar esses mecanismos em seus aplicativos.
 </p>
 </div>
 </div>
@@ -173,7 +171,7 @@ Este artigo descreve o zoom e o redimensionamento de elementos do Windows e forn
 <div class="side-by-side-content-right">
 <p>
 <b>[Rotação](guidelines-for-rotation.md)</b><br/>
-Este artigo descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu app UWP.
+Este artigo descreve a nova IU do Windows para rotação. Também fornece diretrizes para a experiência do usuário que devem ser consideradas ao usar esse novo mecanismo de interação no seu aplicativo UWP.
 </p>
 </div>
 </div>
@@ -196,18 +194,17 @@ Use os comentários visuais para mostrar aos usuários quando suas interações 
 
 ## <a name="devices"></a>Dispositivos
 
-Conhecer os dispositivos que dão suporte a apps UWP ajudará você a oferecer a melhor experiência de usuário para cada fator forma. Ao projetar para um dispositivo específico, as principais considerações incluem como o app aparecerá no dispositivo, onde, quando e como o app será usado nesse dispositivo, e como o usuário vai interagir com esse dispositivo.
+Conhecer os dispositivos que dão suporte a aplicativos UWP ajudará você a oferecer a melhor experiência de usuário para cada fator forma. Ao projetar para um dispositivo específico, as principais considerações incluem como o aplicativo aparecerá no dispositivo, onde, quando e como o aplicativo será usado nesse dispositivo, e como o usuário vai interagir com esse dispositivo.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Cartilha de dispositivos](device-primer.md)</b><br/>Conhecer os dispositivos que dão suporte a apps UWP ajudará você a oferecer a melhor experiência de usuário para cada fator forma.
+<p><b>[Cartilha de dispositivos](device-primer.md)</b><br/>Conhecer os dispositivos que dão suporte a aplicativos UWP ajudará você a oferecer a melhor experiência de usuário para cada fator forma.
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Projetando para TV e Xbox](designing-for-tv.md)</b><br/>Projete seu app UWP (Plataforma Universal do Windows) para que ele tenha uma boa aparência e funcione bem no Xbox One e em telas de televisão.
+<p><b>[Projetando para TV e Xbox](designing-for-tv.md)</b><br/>Projete seu aplicativo UWP (Plataforma Universal do Windows) para que ele tenha uma boa aparência e funcione bem no Xbox One e em telas de televisão.
 </p>
   </div>
 </div>
 </div>
-

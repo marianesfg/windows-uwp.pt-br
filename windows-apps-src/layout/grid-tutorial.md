@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 87947b5bd1c1db008a21828c3940475c2b53fd6d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 094cabc642884f57af2dbeb5125a2a8b81365824
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Criar um app de clima simples usando Grid e StackPanel
 
 Use XAML para criar o layout de um app de clima simples usando os elementos **Grid** e **StackPanel**. Com essas ferramentas que você pode criar apps com um visual excelente que funcionam em qualquer dispositivo que tenha o Windows 10 instalado. Este tutorial dura de 10 a 20 minutos.
@@ -123,4 +120,3 @@ Se desejar, experimente o layout acima e explore formas diferentes de representa
 Para obter uma introdução ao design de layouts de aplicativos UWP, consulte [Introdução ao design de aplicativos UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)
 
 Para saber mais sobre como criar layouts dinâmicos que se adaptem a diferentes tamanhos de tela, consulte [Definir layouts de página com XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-

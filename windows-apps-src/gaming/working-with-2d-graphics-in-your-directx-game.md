@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, directx, 2d, elementos gráficos"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para jogos DirectX
 
 
@@ -72,7 +69,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
  
 
  
-
 
 
 

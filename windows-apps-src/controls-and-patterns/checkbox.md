@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aeac6f2326fa7a80f8d90f1c10333933fa562a00
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7e00ac2aa08033292ba8d3ce1cebe836fdc3808c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="check-boxes"></a>Caixas de seleção
 
@@ -61,9 +59,9 @@ Uma caixa de seleção em uma caixa de diálogo no navegador Microsoft Edge.
 
 ![Uma caixa de seleção em uma caixa de diálogo no navegador Microsoft Edge](images/control-examples/check-box-edge.png)
 
-Caixas de seleção no app Alarmes e Relógio do Windows.
+Caixas de seleção no aplicativo Alarmes e Relógio do Windows.
 
-![Caixas de seleção no app Alarmes e Relógio do Windows](images/control-examples/check-box-alarm.png)
+![Caixas de seleção no aplicativo Alarmes e Relógio do Windows](images/control-examples/check-box-alarm.png)
 
 ## <a name="create-a-checkbox"></a>Criar uma caixa de seleção
 
@@ -128,13 +126,13 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 }
 ```
 
-### <a name="handle-click-and-checked-events"></a>Tratar eventos Click e Checked
+### <a name="handle-click-and-checked-events"></a>Manipular eventos Click e Checked
 
-Para realizar uma ação quando o estado da caixa de seleção é alterado, você pode tratar o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) ou os eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) e [**Unchecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
+Para realizar uma ação quando o estado da caixa de seleção é alterado, você pode manipular o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) ou os eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) e [**Unchecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
 
-O evento **Click** ocorre sempre que o estado marcado é modificado. Se você tratar o evento Click, use a propriedade **IsChecked** para determinar o estado da caixa de seleção.
+O evento **Click** ocorre sempre que o estado marcado é modificado. Se você manipular o evento Click, use a propriedade **IsChecked** para determinar o estado da caixa de seleção.
 
-Os eventos **Checked** e **Unchecked** ocorrem de maneira independente. Se você tratar esses eventos, deverá fazer isso em ambos para que eles respondam a mudanças de estado na caixa de seleção.
+Os eventos **Checked** e **Unchecked** ocorrem de maneira independente. Se você manipular esses eventos, deverá fazer isso em ambos para que eles respondam a mudanças de estado na caixa de seleção.
 
 Nos exemplos a seguir, mostramos a manipulação do evento Click e dos eventos Checked e Unchecked. 
 
@@ -304,6 +302,5 @@ private void SetCheckedState()
 -   [**Classe CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Botões de opção](radio-button.md)
 -   [Switch de alternância](toggles.md)
-
 
 

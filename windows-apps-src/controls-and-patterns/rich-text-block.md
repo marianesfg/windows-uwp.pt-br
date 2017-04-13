@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Use um RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados."
+Description: "Use RichTextBlock com elementos RichTextBlockOverflow para criar layouts de texto avançados."
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f3eded52428f0432cbdecfbda7d8b53e9e89ed16
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 464a726f4429eb24ad04acae130c7fc812971b3b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="rich-text-block"></a>Bloco de rich text
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Os blocos de rich text fornecem vários recursos para layout de texto avançado que você pode usar quando precisar de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
+Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -158,4 +156,3 @@ Consulte Tipografia e Diretrizes para fontes.
 
 **Para desenvolvedores (outros)**
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-

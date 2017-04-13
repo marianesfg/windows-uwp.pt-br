@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: Iniciar o app Mapas do Windows
+title: Iniciar o aplicativo Mapas do Windows
 description: Saiba como iniciar o app Mapas do Windows a partir de seu app.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.author: twhitney
@@ -9,32 +9,29 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c9c359fd424b4c9526ebfc610adc7097bb83cbda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cfaa7c96a3ec8bf50f19ee699ff74b037500a838
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-windows-maps-app"></a>Iniciar o app Mapas do Windows
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve os esquemas de URI (Uniform Resource Identifier) de **bingmaps:, ms-drive-to:, ms-walk-to:** and **ms-settings:** Use esses esquemas de URI para iniciar o app Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no app Configurações.
+Saiba como iniciar o app Mapas do Windows a partir de seu app. Este tópico descreve os esquemas de URI (Uniform Resource Identifier) de **bingmaps:, ms-drive-to:, ms-walk-to:** and **ms-settings:** Use esses esquemas de URI para iniciar o aplicativo Mapas do Windows para ver mapas, trajetos e resultados de pesquisa específicos ou para baixar mapas offline de Mapas do Windows no aplicativo Configurações.
 
-**Dica** Para saber mais sobre como iniciar o app Mapas do Windows a partir de seu app, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre como iniciar o aplicativo Mapas do Windows a partir de seu aplicativo, baixe a [amostra de mapas da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) do [repositório de amostras universais do Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 ## <a name="introducing-uris"></a>Apresentando URIs
 
-Os esquemas de URI permitem que você abra apps clicando em hiperlinks (ou programaticamente, em seu app). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:**, é possível abrir o app Mapas do Windows usando **bingmaps:**, **ms-drive-to:** e **ms-walk-to:**.
+Os esquemas de URI permitem que você abra aplicativos clicando em hiperlinks (ou programaticamente, em seu aplicativo). Assim como você pode iniciar um novo email usando **mailto:** ou abrir um navegador da Web usando **http:**, é possível abrir o aplicativo Mapas do Windows usando **bingmaps:**, **ms-drive-to:** e **ms-walk-to:**.
 
 -   O URI **bingmaps:** fornece mapas de locais, resultados de pesquisa, trajetos e tráfego.
 -   O URI **ms-drive-to:** fornece o trajeto de carro, curva a curva, a partir de sua localização atual.
 -   O URI **ms-walk-to:** fornece o trajeto a pé, curva a curva, a partir de sua localização atual.
 
-Por exemplo, o URI a seguir abre o app Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
+Por exemplo, o URI a seguir abre o aplicativo Mapas do Windows e exibe um mapa centralizado na cidade de Nova York.
 
 ```xml
 <bingmaps:?cp=40.726966~-74.006076>
@@ -52,10 +49,10 @@ Neste esquema de URI, *query* é uma série de pares de parâmetro nome/valor:
 
 Para obter uma lista completa dos parâmetros disponíveis, consulte a referência de parâmetro [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference)e [ms-walk-to:](#ms-walk-to-param-reference). Também há exemplos mais adiante neste tópico.
 
-## <a name="launch-a-uri-from-your-app"></a>Iniciar um URI a partir de seu app
+## <a name="launch-a-uri-from-your-app"></a>Iniciar um URI a partir de seu aplicativo
 
 
-Para iniciar o app Mapas do Windows de seu app, chame o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) com um URI **bingmaps:**, **ms-drive-to:** ou **ms-walk-to:**. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar apps via URI, consulte [Iniciar o app padrão de um URI](launch-default-app.md).
+Para iniciar o aplicativo Mapas do Windows de seu aplicativo, chame o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) com um URI **bingmaps:**, **ms-drive-to:** ou **ms-walk-to:**. O exemplo a seguir inicia o mesmo URI do exemplo anterior. Para saber mais sobre como iniciar aplicativos via URI, consulte [Iniciar o aplicativo padrão para um URI](launch-default-app.md).
 
 ```cs
 // Center on New York City
@@ -67,7 +64,7 @@ launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wek
 var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
 ```
 
-Neste exemplo, a classe [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435) é usada para ajudar a garantir que o app Mapas do Windows seja iniciado.
+Neste exemplo, a classe [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435) é usada para ajudar a garantir que o aplicativo Mapas do Windows seja iniciado.
 
 ## <a name="display-known-locations"></a>Exibir locais conhecidos
 
@@ -77,7 +74,7 @@ Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty
 
 | URI de Exemplo                                                                 | Resultados                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?                                                                 | Abre o app Mapas.                                                                                                                                                                                       |
+| bingmaps:?                                                                 | Abre o aplicativo Mapas.                                                                                                                                                                                       |
 | bingmaps:?cp=40.726966~-74.006076                                          | Exibe um mapa centralizado na cidade de Nova York.                                                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Exibe um mapa centralizado na cidade de Nova York com um nível de zoom 10.                                                                                                                                       |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Exibe um mapa da cidade de Nova York com o tamanho da tela como a caixa delimitadora.                                                                                                                          |
@@ -93,7 +90,7 @@ Para controlar o tipo de exibição, use os parâmetros *ss* (Streetside) e *sty
  
 ## <a name="display-search-results"></a>Exibir resultados de pesquisa
 
-Ao realizar uma pesquisa de empresa usando o parâmetro *q*, recomendamos que especifique os termos o máximo possível e use-os em conjunto com o parâmetro *cp* ou *where* para especificar um local. Se o usuário não der permissão ao app Mapas para usar sua localização e você não especificar um local para uma pesquisa de empresa, a pesquisa poderá ser realizada no âmbito do país/região e não retornar resultados significativos. Os resultados da pesquisa são exibidos no modo de exibição de mapa mais apropriado; portanto, a menos que haja uma necessidade de definir o *lvl* (nível de zoom), é recomendável permitir que o app Mapas decida. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps-param-reference).
+Ao realizar uma pesquisa de empresa usando o parâmetro *q*, recomendamos que especifique os termos o máximo possível e use-os em conjunto com o parâmetro *cp* ou *where* para especificar um local. Se o usuário não der permissão ao aplicativo Mapas para usar sua localização e você não especificar um local para uma pesquisa de empresa, a pesquisa poderá ser realizada no âmbito do país/região e não retornar resultados significativos. Os resultados da pesquisa são exibidos no modo de exibição de mapa mais apropriado; portanto, a menos que haja uma necessidade de definir o *lvl* (nível de zoom), é recomendável permitir que o aplicativo Mapas decida. Para obter mais informações sobre esses e outros parâmetros, consulte a [referência de parâmetro bingmaps:](#bingmaps-param-reference).
 
 | URI de Exemplo                                                    | Resultados                                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -144,7 +141,7 @@ Você pode exibir o trajeto entre dois pontos usando o parâmetro *rtp*; esses p
 
 Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie diretamente em um modo de exibição de curva a curva de uma rota. Esses esquemas de URI só podem fornecer o trajeto da localização atual do usuário. Se você tiver de fornecer o trajeto entre pontos que não incluem a localização atual do usuário, use o esquema de URI **bingmaps:** conforme descrito na seção anterior. Para saber mais sobre esses esquemas de URI, consulte as referências de parâmetro [ms-drive-to:](#ms-drive-to-param-reference) e [ms-walk-to:](#ms-walk-to-param-reference).
 
-> **Importante**  Quando os esquemas de URI **ms-drive-to:** ou **ms-walk-to:** são iniciados, o app Mapas verifica se o dispositivo passou por uma correção de localização do GPS. Em caso afirmativo, o app Mapas continuará com o trajeto curva a curva. Caso contrário, o app exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#display-directions-and-traffic).
+> **Importante**  Quando os esquemas de URI **ms-drive-to:** ou **ms-walk-to:** são iniciados, o aplicativo Mapas verifica se o dispositivo passou por uma correção de localização do GPS. Em caso afirmativo, o aplicativo Mapas continuará com o trajeto curva a curva. Caso contrário, o aplicativo exibirá a visão geral da rota, conforme descrito em [Exibir trajeto e tráfego](#display-directions-and-traffic).
 
  
 
@@ -159,11 +156,11 @@ Os esquemas de URI **ms-drive-to:** e **ms-walk-to:** permitem que você inicie 
 ## <a name="download-offline-maps"></a>Baixar mapas offline
 
 
-O esquema de URI **ms-settings:** permite que você inicie diretamente em uma página específica no app Configurações. Embora o esquema de URI **ms-settings:** não inicie o app Mapas, ele permite que você acesse diretamente a página Mapas Offline no app Configurações e exibe uma caixa de diálogo de confirmação para baixar os mapas offline usados pelo app Mapas. O esquema de URI aceita um ponto especificado por uma latitude e longitude e determina automaticamente se há mapas offline disponíveis para uma região que contém esse ponto.  Se a latitude e longitude informadas estiverem em várias regiões de download, a caixa de diálogo de confirmação permitirá que o usuário escolha qual essas regiões baixar. Se mapas offline não estiverem disponíveis para uma região que contém esse ponto, a página Mapas offline no app Configurações será exibida com uma caixa de diálogo de erro.
+O esquema de URI **ms-settings:** permite que você inicie diretamente em uma página específica no aplicativo Configurações. Embora o esquema de URI **ms-settings:** não inicie o aplicativo Mapas, ele permite que você acesse diretamente a página Mapas Offline no aplicativo Configurações e exibe uma caixa de diálogo de confirmação para baixar os mapas offline usados pelo aplicativo Mapas. O esquema de URI aceita um ponto especificado por uma latitude e longitude e determina automaticamente se há mapas offline disponíveis para uma região que contém esse ponto.  Se a latitude e longitude informadas estiverem em várias regiões de download, a caixa de diálogo de confirmação permitirá que o usuário escolha qual essas regiões baixar. Se mapas offline não estiverem disponíveis para uma região que contém esse ponto, a página Mapas offline no aplicativo Configurações será exibida com uma caixa de diálogo de erro.
 
 | URI de Exemplo                                                                                                | Resultados                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre o app Configurações na página Mapas Offline com uma caixa de diálogo de confirmação exibida para baixar mapas para a região que contém o ponto de latitude e longitude especificado. |
+| ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre o aplicativo Configurações na página Mapas Offline com uma caixa de diálogo de confirmação exibida para baixar mapas para a região que contém o ponto de latitude e longitude especificado. |
  
 
 <span id="bingmaps-param-reference"/>
@@ -423,7 +420,7 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 ## <a name="ms-settings-parameter-reference"></a>Referência de parâmetro ms-settings:
 
 
-A sintaxe para parâmetros específicos do app Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline.
+A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline.
 
  
 
@@ -433,4 +430,3 @@ A sintaxe para parâmetros específicos do app Mapas para o esquema de URI **ms-
  
 
  
-

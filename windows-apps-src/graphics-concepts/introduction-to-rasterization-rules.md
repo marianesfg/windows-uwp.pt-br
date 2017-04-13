@@ -2,21 +2,17 @@
 title: "Introdução às regras de rasterização"
 description: "Muitas vezes, os pontos especificados para vértices não correspondem exatamente os pixels na tela. Quando isso ocorre, o Direct3D aplica as regras de rasterização de triângulo para decidir quais pixels se aplicam a um determinado triângulo."
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
-keywords:
-- "Introdução às regras de rasterização"
+keywords: "Introdução às regras de rasterização"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7814c01d18e7a5ef121d151438a25921f35aaf2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c22f17991462ddf190ece2baa0360fa3e1d12a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-rasterization-rules"></a>Introdução às regras de rasterização
 
 
@@ -79,7 +75,6 @@ Os sprites de ponto e os primitivos de patch são rasterizados como se os primit
  
 
  
-
 
 
 

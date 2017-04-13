@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Considere com que frequência lemos texto em nossas vidas diárias – em emails, livros, sinais de trânsito, preços em um cardápio, marcas de pressão dos pneus ou cartazes em postes."
+Description: "Considere com que frequência lemos texto em nossas vidas diárias - em emails, livros, sinais de trânsito, preços em um cardápio, marcas de pressão dos pneus ou cartazes em postes."
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 41c5b771440a3ad88b3c1fcc2aec57b2e080741b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8be1dac30047a647d7f80464b53fe2fc3527d2c3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -197,4 +195,3 @@ Para controles TextBox e RichEditBox, a verificação ortográfica permanece ati
 - [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
-

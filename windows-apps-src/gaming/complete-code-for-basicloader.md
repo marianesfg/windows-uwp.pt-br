@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, basicloader
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="complete-code-for-basicloader"></a>Concluir código para BasicLoader
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Conclua o código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
+Conclua código para classe e métodos que convertam e carreguem recursos gráficos comuns; por exemplo, malhas, texturas e vários objetos sombreadores.
 
 Este tópico contém estas seções:
 
@@ -1111,7 +1108,6 @@ task<void> BasicLoader::LoadMeshAsync(
  
 
  
-
 
 
 

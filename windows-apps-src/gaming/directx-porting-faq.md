@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 11
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7dda21925e31785e0ce7c3dfc72ba173b8686743
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="directx-11-porting-faq"></a>Perguntas frequentes de portabilidade do DirectX 11
 
 
@@ -140,7 +137,6 @@ Veja o [mapeamento de formatos de superfície](feature-mapping.md#surface-format
  
 
  
-
 
 
 

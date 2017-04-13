@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 19d4a4e00692bc983a56416951e82f71bf5f6be2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 659a2871e540398d34b93c288d34fb80699c36c9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="in-app-help-pages"></a>Páginas de ajuda no aplicativo
 
 Na maioria das vezes, é melhor que a ajuda seja exibida dentro do aplicativo e quando o usuário optar por exibi-la.
@@ -39,7 +36,7 @@ A ajuda no aplicativo pode ser fornecida de várias formas, mas todas elas segue
 Ter uma página ou páginas separadas de ajuda em seu aplicativo é uma maneira rápida e fácil de exibir instruções úteis.
 
 -   **Seja conciso:** uma biblioteca grande de tópicos da ajuda é complicada e inadequada para a ajuda no aplicativo.
--   **Seja consistente:** verifique se os usuários conseguem acessar as páginas da ajuda da mesma maneira em qualquer parte do aplicativo. Eles nunca devem precisar procurá-la.
+-   **Seja consistente:** verifique se os usuários podem acessar as páginas da ajuda da mesma maneira em qualquer parte do aplicativo. Eles nunca devem precisar procurá-la.
 -   **Os usuários examinam, não leem:** como a ajuda que um usuário procura pode estar na mesma página de outros tópicos da ajuda, certifique-se de que eles possam indicar rapidamente em qual eles precisam se concentrar.
 
 
@@ -62,4 +59,3 @@ Os pop-ups permitem ajuda altamente contextual exibindo instruções e conselhos
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)
-

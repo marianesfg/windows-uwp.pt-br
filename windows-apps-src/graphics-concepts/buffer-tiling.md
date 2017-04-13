@@ -2,21 +2,17 @@
 title: Buffers colocados lado a lado
 description: "Um recurso de buffer é dividido em blocos de 64KB, com algum espaço vazio no último bloco se o tamanho não é um múltiplo de 64KB."
 ms.assetid: 577DC6B0-F373-4748-AD80-2784C597C366
-keywords:
-- Buffers colocados lado a lado
+keywords: Buffers colocados lado a lado
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2382974de7146f4ba64c2422a01c4d3d297a8977
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f79d04675722c2bcc84c9c79f4da338c7b46732d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="buffer-tiling"></a>Buffers colocados lado a lado
 
 
@@ -32,7 +28,6 @@ Buffers estruturados não devem ter nenhuma restrição sobre a distância lado 
  
 
  
-
 
 
 

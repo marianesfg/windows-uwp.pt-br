@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40c27746a8364ca9f22288b9bfc128dd2b317815
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70dbf24b53a36f7ee55ce387f713ce2abc79a87c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -123,7 +120,7 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 **Exemplos**
 * [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo-morto**
@@ -138,7 +135,6 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
  
 
  
-
 
 
 

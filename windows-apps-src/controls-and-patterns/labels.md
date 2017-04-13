@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54610e29b0fcaa8b7e90cf00676098a2ea50b827
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b14c775896984095f580aed8cf41d010f408f67e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="labels"></a>Rótulos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Um rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
+Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -49,7 +47,7 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Exemplo de noções básicas da interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Controles de texto](text-controls.md)
@@ -68,7 +66,6 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
  
 
  
-
 
 
 

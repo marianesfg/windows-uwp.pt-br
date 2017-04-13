@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, ddstextureloader
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="complete-code-for-ddstextureloader"></a>Concluir código para DDSTextureLoader
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Conclua o código para a classe e o método que carrega uma textura DDS da memória.
+Conclua código para a classe e o método que carrega uma textura DDS da memória.
 
 Este tópico contém estas seções:
 
@@ -1226,7 +1223,6 @@ void CreateDDSTextureFromMemory(
  
 
  
-
 
 
 

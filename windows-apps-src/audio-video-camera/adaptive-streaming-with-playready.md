@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: "Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um app UWP (Plataforma Universal do Windows)."
+description: "Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows)."
 title: "Streaming adaptável com PlayReady"
 ms.author: elcowle
 ms.date: 02/08/2017
@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f7bd47c4c8ae7ce5515e3c53571655fd32d36e1a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptável com PlayReady
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um app UWP (Plataforma Universal do Windows). 
+Este artigo descreve como adicionar streaming adaptável de conteúdo multimídia com proteção de conteúdo do Microsoft PlayReady a um aplicativo UWP (Plataforma Universal do Windows). 
 
 Esse recurso atualmente oferece suporte à reprodução de conteúdo Dynamic Streaming over HTTP (DASH).
 
@@ -67,7 +64,7 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>Configurando o MediaProtectionManager
 
-Para adicionar proteção de conteúdo PlayReady ao seu app UWP, você precisará configurar um objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Você fará isso ao inicializar seu objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
+Para adicionar proteção de conteúdo PlayReady ao seu aplicativo UWP, você precisará configurar um objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Você fará isso ao inicializar seu objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
 
 O código a seguir configura um [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040):
 
@@ -102,7 +99,7 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 }
 ```
 
-Este código pode simplesmente ser copiado para o seu app, já que ele é obrigatório para configurar a proteção de conteúdo.
+Este código pode simplesmente ser copiado para o seu aplicativo, já que ele é obrigatório para configurar a proteção de conteúdo.
 
 O evento [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) é acionado quando a carga de dados binários falha. Precisamos adicionar um manipulador de eventos para lidar com isso, indicando que a carga não foi concluída:
 
@@ -297,11 +294,10 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-Você pode chamar essa função em qualquer evento que tratar o início do streaming adaptável; por exemplo, em um evento de clique de um botão.
+Você pode chamar essa função em qualquer evento que manipular o início do streaming adaptável; por exemplo, em um evento de clique de um botão.
 
 ## <a name="see-also"></a>Consulte também
 - [DRM do PlayReady](playready-client-sdk.md)
-
 
 
 

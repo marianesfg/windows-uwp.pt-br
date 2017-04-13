@@ -2,21 +2,17 @@
 title: "Configurando a funcionalidade de estêncil de profundidade"
 description: "Esta seção abrange as etapas para configurar o buffer de estêncil de profundidade e o estado de estêncil de profundidade para o estágio de fusão de saída."
 ms.assetid: B3F6CDAA-93ED-4DC1-8E69-972C557C7920
-keywords:
-- "Configurando a funcionalidade de estêncil de profundidade"
+keywords: "Configurando a funcionalidade de estêncil de profundidade"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6814e5ee5aa99558830af4da3b43d102048f8bcb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9064c65732287777c90fe3987cda61c087e49508
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Configurando a funcionalidade de estêncil de profundidade
 
 
@@ -102,4 +98,3 @@ Um buffer de estêncil de profundidade inativo pode ser lido por um sombreador c
 [Pipeline de elementos gráficos](graphics-pipeline.md)
 
 [Estágio de fusão de saída](https://msdn.microsoft.com/library/windows/desktop/bb205120)
-

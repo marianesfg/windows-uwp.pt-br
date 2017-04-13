@@ -2,21 +2,17 @@
 title: "Compactação de bloco"
 description: "A compactação de bloco é uma técnica de compactação de textura com perdas para reduzir o volume de memória e o tamanho da textura, dando um aumento de desempenho. Uma textura compactada em bloco pode ser menor do que uma textura com 32 bits por cor."
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
-keywords:
-- "Compactação de bloco"
+keywords: "Compactação de bloco"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 45f860a184400f0d50584ae0fa2e5a8a777f1651
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d67ec99494dc0b598d9eeb8c4aa5b29255a415ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="block-compression"></a>Compactação de bloco
 
 
@@ -422,4 +418,3 @@ A tabela a seguir lista os formatos de destino e origem permitidos que você pod
 
 
 [Recursos de textura compactada](compressed-texture-resources.md)
-

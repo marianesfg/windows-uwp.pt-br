@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f6df625d9eaab9db1bd3aed96d3f07160001ae70
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="lists"></a>Listas
 
@@ -49,7 +47,7 @@ Use um modo de exibição de lista para:
 
 -   Exiba uma coleção de conteúdos que consistem principalmente em texto.
 -   Navegue em uma coleção de conteúdos única ou categorizada.
--   Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em apps de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
+-   Crie o painel mestre no [padrão mestre/detalhes](master-details.md). Um padrão mestre/detalhes é usado com frequência em aplicativos de email, em que um painel (o mestre) tem uma lista de itens selecionáveis e o outro painel (detalhes) tem uma exibição detalhada do item selecionado.
 
 ### <a name="examples"></a>Exemplos
 
@@ -77,15 +75,15 @@ Veja uma exibição de lista simples que mostra dados agrupados em um telefone.
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Exibição de lista e exibição de grade](listview-and-gridview.md)</p></td>
-<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu app.</p></td>
+<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Modelos de item de exibição de lista](listview-item-templates.md)</p></td>
-<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu app. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu app com uma ótima aparência.</p></td>
+<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Listas invertidas](inverted-lists.md)</p></td>
-<td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um app de chat. Siga estas orientações para usar uma lista invertida em seu app.</p></td>
+<td align="left"><p>As listas invertidas têm novos itens adicionados na parte inferior, como em um aplicativo de chat. Siga estas orientações para usar uma lista invertida em seu aplicativo.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Puxar para atualizar](pull-to-refresh.md)</p></td>
@@ -112,7 +110,7 @@ Use um modo de exibição de lista para:
 
 ### <a name="examples"></a>Exemplos
 
-Este exemplo mostra um layout de modo de exibição de grade típico, neste caso, para navegar apps. Metadados para itens de modo de exibição de grade são geralmente restritos a algumas linhas de texto e uma classificação de item.
+Este exemplo mostra um layout de modo de exibição de grade típico, neste caso, para navegar aplicativos. Metadados para itens de modo de exibição de grade são geralmente restritos a algumas linhas de texto e uma classificação de item.
 
 ![Exemplo de um layout de exibição de grade](images/controls_gridview_example02.png)
 
@@ -140,11 +138,11 @@ Um modo de exibição de grade é a solução ideal para uma biblioteca de conte
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Exibição de lista e exibição de grade](listview-and-gridview.md)</p></td>
-<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu app.</p></td>
+<td align="left"><p>Conheça as noções básicas do uso de uma exibição de lista ou grade em seu aplicativo.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Modelos de item de exibição de lista](listview-item-templates.md)</p></td>
-<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu app. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu app com uma ótima aparência.</p></td>
+<td align="left"><p>Os itens exibidos em uma lista ou grade podem desempenhar uma função importante na aparência geral do seu aplicativo. Modifique modelos de controle e modelos de dados para definir a aparência dos itens e deixar seu aplicativo com uma ótima aparência.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Interface do usuário aninhada](nested-ui.md)</p></td>
@@ -162,7 +160,7 @@ Listas suspensas, também conhecidas como caixas de combinação, começam em um
 -   Use um controle de lista suspensa para permitir aos usuários selecionar um ou mais valores de um conjunto de itens que podem ser representados adequadamente com linhas de texto únicas.
 -   Use um modo de exibição de lista ou de grade em vez de uma caixa de combinação para exibir itens que contenham várias linhas de texto ou imagens.
 -   Quando houver menos de cinco itens, considere a possibilidade de usar [botões de opção](radio-button.md) (se somente um item puder ser selecionado) [ou caixas de seleção](checkbox.md) (se vários itens puderem ser selecionados).
--   Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu app. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
+-   Use a caixa de combinação quando os itens de seleção forem de importância secundária no fluxo do seu aplicativo. Se a opção padrão for recomendada para a maioria dos usuários em grande parte das situações, mostrar todos os itens usando uma exibição de lista pode chamar mais atenção para as opções do que o necessário. Você pode economizar espaço e minimizar a distração usando uma caixa de combinação.
 
 ### <a name="examples"></a>Exemplos
 
@@ -200,7 +198,7 @@ Uma caixa de listagem permite que o usuário escolha um único item ou vários i
     -   A caixa de listagem é de seleção única e apresenta sempre as mesmas 2 opções, onde uma pode ser imposta como o contrário da outra, como “ligado” e “desligado”. Use uma única caixa de seleção ou um botão de alternância.
     -   Há um número muito grande de itens. Exibição de grade e exibição de lista são escolhas melhores para listas longas. Para listas muito longas de dados agrupados, prefere-se a aplicação de zoom semântico.
     -   Os itens são valores numéricos contíguos. Se esse for o caso, considere usar um [controle deslizante](slider.md).
-    -   Os itens de seleção são de importância secundária no fluxo de seu app, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
+    -   Os itens de seleção são de importância secundária no fluxo de seu aplicativo, ou a opção padrão é recomendada para a maioria dos usuários na maioria das situações. Utilize uma lista suspensa em vez disso.
 
 ### <a name="recommendations"></a>Recomendações
 
@@ -263,4 +261,3 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 - [**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**Classe ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
-

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Este artigo aborda as quatro opções de notificação&\\#8212;local, agendada, periódica e por push&\\#8212;que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema."
+Description: "Este artigo aborda as quatro opções de notificação&\\#8212;local, agendada, periódica e por push&\\#8212que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema."
 title: "Escolher um método de entrega de notificação"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 42cb565c9cb1592d90d9f46d2faf783117d0a8bd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 39418d553eceb6b38d9b0cecc633c984f38465b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Este artigo aborda as quatro opções de notificação – local, agendada, periódica e por push – que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
+Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. Um bloco ou uma notificação do sistema pode obter informações para o usuário mesmo enquanto o usuário não está diretamente envolvido com o aplicativo. A natureza e o conteúdo do aplicativo e as informações que você deseja fornecer podem ajudá-lo a determinar qual método de notificação é melhor para o seu cenário.
 
 ## <a name="notification-delivery-methods-overview"></a>Visão geral de métodos de entrega de notificações
 
@@ -103,7 +101,7 @@ Atualizar o bloco ou emblema do aplicativo ou acionar uma notificação do siste
 
 Recomendamos que seu aplicativo atualize o respectivo bloco localmente na primeira inicialização ou, pelo menos, logo depois que o usuário faz uma alteração que seu aplicativo geralmente refletirá no bloco. Essa atualização não é vista até que o usuário saia do aplicativo, porém ao fazer a alteração enquanto o aplicativo está sendo usado já garante que o bloco seja atualizado quando o usuário sair dele.
 
-Embora as chamadas de API sejam locais, as notificações podem fazer referência a imagens da Web. Se a imagem da Web não estiver disponível para download, estiver corrompida ou não atender às especificações da imagem, os blocos e a notificação do sistema responderão de maneira diferente:
+Embora as chamadas de API sejam locais, as notificações podem fazer referência a imagens da Web. Se a imagem da Web não estiver disponível para transferência, estiver corrompida ou não atender às especificações da imagem, os blocos e a notificação do sistema responderão de maneira diferente:
 
 -   Blocos: as atualizações não são mostradas
 -   Notificação do sistema: a notificação é exibida, mas sua imagem será removida
@@ -172,7 +170,6 @@ Para obter mais informações, consulte:
  
 
  
-
 
 
 

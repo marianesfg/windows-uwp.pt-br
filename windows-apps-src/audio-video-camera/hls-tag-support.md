@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 34bac5b7332bcc258c76f15a6005f82f545eef4d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7bf47b166dfd05b906b37deded909d5a3b26ac6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="http-live-streaming-hls-tag-support"></a>Suporte para marcas HLS (HTTP Live Streaming)
 A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 
 > [!NOTE] 
 > As marcas personalizadas que começam com "X-" podem ser acessadas como metadados programados conforme descrito no artigo [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md).
 
-|Marca |Introduzida na versão do protocolo HLS|Versão de rascunho do documento do protocolo HLS|Obrigatória no cliente|Versão de julho do Windows 10|Windows 10, versão 1511|Windows 10, versão 1606 |
+|Marca |Introduzida na versão do protocolo HLS|Versão de rascunho do documento do protocolo HLS|Obrigatória no cliente|Versão de julho do Windows 10|Windows 10, versão 1511|Windows 10, versão 1607 |
 |---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  Marcas básicas                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|OBRIGATÓRIA|Com suporte|Com suporte|Com suporte|
@@ -90,7 +87,6 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
  
 
  
-
 
 
 

@@ -9,25 +9,22 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, direct3d, buffer de profundidade
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-depth-buffer-device-resources"></a>Criar recursos de dispositivo de buffer de profundidade
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Aprenda a criar recursos de dispositivos Direct3D necessários para dar suporte a testes de profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Aprenda a criar recursos de dispositivos Direct3D necessários ao suporte de testes e profundidade para volumes de sombra. Parte 1 do [Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="resources-youll-need"></a>Recursos necessários
 
 
-Para renderizar um mapa de profundidade para volumes de sombra, são obrigatórios os seguintes recursos, dependentes de dispositivos Direct3D:
+Para renderizar um mapa de profundidade para volumes de sombra, são necessários os seguintes recursos, dependentes de dispositivos Direct3D:
 
 -   Um recurso (buffer) para o mapa de profundidade
 -   Uma exibição de estêncil de profundidade e uma exibição de recurso de sombreador para o recurso
@@ -37,7 +34,7 @@ Para renderizar um mapa de profundidade para volumes de sombra, são obrigatóri
 -   Um objeto de estado de renderização para habilitar o conjunto de face frontal
 -   Você também precisará de um objeto de estado de renderização para voltar ao conjunto de face traseira, caso ainda não use um.
 
-Observe que a criação desses recursos deve se incluída em uma rotina de criação de recursos dependentes de dispositivos. Desse modo, seu renderizador poderá recriá-los quando um novo driver de dispositivo for instalado ou o usuário mover o app para um monitor conectado a uma placa gráfica diferente, apenas para citar alguns exemplos.
+Observe que a criação desses recursos deve se incluída em uma rotina de criação de recursos dependentes de dispositivos. Desse modo, seu renderizador poderá recriá-los quando um novo driver de dispositivo for instalado ou o usuário mover o aplicativo para um monitor conectado a uma placa gráfica diferente, apenas para citar alguns exemplos.
 
 ## <a name="check-feature-support"></a>Verificar o suporte ao recurso
 
@@ -265,7 +262,6 @@ Na próxima parte deste guia passo a passo, veremos como criar o mapa de sombra 
  
 
  
-
 
 
 

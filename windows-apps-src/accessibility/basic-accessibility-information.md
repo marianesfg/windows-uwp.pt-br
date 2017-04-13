@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu app a expor as informações básicas de que tecnologias adaptativas precisam."
+Description: "As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: "Expor informações básicas de acessibilidade"
 label: Expose basic accessibility information
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 123776d100b0308248e6d715d8253b69f700f1d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd873b6d1abd4187f1b8ff1d9040da3242c0ee65
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="expose-basic-accessibility-information"></a>Expor informações básicas de acessibilidade  
 
 
 
-As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu app a expor as informações básicas de que tecnologias adaptativas precisam.
+As informações básicas de acessibilidade costumam ser categorizadas por nome, função e valor. Este tópico descreve códigos para ajudar seu aplicativo a expor as informações básicas de que tecnologias adaptativas precisam.
 
 <span id="accessible_name"/>
 <span id="ACCESSIBLE_NAME"/>
@@ -56,7 +53,7 @@ Nem todos os controles têm um valor. Os controles que não têm um valor report
 ## <a name="influencing-the-ui-automation-tree-views"></a>Influenciando as exibições de árvore de automação da IU  
 A estrutura de Automação da IU tem um conceito de exibições em árvore, onde os clientes da Automação da Interface do Usuário podem recuperar as relações entre os elementos de uma interface do usuário usando três visualizações possíveis: bruto, de controle e de conteúdo. A visualização de controle é a visualização usada frequentemente por clientes da Automação da Interface do Usuário, pois fornece uma boa representação e organização dos elementos em uma interface do usuário que são interativos. As ferramentas de teste costumam permitir que você escolha qual modo de exibição de árvore usar quando a ferramenta apresenta a organização dos elementos.
 
-Por padrão, qualquer classe derivada de [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e alguns outros elementos aparecerão na visualização de controle quando a estrutura de Automação da IU representar a IU para um app da Plataforma Universal do Windows (UWP). Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
+Por padrão, qualquer classe derivada de [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) e alguns outros elementos aparecerão na visualização de controle quando a estrutura de Automação da IU representar a IU para um aplicativo da Plataforma Universal do Windows (UWP). Mas às vezes você não quer que um elemento apareça na exibição do controle devido à composição da interface do usuário, onde esse elemento está duplicando ou apresentando informações que não são importantes para os cenários de acessibilidade. Use a propriedade anexada [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788) para alterar como os elementos são expostos para os modos de exibição de árvore. Se você colocar um elemento na árvore **Raw**, a maioria das tecnologias adaptativas não reportará esse elemento como parte de seus modos de exibição. Para ver alguns exemplos de como isso funciona em controles existentes, abra o arquivo XAML de referência de design generic.xaml em um editor de texto e pesquise por **AutomationProperties.AccessibilityView** nos modelos.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>
@@ -126,9 +123,9 @@ O nome acessível se destina a identificar o controle, em vez de fazê-lo para d
 <span id="testing_accessibility_early_and_often"/>
 <span id="TESTING_ACCESSIBILITY_EARLY_AND_OFTEN"/>
 ## <a name="testing-accessibility-early-and-often"></a>Testando a acessibilidade de forma precoce e frequente  
-Definitivamente, a melhor abordagem para suportar leitores de tela é testar o seu app usando, você mesmo, um leitor de tela. Isso lhe mostrará como se comporta o leitor de tela e as informações básicas de acessibilidade podem estar ausentes do app. Em seguida, você pode ajustar os valores da interface do usuário ou da propriedade de Automação da Interface do Usuário adequadamente. Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md).
+Definitivamente, a melhor abordagem para suportar leitores de tela é testar o seu aplicativo usando, você mesmo, um leitor de tela. Isso lhe mostrará como se comporta o leitor de tela e as informações básicas de acessibilidade podem estar ausentes do aplicativo. Em seguida, você pode ajustar os valores da interface do usuário ou da propriedade de Automação da Interface do Usuário adequadamente. Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md).
 
-Uma das ferramentas que você pode usar para testar a acessibilidade chama-se **AccScope**. A ferramenta **AccScope** é especialmente útil porque você pode ver representações visuais de sua IU que demostram como as tecnologias assistidas poderiam ver seu app como uma árvore de automação. Em particular, há um modo Narrador que dá uma visão de como o Narrador obtém o texto de seu app e como ele organiza os elementos na IU. A AccScope foi criada de modo que possa ser usada e útil ao longo do ciclo de desenvolvimento de um app, mesmo durante a fase preliminar de design. Para obter mais informações, consulte [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
+Uma das ferramentas que você pode usar para testar a acessibilidade chama-se **AccScope**. A ferramenta **AccScope** é especialmente útil porque você pode ver representações visuais de sua IU que demostram como as tecnologias assistidas poderiam ver seu aplicativo como uma árvore de automação. Em particular, há um modo Narrador que dá uma visão de como o Narrador obtém o texto de seu aplicativo e como ele organiza os elementos na IU. A AccScope foi criada de modo que possa ser usada e útil ao longo do ciclo de desenvolvimento de um aplicativo, mesmo durante a fase preliminar de design. Para obter mais informações, consulte [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
@@ -150,4 +147,3 @@ Observe que as propriedades anexadas, como as propriedades [**AutomationProperti
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Testes de acessibilidade](accessibility-testing.md)
-

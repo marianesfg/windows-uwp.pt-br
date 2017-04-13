@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 11, dispositivo perdido
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d7a93ed0b1ce78cba278232eb5325e463c12789
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
 
 
@@ -32,7 +29,7 @@ No DirectX 9, os aplicativos devem encontrar uma condição "[dispositivo perdid
 
 Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que o dispositivo Direct3D deve ser reinicializado e os recursos do dispositivo precisam ser recriados. Este tutorial passo a passo explica como os aplicativos e jogos do Direct3D 11 podem detectar e responder a qualquer circunstância em que o adaptador gráfico seja reiniciado, removido ou alterado. Exemplos de código são fornecidos no modelo de aplicativo DirectX 11 (Windows Universal) fornecido com o Microsoft Visual Studio 2015.
 
-# <a name="instructions"></a>Instruções
+## <a name="instructions"></a>Instruções
 
 ### <a name="spanspanstep-1"></a><span></span>Etapa 1:
 
@@ -170,15 +167,4 @@ Para obter mais detalhes, consulte [**GetDeviceRemovedReason**](https://msdn.mic
 
 O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramenta de linha de comando chamada 'dxcap' para captura de eventos Direct3D e reprodução relacionada ao Diagnóstico de Gráficos do Visual Studio. Você pode usar a opção de linha de comando "-forcetdr" enquanto seu aplicativo estiver em execução, o que forçará um evento de recuperação e detecção de tempo limite de GPU, disparando DXGI\_ERROR\_DEVICE\_REMOVED e permitindo que você teste seu código de tratamento de erro.
 
-> **Note**  O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Mais informações sobre como instalar as Ferramentas de Gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
-
- 
-
- 
-
- 
-
-
-
-
-
+> **Note** O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Mais informações sobre como instalar as Ferramentas de Gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>

@@ -2,21 +2,17 @@
 title: "Não há suporte para formatos de estêncil com recursos de streaming"
 description: "Formatos que contêm estêncil não são compatíveis com recursos de streaming."
 ms.assetid: 90A572A4-3C76-4795-BAE9-FCC72B5F07AD
-keywords:
-- "Não há suporte para formatos de estêncil com recursos de streaming"
+keywords: "Não há suporte para formatos de estêncil com recursos de streaming"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96eb1ec610b5aba743caf92584f52f5785046155
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 15e64263a6b529fbc14be936195d33ad7ec69a1c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stencil-formats-not-supported-with-streaming-resources"></a>Não há suporte para formatos de estêncil com recursos de streaming
 
 
@@ -36,7 +32,6 @@ A profundidade de 32 bits teria blocos de 128 x 128, e o estêncil de 8 bits ter
  
 
  
-
 
 
 

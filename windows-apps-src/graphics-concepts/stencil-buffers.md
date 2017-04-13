@@ -2,21 +2,17 @@
 title: "Buffers de estêncil"
 description: "O buffer de estêncil é usado para mascarar pixels em uma imagem, para gerar efeitos especiais."
 ms.assetid: 544B3B9E-31E3-41DA-8081-CC3477447E94
-keywords:
-- "Buffers de estêncil"
+keywords: "Buffers de estêncil"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 981d9d25b860d1c168227c9f67537cf033165aac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 131b573d990db4d24f33b33c38e4534a7932571b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stencil-buffers"></a>Buffers de estêncil
 
 
@@ -54,14 +50,14 @@ Seu aplicativo pode personalizar a operação do buffer de estêncil. Ele pode d
 ## <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>Composição
 
 
-Seu aplicativo pode usar o buffer de estêncil para compor imagens 2D ou 3D em uma cena 3D. Uma máscara no buffer de estêncil é usada para ocultar uma área da superfície de destino de renderização. Informações armazenadas 2D, como texto ou bitmaps, podem então ser escritas na área obstruída. Como alternativa, seu aplicativo pode renderizar objetos primitivos 3D adicionais para a região mascarada por estêncil da superfície do destino de renderização. Ele pode até mesmo renderizar uma cena inteira.
+Seu aplicativo pode usar o buffer de estêncil para compor imagens 2D ou 3D em uma cena 3D. Uma máscara no buffer de estêncil é usada para ocultar uma área da superfície de destino de renderização. Informações armazenadas 2D, como texto ou bitmaps, podem então ser escritas na área obstruída. Como alternativa, seu app pode renderizar objetos primitivos 3D adicionais para a região mascarada por estêncil da superfície do destino de renderização. Ele pode até mesmo renderizar uma cena inteira.
 
 Jogos geralmente são compostos por diversas cenas 3D juntas. Por exemplo, jogos de direção normalmente exibem um espelho retrovisor. O espelho contém o modo de exibição da cena 3D atrás do condutor. Ele é essencialmente uma segunda cena 3D composta pela visão frontal do condutor.
 
 ## <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Decalque
 
 
-Aplicativos Direct3D usam decalque para controlar quais pixels de uma determinada imagem primitiva são desenhados na superfície de destino de renderização. Os aplicativos aplicam os decalques às imagens de objetos primitivos para permitir que polígonos coplanares sejam renderizados corretamente.
+Aplicativos Direct3D usam decalque para controlar quais pixels de uma determinada imagem primitiva são desenhados na superfície de destino de renderização. Os apps aplicam os decalques às imagens de objetos primitivos para permitir que polígonos coplanares sejam renderizados corretamente.
 
 Por exemplo, ao aplicar marcas de pneus e linhas amarelas em uma estrada, as marcas devem aparecer diretamente sobre a pista. No entanto, os valores z das marcas e da estrada são os mesmos. Portanto, o buffer de profundidade pode não produzir uma separação clara entre os dois. Alguns pixels da parte primitiva traseira podem ser renderizados na parte superior da parte primitiva frontal e vice-versa. A imagem resultante parece tremida de quadro a quadro. Esse efeito é chamado *luta z* ou *flimmering*.
 
@@ -93,12 +89,12 @@ Você pode usar o buffer de estêncil para efeitos mais abstratos, como contorno
 
 Se seu aplicativo aplicar uma máscara de estêncil à imagem de um objeto primitivo com o mesmo formato, mas um pouco menor, a imagem resultante terá apenas o contorno do objeto primitivo. O aplicativo pode preencher a área com máscara de estêncil da imagem com uma cor sólida, dando ao primitivo uma aparência em alto-relevo.
 
-Se a máscara de estêncil tiver o mesmo tamanho e formato do primitivo que está sendo renderizado, a imagem resultante terá um buraco onde o primitivo deveria estar. Seu aplicativo poderá preencher o buraco com cor preta para produzir uma silhueta do primitivo.
+Se a máscara de estêncial tiver o mesmo tamanho e formato da primitiva que está sendo renderizado, a imagem resultante terá um buraco onde o primitivo deveria estar. Seu aplicativo poderá preencher o buraco com cor preta para produzir uma silhueta do primitivo.
 
 ## <a name="span-idtwo-sidedstencilspanspan-idtwo-sidedstencilspanspan-idtwo-sidedstencilspantwo-sided-stencil"></a><span id="Two-sided_stencil"></span><span id="two-sided_stencil"></span><span id="TWO-SIDED_STENCIL"></span>Estêncil de dois lados
 
 
-Os volumes de sombra são usados para desenhar sombras com o buffer de estêncil. O aplicativo calcula os volumes de sombra convertidos sobrepondo a geometria, calculando as bordas da silhueta e afastando-as da luz em um conjunto de volumes 3D. Em seguida, esses volumes são renderizados duas vezes no buffer de estêncil.
+Os volumes de sombra são usados para desenhar sombras com o buffer de estêncil. O app calcula os volumes de sombra convertidos sobrepondo a geometria, calculando as bordas da silhueta e afastando-as da luz em um conjunto de volumes 3D. Em seguida, esses volumes são renderizados duas vezes no buffer de estêncil.
 
 A primeira renderização desenha polígonos voltados para frente e aumenta os valores de buffer de estêncil. A segunda renderização desenha polígonos voltados para trás do volume de sombra e diminui os valores de buffer de estêncil. Normalmente, todos os valores incrementados e diminuídos cancelam uns aos outros. No entanto, a cena já foi renderizada com geometria normal, fazendo com que alguns pixels falhem no teste de buffer z, conforme o volume de sombra é renderizado. Os valores restantes no buffer de estêncil correspondem aos pixels que estão na sombra. Esse conteúdo restante do buffer de estêncil é usado como uma máscara, para fazer a combinação alfa de um quadrupleto preto grande e abrangente na cena. Com o buffer de estêncil atuando como uma máscara, o resultado será o escurecimento dos pixels que estão nas sombras.
 
@@ -112,7 +108,6 @@ Isso significa que a geometria de sombra é desenhada duas vezes por fonte de lu
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3708a9b7768d4fb7fbb6af0e55836471a2ba29ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f834c91cd0c71f6d7687d9f69224ed747e45a6d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -46,13 +43,13 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
     Por exemplo, este gatilho fará com que uma tarefa em segundo plano seja executada uma vez de hora em hora:
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
-    > ```
-    > ```cpp
-    > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
+> ```
+> ```cpp
+> TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
+> ```
 
 ## <a name="optional-add-a-condition"></a>(Opcional) Adicionar uma condição
 
@@ -60,25 +57,25 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
     Neste exemplo, a condição é definida como **UserPresent** de maneira que, quando acionada, a tarefa seja executada somente quando o usuário estiver ativo. Para obter uma lista das possíveis condições, consulte [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > SystemCondition userCondition = new SystemCondition(SystemConditionType.UserPresent);
-    > ```
-    > ```cpp
-    > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> SystemCondition userCondition = new SystemCondition(SystemConditionType.UserPresent);
+> ```
+> ```cpp
+> SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
+> ```
 
 ##  <a name="call-requestaccessasync"></a>Chamar RequestAccessAsync()
 
 -   Antes de tentar registrar a tarefa em segundo plano [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494).
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > BackgroundExecutionManager.RequestAccessAsync();
-    > ```
-    > ```cpp
-    > BackgroundExecutionManager::RequestAccessAsync();
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> BackgroundExecutionManager.RequestAccessAsync();
+> ```
+> ```cpp
+> BackgroundExecutionManager::RequestAccessAsync();
+> ```
 
 ## <a name="register-the-background-task"></a>Registrar a tarefa em segundo plano
 
@@ -89,21 +86,21 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 
     The following code registers a background task that runs out-of-process:
 
-    > > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
-    > string taskName   = "Example hourly background task";
-    >
-    > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
-    > ```
-    > ```cpp
-    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
-    > String ^ taskName   = "Example hourly background task";
-    >
-    > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> string entryPoint = "Tasks.ExampleBackgroundTaskClass";
+> string taskName   = "Example hourly background task";
+>
+> BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
+> ```
+> ```cpp
+> String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
+> String ^ taskName   = "Example hourly background task";
+>
+> BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
+> ```
 
-    > **Note**  Background task registration parameters are validated at the time of registration. An error is returned if any of the registration parameters are invalid. Ensure that your app gracefully handles scenarios where background task registration fails - if instead your app depends on having a valid registration object after attempting to register a task, it may crash.
+> **Observações**  Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo manipula tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
 
 ## <a name="remarks"></a>Comentários
@@ -127,4 +124,3 @@ Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa p
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos da Windows Store (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-

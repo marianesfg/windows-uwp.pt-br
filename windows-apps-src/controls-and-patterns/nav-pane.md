@@ -11,39 +11,27 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5f15129c424c92ac537116458c8433f6c96fa87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
+ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
+translationtype: HT
 ---
 # <a name="nav-panes"></a>Painéis de navegação
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-Um painel de navegação é um padrão que permite muitos itens de navegação de nível superior sem ocupar o espaço da tela. O painel de navegação é bastante usado em apps móveis, mas também funciona bem em telas maiores. Quando usado como uma sobreposição, o painel permanece recolhido e oculto até o usuário pressionar o botão, o que é útil em telas menores. Quando usado no modo encaixado, o painel permanece aberto, o que garante maior utilidade se não houver espaço suficiente na tela.
+Um painel de navegação é um padrão que permite muitos itens de navegação de nível superior sem ocupar o espaço da tela. O painel de navegação é bastante usado em aplicativos móveis, mas também funciona bem em telas maiores. Quando usado como uma sobreposição, o painel permanece recolhido e oculto até o usuário pressionar o botão, o que é útil em telas menores. Quando usado no modo encaixado, o painel permanece aberto, o que garante maior utilidade se não houver espaço suficiente na tela.
 
 ![Exemplo de um painel de navegação](images/navHero.png)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-</ul>
-</div>
 
+**APIs importantes**
+
+* [**Classe SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>Este é o padrão certo?
 
 O painel de navegação funciona bem em:
 
--   Aplicativos com muitos itens de navegação de nível superior que são de tipo similar. Por exemplo, um app de esportes com categorias como Futebol, Beisebol, Basquete, etc.
--   Fornecendo uma experiência de navegação consistente em todos os apps. Painel de navegação deve incluir somente elementos de navegação, não ações.
+-   Aplicativos com muitos itens de navegação de nível superior que são de tipo similar. Por exemplo, um aplicativo de esportes com categorias como Futebol, Beisebol, Basquete, etc.
+-   Fornecendo uma experiência de navegação consistente em todos os aplicativos. Painel de navegação deve incluir somente elementos de navegação, não ações.
 -   Um número de médio a alto (entre 5 e 10, ou mais) de categorias de navegação de nível superior.
 -   Preservar o estado real da tela (como uma sobreposição).
 -   Itens de navegação que são acessados com pouca frequência. (como uma sobreposição).
@@ -54,13 +42,10 @@ O padrão do painel de navegação consiste em um painel para categorias de nave
 
 Para experimentar o código que implementa esse padrão, baixe a [Solução de navegação XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlNavigation) do GitHub.
 
-<div class="microsoft-internal-note">
-Linhas vermelhas para o painel de navegação e o hambúrguer estão disponíveis em [UNI](http://uni/DesignDepot.FrontEnd/#/Search?c=t&t=Windows%2BRS1%2BControls&f=NavPane_Hamburger).
-</div>
 
 ### <a name="pane"></a>Painel
 
-Cabeçalhos para categorias de navegação entram no painel. Pontos de entrada para as configurações do app e o gerenciamento de contas, se aplicáveis, também entram no painel. Cabeçalhos de navegação geralmente são uma lista de itens para o usuário escolher.
+Cabeçalhos para categorias de navegação entram no painel. Pontos de entrada para as configurações do aplicativo e o gerenciamento de contas, se aplicáveis, também entram no painel. Cabeçalhos de navegação geralmente são uma lista de itens para o usuário escolher.
 
 ![Exemplo de painel do painel de navegação](images/nav_pane_expanded.png)
 
@@ -70,11 +55,11 @@ A área de conteúdo é onde as informações do local de navegação selecionad
 
 ### <a name="button"></a>Botão
 
-Quando presente, o botão permite aos usuários abrir e fechar o painel. O botão permanece visível em uma posição fixa e não se move com o painel. Recomendamos colocar o botão no canto superior esquerdo do seu app. O botão do painel de navegação é visualizado como três linhas horizontais empilhadas e é conhecido como o botão "hambúrguer".
+Quando presente, o botão permite aos usuários abrir e fechar o painel. O botão permanece visível em uma posição fixa e não se move com o painel. Recomendamos colocar o botão no canto superior esquerdo do seu aplicativo. O botão do painel de navegação é visualizado como três linhas horizontais empilhadas e é conhecido como o botão "hambúrguer".
 
 ![Exemplo de botão do painel de navegação](images/nav_button.png)
 
-O botão geralmente está associado a uma cadeia de caracteres de texto. No nível superior do app, o título do app pode ser exibido ao lado do botão. Em níveis inferiores do app, a cadeia de caracteres de texto pode ser o título da página em que o usuário está no momento.
+O botão geralmente está associado a uma cadeia de caracteres de texto. No nível superior do aplicativo, o título do aplicativo pode ser exibido ao lado do botão. Em níveis inferiores do aplicativo, a cadeia de caracteres de texto pode ser o título da página em que o usuário está no momento.
 
 ## <a name="nav-pane-variations"></a>Variações do painel de navegação
 
@@ -83,7 +68,7 @@ O painel de navegação tem três modos: sobreposição, compacto e embutido. Um
 ### <a name="overlay"></a>Sobreposição
 
 -   Uma sobreposição pode ser usada em qualquer tamanho de tela e na orientação retrato ou paisagem. Em seu estado padrão (recolhido), a sobreposição não ocupa estado real, com apenas com o botão mostrado.
--   Fornece navegação sob demanda que preserva o estado real da tela. Ideal para apps em telefones e phablets.
+-   Fornece navegação sob demanda que preserva o estado real da tela. Ideal para aplicativos em telefones e phablets.
 -   O painel fica oculto por padrão, somente com o botão visível.
 -   Pressionar o botão do painel de navegação abre e fecha a sobreposição.
 -   O estado expandido é transitório, sendo ignorado quando uma seleção é feita, quando o botão Voltar é usado ou quando o usuário toca fora do painel.
@@ -107,7 +92,7 @@ O painel de navegação tem três modos: sobreposição, compacto e embutido. Um
 
 ## <a name="adaptability"></a>Capacidade de adaptação
 
-Para aumentar a usabilidade em uma variedade de dispositivos, recomendamos usar [pontos de interrupção](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) e ajustar o modo do painel de navegação com base na largura da sua janela de app.
+Para aumentar a usabilidade em uma variedade de dispositivos, recomendamos usar [pontos de interrupção](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) e ajustar o modo do painel de navegação com base na largura da sua janela de aplicativo.
 -   Janela pequena
    -   Menor ou igual a 640 px de largura.
    -   O painel de navegação deve estar no modo de sobreposição, fechado por padrão.
@@ -120,7 +105,7 @@ Para aumentar a usabilidade em uma variedade de dispositivos, recomendamos usar 
 
 ## <a name="tailoring"></a>Adaptação
 
-Para otimizar a [experiência de 3 metros](http://go.microsoft.com/fwlink/?LinkId=760736) do seu app, considere adaptar o painel de navegação, mudando a aparência visual de seus elementos de navegação. Dependendo do contexto de interação, pode ser mais importante chamar a atenção do usuário para o item de navegação selecionado ou para o item de navegação focado. Para a experiência de 3 metros, onde o gamepad é o dispositivo de entrada mais comum, garantir que o usuário possa manter facilmente o controle do local do item atualmente focalizado na tela é particularmente importante.
+Para otimizar a [experiência de 3 metros](http://go.microsoft.com/fwlink/?LinkId=760736) do seu aplicativo, considere adaptar o painel de navegação, mudando a aparência visual de seus elementos de navegação. Dependendo do contexto de interação, pode ser mais importante chamar a atenção do usuário para o item de navegação selecionado ou para o item de navegação focado. Para a experiência de 3 metros, onde o gamepad é o dispositivo de entrada mais comum, garantir que o usuário possa manter facilmente o controle do local do item atualmente focalizado na tela é particularmente importante.
 
 ![Exemplo de itens do painel de navegação personalizado](images/nav_item_states.png)
 
@@ -132,4 +117,3 @@ Para otimizar a [experiência de 3 metros](http://go.microsoft.com/fwlink/?LinkI
  
 
  
-

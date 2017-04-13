@@ -2,21 +2,17 @@
 title: Dispositivos
 description: "Um dispositivo Direct3D é o componente de renderização do Direct3D. Um dispositivo encapsula e armazena o estado de renderização, executa transformações e operações de iluminação e rasteriza uma imagem para uma superfície."
 ms.assetid: BC903462-A32A-46BA-8411-FB294F5D2CD9
-keywords:
-- Dispositivos
+keywords: Dispositivos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5f2d86f3ceeb5a7026d5ad8e445e47cb69402879
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e95c1e1cc9cf1b26553ec9e148438ae837dbdf0e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="devices"></a>Dispositivos
 
 
@@ -89,7 +85,6 @@ Como o comportamento dos dispositivos de referência e software fornecidos com o
  
 
  
-
 
 
 

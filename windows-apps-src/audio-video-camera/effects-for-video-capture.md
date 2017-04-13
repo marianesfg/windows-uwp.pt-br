@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60b3d3874ea90b7d626ff1a78c104348ff80dc09
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7e8d65576347308eea7dd2f445961ba366557fa3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="effects-for-video-capture"></a>Efeitos para captura de vídeo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -110,7 +107,6 @@ Para limpar o efeito de estabilização de vídeo, chame [**RemoveEffectAsync**]
  
 
  
-
 
 
 

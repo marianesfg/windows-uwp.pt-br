@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
-ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
-ms.lasthandoff: 01/19/2017
-
+ms.openlocfilehash: 4997895e73e7c8bf0f20a2bc504b7b8c17c45339
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
@@ -149,4 +147,3 @@ Em vez de especificar uma classe, você pode projetar o esquema da fonte de dado
 O recurso **Novos Dados de Exemplo** usa [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e não **d:DataContext**, para que os dados de exemplo estejam disponíveis quando você executar seu esboço ou protótipo e durante a criação. E o painel **Dados** realmente acelera as tarefas de design e associação. Por exemplo, basta arrastar uma propriedade de coleção do painel **Dados** para a superfície de design para gerar um controle de itens de ligação de dados e os modelos necessários, tudo pronto para compilação e execução.
 
 ![Dados de exemplo para criação de protótipo.](images/displaying-data-in-the-designer-04.png)
-

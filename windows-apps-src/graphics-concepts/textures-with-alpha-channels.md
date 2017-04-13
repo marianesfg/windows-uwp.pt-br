@@ -2,21 +2,17 @@
 title: Texturas com canais alfa
 description: "Há duas maneiras de codificar mapas de texturas que exibem uma transparência mais complexa."
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
-keywords:
-- Texturas com canais alfa
+keywords: Texturas com canais alfa
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 708f6a7903df2ead18cf40e01675c3d244c7f9b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1ea2282bb00f309f0dd2616898ce8d4a43215ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures-with-alpha-channels"></a>Texturas com canais alfa
 
 
@@ -150,7 +146,6 @@ A comparação de cores usada em BC1 para determinar se o texel é transparente 
  
 
  
-
 
 
 

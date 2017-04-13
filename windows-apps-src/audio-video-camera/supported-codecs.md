@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0973195b8777a0154b733ba2625327bb9296bd6b
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="supported-codecs"></a>Codecs compatíveis
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo lista os codecs de áudio, de vídeo e de imagem, e os formatos compatíveis com os aplicativos UWP.
+Este artigo lista o áudio, vídeo e a disponibilidade de codec e o formato de imagem para aplicativos UWP por padrão para cada família de dispositivos. Observe que essas tabelas listam os codecs incluídos com a instalação do Windows 10 para a família de dispositivo especificado. Os usuários e aplicativos podem instalar codecs adicionais que podem estar disponíveis para uso. Você pode consultar em tempo de execução o conjunto de codecs que estão atualmente disponíveis para um dispositivo específico. Para obter mais informações, consulte [Consulta de codecs instalados em um dispositivo](codec-query.md).
 
 Nas tabelas abaixo "D" indica suporte de decodificador e "E" indica suporte de codificador.
 

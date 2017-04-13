@@ -2,21 +2,17 @@
 title: "Filtragem anisotrópica de textura"
 description: "Anisotropia é visível no texels a distorção de um objeto 3D cujo superfície é orientada com um ângulo em relação ao plano da tela. Quando um pixel de uma primitiva anisotrópica é mapeado para texels, sua forma é distorcida."
 ms.assetid: 58923809-EF76-4C16-BCE7-922A66425F83
-keywords:
-- "Filtragem anisotrópica de textura"
+keywords: "Filtragem anisotrópica de textura"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4946281fd754f267b37ee0a069d5101f8169deff
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a185caebf2067afcacf5f287b3b6af320894f6f6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="anisotropic-texture-filtering"></a>Filtragem anisotrópica de textura
 
 
@@ -32,7 +28,6 @@ Você pode usar a filtragem de textura anisotrópica em conjunto com filtragem d
  
 
  
-
 
 
 

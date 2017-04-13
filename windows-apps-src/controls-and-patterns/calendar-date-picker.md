@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 801e9192f3da2f72803dcb95168b1f8dfded6695
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6d8e45d39c3781eefa9081971c51c001e95799df
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-date-picker"></a>Seletor de data do calendário
 
@@ -41,7 +39,7 @@ Para obter mais informações sobre como escolher o controle correto, consulte o
 
 ## <a name="examples"></a>Exemplos
 
-O ponto de entrada exibe o texto de espaço reservado se uma data não tiver sido definida. Caso contrário, ele exibe a data escolhida. Quando o usuário seleciona o ponto de entrada, uma exibição de calendário se expande para que o usuário faça uma seleção de data. A exibição de calendário substitui outras interfaces do usuário; ela não as tira do caminho.
+O ponto de entrada exibe o texto de espaço reservado se uma data não tiver sido definida. Caso contrário, ele exibe a data escolhida. Quando o usuário seleciona o ponto de entrada, uma exibição de calendário se expande para que o usuário faça uma seleção de data. A exibição de calendário se sobrepõe à outra interface do usuário; ela não remove a outra interface do usuário.
 
 ![Exemplo de seletor de data do calendário](images/calendar-date-picker-2-views.png)
 
@@ -78,7 +76,7 @@ Quando você define a data em código, o valor é restringido pelas propriedades
 - Se **Date** é menor que **MinDate**, o valor é definido como **MinDate**.
 - Se **Date** é maior que **MaxDate**, o valor é definido como **MaxDate**.
 
-Você pode tratar o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
+Você pode manipular o evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para ser notificado quando o valor Date for alterado.
 
 > [!NOTE]
 Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
@@ -104,4 +102,3 @@ O texto de espaço reservado padrão é "selecionar uma data". Você pode remove
 - [Exibição de Calendário](calendar-view.md)
 - [Seletor de data](date-picker.md)
 - [Seletor de hora](time-picker.md)
-

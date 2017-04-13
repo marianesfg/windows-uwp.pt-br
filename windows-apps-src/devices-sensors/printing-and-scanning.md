@@ -9,30 +9,27 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e05d6278472af75fb97f33eb840f6ecf28d33670
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b3081680c0d2324585fa5550aa7c6e8548673219
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="printing-and-scanning"></a>Impressão e digitalização
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Esta seção descreve como imprimir e digitalizar em seu aplicativo universal do Windows.
+Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do Windows.
 
 | Tópico | Descrição | 
 |-------|-------------|
 | [Epson ESC/POS com formatação](epson-esc-pos-with-formatting.md) | Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço. |
-| [Imprimir de seu app](print-from-your-app.md) | Aprenda a imprimir documentos a partir de um aplicativo universal do Windows. Este tópico também mostra como imprimir páginas específicas. |
+| [Impressão a partir do seu aplicativo](print-from-your-app.md) | Aprenda a imprimir documentos a partir de um aplicativo Universal do Windows. Este tópico também mostra como imprimir páginas específicas. |
 | [Personalizar a interface do usuário para visualização de impressão](customize-the-print-preview-ui.md) | Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização de impressão. |
-| [Digitalizar a partir do seu app](scan-from-your-app.md) | Aprenda aqui a digitalizar conteúdos do seu app usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.|
+| [Digitalizar a partir do seu aplicativo](scan-from-your-app.md) | Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.|
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//Vídeo da Compilação 2015: Desenvolvendo apps que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [//Vídeo da Compilação 2015: Desenvolvendo aplicativos que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Exemplo de impressão via UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
  
-
 

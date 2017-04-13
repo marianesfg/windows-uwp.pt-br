@@ -1,8 +1,8 @@
 ---
-description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu app UWP. Encontre mais de 45 controles poderosos para uso com o seu app."
+description: "Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo."
 title: "Controles e padrões UWP - Desenvolvimento de aplicativos do Windows"
 author: mijacobs
-keywords: "controles de UWP, interface do usuário, controles de app"
+keywords: "controles de UWP, interface do usuário, controles de aplicativo"
 label: Controls & patterns
 template: detail.hbs
 ms.author: mijacobs
@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
-translationtype: Human Translation
-ms.sourcegitcommit: 412a3f70861c6cd1bbf003fe0bd78c8547a5f3f8
 ms.openlocfilehash: 7b525267c8f4d24af95f6d41d46d33a3adf10f8f
-ms.lasthandoff: 02/08/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Controles e padrões para apps UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -32,13 +30,13 @@ Instruções gerais e exemplos de código para adicionar e estilizar controles e
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Adicionar controles e manipular eventos](controls-and-events-intro.md)</b> <br/>
-Há 3 etapas principais para adicionar controles ao seu app: adicionar um controle à interface do usuário de seu app, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</li>
+Há 3 etapas principais para adicionar controles ao seu aplicativo: adicionar um controle à interface do usuário de seu aplicativo, definir propriedades no controle e adicionar código aos manipuladores de eventos do controle, para que ele faça algo.</li>
 </ul> 
 </p>
   </div>
   <div class="side-by-side-content-right">
    <p><b>[Aplicando estilos a controles](styling-controls.md)</b> <br/>
-É possível personalizar a aparência de seus apps de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
+É possível personalizar a aparência de seus aplicativos de muitas formas usando a estrutura XAML. Os estilos permitem definir propriedades de controle e reutilizar essas configurações para criar uma aparência consistente em vários controles.</p>
   </div>
 </div>
 </div>
@@ -65,7 +63,7 @@ Informações detalhadas sobre controles e padrões específicos.
 
 <li>[Seletor de data do calendário](calendar-date-picker.md)</li>
 
-<li>[Exibição de Calendário](calendar-view.md)</li>
+<li>[Exibição de calendário](calendar-view.md)</li>
 
 <li>[Seletor de data](date-picker.md)</li>
 
@@ -170,7 +168,7 @@ Informações detalhadas sobre controles e padrões específicos.
 
 
 <li>[Alternar](toggles.md)</li>
-<li>[Dicas de ferramenta](tooltips.md)</li>
+<li>[Dicas de ferramentas](tooltips.md)</li>
 
 <li>[Modo de exibição da Web](web-view.md)</li>
 </ul>

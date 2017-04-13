@@ -2,21 +2,17 @@
 title: Mesclagem de texturas
 description: "O Direct3D pode mesclar até oito texturas em primitivas em uma única passagem."
 ms.assetid: 9AD388FA-B2B9-44A9-B73E-EDBD7357ACFB
-keywords:
-- Mesclagem de texturas
+keywords: Mesclagem de texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 363adc6537fe2c8421f938dbeee7735c9d336771
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1fed6a38121402e1aa0273b9186a9eab80fdf4ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-blending"></a>Mesclagem de texturas
 
 
@@ -83,7 +79,6 @@ Se seu aplicativo usa um número de estágios variado para diferentes situaçõe
  
 
  
-
 
 
 

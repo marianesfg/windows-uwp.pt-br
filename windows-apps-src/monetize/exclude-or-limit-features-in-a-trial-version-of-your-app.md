@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: "Se você permitir que os clientes usem seu aplicativo gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do aplicativo excluindo ou limitando alguns recursos durante o período de avaliação."
+Description: "Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação."
 title: "Excluir ou limitar recursos em uma versão de avaliação"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: "windows 10, uwp, compra no aplicativo, avaliação, IAP, Windows.ApplicationModel.Store"
@@ -9,17 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: badb14e5c915db68fb262002a8ee3321b62e2778
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 
 
->**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar uma versão de avaliação, em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md).
+> [!NOTE]
+> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar uma versão de avaliação, em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md).
 
 Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
@@ -106,7 +104,8 @@ Se esse caminho e esse arquivo não existirem, você deverá criá-los ou fornec
 
 Depois de testar seu app com o servidor de licenças simuladas, e antes de enviá-lo a uma Loja para certificação, substitua **CurrentAppSimulator** por **CurrentApp**, conforme mostrado no código de exemplo a seguir.
 
->**Importante**&nbsp;&nbsp;Seu app deverá usar o objeto **CurrentApp** quando você o enviar a uma Loja; caso contrário, haverá falha na certificação.
+> [!IMPORTANT]
+> Seu app deverá usar o objeto **CurrentApp** quando você o enviar a uma Loja; caso contrário, haverá falha na certificação.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
@@ -126,4 +125,3 @@ Para saber mais sobre a descrição de seu aplicativo, consulte [Criar descriç�
  
 
  
-

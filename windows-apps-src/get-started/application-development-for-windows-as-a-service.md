@@ -1,15 +1,13 @@
 ---
-title: "Desenvolvimento de aplicativos para Windows como serviço (Windows 10)"
-description: "Dissocie a versão do aplicativo e o suporte das compilações específicas do Windows."
-author: jdeckerMS
+title: "Desenvolvimento de aplicativos para Windows como serviço"
+description: "Dissocie a versão do app e o suporte das compilações específicas do Windows."
+author: jken
 redirect_url: ../updates-and-versions/application-development-for-windows-as-a-service/
-translationtype: Human Translation
-ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 561f5ea0ab4ba5b456456cedf786479ef168e7c0
-
+ms.openlocfilehash: 4a5c3a502c857c286078e21563246aee62ae4f5f
+ms.sourcegitcommit: 253ed634522773e15199084a6f74a3a465c2b218
+translationtype: HT
 ---
-
-# Desenvolvimento de aplicativos para Windows como serviço
+# <a name="application-development-for-windows-as-a-service"></a>Desenvolvimento de aplicativos para Windows como serviço
 
 **Esta página foi realocada para ../updates-and-versions/application-development-for-windows-as-a-service/**
 
@@ -22,7 +20,7 @@ No ambiente de hoje, onde as expectativas do usuário com frequência são defin
 
 As compilações distribuídas como Programa Windows Insider fornecem à equipe de engenharia do Windows dados significativos relativos ao desempenho das compilações em uso real. O Programa Windows Insider também permite que a Microsoft teste compilações nos mais diversos tipos de hardware, aplicativos e ambientes de rede e identifique problemas de forma muito mais rápida. Como um resultado, a Microsoft acredita que a concentração da comunidade na liberação de versões de pré-lançamento possibilitarão um ritmo mais rápido de entrega de inovações e uma versão pública de melhor qualidade do que nunca.
 
-## Regularidades e tipos de versão do Windows 10
+## <a name="windows-10-release-types-and-cadences"></a>Regularidades e tipos de versão do Windows 10
 
 Embora a Microsoft libere versões de pré-lançamento compiladas para o participante do programa Windows Insider, a Microsoft publicará amplamente dois tipos de versões do Windows 10 ao público em base contínua:
 
@@ -42,7 +40,7 @@ A seguinte exibição da tabela descreve os vários branches de serviços e seus
  
 Para obter mais informações, consulte [Opções de serviços do Windows10 para atualizações e upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing).
 
-## Oferecendo suporte a aplicativos no Windows como serviço
+## <a name="supporting-apps-in-windows-as-a-service"></a>Oferecendo suporte a aplicativos no Windows como serviço
 
 A abordagem tradicional para dar suporte a aplicativos tem sido lançar uma nova versão do aplicativo em resposta a uma versão do Windows. Isso pressupõe que há alterações significativas no sistema operacional subjacente que podem causar uma regressão ao aplicativo. Esse modelo envolve um ciclo de desenvolvimento e validação dedicado que exige que nossos parceiros de ISV se alinhem com a regularidade de lançamentos do Windows.
 
@@ -58,7 +56,7 @@ Essa abordagem reduz a sobrecarga de manutenção de um agendamento de aplicativ
  
 Nas seções a seguir, você encontrará informações adicionais sobre as etapas da Microsoft para manter a compatibilidade do sistema operacional subjacente. Você também encontrará orientações sobre as etapas que você pode tomar para ajudar a manter a compatibilidade do ecossistema do sistema operacional e aplicativo combinados. Há uma seção sobre como aproveitar as compilações de liberação de versões de pré-lançamento do Windows para detectar regressões aplicativo antes de uma compilação do Windows ser lançada. Por fim, nós descrevemos como usamos uma instrumentação e abordagem orientadas por telemetria para aumentar a qualidade das compilações do Windows. Nós recomendamos que as ISVs adotem uma abordagem semelhante em seu portfólio de aplicativos.
 
-## Principais alterações desde o Windows7 para garantir a compatibilidade de aplicativo
+## <a name="key-changes-since-windows-7-to-ensure-app-compatibility"></a>Principais alterações desde o Windows7 para garantir a compatibilidade de aplicativo
 
 Entendemos que compatibilidade é importante para os desenvolvedores. Os ISVs e desenvolvedores querem garantir que seus aplicativos serão executados como esperado em todas as versões compatíveis do sistema operacional Windows. Os consumidores e empresas têm um investimento chave aqui — eles querem garantir que os aplicativos pelos quais eles pagaram continuarão a funcionar. Nós sabemos que compatibilidade é o critério principal para decisões de compra. Aplicativos que são escritos com base em práticas recomendadas levarão a muito menos variação de código quando uma nova versão do Windows for lançada e reduzirá a fragmentação — esses aplicativos têm um investimento em engenharia reduzido para manter e um tempo mais rápido no mercado.
 
@@ -69,13 +67,13 @@ No cronograma do Windows7, compatibilidade era muito mais uma abordagem reativa.
 -   **Comunicação**: maior controle sobre alterações da API e melhor comunicação.
 -   **Liberação de versões de pré-lançamento e loop de feedback**: os usuários do Windows insider recebem as compilações das versões de pré-lançamento liberadas que ajudam a melhorar a nossa capacidade de localizar problemas de compatibilidade antes de uma compilação final ser lançada para os clientes. Esse processo de feedback não só expõe os bugs, mas garante que entregamos os recursos que nossos usuários querem.
 
-## Práticas recomendadas para compatibilidade de aplicativos
+## <a name="best-practices-for-app-compatibility"></a>Práticas recomendadas para compatibilidade de aplicativos
 
 A Microsoft usa diagnósticos e dados de uso para identificar e solucionar problemas, melhorar nossos produtos e serviços e oferecer aos nossos usuários experiências personalizadas. Os dados de uso que coletamos também se estendem aos aplicativos que são executados nos computadores do ecossistema do Windows. Com base no que nossos clientes usam, criamos nossa lista para testar esses aplicativos, dispositivos e drivers em relação às novas versões do sistema operacional do Windows. O Windows10 foi a versão mais compatível do Windows até o momento, com mais de 90% compatibilidade contra milhares de aplicativos populares. A equipe de compatibilidade do Windows normalmente entra em contato com nossos parceiros de ISV para fornecer comentários, caso ocorram problemas, para que possamos compartilhar as soluções. Em condições ideais, gostaríamos que nossos clientes comuns conseguissem atualizar o Windows perfeitamente e sem perder a funcionalidade em seu sistema operacional ou dos aplicativos que eles dependem para a sua produtividade ou diversão.
 
 As seções a seguir contêm algumas práticas recomendadas que a Microsoft recomenda para que você pode garantir que seus aplicativos sejam compatíveis com o Windows10.
 
-### Verificação de versão do Windows
+### <a name="windows-version-check"></a>Verificação de versão do Windows
 
 A versão do sistema operacional foi incrementado com o Windows10. Isso significa que o número de versão interno foi alterado para 10.0. Como sempre, não medimos esforços para manter a compatibilidade de aplicativos e dispositivos após uma mudança de versão do sistema operacional. Para a maioria das categorias de aplicativos (sem nenhuma dependência de kernel) a mudança não afetará negativamente a funcionalidade do aplicativo e os aplicativos existentes continuarão a funcionar bem no Windows10.
 
@@ -92,11 +90,11 @@ Alguns aplicativos realizam uma verificação da versão e simplesmente passam u
 
 Se você possui aplicativos como aplicativos antimalware ou firewall, você deve trabalhar por meio dos canais de feedback usuais e por meio do programa Windows Insider.
 
-### APIs não documentadas
+### <a name="undocumented-apis"></a>APIs não documentadas
 
 Seus aplicativos não devem chamar APIs do Windows não documentadas ou depender da exportação de um arquivo específico do Windows ou de chaves do registro. Isso pode levar a perda da funcionalidade, perda de dados e possíveis problemas de segurança. Se a funcionalidade que o seu aplicativo requer não estiver disponível, isso é uma oportunidade de fornecer comentários por meio dos canais de comentários usuais e por meio do programa Windows Insider.
 
-### Desenvolver aplicativos Centennial e na Plataforma Universal do Windows (UWP)
+### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>Desenvolver aplicativos Centennial e na Plataforma Universal do Windows (UWP)
 
 Incentivamos todos os ISVs de aplicativos para Win32 a desenvolver na [Plataforma Universal do Windows(UWP)](http://go.microsoft.com/fwlink/?LinkID=780560) e, especificamente, aplicativos [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) mais adiante. Há excelentes benefícios para desenvolver esses pacotes de aplicativos em lugar de usar os instaladores Win32 tradicionais. Os aplicativos UWP também têm suporte na [Windows Store](http://go.microsoft.com/fwlink/?LinkID=780563), portanto, é mais fácil para você atualizar os usuários para uma versão consistente automaticamente, reduzindo os custos de suporte.
 
@@ -108,13 +106,13 @@ Se os seus tipos de aplicativos Win32 não funcionam com o modelo do Centennial,
 -   Mantenha todos os recursos redistribuíveis do Windows no pacote original – se ele for remontado, é possível que isso causará a perda do instalador.
 -   Programe o tempo de desenvolvimento para seus instaladores, eles geralmente são ignorados como um produto durante o ciclo de vida de desenvolvimento de software.
 
-## Estratégias de teste otimizadas e liberação de versões de pré-lançamento
+## <a name="optimized-test-strategies-and-flighting"></a>Estratégias de teste otimizadas e liberação de versões de pré-lançamento
 
 A liberação de versões de pré-lançamento do sistema operacional Windows refere-se às compilações provisórias disponíveis para os participantes do programa Windows Insiders antes de uma compilação final ser lançada para a população geral. Quanto mais participantes do programa Insiders recebam essa versão de pré-lançamento dessas compilações temporárias, mais feedback recebemos sobre a qualidade da compilação, compatibilidade, etc. e isso ajuda a melhorar a qualidade das compilações finais. Você pode participar deste programa de liberação de versões de pré-lançamento para garantir que seus aplicativos funcionem conforme o esperado nas compilações iterativas do sistema operacional. Também recomendamos que você forneça comentários sobre como essas compilações de versões de pré-lançamento estão trabalhando para você, problemas que ocorrerem e assim por diante.
 
 Se seu aplicativo está na Loja, você pode liberar a versão de pré-lançamento do seu aplicativo através da Loja, o que significa que o seu aplicativo estará disponível para os nossos participantes do Programa Windows Insider para instalação. Os usuários podem instalar seu aplicativo e você pode receber comentários preliminar sobre o seu aplicativo antes de lançá-lo para a população geral. As seções a seguir descrevem as etapas para testar seus aplicativos com base em compilações de versões de pré-lançamento do Windows.
 
-### Etapa 1: torne-se um usuário do Windows Insider e participe da liberação de versões de pré-lançamento
+### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>Etapa 1: torne-se um usuário do Windows Insider e participe da liberação de versões de pré-lançamento
 Como um [participante do programa Windows Insider,](http://go.microsoft.com/fwlink/p/?LinkId=521639) você pode ajudar a moldar o futuro do Windows — seus comentários nos ajudarão a melhorar os recursos e funcionalidades na plataforma. Essa é uma comunidade vibrante onde você pode se conectar com outros entusiastas, participar de fóruns, trocar conselhos e saber mais sobre os futuros eventos apenas para o programa Insider.
 
 Assim que você tenha acesso para as versões prévias do Windows10, Windows10 Mobile e o emulador e o SDK do Windows mais recentes, você terá todas as ferramentas à sua disposição para desenvolver ótimos aplicativos e explorar o que há de novo na Plataforma Universal do Windows e da Windows Store.
@@ -129,7 +127,7 @@ Antes de se tornar um participante do programa Windows Insider, observe que a pa
 -   Souber o que é um arquivo ISO e como usá-lo.
 -   Não instalá-lo no seu computador ou dispositivo do dia a dia.
 
-### Etapa 2: Testar seus cenários
+### <a name="step-2-test-your-scenarios"></a>Etapa 2: Testar seus cenários
 
 Depois de ter atualizado para uma compilação liberada de versão de pré-lançamento, a seguir estão alguns casos de teste de amostra para ajudá-lo a começar a usar testes e reunir comentários. Para a maioria desses testes, certifique-se de que abrange os sistemas x86 e AMD64.
 **Teste de instalação limpa:** em uma instalação limpa do Windows10, certifique-se de que seu aplicativo é totalmente funcional. Se o seu aplicativo falhar neste teste e no teste de atualização, é provável que o problema é causado pelas alterações do sistema operacional subjacente ou falhas no aplicativo. Se depois de investigação, o primeiro for o caso, certifique-se de usar o Programa Windows Insider para fornecer feedback e compartilhar soluções.
@@ -150,18 +148,12 @@ Depois de ter atualizado para uma compilação liberada de versão de pré-lanç
 -   Sensores (acelerômetro, fusão e assim por diante)
 -   Câmera
 
-### Etapa 3: fornecer comentários
+### <a name="step-3-provide-feedback"></a>Etapa 3: fornecer comentários
 
 Conte como seu aplicativo está se comportando em relação às compilações de versões de pré-lançamento liberadas. Na medida que você descobrir problemas com seu aplicativo durante o teste, registre os bugs através do portal do parceiro se você tem acesso, ou por meio do seu representante da Microsoft. Recomendamos essas informações para que possamos construir uma experiência de qualidade para os nossos usuários juntos.
 
-### Etapa 4: Registre-se no Windows10
+### <a name="step-4-register-on-windows-10"></a>Etapa 4: Registre-se no Windows10
 O site [Pronto para o Windows10](http://go.microsoft.com/fwlink/?LinkID=780580) é um diretório de software que suporta o Windows 10. Destina-se a administradores de TI em empresas e organizações em todo o mundo que estão considerando o Windows 10 para suas implantações. Os administradores de TI podem verificar o site para ver se o software implantado em sua empresa é suportado no Windows10.
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 [Opções de serviços do Windows10 para atualizações e upgrade](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-

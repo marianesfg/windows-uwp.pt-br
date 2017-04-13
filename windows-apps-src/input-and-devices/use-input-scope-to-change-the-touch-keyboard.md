@@ -13,13 +13,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 215cf54a5d6ed1b0c514768817cc11d1a85627e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar o escopo de entrada para alterar o teclado virtual
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -204,7 +201,7 @@ Inclui as teclas **@** e **.com**. Pressione e segure a tecla **.com** para exib
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado virtual do Windows para números](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado virtual do Windows Phone para números](images/input-scopes/kbdwpnumber.png)<br>O teclado contém números e um ponto decimal. Pressione e segure a tecla de ponto decimal para exibir opções adicionais ( , - ). |
-|Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
+|Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
 
 ### <a name="telephonenumber"></a>TelephoneNumber
 
@@ -213,7 +210,7 @@ Inclui as teclas **@** e **.com**. Pressione e segure a tecla **.com** para exib
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado virtual do Windows Phone para números de telefone](images/input-scopes/kbdwptelephonenumber.png)<br>O teclado imita o teclado do telefone. Pressione e segure a tecla de ponto para exibir opções adicionais ( , ( ) X. ). Pressione e segure a tecla 0 para inserir +. |
-|Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
+|Mesmo que **CurrencyAmountAndSymbol** e **TelephoneNumber**. | Disponibilidade de recursos:<ul><li>Verificação ortográfica: sempre desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> |
 
 ### <a name="search"></a>Pesquisar
 
@@ -244,7 +241,7 @@ Inclui a tecla **=**.
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado virtual do Windows para números de telefone](images/input-scopes/kbdpcformula.png)<br>Também inclui as teclas **%**, **$** e **+**.| ![Teclado virtual do Windows Phone para fórmula](images/input-scopes/kbdwpformula.png)<br>Pressione e segure a tecla de ponto para exibir opções adicionais ( - ! ? , ). Pressione e segure a tecla **=** para exibir opções adicionais ( ( ) : &lt; &gt; ). |
-|Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Capitalização automática: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
+|Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: ativada por padrão, pode ser desabilitada</li><li>Uso automático de maiúsculas: sempre desabilitada</li><li>Previsão de texto: ativada por padrão, pode ser desabilitada</li></ul> |
 
 ### <a name="chat"></a>Chat
 
@@ -263,4 +260,3 @@ Inclui a tecla **=**.
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado virtual padrão do Windows](images/input-scopes/kbdpcdefault.png)<br>Layout igual a **Padrão**.| ![Teclado virtual do Windows Phone para nome ou número de telefone](images/input-scopes/kbdwpnameorphonenumber.png)<br>Inclui as teclas **;** e **@**. A tecla **&amp;123** é substituída pela tecla **123**, que abre o teclado do telefone (consulte **TelephoneNumber**).|
 |Disponibilidade de recursos:<ul><li>Verificação ortográfica: ativada por padrão, pode ser desabilitada</li><li>Correção automática: sempre desabilitada</li><li>Uso automático de maiúsculas: sempre habilitada</li><li>Previsão de texto: sempre desabilitada</li></ul> | Disponibilidade de recursos:<ul><li>Verificação ortográfica: desativada por padrão, pode ser habilitada</li><li>Correção automática: desativada por padrão, pode ser habilitada</li><li>Capitalização automática: desativada por padrão, pode ser habilitada. A primeira letra de cada palavra é capitalizada.</li><li>Previsão de texto: desativada por padrão, pode ser habilitada</li></ul> |
-

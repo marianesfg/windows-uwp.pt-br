@@ -9,27 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5833422a3074ddfa581011d91c8364bddb3c3088
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2c803083a9f7a279a6cfb70087c5cd1f0c3def1e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Dicas de MVVM e desempenho de linguagem
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
 
 ## <a name="the-model-view-viewmodel-mvvm-pattern"></a>O padrão MVVM (Model-View-ViewModel)
 
-O padrão MVVM (Model-View-ViewModel) é comum em muitos apps XAML. (O MVVM é muito semelhante à descrição do Fowler do padrão Model-View-Presenter, mas foi adaptado para XAML). O problema com o padrão MVVM é que ele inadvertidamente pode levar a apps que têm muitas camadas e muitas alocações. As motivações para o MVVM são estas.
+O padrão MVVM (Model-View-ViewModel) é comum em muitos aplicativos XAML. (O MVVM é muito semelhante à descrição do Fowler do padrão Model-View-Presenter, mas foi adaptado para XAML). O problema com o padrão MVVM é que ele inadvertidamente pode levar a aplicativos que têm muitas camadas e muitas alocações. As motivações para o MVVM são estas.
 
--   **Divisão de problemas**. É sempre útil dividir um problema em partes menores, e um padrão como o MVVM ou MVC é uma maneira de dividir um app (ou até mesmo um único controle) em partes menores: a exibição real, um modelo lógico da exibição (modelo de exibição) e a lógica do app independente da exibição (o modelo). Em particular, é um fluxo de trabalho popular para que os designers assumam a exibição usando uma ferramenta, os desenvolvedores assumam o modelo usando outra ferramenta e os integradores de design assumam o modelo de exibição usando as duas ferramentas.
--   **Teste de unidade**. Você pode testar a unidade do modelo de exibição (e consequentemente o modelo) independente da exibição, não se baseando, assim, na criação de janelas, na geração de entrada e assim por diante. Mantendo a exibição pequena, você pode testar uma grande parte de seu app sem precisar criar uma janela.
--   **Agilidade na alteração da experiência do usuário**. A exibição tende ver as alterações mais frequentes e as alterações mais tardias, à medida que a experiência do usuário é ajustada com base nos comentários do usuário final. Mantendo a exibição separada, essas mudanças podem ser acomodadas mais rapidamente e com menos variação para o app.
+-   **Divisão de problemas**. É sempre útil dividir um problema em partes menores, e um padrão como o MVVM ou MVC é uma maneira de dividir um aplicativo (ou até mesmo um único controle) em partes menores: a exibição real, um modelo lógico da exibição (modelo de exibição) e a lógica do aplicativo independente da exibição (o modelo). Em particular, é um fluxo de trabalho popular para que os designers assumam a exibição usando uma ferramenta, os desenvolvedores assumam o modelo usando outra ferramenta e os integradores de design assumam o modelo de exibição usando as duas ferramentas.
+-   **Teste de unidade**. Você pode testar a unidade do modelo de exibição (e consequentemente o modelo) independente da exibição, não se baseando, assim, na criação de janelas, na geração de entrada e assim por diante. Mantendo a exibição pequena, você pode testar uma grande parte de seu aplicativo sem precisar criar uma janela.
+-   **Agilidade na alteração da experiência do usuário**. A exibição tende ver as alterações mais frequentes e as alterações mais tardias, à medida que a experiência do usuário é ajustada com base nos comentários do usuário final. Mantendo a exibição separada, essas mudanças podem ser acomodadas mais rapidamente e com menos variação para o aplicativo.
 
-Há várias definições concretas do padrão MVVM e das estruturas de terceiros que ajudam a implementá-lo. Mas aderir estritamente a qualquer variação do padrão pode levar a apps com muito mais sobrecarga do que se pode justificar.
+Há várias definições concretas do padrão MVVM e das estruturas de terceiros que ajudam a implementá-lo. Mas aderir estritamente a qualquer variação do padrão pode levar a aplicativos com muito mais sobrecarga do que se pode justificar.
 
 -   A vinculação de dados XAML (a extensão de marcação {Binding}) foi projetada em parte para habilitar padrões de modelo/exibição. Mas a extensão {Binding} traz com ela um conjunto de trabalho não trivial e sobrecarga para a CPU. Criar uma extensão {Binding} causa uma série de alocações, e atualizar um destino de associação pode causar reflexão e conversão boxing. Esses problemas estão sendo corrigidos com a extensão de marcação {x:Bind}, que compila as associações no momento da compilação. **Recomendação:** use {x:Bind}.
 -   No MVVM, é comum conectar Button.Click ao modelo de exibição usando um ICommand, como os auxiliares comuns DelegateCommand ou RelayCommand. Mas esses comandos são alocações extras, incluindo o ouvinte de eventos CanExecuteChanged, somando-se ao conjunto de trabalho e ao tempo de inicialização/navegação da página. **Recomendação:** como alternativa à prática interface ICommand, você pode colocar manipuladores de eventos em seu code-behind, anexá-los a eventos de exibição e chamar um comando em seu modelo de exibição quando esses eventos ocorrerem. Você também precisará adicionar código extra para desabilitar o botão quando o comando não estiver disponível.
@@ -37,15 +35,14 @@ Há várias definições concretas do padrão MVVM e das estruturas de terceiros
 
 ## <a name="ccx-recommendations"></a>Recomendações para C++/CX
 
--   **Use a versão mais recente**. Há melhorias de desempenho contínuas feitas no compilador C++/CX. Certifique-se de que seu app está sendo compilado com o conjunto de ferramentas mais recente.
+-   **Use a versão mais recente**. Há melhorias de desempenho contínuas feitas no compilador C++/CX. Certifique-se de que seu aplicativo está sendo compilado com o conjunto de ferramentas mais recente.
 -   **Desative RTTI (/GR-)**. O RTTI é ativado por padrão no compilador, então, a menos que seu ambiente de compilação o desative, você provavelmente está usando-o. O RTTI tem uma sobrecarga significativa e, a menos que seu código dependa profundamente dele, você deve desativá-lo. A estrutura XAML não exige que seu código use o RTTI.
 -   **Evite o uso intenso de ppltasks**. Ppltasks são muito convenientes ao chamar APIs assíncronas do WinRT, mas eles vêm com uma sobrecarga de tamanho de código significativa. A equipe da linguagem C++/CX está trabalhando em um recurso da linguagem – await – que fornecerá um desempenho muito melhor. Enquanto isso, modere seu uso de ppltasks nos caminhos intensos de seu código.
--   **Evite o uso de C++/CX na “lógica comercial” do seu app**. A linguagem C++/CX foi projetada para ser uma maneira conveniente de acessar APIs do WinRT a partir de apps C++. Essa linguagem faz uso de wrappers que têm sobrecarga. Evite usar C++/CX dentro do modelo/lógica de negócios de sua classe e reserve-o para uso nos limites entre o código e o WinRT.
+-   **Evite o uso de C++/CX na “lógica comercial” do seu aplicativo**. A linguagem C++/CX foi projetada para ser uma maneira conveniente de acessar APIs do WinRT a partir de aplicativos C++. Essa linguagem faz uso de wrappers que têm sobrecarga. Evite usar C++/CX dentro do modelo/lógica de negócios de sua classe e reserve-o para uso nos limites entre o código e o WinRT.
 
  
 
  
-
 
 
 

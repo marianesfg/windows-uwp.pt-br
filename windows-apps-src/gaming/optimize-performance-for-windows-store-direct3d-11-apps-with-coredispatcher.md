@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)"
-description: "A latência de entrada pode ter impacto significativo na experiência de um jogo, sendo que sua otimização pode deixar o jogo com aspecto mais aperfeiçoado."
+title: "Otimizar a latência de entrada para jogos UWP do DirectX"
+description: "A latência de entrada pode afetar significativamente a experiência de um jogo, e a sua otimização pode tornar um jogo mais bem acabado."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, directx, latência de entrada"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7cb4b72ed035e77a2054daffa9f105449f3b501
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Otimizar a latência de entrada para jogos em DirectX da Plataforma Universal do Windows (UWP)
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A latência de entrada pode ter impacto significativo na experiência de um jogo, sendo que sua otimização pode deixar o jogo com aspecto mais aperfeiçoado. Além disso, a otimização adequada dos eventos de entrada pode aumentar a vida útil da bateria. Aprenda como escolher as opções de processamento de evento de entrada CoreDispatcher certas para garantir que seu jogo manipule a entrada o mais fluidamente possível.
 
@@ -28,7 +25,7 @@ A latência de entrada pode ter impacto significativo na experiência de um jogo
 
 Latência de entrada é o tempo que o sistema demora para responder à entrada do usuário. A resposta geralmente é uma mudança no que é exibido na tela ou o que é ouvido pelo comentário de áudio.
 
-Cada evento de entrada, seja ele um ponteiro sensível ao toque, um ponteiro do mouse ou um teclado, gera uma mensagem a ser processada por um manipulador de eventos. Digitalizadores de toque e periféricos de jogo modernos reportam os eventos de entrada a um mínimo de 100 Hz por ponteiro, o que significa que os apps podem receber 100 eventos ou mais por segundo por ponteiro (ou pressionamento de tecla). Essa taxa de atualizações é amplificada se vários ponteiros estiverem acontecendo concorrentemente ou se um dispositivo de entrada de precisão mais elevada for usado (por exemplo, um mouse para jogos). A fila de mensagens de eventos pode ser preenchida muito rapidamente.
+Cada evento de entrada, seja ele um ponteiro sensível ao toque, um ponteiro do mouse ou um teclado, gera uma mensagem a ser processada por um manipulador de eventos. Digitalizadores de toque e periféricos de jogo modernos reportam os eventos de entrada a um mínimo de 100 Hz por ponteiro, o que significa que os aplicativos podem receber 100 eventos ou mais por segundo por ponteiro (ou pressionamento de tecla). Essa taxa de atualizações é amplificada se vários ponteiros estiverem acontecendo concorrentemente ou se um dispositivo de entrada de precisão mais elevada for usado (por exemplo, um mouse para jogos). A fila de mensagens de eventos pode ser preenchida muito rapidamente.
 
 É importante entender que as exigências de latência de entrada de seu jogo, para que os eventos sejam processados da melhor maneira para a situação. Não há uma única solução para todos os jogos.
 
@@ -42,19 +39,19 @@ Se um jogo pode desenhar a tela inteira em menos de 60 quadros por segundo (atua
 ## <a name="choosing-what-to-optimize-for"></a>Escolhendo o que otimizar
 
 
-Ao projetar um app DirectX, você precisa fazer algumas escolhas. O app precisa renderizar 60 quadros por segundo para apresentar animação suave ou ele precisa renderizar apenas em resposta à entrada? Ele precisa ter a mais baixa latência de entrada possível ou pode tolerar um pouco de atraso? Meus usuários esperarão que meu app seja prudente sobre o uso de bateria?
+Ao projetar um aplicativo DirectX, você precisa fazer algumas escolhas. O aplicativo precisa renderizar 60 quadros por segundo para apresentar animação suave ou ele precisa renderizar apenas em resposta à entrada? Ele precisa ter a mais baixa latência de entrada possível ou pode tolerar um pouco de atraso? Meus usuários esperarão que meu aplicativo seja prudente sobre o uso de bateria?
 
-As respostas a estas perguntas provavelmente alinharão seu app com um dos seguintes cenários:
+As respostas a estas perguntas provavelmente alinharão seu aplicativo com um dos seguintes cenários:
 
-1.  Renderizar sob demanda. Jogos nesta categoria somente precisam atualizar a tela em resposta a tipos específicos de entrada. A eficiência de energia é excelente porque o app não renderiza quadros idênticos repetidamente e a latência de entrada é baixa porque o app passa a maior parte de seu tempo esperando a entrada. Os jogos de tabuleiro e leitores de notícias são exemplos de apps que podem estar nessa categoria.
-2.  Renderizar sob demanda com animações transitórias. Este cenário é idêntico ao primeiro cenário, exceto pelo fato de que certos tipos de entrada iniciarão uma animação que não é dependente da entrada subsequente do usuário. A eficiência de energia é boa porque o jogo não renderiza quadros idênticos repetidamente e a latência de entrada é baixa, enquanto o jogo não está animando. Jogos infantis interativos e jogos de tabuleiro que animam cada movimento são exemplos de apps que podem estar nessa categoria.
-3.  Renderizar 60 quadros por segundo. Nessa situação, o jogo atualiza constantemente a tela. A eficiência de energia é fraca porque renderiza o número máximo de quadros que a tela pode apresentar. A latência de entrada é alta porque o DirectX bloqueia o thread enquanto o conteúdo está sendo apresentado. Isso impede que o thread envie mais quadros para a tela do que ela pode exibir para o usuário. Os jogos de tiro em primeira pessoa, os jogos de estratégia em tempo real e os jogos baseados na física são exemplos de apps que podem estar nessa categoria.
-4.  Renderizar 60 quadros por segundo e atingir a mais baixa latência possível de entrada. Semelhante ao cenário 3, o app está constantemente atualizando a tela, de modo a eficiência de energia será fraca. A diferença é que o jogo responde à entrada em um thread separado, para que o processamento da entrada não seja bloqueado ao apresentar os gráficos para exibição. Jogos multijogador online, jogos de luta ou jogos de ritmo/timing podem se encaixar nessa categoria, pois oferecem suporte para entradas de movimento em janelas de evento extremamente apertadas.
+1.  Renderizar sob demanda. Jogos nesta categoria somente precisam atualizar a tela em resposta a tipos específicos de entrada. A eficiência de energia é excelente porque o aplicativo não renderiza quadros idênticos repetidamente e a latência de entrada é baixa porque o aplicativo passa a maior parte de seu tempo esperando a entrada. Os jogos de tabuleiro e leitores de notícias são exemplos de aplicativos que podem estar nessa categoria.
+2.  Renderizar sob demanda com animações transitórias. Este cenário é idêntico ao primeiro cenário, exceto pelo fato de que certos tipos de entrada iniciarão uma animação que não é dependente da entrada subsequente do usuário. A eficiência de energia é boa porque o jogo não renderiza quadros idênticos repetidamente e a latência de entrada é baixa, enquanto o jogo não está animando. Jogos infantis interativos e jogos de tabuleiro que animam cada movimento são exemplos de aplicativos que podem estar nessa categoria.
+3.  Renderizar 60 quadros por segundo. Nessa situação, o jogo atualiza constantemente a tela. A eficiência de energia é fraca porque renderiza o número máximo de quadros que a tela pode apresentar. A latência de entrada é alta porque o DirectX bloqueia o thread enquanto o conteúdo está sendo apresentado. Isso impede que o thread envie mais quadros para a tela do que ela pode exibir para o usuário. Os jogos de tiro em primeira pessoa, os jogos de estratégia em tempo real e os jogos baseados na física são exemplos de aplicativos que podem estar nessa categoria.
+4.  Renderizar 60 quadros por segundo e atingir a mais baixa latência possível de entrada. Semelhante ao cenário 3, o aplicativo está constantemente atualizando a tela, de modo a eficiência de energia será fraca. A diferença é que o jogo responde à entrada em um thread separado, para que o processamento da entrada não seja bloqueado ao apresentar os gráficos para exibição. Jogos multijogador online, jogos de luta ou jogos de ritmo/timing podem se encaixar nessa categoria, pois oferecem suporte para entradas de movimento em janelas de evento extremamente apertadas.
 
 ## <a name="implementation"></a>Implementação
 
 
-A maioria dos jogos em DirectX é direcionada pelo conhecido loop de jogos. O algoritmo básico é para executar estas etapas até o usuário sair do jogo ou do app:
+A maioria dos jogos em DirectX é direcionada pelo conhecido loop de jogos. O algoritmo básico é para executar estas etapas até o usuário sair do jogo ou do aplicativo:
 
 1.  Processar a entrada
 2.  Atualizar o estado do jogo
@@ -62,7 +59,7 @@ A maioria dos jogos em DirectX é direcionada pelo conhecido loop de jogos. O al
 
 Quando o conteúdo de um jogo do DirectX é renderizado e está pronto para ser apresentado na tela, o loop de jogos aguarda até a GPU estar pronta para receber um novo quadro antes de ativar para processar a entrada novamente.
 
-Mostraremos a implementação do loop de jogos para cada um dos cenários mencionados anteriormente pela iteração de um simples quebra-cabeça. Os pontos de decisão, os benefícios e as compensações abordadas em cada implementação podem servir como um guia para ajudá-lo a otimizar seus apps para a entrada de baixa latência e a eficiência de energia.
+Mostraremos a implementação do loop de jogos para cada um dos cenários mencionados anteriormente pela iteração de um simples quebra-cabeça. Os pontos de decisão, os benefícios e as compensações abordadas em cada implementação podem servir como um guia para ajudá-lo a otimizar seus aplicativos para a entrada de baixa latência e a eficiência de energia.
 
 ## <a name="scenario-1-render-on-demand"></a>Cenário 1: Renderizar sob demanda
 
@@ -100,7 +97,7 @@ void App::Run()
 
 Na segunda iteração, o jogo é modificado para que quando um usuário selecionar uma peça do quebra-cabeça e, em seguida, tocar no destino correto para essa peça, uma animação seja exibida na tela até a peça chegar a seu destino.
 
-Como antes, o código tem um loop de jogo de thread único que usa **ProcessOneAndAllPending** para despachar os eventos de entrada na fila. Agora, a diferença é que, durante a animação, o loop muda para usar **CoreProcessEventsOption::ProcessAllIfPresent**, de modo que ele não fica esperando para novos eventos de entrada. Se não houver eventos pendentes, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna imediatamente e permite que o app apresente o próximo quadro na animação. Quando a animação está completa, o loop volta para **ProcessOneAndAllPending**, para limitar as atualizações de tela.
+Como antes, o código tem um loop de jogo de thread único que usa **ProcessOneAndAllPending** para despachar os eventos de entrada na fila. Agora, a diferença é que, durante a animação, o loop muda para usar **CoreProcessEventsOption::ProcessAllIfPresent**, de modo que ele não fica esperando para novos eventos de entrada. Se não houver eventos pendentes, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) retorna imediatamente e permite que o aplicativo apresente o próximo quadro na animação. Quando a animação está completa, o loop volta para **ProcessOneAndAllPending**, para limitar as atualizações de tela.
 
 ``` syntax
 void App::Run()
@@ -141,14 +138,14 @@ void App::Run()
 }
 ```
 
-Para dar suporte à transição entre **ProcessOneAndAllPending** e **ProcessAllIfPresent**, o app deve rastrear o estado para saber se está animando. No app de quebra-cabeça, você faz isso adicionando um novo método que pode ser chamado durante o loop de jogo na classe GameState. A ramificação de animação no loop de jogos direciona atualizações no estado da animação chamando o novo método Update de GameState.
+Para dar suporte à transição entre **ProcessOneAndAllPending** e **ProcessAllIfPresent**, o aplicativo deve rastrear o estado para saber se está animando. No aplicativo de quebra-cabeça, você faz isso adicionando um novo método que pode ser chamado durante o loop de jogo na classe GameState. A ramificação de animação no loop de jogos direciona atualizações no estado da animação chamando o novo método Update de GameState.
 
 ## <a name="scenario-3-render-60-frames-per-second"></a>Cenário 3: Renderizar 60 quadros por segundo
 
 
-Na terceira iteração, o app exibe um temporizador que mostra ao usuário quanto tempo ele está trabalhando no quebra-cabeça. Como ele exibe o tempo decorrido até o milissegundo, deve renderizar 60 quadros por segundo para manter a exibição atualizada.
+Na terceira iteração, o aplicativo exibe um temporizador que mostra ao usuário quanto tempo ele está trabalhando no quebra-cabeça. Como ele exibe o tempo decorrido até o milissegundo, deve renderizar 60 quadros por segundo para manter a exibição atualizada.
 
-Como nos cenários 1 e 2, o app tem um loop de jogos com thread único. A diferença nessa situação é porque ele está sempre renderizando, não é mais necessário rastrear as alterações no estado de jogo como foi feito nas duas primeiras situações. Como resultado, pode deixar de usar **ProcessAllIfPresent** para processar eventos. Se não houver eventos pendentes, **ProcessEvents** retorna imediatamente e continua renderizando o próximo quadro.
+Como nos cenários 1 e 2, o aplicativo tem um loop de jogos com thread único. A diferença nessa situação é porque ele está sempre renderizando, não é mais necessário rastrear as alterações no estado de jogo como foi feito nas duas primeiras situações. Como resultado, pode deixar de usar **ProcessAllIfPresent** para processar eventos. Se não houver eventos pendentes, **ProcessEvents** retorna imediatamente e continua renderizando o próximo quadro.
 
 ``` syntax
 void App::Run()
@@ -179,7 +176,7 @@ void App::Run()
 
 Esse método é a maneira mais fácil de gravar um jogo, pois não há necessidade de controlar o estado adicional para determinar quando renderizar. Ele atinge a mais rápida renderização possível, juntamente com a capacidade de resposta de entrada razoável em um intervalo do temporizador.
 
-No entanto, essa facilidade de desenvolvimento tem um preço. A renderização a 60 quadros por segundo usa mais energia do que a renderização por demanda. É melhor usar **ProcessAllIfPresent** quando o jogo muda o que está sendo exibido a cada quadro. Isso também aumenta a latência de entrada em até 16,7 ms, porque o app agora bloqueia o loop de jogo no intervalo de sincronia da exibição em vez de no **ProcessEvents**. Alguns eventos de entrada podem ser reduzidos, porque a fila é processada apenas uma vez por quadro (60 Hz).
+No entanto, essa facilidade de desenvolvimento tem um preço. A renderização a 60 quadros por segundo usa mais energia do que a renderização por demanda. É melhor usar **ProcessAllIfPresent** quando o jogo muda o que está sendo exibido a cada quadro. Isso também aumenta a latência de entrada em até 16,7 ms, porque o aplicativo agora bloqueia o loop de jogo no intervalo de sincronia da exibição em vez de no **ProcessEvents**. Alguns eventos de entrada podem ser reduzidos, porque a fila é processada apenas uma vez por quadro (60 Hz).
 
 ## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>Cenário 4: Renderizar 60 quadros por segundo e atingir a mais baixa latência possível de entrada
 
@@ -244,13 +241,13 @@ O modelo **DirectX 11 and XAML App (Universal Windows)** no Microsoft Visual Stu
 
 ### <a name="use-waitable-swap-chains"></a>Use cadeias de troca de espera
 
-Os jogos em DirectX respondem à entrada do usuário atualizando o que o usuário vê na tela. Em um monitor de 60 Hz, a tela atualiza a cada 16,7 ms (1 segundo/60 quadros). A Figura 1 mostra o ciclo de vida útil aproximado e a resposta a um evento de entrada relativo ao sinal de atualização de 16,7 ms (VBlank) para um app que renderiza 60 quadros por segundo:
+Os jogos em DirectX respondem à entrada do usuário atualizando o que o usuário vê na tela. Em um monitor de 60 Hz, a tela atualiza a cada 16,7 ms (1 segundo/60 quadros). A Figura 1 mostra o ciclo de vida útil aproximado e a resposta a um evento de entrada relativo ao sinal de atualização de 16,7 ms (VBlank) para um aplicativo que renderiza 60 quadros por segundo:
 
 Figura 1
 
 ![figura 1 latência de entrada no directx ](images/input-latency1.png)
 
-No Windows 8.1, DXGI introduziu a bandeira **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** para a cadeia de troca, que permite que os apps reduzam essa latência sem exigir que implementem heurísticas para manter a fila Presente vazia. As cadeias de troca criadas com esse sinalizador são referidas como cadeias de troca de espera. A Figura 2 mostra o ciclo de vida aproximado e a resposta a um evento de entrada ao usar cadeias de troca de espera:
+No Windows 8.1, DXGI introduziu a bandeira **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** para a cadeia de troca, que permite que os aplicativos reduzam essa latência sem exigir que implementem heurísticas para manter a fila Presente vazia. As cadeias de troca criadas com esse sinalizador são referidas como cadeias de troca de espera. A Figura 2 mostra o ciclo de vida aproximado e a resposta a um evento de entrada ao usar cadeias de troca de espera:
 
 Figura 2
 
@@ -261,7 +258,6 @@ O que vemos nesses diagramas é que os jogos têm o potencial de reduzir a latê
  
 
  
-
 
 
 

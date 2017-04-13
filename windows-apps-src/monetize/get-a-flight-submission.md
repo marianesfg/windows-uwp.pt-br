@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Use este método na API de envio da Windows Store para obter dados para um envio de pacote de pré-lançamento existente."
-title: "Obter um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Obter um envio de pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envio de versão de pré-lançamento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a989e9d081ec9cb709b59e1ff4ceff2d517ae48f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2571bb25ce407a9c44ed40aae0a865708e6154d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-a-package-flight-submission-using-the-windows-store-submission-api"></a>Obter um envio do pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="get-a-package-flight-submission"></a>Obter um envio de pacote de pré-lançamento
 
 
 
@@ -104,7 +101,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -120,7 +117,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não puder ser concluída com êxito, a resposta conterá um dos códigos de erro HTTP a seguir.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -138,4 +135,3 @@ Se a solicitação não puder ser concluída com êxito, a resposta conterá um 
 * [Confirmar um envio de pacote de pré-lançamento](commit-a-flight-submission.md)
 * [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
 * [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
-

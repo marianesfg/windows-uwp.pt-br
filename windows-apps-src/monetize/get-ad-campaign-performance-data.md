@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, campanhas publicitárias"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca7ba9ad8817a68c8dd5f74a8bf2674d76f9eadf
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2c0e696488af33731459bdef2c8dc24477755078
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-ad-campaign-performance-data"></a>Obter dados de desempenho da campanha publicitária
 
 
@@ -30,7 +27,7 @@ Para criar, atualizar ou recuperar detalhes de campanhas publicitárias, você p
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -55,7 +52,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Para recuperar dados de desempenho da campanha publicitária de um aplicativo específico, use o parâmetro *applicationId*. Para recuperar dados de desempenho do anúncio de todos os aplicativos associados à conta de desenvolvedor, omita o parâmetro *applicationId*.
 
-| Parâmetro     | Tipo   | Descrição     | Necessário |
+| Parâmetro     | Tipo   | Descrição     | Obrigatório |
 |---------------|--------|-----------------|----------|
 | applicationId   | string    | A ID da Loja do aplicativo cujos dados de desempenho da campanha publicitária você deseja recuperar. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9NBLGGH4R315. |    Não      |
 |  startDate  |  date   |  A data de início no intervalo de datas dos dados de desempenho da campanha publicitária a ser recuperada, no formato AAAA/MM/DD. O padrão é a data atual menos 30 dias.   |   Não    |
@@ -91,7 +88,7 @@ Authorization: Bearer <your access token>
 | Valor      | Tipo   | Descrição  |
 |------------|--------|---------------|
 | Valor      | array  | Uma matriz de objetos que contêm dados de desempenho da campanha publicitária agregados. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [Objeto de desempenho da campanha](#campaign-performance-object) abaixo.          |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 5, mas houver mais de 5 itens de dados para a consulta. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 5, mas houver mais de 5 itens de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
 <span id="campaign-performance-object" />
@@ -102,14 +99,14 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | Valor               | Tipo   | Descrição            |
 |---------------------|--------|------------------------|
 | date                | string | A primeira data no intervalo de datas dos dados de desempenho da campanha publicitária. Se a solicitação especificou um único dia, esse valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
-| applicationId       | string | A ID da Loja do aplicativo para o qual você está recuperando dados de desempenho da campanha publicitária.                     |
-| campaignId     | cadeia | A ID da campanha publicitária.           |
+| applicationId       | string | A ID da Loja do aplicativo do qual você está recuperando dados de desempenho da campanha publicitária.                     |
+| campaignId     | string | A ID da campanha publicitária.           |
 | lineId     | cadeia |    A ID da [linha de entrega](manage-delivery-lines-for-ad-campaigns.md) da campanha publicitária que gerou esses dados de desempenho.        |
-| currencyCode              | cadeia | O código da moeda do orçamento da campanha.              |
+| currencyCode              | string | O código da moeda do orçamento da campanha.              |
 | spend          | string |  O valor no orçamento gasto na campanha publicitária.     |
 | impressions           | long | O número de impressões de anúncios da campanha.        |
 | installs              | long | O número de instalações de aplicativos relacionados à campanha.   |
-| cliques            | comprimento | O número de cliques em anúncios da campanha.      |
+| clicks            | long | O número de cliques em anúncios da campanha.      |
 | iapInstalls            | comprimento | O número de instalações de complemento (também chamado de compra no aplicativo ou IAP) relacionado à campanha.      |
 | activeUsers            | comprimento | O número de usuários que clicaram em um anúncio que faz parte da campanha e retornaram ao aplicativo.      |
 
@@ -159,4 +156,3 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Criar uma campanha publicitária para seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
 * [Executar campanhas publicitárias usando serviços da Windows Store](run-ad-campaigns-using-windows-store-services.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
-

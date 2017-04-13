@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: "Use os exemplos de código nesta seção para saber mais sobre como usar a API de envio da Windows Store."
-title: "Exemplos de código para a API de envio da Windows Store"
+title: "Exemplos de código para a API de envio"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 44dd7cbf39825c47783886d12b116bf99a6630e8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 04cfa46b84392afcc474127595bcd720f7a70804
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="code-examples-for-the-windows-store-submission-api"></a>Exemplos de código para a API de envio da Windows Store
+# <a name="code-examples-for-the-submission-api"></a>Exemplos de código para a API de envio
 
 Esta seção fornece exemplos de código para usar a *API de envio da Windows Store* em vários idiomas diferentes de programação.
 
@@ -26,11 +23,10 @@ Esta seção fornece exemplos de código para usar a *API de envio da Windows St
 
 | Tópico                                                                                                       | Descrição                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
-| [Exemplos de código em C#](csharp-code-examples-for-the-windows-store-submission-api.md) | Use os exemplos de código C# nesta seção para saber mais sobre como usar a API de envio da Windows Store. |
-| [Exemplos de código em Java](java-code-examples-for-the-windows-store-submission-api.md) | Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Windows Store. |
-| [Exemplos de código em Python](python-code-examples-for-the-windows-store-submission-api.md)  | Use os exemplos de código Python nesta seção para saber mais sobre como usar a API de envio da Windows Store.  |
+| [Exemplo de código C#](csharp-code-examples-for-the-windows-store-submission-api.md) | Use os exemplos de código C# nesta seção para saber mais sobre como usar a API de envio da Windows Store. |
+| [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md) | Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Windows Store. |
+| [Exemplo de código Python](python-code-examples-for-the-windows-store-submission-api.md)  | Use os exemplos de código Python nesta seção para saber mais sobre como usar a API de envio da Windows Store.  |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-

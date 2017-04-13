@@ -2,25 +2,21 @@
 title: "Iluminação especular"
 description: "A iluminação especular identifica os realces especulares brilhantes que ocorrem quando a luz atinge uma superfície de objeto e reflete volta em direção da câmera."
 ms.assetid: 71F87137-B00F-48CE-8E6A-F98A139A742A
-keywords:
-- "Iluminação especular"
+keywords: "Iluminação especular"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54cb099e768ad1583f686d98375a0f1bcedd4e5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c57edefa190fbb56b8bbe2a0c06ef2828b780927
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="specular-lighting"></a>Iluminação especular
 
 
-A *iluminação especular* identifica os realces especulares brilhantes que ocorrem quando a luz atinge uma superfície de objeto e reflete volta em direção da câmera. A iluminação especular é mais intensa que a luz difusa e cai mais rapidamente na superfície do objeto. Demora mais tempo para calcular a iluminação especular que a iluminação difusa, no entanto, a vantagem de usá-lo é que ele adiciona detalhes significativos a uma superfície.
+A *iluminação especular* identifica os realces especulares brilhantes que ocorrem quando a luz atinge uma superfície de objeto e reflete volta em direção da câmera. A iluminação especular é mais intensa do que a luz difusa e incide mais rapidamente na superfície do objeto. Demora mais tempo para calcular a iluminação especular que a iluminação difusa, no entanto, a vantagem de usá-lo é que ele adiciona detalhes significativos a uma superfície.
 
 Modelar a reflexão especular requer que o sistema saiba em que direção a luz está viajando e a direção para os olhos do observador. O sistema usa uma versão simplificada do modelo de reflexo especular Phong, que utiliza um vetor de metade para aproximar a intensidade da reflexão especular.
 
@@ -122,7 +118,6 @@ A iluminação especular é mais intensa para se calcular do que a iluminação 
  
 
  
-
 
 
 

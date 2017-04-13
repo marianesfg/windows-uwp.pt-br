@@ -4,20 +4,21 @@ ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "Prepare-se para começar"
 description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96b6b477efd42b46b8aaf553de2482e1946c9cd7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="get-set-up"></a>Faça a configuração
+# <a name="get-set-up"></a>Prepare-se para começar
 
-É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+![Prepare-se para usar o Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
+
+
+É mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
 
 ## <a name="1-get-windows-10"></a>1. Obtenha o Windows 10
 
@@ -33,17 +34,22 @@ Você é assinante do MSDN? É possível obter os downloads ISO aqui:
 
 ## <a name="2-download-or-update-visual-studio"></a>2. Baixe ou atualize o Visual Studio
 
-O Microsoft Visual Studio 2015 ajuda você a projetar, codificar, testar e depurar seus aplicativos.
+O Microsoft Visual Studio 2017 ajuda você a projetar, codificar, testar e depurar seus apps.
 
-Se você ainda não tem o Visual Studio 2015, clique neste link para instalar o Microsoft Visual Studio Community 2015 grátis. Esse download inclui simuladores de dispositivos e telefones para testar seus aplicativos:
+Se ainda não tem o Visual Studio 2017, você pode instalar o Microsoft Visual Studio Community 2017 gratuitamente. Este download inclui simuladores de dispositivos para testar seus apps:
 
 -   [Baixar ferramentas de desenvolvedor do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
-Quando você instalar o Visual Studio, use a opção personalizada e verifique se todas as opções de ferramentas de desenvolvimento de aplicativos universais do Windows estão selecionadas, conforme mostrado aqui.
+Quando você instalar o Visual Studio, selecione a opção de Ferramentas de Desenvolvimento de Aplicativo Universal do Windows, conforme mostrado aqui.
 
-![Ferramentas do Visual Studio para UWP](images/vs-2015-community-setup.png)
+![Ferramentas do Visual Studio para UWP](images/vs-2017-community-setup.png)
 
-Alguns de ajuda com o Visual Studio? Consulte [introdução ao Visual Studio](https://www.visualstudio.com/vs/getting-started).
+Precisa de ajuda com o Visual Studio? Consulte [introdução ao Visual Studio](https://www.visualstudio.com/vs/getting-started).
+
+Se já tiver começado a usar o Visual Studio, mas descobrir que lhe faltam alguns componentes, você pode iniciar o instalador novamente da caixa de diálogo *Novo projeto*:
+
+   ![Como repetir o processo de instalação](images/win10-cs-install.png)
+
 
 ## <a name="3-enable-your-device-for-development"></a>3. Habilitar seu dispositivo para desenvolvimento
 
@@ -68,3 +74,11 @@ Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma cont
 Para obter a lista completa de ferramentas e downloads, consulte [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
 
 
+## <a name="see-also"></a>Consulte também
+
+* [Seu primeiro app](your-first-app.md)
+* [Publicar aplicativos da Windows Store](https://developer.microsoft.com/store/publish-apps).
+* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
+* [O que é um aplicativo Universal do Windows?](whats-a-uwp.md)
+* [Inscreva-se para a conta do Windows](sign-up.md)

@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, glsl, porta
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-glsl"></a>Fazer a portabilidade do GLSL
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -178,18 +175,17 @@ Entender a semântica HLSL e o compactação de buffers constantes pode evitar c
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-[Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+[Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
 [Fazer a portabilidade de objetos de sombreador](port-the-shader-config.md)
 
-[Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 
 [Desenhar na tela](draw-to-the-screen.md)
 
  
 
  
-
 
 
 

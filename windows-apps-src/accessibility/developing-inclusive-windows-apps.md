@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5e4668a185e003150cf9d72aeb5c55c2e092d549
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developing-inclusive-windows-apps"></a>Desenvolvendo aplicativos inclusivos do Windows  
 
 Este artigo discute como desenvolver aplicativos UWP (Plataforma Universal do Windows) acessíveis. Especificamente, ele presume que você entende como criar a hierarquia lógica para seu aplicativo. Aprenda a desenvolver aplicativos UWP para Windows 10 acessíveis que incluem navegação de teclado, configurações de cor e contraste, além de suporte para as tecnologias assistenciais.
@@ -90,4 +87,3 @@ Para obter mais detalhes, veja o tópico [Lista de verificação de acessibilida
 * [Software de engenharia para acessibilidade](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://msdn.microsoft.com/enable)
 * [Acessibilidade](accessibility.md)
-

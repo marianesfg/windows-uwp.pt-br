@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 30f73484bde4948e4b0bac5609197f08be5968a0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2643606fa3dcbf1c95669bb09bef0aae49f86529
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="transforms-overview"></a>Visão geral das transformações
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -138,7 +135,6 @@ No Windows 10, o XAML introduziu uma nova propriedade, [**UIElement.Transform3D*
  
 
  
-
 
 
 

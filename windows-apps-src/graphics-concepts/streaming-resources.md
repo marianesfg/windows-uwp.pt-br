@@ -1,6 +1,6 @@
 ---
 title: Recursos de streaming
-description: "Os recursos de streaming são enormes recursos lógicos que utilizam pequenas quantias de memória física. Em vez de repassar um recurso grande por inteiro, pequenas partes do recurso são transmitidas, conforme necessário. Recursos de streaming anteriormente foram chamados de recursos lado a lado."
+description: "Os recursos de streaming são enormes recursos lógicos que utilizam pequenas quantias de memória física. Em vez de transferir um recurso grande inteiro, pequenas partes do recurso são transmitidas conforme necessário. Recursos de streaming anteriormente foram chamados de recursos lado a lado."
 ms.assetid: 04F0486E-4B71-4073-88DA-2AF505F4F0C1
 keywords:
 - Recursos de streaming
@@ -12,17 +12,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7bb706c94d26b1d27e7b9bf94ca3cfa7a57b41a6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f45c1d955d901366b0160d148cef88ce015aeaa2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="streaming-resources"></a>Recursos de streaming
 
 
-Os *recursos de streaming* são enormes recursos lógicos que utilizam pequenas quantias de memória física. Em vez de repassar um recurso grande por inteiro, pequenas partes do recurso são transmitidas, conforme necessário. Recursos de streaming anteriormente foram chamados de *recursos lado a lado*.
+Os *recursos de streaming* são enormes recursos lógicos que utilizam pequenas quantias de memória física. Em vez de transferir um recurso grande inteiro, pequenas partes do recurso são transmitidas conforme necessário. Recursos de streaming anteriormente foram chamados de *recursos lado a lado*.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Nesta seção
 
@@ -70,7 +67,6 @@ Os *recursos de streaming* são enormes recursos lógicos que utilizam pequenas 
  
 
  
-
 
 
 

@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9728eced6de3d246dc1ec9950b90d77fea0d576d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-your-xaml-markup"></a>Otimizar sua marcação XAML
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu app.
+Analisar marcações XAML para construir objetos na memória é demorado para uma interface do usuário complexa. Aqui está o que você pode fazer para melhorar a análise de marcação XAML, o tempo de carregamento e a eficiência de memória para seu aplicativo.
 
-Na inicialização do app, limite a marcação XAML que é carregada para apenas o que você precisa para sua interface do usuário inicial. Examine a marcação em sua página inicial e confirmar se ela contém apenas o que é necessário. Se a página fizer referência a um controle de usuário ou um recurso definido em um arquivo diferente, a estrutura analisará esse arquivo também.
+Na inicialização do aplicativo, limite a marcação XAML que é carregada para apenas o que você precisa para sua interface do usuário inicial. Examine a marcação em sua página inicial e confirmar se ela contém apenas o que é necessário. Se a página fizer referência a um controle de usuário ou um recurso definido em um arquivo diferente, a estrutura analisará esse arquivo também.
 
 Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary.xaml, todo o ExampleResourceDictionary.xaml deve ser analisado na inicialização.
 
@@ -54,7 +52,7 @@ Neste exemplo, como InitialPage.xaml usa um recurso de ExampleResourceDictionary
 </ResourceDictionary>
 ```
 
-Se você usar um recurso em várias páginas em todo o app, armazenando-o em App.xaml é uma boa prática e evita a duplicação. Mas App.xaml é analisado na inicialização do app para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este contraexemplo mostra um App.xaml que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do app.
+Se você usar um recurso em várias páginas em todo o aplicativo, armazenando-o em App.xaml é uma boa prática e evita a duplicação. Mas App.xaml é analisado na inicialização do aplicativo para que qualquer recurso usado em apenas uma página (a menos que essa página seja a página inicial) seja colocado nos recursos locais da página. Este contraexemplo mostra um App.xaml que contém recursos que são usados por apenas uma página (que não é a página inicial). Isso aumenta desnecessariamente o tempo de inicialização do aplicativo.
 
 **InitialPage.xaml.**
 
@@ -89,11 +87,11 @@ Se você usar um recurso em várias páginas em todo o app, armazenando-o em App
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush`  pode permanecer em App.xaml porque os recursos de app devem ser analisados na inicialização do app em qualquer caso.
+A maneira de tornar o contraexemplo acima mais eficiente é mover `SecondPageTextBrush` para SecondPage.xaml e `ThirdPageTextBrush` para ThirdPage.xaml. `InitialPageTextBrush`  pode permanecer em App.xaml porque os recursos de aplicativo devem ser analisados na inicialização do aplicativo em qualquer caso.
 
 ## <a name="minimize-element-count"></a>Minimizar a contagem de elementos
 
-Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, você pode fazer com que a disposição e a renderização de seu app sejam mais rápidas, usando a menor quantidade de elementos para alcançar os elementos visuais desejados.
+Embora a plataforma XAML seja capaz de exibir grandes quantidades de elementos, você pode fazer com que a disposição e a renderização de seu aplicativo sejam mais rápidas, usando a menor quantidade de elementos para alcançar os elementos visuais desejados.
 
 -   Os painéis de layout têm uma propriedade [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512), então não é preciso puxar um [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) na frente de um painel apenas para colori-lo.
 
@@ -281,18 +279,17 @@ Observe o uso de [**CacheMode**](https://msdn.microsoft.com/library/windows/apps
 
 ## <a name="resourcedictionaries"></a>ResourceDictionaries
 
-ResourceDictionaries geralmente são usados para armazenar seus recursos em um nível um pouco global. Os recursos aos quais seu app fará referência em vários lugares. Por exemplo, estilos, pincéis, modelos e assim por diante. No geral, otimizamos ResourceDictionaries para não instanciar recursos, a menos que seja solicitado. Mas há alguns lugares onde você precisa ter um pouco de cuidado.
+ResourceDictionaries geralmente são usados para armazenar seus recursos em um nível um pouco global. Os recursos aos quais seu aplicativo fará referência em vários lugares. Por exemplo, estilos, pincéis, modelos e assim por diante. No geral, otimizamos ResourceDictionaries para não instanciar recursos, a menos que seja solicitado. Mas há alguns lugares onde você precisa ter um pouco de cuidado.
 
-**Recurso com x:Name**. Os recursos com x:Name não se beneficiarão com a otimização da plataforma, mas em vez disso, eles serão instanciados assim que ResourceDictionary for criado. Isso ocorre porque x:Name instrui a plataforma de que seu app precisa de acesso de campo a esse recurso de forma que a plataforma precise criar algo para o qual irá criar um referência.
+**Recurso com x:Name**. Os recursos com x:Name não se beneficiarão com a otimização da plataforma, mas em vez disso, eles serão instanciados assim que ResourceDictionary for criado. Isso ocorre porque x:Name instrui a plataforma de que seu aplicativo precisa de acesso de campo a esse recurso de forma que a plataforma precise criar algo para o qual irá criar um referência.
 
 **ResourceDictionaries em um UserControl**. ResourceDictionaries definidos dentro de um UserControl provocam uma penalidade. A plataforma criará uma cópia de tal ResourceDictionary para cada instância do UserControl. Se você tiver um UserControl que é muito usado, mova ResourceDictionary do UserControl e coloque-o no nível de página.
 
 ## <a name="use-xbf2"></a>Usar o XBF2
 
-XBF2 é uma representação binária da marcação XAML que evita todos os custos da análise de texto em tempo de execução. Ele também otimiza o binário para a criação de árvore e o carregamento, além de proporcionar um "caminho rápido" para que tipos XAML melhorem os custos de criação de objeto e de heap, por exemplo VSM, ResourceDictionary, Styles e assim por diante. Ele é totalmente mapeado por memória de forma que não haja uma volume de heap no carregamento e leitura de uma página XAML. Além disso, ele reduz o volume de disco das páginas XAML armazenadas em um appx. XBF2 é uma representação mais compacta e pode reduzir o volume de disco de arquivos XAML/XBF1 comparativos em até 50%. Por exemplo, o app Fotos integrado experimentou uma redução em torno de 60% após a conversão para XBF2, baixando de cerca de ~ 1mb de ativos XBF1 para ~ 400kb de ativos XBF2. Também vimos apps se beneficiarem entre 15 e 20% em termos de uso de CPU e 10 e 15% em relação ao heap do Win32.
+XBF2 é uma representação binária da marcação XAML que evita todos os custos da análise de texto em tempo de execução. Ele também otimiza o binário para a criação de árvore e o carregamento, além de proporcionar um "caminho rápido" para que tipos XAML melhorem os custos de criação de objeto e de heap, por exemplo VSM, ResourceDictionary, Styles e assim por diante. Ele é totalmente mapeado por memória de forma que não haja uma volume de heap no carregamento e leitura de uma página XAML. Além disso, ele reduz o volume de disco das páginas XAML armazenadas em um appx. XBF2 é uma representação mais compacta e pode reduzir o volume de disco de arquivos XAML/XBF1 comparativos em até 50%. Por exemplo, o aplicativo Fotos integrado experimentou uma redução em torno de 60% após a conversão para XBF2, baixando de cerca de ~ 1mb de ativos XBF1 para ~ 400kb de ativos XBF2. Também vimos aplicativos se beneficiarem entre 15 e 20% em termos de uso de CPU e 10 e 15% em relação ao heap do Win32.
 
-Dicionários e controles XAML internos que a estrutura fornece já são totalmente habilitados para XBF2. Para seu próprio app, assegure-se de que o arquivo de projeto declare TargetPlatformVersion 8.2 ou posterior.
+Dicionários e controles XAML internos que a estrutura fornece já são totalmente habilitados para XBF2. Para seu próprio aplicativo, assegure-se de que o arquivo de projeto declare TargetPlatformVersion 8.2 ou posterior.
 
-Para verificar se você tem o XBF2, abra seu app em um editor binário; o 12º e o 13º bytes são 00 02 se você tiver o XBF2.
-
+Para verificar se você tem o XBF2, abra seu aplicativo em um editor binário; o 12º e o 13º bytes são 00 02 se você tiver o XBF2.
 

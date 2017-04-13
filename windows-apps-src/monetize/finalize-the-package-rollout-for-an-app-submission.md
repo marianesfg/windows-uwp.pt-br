@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "Use esse método na API de envio da Windows Store a fim de finalizar a distribuição de pacote para um envio de aplicativo."
-title: "Finalizar a distribuição de pacote para um envio de aplicativo usando a API de envio da Windows Store"
+title: "Finalizar a distribuição para um envio de app"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,14 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, distribuição de pacote, envio do aplicativo, finalizar"
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6c7fa8fc509faf2c662732e7e6b998d355fcbd66
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 1f26b826595b439c20b1582265dbe690d314277e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="finalize-the-package-rollout-for-an-app-submission-using-the-windows-store-submission-api"></a>Finalizar a distribuição de pacote para um envio de aplicativo usando a API de envio da Windows Store
+# <a name="finalize-the-rollout-for-an-app-submission"></a>Finalizar a distribuição para um envio de app
 
 
 Use esse método na API de envio da Windows Store a fim de [finalizar a distribuição de pacote](../publish/gradual-package-rollout.md#completing-the-rollout) para um envio de aplicativo. Para obter mais informações sobre o processo de criação de um envio de aplicativo, usando a API de envio da Windows Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
@@ -26,7 +23,7 @@ Use esse método na API de envio da Windows Store a fim de [finalizar a distribu
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
 * Habilite uma distribuição de pacote gradual para o envio. Você pode fazer isso no [painel do Centro de Desenvolvimento](../publish/gradual-package-rollout.md) ou [usando a API de envio da Windows Store](manage-app-submissions.md#manage-gradual-package-rollout).
 
@@ -55,7 +52,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio com a distribuição de pacote que você deseja finalizar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Necessário. A ID da Loja do aplicativo que contém o envio com a distribuição de pacote que você deseja finalizar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | string | Necessário. A ID do envio com a distribuição de pacote que você deseja finalizar. Esse ID está disponível no painel do Centro de Desenvolvimento e está incluído nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md).  |
 
 <span/>
@@ -80,7 +77,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 100,
+    "packageRolloutPercentage": 100.0,
     "packageRolloutStatus": "PackageRolloutComplete",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -104,4 +101,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Distribuição de pacote gradual](../publish/gradual-package-rollout.md)
 * [Gerenciar envios de aplicativo usando a API de envio da Windows Store](manage-app-submissions.md)
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
-

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "Adicionando conteúdo visual ao exemplo do Marble Maze"
-description: "Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do app da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo."
+description: "Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, amostra, directx, elementos gráficos"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: b8ee07dc45e53f2ea73f87111fa9eb155854f10a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Adicionando conteúdo visual ao exemplo do Marble Maze
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do app da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo. Para saber mais sobre como os componentes visuais do jogo se encaixam na estrutura geral do app Marble Maze, consulte [Estrutura do app Marble Maze](marble-maze-application-structure.md).
+Este documento descreve como o jogo Marble Maze usa Direct3D e Direct2D no ambiente do aplicativo da Plataforma Universal do Windows (UWP) para que você aprenda e adapte os parâmetros quando trabalhar com o conteúdo do seu próprio jogo. Para saber mais sobre como os componentes visuais do jogo se encaixam na estrutura geral do aplicativo Marble Maze, consulte [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md).
 
 Seguimos estas três etapas básicas conforme desenvolvíamos os aspectos visuais do Marble Maze:
 
@@ -44,7 +41,7 @@ Seguem alguns dos principais pontos discutidos neste documento para quando você
 -   Em geral, adicionar conteúdo de jogo envolve várias etapas. Muitas vezes, essas etapas também exigem iteração. Frequentemente, desenvolvedores de jogos se concentram primeiro em adicionar conteúdo de jogo 3D e, em seguida, em adicionar conteúdo 2D.
 -   Conquiste mais clientes e proporcione uma ótima experiência a todos eles dando suporte para a maior variedade possível de componentes de hardware gráfico.
 -   Separe transparentemente os formatos de tempo de design e de tempo de execução. Estruture seus ativos de tempo de design para maximizar a flexibilidade e permitir rápidas iterações no conteúdo. Formate e compacte seus ativos para que eles sejam carregados e processados da maneira mais eficiente possível em tempo de execução.
--   Você cria os dispositivos Direct3D e Direct2D em um app UWP de maneira bastante semelhante à que costuma fazer em um app de área de trabalho clássico do Windows. Uma diferença importante é a forma como a cadeia de troca é associada à janela de saída.
+-   Você cria os dispositivos Direct3D e Direct2D em um aplicativo UWP de maneira bastante semelhante à que costuma fazer em um aplicativo de área de trabalho clássico do Windows. Uma diferença importante é a forma como a cadeia de troca é associada à janela de saída.
 -   Ao criar seu jogo, certifique-se de que o formato de malha escolhido dê suporte aos cenários principais. Por exemplo, se o seu jogo requer colisão, verifique se é possível obter dados de colisão a partir das suas malhas.
 -   Separe a lógica do jogo da lógica de renderização atualizando primeiramente todos os objetos de cena antes de renderizá-los.
 -   Em geral, você desenha seus objetos de cena 3D e, em seguida, desenha todos os objetos 2D que aparecem na frente da cena.
@@ -53,7 +50,7 @@ Seguem alguns dos principais pontos discutidos neste documento para quando você
 ## <a name="getting-started-with-directx-graphics"></a>Introdução a elementos gráficos DirectX
 
 
-Quando planejamos o jogo Marble Maze da UWP (Plataforma Universal do Windows), escolhemos as linguagens C++ e Direct3D 11.1 porque elas são as melhores opções para criar jogos 3D que exigem alto desempenho e o máximo de controle sobre o processo de renderização. O DirectX 11.1 dá suporte para componentes de hardware do DirectX 9, até o DirectX 11 e, portanto, pode ajudar você a conquistar mais clientes com maior eficiência, pois não é obrigatório reescrever o código para cada uma das versões anteriores do DirectX.
+Quando planejamos o jogo Marble Maze da UWP (Plataforma Universal do Windows), escolhemos as linguagens C++ e Direct3D 11.1 porque elas são as melhores opções para criar jogos 3D que exigem alto desempenho e o máximo de controle sobre o processo de renderização. O DirectX 11.1 dá suporte para componentes de hardware do DirectX 9, até o DirectX 11 e, portanto, pode ajudar você a conquistar mais clientes com maior eficiência, pois não é necessário reescrever o código para cada uma das versões anteriores do DirectX.
 
 O Marble Maze usa o Direct3D 11.1 para renderizar os ativos de jogo 3D, ou seja, a bolinha e o labirinto. O Marble Maze também usa as linguagens Direct2D, DirectWrite e WIC (Windows Imaging Component) para desenhar os ativos de jogo 2D, como os menus e o temporizador. Por último, o Marble Maze usa o XAML para fornecer uma barra de aplicativos e permite a você adicionar controles XAML.
 
@@ -71,9 +68,9 @@ O Direct3D 11 apresenta um paradigma conhecido com níveis de recursos. Um níve
 ## <a name="initializing-direct3d-and-direct2d"></a>Inicializando o Direct3D e o Direct2D
 
 
-Um dispositivo representa o adaptador de vídeo. Você cria os dispositivos Direct3D e Direct2D em um app UWP de maneira bastante semelhante à que costuma fazer em um app de área de trabalho clássico do Windows. A principal diferença é em como você conecta a cadeia de troca do Direct3D ao sistema de janelas.
+Um dispositivo representa o adaptador de vídeo. Você cria os dispositivos Direct3D e Direct2D em um aplicativo UWP de maneira bastante semelhante à que costuma fazer em um aplicativo de área de trabalho clássico do Windows. A principal diferença é em como você conecta a cadeia de troca do Direct3D ao sistema de janelas.
 
-O *app DirectX 11 e XAML (Universal Windows)* fatora um sistema operacional genérico e funções de renderização 3D das funções específicas de jogo. A classe **DeviceResources** é uma base para o gerenciamento do Direct3D e do Direct2D. Essa classe lida com infraestrutura em geral e não tem ativos específicos de jogo. O Marble Maze define a classe **MarbleMaze** para lidar com ativos específicos de jogo, que tem uma referência a um objeto **DeviceResources** para dar a ele acesso ao Direct3D e ao Direct2D.
+O *aplicativo DirectX 11 e XAML (Universal Windows)* fatora um sistema operacional genérico e funções de renderização 3D das funções específicas de jogo. A classe **DeviceResources** é uma base para o gerenciamento do Direct3D e do Direct2D. Essa classe lida com infraestrutura em geral e não tem ativos específicos de jogo. O Marble Maze define a classe **MarbleMaze** para lidar com ativos específicos de jogo, que tem uma referência a um objeto **DeviceResources** para dar a ele acesso ao Direct3D e ao Direct2D.
 
 Durante a inicialização, o método **DeviceResources::Initialize** cria recursos independentes do dispositivo e os dispositivos Direct3D e Direct2D.
 
@@ -138,7 +135,7 @@ void DeviceResources::CreateDeviceIndependentResources()
 
 ###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Criando os dispositivos Direct3D e Direct2D
 
-O método **DeviceResources::CreateDeviceResources** chama o [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Como o Marble Maze dá suporte a recursos a partir do nível 9.1, o método **DeviceResources::CreateDeviceResources** especifica os níveis 9.1 a 11.1 na matriz de valores **\\**. O Direct3D passa pela lista em ordem e dá ao app o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a menor para que o app obtenha o recurso de nível mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
+O método **DeviceResources::CreateDeviceResources** chama o [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Como o Marble Maze dá suporte a recursos a partir do nível 9.1, o método **DeviceResources::CreateDeviceResources** especifica os níveis 9.1 a 11.1 na matriz de valores **\\**. O Direct3D passa pela lista em ordem e dá ao aplicativo o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a menor para que o aplicativo obtenha o recurso de nível mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
 
 ```cpp
 // This array defines the set of DirectX hardware feature levels this app will support. 
@@ -226,7 +223,7 @@ Para saber mais sobre o DXGI e a interoperabilidade entre Direct2D e Direct3D, c
 
 ### <a name="associating-direct3d-with-the-view"></a>Associando o Direct3D com a exibição
 
-O método **DeviceResources::CreateWindowSizeDependentResources** cria os recursos de elementos gráficos que dependem de um dado tamanho de janela, como a cadeia de troca e os destinos de renderização do Direct3D e do Direct2D. Uma característica importante que diferencia um app UWP DirectX de um app de área de trabalho é a forma como a cadeia de troca é associada à janela de saída. Uma cadeia de troca é responsável por exibir o buffer para o qual o dispositivo é renderizado no monitor. O documento da estrutura do app Marble Maze descreve como o sistema de janelas de um app UWP diferencia-se de um app da área de trabalho. Devido ao aplicativo da Windows Store não trabalhar com objetos **HWND**, o Marble Maze deve usar o método [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) para associar o dispositivo de saída à exibição. O exemplo a seguir mostra a parte do método **DeviceResources::CreateWindowSizeDependentResources** que cria a cadeia de troca.
+O método **DeviceResources::CreateWindowSizeDependentResources** cria os recursos de elementos gráficos que dependem de um dado tamanho de janela, como a cadeia de troca e os destinos de renderização do Direct3D e do Direct2D. Uma característica importante que diferencia um aplicativo UWP DirectX de um aplicativo de área de trabalho é a forma como a cadeia de troca é associada à janela de saída. Uma cadeia de troca é responsável por exibir o buffer para o qual o dispositivo é renderizado no monitor. O documento da estrutura do aplicativo Marble Maze descreve como o sistema de janelas de um aplicativo UWP diferencia-se de um aplicativo da área de trabalho. Devido ao aplicativo da Windows Store não trabalhar com objetos **HWND**, o Marble Maze deve usar o método [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) para associar o dispositivo de saída à exibição. O exemplo a seguir mostra a parte do método **DeviceResources::CreateWindowSizeDependentResources** que cria a cadeia de troca.
 
 ```cpp
 // Obtain the final swap chain for this window from the DXGI factory.
@@ -254,7 +251,7 @@ DX::ThrowIfFailed(
 
 O método **DeviceResources::CreateWindowSizeDependentResources** inicializa os recursos de elementos gráficos de forma que funcione para a maioria dos jogos.
 
-> **Observação**   O termo *exibição* tem significados diferentes no Windows Runtime e no Direct3D. No Windows Runtime, uma exibição refere-se ao conjunto de configurações de interface do usuário para um app, incluindo a área de exibição e os comportamentos de entrada, além do thread utilizado para processamento. Você pode especificar as configurações necessárias ao criar uma exibição. O processo de configurar uma exibição de app é descrito em [Estrutura do app Marble Maze](marble-maze-application-structure.md). No Direct3D, o termo exibição tem vários significados. Em primeiro lugar, uma exibição de recurso define os sub-recursos que um recurso pode acessar. Por exemplo, quando um objeto de textura está associado a uma exibição de recurso de sombreador, esse sombreador pode acessar a textura mais tarde. Uma das vantagens de uma exibição de recurso é que você pode interpretar os dados de diferentes maneiras em diferentes estágios no pipeline de renderização. Para saber mais sobre exibições de recursos, consulte [Exibições de textura (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Quando usada no contexto de uma transformação de exibição ou de uma matriz de transformação de exibição, uma exibição refere-se à localização e à orientação da câmara. Uma transformação de exibição realoca objetos ao redor da posição e da orientação da câmera. Para saber mais sobre transformações de exibição, consulte [Transformação de exibição (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Como o Marble Maze usa exibições de matriz e recurso é descrito com mais detalhes neste tópico.
+> **Observação**   O termo *exibição* tem significados diferentes no Windows Runtime e no Direct3D. No Windows Runtime, uma exibição refere-se ao conjunto de configurações de interface do usuário para um aplicativo, incluindo a área de exibição e os comportamentos de entrada, além do thread utilizado para processamento. Você pode especificar as configurações necessárias ao criar uma exibição. O processo de configurar uma exibição de aplicativo é descrito em [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md). No Direct3D, o termo exibição tem vários significados. Em primeiro lugar, uma exibição de recurso define os sub-recursos que um recurso pode acessar. Por exemplo, quando um objeto de textura está associado a uma exibição de recurso de sombreador, esse sombreador pode acessar a textura mais tarde. Uma das vantagens de uma exibição de recurso é que você pode interpretar os dados de diferentes maneiras em diferentes estágios no pipeline de renderização. Para saber mais sobre exibições de recursos, consulte [Exibições de textura (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Quando usada no contexto de uma transformação de exibição ou de uma matriz de transformação de exibição, uma exibição refere-se à localização e à orientação da câmara. Uma transformação de exibição realoca objetos ao redor da posição e da orientação da câmera. Para saber mais sobre transformações de exibição, consulte [Transformação de exibição (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Como o Marble Maze usa exibições de matriz e recurso é descrito com mais detalhes neste tópico.
 
  
 
@@ -263,7 +260,7 @@ O método **DeviceResources::CreateWindowSizeDependentResources** inicializa os 
 
 O Marble Maze usa a classe **BasicLoader**, declarada no BasicLoader.h, para carregar texturas e sombreadores. O Marble Maze usa a classe **SDKMesh** para carregar as malhas 3D para o labirinto e a bola de gude.
 
-Para garantir um app com respostas rápidas, o Marble Maze carrega recursos de cena de forma assíncrona ou no fundo. Como os ativos são carregados em segundo plano, seu jogo pode responder a eventos de janela. Esse processo é explicado com mais detalhes em [Carregando ativos de jogo em segundo plano](marble-maze-application-structure.md#loading-game-assets-in-the-background), neste guia.
+Para garantir um aplicativo com respostas rápidas, o Marble Maze carrega recursos de cena de forma assíncrona ou no fundo. Como os ativos são carregados em segundo plano, seu jogo pode responder a eventos de janela. Esse processo é explicado com mais detalhes em [Carregando ativos de jogo em segundo plano](marble-maze-application-structure.md#loading-game-assets-in-the-background), neste guia.
 
 ###  <a name="loading-the-2-d-overlay-and-user-interface"></a>Carregando a sobreposição 2D e a interface do usuário
 
@@ -399,7 +396,7 @@ O método **MarbleMaze::LoadDeferredResources** usa o método **BasicLoader::Loa
     );
 ```
 
-A variável do membro **m\_inputLayout** é um objeto [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575). O objeto do layout de entrada encapsula o estado do estágio de assembler de entrada (IA) Um trabalho do estágio IA é deixar os sombreadores mais eficazes usando valores gerados pelo sistema, também conhecidos como *semântica*, para processar apenas as primitivas ou vértices que ainda não foram processados. Use o método [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) para criar um layout de entrada a partir de uma matriz de descrições de elementos de entrada. A matriz contém um ou mais elementos de entrada, e cada um destes descreve um elemento de dados de vértice a partir de um buffer de vértices. O conjunto inteiro de descrições de elementos de entrada descreve todos os elementos de dados de vértice de todos os buffers de vértices que serão associados ao estágio IA. O exemplo a seguir mostra a descrição de layout usada pelo Marble Maze. Essa descrição de layout descreve um buffer de vértices que contém quatro elementos de dados de vértice. As partes importantes de cada entrada na matriz são o nome da semântica, o formato de data e o deslocamento de byte. Por exemplo, o elemento **POSITION** especifica a posição do vértice no espaço de objeto. Ele inicia no deslocamento de byte 0 e contém três componentes de ponto flutuante (para um total de 12 bytes). O elemento **NORMAL** especifica o vetor normal. Ele inicia no deslocamento de byte 12 porque aparece logo depois de **POSITION** no layout, que exige 12 bytes. O elemento **NORMAL** contém um inteiro sem sinal de 32 bits e quatro componentes.
+A variável do membro **m\_inputLayout** é um objeto [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575). O objeto do layout de entrada encapsula o estado do estágio de assembler de entrada (IA) Um trabalho do estágio IA é deixar os sombreadores mais eficazes usando valores gerados pelo sistema, também conhecidos como *semântica*, para processar apenas os primitivos ou vértices que ainda não foram processados. Use o método [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) para criar um layout de entrada a partir de uma matriz de descrições de elementos de entrada. A matriz contém um ou mais elementos de entrada, e cada um destes descreve um elemento de dados de vértice a partir de um buffer de vértices. O conjunto inteiro de descrições de elementos de entrada descreve todos os elementos de dados de vértice de todos os buffers de vértices que serão associados ao estágio IA. O exemplo a seguir mostra a descrição de layout usada pelo Marble Maze. Essa descrição de layout descreve um buffer de vértices que contém quatro elementos de dados de vértice. As partes importantes de cada entrada na matriz são o nome da semântica, o formato de data e o deslocamento de byte. Por exemplo, o elemento **POSITION** especifica a posição do vértice no espaço de objeto. Ele inicia no deslocamento de byte 0 e contém três componentes de ponto flutuante (para um total de 12 bytes). O elemento **NORMAL** especifica o vetor normal. Ele inicia no deslocamento de byte 12 porque aparece logo depois de **POSITION** no layout, que exige 12 bytes. O elemento **NORMAL** contém um inteiro sem sinal de 32 bits e quatro componentes.
 
 ```cpp
 D3D11_INPUT_ELEMENT_DESC layoutDesc[] = 
@@ -517,9 +514,9 @@ Para saber mais sobre buffers constantes, consulte [Introduction to Buffers in D
 
 ###  <a name="loading-meshes"></a>Carregando malhas
 
-O Marble Maze usa o SDK-Mesh como formato do tempo de execução porque esse formato fornece uma forma básica de carregar dados de malha para apps de exemplo. Para uso de produto, você deve usar um formato de malha que atenda às exigências específicas do seu jogo.
+O Marble Maze usa o SDK-Mesh como formato do tempo de execução porque esse formato fornece uma forma básica de carregar dados de malha para aplicativos de exemplo. Para uso de produto, você deve usar um formato de malha que atenda às exigências específicas do seu jogo.
 
-O método **MarbleMaze::LoadDeferredResources** carrega dados de malha depois de carregar sombreadores de pixel e vértice. Uma malha é uma coleção de dados de vértice que muitas vezes inclui informações como posições, dados de normais, cores, materiais e coordenadas de textura. Malhas são tipicamente criadas em softwares de autoria de 3D e mantidos em arquivos que são separados do código do app. A bola de gude e o labirinto são dois exemplos de malhas que o jogo usa.
+O método **MarbleMaze::LoadDeferredResources** carrega dados de malha depois de carregar sombreadores de pixel e vértice. Uma malha é uma coleção de dados de vértice que muitas vezes inclui informações como posições, dados de normais, cores, materiais e coordenadas de textura. Malhas são tipicamente criadas em softwares de autoria de 3D e mantidos em arquivos que são separados do código do aplicativo. A bola de gude e o labirinto são dois exemplos de malhas que o jogo usa.
 
 O Marble Maze usa a classe **SDKMesh** para carregar as malhas 3D para o labirinto e a bola de gude. Essa classe está declarada no SDKMesh.h. O **SDKMesh** fornece métodos de carregar, renderizar e destruir dados de malha.
 
@@ -590,7 +587,7 @@ A maneira como você carrega dados de colisões depende amplamente do formato de
 
 O Marble Maze separa lógica de jogo e lógica de renderização ao atualizar primeiro todos os objetos de cena antes de renderizá-los.
 
-A documento sobre a estrutura do app Marble Maze descreve o loop principal do jogo. Atualizar a cena, que faz parte do loop de jogo, acontece depois que os eventos e a entrada do Windows são processados e antes de a cena ser renderizada. O método **MarbleMaze::Update** lida com a atualização de interface do usuário e do jogo.
+A documento sobre a estrutura do aplicativo Marble Maze descreve o loop principal do jogo. Atualizar a cena, que faz parte do loop de jogo, acontece depois que os eventos e a entrada do Windows são processados e antes de a cena ser renderizada. O método **MarbleMaze::Update** lida com a atualização de interface do usuário e do jogo.
 
 ### <a name="updating-the-user-interface"></a>Atualizando a interface do usuário
 
@@ -899,13 +896,12 @@ Leia [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-inp
 
 
 * [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
-* [Estrutura do app Marble Maze](marble-maze-application-structure.md)
+* [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md)
 * [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
 Tudo no Windows Device Portal foi criado com base em APIs REST, que você pode usar para acessar os dados e controlar o dispositivo de forma programática.
@@ -43,7 +40,7 @@ package   | (**necessário**) O nome do arquivo do pacote a ser instalado.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -83,15 +80,15 @@ GET | /api/app/packagemanager/state
 <br />
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -133,11 +130,11 @@ package   | (**necessário**) O PackageFullName (de GET/api/app/packagemanager/p
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -173,15 +170,15 @@ GET | /api/app/packagemanager/packages
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -244,15 +241,15 @@ GET | /api/devicemanager/devices
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -303,15 +300,15 @@ GET | /api/debug/dump/usermode/dumps
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -356,11 +353,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -409,11 +406,11 @@ fileName   | (**necessário**) O nome do arquivo de despejo que deve ser excluí
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -456,11 +453,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -504,11 +501,11 @@ fileName   | (**necessário**) O nome do arquivo de despejo que você deseja bai
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -553,11 +550,11 @@ packageFullname   | (**necessário**) O nome completo do pacote para o aplicativ
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -590,15 +587,15 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -647,11 +644,11 @@ filename   | (**necessário**) O nome do arquivo de despejo de memória. Você p
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -686,15 +683,15 @@ GET | /api/debug/dump/kernel/crashcontrol
 <br />
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -747,15 +744,15 @@ GET | /api/debug/dump/livekernel
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -798,11 +795,11 @@ pid   | (**necessário**) A ID de processo exclusiva do processo no qual você e
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -848,11 +845,11 @@ overwrite   | (**opcional**) True ou false. Isso indica a substituição ou não
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -887,15 +884,15 @@ GET/WebSocket | /api/etw/session/realtime
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -981,15 +978,15 @@ GET | /api/etw/providers
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1032,15 +1029,15 @@ GET | /api/etw/customproviders
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1082,15 +1079,15 @@ GET | /api/os/machinename
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1132,15 +1129,15 @@ GET | /api/os/info
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1188,15 +1185,15 @@ GET | /api/os/devicefamily
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1250,11 +1247,11 @@ name | (**necessário**) O novo nome para o computador.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1291,15 +1288,15 @@ GET/WebSocket | /api/resourcemanager/processes
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1353,15 +1350,15 @@ Isso também pode ser atualizado para uma conexão WebSocket.  Isso fornece os m
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1432,15 +1429,15 @@ GET | /api/power/battery
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1489,15 +1486,15 @@ GET | /api/power/activecfg
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1537,11 +1534,11 @@ Opções:
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -1578,15 +1575,15 @@ GET | /api/power/state
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1633,11 +1630,11 @@ scheme | (**necessário**) O GUID do esquema que você deseja definir como o esq
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1679,11 +1676,11 @@ valueDC | (**necessário**) O valor a ser usado para energia da bateria.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1718,11 +1715,11 @@ FileName | (**necessário**) O nome completo do arquivo que você deseja baixar.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1757,15 +1754,15 @@ GET | /api/power/sleepstudy/reports
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1808,15 +1805,15 @@ GET | /api/power/sleepstudy/transform
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1853,15 +1850,15 @@ POST | /api/control/restart
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1895,15 +1892,15 @@ POST | /api/control/shutdown
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1950,11 +1947,11 @@ package   | (**necessário**) O nome completo do pacote do aplicativo que você 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -1999,11 +1996,11 @@ forcestop   | (**opcional**) Um valor **yes** indica que o sistema deve forçar 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2041,15 +2038,15 @@ GET | /api/networking/ipconfig
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2127,15 +2124,15 @@ GET | /api/wifi/interfaces
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2197,11 +2194,11 @@ interface   | (**necessário**) O GUID da interface de rede a ser usado para pro
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2271,11 +2268,11 @@ createprofile | (**necessário**) Crie um perfil de rede no dispositivo.  Isso f
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2318,11 +2315,11 @@ profile   | (**necessário**) O nome do perfil a ser excluído.
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2369,11 +2366,11 @@ file   | (**necessário**) O nome do arquivo a ser baixado do relatório. Isso d
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2419,7 +2416,7 @@ name   | (**necessário**) O nome do relatório. Isso deve ser codificado em bas
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -2464,15 +2461,15 @@ GET | /api/wer/reports
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2524,11 +2521,11 @@ POST | /api/wpr/customtrace
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -2584,11 +2581,11 @@ profile   | (**necessário**) Esse parâmetro é necessário no início. O nome 
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2632,15 +2629,15 @@ GET | /api/wpr/boottrace
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2685,11 +2682,11 @@ profile   | (**necessário**) O nome do perfil que deve iniciar uma sessão de r
 <br />
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2733,15 +2730,15 @@ GET | /api/wpr/trace
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2778,15 +2775,15 @@ GET | /api/wpr/status
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2830,15 +2827,15 @@ GET | /api/wpr/tracefiles
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2895,11 +2892,11 @@ filename   | (**obrigatório**) O nome do rastreamento de ETL a ser baixado.  Po
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2944,11 +2941,11 @@ filename   | (**obrigatório**) O nome do rastreamento de ETL a ser excluído.  
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
@@ -2980,18 +2977,18 @@ Código de status HTTP      | Descrição
 
 Veja as marcas atualmente aplicadas para o dispositivo.  Elas são anunciadas por meio de registros DNS-SD TXT na chave T.  
  
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /api/dns-sd/tags
 <br />
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -3033,25 +3030,25 @@ Código de status HTTP      | Descrição
 
 Exclua todas as marcas atualmente anunciadas pelo DNS-SD.   
  
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 DELETE | /api/dns-sd/tags
 <br />
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
- - Nenhuma
+ - Nenhum(a)
 
 **Código de status**
 
@@ -3078,7 +3075,7 @@ Código de status HTTP      | Descrição
 
 Exclua uma marca atualmente anunciada pelo DNS-SD.   
  
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 DELETE | /api/dns-sd/tag
 <br />
@@ -3091,14 +3088,14 @@ tagValue | (**obrigatório**) A marca a ser removida.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
- - Nenhuma
+ - Nenhum(a)
 
 **Código de status**
 
@@ -3124,7 +3121,7 @@ Código de status HTTP      | Descrição
 
 Adicione uma marca do anúncio DNS-SD.   
  
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 POST | /api/dns-sd/tag
 <br />
@@ -3137,14 +3134,14 @@ tagValue | (**obrigatório**) A marca a ser adicionada.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
- - Nenhum
+ - Nenhum(a)
 
 **Código de status**
 
@@ -3173,18 +3170,18 @@ Código de status HTTP      | Descrição
 
 Obtenha uma lista de pastas de nível superior acessíveis.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /api/filesystem/apps/knownfolders
 <br />
 
 **Parâmetros do URI**
 
-- Nenhum
+- Nenhum(a)
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -3223,7 +3220,7 @@ Código de status HTTP      | Descrição
 
 Obtenha uma lista de arquivos em uma pasta.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 GET | /api/filesystem/apps/files
 <br />
@@ -3238,7 +3235,7 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -3298,7 +3295,7 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -3331,7 +3328,7 @@ Código de status HTTP      | Descrição
 
 Renomeie um arquivo em uma pasta.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 POST | /api/filesystem/apps/rename
 
@@ -3348,15 +3345,15 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma
+- Nenhum(a)
 
 **Código de status**
 
@@ -3383,7 +3380,7 @@ Código de status HTTP      | Descrição
 
 Exclua um arquivo em uma pasta.
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 DELETE | /api/filesystem/apps/file
 <br />
@@ -3398,15 +3395,15 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 
-- Nenhuma 
+- Nenhum(a) 
 
 **Código de status**
 
@@ -3433,7 +3430,7 @@ Código de status HTTP      | Descrição
 
 Carregue um arquivo em uma pasta.  Isso sobrescreverá um arquivo existente com o mesmo nome, mas não criará novas pastas. 
 
-Método      | URI da Solicitação
+Método      | URI da solicitação
 :------     | :-----
 POST | /api/filesystem/apps/file
 <br />
@@ -3447,11 +3444,11 @@ path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Resposta**
 

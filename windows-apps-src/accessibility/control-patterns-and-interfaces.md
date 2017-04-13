@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bec52abfca19634948e3ad2a1959b51b1df3eced
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0dd135fb0ece7d78c985188c50639472aa038ad4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="control-patterns-and-interfaces"></a>Padrões e interfaces de controle  
 
 
@@ -40,7 +37,7 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 | **Grade** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Usado para controles que dão suporte à funcionalidade de grade, como dimensionamento e transferência para uma célula especificada. Observe que Grade em si não implementa esse padrão porque ele fornece layout, mas não é um controle. |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | Usado para controles que possuem células nas grades. |
 | **Invocar** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Usado para controles que podem ser invocados, como [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
-| **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Possibilita que os apps localizem um elemento em um contêiner, como uma lista virtualizada. |
+| **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Possibilita que os aplicativos localizem um elemento em um contêiner, como uma lista virtualizada. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | Usado para controles que podem alternar entre várias representações do mesmo conjunto de informações, dados ou filhos. |
 | **ObjectModel** | [**IObjectModelProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251815) | Usado para expor um ponteiro para o modelo de objeto subjacente de um documento. |
 | **RangeValue** | [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) | Usado para controles que possuem um intervalo de valores que podem ser aplicados ao controle. Por exemplo, um controle giratório contendo anos poderia ter o intervalo de 1900 até ano atual, já outro contendo meses poderia ter o intervalo de 1 a 12. |
@@ -51,7 +48,7 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 | **Spreadsheet** | [**ISpreadsheetProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251821) | Usado para expor o conteúdo de uma folha de cálculo ou de outro documento baseado em grade. |
 | **SpreadsheetItem** | [**ISpreadsheetItemProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251817) | Usado para expor as propriedades de uma célula em uma folha de cálculo ou outro documento baseado em grade. |
 | **Estilos** | [**IStylesProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251823) | Usado para descrever um elemento de interface do usuário que tem um estilo, cor de preenchimento, padrão de preenchimento ou forma específico. |
-| **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite que os apps de cliente da Automação da Interface do Usuário redirecionem a entrada do mouse ou do teclado para um elemento da interface do usuário específico. |
+| **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite que os aplicativos de cliente da Automação da Interface do Usuário redirecionem a entrada do mouse ou do teclado para um elemento da interface do usuário específico. |
 | **Tabela** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Usado para controles que possuem uma grade e informações de cabeçalho. Por exemplo, um controle de calendário tabular. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Usado para itens em uma tabela. |
 | **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Usado para editar controles e documentos que exponham informações textuais. Consulte também [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) e [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
@@ -59,7 +56,7 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 | **TextEdit** | Não há classe gerenciada disponível | Fornece acesso a um controle que modifica o texto, por exemplo, um controle que executa correção automática ou permite a composição de entrada através de um IME (Editor de Método de Entrada). |
 | **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Fornece acesso a um conjunto de texto contínuo em um contêiner de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider). Consulte também [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
 | **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Usado para controles onde é possível alternar o estado. Por exemplo, [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) e itens de menu que podem ser marcados. |
-| **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Usado para controles que podem ser redimensionados, transferidos e girados. O padrão de controle de transformação costuma ser usado em apps de desenho, design, formulários e editores gráficos. |
+| **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Usado para controles que podem ser redimensionados, transferidos e girados. O padrão de controle de transformação costuma ser usado em aplicativos de desenho, design, formulários e editores gráficos. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Possibilita que os clientes obtenham ou definam um valor nos controles que não dão suporte a um intervalo de valores. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Expõe itens nos contêineres que são virtualizados e precisam estar totalmente acessíveis como elementos de automação da IU. |
 | **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Expõe informações específicas de janelas, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas filho e caixas de diálogo. |
@@ -68,10 +65,9 @@ Ao implementar um padrão de controle, você também deverá consultar a documen
 > Você não encontrará necessariamente implementações de todos esses padrões em controles XAML existentes. Alguns dos padrões têm interfaces exclusivamente para oferecer suporte à paridade com a definição de padrões da estrutura de Automação da IU geral e para oferecer suporte a cenários de mesmo nível de automação que exigirão uma implementação puramente personalizada para oferecer suporte a esse padrão.
 
 > [!NOTE]
-> Os apps da Loja do Windows Phone não dão suporte a todos os padrões de controle de Automação da Interface do Usuário listados aqui. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** são alguns dos padrões sem suporte.
+> Os aplicativos da Loja do Windows Phone não dão suporte a todos os padrões de controle de Automação da Interface do Usuário listados aqui. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** são alguns dos padrões sem suporte.
 
 <span id="related_topics"/>
 ## <a name="related-topics"></a>Tópicos relacionados  
 * [Pares de automação personalizados](custom-automation-peers.md)
 * [Acessibilidade](accessibility.md) 
-

@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="device-portal-for-desktop"></a>Device Portal para desktop
 
@@ -78,7 +76,7 @@ Se você quiser selecionar números de porta para o Device Portal (como 80 e 443
 
 - Em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.  
+    - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
     - HttpsPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
 
 ## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Falha ao instalar o pacote do Modo de Desenvolvedor ou iniciar o Device Portal
@@ -112,4 +110,3 @@ Para resolver este problema:
 
 1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
 2. Reinicialize o computador para garantir que todas as atualizações sejam aplicadas.
-

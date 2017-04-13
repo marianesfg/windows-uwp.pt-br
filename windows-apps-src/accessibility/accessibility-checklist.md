@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "Fornece uma lista de verificação para ajudar você a garantir que seu app da Plataforma Universal do Windows (UWP) seja acessível."
+Description: "Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível."
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: "Lista de verificação de acessibilidade"
 label: Accessibility checklist
@@ -11,22 +11,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c5db2b89c52f77cb92da06c246e07a215fd2d02d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bbdff40a10e61be6be498af65701a026a53a8cf0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-checklist"></a>Lista de verificação de acessibilidade
 
 
 
-Fornece uma lista de verificação para ajudar você a garantir que seu app da Plataforma Universal do Windows (UWP) seja acessível.
+Fornece uma lista de verificação para ajudar você a garantir que seu aplicativo da Plataforma Universal do Windows (UWP) seja acessível.
 
-Aqui nós fornecemos uma lista de verificação que você pode usar para garantir que seu app é acessível.
+Aqui nós fornecemos uma lista de verificação que você pode usar para garantir que seu aplicativo é acessível.
 
-1.  Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu app.
+1.  Defina o nome acessível (obrigatório) e a descrição (opcional) dos elementos de interface de usuário interativa e do conteúdo em seu aplicativo.
 
     Um nome acessível é uma cadeia de caracteres de texto descritiva e curta que um leitor de usa para anunciar um elemento de interface do usuário. Alguns elementos de interface do usuário como [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) promovem o conteúdo de texto como o nome acessível padrão; consulte [Basic accessibility information](basic-accessibility-information.md#name_from_inner_text).
 
@@ -46,9 +43,9 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
 3.  Observe a interface do usuário para confirmar se o contraste do texto está adequado, se os elementos são renderizados corretamente nos temas de alto contraste e se as cores são usadas corretamente.
 
-    * Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu app seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alteram os valores de dpi como uma opção de acessibilidade; isso está disponível em **Facilidade de Acesso**).
+    * Use as opções de exibição do sistema que ajustam o valor de pontos por polegada (dpi) da exibição, e garanta que a interface de usuário de seu aplicativo seja dimensionada corretamente quando o valor de dpi mudar. (Alguns usuários alteram os valores de dpi como uma opção de acessibilidade; isso está disponível em **Facilidade de Acesso**).
     * Use uma ferramenta de análise de cor para verificar se a taxa de contraste visual do texto é pelo menos 4.5:1.
-    * Mude para um tema de alto contraste e veja se é possível ler e usar a interface do usuário de seu app.
+    * Mude para um tema de alto contraste e veja se é possível ler e usar a interface do usuário de seu aplicativo.
     * A interface do usuário não deve usar as cores como única forma de transmitir informações.
 
     Para obter mais informações, consulte [Temas de alto contraste](high-contrast-themes.md) e [Requisitos de texto acessível](accessible-text-requirements.md).
@@ -59,11 +56,11 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 
     Para obter mais informações, consulte [Testes de acessibilidade](accessibility-testing.md).
 
-5.  Verifique se as configurações do manifesto do app seguem as diretrizes de acessibilidade.
+5.  Verifique se as configurações do manifesto do aplicativo seguem as diretrizes de acessibilidade.
 
-6.  Declare seu app como acessível na Windows Store.
+6.  Declare seu aplicativo como acessível na Windows Store.
 
-    Se você implementou o suporte de acessibilidade de linha base, declarar o seu app como acessível na Windows Store pode ajudá-lo a chegar a mais clientes e obter boas classificações adicionais.
+    Se você implementou o suporte de acessibilidade de linha base, declarar o seu aplicativo como acessível na Windows Store pode ajudá-lo a chegar a mais clientes e obter boas classificações adicionais.
 
     Para obter mais informações, consulte [Accessibility in the Store](accessibility-in-the-store.md).
 
@@ -72,4 +69,3 @@ Aqui nós fornecemos uma lista de verificação que você pode usar para garanti
 * [Acessibilidade](accessibility.md)
 * [Design de acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Práticas que devem ser evitadas](practices-to-avoid.md) 
-

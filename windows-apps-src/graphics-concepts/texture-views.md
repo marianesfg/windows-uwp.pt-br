@@ -2,21 +2,17 @@
 title: "Exibições de textura"
 description: "No Direct3D, os recursos de textura são acessados com uma exibição, que é um mecanismo para interpretação de um recurso na memória pelo hardware."
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
-keywords:
-- "Exibições de textura"
+keywords: "Exibições de textura"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd5f49364f40876747e34aaade3ca119230407aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70b7b5da92f5be038fd1eb16ca27875704410449
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-views"></a>Exibições de textura
 
 
@@ -42,7 +38,6 @@ Crie um objeto de exibição para um destino de renderização chamando CreateRe
  
 
  
-
 
 
 

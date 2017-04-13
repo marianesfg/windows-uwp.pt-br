@@ -14,13 +14,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60eb44ab45873b638181bb4b3194e443d21356bc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b9bc1e68e26830a283ed49b753f63a8f7ae63637
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="styling-controls"></a>Aplicando estilos a controles
 
 
@@ -157,5 +154,4 @@ Você deve usar os estilos provenientes dos recursos XAML padrão do Windows Run
 ## <a name="the-template-property"></a>A propriedade Template
 
 Um setter de estilo pode ser usado para a propriedade [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) de um [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e, na verdade, isso compõe a maior parte de um estilo XAML típico e dos recursos XAML de um aplicativo. Isso é discutido com mais detalhes no tópico [Modelos de controle](control-templates.md).
-
 

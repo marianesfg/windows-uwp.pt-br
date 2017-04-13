@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo da Plataforma Universal do Windows (UWP)."
+Description: "Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP)."
 title: "Ativos de bloco e ícone"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fa195ab35b0d6b1825adb8ce18ae1666d0bf1581
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>Diretrizes para ativos de bloco e ícone
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo da Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados.
+Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados.
 
 ![início e blocos do windows 10](images/assetguidance01.jpg)
 
@@ -387,7 +385,6 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
  
 
  
-
 
 
 

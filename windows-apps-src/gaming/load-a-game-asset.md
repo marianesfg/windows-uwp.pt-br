@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, carregamento de recursos
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 032cde6294093a2c0a1c582312b9353a146e94da
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados. Aqui, vamos examinar uma exibição de alto nível daquilo que é preciso considerar ao carregar esses arquivos para uso no jogo da UWP (Plataforma Universal do Windows).
 
@@ -203,9 +200,9 @@ Claro!, diferentes tipos de recursos e ativos geralmente exigem processamento ad
 
 ### <a name="loading-meshes"></a>Carregando malhas
 
-Malhas são dados de vértice, gerados via procedimentos pelo código no jogo ou exportados de um arquivo de outro app (como 3DStudio MAX ou Alias WaveFront) ou ferramenta. Essas malhas representam os modelos do jogo, desde primitivos simples, como cubos e esferas, até carros e casas e caracteres. Elas geralmente contêm dados de cor e animação, dependendo do formato. Vamos nos concentrar nas malhas que contêm apenas dados de vértice.
+Malhas são dados de vértice, gerados via procedimentos pelo código no jogo ou exportados de um arquivo de outro aplicativo (como 3DStudio MAX ou Alias WaveFront) ou ferramenta. Essas malhas representam os modelos do jogo, desde primitivos simples, como cubos e esferas, até carros e casas e caracteres. Elas geralmente contêm dados de cor e animação, dependendo do formato. Vamos nos concentrar nas malhas que contêm apenas dados de vértice.
 
-Para carregar corretamente uma malha, é preciso conhecer o formato dos dados no arquivo da malha. Nosso tipo simples **BasicReaderWriter**, acima, lê os dados como um fluxo de bytes; ele não sabe que os dados de bytes representam uma malha, muito menos que um formato de malha específico foi exportado por outro app. Você precisa executar a conversão quando traz os dados de malha para a memória.
+Para carregar corretamente uma malha, é preciso conhecer o formato dos dados no arquivo da malha. Nosso tipo simples **BasicReaderWriter**, acima, lê os dados como um fluxo de bytes; ele não sabe que os dados de bytes representam uma malha, muito menos que um formato de malha específico foi exportado por outro aplicativo. Você precisa executar a conversão quando traz os dados de malha para a memória.
 
 (Tente sempre empacotar dados de ativos em um formato o mais próximo possível da representação interna. Fazendo assim, você reduzirá a utilização de recursos e economizará tempo.)
 
@@ -710,7 +707,6 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
  
 
  
-
 
 
 

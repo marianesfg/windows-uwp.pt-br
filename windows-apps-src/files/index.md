@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
-ms.openlocfilehash: 0baa58915bfac91d618a6da84f37174e41f7377f
-ms.lasthandoff: 01/19/2017
-
+ms.openlocfilehash: 77969b423ba955c50937a45955e2e490118b2c13
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
  # <a name="files-folders-and-libraries"></a>Arquivos, pastas e bibliotecas
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) e [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928) para ler e gravar texto e outros formatos de dados em arquivos e gerenciar arquivos e pastas. Nesta seção, você aprenderá também sobre como ler e gravar configurações de app, sobre seletores de arquivos e pastas e sobre os locais de área restrita especiais, como a biblioteca de vídeos/músicas.
+Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) e [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928) para ler e gravar texto e outros formatos de dados em arquivos e gerenciar arquivos e pastas. Nesta seção, você aprenderá também sobre como ler e gravar configurações de aplicativo, sobre seletores de arquivos e pastas e sobre os locais de área restrita especiais, como a biblioteca de vídeos/músicas.
 
 | Tópico | Descrição  |
 |-------|--------------|
@@ -27,13 +25,13 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
 | [Criar, gravar e ler um arquivo](quickstart-reading-and-writing-files.md) | Leia e grave um arquivo usando o objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Obter propriedades do arquivo](quickstart-getting-file-properties.md) | Obtenha as propriedades - nível superior, básicas e estendidas - de um arquivo representado pelo objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Abrir arquivos e pastas com um seletor](quickstart-using-file-and-folder-pickers.md) | Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar o [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) para obter acesso a uma pasta. |
-| [Salvar um arquivo com um seletor](quickstart-save-a-file-with-a-picker.md) | Use o [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local em que desejam que o app salve um app. |
+| [Salvar um arquivo com um seletor](quickstart-save-a-file-with-a-picker.md) | Use o [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local em que desejam que o aplicativo salve um aplicativo. |
 | [Acessando o conteúdo do Grupo Doméstico](quickstart-accessing-homegroup-content.md) | Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo imagens, músicas e vídeos. |
 | [Determinando a disponibilidade de arquivos do Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determine se um arquivo do Microsoft OneDrive está disponível usando a propriedade [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Arquivos e pastas nas bibliotecas Música, Imagens e Vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados. |
-| [Acompanhar arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md) | Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu app. A plataforma gerencia os itens usados recentemente para você classificando-os com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os apps têm seus próprios itens usados recentemente. |
+| [Acompanhar arquivos e pastas usados recentemente](how-to-track-recently-used-files-and-folders.md) | Acompanhe os arquivos que o usuário acessa com frequência adicionando-os à lista de itens usados recentemente de seu aplicativo. A plataforma gerencia os itens usados recentemente para você classificando-os com base na data em que foram acessados pela última vez e removendo o item mais antigo quando o limite de 25 itens é atingido. Todos os aplicativos têm seus próprios itens usados recentemente. |
 | [Acessar o cartão SD](access-the-sd-card.md) | Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, especialmente em dispositivos móveis de baixo custo que têm armazenamento interno limitado. |
-| [Permissões de acesso a arquivo](file-access-permissions.md) | Os apps podem acessar certos locais do sistema de arquivos por padrão. Os apps também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades. |
+| [Permissões de acesso a arquivo](file-access-permissions.md) | Os aplicativos podem acessar certos locais do sistema de arquivos por padrão. Os aplicativos também podem acessar outros locais por meio do seletor de arquivos ou da declaração de funcionalidades. |
 
 ## <a name="related-samples"></a>Exemplos relacionados
 [Exemplo de enumeração de pasta](http://go.microsoft.com/fwlink/p/?linkid=619993)
@@ -44,4 +42,3 @@ Use as APIs nos namespaces [Windows.Storage](https://msdn.microsoft.com/library/
  
 
  
-

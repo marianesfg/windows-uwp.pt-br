@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 420f9b8c3bb6573fbc12bc974ef2382b9ba6ec03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3dca5108988e4a3c0fe3903d26f31733685d66a4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-a-preview-frame"></a>Obter um quadro de visualização
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -65,7 +62,6 @@ Quando terminar de usar o quadro de visualização, certifique-se de chamar seu 
  
 
  
-
 
 
 

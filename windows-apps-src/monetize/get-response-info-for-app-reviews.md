@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: "Use este método na API de análises da Windows Store para determinar se você pode responder a uma análise específica, ou se você pode responder a qualquer revisão para um determinado aplicativo."
-title: "Obter informações de resposta para avaliações de aplicativo"
+title: "Obter informações de resposta para análises"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análises da Windows Store, informações de resposta"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 88e6158bfc5df23e5c2056624e353b38b39c7331
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 46f5cb04fcea1b06205999743205396a875ebbce
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-response-info-for-app-reviews"></a>Obter informações de resposta para análises de aplicativo
+# <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 
 Se você quiser responder de forma programática a uma análise feita pelo cliente ao seu aplicativo, você pode usar este método na API de análises da Windows Store para determinar primeiro se você tem permissão para responder à análise. Você não poderá responder às análises enviadas por clientes que optaram por não receber respostas a análises. Depois de confirmar que você pode responder à análise, você pode usar o método [enviar respostas às análises do aplicativo](submit-responses-to-app-reviews.md) para responder de forma programática à ela.
 
@@ -50,9 +47,9 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
-| Parâmetro        | Tipo   | Descrição                                     |  Necessário  |
+| Parâmetro        | Tipo   | Descrição                                     |  Obrigatório  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | cadeia | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | cadeia | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | reviewId | cadeia | A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de aplicativo](get-app-reviews.md) na API de análise da Windows Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md). <br/>Se você omitir esse parâmetro, o corpo da resposta para esse método indicará se você tem permissões para responder a quaisquer análises para o aplicativo especificado. |  Não  |
 
 <span/>
@@ -95,4 +92,3 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Responder às críticas de clientes usando o painel do Centro de Desenvolvimento](../publish/respond-to-customer-reviews.md)
 * [Responder às críticas usando serviços da Windows Store](respond-to-reviews-using-windows-store-services.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)
-

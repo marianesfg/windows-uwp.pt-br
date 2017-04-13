@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 233044095bc8e994ef1a425ec7069fc7fdc93b86
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b655bea614f1c395959a12e9c3b8a5b1af61d694
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
 
@@ -165,11 +162,11 @@ Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://m
 **Tarefas**
 
 * [Iniciar o aplicativo padrão para um URI](launch-default-app.md)
-* [Manipular a ativação de arquivos](handle-file-activation.md)
+* [Manipular a ativação do arquivo](handle-file-activation.md)
 
 **Diretrizes**
 
-* [Diretrizes de tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Diretrizes para tipos de arquivos e URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 **Referência**
 
@@ -180,4 +177,3 @@ Se decidir que deseja que seus aplicativos usem um único [**Quadro**](https://m
  
 
  
-

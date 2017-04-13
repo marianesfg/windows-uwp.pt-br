@@ -3,7 +3,7 @@ author: mijacobs
 Description: "A navegação em apps da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema."
 title: "Histórico de navegação e navegação retroativa (aplicativos do Windows)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
-isNew: true
+isNew: True
 label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
@@ -13,22 +13,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ea937ba237f4b0c58deff2b8d342337512e0de5f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c2037c4b313b45309162ea4c0874418fe9463d17
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Na Web, os sites individuais fornecem seus próprios sistemas de navegação, como índices analíticos, botões, menus, listas simples de links e outros. A experiência de navegação pode variar muito de um site para outro. No entanto, há uma experiência de navegação consistente: voltar. A maioria dos navegadores oferece um botão Voltar que se comporta da mesma maneira, independentemente do site.
 
-Por motivos semelhantes, a Plataforma Universal do Windows (UWP) oferece um sistema de navegação regressiva consistente a fim de percorrer o histórico de navegação do usuário dentro de um app e, dependendo do dispositivo, de app para app.
+Por motivos semelhantes, a Plataforma Universal do Windows (UWP) oferece um sistema de navegação regressiva consistente a fim de percorrer o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
 
-A interface do usuário do botão Voltar do sistema é otimizada para cada tipo de dispositivo de entrada e fator forma, mas a experiência de navegação é global e consistente entre dispositivos e apps UWP.
+A interface do usuário do botão Voltar do sistema é otimizada para cada tipo de dispositivo de entrada e fator forma, mas a experiência de navegação é global e consistente entre dispositivos e aplicativos UWP.
 
 Estes são os principais fatores forma com o botão Voltar da interface do usuário:
 
@@ -45,7 +42,7 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
         <ul>
 <li>Sempre presente.</li>
 <li>Um botão de hardware ou software na parte inferior do dispositivo.</li>
-<li>Navegação regressiva global no app e entre apps.</li>
+<li>Navegação regressiva global no aplicativo e entre aplicativos.</li>
 </ul>
 </td>
      </tr>
@@ -57,7 +54,7 @@ Estes são os principais fatores forma com o botão Voltar da interface do usuá
 <li>Sempre presente no modo Tablet. Não está disponível no modo de área de trabalho. Em vez disso, o botão Voltar da barra de título pode ser habilitado. Consulte [Computador, laptop, tablet](#PC).
 Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.</li>
 <li> Um botão de software na barra de navegação na parte inferior do dispositivo.</li>
-<li>Navegação regressiva global no app e entre apps.</li></ul>        
+<li>Navegação regressiva global no aplicativo e entre aplicativos.</li></ul>        
         </td>
      </tr>
     <tr>
@@ -67,8 +64,8 @@ Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho 
 <ul>
 <li>Opcional no modo Área de trabalho. Não está disponível no modo Tablet. Consulte [Tablet](#Tablet). Desabilitado por padrão. Deve aceitar para habilitá-lo.
 Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho indo para **Configurações &gt; Sistema &gt; modo Tablet** e definindo **Deixar o Windows mais fácil para o toque ao usar o seu dispositivo como tablet**.</li>
-<li>Um botão de software na barra de título do app.</li>
-<li>Navegação regressiva somente no app. Não dá suporte à navegação de app para app.</li></ul>        
+<li>Um botão de software na barra de título do aplicativo.</li>
+<li>Navegação regressiva dentro do aplicativo apenas. Não dá suporte à navegação de aplicativo para aplicativo.</li></ul>        
         </td>
      </tr>
     <tr>
@@ -78,8 +75,8 @@ Usuários podem alterar a execução entre modo Tablet e modo Área de trabalho 
 <ul>
 <li>Opcional.</li>
 <li>Desabilitado por padrão. Deve aceitar para habilitá-lo.</li>
-<li>Um botão de software na barra de título do app.</li>
-<li>Navegação regressiva dentro do app apenas. Não dá suporte à navegação de app para app.</li></ul>        
+<li>Um botão de software na barra de título do aplicativo.</li>
+<li>Navegação regressiva dentro do aplicativo apenas. Não dá suporte à navegação de aplicativo para aplicativo.</li></ul>        
         </td>
      </tr>     
 <table>
@@ -95,13 +92,13 @@ Estes são alguns tipos de entrada alternativos que não dependem de um botão V
 </table>
  
 
-Quando seu app é executado em um telefone, tablet, ou em um PC ou notebook que tenha o Voltar do sistema habilitado, o sistema notifica o app quando o botão Voltar é pressionado. O usuário espera que o botão Voltar navegue para o local anterior no histórico de navegação do app. Cabe a você decidir quais ações de navegação serão adicionadas ao histórico de navegação e como responder ao pressionar botão Voltar.
+Quando seu aplicativo é executado em um telefone, tablet, ou em um PC ou notebook que tenha o Voltar do sistema habilitado, o sistema notifica o aplicativo quando o botão Voltar é pressionado. O usuário espera que o botão Voltar navegue para o local anterior no histórico de navegação do aplicativo. Cabe a você decidir quais ações de navegação serão adicionadas ao histórico de navegação e como responder ao pressionar botão Voltar.
 
 
 ## <a name="how-to-enable-system-back-navigation-support"></a>Como habilitar o suporte a navegação regressiva do sistema
 
 
-Os apps devem habilitar a navegação regressiva para todos os botões Voltar do sistema de todos os hardwares e softwares. Faça isso registrando um ouvinte para o evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) e definindo um manipulador correspondente.
+Os aplicativos devem habilitar a navegação regressiva para todos os botões Voltar do sistema de todos os hardwares e softwares. Faça isso registrando um ouvinte para o evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) e definindo um manipulador correspondente.
 
 Aqui, nós registramos um ouvinte global para evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) no arquivo de code-behind App.xaml. É possível se registrar para esse evento em cada página se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código no nível da página antes de exibi-la.
 
@@ -117,9 +114,9 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
         this, &amp;App::App_BackRequested);
 ```
 
-Este é o manipulador de eventos [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) correspondente que chama [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) no quadro raiz do app.
+Este é o manipulador de eventos [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) correspondente que chama [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) no quadro raiz do aplicativo.
 
-Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentro do app estiver vazia, o sistema pode navegar para o app anterior na pilha de apps ou para a tela inicial. Não há pilha Voltar de apps no modo Área de Trabalho e o usuário fica no app mesmo quando a pilha Voltar no app é descarregada.
+Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentro do aplicativo estiver vazia, o sistema pode navegar para o aplicativo anterior na pilha de aplicativos ou para a tela inicial. Não há pilha Voltar de aplicativos no modo Área de Trabalho e o usuário fica no aplicativo mesmo quando a pilha Voltar no aplicativo é descarregada.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -163,9 +160,9 @@ Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentr
 
 Os dispositivos que têm suporte ao modo de Área de Trabalho (geralmente PCs e notebooks, mas também alguns tablets) e têm a configuração habilitada (**Configurações &gt; Sistema &gt; Modo tablet**) não oferecem uma barra de navegação global com o botão Voltar do sistema.
 
-No modo de área de trabalho, cada app é executado em uma janela com uma barra de título. Você pode fornecer um botão Voltar alternativo para seu app que é exibido nessa barra de título.
+No modo de área de trabalho, cada aplicativo é executado em uma janela com uma barra de título. Você pode fornecer um botão Voltar alternativo para seu aplicativo que é exibido nessa barra de título.
 
-O botão Voltar da barra de título está disponível somente em apps que sejam executados em dispositivos no modo Área de Trabalho, e oferece suporte apenas a histórico de navegação no app. Ele não oferece suporte a histórico de navegação de app para app.
+O botão Voltar da barra de título está disponível somente em aplicativos que sejam executados em dispositivos no modo Área de Trabalho, e oferece suporte apenas a histórico de navegação no aplicativo. Ele não oferece suporte a histórico de navegação de aplicativo para aplicativo.
 
 **Importante**  O botão Voltar da barra de título não é exibido por padrão. Você deve aceitar.
 
@@ -243,7 +240,7 @@ Para esse exemplo, listamos cada página na pilha Voltar e habilitamos o botão 
 
 ### <a name="guidelines-for-custom-back-navigation-behavior"></a>Diretrizes para o comportamento da navegação regressiva personalizada
 
-Se você optar por fornecer sua própria pilha Voltar de navegação, a experiência deve ser consistente com outros apps. Recomendamos que você siga os seguintes padrões de ações de navegação:
+Se você optar por fornecer sua própria pilha Voltar de navegação, a experiência deve ser consistente com outros aplicativos. Recomendamos que você siga os seguintes padrões de ações de navegação:
 
 <table>
 <thead>
@@ -256,7 +253,7 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página para página, grupos de pares diferentes</strong></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
-<p>Nesta ilustração, o usuário navega do nível 1 do app ao nível 2, cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
+<p>Nesta ilustração, o usuário navega do nível 1 do aplicativo ao nível 2, cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>Na próxima ilustração, o usuário navega entre dois grupos de par no mesmo nível, novamente cruzando grupos de par, de maneira que a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
@@ -277,14 +274,14 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Exibir uma interface do usuário transitória</strong>
-<p>O app exibe uma janela pop-up ou filho, como uma caixa de diálogo, tela inicial, ou teclado virtual, ou o app entra em um modo especial, como o modo de seleção múltipla.</p></td>
+<p>O aplicativo exibe uma janela pop-up ou filho, como uma caixa de diálogo, tela inicial, ou teclado virtual, ou o aplicativo entra em um modo especial, como o modo de seleção múltipla.</p></td>
 <td style="vertical-align:top;"><strong>Não</strong>
 <p>Quando o usuário pressionar o botão Voltar, descarte a interface do usuário transitória (ocultar o teclado virtual, cancelar a caixa de diálogo, etc) e retorne à página que gerou a interface do usuário transitória.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Enumerar os itens</strong>
-<p>O app exibe o conteúdo para um item virtual, como os detalhes de um item selecionado na lista mestre/de detalhes.</p></td>
+<p>O aplicativo exibe o conteúdo para um item virtual, como os detalhes de um item selecionado na lista mestre/de detalhes.</p></td>
 <td style="vertical-align:top;"><strong>Não</strong>
 <p>A enumeração de itens é semelhante à navegação dentro de um grupo de pares. Quando o usuário pressionar Voltar, navegue até a página anterior à página atual com a enumeração de item.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
@@ -295,18 +292,17 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 
 ### <a name="resuming"></a>Retomando
 
-Quando o usuário alternar para outro app e retornar ao seu app, recomendamos retornar para a última página no histórico de navegação.
+Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, recomendamos retornar para a última página no histórico de navegação.
 
 
 ## <a name="get-the-samples"></a>Obter os exemplos
 *   [Exemplo do botão Voltar](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
-    Mostra como configurar um manipulador de eventos para o evento do botão Voltar e como habilitar o botão Voltar da barra de títulos quando o app está em modo de janela de área de trabalho na janela.
+    Mostra como configurar um manipulador de eventos para o evento do botão Voltar e como habilitar o botão Voltar da barra de títulos quando o aplicativo está em modo de janela de área de trabalho na janela.
 
 ## <a name="related-articles"></a>Artigos relacionados
 * [Noções básicas de navegação](navigation-basics.md)
 
  
-
 
 
 

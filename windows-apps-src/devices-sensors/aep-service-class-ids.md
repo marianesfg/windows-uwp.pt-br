@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d2259c82acf700d21f4c3f51a367180bb976f636
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 354ed6c8d2a58bff68c798e66bfde0be03c5b140
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -26,7 +24,7 @@ ms.lasthandoff: 02/07/2017
 
 Os serviços de pontos de extremidade de associação (AEP) fornecem um contrato de programação para serviços aos quais um dispositivo oferece suporte em determinado protocolo. Vários desses serviços estabeleceram identificadores que devem ser usados ao fazer referência a eles. Esses contratos são identificados com a propriedade **System.Devices.AepService.ServiceClassId**. Este tópico lista várias IDs de classe de serviço AEP conhecidas. A ID de classe de serviço AEP também é aplicável a protocolos com IDs de classe personalizada.
 
-Um desenvolvedor de apps deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um app pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
+Um desenvolvedor de aplicativos deve usar filtros de sintaxe de consulta avançada (AQS) com base nas IDs de classe para limitar suas consultas aos serviços AEP que pretendem usar. Isso limitará os resultados da consulta aos serviços relevantes e aumentará consideravelmente o desempenho, a duração da bateria e a qualidade de serviço do dispositivo. Por exemplo, um aplicativo pode usar essas IDs de classe de serviço para usar um dispositivo como uma sincronização de Miracast ou um renderizador de mídia digital DLNA (DMR). Para obter mais informações sobre como dispositivos e serviços interagem uns com os outros, consulte [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Serviços Bluetooth e Bluetooth LE
 
@@ -131,4 +129,3 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
  
 
  
-

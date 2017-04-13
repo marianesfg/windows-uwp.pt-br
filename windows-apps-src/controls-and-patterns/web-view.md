@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9f7f786007a6e251a76fe5c4fcbad5c81b879c53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 03b4832b64b044a4fb990fac3b64f61409f959bb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="web-view"></a>Modo de exibição da Web
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -94,7 +92,7 @@ Para carregar o conteúdo do pacote do aplicativo, use o método **Navigate** co
 webView1.Navigate("ms-appx-web:///help/about.html");
 ```
 
-Você pode carregar o conteúdo local por meio de uma resolução personalizada usando o método [**NavigateToLocalStreamUri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx). Isso possibilita cenários avançados, como download e armazenamento em cache de conteúdo baseado na Web para uso offline ou extração de conteúdo de um arquivo compactado.
+Você pode carregar o conteúdo local por meio de uma resolução personalizada usando o método [**NavigateToLocalStreamUri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx). Isso possibilita cenários avançados, como transferência e armazenamento em cache de conteúdo baseado na Web para uso offline ou extração de conteúdo de um arquivo compactado.
 
 ### <a name="responding-to-navigation-events"></a>Respondendo a eventos de navegação
 
@@ -334,7 +332,6 @@ Um modo de exibição da Web que hospeda o conteúdo fora do thread de interface
  
 
  
-
 
 
 

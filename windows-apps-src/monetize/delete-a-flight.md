@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
 description: "Use este método na API de envio da Windows Store para excluir um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
-title: "Exclua um pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Excluir um pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, excluir versão de pré-lançamento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 781fda9708867dd2f09957e1f06b80e220534e02
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e20661cef4ac7cad17ea5a62d37e9b217061809c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-a-package-flight-using-the-windows-store-submission-api"></a>Exclua um pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="delete-a-package-flight"></a>Excluir um pacote de pré-lançamento
 
 
 
@@ -35,7 +32,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ## <a name="request"></a>Solicitação
 
-Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
@@ -48,7 +45,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -82,12 +79,12 @@ Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição                                                                                                                                                                           |
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
-| 404  | A pacote de pré-lançamento do pacote especificado não pôde ser encontrado.  |
+| 404  | O pacote de pré-lançamento especificado não foi encontrado.  |
 | 409  | A pacote de pré-lançamento do pacote especificada foi encontrada, mas não pôde ser excluída em seu estado atual ou o aplicativo que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
@@ -97,4 +94,3 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Criar um pacote de pré-lançamento](create-a-flight.md)
 * [Obter um pacote de pré-lançamento](get-a-flight.md)
-

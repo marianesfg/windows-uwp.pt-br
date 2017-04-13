@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, controle de mapa, mapas, localização"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ad6267e0294e4a62c1e586c066ce9d0489940d7d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fb1bf78d247ca291ee40405d4143cbb6bc85230f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="map-control"></a>Controle de mapa
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O controle de mapa pode exibir mapas de rodovias, visualizações aéreas, 3D, trajetos, resultados de busca e informações sobre trânsito. Em um mapa, você pode exibir a localização, o trajeto e pontos de interesse para o usuário. Um mapa também pode exibir vistas aéreas em 3D, modos de exibição Streetside, tráfego, trânsito e empresas locais.
@@ -29,9 +26,9 @@ O controle de mapa pode exibir mapas de rodovias, visualizações aéreas, 3D, t
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 
-Use um controle de mapa quando quiser que um mapa dentro de seu app permita aos usuários ver informações geográficas gerais ou específicas do app. Ter um controle de mapa no seu app significa que os usuários não têm que sair do seu app para obter informações.
+Use um controle de mapa quando quiser que um mapa dentro de seu aplicativo permita aos usuários ver informações geográficas gerais ou específicas do aplicativo. Ter um controle de mapa no seu aplicativo significa que os usuários não têm que sair do seu aplicativo para obter informações.
 
-**Observação**  Se você não se importar que os usuários saiam do seu app para obter essas informações, considere usar o app Mapas do Windows para fornecer essas informações. Seu app pode iniciar o app Mapas do Windows para exibir mapas específicos, trajetos e resultados de pesquisa. Para obter mais informações, consulte [Iniciar o app Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+**Observação**  Se você não se importar que os usuários saiam do seu aplicativo para obter essas informações, considere usar o aplicativo Mapas do Windows para fornecer essas informações. Seu aplicativo pode iniciar o aplicativo Mapas do Windows para exibir mapas específicos, trajetos e resultados de pesquisa. Para obter mais informações, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ## <a name="examples"></a>Exemplos
 
@@ -48,7 +45,7 @@ Este exemplo mostra um mapa com uma vista aérea 3D:
 
  
 
-Este exemplo mostra um app com uma vista aérea 3D e um modo de exibição do Streetside:
+Este exemplo mostra um aplicativo com uma vista aérea 3D e um modo de exibição do Streetside:
 
 ![exemplo de vista de mapa em 3D com modo de exibição Streetside](./images/win10fa/controls-maps-3dstreetview.png)
 
@@ -70,8 +67,7 @@ Este exemplo mostra um app com uma vista aérea 3D e um modo de exibição do St
 * [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [//Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Iniciar o app Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341)
+* [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341)
  
 
  
-

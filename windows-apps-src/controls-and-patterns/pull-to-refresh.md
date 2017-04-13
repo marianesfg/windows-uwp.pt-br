@@ -11,17 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e062ed2910e20ba187b8a0726a0061f0dd4b07f8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="pull-to-refresh"></a>Puxar para atualizar
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. O padrão puxar para atualizar é amplamente usado em apps móveis, mas é útil em qualquer dispositivo com tela touch. Você pode manipular [eventos de manipulação](../input-and-devices/touch-interactions.md#manipulation-events) implementar o padrão puxar para atualizar em seu app.
+O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. O padrão puxar para atualizar é amplamente usado em aplicativos móveis, mas é útil em qualquer dispositivo com tela touch. Você pode manipular [eventos de manipulação](../input-and-devices/touch-interactions.md#manipulation-events) implementar o padrão puxar para atualizar em seu aplicativo.
 
 O [exemplo de puxar para atualizar](http://go.microsoft.com/fwlink/p/?LinkId=620635) mostra como estender um controle [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para dar suporte a esse padrão. Neste artigo, usamos este exemplo para explicar os pontos-chave da implementação do padrão puxar para atualizar.
 
@@ -29,23 +27,23 @@ O [exemplo de puxar para atualizar](http://go.microsoft.com/fwlink/p/?LinkId=620
 
 ## <a name="is-this-the-right-pattern"></a>Este é o padrão certo?
 
-Use o padrão puxar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente, e é provável que seu app seja executado em dispositivos móveis touch-first.
+Use o padrão puxar para atualizar quando você tiver uma lista ou uma grade de dados que o usuário talvez queira atualizar regularmente, e é provável que seu aplicativo seja executado em dispositivos móveis touch-first.
 
 ## <a name="implement-pull-to-refresh"></a>Implementar o padrão puxar para atualizar
 
 Para implementar o padrão puxar para atualizar, você precisa manipular eventos de manipulação para detectar quando um usuário extraiu a lista, fornecer feedback visual e atualizar os dados. Aqui, analisaremos como isso é feito [exemplo do padrão puxar para atualizar](http://go.microsoft.com/fwlink/p/?LinkId=620635). Não mostramos o código aqui, portanto, você deve baixar o exemplo ou exibir o código em GitHub.
 
-O exemplo de puxar para atualizar cria um controle personalizado chamado `RefreshableListView` que estende o controle **ListView**. Esse controle adiciona um indicador de atualização para fornecer feedback visual e manipula os eventos de manipulação no visualizador de rolagem interno da exibição de lista. Ele também adiciona dois eventos para notificar você quando a lista é extraída e quando os dados devem ser atualizados. RefreshableListView fornece apenas a notificação de que os dados devem ser atualizados. Você precisa manipular o evento em seu app para atualizar os dados, e esse código será diferente para cada app.
+O exemplo de puxar para atualizar cria um controle personalizado chamado `RefreshableListView` que estende o controle **ListView**. Esse controle adiciona um indicador de atualização para fornecer feedback visual e manipula os eventos de manipulação no visualizador de rolagem interno da exibição de lista. Ele também adiciona dois eventos para notificar você quando a lista é extraída e quando os dados devem ser atualizados. RefreshableListView fornece apenas a notificação de que os dados devem ser atualizados. Você precisa manipular o evento em seu aplicativo para atualizar os dados, e esse código será diferente para cada aplicativo.
 
 RefreshableListView fornece um modo de "atualização automática" que determina quando a atualização é solicitada e quando o indicador de atualização sai da exibição. A atualização automática pode estar ativada ou desativada.
 - Desativada: uma atualização só será solicitada se a lista for liberada ao ultrapassar `PullThreshold`. O indicador sai da exibição quando o usuário libera o controle de rolagem. O indicador de barra de status será mostrado se ele estiver disponível (no telefone).
-- Ativada: uma atualização é solicitada assim que o `PullThreshold` é excedido, esteja ou não liberado. O indicador permanece na exibição até os novos dados serem recuperados e, em seguida, sai da exibição. Um objeto **Deferral** é usado para notificar o app quando a busca dos dados é concluída.
+- Ativada: uma atualização é solicitada assim que o `PullThreshold` é excedido, esteja ou não liberado. O indicador permanece na exibição até os novos dados serem recuperados e, em seguida, sai da exibição. Um objeto **Deferral** é usado para notificar o aplicativo quando a busca dos dados é concluída.
 
 > **Observação**&nbsp;&nbsp;O código no exemplo também é aplicável a um [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar um GridView, gere a classe personalizada de GridView em vez de ListView e modifique o modelo padrão de GridView.
 
 ## <a name="add-a-refresh-indicator"></a>Adicionar um indicador de atualização
 
-É importante fornecer feedback visual ao usuário para que ele saiba que seu app dá suporte ao padrão puxar para atualizar. RefreshableListView tem uma propriedade `RefreshIndicatorContent` que permite definir o indicador visual no XAML. Ele também inclui um indicador de texto padrão que será usado se você não definir o `RefreshIndicatorContent`.
+É importante fornecer feedback visual ao usuário para que ele saiba que seu aplicativo dá suporte ao padrão puxar para atualizar. RefreshableListView tem uma propriedade `RefreshIndicatorContent` que permite definir o indicador visual no XAML. Ele também inclui um indicador de texto padrão que será usado se você não definir o `RefreshIndicatorContent`.
 
 Veja a seguir as diretrizes recomendadas para o indicador de atualização.
 
@@ -125,7 +123,7 @@ Você pode definir o conteúdo do indicador de atualização no XAML para a exib
 
 **Animar o controle giratório**
 
-Quando a lista é extraída, ocorre o evento `PullProgressChanged` do RefreshableListView. Você pode manipular esse evento em seu app para controlar o indicador de atualização. No exemplo, este storyboard é iniciado para animar o [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) do indicador e girar o indicador de atualização. 
+Quando a lista é extraída, ocorre o evento `PullProgressChanged` do RefreshableListView. Você pode manipular esse evento em seu aplicativo para controlar o indicador de atualização. No exemplo, este storyboard é iniciado para animar o [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) do indicador e girar o indicador de atualização. 
 
 **XAML**
 ```xaml
@@ -202,13 +200,13 @@ A ação de puxar para atualizar só ocorre quando a lista é extraída por uma 
 
 ## <a name="add-pull-and-refresh-events"></a>Adicionar eventos de puxar e atualizar
 
-"RefreshableListView" adiciona dois eventos que você pode manipular em seu app para atualizar os dados e gerenciar o indicador de atualização.
+"RefreshableListView" adiciona dois eventos que você pode manipular em seu aplicativo para atualizar os dados e gerenciar o indicador de atualização.
 
 Para saber mais sobre eventos, consulte [Visão geral de eventos e eventos roteados](https://msdn.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 **RefreshRequested**
 
-O evento "RefreshRequested" avisa o app que o usuário efetuou pull na lista para atualizá-la. Você manipula esse evento para buscar novos dados e atualizar sua lista.
+O evento "RefreshRequested" avisa o aplicativo que o usuário efetuou pull na lista para atualizá-la. Você manipula esse evento para buscar novos dados e atualizar sua lista.
 
 Veja a seguir o manipulador de eventos do exemplo. O importante a observar é que ele verifica a propriedade `AutoRefresh` da exibição de lista e se for **true** obterá um objeto Deferral. Com um objeto Deferral, o indicador de atualização não é interrompido e não fica oculto até a atualização ser concluída.
 
@@ -230,7 +228,7 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 **PullProgressChanged**
 
-No exemplo, o conteúdo para o indicador de atualização é fornecido e controlado pelo app. O evento "PullProgressChanged" avisa seu app quando o usuário está efetuando pull na lista para que você possa iniciar, parar e redefinir o indicador de atualização. 
+No exemplo, o conteúdo para o indicador de atualização é fornecido e controlado pelo aplicativo. O evento "PullProgressChanged" avisa seu aplicativo quando o usuário está efetuando pull na lista para que você possa iniciar, parar e redefinir o indicador de atualização. 
 
 ## <a name="composition-animations"></a>Animações de composição
 

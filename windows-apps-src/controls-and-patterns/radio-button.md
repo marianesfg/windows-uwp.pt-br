@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aa53060a281a452d47461602866d1b67edc161aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="radio-buttons"></a>Botões de opção
 
@@ -43,7 +41,7 @@ Use botões de opção para apresentar aos usuários duas ou mais opções mutua
 
 ![Um grupo de botões de opção](images/radiobutton_basic.png)
 
-Os botões acrescentam claridade e peso a opções importantes em seu app. Use botões de opção quando as opções sendo apresentadas forem importantes o bastante para comandar mais espaço na tela e em que a claridade da escolha demande opções muito explícitas.
+Os botões acrescentam claridade e peso a opções importantes em seu aplicativo. Use botões de opção quando as opções sendo apresentadas forem importantes o bastante para comandar mais espaço na tela e em que a claridade da escolha demande opções muito explícitas.
 
 Os botões de opção enfatizam todas as opções da mesma forma e isso pode chamar mais atenção para as opções que o necessário. Considere usar outros controles, a menos que as opções mereçam atenção adicional do usuário. Por exemplo, se a opção padrão for recomendada para a maioria dos usuários na maioria das situações, use uma [lista suspensa](lists.md).
 
@@ -59,7 +57,7 @@ Não use botões de opção quando as opções forem números que possuem etapas
 
 Se houver mais que oito opções, use uma [lista suspensa](lists.md), uma [caixa de listagem](lists.md) de seleção única ou uma [caixa de listagem](lists.md) em vez disso.
 
-Se as opções disponíveis estiverem baseadas no contexto atual do app ou, de outra forma, variar dinamicamente use uma [caixa de listagem](lists.md) de seleção única em vez disso.
+Se as opções disponíveis estiverem baseadas no contexto atual do aplicativo ou, de outra forma, variar dinamicamente use uma [caixa de listagem](lists.md) de seleção única em vez disso.
 
 ## <a name="example"></a>Exemplo
 Botões de opção nas configurações do navegador Microsoft Edge.
@@ -173,7 +171,7 @@ Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um bot�
 -   Use fonte padrão, a menos que as diretrizes da marca o orientem de outra forma.
 -   Inclua o botão de opção em um elemento de rótulo para que o toque no rótulo selecione o botão de opção.
 -   Coloque o texto do rótulo após o botão de opção, não antes ou acima dele.
--   Considere personalizar seus botões de opção. Por padrão, um botão de opção consiste em dois círculos concêntricos, o de dentro preenchido (e mostrado quando o botão de opção for assinalado) e o de fora com um traço, e com algum conteúdo em texto. Incentivamos a criatividade. Os usuários se sentem confortáveis ao interagir diretamente com o conteúdo de um app. Portanto, você pode escolher mostrar o conteúdo real em aberto, seja apresentado em gráficos ou com botões de alternância de texto sutis.
+-   Considere personalizar seus botões de opção. Por padrão, um botão de opção consiste em dois círculos concêntricos, o de dentro preenchido (e mostrado quando o botão de opção for assinalado) e o de fora com um traço, e com algum conteúdo em texto. Incentivamos a criatividade. Os usuários se sentem confortáveis ao interagir diretamente com o conteúdo de um aplicativo. Portanto, você pode escolher mostrar o conteúdo real em aberto, seja apresentado em gráficos ou com botões de alternância de texto sutis.
 -   Não coloque mais que oito opções em um grupo de botão de opção. Quando for necessário apresentar mais opções, use uma [lista suspensa](lists.md), [caixa de listagem](lists.md)ou um [modo de exibição de lista](lists.md) em vez disso.
 -   Não coloque dois grupos de botão de opção próximos um do outro. Quando dois grupos de botão de opção estão próximos um do outro é difícil determinar quais botões pertencem a qual grupo. Use rótulos de grupos para separá-los.
 
@@ -196,4 +194,3 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 **Para desenvolvedores (XAML)**
 - [**Classe Windows.UI.Xaml.Controls RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
-

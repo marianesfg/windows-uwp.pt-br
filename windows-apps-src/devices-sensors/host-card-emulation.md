@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee62e0d1ddd41ce1cce61bc854168f0cac6ad038
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc8064cd5446ca4c481c60b08cdf626ec85be646
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Criar um aplicativo de cartão inteligente NFC
 
@@ -252,13 +250,13 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 Você pode incluir até 9 AIDs (de 5 a 16 bytes cada) por grupo de AIDs.
 
-Use o método [**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) para registrar seu grupo de AIDs no sistema, o que retornará um objeto [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration). Por padrão, a propriedade [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) do objeto de registro é definida como **Disabled**. Isso significa que, embora seus AIDs estejam registrados no sistema, eles não estão habilitados ainda e não receberão tráfego.
+Use o método [**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) para registrar seu grupo de AIDs no sistema, o que retornará um objeto [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration). Por padrão, a propriedade [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) do objeto de registro é definida como **Disabled**. Isso significa que, embora seus AIDs estejam registrados no sistema, eles não estão habilitados ainda e não receberão tráfego.
 
 ```csharp
 reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
 ```
 
-Você pode habilitar seus cartões registrados (grupos de AIDs) usando o método [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) da classe [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) conforme mostrado a seguir. Como apenas um cartão de pagamento de cada vez pode ser habilitado no sistema, definir o [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) de um grupo de AIDs de pagamento como **Enabled** é o mesmo que definir o cartão de pagamento padrão. O usuário será solicitado a autorizar esse cartão como um cartão de pagamento padrão, independentemente do fato de haver um cartão de pagamento padrão já selecionado ou não. Esta instrução não será true se o aplicativo já for o aplicativo de pagamento padrão, e estará simplesmente alternando entre seus próprios grupos de AIDs. Você pode registrar até 10 grupos de AIDs por aplicativo.
+Você pode habilitar seus cartões registrados (grupos de AIDs) usando o método [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) da classe [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) conforme mostrado a seguir. Como apenas um cartão de pagamento de cada vez pode ser habilitado no sistema, definir o [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de um grupo de AIDs de pagamento como **Enabled** é o mesmo que definir o cartão de pagamento padrão. O usuário será solicitado a autorizar esse cartão como um cartão de pagamento padrão, independentemente do fato de haver um cartão de pagamento padrão já selecionado ou não. Esta instrução não será true se o aplicativo já for o aplicativo de pagamento padrão, e estará simplesmente alternando entre seus próprios grupos de AIDs. Você pode registrar até 10 grupos de AIDs por aplicativo.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.Enabled);
@@ -290,7 +288,7 @@ bgTask = taskBuilder.Register();
 
 ## <a name="foreground-override-behavior"></a>Comportamento de substituição em primeiro plano
 
-Você pode alterar o [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) de qualquer um dos seus registros de grupo de AIDs para **ForegroundOverride** enquanto seu aplicativo estiver em primeiro plano sem avisar o usuário. Quando o usuário toca no dispositivo em um terminal enquanto seu aplicativo está em primeiro plano, o tráfego é roteado para o aplicativo, mesmo que nenhum de seus cartões de pagamento tenha sido escolhido pelo usuário como o cartão de pagamento padrão. Quando você altera a política de ativação de um cartão para **ForegroundOverride**, essa alteração é temporária somente até o aplicativo sair do primeiro plano, e não mudará o cartão de pagamento padrão atual definido pelo usuário. Você pode alterar o **ActivationPolicy** de seus cartões de pagamento ou de não pagamento de seu aplicativo em primeiro plano conforme explicado a seguir. Observe que o método [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) só pode ser chamado de um aplicativo em primeiro plano, e não de uma tarefa em segundo plano.
+Você pode alterar o [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de qualquer um dos seus registros de grupo de AIDs para **ForegroundOverride** enquanto seu aplicativo estiver em primeiro plano sem avisar o usuário. Quando o usuário toca no dispositivo em um terminal enquanto seu aplicativo está em primeiro plano, o tráfego é roteado para o aplicativo, mesmo que nenhum de seus cartões de pagamento tenha sido escolhido pelo usuário como o cartão de pagamento padrão. Quando você altera a política de ativação de um cartão para **ForegroundOverride**, essa alteração é temporária somente até o aplicativo sair do primeiro plano, e não mudará o cartão de pagamento padrão atual definido pelo usuário. Você pode alterar o **ActivationPolicy** de seus cartões de pagamento ou de não pagamento de seu aplicativo em primeiro plano conforme explicado a seguir. Observe que o método [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) só pode ser chamado de um aplicativo em primeiro plano, e não de uma tarefa em segundo plano.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);
@@ -387,4 +385,3 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 ** Importante **  
 O suporte à intercepção de SMS binário herdado no Windows Phone 8.1 foi removido e substituído pelo novo suporte a SMS mais abrangente do Windows 10 Mobile, mas todos os aplicativos Windows Phone 8.1 herdados que dependem disso devem ser atualizados para usar as novas APIs de SMS do Windows 10 Mobile.
-

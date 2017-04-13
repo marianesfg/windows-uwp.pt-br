@@ -2,21 +2,17 @@
 title: "Estágio de Saída de Fluxo(SO)"
 description: "O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior para um ou mais buffers na memória. Os dados transmitidos para a memória podem ser reenviados para o pipeline como dados de entrada ou lidos pela CPU."
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
-keywords:
-- "Estágio de Saída de Fluxo(SO)"
+keywords: "Estágio de Saída de Fluxo(SO)"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 52a5e886cb2e5ddd8f9bda459f7bd658fb3f7a1b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 07bc125426854bdd82c7cebaed6f3585197353db
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stream-output-so-stage"></a>Estágio de Saída de Fluxo(SO)
 
 
@@ -61,7 +57,6 @@ O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
  
 
  
-
 
 
 

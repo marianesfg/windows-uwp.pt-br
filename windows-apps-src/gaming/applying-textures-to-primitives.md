@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Aplicar texturas a primitivas
-description: Aqui, carregamos dados de textura bruta e os aplicamos em uma primitiva 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
+description: Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, texturas, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas a primitivas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Aqui, carregamos dados de textura bruta e os aplicamos em uma primitiva 3D usando o cubo que criamos em [Usando efeitos e profundidade em primitivas](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
+Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
 
 **Objetivo:** aplicar texturas a primitivas.
 
@@ -72,9 +69,9 @@ private:
 
 ### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Criando sombreadores de vértice e pixel com elementos de superfície e textura
 
-Aqui, criamos sombreadores de vértice e pixel mais complexos do que no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). O sombreador de vértice desse app transforma cada posição de vértice em espaço de projeção e as coordenadas de textura de vértice para o sombreador de pixel.
+Aqui, criamos sombreadores de vértice e pixel mais complexos do que no tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). O sombreador de vértice desse aplicativo transforma cada posição de vértice em espaço de projeção e as coordenadas de textura de vértice para o sombreador de pixel.
 
-A matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) do app que descrevem o layout do código do sombreador de vértice tem três elementos: um define a posição de vértice, outro define o vetor normal de superfície (a direção para que a superfície fica normalmente voltada) e o terceiro elemento define as coordenadas de textura.
+A matriz de estruturas [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) do aplicativo que descrevem o layout do código do sombreador de vértice tem três elementos: um define a posição de vértice, outro define o vetor normal de superfície (a direção para que a superfície fica normalmente voltada) e o terceiro elemento define as coordenadas de textura.
 
 Criamos índice de vértice e buffers constantes que definem um cubo texturizado em órbita.
 
@@ -522,12 +519,11 @@ Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://ms
 ## <a name="summary"></a>Resumo
 
 
-Carregamos dados de textura bruta e os aplicamos a uma primitiva 3D.
+Carregamos dados de textura bruta e os aplicamos a um primitivo 3D.
 
  
 
  
-
 
 
 

@@ -11,20 +11,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e615e989a25520cff86c53e383d0cc5e87956d1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8c50d0eb51240f458fcd1510abb02ce471aa1152
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Armazenar e recuperar configurações e outros dados de aplicativo
 
 
 
 
 
-*Dados de aplicativo* são dados mutáveis específicos de um determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
+*Dados de aplicativo* são dados mutáveis específicos de determinado aplicativo. Eles incluem estado de tempo de execução, preferências de usuário e outras configurações. Dados de aplicativo são diferentes de *dados do usuário*, dados que o usuário cria e gerencia ao usar um aplicativo. Os dados do usuário incluem arquivos de documentos ou mídia, emails, transcrições de comunicações ou registros de bancos de dados com conteúdo criado pelo usuário. Os dados do usuário podem ser úteis ou significativos para mais de um aplicativo. Geralmente, trata-se de dados que o usuário quer manipular ou transmitir como uma entidade independente do próprio aplicativo, como um documento.
 
 **Observação importante sobre os dados de aplicativo: **o tempo de vida dos dados de aplicativo está vinculado ao tempo de vida do aplicativo. Se o aplicativo for removido, como consequência todos os dados do aplicativo serão perdidos. Não use dados do aplicativo para armazenar dados do usuário ou qualquer coisa que os usuários possam perceber como valioso e insubstituível. Recomendamos que as bibliotecas do usuário e o Microsoft OneDrive sejam usados para armazenar esse tipo de informações. Os dados do Aplicativo são ideais para armazenar as preferências, as configurações e os favoritos do usuário específicos ao aplicativo.
 
@@ -459,6 +456,5 @@ Como opção, você pode converter os dados do aplicativo para seu aplicativo. I
 * [**Windows.Storage.ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
-
 
 

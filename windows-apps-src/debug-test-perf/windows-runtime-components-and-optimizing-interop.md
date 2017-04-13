@@ -9,13 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 722a14b7fbad2a8914888a6d6a135e88d1aa8095
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a4296c7ba149abce2173e816aa99406a44f75618
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="universal-windows-platform-components-and-optimizing-interop"></a>Componentes da Plataforma Universal do Windows e otimização de interoperabilidade
+# <a name="uwp-components-and-optimizing-interop"></a>Componentes UWP e otimização de interoperabilidade
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -93,5 +91,4 @@ Se você criou um componente UWP para usar em aplicativos escritos em C++ ou em 
 Todas as sugestões com vistas ao bom desempenho nos aplicativos são extensivas aos componentes. Avalie seu componente para observar quais APIs têm altos padrões de tráfego e, nessas áreas, considere o fornecimento de APIs que permitam aos seus usuários trabalhar com poucas chamadas. Envidamos esforços significativos durante o desenvolvimento da UWP para permitir que os aplicativos a utilizem sem precisarem transpor o limite da interoperabilidade com frequência.
 
  
-
 

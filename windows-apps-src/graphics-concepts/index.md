@@ -2,21 +2,17 @@
 title: "Guia de aprendizagem de Gráficos do Direct3D"
 description: "Descreve os conceitos de gráficos sobre os quais o Microsoft Direct3D foi construído."
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
-keywords:
-- "Guia de aprendizagem de Gráficos do Direct3D"
+keywords: "Guia de aprendizagem de Gráficos do Direct3D"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e62f9cfde35580dd384ef69fe6e5658d927ce3d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9d46a13844fafc5f517fce16c39e33257ff8e9a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="direct3d-graphics-learning-guide"></a>Guia de aprendizagem de Gráficos do Direct3D
 
 
@@ -43,7 +39,7 @@ Descreve os conceitos de gráficos sobre os quais o Microsoft Direct3D foi const
 </tr>
 <tr class="even">
 <td align="left"><p>[Buffers de vértice e índice](vertex-and-index-buffers.md)</p></td>
-<td align="left"><p><em>Buffers de vértice</em> são buffers de memória que contêm dados de vértice; vértices em um buffer de vértice são processados para executar a transformação, iluminação e corte. <em>Buffers de índice</em> são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice, usados para renderizar primitivas.</p></td>
+<td align="left"><p>Os <em>buffers de vértice</em> são buffers de memória que contêm dados de vértice; vértices em um buffer de vértice são processados para executar a transformação, iluminação e corte. <em>Buffers de índice</em> são buffers de memória que contêm dados de índice, que são deslocamentos de inteiro em buffers de vértice usados para renderizar primitivas.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Dispositivos](devices.md)</p></td>
@@ -79,7 +75,7 @@ Descreve os conceitos de gráficos sobre os quais o Microsoft Direct3D foi const
 </tr>
 <tr class="odd">
 <td align="left"><p>[Recursos de streaming](streaming-resources.md)</p></td>
-<td align="left"><p><em>Recursos de streaming</em> são grandes recursos lógicos que usam pequenas quantidades de memória física. Em vez de transferir um recurso grande inteiro, pequenas partes do recurso são transmitidas conforme necessário. Recursos de streaming eram anteriormente chamados de <em>recursos em bloco</em>.</p></td>
+<td align="left"><p>Os <em>recursos de streaming</em> são enormes recursos lógicos que utilizam pequenas quantias de memória física. Em vez de transferir um recurso grande inteiro, pequenas partes do recurso são transmitidas conforme necessário. Recursos de streaming eram anteriormente chamados de <em>recursos em bloco</em>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Apêndices](appendix.md)</p></td>
@@ -93,4 +89,3 @@ Descreve os conceitos de gráficos sobre os quais o Microsoft Direct3D foi const
  
 
  
-

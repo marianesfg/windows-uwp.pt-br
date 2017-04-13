@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5e03fbb7971e5526d542d409bccb1c7fee6fd3ee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -93,7 +90,7 @@ Siga essas diretrizes ao desenvolver tarefas em segundo plano para aplicativos q
 -   Inclua uma tarefa em segundo plano registrada com [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) ou [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) e a declare no manifesto do aplicativo. Verifique se o ponto de entrada e os tipos de gatilho estão corretos. Isso é necessário para certificação e permite que o usuário coloque o aplicativo na tela de bloqueio.
 
 **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -115,4 +112,3 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos 
  
 
  
-

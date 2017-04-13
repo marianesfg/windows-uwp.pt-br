@@ -2,21 +2,17 @@
 title: Filtragem de textura
 description: "A filtragem de textura produz uma cor de cada pixel na imagem renderizada em 2D da primitiva quando uma primitiva é renderizada por meio do mapeamento de uma primitiva 3D em uma tela 2D."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords:
-- Filtragem de textura
+keywords: Filtragem de textura
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 97b2dc04c518bfec4b09a50707c08767932f05c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 43dccdc8a8834830b6c15fcfc1cd56216e27ee90
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering"></a>Filtragem de textura
 
 
@@ -56,11 +52,11 @@ O Direct3D dá suporte às abordagens de filtragem de textura a seguir.
 </tr>
 <tr class="even">
 <td align="left"><p>[Filtragem bilinear de textura](bilinear-texture-filtering.md)</p></td>
-<td align="left"><p><em>A filtragem bilinear</em> calcula a média ponderada dos 4 texels mais próximos do ponto de amostragem. Essa abordagem de filtragem é mais precisa e comum do que a filtragem do ponto mais próximo. Essa abordagem é eficiente porque é implementada em hardware de gráficos modernos.</p></td>
+<td align="left"><p>A <em>filtragem bilinear</em> calcula a média ponderada dos 4 texels mais próximos do ponto de amostragem. Essa abordagem de filtragem é mais precisa e comum que a filtragem por ponto mais próximo. Essa abordagem é eficiente porque é implementada em hardware de gráficos modernos.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Filtragem anisotrópica de textura](anisotropic-texture-filtering.md)</p></td>
-<td align="left"><p><em>Anisotropia</em> é a distorção visível nos texels de um objeto 3D cuja superfície é orientada com um ângulo em relação ao plano da tela. Quando um pixel de uma primitiva anisotrópica é mapeado para texels, sua forma é distorcida.</p></td>
+<td align="left"><p><em>Anisotropia</em> é visível no texels a distorção de um objeto 3D cujo superfície é orientada com um ângulo em relação ao plano da tela. Quando um pixel de uma primitiva anisotrópica é mapeado para texels, sua forma é distorcida.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Filtragem de textura com mipmaps](texture-filtering-with-mipmaps.md)</p></td>
@@ -79,7 +75,6 @@ O Direct3D dá suporte às abordagens de filtragem de textura a seguir.
  
 
  
-
 
 
 

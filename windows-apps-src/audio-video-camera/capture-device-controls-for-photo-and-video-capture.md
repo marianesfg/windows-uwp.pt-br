@@ -9,26 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: be3c421c2b8d7b4bb71ddaa984ff925f0563f1f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuais da câmera para a captura de fotos e vídeos
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar controles de dispositivo manuais para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem óptica e zoom suave.
 
-Os controles discutidos neste artigo são todos adicionados ao seu app usando o mesmo padrão. Primeiro, verifique se o controle tem suporte no dispositivo atual em que seu app está sendo executado. Se o controle tiver suporte, defina o modo desejado para o controle. Normalmente, se um determinado controle não tiver suporte no dispositivo atual, você deverá desabilitar ou ocultar o elemento da interface do usuário que permite ao usuário habilitar o recurso.
+Os controles discutidos neste artigo são todos adicionados ao seu aplicativo usando o mesmo padrão. Primeiro, verifique se o controle tem suporte no dispositivo atual em que seu aplicativo está sendo executado. Se o controle tiver suporte, defina o modo desejado para o controle. Normalmente, se um determinado controle não tiver suporte no dispositivo atual, você deverá desabilitar ou ocultar o elemento da interface do usuário que permite ao usuário habilitar o recurso.
 
-O código neste artigo foi adaptado da [amostra do SDK de Controles Manuais de Câmera](http://go.microsoft.com/fwlink/p/?LinkId=619479). Você pode baixar a amostra para ver o código usado no contexto ou usar a amostra como ponto de partida para seu próprio app.
+O código neste artigo foi adaptado da [amostra do SDK de Controles Manuais de Câmera](https://go.microsoft.com/fwlink/?linkid=845228). Você pode baixar a amostra para ver o código usado no contexto ou usar a amostra como ponto de partida para seu próprio aplicativo.
 
 > [!NOTE]
-> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu app já tenha uma instância de MediaCapture inicializada corretamente.
+> Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. Recomendamos que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
 Todas as APIs de controle de dispositivo discutidas neste artigo são membros do namespace [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902).
 
@@ -110,7 +107,7 @@ Por fim, no manipulador da caixa de seleção da lanterna de vídeo, defina a pr
 
 ## <a name="focus"></a>Foco
 
-Três métodos diferentes comumente usados para ajustar o foco da câmera são aceitos pelo objeto [**FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn297788): foco automático contínuo, tocar para focalizar e foco manual. Um app de câmera pode oferecer suporte a todos esses três métodos, mas para facilitar a leitura, este artigo descreve cada técnica separadamente. Esta seção também explica como habilitar a luz auxiliar de foco.
+Três métodos diferentes comumente usados para ajustar o foco da câmera são aceitos pelo objeto [**FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn297788): foco automático contínuo, tocar para focalizar e foco manual. Um aplicativo de câmera pode oferecer suporte a todos esses três métodos, mas para facilitar a leitura, este artigo descreve cada técnica separadamente. Esta seção também explica como habilitar a luz auxiliar de foco.
 
 ### <a name="continuous-autofocus"></a>Foco automático contínuo
 
@@ -122,9 +119,9 @@ Confirme se o dispositivo de captura atual dá suporte ao **FocusControl** verif
 
 [!code-cs[CAF](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCAF)]
 
-No manipulador de eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) do botão de opção de foco automático contínuo, use a propriedade [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091) para obter uma instância do controle. Chame [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) para desbloquear o controle caso seu app tenha chamado [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) anteriormente para habilitar um dos modos de foco.
+No manipulador de eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) do botão de opção de foco automático contínuo, use a propriedade [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091) para obter uma instância do controle. Chame [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) para desbloquear o controle caso seu aplicativo tenha chamado [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) anteriormente para habilitar um dos modos de foco.
 
-Crie um novo objeto [**FocusSettings**](https://msdn.microsoft.com/library/windows/apps/dn608085) e defina a propriedade [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn608090) como **Continuous**. Defina a propriedade [**AutoFocusRange**](https://msdn.microsoft.com/library/windows/apps/dn608086) como um valor apropriado para o seu cenário de app ou como um valor selecionado pelo usuário na sua interface do usuário. Transmita o objeto **FocusSettings** para o método [**Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067) e depois chame [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794) para iniciar um foco automático contínuo.
+Crie um novo objeto [**FocusSettings**](https://msdn.microsoft.com/library/windows/apps/dn608085) e defina a propriedade [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn608090) como **Continuous**. Defina a propriedade [**AutoFocusRange**](https://msdn.microsoft.com/library/windows/apps/dn608086) como um valor apropriado para o seu cenário de aplicativo ou como um valor selecionado pelo usuário na sua interface do usuário. Transmita o objeto **FocusSettings** para o método [**Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067) e depois chame [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794) para iniciar um foco automático contínuo.
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
@@ -143,7 +140,7 @@ Confirme se o dispositivo de captura atual dá suporte ao **FocusControl** verif
 
 [!code-cs[TapFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocus)]
 
-No manipulador de eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) do botão de opção de tocar para focalizar, use a propriedade [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091) para obter uma instância do controle. Chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) para bloquear o controle caso seu app tenha sido chamado anteriormente [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) para habilitar o foco automático contínuo e aguarde até que o usuário toque na tela para alterar o foco.
+No manipulador de eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) do botão de opção de tocar para focalizar, use a propriedade [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091) para obter uma instância do controle. Chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) para bloquear o controle caso seu aplicativo tenha sido chamado anteriormente [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) para habilitar o foco automático contínuo e aguarde até que o usuário toque na tela para alterar o foco.
 
 [!code-cs[TapFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusRadioButton)]
 
@@ -208,7 +205,7 @@ Defina o valor do controle deslizante como o valor atual de **FocusControl** dep
 
 [!code-cs[Foco](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
-No manipulador de eventos **Checked** para o botão de opção de foco manual, obtenha o objeto **FocusControl** e chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) caso seu app tenha desbloqueado anteriormente o foco com uma chamada para [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081).
+No manipulador de eventos **Checked** para o botão de opção de foco manual, obtenha o objeto **FocusControl** e chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) caso seu aplicativo tenha desbloqueado anteriormente o foco com uma chamada para [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081).
 
 [!code-cs[ManualFocusChecked](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetManualFocusChecked)]
 
@@ -348,5 +345,4 @@ Defina o nível de zoom no dispositivo de captura criando um novo objeto [**Zoom
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Câmera](camera.md)
-* [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-
+* [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

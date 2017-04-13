@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 647a0228299e90026307fdd516ac71da2473ff0d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0992c0fc3c6fe9d70b7867275d28e6bba78171ab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-device-information-properties"></a>Propriedades de informações do dispositivo de áudio
 
 Este artigo lista as propriedades de informações de dispositivo relacionadas a dispositivos de áudio. No Windows, cada dispositivo de hardware tem propriedades [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) associados que fornecem informações detalhadas sobre um dispositivo que você pode usar quando precisa de informações específicas sobre o dispositivo ou quando está criando um seletor de dispositivo. Para obter informações gerais sobre a enumeração de dispositivos no Windows, veja [Enumerar dispositivos](../devices-sensors/enumerate-devices.md) e [Propriedades de informações do dispositivo](../devices-sensors/device-information-properties.md).
@@ -35,7 +32,6 @@ Este artigo lista as propriedades de informações de dispositivo relacionadas a
 * [Propriedades de informações do dispositivo](../devices-sensors/device-information-properties.md)
 * [Criar um seletor de dispositivo](../devices-sensors/build-a-device-selector.md)
 * [Reprodução de mídia](media-playback.md)
-
 
 
 

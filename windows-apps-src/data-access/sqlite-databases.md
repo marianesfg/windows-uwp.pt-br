@@ -2,18 +2,16 @@
 author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: Bancos de dados SQLite
-description: "SQLite é um mecanismo de banco de dados sem servidor inserido. Este artigo explica como usar a biblioteca SQLite incluída no SDK, empacotar sua própria biblioteca SQLite em um aplicativo Universal do Windows ou compilá-lo a partir da origem."
+description: "SQLite é um mecanismo de banco de dados sem servidor inserido. Este artigo explica como usar a biblioteca SQLite incluída no SDK, empacotar a própria biblioteca SQLite em um aplicativo Universal do Windows ou compilá-lo desde a origem."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQLite, banco de dados
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 70f0ae8d4f67e0b24199d7dd56ddebe5a643fae5
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sqlite-databases"></a>Bancos de dados SQLite
 
@@ -50,7 +48,7 @@ Configure o projeto para vincular a winsqlite3.lib. No **Gerenciador de Soluçõ
 
 ### <a name="including-sqlite-in-the-app-package"></a>Incluindo SQLite no pacote do aplicativo
 
-Às vezes, você pode desejar empacotar sua própria biblioteca em vez de usar a versão do SDK, por exemplo, talvez queira usar uma determinada versão dele nos clientes de plataforma cruzada diferente da versão do SQLite incluída no SDK.
+Às vezes, você talvez queira a própria biblioteca, em vez de usar a versão do SDK, por exemplo, talvez queira usar uma determinada versão dele nos clientes de plataforma cruzada diferente da versão do SQLite incluída no SDK.
 
 Instale a biblioteca SQLite na extensão do Visual Studio da Plataforma Universal do Windows disponível em SQLite.org ou por meio da ferramenta Extensões e Atualizações.
 
@@ -62,11 +60,11 @@ Depois que a extensão é instalada, faça referência ao arquivo de cabeçalho 
 
 ### <a name="building-sqlite-from-source-in-visual-studio"></a>Compilando SQLite pela fonte no Visual Studio
 
-Às vezes, você pode desejar compilar o próprio binário de SQLite para usar as [diversas opções de compilador](http://www.sqlite.org/compile.html) a fim de reduzir o tamanho do arquivo, melhorar o desempenho da biblioteca ou personalizar o recurso definido para o aplicativo. SQLite oferece opções de configuração da plataforma, definindo valores de parâmetro padrão, definindo limites de tamanho, controlando características operacionais, habilitando recursos normalmente desativados, desativando recursos normalmente ativados, omitindo recursos, habilitando a análise e depuração, além de gerenciar o comportamento da alocação de memória no Windows.
+Às vezes, você talvez queira compilar o próprio binário de SQLite para usar [diversas opções de compilador](http://www.sqlite.org/compile.html) a fim de reduzir o tamanho do arquivo, melhorar o desempenho da biblioteca ou personalizar o recurso definido para o aplicativo. SQLite oferece opções de configuração da plataforma, definindo valores de parâmetro padrão, definindo limites de tamanho, controlando características operacionais, habilitando recursos normalmente desativados, desativando recursos normalmente ativados, omitindo recursos, habilitando a análise e depuração, além de gerenciar o comportamento da alocação de memória no Windows.
 
 *Adição de origem a um projeto do Visual Studio*
 
-O código-fonte de SQLite está disponível para download na [Página de download SQLite.org](https://www.sqlite.org/download.html). Adicione esse arquivo ao projeto do Visual Studio do aplicativo em que você deseja usar o SQLite.
+O código-fonte de SQLite está disponível para transferência na [Página de transferência SQLite.org](https://www.sqlite.org/download.html). Adicione esse arquivo ao projeto do Visual Studio do aplicativo em que você deseja usar o SQLite.
 
 *Configurar pré-processadores*
 
@@ -95,4 +93,3 @@ Existem seis interfaces para realizar operações de banco de dados nesses objet
  
 
  
-

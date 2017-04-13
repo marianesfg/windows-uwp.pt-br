@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, sombreadores, primitivas, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-shaders-and-drawing-primitives"></a>Criar sombreadores e desenhando primitivas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, mostramos a você como usar arquivos de origem HLSL para compilar e criar sombreadores que você pode usar para desenhar primitivas no monitor.
 
@@ -83,7 +80,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 ### <a name="2-reading-data-from-disk"></a>2. Ler dados do disco
 
-Usamos a função DX::ReadDataAsync do DirectXHelper.h no modelo de app do DirectX 11 (Windows Universal) para ler dados de forma assíncrona em um arquivo no disco.
+Usamos a função DX::ReadDataAsync do DirectXHelper.h no modelo de aplicativo do DirectX 11 (Windows Universal) para ler dados de forma assíncrona em um arquivo no disco.
 
 ### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Criar sombreadores de vértice e de pixel
 
@@ -296,7 +293,6 @@ Em seguida, criamos um cubo 3D em órbita e aplicamos os efeitos de iluminação
  
 
  
-
 
 
 

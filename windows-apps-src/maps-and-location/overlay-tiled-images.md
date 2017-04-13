@@ -9,22 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, local, imagens, sobreposição"
-translationtype: Human Translation
-ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
 ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sobreponha imagens lado a lado de terceiros ou personalizadas em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 
-**Dica** Para saber mais sobre o uso de mapas em seu app, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -154,7 +151,7 @@ void MainPage::AddHttpMapTileSource()
 ## <a name="overlay-tiles-from-local-storage"></a>Sobreponha blocos de um armazenamento local
 
 
-Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu app.
+Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local usando o [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Tipicamente, você empacota e distribui esses arquivos com seu aplicativo.
 
 1.  Instancie um [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
 2.  Especifique o formado dos nomes dos arquivos como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para criar esse valor, insira parâmetros substituíveis no nome de arquivo base. Por exemplo, no exemplo de código a seguir, o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é:
@@ -171,16 +168,16 @@ Você pode usar os seguintes protocolos e locais para carregar blocos do armazen
 
 | Uri | Mais informações |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| ms-appx:/// | Aponta para a raiz da pasta de instalação do app. |
+| ms-appx:/// | Aponta para a raiz da pasta de instalação do aplicativo. |
 |  | Esse é o local referenciado pela propriedade [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
-| ms-appdata:///local | Aponta para a raiz do armazenamento local do app. |
+| ms-appdata:///local | Aponta para a raiz do armazenamento local do aplicativo. |
 |  | Este é o local referenciado pela propriedade [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). |
-| ms-appdata:///temp | Aponta para a pasta temporária do app. |
+| ms-appdata:///temp | Aponta para a pasta temporária do aplicativo. |
 |  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
  
 
-O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do app usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
+O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
 
 ```csharp
         void AddLocalMapTileSource()
@@ -367,9 +364,8 @@ Para substituir o mapa padrão inteiramente com blocos de terceiros ou personali
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus apps do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do app de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
+* [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)

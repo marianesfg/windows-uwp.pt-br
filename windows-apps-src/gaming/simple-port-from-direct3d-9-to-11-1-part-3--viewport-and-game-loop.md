@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
 
@@ -144,7 +141,6 @@ Visite os seguintes artigos aprofundados sobre desenvolvimento de jogos da Windo
  
 
  
-
 
 
 

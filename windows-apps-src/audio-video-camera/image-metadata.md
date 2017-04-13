@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e69508ae558d93281e0170913fa0ccdc5891cc64
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="image-metadata"></a>Metadados de imagem
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como ler e gravar propriedades de metadados de imagem e como adicionar marca de localização em arquivos usando a classe de utilitário [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683).
@@ -92,7 +89,6 @@ Crie um objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
  
 
  
-
 
 
 

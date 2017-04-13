@@ -1,6 +1,6 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Adicione um InkToolbar padrão a um app de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada."
+Description: "Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada."
 title: "Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)"
 label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
@@ -11,28 +11,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bd6e209d670164bc017d5012199420420dc3eda0
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dd307bd6d7551c1e95de29360a8601484b37e742
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
-Há dois controles diferentes que facilitam a escrita à tinta em apps da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 O controle [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) fornece a funcionalidade básica do Windows Ink. Use-o para renderizar a entrada à caneta como traço de tinta (usando as configurações padrão de cor e espessura) ou como traço de apagar.
 
-> Para obter detalhes sobre a implementação do InkCanvas, consulte [Interações com caneta em apps UWP](pen-and-stylus-interactions.md).
+> Para obter detalhes sobre a implementação do InkCanvas, consulte [Interações com caneta em aplicativos UWP](pen-and-stylus-interactions.md).
 
 Como uma sobreposição completamente transparente, o InkCanvas não fornece qualquer interface do usuário interna para definir propriedades de traço de tinta. Se você quiser alterar a experiência de escrita à tinta padrão, deixar que os usuários definam as propriedades de traço de tinta e dar suporte a outros recursos de escrita à tinta personalizados, há duas opções:
 
 - No code-behind, use objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) subjacente associado ao InkCanvas.
 
-  As APIs do InkPresenter permitem dar suporte à personalização abrangente da experiência de escrita à tinta. Para obter mais detalhes, consulte [Interações com caneta em apps UWP](pen-and-stylus-interactions.md).
+  As APIs do InkPresenter permitem dar suporte à personalização abrangente da experiência de escrita à tinta. Para obter mais detalhes, consulte [Interações com caneta em aplicativos UWP](pen-and-stylus-interactions.md).
 
 - Associar um [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) ao InkCanvas. Por padrão, o InkToolbar fornece uma interface do usuário básica para ativar recursos de tinta e definir propriedades de tinta, como tamanho do traço, cor da tinta e forma da ponta da caneta.
 
@@ -91,7 +88,7 @@ Nesta seção, abordamos alguns cenários de personalização básica de barra d
 ![Botão de lápis selecionado na inicialização](.\images\ink\ink-tools-default-toolbar.png)  
 *Barra de ferramentas do Windows Ink com botão de lápis selecionado na inicialização*
 
-Por padrão, o primeiro botão (à esquerda) é selecionado quando seu app é iniciado e a barra de ferramentas é inicializada. Na barra de ferramentas do Windows Ink padrão, esse é o botão de caneta esferográfica.
+Por padrão, o primeiro botão (à esquerda) é selecionado quando seu aplicativo é iniciado e a barra de ferramentas é inicializada. Na barra de ferramentas do Windows Ink padrão, esse é o botão de caneta esferográfica.
 
 Como a estrutura define a ordem dos botões internos, o primeiro botão pode não ser a caneta ou ferramenta que você deseja ativar por padrão.
 
@@ -158,7 +155,7 @@ Você pode fazer isso usando XAML ou code-behind.
 
 Modifique a declaração XAML para o InkCanvas e InkToolbar do primeiro exemplo.
 - Adicione um atributo [InitialControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx) e defina seu valor como "[None](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)". Isso limpa a coleção padrão de botões internos.
-- Adicione os botões InkToolbar específicos exigidos pelo seu app. Aqui, adicionamos somente [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx) e [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx).
+- Adicione os botões InkToolbar específicos exigidos pelo seu aplicativo. Aqui, adicionamos somente [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx) e [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx).
 > [!NOTE]
 > Os botões são adicionados à barra de ferramentas na ordem definida pela estrutura, não na ordem especificada aqui.
 
@@ -237,7 +234,7 @@ Modifique a declaração XAML para o InkCanvas e InkToolbar do primeiro exemplo.
   ```
 
 3. Defina [InitialControls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx) como "[None](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)".
-4. Crie referências de objeto para os botões exigidos pelo seu app. Aqui, adicionamos somente [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx) e [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx).
+4. Crie referências de objeto para os botões exigidos pelo seu aplicativo. Aqui, adicionamos somente [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx) e [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx).
   > [!NOTE]
   > Os botões são adicionados à barra de ferramentas na ordem definida pela estrutura, não na ordem especificada aqui.
 
@@ -285,11 +282,11 @@ O InkToolbar consiste em dois grupos distintos de tipos de botões:
 2. Um grupo de botões de "alternância" que contém o botão de régua interno. Alternâncias personalizadas são adicionadas aqui.
 > **Observação**&nbsp;&nbsp;Os recursos não são mutuamente exclusivos e podem ser usados concomitantemente com outras ferramentas ativas.
 
-Dependendo de seu app e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
+Dependendo de seu aplicativo e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
 
-- Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo app host.
-- Ferramenta personalizada – uma ferramenta sem caneta, definida pelo app host.
-- Alternância personalizada – define o estado de um recurso definido pelo app como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
+- Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo aplicativo host.
+- Ferramenta personalizada – uma ferramenta sem caneta, definida pelo aplicativo host.
+- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
 
 > **Observação**&nbsp;&nbsp;Você não pode alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
 
@@ -409,20 +406,20 @@ Em seguida, adicionamos as referências necessárias à caneta personalizada em 
 
 ### <a name="custom-toggle"></a>Alternância personalizada
 
-Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo app como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
+Você pode criar uma alternância personalizada (ativada por meio de um botão de alternância personalizada) para definir o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona em conjunto com a ferramenta ativa.
 
 Neste exemplo, definimos um botão de alternância personalizada que permite escrever à tinta com entrada por toque (por padrão, escrita à tinta por toque não está habilitada).
 
 > [!NOTE]  
 > Se você precisar oferecer suporte para escrita à tinta com touch, é recomendável ativá-la usando um CustomToggleButton, com o ícone e a dica de ferramenta especificados neste exemplo.
 
-Normalmente, a entrada por toque é usada para manipulação direta de um objeto ou da interface do usuário do app. Para demonstrar as diferenças de comportamento quando a escrita à tinta por toque está habilitada, vamos colocar InkCanvas dentro de um contêiner ScrollViewer e definir as dimensões de ScrollViewer como menores do que as de InkCanvas. 
+Normalmente, a entrada por toque é usada para manipulação direta de um objeto ou da interface do usuário do aplicativo. Para demonstrar as diferenças de comportamento quando a escrita à tinta por toque está habilitada, vamos colocar InkCanvas dentro de um contêiner ScrollViewer e definir as dimensões de ScrollViewer como menores do que as de InkCanvas. 
 
-Quando o app é iniciado, somente a escrita com caneta é compatível e o toque é usado para obter panorâmica ou aplicar zoom à superfície de escrita. Quando a escrita à tinta por toque está habilitada, não é possível obter panorâmica ou aplicar zoom por meio de entrada por toque na superfície de escrita.
+Quando o aplicativo é iniciado, somente a escrita com caneta é compatível e o toque é usado para obter panorâmica ou aplicar zoom à superfície de escrita. Quando a escrita à tinta por toque está habilitada, não é possível obter panorâmica ou aplicar zoom por meio de entrada por toque na superfície de escrita.
 
 > [!NOTE]
 > Consulte [Controles de escrita à tinta](..\controls-and-patterns\inking-controls.md) para as diretrizes de experiência do usuário [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkCanvas) e [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkToolbar). As seguintes recomendações são relevantes para este exemplo:
-> - O [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkToolbar), e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu app. 
+> - O [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkToolbar), e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo. 
 > - Para dar suporte à escrita à tinta com entrada por toque, recomendamos usar o ícone "ED5F" da fonte "Segoe MLD2 Assets" para o botão de alternância, com uma dica de ferramenta "Escrita por toque". 
 
 **XAML**
@@ -533,9 +530,9 @@ namespace Ink_Basic_InkToolbar
 
 ### <a name="custom-tool"></a>Ferramenta personalizada
 
-Você pode criar um botão de ferramenta personalizada para invocar uma ferramenta que não é de caneta definida por seu app.
+Você pode criar um botão de ferramenta personalizada para invocar uma ferramenta que não é de caneta definida por seu aplicativo.
 
-Por padrão, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) processa todas as entradas como traço de tinta ou de apagar. Isso inclui entrada modificada por funcionalidade secundária de hardware, como botão de caneta, botão direito do mouse e afins. No entanto, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) pode ser configurado para deixar uma entrada específica não processada, que pode ser transmitida por meio de seu app para processamento personalizado.
+Por padrão, o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) processa todas as entradas como traço de tinta ou de apagar. Isso inclui entrada modificada por funcionalidade secundária de hardware, como botão de caneta, botão direito do mouse e afins. No entanto, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) pode ser configurado para deixar uma entrada específica não processada, que pode ser transmitida por meio de seu aplicativo para processamento personalizado.
 
 Neste exemplo, definimos um botão de ferramenta personalizada que, quando selecionado, faz com que os traços subsequentes sejam processados e renderizados como um laço de seleção (linha tracejada) em vez de tinta. Todos os traços de tinta dentro dos limites da área de seleção são definidos como [**Selecionado**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkStroke.Selected).
 
@@ -604,9 +601,9 @@ Neste exemplo, definimos um botão de ferramenta personalizada que, quando selec
 
 2. Em seguida, manipulamos o evento Click para o [**InkToolbarCustomToolButton**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton) no arquivo code-behind MainPage.xaml.cs.
 
-   Esse manipulador configura o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) para transmitir a entrada não processada pelo app. 
+   Esse manipulador configura o [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter) para transmitir a entrada não processada pelo aplicativo. 
 
-   Para uma etapa mais detalhada por meio deste código: veja a seção de entrada de passagem para processamento avançado em [Windows Ink e interações de caneta em apps UWP](pen-and-stylus-interactions.md).
+   Para uma etapa mais detalhada por meio deste código: veja a seção de entrada de passagem para processamento avançado em [Windows Ink e interações de caneta em aplicativos UWP](pen-and-stylus-interactions.md).
 
    Também especificamos um ícone para o botão usando o elemento SymbolIcon e a extensão de marcação {x:Bind} que o associa a um campo definido no arquivo code-behind (SelectIcon).
 
@@ -796,15 +793,15 @@ namespace Ink_Basic_InkToolbar
 
 ### <a name="custom-ink-rendering"></a>Renderização de tinta personalizada
 
-Por padrão, a entrada de tinta é processada em um thread em segundo plano e renderizada como "molhada" conforme é desenhada. Quando o traço está concluído (caneta ou dedo param de pressionar ou botão do mouse é liberado), o traço é processado do thread de interface do usuário e renderizado como "seco" na camada [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (acima do conteúdo do app e substituindo a tinta molhada).
+Por padrão, a entrada de tinta é processada em um thread em segundo plano e renderizada como "molhada" conforme é desenhada. Quando o traço está concluído (caneta ou dedo param de pressionar ou botão do mouse é liberado), o traço é processado do thread de interface do usuário e renderizado como "seco" na camada [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (acima do conteúdo do aplicativo e substituindo a tinta molhada).
 
 A plataforma de tinta permite substituir esse comportamento e personalizar completamente a experiência de escrita à tinta secando de forma personalizada a entrada de tinta.
 
-Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações de caneta em apps UWP](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions#custom-ink-rendering).
+Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações de caneta em aplicativos UWP](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions#custom-ink-rendering).
 
 > [!NOTE]
 > Secagem personalizada e o [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
-> Se o app substituir o comportamento de renderização da tinta padrão do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) por uma implementação de secagem personalizada, os traços da tinta renderizada não estarão mais disponíveis para o InkToolbar e os comandos de exclusão internos do InkToolbar não funcionarão conforme esperado. Para oferecer uma funcionalidade de exclusão, você deve lidar com todos os eventos de ponteiro, realizar o teste de clique em cada traço e substituir o comando "Apagar toda a tinta" interno.
+> Se o aplicativo substituir o comportamento de renderização da tinta padrão do [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) por uma implementação de secagem personalizada, os traços da tinta renderizada não estarão mais disponíveis para o InkToolbar e os comandos de exclusão internos do InkToolbar não funcionarão conforme esperado. Para oferecer uma funcionalidade de exclusão, você deve lidar com todos os eventos de ponteiro, realizar o teste de clique em cada traço e substituir o comando "Apagar toda a tinta" interno.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -814,4 +811,3 @@ Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações 
 * [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-

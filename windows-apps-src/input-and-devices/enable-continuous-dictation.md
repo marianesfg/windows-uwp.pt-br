@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 075748ffdb557fd32abb58d0497b78e8f57646f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0bbde7caec4ff52898e9b76c3104b9aa484dea27
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="continuous-dictation"></a>Ditado contínuo
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -281,11 +278,10 @@ Se você definir qualquer campo particular ao cancelar a sessão de reconhecimen
 * [Interações de controle por voz](speech-interactions.md)
 
 **Exemplos**
-* [Amostra de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "Se o app não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo."
+Description: "Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo."
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Acessibilidade do teclado
 label: Keyboard accessibility
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b1261de60bf0a45940fe9a284d8a5276b42e0a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b41e7a03d3ca2ac6d146ed706421699dc66066a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="keyboard-accessibility"></a>Acessibilidade do teclado  
 
 
 
-Se o app não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo.
+Se seu aplicativo não oferecer um bom acesso ao teclado, usuários cegos ou com problemas de mobilidade terão dificuldade para usá-lo ou não poderão usá-lo.
 
 <span id="keyboard_navigation_among_UI_elements"/>
 <span id="keyboard_navigation_among_ui_elements"/>
@@ -30,7 +27,7 @@ Se o app não oferecer um bom acesso ao teclado, usuários cegos ou com problema
 ## <a name="keyboard-navigation-among-ui-elements"></a>Navegação de teclado entre elementos de interface de usuário  
 Para usar o teclado com um controle, o controle precisa ter foco e, para receber foco (sem usar um ponteiro), o controle precisa ser acessível em um projeto de interface de usuário da interface do usuário pela navegação por tabulação. Por padrão, a ordem de tabulação dos controles é a mesma ordem que eles foram adicionados à superfície de um projeto, listados em XAML ou adicionados programaticamente a um contêiner.
 
-Na maioria dos casos, a ordem padrão baseada em como você define os controles no XAML é a melhor ordem, principalmente porque é a ordem de leitura dos leitores de tela. Contudo, a ordem padrão não corresponde necessariamente à ordem visual. A posição de exibição real poderia depender do contêiner de layout pai e de certas propriedades que você pode definir nos elementos filho para influenciar o layout. Para ter certeza de que seu app tem uma boa ordem de tabulação, teste esse comportamento. Principalmente se você tiver uma metáfora de grade ou de tabela em seu layout, a ordem de leitura dos usuários poderá ser diferente da ordem de tabulação. Nem sempre isso é um problema. No entanto, convém testar a funcionalidade do app como interface do usuário tanto de toque quanto acessível por teclado e verificar se ela responde igual para ambas as formas.
+Na maioria dos casos, a ordem padrão baseada em como você define os controles no XAML é a melhor ordem, principalmente porque é a ordem de leitura dos leitores de tela. Contudo, a ordem padrão não corresponde necessariamente à ordem visual. A posição de exibição real poderia depender do contêiner de layout pai e de certas propriedades que você pode definir nos elementos filho para influenciar o layout. Para ter certeza de que seu aplicativo tem uma boa ordem de tabulação, teste esse comportamento. Principalmente se você tiver uma metáfora de grade ou de tabela em seu layout, a ordem de leitura dos usuários poderá ser diferente da ordem de tabulação. Nem sempre isso é um problema. No entanto, convém testar a funcionalidade do aplicativo como interface do usuário tanto de toque quanto acessível por teclado e verificar se ela responde igual para ambas as formas.
 
 Você pode fazer com que a ordem de tabulação corresponda à ordem visual ajustando o XAML. Ou pode substituir a ordem de tabulação padrão definindo a propriedade [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461), conforme mostrado no exemplo a seguir de um layout de [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) que usa a navegação por guia de primeira coluna.
 
@@ -75,7 +72,7 @@ Para os elementos compostos, é importante garantir uma navegação interior ade
 ## <a name="keyboard-alternatives-to-pointer-actions-and-events-for-specific-control-elements"></a>Alternativas de teclado para ações do ponteiro e eventos para elementos de controle específico  
 Permita que os elementos de interface de usuário que podem ser clicados também possam ser invocados usando o teclado. Para usar o teclado com um elemento da interface do usuário, o elemento deve ter foco. Somente as classes que derivam de [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) suportam o foco e a navegação de guias.
 
-Para os elementos de interface do usuário que podem ser invocados, implemente manipuladores de eventos de teclado para as teclas de barra de espaço e Enter. Isso torna o suporte de acessibilidade básica de teclado completo e permite que os usuários utilizem cenários básicos de apps apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão.
+Para os elementos de interface do usuário que podem ser invocados, implemente manipuladores de eventos de teclado para as teclas de barra de espaço e Enter. Isso torna o suporte de acessibilidade básica de teclado completo e permite que os usuários utilizem cenários básicos de aplicativos apenas com o teclado, ou seja, os usuários podem acessar todos os elementos interativos da interface do usuário e ativar a funcionalidade padrão.
 
 Em casos em que um elemento que você deseja usar na interface do usuário não pode ter foco, você pode criar seu próprio controle personalizado. Você deve definir a propriedade [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) como **true** para habilitar o foco e deve fornecer uma indicação visual do estado do foco criando um estado visual que decora a interface do usuário com um indicador de foco. Contudo, é frequentemente mais fácil usar a composição de controle, para que o suporte para paradas de tabulação, foco e pares e padrões de Automação de Interface do Usuário da Microsoft possa ser tratados pelo controle no qual você escolhe compor o seu conteúdo.
 
@@ -93,14 +90,14 @@ XAML
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
 ## <a name="keyboard-shortcuts"></a>Atalhos do teclado  
-Além de implementar a navegação pelo teclado e ativação para o seu app, é recomendável implementar atalhos para a funcionalidade do seu app. A navegação por tabulação fornece um bom nível básico de suporte ao teclado, mas com formulários complexos, você poderia desejar adicionar suporte às teclas de atalho também. Isso pode tornar o seu app mais eficiente para usar, mesmo para as pessoas que usam dispositivos de teclado e de ponteiro.
+Além de implementar a navegação pelo teclado e ativação para o seu aplicativo, é recomendável implementar atalhos para a funcionalidade do seu aplicativo. A navegação por tabulação fornece um bom nível básico de suporte ao teclado, mas com formulários complexos, você poderia desejar adicionar suporte às teclas de atalho também. Isso pode tornar o seu aplicativo mais eficiente para usar, mesmo para as pessoas que usam dispositivos de teclado e de ponteiro.
 
-Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecendo uma maneira eficiente de o usuário acessar a funcionalidade do app. Existem dois tipos de atalho:
+Um *atalho* é uma combinação de teclas que aumenta a produtividade, fornecendo uma maneira eficiente de o usuário acessar a funcionalidade do aplicativo. Existem dois tipos de atalho:
 
-* Uma *tecla de acesso* é um atalho para um elemento da interface do usuário no seu app. Teclas de acesso consistem na tecla Alt mais uma tecla de letra.
-* Uma *tecla aceleradora* é um atalho para um comando do app. Seu app pode ter uma interface do usuário que corresponde exatamente ao comando. Teclas aceleradoras consistem na tecla Ctrl mais uma tecla de letra.
+* Uma *tecla de acesso* é um atalho para um elemento da interface do usuário no seu aplicativo. Teclas de acesso consistem na tecla Alt mais uma tecla de letra.
+* Uma *tecla aceleradora* é um atalho para um comando do aplicativo. Seu aplicativo pode ter uma interface do usuário que corresponde exatamente ao comando. Teclas aceleradoras consistem na tecla Ctrl mais uma tecla de letra.
 
-É fundamental oferecer aos usuários que dependem de leitores de tela e outras tecnologias assistenciais uma maneira fácil de descobrir as teclas de atalho do seu app. Comunique as teclas de atalho usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de atalho devem ser bem documentadas no conteúdo de Ajuda do seu app.
+É fundamental oferecer aos usuários que dependem de leitores de tela e outras tecnologias assistenciais uma maneira fácil de descobrir as teclas de atalho do seu aplicativo. Comunique as teclas de atalho usando dicas de ferramentas, nomes acessíveis, descrições acessíveis ou alguma outra forma de comunicação na tela. No mínimo, as teclas de atalho devem ser bem documentadas no conteúdo de Ajuda do seu aplicativo.
 
 Você pode documentar as teclas de acesso pelos leitores de tela definindo a propriedade anexada [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) para uma cadeia de caracteres que descreve a tecla de atalho. Há também uma propriedade anexada [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) para documentar teclas de atalho não mnemônicas, apesar de leitores de tela geralmente tratarem as duas propriedades da mesma forma. Tente documentar as teclas de atalho de várias formas, usando dicas de ferramentas, propriedades de automação e documentação de Ajuda escrita.
 
@@ -143,7 +140,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> A definição de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu app. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
+> A definição de [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) ou [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) não habilita a funcionalidade de teclado. Ela só relata à estrutura de Automação da IU quais teclas devem ser usadas, para que essas informações possam ser repassadas aos usuários através de tecnologias assistivas. A implementação referente à manipulação de teclas ainda precisa ser feita em código, e não em XAML. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) no controle relevante para realmente implementar o comportamento de atalhos de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
 Para fins de simplicidade, o exemplo anterior omite o uso de recursos para cadeias de caracteres, como "Ctrl+A". Contudo, considere também as teclas de atalho durante o processo de localização. A localização de teclas de atalho é relevante porque a escolha da chave a ser usada como a chave de atalho normalmente depende do rótulo de texto visível para o elemento.
 
@@ -236,7 +233,7 @@ Observe como somente um dos estados nomeados ajusta a [**Visibility**](https://m
 ## <a name="keyboard-accessibility-and-windows-phone"></a>Acessibilidade do teclado e o Windows Phone
 Um dispositivo Windows Phone normalmente não tem um teclado de hardware dedicado. Porém, um SIP (Soft Input Panel) pode oferecer suporte a vários cenários de acessibilidade do teclado. Os leitores de tela podem ler entradas de texto no SIP **Texto**, incluindo exclusão de anúncios. Os usuários podem saber onde os seus dedos estão, pois o leitor de tela pode detectar se o usuário está usando as teclas e lê o nome da tecla pressionada em voz alta. Além disso, alguns dos conceitos de acessibilidade orientados pelo teclado podem ser mapeados com os comportamentos de tecnologia adaptativa relacionados que não usam teclado. Por exemplo, mesmo que um SIP não inclua uma tecla Tab, o Narrador reconhece um gesto de toque que é o equivalente a pressionar a tecla Tab, de modo que ter uma ordem de tabulação útil pelos controles em uma interface do usuário ainda é um princípio importante de acessibilidade. As teclas de setas que são usadas para navegar pelas partes dentro de controles complexos também são suportadas por meio de gestos de toque do Narrador. Quando o foco atinge um controle que não seja entrada de texto, o Narrador suporta um gesto que chama a ação desse controle.
 
-Os atalhos do teclado não são normalmente relevantes para os apps no Windows Phone porque um SIP não inclui as teclas Control ou Alt.
+Os atalhos do teclado não são normalmente relevantes para os aplicativos no Windows Phone porque um SIP não inclui as teclas Control ou Alt.
 
 <span id="related_topics"/>
 ## <a name="related-topics"></a>Tópicos relacionados  
@@ -245,5 +242,4 @@ Os atalhos do teclado não são normalmente relevantes para os apps no Windows P
 * [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
-
 

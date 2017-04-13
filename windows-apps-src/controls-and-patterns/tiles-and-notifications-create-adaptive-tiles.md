@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 27d3de280201d92ee98f6e8a17afd85f76acd7d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
@@ -24,7 +22,7 @@ ms.lasthandoff: 02/07/2017
 
 Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Se quiser, você ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows 10.)
+(Se quiser, você ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows10.)
 
 
 ## <a name="getting-started"></a>Introdução
@@ -36,7 +34,7 @@ Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que
 
 ## <a name="how-to-send-a-tile-notification"></a>Como enviar uma notificação de bloco
 
-Leia nosso [guia de início rápido sobre como enviar notificações de bloco local](tiles-and-notifications-create-adaptive-tiles.md). A documentação nesta página explica todas as possibilidades visuais da interface do usuário que você tem com os blocos adaptáveis.
+Leia nosso [guia de início rápido sobre como enviar notificações de bloco local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/). A documentação nesta página explica todas as possibilidades visuais da interface do usuário que você tem com os blocos adaptáveis.
 
 
 ## <a name="usage-guidance"></a>Diretriz de uso
@@ -361,10 +359,10 @@ new AdaptiveText()
 
 ![texto do bloco adaptável](images/adaptive-tiles-text.png)
 
-## <a name="text-wrapping"></a>Encapsulamento de texto
+## <a name="text-wrapping"></a>Disposição do texto
 
 
-Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o atributo **hint-wrap** para definir o encapsulamento de texto em um elemento de texto. Você também pode controlar o número mínimo e máximo de linhas usando **hint-minLines** e **hint-maxLines**, que aceitam números inteiros positivos.
+Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o atributo **hint-wrap** para definir a disposição do texto em um elemento de texto. Você também pode controlar o número mínimo e máximo de linhas usando **hint-minLines** e **hint-maxLines**, que aceitam números inteiros positivos.
 
 ```XML
 <text hint-wrap="true">This is a line of wrapping text</text>
@@ -381,7 +379,7 @@ new AdaptiveText()
 
 **Resultado:**
 
-![bloco adaptável com encapsulamento de texto](images/adaptive-tiles-textwrapping.png)
+![bloco adaptável com disposição do texto](images/adaptive-tiles-textwrapping.png)
 
 ## <a name="text-styles"></a>Estilos de texto
 
@@ -1397,13 +1395,12 @@ TileWide = new TileBinding()
 
 
 * [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md)
-* [Guia de início rápido: Enviar uma notificação de bloco local](tiles-and-notifications-create-adaptive-tiles.md)
+* [Guia de início rápido: Enviar uma notificação de bloco local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)
 * [Biblioteca de notificações no GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [Catálogo de modelos de bloco especial](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
  
-
 
 
 

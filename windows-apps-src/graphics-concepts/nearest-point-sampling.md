@@ -2,21 +2,17 @@
 title: "Exemplo do ponto mais próximo"
 description: "Os apps não são obrigados a usar filtragem de textura."
 ms.assetid: D7F88320-2C61-47E9-9B92-EC31D48DB079
-keywords:
-- "Exemplo do ponto mais próximo"
+keywords: "Exemplo do ponto mais próximo"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a2ead1b197ce4e504212f722aaf09d2038ec46f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 351acc87764fadc2cd967aaf1d918f4b4837c81f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Exemplo do ponto mais próximo
 
 
@@ -54,7 +50,6 @@ A melhor abordagem é usar a filtragem de ponto mais próximo somente quando nec
  
 
  
-
 
 
 

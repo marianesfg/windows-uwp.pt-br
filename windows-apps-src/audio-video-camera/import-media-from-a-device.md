@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4deda6efa9b9b9ea03bee76855e30c8e9a290480
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 588367c1e4c1676641d57bbd33df6bdaf0c854da
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="import-media-from-a-device"></a>Importar mídia de um dispositivo
 
 Este artigo descreve como importar mídia de um dispositivo, inclusive procurar fontes de mídia disponíveis, importar arquivos, como vídeos, fotos e arquivos secundários, e excluir os arquivos importados do dispositivo de origem.
@@ -62,7 +59,7 @@ Essas classes são fornecidas na [**amostra MediaImport**](https://github.com/Mi
 [!code-cs[GeneratorIncrementalLoadingClass](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetGeneratorIncrementalLoadingClass)]
 
 
-# <a name="find-available-sources-from-which-media-can-be-imported"></a>Localizar fontes disponíveis das quais mídias podem ser importadas
+## <a name="find-available-sources-from-which-media-can-be-imported"></a>Localizar fontes disponíveis das quais mídias podem ser importadas
 
 No manipulador de cliques do botão Localizar fontes, chame o método estático [**PhotoImportManager.FindAllSourcesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync) para começar a procurar no sistema por dispositivos dos quais mídias possam ser importadas. Depois de aguardar a conclusão da operação, percorra cada objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) na lista retornada de objeto e adicione uma entrada a **ComboBox**, definindo a propriedade **Tag** ao objeto de origem em si, para que ela possa ser facilmente recuperado quando o usuário fizer uma seleção.
 
@@ -76,13 +73,13 @@ No manipulador [**SelectionChanged**](https://msdn.microsoft.com/library/windows
 
 [!code-cs[SourcesSelectionChanged](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetSourcesSelectionChanged)]
 
-# <a name="find-items-to-import"></a>Localizar itens para importação
+## <a name="find-items-to-import"></a>Localizar itens para importação
 
 Adicione as variáveis de membro de classe do tipo [**PhotoImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession) e [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) que serão usadas nas próximas etapas.
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-No método FindItems, inicialize a variável **CancellationTokenSource** para que ela possa ser usada para cancelar a operação de localização, se necessário. Em um bloco **try**, crie uma nova sessão de importação chamando [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) no objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) selecionado pelo usuário. Crie um novo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para fornecer um retorno de chamada para exibir o progresso da operação de localização. Em seguida, chame [**FindItemsAsync**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession.FindItemsAsync (Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode) para iniciar a operação de localização. Forneça um valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar se fotos, vídeos ou ambos devem ser retornados. Forneça um valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar se todos, nenhum ou apenas os novos itens de mídia são retornados com a propriedade [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) definida como true. Essa propriedade está associada a uma caixa de seleção de cada item de mídia em nosso modelo de item ListBox.
+No método FindItems, inicialize a variável **CancellationTokenSource** para que ela possa ser usada para cancelar a operação de localização, se necessário. Em um bloco **try**, crie uma nova sessão de importação chamando [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) no objeto [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource) selecionado pelo usuário. Crie um novo objeto [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx) para fornecer um retorno de chamada para exibir o progresso da operação de localização. Em seguida, chame [**FindItemsAsync**](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession#Windows_Media_Import_PhotoImportSession_FindItemsAsync_Windows_Media_Import_PhotoImportContentTypeFilter_Windows_Media_Import_PhotoImportItemSelectionMode_) para iniciar a operação de localização. Forneça um valor [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter) para especificar se fotos, vídeos ou ambos devem ser retornados. Forneça um valor [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode) para especificar se todos, nenhum ou apenas os novos itens de mídia são retornados com a propriedade [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected) definida como true. Essa propriedade está associada a uma caixa de seleção de cada item de mídia em nosso modelo de item ListBox.
 
 **FindItemsAsync** retorna [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx). O método de extensão [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) é usado para criar uma tarefa que pode ser aguardada, pode ser cancelada com o token de cancelamento e que relata o progresso usando o objeto **Progress** fornecido.
 
@@ -121,6 +118,5 @@ Para excluir os itens importados com sucesso da fonte de onde foram importados, 
 
 
  
-
 
 

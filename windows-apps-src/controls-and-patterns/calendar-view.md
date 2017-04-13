@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c3779262c24ef1bd124330fc7709b38abead1a7a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b033c58fed79db197858db99d71ad6a174a9a662
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-view"></a>Exibição de Calendário
 
@@ -73,7 +71,7 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 
 Um usuário poderá desmarcar uma data selecionada, clicando ou tocando nela na grade do calendário.
 
-Você pode tratar o evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para ser notificado quando a coleção [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) for alterada.
+Você pode manipular o evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para ser notificado quando a coleção [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) for alterada.
 
 > [!NOTE]
 > Para obter informações importantes sobre valores de data, consulte [Valores DateTime e Calendar](date-and-time.md#datetime-and-calendar-values) no artigo Controles de data e hora.
@@ -140,7 +138,7 @@ Este exemplo mostra a renderização em fases de uma exibição de calendário p
 - Na fase 1, você escurece datas que não podem ser registradas. Isso inclui datas passadas, domingos e datas que já estão totalmente reservadas. 
 - Na fase 2, você verifica cada compromisso que está reservado para o dia. Você exibe uma barra de densidade verde para cada compromisso confirmado e uma barra de densidade azul para cada compromisso provisório. 
 
-A classe `Bookings` neste exemplo é de um app de reserva de compromisso fictício, e não é exibida.
+A classe `Bookings` neste exemplo é de um aplicativo de reserva de compromisso fictício, e não é exibida.
 
 ```xaml
 <CalendarView CalendarViewDayItemChanging="CalendarView_CalendarViewDayItemChanging"/>
@@ -207,4 +205,3 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Seletor de data do calendário](calendar-date-picker.md)
 - [Seletor de data](date-picker.md)
 - [Seletor de hora](time-picker.md)
-

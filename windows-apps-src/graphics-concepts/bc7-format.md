@@ -2,21 +2,17 @@
 title: Formato BC7
 description: "O formato BC7 é um formato de compactação de textura usado para compactação de alta qualidade de dados de RGB e RGBA."
 ms.assetid: 788B6E8C-9A1F-45F9-BE49-742285E8D8A6
-keywords:
-- Formato BC7
+keywords: Formato BC7
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73b6700a902c33c0af0c9314d2869f98f3f53d21
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ae67966d6f49c9cb97621b4613d61e321c9fdba0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bc7-format"></a>Formato BC7
 
 
@@ -358,7 +354,6 @@ No BC7, você pode codificar o componente alfa de uma das seguintes maneiras:
  
 
  
-
 
 
 

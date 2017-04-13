@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Um controle de zoom semântico permite que o usuário aplique zoom entre duas exibições semânticas diferentes do mesmo conjunto de dados."
+Description: "Um controle de zoom semântico permite que o usuário aplique zoom entre duas diferentes exibições do mesmo conjunto de dados."
 title: "Zoom semântico"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 29c80f1120a503968e426325aad818dd7a62e87c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c5a34805941d72981f84a5d515e01d404fb30650
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="semantic-zoom"></a>Zoom semântico
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-O zoom semântico permite que o usuário alterne entre duas exibições diferentes do mesmo conteúdo, de maneira que possa navegar rapidamente em um grande conjunto de dados agrupados.
+Zoom Semântico permite que o usuário alterne duas exibições diferentes do mesmo conteúdo, de maneira que possa navegar rapidamente em um grande conjunto de dados agrupados.
  
 - A exibição ampliada é o modo de exibição principal do conteúdo. Essa é a exibição principal na qual você mostra itens de dados individuais. 
 - A exibição reduzida é um modo de exibição de alto nível do mesmo conteúdo. Normalmente, você mostra os cabeçalhos de grupo para um conjunto de dados agrupado nesse modo de exibição. 
@@ -202,7 +200,6 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 - [Noções básicas de design de navegação](../layout/navigation-basics.md)
 - [Exibição de lista e exibição de grade](listview-and-gridview.md)
 - [Modelos de item de exibição de lista](listview-item-templates.md)
-
 
 
 

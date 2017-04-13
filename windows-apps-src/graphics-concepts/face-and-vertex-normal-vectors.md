@@ -2,21 +2,17 @@
 title: "Face e vetores normais de vértice"
 description: "Cada rosto em uma malha tem um vetor normal de unidade perpendicular. Direção do vetor é determinada pela ordem em que os vértices são definidos, e se o sistema de coordenadas é orientado à direita ou esquerda."
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
-keywords:
-- "Face e vetores normais de vértice"
+keywords: "Face e vetores normais de vértice"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 48a87cc9766d7fb6d0e3ac42e7956b27264af0db
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 04725508694370c1fff20ae34736fbd05948328c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="face-and-vertex-normal-vectors"></a>Face e vetores normais de vértice
 
 
@@ -96,7 +92,6 @@ Outra alternativa é alterar para o sombreamento simples ao renderizar objetos c
  
 
  
-
 
 
 

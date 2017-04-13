@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: "Use este método na API de envio da Windows Store para obter dados para um pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
-title: "Obter um pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Obter um pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, versão de pré-lançamento, pacote de pré-lançamento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ae8014dadfb838cfd14202a673654be3a012c8bf
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 921d33c033704de711112c30feae7dbbfebc732b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-a-package-flight-using-the-windows-store-submission-api"></a>Obter um pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="get-a-package-flight"></a>Obter um pacote de pré-lançamento
 
 
 
@@ -124,7 +121,7 @@ Os valores *lastPublishedFlightSubmission* e *pendingFlightSubmission* no corpo 
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se não foi possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição     |
 |--------|---------------------  |
@@ -139,4 +136,3 @@ Se não foi possível concluir a solicitação, a resposta conterá um dos segui
 * [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Criar um pacote de pré-lançamento](create-a-flight.md)
 * [Excluir um pacote de pré-lançamento](delete-a-flight.md)
-

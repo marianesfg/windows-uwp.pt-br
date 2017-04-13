@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2b70356f5d28f9884292d816e71838ec4591dad7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 555e340d55c9a2fec6204ffd4759e17d68d8a746
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="recognize-windows-ink-strokes-as-text"></a>Reconhecer traços do Windows Ink como texto
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -220,7 +217,7 @@ Um subconjunto abrangente de idiomas com suporte no Windows pode ser usado para 
 
 Para obter uma lista de idiomas com suporte a [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) consulte a propriedade [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx).
 
-Seu app pode consultar o conjunto de mecanismos de reconhecimento de manuscrito instalados e usar um deles ou permitir que o usuário selecione o idioma preferencial.
+Seu aplicativo pode consultar o conjunto de mecanismos de reconhecimento de manuscrito instalados e usar um deles ou permitir que o usuário selecione o idioma preferencial.
 
 **Observação**  
 Os usuários podem ver uma lista de idiomas instalados em **Configurações -&gt; Hora e Idioma**. Os idiomas instalados estão listados em **Idiomas**.
@@ -461,7 +458,7 @@ string str = "Recognition result\n";
 ## <a name="dynamic-handwriting-recognition"></a>Reconhecimento de manuscrito dinâmico
 
 
-Os dois exemplos anteriores exigem que o usuário pressione um botão para iniciar o reconhecimento. Seu app também pode executar reconhecimento dinâmico usando entrada de traço em conjunto com uma função de tempo básica.
+Os dois exemplos anteriores exigem que o usuário pressione um botão para iniciar o reconhecimento. Seu aplicativo também pode executar reconhecimento dinâmico usando entrada de traço em conjunto com uma função de tempo básica.
 
 Para este exemplo, usaremos a mesma interface do usuário e as configurações de traço que o exemplo anterior de reconhecimento internacional.
 
@@ -683,4 +680,3 @@ string str = "Recognition result\n";
 
 
  
-

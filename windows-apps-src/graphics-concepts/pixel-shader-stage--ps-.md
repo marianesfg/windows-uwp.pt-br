@@ -2,21 +2,17 @@
 title: "Estágio do sombreador de pixel (PS)"
 description: "Estágio do sombreador de pixel (PS) recebe dados interpolados para um primitivo e gera dados por pixel, como cor."
 ms.assetid: 0AEBFDFB-0AD8-4633-AE4E-A44004B57745
-keywords:
-- "Estágio do sombreador de pixel (PS)"
+keywords: "Estágio do sombreador de pixel (PS)"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2048a92816de384de0c4be0400338abba9cb275f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 94a7d35605200b010210d16a8e0ddcc605db01e8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="pixel-shader-ps-stage"></a>Estágio do sombreador de pixel (PS)
 
 
@@ -33,9 +29,9 @@ As funções intrínsecas do sombreador de pixel produzem ou usam derivadas de q
 ## <a name="span-idinputsspanspan-idinputsspanspan-idinputsspaninputs"></a><span id="Inputs"></span><span id="inputs"></span><span id="INPUTS"></span>Entradas
 
 
-Quando o pipeline é configurado sem um sombreador de geometria, um sombreador de pixel é limitado a 16 entradas de 32 bits e 4 componentes. Caso contrário, um sombreador de pixel pode aceitar até 32 entradas de 32 bits e 4 componentes.
+Quando o pipeline é configurado sem um sombreador de geometria, um sombreador de pixel é limitado a 16 entradas de 32 bits e 4 componentes. Caso contrário, um sombreador de pixel pode levar até 32 entradas de 32 bits de 4 componentes.
 
-Dados de entrada de sombreador de pixel incluem atributos de vértice (que podem ser interpolados com ou sem correção da perspectiva) ou podem ser tratados como constantes por primitivo. Entradas do sombreador de pixel são interpoladas a partir dos atributos de vértice da primitivo a ser rasterizado com base no modo de interpolação declarado. Se um primitivo for recortado antes da rasterização, o modo de interpolação também será aplicado durante o processo de recorte.
+Os dados de entrada de sombreador de pixel incluem atributos de vértice (que podem ser interpolados com ou sem correção de perspectiva) ou podem ser tratados como constantes por primitivo. As entradas do sombreador de pixel são interpoladas dos atributos de vértice do primitivo que está sendo rasterizado, com base no modo de interpolação declarado. Se um primitivo for recortado antes da rasterização, o modo de interpolação também será aplicado durante o processo de recorte.
 
 Atributos de vértice são interpolados (ou avaliados) em locais de centro de sombreador de pixel. Modos de interpolação de atributo de sombreador de pixel são declarados em uma declaração de registro de entrada, de acordo com o elemento, em um [argumento](https://msdn.microsoft.com/library/windows/desktop/bb509606) ou um [entrada estrutura](https://msdn.microsoft.com/library/windows/desktop/bb509668). Atributos podem ser interpolados linearmente ou amostragem de centroides. Consulte a seção "Amostragem de centroides de atributos com suavização de várias amostras" em [Regras de rasterização](rasterization-rules.md). A avaliação de centroides é relevante apenas durante a coleta de várias amostras para cobrir casos onde um pixel é coberto por um primitivo, mas um centro de pixel pode não estar; a avaliação de centroides ocorre o mais próximo possível do centro de pixel (não coberto).
 
@@ -58,7 +54,6 @@ Um sombreador de pixel não pode retornar um valor de estêncil.
  
 
  
-
 
 
 

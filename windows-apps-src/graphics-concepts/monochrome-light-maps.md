@@ -2,21 +2,17 @@
 title: "Mapas de luzes monocromáticas"
 description: "O mapeamento de luzes monocromáticas permite que os adaptadores mais antigos misturem a textura de passagem múltipla, quando uma placa de aceleradora 3D mais antiga não oferece suporte à mesclagem de textura com o valor de alfa do pixel de destino."
 ms.assetid: 60F8F8F6-9DB7-452B-8DC0-407FFAA4BFE1
-keywords:
-- "Mapas de luzes monocromáticas"
+keywords: "Mapas de luzes monocromáticas"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dcdb54345298cd5def27707ad473aeb2ea873203
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 088e109cde92515305e474b2b03bd03526aaab87
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="monochrome-light-maps"></a>Mapas de luzes monocromáticas
 
 
@@ -34,7 +30,6 @@ Para executar o mapeamento de luzes monocromáticas, um app armazena as informa�
  
 
  
-
 
 
 

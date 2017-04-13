@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6200a8363c8a638f2ee44bdad6902748fb9adf45
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 46b60f180642e509eca76a68d78b1099008746eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -26,7 +23,7 @@ ms.lasthandoff: 02/07/2017
 Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows.
 
 ## <a name="debugging-out-of-process-vs-in-process-background-tasks"></a>Depurando tarefas em segundo plano fora do processo vs. no processo
-Este tópico aborda principalmente tarefas em segundo plano que são executadas em um processo separado do aplicativo host. Se você estiver depurando uma tarefa em segundo plano no processo, não terá um projeto de tarefa em segundo plano separado e poderá definir um ponto de interrupção em **OnBackgroundActivated()** (onde seu código em segundo plano no processo é executado) e consulte a etapa 2 em [Disparar tarefas em segundo plano manualmente para depurar o código da tarefa em segundo plano](#Trigger-background-tasks-manually-to-debug-background-task-code)abaixo, para obter instruções sobre como disparar seu código em segundo plano para ser executado.
+Este tópico aborda principalmente tarefas em segundo plano que são executadas em um processo separado do aplicativo host. Se você estiver depurando uma tarefa em segundo plano no processo, não terá um projeto de tarefa em segundo plano separado e poderá definir um ponto de interrupção em **OnBackgroundActivated()** (onde seu código em segundo plano no processo é executado) e consulte a etapa 2 em [Disparar tarefas em segundo plano manualmente para depurar o código da tarefa em segundo plano](#trigger-background-tasks-manually-to-debug-background-task-code)abaixo, para obter instruções sobre como disparar seu código em segundo plano para ser executado.
 
 ## <a name="make-sure-the-background-task-project-is-set-up-correctly"></a>Verificar se o projeto de tarefa em segundo plano está configurado corretamente
 
@@ -120,4 +117,3 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
  
 
  
-

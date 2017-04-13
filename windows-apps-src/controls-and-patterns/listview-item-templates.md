@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d8eb818d-b62e-4314-a612-f29142dbd93f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 91827b88d7b8ce2a216f8c10b56905b925b6c1ce
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b63b3a67db3b07cbfef6a89bdffb436605ab91ed
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="item-containers-and-templates"></a>Contêineres e modelos de itens
 
@@ -305,7 +303,7 @@ Conforme observado anteriormente sobre modelos de dados, o número de elementos 
 Os controles ListView e GridView são otimizados para reduzir o número de elementos XAML criados por item. O elementos visuais **ListViewItem** são criados pelo [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx), que é um elemento XAML especial que exibe elementos visuais complexos para foco, seleção e outros estados visuais, sem a sobrecarga de UIElements numerosos.
  
 > [!NOTE]
-> Em apps UWP para Windows 10, **ListViewItem** e **GridViewItem** usam **ListViewItemPresenter**; o GridViewItemPresenter está preterido e você não deve usá-lo. ListViewItem e GridViewItem definem valores de propriedade diferentes em ListViewItemPresenter para obter aparências padrão diferentes.)
+> Em aplicativos UWP para Windows 10, **ListViewItem** e **GridViewItem** usam **ListViewItemPresenter**; o GridViewItemPresenter está preterido e você não deve usá-lo. ListViewItem e GridViewItem definem valores de propriedade diferentes em ListViewItemPresenter para obter aparências padrão diferentes.)
 
 Para modificar a aparência do contêiner de item, use a propriedade [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) e forneça um elemento [**Style**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) com seu [**TargetType**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.targettype.aspx) definido como **ListViewItem** ou **GridViewItem**.
 
@@ -345,7 +343,7 @@ Para modificar outras propriedades ListViewItemPresenter que não estejam associ
 4. Na caixa de diálogo Criar Recurso de Estilo, insira um nome para o estilo. Neste exemplo, você usa `colorsGridViewItemStyle`.
     ![Visual Studio Create Style Resource dialog(images/listview-style-resource-vs.png)
 
-Uma cópia do estilo padrão é adicionada ao seu app como um recurso, e a propriedade **GridView.ItemContainerStyle** é definida como esse recurso, conforme mostrado neste XAML. 
+Uma cópia do estilo padrão é adicionada ao seu aplicativo como um recurso, e a propriedade **GridView.ItemContainerStyle** é definida como esse recurso, conforme mostrado neste XAML. 
 
 ```xaml
 <Style x:Key="colorsGridViewItemStyle" TargetType="GridViewItem">
@@ -429,7 +427,7 @@ Muitas das propriedades especificam os pincéis usados para diferentes estados v
 Esta tabela mostra os estados visuais comum e de seleção para ListViewItem e os pincéis usados para renderizar os elementos visuais para cada estado. As imagens mostram os efeitos dos pincéis sobre os estilos visuais de seleção embutida e sobreposta.
 
 > [!NOTE]
-> Nesta tabela, os valores de cor modificados para os pincéis são cores nomeadas em código e as cores são selecionadas para tornar mais aparente onde elas são aplicadas no modelo. Estas não são as cores padrão dos estados visuais. Se você modificar as cores padrão em seu app, use os recursos de pincel para modificar os valores de cor como feito no modelo padrão.
+> Nesta tabela, os valores de cor modificados para os pincéis são cores nomeadas em código e as cores são selecionadas para tornar mais aparente onde elas são aplicadas no modelo. Estas não são as cores padrão dos estados visuais. Se você modificar as cores padrão em seu aplicativo, use os recursos de pincel para modificar os valores de cor como feito no modelo padrão.
 
 Nome do estado/pincel | Estilo embutido | Estilo de sobreposição
 ------------|--------------|--------------
@@ -452,7 +450,7 @@ Como mencionado anteriormente, o número de UIElements em um modelo de item tem 
 > [!NOTE]
 > **ListViewItemPresenter** só é compatível quando [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) da exibição de lista é um [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) ou um [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx). Se você alterar o ItemsPanel para usar [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) ou [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), o modelo de itens será alternado automaticamente para o modelo XAML expandido. Para obter mais informações, consulte [Otimização das interfaces do usuário ListView e GridView](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
 
-Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele em seu app e definir a propriedade **ItemContainerStyle** para sua cópia.
+Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele em seu aplicativo e definir a propriedade **ItemContainerStyle** para sua cópia.
 
 **Para copiar o modelo expandido**
 1. Defina a propriedade ItemContainerStyle conforme mostrado aqui para ListView ou GridView.
@@ -467,12 +465,11 @@ Para personalizar um modelo XAML expandido, você precisa fazer uma cópia dele 
     ![Menu de propriedades do Visual Studio](images/listview-convert-resource-vs.png)
 5. Na caixa de diálogo Criar Recurso de Estilo, insira um nome para o recurso e clique em OK.
 
-Uma cópia do modelo expandido de generic.xaml será criada em seu app, que pode ser modificada conforme necessário.
+Uma cópia do modelo expandido de generic.xaml será criada em seu aplicativo, que pode ser modificada conforme necessário.
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Listas](lists.md)
 - [ListView e GridView](listview-and-gridview.md)
-
 

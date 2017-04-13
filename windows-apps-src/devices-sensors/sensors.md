@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a7c1c5e4352f80aee65cd828f8113ac0bd35d49
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sensors"></a>Sensores
 
@@ -132,5 +130,4 @@ Um aplicativo de leitura que altera sua exibição com base no dispositivo sendo
 ## <a name="samples"></a>Exemplos
 
 Para obter alguns exemplos que demonstram o uso de alguns dos diferentes sensores, consulte [Exemplos de sensores do Windows](http://go.microsoft.com/fwlink/?LinkID=616041).
-
 

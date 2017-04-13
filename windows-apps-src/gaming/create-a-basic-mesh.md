@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, jogos, malha, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f7dc55c0a7653616a86f1cca41521c7b25c070f9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo. As listas de vértices que compõem a estrutura desses objetos e superfícies poligonais são chamadas de malhas. Aqui, vamos criar uma malha básica para um objeto cúbico e fornecê-lo no pipeline de sombreador para renderização e exibição.
 
@@ -43,7 +40,7 @@ Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos 
 
 ### <a name="step-1-construct-the-mesh-for-the-model"></a>Etapa 1: construir a malha do modelo
 
-Na maioria dos jogos, a malha de um objeto de jogo é carregada de um arquivo que contém os dados de vértice específicos. A ordenação desses vértices depende do app, mas eles geralmente são serializados como faixas ou leques. Os dados de vértice podem se originar em qualquer fonte de software ou podem ser criados manualmente. Cabe ao seu jogo interpretar os dados de maneira que o sombreador de vértice possa efetivamente processá-los.
+Na maioria dos jogos, a malha de um objeto de jogo é carregada de um arquivo que contém os dados de vértice específicos. A ordenação desses vértices depende do aplicativo, mas eles geralmente são serializados como faixas ou leques. Os dados de vértice podem se originar em qualquer fonte de software ou podem ser criados manualmente. Cabe ao seu jogo interpretar os dados de maneira que o sombreador de vértice possa efetivamente processá-los.
 
 No nosso exemplo, usamos uma malha simples para um cubo. O cubo, assim como qualquer malha de objeto nesse estágio do pipeline, é representado por meio de seu próprio sistema de coordenadas. O sombreador de vértice obtém as coordenadas e, aplicando as matrizes de transformação fornecidas por você, retorna a projeção final de exibição 2D em um sistema de coordenadas homogêneo.
 
@@ -438,7 +435,7 @@ E pronto! Para um cenário repleto de modelos, use vários buffers de vértices 
 Este tópico abrange a criação e a exibição de geometria simples que você mesmo cria. Para saber mais sobre o carregamento de geometria complexa de um arquivo e a conversão dessa geometria no formato do objeto de buffer de vértices específico do exemplo (.vbo), consulte [Como carregar recursos no jogo em DirectX](load-a-game-asset.md).
 
 > **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem apps UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -450,7 +447,6 @@ Este artigo se destina a desenvolvedores do Windows 10 que escrevem apps UWP (Pl
  
 
  
-
 
 
 

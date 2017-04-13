@@ -2,21 +2,17 @@
 title: "Comportamento de SRV com blocos não mapeados"
 description: "O comportamento de leituras de modo de exibição (SRV) de recurso de sombreador que envolve blocos não mapeados depende do nível de suporte de hardware."
 ms.assetid: 0E1D64BE-EB09-4F9D-9800-BD23A3B374EE
-keywords:
-- "Comportamento de SRV com blocos não mapeados"
+keywords: "Comportamento de SRV com blocos não mapeados"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a8faa6e8b9bdbb3917ce79b6a83080f8a9df79a8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e6c4334446ef3bc302602d0b59b81164c9a28f3d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptssrvbehaviorwithnon-mappedtilesspansrv-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.srv_behavior_with_non-mapped_tiles"></span>Comportamento de SRV com blocos não mapeados
 
 
@@ -34,7 +30,6 @@ Alguns hardwares de [Nível 2](tier-2.md) de primeira geração não atendem a e
  
 
  
-
 
 
 

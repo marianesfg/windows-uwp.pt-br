@@ -2,21 +2,17 @@
 title: Mapeamento de luzes com texturas
 description: "Um mapa de luz é uma textura ou um grupo de texturas que contém informações sobre a iluminação em uma cena 3D."
 ms.assetid: 5C7518D2-AC92-4A97-B7AF-4469D213D7BD
-keywords:
-- Mapeamento de luzes com texturas
+keywords: Mapeamento de luzes com texturas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1154be19719cc3101c114c0bd700fb735824bcda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 18e24c1bc60c37a01cb99335e7a8e984697b19b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="light-mapping-with-textures"></a>Mapeamento de luzes com texturas
 
 
@@ -78,7 +74,6 @@ As informações sobre o uso da mistura de textura do Direct3D para executar o m
  
 
  
-
 
 
 

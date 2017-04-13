@@ -11,17 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 541f7e8c45190cfd597869ad1040801d368b77e8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 50c18f0ef72ad990971323921eae282c76c70be3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Há dois controles diferentes que facilitam a escrita à tinta em apps da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 O controle InkCanvas renderiza uma entrada à caneta como um traço de tinta (usando as configurações padrão de cor e espessura) ou um traço de apagar. Esse controle é uma sobreposição transparente que não inclui interfaces do usuário internas para alterar as propriedades de traço de tinta padrão.
 
@@ -51,7 +49,7 @@ Por padrão, o InkToolbar inclui botões para desenhar, apagar, realçar e exibi
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-Use o InkCanvas quando você precisar habilitar recursos básicos de escrita à tinta em seu app sem fornecer todas as configurações de tinta ao usuário.
+Use o InkCanvas quando você precisar habilitar recursos básicos de escrita à tinta em seu aplicativo sem fornecer todas as configurações de tinta ao usuário.
 
 Por padrão, os traços são renderizados como tinta ao usar a ponta da caneta (uma caneta esferográfica preta com espessura de 2 pixels) e como borracha ao usar a ponta da borracha. Se uma ponta de borracha não estiver presente, o InkCanvas poderá ser configurado para processar a entrada da ponta da caneta como um traço para apagar.
 
@@ -74,16 +72,16 @@ O InkCanvas e InkToolbar também são usados para **Bloco de esboços** e **Esbo
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>Criar um InkCanvas e InkToolbar
 
-Adicionar um InkCanvas ao app requer apenas uma linha de marcação:
+Adicionar um InkCanvas ao aplicativo requer apenas uma linha de marcação:
 
 ```xaml
 <InkCanvas x:Name=“myInkCanvas”/>
 ```
 
 > [!NOTE]
-> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, consulte o artigo ["Interações com caneta em apps UWP"](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/).
+> Para obter uma personalização do InkCanvas detalhada usando o InkPresenter, consulte o artigo ["Interações com caneta em aplicativos UWP"](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/).
 
-O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporação de um InkToolbar (com todas as ferramentas internas) ao seu app requer uma linha de marcação adicional:
+O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporação de um InkToolbar (com todas as ferramentas internas) ao seu aplicativo requer uma linha de marcação adicional:
 
  ```xaml
 <InkToolbar TargetInkCanvas=“{x:Bind myInkCanvas}”/>
@@ -108,12 +106,12 @@ Você pode personalizar os atributos de paleta de cores e tamanho (mín, máx, p
 
 - Borracha – exclui qualquer traço de tinta tocado. Observe que o inteiro traço de tinta é excluído, não apenas a parte sob o traço da borracha.
 
-**Alternar**
+**Alternância**
 
 - Régua – mostra ou oculta a régua. Desenhar perto da borda da régua faz com que o traço de tinta se ajuste à régua.  
  ![Elemento visual de régua associado ao InkToolbar](images/inking-tools-ruler.png)
 
-Embora essa seja a configuração padrão, você tem controle total sobre quais botões internos estão incluídos no InkToolbar para seu app.
+Embora essa seja a configuração padrão, você tem controle total sobre quais botões internos estão incluídos no InkToolbar para seu aplicativo.
 
 ### <a name="custom-buttons"></a>Botões personalizados
 
@@ -127,11 +125,11 @@ O InkToolbar consiste em dois grupos distintos de tipos de botões:
 > [!NOTE]
 > Os recursos não são mutuamente excludentes e podem ser usados concomitantemente com outras ferramentas ativas.
 
-Dependendo de seu app e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
+Dependendo de seu aplicativo e da funcionalidade de escrita à tinta necessária, você pode adicionar qualquer um dos seguintes botões (associados aos seus recursos de tinta personalizados) ao InkToolbar:
 
-- Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo app host.
-- Ferramenta personalizada – uma ferramenta sem caneta, definida pelo app host.
-- Alternância personalizada – define o estado de um recurso definido pelo app como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
+- Caneta personalizada – uma caneta para a qual as propriedades de paleta de cores de tinta e ponta da caneta, como tamanho, rotação e forma, são definidas pelo aplicativo host.
+- Ferramenta personalizada – uma ferramenta sem caneta, definida pelo aplicativo host.
+- Alternância personalizada – define o estado de um recurso definido pelo aplicativo como ativado ou desativado. Quando ativado, o recurso funciona com a ferramenta ativa.
 
 > [!NOTE]
 > Não é possível alterar a ordem de exibição dos botões internos. A ordem de exibição padrão é: caneta esferográfica, lápis, marca-texto, borracha e régua. Canetas personalizadas são acrescentadas à última caneta padrão, botões de ferramenta personalizados são adicionados entre o último botão de caneta e o botão de borracha e botões de alternância personalizados são adicionados após o botão de régua. (Os botões personalizados são adicionados na ordem em que são especificados.)
@@ -151,9 +149,9 @@ A borracha também tem um submenu que fornece o comando **Apagar Toda a Tinta**.
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
-- O InkCanvas, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, é recomendável dar suporte à escrita à tinta com entrada de mouse e toque (inclusive caneta passiva), se exigido por seu app.
+- O InkCanvas, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, é recomendável dar suporte à escrita à tinta com entrada de mouse e toque (inclusive caneta passiva), se exigido por seu aplicativo.
 - Use um controle InkToolbar com InkCanvas para fornecer configurações e recursos de escrita à tinta básicos. O InkCanvas e InkToolbar podem ser personalizados de forma programática.
-- O InkToolbar, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu app.
+- O InkToolbar, e a escrita à tinta em geral, oferece a melhor experiência com uma caneta ativa. No entanto, a escrita à tinta com mouse e toque pode ter suporte, se exigido por seu aplicativo.
 - Para dar suporte à escrita à tinta com entrada por toque, recomendamos usar o ícone ED5F da fonte Segoe MLD2 Assets para o botão de alternância, com uma dica de ferramenta "Escrita por toque".
 - Se você fornecer seleção de traço, recomendamos usar o ícone EF20 da fonte Segoe MLD2 Assets para o botão de ferramenta, com uma dica de ferramenta "Ferramenta de seleção".
 - Se for usar mais de um InkCanvas, recomendamos usar um único InkToolbar para controlar a escrita à tinta em telas.
@@ -167,7 +165,6 @@ Para ver um exemplo de escrita à tinta mais avançado, consulte o [exemplo Comp
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Interações com caneta em apps UWP](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
+- [Interações com caneta em aplicativos UWP](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
 - [Reconhecer traços de tinta](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
 - [Armazenar e recuperar traços de tinta](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
-

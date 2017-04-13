@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: "Use este método na API de promoções da Windows Store para gerenciar perfis de direcionamento de campanhas publicitárias promocionais."
-title: "Gerenciar perfis de direcionamento de campanhas publicitárias"
+title: Gerenciar perfis de direcionamento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de promoções da Windows Store, campanhas publicitárias"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c737e27df4a911d3fcbdcb3128ece865bda2b703
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 30fb160e389edd18fb3782d332b5603fc6207757
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-targeting-profiles-for-ad-campaigns"></a>Gerenciar perfis de direcionamento de campanhas publicitárias
+# <a name="manage-targeting-profiles"></a>Gerenciar perfis de direcionamento
 
 
 Use esses métodos na API de promoções da Windows Store para selecionar usuários, regiões geográficas e tipos de inventário que você deseja destinar para cada linha de entrega de uma campanha publicitária promocional. Os perfis de direcionamento podem ser criados e reutilizados em diversas linhas de entrega.
@@ -28,7 +25,7 @@ Para saber mais sobre a relação entre perfis de direcionamento e campanhas pub
 Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Windows Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -45,7 +42,7 @@ Esses métodos têm os seguintes URIs.
 
 | Cabeçalho        | Tipo   | Descrição         |
 |---------------|--------|---------------------|
-| Autorização | cadeia | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 
@@ -161,7 +158,7 @@ O campo *idade* no objeto [TargetingProfile](#targeting-profile) contém um ou m
 
 |  Valor inteiro do campo *idade*  |  Faixa etária correspondente  |  
 |---------------------------------|---------------------------|
-|     621     |            13 a 17             |
+|     651     |            13 a 17             |
 |     652     |           18 a 24             |
 |     653     |            25 a 34             |
 |     654     |            35 a 49             |
@@ -620,4 +617,3 @@ O exemplo de código a seguir mostra o corpo de resposta desse método.
 * [Gerenciar linhas de entrega de campanhas publicitárias](manage-delivery-lines-for-ad-campaigns.md)
 * [Gerenciar criativos de campanhas publicitárias](manage-creatives-for-ad-campaigns.md)
 * [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
-

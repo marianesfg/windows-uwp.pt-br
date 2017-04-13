@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 493e491bd16b7346046394d66587788caf06db4f
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
-
 # <a name="guidelines-for-app-settings"></a>Diretrizes para configurações de aplicativos
 
-As configurações do aplicativo são as partes de seu aplicativo personalizáveis pelo usuário e as partes dinâmicas na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+Configurações do aplicativo são as partes de seu aplicativo personalizáveis pelo usuário e as partes dinâmicas na página de configurações do aplicativo. Por exemplo, as configurações do aplicativo em um aplicativo leitor de notícias podem permitir que o usuário especifique quais fontes de notícias exibir ou a quantidade de colunas a serem exibidas na tela, enquanto as configurações de um aplicativo de previsão do tempo podem permitir que o usuário escolha entre Celsius e Fahrenheit como a unidade padrão de medida. Este artigo descreve as práticas recomendadas para criar e exibir as configurações do aplicativo.
 
 ![exemplo de um painel de configurações](images/app-settings.png)
 
@@ -142,7 +140,7 @@ Assim que você tiver uma lista dos itens que deseja incluir na página de confi
 -   Se o carregamento de controles ou de conteúdo da Web for demorado, use um controle de progresso indeterminado para indicar aos usuários que as informações estão sendo carregadas. Para obter mais informações, consulte [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469).
 -   Não use botões para navegação ou para confirmar alterações. Use hiperlinks para navegar para outras páginas e, em vez de usar um botão para confirmar as mudanças, salve-as automaticamente nas configurações do aplicativo quando um usuário ignorar o submenu Configurações.
 
-\[Este artigo contém informações que são específicas aos aplicativos UWP (Plataforma Universal do Windows) e do Windows�10. Para obter as diretrizes do Windows�8.1, baixe o [PDF de diretrizes do Windows�8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -150,4 +148,3 @@ Assim que você tiver uma lista dos itens que deseja incluir na página de confi
 * [Diretrizes de controles de progresso](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [Armazenar e recuperar dados de aplicativo](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-

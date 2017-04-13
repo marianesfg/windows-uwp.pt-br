@@ -2,21 +2,17 @@
 title: "Operações disponíveis em pools de blocos"
 description: "As operações em pools de blocos incluem o redimensionamento de um pool de blocos, o que oferece recursos (memória temporariamente para o sistema e o pool de blocos inteiro) e recuperação de recursos."
 ms.assetid: 90347F7F-C991-4287-BD70-494533ECDC8A
-keywords:
-- "Operações disponíveis em pools de blocos"
+keywords: "Operações disponíveis em pools de blocos"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 414e6a2f224d7c171b2268fba58954f7ebcbea6f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e144b42782f8479bc55dc22f8505c7cfa4455713
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="operations-available-on-tile-pools"></a>Operações disponíveis em pools de blocos
 
 
@@ -37,7 +33,6 @@ Os dados não podem ser copiados de e para a memória diretamente do pool de blo
  
 
  
-
 
 
 

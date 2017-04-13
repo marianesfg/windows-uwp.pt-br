@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 26345315e9e09d2fd9134ba7264028c460d888ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -57,9 +55,9 @@ O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos di
 
 -   **Instalando**.
 
-    O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio 2015. Confira a [página de download do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
+    O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio 2015. Confira a [Página de transferência do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
-    Você também pode instalar o Emulador da Microsoft para Windows 10 Mobile usando a instalação do Emulador da Microsoft. Confira a [página de download de Ferramentas do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189).
+    Você também pode instalar o Emulador da Microsoft para Windows 10 Mobile usando a instalação do Emulador da Microsoft. Confira a [Página de transferência de Ferramentas do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189).
 
 -   **Desinstalando**.
 
@@ -662,5 +660,4 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 * [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Arquivo morto do SDK do Windows e do Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
-
 

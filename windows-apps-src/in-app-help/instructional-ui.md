@@ -11,26 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b9734304b813794d615eca4d0c9d852dc8df31c1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3d1d1e139baf82800ca999c0ab931f7965882b0c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="instructional-ui-guidelines"></a>Diretrizes da interface do usuário instrucional
 
 
 
-Em algumas circunstâncias, pode ser útil ensinar o usuário sobre funções em seu app que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa usar esses recursos que talvez tenha ignorado.
+Em algumas circunstâncias, pode ser útil ensinar o usuário sobre funções em seu aplicativo que podem não ser óbvias, como interações de toque específicas. Nesses casos, você precisa apresentar instruções para o usuário por meio da interface do usuário, para que ele possa usar esses recursos que talvez tenha ignorado.
 
 ## <a name="when-to-use-instructional-ui"></a>Quando usar a interface do usuário instrucional
 
 A interface do usuário instrucional deve ser usada com cuidado. Quando usada em excesso, ela pode ser facilmente ignorada ou incomodar o usuário, tornando-se ineficaz.
 
-A interface do usuário instrucional deve ser usada para ajudar o usuário a descobrir recursos importantes de seu app que não são óbvios, como gestos de toque ou configurações nos quais ele podem estar interessados. Também pode ser usada para informar os usuários sobre novos recursos ou alterações em seu app que, de outra maneira, podem ser ignorados.
+A interface do usuário instrucional deve ser usada para ajudar o usuário a descobrir recursos importantes de seu aplicativo que não são óbvios, como gestos de toque ou configurações nos quais ele podem estar interessados. Também pode ser usada para informar os usuários sobre novos recursos ou alterações em seu aplicativo que, de outra maneira, podem ser ignorados.
 
-A menos que seu app dependa de gestos de toque, interface do usuário instrucional não deve ser usada para ensinar os usuários os recursos fundamentais do seu app.
+A menos que seu aplicativo dependa de gestos de toque, interface do usuário instrucional não deve ser usada para ensinar os usuários os recursos fundamentais do seu aplicativo.
 
 ## <a name="principles-of-writing-instructional-ui"></a>Princípios de escrita da interface do usuário instrucional
 
@@ -42,14 +39,14 @@ Uma boa interface do usuário instrucional é relevante e educativa para o usuá
 
 Evite o uso excessivo de interface do usuário instrucional e certifique-se de escolher os tópicos certos. Não ensine:
 
--   **Recursos fundamentais:** se um usuário precisar de instruções para usar seu app, considere tornar o design do app mais intuitivo.
+-   **Recursos fundamentais:** se um usuário precisar de instruções para usar seu aplicativo, considere tornar o design do aplicativo mais intuitivo.
 -   **Recursos óbvios:** se um usuário conseguir descobrir um recurso por conta própria sem instrução, a interface do usuário instrucional só acabará atrapalhando.
 -   **Recursos complexos:** a interface do usuário instrucional deve ser concisa, e os usuários interessados em recursos complexos normalmente estão dispostos a buscar instruções e não precisam recebê-las.
 
 Evite ser inconveniente para o usuário com sua interface do usuário instrucional. Não:
 
--   **Obscureça informações importantes:** a interface do usuário instrucional nunca deve atrapalhar outros recursos de seu app.
--   **Force os usuários a participar:** os usuários devem conseguir ignorar a interface do usuário instrucional e ainda usar bem o app.
+-   **Obscureça informações importantes:** a interface do usuário instrucional nunca deve atrapalhar outros recursos de seu aplicativo.
+-   **Force os usuários a participar:** os usuários devem conseguir ignorar a interface do usuário instrucional e ainda usar bem o aplicativo.
 -   **Como exibir informações repetidas:** não assedie o usuário com a interface do usuário instrucional, mesmo que ele a ignore na primeira vez. Adicionar uma configuração para exibir a interface do usuário instrucional novamente é a melhor solução.
 
 ## <a name="examples-of-instructional-ui"></a>Exemplos de interface do usuário instrucional
@@ -62,19 +59,18 @@ Estas são algumas situações nas quais a interface do usuário instrucional po
 
 -   **Causando uma ótima primeira impressão.** Quando o Editor de Vídeos é iniciado pela primeira vez, a interface do usuário instrucional solicita que o usuário comece a criar vídeos sem obstruir sua experiência.
 
-    ![tela de inicialização do app Editor de Vídeos](images/instructional-ui-movie.png)
+    ![tela de inicialização do aplicativo Editor de Vídeos](images/instructional-ui-movie.png)
 
--   **Orientando o usuário a realizar a próxima etapa de uma tarefa complicada.** No app Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
+-   **Orientando o usuário a realizar a próxima etapa de uma tarefa complicada.** No aplicativo Windows Mail, uma dica na parte inferior da Caixa de Entrada direciona os usuários até as **Configurações** para acessar mensagens mais antigas.
 
-    ![captura de tela cortada do app windows mail mostrando uma mensagem da interface do usuário instrucional](images/instructional-ui-mail-inbox.png)
+    ![captura de tela cortada do aplicativo windows mail mostrando uma mensagem da interface do usuário instrucional](images/instructional-ui-mail-inbox.png)
 
-    Quando o usuário clica na mensagem, o submenu **Configurações** do app aparece no lado direito da tela, permitindo a conclusão da tarefa. Estas capturas de tela mostram o app Mail antes e depois de um usuário clicar na mensagem da interface do usuário instrucional.
+    Quando o usuário clica na mensagem, o submenu **Configurações** do aplicativo aparece no lado direito da tela, permitindo a conclusão da tarefa. Estas capturas de tela mostram o aplicativo Mail antes e depois de um usuário clicar na mensagem da interface do usuário instrucional.
 
     | Antes                                                               | Depois                                                                                                        |
     |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-    | ![captura de tela do app windows mail](images/instructional-ui-mail.png) | ![captura de tela do app de email do windows com um submenu configurações estendido](images/instructional-ui-mail-flyout.png) |
+    | ![captura de tela do aplicativo windows mail](images/instructional-ui-mail.png) | ![captura de tela do aplicativo de email do windows com um submenu configurações estendido](images/instructional-ui-mail-flyout.png) |
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [Diretrizes da ajuda do app](guidelines-for-app-help.md)
-
+* [Diretrizes da ajuda do aplicativo](guidelines-for-app-help.md)

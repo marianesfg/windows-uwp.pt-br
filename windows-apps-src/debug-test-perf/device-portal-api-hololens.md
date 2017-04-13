@@ -3,18 +3,17 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "Referência de API do Device Portal para HoloLens"
 description: "Saiba mais sobre as APIs REST do Windows Device Portal para Hololens que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# Referência de API do Device Portal para HoloLens
+# <a name="device-portal-api-reference-for-hololens"></a>Referência de API do Device Portal para HoloLens
 
 Tudo no Windows Device Portal foi criado com base em APIs REST, que você pode usar para acessar os dados e controlar o dispositivo de forma programática.
 
-## Sistema operacional holográfico
+## <a name="holographic-os"></a>Sistema operacional holográfico
 ---
-### Obter requisitos de HTTPS para o Device Portal
+### <a name="get-https-requirements-for-the-device-portal"></a>Obter requisitos de HTTPS para o Device Portal
 
 **Solicitação**
 
@@ -46,7 +45,7 @@ GET | /api/holographic/os/webmanagement/settings/https
 - Códigos de status padrão.
 
 ---
-### Obter a DIP (distância interpupilar) armazenada
+### <a name="get-the-stored-interpupillary-distance-ipd"></a>Obter a DIP (distância interpupilar) armazenada
 
 **Solicitação**
 
@@ -78,7 +77,7 @@ GET | /api/holographic/os/settings/ipd
 - Códigos de status padrão.
 
 ---
-### Obter uma lista de provedores ETW específicos do HoloLens
+### <a name="get-a-list-of-hololens-specific-etw-providers"></a>Obter uma lista de provedores ETW específicos do HoloLens
 
 **Solicitação**
 
@@ -110,7 +109,7 @@ GET | /api/holographic/os/etw/customproviders
 - Códigos de status padrão.
 
 ---
-### Retornar o estado para todos os serviços de ativos
+### <a name="return-the-state-for-all-active-services"></a>Retornar o estado para todos os serviços de ativos
 
 **Solicitação**
 
@@ -142,7 +141,7 @@ GET | /api/holographic/os/services
 - Códigos de status padrão.
 
 ---
-### Defina o requisito de HTTPS para o Device Portal.
+### <a name="set-the-https-requirement-for-the-device-portal"></a>Defina o requisito de HTTPS para o Device Portal.
 
 **Solicitação**
 
@@ -178,7 +177,7 @@ required   | (**necessário**) Determina se o HTTPS é necessário ou não para 
 - Códigos de status padrão.
 
 ---
-### Definir a DIP (distância interpupilar)
+### <a name="set-the-interpupillary-distance-ipd"></a>Definir a DIP (distância interpupilar)
 
 **Solicitação**
 
@@ -214,9 +213,9 @@ ipd   | (**necessário**) O novo valor da DIP a ser armazenado. Esse valor deve 
 - Códigos de status padrão.
 
 ---
-## Percepção holográfica
+## Holographic perception
 ---
-### Aceitar atualizações Websocket e executar um cliente do Mirage que envia atualizações
+### <a name="accept-websocket-upgrades-and-run-a-mirage-client-that-sends-updates"></a>Aceitar atualizações Websocket e executar um cliente do Mirage que envia atualizações
 
 **Solicitação**
 
@@ -252,9 +251,9 @@ clientmode   | (**necessário**) Determina o modo de rastreamento. Um valor **ac
 - Códigos de status padrão.
 
 ---
-## Térmico holográfico
+## Holographic thermal
 ---
-### Obter o estágio térmico do dispositivo
+### <a name="get-the-thermal-stage-of-the-device"></a>Obter o estágio térmico do dispositivo
 
 **Solicitação**
 
@@ -291,9 +290,9 @@ Valor | Descrição
 - Códigos de status padrão.
 
 ---
-## Controle de HSimulation
+## HSimulation control
 ---
-### Criar um fluxo de controle ou postar dados em um fluxo criado
+### <a name="create-a-control-stream-or-post-data-to-a-created-stream"></a>Criar um fluxo de controle ou postar dados em um fluxo criado
 
 **Solicitação**
 
@@ -330,7 +329,7 @@ streamid   | (**necessário na postagem em um fluxo criado**) O identificador do
 - Códigos de status padrão.
 
 ---
-### Excluir um fluxo de controle
+### <a name="delete-a-control-stream"></a>Excluir um fluxo de controle
 
 **Solicitação**
 
@@ -362,7 +361,7 @@ DELETE | /api/holographic/simulation/control/stream
 - Códigos de status padrão.
 
 ---
-### Obter um fluxo de controle
+### <a name="get-a-control-stream"></a>Obter um fluxo de controle
 
 **Solicitação**
 
@@ -394,7 +393,7 @@ GET/WebSocket | /api/holographic/simulation/control/stream
 - Códigos de status padrão.
 
 ---
-### Obter o modo de simulação
+### <a name="get-the-simluation-mode"></a>Obter o modo de simulação
 
 **Solicitação**
 
@@ -426,7 +425,7 @@ GET | /api/holographic/simulation/control/mode
 - Códigos de status padrão.
 
 ---
-### Definir o modo de simulação
+### <a name="set-the-simluation-mode"></a>Definir o modo de simulação
 
 **Solicitação**
 
@@ -462,9 +461,9 @@ mode   | (**necessário**) Indica o modo de simulação. Os valores possíveis i
 - Códigos de status padrão.
 
 ---
-## Reprodução de HSimulation
+## HSimulation playback
 ---
-### Excluir uma gravação
+### <a name="delete-a-recording"></a>Excluir uma gravação
 
 **Solicitação**
 
@@ -500,7 +499,7 @@ recording   | (**necessário**) O nome da gravação a ser excluída.
 - Códigos de status padrão.
 
 ---
-### Obter todas as gravações
+### <a name="get-all-recordings"></a>Obter todas as gravações
 
 **Solicitação**
 
@@ -532,7 +531,7 @@ GET | /api/holographic/simulation/playback/files
 - Códigos de status padrão.
 
 ---
-### Obter os tipos de dados em uma gravação carregada
+### <a name="get-the-types-of-data-in-a-loaded-recording"></a>Obter os tipos de dados em uma gravação carregada
 
 **Solicitação**
 
@@ -568,7 +567,7 @@ recording   | (**necessário**) O nome da gravação pela qual você se interess
 - Códigos de status padrão.
 
 ---
-### Obter todas as gravações carregadas
+### <a name="get-all-the-loaded-recordings"></a>Obter todas as gravações carregadas
 
 **Solicitação**
 
@@ -600,7 +599,7 @@ GET | /api/holographic/simulation/playback/session/files
 - Códigos de status padrão.
 
 ---
-### Obter o estado de reprodução atual de uma gravação 
+### <a name="get-the-current-playback-state-of-a-recording"></a>Obter o estado de reprodução atual de uma gravação 
 
 **Solicitação**
 
@@ -636,7 +635,7 @@ recording   | (**necessário**) O nome da gravação pela qual você se interess
 - Códigos de status padrão.
 
 ---
-### Carregar uma gravação
+### <a name="load-a-recording"></a>Carregar uma gravação
 
 **Solicitação**
 
@@ -672,7 +671,7 @@ recording   | (**necessário**) O nome da gravação a ser carregada.
 - Códigos de status padrão.
 
 ---
-### Pausar uma gravação
+### <a name="pause-a-recording"></a>Pausar uma gravação
 
 **Solicitação**
 
@@ -708,7 +707,7 @@ recording   | (**necessário**) O nome da gravação a ser pausada.
 - Códigos de status padrão.
 
 ---
-### Reproduzir uma gravação
+### <a name="play-a-recording"></a>Reproduzir uma gravação
 
 **Solicitação**
 
@@ -744,7 +743,7 @@ recording   | (**necessário**) O nome da gravação a ser reproduzida.
 - Códigos de status padrão.
 
 ---
-### Parar a gravação
+### <a name="stop-a-recording"></a>Parar a gravação
 
 **Solicitação**
 
@@ -780,7 +779,7 @@ recording   | (**necessário**) O nome da gravação a ser parada.
 - Códigos de status padrão.
 
 ---
-### Descarregar uma gravação
+### <a name="unload-a-recording"></a>Descarregar uma gravação
 
 **Solicitação**
 
@@ -816,7 +815,7 @@ recording   | (**necessário**) O nome da gravação a ser descarregada.
 - Códigos de status padrão.
 
 ---
-### Carregar uma gravação
+### <a name="upload-a-recording"></a>Carregar uma gravação
 
 **Solicitação**
 
@@ -848,9 +847,9 @@ POST | /api/holographic/simulation/playback/file
 - Códigos de status padrão.
 
 ---
-## Gravação de HSimulation
+## HSimulation recording
 ---
-### Obter o estado de gravação
+### <a name="get-the-recording-state"></a>Obter o estado de gravação
 
 **Solicitação**
 
@@ -882,7 +881,7 @@ GET | /api/holographic/simulation/recording/status
 - Códigos de status padrão.
 
 ---
-### Iniciar uma gravação
+### <a name="start-a-recording"></a>Iniciar uma gravação
 
 **Solicitação**
 
@@ -925,7 +924,7 @@ Para esses parâmetros, um dos seguintes parâmetros deve ser definido exatament
 - Códigos de status padrão.
 
 ---
-### Parar a gravação atual
+### <a name="stop-the-current-recording"></a>Parar a gravação atual
 
 **Solicitação**
 
@@ -957,9 +956,9 @@ POST | /api/holographic/simulation/recording/stop
 - Códigos de status padrão.
 
 ---
-## Captura de realidade mista
+## Mixed reality capture
 ---
-### Excluir uma gravação MRC (captura de realidade mista) do dispositivo
+### <a name="delete-a-mixed-reality-capture-mrc-recording-from-the-device"></a>Excluir uma gravação MRC (captura de realidade mista) do dispositivo
 
 **Solicitação**
 
@@ -995,7 +994,7 @@ filename   | (**necessário**) O nome do arquivo de vídeo a ser excluído. O no
 - Códigos de status padrão.
 
 ---
-### Baixar um arquivo de MRC (captura de realidade mista)
+### <a name="download-a-mixed-reality-capture-mrc-file"></a>Baixar um arquivo de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1032,7 +1031,7 @@ op   | (**opcional**) Defina esse valor como **stream** se você deseja baixar u
 - Códigos de status padrão.
 
 ---
-### Obter as configurações de MRC (captura de realidade mista)
+### <a name="get-the-mixed-reality-capture-mrc-settings"></a>Obter as configurações de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1064,7 +1063,7 @@ GET | /api/holographic/mrc/settings
 - Códigos de status padrão.
 
 ---
-### Obter o status da gravação de MRC (captura de realidade mista)
+### <a name="get-the-status-of-the-mixed-reality-capture-mrc-recording"></a>Obter o status da gravação de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1096,7 +1095,7 @@ GET | /api/holographic/mrc/status
 - Códigos de status padrão.
 
 ---
-### Obter a lista de arquivos de MRC (captura de realidade mista)
+### <a name="get-the-list-of-mixed-reality-capture-mrc-files"></a>Obter a lista de arquivos de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1128,7 +1127,7 @@ GET | /api/holographic/mrc/files
 - Códigos de status padrão.
 
 ---
-### Definir as configurações de MRC (captura de realidade mista)
+### <a name="set-the-mixed-reality-capture-mrc-settings"></a>Definir as configurações de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1160,7 +1159,7 @@ POST | /api/holographic/mrc/settings
 - Códigos de status padrão.
 
 ---
-### Iniciar uma gravação de MRC (captura de realidade mista)
+### <a name="starts-a-mixed-reality-capture-mrc-recording"></a>Iniciar uma gravação de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1192,7 +1191,7 @@ POST | /api/holographic/mrc/video/control/start
 - Códigos de status padrão.
 
 ---
-### Parar a atual gravação de MRC (captura de realidade mista)
+### <a name="stop-the-current-mixed-reality-capture-mrc-recording"></a>Parar a atual gravação de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1224,7 +1223,7 @@ POST | /api/holographic/mrc/video/control/stop
 - Códigos de status padrão.
 
 ---
-### Tirar uma foto de MRC (captura de realidade mista)
+### <a name="take-a-mixed-reality-capture-mrc-photo"></a>Tirar uma foto de MRC (captura de realidade mista)
 
 **Solicitação**
 
@@ -1256,9 +1255,9 @@ GET | /api/holographic/mrc/photo
 - Códigos de status padrão.
 
 ---
-## Streaming de realidade mista
+## Mixed reality streaming
 ---
-### Inicia um download em partes de um mp4 fragmentado
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Inicia um download em partes de um mp4 fragmentado
 
 **Solicitação**
 
@@ -1297,7 +1296,7 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 - Códigos de status padrão.
 
 ---
-### Inicia um download em partes de um mp4 fragmentado
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Inicia um download em partes de um mp4 fragmentado
 
 **Solicitação**
 
@@ -1336,7 +1335,7 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 - Códigos de status padrão.
 
 ---
-### Inicia um download em partes de um mp4 fragmentado
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Inicia um download em partes de um mp4 fragmentado
 
 **Solicitação**
 
@@ -1375,7 +1374,7 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 - Códigos de status padrão.
 
 ---
-### Inicia um download em partes de um mp4 fragmentado
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Inicia um download em partes de um mp4 fragmentado
 
 **Solicitação**
 
@@ -1412,9 +1411,3 @@ loopback   | (**opcional**) Indica se deve ser capturado o áudio do aplicativo.
 **Código de status**
 
 - Códigos de status padrão.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

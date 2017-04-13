@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0b1dfaeb098ac4b73c89f4d1a51ec658312aee4e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 722389a7440110eaffa5458e8ef5e85fccb39671
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualização de dados de ListView e GridView
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Observação**  Para obter mais detalhes, consulte a sessão //build/ sobre como [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
@@ -28,7 +26,7 @@ Um método de virtualização de dados é necessário para um conjunto de dados 
 -   O tamanho do conjunto de dados
 -   O tamanho de cada item
 -   A fonte do conjunto de dados (disco local, rede ou nuvem)
--   O consumo de memória geral do seu app
+-   O consumo de memória geral do seu aplicativo
 
 **Observação**  Lembre-se de que um recurso é habilitado por padrão para ListView e GridView que exibe os elementos visuais de espaço reservado temporário enquanto o usuário está aplicando panorâmica/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -73,7 +71,7 @@ Esta é a estratégia básica para sua fonte de dados de virtualização de dado
     -   Use a solicitação de um item (ou as informações do intervalo de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber quais itens são necessários, além de buscar dados dos itens do back-end de maneira assíncrona. Depois de recuperar os dados, acione uma notificação de alteração via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) de maneira que o controle de itens saiba mais sobre o novo item.
 -   (Opcionalmente) À medida que o visor do controle de itens muda, identifique quais itens da fonte de dados são necessários implementando [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
 
-Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu app. Algumas considerações gerais para lembrar:
+Além disso, a estratégia de quando carregar itens de dados, quantos dados carregar e quais itens manter na memória depende de seu aplicativo. Algumas considerações gerais para lembrar:
 
 -   Faça solicitações assíncronas de dados; não bloqueie o thread de interface do usuário.
 -   Encontre o ponto forte no tamanho dos lotes nos que você busca os itens. Prefira os "robustos" aos "tagarelas". Não tão pequenos a ponto de você fazer solicitações pequenas demais; não tão grandes a ponto de levarem muito tempo para recuperar.
@@ -83,7 +81,6 @@ Além disso, a estratégia de quando carregar itens de dados, quantos dados carr
 -   Quais tipos de notificações são fornecidos pelo serviço quando os resultados de uma consulta são alterados? Você saberá se um item foi inserido no índice 33? Se seu serviço aceita consultas com base em no método chave mais deslocamento, isso pode ser melhor do que apenas usar um índice.
 -   Quão inteligente você quer ser na pré-busca de itens? Você vai testar e controlar a direção e a velocidade de rolagem para prever quais itens são necessários?
 -   Quão agressivo você quer ser na limpeza do cache? Esse é um equilíbrio entre memória e experiência.
-
 
 
 

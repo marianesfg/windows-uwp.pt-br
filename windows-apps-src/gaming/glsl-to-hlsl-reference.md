@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreadores
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f2d5f5a363abf026e865ed07221ba9075a6a67e7
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="glsl-to-hlsl-reference"></a>Referência de GLSL para HLSL
 
 
@@ -157,7 +154,7 @@ No GLSL, você deve aplicar modificadores (qualificadores) a uma declaração de
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
 <p>Constantes que são compiladas no sombreador e nunca mudam.</p></td>
-<td align="left">Use uma <strong>static const</strong>. <strong>static</strong> indica que o valor não é exposto a buffers constantes, <strong>const</strong> indica que o sombreador não pode alterar o valor. Por isso, o valor é conhecido no momento da compilação com base em seu inicializador.</td>
+<td align="left">Use uma <strong>static const</strong>. <strong>static</strong> indica que o valor não é exposto a buffers constantes; <strong>const</strong> indica que o sombreador não pode alterar o valor. Por isso, o valor é conhecido no momento da compilação com base em seu inicializador.</td>
 </tr>
 </tbody>
 </table>
@@ -571,7 +568,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
  
 
  
-
 
 
 

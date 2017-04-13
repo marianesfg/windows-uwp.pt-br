@@ -2,21 +2,17 @@
 title: Sistemas de coordenadas
 description: "Normalmente, os apps de elementos gráficos 3D usam um dos dois tipos de sistemas de coordenadas cartesianas de esquerda e direita. Em ambos os sistemas de coordenadas, o eixo x positivo aponta para a direita e o eixo y positivo aponta para cima."
 ms.assetid: 138D9B81-146F-4E9F-B742-1EDED8FBF2AE
-keywords:
-- Sistemas de coordenadas
+keywords: Sistemas de coordenadas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47096c67d97212a5090f1a9b9a14e6ca57aa8f18
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 64ee2dee2944af1d256b825fc08fb01c992d3218
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
 
@@ -58,7 +54,6 @@ Se você estiver fazendo a portabilidade de um app que se baseia em um sistema d
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: "Parâmetros de criação de recursos de streaming"
 description: "Há algumas restrições sobre o tipo de recursos do Direct3D que você pode criar como um recurso de streaming."
 ms.assetid: 6FC5AD93-6F47-479E-947C-895C99B427BC
-keywords:
-- "Parâmetros de criação de recursos de streaming"
+keywords: "Parâmetros de criação de recursos de streaming"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73f844071fe1349db3a61854fb09e87eb73c9082
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8704705edb0ec516a03c13a4bf240fd00f31e44b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="streaming-resource-creation-parameters"></a>Parâmetros de criação de recursos de streaming
 
 
@@ -85,7 +81,6 @@ O conteúdo inicial da memória do pool de bloco é indefinido.
  
 
  
-
 
 
 

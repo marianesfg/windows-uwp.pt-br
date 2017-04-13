@@ -2,21 +2,17 @@
 title: Criar recursos de streaming
 description: "Os recursos de streaming criados especificando um sinalizador quando você cria um recurso, indicando que o recurso é um recurso de streaming."
 ms.assetid: B3F3E43C-54D4-458C-9E16-E13CB382C83F
-keywords:
-- Criar recursos de streaming
+keywords: Criar recursos de streaming
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 86f19b2afd580a16510fee8e97acfc2a388cad01
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0f42d34251ccd6d9add87808e502ab66dc830905
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="creating-streaming-resources"></a>Criar recursos de streaming
 
 
@@ -86,7 +82,6 @@ Não confunda esse conceito com a noção de mapeamento de um recurso do Direct3
  
 
  
-
 
 
 

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 96C090C1-88F8-42E7-AED1-AFA9031E952B
 description: "Use este método na API de envio da Windows Store para excluir um envio de aplicativo existente."
-title: Excluir um envio de aplicativo usando a API de envio da Windows Store
+title: Excluir um envio de app
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, envio de aplicativo, excluir
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fe85515d9baaaf0d36cdcdce12a0e81561bb6787
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 20ac77960c47e21daddec845abef73887ee93710
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-app-submission-using-the-windows-store-submission-api"></a>Excluir um envio de aplicativo usando a API de envio da Windows Store
+# <a name="delete-an-app-submission"></a>Excluir um envio de app
 
 
 
@@ -34,7 +31,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ## <a name="request"></a>Solicitação
 
-Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
@@ -47,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -81,7 +78,7 @@ Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -100,4 +97,3 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Confirmar um envio de aplicativo](commit-an-app-submission.md)
 * [Atualizar um envio de aplicativo](update-an-app-submission.md)
 * [Obter o status de um envio de aplicativo](get-status-for-an-app-submission.md)
-

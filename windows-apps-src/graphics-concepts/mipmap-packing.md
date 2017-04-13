@@ -2,21 +2,17 @@
 title: "Compactação de mapas MIP"
 description: "Um número de mips (por fatia de matriz) pode ser incluído em uma quantidade de blocos, dependendo das dimensões, do formato, do número de mipmaps e das fatias de matriz de um recurso de streaming."
 ms.assetid: 906C3CAC-4E84-4947-B508-06788551BE85
-keywords:
-- "Compactação de mapas MIP"
+keywords: "Compactação de mapas MIP"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4d9f8d62ee19cd92b543359413fc09e6053c1ed5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 720e8ff5fd6dee2a67bd7a1bf7de02a8f5c34583
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mipmap-packing"></a>Compactação de mapas MIP
 
 
@@ -40,7 +36,6 @@ As APIs dedicadas para copiar blocos não podem acessar mips compactados. Os app
  
 
  
-
 
 
 

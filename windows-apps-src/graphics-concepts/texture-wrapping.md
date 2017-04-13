@@ -2,21 +2,17 @@
 title: Encapsulamento de textura
 description: "O encapsulamento de textura muda a maneira básica com que o Direct3D rasteriza polígonos texturizados usando as coordenadas de textura especificadas para cada vértice."
 ms.assetid: C28FB369-9A91-4D57-A96D-4A5D36484B35
-keywords:
-- Encapsulamento de textura
+keywords: Encapsulamento de textura
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4743672c757fbbe67770e95d61080ac678c600ac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a5c53a4a9fdaf166e9010da1e72f43b8dccf81e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-wrapping"></a>Encapsulamento de textura
 
 
@@ -59,7 +55,6 @@ Os mapas de deslocamento são interpolados pelo mecanismo de mosaico. Como o mod
  
 
  
-
 
 
 

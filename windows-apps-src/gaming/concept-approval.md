@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, aprovação de conceito"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 43c4448e7a581dae69f44c64fd2068e79cb6c7ed
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f05789d87f3260aa02d1e0dd33490b248efb42a7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="concept-approval"></a>Aprovação de conceito
 
 Quando você começar a criar um jogo que será executado no Xbox, precisará enviar uma proposta à Microsoft para que o jogo tenha *aprovação de conceito* antes de publicá-lo. Este envio inicial e de alto nível beneficia tanto a Microsoft quanto você ao identificar logo no início do processo possíveis dificuldades ou desvantagens no plano geral do jogo. Tente garantir que seu conteúdo não seja excessivamente vulgar, ofensivo ou inadequado, e que ele pareça muito à vontade na plataforma de destino. Depois de enviar sua proposta, a Microsoft a revisará e o notificará sobre o resultado.
 
-Se você estiver desenvolvendo um jogo da Plataforma Universal do Windows (UWP), só precisará da aprovação de conceito se quiser permitir que os clientes façam o download dele nos dispositivos do Xbox ou se quiser ativar recursos do Xbox Live. Se você quiser disponibilizar seu jogo UWP em dispositivos móveis ou na área de trabalho do Windows (ou se estiver publicando um app UWP que *não* é um jogo, visando qualquer dispositivo), e não estiver usando o Xbox Live, você só precisará de uma [conta de desenvolvedor](https://go.microsoft.com/fwlink/?LinkId=817223) e poderá configurar e enviar livremente seu app para a Loja por meio do painel.
+Se você estiver desenvolvendo um jogo da Plataforma Universal do Windows (UWP), só precisará da aprovação de conceito se quiser permitir que os clientes façam o download dele nos dispositivos do Xbox ou se quiser ativar recursos do Xbox Live. Se você quiser disponibilizar seu jogo UWP em dispositivos móveis ou na área de trabalho do Windows (ou se estiver publicando um aplicativo UWP que *não* é um jogo, visando qualquer dispositivo), e não estiver usando o Xbox Live, você só precisará de uma [conta de desenvolvedor](https://go.microsoft.com/fwlink/?LinkId=817223) e poderá configurar e enviar livremente seu aplicativo para a Loja por meio do painel.
 
 ## <a name="submit-your-concept-for-approval"></a>Enviar seu conceito para aprovação
 

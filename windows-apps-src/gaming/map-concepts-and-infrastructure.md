@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Correlacionar OpenGL ES 2.0 com Direct3D 11
-description: "Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs."
+description: "Ao iniciar o processo de portabilidade da arquitetura gráfica do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as principais diferenças entre APIs."
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, opengl, direct3d, portabilidade
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 1298f165444b31c75ca9d98f04eb82a58be46e5b
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Correlacionar OpenGL ES 2.0 com Direct3D 11
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as diferenças principais entre as APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de compatibilização e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.
+Ao iniciar o processo de portabilidade da arquitetura gráfica do OpenGL ES 2.0 para o Direct3D pela primeira vez, familiarize-se com as principais diferenças entre APIs. Os tópicos desta seção ajudam você a planejar sua estratégia de compatibilização e as alterações de API que você deve fazer ao mover o processamento de elementos gráficos para Direct3D.
 ## 
 <table>
 <colgroup>
@@ -45,7 +42,7 @@ Ao iniciar o processo de portabilidade da sua arquitetura de elementos gráficos
 </tr>
 <tr class="odd">
 <td align="left"><p>[Comparação de buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D](porting-uniforms-and-attributes.md)</p></td>
-<td align="left"><p>Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o app e os programas sombreadores.</p></td>
+<td align="left"><p>Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o aplicativo e os programas sombreadores.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D](change-your-shader-loading-code.md)</p></td>
@@ -64,7 +61,6 @@ Estes tópicos usam a especificação Khronos OpenGL ES 2.0 com C sem plataforma
  
 
  
-
 
 
 

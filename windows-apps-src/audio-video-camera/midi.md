@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo universal do Windows.
+description: Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows.
 title: MIDI
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd494a814155d72642bb721a939fcc8c50668a2d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bccc087b561699ec72bb99cd160d532b95c49530
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="midi"></a>MIDI
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo universal do Windows.
+Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows.
 
 ## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
@@ -43,7 +40,7 @@ Enumerar os dispositivos de saída MIDI funciona exatamente da mesma maneira com
 
 ## <a name="create-a-device-watcher-helper-class"></a>Criar uma classe auxiliar de inspetor de dispositivo
 
-O namespace [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) fornece o [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) que pode notificar seu app quando dispositivos forem adicionados ou removidos do sistema, ou se as informações para um dispositivo forem atualizadas. Desde que os apps habilitados para MIDI normalmente estão interessados em dispositivos de entrada e saída, este exemplo cria uma classe auxiliar que implementa o padrão **DeviceWatcher**, de modo que o mesmo código pode ser usado para ambos os MIDI de entrada e saída, sem a necessidade de duplicação.
+O namespace [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) fornece o [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446) que pode notificar seu aplicativo quando dispositivos forem adicionados ou removidos do sistema, ou se as informações para um dispositivo forem atualizadas. Desde que os aplicativos habilitados para MIDI normalmente estão interessados em dispositivos de entrada e saída, este exemplo cria uma classe auxiliar que implementa o padrão **DeviceWatcher**, de modo que o mesmo código pode ser usado para ambos os MIDI de entrada e saída, sem a necessidade de duplicação.
 
 Adicione uma nova classe ao seu projeto para servir como o inspetor de dispositivos. Neste exemplo,a classe é denominada **MyMidiDeviceWatcher**. O restante do código desta seção é usado para implementar a classe auxiliar.
 
@@ -125,27 +122,26 @@ Depois que o dispositivo de saída é criado, você pode enviar uma mensagem, cr
 
 [!code-cs[SendMessage](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetSendMessage)]
 
-Quando seu app é desativado, certifique-se de limpar os recursos de apps. Cancele o registro de manipuladores de eventos e defina o MIDI na porta e os objetos de porta de saída para nulo. Pare os inspetores de dispositivo e defina-os como null.
+Quando seu aplicativo é desativado, certifique-se de limpar os recursos de aplicativos. Cancele o registro de manipuladores de eventos e defina o MIDI na porta e os objetos de porta de saída para nulo. Pare os inspetores de dispositivo e defina-os como null.
 
 [!code-cs[CleanUp](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
 
 ## <a name="using-the-built-in-windows-general-midi-synth"></a>Usando o sintetizador Windows General MIDI interno
 
-Quando você enumerar dispositivos MIDI de saída usando a técnica descrita acima, seu app descobre um dispositivo MIDI chamado "Microsoft GS Wavetable Synth". Este é um sintetizador General MIDI interno que você pode jogar de seu app. No entanto, a tentativa de criar um outport MIDI para este dispositivo falhará, a menos que você tenha incluído a extensão do SDK para o sintetizador interno em seu projeto.
+Quando você enumerar dispositivos MIDI de saída usando a técnica descrita acima, seu aplicativo descobre um dispositivo MIDI chamado "Microsoft GS Wavetable Synth". Este é um sintetizador General MIDI interno que você pode jogar de seu aplicativo. No entanto, a tentativa de criar um outport MIDI para este dispositivo falhará, a menos que você tenha incluído a extensão do SDK para o sintetizador interno em seu projeto.
 
-**Para incluir a extensão do SDK General MIDI Synth no seu projeto de app**
+**Para incluir a extensão do SDK General MIDI Synth no seu projeto de aplicativo**
 
 1.  No **Gerenciador de Soluções**, no seu projeto, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência...**
 2.  Expanda o nó **Universal do Windows**.
 3.  Selecione **Extensões**.
-4.  Na lista de extensões, selecione **Microsoft General MIDI DLS para apps universais do Windows**.
+4.  Na lista de extensões, selecione **Microsoft General MIDI DLS para aplicativos universais do Windows**.
     > [!NOTE] 
-    > Se houver várias versões da extensão, certifique-se de selecionar a versão que corresponde ao seu app. Você pode ver qual versão do SDK destina-se ao seu app na guia **Aplicativo** das propriedades do projeto.
+    > Se houver várias versões da extensão, certifique-se de selecionar a versão que corresponde ao seu aplicativo. Você pode ver qual versão do SDK destina-se ao seu aplicativo na guia **Aplicativo** das propriedades do projeto.
 
  
 
  
-
 
 
 

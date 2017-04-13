@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, directx, compatibilização"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -50,9 +47,9 @@ Conheça os diferentes [níveis de recursos do Direct3D](https://msdn.microsoft.
 ## <a name="plan-to-port-win32-ui-code-to-corewindow"></a>Planeje a portabilidade do código da interface do usuário Win32 para CoreWindow
 
 
-Aplicativos UWP são executados em uma janela criada por um contêiner de app, chamada [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Seu jogo controle a janela herdando de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), que exige menos detalhes de implementação do que uma janela de área de trabalho. O loop principal do seu jogo estará no método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505).
+Aplicativos UWP são executados em uma janela criada por um contêiner de aplicativo, chamada [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Seu jogo controle a janela herdando de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), que exige menos detalhes de implementação do que uma janela de área de trabalho. O loop principal do seu jogo estará no método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505).
 
-O ciclo de vida de um app UWP é muito diferente de um app de área de trabalho. Será necessário salvar o jogo frequentemente, porque quando o evento suspenso ocorre, seu app tem apenas um tempo limitado para parar de executar o código e você precisa garantir que o jogador possa voltar para onde estava assim que o app for retomado. Os jogos devem ser salvos com frequência suficiente para manter uma experiência de jogabilidade contínua a partir da retomada, mas não com tanta frequência a ponto de o processo influenciar na taxa de quadros ou fazer com que o jogo trave. Seu jogo precisará carregar potencialmente o estado de jogo quando for retomado a partir de um estado encerrado.
+O ciclo de vida de um aplicativo UWP é muito diferente de um aplicativo de área de trabalho. Será necessário salvar o jogo frequentemente, porque quando o evento suspenso ocorre, seu aplicativo tem apenas um tempo limitado para parar de executar o código e você precisa garantir que o jogador possa voltar para onde estava assim que o aplicativo for retomado. Os jogos devem ser salvos com frequência suficiente para manter uma experiência de jogabilidade contínua a partir da retomada, mas não com tanta frequência a ponto de o processo influenciar na taxa de quadros ou fazer com que o jogo trave. Seu jogo precisará carregar potencialmente o estado de jogo quando for retomado a partir de um estado encerrado.
 
 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415571) pode ser usado como substituto de D3DXMath e XNAMath, e pode ser útil se você precisar de uma biblioteca matemática. DirectXMath possui tipos de dados rápidos e portáteis, além dos tipos alinhados e empacotados com sombreadores.
 
@@ -68,7 +65,6 @@ Há dois conceitos que você usará com frequência:
  
 
  
-
 
 
 

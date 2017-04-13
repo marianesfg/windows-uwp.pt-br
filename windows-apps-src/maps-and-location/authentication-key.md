@@ -9,29 +9,26 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, chave de autenticação de mapa, controle de mapa"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 841a3bf42faaaa12df94ad9be2ffc9eb3a833ae5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 42078becbc5853787ca057dcbfb58b8d8de7967d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="request-a-maps-authentication-key"></a>Solicitar uma chave de autenticação de mapas
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Seu [aplicativo universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o app, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao app.
+Seu [aplicativo Universal do Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) deve ser autenticado para que possa usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este tópico descreve como solicitar uma chave de autenticação de mapas a partir da [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo.
 
-**Dica** Para saber mais sobre o uso de mapas em seu app, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe a amostra a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 
 -   [Amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## <a name="get-a-key"></a>Obter uma chave
 
 
-Crie e gerencie chaves de autenticação de mapa para aplicativos universais do Windows usando a [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/).
+Crie e gerencie chaves de autenticação de mapa para aplicativos Universal do Windows usando a [Central de Desenvolvimento do Bing Mapas](https://www.bingmapsportal.com/).
 
 Para criar uma nova chave
 
@@ -49,21 +46,21 @@ Para criar uma nova chave
 
 7.  Preencha o formulário **Criar Chave** e clique em **Criar**.
 
-    -   **Nome do app:** o nome do app.
-    -   **URL do app (opcional):** a URL do app.
+    -   **Nome do aplicativo:** o nome do aplicativo.
+    -   **URL do aplicativo (opcional):** a URL do aplicativo.
     -   **Tipo de chave:** selecione **Básico** ou **Empresa**.
-    -   **Tipo de app:** selecione **Aplicativo Universal Windows** para usar no aplicativo universal do Windows.
+    -   **Tipo de aplicativo:** selecione **Aplicativo Universal Windows** para usar no aplicativo Universal do Windows.
 
     Este é um exemplo da aparência do formulário.
 
     ![exemplo do formulário Criar Chave.](images/createkeydialog.png)
 
-8.  Depois de você clicar em **Criar**, a nova chave aparece abaixo do formulário **Criar Chave**. Copie-a para um local seguro ou adicione-a imediatamente ao app, conforme descrito na próxima etapa.
+8.  Depois de você clicar em **Criar**, a nova chave aparece abaixo do formulário **Criar Chave**. Copie-a para um local seguro ou adicione-a imediatamente ao aplicativo, conforme descrito na próxima etapa.
 
-## <a name="add-the-key-to-your-app"></a>Adicionar a chave ao app
+## <a name="add-the-key-to-your-app"></a>Adicionar a chave ao aplicativo
 
 
-A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) no aplicativo universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
+A chave de autenticação de mapa é obrigada a usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) no aplicativo Universal do Windows. Adicione-o ao controle de mapa e mapeie objetos de serviço, conforme aplicável.
 
 ### <a name="to-add-the-key-to-a-map-control"></a>Para adicionar a chave a um controle de mapa
 
@@ -93,9 +90,8 @@ Para usar serviços no namespace [**Windows.Services.Maps**](https://msdn.micros
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
+* [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
 * [Amostra de mapa UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Diretrizes de design para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Exemplo do app de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
+* [Exemplo do aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)

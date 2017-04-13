@@ -2,21 +2,17 @@
 title: Filtragem de textura com mipmaps
 description: "Um mipmap é uma sequência de texturas, cada uma delas é uma representação em resolução mais baixa progressivamente da mesma imagem. A altura e a largura de cada imagem ou nível, no mipmap é uma potência de dois menor do que o nível anterior."
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
-keywords:
-- Filtragem de textura com mipmaps
+keywords: Filtragem de textura com mipmaps
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5644fb4e57962de06874d15f7c9e97ed74106b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65c775a265f7c5a0b15f76d867a9403308fc7128
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering-with-mipmaps"></a>Filtragem de textura com mipmaps
 
 
@@ -64,7 +60,6 @@ O Direct3D pode executar automaticamente a filtragem de textura de mipmap. Os ap
  
 
  
-
 
 
 

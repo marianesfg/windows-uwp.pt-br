@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, directx, elementos gráficos"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 1fe28d17aa8c943de9a2bcf6c2230237e0c931d0
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="draw-to-the-screen"></a>Desenhar na tela
 
 
@@ -214,7 +211,7 @@ Este exemplo fala muito da complexidade de configurar recursos de dispositivo, p
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-* [Como fazer a portabilidade de um renderizador simples do OpenGL ES 2.0 para o Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 * [Compatibilizar os objetos de sombreadores](port-the-shader-config.md)
 * [Fazer a portabilidade do GLSL](port-the-glsl.md)
 * [Desenhar na tela](draw-to-the-screen.md)
@@ -222,7 +219,6 @@ Este exemplo fala muito da complexidade de configurar recursos de dispositivo, p
  
 
  
-
 
 
 

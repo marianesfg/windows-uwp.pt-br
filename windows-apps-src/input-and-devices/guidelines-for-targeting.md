@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fd4ba842a1d6f9eec6012a930a5dda5d7ff7c249
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: dbd5d649dbb9efd95b61f1cffa8266143c5bf2d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -63,7 +60,7 @@ Por exemplo, quando um toque é detectado, ele é registrado se o objeto for arr
 ## <a name="target-sizes"></a>Tamanhos do alvo
 
 
-Em geral, defina o tamanho do alvo de toque como 9 mm ou maior (48x48 pixels em uma tela de 135 PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7 mm.
+Em geral, defina o tamanho do alvo de toque como 9mm ou maior (48x48 pixels em uma tela de 135PPI em um nível de ajuste predefinido de 1,0x). Evite usar alvos de toque que tenham menos de 7mm.
 
 O diagrama a seguir mostra como o tamanho do destino normalmente é uma combinação do destino visual, do tamanho do destino real e de qualquer área de preenchimento entre o destino real e outros destinos possíveis.
 
@@ -98,8 +95,8 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 </tr>
 <tr class="odd">
 <td align="left">Tamanho real do alvo</td>
-<td align="left">7 mm</td>
-<td align="left">Maior ou igual a 9 mm (48 x 48 px em 1x)</td>
+<td align="left">7mm</td>
+<td align="left">Maior ou igual a 9mm (48 x 48 px em 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Tamanho total do alvo</td>
@@ -160,9 +157,9 @@ Siga estas diretrizes para criar interações de esfregar:
 
 
 **Exemplos**
-* [Exemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Exemplo de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Exemplo do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Amostra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Amostra de entrada de baixa latência](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Amostra do modo de interação do usuário](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Amostra de elementos visuais do foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Exemplos de arquivo-morto**
@@ -177,7 +174,6 @@ Siga estas diretrizes para criar interações de esfregar:
  
 
  
-
 
 
 

@@ -2,25 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Use estes métodos na API de envio da Windows Store para recuperar dados dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
-title: Obter dados de aplicativo usando a API de envio da Windows Store
+title: Obter dados de app
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, dados do aplicativo
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 756f11cdc440a891658c2311cc61199dec3d6d1f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-app-data-using-the-windows-store-submission-api"></a>Obter dados de aplicativo usando a API de envio da Windows Store
+# <a name="get-app-data"></a>Obter dados de app
 
 Use os métodos a seguir na API de envio da Windows Store para obter dados para os aplicativos existentes em sua conta do Centro de Desenvolvimento. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que tenham recebido permissão para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
+>**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
 
 Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Centro de Desenvolvimento. Para criar ou gerenciar envios de aplicativos, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
@@ -65,7 +62,7 @@ Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Cent
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) da API de envio da Windows Store antes de tentar usar qualquer um desses métodos.
+Se você ainda não tiver feito isso, preencha todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) da API de envio da Windows Store antes de tentar usar qualquer um desses métodos.
 
 ## <a name="data-resources"></a>Recursos de dados
 
@@ -194,4 +191,3 @@ Este recurso tem os seguintes valores.
 * [Obter um aplicativo](get-an-app.md)
 * [Obter complementos para um app](get-add-ons-for-an-app.md)
 * [Obter pacotes de pré-lançamento de um app](get-flights-for-an-app.md)
-

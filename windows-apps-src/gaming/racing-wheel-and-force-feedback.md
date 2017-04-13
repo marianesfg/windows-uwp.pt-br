@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, volante de corrida, force feedback
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ca8413a857fd4d8925a6767280a32a8336eeba19
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="racing-wheel-and-force-feedback"></a>Volante de corrida e force feedback
 
 Esta página descreve os conceitos básicos de programação para volantes de corrida do Xbox One que usam as APIs relacionadas [Windows.Gaming.Input.RacingWheel][racingwheel] para a Plataforma Universal do Windows (UWP).
@@ -30,7 +27,7 @@ Ao ler esta página, você saberá como:
 
 ## <a name="racing-wheel-overview"></a>Visão geral do volante de corrida
 
-Volantes de corrida são dispositivos de entrada que reproduzem a sensação do cockpit de um carro de corrida real. Volantes de corrida são o dispositivo de entrada perfeito para jogos de corrida em estilos arcade e simulação com carros ou caminhões. Os volantes de corrida são compatíveis em apps UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input][].
+Volantes de corrida são dispositivos de entrada que reproduzem a sensação do cockpit de um carro de corrida real. Volantes de corrida são o dispositivo de entrada perfeito para jogos de corrida em estilos arcade e simulação com carros ou caminhões. Os volantes de corrida são compatíveis em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input][].
 
 Os volantes de corrida do Xbox One são oferecidos em uma grande variedade de faixas de preço com entrada e funcionalidades de force feedback melhores à medida que as faixas de preços sobem. Todos os volantes de corrida estão equipados com um volante analógico, controles de aceleração e freio analógicos e alguns botões no volante. Além disso, alguns volantes de corrida estão equipados com controles de embreagem e freio de mão analógicos, borboletas de câmbio e funcionalidades de force feedback. Nem todos os volantes de corrida estão equipados com os mesmos conjuntos de recursos e também podem variar no suporte para determinados recursos – por exemplo, os volantes podem suportar graus de esterçamento diferentes e as borboletas de câmbio podem suportar números de marchas diferentes.
 
@@ -275,7 +272,7 @@ O [exemplo InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 
 ## <a name="force-feedback-overview"></a>Visão geral do force feedback
 
-Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. O force feedback é compatível em apps UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input.ForceFeedback][].
+Muitos volantes de corrida têm a funcionalidade de force feedback para oferecer uma experiência de direção mais imersiva e desafiadora. Os volantes de corrida compatíveis com force feedback normalmente são equipados com um único motor que aplica força ao volante ao longo de um único eixo, o eixo de esterçamento do volante. O force feedback é compatível em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input.ForceFeedback][].
 
 > **Observação**    As APIs de force feedback são capazes de dar suporte a diversos eixos de força, mas nenhum volante de corrida do Xbox One atualmente dá suporte a qualquer eixo de feedback que não seja de esterçamento do volante.
 
@@ -387,4 +384,3 @@ Por fim, é possível habilitar, desabilitar ou redefinir de maneira assíncrona
 [wheelmotor]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheel.wheelmotor.aspx
 [racingwheelreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelreading.aspx
 [racingwheelbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelbuttons.aspx
-

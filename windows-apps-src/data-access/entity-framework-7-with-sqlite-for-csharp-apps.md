@@ -1,30 +1,27 @@
 ---
 author: mcleblanc
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
-description: "O Entity Framework (FE) é um mapeador relacional de objeto que permite trabalhar com dados relacionais usando-se objetos específicos de domínio."
-title: Entity framework 7 com SQLite para aplicativos C#
+description: "O Entity Framework (EF) é um mapeador relacional de objetos que permite trabalhar com dados relacionais usando-se objetos específicos de domínio."
+title: Entity Framework Core com SQLite para apps C#
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, SQLite, c#, FE, estrutura de entidade
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ab2a12f6c2bc2f0f8853b404afaf13bf80635b7
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp, SQLite, c#, EF, estrutura de entidade
+ms.openlocfilehash: 015030774c7d148d3a9be757c80de827987347a9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="entity-framework-core-1-with-sqlite-for-c-apps"></a>Entity Framework Core 1 com SQLite para aplicativos C#
+# <a name="entity-framework-core-with-sqlite-for-c-apps"></a>Entity Framework Core com SQLite para apps C#
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-O Entity Framework (FE) é um mapeador relacional de objeto que permite trabalhar com dados relacionais usando-se objetos específicos de domínio. Este artigo explica como é possível usar o Entity Framework Core 1 com um banco de dados SQLite em um aplicativo Universal do Windows.
+O Entity Framework (FE) é um mapeador relacional de objeto que permite trabalhar com dados relacionais usando-se objetos específicos de domínio. Este artigo explica como é possível usar o Entity Framework Core com um banco de dados SQLite em um aplicativo universal do Windows.
 
-Originalmente para desenvolvedores do .NET, o Entity Framework Core 1 pode ser usado com SQLite na Plataforma Universal do Windows (UWP) para armazenar e manipular dados relacionais usando objetos específicos de domínio. É possível migrar o código de FE de um aplicativo do .NET para um aplicativo UWP e esperar que ele funcione com as alterações apropriadas feitas na cadeia de caracteres da conexão.
+Originalmente para desenvolvedores do .NET, o Entity Framework Core pode ser usado com SQLite na Plataforma Universal do Windows (UWP) para armazenar e manipular dados relacionais usando-se objetos específicos de domínio. É possível migrar o código de FE de um aplicativo do .NET para um aplicativo UWP e esperar que ele funcione com as alterações apropriadas feitas na cadeia de caracteres da conexão.
 
-Atualmente, FE só dá suporte ao SQLite na UWP. Um procedimento passo a passo detalhado sobre como instalar o Entity Framework Core 1 e criar modelos está disponível na página [Introdução à Plataforma Universal do Windows](http://go.microsoft.com/fwlink/p/?LinkId=735013). Ele aborda os seguintes tópicos:
+Atualmente, FE só dá suporte ao SQLite na UWP. Um procedimento passo a passo detalhado sobre como instalar o Entity Framework Core e como criar modelos está disponível na página [Ponto de Partida da Plataforma Universal do Windows](http://go.microsoft.com/fwlink/p/?LinkId=735013). Ele aborda os seguintes tópicos:
 
 -   Pré-requisitos
 -   Criar um novo projeto
@@ -32,4 +29,3 @@ Atualmente, FE só dá suporte ao SQLite na UWP. Um procedimento passo a passo d
 -   Criar o modelo
 -   Criar o banco de dados
 -   Usar o modelo
-

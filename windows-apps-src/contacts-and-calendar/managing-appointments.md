@@ -1,6 +1,6 @@
 ---
 author: Xansky
-description: "Pelo namespace Windows.ApplicationModel.Appointments, você pode criar e gerenciar compromissos no app de calendário de um usuário."
+description: "Pelo namespace Windows.ApplicationModel.Appointments, você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário."
 title: Gerenciar compromissos
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: mhopkins
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, compromissos, calendário"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8fe8c0172d50cfe65bc8e695ffeb6899a228bdd2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2f220e8efadfca824a1ec4f41045f18dcc61ffb1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-appointments"></a>Gerenciar compromissos
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Pelo namespace [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), você pode criar e gerenciar compromissos no app de calendário de um usuário. Aqui, mostraremos como criar um compromisso, adicioná-lo a um app de calendário, substituí-lo no app de calendário e depois removê-lo desse app de calendário. Também mostraremos como exibir um intervalo de tempo para um app de calendário e criar um objeto de recorrência de compromisso.
+Pelo namespace [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário. Aqui, mostraremos como criar um compromisso, adicioná-lo a um aplicativo de calendário, substituí-lo no aplicativo de calendário e depois removê-lo desse aplicativo de calendário. Também mostraremos como exibir um intervalo de tempo para um aplicativo de calendário e criar um objeto de recorrência de compromisso.
 
 ## <a name="create-an-appointment-and-apply-data-to-it"></a>Criar um compromisso e aplicar dados a ele
 
@@ -286,7 +283,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  Para os apps da Loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) pelo fato de que a caixa de diálogo exibida para adicionar o compromisso é editável.
+**Observação**  Para os aplicativos da Loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) pelo fato de que a caixa de diálogo exibida para adicionar o compromisso é editável.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Substituir um compromisso no calendário do usuário
 
@@ -546,7 +543,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## <a name="show-appointment-details"></a>Mostrar detalhes do compromisso
 
-[**ShowAppointmentDetailsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um app de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
+[**ShowAppointmentDetailsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) faz com que o sistema mostre detalhes do compromisso específico. Você pode escolher ativar um aplicativo de calendário para mostrar detalhes do compromisso no próprio calendário. Ou o sistema irá exibir os detalhes do compromisso. Uma sobrecarga no método que aceita o argumento da data inicial é fornecida para mostrar detalhes, por exemplo, de um compromisso recorrente.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -569,7 +566,7 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 
-Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos universais do Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como gerenciar compromissos.
+Agora, você já conhece as noções básicas de como gerenciar compromissos. Baixe as [amostras de aplicativos Universais do Windows](http://go.microsoft.com/fwlink/p/?linkid=619979) do GitHub para ver mais exemplos de como gerenciar compromissos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -577,4 +574,3 @@ Agora, você já conhece as noções básicas de como gerenciar compromissos. Ba
  
 
  
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, fone de ouvido
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 04baee2a3011cee63933fe1fdab759d1b6d29c89
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="headset"></a>Fone de ouvido
 
 Esta página descreve as noções básicas de programação para fones de ouvido que usam [Windows.Gaming.Input.Headset][headset] e APIs relacionadas para a Plataforma Universal do Windows (UWP).
@@ -77,4 +74,3 @@ Os detalhes do trabalho com XAudio não são abordados aqui. Para obter mais inf
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
 [headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
-

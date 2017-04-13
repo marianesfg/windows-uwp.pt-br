@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, localização, cerca geográfica, notificações"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 8a143359948e536d30efb425055969ae8ac0987f
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-a-geofence"></a>Configurar uma cerca geográfica
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Configure uma [**cerca geográfica**](https://msdn.microsoft.com/library/windows/apps/dn263587) no aplicativo e saiba como manipular notificações em primeiro e segundo planos.
@@ -475,4 +472,3 @@ Para que o aplicativo possa acessar a localização, é necessário habilitar **
 * [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 * [Diretrizes de design para cerca geográfica](https://msdn.microsoft.com/library/windows/apps/dn631756)
 * [Diretrizes de design para aplicativos com detecção de localização](https://msdn.microsoft.com/library/windows/apps/hh465148)
-

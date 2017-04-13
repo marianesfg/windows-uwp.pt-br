@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2f00c27ae2248ebe39ed1cf426af640ec9200e73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 392b0b0acf1443b2260a33bbf389d505f8cc7d0e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sliders"></a>Controles deslizantes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-O controle deslizante é um controle que permite que o usuário selecione em uma lista de valores movendo um controle de posição paralelo a uma faixa.
+Controle deslizante é um controle que permite que o usuário selecione em uma lista de valores movendo um controle de posição paralelo a uma faixa.
 
 ![Um controle deslizante](images/controls/slider.png)
 
@@ -180,4 +178,3 @@ Quando você está projetando um controle deslizante personalizado, considere me
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Switches de alternância](toggles.md)
 - [**Classe Slider**](https://msdn.microsoft.com/library/windows/apps/br209614)
-

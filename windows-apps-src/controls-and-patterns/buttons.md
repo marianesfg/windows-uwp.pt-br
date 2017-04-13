@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 41d86777b3e8aa0b7d32c408beec3f55a4a35d7b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e5c8b5056581540abd5e0ddf75da7785648df1d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="buttons"></a>Botões
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -30,9 +28,6 @@ Um botão dá ao usuário uma forma de acionar uma ação imediata.
 <li>[**Classe Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
 <li>[**Classe RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
 <li>[**Evento Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
-<li> </li>
-<li> </li>
-<li> </li>
 </ul>
 </div>
 
@@ -88,16 +83,16 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Quando você toca em um botão com um dedo ou uma caneta, ou pressiona o botão esquerdo do mouse enquanto o ponteiro está sobre ele, o botão gera o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Se um botão tem foco do teclado, pressionar a tecla Enter ou a barra de espaço também aciona o evento Click.
 
-Geralmente, não se pode tratar eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Geralmente, não se pode manipular eventos de baixo nível [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) em um botão porque, em vez disso, ele tem o comportamento Click. Para saber mais, consulte [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Você pode alterar a forma como um botão aciona o evento Click, alterando a propriedade [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). O valor ClickMode padrão é **Release**. Se ClickMode for **Hover**, o evento Click não poderá ser chamado com o teclado ou o toque. 
 
 
 ### <a name="button-content"></a>Conteúdo do botão
 
-Botão é um [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx). Sua propriedade de conteúdo XAML é [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx), que habilita uma sintaxe assim para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é mostrada no botão.
+Botão é um [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx). Sua propriedade de conteúdo XAML é [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx), que habilita uma sintaxe assim para XAML: `<Button>A button's content</Button>`. Você pode definir qualquer objeto como conteúdo do botão. Se o conteúdo for um [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), ele é renderizado no botão. Se o conteúdo for outro tipo de objeto, a representação da cadeia de caracteres é apresentada no botão.
 
-Aqui, um **StackPanel** que contém a imagem de uma banana e o texto está definido como conteúdo de um botão.
+Segue um **StackPanel** que contém a imagem de uma laranja e o texto está definido como conteúdo de um botão.
 
 ```xaml
 <Button Click="Button_Click" 
@@ -162,14 +157,14 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Para botões de comando com conteúdo de texto, use a largura mínima do botão.
 -   Não use botões estreitos, baixos ou altos com conteúdos em texto.
 -   Use a fonte padrão a menos que suas diretrizes de marca digam para usar algo diferente.
--   Para uma ação que precise ser avaliada em múltiplas páginas em seu app, em vez de duplicar um botão em múltiplas páginas, considere usar uma [barra inferior do app](app-bars.md).
+-   Para uma ação que precise ser avaliada em múltiplas páginas em seu aplicativo, em vez de duplicar um botão em múltiplas páginas, considere usar uma [barra inferior do aplicativo](app-bars.md).
 -   Exponha apenas um ou dois botões de cada vez para o usuário, por exemplo, Aceitar e Cancelar. Se precisar expor mais ações para o usuário, considere usar [checkboxes](checkbox.md) or [radio buttons](radio-button.md), de onde o usuário pode selecionar ações com apenas um botão de comando para acionar tais ações.
 -   Use o botão de comando padrão para indicar a ação mais comum ou recomendada.
 -   Considere personalizar seus botões. O formato de um botão é retangular por padrão, mas você pode customizar os recursos visuais que criam a aparência do botão. O conteúdo de um botão costuma ser texto—por exemplo, Aceitar ou Cancelar—mas você pode substituir o texto por um ícone ou usar ícone e texto.
 -   Certifique-se de que conforme o usuário interaja com o botão, o botão mude de estado e aparência para fornecer um comentário ao usuário. Normal, pressionado e desativado são exemplos de estados do botão.
 -   Acione os botões quando o usuário tocar ou pressionar o botão. Geralmente, a ação é disparada quando o usuário libera o botão, mas você também pode definir a ação de um botão para disparar assim que um dedo o pressiona.
 -   Não use um botão de comando para definir um estado.
--   Não altere o texto do botão enquanto o app estiver em execução. Por exemplo, não altere o texto de um botão "Avançar" para "Continuar".
+-   Não altere o texto do botão enquanto o aplicativo estiver em execução. Por exemplo, não altere o texto de um botão "Avançar" para "Continuar".
 -   Não altere os estilos padrão de enviar, redefinir e botão.
 -   Não coloque conteúdo em excesso dentro de um botão. Deixe o conteúdo conciso e fácil de entender (nada mais que uma imagem e um pouco de texto).
 
@@ -187,6 +182,5 @@ O botão Voltar é um elemento de interface do usuário fornecida pelo sistema q
 - [Switches de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
 - [**Classe Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
-
 
 

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d96565479d970bca724614768361ba390ab9d668
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f1941a73937db19394e590026a16a023d025bba2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -374,7 +372,7 @@ Para exibir um valor padrão a ser usado sempre que a origem da associação nã
 Se você associar um controle de texto a um valor que não seja uma cadeia, o mecanismo de vinculação de dados converterá o valor a uma cadeia. Se o valor for um tipo de referência, o mecanismo de vinculação de dados recuperará o valor da cadeia chamando [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) ou [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136) se disponível e, caso não estejam, chamará [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx). Observe, porém, que esse mecanismo ignora qualquer implementação de **ToString** que oculte a implementação da classe base. Implementações de subclasse devem substituir o método **ToString** da classe base em vez disso. Da mesma forma, nos idiomas nativos, todos os objetos gerenciados parecem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) e [**IStringable**](https://msdn.microsoft.com/library/Dn302135). Porém, todas as chamadas para **GetStringRepresentation** e **IStringable.ToString** são roteadas para **Object.ToString** ou para uma substituição desse método e nunca para uma nova implementação de **ToString** que oculte a implementação da classe base.
 
 > [!NOTE]
-> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booliano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir do Windows 10, versão 1607, a estrutura XAML fornece um booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **false** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um booleano sem criar um conversor. Para usar o conversor integrado, a versão do SDK de alvo mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 ## <a name="function-binding-in-xbind"></a>Associação de função em {x: Bind}
 
@@ -655,6 +653,5 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | Source | Sem suporte | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Para {x:Bind}, use uma propriedade ou um caminho estático. | 
 | Mode | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | Modo pode ser OneTime, OneWay ou TwoWay. {x: Bind} usa como padrão OneTime; {Binding} OneWay. | 
 | UpdateFonteTrigger | Sem suporte | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x:Bind} usa o comportamento PropertyChanged para todos os casos, exceto TextBox onde aguarda perder o foco para atualizar a origem. | 
-
 
 

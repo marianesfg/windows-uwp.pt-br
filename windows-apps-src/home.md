@@ -3,14 +3,11 @@ Description: "Aqui estão as informações de que você precisa para criar um ap
 title: "Guias de instruções para aplicativos do Windows 10 - desenvolvimento de aplicativos do Windows"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 redirect_url: https://developer.microsoft.com/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
 ms.openlocfilehash: 5b07b46627ca19f2a3cc02e72212a9870d778c7c
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Guias de instruções para aplicativos do Windows 10
+# <a name="how-to-guides-for-windows-10-apps"></a>Guias de instruções para aplicativos do Windows 10
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -45,9 +42,3 @@ Se você quiser uma introdução à Plataforma Universal do Windows (UWP) e como
 | [Programação threading e assíncrona](threading-async/index.md) | Use a programação assíncrona para ajudar seu aplicativo a permanecer responsivo, permitindo que ele continue executando e respondendo à interface do usuário durante a conclusão de outros trabalhos que podem levar muito tempo. |
 | [Componentes do Tempo de Execução do Windows](winrt-components/index.md) | Saiba mais sobre esses objetos independentes que você pode inicializar e usar em qualquer linguagem, incluindo C#, Visual Basic, JavaScript e C++. Por exemplo, você poderia criar um componente do Windows Runtime do Windows em C++ que use uma biblioteca de terceiros para executar uma operação dispendiosa em termos computacionais ou simplesmente reutilizar o código Visual Basic ou C# no seu aplicativo Universal do Windows. 
 | [Plataforma XAML](xaml-platform/index.md) | Introdução aos conceitos básicos da linguagem de programação XAML. Ou, se você já está familiarizado com XAML, pule e saiba como implementar recursos do Windows Runtime em XAML usando o Visual Studio para criar um ótimo Aplicativo Universal do Windows. |
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

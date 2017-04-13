@@ -2,21 +2,17 @@
 title: Faixas de linhas
 description: "Uma faixa de linhas é um primitivo composto de segmentos de linha conectados. O app pode usar faixas de linhas para criar polígonos não fechados. Um polígono fechado tem o último vértice conectado ao primeiro por um segmento de linhas."
 ms.assetid: 6E8C58E1-B463-44FD-A69F-81CCBF25D856
-keywords:
-- Faixas de linhas
+keywords: Faixas de linhas
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5fe51d8e07f064da6ef3ba1ad32060a014a31d97
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 316a036ca4460e9f1c9b8cafa7aa7a7f4dfe9174
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="line-strips"></a>Faixas de linhas
 
 
@@ -66,7 +62,6 @@ d3dDevice->DrawPrimitive( D3DPT_LINESTRIP, 0, 5 );
  
 
  
-
 
 
 

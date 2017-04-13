@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, entrada
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ee6017648974d5283f59708550092f26d88388ce
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="input-for-games"></a>Entrada para jogos
 
 Esta seção descreve os diferentes tipos de dispositivos de entrada que podem ser usados em jogos da Plataforma Universal do Windows (UWP) no Windows 10 e no Xbox One, demonstra o uso básico e recomenda padrões e técnicas para programação de entrada efetiva em jogos.
@@ -24,7 +21,7 @@ Esta seção descreve os diferentes tipos de dispositivos de entrada que podem s
 
 ## <a name="gaming-input-devices"></a>Dispositivos de entrada para jogos
 
-Os dispositivos de entrada para jogos são compatíveis em jogos e apps UWP para Windows 10 e Xbox One pelo namespace [Windows.Gaming.Input][].
+Os dispositivos de entrada para jogos são compatíveis em jogos e aplicativos UWP para Windows 10 e Xbox One pelo namespace [Windows.Gaming.Input][].
 
 ### <a name="gamepads"></a>Gamepads
 
@@ -68,4 +65,3 @@ Para obter informações sobre como gerenciar usuários e os dispositivos de ent
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.Custom]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.gaming.input.custom.aspx
-

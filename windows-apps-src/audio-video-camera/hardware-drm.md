@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a6d2ea23cb0720d8fe6c7aa581c42db6e025d146
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ba561b340796a175815a37f5c3d8d4c125ef35c4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hardware-drm"></a>DRM de Hardware
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -31,7 +28,7 @@ Cada vez mais, os provedores de conteúdo estão migrando para proteções basea
 
 Este tópico fornece uma breve visão geral de como o Windows 10 implementa o ambiente de execução confiável (TEE).
 
-Os detalhes da implementação do ambiente de execução confiável do Windows está fora do escopo deste documento. No entanto, uma breve discussão sobre a diferença entre o kit de porta padrão do ambiente de execução confiável e da porta do Windows será benéfica. O Windows implementa a camada de proxy do OEM e transfere as chamadas de funções PRITEE serializadas para um driver de modo de usuário no subsistema do Windows Media Foundation. Isso eventualmente é roteado para o driver do ambiente de execução confiável (Trusted Execution Environment) do Windows ou para o driver de gráficos do OEM. Os detalhes de qualquer uma dessas abordagens está fora do escopo deste documento. O diagrama a seguir mostra a interação de componentes geral para a porta do Windows. Se você quiser desenvolver uma implementação de ambiente de execução confiável do PlayReady do Windows, contate <WMLA@Microsoft.com>.
+Os detalhes da implementação do ambiente de execução confiável do Windows está fora do escopo deste documento. No entanto, uma breve discussão sobre a diferença entre o kit de porta padrão do ambiente de execução confiável e da porta do Windows será benéfica. O Windows implementa a camada de proxy do OEM e transfere as chamadas de funções PRITEE serializadas para um driver de modo de usuário no subsistema do Windows Media Foundation. Isso eventualmente é roteado para o driver do ambiente de execução confiável (Trusted Execution Environment) do Windows ou para o driver de gráficos do OEM. Os detalhes de qualquer uma dessas abordagens está fora do escopo deste documento. O diagrama a seguir mostra a interação de componentes geral para a porta do Windows. Se você quiser desenvolver uma implementação de TEE do PlayReady do Windows, contate <WMLA@Microsoft.com>.
 
 ![diagrama de componente de tee do Windows](images/windowsteecomponentdiagram720.jpg)
 
@@ -105,4 +102,3 @@ Você também pode usar a propriedade [**PlayReadyStatics.PlayReadyCertificateSe
 
 ## <a name="see-also"></a>Consulte também
 - [DRM do PlayReady](playready-client-sdk.md)
-

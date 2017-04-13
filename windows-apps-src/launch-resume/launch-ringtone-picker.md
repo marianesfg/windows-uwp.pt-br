@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Esquema ms-tonepicker
-description: "Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele."
+description: "Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar um tom, salvar um tom e obter o nome amigável para um tom."
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 84cc1c7347b71a174b25635188ef2972c2bb39d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Escolher e salvar tons usando o esquema de URI ms-tonepicker
 
 Este tópico descreve como usar o esquema de URI **ms-tonepicker:**. Esse esquema de URI pode ser usado para:
@@ -202,4 +199,3 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-

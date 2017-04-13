@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, serviços de nuvem"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 72f357cbf8e370512f9230978de546aa3d54c660
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Usando serviços de nuvem para jogos UWP
 
@@ -21,7 +19,7 @@ A UWP (Plataforma Universal do Windows) no Windows 10 oferece um conjunto de API
 
 ##  <a name="what-is-cloud-computing"></a>O que é computação em nuvem?
 
-A computação em nuvem utiliza recursos de TI e apps sob demanda pela internet para armazenar e processar dados para seus dispositivos. O termo _nuvem_ é uma metáfora para a disponibilidade de inúmeros recursos externamente (recursos não locais) que você pode acessar de locais não específicos.
+A computação em nuvem utiliza recursos de TI e aplicativos sob demanda pela internet para armazenar e processar dados para seus dispositivos. O termo _nuvem_ é uma metáfora para a disponibilidade de inúmeros recursos externamente (recursos não locais) que você pode acessar de locais não específicos.
 O princípio da computação em nuvem oferece uma nova forma na qual os recursos e o software podem ser consumidos. Os usuários não precisam mais pagar pelos recursos ou produtos completos antecipadamente, mas, em vez disso, são capazes de consumir a plataforma, o software e os recursos como um serviço. Os provedores de nuvem geralmente cobram seus clientes de acordo com as ofertas de planos de uso ou serviços.
 
 ##  <a name="why-use-cloud-services"></a>Por que usar serviços de nuvem?
@@ -81,7 +79,7 @@ Saiba como outros desenvolvedores implementaram soluções de nuvem em seus jogo
     </tr>
     <tr>
         <td>[Next Games](http://www.nextgames.com/)</td>
-        <td>A Next Games é a criadora do videogame _The Walking Dead: No Man's Land_, que se baseia na série original da AMC. O jogo Walking Dead usou o Azure como back-end. Ele teve 1.000.000 de downloads no fim de semana de lançamento e, durante a primeira semana, o jogo ficou em primeiro lugar em apps gratuitos para iPhone e iPad na App Store dos EUA, primeiro lugar em apps gratuitos em 12 países e regiões e primeiro lugar em jogos gratuitos em 13 países e regiões.
+        <td>A Next Games é a criadora do videogame _The Walking Dead: No Man's Land_, que se baseia na série original da AMC. O jogo Walking Dead usou o Azure como back-end. Ele teve 1.000.000 de downloads no fim de semana de lançamento e, durante a primeira semana, o jogo ficou em primeiro lugar em aplicativos gratuitos para iPhone e iPad na App Store dos EUA, primeiro lugar em aplicativos gratuitos em 12 países e regiões e primeiro lugar em jogos gratuitos em 13 países e regiões.
         </td>
         <td>
             <ul>
@@ -136,11 +134,11 @@ Primeiro, você precisa pensar no nível de serviço que é mais adequado para s
 
 * [PaaS (plataforma como serviço)](https://azure.microsoft.com/overview/what-is-paas/)
 
-    A PaaS (plataforma como serviço) é como a IaaS, mas também inclui o gerenciamento de infraestrutura como servidores, armazenamento e rede. Portanto, além de não comprar servidores físicos e infraestrutura de datacenter, você também não precisa comprar e gerenciar licenças de software, infraestrutura de apps subjacente, middleware, ferramentas de desenvolvimento ou outros recursos.
+    A PaaS (plataforma como serviço) é como a IaaS, mas também inclui o gerenciamento de infraestrutura como servidores, armazenamento e rede. Portanto, além de não comprar servidores físicos e infraestrutura de datacenter, você também não precisa comprar e gerenciar licenças de software, infraestrutura de aplicativos subjacente, middleware, ferramentas de desenvolvimento ou outros recursos.
 
 * SaaS (software como serviço)
 
-    O SaaS (software como serviço) normalmente é um app já criado para você e hospedado em uma plataforma de nuvem existente. Ele foi projetado para facilitar ainda mais para você o início da execução do seu jogo no serviço.
+    O SaaS (software como serviço) normalmente é um aplicativo já criado para você e hospedado em uma plataforma de nuvem existente. Ele foi projetado para facilitar ainda mais para você o início da execução do seu jogo no serviço.
 
 
 ### <a name="design-your-game-infrastructure-using-azure"></a>Projetar sua infraestrutura de jogo usando o Azure
@@ -149,8 +147,8 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 
 | Requisitos                 | Cenários de atividade                            | Oferta de produto                      | Funcionalidades do produto                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
-| Hospedar seu domínio na nuvem     | Responder a consultas do DNS com eficiência            | [DNS do Azure](https://azure.microsoft.com/services/dns/) | Hospedar seu domínio com alto desempenho e disponibilidade  |
-| Entrada, verificação de identidade      | O jogador entra e sua identidade é autenticada  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | Logon único em qualquer app da Web local e na nuvem com autenticação multifator            |
+| Hospedar seu domínio na nuvem     | Responder a consultas do DNS com eficiência            | [DNS do Azure](https://azure.microsoft.com/services/dns/) | Hospedar seu domínio com alto desempenho e disponibilidade    |
+| Entrada, verificação de identidade      | O jogador entra e sua identidade é autenticada  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | Logon único em qualquer aplicativo da Web local e na nuvem com autenticação multifator            |
 | Jogo usando o modelo IaaS (infraestrutura como serviço)      | O jogo é hospedado em máquinas virtuais na nuvem       | [VMs do Azure](https://azure.microsoft.com/services/virtual-machines/) | Escala de uma a milhares de instâncias de máquina virtual como servidores de jogo com redes virtuais internas e balanceamento de carga; consistência híbrida com sistemas locais           |
 | Jogos na Web ou em dispositivos móveis usando PaaS (plataforma como serviço)            | O jogo é hospedado em uma plataforma gerenciada                | [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) | PaaS para sites ou jogos em dispositivos móveis (o que significa VMs do Azure com middleware/ferramentas de desenvolvimento/BI/gerenciamento de banco de dados)   |
 | Armazenamento em nuvem para dados de jogo       | Os dados de jogo mais recentes são armazenados na nuvem e enviados a dispositivos cliente | [Armazenamento de Blobs do Azure](https://azure.microsoft.com/services/storage/blobs/)| Nenhuma restrição nos tipos de arquivo que podem ser armazenados; armazenamento de objetos para grandes volumes de dados não estruturados, como imagens, áudio, vídeo e muito mais.  |
@@ -159,14 +157,14 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 | Banco de dados de jogo relacional escalonável| Armazenamento estruturado de dados relacionais como transações no jogo no banco de dados | [Banco de Dados do SQL Azure](https://azure.microsoft.com/services/sql-database/)| Banco de dados SQL como serviço ([Comparação com o SQL em uma VM](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | Banco de dados de jogos de baixa latência distribuído e escalonável| Leitura, gravação e consulta de dados de jogo e jogadores rápidas com flexibilidade de esquema | [Banco de Dados de Documentos do Azure](https://azure.microsoft.com/services/documentdb/)| Banco de dados como serviço de documentos NoSQL de baixa latência   |
 | Usar o próprio datacenter com serviços do Azure | O jogo é recuperado de seu próprio datacenter e enviado aos dispositivos cliente | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite que sua organização forneça serviços do Azure no próprio datacenter para ajudá-lo a obter mais  |
-| Transferência de blocos de dados grandes| Arquivos grandes, como imagem, áudio e vídeo de jogos, podem ser enviados aos usuários a partir do local POP da CDN (Rede de Distribuição de Conteúdo) mais próxima com a CDN do Azure    | [Rede de Distribuição de Conteúdo do Azure](https://azure.microsoft.com/services/cdn/) | Criada em uma topologia de rede moderna de nós centralizados grandes, a CDN do Azure manipula picos súbitos de tráfego e cargas pesadas para aumentar drasticamente a velocidade e a disponibilidade, o que resulta em melhorias significativas na experiência do usuário  |
-| Baixa latência               | Executa o armazenamento em cache para criar jogos rápidos e escalonáveis com mais controle e isolamento garantido de dados; também pode ser usada para aprimorar o recurso de correspondência do jogo. | [Cache Redis do Azure](https://azure.microsoft.com/services/cache/) | Acesso a dados de baixa latência e alta taxa de transferência para ativar apps do Azure rápidos e escalonáveis.  |
-| Alta escalabilidade, baixa latência | Manipula flutuações no número de usuários do jogo com leituras e gravações de baixa latência | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) | Capacidade de ativar os cenários mais complexos de baixa latência com uso intenso de dados e escalonar de forma confiável para tratar mais usuários por vez. O Service Fabric permite que você crie jogos sem precisar criar um armazenamento ou cache separado, conforme obrigatório para apps sem estado |
-| Capacidade de coletar milhões de eventos por segundo de dispositivos                         | Log de milhões de eventos por segundo de dispositivos | [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/) | Ingestão de telemetria em escala de nuvem de jogos, sites, apps e dispositivos  |
+| Transferência de blocos de dados grandes| Arquivos grandes, como imagem, áudio e vídeo de jogos, podem ser enviados aos usuários a partir do local POP da CDN (Rede de Distribuição de Conteúdo) mais próxima com a CDN do Azure     | [Rede de Distribuição de Conteúdo do Azure](https://azure.microsoft.com/services/cdn/) | Criada em uma topologia de rede moderna de nós centralizados grandes, a CDN do Azure manipula picos súbitos de tráfego e cargas pesadas para aumentar drasticamente a velocidade e a disponibilidade, o que resulta em melhorias significativas na experiência do usuário  |
+| Baixa latência               | Executa o armazenamento em cache para criar jogos rápidos e escalonáveis com mais controle e isolamento garantido de dados; também pode ser usada para aprimorar o recurso de correspondência do jogo. | [Cache Redis do Azure](https://azure.microsoft.com/services/cache/) | Acesso a dados de baixa latência e alta taxa de transferência para ativar aplicativos do Azure rápidos e escalonáveis.  |
+| Alta escalabilidade, baixa latência | Manipula flutuações no número de usuários do jogo com leituras e gravações de baixa latência | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) | Capacidade de ativar os cenários mais complexos de baixa latência com uso intenso de dados e escalonar de forma confiável para manipular mais usuários por vez. O Service Fabric permite que você crie jogos sem precisar criar um armazenamento ou cache separado, conforme necessário para aplicativos sem estado |
+| Capacidade de coletar milhões de eventos por segundo de dispositivos                         | Log de milhões de eventos por segundo de dispositivos | [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/) | Ingestão de telemetria em escala de nuvem de jogos, sites, aplicativos e dispositivos  |
 | Processamento de dados de jogos em tempo real  | Executar a análise de dados de jogadores em tempo real para melhorar o jogo| [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) | Processamento de fluxo em tempo real na nuvem  |
-| Desenvolver jogo preditivo         | Criar um jogo dinâmico personalizado com base nos dados do jogador  | [Aprendizado de Máquina do Azure](https://azure.microsoft.com/services/machine-learning/) | Um serviço de nuvem totalmente gerenciado que permite que você compile, implante e compartilhe soluções de análise preditiva  |
+| Desenvolver jogo preditivo          | Criar um jogo dinâmico personalizado com base nos dados do jogador    | [Aprendizado de Máquina do Azure](https://azure.microsoft.com/services/machine-learning/) | Um serviço de nuvem totalmente gerenciado que permite que você compile, implante e compartilhe soluções de análise preditiva  |
 | Coletar e analisar dados de jogos| Intenso processamento de dados paralelo de bancos de dados relacionais e não relacionais | [Data Warehouse do Azure](https://azure.microsoft.com/services/sql-data-warehouse/)| Depósito de dados como serviço elástico com recursos de classe empresarial   |
-| Criar campanhas de marketing para aumentar o uso e a retenção  | Enviar notificações por push a jogadores direcionados para gerar interesse e incentivar ações específicas do jogo de acordo com a análise de dados | [Mobile Engagement](https://azure.microsoft.com/services/mobile-engagement/) |  Aumentar o tempo de jogo e a retenção de usuários em todas as principais plataformas — iOS, Android, Windows, Windows Phone |
+| Criar campanhas de marketing para aumentar o uso e a retenção  |    Enviar notificações por push a jogadores direcionados para gerar interesse e incentivar ações específicas do jogo de acordo com a análise de dados | [Mobile Engagement](https://azure.microsoft.com/services/mobile-engagement/) |  Aumentar o tempo de jogo e a retenção de usuários em todas as principais plataformas — iOS, Android, Windows, Windows Phone |
 
 
 ##  <a name="startup-and-developer-resources"></a>Recursos para startups e desenvolvedores
@@ -177,7 +175,7 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
     
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
-    Se você quiser adicionar recursos do Xbox Live, como jogo multijogador, correspondência em plataforma cruzada, pontuação do jogador, conquistas e placares de líderes ao seu jogo do Windows 10, inscreva-se com o ID@Xbox para obter as ferramentas e o suporte de que precisa para soltar sua criatividade e maximizar seu sucesso. Antes de requerer o ID@Xbox, registre uma conta de desenvolvedor no [Centro de Desenvolvimento do Windows](https://developer.microsoft.com/windows/programs/join).
+    Se você quiser adicionar recursos do Xbox Live, como jogo multijogador, correspondência em plataforma cruzada, pontuação do jogador, conquistas e placares de líderes ao seu jogo do Windows 10, inscreva-se com a ID@Xbox para obter as ferramentas e o suporte de que precisa para soltar sua criatividade e maximizar seu sucesso. Antes de se inscrever na ID@Xbox, registre uma conta de desenvolvedor no [Centro de Desenvolvimento do Windows](https://developer.microsoft.com/windows/programs/join).
 
 ## <a name="software-as-a-service-for-game-backend"></a>Software como serviço para back-end de jogo
 
@@ -189,7 +187,7 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
 
 * [Photon Engine](https://www.photonengine.com/en/Photon)
 
-    Photon é uma plataforma multijogador e um mecanismo rede independente para jogos. Ela oferece o Photon Cloud, que fornece SaaS (software como serviço) e, como tal, é um serviço totalmente gerenciado. Você pode se concentrar completamente no cliente do seu app durante a hospedagem; quem cuida das operações do servidor e do escalonamento é a Exit Games.
+    Photon é uma plataforma multijogador e um mecanismo rede independente para jogos. Ela oferece o Photon Cloud, que fornece SaaS (software como serviço) e, como tal, é um serviço totalmente gerenciado. Você pode se concentrar completamente no cliente do seu aplicativo durante a hospedagem; quem cuida das operações do servidor e do escalonamento é a Exit Games.
 
 * [Playfab](https://playfab.com/)
 
@@ -206,4 +204,3 @@ Estas são algumas empresas que oferecem back-end de nuvem para jogos com base n
  
 
  
-

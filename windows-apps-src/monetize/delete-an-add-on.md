@@ -1,27 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: "Use este método na API de envio da Windows Store para excluir um complemento para um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows."
-title: Excluir um complemento usando a API de envio da Windows Store
+description: "Use este método na API de envio da Windows Store para excluir um complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
+title: Excluir um complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complemento, excluir, produto no aplicativo, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 56ae310a13401b733eadf08f2f1992bfe0130884
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 74149837e43b65998069c8724b5cd6c55df8703b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-using-the-windows-store-submission-api"></a>Excluir um complemento usando a API de envio da Windows Store
-
+# <a name="delete-an-add-on"></a>Excluir um complemento
 
 
 
-Use este método na API de envio da Windows Store para excluir um complemento (também conhecido como produto no aplicativo ou IAP) para um aplicativo que esteja registrado na sua conta do Centro de Desenvolvimento do Windows.
+
+Use este método na API de envio da Windows Store para excluir um complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -34,7 +31,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ## <a name="request"></a>Solicitação
 
-Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
@@ -47,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -80,12 +77,12 @@ Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição                                                                                                                                                                           |
 |--------|------------------|
 | 400  | A solicitação é inválida. |
-| 404  | O complemento especificado não pôde ser encontrado.  |
+| 404  | O complemento especificado não foi encontrado.  |
 | 409  | O complemento especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o complemento que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
@@ -96,4 +93,3 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Obter todos os complementos](get-all-add-ons.md)
 * [Obter um complemento](get-an-add-on.md)
 * [Criar um complemento](create-an-add-on.md)
-

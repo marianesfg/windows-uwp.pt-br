@@ -9,36 +9,33 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1955f4981f09c2632fe2236ebd6a772e7b0ed8a1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f89537416b409642adab894ba9e3a413e4b0b828
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
 
-**APIs Importantes**
+**APIs importantes**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Este tópico demonstra como criar e registrar uma tarefa em segundo plano que é executada no mesmo processo do seu app.
+Este tópico demonstra como criar e registrar uma tarefa em segundo plano que é executada no mesmo processo do seu aplicativo.
 
-As tarefas em segundo plano no processo são mais simples de implementar do que as tarefas em segundo plano fora do processo. No entanto, elas são menos flexíveis. Se o código em execução em uma tarefa em segundo plano no processo travar, ele prejudicará seu app. Observe também que [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask** não podem ser usado com o modelo no processo. Ativar uma tarefa de VoIP em segundo plano dentro de seu app também não é possível. Esses gatilhos e tarefas ainda têm suporte usando o modelo de tarefa em segundo plano fora do processo.
+As tarefas em segundo plano no processo são mais simples de implementar do que as tarefas em segundo plano fora do processo. No entanto, elas são menos flexíveis. Se o código em execução em uma tarefa em segundo plano no processo travar, ele prejudicará seu aplicativo. Observe também que [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask** não podem ser usado com o modelo no processo. Ativar uma tarefa de VoIP em segundo plano dentro de seu aplicativo também não é possível. Esses gatilhos e tarefas ainda têm suporte usando o modelo de tarefa em segundo plano fora do processo.
 
-Lembre-se de que a atividade em segundo plano pode ser encerrada mesmo ao ser executada dentro do processo em primeiro plano do app se ele executar os limites de tempo de execução. Para algumas finalidades, a resiliência de separar o trabalho em uma tarefa em segundo plano que é executada em um processo separado ainda é útil. Manter o trabalho em segundo plano como uma tarefa separada do app em primeiro plano pode ser a melhor opção para o trabalho que não exige comunicação com o app em primeiro plano.
+Lembre-se de que a atividade em segundo plano pode ser encerrada mesmo ao ser executada dentro do processo em primeiro plano do aplicativo se ele executar os limites de tempo de execução. Para algumas finalidades, a resiliência de separar o trabalho em uma tarefa em segundo plano que é executada em um processo separado ainda é útil. Manter o trabalho em segundo plano como uma tarefa separada do aplicativo em primeiro plano pode ser a melhor opção para o trabalho que não exige comunicação com o aplicativo em primeiro plano.
 
 ## <a name="fundamentals"></a>Conceitos básicos
 
-O modelo no processo aprimora o ciclo de vida do app com notificações aprimoradas quando o app está em primeiro plano ou em segundo plano. Dois novos eventos estão disponíveis no objeto do Aplicativo para essas transições: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Esses eventos se adaptam ao ciclo de vida do app com base no estado de visibilidade do seu app Leia mais sobre esses eventos e como eles afetam o ciclo de vida do app em [ciclo de vida do app](app-lifecycle.md).
+O modelo no processo aprimora o ciclo de vida do aplicativo com notificações aprimoradas quando o aplicativo está em primeiro plano ou em segundo plano. Dois novos eventos estão disponíveis no objeto do Aplicativo para essas transições: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) e [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Esses eventos se adaptam ao ciclo de vida do aplicativo com base no estado de visibilidade do seu aplicativo Leia mais sobre esses eventos e como eles afetam o ciclo de vida do aplicativo em [ciclo de vida do aplicativo](app-lifecycle.md).
 
-Em um nível alto, você tratará o evento **EnteredBackground** para executar seu código que será executado enquanto seu app é executado em segundo plano e manipule **LeavingBackground** para saber quando seu app foi movido para o primeiro plano.
+Em um nível alto, você manipulará o evento **EnteredBackground** para executar seu código que será executado enquanto seu aplicativo é executado em segundo plano e manipule **LeavingBackground** para saber quando seu aplicativo foi movido para o primeiro plano.
 
 ## <a name="register-your-background-task-trigger"></a>Registre o gatilho da tarefa em segundo plano
 
-A atividade em segundo plano no processo é registrada de modo semelhante às atividades em segundo plano fora do processo. Todos os gatilhos em segundo plano começam com o registro usando [BackgroundTaskBuilder](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396). O construtor facilita o registro de uma tarefa em segundo plano por meio da definição de todos os valores obrigatórios em um só lugar:
+A atividade em segundo plano no processo é registrada de modo semelhante às atividades em segundo plano fora do processo. Todos os gatilhos em segundo plano começam com o registro usando [BackgroundTaskBuilder](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396). O construtor facilita o registro de uma tarefa em segundo plano por meio da definição de todos os valores necessários em um só lugar:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -51,8 +48,8 @@ A atividade em segundo plano no processo é registrada de modo semelhante às at
 > ```
 
 > [!NOTE]
-> Os aplicativos universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
-> Para garantir que seu aplicativo universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu app for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
+> Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
+> Para garantir que seu aplicativo Universal do Windows continue a ser executado corretamente depois que você liberar uma atualização, chame [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) e, em seguida, chame [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) quando seu aplicativo for iniciado após a atualização. Para obter mais informações, consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md).
 
 Para atividades em segundo plano no processo, não defina `TaskEntryPoint.` Deixar em branco habilita o ponto de entrada padrão, um novo método protegido no objeto Application chamado [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
 
@@ -73,13 +70,13 @@ O código de exemplo abaixo atribui uma condição que exige que o usuário este
 
 Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)** para responder ao seu gatilho em segundo plano quando ele é disparado. **OnBackgroundActivated** pode ser tratado como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx), que contém tudo o que fornece o método Run.
 
-## <a name="handle-background-task-progress-and-completion"></a>Tratar progresso e conclusão de tarefas em segundo plano
+## <a name="handle-background-task-progress-and-completion"></a>Manipular progresso e conclusão de tarefas em segundo plano
 
-O progresso e a conclusão da tarefa podem ser monitorados da mesma forma para tarefas em segundo plano de vários processos (veja [Monitorar o progresso e a conclusão da tarefa em segundo plano](monitor-background-task-progress-and-completion.md)), mas você provavelmente achará que você pode rastreá-los mais facilmente usando variáveis para acompanhar o status de progresso ou conclusão em seu app. Essa é uma das vantagens de ter o código de atividade em segundo plano em execução no mesmo processo de seu app.
+O progresso e a conclusão da tarefa podem ser monitorados da mesma forma para tarefas em segundo plano de vários processos (veja [Monitorar o progresso e a conclusão da tarefa em segundo plano](monitor-background-task-progress-and-completion.md)), mas você provavelmente achará que você pode rastreá-los mais facilmente usando variáveis para acompanhar o status de progresso ou conclusão em seu aplicativo. Essa é uma das vantagens de ter o código de atividade em segundo plano em execução no mesmo processo de seu aplicativo.
 
-## <a name="handle-background-task-cancellation"></a>Tratar cancelamento de tarefas em segundo plano
+## <a name="handle-background-task-cancellation"></a>Manipular cancelamento de tarefas em segundo plano
 
-As tarefas em segundo plano no processo serão canceladas da mesma forma que as tarefas em segundo plano fora do processo (consulte [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)). Lembre-se que seu manipulador de eventos **BackgroundActivated** deve sair antes de ocorrer o cancelamento ou todo o processo será finalizado. Se seu app em primeiro plano fechar inesperadamente quando você cancelar a tarefa em segundo plano, verifique se o manipulador foi encerrado antes de ocorrer o cancelamento.
+As tarefas em segundo plano no processo serão canceladas da mesma forma que as tarefas em segundo plano fora do processo (consulte [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)). Lembre-se que seu manipulador de eventos **BackgroundActivated** deve sair antes de ocorrer o cancelamento ou todo o processo será finalizado. Se seu aplicativo em primeiro plano fechar inesperadamente quando você cancelar a tarefa em segundo plano, verifique se o manipulador foi encerrado antes de ocorrer o cancelamento.
 
 ## <a name="the-manifest"></a>O manifesto
 
@@ -89,7 +86,7 @@ Ao contrário das tarefas em segundo plano fora do processo, você não precisa 
 
 Agora, você deve compreender as noções básicas de como escrever uma tarefa em segundo plano no processo.
 
-Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever apps que usam tarefas em segundo plano.
+Veja os seguintes tópicos relacionados para obter referência de API, diretriz conceitual de tarefa em segundo plano e instruções mais detalhadas para escrever aplicativos que usam tarefas em segundo plano.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -102,7 +99,7 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
-* [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 * [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)
 
@@ -115,4 +112,3 @@ Veja os seguintes tópicos relacionados para obter referência de API, diretriz 
 **Referência de API de tarefa em segundo plano**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
-

@@ -5,13 +5,11 @@ title: Diretrizes de deslizamento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Diretrizes de deslizamento transversal
+# <a name="guidelines-for-cross-slide"></a>Diretrizes de deslizamento transversal
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,14 +23,14 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 Use o deslizamento transversal para dar suporte à seleção com o gesto de deslizar e a interações de arrastar (mover) com o gesto de deslizar.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>O que fazer e o que não fazer
 
 
 -   Use o deslizamento transversal para listas ou coleções que rolam em uma única direção.
 -   Utilize o deslizamento transversal para seleção de itens quando a interação de toque for utilizada para outra finalidade.
 -   Não utilize o deslizamento transversal para adicionar itens a uma fila.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Diretrizes de uso adicional
 
 
 Gestos de selecionar e arrastar só são possíveis em uma área de conteúdo que permite movimento panorâmico unidirecional (vertical ou horizontal). Para qualquer uma dessas interações funcionar, uma direção de movimento panorâmico deve ser bloqueada, e o gesto deve ser realizado na direção perpendicular à direção do momento panorâmico.
@@ -128,7 +126,7 @@ Use o gesto de arrastar para mover um ou mais objetos de um local para outro.
 
 Se for necessário mover mais de um objeto, permita que os usuários selecionem vários itens e depois arrastem todos eles de uma só vez.
 
-## <span id="related_topics"></span>Artigos relacionados
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Artigos relacionados
 
 
 **Exemplos**
@@ -150,11 +148,5 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
  
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

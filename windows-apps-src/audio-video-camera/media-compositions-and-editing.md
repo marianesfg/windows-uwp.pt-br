@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: "As APIs no namespace Windows.Media.Editing permitem que você desenvolva rapidamente apps que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo."
+description: "As APIs no namespace Windows.Media.Editing permitem que você desenvolva rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo."
 title: "Composições e edição de mídia"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d31cb88d1cea00bd291478b612b1759b1d6fd0b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-compositions-and-editing"></a>Composições e edição de mídia
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente apps que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. Recursos da estrutura incluem a capacidade acrescentar vários videoclipes juntos, adicionar sobreposições de vídeo e imagem, adicionar áudio em segundo plano e aplicar efeitos de áudio e vídeos de forma programática. Uma vez criadas, composições de mídia podem ser renderizadas em um arquivo de mídia simples para reprodução ou compartilhamento, mas composições também podem ser serializadas para o disco e desserializadas do mesmo, permitindo que o usuário carregue e modifique composições que eles criaram anteriormente. Toda essa funcionalidade é fornecida em uma interface de Windows Runtime fácil de usar que reduz significativamente a quantidade e a complexidade do código necessário para executar essas tarefas quando comparado com a API de nível inferior da [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) .
+Este artigo mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. Recursos da estrutura incluem a capacidade acrescentar vários videoclipes juntos, adicionar sobreposições de vídeo e imagem, adicionar áudio em segundo plano e aplicar efeitos de áudio e vídeos de forma programática. Uma vez criadas, composições de mídia podem ser renderizadas em um arquivo de mídia simples para reprodução ou compartilhamento, mas composições também podem ser serializadas para o disco e desserializadas do mesmo, permitindo que o usuário carregue e modifique composições que eles criaram anteriormente. Toda essa funcionalidade é fornecida em uma interface de Windows Runtime fácil de usar que reduz significativamente a quantidade e a complexidade do código necessário para executar essas tarefas quando comparado com a API de nível inferior da [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) .
 
 ## <a name="create-a-new-media-composition"></a>Crie uma nova composição de mídia
 
-A classe [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) é o contêiner para todos os clipes de mídia presentes na composição e é responsável pela renderização final da composição, carregando e salvando composições no disco e fornecendo um fluxo de visualização da composição para que o usuário possa visualizá-la na interface do usuário. Para usar **MediaComposition** em seu app, inclua o namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565), bem como o namespace [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) que fornece APIs relacionadas que você precisará.
+A classe [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) é o contêiner para todos os clipes de mídia presentes na composição e é responsável pela renderização final da composição, carregando e salvando composições no disco e fornecendo um fluxo de visualização da composição para que o usuário possa visualizá-la na interface do usuário. Para usar **MediaComposition** em seu aplicativo, inclua o namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565), bem como o namespace [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) que fornece APIs relacionadas que você precisará.
 
 [!code-cs[Namespace1](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace1)]
 
@@ -48,7 +45,7 @@ Composições de mídia geralmente contêm um ou mais clipes de vídeo. Você po
 
 -   Um **MediaClip** só pode ser incluído em uma composição uma vez. Tentar adicionar um **MediaClip** que já está sendo usado pela composição resultará em erro. Para reutilizar um videoclipe várias vezes em uma composição, chame [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599) para criar novos objetos **MediaClip**, que podem então ser adicionados à composição.
 
--   Aplicativos universais do Windows não têm permissão para acessar o sistema de arquivos inteiro. A propriedade [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) da classe [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) permite que seu app armazene um registro de um arquivo que foi selecionado pelo usuário para que você possa manter as permissões para acessar o arquivo. O **FutureAccessList** tem um máximo de 1.000 entradas, assim seu app precisa gerenciar a lista para garantir que não fique cheia. Isso é especialmente importante se você planeja suportar o carregamento e modificação de composições criadas anteriormente.
+-   Aplicativos universais do Windows não têm permissão para acessar o sistema de arquivos inteiro. A propriedade [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) da classe [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) permite que seu aplicativo armazene um registro de um arquivo que foi selecionado pelo usuário para que você possa manter as permissões para acessar o arquivo. O **FutureAccessList** tem um máximo de 1.000 entradas, assim seu aplicativo precisa gerenciar a lista para garantir que não fique cheia. Isso é especialmente importante se você planeja suportar o carregamento e modificação de composições criadas anteriormente.
 
 -   Uma **MediaComposition** suporta videoclipes em formato MP4.
 
@@ -151,12 +148,11 @@ Composições de mídia podem ser desserializadas de um arquivo para permitir qu
 
 [!code-cs[OpenComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOpenComposition)]
 
--   Se o arquivo de mídia na composição não estiver em um local que possa ser acessado por seu app e não estiver na propriedade [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) da classe [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) para seu app, será gerado um erro ao carregar a composição.
+-   Se o arquivo de mídia na composição não estiver em um local que possa ser acessado por seu aplicativo e não estiver na propriedade [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) da classe [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) para seu aplicativo, será gerado um erro ao carregar a composição.
 
  
 
  
-
 
 
 

@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML em um aplicativo UWP (Plataforma Universal do Windows)."
+description: "Este artigo descreve como exibir rapidamente o fluxo de visualização de câmera em uma página XAML de um aplicativo UWP (Plataforma Universal do Windows)."
 title: "Exibir a visualização da câmera"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d65d09349850f580d8bcee2d3875b38b8ed189f1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5e6a38c34f080310eeca7e904ef21e399639de71
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="display-the-camera-preview"></a>Exibir a visualização da câmera
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -97,4 +94,3 @@ No manipulador de eventos **Suspending**, verifique primeiro se a página está 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Obter um quadro de visualização](get-a-preview-frame.md)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, joystick de arcade, entrada
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: b0411dcf1fd75ec7dc31d29a39e95f5c26073953
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="arcade-stick"></a>Joystick de arcade
 
 Esta página descreve os conceitos básicos de programação para joysticks de arcade do Xbox One usando [Windows.Gaming.Input.ArcadeStick][arcadestick] e APIs relacionadas para a Plataforma Universal do Windows (UWP).
@@ -29,7 +26,7 @@ Ao ler esta página, você saberá como:
 
 ## <a name="arcade-stick-overview"></a>Visão geral do joystick de arcade
 
-Os joysticks de arcade são dispositivos de entrada valorizados por reproduzirem a sensação de máquinas de arcade de fliperama e por seus controles digitais de alta precisão. Os joysticks de arcade são o dispositivo de entrada perfeito para luta "mano a mano" e outros jogos estilo arcade e são adequados para qualquer jogo que funcione bem com controles inteiramente digitais. Os joysticks de arcade têm suporte em apps UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input][].
+Os joysticks de arcade são dispositivos de entrada valorizados por reproduzirem a sensação de máquinas de arcade de fliperama e por seus controles digitais de alta precisão. Os joysticks de arcade são o dispositivo de entrada perfeito para luta "mano a mano" e outros jogos estilo arcade e são adequados para qualquer jogo que funcione bem com controles inteiramente digitais. Os joysticks de arcade têm suporte em aplicativos UWP do Windows 10 e do Xbox One pelo namespace [Windows.Gaming.Input][].
 
 Os joysticks de arcade do Xbox One são equipados com um joystick digital de 8 vias, seis botões de **ação** e dois botões **especiais**; eles são dispositivos de entrada inteiramente digitais que não dão suporte a controles analógicos ou vibração. Os joysticks de arcade do Xbox One também são equipados com botões **exibir** e **menu** usados para dar suporte à navegação da interface do usuário, mas eles não aceitam comandos de jogo e não podem ser prontamente acessados como botões de joystick.
 
@@ -167,4 +164,3 @@ A [amostra InputInterfacingUWP _(github)_](https://github.com/Microsoft/Xbox-ATG
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestick.getcurrentreading.aspx
 [arcadestickreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickreading.aspx
 [arcadestickbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickbuttons.aspx
-

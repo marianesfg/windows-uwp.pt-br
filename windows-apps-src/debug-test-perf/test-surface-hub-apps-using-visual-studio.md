@@ -9,15 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ed2f7dc63e478d3dde2eb58b502d373db3181501
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testar aplicativos Surface Hub usando o Visual Studio
-O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos de Plataforma Universal do Windows (UWP), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar a aparência e o comportamento de seu aplicativo no tamanho de tela e resolução do Surface Hub.
+O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos UWP (Plataforma Universal do Windows), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar a aparência e o comportamento de seu aplicativo no tamanho de tela e resolução do Surface Hub.
 
 Para obter mais informações, consulte [Executar aplicativos da Windows Store no simulador](https://msdn.microsoft.com/library/hh441475.aspx).
 
@@ -106,4 +103,3 @@ Para obter mais informações, consulte [Implantando e depurando aplicativos da 
 3. Escolha **Iniciar Depuração (F5)** para implantar e depurar seu aplicativo no Surface Hub ou pressione Ctrl + F5 para apenas implantar seu aplicativo.
 
    > **Dica**&nbsp;&nbsp;Se o Surface Hub estiver na tela de boas-vindas, ignore-o escolhendo qualquer botão.
-

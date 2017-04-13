@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "A navegação em apps da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema."
+Description: "A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema."
 title: "Noções básicas sobre navegação para apps UWP (aplicativos do Windows)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -12,22 +12,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 72596a2d902dff72af76c84115bc1eb0be8fa743
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6397949c4c763db9d406790a6ffcb7f8ad94b7aa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para apps UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-A navegação em apps da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema. Juntos, eles permitem diversas experiências de usuário ao se mover entre apps, páginas e conteúdos.
+A navegação em aplicativos da Plataforma Universal do Windows (UWP) é baseada em um modelo flexível de estruturas de navegação, elementos de navegação e recursos no nível do sistema. Juntos, eles permitem diversas experiências de usuário ao se mover entre aplicativos, páginas e conteúdos.
 
-Em alguns casos, você poderá ajustar todo o conteúdo e funcionalidade em uma única página do seu app sem exigir que o usuário faça nada mais do que movimento panorâmico para navegar pelo conteúdo. No entanto, a maioria dos apps normalmente tem várias páginas de conteúdo e funcionalidades para explorar, se envolver e interagir. Quando um app tem mais de uma página, você precisa oferecer a experiência de navegação certa.
+Em alguns casos, você poderá ajustar todo o conteúdo e funcionalidade em uma única página do seu aplicativo sem exigir que o usuário faça nada mais do que movimento panorâmico para navegar pelo conteúdo. No entanto, a maioria dos aplicativos normalmente tem várias páginas de conteúdo e funcionalidades para explorar, se envolver e interagir. Quando um aplicativo tem mais de uma página, você precisa oferecer a experiência de navegação certa.
 
-Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências de navegação de várias páginas em apps UWP incluem (os detalhes são descritos posteriormente):
+Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências de navegação de várias páginas em aplicativos UWP incluem (os detalhes são descritos posteriormente):
 
 -   **A estrutura de navegação correta**
 
@@ -35,7 +32,7 @@ Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências d
 
 -   **Elementos de navegação compatíveis** que deem suporte à estrutura escolhida.
 
-    Elementos de navegação podem ajudar o usuário a acessar o conteúdo desejado e também permitem que os usuários saibam onde eles estão dentro do app. No entanto, eles também ocupam um espaço que poderia ser usado para elementos de conteúdo ou comandos, logo, é importante usar os elementos de navegação certos para a estrutura do seu app.
+    Elementos de navegação podem ajudar o usuário a acessar o conteúdo desejado e também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam um espaço que poderia ser usado para elementos de conteúdo ou comandos, logo, é importante usar os elementos de navegação certos para a estrutura do seu aplicativo.
 
 -   **Respostas apropriadas para recursos de navegação no nível do sistema (como Voltar)**
 
@@ -44,7 +41,7 @@ Para serem bem-sucedidas e fazerem sentido para os usuários, as experiências d
 ## <a name="build-the-right-navigation-structure"></a>Criar a estrutura de navegação correta
 
 
-Vamos olhar para um app como uma coleção de grupos de páginas, na qual cada página contém um conjunto exclusivo de conteúdos ou funcionalidades. Por exemplo, um app de fotos pode ter uma página para tirar fotos, uma página para edição de imagens e outra página para o gerenciamento de sua biblioteca de imagens. A maneira em que você organiza essas páginas em grupos define a estrutura de navegação do app. Há duas maneiras comuns de organizar um grupo de páginas:
+Vamos olhar para um aplicativo como uma coleção de grupos de páginas, na qual cada página contém um conjunto exclusivo de conteúdos ou funcionalidades. Por exemplo, um aplicativo de fotos pode ter uma página para tirar fotos, uma página para edição de imagens e outra página para o gerenciamento de sua biblioteca de imagens. A maneira em que você organiza essas páginas em grupos define a estrutura de navegação do aplicativo. Há duas maneiras comuns de organizar um grupo de páginas:
 
 <table class="uwpd-noborder uwpd-top-aligned-table">
 <colgroup>
@@ -71,9 +68,9 @@ Vamos olhar para um app como uma coleção de grupos de páginas, na qual cada p
 
  
 
-Um app típico usará as duas organizações, com algumas partes sendo organizados como pares e outras em hierarquias.
+Um aplicativo típico usará as duas organizações, com algumas partes sendo organizados como pares e outras em hierarquias.
 
-![um app com uma estrutura híbrida](images/nav/nav-hybridstructure.png.png)
+![um aplicativo com uma estrutura híbrida](images/nav/nav-hybridstructure.png.png)
 
 Então, quando você deve organizar as páginas em hierarquias e quando deve organizá-las como pares? Para responder a essa pergunta, devemos considerar o número de páginas no grupo, se as páginas devem ser percorridas em uma ordem específica e o relacionamento entre as páginas. Em geral, estruturas mescladas são mais fáceis de entender e mais rápidas de navegar, mas às vezes é apropriado ter uma hierarquia profunda.
 
@@ -86,7 +83,7 @@ Então, quando você deve organizar as páginas em hierarquias e quando deve org
 <li>Você espera que o usuário percorra as páginas em uma ordem específica. Organize a hierarquia para impor essa ordem.</li>
 <li>Há uma relação de pai-filho clara entre uma das páginas e as outras páginas do grupo.</li>
 <li>Existem mais de sete páginas no grupo.
-<p>Quando há mais de sete páginas no grupo, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu app, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores. (Um controle hub pode ajudá-lo a agrupar as páginas em categorias).</p></li>
+<p>Quando há mais de sete páginas no grupo, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu aplicativo, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores. (Um controle hub pode ajudá-lo a agrupar as páginas em categorias).</p></li>
 </ul>
   </div>
   <div class="side-by-side-content-right">Recomendamos usar uma relação de pares quando
@@ -94,7 +91,7 @@ Então, quando você deve organizar as páginas em hierarquias e quando deve org
 <li>As páginas podem ser vistas em qualquer ordem.</li>
 <li>As páginas são claramente distintas umas das outros e não têm uma relação pai/filho óbvia.</li>
 <li><p>Há menos de 8 páginas no grupo.</p>
-<p>Quando há mais de 7 páginas no grupo, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu app, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores. (Um controle hub pode ajudá-lo a agrupar as páginas em categorias).</p></li>
+<p>Quando há mais de 7 páginas no grupo, talvez seja difícil para os usuários compreender como as páginas são únicas ou entender sua localização atual dentro do grupo. Se você não achar que isso é um problema para seu aplicativo, vá em frente e torne as páginas pares. Caso contrário, considere a possibilidade de usar uma estrutura hierárquica para quebrar as páginas em dois ou mais grupos menores. (Um controle hub pode ajudá-lo a agrupar as páginas em categorias).</p></li>
 </ul>
   </div>
 </div>
@@ -104,7 +101,7 @@ Então, quando você deve organizar as páginas em hierarquias e quando deve org
 ## <a name="use-the-right-navigation-elements"></a>Use os elementos de navegação para a direita
 
 
-Elementos de navegação podem fornecer dois serviços: eles ajudam o usuário a acessar o conteúdo desejado e alguns elementos também permitem que os usuários saibam onde eles estão dentro do app. No entanto, eles também ocupam espaço que o app poderia usar para elementos de conteúdo ou comandos, portanto, é importante usar os elementos de navegação que sejam ideais para a estrutura do seu app.
+Elementos de navegação podem fornecer dois serviços: eles ajudam o usuário a acessar o conteúdo desejado e alguns elementos também permitem que os usuários saibam onde eles estão dentro do aplicativo. No entanto, eles também ocupam espaço que o aplicativo poderia usar para elementos de conteúdo ou comandos, portanto, é importante usar os elementos de navegação que sejam ideais para a estrutura do seu aplicativo.
 
 ### <a name="peer-to-peer-navigation-elements"></a>Elementos de navegação ponto a ponto
 
@@ -132,7 +129,7 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 <p>(Você pode usar guias/pivôs quando houver mais de cinco páginas, mas pode ser difícil ajustar todas as guias/pivôs na tela.)</p></li>
 <li>Você espera que os usuários alternem entre as páginas com frequência.</li>
 </ul>
-<p>Este design para um app de localização de restaurantes usa guias/pivôs:</p>
+<p>Este design para um aplicativo de localização de restaurantes usa guias/pivôs:</p>
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
@@ -145,7 +142,7 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 <li>Você quer economizar espaço à custa de diminuir a velocidade das operações de navegação.</li>
 <li>As páginas existirem no nível superior.</li>
 </ul>
-<p>Esse design para um app de casa inteligente apresenta um painel de navegação:</p>
+<p>Esse design para um aplicativo de casa inteligente apresenta um painel de navegação:</p>
 <p><img src="images/smart-home/uap-smarthome-tabletphone-sbs-sm-400.png" alt="Example of an app that uses a nav pane pattern" /></p>
 <p></p></td>
 </tr>
@@ -156,11 +153,11 @@ Para a navegação ponto a ponto, recomendamos o uso de guias ou de um painel de
 
 Se a sua estrutura de navegação tiver vários níveis, recomendamos que elementos de navegação ponto a ponto sejam vinculados apenas aos pares em sua subárvore atual. Considere a ilustração a seguir, que mostra uma estrutura de navegação que tem três níveis:
 
-![um app com duas subárvores](images/nav/nav-subtrees.png)
+![um aplicativo com duas subárvores](images/nav/nav-subtrees.png)
 -   Para o nível 1, o elemento de navegação ponto a ponto deve fornecer acesso às páginas A, B, C e D.
 -   No nível 2, os elementos de navegação ponto a ponto para as páginas A2 só devem vincular a outras páginas A2. Eles não devem vincular a páginas do nível 2 páginas na subárvore C.
 
-![um app com duas subárvores](images/nav/nav-subtrees2.png)
+![um aplicativo com duas subárvores](images/nav/nav-subtrees2.png)
 
 ### <a name="hierarchical-navigation-elements"></a>Elementos de navegação hierárquica
 
@@ -184,7 +181,7 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <ul>
 <li>Você espera que os usuários desejem visualizar parte do conteúdo das páginas filho sem ter que navegar até cada uma delas.</li>
 </ul>
-<p>Os hubs promovem a descoberta e a exploração, o que faz com que eles sejam adequados para apps de mídia, leitores de notícias e apps de compras.</p>
+<p>Os hubs promovem a descoberta e a exploração, o que faz com que eles sejam adequados para aplicativos de mídia, leitores de notícias e aplicativos de compras.</p>
 <p></p></td>
 </tr>
 
@@ -198,7 +195,7 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <li>Você quer permitir que o usuário execute operações de alto nível, como excluir ou classificar, em itens individuais ou grupos de itens, e também deseja permitir que o usuário exiba ou atualize os detalhes de cada item.</li>
 </ul>
 <p>Elementos mestre/detalhes são adequados para caixas de entrada de email, listas de contatos e entrada de dados.</p>
-<p>Esse design para um app de controle de ações faz uso de um padrão de mestre/detalhes:</p>
+<p>Esse design para um aplicativo de controle de ações faz uso de um padrão de mestre/detalhes:</p>
 <p><img src="images/stock-tracker/uap-finance-tabletphone-sbs-sm.png" alt="Example of a stock trading app that has a master/details pattern" /></p></td>
 </tr>
 </tbody>
@@ -218,7 +215,7 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 <tbody>
 <tr class="odd">
 <td style="vertical-align:top;">[Voltar](navigation-history-and-backwards-navigation.md)</td>
-<td style="vertical-align:top;">Façamos o usuário percorrer o histórico de navegação dentro de um app e, dependendo do dispositivo, de app para app. Para obter mais informações, consulte o artigo [Histórico de navegação e navegação retroativa](navigation-history-and-backwards-navigation.md).</td>
+<td style="vertical-align:top;">Façamos o usuário percorrer o histórico de navegação dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo. Para obter mais informações, consulte o artigo [Histórico de navegação e navegação retroativa](navigation-history-and-backwards-navigation.md).</td>
 </tr>
 </tbody>
 </table>
@@ -246,7 +243,7 @@ Os elementos de navegação hierárquica fornecem navegação entre uma página 
 
 ### <a name="combining-navigation-elements"></a>Combinando elementos de navegação
 
-Você pode combinar elementos de navegação para criar uma experiência de navegação que seja ideal para seu app. Por exemplo, seu app pode usar um painel de navegação para fornecer acesso a páginas de nível superior e guias para fornecer acesso às páginas de segundo nível.
+Você pode combinar elementos de navegação para criar uma experiência de navegação que seja ideal para seu aplicativo. Por exemplo, seu aplicativo pode usar um painel de navegação para fornecer acesso a páginas de nível superior e guias para fornecer acesso às páginas de segundo nível.
 
 
 
@@ -254,7 +251,6 @@ Você pode combinar elementos de navegação para criar uma experiência de nave
 
 
  
-
 
 
 

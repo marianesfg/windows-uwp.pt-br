@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, porta, sombreador, direct3d, opengl
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f683e8b6ad04b1350adae1c962da09e2f15f5cec
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-shader-objects"></a>Fazer a portabilidade de objetos de sombreador
 
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -80,7 +77,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 }
 ```
 
-No Direct3D, os sombreadores não são compilados durante o tempo de execução; eles sempre são compilados em arquivos CSO quando o resto do programa é compilado. Quando você compila o seu app com Microsoft Visual Studio, os arquivos HLSL são compilados a arquivos CSO (.cso) que o seu app deve carregar. Não se esqueça de incluir esses arquivos CSO ao seu app em seu pacote!
+No Direct3D, os sombreadores não são compilados durante o tempo de execução; eles sempre são compilados em arquivos CSO quando o resto do programa é compilado. Quando você compila o seu aplicativo com Microsoft Visual Studio, os arquivos HLSL são compilados a arquivos CSO (.cso) que o seu aplicativo deve carregar. Não se esqueça de incluir esses arquivos CSO ao seu aplicativo em seu pacote!
 
 > **Observação**   O exemplo a seguir executa o carregamento e a compilação do sombreador de forma assíncrona usando a palavra-chave **auto** e a sintaxe lambda. ReadDataAsync() é um método implementado para o modelo que lê em um arquivo CSO como uma matriz de dados em byte (fileData).
 
@@ -231,7 +228,7 @@ renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 
 O Direct3D não tem um conceito de "atributo" ou "uniforme" com o mesmo sentido (ou, pelo menos, não compartilha essa sintaxe). Em vez disso, ele tem buffers constantes, representados como sub-recursos Direct3D (recursos esses compartilhados entre o programa principal e os programas de sombreador). Alguns desses sub-recursos, como posições e cores de vértice, são descritos como semântica HLSL. Para saber mais sobre buffers constantes e semântica HLSL relacionados a conceitos do OpenGL ES 2.0, leia o tópico sobre [portabilidade de uniformes, atributos e objetos de buffer de quadros](porting-uniforms-and-attributes.md).
 
-Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel usa um SV\_POSITION, com o prefixo SV\_ indicando que é um valor de sistema gerado pela GPU. (Neste caso, é uma posição de pixel gerada durante conversão de varredura) VertexShaderInput e PixelShaderInput não são declarados como buffers constantes porque o primeiro será usado para definir o buffer de vértices (consulte [Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)), e os dados para o segundo são gerados como resultado de um estágio anterior no pipeline, que, neste caso, é o sombreador de vértice.
+Ao mover esse processo para o Direct3D, convertemos o uniforme para um buffer constante (cbuffer) do Direct3D e atribuímos a ele um registro de pesquisa com a semântica HLSL **registro**. Os dois atributos de vértice são manipulados como elementos de entrada para os estágios de pipeline de sombreador, e também são atribuídos [HLSL semantics](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION and COLOR0) que informam aos sombreadores. O sombreador de pixel usa um SV\_POSITION, com o prefixo SV\_ indicando que é um valor de sistema gerado pela GPU. (Neste caso, é uma posição de pixel gerada durante conversão de varredura) VertexShaderInput e PixelShaderInput não são declarados como buffers constantes porque o primeiro será usado para definir o buffer de vértices (consulte [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)), e os dados para o segundo são gerados como resultado de um estágio anterior no pipeline, que, neste caso, é o sombreador de vértice.
 
 Direct3D: definições HLSL para buffers constantes e dados de vértice
 
@@ -303,18 +300,18 @@ m_d3dContext->UpdateSubresource(
   0);
 ```
 
-O buffer de vértices é criado e atualizado de forma semelhante, e é discutido na próxima etapa, [Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md).
+O buffer de vértices é criado e atualizado de forma semelhante, e é discutido na próxima etapa, [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md).
 
 <a name="next-step"></a>Próxima etapa
 ---------
 
-[Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
-[Como fazer a portabilidade de um renderizador OpenGL ES 2.0 simples para Direct3D Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+[Como: compatibilizar um renderizador simples do OpenGL ES 2.0 ao Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 
-[Fazer a portabilidade de dados e buffers de vértice](port-the-vertex-buffers-and-data-config.md)
+[Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 
 [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
@@ -323,7 +320,6 @@ O buffer de vértices é criado e atualizado de forma semelhante, e é discutido
  
 
  
-
 
 
 

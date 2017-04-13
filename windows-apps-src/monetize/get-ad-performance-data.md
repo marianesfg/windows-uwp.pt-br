@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, anúncios, desempenho"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a9d6226ebb06c1a9322ab44c3001a8b86aab1e5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a4d907e60ddcd6a1ff093c9feccdefdda9551d09
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 
 
@@ -56,7 +53,7 @@ Para saber mais, consulte [Acessar dados analíticos usando serviços da Windows
 
 Para recuperar dados de desempenho do anúncio de um aplicativo específico, use o parâmetro *applicationId*. Para recuperar dados de desempenho do anúncio de todos os aplicativos associados à conta de desenvolvedor, omita o parâmetro *applicationId*.
 
-| Parâmetro     | Tipo   | Descrição     | Necessário |
+| Parâmetro     | Tipo   | Descrição     | Obrigatório |
 |---------------|--------|-----------------|----------|
 | applicationId   | string    | A ID da Loja do aplicativo cujos dados de desempenho do anúncio você deseja recuperar. A ID da Loja está disponível na [página Identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9NBLGGH4R315. |    Não      |
 | startDate   | date    | A data de início no intervalo de datas dos dados de desempenho do anúncio a ser recuperada, no formato AAAA/MM/DD. O padrão é a data atual menos 30 dias. |    Não      |
@@ -109,7 +106,7 @@ Authorization: Bearer <your access token>
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Valor      | array  | Uma matriz de objetos que contêm dados de desempenho do anúncio agregados. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de desempenho do anúncio](#ad-performance-values) a seguir.                                                                                                                      |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 5, mas houver mais de 5 itens de dados para a consulta. |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você pode usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 5, mas houver mais de 5 itens de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
 <span id="ad-performance-values" />
@@ -139,7 +136,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 
 ### <a name="response-example"></a>Exemplo de resposta
 
-O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
+O código a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.
 
 ```json
 {
@@ -183,4 +180,3 @@ O exemplo a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 * [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
-

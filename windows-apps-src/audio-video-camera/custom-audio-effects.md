@@ -9,21 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1d8ced4a3dfcf0994d969ad045550ea0cc44a2af
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f2754cea4442fd0333b620f82d1db92d8be1c578
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-audio-effects"></a>Efeitos de áudio personalizados
 
 Este artigo descreve como criar um componente do Tempo de Execução do Windows que implemente a interface [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect) para criar efeitos personalizados para fluxos de áudio. Efeitos personalizados podem ser usados com várias APIs diferentes do Windows Runtime, incluindo [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), que fornece acesso à câmera do dispositivo, [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), que permite que você crie composições complexas de clipes de mídia, e [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph), que permite que você monte rapidamente um gráfico de vários nós de entrada, saída e submixagem de áudio.
 
-## <a name="add-a-custom-effect-to-your-app"></a>Adicionar um efeito personalizado ao seu app
+## <a name="add-a-custom-effect-to-your-app"></a>Adicionar um efeito personalizado ao seu aplicativo
 
 
-Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu app. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de áudio.
+Um efeito de áudio personalizado é definido em uma classe que implementa a interface [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect). Essa classe não pode ser incluída diretamente no projeto do seu aplicativo. Em vez disso, você deve usar um componente do Tempo de Execução do Windows para hospedar sua classe de efeito de áudio.
 
 **Adicionar um componente do Tempo de Execução do Windows para o efeito de áudio**
 
@@ -62,11 +59,11 @@ O sistema chama [**SetEncodingProperties**](https://msdn.microsoft.com/library/w
 
 ### <a name="setproperties-method"></a>Método SetProperties
 
-O método [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) permite que o app que está usando o efeito ajuste os parâmetros do efeito. As propriedades são passadas como um mapa de nomes e valores de propriedade [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054).
+O método [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) permite que o aplicativo que está usando o efeito ajuste os parâmetros do efeito. As propriedades são passadas como um mapa de nomes e valores de propriedade [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054).
 
 [!code-cs[SetProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetProperties)]
 
-Este exemplo simples misturará a amostra de áudio atual com um valor do buffer de atraso de acordo com o valor da propriedade **Mix**. Uma propriedade é declarada e TryGetValue é usado para obter o valor definido pelo app de chamada. Se nenhum valor foi definido, um valor padrão de 0,5 será usado. Observe que essa propriedade é somente leitura. O valor da propriedade deve ser definido usando **SetProperties**.
+Este exemplo simples misturará a amostra de áudio atual com um valor do buffer de atraso de acordo com o valor da propriedade **Mix**. Uma propriedade é declarada e TryGetValue é usado para obter o valor definido pelo aplicativo de chamada. Se nenhum valor foi definido, um valor padrão de 0,5 será usado. Observe que essa propriedade é somente leitura. O valor da propriedade deve ser definido usando **SetProperties**.
 
 [!code-cs[MixProperty](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetMixProperty)]
 
@@ -96,7 +93,7 @@ Agora que os buffers de dados foram obtidos, você pode ler o buffer de entrada 
 
 ### <a name="close-method"></a>Método Close
 
-O sistema chamará o método [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) em sua classe quando o efeito for encerrado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação obrigatório.
+O sistema chamará o método [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764782) em sua classe quando o efeito for encerrado. Você deve usar esse método para descartar quaisquer recursos que você criou. O argumento para o método é um [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason) que permite que você saiba se o efeito foi fechado normalmente, se ocorreu um erro ou se o efeito não é compatível com o formato de codificação necessário.
 
 [!code-cs[Fechar](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
@@ -119,12 +116,12 @@ Defina a propriedade [**UseInputFrameForOutput**](https://msdn.microsoft.com/lib
 [!code-cs[UseInputFrameForOutput](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetUseInputFrameForOutput)]
 
 
-## <a name="adding-your-custom-effect-to-your-app"></a>Adicionando efeito personalizado ao seu app
+## <a name="adding-your-custom-effect-to-your-app"></a>Adicionando efeito personalizado ao seu aplicativo
 
 
-Para usar o efeito de áudio do seu app, você deve adicionar uma referência ao projeto do efeito ao seu app.
+Para usar o efeito de áudio do seu aplicativo, você deve adicionar uma referência ao projeto do efeito ao seu aplicativo.
 
-1.  No Gerenciador de Soluções, no projeto do seu app, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência**.
+1.  No Gerenciador de Soluções, no projeto do seu aplicativo, clique com o botão direito do mouse em **Referências** e selecione **Adicionar referência**.
 2.  Expanda a guia **Projetos**, selecione **Solução** e marque a caixa de seleção com o nome do projeto do efeito. Neste exemplo, o nome é *AudioEffectComponent*.
 3.  Clique em **OK**
 
@@ -137,7 +134,7 @@ Para obter informações gerais sobre como usar os gráficos de áudio, consulte
 
 [!code-cs[AddCustomEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddCustomEffect)]
 
-Depois que ele foi adicionado a um nó, o efeito personalizado poderá ser desabilitado chamando [**DisableEffectsByDefinition**](https://msdn.microsoft.com/library/windows/apps/dn958480) e transmitindo o objeto **AudioEffectDefinition**. Para obter mais informações sobre como usar os gráficos de áudio em seu app, consulte [AudioGraph](audio-graphs.md).
+Depois que ele foi adicionado a um nó, o efeito personalizado poderá ser desabilitado chamando [**DisableEffectsByDefinition**](https://msdn.microsoft.com/library/windows/apps/dn958480) e transmitindo o objeto **AudioEffectDefinition**. Para obter mais informações sobre como usar os gráficos de áudio em seu aplicativo, consulte [AudioGraph](audio-graphs.md).
 
 ### <a name="add-your-custom-effect-to-a-clip-in-a-mediacomposition"></a>Adicionar o efeito personalizado a um clipe em um MediaComposition
 
@@ -154,7 +151,6 @@ O snippet de código a seguir demonstra como adicionar o efeito de áudio person
 * [Reprodução de mídia](media-playback.md)
 
  
-
 
 
 

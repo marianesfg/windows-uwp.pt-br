@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-Description: "A API JavaScript do aplicativo Fazer um Teste Microsoft permite fazer avaliações seguras. Fazer um teste oferece um navegador seguro que impede que alunos usem outros recursos de computador ou internet durante um teste."
+Description: "A API JavaScript do aplicativo Fazer um Teste Microsoft permite fazer avaliações seguras. Fazer um Teste oferece um navegador seguro que impede que alunos usem outros recursos de computador ou internet durante um teste."
 title: API do JavaScript do Fazer um Teste.
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ac1a9b38a9857ae536025e682f98d01135850a19
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e308280fcecf825061ddf503ce91f8607fcece72
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="take-a-test-javascript-api"></a>API do JavaScript do Fazer um Teste
 
 [Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo baseado em navegador que renderiza avaliações online bloqueadas para testes de alto risco. Ele dá suporte ao padrão da API do navegador SBAC para testes básicos comuns importantes e permite se concentrar no conteúdo de avaliação, em vez de como bloquear o Windows.
@@ -320,4 +317,3 @@ Para sintetização do controle por voz.
 
 **Requisitos**  
 Windows 10, versão 1607
-

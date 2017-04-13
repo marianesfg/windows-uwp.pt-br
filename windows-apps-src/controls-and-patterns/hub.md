@@ -11,18 +11,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 32a558866457c4a9e9a359f12d43af317fc0f84a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: df2ed32801cbf1377e72b10aac0049575528408c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="hub-controlpattern"></a>Controle/padrão hub
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Um controle hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
+Um controle Hub permite organizar o conteúdo do aplicativo em seções ou categorias distintas, mas relacionadas. A seções de um hub devem ser percorridas em uma ordem preferencial e podem servir como ponto de partida para experiências mais detalhadas.
 
 ![Exemplo de um hub](images/hub_example_tablet.png)
 
@@ -118,7 +116,7 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
-* [Exemplo de noções básicas da interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -127,4 +125,3 @@ Em dispositivos móveis, uma seção de hub está visível por vez.
 - [Noções básicas de navegação](../layout/navigation-basics.md)
 - [Como usar um hub](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 - [Exemplo de controle do Hub em XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
-

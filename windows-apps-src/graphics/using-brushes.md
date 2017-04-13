@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bf3e4e169108f4cab98dcb460552daff8822c64c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 71bac3ed2c62df9b47bf16881acbc5e401697a5f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-brushes"></a>Usar pincéis
 
@@ -179,7 +177,6 @@ Para exemplos de código, consulte as páginas de referência para [**WebViewBru
  
 
  
-
 
 
 

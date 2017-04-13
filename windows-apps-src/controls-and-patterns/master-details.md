@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96f9f9855dba48203e4372cef88d1f6ab7d435f5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -29,7 +27,7 @@ O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição d
 
 O padrão mestre/detalhes funciona bem para:
 
--   Criar um app de email, catálogo de endereços ou qualquer app que se baseia em um layout de lista-detalhes.
+-   Criar um aplicativo de email, catálogo de endereços ou qualquer aplicativo que se baseia em um layout de lista-detalhes.
 -   Localizar e priorizar uma grande coleção de conteúdo.
 -   Permitir a rápida adição e remoção de itens de uma lista enquanto se alterna entre contextos.
 
@@ -77,13 +75,13 @@ Para o painel de detalhes, use o elemento de conteúdo mais lógico. Se tiver mu
 
 ## <a name="examples"></a>Exemplos
 
-Este design de app que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do app como apareceria no telefone, o painel/lista mestra encontra-se à esquerda, com o painel de detalhes à direita.
+Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria no telefone, o painel/lista mestra encontra-se à esquerda, com o painel de detalhes à direita.
 
-![Exemplo de app usando o padrão mestre-detalhes no telefone](images/uap-finance-phone-masterdetails-600.png)
+![Exemplo de aplicativo usando o padrão mestre-detalhes no telefone](images/uap-finance-phone-masterdetails-600.png)
 
-Este design de app que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do app como apareceria na área de trabalho, o painel/lista mestra e o painel de detalhes ficam visíveis e em tela inteira. O painel mestre apresenta uma caixa de pesquisa na parte superior e uma barra de comandos na parte inferior.
+Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria na área de trabalho, o painel/lista mestra e o painel de detalhes ficam visíveis e em tela inteira. O painel mestre apresenta uma caixa de pesquisa na parte superior e uma barra de comandos na parte inferior.
 
-![Exemplo de um app que usa o padrão de detalhes mestre na área de trabalho](images/uap-finance-desktop700.png)
+![Exemplo de um aplicativo que usa o padrão de detalhes mestre na área de trabalho](images/uap-finance-desktop700.png)
 
 Para código de exemplo que mostra o padrão mestre/detalhes, consulte
 - [Exemplo de ListView e GridView](http://go.microsoft.com/fwlink/p/?LinkId=619900)
@@ -95,4 +93,3 @@ Para código de exemplo que mostra o padrão mestre/detalhes, consulte
 - [Pesquisa](search.md)
 - [Aplicativo e barras de comandos](app-bars.md)
 - [**Classe ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
-

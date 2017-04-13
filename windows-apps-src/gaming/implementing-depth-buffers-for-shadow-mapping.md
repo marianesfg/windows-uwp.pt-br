@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "Guia passo a passo – implementar volumes de sombra usando buffers de profundidade no Direct3D 11"
+title: Passo a passo-- Buffers de profundidade de volume de sombra do Direct3D 11
 description: "Este guia passo a passo demonstra como renderizar volumes de sombra com mapas de profundidade, usando o Direct3D 11 em dispositivos com todos os níveis de recursos do Direct3D."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, volumes de sombra, buffers de profundidade, directx 11
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 00e823b667a4622f6fa2dd213c3277bec9d616a2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e68f0d559e6dbd7791104310a985ca99e0131c99
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Guia passo a passo: implementar volumes de sombra usando buffers de profundidade no Direct3D 11
 
 
@@ -90,7 +87,6 @@ Você deve [Preparar seu ambiente de desenvolvimento de jogos UWP (Plataforma Un
  
 
  
-
 
 
 

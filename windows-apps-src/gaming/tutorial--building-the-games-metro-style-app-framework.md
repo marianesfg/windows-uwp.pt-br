@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
+title: Definir a estrutura do aplicativo UWP do jogo
 description: "A primeira parte da codificação de um jogo UWP (Plataforma Universal do Windows) com DirectX é criar a estrutura que permite que o objeto de jogo interaja com o Windows."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c19c2ca89b2d38929ade8596c10beb3c3a16104
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>Definir a estrutura do aplicativo UWP (Plataforma Universal do Windows) do jogo
 
 
@@ -323,8 +320,7 @@ Consulte os manipuladores de eventos na amostra e os eventos que manipulam. Voc�
 <td align="left">OnLogicalDpiChanged</td>
 <td align="left">Manipula [<strong>DisplayProperties::LogicalDpiChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br226150). O DIP da janela principal do jogo mudou e o aplicativo do jogo ajusta devidamente seus recursos.
 <div class="alert">
-<strong>
-Observação</strong> As coordenadas [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) são em DIPs (Pixels Independentes de Dispositivo), como em [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, você deve notificar o Direct2D sobre a alteração no DIP para exibir quaisquer ativos ou primitivas 2D corretamente.
+<strong>Observação</strong>  As coordenadas [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) são em DIPs (Pixels Independentes de Dispositivo), como no [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, você deve notificar o Direct2D sobre a alteração no DIP para exibir quaisquer ativos ou primitivas 2D corretamente.
 </div>
 <div>
  
@@ -1428,7 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
  
 
  
-
 
 
 

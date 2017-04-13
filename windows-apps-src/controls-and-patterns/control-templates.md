@@ -14,11 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3a8a2ccde21ba1e2b16545ae26ebe5e8908ec6b8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 825b6a8b2689143b5a68b9e7e1862ac2e6e92d28
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -195,7 +193,7 @@ Uma forma rápida de aplicar temas aos seus controles é clicar com o botão dir
 
 ## <a name="controls-and-accessibility"></a>Controles e acessibilidade
 
-Ao criar um novo modelo de controle, além da possibilidade de mudar o comportamento e a aparência visual do controle, você também pode alterar como o controle se representa nas estruturas de acessibilidade. A Plataforma Universal do Windows (UWP) é compatível com a estrutura de Automação da IU Microsoft para acessibilidade. Todos os controles padrão e seus modelos permitem tipos e padrões comuns de controle de Automação da Interface do Usuário adequados para a finalidade e a função do controle. Esses tipos e padrões de controle são interpretados por clientes de Automação da Interface do Usuário, como tecnologias adaptativas, permitindo acessar um controle como parte de uma interface do usuário de app acessível maior.
+Ao criar um novo modelo de controle, além da possibilidade de mudar o comportamento e a aparência visual do controle, você também pode alterar como o controle se representa nas estruturas de acessibilidade. A Plataforma Universal do Windows (UWP) é compatível com a estrutura de Automação da IU Microsoft para acessibilidade. Todos os controles padrão e seus modelos permitem tipos e padrões comuns de controle de Automação da Interface do Usuário adequados para a finalidade e a função do controle. Esses tipos e padrões de controle são interpretados por clientes de Automação da Interface do Usuário, como tecnologias adaptativas, permitindo acessar um controle como parte de uma interface do usuário de aplicativo acessível maior.
 
 Para separar a lógica de controle básica e também atender a alguns requisitos de arquitetura da Automação da Interface do Usuário, as classes de controle incluem o suporte para acessibilidade em uma classe separada, um par de automação. Os pares de automação às vezes têm interações com os modelos de controle, pois os pares esperam que existam determinadas partes nomeadas nos modelos para que funcionalidades, como a habilitação de tecnologias adaptativas, possam invocar as ações dos botões.
 
@@ -207,14 +205,13 @@ Os tópicos que documentam os estilos e modelos dos controles de XAML mostram tr
 
 ## <a name="theme-resources-in-control-templates"></a>Recursos de tema em modelos de controle
 
-Para alguns dos atributos nos exemplos de XAML, você pode ter percebido referências de recursos que usam a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md). Essa é uma técnica que permite que um único modelo de controle use recursos que podem ser valores diferentes dependendo de qual tema está ativo no momento. Isso é particularmente importante para pincéis e cores, porque a finalidade principal dos temas é permitir que os usuários escolham se querem um tema de contraste escuro, claro ou alto aplicado ao sistema como um todo. Os apps que usam o sistema de recursos de XAML podem usar um conjunto de recursos apropriado para esse tema, de maneira que as escolhas de tema na interface do usuário de um app reflitam a escolha de tema em todo o sistema feita pelo usuário.
+Para alguns dos atributos nos exemplos de XAML, você pode ter percebido referências de recursos que usam a [extensão de marcação {ThemeResource}](../xaml-platform/themeresource-markup-extension.md). Essa é uma técnica que permite que um único modelo de controle use recursos que podem ser valores diferentes dependendo de qual tema está ativo no momento. Isso é particularmente importante para pincéis e cores, porque a finalidade principal dos temas é permitir que os usuários escolham se querem um tema de contraste escuro, claro ou alto aplicado ao sistema como um todo. Os aplicativos que usam o sistema de recursos de XAML podem usar um conjunto de recursos apropriado para esse tema, de maneira que as escolhas de tema na interface do usuário de um aplicativo reflitam a escolha de tema em todo o sistema feita pelo usuário.
 
  ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 * [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Exemplo de controle de edição de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
  
-
 
 
 

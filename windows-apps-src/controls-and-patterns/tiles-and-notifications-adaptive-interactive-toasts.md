@@ -11,15 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1962e58d3513ddff908a0d556731d83cce20af4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d9808feeabfa4ffce19d0e669352331804dfd751
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>Notificações do sistema interativas e adaptáveis
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.
 
@@ -29,7 +27,7 @@ O modelo de notificações do sistema interativas e adaptáveis tem estas atuali
 -   Três tipos diferentes de ativação para a notificação do sistema principal e para cada ação.
 -   A opção para criar uma notificação para determinados cenários, inclusive alarmes, lembretes e chamadas de entrada.
 
-**Observação**   Para ver os modelos herdados do Windows 8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Observação**   Para ver os modelos herdados do Windows8.1 e Windows Phone 8.1, consulte o [catálogo de modelos de notificação do sistema herdados](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
 
 ## <a name="getting-started"></a>Introdução
@@ -119,7 +117,30 @@ ToastContent content = new ToastContent()
 };
 ```
 
-E uma representação visual da estrutura:
+Depois precisamos converter a notificação do sistema em um objeto [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx). Se você tiver definido a notificação do sistema em um arquivo XML (denominado "content.xml" aqui), use este código:
+
+```CSharp
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+Ou, se você tiver definido o modelo de notificação do sistema em C#, use isto:
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+Independentemente de como você criar o XMLDocument, pode usar este código para criar e enviar a notificação do sistema:
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
+ToastNotificationManager.CreateToastNotifier().Show(notification);
+```
+
+Para ver um app completo que mostra notificações do sistema em ação, consulte o [Guia de início rápido sobre como enviar uma notificação do sistema local](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
+
+Esta é uma representação visual da estrutura:
 
 ![estrutura de notificação do sistema](images/adaptivetoasts-structure.jpg)
 
@@ -249,9 +270,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Notificação com ações, exemplo 1**
+**Notificação com ações**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação com duas ações possíveis de resposta.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +330,11 @@ ToastContent content = new ToastContent()
 
 ![notificação com ações, exemplo 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**Notificação com ações, exemplo 2**
-
-Este exemplo mostra...
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![notificação com ações, exemplo 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **Notificação com entrada de texto e ações, exemplo 1**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação que aceita entrada de texto, juntamente com duas ações de resposta.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +415,7 @@ ToastContent content = new ToastContent()
 
 **Notificação com entrada de texto e ações, exemplo 2**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação que aceita entrada de texto e uma única ação.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +492,7 @@ ToastContent content = new ToastContent()
 
 **Notificação com entrada de seleção e ações**
 
-Este exemplo mostra...
+Este exemplo cria uma notificação com um menu suspenso de seleção e duas ações possíveis.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +576,7 @@ ToastContent content = new ToastContent()
 
 **Notificação de lembrete**
 
-Este exemplo mostra...
+Usando um menu de seleção e duas ações como no exemplo anterior, podemos criar uma notificação de lembrete:
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">

@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 127bf79ebe17e6156a95d4aae168e42b7ff53aa1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5da40bb4c680416f0766cf0d1a171f95358ea63e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-date-and-time-controls"></a>Controles de calendário, data e hora
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Os controles de data e hora oferecem formas padrão e localizadas para permitir que um usuário visualize e defina valores de data e hora em seu aplicativo. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
+Os controles de data e hora oferecem formas padrão e localizadas para permitir que um usuário exiba e defina valores de data e hora em seu aplicativo. Este artigo fornece diretrizes de design e ajuda você a escolher o controle correto.
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -82,7 +80,7 @@ O ponto de entrada mostra a data escolhida e, quando o usuário seleciona o pont
 
 O **TimePicker** é usado para selecionar um valor de hora único para itens como compromissos ou uma hora de partida. É uma exibição estática que é definida pelo usuário ou no código, mas não é atualizada para exibir a hora atual. 
 
-O ponto de entrada mostra a hora escolhida e, quando o usuário seleciona o ponto de entrada, uma superfície de seletor se expande verticalmente do meio para que o usuário faça uma seleção. O seletor de hora se sobrepõe à outra interface do usuário; ele não remove a outra interface do usuário.
+O ponto de entrada mostra a hora escolhida e, quando o usuário seleciona o ponto de entrada, uma superfície de seletor se expande verticalmente do meio para que o usuário faça uma seleção. O seletor de hora se sobrepõe a outra interface do usuário; ele não remove a outra interface do usuário.
 
 ![Exemplo da expansão do seletor de hora](images/controls_timepicker_expand.png)
 
@@ -127,4 +125,3 @@ O .NET também dá suporte a um tipo chamado [**DateTime**](https://msdn.microso
 - [**Classe CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/dn950083)
 - [**Classe DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584)
 - [**Classe TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
-

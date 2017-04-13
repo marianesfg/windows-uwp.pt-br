@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 52c1d63d-69c1-48d6-a234-6f39296e4bfd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0a33aaf71dbf23e991591f790f7327d812b060ef
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 332271894b5e11657bd2b0b1ca40f0bd7620889d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inverted-lists"></a>Listas invertidas
 
@@ -25,7 +23,7 @@ Você pode usar uma exibição de lista para apresentar uma conversa de uma expe
  
 Normalmente, você precisa apresentar a lista de modo que ela pareça crescer de baixo para cima, em vez de cima para baixo.  Quando uma nova mensagem chega e é acrescentada ao final, as mensagens anteriores deslizam para cima para liberar espaço chamando a atenção do usuário para a chegada mais recente.  No entanto, se um usuário tiver rolado a tela para cima para ver as respostas anteriores, a chegada de uma nova mensagem não deverá causar uma mudança de visual que possa atrapalhar seu foco.
 
-![app de chat com a lista invertida](images/listview-inverted.png)
+![aplicativo de chat com a lista invertida](images/listview-inverted.png)
 
 <div class="important-apis" >
 <b>APIs importantes</b><br/>
@@ -42,7 +40,7 @@ Normalmente, você precisa apresentar a lista de modo que ela pareça crescer de
 Para criar uma lista invertida, use uma exibição de lista com um [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx) como seu painel de itens. No ItemsStackPanel, defina o [**ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx) como [**KeepLastItemInView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx).
 
 > [!IMPORTANT]
-> O valor de enumeração **KeepLastItemInView** está disponível desde o Windows 10, versão 1607. Você não pode usar esse valor quando seu app é executado em versões anteriores do Windows 10.
+> O valor de enumeração **KeepLastItemInView** está disponível desde o Windows 10, versão 1607. Você não pode usar esse valor quando seu aplicativo é executado em versões anteriores do Windows 10.
 
 Este exemplo mostra como alinhar itens da exibição de lista com a parte inferior e indicar que, quando houver uma alteração nos itens, o último item deve permanecer na exibição.
  
@@ -63,4 +61,3 @@ Este exemplo mostra como alinhar itens da exibição de lista com a parte inferi
 - Alinhe mensagens do remetente/destinatário em lados opostos para esclarecer o fluxo da conversa para os usuários.
 - Deixe as mensagens existentes fora do caminho para exibir a mensagem mais recente se o usuário já estiver no final da conversa aguardando a próxima mensagem.
 - Não interrompa o foco dos usuários movendo itens se eles não estiverem lendo o final da conversa.
-

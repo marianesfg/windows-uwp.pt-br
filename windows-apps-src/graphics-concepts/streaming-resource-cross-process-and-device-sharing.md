@@ -2,21 +2,17 @@
 title: Processo cruzado de recursos de streaming e compartilhamento de dispositivos
 description: "Os pools de bloco podem ser compartilhados com outros processos como recursos tradicionais. O streaming de recursos que faz referência a pools de bloco não pode ser compartilhado entre dispositivos e processos."
 ms.assetid: D035AF4B-D71B-4F20-9A98-7C360BF9B285
-keywords:
-- Processo cruzado de recursos de streaming e compartilhamento de dispositivos
+keywords: Processo cruzado de recursos de streaming e compartilhamento de dispositivos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cba124fe9152790857fa9658513414735c60de47
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8f383805759e099144f13a5924b5da90240b4ef0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Processo cruzado de recursos de streaming e compartilhamento de dispositivos
 
 
@@ -56,7 +52,6 @@ Os pools de bloco compartilhado não podem ser redimensionados.
  
 
  
-
 
 
 

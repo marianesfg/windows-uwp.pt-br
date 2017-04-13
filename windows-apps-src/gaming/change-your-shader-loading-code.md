@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, opengl, direct3d, pipeline do sombreador
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar o pipeline do sombreador do OpenGL ES 2.0 com Direct3D
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -60,7 +57,7 @@ Em Direct3D, os recursos de sombreador não são criados antes da compilação e
 ## <a name="compiling-a-shader"></a>Compilando um sombreador
 
 
-Os sombreadores do Direct3D devem ser recompilados como arquivos .cso (objeto de sombreador compilado) em apps UWP (Plataforma Universal do Windows) e carregados usando uma das APIs de arquivos do Windows Runtime. (Os apps da área de trabalho podem compilar os sombreadores a partir de arquivos de texto ou de cadeias de caracteres em tempo de execução). Os arquivos CSO são criados a partir de qualquer arquivo .hlsl que faça parte do projeto do Microsoft Visual Studio e mantêm os mesmos nomes, mas com a extensão de arquivo .cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
+Os sombreadores do Direct3D devem ser recompilados como arquivos .cso (objeto de sombreador compilado) em aplicativos UWP (Plataforma Universal do Windows) e carregados usando uma das APIs de arquivos do Windows Runtime. (Os aplicativos da área de trabalho podem compilar os sombreadores a partir de arquivos de texto ou de cadeias de caracteres em tempo de execução). Os arquivos CSO são criados a partir de qualquer arquivo .hlsl que faça parte do projeto do Microsoft Visual Studio e mantêm os mesmos nomes, mas com a extensão de arquivo .cso. Não se esqueça de incluí-los em seu pacote ao enviá-lo!
 
 | OpenGL ES 2.0                          | Direct3D 11                                                                                                                                                                   |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,9 +191,9 @@ Leia a [referência de GLSL para HLSL](glsl-to-hlsl-reference.md) e conheça mel
 ## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>Fazendo a portabilidade de intrínsecos do OpenGL para semântica do HLSL
 
 
-A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um app para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
+A semântica HLSL do Direct3D 11 é composta de cadeias que, como um nome de atributo ou uniforme, são usadas para identificar um valor passado de um aplicativo para um programa de sombreador (e vice-versa). Embora haja uma grande variedade de cadeias possíveis, o melhor a fazer é usar uma cadeia, como POSITION ou COLOR, que indique o uso. Você deve atribuir essa semântica ao construir um buffer constante ou um layout de entrada de buffer. Você também pode adicionar um número de 0 a 7 à semântica, o que permite usar Registros separados para valores semelhantes. Por exemplo: COLOR0, COLOR1, COLOR2...
 
-A semântica prefixada com "SV\_" contém valores do sistema gravados pelo programa sombreador; por si só, o app (em execução na CPU) não pode modificá-la. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
+A semântica prefixada com "SV\_" contém valores do sistema gravados pelo programa sombreador; por si só, o aplicativo (em execução na CPU) não pode modificá-la. Normalmente, esses valores são entradas ou saídas de outro estágio do sombreador no pipeline gráfico ou são completamente gerados pela GPU.
 
 Além disso, a semântica SV\_ tem comportamentos diferentes quando é usada para especificar a entrada ou saída de um estágio do sombreador. Por exemplo, SV\_POSITION (saída) contém os dados de vértice transformados durante o estágio do sombreador de vértice, e SV\_POSITION (entrada) contém os valores de posição de pixel interpolados durante a rasterização.
 
@@ -204,7 +201,7 @@ Veja algumas correlações com intrínsecos de sombreador comuns do OpenGL ES 2.
 
 | Valor de sistema no OpenGL | Use esta semântica HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| gl\_Position        | POSITION(n) dos dados do buffer de vértice. SV\_POSITION fornece uma posição do pixel ao sombreador de pixel e não pode ser gravado pelo app.                                        |
+| gl\_Position        | POSITION(n) dos dados do buffer de vértice. SV\_POSITION fornece uma posição do pixel ao sombreador de pixel e não pode ser gravado pelo aplicativo.                                        |
 | gl\_Normal          | NORMAL(n) de dados normais fornecidos pelo buffer de vértice.                                                                                                                 |
 | gl\_TexCoord\[n\]   | TEXCOORD(n) de dados de coordenadas UV (ST em alguns documentos do OpenGL) de textura fornecidos a um sombreador.                                                                       |
 | gl\_FragColor       | COLOR(n) de dados de cor RGBA fornecidos a um sombreador. Não se esqueça de que eles são tratados de forma idêntica aos dados de coordenadas; a semântica simplesmente o ajuda a identificar que são dados de cor. |
@@ -250,7 +247,6 @@ Para saber mais sobre o uso de semântica com Direct3D, leia [Semântica HLSL](h
  
 
  
-
 
 
 

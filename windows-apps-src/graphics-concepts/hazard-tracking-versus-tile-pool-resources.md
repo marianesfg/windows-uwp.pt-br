@@ -2,21 +2,17 @@
 title: Controle de risco versus recursos de pool de blocos
 description: "Para recursos não streaming, o Direct3D pode impedir determinadas condições de risco durante a renderização, mas como o controle de risco estaria em um nível de bloco para os recursos de streaming, monitorar as condições de risco durante a renderização de streaming de recursos pode ser muito caro."
 ms.assetid: 8B0C73D3-3F77-41E8-B17D-C595DEE39E49
-keywords:
-- Controle de risco versus recursos de pool de blocos
+keywords: Controle de risco versus recursos de pool de blocos
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5321da19c4c168b48d7e2ba2f3edb7da7880e944
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bdec458e13e3f2df54555716d59aefcc946ef7b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>Controle de risco versus recursos de pool de blocos
 
 
@@ -36,7 +32,6 @@ Um aplicativo deve informar o driver de vídeo ao emitir uma operação de grava
  
 
  
-
 
 
 

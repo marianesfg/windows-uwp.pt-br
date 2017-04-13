@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b3b41e81f48f790c85377208816668ba302d3738
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="nested-ui-in-list-items"></a>Interface do usuário aninhada em itens de lista
 
@@ -55,7 +53,7 @@ A *ação principal* é o que o usuário espera acontecer ao pressionar o item d
 
 Ao criar a interface do usuário de lista, você precisa primeiro considerar todos os métodos de entrada que a UWP aceita. Para saber mais sobre os diferentes tipos de entrada, consulte a [Cartilha de entrada](../input-and-devices/input-primer.md).
 
-Depois de confirmar que seu app aceita todas as entradas que a UWP aceita, você deve decidir se as ações secundárias de seu app são importantes o suficiente para serem expostas como aceleradores na lista principal. Lembre-se de que quanto mais ações que você expõe, mais complicado sua interface do usuário se torna. Você realmente precisa expor as ações secundárias na lista principal da interface do usuário ou pode colocá-las em outro lugar?
+Depois de confirmar que seu aplicativo aceita todas as entradas que a UWP aceita, você deve decidir se as ações secundárias de seu aplicativo são importantes o suficiente para serem expostas como aceleradores na lista principal. Lembre-se de que quanto mais ações que você expõe, mais complicado sua interface do usuário se torna. Você realmente precisa expor as ações secundárias na lista principal da interface do usuário ou pode colocá-las em outro lugar?
 
 Você pode considerar expor ações adicionais na lista principal da interface do usuário quando essas ações precisam ser acessadas por qualquer entrada sempre.
 
@@ -77,7 +75,7 @@ Para obter mais informações, consulte [Menus de contexto e submenus](menus.md)
 
 ### <a name="put-secondary-actions-in-hover-ui-to-optimize-for-pointer-input"></a>Colocar as ações secundárias na interface do usuário de foco para otimizar para entrada de ponteiro
 
-Se você espera que seu app seja usado com frequência com entrada de ponteiro, como mouse e caneta, e deseja disponibilizar ações secundárias prontamente somente para essas entradas, é possível mostrar as ações secundárias apenas em foco. Esse acelerador fica visível somente quando uma entrada de ponteiro é usada, então, use as outras opções para dar suporte a outros tipos de entrada também.
+Se você espera que seu aplicativo seja usado com frequência com entrada de ponteiro, como mouse e caneta, e deseja disponibilizar ações secundárias prontamente somente para essas entradas, é possível mostrar as ações secundárias apenas em foco. Esse acelerador fica visível somente quando uma entrada de ponteiro é usada, então, use as outras opções para dar suporte a outros tipos de entrada também.
 
 ![Interface do usuário aninhada mostrada em foco](images/nested-ui-hover.png)
 
@@ -310,4 +308,3 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-

@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 70b737625f5301d3147f4570b4e6f7216c2212c7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6d3251e9e67f7a49b51493bf13216bfd72826d62
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="epson-escpos-with-formatting"></a>ESC/POS Epson com formatação
 
@@ -63,4 +61,3 @@ printJob.ExecuteAsync();
 ```
 
 Para saber mais sobre ESC/POS, incluindo os comandos disponíveis, consulte as [Perguntas frequentes sobre ESC/POS Epson](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Para obter detalhes sobre [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) e todas as funcionalidades disponíveis, consulte [Impressora PointofService](https://msdn.microsoft.com/library/windows/apps/Mt426652) no MSDN.
-

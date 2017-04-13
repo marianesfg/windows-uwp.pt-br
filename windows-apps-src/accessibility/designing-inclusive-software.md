@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 23d5f86377dd88877987a9d149377aaee8a4ac48
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 124c0eb2d8640559c2573c532c8dc6089f75d0e7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="designing-inclusive-software-for-windows-10"></a>Projetando software inclusivo para Windows 10  
 
 Saiba mais sobre como evoluir o design inclusivo com aplicativos da Plataforma Universal do Windows (UWP) para o Windows 10.  Crie e compile software inclusivo com a acessibilidade em mente.
@@ -49,7 +46,7 @@ Há essencialmente dois tipos de usuários de tecnologia assistencial (AT):
 
 A maioria dos usuários de computador (54%) conhece alguma forma de tecnologia assistencial e 44% dos usuários de computador usa alguma forma dela, mas muitos deles não está usando a AT que poderia beneficiá-los (Forrester 2004).  
 
-Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade &mdash; 57% &mdash; dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. A Forrester (2003) também descobriu o seguinte número de usuários com estas dificuldades específicas: um em quatro tem uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
+Um estudo de 2003-2004 contratado pela Microsoft e realizado pela Forrester Research descobriu que mais da metade &mdash;57%&mdash; dos usuários de computador nos Estados Unidos entre as idades de 18 e 64 anos poderiam se beneficiar da tecnologia assistencial. A maioria desses usuários não se identificou como tendo uma deficiência ou comprometimento, mas expressou determinadas dificuldades relacionadas a comprometimentos ou deficiências ao usar um computador. A Forrester (2003) também descobriu o seguinte número de usuários com estas dificuldades específicas: um em quatro tem uma dificuldade visual. Um em quatro sente dor nos pulsos ou mãos. Uma em cinco tem dificuldade de audição.  
 
 Além de deficiências permanentes, a gravidade e os tipos de dificuldades que uma pessoa tem podem variar durante a vida dela. Não existe um ser humano normal. Nossas habilidades estão sempre mudando. Margaret Meade disse, "Somos todos únicos. Sermos todos únicos nos torna iguais".  
 
@@ -112,4 +109,3 @@ Em resumo, siga essas sete etapas para garantir que o seu software seja inclusiv
 * [Hub de desenvolvedor de acessibilidade da Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desenvolvendo aplicativos inclusivos do Windows](developing-inclusive-windows-apps.md) 
 * [Acessibilidade](accessibility.md)
-

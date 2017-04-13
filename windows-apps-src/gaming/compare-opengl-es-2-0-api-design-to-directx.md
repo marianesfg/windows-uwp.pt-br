@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, opengl, direct3d
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planejar a portabilidade do OpenGL ES 2.0 para o Direct3D
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -47,7 +44,7 @@ Os exemplos de Direct3D 11 destes tópicos usam o Microsoft Windows C++ com CX (
 
 O conjunto de recursos de processamento gráfico compatível com o OpenGL ES 2.0 corresponde, em linhas gerais, aos recursos fornecidos no Direct3D 9.1. Se quiser aproveitar os recursos mais avançados fornecidos no Direct3D 11, leia a documentação do [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) ao planejar a portabilidade ou os tópicos de [portabilidade do DirectX 9 para a UWP (Plataforma Universal do Windows)](porting-your-directx-9-game-to-windows-store.md) ao concluir o trabalho inicial.
 
-Para facilitar o trabalho de portabilidade inicial, comece com um modelo de Direct3D do Visual Studio. Ele fornece um renderizador básico já configurado para você e é compatível com recursos de apps UWP, como a recriação de recursos depois de alterações em janelas e níveis de recursos do Direct3D.
+Para facilitar o trabalho de portabilidade inicial, comece com um modelo de Direct3D do Visual Studio. Ele fornece um renderizador básico já configurado para você e é compatível com recursos de aplicativos UWP, como a recriação de recursos depois de alterações em janelas e níveis de recursos do Direct3D.
 
 ## <a name="understand-direct3d-feature-levels"></a>Compreenda os níveis de recursos do Direct3D
 
@@ -71,7 +68,7 @@ O Direct3D 11 oferece suporte a "níveis de recursos" de hardware, do 9\_1 (Dire
 ## <a name="review-the-windows-runtime-apis-and-template-library"></a>Confira as APIs e a biblioteca de modelos do Windows Runtime
 
 
-As APIs do Windows Runtime fornecem a infraestrutura geral dos apps UWP. Confira-as [aqui](https://msdn.microsoft.com/library/windows/apps/br211377).
+As APIs do Windows Runtime fornecem a infraestrutura geral dos aplicativos UWP. Confira-as [aqui](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 As principais APIs do Windows Runtime usadas na portabilidade do pipeline de elementos gráficos incluem:
 
@@ -80,7 +77,7 @@ As principais APIs do Windows Runtime usadas na portabilidade do pipeline de ele
 -   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
 -   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
-Além disso a WRL (Biblioteca de Modelos C++ do Windows Runtime) é uma biblioteca de modelos que proporciona um modo específico de modificar e usar os componentes do Tempo de Execução do Windows. As APIs do Direct3D 11 para apps UWP são mais bem utilizadas em conjunto com as interfaces e os tipos dessa biblioteca, como ponteiros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para saber mais sobre a WRL, leia [Biblioteca de Modelos C++ do Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
+Além disso a WRL (Biblioteca de Modelos C++ do Windows Runtime) é uma biblioteca de modelos que proporciona um modo específico de modificar e usar os componentes do Tempo de Execução do Windows. As APIs do Direct3D 11 para aplicativos UWP são mais bem utilizadas em conjunto com as interfaces e os tipos dessa biblioteca, como ponteiros inteligentes ([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)). Para saber mais sobre a WRL, leia [Biblioteca de Modelos C++ do Windows Runtime (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx).
 
 ## <a name="change-your-coordinate-system"></a>Altere o sistema de coordenadas
 
@@ -120,7 +117,6 @@ Mas o Direct3D é compatível com um sistema de coordenadas de mão direita. O D
  
 
  
-
 
 
 

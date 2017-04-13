@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "As notificações periódicas, também chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo de um serviço de nuvem."
+Description: "Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem."
 title: "Visão geral de notificações periódicas"
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 label: TBD
@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f77bdb61fdb596720a857960094c959b344db9af
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-As notificações periódicas, também chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo de um serviço de nuvem. Para usar notificações periódicas, seu código de aplicativo cliente precisa fornecer duas partes de informações:
+Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem. Para usar notificações periódicas, seu código de aplicativo cliente precisa fornecer duas partes de informações:
 
 -   O URI (Uniform Resource Identifier) de um local na Web para o Windows sondar por atualizações de bloco ou notificação para o seu aplicativo
 -   A frequência com que o URI deve ser sondado

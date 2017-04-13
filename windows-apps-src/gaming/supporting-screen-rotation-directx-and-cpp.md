@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, orientação da tela, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 606d32d16ad94e45cb63c73f1869735a9fbd7d25
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 
 
@@ -29,7 +26,7 @@ Para aplicativos UWP DirectX, o objeto [**DisplayInformation**](https://msdn.mic
 
 O Windows 10 define quatro modos de orientação de exibição específicos:
 
--   Paisagem - a orientação de exibição padrão para o Windows 10 e é considerada o ângulo base ou de identificação da rotação (0 graus).
+-   Paisagem - a orientação de exibição padrão para o Windows10 e é considerada o ângulo base ou de identificação da rotação (0 graus).
 -   Retrato - o vídeo tem que ser girado no sentido horário 90 graus (ou sentido anti-horário 270 graus).
 -   Paisagem, invertida - o tela foi girada 180 graus (virada de cabeça para baixo).
 -   Retrato invertido - o vídeo foi girado no sentido horário a 270 graus (ou no sentido anti-horário a 90 graus).
@@ -384,7 +381,7 @@ CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeMana
 resizeManager->NotifyLayoutCompleted();
 ```
 
-Quando um usuário gira a orientação do vídeo, o Windows 10 mostra uma animação independente de seu aplicativo como feedback para o usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
+Quando um usuário gira a orientação do vídeo, o Windows10 mostra uma animação independente de seu aplicativo como feedback para o usuário. Existem três partes para essa animação que ocorrem na seguinte ordem:
 
 -   O Windows 10 reduz a imagem original.
 -   O Windows 10 mantém a imagem durante tempo que leva para recriar um novo layout. Esse é o período que você gostaria de reduzir, porque seu aplicativo provavelmente não precisará dele inteiro.
@@ -558,7 +555,6 @@ Agora, quando você chamar seu método de renderização, ela multiplicará a ma
  
 
  
-
 
 
 

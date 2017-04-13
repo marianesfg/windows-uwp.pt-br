@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: D677E126-C3D6-46B6-87A5-6237EBEDF1A9
 description: "Use este método na API de envio da Windows Store para excluir um envio de complemento existente."
-title: Excluir um envio de complemento usando a API de envio da Windows Store
+title: Excluir um envio de complemento
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, envio de complemento, excluir, produto no aplicativo, IAP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 117ed98dc961231cdbc7258b1097b7e0452efe35
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a1f2a545b75ac4416ac016d36836328b24433917
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-submission-using-the-windows-store-submission-api"></a>Excluir um envio de complemento usando a API de envio da Windows Store
+# <a name="delete-an-add-on-submission"></a>Excluir um envio de complemento
 
 
 
@@ -34,7 +31,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ## <a name="request"></a>Solicitação
 
-Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e de cabeçalho.
+Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
 | Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
@@ -47,7 +44,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
+| Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -81,7 +78,7 @@ Se for bem-sucedida, esse método retorna um corpo de resposta vazia.
 
 ## <a name="error-codes"></a>Códigos de erro
 
-Se a solicitação não pode ser concluída com êxito, a resposta conterá um dos seguintes códigos de erro HTTP.
+Se não for possível concluir a solicitação, a resposta conterá um dos seguintes códigos de erro HTTP.
 
 | Código de erro |  Descrição   |
 |--------|------------------|
@@ -99,4 +96,3 @@ Se a solicitação não pode ser concluída com êxito, a resposta conterá um d
 * [Confirmar um envio de complemento](commit-an-add-on-submission.md)
 * [Atualizar um envio de complemento](update-an-add-on-submission.md)
 * [Obter o status de um envio de complemento](get-status-for-an-add-on-submission.md)
-

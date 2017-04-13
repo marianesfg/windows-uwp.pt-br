@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas e directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="graphics-diagnostics-tools"></a>Ferramentas de diagnóstico de gráficos
 
 
@@ -41,7 +38,6 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
  
 
  
-
 
 
 

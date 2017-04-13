@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a733f3d87f2e6598e49d8926a7b10797e335c79c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84e53b5093d2d288dbe95f51b0a3f9a8e5e06fe0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-global-ready-formats"></a>Usar formatos prontos para o mundo
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -173,4 +170,3 @@ Para cenários em que você fornecer uma funcionalidade diferente com base no id
 * [Exemplo de formatação de data e hora](http://go.microsoft.com/fwlink/p/?linkid=231618)
 * [Exemplo de preferências de globalização](http://go.microsoft.com/fwlink/p/?linkid=231608)
 * [Exemplo de formatação de número e análise](http://go.microsoft.com/fwlink/p/?linkid=231620)
-

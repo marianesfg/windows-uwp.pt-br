@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6107fe07fc8e98db7d197354246784a31a9c902c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b8200f3dd345d2da63a9fa127db53201afefc92d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-app-prelaunch"></a>Tratar a pré-inicialização do aplicativo
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -160,4 +157,3 @@ Se seu aplicativo WinJS direciona uma versão anterior do Windows 10, você pode
 
 * [Ciclo de vida do aplicativo](app-lifecycle.md)
 * [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, aquisições de aplicativo"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a716acb00b7a86429c444555c491b48cbc2c4b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b6ffd8300871e06d8b93682bed8d42546d1b88fc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-app-acquisitions"></a>Obter aquisições de aplicativo
 
 
@@ -27,7 +24,7 @@ Use este método na API de análise da Windows Store para obter dados agregados 
 Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](access-analytics-data-using-windows-store-services.md#prerequisites) para a API de análise da Windows Store.
-* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
+* [Obtenha um token de acesso do Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 
 ## <a name="request"></a>Solicitação
 
@@ -52,7 +49,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Um exemplo de ID da Loja é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | string | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição. A ID da Loja está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | startDate | date | A data de início no intervalo de datas de dados de aquisição a serem recuperados. O padrão é a data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas de dados de aquisição a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
@@ -105,8 +102,8 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de classificações agregadas. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de aquisição](#acquisition-values) a seguir.                                                                                                                      |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de aquisição para a consulta. |
+| Valor      | matriz  | Uma matriz de objetos que contém dados agregados de aquisição do aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores de aquisição](#acquisition-values) a seguir.                                                                                                                      |
+| @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de aquisição para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                                                                                                                                                                             |
 
 <span/>
@@ -167,4 +164,3 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter classificações de aplicativos](get-app-ratings.md)
 * [Obter avaliações de app](get-app-reviews.md)
-

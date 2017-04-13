@@ -12,13 +12,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7c992aa651069f6876aa920da88ada659480132e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamanhos de tela e pontos de interrupção para um design responsivo
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -107,4 +104,3 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 
 Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um mouse e um teclado para fazê-los funcionar como laptops. Mantenha essa nova funcionalidade em mente ao criar designs para pontos de interrupção específicos - um telefone móvel não permanecerá sempre na classe de tamanho pequeno.
  
-

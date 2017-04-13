@@ -2,21 +2,17 @@
 title: "Regras de rasterização"
 description: "Regras de rasterização definem como os dados de vetor são mapeados para dados de rasterização."
 ms.assetid: B604725F-96A5-4DB6-B597-9EC57FBBC024
-keywords:
-- "Regras de rasterização"
+keywords: "Regras de rasterização"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9267cd0e9d01b8af6a697fbdf90c33cbca786df2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c7385f936f8e7bed23433e241aea3806a0d75bdf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rasterization-rules"></a>Regras de rasterização
 
 
@@ -138,7 +134,6 @@ Na verdade, é recomendável que você não combine derivadas e amostragem de ce
  
 
  
-
 
 
 

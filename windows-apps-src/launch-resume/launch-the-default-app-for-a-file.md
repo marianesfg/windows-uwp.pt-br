@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: "Iniciar o app padrão para um arquivo"
+title: "Iniciar o aplicativo padrão para um arquivo"
 description: "Aprenda como iniciar o app padrão para um arquivo."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.author: twhitney
@@ -9,31 +9,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1ab65f210c5fd01460cbe9f63f8b94f6935a630e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9727aa78a4df0ab204574b12e827f279144d3fe1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar o app padrão para um arquivo
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
 
 -   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
-Aprenda como iniciar o app padrão para um arquivo. Muitos apps precisam funcionar com arquivos que eles não podem manipular sozinhos. Por exemplo, os apps de email recebem uma variedade de tipos de arquivo e precisam de alguma maneira iniciá-los em seus manipuladores padrão. Essas etapas mostram como usar a API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar o manipulador padrão para um arquivo que seu app não pode manipular sozinho.
+Aprenda como iniciar o aplicativo padrão para um arquivo. Muitos aplicativos precisam funcionar com arquivos que eles não podem manipular sozinhos. Por exemplo, os aplicativos de email recebem uma variedade de tipos de arquivo e precisam de alguma maneira iniciá-los em seus manipuladores padrão. Essas etapas mostram como usar a API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar o manipulador padrão para um arquivo que seu aplicativo não pode manipular sozinho.
 
 ## <a name="get-the-file-object"></a>Obter o objeto de arquivo
 
 
 Primeiro, obtenha um objeto [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para o arquivo.
 
-Se o arquivo estiver incluído no pacote do app, você poderá usar a propriedade [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) para obter um objeto [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) e o método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obter o objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+Se o arquivo estiver incluído no pacote do aplicativo, você poderá usar a propriedade [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) para obter um objeto [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) e o método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obter o objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 Se o arquivo estiver em uma pasta conhecida, é possível usar as propriedades da classe [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) para obter uma [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) e o método [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obter o objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
@@ -46,12 +43,12 @@ O Windows fornece várias opções diferentes para iniciar o manipulador padrão
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Início padrão | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Inicie o arquivo especificado com o manipulador padrão. |
 | Início com Abrir com | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado deixando que o usuário escolha o manipulador na caixa de diálogo Abrir com. |
-| Iniciar com um fallback do app recomendado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado com o manipulador padrão. Se nenhum manipulador estiver instalado no sistema, recomende ao usuário um app na Loja. |
+| Iniciar com um fallback do aplicativo recomendado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicie o arquivo especificado com o manipulador padrão. Se nenhum manipulador estiver instalado no sistema, recomende ao usuário um aplicativo na Loja. |
 | Iniciar com um modo de exibição restante desejado | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (somente Windows) | Inicie o arquivo especificado com o manipulador padrão. Especifique uma preferência para permanecer na tela após a inicialização e solicite um tamanho específico de janela. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) não é compatível na família de dispositivos móveis.   |
  
 ### <a name="default-launch"></a>Início padrão
 
-Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para inicializar o app padrão. Este exemplo usa o método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar um arquivo de imagem, test.png, que está incluído no pacote do app.
+Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para inicializar o aplicativo padrão. Este exemplo usa o método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar um arquivo de imagem, test.png, que está incluído no pacote do aplicativo.
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -137,11 +134,11 @@ Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](http
 
 ### <a name="open-with-launch"></a>Início com Abrir com
 
-Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) com [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) configurado para **true** para inicializar o app que o usuário selecionar na caixa de diálogo **Abrir com**.
+Chame o método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) com [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) configurado para **true** para inicializar o aplicativo que o usuário selecionar na caixa de diálogo **Abrir com**.
 
-Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser selecionar um app diferente do padrão para um determinado tipo de arquivo. Por exemplo, se o seu app permitir que o usuário inicie um arquivo de imagem, provavelmente o manipulador padrão será um app de visualização. Em alguns casos, o usuário pode querer editar a imagem em vez de visualizá-la. Use a opção **Abrir com** junto com um comando alternativo no controle **AppBar** ou em um menu de contexto para permitir que o usuário abra a caixa de diálogo **Abrir com** e selecione o app de edição nesses tipos de cenário.
+Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser selecionar um aplicativo diferente do padrão para um determinado tipo de arquivo. Por exemplo, se o seu aplicativo permitir que o usuário inicie um arquivo de imagem, provavelmente o manipulador padrão será um aplicativo de visualização. Em alguns casos, o usuário pode querer editar a imagem em vez de visualizá-la. Use a opção **Abrir com** junto com um comando alternativo no controle **AppBar** ou em um menu de contexto para permitir que o usuário abra a caixa de diálogo **Abrir com** e selecione o aplicativo de edição nesses tipos de cenário.
 
-![a caixa de diálogo Abrir com para a inicialização de um arquivo .png. a caixa de diálogo contém uma caixa de seleção que especifica se a opção do usuário deve ser usada para todos os arquivos .png ou apenas esse arquivo .png. a caixa de diálogo contém quatro opções de app para iniciar o arquivo e um link "mais opções".](images/checkboxopenwithdialog.png)
+![a caixa de diálogo Abrir com para a inicialização de um arquivo .png. a caixa de diálogo contém uma caixa de seleção que especifica se a opção do usuário deve ser usada para todos os arquivos .png ou apenas esse arquivo .png. a caixa de diálogo contém quatro opções de aplicativo para iniciar o arquivo e um link "mais opções".](images/checkboxopenwithdialog.png)
 
 > [!div class="tabbedCodeSnippets"]
 > ```vb
@@ -237,11 +234,11 @@ Recomendamos que use a caixa de diálogo **Abrir com** quando o usuário quiser 
 > }
 > ```
 
-**Iniciar com um fallback do app recomendado**
+**Iniciar com um fallback do aplicativo recomendado**
 
-Em alguns casos, pode ser que o usuário não tenha um app instalado para manipular o arquivo que você está iniciando. Por padrão, nesses casos, o Windows oferece ao usuário um link para pesquisar o app apropriado na Loja. Se você quiser, poderá fazer uma recomendação específica sobre qual app deve ser adquirido nesse cenário, transmitindo tal recomendação junto com o arquivo que você está iniciando. Para fazer isso, chame o método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) com [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) definido para o nome da família do pacote do app na Loja que você deseja recomendar. Em seguida, defina [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) como o nome desse app. O Windows usará essas informações para substituir a opção geral de pesquisar um app na Loja por uma opção específica para adquirir o app recomendado na Loja.
+Em alguns casos, pode ser que o usuário não tenha um aplicativo instalado para manipular o arquivo que você está iniciando. Por padrão, nesses casos, o Windows oferece ao usuário um link para pesquisar o aplicativo apropriado na Loja. Se você quiser, poderá fazer uma recomendação específica sobre qual aplicativo deve ser adquirido nesse cenário, transmitindo tal recomendação junto com o arquivo que você está iniciando. Para fazer isso, chame o método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) com [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) definido para o nome da família do pacote do aplicativo na Loja que você deseja recomendar. Em seguida, defina [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) como o nome desse aplicativo. O Windows usará essas informações para substituir a opção geral de pesquisar um aplicativo na Loja por uma opção específica para adquirir o aplicativo recomendado na Loja.
 
-> **Observação**  Defina essas duas opções para recomendar um app. Se você definir uma opção sem a outra, haverá falha.
+> **Observação**  Defina essas duas opções para recomendar um aplicativo. Se você definir uma opção sem a outra, haverá falha.
 
 ![a caixa de diálogo Abrir com para a inicialização de um arquivo .contoso. como .contoso não tem um manipulador instalado no computador, a caixa de diálogo contém uma opção com o ícone da Loja e o texto que aponta o usuário para o manipulador correto na Loja. a caixa de diálogo também contém um link "mais opções".](images/howdoyouwanttoopen.png)
 
@@ -351,9 +348,9 @@ Em alguns casos, pode ser que o usuário não tenha um app instalado para manipu
 
 ### <a name="launch-with-a-desired-remaining-view-windows-only"></a>Iniciar com um Modo de Exibição Restante Desejado (somente Windows)
 
-Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) podem solicitar que permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta dividir todo o espaço disponível igualmente entre o app de origem e o app de destino que manipula o arquivo. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar ao sistema operacional que eles preferem que sua janela de app ocupe mais ou menos espaço disponível. **DesiredRemainingView** também pode ser usado para indicar que o app de origem não precisa permanecer na tela depois da inicialização do arquivo e pode ser completamente substituído pelo app de destino. Esta propriedade especifica somente o tamanho da janela preferido do app de chamada. Ele não especifica o comportamento de outros apps que podem acontecer de também estar na tela ao mesmo tempo.
+Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) podem solicitar que permaneçam na tela após a inicialização de um arquivo. Por padrão, o Windows tenta dividir todo o espaço disponível igualmente entre o aplicativo de origem e o aplicativo de destino que manipula o arquivo. Aplicativos de origem podem usar a propriedade [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar ao sistema operacional que eles preferem que sua janela de aplicativo ocupe mais ou menos espaço disponível. **DesiredRemainingView** também pode ser usado para indicar que o aplicativo de origem não precisa permanecer na tela depois da inicialização do arquivo e pode ser completamente substituído pelo aplicativo de destino. Esta propriedade especifica somente o tamanho da janela preferido do aplicativo de chamada. Ele não especifica o comportamento de outros aplicativos que podem acontecer de também estar na tela ao mesmo tempo.
 
-> **Observação**  O Windows leva em conta vários fatores diferentes ao determinar o tamanho da janela final do app de origem, por exemplo, a preferência do app de origem, o número de apps na tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), você não garante um comportamento de janelas específico para o app de origem.
+> **Observação**  O Windows leva em conta vários fatores diferentes ao determinar o tamanho da janela final do aplicativo de origem, por exemplo, a preferência do aplicativo de origem, o número de aplicativos na tela, a orientação da tela e assim por diante. Definindo [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), você não garante um comportamento de janelas específico para o aplicativo de origem.
 
 **Família de dispositivos móveis:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) não tem suporte na família de dispositivos móveis.
 
@@ -427,15 +424,15 @@ Aplicativos de origem que chamam [**LaunchFileAsync**](https://msdn.microsoft.co
 
 ## <a name="remarks"></a>Comentários
 
-Seu app não pode selecionar o app que foi iniciado. O usuário determina o app que é iniciado. O usuário pode selecionar um app da Plataforma Universal do Windows (UWP) ou um app da área de trabalho do Windows.
+Seu aplicativo não pode selecionar o aplicativo que foi iniciado. O usuário determina o aplicativo que é iniciado. O usuário pode selecionar um aplicativo da Plataforma Universal do Windows (UWP) ou um aplicativo da área de trabalho do Windows.
 
-Ao iniciar um arquivo, seu app tem que estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de arquivo diretamente à interface do usuário do app. O mais provável é que o usuário execute alguma ação para iniciar um arquivo.
+Ao iniciar um arquivo, seu aplicativo tem que estar em primeiro plano, ou seja, visível para o usuário. Essa exigência ajuda a garantir que o usuário permaneça no controle. Para que essa exigência seja atendida, você deve vincular todas as inicializações de arquivo diretamente à interface do usuário do aplicativo. O mais provável é que o usuário execute alguma ação para iniciar um arquivo.
 
-Você não pode iniciar tipos de arquivos com código ou script que são executados automaticamente pelo sistema operacional, como os arquivos .exe, .msi e .js. Essa restrição protege os usuários contra arquivos possivelmente maliciosos que podem modificar o sistema operacional. Você pode usar esse método para iniciar arquivos que contenham script se eles forem executados por um app que isole o script, como os arquivos .docx. Aplicativos como o Microsoft Word impedem que o script nos arquivos .docx modifique o sistema operacional.
+Você não pode iniciar tipos de arquivos com código ou script que são executados automaticamente pelo sistema operacional, como os arquivos .exe, .msi e .js. Essa restrição protege os usuários contra arquivos possivelmente maliciosos que podem modificar o sistema operacional. Você pode usar esse método para iniciar arquivos que contenham script se eles forem executados por um aplicativo que isole o script, como os arquivos .docx. Aplicativos como o Microsoft Word impedem que o script nos arquivos .docx modifique o sistema operacional.
 
-Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicialização e o retorno de chamada de erro é invocado. Quando o seu app manipula vários tipos de arquivos diferentes e você espera obter esse erro, nós recomendamos que você ofereça uma experiência de fallback ao usuário. Por exemplo, você pode dar ao usuário a opção de salvar o arquivo na área de trabalho para abri-lo de lá.
+Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicialização e o retorno de chamada de erro é invocado. Quando o seu aplicativo manipula vários tipos de arquivos diferentes e você espera obter esse erro, nós recomendamos que você ofereça uma experiência de fallback ao usuário. Por exemplo, você pode dar ao usuário a opção de salvar o arquivo na área de trabalho para abri-lo de lá.
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram apps UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 ## <a name="related-topics"></a>Tópicos relacionados
@@ -443,7 +440,7 @@ Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicializa�
 
 **Tarefas**
 
-* [Iniciar o app padrão de um URI](launch-default-app.md)
+* [Iniciar o aplicativo padrão para um URI](launch-default-app.md)
 * [Manipular a ativação do arquivo](handle-file-activation.md)
 
 **Diretrizes**
@@ -458,4 +455,3 @@ Quando você tenta iniciar um tipo de arquivo restrito, há falha na inicializa�
  
 
  
-

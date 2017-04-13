@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: "Use este método na API de envio da Windows Store para confirmar um envio de pacote de pré-lançamento novo ou atualizado para o Centro de Desenvolvimento do Windows."
-title: "Confirmar um envio do pacote de pré-lançamento usando a API de envio da Windows Store"
+title: "Confirmar um envio de pacote de pré-lançamento"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, confirmar envio de versão de pré-lançamento"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 305c9280b00fbbd669bee31732e831238054f177
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5171fb89b9485ed314a8c7f0322db89019e9d512
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="commit-a-package-flight-submission-using-the-windows-store-submission-api"></a>Confirmar um envio do pacote de pré-lançamento usando a API de envio da Windows Store
+# <a name="commit-a-package-flight-submission"></a>Confirmar um envio de pacote de pré-lançamento
 
 
 
@@ -39,7 +36,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exemplos de uso e descrições do corpo da solicitação e do cabeçalho.
 
-| Método | URI da Solicitação                                                      |
+| Método | URI da solicitação                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` |
 
@@ -58,9 +55,9 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do app que contém o envio do pacote de pré-lançamento que você deseja confirmar. A ID da Loja do app está disponível no painel do Centro de Desenvolvimento.  |
-| flightId | cadeia de caracteres | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um app](get-flights-for-an-app.md).  |
-| submissionId | cadeia de caracteres | Obrigatório. A ID do envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento que você deseja confirmar. A ID da Loja do aplicativo está disponível no painel do Centro de Desenvolvimento.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| submissionId | string | Obrigatório. A ID do envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).  |
 
 <span/>
 
@@ -91,7 +88,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Versão</li><li>ReleaseFailed</li></ul>  |
+| status           | string  | O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>  |
 
 <span/>
 
@@ -103,7 +100,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
-| 409  | O envio especificado foi encontrado, mas não pôde ser confirmado em seu estado atual ou o app que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | O envio especificado foi encontrado, mas não pôde ser confirmado em seu estado atual ou o aplicativo que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 <span/>
 
@@ -117,4 +114,3 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 * [Atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md)
 * [Excluir um envio de pacote de pré-lançamento](delete-a-flight-submission.md)
 * [Obter o status de um envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md)
-

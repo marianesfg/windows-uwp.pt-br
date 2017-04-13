@@ -2,21 +2,17 @@
 title: "Iluminação difusa"
 description: "A iluminação difusa depende da direção da luz e da normal da superfície do objeto."
 ms.assetid: 8AF78742-76B1-4BBB-86E3-94AE6F48B847
-keywords:
-- "Iluminação difusa"
+keywords: "Iluminação difusa"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 256d3ed1dd6236abe4ca93e362c52316eb548bda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d7916bf421a56125691da9be3505039e9cb1d71d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="diffuse-lighting"></a>Iluminação difusa
 
 
@@ -75,7 +71,6 @@ A iluminação difusa é mais intensa para se calcular do que a iluminação amb
  
 
  
-
 
 
 

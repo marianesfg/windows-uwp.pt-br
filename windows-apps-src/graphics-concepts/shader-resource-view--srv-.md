@@ -2,21 +2,17 @@
 title: "Modo de exibição de recurso de sombreador (SRV) e modo de exibição de acesso não ordenado (UAV)"
 description: "Os modos de exibição de recurso de sombreador geralmente envolvem as texturas em um formato que pode ser acessado pelos sombreadores. Um modo de exibição de acesso não ordenado fornece funcionalidade semelhante, mas permite a leitura e a gravação na textura (ou outro recurso) em qualquer ordem."
 ms.assetid: 4505BCD2-0EDA-40F2-887C-EC081FE32E8F
-keywords:
-- "Exibição de recurso de sombreador (SRV)"
+keywords: "Exibição de recurso de sombreador (SRV)"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ce8e7a5d17656545cf047c2ab21cda5c5fbb4f0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2413c37dc7a19f110597a4e5664c6d4ac7b5508c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a>Modo de exibição de recurso de sombreador (SRV) e modo de exibição de acesso não ordenado (UAV)
 
 
@@ -34,7 +30,6 @@ Os modos de exibição de acesso não ordenados são um pouco mais dispendiosos 
  
 
  
-
 
 
 
