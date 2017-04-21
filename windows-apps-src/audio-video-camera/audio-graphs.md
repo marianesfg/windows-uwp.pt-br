@@ -9,8 +9,8 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.openlocfilehash: 1b286a9fcfd71bb2dc219fb3c03a363a41d24346
+ms.sourcegitcommit: bccf9bcc39f0c4ee8801d90e2d7fcae3ad6e3b3e
 translationtype: HT
 ---
 # <a name="audio-graphs"></a>Gráficos de áudio
@@ -159,9 +159,12 @@ Um nó de saída de quadro de áudio permite receber e processar a saída de dad
 
 [!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
 
-O evento [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) é disparado quando o gráfico de áudio conclui o processamento de um quantum de dados de áudio. Você pode acessar os dados de áudio de dentro do manipulador para esse evento.
+O evento [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Audio.AudioGraph#Windows_Media_Audio_AudioGraph_QuantumStarted) é disparado quando o gráfico de áudio inicia o processamento de um quantum de dados de áudio. Você pode acessar os dados de áudio de dentro do manipulador para esse evento. 
 
-[!code-cs[QuantumProcessed](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumProcessed)]
+> [!NOTE]  
+> Se você quiser recuperar quadros de áudio em uma cadência regular, sincronizado com o gráfico de áudio, chame [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeoutputnode#Windows_Media_Audio_AudioFrameOutputNode_GetFrame) dentro do manipulador de eventos **QuantumStarted** síncronos. O evento **QuantumProcessed** é gerado assincronamente depois que o mecanismo de áudio conclui o processamento de áudio, o que significa que sua cadência pode ser irregular. Portanto, você não deve usar o evento **QuantumProcessed** para o processamento sincronizado de dados de quadros de áudio.
+
+[!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
 
 -   Chame [**GetFrame**](https://msdn.microsoft.com/library/windows/apps/dn914171) para obter um objeto [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) preenchido com dados de áudio do gráfico.
 -   Veja a seguir um exemplo de implementação do método auxiliar **ProcessFrameOutput**.
