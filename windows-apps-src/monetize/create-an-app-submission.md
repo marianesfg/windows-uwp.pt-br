@@ -4,19 +4,18 @@ ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: "Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows."
 title: Criar um envio de app
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, criar envio de app
-ms.openlocfilehash: 13b1b1cc83b6a8659bf38f5a97caf8b2f50a3ee0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6ed90a764701e40ed513b623a9ddb5aa6a2be466
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="create-an-app-submission"></a>Criar um envio de app
-
-
-
 
 Use este método na API de envio da Windows Store para criar um novo envio para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows. Depois de criar um novo envio com êxito usando esse método, [atualize o envio](update-an-app-submission.md) para fazer as alterações necessárias para os dados de envio e depois [confirme o envio](commit-an-app-submission.md) para inclusão e publicação.
 
@@ -30,8 +29,6 @@ Para usar este método, primeiro você precisa do seguinte:
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Verifique se o aplicativo já tem pelo menos um envio com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
-
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## <a name="request"></a>Solicitação
 
@@ -131,6 +128,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -182,7 +180,8 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 

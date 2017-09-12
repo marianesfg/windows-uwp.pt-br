@@ -4,14 +4,16 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Use a API de análise da Windows Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows."
 title: "Acessar dados analíticos usando serviços da Loja"
 ms.author: mcleans
-ms.date: 03/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store"
-ms.openlocfilehash: aa33af63a49d890b3c60ec1bee32528cfc78af93
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: f739676d02ae5af4c3960fdde6461779c1533885
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Loja
 
@@ -28,21 +30,21 @@ As etapas a seguir descrevem o processo completo:
 
 Antes de começar a escrever o código para chamar a API de análise da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account) sem nenhum custo adicional.
 
 * Você deve associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Windows Store. Você precisa a ID do locatário, a ID do cliente e a chave para obter um token de acesso do Azure AD que você passa para a API.
-
-  >**Observação**&nbsp;&nbsp;Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
+    > [!NOTE]
+    > Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
 Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e recuperar os valores necessários:
 
-1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e [associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar dados analíticos de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar dados analíticos de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar aplicativos do Azure AD à sua conta do Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
 
 3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
-4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte [Gerenciar chaves para um aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
 <span id="obtain-an-azure-ad-access-token" />
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>Etapa 2: Obter um token de acesso do Azure AD
@@ -73,14 +75,14 @@ Depois que tiver um token de acesso do Azure AD, você estará pronto para chama
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
-| Aquisições e instalações |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter as instalações do aplicativo](get-app-installs.md)</li></ul> |
+| Aquisições, conversões e instalações |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatórios de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
 | Classificações e opiniões | <ul><li>[Obter classificações de app](get-app-ratings.md)</li><li>[Obter avaliações de app](get-app-reviews.md)</li></ul> |
 | Anúncios no app e campanhas publicitárias | <ul><li>[Obter dados de desempenho de anúncios](get-ad-performance-data.md)</li><li>[Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)</li></ul> |
 
 Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor que pertencem ao [programa do Centro de Desenvolvimento de Hardware do Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard).
 
-| Cenário       | Descrição      |
+| Cenário       | Métodos      |
 |---------------|--------------------|
 | Erros nos drivers do Windows 10 (para IHVs) |  <ul><li>[Obter dados de relatório de erro para drivers do Windows 10](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Obter detalhes sobre um erro de driver do Windows 10](get-details-for-a-windows-10-driver-error.md)</li><li>[Baixe o arquivo CAB para um erro de driver do Windows 10](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
 | Erros nos drivers do Windows 7/Windows 8.x (para IHVs) |  <ul><li>[Obter dados de relatório de erro para drivers do Windows 7 e Windows 8. x](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Obtenha informações sobre o erro de driver do Windows 7 ou Windows 8. x](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Baixe o arquivo CAB para um erro de driver do Windows 7 ou Windows 8. x](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |

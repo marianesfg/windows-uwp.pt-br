@@ -1,17 +1,19 @@
 ---
-author: rmpablos
+author: laurenhughes
 title: "Configurar compilações automáticas para seu aplicativo UWP"
-description: "Como configurar compilações automáticas para produzir pacotes de sideload e/ou armazenamento."
-ms.author: wdg-dev-content
-ms.date: 02/15/2017
+description: "Como configurar compilações automáticas para produzir pacotes de sideload e/ou armazenamento da Loja."
+ms.author: lahugh
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c8c1765e2983484ddc57e47a995867aa3b401ad4
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -39,7 +41,7 @@ Se você optar por criar um agente de compilação personalizado, precisará das
 
 Para saber mais, consulte [Implantar um agente no Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows). 
 
-Para executar testes de unidade UWP, você precisará fazer o seguinte: •    Implantar e iniciar o app. •    Executar o agente VSTS no modo interativo. •    Configurar seu agente para logon automático após uma reinicialização.
+Para executar testes de unidade UWP, você precisará fazer o seguinte: •   Implantar e iniciar o aplicativo. •   Executar o agente VSTS no modo interativo. •   Configurar seu agente para logon automático após uma reinicialização.
 
 Agora, falaremos sobre como configurar uma compilação automática.
 
@@ -104,11 +106,11 @@ Os parâmetros definidos com a sintaxe $() são variáveis definidas na definiç
 Para ver todas as variáveis predefinidas, consulte [Usar variáveis de compilação](https://www.visualstudio.com/docs/build/define/variables).
 
 #### <a name="configure-the-publish-artifact-build-task"></a>Configurar a tarefa de compilação Publicar artefato 
-Essa tarefa armazena os artefatos gerados no VSTS. Você pode vê-los na guia Artefatos da página de resultados da compilação. O VSTS usa a pasta `$Build.ArtifactStagingDirectory)\AppxPackages` que definimos anteriormente.
+Essa tarefa armazena os artefatos gerados no VSTS. Você pode vê-los na guia Artefatos da página de resultados da compilação. O VSTS usa a pasta `$(Build.ArtifactStagingDirectory)\AppxPackages` que definimos anteriormente.
 
 ![artefatos](images/building-screen6.png)
 
-Como definimos a propriedade `UapAppxPackageBuildMode` como `StoreUpload`, a pasta de artefatos inclui o pacote que você carrega para a Loja (appxupload), bem como os pacotes que permitem sideload (appxbundle).
+Como definimos a propriedade `UapAppxPackageBuildMode` para `StoreUpload`, a pasta de artefatos inclui o pacote recomendado para envio à Loja (.appxupload). Observe que você também pode enviar um pacote de apps (.appx) normal ou um lote de aplicativo (.appxbundle) para a Loja. Para os fins deste artigo, vamos usar o arquivo .appxupload.
 
 
 >Observação: por padrão, o agente de VSTS mantém os últimos pacotes appx gerados. Se você quiser armazenar somente os artefatos da compilação atual, configure a compilação para limpar o diretório de binários. Para fazer isso, adicione uma variável chamada `Build.Clean` e defina-a como o valor `all`. Para saber mais, consulte [Especificar o repositório](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
@@ -172,10 +174,10 @@ No VSTS, a página de resumo de compilação mostra os resultados de teste para 
 Se você quiser usar sua compilação CI apenas para monitorar a qualidade dos check-ins, reduza os tempos de compilação.
 
 #### <a name="to-improve-the-speed-of-a-ci-build"></a>Para aumentar a velocidade de uma compilação CI
-1.    Compile apenas para uma plataforma.
-2.    Edite a variável BuildPlatform para usar somente x86. ![config ci](images/building-screen10.png) 
-3.    Na etapa de compilação, adicione /p:AppxBundle=Never à propriedade Argumentos de MSBuild e, em seguida, defina a propriedade Plataforma. ![configurar a plataforma](images/building-screen11.png)
-4.    No projeto de teste de unidade, desabilite .NET Native. 
+1.  Compile apenas para uma plataforma.
+2.  Edite a variável BuildPlatform para usar somente x86. ![config ci](images/building-screen10.png) 
+3.  Na etapa de compilação, adicione /p:AppxBundle=Never à propriedade Argumentos de MSBuild e, em seguida, defina a propriedade Plataforma. ![configurar a plataforma](images/building-screen11.png)
+4.  No projeto de teste de unidade, desabilite .NET Native. 
 
 Para fazer isso, abra o arquivo de projeto e, nas propriedades do projeto, defina a propriedade `UseDotNetNativeToolchain` como `false`.
 
@@ -260,7 +262,7 @@ Nós ajudaremos você a instalar e executar um pacote de sideload [posteriorment
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Configurar uma compilação de implantação contínua que envia um pacote para a Loja 
 
-Para gerar pacotes de envio da Loja, associe seu aplicativo à Loja usando o Assistente de Associação à Loja no Visual Studio.
+Para gerar pacotes de envio da Loja, associe seu app à Loja usando o Assistente de Associação à Loja no Visual Studio.
 
 ![associar à Loja](images/building-screen16.png) 
 
@@ -274,16 +276,16 @@ Em seguida, você precisa verificar se a etapa de compilação inclui o seguinte
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-Isso irá gerar o arquivo appxupload que pode ser enviado para a Loja.
+Isso irá gerar o arquivo .appxupload que pode ser enviado para a Loja.
 
 
 #### <a name="configure-automatic-store-submission"></a>Configurar o envio automático à Loja
 
-Use a extensão do Visual Studio Team Services para a Windows Store para integrar-se à API da Loja e envie seu pacote appxupload para a Loja.
+Use a extensão do Visual Studio Team Services para a Windows Store para integrar-se à API da Loja e envie seu pacote de apps para a Loja.
 
 Você precisa conectar sua conta do Centro de Desenvolvimento ao Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso. 
 
-Depois que você tiver configurado a extensão, adicione a tarefa de compilação e configure-a com sua ID do aplicativo e o local do arquivo appxupload.
+Depois que você tiver configurado a extensão, adicione a tarefa de compilação e configure-a com sua ID do app e o local do arquivo .appxupload.
 
 ![configurar o Centro de Desenvolvimento](images/building-screen17.png) 
 
@@ -294,14 +296,14 @@ $(Build.ArtifactStagingDirectory)\
 AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 ```
 
->Observação. Você precisa ativar manualmente essa compilação. Você pode usá-la para atualizar os aplicativos existentes, mas não pode usá-la para seu primeiro envio à Loja. Para saber mais, consulte [Criar e gerenciar envios à Loja usando serviços da Windows Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+>Observação. Você precisa ativar manualmente essa compilação. Você pode usá-la para atualizar os apps existentes, mas não pode usá-la para seu primeiro envio à Loja. Para saber mais, consulte [Criar e gerenciar envios à Loja usando serviços da Windows Store](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
 <span id="sideloading-best-practices"/>
 ### <a name="best-practices-for-sideloading-apps"></a>Práticas recomendadas para aplicativos de sideload
 
-Se você quiser distribuir seu aplicativo sem publicá-lo na Loja, faça o sideload do seu aplicativo diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do aplicativo. 
+Se você quiser distribuir seu app sem publicá-lo na Loja, faça o sideload do seu aplicativo diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do aplicativo. 
 
 Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script adicionará o certificado à seção Certificação Confiável da máquina local e, em seguida, irá instalar ou atualizar o arquivo appx.
 
@@ -317,7 +319,7 @@ Se você quiser distribuir seus pacotes appx em um site como VSTS ou HockeyApp, 
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Práticas recomendadas para certificados de assinatura 
-O Visual Studio gera um certificado para cada projeto. Isso dificulta manter uma lista gerenciada de certificados válidos. Se você pretende criar vários aplicativos, pode criar um único certificado para assinar todos os seus aplicativos. Em seguida, cada dispositivo que confia no certificado será capaz de fazer o sideload de qualquer um dos seus aplicativos sem precisar instalar outro certificado. Para saber mais, consulte [Como criar um certificado de assinatura de pacote do aplicativo](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx).
+O Visual Studio gera um certificado para cada projeto. Isso dificulta manter uma lista gerenciada de certificados válidos. Se você pretende criar vários aplicativos, pode criar um único certificado para assinar todos os seus aplicativos. Em seguida, cada dispositivo que confia no certificado será capaz de fazer o sideload de qualquer um dos seus aplicativos sem precisar instalar outro certificado. Para saber mais, consulte [Criar um certificado para assinatura de pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
 
 
 #### <a name="create-a-signing-certificate"></a>Criar um certificado de assinatura
@@ -360,4 +362,4 @@ A maneira mais fácil de registrar o certificado é clicar duas vezes no arquivo
 * [Criar seu aplicativo .NET para Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [Empacotando aplicativos UWP](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Como criar um certificado de assinatura de pacote do aplicativo](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+* [Criar um certificado para a assinatura de pacote](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

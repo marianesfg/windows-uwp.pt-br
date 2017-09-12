@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b655bea614f1c395959a12e9c3b8a5b1af61d694
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40c70770028853d5912ef63f84259245252ce881
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
@@ -73,12 +75,7 @@ O aplicativo recebe os eventos de ativação somente para os nomes de esquema de
 
 ## <a name="step-2-add-the-proper-icons"></a>Etapa 2: adicionar os ícones apropriados
 
-
-Os aplicativos que se tornam padrão para um nome de esquema de URI terão seus ícones exibidos em vários locais em todo o sistema; por exemplo, no painel de controle de programas padrão.
-
-Recomendamos que você inclua no seu projeto os ícones apropriados para que seu logotipo fique legal em todos esses locais. Combine a aparência do logotipo do bloco do aplicativo e use a cor de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Para ícones de exemplo, consulte o [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=620490).
-
-![o gerenciador de soluções com uma exibição dos arquivos na pasta imagens. há 16, 32, 48 e 256 versões de pixels de 'icon.targetsize' e 'smalltile-sdk'](images/seviewofimages.png)
+Os aplicativos que se tornam padrão para um nome de esquema de URI têm seus ícones exibidos em vários locais por todo o sistema, como no painel de controle de programas padrão. Inclua um ícone 44x44 com seu projeto para essa finalidade. Combine a aparência do logotipo do bloco do aplicativo e use a cor de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Consulte [Diretrizes para ativos de bloco e ícone](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) para obter mais detalhes sobre ícones.
 
 ## <a name="step-3-handle-the-activated-event"></a>Etapa 3: manipular o evento ativado
 

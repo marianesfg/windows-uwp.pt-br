@@ -6,14 +6,19 @@ ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b14c775896984095f580aed8cf41d010f408f67e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 2a3f3d6795276df6e3436c5ae6eff42551d03478
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="labels"></a>Rótulos
 
@@ -21,20 +26,9 @@ translationtype: HT
 
 Rótulo é o nome ou o título de um controle ou de um grupo de controles relacionados.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>Propriedade Header</li>
-<li>[**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)</li>
-</ul>
-</div>
+> **APIs importantes**: propriedade Header, [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
 
-
-No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para controles que não tenham uma propriedade Header, ou para rotular grupos de controles, você pode utilizar um [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) em vez disso.
-
-
-## <a name="example"></a>Exemplo
-
+No XAML, muitos controles têm uma propriedade Header interna que é usada para especificar o rótulo. Para os controles sem uma propriedade Header ou para rotular grupos de controles, você pode utilizar um [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652).
 
 ![uma captura de tela que ilustra o controle de rótulo padrão](images/label-standard.png)
 
@@ -51,17 +45,15 @@ No XAML, muitos controles têm uma propriedade Header interna que é usada para 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Controles de texto](text-controls.md)
-
-**Para desenvolvedores**
-* [**Propriedade TextBox.Header**](https://msdn.microsoft.com/library/windows/apps/dn252861)
-* [**Propriedade PasswordBox.Header**](https://msdn.microsoft.com/library/windows/apps/dn299051)
-* [**Propriedade ToggleSwitch.Header**](https://msdn.microsoft.com/library/windows/apps/br209713)
-* [**Propriedade DatePicker.Header**](https://msdn.microsoft.com/library/windows/apps/dn279460)
-* [**Propriedade TimePicker.Header**](https://msdn.microsoft.com/library/windows/apps/dn299286)
-* [**Propriedade Slider.Header**](https://msdn.microsoft.com/library/windows/apps/dn252829)
-* [**Propriedade ComboBox.Header**](https://msdn.microsoft.com/library/windows/apps/dn279416)
-* [**Propriedade RichEditBox.Header**](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [Propriedade TextBox.Header](https://msdn.microsoft.com/library/windows/apps/dn252861)
+* [Propriedade PasswordBox.Header](https://msdn.microsoft.com/library/windows/apps/dn299051)
+* [Propriedade ToggleSwitch.Header](https://msdn.microsoft.com/library/windows/apps/br209713)
+* [Propriedade DatePicker.Header](https://msdn.microsoft.com/library/windows/apps/dn279460)
+* [Propriedade TimePicker.Header](https://msdn.microsoft.com/library/windows/apps/dn299286)
+* [Propriedade Slider.Header](https://msdn.microsoft.com/library/windows/apps/dn252829)
+* [Propriedade ComboBox.Header](https://msdn.microsoft.com/library/windows/apps/dn279416)
+* [Propriedade RichEditBox.Header](https://msdn.microsoft.com/library/windows/apps/dn252726)
+* [Classe TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)
 
  
 

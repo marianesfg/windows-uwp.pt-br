@@ -6,14 +6,16 @@ ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7d72d5251000e16349efa8d4f7716e12d22764d6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 08f6a712d73c58d3719c0555cda6688b5aa138ab
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="fonts-for-uwp-apps"></a>Fontes para aplicativos UWP
 
@@ -279,13 +281,13 @@ Embora muitas dessas fontes forneçam caracteres latinos.
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: Yu Gothic;">Yu Gothic</td>
-<td align="left">Médio</td>
-<td align="left"></td>
+<td align="left">Leve, Regular, Médio, Negrito</td>
+<td align="left">Use Yu Gothic Médio para texto do corpo e conteúdo semelhante.</td>
 </tr>
 <tr class="even">
-<td align="left" style="font-family: Yu Gothic UI;">Interface do usuário Yu Gothic</td>
-<td align="left">Regular</td>
-<td align="left">Fonte de interface do usuário para japonês.</td>
+<td align="left" style="font-family: Yu Gothic UI;">Interface de usuário Yu Gothic</td>
+<td align="left">Leve, Semi-leve, Regular, Semi-negrito, Negrito</td>
+<td align="left">Fonte de interface de usuário para japonês.</td>
 </tr>
 </tbody>
 </table>

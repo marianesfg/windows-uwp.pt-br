@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, aquisições de aplicativo"
-ms.openlocfilehash: b6ffd8300871e06d8b93682bed8d42546d1b88fc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: daaab1a06b4a0cdcbb1644faa4341202dbbafdf3
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="get-app-acquisitions"></a>Obter aquisições de aplicativo
 
@@ -91,7 +93,7 @@ O exemplo a seguir demonstra várias solicitações de obtenção de dados de aq
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
 Authorization: Bearer <your access token>
 
-GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=8/1/2015&endDate=8/31/2015&skip=0&filter=market eq 'US'; and gender eq 'm'  HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=8/1/2015&endDate=8/31/2015&skip=0&filter=market eq 'US' and gender eq 'm'  HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
@@ -160,7 +162,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 * [Relatório de aquisições](../publish/acquisitions-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
+* [Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)
+* [Obter conversões de app por canal](get-app-conversions-by-channel.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
-* [Obter dados de relatório de erros](get-error-reporting-data.md)
-* [Obter classificações de aplicativos](get-app-ratings.md)
-* [Obter avaliações de app](get-app-reviews.md)

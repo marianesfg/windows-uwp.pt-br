@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: "Use os exemplos de código Python nesta seção para saber mais sobre como usar a API de envio da Windows Store."
-title: "Exemplos de código Python para a API de envio"
+title: "Exemplo de Python - envios para apps, complementos e versões de pré-lançamento"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código"
-ms.openlocfilehash: a46907ecfea1de60b8a32cdaea7076f056a41ff5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código, python"
+ms.openlocfilehash: 01d40aa31531aa4d5b75f02627bc7e6234963c7e
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="python-code-examples-for-the-submission-api"></a>Exemplos de código Python para a API de envio
+# <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de Python: envios para apps, complementos e versões de pré-lançamento
 
-Este artigo fornece exemplos de código Python para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
-
-Estes exemplos de códigos demonstram as seguintes tarefas:
+Este artigo fornece exemplos de código Python que demonstram como usar a [API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md) para estas tarefas:
 
 * [Obter um token de acesso do Azure AD](#token)
 * [Criar um complemento](#create-add-on)
@@ -36,7 +36,7 @@ O exemplo a seguir demonstra como [obter um token de acesso do Azure AD](create-
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Criar um complemento
 
-O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento (os complementos também são conhecidos como produtos no aplicativo ou IAPs).
+O exemplo a seguir demonstra como [criar](create-an-add-on.md) e depois [excluir](delete-an-add-on.md) um complemento.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L26-L52)]
 

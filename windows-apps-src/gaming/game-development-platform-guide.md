@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, tecnologia, directx
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f6ad043299efa2aae7abdb1f1e0a7e898d40836
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: afbab8d6e38bad7c72d4863f97d90b7eb8ff4cac
+ms.sourcegitcommit: ae20971c4c8276034cd22fd7e10b0e3ddfddf480
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/11/2017
 ---
-
-# <a name="game-technologies-for-universal-windows-platform-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
+# <a name="game-technologies-for-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -36,17 +35,17 @@ Além disso, o Windows 10 oferece muitos reursos novos que são particularmente 
 ## <a name="uwp-games-with-c-and-directx"></a>Jogos UWP com C++ e DirectX
 
 
-Os jogos em tempo real que exigem alto desempenho devem usar as APIs do DirectX. DirectX é uma coleção de APIs nativas para a criação de jogos e aplicativos multimídia que exigem alto desempenho, como jogos 3D. Como as APIs do DirectX são nativas, C++ é a única linguagem compatível com o DirectX.
+Os jogos em tempo real que exigem alto desempenho devem usar as APIs do DirectX. O DirectX é uma coleção de APIs nativas para a criação de jogos e aplicativos multimídia que exigem alto desempenho, como jogos 3D.
 
 ## <a name="development-environment"></a>Ambiente de desenvolvimento
 
 
-Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolvimento instalando uma cópia do Visual Studio 2015. O Visual Studio 2015 permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
+Para criar jogos para UWP, você precisará configurar o ambiente de desenvolvimento instalando o Visual Studio 2015 ou posterior. O Visual Studio 2015 permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
 
 -   Ferramentas do Visual Studio para programação de jogos DX - O Visual Studio fornece ferramentas para criar, editar, visualizar e exportar recursos de imagem, modelo e sombreador. Há também ferramentas que você pode usar para converter recursos no momento da compilação e depurar o código gráfico do DirectX. Para obter mais informações, consulte [Usar ferramentas do Visual Studio para programação de jogos](set-up-visual-studio-for-game-development.md).
 -   Recursos de diagnóstico de gráficos do Visual Studio – As ferramentas de diagnóstico de elementos gráficos agora estão disponíveis no Windows como um recurso opcional. As ferramentas de diagnóstico permitem que você faça depuração e análise do quadro de elementos gráficos e monitore o uso da GPU em tempo real. Para obter mais informações, consulte [Usar o tempo de execução do DirectX e recursos de diagnóstico de elementos gráficos do Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
 
-Para obter mais informações, consulte Preparar seu ambiente da Plataforma Universal do Windows e DirectX para programação de jogos.
+Para obter mais informações, consulte Preparar a Plataforma Universal do Windows e [programação no DirectX](directx-programming.md).
 
 ## <a name="getting-started-with-directx-game-project-templates"></a>Introdução aos modelos de projeto de jogo em DirectX
 
@@ -211,7 +210,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     <p><strong>Quando usar</strong></p>
     <p>Se seu jogo precisar dar suporte à entrada de gamepad e não estiver usando um código XInput existente ou se precisar de um dos benefícios listados acima, você deve usar Windows.Gaming.Input.</p>
     <p><strong>Para obter mais informações</strong></p>
-    <p>Veja a documentação do [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817) .</p></td>
+    <p>Consulte a documentação [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
     </tr>
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
@@ -325,10 +324,13 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
 
 ## <a name="xbox-live-services"></a>Serviços Xbox Live
 
+O [Programa de Criadores do Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite que qualquer desenvolvedor integre o Xbox Live ao seu jogo UWP e publique no Xbox One e no Windows 10. Integre as experiências sociais do Xbox Live, como entrada, presença, placares de líderes e muito mais ao seu título, com tempo de desenvolvimento mínimo. Os recursos sociais do Xbox Live foram criados para aumentar seu público de forma orgânica, distribuindo reconhecimento para os mais de 55 milhões de jogadores ativos.
 
-O conjunto de recursos do Xbox Live – reprodução com o Xbox, conquistas, pontuação e muito mais – estará no Windows 10. Assim, você poderá trabalhar com ID@Xbox para incluir Live em seus jogos UWP! No futuro, também ajudaremos você a enviar seus jogos de plataforma de aplicativo universal no Xbox One. Para obter mais informações, consulte a página [ID@Xbox](http://www.xbox.com/developers/id).
+Se você deseja ter acesso a mais recursos do Xbox Live, marketing dedicado e suporte para desenvolvimento e a chance de ganhar destaque na loja principal do Xbox One, inscreva-se no programa [ID@Xbox](http://www.xbox.com/developers/id). Para ver quais recursos estão disponíveis para o Programa de Criadores do Xbox Live e para o programa ID@Xbox, consulte a [Tabela de recursos](../xbox-live/developer-program-overview.md#feature-table).
 
-##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>Alternativas para gravar jogos com o DirectX e a UWP
+Para saber mais, acesse [Adicionando o Xbox Live ao seu jogo](e2e.md#adding-xbox-live-to-your-game).
+
+##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>Alternativas para escrever jogos com o DirectX e a UWP
 
 
 ### <a name="uwp-games-without-directx"></a>Jogos UWP sem o DirectX
@@ -351,12 +353,11 @@ Como uma alternativa à criação do próprio mecanismo de jogo usando as APIs d
 
 Depois que você estiver pronto para publicar seu jogo, será necessário criar uma conta de desenvolvedor e enviar seu jogo para a Windows Store.
 
-Para obter informações sobre como enviar seu jogo para a Windows Store, veja <https://dev.windows.com/publish>.
+Para obter informações sobre como enviar seu jogo para a Windows Store, veja [Enviando e publicando seu jogo](e2e.md#submitting-and-publishing-your-game).
 
  
 
  
-
 
 
 

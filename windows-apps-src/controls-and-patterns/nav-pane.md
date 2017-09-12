@@ -1,21 +1,26 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview
 Description: "Fornece navegação de nível superior ao mesmo tempo que economiza o espaço da tela."
 title: "Diretrizes para painéis de navegação"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
-ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
-translationtype: HT
+ms.openlocfilehash: d5c838675eb8cb568f0dabd1c6b776a8a53d3bf4
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="nav-panes"></a>Painéis de navegação
+
+Este artigo foi transferido para aqui: [Modo de exibição de navegação](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview).
 
 Um painel de navegação é um padrão que permite muitos itens de navegação de nível superior sem ocupar o espaço da tela. O painel de navegação é bastante usado em aplicativos móveis, mas também funciona bem em telas maiores. Quando usado como uma sobreposição, o painel permanece recolhido e oculto até o usuário pressionar o botão, o que é útil em telas menores. Quando usado no modo encaixado, o painel permanece aberto, o que garante maior utilidade se não houver espaço suficiente na tela.
 
@@ -24,7 +29,7 @@ Um painel de navegação é um padrão que permite muitos itens de navegação d
 
 **APIs importantes**
 
-* [**Classe SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)
+* [Classe SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>Este é o padrão certo?
 
@@ -114,6 +119,3 @@ Para otimizar a [experiência de 3 metros](http://go.microsoft.com/fwlink/?LinkI
 * [Controle de modo de exibição dividido](split-view.md)
 * [Mestre/detalhes](master-details.md)
 * [Noções básicas de navegação](https://msdn.microsoft.com/library/windows/apps/dn958438)
- 
-
- 

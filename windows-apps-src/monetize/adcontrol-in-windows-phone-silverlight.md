@@ -4,20 +4,30 @@ ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0."
 title: AdControl no Windows Phone Silverlight
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, AdControl, Silverlight, Windows Phone"
-ms.openlocfilehash: 743b9faccaa120f1904b592fc09a965dc7878e03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f1582639757abfb6de156bf88ce8af71ba3eaacd
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="adcontrol-in-windows-phone-silverlight"></a>AdControl no Windows Phone Silverlight
 
 Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para exibir anúncios em faixa em um aplicativo Silverlight para Windows Phone 8.1 ou Windows Phone 8.0.
 
-> **Observação para Windows Phone Silverlight 8.0**&nbsp;&nbsp;Os anúncios em faixa ainda são compatíveis com os aplicativos existentes do Windows Phone 8.0 Silverlight que usam um **AdControl** de uma versão anterior do SDK do Universal Ad Client ou do SDK do Microsoft Advertising e que já estão disponíveis na Loja. No entanto, anúncios em faixa não são mais compatíveis com os novos projetos do Windows Phone 8.0 Silverlight. Além disso, alguns cenários de depuração e testes são limitados nos projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md#silverlight_support).
+<span id="silverlight_support"/>
+## <a name="advertising-support-for-windows-phone-8x-silverlight-projects"></a>Suporte de publicidade para projetos do Windows Phone 8.x Silverlight
+
+Não há suporte para alguns cenários de desenvolvedor em projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte a seguinte tabela.
+
+|  Versão da plataforma  |  Projetos existentes    |   Novos projetos  |
+|-----------------|----------------|--------------|
+| Windows Phone 8.0 Silverlight     |  Se você tem um projeto existente do Windows Phone 8.0 Silverlight que já usa um **AdControl** ou **AdMediatorControl** de uma versão anterior do SDK do Universal Ad Client ou o SDK do Microsoft Advertising e esse aplicativo já está publicado na Windows Store, você pode modificar e recriar o projeto e você pode depurar ou testar suas alterações em um dispositivo. Não há suporte para depuração ou teste do projeto no emulador.  |  Sem suporte.  |
+| Windows Phone 8.1 Silverlight    |  Se você tiver um projeto existente do Windows Phone 8.1 Silverlight que usa um **AdControl** ou **AdMediatorControl** de um SDK anterior, você pode modificar e recompilar o projeto. No entanto, para depurar ou testar o aplicativo, você deve executar o aplicativo no emulador e usar [valores de modo de teste](test-mode-values.md) para ID do aplicativo e para a ID da unidade de anúncios. Não há suporte para depuração ou teste do aplicativo em um dispositivo.  |   Você pode adicionar um **AdControl** ou **AdMediatorControl** para um novo projeto do Windows Phone 8.1 Silverlight. No entanto, para depurar ou testar o aplicativo, você deve executar o aplicativo no emulador e usar [valores de modo de teste](test-mode-values.md) para ID do aplicativo e para a ID da unidade de anúncios. Não há suporte para depuração ou teste do app em um dispositivo. |
 
 ## <a name="add-the-advertising-assemblies-to-your-project"></a>Adicione os assemblies de publicidade ao seu projeto
 
@@ -31,14 +41,12 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
   * Se seu projeto for direcionado para Windows Phone 8.0, digite este comando.
 
-      > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
       ```
 
   * Se seu projeto for direcionado para Windows Phone 8.1, digite este comando.
 
-      > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL81 -Version 8.1.50112
       ```
@@ -50,7 +58,6 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
 1.  Adicione os seguintes recursos ao nó **Recursos** no arquivo WMAppManifest.xml.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` syntax
   <Capability Name="ID_CAP_IDENTITY_USER"/>
   <Capability Name="ID_CAP_MEDIALIB_PHOTO"/>
@@ -59,7 +66,6 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
   Neste exemplo, seu nó **Recursos** se parece com:
 
-  > [!div class="tabbedCodeSnippets"]
   ``` syntax
   <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
@@ -85,14 +91,12 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
 5.  Modifique a marcação Silverlight no arquivo MainPage.xaml para incluir o namespace **Microsoft.Advertising.Mobile.UI**.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
   ```
 
   O cabeçalho da sua página terá o código a seguir:
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
@@ -103,7 +107,6 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
   > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste **ApplicationId** e **AdUnitId** por valores dinâmicos antes de enviar seu aplicativo.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   <Grid x:Name="ContentPanel" Grid.Row="1">
       <UI:AdControl
@@ -122,7 +125,7 @@ Para começar, baixe e instale o pacote NuGet que contém os assemblies do Micro
 
 ## <a name="release-your-app-with-live-ads-using-dev-center"></a>Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento
 
-1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
+1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo, e [crie uma unidade de anúncios autônoma](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
 
 2.  Em seu código, substitua os valores da unidade de anúncio de teste (**applicationId** e **adUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 

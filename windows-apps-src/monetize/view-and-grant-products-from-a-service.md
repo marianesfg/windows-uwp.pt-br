@@ -9,20 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de coleção da Windows Store, API de compra da Windows Store, exibir produtos, conceder produtos"
-ms.openlocfilehash: 1f5930a9917933937a1a0103fe118a2ccdf2d47f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6ecc9d6014692cac52f5554f78a0773dfee3fb81
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Gerenciar direitos a produtos de um serviço
 
-Se você tiver um catálogo de aplicativos e complementos (também conhecidos como produtos no aplicativo ou IAPs), poderá usar a *API de coleção da Windows Store* e a *API de compra da Windows Store* para acessar informações de direitos para esses produtos de seus serviços. Um *direito* representa um direito do consumidor de usar um aplicativo ou complemento que está publicado na Windows Store.
+Se você tiver um catálogo de aplicativos e complementos, poderá usar a *API de coleção da Windows Store* e a *API de compra da Windows Store* para acessar informações de direitos para esses produtos de seus serviços. Um *direito* representa um direito do consumidor de usar um aplicativo ou complemento que está publicado na Windows Store.
 
 Essas APIs consistem em métodos REST que são projetados para serem usados por desenvolvedores com catálogos de complementos que são suportados pelos serviços para várias plataformas. Essa API permite:
 
 -   API de coleção da Windows Store: [consulta por aplicativos pertencentes a um usuário](query-for-products.md) e [declarar que um produto de consumo foi providenciado](report-consumable-products-as-fulfilled.md).
--   API de compra da Windows Store: [conceder um produto gratuito a um usuário](grant-free-products.md).
+-   API de compras da Windows Store: [Conceda um produto gratuito a um usuário](grant-free-products.md), [obtenha assinaturas para um usuário](get-subscriptions-for-a-user.md) e [altere o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
->**Observação**&nbsp;&nbsp;A API de coleção e a API de compra da Windows Store usam a autenticação do Active Directory do Microsoft Azure (Azure AD) para acessar informações de propriedade do cliente. Para usar essas APIs, você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD.
+> [!NOTE]
+> A API de coleção e a API de compra da Windows Store usam a autenticação do Azure Active Directory (Azure AD) para acessar informações de propriedade do cliente. Para usar essas APIs, você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD.
 
 ## <a name="overview"></a>Visão geral
 
@@ -41,11 +44,12 @@ As seções a seguir fornecem mais detalhes sobre cada uma dessas etapas.
 
 Antes de poder usar a API de coleção da Windows Store ou API de compra, você deve criar um aplicativo Web do Azure AD, recuperar a ID de locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de coleção da Windows Store ou API de compra. Você precisa da ID do locatário, ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
 
->**Observação**&nbsp;&nbsp;você só precisa executar as tarefas nesta seção uma vez. Depois que você atualizar o manifesto de aplicativo do Azure AD e ter a ID de locatário, a ID de cliente e o segredo de cliente, você poderá reutilizar esses valores sempre que precisar criar um novo token de acesso do Azure AD.
+> [!NOTE]
+> Você precisa executar somente as tarefas nesta seção uma vez. Depois que você atualizar o manifesto de aplicativo do Azure AD e ter a ID de locatário, a ID de cliente e o segredo de cliente, você poderá reutilizar esses valores sempre que precisar criar um novo token de acesso do Azure AD.
 
 1.  Siga as instruções em [Integrando aplicativos com o Active Directory do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=722502) para adicionar um aplicativo Web ao Azure AD.
-
-    > **Observação**&nbsp;&nbsp;Na página **Conte-nos sobre o seu aplicativo**, certifique-se de escolher **Aplicativo Web e/ou API da Web**. Isso é necessário para que você possa recuperar uma chave (também chamada de *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Windows Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
+    > [!NOTE]
+    > Na página **Conte-nos sobre o seu aplicativo**, certifique-se de escolher **Aplicativo Web e/ou API da Web**. Isso é necessário para que você possa recuperar uma chave (também chamada de *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Windows Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
 
 2.  No [Portal de Gerenciamento do Azure](http://manage.windowsazure.com/), navegue até **Active Directory**. Selecione seu diretório, clique na guia **Aplicativos** na parte superior e selecione seu aplicativo.
 3.  Clique na guia **Configurar**. Nessa guia, obtenha a ID do cliente para seu aplicativo e solicite uma chave (chamada de *segredo do cliente* nas etapas posteriores).
@@ -68,7 +72,8 @@ Antes de poder usar a API de coleção da Windows Store ou API de compra, você 
 
 Antes de poder usar a API de coleção ou API de compra da Windows Store para operar em um aplicativo ou complemento, você deve associar sua ID de cliente do Azure AD ao aplicativo (ou o aplicativo que contém o complemento) no painel do Centro de Desenvolvimento.
 
->**Observação**&nbsp;&nbsp;Você só precisa executar essa tarefa uma vez.
+> [!NOTE]
+> Você só precisa executar essa tarefa uma vez.
 
 1.  Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview) e selecione o aplicativo.
 2.  Vá até a página **Serviços** &gt; **Coleções e compras de produto** e digite sua ID de cliente do Azure AD em um dos campos disponíveis.
@@ -78,18 +83,21 @@ Antes de poder usar a API de coleção ou API de compra da Windows Store para op
 
 Para poder recuperar uma chave ID da Windows Store ou chamar a API de coleção ou API de compra da Windows Store, seu serviço deve criar diversos tokens de acesso do Azure AD diferentes que representem sua identidade de fornecedor. Cada token será usado com uma API diferente. A vida útil desses tokens é de 60 minutos, e você pode atualizá-los depois que expirarem.
 
+> [!IMPORTANT]
+> Crie tokens de acesso do Azure AD somente no contexto de seu serviço, e não em seu aplicativo. O segredo do cliente pode ser comprometido se ele for enviado para seu aplicativo.
+
 <span id="access-tokens" />
 ### <a name="understanding-the-different-tokens-and-audience-uris"></a>Noções básicas sobre os diferentes tokens e URIs de público
 
 Dependendo dos métodos com os quais você deseja chamar a API de compra ou API de coleção da Windows Store, você deve criar dois ou três tokens diferentes. Cada token de acesso é associado a um URI de público diferente (esses são os mesmos URIs que você adicionou anteriormente na seção `"identifierUris"` do manifesto do aplicativo do Azure AD).
 
   * Em todos os casos, você deve criar um token com o `https://onestore.microsoft.com` URI de público. Em uma etapa posterior, você irá passar esse token para o cabeçalho de **autorização** dos métodos na API de compra ou API de coleção da Windows Store.
-
-  > **Importante**&nbsp;&nbsp;Use o público de `https://onestore.microsoft.com` apenas com os tokens de acesso que estão armazenados com segurança dentro de seu serviço. Expor tokens de acesso com esse público fora de seu serviço poderia tornar seu serviço vulnerável a ataques de repetição.
+      > [!IMPORTANT]
+      > Use o `https://onestore.microsoft.com` público apenas com tokens de acesso que sejam armazenados com segurança dentro de seu serviço. Expor tokens de acesso com esse público fora de seu serviço poderia tornar seu serviço vulnerável a ataques de repetição.
 
   * Se você deseja chamar um método na API de coleção da Windows Store para [procurar por produtos pertencentes a um usuário](query-for-products.md) ou [declarar um produto consumível como providenciado](report-consumable-products-as-fulfilled.md), você também deve criar um token com o `https://onestore.microsoft.com/b2b/keys/create/collections` URI de público. Em uma etapa posterior, você passará esse token para um método de cliente no SDK do Windows para solicitar uma chave ID da Windows Store que você pode usar com a API de coleção da Windows Store.
 
-  * Se você deseja chamar um método na API de compra da Windows Store para [conceder um produto gratuito a um usuário](grant-free-products.md), você também deve criar um token com o `https://onestore.microsoft.com/b2b/keys/create/purchase` URI de público. Em uma etapa posterior, você passará esse token para um método de cliente no SDK do Windows para solicitar uma chave ID da Windows Store que você pode usar com a API de compra da Windows Store.
+  * Se você deseja chamar um método na API de compras da Windows Store para [conceder um produto gratuito a um usuário](grant-free-products.md), [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) ou [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md), também é necessário criar um token com o `https://onestore.microsoft.com/b2b/keys/create/purchase`URI de público. Em uma etapa posterior, você passará esse token para um método de cliente no SDK do Windows para solicitar uma chave ID da Windows Store que você pode usar com a API de compra da Windows Store.
 
 <span />
 ### <a name="create-the-tokens"></a>Criar os tokens
@@ -115,8 +123,6 @@ Para cada token, especifique os seguintes dados de parâmetro:
 
 Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as instruções descritas [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens). Para obter mais detalhes sobre a estrutura de um token de acesso, consulte [Tipos de declaração e token com suporte](http://go.microsoft.com/fwlink/?LinkId=722501).
 
-> **Importante**&nbsp;&nbsp;Você deve criar tokens de acesso do Azure AD somente no contexto de seu serviço, e não em seu aplicativo. O segredo do cliente pode ser comprometido se ele for enviado para seu aplicativo.
-
 <span id="step-4"/>
 ## <a name="step-4-create-a-windows-store-id-key"></a>Etapa 4: criar uma chave ID da Windows Store
 
@@ -124,7 +130,8 @@ Antes de chamar qualquer método na API de coleção ou a API de compra da Windo
 
 Atualmente, a única forma de criar uma chave de ID da Windows Store é chamando uma API da Plataforma Universal do Windows (UWP) no código do cliente em seu aplicativo. A chave gerada representa a identidade do usuário que fez logon na Windows Store no dispositivo.
 
-> **Observação**&nbsp;&nbsp;Cada chave de ID da Windows Store é válida por 90 dias. Depois que uma chave expira, você pode [renovar a chave](renew-a-windows-store-id-key.md). Nós recomendamos que você renove as chaves de ID da Windows Store em vez de criar chaves novas.
+> [!NOTE]
+> Cada chave ID da Windows Store é válida por 90 dias. Depois que uma chave expira, você pode [renovar a chave](renew-a-windows-store-id-key.md). Nós recomendamos que você renove as chaves de ID da Windows Store em vez de criar chaves novas.
 
 <span />
 ### <a name="to-create-a-windows-store-id-key-for-the-windows-store-collection-api"></a>Para criar uma chave de ID da Windows Store para a API de coleção da Windows Store
@@ -139,14 +146,14 @@ Siga estas etapas para criar uma chave de ID da Windows Store que você pode usa
 
   * Se seu aplicativo usa a classe [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) no namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para gerenciar as compras no aplicativo, use o método [CurrentApp.GetCustomerCollectionsIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608674).
 
-  Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Opcionalmente, você pode passar uma ID para o parâmetro *publisherUserId* que identifica o usuário atual no contexto de seus serviços. Se você mantiver IDs de usuário para seus serviços, você poderá usar esse parâmetro para correlacionar essas IDs de usuário com as chamadas que fizer da API de coleção da Windows Store.
+    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Opcionalmente, você pode passar uma ID para o parâmetro *publisherUserId* que identifica o usuário atual no contexto de seus serviços. Se você mantiver IDs de usuário para seus serviços, você poderá usar esse parâmetro para correlacionar essas IDs de usuário com as chamadas que fizer da API de coleção da Windows Store.
 
 3.  Depois que seu aplicativo criar com êxito uma chave de ID da Windows Store, repasse a chave para seu serviço.
 
 <span />
 ### <a name="to-create-a-windows-store-id-key-for-the-windows-store-purchase-api"></a>Para criar uma chave de ID da Windows Store para a API de compra da Windows Store
 
-Siga estas etapas para criar uma chave de ID da Windows Store que você pode usar com a API de compra da Windows Store para [conceder um produto gratuito a um usuário](grant-free-products.md).
+Siga estas etapas para criar uma chave de ID da Windows Store que você pode usar com a API de compras da Windows Store a fim de [conceder um produto gratuito a um usuário](grant-free-products.md), [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) ou [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).
 
 1.  Passe o token de acesso do Azure AD criado com o `https://onestore.microsoft.com/b2b/keys/create/purchase` URI de público de seu serviço para o aplicativo cliente.
 
@@ -156,7 +163,7 @@ Siga estas etapas para criar uma chave de ID da Windows Store que você pode usa
 
   * Se seu aplicativo usa a classe [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) no namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para gerenciar as compras no aplicativo, use o método [CurrentApp.GetCustomerPurchaseIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608675).
 
-  Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Opcionalmente, você pode passar uma ID para o parâmetro *publisherUserId* que identifica o usuário atual no contexto de seus serviços. Se você mantiver IDs de usuário para seus serviços, você poderá usar esse parâmetro para correlacionar essas IDs de usuário com as chamadas que fizer da API de compra da Windows Store.
+    Passe o token de acesso do Azure AD para o parâmetro *serviceTicket* do método. Opcionalmente, você pode passar uma ID para o parâmetro *publisherUserId* que identifica o usuário atual no contexto de seus serviços. Se você mantiver IDs de usuário para seus serviços, você poderá usar esse parâmetro para correlacionar essas IDs de usuário com as chamadas que fizer da API de compra da Windows Store.
 
 3.  Depois que seu aplicativo criar com êxito uma chave de ID da Windows Store, repasse a chave para seu serviço.
 
@@ -168,6 +175,8 @@ Depois que o serviço tiver uma chave ID da Windows Store que o permita acessar 
 * [Consulta por produtos](query-for-products.md)
 * [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
+* [Obter assinaturas para um usuário](get-subscriptions-for-a-user.md)
+* [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
 
 Para cada cenário, passe as seguintes informações para a API:
 
@@ -220,6 +229,8 @@ Aqui está um exemplo de uma declaração de chave ID da Windows Store decodific
 * [Consulta por produtos](query-for-products.md)
 * [Declarar produtos consumíveis como providenciados](report-consumable-products-as-fulfilled.md)
 * [Conceder produtos gratuitos](grant-free-products.md)
+* [Obter assinaturas para um usuário](get-subscriptions-for-a-user.md)
+* [Alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Renovar uma chave ID da Windows Store](renew-a-windows-store-id-key.md)
 * [Integrando aplicativos com o Active Directory do Azure](http://go.microsoft.com/fwlink/?LinkId=722502)
 * [Noções básicas sobre o manifesto de aplicativo do Active Directory do Azure]( http://go.microsoft.com/fwlink/?LinkId=722500)

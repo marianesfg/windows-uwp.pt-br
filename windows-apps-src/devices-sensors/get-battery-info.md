@@ -1,23 +1,25 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: "Obter informações sobre a bateria"
 description: "Saiba como obter informações de bateria detalhadas usando APIs no namespace Windows.Devices.Power."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b136c53cd39028c15ff55be803ae314c773a9be6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 11fb22fda7ca69f08b91fc2ad77b5f65fdc20b3b
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="get-battery-information"></a>Obter informações de bateria
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+** APIs Importantes **
 
 -   [**Windows.Devices.Power**](https://msdn.microsoft.com/library/windows/apps/Dn895017)
 -   [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432)

@@ -4,23 +4,27 @@ Description: "Para entender suas considerações fiscais para seleção de preç
 title: Detalhes de impostos para aplicativos pagos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9c660e480402c584fad2b0f6444d7051d1cd234b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 99b370c5bfc6d06e9ab05f56d2d0698b4669842a
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
 
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
-> **Observação**  O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> [!NOTE]
+> O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> **Observação**  Taxas de imposto estão sujeitas a alterações a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
+> [!IMPORTANT]
+> Taxas de imposto estão sujeitas à alteração a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
 
  
 
@@ -32,9 +36,9 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Andorra                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Angola                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Antígua e Barbuda              | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Argentina                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado  | Desenvolvedor          |
+| Argentina                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado  | Desenvolvedor          |
 | Armênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Austrália                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Austrália                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 10%)                 | Microsoft          |
 | Áustria                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.       | 70% de (preço selecionado menos imposto de 20%)     | Microsoft          |
 | Azerbaijão                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Bahamas                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -49,7 +53,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Bolívia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Bósnia e Herzegovina           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Botsuana                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Brasil                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Brasil                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Brunei                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Bulgária                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.       | 70% de (preço selecionado menos imposto de 20%)   | Microsoft          |
 | Burquina Faso                     | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -60,13 +64,13 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Canadá                           | Os impostos são adicionados ao preço sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
 | República Centro-Africana         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Chade                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Chile                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
-| China                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
-| Colômbia                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Chile                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
+| China                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
+| Colômbia                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Ilhas Comores                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Congo                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Congo (República Democrática)                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Costa Rica                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Costa Rica                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Côte d’Ivoire                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Croácia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.       | 70% de (preço selecionado menos imposto de 25%)   | Microsoft          |
 | Chipre                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.       | 70% de (preço selecionado menos imposto de 19%)   | Microsoft          |
@@ -75,8 +79,8 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Djibuti                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Dominica                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | República Dominicana               | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Equador                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
-| Egito                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Equador                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
+| Egito                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | El Salvador                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Eritreia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Estônia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
@@ -94,7 +98,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Grécia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 24%) | Microsoft          |
 | Groenlândia                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Granada                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Guatemala                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Guatemala                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Guiné                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Guiné-Bissau                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Guiana                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -103,17 +107,17 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | RAE de Hong Kong                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Hungria                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 27%) | Microsoft          |
 | Islândia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Índia                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#tax-reporting-for-india-developers)    | 70% do preço selecionado                 | Desenvolvedor          |
-| Indonésia                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Índia                            | Os impostos são adicionados ao preço que está sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
+| Indonésia                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Iraque                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Irlanda                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
 | Israel                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Itália                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 22%) | Microsoft          |
 | Jamaica                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Japão                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Jordânia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Jordânia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Cazaquistão                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Quênia                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| Quênia                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Kiribati                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Coreia                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 10%) | Microsoft          |
 | Kuwait                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -138,7 +142,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Ilhas Marshall                 | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Mauritânia                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Maurício                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| México                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions) | 70% do preço selecionado                 | Desenvolvedor          |
+| México                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Micronésia                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Mônaco                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
 | Mongólia                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -161,11 +165,10 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Panamá                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Papua Nova-Guiné                 | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Paraguai                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Peru                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                  | 70% do preço selecionado            | Desenvolvedor          |
-| Filipinas                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                  | 70% do preço selecionado                 | Desenvolvedor          |
+| Peru                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado            | Desenvolvedor          |
+| Filipinas                      | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Polônia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
 | Portugal                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 23%) | Microsoft          |
-| Porto Rico                      | Os impostos são adicionados ao preço sendo selecionado. [Leia mais sobre considerações fiscais para esse país.](#mixed-remittance-countriesregions)                                                                                                     | 70% do preço selecionado                 | Microsoft          |
 | Catar                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Romênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 19%) | Microsoft          |
 | Rússia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 18%) | Microsoft          |
@@ -178,7 +181,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | São Tomé e Príncipe            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Arábia Saudita                     | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Senegal                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Sérvia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Sérvia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
 | Seicheles                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Serra Leoa                     | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Cingapura                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -209,7 +212,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Ucrânia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Emirados Árabes Unidos             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Reino Unido                   | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
-| Estados Unidos                    | Os impostos são adicionados ao preço sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
+| Estados Unidos (inclui Porto Rico)  | Os impostos são adicionados ao preço que está sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
 | Uruguai                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Usbequistão                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Vanuatu                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -228,22 +231,6 @@ Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos 
 
 | Países/regiões de remessa misturados |
 |------------------------------------|
-| Argentina                          |
-| Brasil                             |
-| Chile                              |
-| China                              |
-| Colômbia                           |
-| Costa Rica                         |
-| Equador                            |
-| Egito                              |
-| Guatemala                          |
-| Índia                              |
-| Indonésia                          |
-| Jordânia                             |
-| Quênia                              |
-| México                             |
-| Peru                               |
-| Filipinas                        |
 | África do Sul                       |
 | Vietnã                            |
 
@@ -261,22 +248,7 @@ Em determinados países/regiões, a Microsoft atua como revendedor, e não agent
 
  
 
-## <a name="tax-reporting-for-india-developers"></a>Relatório fiscal para desenvolvedores da Índia
 
-
-Para obter informações relacionadas à remissão de impostos para suas transações da loja na Índia, gere um relatório de transação. Você é responsável por analisar o relatório e por determinar e cumprir quaisquer obrigações que tiver para registrar, cobrar e remeter impostos relacionados às transações envolvendo seu(s) Aplicativo(s) ou Produto(s) no aplicativo.
- 
-**Para gerar um relatório:**
-
-1.  Acesse [https://commerce.microsoft.com/PaymentHub/TaxReport](http://go.microsoft.com/fwlink/p/?LinkID=264239).
-2.  Faça o logon utilizando a conta da Microsoft que você usa para acessar sua conta de desenvolvedor do Centro de Desenvolvimento.
-3.  Selecione a(s) data(s) adequada(s).
-4.  Em **Vendido para País/Região**, selecione **Índia.**
-5.  Clique em **Pesquisar.**
-
-Cada linha do relatório contém a data e hora da transação e, se disponível, o estado da Índia onde a transação ocorreu.
-
- 
 
  
 

@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para desktop
 description: "Saiba como o Windows Device Portal abre diagnósticos e automação em sua área de trabalho do Windows."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 32155bfbb676a5f79dd4b1629f0a88368da36828
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="device-portal-for-desktop"></a>Device Portal para desktop
 
@@ -76,37 +78,11 @@ Se você quiser selecionar números de porta para o Device Portal (como 80 e 443
 
 - Em HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: um DWORD necessário. Defina como 0 para manter os números de porta que você escolheu.
-    - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.    
+    - HttpPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTP.  
     - HttpsPort: um DWORD necessário. Contém o número da porta na qual o Device Portal escutará conexões HTTPS.
 
-## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Falha ao instalar o pacote do Modo de Desenvolvedor ou iniciar o Device Portal
-Às vezes, devido a problemas de rede ou de compatibilidade, o Modo de Desenvolvedor não será instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para a implantação **remota** – Device Portal e SSH – mas não para o desenvolvimento local.  Mesmo se você encontrar esses problemas, você ainda pode implementar seu aplicativo localmente usando o Visual Studio. 
+## <a name="failure-to-install-developer-mode-package"></a>Falha ao instalar o pacote do Modo de Desenvolvedor
+Às vezes, devido a problemas de rede ou de compatibilidade, o Modo de Desenvolvedor não será instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para implantação **remota** no computador, usando o Device Portal em um navegador ou a descoberta de dispositivos para habilitar SSH, mas não para o desenvolvimento local.  Mesmo se você encontrar esses problemas, você ainda pode implementar seu aplicativo localmente usando o Visual Studio. 
 
-Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
+Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) e a [página do Modo de Desenvolvedor](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package) para encontrar soluções alternativas para esses problemas e muito mais. 
 
-### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
-
-"Não foi possível localizar o pacote do Modo de Desenvolvedor no Windows Update. Código do erro 0x001234 Saiba mais"   
-
-Esse erro pode ocorrer devido a um problema de conectividade de rede, configurações corporativas ou o pacote pode estar faltando. 
-
-Para resolver este problema:
-
-1. Certifique-se de que o computador esteja conectado à Internet. 
-2. Se você estiver em um computador associado a um domínio, fale com o administrador de rede. 
-3. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
-4. Verifique se o pacote do Modo de Desenvolvedor do Windows está presente em Configurações > Sistema > Aplicativos e Recursos > Gerenciar recursos opcionais > Adicionar um recurso. Se ele estiver ausente, o Windows não poderá encontrar o pacote correto para o seu computador. 
-
-Depois de realizar qualquer uma das etapas acima, desabilite e habilite novamente o Modo de Desenvolvedor para verificar a correção. 
-
-
-### <a name="failed-to-install-the-package"></a>Falha ao instalar o pacote
-
-"Falha ao instalar o pacote do Modo de Desenvolvedor. Código do erro 0x001234 Saiba mais"
-
-Esse erro pode ocorrer devido à incompatibilidade entre a compilação do Windows e o pacote do Modo de Desenvolvedor. 
-
-Para resolver este problema:
-
-1. Verifique se existem atualizações do Windows em Configurações > Atualizações e Segurança > Atualizações do Windows.
-2. Reinicialize o computador para garantir que todas as atualizações sejam aplicadas.

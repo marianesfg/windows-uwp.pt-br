@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "Mantenha o thread de interface do usuário responsivo"
 description: "Os usuários esperam que um app continue respondendo enquanto executa cálculos, independentemente do tipo de computador."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Manter o thread de interface do usuário responsivo
 
@@ -29,7 +31,7 @@ Você precisa usar o thread de interface do usuário para fazer quase todas as a
 
 Alguns dos estágios mais lentos de um aplicativo podem incluir a inicialização e a troca de exibições. Não execute mais trabalho do que o necessário para exibir a interface do usuário que o usuário vê inicialmente. Por exemplo, não crie a interface do usuário para IU progressivamente revelada e o conteúdo de pop-ups.
 
--   Use [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para atrasar a instanciação de elementos.
+-   Use o [Atributo x:Load](../xaml-platform/x-load-attribute.md) ou o [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para atrasar a instanciação de elementos.
 -   Insira de forma programada elementos na árvore sob demanda.
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) enfileira o trabalho para o thread de interface do usuário processar quando não estiver ocupado.
@@ -107,4 +109,3 @@ Neste exemplo, o manipulador `NextMove-Click` retornará em **await** para mante
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Interações personalizadas do usuário](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-

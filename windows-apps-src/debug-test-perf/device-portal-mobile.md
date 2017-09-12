@@ -1,19 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para celulares
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo móvel remotamente."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54660777706fbfdc54b08da025c2f280f194c010
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0a85a780bf71bd43a0482494a1de939582a4b56
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para celulares
 
@@ -27,7 +27,7 @@ Para saber mais sobre como habilitar o Modo de desenvolvedor, consulte [Habilita
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>Ativar a descoberta e o emparelhamento de dispositivos
 
-Para se conectar ao Device Portal, você deve habilitar a Descoberta de dispositivo e o Device Portal. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
+Para se conectar ao Device Portal, você deve habilitar a Descoberta de dispositivo e o Device Portal nas configurações do seu telefone. Isso permite emparelhar seu telefone com um computador ou outro dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB.
 
 Na primeira vez que você se conectar ao Device Portal, será solicitado a fornecer um código de segurança de 6 caracteres que diferencia maiúsculas de minúsculas. Isso garante que você tenha acesso ao telefone e o mantém protegido contra invasores. Pressione o botão Emparelhar no seu telefone para gerar e exibir o código. Em seguida, insira os 6 caracteres na caixa de texto no navegador.
 

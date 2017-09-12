@@ -7,14 +7,16 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 868221cce04688ea2f7ab50e3062579932fbbd80
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -22,8 +24,9 @@ translationtype: HT
 
 Em um aplicativo da Plataforma Universal do Windows (UWP), *elementos de comando* são os elementos interativos da interface do usuário que permitem ao usuário executar ações, como enviar um email, excluir um item ou enviar um formulário. Este artigo descreve os elementos de comando, como botões e caixas de seleção, as interações a que eles dão suporte e as superfícies de comando (por exemplo, barras de comandos e menus de contexto) para hospedá-los.
 
-## <a name="provide-the-right-type-of-interactions"></a>Forneça o tipo correto de interações
+> **APIs importantes**: [Interface ICommand](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.ICommand), [Classe Button](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Button), [Classe CommandBar](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.commandbar), [Classe MenuFlyout](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)
 
+## <a name="provide-the-right-type-of-interactions"></a>Forneça o tipo correto de interações
 
 Ao projetar uma interface de comando, a decisão mais importante é escolher quais ações os usuários podem executar. Por exemplo, se você estiver criando um aplicativo de fotos, o usuário precisará de ferramentas para editar fotos. No entanto, se você estiver criando um aplicativo de mídia social que exiba fotos, a edição de imagens talvez não seja uma prioridade e, portanto, as ferramentas de edição podem ser omitidas para economizar espaço. Decida quais ações os usuários podem executar e forneça as ferramentas para ajudá-los a fazê-lo.
 

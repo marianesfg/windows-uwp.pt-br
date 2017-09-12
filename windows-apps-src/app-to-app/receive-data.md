@@ -2,16 +2,18 @@
 description: "Este artigo explica como receber conteúdo em seu aplicativo UWP (Plataforma Universal do Windows) compartilhado de outro aplicativo usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu aplicativo seja apresentado como uma opção quando o usuário invoca o compartilhamento."
 title: Receber dados
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b460a20dd88da1745008ea84fe252137df8a82d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 9c3054d161e45bd614e8ef42ea6f21aeb937f582
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="receive-data"></a>Receber dados
 

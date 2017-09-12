@@ -1,28 +1,75 @@
 ---
 author: jnHs
-Description: "O relatório Críticas do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja."
+Description: "O relatório Análises do painel do Centro de Desenvolvimento do Windows permite que você consulte as classificações e os comentários que os clientes inseriram na classificação do seu aplicativo na Loja."
 title: "Relatório de avaliações"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2b9cc9142655efc8123fdcde0eef464cb86df070
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b28883ffe2e1993e87c2d41fdb64108d94c8e841
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="reviews-report"></a>Relatório de avaliações
 
 
-O relatório **Críticas** do painel do Centro de Desenvolvimento do Windows permite que você consulte os comentários que os clientes forneceram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+O relatório **Análises** do painel do Centro de Desenvolvimento do Windows permite que você consulte as classificações e os comentários que os clientes inseriram na classificação do seu aplicativo na Loja. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibi-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Observação** Você também pode [responder às críticas dos clientes](respond-to-customer-reviews.md) nessa página.
+Você também pode responder às análises dos clientes [diretamente a partir desta página](respond-to-customer-reviews.md), programaticamente [pela API de análises da Windows Store](../monetize/submit-responses-to-app-reviews.md) ou usando o [aplicativo do Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
 
-Esse relatório mostra o número de estrelas que um cliente concedeu ao seu aplicativo ao fazer uma crítica, mas não analisa as classificações por estrelas em seu aplicativo. Para obter estatísticas sobre suas classificações, consulte o [Relatório de classificações](ratings-report.md).
+> [!TIP]
+> Para visualizar rapidamente avaliações, classificações e comentários do usuário para todos seus aplicativos nos últimos 30 dias, expanda **Interagir** no menu de navegação esquerdo e selecione **Avaliações e comentários.** 
 
-Observe que os clientes podem deixar uma classificação para o seu aplicativo sem adicionar qualquer comentário, para que você veja normalmente menos críticas do que classificações. Por padrão, esta página também mostra as classificações que não incluem revisar o conteúdo, mas você pode usar os **Filtros de página** para mostrar apenas as classificações que incluem críticas, conforme descrito a seguir.
+## <a name="apply-filters"></a>Aplicar filtros
+
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar as análises. A seleção padrão é **Tempo de vida**, mas você pode optar por mostrar análises de 30 dias, 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Observe que os gráficos de **Análise de classificações** e **Média de classificação ao longo do tempo** sempre mostram dados dos últimos 12 meses; as opções desse período não afetarão os gráficos.
+
+É possível expandir os **Filtros** para filtrar as análises mostradas nessa página pelas seguintes opções. Esses filtros não serão aplicado aos gráficos de **Análise de classificações** e **Média de classificação ao longo do tempo**.
+
+-   **Classificação**: por padrão, as análises com classificação por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
+-   **Conteúdo da crítica**: a configuração padrão é **Todos**, o que inclui classificações sem texto de crítica adicionado. Você pode selecionar **Classificações com conteúdo de crítica** para mostrar apenas as classificações que incluem conteúdo de crítica escrito.
+-   **Versão do sistema operacional**: a configuração padrão é **Todos**. Você poderá escolher a versão específica do sistema operacional se quiser que essa página mostre somente análises deixadas por clientes nessa versão do sistema operacional.
+-   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, é possível selecionar um específico aqui para mostrar somente análises deixadas pelos clientes com esse pacote quando analisaram seu aplicativo.
+-   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
+-   **Atualizações**: a configuração padrão é **Todas**. Você pode optar por filtrar as análises para mostrar apenas as análises atualizadas pelo cliente desde que você [respondeu a uma análise](respond-to-customer-reviews.md), ou apenas aquelas que ainda não foram atualizadas pelo cliente.
+-   **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as críticas de clientes desse mercado.
+-   **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente análises deixadas por clientes que estão usando esse dispositivo.
+-   **Nome da categoria**: o filtro padrão é **Todos**. Você pode escolher uma [categoria de informações de análise](#review-insights-categories) específica para mostrar apenas análises associadas a essa categoria. 
+
+
+> [!TIP]
+> Se você não vir quaisquer análises na página, verifique se os seus filtros não excluíram todas as análises. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer análises
+
+
+## <a name="ratings-breakdown"></a>Detalhamento das classificações
+
+O gráfico de **Análise de classificações** mostra: 
+- A classificação média por estrela do aplicativo.
+- O total de classificações do aplicativo nos últimos 12 meses.
+- O total de classificações de cada classificação por estrelas.
+- O número de classificações para cada tipo de classificação (nova ou revisada) por classificação de estrelas nos últimos 12 meses.
+ - **Classificações novas** são classificações que os clientes enviaram, mas que não foram alteradas.
+ - **Classificações revisadas** são classificações que foram alteradas pelo cliente, até mesmo o texto da opinião.
+
+> [!TIP]
+> A classificação média que um cliente visualiza na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, portanto, pode ser diferente do que você vê nesse relatório. Para ver como a classificação média será exibida na Loja para um cliente específico, é necessário aplicar filtros para selecionar um mercado específico e um tipo de dispositivo.
+
+
+## <a name="average-rating-over-time"></a>Classificação média ao longo do tempo
+
+O gráfico **Classificação média ao longo do tempo** mostra como a classificação média do aplicativo foi alterada nos últimos 12 meses.
+
+Em vez de calcular a média de todas as classificações feitas durante os últimos 12 meses (como no gráfico **Detalhes de classificação**), o gráfico **Classificação média ao longo do tempo** mostra como os clientes classificaram o aplicativo em determinada semana. Isso pode ajudar a identificar tendências ou determinar se classificações foram afetadas por atualizações ou outros fatores.
+
+
+## <a name="reviews"></a>Avaliações
+
+Análises deixadas por seus clientes são mostradas nesta página.  
 
 Cada opinião do cliente contém:
 
@@ -35,50 +82,41 @@ Cada opinião do cliente contém:
 -   O nome do dispositivo que o cliente estava usando quando a crítica foi feita. (Essas informações não estão disponíveis para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores.)
 -   A "contagem de utilidade" da crítica, conforme classificada por outros clientes ao ler a crítica. Esses itens são mostrados como uma série de dois números: o primeiro número mostra quantos clientes a classificaram como útil, e o segundo número é o número total de clientes que classificaram a crítica. Por exemplo, uma contagem de utilidade de 4/10 significa que, dos 10 classificadores, 4 consideraram a opinião útil e seis, não. (Se não houver votos de utilidade de uma crítica, nenhuma contagem de utilidade será exibida).
 
-> **Observação** Às vezes, as revisões desaparecem desse relatório. Isso pode acontecer porque a Microsoft remove revisões da Loja escritas por clientes que executam determinadas compilações do Insider e pré-lançamento do Windows 10. Fazemos isso para reduzir a possibilidade de uma análise negativa causada por um problema em uma compilação de versão de pré-lançamento do Windows. Também podemos remover avaliações da Loja que foram identificadas como spam, inadequadas, ofensivas ou que tenham outras violações de política. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
+Observe que os clientes podem deixar uma classificação para o seu aplicativo sem adicionar qualquer comentário, para que você veja normalmente menos análises do que classificações.
 
-## <a name="apply-filters"></a>Aplicar filtros
+Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link **Classificar por** para exibir opções de classificação por data e/ou classificação. 
+
+> [!NOTE]
+> Às vezes, você pode observar que as avaliações desaparecem desse relatório. Isso pode acontecer porque a Microsoft remove revisões da Loja escritas por clientes que executam determinadas compilações do Insider e pré-lançamento do Windows 10. Fazemos isso para reduzir a possibilidade de uma análise negativa causada por um problema em uma compilação de versão de pré-lançamento do Windows. Também podemos remover avaliações da Loja que foram identificadas como spam, inadequadas, ofensivas ou que tenham outras violações de política. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
 
 
-Perto da parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados dessa página.
-
->**Dica**  Se você não visualizar críticas na página, verifique se os seus filtros não excluíram todas as críticas. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer críticas
-
--   **Classificação**: por padrão, todas as classificações por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
--   **De**: O valor padrão (em branco) mostrará análises desde quando o aplicativo foi publicado. Você poderá escolher uma data diferente se quiser apenas ver críticas que foram feitas na ou depois da data escolhida.
--   **Até**: O valor padrão (em branco) mostrará análises até a data atual. Você poderá escolher uma data diferente se quiser apenas ver críticas que foram feitas antes da ou na data escolhida.
--   **Conteúdo da crítica**: a configuração padrão é **Todos**, o que inclui classificações sem texto de crítica adicionado. Você pode selecionar **Classificações com conteúdo de crítica** para mostrar apenas as classificações que incluem conteúdo de crítica escrito.
--   **Sistema operacional de destino**: a configuração padrão é **Todos**. Você pode escolher um sistema operacional de destino específico, se quiser que essa página mostre apenas as classificações dos clientes que usando pacotes destinados a esse sistema operacional.
--   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
--   **Atualizações**: a configuração padrão é **Todas**. Você pode optar por filtrar as análises para mostrar apenas as críticas que foram atualizadas pelo cliente desde que você [respondeu a uma crítica](respond-to-customer-reviews.md), ou apenas aquelas que ainda não foram atualizadas pelo cliente.
--   **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as críticas de clientes desse mercado.
--   **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente análises deixadas por clientes que estão usando esse dispositivo.
--   **Versão do pacote**: o filtro padrão é **Todos os pacotes**. Se você quiser que essa página mostre apenas análises deixadas por clientes que tinham esse pacote quando analisaram seu aplicativo, você poderá escolher um pacote específico.
-
-As informações em todos os gráficos listados a seguir refletirão o período de tempo selecionado na seção **Aplicar filtros** e refletirá todos os outros filtros que você tenha escolhido aqui.
-
-> **Observação**  A classificação média que um cliente vê na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, além das classificações no ano anterior; portanto, ela pode ser diferente do que você vê nesse relatório. Para ver como a classificação média será exibida na Loja para um determinado cliente, você precisará aplicar filtros para selecionar um mercado e um tipo de dispositivo específicos e definir a **Data** como **Últimos 12 meses**.
-
-## <a name="translating-reviews"></a>Traduzindo críticas
-
+## <a name="translating-reviews"></a>Traduzindo análises
 
 Por padrão, críticas que não foram escritas em seu idioma preferencial são traduzidas para você. Se você preferir, a tradução das críticas pode ser desabilitada, desmarcando-se a caixa de seleção **Traduzir análises** na parte superior direita, acima da lista de críticas.
 
-Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido, se você quiser compará-lo com a tradução, ou traduzi-lo por meio algum outro meio.
-
-## <a name="sorting-reviews"></a>Revisões de classificação
+Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido caso deseje compará-lo à tradução ou traduzi-lo por meio de algum outro meio.
 
 
-Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link **Classificar por** para exibir opções de classificação por data e/ou classificação. Quando você clicar em um botão de opção na seção Data ou Classificação, os critérios de classificação serão aplicados, e você verá o rótulo de classificação mostrado ao lado do título **Classificar por**. Você pode remover todos os critérios de classificação clicando no **X** exibido em cada rótulo.
+## <a name="review-insight-categories"></a>Categorias de informações de análise
 
-## <a name="responding-to-customer-reviews"></a>Respondendo às críticas dos clientes
+Você pode exibir **Categorias de informações de análise** para ver as avaliações agrupadas de acordo com categorias que determinamos como associadas à avaliação.
 
-Você pode usar o painel do Centro de Desenvolvimento da Windows Store para enviar respostas a muitas das críticas dos clientes. Para obter mais informações, consulte [Responder às críticas dos clientes](respond-to-customer-reviews.md)
+> [!NOTE]
+> As análises com menos de 24 horas e/ou em um idioma diferente do inglês não são incluídas ao visualizar análises por categorias.
+
+Na parte superior da página, você verá blocos coloridos representando análises por categoria. Selecione uma destas categorias para ver apenas as análises que associamos a essa categoria. Você também pode usar os [filtros de página](#apply-filters) para filtrar por categoria.
+
+Para ver um detalhamento das avaliações por categoria, selecione **Mostrar detalhes**. 
+
+
+## <a name="responding-to-customer-reviews"></a>Respondendo às análises dos clientes
+
+Você pode usar o painel do Centro de Desenvolvimento da Windows Store, a [API de análises da Windows Store](../monetize/submit-responses-to-app-reviews.md) ou o [aplicativo do Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respostas a diversas análises dos clientes. Para obter mais informações, consulte [Responder às análises dos clientes](respond-to-customer-reviews.md)
 
 Veja algumas ações adicionais que você pode realizar com base nas classificações e críticas observadas.
 
 -   Caso veja muitas críticas sugerindo um recurso novo ou alterado ou com reclamações sobre um problema, pense em lançar uma nova versão que atenda especificamente a esses comentários (Não se esqueça de atualizar a [descrição](create-app-descriptions.md) do aplicativo para indicar que o problema foi corrigido).
--   Caso a classificação média seja alta, mas o número de transferências seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](app-promotion-and-customer-engagement.md), já que ele foi é bem-recebido pelos usuários que o testaram.
+-   Caso a classificação média seja alta, mas o número de transferências seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](attract-customers-and-promote-your-apps.md), já que ele foi é bem-recebido pelos usuários que o testaram.
 
 
  

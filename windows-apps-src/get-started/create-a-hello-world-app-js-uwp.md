@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1556cd049de767966e6beead50941ebfff443736
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bf63108a7afd5558b57a03ffcdd251c2460d3a9a
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="create-a-hello-world-app-js"></a>Criar um app Hello, world (JS)
 
@@ -155,7 +157,7 @@ Agora você pode executar o app pressionando F5. O app será carregado e a pági
 ## <a name="summary"></a>Resumo
 
 
-Parabéns, você criou um app JavaScript para o Windows 10 e a UWP! Este é um exemplo incrivelmente simples, porém agora você pode começar a adicionar suas bibliotecas e estruturas JavaScript favoritas para criar seu próprio app. E como é um aplicativo UWP, você poderá publicá-lo na Loja. Para um exemplo de como estruturas de terceiros podem ser adicionadas, consulte estes projetos:
+Parabéns, você criou um app JavaScript para o Windows 10 e a UWP! Este é um exemplo incrivelmente simples, porém agora você pode começar a adicionar suas bibliotecas e estruturas JavaScript favoritas para criar seu próprio aplicativo. E como é um aplicativo UWP, você poderá publicá-lo na Loja. Para um exemplo de como estruturas de terceiros podem ser adicionadas, consulte estes projetos:
 
 * [Um jogo simples 2D UWP para a Windows Store, escrito em JavaScript e CreateJS](get-started-tutorial-game-js2d.md)
 * [Um jogo 3D UWP para a Windows Store, escrito em JavaScript e threeJS](get-started-tutorial-game-js3d.md)

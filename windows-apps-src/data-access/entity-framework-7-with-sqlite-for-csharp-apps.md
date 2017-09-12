@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: normesta
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
 description: "O Entity Framework (EF) é um mapeador relacional de objetos que permite trabalhar com dados relacionais usando-se objetos específicos de domínio."
 title: Entity Framework Core com SQLite para apps C#
-ms.author: markl
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQLite, c#, EF, estrutura de entidade
-ms.openlocfilehash: 015030774c7d148d3a9be757c80de827987347a9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 9d447b8a197ed7eaea0f991749064912dffb66d7
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="entity-framework-core-with-sqlite-for-c-apps"></a>Entity Framework Core com SQLite para apps C#
 

@@ -6,14 +6,19 @@ title: Caixa de texto
 label: Text box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 29ab04588088907a851700fcbd04a64bcea77d63
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: e3b39208db6cd0cb8954d773b704b68888cc5ff0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-box"></a>Caixa de texto
 
@@ -23,26 +28,20 @@ O controle TextBox permite que um usuário digite texto em um aplicativo. Em ger
 
 O controle TextBox tem vários recursos que podem simplificar a entrada de texto. Ele é fornecido com um menu de contexto familiar, integrado, com suporte para copiar e colar texto. O botão "Limpar tudo" permite que um usuário exclua rapidamente todo o texto que foi digitado. Ele também tem recursos de verificação ortográfica integrados e habilitados por padrão.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
-<li>[**Propriedade Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [propriedade Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
 
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use o controle **TextBox** para permitir que o usuário digite e edite texto não formatado, como em um formulário. Você pode usar a propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obter e definir o texto em um TextBox.
 
-Você pode tornar um TextBox somente leitura, mas deve ser um estado temporário e condicional. Se o texto nunca for editável, considere usar um [ **TextBlock** ](text-block.md).
+Você pode tornar um TextBox somente leitura, mas deve ser um estado temporário e condicional. Se o texto nunca for editável, considere usar um [TextBlock](text-block.md).
 
-Use o controle [**PasswordBox**](password-box.md) para receber uma senha ou outros dados particulares, como um número de CPF. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido.
+Use um controle [PasswordBox](password-box.md) para coletar uma senha ou outros dados particulares, como números de documentos. Uma caixa de senha é semelhante a uma caixa para entrada de texto, exceto pelo fato de gerar marcadores no lugar do texto inserido.
 
-Use o controle [**AutoSuggestBox**](auto-suggest-box.md) para permitir que o usuário insira termos de pesquisa ou para mostrar ao usuário uma lista de sugestões das quais escolher ao digitarem.
+Use o controle [AutoSuggestBox](auto-suggest-box.md) para permitir que o usuário insira termos de pesquisa ou para mostrar ao usuário uma lista de sugestões das quais escolher ao digitarem.
 
-Use [ **RichEditBox** ](rich-edit-box.md) para exibir e editar arquivos Rich Text.
+Use uma [RichEditBox](rich-edit-box.md) para exibir e editar arquivos Rich Text.
 
 Para obter mais informações sobre como escolher o controle de texto certo, consulte o artigo [Controles de texto](text-controls.md).
 
@@ -104,8 +103,8 @@ IsEnabled
 ### <a name="enable-multi-line-input"></a>Habilitar a entrada de várias linhas
 
 Há duas propriedades que você pode usar para determinar se a caixa de texto exibe texto em mais de uma linha. Em geral, as duas propriedades são definidas para fazer uma caixa de texto de várias linhas.
-- Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) como **true**.
-- Para habilitar o encapsulamento de texto, defina a propriedade [**TextWrapping**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
+- Para que a caixa de texto permita e exiba os caracteres newline ou return, defina a propriedade [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) como **true**.
+- Para habilitar a disposição do texto, defina a propriedade [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) como **Wrap**. Isso faz com que o texto seja encapsulado ao atingir a borda da caixa de texto, independente dos caracteres separadores de linha.
 
 > **Observação**&nbsp;&nbsp;TextBox e RichEditBox não dão suporte ao valor **WrapWholeWords** para suas propriedades TextWrapping. Se você tentar usar WrapWholeWords como um valor para TextBox.TextWrapping ou RichEditBox.TextWrapping, será gerada uma exceção de argumento inválido.
 
@@ -282,6 +281,6 @@ Para obter mais informações e exemplos, consulte [Usar o escopo de entrada par
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Diretrizes para entrada de texto](text-controls.md)
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

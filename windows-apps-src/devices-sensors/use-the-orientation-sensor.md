@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: "Usar sensor de orientação"
 description: "Saiba como usar os sensores de orientação para determinar a orientação do dispositivo."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 435c2d7ca1bf2a256356c28a83d51e493d98e014
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2a354d4e3f26d0a8ac3678d4f07d606c7cf88cc5
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-orientation-sensor"></a>Usar o sensor de orientação
 
@@ -22,6 +24,11 @@ translationtype: HT
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
 -   [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)
+
+**Exemplos**
+
+-   [Exemplo de sensor de orientação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
+-   [Exemplo de sensor de orientação simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
 Saiba como usar os sensores de orientação para determinar a orientação do dispositivo.
 
@@ -125,7 +132,7 @@ Esta seção está dividida em duas subseções. A primeira subseção levará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, pode substituir `namespace App1` por `namespace OrientationSensorCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **OrientationSensorCS**, poderá substituir `namespace App1` por `namespace OrientationSensorCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 
@@ -295,7 +302,7 @@ Esta seção está dividida em duas subseções. A primeira subseção guiará v
     }
 ```
 
-Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, pode substituir `namespace App1` por `namespace SimpleOrientationCS`.
+Você precisará substituir o nome do namespace no trecho anterior pelo nome que você deu a seu projeto. Por exemplo, se você criou um projeto denominado **SimpleOrientationCS**, poderá substituir `namespace App1` por `namespace SimpleOrientationCS`.
 
 -   Abra o arquivo MainPage.xaml e substitua o conteúdo original pelo XML abaixo.
 
@@ -348,9 +355,3 @@ Os novos valores são gravados em um TextBlock encontrado no XAML do projeto.
 <TextBlock HorizontalAlignment="Left" Height="24" Margin="8,8,0,0" TextWrapping="Wrap" Text="Current Orientation:" VerticalAlignment="Top" Width="101" Foreground="#FFF8F7F7"/>
  <TextBlock x:Name="txtOrientation" HorizontalAlignment="Left" Height="24" Margin="118,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="175" Foreground="#FFFEFAFA"/>
 ```
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-* [Amostra de OrientationSensor](http://go.microsoft.com/fwlink/p/?linkid=241382)
-* [Amostra de sensor SimpleOrientation](http://go.microsoft.com/fwlink/p/?linkid=241383)
- 

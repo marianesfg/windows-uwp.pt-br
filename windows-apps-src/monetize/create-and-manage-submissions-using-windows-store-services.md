@@ -4,19 +4,21 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Use a API de envio da Windows Store para criar e gerenciar de forma programática os envios de apps que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Criar e gerenciar envios
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store
-ms.openlocfilehash: ca8bb623d06da0001b1b0751a5ac1ccc310bbd84
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: cea6f7c1f542fa91506063331e8c68345c4cca54
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
 
 
-Use a *API de envio da Windows Store* para consultar e criar programaticamente os envios de aplicativos, complementos (também conhecidos como produtos no aplicativo ou IAPs) e pacotes de pré-lançamento para a sua conta e a para a conta do Centro de Desenvolvimento do Windows da sua organização. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
+Use a *API de envio da Windows Store* para consultar programaticamente e criar os envios de aplicativos, complementos e pacotes de pré-lançamento para a sua conta ou a conta da sua empresa do Centro de Desenvolvimento do Windows. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
 As etapas a seguir descrevem o processo completo de usar a API de envio da Windows Store:
 
@@ -26,13 +28,11 @@ As etapas a seguir descrevem o processo completo de usar a API de envio da Windo
 
 
 <span id="not_supported" />
->**Observações importantes**
+> [!Important]
+> Se você usar essa API para criar um envio para um app, um pacote de pré-lançamento ou um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo envio.
 
-> * Essa API pode ser usada somente para contas do Centro de Desenvolvimento do Windows que têm permissão para usar a API. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
-<br/><br/>
->* Se você usar essa API para criar um envio para um app, um pacote de pré-lançamento ou um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo envio.
-<br/><br/>
-> * Essa API não pode ser usada com aplicativos ou complementos que usam determinados recursos que foram introduzidos no painel do Centro de Desenvolvimento em agosto de 2016, incluindo (mas não se limitando a) atualizações obrigatórias de aplicativos e complementos de consumíveis gerenciados pela Loja. Se você usar a API de envio da Windows Store com um aplicativo ou um complemento que usa um desses recursos, a API retornará um código de erro 409. Nesse caso, você deve usar o painel para gerenciar os envios para o aplicativo ou um complemento.
+> [!NOTE]
+Essa API não pode ser usada com aplicativos ou complementos que usam determinados recursos que foram introduzidos no painel do Centro de Desenvolvimento em agosto de 2016, incluindo (mas não se limitando a) atualizações obrigatórias de aplicativos e complementos de consumíveis gerenciados pela Loja. Se você usar a API de envio da Windows Store com um aplicativo ou um complemento que usa um desses recursos, a API retornará um código de erro 409. Nesse caso, você deve usar o painel para gerenciar os envios para o aplicativo ou um complemento.
 
 
 <span id="prerequisites" />
@@ -40,7 +40,7 @@ As etapas a seguir descrevem o processo completo de usar a API de envio da Windo
 
 Antes de começar a escrever o código para chamar a API de envio da Windows Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account) sem nenhum custo adicional.
 
 * Você deve [associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento do Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account) e obter a ID de locatário, a ID do cliente e a chave. Você precisa desses valores para obter um token de acesso do Azure AD, que você usará em chamadas para a API de envio da Windows Store.
 
@@ -59,17 +59,18 @@ Antes de começar a escrever o código para chamar a API de envio da Windows Sto
 <span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
 ### <a name="how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account"></a>Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows
 
-Antes de usar a API de envio da Windows Store, você deverá associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de envio da Windows Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que você passa para a API.
+Antes de usar a API de envio da Windows Store, você deverá associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de envio da Windows Store. Você precisa da ID do locatário, da ID do cliente e da chave para obter um token de acesso do Azure AD que será passado para a API.
 
->**Observação**&nbsp;&nbsp;Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
+> [!NOTE]
+> Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
-1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização. Para obter instruções detalhadas, consulte [Gerenciar usuários de conta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e [associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar envios de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar envios de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Adicionar aplicativos do Azure AD**. Para obter mais informações, consulte [Adicionar aplicativos do Azure AD à sua conta do Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
 
 3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
-4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte as informações sobre o gerenciamento de chaves em [Adicionar e gerenciar aplicativos Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte [Gerenciar chaves para um aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
 <span id="obtain-an-azure-ad-access-token" />
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>Etapa 2: Obter um token de acesso do Azure AD
@@ -100,7 +101,8 @@ Para obter exemplos que demonstram como obter um token de acesso usado código C
 
 Depois que tiver um token de acesso do Azure AD, você poderá chamar métodos na API de envio da Windows Store. A API inclui muitos métodos que são agrupados em cenários de aplicativos, complementos e pacotes de pré-lançamento. Para criar ou atualizar os envios, você normalmente chama vários métodos na API de envio da Windows Store em uma ordem específica. Para obter informações sobre cada cenário e a sintaxe de cada método, consulte os artigos na tabela a seguir.
 
->**Observação**&nbsp;&nbsp;Depois de obter um token de acesso, você tem 60 minutos para chamar métodos na API de envio da Windows Store antes que ele expire.
+> [!NOTE]
+> Depois de obter um token de acesso, você tem 60 minutos para chamar métodos na API de envio da Windows Store antes que o token expire.
 
 | Cenário       | Descrição                                                                 |
 |---------------|----------------------------------------------------------------------|
@@ -113,11 +115,15 @@ Depois que tiver um token de acesso do Azure AD, você poderá chamar métodos n
 
 Os artigos a seguir fornecem exemplos detalhados de código que demonstram como usar a API de envio da Windows Store em várias linguagens de programação diferentes:
 
-* [Exemplo de código C#](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplos de código em Python](python-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de C#: envios de apps, complementos e versões de pré-lançamento](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de C#: envio de aplicativo com opções de jogo e trailers](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Exemplo de Java: envios de apps, complementos e versões de pré-lançamento](java-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de Java: envio de aplicativo com opções de jogo e trailers](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Exemplo de Python: envios para apps, complementos e versões de pré-lançamento](python-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de Python: envio de aplicativo com opções de jogo e trailers](python-code-examples-for-submissions-game-options-and-trailers.md)
 
->**Observação**&nbsp;&nbsp;além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre o envio da Windows Store API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja. Para obter mais informações, consulte nosso [StoreBroker página no GitHub](https://aka.ms/storebroker).
+> [!NOTE]
+> Além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre API de envio da Windows Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja. Para obter mais informações, consulte nosso [StoreBroker página no GitHub](https://aka.ms/storebroker).
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

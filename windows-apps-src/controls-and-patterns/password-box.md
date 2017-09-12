@@ -7,14 +7,19 @@ dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0dee750042edc3c80c993d29c2f6f29cf6b2a130
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 742d72d1d62cdb1bc2cd0397589d167cd6d3cfe2
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="password-box"></a>Caixa de senha
 
@@ -22,20 +27,11 @@ translationtype: HT
 
 Caixa de senha é uma caixa de entrada de texto que oculta os caracteres digitados nela, para fins de privacidade. Uma caixa de senha se parece com uma caixa de texto, exceto que ela renderiza caracteres de espaço reservado no lugar do texto que foi inserido. Você pode configurar o caractere de espaço reservado.
 
+> **APIs importantes**: [classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [propriedade Password](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx), [propriedade PasswordChar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx), [propriedade PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx), [evento PasswordChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)
+
 Por padrão, a caixa de senha oferece uma maneira para o usuário visualizar a senha pressionando um botão de revelar. Você pode desabilitar o botão de revelação ou fornecer um mecanismo alternativo para revelar a senha, como uma caixa de seleção.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
-<li>[**Propriedade Password**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.password.aspx)</li>
-<li>[**Propriedade PasswordChar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchar.aspx)</li>
-<li>[**Propriedade PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx)</li>
-<li>[**Evento PasswordChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordchanged.aspx)</li>
-</ul>
-</div>
-
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use um controle **PasswordBox** para coletar uma senha ou outros dados particulares, como números de documentos.
 
@@ -191,6 +187,6 @@ Para obter mais informações sobre como usar escopos de entrada, consulte [Usar
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [Diretrizes para entrada de texto](text-controls.md)
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

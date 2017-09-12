@@ -5,20 +5,22 @@ description: "Saiba como usar o namespace Windows.Services.Store para trabalhar 
 title: "Habilitar compras de complementos consumíveis"
 keywords: "windows 10, uwp, consumíveis, complementos, compras no aplicativo, IAPs, Windows.Services.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 534c03287d39916d5fa357307b7479f895240b02
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 6fe73068f3a4a0588e3d7959054879a92ff23c0f
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumíveis
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar o atendimento de complementos consumíveis do usuário em seus aplicativos UWP (complementos também são conhecidos como produtos no aplicativo ou IAPs). Use complementos consumíveis para itens que podem ser comprados, usados e comprados novamente. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos.
+Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar o atendimento de complementos consumíveis do usuário em seus aplicativos UWP. Use complementos consumíveis para itens que podem ser comprados, usados e comprados novamente. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos.
 
 > [!NOTE]
-> Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [este artigo](enable-consumable-in-app-product-purchases.md).
 
 ## <a name="overview-of-consumable-add-ons"></a>Visão geral dos complementos consumíveis
 
@@ -32,9 +34,6 @@ Aplicativos destinados ao Windows 10, versão 1607, ou posterior podem oferecer 
 
   Por exemplo, se o complemento representar uma quantidade inicial de 100 moedas em um jogo e o usuário consumir 10 moedas, o aplicativo relatará para a Loja que 10 unidades do complemento foram providenciadas, e a Loja atualizará o saldo restante. Depois que o usuário tiver consumido todas as 100 moedas, o usuário poderá comprar o complemento de 100 moedas novamente.
 
-  > [!NOTE]
-  > Os consumíveis gerenciados pela Loja estão disponíveis a partir do Windows 10, versão 1607. A capacidade de criar um produto consumível gerenciado pela Loja no painel do Centro de Desenvolvimento do Windows estará disponível em breve.
-
 Para oferecer um complemento consumível a um usuário, siga este processo geral:
 
 1. Permita que os usuários [comprem o complemento](enable-in-app-purchases-of-apps-and-add-ons.md) do seu aplicativo.
@@ -46,9 +45,10 @@ A qualquer momento, você também pode [obter o saldo restante](enable-consumabl
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows com complementos consumíveis (também conhecidos como produtos no aplicativo ou IAPs), e esse aplicativo foi publicado e disponibilizado na Loja. Pode ser um aplicativo que você deseja liberar para os clientes ou pode ser um aplicativo básico que atenda aos requisitos mínimos [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que você esteja usando somente para testes. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um complemento para o complemento consumível para o app](../publish/add-on-submissions.md) no painel do Centro de Desenvolvimento.
 
-O código nestes exemplos pressupõem que:
+O código nestes exemplos pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
@@ -56,7 +56,7 @@ O código nestes exemplos pressupõem que:
 Para obter um app de exemplo completo, consulte o [exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
-> Se você tiver um aplicativo da área de trabalho que utilize a [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+> Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
 ## <a name="report-a-consumable-add-on-as-fulfilled"></a>Declarar um complemento consumível como providenciado

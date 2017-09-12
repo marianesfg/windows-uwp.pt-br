@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
+ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/24/2017
 ---
-
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
 
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 02/07/2017
 Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.
 
 > [!Important]
->  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo =não são declaradas no manifesto.
+>  Este artigo é específico para tarefas em segundo plano fora do processo. Tarefas em segundo plano no processo não são declaradas no manifesto.
 
-As tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo, ou seu aplicativo não será capaz de registrá-los (uma exceção será gerada). Além disso, as tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo para passar certificação.
+As tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo ou ele não será capaz de registrá-las (uma exceção será gerada). Além disso, as tarefas em segundo plano fora do processo devem ser declaradas no manifesto do aplicativo para passar certificação.
 
 Este tópico considera que você criou uma ou mais classes de tarefa em segundo plano e que o seu aplicativo registra cada tarefa em segundo plano para execução em resposta a pelo menos um gatilho.
 
@@ -62,8 +61,7 @@ O seguinte trecho foi retirado do [exemplo de tarefa de segundo plano](http://go
  </Application>
 ```
 
-## <a name="add-a-background-task-extension"></a>Adicionar uma extensão de tarefa em segundo plano
-
+## <a name="add-a-background-task-extension"></a>Adicionar uma extensão de tarefa em segundo plano  
 
 Declare sua primeira tarefa em segundo plano.
 
@@ -108,12 +106,11 @@ Copie o código no elemento Extensions (você adicionará atributos nas próxima
 </Extension>
 ```
 
-
-## <a name="add-additional-background-task-extensions"></a>Adicionar outras extensões de tarefa em segundo plano
+### <a name="add-multiple-background-task-extensions"></a>Adicionar múltiplas extensões de tarefa em segundo plano
 
 Repita a etapa 2 para cada classe adicional de tarefa em segundo plano registrada pelo aplicativo.
 
-O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do seu aplicativo.
+O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509). Ele ilustra o uso de 2 classes de tarefa em segundo plano com um total de 3 tipos de gatilho. Copie a seção Extensões desse exemplo e modifique-a conforme o necessário para declarar tarefas em segundo plano no manifesto do aplicativo.
 
 ```xml
 <Applications>
@@ -154,17 +151,22 @@ O exemplo a seguir mostra o elemento Application completo da [amostra de tarefa 
 </Applications>
 ```
 
-## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Declare sua tarefa em segundo plano para ser executada em um processo diferente
+## <a name="declare-where-your-background-task-will-run"></a>Declarar onde a tarefa em segundo plano será executada
 
-Nova funcionalidade no Windows 10, versão 1507, permite que você execute a tarefa em segundo plano em um processo diferente do BackgroundTaskHost.exe (o processo em que tarefas em segundo plano são executadas por padrão).  Há duas opções: executar no mesmo processo de seu aplicativo em primeiro plano; executar em uma instância do BackgroundTaskHost.exe separada de outras instâncias das tarefas em segundo plano do mesmo aplicativo.  
+Você pode especificar onde as tarefas em segundo plano são executadas:
 
-### <a name="run-in-the-foreground-application"></a>Executar no aplicativo em primeiro plano
+* Por padrão, elas são executadas no processo BackgroundTaskHost.exe.
+* No mesmo processo do aplicativo em primeiro plano.
+* Use `ResourceGroup` para inserir diversas tarefas em segundo plano no mesmo processo de hospedagem ou para separá-las em processos diferentes.
+* Use `SupportsMultipleInstances` para executar o processo em segundo plano em um novo processo que obtém seus próprio limites de recursos (cpu, memória) sempre que um novo gatilho é acionado.
 
-Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada no mesmo processo como o aplicativo em primeiro plano. Observe o atributo `Executable`:
+### <a name="run-in-the-same-process-as-your-foreground-application"></a>Execute no mesmo processo do aplicativo em primeiro plano.
+
+Aqui está o XML de exemplo que declara uma tarefa em segundo plano, a qual é executada no mesmo processo como o aplicativo em primeiro plano.
 
 ```xml
 <Extensions>
-    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask">
         <BackgroundTasks>
             <Task Type="systemEvent" />
         </BackgroundTasks>
@@ -172,10 +174,9 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 </Extensions>
 ```
 
-> [!Note]
-> Use o elemento Executável apenas com tarefas em segundo plano que o exigem, como [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
+Ao especificar o **EntryPoint**, o aplicativo recebe um retorno de chamada para o método especificado quando o gatilho é acionado. Se você não especificar um **EntryPoint**, o aplicativo recebe o retorno de chamada por meio de [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).  Consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) para obter mais detalhes.
 
-### <a name="run-in-a-different-background-host-process"></a>Executar em um processo de host de segundo plano diferente
+### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>Especifique onde sua tarefa em segundo plano é executada com o atributo ResourceGroup.
 
 Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é executada em um processo do BackgroundTaskHost.exe, mas em um separado de outras instâncias de tarefas em segundo plano do mesmo aplicativo. Observe o atributo `ResourceGroup`, que identifica quais tarefas em segundo plano serão executadas juntas.
 
@@ -209,11 +210,33 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 </Extensions>
 ```
 
+### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Execute em um novo processo sempre que um gatilho é acionado com o atributo SupportsMultipleInstances
+
+Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar esse atributo, você deve possuir a versão '10.0.15063' (Atualização do Windows 10 para Criadores) do SDK ou superior.
+
+```xml
+<Package
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+    ...
+    <Applications>
+        <Application ...>
+            ...
+            <Extensions>
+                <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask">
+                    <BackgroundTasks uap4:SupportsMultipleInstances=“True”>
+                        <Task Type="timer" />
+                    </BackgroundTasks>
+                </Extension>
+            </Extensions>
+        </Application>
+    </Applications>
+```
+
+> [!NOTE]
+> Você não pode especificar `ResourceGroup` ou `ServerName` juntamente com `SupportsMultipleInstances`.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-
 
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-

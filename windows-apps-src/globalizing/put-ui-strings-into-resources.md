@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9f4ebe843b30d5bc408a705cfc9dda5d6731d4d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a3e224fc51245a5f91c29da2d745a3740029cda9
+ms.sourcegitcommit: 11664964e548a2af30d6e176c515cdbf330934ac
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="put-ui-strings-into-resources"></a>Colocar cadeias de caracteres da interface do usuário em recursos
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -65,10 +67,10 @@ Você precisa associar cada controle que necessita de texto localizado ao arquiv
 
 Para o nome do recurso, você dá o valor do atributo **Uid**, e também especifica qual propriedade obterá a cadeia de caracteres traduzida (neste caso a propriedade Text). Você poderá especificar outra propriedade ou outros valores para culturas diferentes, como Greeting.Width, mas seja cauteloso com essas propriedades relacionadas ao layout. Lembre-se, você deve se esforçar para permitir que os controles sejam dispostos dinamicamente, com base na tela do dispositivo.
 
-Observe que as propriedades anexadas são tratadas de maneira diferente em arquivos resw, como AutomationPeer.Name. Você precisa escrever explicitamente o namespace da seguinte forma:
+Observe que as propriedades anexadas são tratadas de maneira diferente em arquivos resw, como AutomationProperties.Name. Você precisa escrever explicitamente o namespace da seguinte forma:
 
 ```XML
-MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
+MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 ```
 
 ## <a name="add-string-resource-identifiers-to-code-and-markup"></a>Adicione identificadores de recurso ao código e à marcação.
@@ -101,7 +103,9 @@ auto str = loader->GetString("Farewell");
 
 3.  Crie mais uma pasta, denominada "fr-FR", para francês (França). Crie um novo arquivo de recursos e adicione o seguinte:
 
-    strings/fr-FR/Resources.resw ![adicionar recursos, francês](images/addresource-fr-fr.png)
+    strings/fr-FR/Resources.resw
+    
+    ![adicionar recurso, francês](images/addresource-fr-fr.png)
 
 ## <a name="build-and-run-the-app"></a>Compile e execute o aplicativo.
 

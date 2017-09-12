@@ -4,18 +4,22 @@ ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: "Saiba como usar o namespace Windows.Services.Store para obter informações de produto relacionados à Loja para o aplicativo atual ou um de seus complementos."
 title: "Obter informações do produto para apps e complementos"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, Windows.Services.Store
-ms.openlocfilehash: 5ce47241bad229d0f44e14d3f9332603e6776f2f
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: e603d13c4ac535f2d44d364af0f66fde522aef67
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obter informações do produto para apps e complementos
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acessar informações relacionadas à Loja para o aplicativo atual ou um de seus complementos (também conhecidos como produtos no aplicativo ou IAPs). Os exemplos neste artigo a seguir demonstram como fazer isso para diferentes cenários. Para obter um exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acessar informações relacionadas à Loja para o aplicativo atual ou um de seus complementos. Os exemplos neste artigo a seguir demonstram como fazer isso para diferentes cenários.
+
+Para obter um app de exemplo completo, consulte o [exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
 > Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
@@ -24,14 +28,13 @@ Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar m�
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows, e esse aplicativo foi publicado e disponibilizado na Loja. Pode ser um aplicativo que você deseja liberar para os clientes ou pode ser um aplicativo básico que atenda aos requisitos mínimos [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que você esteja usando somente para testes. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Se você quiser obter informações de produto para um complemento para o aplicativo, também deverá [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
 
-O código nestes exemplos pressupõem que:
+O código nestes exemplos pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
-
-Para obter um app de exemplo completo, consulte o [exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
 > Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado nesses exemplos para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).

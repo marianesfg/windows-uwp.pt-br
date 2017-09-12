@@ -6,14 +6,20 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 370c5266277ff442f26c9aeb951d869ec70b31c5
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="radio-buttons"></a>Botões de opção
 
@@ -21,21 +27,13 @@ translationtype: HT
 
 Botões de opção permitem que os usuários selecionem uma opção entre duas ou mais escolhas. Cada opção é representada por um botão de opção; um usuário pode selecionar apenas um botão de opção em um grupo de botões de opção.
 
-(Se você tem curiosidade em saber a origem do nome, os botões de opção, também conhecidos como botões de rádio, receberam esse nome por causa dos botões predefinidos de canais em um rádio.
+> **APIs importantes**: [classe RadioButton](https://msdn.microsoft.com/library/windows/apps/br227544), [evento Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [propriedade IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+
+(Se você tem curiosidade em saber a origem do nome, os botões de opção, também conhecidos como botões de rádio, receberam esse nome por causa dos botões predefinidos de canais em um rádio.)
 
 ![Botões de opção](images/controls/radio-button.png)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
-<li>[**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**Propriedade IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
-</ul>
-</div>
-
-
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use botões de opção para apresentar aos usuários duas ou mais opções mutuamente exclusivas, conforme ilustrado aqui.
 
@@ -68,7 +66,7 @@ Botões de opção nas configurações do navegador Microsoft Edge.
 
 Botões de opção funcionam em grupos. Há 2 maneiras de agrupar controles de botão de opção:
 - Colocá-los dentro do mesmo contêiner pai.
-- Defina a propriedade [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
+- Defina a propriedade [GroupName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) em cada botão de opção como o mesmo valor.
 
 > **Observação**&nbsp;&nbsp;Um grupo de botões de opção se comportam como um controle único quando acessados pelo teclado. Apenas a opção selecionada pode ser acessada usando a tecla Tab, mas os usuários podem alternar pelo grupo usando as teclas de seta.
 
@@ -158,7 +156,7 @@ Os grupos de botões de opção têm a seguinte aparência.
 
 ![Botões de opção em dois grupos](images/radio-button-groups.png)
 
-Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um botão de opção está marcado, sua propriedade [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) é **true**. Quando um botão de opção está desmarcado, sua propriedade **IsChecked** é **false**. Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente, definindo sua propriedade IsChecked como **false**.
+Um botão de opção tem dois estados: *marcado* ou *desmarcado*. Quando um botão de opção está marcado, sua propriedade [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) é **true**. Quando um botão de opção está desmarcado, sua propriedade **IsChecked** é **false**. Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente, definindo sua propriedade IsChecked como **false**.
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -193,4 +191,4 @@ Esta ilustração mostra a maneira correta de posicionar e espaçar os botões d
 
 
 **Para desenvolvedores (XAML)**
-- [**Classe Windows.UI.Xaml.Controls RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
+- [Classe Windows.UI.Xaml.Controls RadioButton](https://msdn.microsoft.com/library/windows/apps/br227544)

@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0fd2e03c58ac5ffa575cf2381df4c652422efea
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 230480343a3f63ece4935e34101b1d3ec5408b84
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="accessibility-overview"></a>Visão geral de acessibilidade  
 
@@ -22,11 +24,12 @@ translationtype: HT
 
 Este artigo é uma visão geral dos conceitos e tecnologias relacionados a cenários de acessibilidade de aplicativos da Plataforma Universal do Windows (UWP).
 
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
 <span id="Accessibility_and_your_app"/>
 <span id="accessibility_and_your_app"/>
 <span id="ACCESSIBILITY_AND_YOUR_APP"/>
-## <a name="accessibility-and-your-app"></a>Acessibilidade e seu aplicativo  
-Há muitas deficiências ou problemas possíveis, incluindo limites de movimento, visão, percepção de cores, audição, fala, cognição e alfabetização. Entretanto, você pode atender à maioria das exigências seguindo as diretrizes oferecidas aqui. Isso significa fornecer:
+## Acessibilidade e seu aplicativo: há muitas deficiências ou problemas possíveis, incluindo limites de movimento, visão, percepção de cores, audição, fala, cognição e alfabetização. Entretanto, você pode atender à maioria das exigências seguindo as diretrizes oferecidas aqui. Isso significa fornecer:
 
 * Suporte a interações de teclado e leitores de tela.
 * Suporte a personalização do usuário, como fonte, ajuste de zoom (ampliação), cor e configurações de alto contraste.
@@ -181,4 +184,4 @@ O conteúdo do Microsoft DirectX hospedado em uma interface do usuário XAML (us
 * [Design de acessibilidade](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Amostra de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Acessibilidade](accessibility.md)
-* [Introdução ao Narrador](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
+* [Introdução ao Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

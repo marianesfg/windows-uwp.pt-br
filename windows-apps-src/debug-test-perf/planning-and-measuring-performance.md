@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planejando para o desempenho
 description: "Os usuários esperam que seus apps mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="planning-for-performance"></a>Planejando para o desempenho
 
@@ -85,7 +87,7 @@ Agora você pode usar suas metas de desempenho para influenciar o design de seu 
 -   Maximize o tempo de análise e carregamento e a eficiência da memória para cada página da interface do usuário do seu aplicativo (especialmente a página inicial) [otimizando sua marcação XAML](optimize-xaml-loading.md). Resumindo, adie o carregamento da interface do usuário e do código até que seja necessário.
 -   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), crie todos os itens do mesmo tamanho e use o máximo de [técnicas de otimização de ListView e GridView](optimize-gridview-and-listview.md) possível.
 -   Declare a interface do usuário na forma de marcação, que a estrutura pode carregar e reutilizar em blocos, em vez de construí-la imperativamente em código.
--   Recolha os elementos da interface do usuário até que o usuário precise deles. Consulte a propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992).
+-   Atrase a criação de elementos da interface do usuário até que o usuário precise deles. Veja o atributo [**x:Load**](../xaml-platform/x-load-attribute.md).
 -   Prefira as transições de tema e animações às animações de storyboard. Para obter mais informações, consulte [Visão geral das animações](https://msdn.microsoft.com/library/windows/apps/Mt187350). Lembre-se de que as animações de storyboard requerem atualizações constantes na tela e mantêm ativo o pipeline de CPU e elementos gráficos. Para preservar a bateria, não deixe animações em execução se o usuário não estiver interagindo com o aplicativo.
 -   As imagens que você carregar devem ser carregadas em um tamanho apropriado ao modo de exibição de apresentação, usando o método [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210).
 
@@ -195,4 +197,3 @@ Se alterações forem necessárias, faça-as e volte para a instrumentação ou 
 ## <a name="optimizing"></a>Otimização
 
 Otimize somente os caminhos de código críticos de desempenho em seu aplicativo: os que exigem maior dedicação de tempo. A criação do perfil lhe dirá quais são eles. Frequentemente, há uma compensação entre a criação de um software que siga boas práticas de design e a geração de código que opere com o máximo de otimização. Geralmente, é melhor priorizar a produtividade do desenvolvedor e um bom design de software em áreas onde o desempenho não é uma preocupação.
-

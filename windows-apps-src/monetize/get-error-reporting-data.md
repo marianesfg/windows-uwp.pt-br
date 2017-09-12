@@ -4,20 +4,22 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais."
 title: "Obter dados de relatório de erros do seu aplicativo"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, erros"
-ms.openlocfilehash: dc5c4092368c0b395e42be122a9e0e7feec8f03e
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 68e54c955d865669907c68d7cf1ef5a0f8986d8d
+ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2017
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obter dados de relatório de erros do seu aplicativo
 
 Use este método na API de análise da Windows Store para obter dados de relatório de erros agregados do seu app no formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
 
-Você pode recuperar informações adicionais sobre erros usando os métodos [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) e [obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md).
+Você pode recuperar informações de erro adicionais usando os métodos [obter detalhes de erro](get-details-for-an-error-in-your-app.md), [obter rastreamento de pilha](get-the-stack-trace-for-an-error-in-your-app.md) e [baixar arquivo CAB](download-the-cab-file-for-an-error-in-your-app.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -168,6 +170,7 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Relatório de integridade](../publish/health-report.md)
 * [Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)
 * [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter aquisições de app](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)

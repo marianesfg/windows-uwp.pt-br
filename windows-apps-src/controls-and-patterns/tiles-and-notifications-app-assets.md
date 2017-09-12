@@ -6,14 +6,16 @@ ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 54ad78d5799a96ddcec7b060704ee198e0bf8db5
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>Diretrizes para ativos de bloco e ícone
 
@@ -123,7 +125,7 @@ Para blocos largos, limite a largura do ícone a 66% e a altura a 50% do tamanho
 
 ![razões de dimensionamento de bloco largo](images/assetguidance11.png)
 
-Para blocos grandes, limite a largura do ícone e a altura a 50% do tamanho do bloco:
+Para blocos grandes, limite a largura do ícone a 66% e a altura a 50% do tamanho do bloco:
 
 ![razões de tamanho de bloco grande](images/assetguidance12.png)
 
@@ -181,24 +183,6 @@ Estas são recomendações de tamanho para ativos baseados no destino, em escala
 
 ![dimensionamento de ativos baseado em destino na escala de 100%](images/assetguidance23.png)
 
-**Ativos de aplicativo de modelo icônico**
-
-O modelo icônico (também conhecido como o modelo "IconWithBadge") permite que você exiba uma imagem pequena no centro do bloco. O Windows 10 dá suporte ao modelo em telefone e tablet/desktop. (Saiba como criar blocos icônicos no [artigo sobre modelos de blocos especiais](tiles-and-notifications-special-tile-templates-catalog.md).)
-
-Os aplicativos que usam o modelo icônico, como Mensagens, Telefone e Loja, têm ativos baseados no destino que podem apresentar um selo (com o contador dinâmico). Assim como acontece com outros ativos baseados no destino, nenhum preenchimento é necessário. Ativos icônicos não fazem parte do manifesto do aplicativo, e sim de uma carga de bloco dinâmico. Os ativos são dimensionados para que caibam e sejam centralizados em um contêiner de razão 3:2.
-
-![dimensionamento de ativos com e sem selo](images/assetguidance24.png)
-
-Para ativos quadrados, ocorre a centralização automática dentro do contêiner:
-
-![dimensionamento de ativo quadrado, com e sem selo](images/assetguidance25.png)
-
-Para ativos não quadrados, ocorrem a centralização horizontal/vertical automática e o ajuste à largura/altura do contêiner:
-
-![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26a.png)
-
-![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26b.png)
-
 ## <a name="splash-screen-assets"></a>Ativos de tela inicial
 
 
@@ -233,38 +217,217 @@ Caso opte por fornecer ativos de alto contraste, você precisa incluir dois conj
 
 É altamente recomendável, no mínimo, que você forneça ativos para os fatores de escala 100, 200 e 400. Fornecer ativos para todos os fatores de escala proporcionará a experiência ideal do usuário.
 
-**Ativos baseados na escala**
+<br/>
 
-| Categoria             | Nome do elemento      | Em escala de 100% | Em escala de 125% | Em escala de 150% | Em escala de 200% | Em escala de 400% |
-|----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
-| Pequeno                | Square71x71Logo   | 71x71         | 89x89         | 107x107       | 142x142       | 284x284       |
-| Médio               | Square150x150Logo | 150x150       | 188x188       | 225x225       | 300x300       | 600x600       |
-| Largo                 | Square310x150Logo | 310x150       | 388x188       | 465x225       | 620x300       | 1240x600      |
-| Largo (somente desktop) | Square310x310Logo | 310x310       | 388x388       | 465x465       | 620x620       | 1240x1240     |
-| Lista de aplicativos (ícone)      | Square44x44Logo   | 44x44         | 55x55         | 66x66         | 88x88         | 176x176       |
+<table>
+<thead>
+<tr><th colspan="3">Bloco pequeno (Square71x71Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">71x71</td>
+    <td>Square71x71Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>89x89</td>
+    <td>Square71x71Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>107x107</td>
+    <td>Square71x71Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>142x142</td>
+    <td>Square71x71Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>284x284</td>
+    <td>Square71x71Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
- 
+<br/>
 
-**Exemplos de nome de arquivo para ativos baseados na escala**
+<table>
+<thead>
+<tr><th colspan="3">Bloco médio (Square150x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">150x150</td>
+    <td>Square150x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>188x188</td>
+    <td>Square150x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>225x225</td>
+    <td>Square150x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>300x300</td>
+    <td>Square150x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>600x600</td>
+    <td>Square150x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| Categoria             | Nome do elemento      | Em escala de 100%                  | Em escala de 125%                  | Em escala de 150%                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|--------------------------------|
-| Pequeno                | Square71x71Logo   | AppNameSmallTile.scale-100.png | AppNameSmallTile.scale-125.png | AppNameSmallTile.scale-150.png |
-| Médio               | Square150x150Logo | AppNameMedTile.scale-100.png   | AppNameMedTile.scale-125.png   | AppNameMedTile.scale-150.png   |
-| Largo                 | Square310x150Logo | AppNameWideTile.scale-100.png  | AppNameWideTile.scale-125.png  | AppNameWideTile.scale-150.png  |
-| Largo (somente desktop) | Square310x310Logo | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale-125.png | AppNameLargeTile.scale-150.png |
-| Lista de aplicativos (ícone)      | Square44x44Logo   | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale-125.png | AppNameLargeTile.scale-150.png |
+<br/>
 
- 
+<table>
+<thead>
+<tr><th colspan="3">Bloco largo (Wide310x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">310x150</td>
+    <td>Wide310x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>388x188</td>
+    <td>Wide310x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>465x225</td>
+    <td>Wide310x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>620x300</td>
+    <td>Wide310x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>1240x600</td>
+    <td>Wide310x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| Categoria             | Nome do elemento      | Em escala de 200%                  | Em escala de 400%                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|
-| Pequeno                | Square71x71Logo   | AppNameSmallTile.scale-200.png | AppNameSmallTile.scale-400.png |
-| Médio               | Square150x150Logo | AppNameMedTile.scale-200.png   | AppNameMedTile.scale-400.png   |
-| Largo                 | Square310x150Logo | AppNameWideTile.scale-200.png  | AppNameWideTile.scale-400.png  |
-| Largo (somente desktop) | Square310x310Logo | AppNameLargeTile.scale-200.png | AppNameLargeTile.scale-400.png |
-| Lista de aplicativos (ícone)      | Square44x44Logo   | AppNameLargeTile.scale-200.png | AppNameLargeTile.scale-400.png |
+<br/>
 
+<table>
+<thead>
+<tr><th colspan="3">Bloco grande (Square310x310Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">310x310</td>
+    <td>Square310x310Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>388x388</td>
+    <td>Square310x310Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>465x465</td>
+    <td>Square310x310Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>620x620</td>
+    <td>Square310x310Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>1240x1240</td>
+    <td>Square310x310Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">Ícone da lista de aplicativos (Square44x44Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">44x44</td>
+    <td>Square44x44Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>55x55</td>
+    <td>Square44x44Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>66x66</td>
+    <td>Square44x44Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>88x88</td>
+    <td>Square44x44Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>176x176</td>
+    <td>Square44x44Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">Tela inicial (SplashScreen)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Escala 100%</td>
+    <td width="20%">620x300</td>
+    <td>SplashScreen.scale-100.png</td>
+</tr>
+<tr>
+    <td>Escala 125%</td>
+    <td>775x375</td>
+    <td>SplashScreen.scale-125.png</td>
+</tr>
+<tr>
+    <td>Escala 150%</td>
+    <td>930x450</td>
+    <td>SplashScreen.scale-150.png</td>
+</tr>
+<tr>
+    <td>Escala 200%</td>
+    <td>1240x600</td>
+    <td>SplashScreen.scale-200.png</td>
+</tr>
+<tr>
+    <td>Escala 400%</td>
+    <td>2480x1200</td>
+    <td>SplashScreen.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
  
 
 **Ativos baseados no destino**
@@ -275,22 +438,22 @@ Os ativos baseados no destino são usados em vários fatores de escala. O nome d
 
 A seguinte tabela lista todos os tamanhos de ativos baseados no destino e os exemplos de nome de arquivo correspondentes:
 
-| Tamanho do ativo | Exemplo de nome de arquivo                 |
-|------------|-----------------------------------|
-| 16x16\*    | AppNameAppList.targetsize-16.png  |
-| 24x24\*    | AppNameAppList.targetsize-24.png  |
-| 32x32\*    | AppNameAppList.targetsize-32.png  |
-| 48x48\*    | AppNameAppList.targetsize-48.png  |
-| 256x256\*  | AppNameAppList.targetsize-256.png |
-| 20x20      | AppNameAppList.targetsize-20.png  |
-| 30x30      | AppNameAppList.targetsize-30.png  |
-| 36x36      | AppNameAppList.targetsize-36.png  |
-| 40x40      | AppNameAppList.targetsize-40.png  |
-| 60x60      | AppNameAppList.targetsize-60.png  |
-| 64x64      | AppNameAppList.targetsize-64.png  |
-| 72x72      | AppNameAppList.targetsize-72.png  |
-| 80x80      | AppNameAppList.targetsize-80.png  |
-| 96x96      | AppNameAppList.targetsize-96.png  |
+| Tamanho do ativo | Exemplo de nome de arquivo                  |
+|------------|------------------------------------|
+| 16x16\*    | Square44x44Logo.targetsize-16.png  |
+| 24x24\*    | Square44x44Logo.targetsize-24.png  |
+| 32x32\*    | Square44x44Logo.targetsize-32.png  |
+| 48x48\*    | Square44x44Logo.targetsize-48.png  |
+| 256x256\*  | Square44x44Logo.targetsize-256.png |
+| 20x20      | Square44x44Logo.targetsize-20.png  |
+| 30x30      | Square44x44Logo.targetsize-30.png  |
+| 36x36      | Square44x44Logo.targetsize-36.png  |
+| 40x40      | Square44x44Logo.targetsize-40.png  |
+| 60x60      | Square44x44Logo.targetsize-60.png  |
+| 64x64      | Square44x44Logo.targetsize-64.png  |
+| 72x72      | Square44x44Logo.targetsize-72.png  |
+| 80x80      | Square44x44Logo.targetsize-80.png  |
+| 96x96      | Square44x44Logo.targetsize-96.png  |
 
  
 
@@ -304,7 +467,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Ativos de bloco**
 
 -   Os ativos centralizados costumam ser usados em Iniciar para demonstrar seu aplicativo.
--   Formato do nome do arquivo: \*Tile.scale-\*.PNG
+-   Formato do nome do arquivo: [Square\Wide]\*x\*Logo.scale-\*.png
 -   Aplicativos afetados: todos os aplicativos UWP
 -   Usos:
     -   Blocos Iniciar padrão (desktop e dispositivos móveis)
@@ -317,7 +480,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Ativos de lista escalonáveis com fundo**
 
 -   Esses ativos são usados em superfícies que solicitam fatores de escala. Os ativos recebem o fundo do sistema ou vêm com sua própria cor da tela de fundo caso o aplicativo a inclua.
--   Formato do nome do arquivo: \*AppList.scale-\*.PNG
+-   Formato do nome do arquivo: Square44x44Logo.scale-\*.png
 -   Aplicativos afetados: todos os aplicativos UWP
 -   Usos:
     -   Iniciar lista de todos os aplicativos (desktop)
@@ -330,7 +493,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Ativos da lista de tamanho desejado com fundo**
 
 -   Esses são tamanhos de ativos corrigidos sem escala com níveis de ajuste. Usados principalmente para experiências herdadas. Os ativos são verificados pelo sistema.
--   Formato do nome do arquivo: \*AppList.targetsize-\*.PNG
+-   Formato do nome do arquivo: Square44x44Logo.targetsize-\*.png
 -   Aplicativos afetados: todos os aplicativos UWP
 -   Usos:
     -   Iniciar a lista de atalhos (desktop)
@@ -341,7 +504,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Ativos da lista de tamanho desejado sem fundo**
 
 -   Esses são ativos que não recebem fundo ou escala do sistema.
--   Formato do nome do arquivo: \*AppList.targetsize-\*_altform-unplated.PNG
+-   Formato do nome do arquivo: Square44x44Logo.targetsize-\*\_altform-unplated.png
 -   Aplicativos afetados: todos os aplicativos UWP
 -   Usos:
     -   Barra de tarefas e miniatura da barra de tarefas (área de trabalho)
@@ -352,7 +515,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Ativos de extensão de arquivo**
 
 -   Esses são ativos específicos para extensões de arquivo. Eles são exibidos ao lado de ícones de associação de arquivo no estilo Win32 no Explorador de Arquivos e devem ser independentes de tema. O dimensionamento é diferente em plataformas desktop e de dispositivos móveis.
--   Formato do nome do arquivo: \*LogoExtensions.targetsize-\*.PNG
+-   Formato do nome do arquivo: \*LogoExtensions.targetsize-\*.png
 -   Aplicativos afetados: Música, Vídeo, Fotos, Microsoft Edge, Microsoft Office
 -   Usos:
     -   Explorador de Arquivos
@@ -362,30 +525,7 @@ Estão listados aqui todos os tipos de ativos, seus usos e nomes de arquivo reco
 **Tela inicial**
 
 -   O ativo exibido na tela inicial do aplicativo. Dimensiona automaticamente em plataformas desktop e de dispositivos móveis.
--   Formato do nome do arquivo: \*SplashScreen.screen-100.PNG
+-   Formato do nome do arquivo: SplashScreen.scale-*.png
 -   Aplicativos afetados: todos os aplicativos UWP
 -   Usos:
     -   Tela inicial do aplicativo
-
-**Ativos de bloco icônico**
-
--   Esses são os ativos para aplicativos que usam o modelo icônico.
--   Formato do nome do arquivo: não aplicável
--   Aplicativos afetados: Mensagens, Telefone, Loja, mais
--   Usos:
-    -   Bloco icônico
-
-
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-
-
-* [Modelos de blocos especiais](tiles-and-notifications-special-tile-templates-catalog.md)
- 
-
- 
-
-
-
-

@@ -2,27 +2,27 @@
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "Use os exemplos de código C# nesta seção para saber mais sobre como usar a API de envio da Windows Store."
-title: "Exemplos de código C# para a API de envio"
+title: "Exemplo de C# - envios de apps, complementos e versões de pré-lançamento"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código"
-ms.openlocfilehash: 59b9c0b2cc503a56e0a1c9a75ce5ef471983c699
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, API de envio da Windows Store, exemplos de código, C#"
+ms.openlocfilehash: 77c0f2ddbe0e76ede2580129d7d0a0ae118b3554
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="c-code-examples-for-the-submission-api"></a>Exemplos de código C\# para a API de envio
+# <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de C#: envios de apps, complementos e versões de pré-lançamento
 
-Este artigo fornece exemplos de código C# para usar a *API de envio da Windows Store*. Para saber mais sobre essa API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
+Este artigo fornece exemplos de código C# que demonstram como usar a [API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md) para estas tarefas:
 
-Estes exemplos de códigos demonstram as seguintes tarefas:
-
-* [Atualizar um envio de aplicativo](#update-app-submission)
-* [Criar um novo envio de complemento](#create-add-on-submission)
+* [Criar um envio de aplicativo](#create-app-submission)
+* [Criar um envio de complemento](#create-add-on-submission)
 * [Atualizar um envio de complemento](#update-add-on-submission)
-* [Atualizar um envio de pacote de pré-lançamento](#update-flight-submission)
+* [Criar um envio de pacote de pré-lançamento](#create-flight-submission)
 
 Você pode examinar cada exemplo para saber mais sobre a tarefa que ele demonstra ou compilar todos os exemplos de código neste artigo em um aplicativo de console. Para compilar os exemplos, crie um aplicativo de console C# chamado **DeveloperApiCSharpSample** no Visual Studio, copie cada exemplo em um arquivo de código separado no projeto e compile o projeto.
 
@@ -31,13 +31,13 @@ Você pode examinar cada exemplo para saber mais sobre a tarefa que ele demonstr
 Estes exemplos usam as seguintes bibliotecas:
 
 * Microsoft.WindowsAzure.Storage.dll. Essa biblioteca está disponível no [SDK do Azure para .NET](https://azure.microsoft.com/downloads/) ou você pode obtê-la instalando o [pacote NuGet do WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage).
-* [Json.NET](http://www.newtonsoft.com/json) da Newtonsoft.
+* [Newtonsoft.Json](http://www.newtonsoft.com/json) pacote NuGet do Newtonsoft.
 
 ## <a name="main-program"></a>Programa principal
 
 O exemplo a seguir implementa um programa de linha de comando que chama os outros métodos de exemplo neste artigo para demonstrar as diversas maneiras de usar a API do envio da Windows Store. Para adaptar este programa para seu próprio uso:
 
-* Atribua as propriedades ```ApplicationId```, ```InAppProductId``` e ```FlightId``` para a ID do app, o complemento (os complementos também são conhecidos como produtos no aplicativo ou IAPs) e o pacote de pré-lançamento que você deseja gerenciar. Essas IDs estão disponíveis no painel do Centro de Desenvolvimento.
+* Atribua as propriedades ```ApplicationId```, ```InAppProductId``` e ```FlightId``` à ID do app, ao complemento e ao pacote de pré-lançamento que você deseja gerenciar.
 * Atribua as propriedades ```ClientId``` e ```ClientSecret``` para a ID e a chave do cliente para seu app e substitua a cadeia de caracteres *tenantid* na URL de ```TokenEndpoint``` pela ID de locatário de seu app. Para obter mais informações, consulte [Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)
 
 > [!div class="tabbedCodeSnippets"]
@@ -51,8 +51,8 @@ O app de exemplo usa a classe auxiliar ```ClientConfiguration``` para transmitir
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/ClientConfiguration.cs#ClientConfiguration)]
 
-<span id="update-app-submission" />
-## <a name="update-an-app-submission"></a>Atualizar um envio de aplicativo
+<span id="create-app-submission" />
+## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
 O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Windows Store para atualizar um envio de aplicativo. O método ```RunAppSubmissionUpdateSample``` na classe cria um novo envio como clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```RunAppSubmissionUpdateSample``` executa estas tarefas:
 
@@ -67,7 +67,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/AppSubmissionUpdateSample.cs#AppSubmissionUpdateSample)]
 
 <span id="create-add-on-submission" />
-## <a name="create-a-new-add-on-submission"></a>Criar um novo envio de complemento
+## <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
 O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Windows Store para criar um novo envio de complemento. O método ```RunInAppProductSubmissionCreateSample``` na classe executa estas tarefas:
 
@@ -94,8 +94,8 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionUpdateSample.cs#InAppProductSubmissionUpdateSample)]
 
-<span id="update-flight-submission" />
-## <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
+<span id="create-flight-submission" />
+## <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
 O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Windows Store para atualizar um envio de pacote de pré-lançamento. O método ```RunFlightSubmissionUpdateSample``` na classe cria um novo envio como clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```RunFlightSubmissionUpdateSample``` executa estas tarefas:
 

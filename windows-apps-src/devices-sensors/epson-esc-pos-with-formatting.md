@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: PatrickFarley
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: "ESC/POS Epson com formatação"
 description: "Saiba como usar a linguagem de comando ESC/POS para formatar texto, como caracteres em negrito e tamanho dobrado para sua impressora Ponto de Serviço."
-ms.author: dbirtolo
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6d3251e9e67f7a49b51493bf13216bfd72826d62
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f482f9f44a5f4acb9c5213745da3b8edd3613b62
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="epson-escpos-with-formatting"></a>ESC/POS Epson com formatação
 

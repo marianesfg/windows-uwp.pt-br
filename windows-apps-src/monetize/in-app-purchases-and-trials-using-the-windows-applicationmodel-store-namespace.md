@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06ee6eba5e4dc2f13b1ca8f8555b0e29770d1ec8
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
 Você pode usar membros no namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para adicionar a funcionalidade de compras realizadas em aplicativo e avaliação ao seu aplicativo UWP (Plataforma Universal do Windows) para ajudar na monetização de seu app. Estas APIs também fornecem acesso às informações de licença de seu app.
@@ -24,15 +23,15 @@ Os artigos nesta seção fornecem orientações detalhadas e exemplos de código
 
 Para obter um exemplo completo que demonstra como implementar avaliações e compras no aplicativo usando o namespace **Windows.ApplicationModel.Store**, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
->**Observações**&nbsp;&nbsp;
->
-> * Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como complementos consumíveis gerenciados pela Loja, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Loja. O namespace **Windows.Services.Store** também foi projetado para ter um desempenho melhor. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
-<br/><br/>
-> * O namespace **ApplicationModel** não tem suporte em aplicativos da área de trabalho do Windows que usam o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop). Estes apps devem usar o namespace **Windows.Services.Store** para implementar compras realizadas em aplicativo e avaliações.
+> [!NOTE]
+> Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como complementos consumíveis gerenciados pela Loja, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Loja. O namespace **Windows.Services.Store** também foi projetado para ter um desempenho melhor. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+
+> [!NOTE]
+> O namespace **ApplicationModel** não tem suporte em aplicativos da área de trabalho do Windows que usam o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop). Estes apps devem usar o namespace **Windows.Services.Store** para implementar compras realizadas em aplicativo e avaliações.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introdução às classes CurrentApp e CurrentAppSimulator
 
-O ponto de entrada principal para o namespace **Windows.ApplicationModel.Store** é a classe [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx). Esta classe fornece propriedades e métodos estáticos que você pode usar para obter informações do app atual e seus complementos disponíveis (também conhecidos como produtos no aplicativo ou IAPs), obter informações de licença do app atual ou seus complementos, comprar um app ou um complemento para o usuário atual e realizar outras tarefas.
+O ponto de entrada principal para o namespace **Windows.ApplicationModel.Store** é a classe [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx). Essa classe fornece métodos e propriedades estáticos que você pode usar para obter informações do aplicativo atual e seus complementos disponíveis, obter informações de licença do aplicativo atual ou seus complementos, comprar um aplicativo ou um complemento para o usuário atual e realizar outras tarefas.
 
 A classe [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) obtém seus dados da Windows Store, portanto você deve ter uma conta de desenvolvedor e o app deve ser publicado na Loja para que você possa usar com êxito esta classe em seu app. Antes de enviar seu app para a Loja, você pode testar o código com uma versão simulada dessa classe chamada [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx). Depois de testar o app e antes de enviá-lo para a Windows Store, você deve substituir as instâncias de **CurrentAppSimulator** por **CurrentApp**. O app será reprovado na certificação se ele usar **CurrentAppSimulator**.
 
@@ -57,7 +56,8 @@ Um arquivo WindowsStoreProxy.xml é criado por padrão no seguinte local: %UserP
 
 Embora você possa modificar os valores nesse arquivo, recomendamos que crie seu próprio arquivo WindowsStoreProxy.xml (em uma pasta de dados do seu projeto do Visual Studio) para **CurrentAppSimulator** usar no lugar. Ao simular a transação, chame [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) para carregar o arquivo. Se você não chamar **ReloadSimulatorAsync** para carregar seu próprio arquivo WindowsStoreProxy.xml, **CurrentAppSimulator** criará/carregará (mas não substituirá) o arquivo WindowsStoreProxy.xml padrão.
 
->**Observação**&nbsp;&nbsp;Lembre-se de que **CurrentAppSimulator** não é totalmente inicializado até **ReloadSimulatorAsync** ser concluído. E, uma vez que **ReloadSimulatorAsync** é um método assíncrono, evite a condição de corrida de consulta de **CurrentAppSimulator** em um thread enquanto ele está sendo inicializado em outro. Uma técnica é usar um sinalizador para indicar que a inicialização foi concluída. Um aplicativo instalado da Windows Store deve usar **CurrentApp** em vez de **CurrentAppSimulator** e, nesse caso, **ReloadSimulatorAsync** não é chamado. Dessa forma, a condição de corrida mencionada há pouco não se aplica. Por esse motivo, projete seu código para que ele funcione nos dois casos, de forma assíncrona e síncrona.
+> [!NOTE]
+> Lembre-se de que **CurrentAppSimulator** não é totalmente inicializado até **ReloadSimulatorAsync** ser concluído. E, uma vez que **ReloadSimulatorAsync** é um método assíncrono, evite a condição de corrida de consulta de **CurrentAppSimulator** em um thread enquanto ele está sendo inicializado em outro. Uma técnica é usar um sinalizador para indicar que a inicialização foi concluída. Um aplicativo instalado da Windows Store deve usar **CurrentApp** em vez de **CurrentAppSimulator** e, nesse caso, **ReloadSimulatorAsync** não é chamado. Dessa forma, a condição de corrida mencionada há pouco não se aplica. Por esse motivo, projete seu código para que ele funcione nos dois casos, de forma assíncrona e síncrona.
 
 
 <span id="proxy-examples" />
@@ -544,4 +544,3 @@ Este elemento descreve um complemento consumível. **Product** é um filho opcio
 |  **TransactionId**  |     Sim       |   Contém um GUID (como uma cadeia de caracteres) usado pelo app para acompanhar a transação de compra de um consumível pelo processo de atendimento. Consulte [Habilitar compras de produtos consumíveis realizada em aplicativo](enable-consumable-in-app-product-purchases.md).            |
 |  **Status**  |      Sim      |  Contém a cadeia de caracteres usada pelo app para indicar o status de atendimento de um consumível. Os valores podem ser **Active**, **PurchaseReverted**, **PurchasePending** ou **ServerError**.             |
 |  **OfferId**  |     Não       |    Contém a cadeia de caracteres usada pelo app para identificar a categoria à qual pertence o consumível. Isso fornece suporte para catálogos abrangentes de itens, conforme descrito em [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md).           |
-

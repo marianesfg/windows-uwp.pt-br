@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Desempenho
 description: "Os usuários esperam que seus apps mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 51befe8b6b30418599fc1dd04a059f3b053046ad
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40833b98483dc0197c651e2ab4bea259742c2858
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="performance"></a>Desempenho
 

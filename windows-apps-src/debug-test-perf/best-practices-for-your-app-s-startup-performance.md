@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "Práticas recomendadas para o desempenho inicial de seu aplicativo"
 description: "Crie apps da Plataforma Universal do Windows (UWP) com tempos de inicialização ótimos melhorando a maneira como você manipula a inicialização e a ativação."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Práticas recomendadas para o desempenho inicial de seu app
 
@@ -55,7 +57,7 @@ Quando você recompila seu aplicativo, a imagem nativa não é mais usada. Em ve
 
 ### <a name="defer-work-as-long-as-possible"></a>Adie o trabalho tanto quanto possível
 
-Para aumentar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O tempo de execução de linguagem comum carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
+Para melhorar o tempo de inicialização de seu aplicativo, faça apenas o trabalho que precisa ser feito para permitir que o usuário comece a interagir com o aplicativo. Isso pode ser especialmente benéfico se você possa atrasar o carregamento de assemblies adicionais. O tempo de execução de linguagem comum carrega um assembly na primeira vez que é usado. Se você puder minimizar a quantidade de assemblies carregados, talvez consiga melhorar o tempo de inicialização e o consumo de memória do aplicativo.
 
 ### <a name="do-long-running-work-independently"></a>Faça trabalhos longos de forma independente
 
@@ -108,7 +110,7 @@ A janela [Live Visual Tree no Visual Studio](http://blogs.msdn.com/b/visualstudi
 
 ![Live Visual Tree.](images/live-visual-tree.png)
 
-**Use x:DeferLoadStrategy**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usar x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, consulte [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Use o adiamento**. Recolher um elemento ou definir sua opacidade para 0 não impede que o elemento seja criado. Usando x:Load ou x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Essa é uma boa maneira de atrasar o processamento da interface do usuário que não é visível durante a tela de inicialização, para que você possa carregá-la quando necessário, ou como parte de uma definição de lógica atrasada. Para disparar o carregamento, você só precisa chamar FindName para o elemento. Para obter um exemplo e mais informações, veja [Atributo x:Load](../xaml-platform/x-load-attribute.md) e [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
 **Virtualização**. Se houver conteúdo em lista ou de repetição em sua interface do usuário, é altamente recomendável que você use a virtualização da interface do usuário. Se a interface do usuário de lista não for virtualizada, você pagará o preço de criar todos os elementos com antecedência, e isso pode retardar a inicialização. Consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -365,4 +367,3 @@ O Frame, porém, oferece um cache de página opcional que pode evitar essas cria
 O armazenamento de páginas em cache pode ajudar no desempenho evitando a criação de instâncias e, portanto, melhorando o desempenho da navegação. O armazenamento de páginas em cache pode prejudicar o desempenho com o armazenamento em cache excessivo, afetando, assim conjunto de trabalho.
 
 Portanto, recomendamos usar o armazenamento de páginas em cache conforme apropriado para seu aplicativo. Por exemplo, digamos que você tenha um aplicativo que mostre uma lista de itens em um quadro e, quando você toca em um item, ele move o quadro para uma página de detalhes desse item. A página da lista provavelmente deve ser definida para o cache. Se a página de detalhes for a mesma para todos os itens, provavelmente ela também deverá ser armazenada em cache. Mas se a página de detalhes for mais heterogênea, talvez seja melhor desativar o armazenamento em cache.
-

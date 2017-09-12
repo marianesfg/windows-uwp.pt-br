@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
 description: "Os sensores permitem ao aplicativo identificar a relação entre um dispositivo e o mundo físico ao redor dele. Os sensores podem informar ao aplicativo a direção, a orientação e o movimento do dispositivo."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eee6bb0c70c39a6676639f5b6da0f5465811dbad
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="sensors"></a>Sensores
 
@@ -65,17 +67,25 @@ O diagrama a seguir ilustra:
 
 Os aplicativos que possivelmente usem um acelerômetro incluem um jogo em que uma bola de gude rola na tela, na direção em que o dispositivo é inclinado (vetor gravitacional). Esse tipo de funcionalidade espelha bastante bem a funcionalidade do [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) e também pode ser usada com esse sensor, por meio de uma combinação de rotação sobre o eixo x e rolagem. O uso do vetor de gravidade do acelerômetro simplifica um pouco isso ao fornecer um vetor manipulado matemática e facilmente para a inclinação do dispositivo. Outro exemplo é um aplicativo que faz um som de estalo de chicote quando o usuário sacode o dispositivo no ar (vetor de aceleração linear).
 
+Para obter um exemplo de implementação, consulte o [exemplo de acelerômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
+
 ## <a name="activity-sensor"></a>Sensor de atividade
 
 O sensor [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096) determina o status atual do dispositivo conectado ao sensor. Esse sensor é usado com frequência em aplicativos de exercícios físicos para controlar quando o usuário que está com o dispositivo está correndo ou caminhando. Consulte [**ActivityType**](https://msdn.microsoft.com/library/windows/apps/Dn785128) para obter uma lista de possíveis atividades que podem ser detectadas por essa API de sensor.
+
+Para obter um exemplo de implementação, consulte o [exemplo de sensor de atividade](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ActivitySensor).
 
 ## <a name="altimeter"></a>Altímetro
 
 O sensor [**Altimeter**](https://msdn.microsoft.com/library/windows/apps/Dn858893) retorna um valor que indica a altitude do sensor. Isso permite que você mantenha o controle de uma alteração na altitude em termos de metros acima do nível do mar. Um exemplo de um aplicativo que pode usar isso seria um aplicativo de corrida que controla as mudanças de elevação durante uma corrida para calcular as calorias queimadas. Nesse caso, os dados desse sensor podem ser combinados com o sensor [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096) para fornecer informações de controle mais precisas.
 
+Para obter um exemplo de implementação, consulte o [exemplo de altímetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Altimeter).
+
 ## <a name="barometer"></a>Barômetro
 
 O sensor [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn872405) permite que um aplicativo obtenha leituras barométricas. Um aplicativo de previsão do tempo pode usar essas informações para fornecer a pressão atmosférica atual. Isso pode ser usado para fornecer informações mais detalhadas e prever possíveis mudanças na previsão do tempo.
+
+Para obter um exemplo de implementação, consulte o [exemplo de barômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Barometer).
 
 ## <a name="compass"></a>Bússola
 
@@ -85,6 +95,8 @@ O sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
 
 Os aplicativos que devem exibir uma bússola ou navegar em um mapa geralmente usam um sensor de bússola.
 
+Para obter um exemplo de implementação, consulte o [exemplo da bússola](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
+
 ## <a name="gyrometer"></a>Girômetro
 
 O sensor [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718) mede as velocidades angulares ao longo dos eixos X, Y e Z. Eles são muito úteis em aplicativos baseados em movimento simples que não levam em consideração a orientação do dispositivo, e sim a rotação do dispositivo em diferentes velocidades. Os girômetros podem ser afetados por ruídos nos dados ou por uma tendência constante ao longo de um ou mais eixos. Você deve consultar o acelerômetro para verificar se o dispositivo está se movimentando e assim determinar se o girômetro é afetado por uma tendência; então, faça a devida compensação no aplicativo.
@@ -92,6 +104,8 @@ O sensor [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR22571
 ![Girômetro com rotação sobre o eixo x, rolagem e rotação sobre o eixo y](images/gyrometer.png)
 
 Um exemplo de aplicativo que poderia usar o sensor girômetro é um jogo que gira uma roleta com base em uma rápida sacudida rotacional do dispositivo.
+
+Para obter um exemplo de implementação, consulte o [exemplo de girômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Gyrometer).
 
 ## <a name="inclinometer"></a>Inclinômetro
 
@@ -101,9 +115,13 @@ O sensor [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR22
 
 Os aplicativos que alteram sua exibição para corresponder à orientação do dispositivo podem usar o sensor do inclinômetro. Além disso, um aplicativo que exibe um avião que corresponde à rotação sobre o eixo y, rotação sobre o eixo x e rolagem do dispositivo devem usar também as leituras do inclinômetro.
 
+Para obter um exemplo de implementação, consulte o exemplo de inclinômetro [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+
 ## <a name="light-sensor"></a>Sensor de luz
 
 O sensor [**Light**](https://msdn.microsoft.com/library/windows/apps/BR225790) é capaz de determinar a luz ambiente ao redor do sensor. Isso permite que um aplicativo determine quando a configuração de iluminação ao redor de um dispositivo foi alterada. Por exemplo, um usuário com um dispositivo slate pode sair de um ambiente fechado para o ar livre em um dia ensolarado. Um aplicativo inteligente pode usar esse valor para aumentar o contraste entre o plano de fundo e a fonte renderizada. Isso tornaria o conteúdo ainda legível na configuração mais brilhante para o ar livre.
+
+Para obter um exemplo de implementação, consulte o [exemplo de sensor de luz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
 
 ## <a name="orientation-sensor"></a>Sensor de orientação
 
@@ -113,13 +131,19 @@ A orientação do dispositivo é expressa através das matrizes de quaternião e
 
 O sensor de orientação é geralmente usado nos aplicativos de realidade aumentada que criam uma sobreposição no ambiente ao redor, com base na direção apontada pela parte traseira do dispositivo.
 
+Para obter um exemplo de implementação, consulte o [exemplo de sensor de orientação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor).
+
 ## <a name="pedometer"></a>Podômetro
 
 O sensor [**Pedometer**](https://msdn.microsoft.com/library/windows/apps/Dn878203) controla o número de passos dados pelo usuário que está usando o dispositivo conectado. O sensor está configurado para controlar o número de passos por determinado período. Vários aplicativos de exercícios físicos gostam de controlar o número de passos dados para ajudar o usuário a definir e alcançar vários objetivos. Essas informações podem ser coletadas e armazenadas para mostrar o progresso ao longo do tempo.
 
+Para obter um exemplo de implementação, consulte o [exemplo de podômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Pedometer).
+
 ## <a name="proximity-sensor"></a>Sensor de proximidade
 
 O sensor [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn872427) pode ser usado para indicar se objetos são detectados ou não pelo sensor. Além de determinar se um objeto está dentro ou não do alcance do dispositivo, o sensor de proximidade também pode determinar a distância em relação ao objeto detectado. Um exemplo de onde isso pode ser usado com um aplicativo que quer surgir de um estado de suspensão quando um usuário entra em um intervalo especificado. O dispositivo pode ficar em um estado de suspensão de baixa energia até que o sensor de proximidade detecte um objeto e, em seguida, pode entrar em um estado mais ativo.
+
+Para obter um exemplo de implementação, consulte o [exemplo de sensor de proximidade](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ProximitySensor).
 
 ## <a name="simple-orientation"></a>Orientação simples
 
@@ -127,7 +151,4 @@ O [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/
 
 Um aplicativo de leitura que altera sua exibição com base no dispositivo sendo segurado em paralelo ou perpendicular ao chão usará os valores de SimpleOrientationSensor para determinar como o dispositivo está sendo segurado.
 
-## <a name="samples"></a>Exemplos
-
-Para obter alguns exemplos que demonstram o uso de alguns dos diferentes sensores, consulte [Exemplos de sensores do Windows](http://go.microsoft.com/fwlink/?LinkID=616041).
-
+Para obter um exemplo de implementação, consulte o [exemplo de sensor de orientação simples](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor).

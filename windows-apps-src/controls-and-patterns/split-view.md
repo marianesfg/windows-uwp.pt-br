@@ -6,14 +6,20 @@ description: "Um controle de modo divisão tem um painel que pode ser expandido/
 label: Split view
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b7488f19109925faa2c9e6b3be528cb2d19846e8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: kimsea
+dev-contact: tpaine
+doc-status: Published
+ms.openlocfilehash: 126fab3db9a0728626289788757f576648a43856
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="split-view-control"></a>Controle de modo de exibição dividido
 
@@ -21,12 +27,7 @@ translationtype: HT
 
 Um controle de modo divisão tem um painel que pode ser expandido/recolhido e uma área de conteúdo.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para mostrar seu Hub.
 
@@ -53,7 +54,7 @@ Veja a seguir um exemplo do aplicativo Microsoft Edge usando SplitView para most
 
 ## <a name="is-this-the-right-control"></a>Esse é o controle correto?
 
-O controle de modo divisão pode ser usado para criar um [painel de navegação](nav-pane.md). Para criar esse padrão, adicione um botão expandir/recolher (o botão "hambúrguer") e um modo de exibição de lista representando os itens de navegação.
+O controle de modo divisão pode ser usado para criar um [painel de navegação](navigationview.md). Para criar esse padrão, adicione um botão expandir/recolher (o botão "hambúrguer") e um modo de exibição de lista representando os itens de navegação.
 
 O controle de modo divisão também pode ser usado para criar qualquer experiência de "gaveta" na qual os usuários podem abrir e fechar o painel complementar.
 
@@ -83,7 +84,7 @@ Eis um controle SplitView com um painel aberto sendo exibido embutido ao lado do
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Padrão do painel de navegação](nav-pane.md)
+* [Padrão do painel de navegação](navigationview.md)
 * [Modo de exibição de lista](lists.md)
  
 

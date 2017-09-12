@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6eed2ecb5766edea8678ea2af10c02332d5a5928
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Início, retomada e tarefas em segundo plano
 
@@ -24,6 +26,7 @@ Esta seção inclui informações sobre os itens a seguir:
 - Como usar serviços de app, que permitem que seu aplicativo UWP (Plataforma Universal do Windows) compartilhe dados e funcionalidades com outros apps.
 - Como usar tarefas em segundo plano, que permitem que um aplicativo UWP funcione mesmo quando o próprio app não estiver em primeiro plano.
 - Como descobrir dispositivos conectados, iniciar um app em outro dispositivo e comunicar-se com um serviço de app em um dispositivo remoto para que você possa criar experiências de usuário que fluam de um dispositivo para outro.
+- Como escolher a tecnologia adequada para estender e dividir o aplicativo.
 - Como adicionar e configurar uma tela inicial para seu app.
 
 ## <a name="the-app-lifecycle"></a>O ciclo de vida do app
@@ -68,7 +71,7 @@ Veja outros tópicos relacionados à inicialização de um app abaixo.
 | Tópico | Descrição |
 |-------|-------------|
 | [Arquivo reservado e nomes de esquemas de URI](reserved-uri-scheme-names.md) | Este tópico lista os arquivos reservados e os nomes de esquemas de URI que não estão disponíveis para seu app. |
-| [Iniciando automaticamente com a Reprodução Automática](auto-launching-with-autoplay.md) | Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como câmeras ou players de mídia, ou dispositivos com volume, como pen drives, cartões SD ou DVDs. |
+| [Iniciando automaticamente com a Reprodução Automática](auto-launching-with-autoplay.md) | Você pode usar a Reprodução Automática para fornecer seu aplicativo como uma opção quando um usuário conecta um dispositivo ao computador. Isso inclui dispositivos sem volume, como uma câmera ou um player de mídia, ou dispositivos com volume, como pen drives, cartões de memória ou DVDs. |
 
 ## <a name="app-services"></a>Serviços de app
 
@@ -78,6 +81,7 @@ A seção [Serviços de app](app-services.md) descreve como integrar serviços d
 |-------|-------------|
 | [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md) | Saiba como escrever um aplicativo UWP (Plataforma Universal do Windows) que pode fornecer serviços a outros aplicativos UWP e também como consumir esses serviços. |
 | [Converter um serviço de app para ser executado no mesmo processo de seu app host](convert-app-service-in-process.md) | Converta o código de serviço de app executado em um processo separado em segundo plano em código que é executado no mesmo processo de seu provedor de serviços de app. |
+| [Estender seu aplicativo com serviços de aplicativo, extensões e pacotes](extend-your-app-with-services-extensions-packages.md) | Há diferentes tecnologias no Windows 10 que ajudam você a estender e separar os componentes do aplicativo. Este tópico ajudará você a determinar qual tecnologia é adequada para usar e fornecer uma breve visão geral de cada um. |
 
 ## <a name="background-tasks"></a>Tarefas em segundo plano
 
@@ -85,26 +89,30 @@ A seção [Tarefas em segundo plano](support-your-app-with-background-tasks.md) 
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Acessar sensores e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que seu aplicativo Universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando seu app em primeiro plano estiver suspenso. |
-| [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)                                           | Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano.                                                                                                                          |
-| [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)                               | Crie e registre uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo e registre-a para ser executada quando o aplicativo não estiver em primeiro plano.                                                                                                 |
-| [Criar e registrar uma tarefa em segundo plano em processo](create-and-register-an-inproc-background-task.md)                               | Crie e registre uma tarefa em segundo plano que é executada no mesmo processo de seu aplicativo em primeiro plano.                                                                                                 |
-| [Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md)                               | Saiba como converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada no mesmo processo do seu aplicativo em primeiro plano.
-| [Depurar uma tarefa em segundo plano](debug-a-background-task.md)                                                           | Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows.                                                                        |
-| [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md) | Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo.                                                                                                       |
-| [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)                                     | Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente.                                     |
-| [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)           | Saiba como o aplicativo pode reconhecer o progresso e a conclusão de uma tarefa em segundo plano.                                                                                                                     |
-| [Registrar uma tarefa em segundo plano](register-a-background-task.md)                                                     | Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano.                                                                                                  |
-| [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)             | Saiba como criar uma tarefa em segundo plano que responda a eventos do [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).                                                                         |
-| [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)                                        | Aprenda a agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano.                                                                                                          |
-| [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)                 | Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada.                                                                                                                  |
-| [Transferir dados em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt280377)                                           | Use a API de transferência em segundo plano para copiar arquivos em segundo plano.                                                                                                                              |
-| [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)                       | Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo.                                                                                                                      |
-| [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)                                                       | Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado.                             |
+| [Diretrizes de tarefas em segundo plano](guidelines-for-background-tasks.md)                                       | Verifique se seu aplicativo atende aos requisitos para executar tarefas em segundo plano. |
+| [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md)       | Crie e registre uma tarefa em segundo plano que é executada no mesmo processo de seu aplicativo em primeiro plano. |
+| [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md)           | Crie e registre uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo e registre-a para ser executada quando o aplicativo não estiver em primeiro plano. |
+| [Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo](convert-out-of-process-background-task.md) | Saiba como converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada no mesmo processo do seu aplicativo em primeiro plano.|
+| [Depurar uma tarefa em segundo plano](debug-a-background-task.md)                                                       | Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows. |
+| [Declarar tarefas em segundo plano no manifesto do app](declare-background-tasks-in-the-application-manifest.md) | Habilite o uso de tarefas em segundo plano declarando-as como extensões no manifesto do aplicativo. |
+| [Registro de tarefa de grupo em segundo plano](group-background-tasks.md)                                             | Isole o registro de tarefa em segundo plano com grupos. |
+| [Processar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)                                 | Saiba como criar uma tarefa em segundo plano que reconhece solicitações de cancelamento e interrompe o trabalho, relatando o cancelamento ao aplicativo usando armazenamento persistente. |
+| [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)       | Saiba como o aplicativo pode reconhecer o progresso e a conclusão de uma tarefa em segundo plano. |
+| [Registrar uma tarefa em segundo plano](register-a-background-task.md)                                                 | Aprenda a criar uma função que pode ser reutilizada para registrar com segurança a maioria das tarefas em segundo plano. |
+| [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)         | Saiba como criar uma tarefa em segundo plano que responda a eventos do [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). |
+| [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md)                                    | Saiba como agendar uma tarefa ocasional em segundo plano ou executar uma tarefa periódica em segundo plano. |
+| [Disparar uma tarefa em segundo plano no aplicativo](trigger-background-task-from-app.md) | Saiba como usar o [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para ativar uma tarefa em segundo plano no aplicativo.|
+| [Acessar sensores e dispositivos a partir de uma tarefa em segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que o aplicativo universal do Windows acesse sensores e dispositivos periféricos em segundo plano, mesmo quando o aplicativo em primeiro plano estiver suspenso. |
+| [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)             | Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada. |
+| [Transferir dados em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt280377)                 | Use a API de transferência em segundo plano para copiar arquivos em segundo plano. |
+| [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)                   | Use uma tarefa em segundo plano para atualizar o bloco dinâmico de seu aplicativo com novo conteúdo. |
+| [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)                                                   | Saiba como usar a classe [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para executar um código leve em segundo plano enquanto o dispositivo estiver conectado. |
+### <a name="see-also"></a>Veja também
+* [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) – saiba como reduzir a energia usada em segundo plano e interagir com as configurações do usuário para atividade em segundo plano.
 
-## <a name="remote-systems"></a>Sistemas remotos
+## <a name="remote-systems"></a>Sistemas Remotos
 
-A seção [Aplicativos e dispositivos conectados (projeto Rome)](connected-apps-and-devices.md) descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um app em um dispositivo remoto e comunicar-se com um serviço de app em um dispositivo remoto.
+A seção [Aplicativos e dispositivos conectados (Project Rome)](connected-apps-and-devices.md) descreve como usar a plataforma de Sistemas Remotos para descobrir dispositivos remotos, iniciar um aplicativo e comunicar-se com um serviço de aplicativo em um dispositivo remoto.
 
 | Tópico | Descrição |
 |-------|-------------|

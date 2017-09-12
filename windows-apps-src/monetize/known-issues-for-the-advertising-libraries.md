@@ -1,32 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Saiba mais sobre problemas conhecidos da versão atual das bibliotecas do Microsoft Advertising no Microsoft Store Services SDK."
+description: "Saiba mais sobre problemas conhecidos para a versão atual das bibliotecas do Microsoft advertising."
 title: Problemas conhecidos das bibliotecas de publicidade
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, problemas conhecidos"
-ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b18c4568770afb70bcca991c79d59a9912981705
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="known-issues-for-the-advertising-libraries"></a>Problemas conhecidos das bibliotecas de publicidade
 
 
 
 
-Este tópico lista os problemas conhecidos com a versão atual das bibliotecas do Microsoft Advertising no Microsoft Store Services SDK (para aplicativos UWP) e o Microsoft Advertising SDK para Windows e Windows Phone 8.x (para aplicativos do Windows 8.1 e Windows Phone 8.x).
-
-## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>A instalação do Microsoft Store Services SDK requer as Ferramentas do Visual Studio para aplicativos universais do Windows
-
-Para instalar o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) com o Visual Studio 2015, você deve ter a versão 1.1 ou posterior das Ferramentas do Visual Studio para Aplicativos Universais do Windows instalada. Para obter mais informações, consulte as [notas de versão](http://go.microsoft.com/fwlink/?LinkID=624516) do o Visual Studio.
+Este tópico lista os problemas conhecidos com a versão atual das bibliotecas do Microsoft Advertising no SDK do Microsoft Advertising (para aplicativos UWP) e o SDK do Microsoft Advertising para Windows e Windows Phone 8.x (para aplicativos do Windows 8.1 e Windows Phone 8.x).
 
 ## <a name="windows-phone-8x-silverlight-projects"></a>Projetos do Windows Phone 8.x Silverlight
 
-O SDK do Microsoft Advertising para Windows e Windows Phone 8.x tem suporte limitado para projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md#silverlight_support).
+O SDK do Microsoft Advertising para Windows e Windows Phone 8.x tem suporte limitado para projetos do Windows Phone 8.x Silverlight. Para obter mais informações, consulte [Suporte de publicidade para projetos do Windows Phone 8.x Silverlight](adcontrol-in-windows-phone-silverlight.md#silverlight_support).
 
 Para obter os assemblies do Microsoft Advertising para projetos do Windows Phone 8.x Silverlight, instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk), abra o projeto no Visual Studio e, em seguida, vá para **Projeto** > **Adicionar Serviço Conectado** > **Ad Mediator** para baixar automaticamente os assemblies. Depois de fazer isso, você pode remover as referências do Ad Mediator do seu projeto se não quiser usar a mediação de anúncios. Para saber mais, consulte [AdControl no Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
 
@@ -64,7 +62,7 @@ Você também pode postar uma pergunta no [fórum](http://go.microsoft.com/fwlin
 
 Anúncios de teste podem ser mostrados, mesmo quando você está esperando anúncios ativos. Isso pode acontecer nos seguintes cenários:
 
-* O Microsoft Advertising não consegue verificar ou localizar a ID do aplicativo ativo usado no repositório do aplicativo. Nesse caso, quando uma unidade de anúncios é criada por um usuário, seu status pode iniciar como dinâmico (não teste) mas passará para status de teste 6 horas após a primeira solicitação de anúncio. Ele mudará novamente para ativo se não houver nenhum solicitação dos aplicativos de teste por 10 dias.
+* Nossa plataforma de publicidade não pode verificar ou encontrar a ID do aplicativo ao vivo usada na loja. Nesse caso, quando uma unidade de anúncios é criada por um usuário, seu status pode iniciar como dinâmico (não teste) mas passará para status de teste 6 horas após a primeira solicitação de anúncio. Ele mudará novamente para ativo se não houver nenhum solicitação dos aplicativos de teste por 10 dias.
 
 * Aplicativos de sideload ou aplicativos que estão em execução no emulador não mostrarão anúncios ativos.
 

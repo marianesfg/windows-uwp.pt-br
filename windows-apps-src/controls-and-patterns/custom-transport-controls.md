@@ -6,14 +6,16 @@ ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 34c3aab3e9a04eb535014182c0dbc8c140670b89
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f92791a1c98e87d41c26f8f80b31870aeffe2592
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="create-custom-transport-controls"></a>Criar controles personalizados de transporte
 
@@ -21,19 +23,12 @@ translationtype: HT
 
 MediaPlayerElement tem controles de transporte XAML personalizáveis para gerenciar o controle de conteúdo de áudio e vídeo em um aplicativo da UWP (Plataforma Universal do Windows). Aqui, demonstramos como personalizar o modelo MediaTransportControls. Mostraremos como trabalhar com o menu de estouro, adicionar um botão personalizado e modificar o controle deslizante.
 
+> **APIs importantes**: [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaPlayerElement.AreTransportControlsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx), [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677)
+
 Antes de começar, você deve estar familiarizado com as classes MediaPlayerElement e MediaTransportControls. Para obter mais informações, consulte o Guia do controle MediaPlayerElement.
 
 > [!TIP]
 > Os exemplos neste tópico se baseiam na [Amostra de controles de transporte de mídia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Você pode baixar a amostra para exibir e executar o código completo.
-
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)</li>
-<li>[**MediaPlayerElement.AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx) </li>
-<li>[**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)</li>
-</ul>
-</div>
 
 > [!NOTE]
 > O **MediaPlayerElement** só está disponível no Windows 10, versão 1607, e posterior. Se estiver desenvolvendo um aplicativo para uma versão anterior do Windows 10, você precisará usar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). Todos os exemplos nesta página também funcionam com o **MediaElement**.
@@ -80,13 +75,16 @@ Se você quiser modificar apenas a aparência dos MediaTransportControls, crie u
 **Para personalizar o modelo e o estilo padrão MediaTransportControls**
 1. Copie o estilo padrão de Estilos e modelos MediaTransportControls para um ResourceDictionary em seu projeto.
 2. Atribua a Style um valor x:Key para identificá-lo, assim.
+
 ```xaml
 <Style TargetType="MediaTransportControls" x:Key="myTransportControlsStyle">
     <!-- Style content ... -->
 </Style>
 ```
+
 3. Adicione um MediaPlayerElement com MediaTransportControls à sua interface do usuário.
 4. Defina a propriedade Style do elemento MediaTransportControls como seu recurso personalizado Style, conforme mostrado aqui.
+
 ```xaml
 <MediaPlayerElement AreTransportControlsEnabled="True">
     <MediaPlayerElement.TransportControls>
@@ -106,20 +104,25 @@ Para adicionar ou modificar a funcionalidade dos controles de transporte, você 
     - No Visual Studio, selecione Projeto > Adicionar Classe. A caixa de diálogo Adicionar Novo Item é aberta.
     - Na caixa de diálogo Adicionar Novo Item, insira um nome para o arquivo de classe e clique em Adicionar. (Na amostra de Controles de Transporte de Mídia, a classe é chamada `CustomMediaTransportControls`.)
 2. Modifique o código de classe a ser derivado da classe MediaTransportControls.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {
 }
 ```
+
 3. Copie o estilo padrão de [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) em um [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.resourcedictionary.aspx) em seu projeto. Este é o estilo e o modelo que você modifica.
 (Na Amostra de controles de transporte de mídia, uma nova pasta chamada "Themes" é criada, e um arquivo ResourceDictionary chamado generic.xaml é adicionado a ela.)
 4. Altere o [**TargetType**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.targettype.aspx) do estilo para o novo tipo de controle personalizado. (Na amostra, o TargetType é alterado para `local:CustomMediaTransportControls`.)
+
 ```xaml
 xmlns:local="using:CustomMediaTransportControls">
 ...
 <Style TargetType="local:CustomMediaTransportControls">
 ```
+
 5. Defina o [**DefaultStyleKey**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.defaultstylekey.aspx) de sua classe personalizada. Isso informa sua classe personalizada para usar um Style com um TargetType de `local:CustomMediaTransportControls`.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {
@@ -129,7 +132,9 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
     }
 }
 ```
+
 6. Adicione um [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) à sua marcação XAML e os controles personalizados de transporte a ela. Uma coisa a observar é que as APIs para ocultar, mostrar, desabilitar e habilitar os botões padrão ainda funcionam com um modelo personalizado.
+
 ```xaml
 <MediaPlayerElement Name="MediaPlayerElement1" AreTransportControlsEnabled="True" Source="video.mp4">
     <MediaPlayerElement.TransportControls>
@@ -145,6 +150,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
     </MediaPlayerElement.TransportControls>
 </MediaPlayerElement>
 ```
+
 Agora você pode modificar o estilo de controle e o modelo para atualizar a aparência de seu controle personalizado e o código de controle para atualizar seu comportamento.
 
 ### <a name="working-with-the-overflow-menu"></a>Trabalhando com o menu de estouro
@@ -158,6 +164,7 @@ Para mover um elemento dos comandos principais da barra de comandos para o menu 
 **Para mover um comando para o menu de estouro:**
 1. No modelo de controle, encontre o elemento CommandBar chamado `MediaControlsCommandBar`.
 2. Adicione uma seção [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) ao XAML da CommandBar. Coloque-a após a marca de fechamento do [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx).
+
 ```xaml
 <CommandBar x:Name="MediaControlsCommandBar" ... >  
   <CommandBar.PrimaryCommands>
@@ -178,10 +185,12 @@ Para mover um elemento dos comandos principais da barra de comandos para o menu 
   </CommandBar.SecondaryCommands>
 </CommandBar>
 ```
+
 3. Para popular o menu com comandos, recorte e cole o XAML dos objetos [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) desejados no PrimaryCommands no SecondaryCommands. Neste exemplo, movemos o `PlaybackRateButton` para o menu de estouro.
 
 4. Adicione um rótulo ao botão e remova as informações de estilo, conforme mostrado aqui.
 Como o menu de estouro é composto de botões de texto, você deve adicionar um rótulo de texto ao botão e também remover o estilo que define a altura e a largura do botão. Do contrário, ele não será exibido corretamente no menu de estouro.
+
 ```xaml
 <CommandBar.SecondaryCommands>
     <AppBarButton x:Name='PlaybackRateButton'
@@ -199,6 +208,7 @@ Uma razão pela qual você talvez queira personalizar MediaTransportControls é 
 
 **Para adicionar um botão de comando personalizado**
 1. Crie um objeto AppBarButton e o adicione ao CommandBar no modelo de controle.
+
 ```xaml
 <AppBarButton x:Name="LikeButton"
               Icon="Like"
@@ -206,11 +216,13 @@ Uma razão pela qual você talvez queira personalizar MediaTransportControls é 
               MediaTransportControlsHelper.DropoutOrder="3"
               VerticalAlignment="Center" />
 ```
+
     You must add it to the CommandBar in the appropriate location. (For more info, see the Working with the overflow menu section.) How it's positioned in the UI is determined by where the button is in the markup. For example, if you want this button to appear as the last element in the primary commands, add it at the very end of the primary commands list.
 
     You can also customize the icon for the button. For more info, see the [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) reference.
 
 2. Na substituição [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx), obtenha o botão do modelo e registre um manipulador para seu evento [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Esse código entra na classe `CustomMediaTransportControls`.
+
 ```csharp
 public sealed class CustomMediaTransportControls :  MediaTransportControls
 {
@@ -230,6 +242,7 @@ public sealed class CustomMediaTransportControls :  MediaTransportControls
 
 3. Adicione código ao manipulador de eventos Click para executar a ação que ocorre quando o botão é clicado.
 Este é o código completo da classe.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {

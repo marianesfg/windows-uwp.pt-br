@@ -1,5 +1,5 @@
 ---
-author: payzer
+author: m-stahl
 title: "Referência da API de configurações do desenvolvedor do Xbox do Device Portal"
 description: "Aprenda a acessar as configurações do desenvolvedor do Xbox."
 ms.author: wdg-dev-content
@@ -9,9 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-ms.openlocfilehash: 43e4bb289d12439bbc0f6de347d187b067288d51
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
+ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/07/2017
 ---
 # <a name="developer-settings-api-reference"></a>Referência da API de configurações do desenvolvedor   
 É possível acessar configurações do Xbox One que sejam úteis para o desenvolvimento usando essa API.
@@ -39,12 +41,20 @@ GET | /ext/settings
 - Nenhum(a)
 
 **Resposta**   
-A resposta é uma matriz JSON de configurações que contém todas as configurações. Todo objeto de configurações contém os seguintes campos:   
+A resposta é uma matriz JSON de configurações que contém todas as configurações. Todo objeto de configurações contém os seguintes campos:
 
-Name – (sequência) o nome da configuração.   
-Value – (sequência) o valor da configuração.   
+Name – (sequência) o nome da configuração.
+Value – (sequência) o valor da configuração.
 RequiresReboot – ("Sim" | "Não") Este campo indica se a configuração requer uma reinicialização para entrar em vigor.
-Category – (sequência) a categoria da configuração
+Desabilitada - ("Sim" | "Não") Este campo indica se a configuração está desabilitada e não pode ser editada.
+Categoria - (cadeia de caracteres) A categoria da configuração.
+Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
+
+Se a configuração é um número: Mín - (número) Este campo indica o valor numérico mínimo da configuração.
+Máx - (número) Este campo indica o valor numérico máximo da configuração.
+
+Se a configuração está marcada: OptionsVariable - ("Sim" | "Não") Este campo indica se as opções de configurçaão são variáveis, se as opções válidas podem mudar sem uma reinicialização.
+Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
 **Código de status**
 
@@ -80,12 +90,20 @@ GET | /ext/settings/\<nome da configuração\>
 - Nenhum(a)
 
 **Resposta**   
-A resposta é um objeto JSON com os seguintes campos:   
+A resposta é um objeto JSON com os seguintes campos:
 
-Name – (sequência) o nome da configuração.   
-Value – (sequência) o valor da configuração.   
+Name – (sequência) o nome da configuração.
+Value – (sequência) o valor da configuração.
 RequiresReboot – ("Sim" | "Não") Este campo indica se a configuração requer uma reinicialização para entrar em vigor.
-Category – (sequência) a categoria da configuração
+Desabilitada - ("Sim" | "Não") Este campo indica se a configuração está desabilitada e não pode ser editada.
+Categoria - (cadeia de caracteres) A categoria da configuração.
+Tipo - ("Texto" | "Número" | "Booleano" | "Selecionar") Este campo indica o tipo uma configuração: texto de entrada, um valor booleano ("true" ou "false"), um número com um mín. e máx. ou selecione com uma lista de valores específicos.
+
+Se a configuração é um número: Mín - (número) Este campo indica o valor numérico mínimo da configuração.
+Máx - (número) Este campo indica o valor numérico máximo da configuração.
+
+Se a configuração está marcada: OptionsVariable - ("Sim" | "Não") Este campo indica se as opções de configurçaão são variáveis, se as opções válidas podem mudar sem uma reinicialização.
+Opções - Array JSON com as opções de seleção válidas como cadeias de caracteres.
 
 **Código de status**
 
@@ -138,4 +156,3 @@ Código de status HTTP      | Descrição
 **Famílias de dispositivos disponíveis**
 
 * Windows Xbox
-

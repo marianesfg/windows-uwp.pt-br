@@ -6,14 +6,16 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 14186f0623f16426a98b5184020736bd4321857d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 566f43b83f410ccd690abca95b9de2323fd2631d
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
@@ -21,7 +23,9 @@ translationtype: HT
 
 No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface do usuário que exibe conteúdo ou permite interação. Crie a interface do usuário do seu aplicativo usando controles como botões, caixas de texto e caixas de combinação para exibir dados e obter entrada do usuário.
 
-Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [painel de navegação](nav-pane.md) é uma maneira pela qual você pode usar um controle [SplitView](split-view.md) de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [Pivô](tabs-pivot.md) para implementar o padrão de guia.
+> **APIs importantes**: [namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [painel de navegação](navigationview.md) é uma maneira pela qual você pode usar um controle [SplitView](split-view.md) de navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [Pivô](tabs-pivot.md) para implementar o padrão de guia.
 
 Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
 

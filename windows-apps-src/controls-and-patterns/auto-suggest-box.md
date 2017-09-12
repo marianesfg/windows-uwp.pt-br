@@ -7,31 +7,28 @@ dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 85c23206d421d061b81f46645b6e6820fb079df3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 61e0d0c1d368a515a7d0b6aba24c7de4b5898092
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="auto-suggest-box"></a>Caixa de sugestão automática
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Use uma AutoSuggestBox para fornecer uma lista de sugestões para um usuário selecionar conforme digita.
 
-![Uma caixa de sugestão automática](images/controls/auto-suggest-box-open.png)
+> **APIs importantes**: [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [evento TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx), [evento SuggestionChose](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [evento QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
-<li>[**Evento TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)</li>
-<li>[**Evento SuggestionChose**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx)</li>
-<li>[**Evento QuerySubmitted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)</li>
-</ul>
-</div>
+![Uma caixa de sugestão automática](images/controls/auto-suggest-box-open.png)
 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
@@ -65,7 +62,7 @@ Para usar uma AutoSuggestBox, você precisa responder a três ações de usuári
 
 ### <a name="text-changed"></a>Texto alterado
 
-O evento [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) ocorre sempre que o conteúdo da caixa de texto é atualizado. Use a propriedade [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) de argumentos de evento para determinar se a alteração foi causada por entrada de usuário. Se a razão da alteração for **UserInput**, filtre seus dados de acordo com a entrada. Depois, configure os dados filtrados como o [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) da AutoSuggestBox, para atualizar a lista de sugestões.
+O evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) ocorre sempre que o conteúdo da caixa de texto é atualizado. Use a propriedade [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) de argumentos de evento para determinar se a alteração foi causada por entrada de usuário. Se a razão da alteração for **UserInput**, filtre seus dados de acordo com a entrada. Depois, configure os dados filtrados como o [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) da AutoSuggestBox, para atualizar a lista de sugestões.
 
 Para controlar como os itens são exibidos na lista de sugestões, você pode usar [DisplayMemberPath](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) ou [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx).
 
@@ -156,18 +153,20 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![Exemplo de uma caixa de sugestão automática com nenhum resultado de pesquisa](images/controls_autosuggest_noresults.png)
 
+<!--
 <div class="microsoft-internal-note">
-**Lista de verificação de globalização e localização**
+**Globalization and localization checklist**
 
 <table>
 <tr>
-<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente, inclusive números.</td>
+<th>Vertical spacing</th><td>Use non-Latin characters for vertical spacing to ensure non-Latin scripts will display properly, including numbers.</td>
 </tr>
 <tr>
-<th>Rolagem</th><td>Quando o texto de sugestão automática for selecionado, o usuário deverá ser capaz de rolar até o final da sequência.</td>
+<th>Scrolling</th><td>When auto suggest text is selected, user should be able to scroll to end of string.</td>
 </tr>
 </table>
 </div>
+-->
 
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -175,6 +174,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [Controles de texto](text-controls.md)
 - [Verificação ortográfica](spell-checking-and-prediction.md)
 - [Pesquisa](search.md)
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)

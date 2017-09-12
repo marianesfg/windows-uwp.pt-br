@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8238076131d932900e8edfb53ab963de8c98402c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8b55968a93f09dae396353e73d72566feb188a89
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 
@@ -36,6 +38,10 @@ Se você for baixar recursos pequenos que, provavelmente, serão completos com r
 ### <a name="how-does-the-background-transfer-feature-work"></a>Como o recurso Transferência em Segundo Plano funciona?
 
 Quando um aplicativo usa transferência em segundo plano para iniciar uma transferência, a solicitação é configurada e inicializada usando os objetos de classe [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) ou [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140). Cada operação de transferência é manipulada individualmente pelo sistema e separada do aplicativo de chamada. As informações de andamento estão disponíveis se você deseja fornecer ao usuário status na interface de usuário do aplicativo, e seu aplicativo pode pausar, retomar, cancelar ou mesmo ler os dados enquanto ocorre a transferência. A maneira como as transferências são manipuladas pelo sistema promove o uso inteligente de energia e evita problemas que poderiam surgir quando um aplicativo conectado encontra eventos como suspensão e finalização de aplicativo ou alterações repentinas no status de rede.
+
+Além disso, a Transferência em Segundo Plano usa eventos de Agente de Evento do Sistema. Dessa forma, o número de downloads é limitado pela quantidade de eventos disponíveis no sistema. Por padrão, são 500 eventos, mas esses eventos são compartilhados entre todos os processos. Portanto, um único aplicativo não deve criar mais de 100 transferências em segundo plano por vez.
+
+Quando um aplicativo inicia uma transferência em segundo plano, o aplicativo deve chamar [**AttachAsync**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation#methods_) em todos os objetos [**DownloadOperation**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation) existentes. Não fazer isso pode causar um vazamento desses eventos e, portanto, inutilizar o recurso Transferência em Segundo Plano.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Executando solicitações de arquivos autenticados com a transferência em segundo plano
 
@@ -182,6 +188,8 @@ Quando a transferência em segundo plano é usada, cada download existe como uma
 
 Se você for baixar recursos pequenos que, provavelmente, serão completos com rapidez, é melhor usar as APIs [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ao invés da transferência em segundo plano.
 
+Devido às restrições de recurso por app, um app não deve ter mais de 200 transferências (DownloadOperations + UploadOperations) de cada vez. Exceder esse limite pode deixar a fila de transferência do app em um estado irrecuperável.
+
 Os exemplos a seguir o guiarão através da criação e da inicialização de um download básico e como enumerar e reintroduzir operações persistidas de uma sessão de aplicativo anterior.
 
 ### <a name="configure-and-start-a-background-transfer-file-download"></a>Configurar e iniciar um download de arquivo de Transferência de Tela de Fundo
@@ -228,7 +236,7 @@ O pós-processamento usa uma nova classe: [**BackgroundTransferCompletionGroup**
 
 Você inicia uma transferência em segundo plano com pós-processamento da seguinte maneira.
 
-1.  Crie um objeto [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209). Depois, crie um objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Configure a propriedade **Trigger** do objeto construtor para o objeto de grupo de conclusão e a propriedade **TaskEngtyPoint** do construtor para o ponto de entrada da tarefa em segundo plano que deve ser executada na conclusão da transferência. Por fim, chame o método [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) para registrar sua tarefa em segundo plano. Observe que vários grupos de conclusão podem compartilhar um ponto de entrada de tarefa em segundo plano, mas você pode ter apenas um grupo de conclusão por registro de tarefa em segundo plano.
+1.  Crie um objeto [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209). Depois, crie um objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Configure a propriedade **Trigger** do objeto construtor para o objeto de grupo de conclusão e a propriedade **TaskEntryPoint** do construtor para o ponto de entrada da tarefa em segundo plano que deve ser executada na conclusão da transferência. Por fim, chame o método [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) para registrar sua tarefa em segundo plano. Observe que vários grupos de conclusão podem compartilhar um ponto de entrada de tarefa em segundo plano, mas você pode ter apenas um grupo de conclusão por registro de tarefa em segundo plano.
 
    ```csharp
     var completionGroup = new BackgroundTransferCompletionGroup();

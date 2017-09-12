@@ -5,21 +5,23 @@ title: "Controles de escrita à tinta"
 label: Inking Controls
 template: detail.hbs
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
-ms.openlocfilehash: 50c18f0ef72ad990971323921eae282c76c70be3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3efbda64a872a59cd1e3e5da03cd9ab896642766
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="inking-controls"></a>Controles de escrita à tinta
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Há dois controles diferentes que facilitam a escrita à tinta em aplicativos da Plataforma Universal do Windows (UWP): [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 O controle InkCanvas renderiza uma entrada à caneta como um traço de tinta (usando as configurações padrão de cor e espessura) ou um traço de apagar. Esse controle é uma sobreposição transparente que não inclui interfaces do usuário internas para alterar as propriedades de traço de tinta padrão.
 
@@ -33,21 +35,12 @@ Por padrão, o InkToolbar inclui botões para desenhar, apagar, realçar e exibi
 > [!NOTE]
 > InkToolbar dá suporte à entrada por caneta e mouse e pode ser configurado para reconhecer a entrada por toque.
 
-<img src="images/ink-tools-invoked-toolbar.png" width="300">
+<img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)</li>
-<li>[**Classe InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)</li>
-<li>[**Classe InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)</li>
-<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [classe InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [classe InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use o InkCanvas quando você precisar habilitar recursos básicos de escrita à tinta em seu aplicativo sem fornecer todas as configurações de tinta ao usuário.
 
@@ -56,7 +49,7 @@ Por padrão, os traços são renderizados como tinta ao usar a ponta da caneta (
 Emparelhe o InkCanvas com um InkToolbar a fim de oferecer uma interface do usuário para ativar recursos de tinta e configurar propriedades de tinta básicas, como tamanho do traço, cor e forma da ponta da caneta.
 
 > [!NOTE] 
-> Para obter uma personalização mais abrangente da renderização do traço de tinta em um InkCanvas, use o objeto [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) subjacente.
+> Para obter uma personalização mais abrangente da renderização do traço de tinta em um InkCanvas, use o objeto [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) subjacente.
 
 ## <a name="examples"></a>Exemplos
 
@@ -88,7 +81,7 @@ O controle InkToolbar deve ser usado em conjunto com um InkCanvas. A incorporaç
  ```
 
 Isso exibe o InkToolbar a seguir:
-<img src="images/ink-tools-uninvoked-toolbar.png" width="250">
+<img src="images/ink-tools-uninvoked-toolbar.png" width="250" alt="Basic InkToolbar">
 
 ### <a name="built-in-buttons"></a>Botões internos
 

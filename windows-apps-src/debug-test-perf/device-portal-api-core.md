@@ -1,17 +1,19 @@
 ---
-author: dbirtolo
+author: mukin
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "Referência de API central do Device Portal"
 description: "Saiba mais sobre as APIs REST centrais do Windows Device Portal que você pode usar para acessar os dados e controlar seu dispositivo de forma programática."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b6df8f361df82ef65098877027cf1857fa575b0b
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="device-portal-core-api-reference"></a>Referência de API central do Device Portal
 
@@ -1272,6 +1274,69 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
+## User information
+---
+### <a name="get-the-active-user"></a>Obter o usuário ativo
+
+**Solicitação**
+
+Você pode obter o nome do usuário ativo no dispositivo usando o seguinte formato de solicitação:
+ 
+Método      | URI da solicitação
+:------     | :-----
+GET | /api/users/activeuser
+<br />
+
+**Parâmetros do URI**
+
+- Nenhum(a)
+
+**Cabeçalhos de solicitação**
+
+- Nenhum(a)
+
+**Corpo da solicitação**
+
+- Nenhum(a)
+
+**Resposta**
+
+A resposta inclui as informações do usuário no formato a seguir. 
+
+Em caso de sucesso: 
+```
+{
+    "UserDisplayName" : string, 
+    "UserSID" : string
+}
+```
+Em caso de falha:
+```
+{
+    "Code" : int, 
+    "CodeText" : string, 
+    "Reason" : string, 
+    "Success" : bool
+}
+```
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
 ## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Obter a lista de processos em execução
@@ -2023,6 +2088,52 @@ Código de status HTTP      | Descrição
 * IoT
 
 ---
+### <a name="kill-process-by-pid"></a>Interromper o processo por PID
+
+**Solicitação**
+
+Você pode interromper um processo usando o formato de solicitação a seguir.
+ 
+Método      | URI da solicitação
+:------     | :-----
+DELETE | /api/taskmanager/process
+<br />
+
+**Parâmetros do URI**
+
+Você pode especificar os seguintes parâmetros adicionais no URI da solicitação:
+
+Parâmetro do URI | Descrição
+:---          | :---
+pid   | (**necessário**) A ID de processo exclusiva do processo a ser interrompido.
+<br />
+**Cabeçalhos de solicitação**
+
+- Nenhum(a)
+
+**Corpo da solicitação**
+
+- Nenhum(a)
+
+**Resposta**
+
+**Código de status**
+
+Esta API tem os códigos de status esperados a seguir.
+
+Código de status HTTP      | Descrição
+:------     | :-----
+200 | OK
+4XX | Códigos de erro
+5XX | Códigos de erro
+<br />
+**Famílias de dispositivos disponíveis**
+
+* Área de Trabalho do Windows
+* HoloLens
+* IoT
+
+---
 ## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Obter a configuração de IP atual
@@ -2262,8 +2373,8 @@ Parâmetro do URI | Descrição
 :---          | :---
 interface   | (**necessário**) O GUID da interface de rede que você usa para se conectar à rede.
 op   | (**necessário**) Indica a ação a ser executada. Valores possíveis são connect ou disconnect.
-ssid   | (**necessário se *op* == connect**) O SSID ao qual se conectar.
-chave   | (**necessário se *op* = = conectar e rede requer autenticação* *) A chave compartilhada.
+ssid   | (**necessário se *op* = = connect**) O SSID ao qual se conectar.
+key   | (**necessário se *op* = = connect e se a rede exigir autenticação**) A chave compartilhada.
 createprofile | (**necessário**) Crie um perfil de rede no dispositivo.  Isso fará o dispositivo se conectar automaticamente à rede no futuro. Isso pode ser **sim** ou **não**. 
 
 **Cabeçalhos de solicitação**
@@ -3088,7 +3199,7 @@ tagValue | (**obrigatório**) A marca a ser removida.
 
 **Cabeçalhos de solicitação**
 
-- Nenhum(a)
+- Nenhum
 
 **Corpo da solicitação**
 
@@ -3290,7 +3401,7 @@ Parâmetro do URI | Descrição
 :------     | :-----
 knownfolderid | (**obrigatório**) O diretório de nível superior onde você deseja baixar arquivos. Use **LocalAppData** para acessar aplicativos de sideload. 
 filename | (**necessário**) O nome do arquivo que está sendo baixado. 
-packagefullname | (**obrigatório se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. 
+packagefullname | (**necessário se *knownfolderid* == LocalAppData**) O nome completo do pacote em que você está interessado. 
 path | (**opcional**) O subdiretório dentro da pasta ou do pacote especificados acima.
 
 **Cabeçalhos de solicitação**

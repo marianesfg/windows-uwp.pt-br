@@ -4,18 +4,18 @@ ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: "Use este método na API de envio da Windows Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows."
 title: Obter um aplicativo
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, aplicativo
-ms.openlocfilehash: 6087bf65ac297b12f92a9082db4e6a12e93130ef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 71081cd4a42ecb085c82432d1a24a5cd2dd92715
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="get-an-app"></a>Obter um aplicativo
-
-
 
 
 Use este método na API de envio da Windows Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows.
@@ -26,8 +26,6 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## <a name="request"></a>Solicitação
 
@@ -90,7 +88,8 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
   "pendingApplicationSubmission": {
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
-  }
+  },
+  "hasAdvancedListingPermission": false
 }
 ```
 

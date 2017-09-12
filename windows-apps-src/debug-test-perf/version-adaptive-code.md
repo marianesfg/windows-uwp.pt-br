@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 title: "Código adaptável de versão"
-description: "Saiba como tirar proveito das novas APIs e manter a compatibilidade com versões anteriores"
+description: "Use a classe ApiInformation para aproveitar as novas APIs e manter a compatibilidade com versões anteriores"
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,49 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-ms.openlocfilehash: 4076bd9edf26108e896e3a7734c2108a00577cd0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5b9a3b02c5acbb2ad7bcd00b9af4f7d6edd91de
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/27/2017
 ---
-# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Código adaptável de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
-
-Cada versão do SDK do Windows 10 adiciona novas funcionalidades interessantes que você vai querer aproveitar. No entanto, nem todos os seus clientes atualizarão seus dispositivos para a versão mais recente do Windows 10 ao mesmo tempo, e você quer garantir que seu aplicativo funcione na maior variedade possível de dispositivos. Aqui, mostraremos como projetar seu aplicativo de modo que ele seja executado em versões anteriores do Windows 10, mas também tire proveito dos novos recursos, sempre que o aplicativo for executado em um dispositivo com a atualização mais recente instalada.
-
-Há duas etapas que devem ser seguidas a fim de garantir que o aplicativo seja compatível com a mais ampla gama de dispositivos Windows 10. Primeiro, configure seu projeto do Visual Studio para acessar as APIs mais recentes. Isso afeta o que acontece quando você compila o aplicativo. Segundo, execute verificações de tempo de execução para garantir que você só chama APIs que estão presentes no dispositivo em que seu aplicativo esteja sendo executado.
-
-## <a name="configure-your-visual-studio-project"></a>Configurar seu projeto no Visual Studio
-
-A primeira etapa para dar suporte a várias versões do Windows 10 é especificar as versões de *Destino* e *Mínima* com suporte do SO/SDK em seu projeto do Visual Studio.
-- *Destino*: a versão do SDK na qual o Visual Studio compila o código do aplicativo e executa todas as ferramentas. Todas as APIs e recursos nesta versão do SDK estão disponíveis no código do aplicativo no momento da compilação.
-- *Mínima*: versão do SDK que dá suporte à versão mais antiga do sistema operacional na qual seu aplicativo possa ser executado (e que será implantado pela loja) e a versão que o Visual Studio compila o código de marcação do aplicativo. 
-
-Durante o tempo de execução, o aplicativo será executado com a versão do sistema operacional que for implantado, portanto o aplicativo gerará exceções se você usar recursos ou chamar as APIs que não estejam disponíveis nessa versão. Mostramos a você como usar verificações de tempo de execução para chamar as APIs corretas mais adiante neste artigo.
-
-As configurações de Destino e Mínima especificam os términos de um intervalo das versões do SO/SDK. No entanto, se você testar o aplicativo na versão mínima, pode ter certeza de que ele será executado em qualquer versão entre a Mínima e a de Destino.
-
-> [!TIP]
-> O Visual Studio não avisa você sobre compatibilidade de API. É sua responsabilidade testar e garantir que o aplicativo tenha o desempenho esperado entre todas as versões de sistema operacional, incluindo a Mínima e a de Destino.
-
-Quando você cria um novo projeto no Visual Studio 2015, Atualização 2 ou posterior, você será solicitado a definir as versões de Destino e Mínima que são compatíveis com seu aplicativo. Por padrão, a versão de Destino é a maior versão instalada do SDK e a versão Mínima é a menor versão instalada do SDK. Você só poderá escolher as versões de Destino e Mínima de acordo com as versões do SDK que estão instaladas em seu computador. 
-
-![Definir o SDK de destino no Visual Studio](images/vs-target-sdk-1.png)
-
-Normalmente, recomendamos que você deixe os padrões. Entretanto, se você tiver uma versão Preview do SDK instalada e estiver escrevendo um código para produção, altere a versão de Destino do SDK do Preview para a última versão oficial do SDK. 
-
-Para alterar a versão Mínima e de Destino de um projeto que já tenha sido criado no Visual Studio, vá para Projeto -> Propriedades -> guia Aplicativo -> Direcionamento.
-
-![Alterar o SDK de destino no Visual Studio](images/vs-target-sdk-2.png) 
-
-Para referência, estes são os números de compilação para cada SDK:
-- Windows 10, versão 1506: SDK versão 10240
-- Windows 10, versão 1511 (atualização de novembro): SDK versão 10586
-- Windows 10, versão 1607 (Atualização de Aniversário): versão do SDK 14393.
-
-Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Windows Insider](https://insider.windows.com/).
-
-## <a name="write-adaptive-code"></a>Escrever código adaptável
+# <a name="version-adaptive-code"></a>Código adaptável de versão
 
 Você pode pensar em escrever código adaptável da mesma forma que pensa em [criar uma interface do usuário adaptável](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Você pode projetar a interface do usuário básica para ser executada na tela menor e então mover ou adicionar elementos ao detectar que o aplicativo está sendo executado em uma tela maior. Com código adaptável, você escreve o código base para ser executado na versão mais baixa do sistema operacional e pode adicionar recursos selecionados a mão quando você detecta que o aplicativo está sendo executado em uma versão mais recente em que o novo recurso está disponível.
+
+Para obter informações de apoio importantes sobre ApiInformation e contratos de API e sobre como configurar o Visual Studio, consulte [Aplicativos adaptáveis de versão](version-adaptive-apps.md).
 
 ### <a name="runtime-api-checks"></a>Verificações de API de tempo de execução
 
@@ -476,6 +444,7 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
+
 ## <a name="related-articles"></a>Artigos relacionados
 
 - [Guia para aplicativos UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)

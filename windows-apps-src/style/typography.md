@@ -5,14 +5,16 @@ title: Tipografia
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 92fd3ee66768fcf1c98d9760ecb44811c9b0f9b3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0609622053d0ae25b5039766137db1b195c0d69d
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="typography"></a>Typography
 
@@ -50,7 +52,7 @@ Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/e
          puts the baseline of the body text exactly 24px
          below the baseline of the header. 24px is the
          recommended line height for a 20px font size,
-         which is what's set in SubtitleTextBlockStyle.
+         which is what’s set in SubtitleTextBlockStyle.
          The bottom margin will be different for
          different font size pairings. -->
     <TextBlock
@@ -70,7 +72,7 @@ Em XAML, isso é feito empilhando dois [TextBlocks](https://msdn.microsoft.com/e
   <div class="side-by-side-content-left">
 <h2>Kerning e tracking</h2>
 
-Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela tem formatos orgânicos e abertos com base em texto manuscrito. Para garantir a legibilidade ideal e manter a integridade humanista, as configurações de kerning e tracking devem ter valores específicos.
+Segoe é uma face de tipos humanista, com uma aparência suave e amigável, ela tem formatos orgânicos e abertos com base em texto manuscrito. Para garantir legibilidade ótima e manter a integridade humanista, as configurações de kerning e rastreamento devem ter valores específicos.
 
 Kerning deve ser definido como "métricas" e tracking deve ser definido como "0".
   </div>
@@ -172,9 +174,11 @@ A rampa de tipos estabelece uma relação de design fundamental dos títulos ao 
 >A maioria dos níveis de rampa está disponível como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) XAML que seguem a convenção de nomenclatura `*TextBlockStyle` (por ex.: `HeaderTextBlockStyle`).
 
 
+<!--
 <div class="microsoft-internal-note">
-SubtitleAlt, BaseAlt e CaptionAlt não são incluídos no momento. Você pode criar os estilos em seu próprio aplicativo seguindo os trechos de código no link acima. Observe também que o XAML atualmente não iguala a altura da linha exatamente.
+SubtitleAlt, BaseAlt, and CaptionAlt are not currently included. You can create the styles in your own app following the code snippets in the above link. Also note that XAML does not currently match the line height exactly.
 </div>
+-->
 
 
 ## <a name="primary-and-secondary-text"></a>Texto principal e secundário

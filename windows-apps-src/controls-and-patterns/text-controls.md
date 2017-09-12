@@ -6,14 +6,19 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8be1dac30047a647d7f80464b53fe2fc3527d2c3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 16b019678e94e131ba1105bb92d7ea3ab301828c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -24,19 +29,10 @@ Controles de texto consistem em caixas de entrada de texto, caixas de senha, cai
 - Os controles para exibir texto somente leitura são [TextBlock](text-block.md) e [RichTextBlock](rich-text-block.md).
 - Os controles de entrada e edição de texto são: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) e [RichEditBox](rich-edit-box.md).
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
-<li>[**Classe PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
-<li>[**Classe RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
-<li>[**Classe RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
-<li> [**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
-<li>[**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 O controle de texto que você deverá usar dependerá do cenário. Use essas informações para selecionar o controle de texto correto para usar em seu aplicativo.
 
@@ -73,7 +69,7 @@ Há muitas maneiras de se obter a entrada do usuário em seu aplicativo. Estas p
 -   **É prático enumerar todos os valores válidos de forma eficiente?** Se sim, então considere usar um dos controles de seleção, como [caixa de seleção](checkbox.md), [lista suspensa](lists.md), caixa de listagem, [botão de opção](radio-button.md), [controle deslizante](slider.md), [switch de alternância](toggles.md), [seletor de data](date-and-time.md) ou seletor de hora.
 -   **Há um conjunto razoavelmente pequeno de valores válidos?** Nesse caso, considere uma [lista suspensa](lists.md) ou uma caixa de listagem, especialmente se os valores tiverem mais do que alguns caracteres.
 -   **Os dados válidos estão completamente irrestritos? Ou os dados válidos estão restritos apenas pelo formato (restrição de tamanho ou tipos de caractere)?** Em caso afirmativo, use um controle de entrada de texto. Você pode limitar o número de caracteres que podem ser inseridos e validar o formato no código do aplicativo.
--   **O valor representa um tipo de dados que tem um controle comum especializado?** Se sim, use o controle apropriado em vez de um controle de entrada de texto. Por exemplo, use um [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), em vez de um controle de entrada de texto, para aceitar uma entrada de data.
+-   **O valor representa um tipo de dados que tem um controle comum especializado?** Se sim, use o controle apropriado em vez de um controle de entrada de texto. Por exemplo, use um [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681), em vez de um controle de entrada de texto, para aceitar uma entrada de data.
 -   Se os dados forem estritamente numéricos:
     -   **O valor que está sendo inserido é aproximado e/ou relativo a outra quantidade na mesma página?** Se for o caso, utilize um [controle deslizante](slider.md).
     -   **O usuário se beneficiaria com um feedback instantâneo sobre o efeito das alterações de configuração?** Se for caso, utilize um [controle deslizante](slider.md), possivelmente com um controle anexo.
@@ -97,18 +93,18 @@ Caixa de senha
 
 Consulte estes artigos para obter informações e exemplos específicos para cada controle de texto.
 
--   [**AutoSuggestBox**](auto-suggest-box.md)
--   [**PasswordBox**](password-box.md)
--   [**RichEditBox**](rich-edit-box.md)
--   [**RichTextBlock**](rich-text-block.md)
--   [**TextBlock**](text-block.md)
--   [**TextBox**](text-box.md)
+-   [AutoSuggestBox](auto-suggest-box.md)
+-   [PasswordBox](password-box.md)
+-   [RichEditBox](rich-edit-box.md)
+-   [RichTextBlock](rich-text-block.md)
+-   [TextBlock](text-block.md)
+-   [TextBox](text-box.md)
 
 ## <a name="font-and-style-guidelines"></a>Diretrizes de fonte e estilo
 Consulte estes artigos para obter diretrizes de fonte:
 
-- [**Diretrizes de fonte**](fonts.md)
-- [**Diretrizes e lista de ícones Segoe MDL2**](segoe-ui-symbol-font.md)
+- [Diretrizes de fonte](fonts.md)
+- [Diretrizes e lista de ícones Segoe MDL2](segoe-ui-symbol-font.md)
 
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolha o teclado correto para o controle de texto
@@ -144,7 +140,7 @@ O texto renderizado tem a aparência a seguir:
 
 ![Bloco de texto com fonte de cor](images/text-block-color-fonts.png)
 
-Para saber mais, consulte a propriedade [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx).
+Para saber mais, consulte a propriedade [IsColorFontEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx).
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>Diretrizes para separadores de linha e parágrafo
 
@@ -187,11 +183,11 @@ Para controles TextBox e RichEditBox, a verificação ortográfica permanece ati
 ## <a name="related-articles"></a>Artigos relacionados
 
 **Para designers**
-- [**Diretrizes de fonte**](fonts.md)
-- [**Diretrizes e lista de ícones Segoe MDL2**](segoe-ui-symbol-font.md)
+- [Diretrizes de fonte](fonts.md)
+- [Diretrizes e lista de ícones Segoe MDL2](segoe-ui-symbol-font.md)
 - [Adicionando pesquisa](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desenvolvedores (XAML)**
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)

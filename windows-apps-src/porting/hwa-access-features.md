@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Aplicativos hospedados na Web, APIs do WinRT para JavaScript, aplicativo de web Win10, aplicativo do Windows em JavaScript, ApplicationContentUriRules, ACURs, msapplication-cortanavcd, Cortana para aplicativos web
-ms.assetid: 86ca4590-2675-4de2-b825-c586d9669b8e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ccb59581227db82b8566da11d6db731b362ec258
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 86661353916e64cb2ed4d7f0ca7b8830bfe95685
+ms.sourcegitcommit: a704e3c259400fc6fbfa5c756c54c12c30692a31
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/12/2017
 ---
+# <a name="accessing-uwp-features"></a>Acesso a recursos UWP
 
-# <a name="accessing-universal-windows-platform-uwp-features"></a>Acessar recursos da Plataforma Universal do Windows (UWP)
-
-Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativando recursos nativos em dispositivos Windows, [beneficiando-se da segurança do Windows](#keep-your-app-secure--setting-application-content-uri-rules-acurs), [chamando APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, tirando proveito da [integração com a Cortana](#integrate-cortana-voice-commands)e usando um [provedor de autenticação on-line](#web-authentication-broker). [Também há suporte para aplicativos híbridos](#create-hybrid-apps--packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
+Seu aplicativo da web pode ter acesso completo à Plataforma Universal do Windows (UWP), ativar recursos nativos em dispositivos Windows, [beneficiar-se da segurança do Windows](#keep-your-app-secure--setting-application-content-uri-rules-acurs), [chamar APIs do Windows Runtime](#call-windows-runtime-apis) diretamente do script hospedado em um servidor, aproveitar a [integração com a Cortana](#integrate-cortana-voice-commands)e usar um [provedor de autenticação on-line](#web-authentication-broker). [Também há suporte para aplicativos híbridos](##create-hybrid-apps--packaged-web-apps-vs-hosted-web-apps), pois você pode incluir código local para ser chamado do script hospedado e gerenciar a navegação do aplicativo entre as páginas locais e remotas.
 
 ## <a name="keep-your-app-secure--setting-application-content-uri-rules-acurs"></a>Mantenha seu aplicativo seguro – Definir regras de URI de conteúdo do aplicativo (ACURs)
 
@@ -41,7 +39,7 @@ Veja a seguir alguns exemplos de ACURs.
 ```HTML
 <Application
 Id="App"
-StartPage="http://contoso.com/home">
+StartPage="https://contoso.com/home">
 <uap:ApplicationContentUriRules>
     <uap:Rule Type="include" Match="https://contoso.com/" WindowsRuntimeAccess="all" />
     <uap:Rule Type="include" Match="https://*.contoso.com/" WindowsRuntimeAccess="all" />
@@ -67,7 +65,7 @@ Veja um tipo de regra de exemplo:
 </uap:ApplicationContentUriRules>
 ```
 
-Isso proporciona o script em execução em http://contoso.com/ acesso para namespaces do Windows Runtime e componentes personalizados incluídos no pacote. Consulte o exemplo [Windows.UI.Notifications.js](https://gist.github.com/Gr8Gatsby/3d471150e5b317eb1813#file-windows-ui-notifications-js) no GitHub para notificações do sistema.
+Isso proporciona o script em execução em https://contoso.com/ acesso para namespaces do Windows Runtime e componentes personalizados incluídos no pacote. Consulte o exemplo [Windows.UI.Notifications.js](https://gist.github.com/Gr8Gatsby/3d471150e5b317eb1813#file-windows-ui-notifications-js) no GitHub para notificações do sistema.
 
 Aqui está um exemplo de como implementar um Bloco Dinâmico e atualizá-lo a partir do JavaScript remoto:
 
@@ -77,12 +75,12 @@ function updateTile(message, imgUrl, imgAlt) {
 
     if (typeof Windows !== 'undefined'&&
             typeof Windows.UI !== 'undefined' &&
-            typeof Windows.UI.Notifications !== 'undefined') {    
+            typeof Windows.UI.Notifications !== 'undefined') {  
         var notifications = Windows.UI.Notifications,
         tile = notifications.TileTemplateType.tileSquare150x150PeekImageAndText01,
         tileContent = notifications.TileUpdateManager.getTemplateContent(tile),
         tileText = tileContent.getElementsByTagName('text'),
-        tileImage = tileContent.getElementsByTagName('image');    
+        tileImage = tileContent.getElementsByTagName('image');  
         tileText[0].appendChild(tileContent.createTextNode(message || 'Demo Message'));
         tileImage[0].setAttribute('src', imgUrl || 'https://unsplash.it/150/150/?random');
         tileImage[0].setAttribute('alt', imgAlt || 'Random demo image');    
@@ -112,7 +110,7 @@ Quando você adiciona uma tag de elemento `<meta>` que lista o local do seu arqu
 Veja um exemplo do uso da tag em uma página html em um aplicativo da Web hospedado:
 
 ```HTML
-<meta name="msapplication-cortanavcd" content="http:// contoso.com/vcd.xml"/>
+<meta name="msapplication-cortanavcd" content="https:// contoso.com/vcd.xml"/>
 ```
 
 Para saber mais sobre integração com a Cortana e VCDs, consulte interações da Cortana e Voice Command Defintion (VCD) elements and attributes v1.2.
@@ -129,22 +127,22 @@ Você pode usar o agente de autenticação da Web para manipular o fluxo de logo
 <meta name="ms-webauth-uris" content="https://<providerstartpoint>?client_id=<clientid>&response_type=token, https://<appendpoint>"/>
 ```
 
-Para saber mais, consulte [Considerações do agente de autenticação da Web para provedores online](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx).
+Para saber mais, consulte [Considerações do agente de autenticação da Web para provedores online](../security/web-authentication-broker.md).
 
 ## <a name="app-capability-declarations"></a>Declarações de funcionalidades do aplicativo
 
 Se seu aplicativo precisar de acesso programático a recursos do usuário como imagens ou músicas, ou dispositivos como uma câmera ou microfone, você deverá declarar a funcionalidade apropriada. Há três categorias de declaração de recurso de aplicativo: 
 
-- [As funcionalidades de uso geral](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities) que se aplicam à maioria dos cenários de aplicativos. 
-- [As funcionalidades do dispositivo](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities) que permitem que seu aplicativo acesse dispositivos periféricos e internos. 
-- [Funcionalidades de uso especiais](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) que requerem uma conta empresarial especial para serem enviadas à Store para uso. 
+- [As funcionalidades de uso geral](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#general-use-capabilities) que se aplicam à maioria dos cenários de aplicativos. 
+- [As funcionalidades do dispositivo](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#device-capabilities) que permitem que seu aplicativo acesse dispositivos periféricos e internos. 
+- [Funcionalidades de uso especiais](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) que requerem uma conta empresarial especial para serem enviadas à Store para uso. 
 
-Para saber mais sobre contas empresariais, consulte [Tipos de conta, locais e taxas](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
+Para saber mais sobre contas empresariais, consulte [Tipos de conta, locais e taxas](https://docs.microsoft.com/en-us/windows/uwp/publish/account-types-locations-and-fees).
 
 > [!NOTE]
 > É importante saber que, quando os clientes compram seu aplicativo na Windows Store, eles são notificados sobre todas as funcionalidades declaradas pelo aplicativo. Portanto, não use recursos de que seu aplicativo não precisa.
 
-Solicite acesso declarando as funcionalidades no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/br211474.aspx) do seu aplicativo. Você pode declarar as funcionalidades gerais usando o [Designer de Manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx#Configure) no Microsoft Visual Studio ou adicioná-las manualmente ao manifesto do pacote.[Consulte Como especificar funcionalidades em um manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/br211477.aspx).
+Solicite acesso declarando as funcionalidades no [manifesto do pacote](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appx-package-manifest) do seu aplicativo. Para obter mais informações, consulte estes artigos sobre [Empacotar para aplicativos da plataforma Universal do Windows (UWP)](https://docs.microsoft.com/en-us/windows/uwp/packaging/index).
 
 Alguns recursos fornecem acesso de aplicativos a um recurso confidencial. Esses recursos são considerados confidenciais porque podem acessar dados pessoais do usuário ou acarretar custos para o usuário. Configurações de privacidade, gerenciadas pelo aplicativo Configurações, permitem que o usuário controle dinamicamente o acesso a recursos confidenciais. Assim, é importante que seu aplicativo não suponha que um recurso confidencial sempre está disponível. Para obter mais informações sobre como acessar recursos confidenciais, consulte [Diretrizes para aplicativos com reconhecimento de privacidade](https://msdn.microsoft.com/library/windows/apps/hh768223.aspx).
 
@@ -153,9 +151,9 @@ Alguns recursos fornecem acesso de aplicativos a um recurso confidencial. Esses 
 Uma maneira fácil de transformar seu site em um aplicativo UWP é usar um **manifesto do aplicativo** e **manifoldjs**. O manifesto do aplicativo é um arquivo xml que contém metadados sobre o aplicativo. Ele especifica itens como o nome do aplicativo, links para recursos, o modo de exibição, URLs e outros dados que descrevem como o aplicativo deve ser implantado e executado. manifoldjs facilita esse processo, mesmo em sistemas que não oferecem suporte a aplicativos Web. Acesse [manifoldjs.com](http://www.manifoldjs.com/) para saber mais sobre seu funcionamento. Você também pode ver uma demonstração sobre manifoldjs como parte desta apresentação [Aplicativos Web do Windows 10](http://channel9.msdn.com/Events/WebPlatformSummit/2015/Hosted-web-apps-and-web-platform-innovations?wt.mc_id=relatedsession).
 
 ## <a name="related-topics"></a>Tópicos relacionados
-- [API Tempo do Windows Runtime: exemplos de código JavaScript](http://rjs.azurewebsites.net/)
+- [API Tempo do Windows Runtime: exemplos de código JavaScript](https://microsoft.github.io/WindowsRuntimeAPIs_Javascript_snippets/)
 - [Codepen: área restrita a ser usada para chamar APIs do Windows Runtime](http://codepen.io/seksenov/pen/wBbVyb/)
-- [Interações da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974231.aspx)
+- [Interações da Cortana](https://developer.microsoft.com/en-us/cortana)
 - [Elementos e atributos de Voice Command Definition (VCD) v1.2](https://msdn.microsoft.com/library/windows/apps/dn954977.aspx)
-- [Considerações do agente de autenticação da Web para provedores online](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx)
-- [Declarações de funcionalidades do aplicativo](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
+- [Considerações do agente de autenticação da Web para provedores online](https://docs.microsoft.com/en-us/windows/uwp/security/web-authentication-broker)
+- [Declarações de funcionalidades do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations)

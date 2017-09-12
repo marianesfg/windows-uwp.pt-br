@@ -1,17 +1,19 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: "Criar um item de trabalho periódico"
 description: "Saiba como criar um item de trabalho periódico que se repete periodicamente."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, item de trabalho periódico, threading, temporizadores"
-ms.openlocfilehash: 89c633f9ab6da23c4b8417a9a75f87c706a3546f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 

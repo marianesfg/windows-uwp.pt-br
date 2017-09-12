@@ -4,20 +4,20 @@ ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Use estes métodos na API de envio da Windows Store para recuperar dados dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Obter dados de app
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, dados do aplicativo
-ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0bb01250756c464113570ece433afe11506a5399
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
 Use os métodos a seguir na API de envio da Windows Store para obter dados para os aplicativos existentes em sua conta do Centro de Desenvolvimento. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
-
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
 
 Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Centro de Desenvolvimento. Para criar ou gerenciar envios de aplicativos, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
@@ -88,7 +88,8 @@ Esse recurso representa um app que está registrado em sua conta.
   "pendingApplicationSubmission": {
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
-  }
+  },
+  "hasAdvancedListingPermission": false
 }
 ```
 
@@ -103,7 +104,8 @@ Este recurso tem os seguintes valores.
 | publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor **Package/Identity/Publisher** que aparece na página [Identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) do aplicativo no painel do Centro de Desenvolvimento do Windows.       |
 | firstPublishedDate      | string  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | object | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
-| pendingApplicationSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   |
+| pendingApplicationSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   
+| hasAdvancedListingPermission        | object  |  Indica se você pode configurar [gamingOptions](manage-app-submissions.md#gaming-options-object) ou [trailers](manage-app-submissions.md#trailer-object) para envios para o app. Para obter mais informações, consulte [esta seção](manage-app-submissions.md#advanced-listings). |  |
 
 
 <span id="add-on-object" />

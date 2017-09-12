@@ -1,28 +1,30 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientação do sensor"
 description: "Os dados do sensor das classes Accelerometer, Gyrometer, Compass, Inclinometer e OrientationSensor são definidos por seus eixos de referência. Esses eixos são definidos pela orientação de paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 05/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 78a155aecdf7cb98f8742380dae62a0a9025149a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a91e38aa11f7fa25804d6d6f11cc030ee1613311
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="sensor-orientation"></a>Orientação do sensor
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** APIs importantes **
+**APIs importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
 
-Os dados do sensor das classes [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) e [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) são definidos por seus eixos de referência. Esses eixos são definidos pela orientação paisagem do dispositivo e giram com o dispositivo conforme o usuário o vira. Caso seu aplicativo dê suporte à rotação automática e se reoriente para acomodar o dispositivo conforme o usuário o gira, você deve ajustar os dados do sensor para a rotação antes de usá-lo.
+Os dados do sensor das classes [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) e [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) são definidos por seus eixos de referência. Esses eixos são definidos pelo quadro de referência do dispositivo e giram com o dispositivo conforme o usuário o vira. Caso seu aplicativo dê suporte à rotação automática e se reoriente para acomodar o dispositivo conforme o usuário o gira, você deve ajustar os dados do sensor para a rotação antes de usá-lo.
 
 ## <a name="display-orientation-vs-device-orientation"></a>Orientação de exibição x orientação do dispositivo
 
@@ -48,7 +50,7 @@ Os fabricantes produzem dispositivos com ambos os formatos de prioridade paisage
 |-------------|-----------------|----------------|
 | **Paisagem** | ![Dispositivo de prioridade paisagem em orientação Paisagem](images/sensor-orientation-0.PNG) | ![Dispositivo de prioridade retrato em orientação Paisagem](images/sensor-orientation-1.PNG) |
 | **Retrato** | ![Dispositivo de prioridade paisagem em orientação Retrato](images/sensor-orientation-2.PNG) | ![Dispositivo de prioridade retrato em orientação Retrato](images/sensor-orientation-3.PNG) |
-| **LandscapeFlipped ** | ![Dispositivo de prioridade paisagem em orientação LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo de prioridade retrato em orientação LandscapeFlipped](images/sensor-orientation-5.PNG) | 
+| **LandscapeFlipped** | ![Dispositivo de prioridade paisagem em orientação LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo de prioridade retrato em orientação LandscapeFlipped](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Dispositivo de prioridade paisagem em orientação PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo de prioridade retrato em orientação PortraitFlipped](images/sensor-orientation-7.PNG) |
 
 ## <a name="devices-broadcasting-display-and-headless-devices"></a>Dispositivos com transmissão de exibição e dispositivos sem periféricos
@@ -162,9 +164,14 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 Os dados de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) devem ser alterados de maneira diferente. Pense nessas diferentes orientações como rotações no sentido anti-horário para o eixo Z, portanto, precisamos inverter a rotação para obter a orientação do usuário de volta. Para dados quatérnion, podemos usar a fórmula de Euler para definir uma rotação com um quatérnion de referência e também podemos usar uma matriz de rotação de referência.
 
-![Fórmula de Euler](images/eulers-formula.png) Para obter a orientação relativa desejada, multiplique o objeto de referência pelo objeto absoluto. Observe que esta matemática não é comutativa.
+![Fórmula de Euler](images/eulers-formula.png)
 
-![Multiplique o objeto de referência pelo objeto absoluto](images/orientation-formula.png) Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
+Para obter a orientação relativa desejada, multiplique o objeto de referência pelo objeto absoluto. Observe que esta matemática não é comutativa.
+
+![Multiplique o objeto de referência pelo objeto absoluto.](images/orientation-formula.png)
+
+Na expressão anterior, o objeto absoluto é retornado pelos dados do sensor.
+
 
 | Orientação de exibição  | Rotação no sentido anti-horário em torno de Z | Quatérnion de referência (rotação invertida) | Matriz de rotação de referência (rotação invertida) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|

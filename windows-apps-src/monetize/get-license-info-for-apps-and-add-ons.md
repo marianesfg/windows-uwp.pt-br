@@ -4,18 +4,20 @@ ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: "Saiba como usar o namespace Windows.Services.Store para obter informações de licença para o aplicativo atual e seus complementos."
 title: "Obter informações de licença para seus aplicativos e complementos"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, licenças, aplicativos, complementos, compras no aplicativo, IAPs, Windows.Services.Store"
-ms.openlocfilehash: 2680ac184bdb876d0b8c834115ff2b93cb7e9771
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: dbd37ed219d47ad2c7631170c4299af708404243
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Obter informações de licença para apps e complementos
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para obter informações relacionadas a licença para o aplicativo atual e seus complementos (também conhecidos como produtos no aplicativo ou IAPs). Por exemplo, você pode usar essas informações para determinar se as licenças para o aplicativo ou seus complementos estão ativas ou se são licenças de avaliação.
+Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar métodos da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para obter informações relacionadas a licença para o aplicativo atual e seus complementos. Por exemplo, você pode usar essas informações para determinar se as licenças para o aplicativo ou seus complementos estão ativas ou se são licenças de avaliação.
 
 > [!NOTE]
 > Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
@@ -24,7 +26,8 @@ Os aplicativos destinados ao Windows 10, versão 1607 ou posterior podem usar m�
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows, e esse aplicativo foi publicado e disponibilizado na Loja. Pode ser um aplicativo que você deseja liberar para os clientes ou pode ser um aplicativo básico que atenda aos requisitos mínimos [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que você esteja usando somente para testes. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Se você quiser obter informações de licença para um complemento para o aplicativo, também deve [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md). 
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.

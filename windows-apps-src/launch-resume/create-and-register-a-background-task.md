@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2492d8c50b6f2e35a137eae6e1a002af0f46afd1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 1974c90b89a34f3252face47b9f18786b638adf8
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo.
 
@@ -26,7 +28,7 @@ translationtype: HT
 Crie uma classe de tarefa em segundo plano e a registre para ser executada quando seu aplicativo não estiver em primeiro plano. Este tópico demonstra como criar e registrar uma tarefa em segundo plano que é executada em um processo separado do seu aplicativo. Para fazer o trabalho em segundo plano diretamente no aplicativo em primeiro plano, consulte [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md).
 
 > [!Note]
-> Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plano, consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obter informações sobre os aprimoramentos no Windows 10, versão 1607, que tornam a tarefa mais fácil.
+> Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plano, consulte [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio) para obter informações sobre os aprimoramentos no Windows 10, versão 1607, que tornam a tarefa mais fácil.
 
 ## <a name="create-the-background-task-class"></a>Criar a classe de tarefa em segundo plano
 
@@ -238,7 +240,7 @@ O procedimento abaixo é concluído em uma de suas classes de aplicativo (por ex
     > [!div class="tabbedCodeSnippets"]
     > ```cs
     >     BackgroundTaskRegistration task = builder.Register();
-    >     ```
+    > ```
     > ```cpp
     >     BackgroundTaskRegistration^ task = builder->Register();
     > ```

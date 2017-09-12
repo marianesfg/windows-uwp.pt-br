@@ -6,32 +6,29 @@ title: Bloco de texto
 label: Text block
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 904f0982deb596783ae886c26fee03c180d51987
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 0ee72a3111fd64fc4cd17a9a0a4283255ce2d3ff
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-block"></a>Bloco de texto
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
  Bloco de texto é o controle principal para exibir texto somente leitura em aplicativos. Você pode usá-lo para exibir texto de linha única ou de várias linhas, hiperlinks embutidos e texto com formatação, como negrito, itálico ou sublinhado.
+ 
+ > **APIs importantes**: [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [propriedade Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx), [propriedade Inlines](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
-<li>[**Propriedade Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx)</li>
-<li>[**Propriedade Inlines**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)</li>
-</ul>
-</div>
-
-
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Um bloco de texto geralmente é mais fácil de usar e fornece melhor desempenho na renderização de texto do que um bloco Rich Text, por isso é o preferido para a maioria do texto da interface do usuário de aplicativo. Você pode facilmente acessar e usar o texto de um bloco de texto em seu aplicativo, obtendo o valor da propriedade [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx). Também fornece muitas das mesmas opções de formatação para personalizar como o texto será renderizado.
 
@@ -76,14 +73,14 @@ Elementos derivados da classe Inline, como Bold, Italic, Run, Span e LineBreak, 
 Sempre que possível, o XAML usa um caminho de código mais eficiente para texto de layout. Esse caminho rápido reduz o uso de memória em geral e reduz consideravelmente o tempo da CPU para medir e organizar o texto. Esse caminho rápido aplica-se somente ao TextBlock. Portanto, sempre que possível, ele deve ter preferência sobre RichTextBlock.
 
 Determinadas condições exigem que o TextBlock faça fallback em caminho de código com mais recursos e uso intenso de CPU para renderização de texto. Para manter a renderização de texto no caminho rápido, siga estas diretrizes para configurar as propriedades listadas aqui.
-- [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): a condição mais importante é que o caminho rápido seja usado somente quando você definir o texto configurando explicitamente a propriedade Text, em XAML ou em código (como mostrado nos exemplos anteriores). Definir o texto pela coleção Inlines do TextBlock (como `<TextBlock>Inline text</TextBlock>`) desabilitará o caminho rápido, devido à complexidade potencial de vários formatos.
-- [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): somente o valor padrão de 0 é o caminho rápido.
-- [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): somente os valores **None**, **CharacterEllipsis** e **WordEllipsis** são o caminho rápido. O valor **Clip** desabilita o caminho rápido.
+- [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): a condição mais importante é que o caminho rápido seja usado somente quando você definir o texto configurando explicitamente a propriedade Text, em XAML ou em código (como mostrado nos exemplos anteriores). Definir o texto pela coleção Inlines do TextBlock (como `<TextBlock>Inline text</TextBlock>`) desabilitará o caminho rápido, devido à complexidade potencial de vários formatos.
+- [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): somente o valor padrão de 0 é o caminho rápido.
+- [TextTrimming](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): somente os valores **None**, **CharacterEllipsis** e **WordEllipsis** são o caminho rápido. O valor **Clip** desabilita o caminho rápido.
 
 > **Observação**&nbsp;&nbsp;Antes do Windows 10, versão 1607, as propriedades adicionais também afetam o caminho rápido. Se o aplicativo for executado em uma versão anterior do Windows, essas condições também farão o texto ser renderizado no caminho lento. Para saber mais sobre as versões, consulte Código adaptável de versão.
-- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): apenas os valores padrão das diversas propriedades Typography são o caminho rápido.
-- [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): se [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) não for 0, os valores **BaselineToBaseline** e **MaxHeight** desabilitarão o caminho rápido.
-- [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): somente **false** é o caminho rápido. Configurar essa propriedade como **true** desabilita o caminho rápido.
+- [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): apenas os valores padrão das diversas propriedades Typography são o caminho rápido.
+- [LineStackingStrategy](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): se [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) não for 0, os valores **BaselineToBaseline** e **MaxHeight** desabilitarão o caminho rápido.
+- [IsTextSelectionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): somente **false** é o caminho rápido. Configurar essa propriedade como **true** desabilita o caminho rápido.
 
 Você pode configurar a propriedade [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) como **true** durante a depuração para determinar se o texto está usando a renderização de caminho rápido. Quando essa propriedade é configurada como true, o texto que está no caminho rápido aparece na cor verde-claro.
 
@@ -136,18 +133,18 @@ Você pode exibir uma série de cadeias de caracteres em um TextBlock, em que ca
 
 Consulte como definir algumas cadeias de caracteres de texto formatadas diferentemente em um TextBlock usando Run objetos separados com um LineBreak.
 ```xaml
-<TextBlock FontFamily="Arial" Width="400" Text="Sample text formatting runs">
+<TextBlock FontFamily="Segoe UI" Width="400" Text="Sample text formatting runs">
     <LineBreak/>
-    <Run Foreground="Gray" FontFamily="Courier New" FontSize="24">
-        Courier New 24
+    <Run Foreground="Gray" FontFamily="Segoe UI Light" FontSize="24">
+        Segoe UI Light 24
     </Run>
     <LineBreak/>
-    <Run Foreground="Teal" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic">
-        Times New Roman Italic 18
+    <Run Foreground="Teal" FontFamily="Georgia" FontSize="18" FontStyle="Italic">
+        Georgia Italic 18
     </Run>
     <LineBreak/>
-    <Run Foreground="SteelBlue" FontFamily="Verdana" FontSize="14" FontWeight="Bold">
-        Verdana Bold 14
+    <Run Foreground="Black" FontFamily="Arial" FontSize="14" FontWeight="Bold">
+        Arial Bold 14
     </Run>
 </TextBlock>
 ```
@@ -183,6 +180,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [Diretrizes para verificação ortográfica](spell-checking-and-prediction.md)
 - [Adicionando pesquisa](search.md)
 - [Diretrizes para entrada de texto](text-controls.md)
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propriedade String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complementos, produtos no aplicativo, IAPs
-ms.openlocfilehash: 198db630fbba8d4145454a6912f118225b13ac1c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 9c39bfe9754805dccf5ccb82c9834d6d4deea385
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-add-ons-for-an-app"></a>Obter complementos para um aplicativo
 
 
 
 
-Use este método na API de envio da Windows Store para listar os complementos (também conhecidos como produtos no aplicativo ou IAPs) de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Windows Store para listar os complementos para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -26,8 +28,6 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## <a name="request"></a>Solicitação
 

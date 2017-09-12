@@ -1,57 +1,73 @@
 ---
 author: jnHs
-Description: "Ao criar um novo complemento no painel do Centro de Desenvolvimento do Windows, é necessário especificar um tipo de produto e atribuir uma ID de produto (product ID)."
+Description: "Quando você cria um novo complemento no painel do Centro de Desenvolvimento do Windows, precisa especificar um tipo de produto e atribuir uma ID do produto (product ID)."
 title: Defina seu tipo de produto e a ID do produto (product ID) do complemento
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: abd6c27367476e5f1da11cde14b7d7f08105ad3e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 136077edcf4704f3ea71416719e7c37db43dafda
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="set-your-add-on-product-type-and-product-id"></a>Defina seu tipo de produto e a ID do produto (product ID) do complemento
 
-Um complemento deve estar associado a um aplicativo que você já tenha criado no painel (mesmo se você ainda não o enviou). Você pode encontrar o botão **Criar um novo complemento** na página **Visão geral** ou **Complementos** de seu aplicativo.
+Um complemento deve estar associado a um aplicativo que você já tenha criado no painel (mesmo se você ainda não o enviou). Você pode encontrar o botão **Criar um novo complemento** na página **Visão geral** ou em **Complementos** do aplicativo.
 
-Depois de clicar no botão, você verá a página **Criar um novo complemento**. Aqui, você precisará especificar um tipo de produto e atribuir a ele uma ID do produto (product ID).
+Depois de selecionar **Criar um novo complemento**, você será solicitado a especificar um tipo de produto e atribuir uma ID de produto ao complemento.
 
 ## <a name="product-type"></a>Tipo de produto
 
 Primeiro, você precisará indicar qual tipo de complemento está oferecendo. Esta seleção se refere a como o cliente pode usar seu complemento.
 
-> **Observação** Não será possível alterar o tipo de produto depois de salvar essa página para criar o complemento. Se você escolheu o tipo de produto errado, pode excluir seu envio de complemento em andamento e começar pela criação de um novo complemento.
+> [!NOTE]
+> Não será possível alterar o tipo de produto depois de salvar essa página para criar o complemento. Se você escolheu o tipo de produto errado, é possível excluir o envio de complemento em andamento e começar a criação de um novo complemento.
 
-Se o produto puder ser comprado, usado (consumido) e depois recomprado, você desejará selecionar um dos tipos de produto **consumíveis**. Complementos consumíveis geralmente são usados para coisas como moedas em jogos (ouro, moedas etc.) que podem ser adquiridas em valores definidos e, em seguida, usadas pelo cliente. Para obter mais informações sobre como incluir complementos consumíveis no aplicativo, consulte [Habilitar compras de complementos consumíveis](../monetize/enable-consumable-add-on-purchases.md).
+<span id="durable" />
+### <a name="durable"></a>Durável
 
-Existem dois tipos de complementos consumíveis que podem ser selecionados:
+Selecione **Durável** como o tipo de produto se o complemento for comprado apenas uma vez em geral. Esses complementos duráveis geralmente são usados para desbloquear a funcionalidade adicional em um aplicativo.
 
-- **Consumível gerenciado pelo desenvolvedor**: compatível em todas as versões de sistema operacional. O saldo e o cumprimento devem ser gerenciados dentro do aplicativo. 
-- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Você não poderá enviar um complemento consumível gerenciado pela Loja para a Loja até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você precisará inserir a quantidade para o complemento consumível gerenciado pela Loja na página **Propriedades**.
+O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Você tem a opção de definir o **Tempo de vida do produto** como uma duração diferente na etapa [Propriedades](enter-add-on-properties.md) do processo de envio de complemento. Se você fizer isso, o complemento expira após o período especificado (com opções de 1 a 365 dias), caso no qual um cliente pode comprá-lo novamente após a expiração.
 
-Você deverá selecionar **Durável** se o produto puder ser comprado apenas uma vez. Complementos duráveis geralmente são usados para desbloquear funcionalidade adicional em um aplicativo. Complementos duráveis não são consumidos, mas você pode definir o **Ciclo de vida do produto** para que eles expirem após uma duração definida (com opções de 1 a 365 dias). O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Você pode alterar isso para uma duração diferente na etapa [Propriedades do complemento](enter-add-on-properties.md) do processo de envio de complemento.
+<span id="consumable" />
+### <a name="consumable"></a>Consumível
 
-## <a name="product-id"></a>ID do Produto (Product ID)
+Se o complemento puder ser comprado, usado (consumido) e depois recomprado, você desejará selecionar um dos tipos de produto **consumíveis**. Complementos consumíveis geralmente são usados para coisas como moedas em jogos (ouro, moedas etc.) que podem ser adquiridas em valores definidos e, em seguida, usadas pelo cliente. Para obter mais informações sobre como incluir complementos consumíveis no aplicativo, consulte [Habilitar compras de complementos consumíveis](../monetize/enable-consumable-add-on-purchases.md).
 
-Insira uma ID do produto (product ID) exclusiva para seu complemento. Este é o mesmo identificador a que você precisa fazer referência no [código do seu aplicativo para chamar o complemento](https://msdn.microsoft.com/library/windows/apps/mt219684).
+Há dois tipos de complementos para consumo:
+- **Consumível gerenciado pelo desenvolvedor**: o saldo e o cumprimento devem ser gerenciados no aplicativo. Compatível com todas as versões do sistema operacional.
+- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe que você não poderá enviar um complemento consumível gerenciado pela Loja para a Loja até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Loja na etapa **Propriedades** do envio.
+
+<span id="subscription" />
+### <a name="subscription"></a>Assinatura
+
+Se você deseja cobrar os clientes pelo complemento com frequência, escolha **Assinatura**.
+
+> [!NOTE]
+> No momento, a capacidade de criar complementos por assinatura está disponível somente para um conjunto de contas de desenvolvedor que participam de um programa de adoção antecipada. Disponibilizaremos complementos de assinatura para todas as contas de desenvolvedor no futuro, e a documentação preliminar será disponibilizada agora para fornecer aos desenvolvedores uma prévia desse recurso. Para obter mais informações, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
+
+Depois que um complemento de assinatura inicialmente é adquirido por um cliente, eles continuarão a ser cobrados em intervalos recorrentes para continuar usando o complemento. O cliente pode cancelar a assinatura a qualquer momento para evitar cobranças futuras. É necessário especificar o período de assinatura e se deseja ou não oferecer uma avaliação gratuita na etapa **Propriedades** do envio.
+
+Há suporte para complementos de assinatura somente para os clientes que executam o Windows 10, versão 1607 ou posterior. O aplicativo pai deve ser compilado utilizando o Windows 10 SDK, versão 14393 ou posterior, e deve usar a API de compras no aplicativo no namespace **Windows.Services.Store**, em vez do namespace **ApplicationModel**. Para obter mais informações sobre as diferenças entre esses namespaces, consulte [Compras no aplicativo e avaliações](../monetize/in-app-purchases-and-trials.md).
+
+Você deve enviar o produto pai antes de publicar o complemento de assinaturas na Loja (embora seja possível criar o envio no painel e começar a trabalhar nele a qualquer momento).
+
+## <a name="product-id"></a>ID do Produto
+
+Independentemente do tipo de produto escolhido, é necessário inserir um ID de produto exclusiva para o complemento. Esse nome será usado para identificar o complemento no painel, e você pode usar esse identificador para [consultar o complemento no seu código](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code).
 
 Aqui estão algumas coisas para se ter em mente ao escolher uma ID do produto (product ID):
 
 -   Os clientes não verão essa ID de produto. (Mais tarde, você pode inserir um [título e descrição](create-add-on-descriptions.md) a serem exibidos para os clientes).
 -   Você não pode alterar ou excluir a ID do produto (product ID) do complemento depois que ele tiver sido publicado.
 -   Uma ID do produto (product ID) não pode ter mais de 100 caracteres.
--   Um ID do produto (product ID) não pode incluir nenhum dos seguintes caracteres: **&lt; &gt; \* % & : \\ ? + ,**
--   Para oferecer o complemento em todos os dispositivos, você deve usar apenas caracteres alfanuméricos, pontos e/ou sublinhados. Se você usar outros tipos de caracteres, o complemento não estará disponível para compra para clientes que executam o Windows Phone 8.1 ou anterior.
+-   Um ID do produto não pode incluir nenhum dos seguintes caracteres: **&lt; &gt; \* % & : \\ ? + ,**
+-   Para oferecer seu complemento em todas as versões OS, você deve usar apenas caracteres alfanuméricos, pontos e/ou sublinhados. Se você usar outros tipos de caracteres, o complemento não estará disponível para compra para clientes que executam o Windows Phone 8.1 ou anterior.
 -   Uma ID de produto não precisa ser exclusiva dentro da Windows Store, mas ela deve ser exclusiva para sua conta de desenvolvedor.
  
-
-
-
-
-

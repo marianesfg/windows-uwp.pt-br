@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, aquisições de complemento"
-ms.openlocfilehash: cdd43c6e5df73ec1983593eb6198eba77c9df6e2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2c641d9fb7e4835df2cf1da05467efcb01cd3681
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
 
 
 
-Use este método na API de análise da Windows Store para obter dados agregados de aquisição de complementos (também conhecidos como produtos no aplicativo ou IAPs) para o aplicativo em formato JSON durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Windows Store para obter dados agregados de aquisição para complementos para seu app em formato JSON durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -173,10 +175,10 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 * [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md)
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
+* [Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)
 * [Obter aquisições de app](get-app-acquisitions.md)
-* [Obter dados de relatório de erros](get-error-reporting-data.md)
-* [Obter classificações de aplicativos](get-app-ratings.md)
-* [Obter avaliações de app](get-app-reviews.md)
+* [Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)
+* [Obter conversões de app por canal](get-app-conversions-by-channel.md)
 
  
 

@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: "Usar a bússola"
 description: "Saiba como usar a bússola para determinar a direção atual."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 04634214aaa32a1beda05b5b127ccc2e0e141bad
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b077d0a38b4146aa84d82c63dbcd3e705c7cd914
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-compass"></a>Usar a bússola
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Bússola**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+
+**Exemplo**
+
+-   Para obter uma implementação completa, consulte o [exemplo de bússola](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
 
 \[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
@@ -172,10 +178,6 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
  <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/>
  <TextBlock x:Name="txtNorth" HorizontalAlignment="Left" Height="18" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFF5F1F1"/>
 ```
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-* [Exemplo de bússola](http://go.microsoft.com/fwlink/p/?linkid=241378)
  
 
  

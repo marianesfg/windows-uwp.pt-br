@@ -4,23 +4,26 @@ Description: "A Windows Store oferece a Cobrança da Operadora Móvel como um m�
 title: "Cobrança da operadora móvel"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 03/03/2017
+ms.date: 07/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5d3dbe205fd3f4260f761d9372a573fe568b3638
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 431d61b087bd59aea8f9a6bc1a7197b603022504
+ms.sourcegitcommit: 90fbdc0e25e0dff40c571d6687143dd7e16ab8a8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/06/2017
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
 
-A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento para operadoras de celular que dão suporte a esse recurso. Se a operadora móvel de um cliente oferecer suporte a essa capacidade, o cliente pode fazer mais compras da Loja utilizando suas contas móveis.
+A Windows Store oferece a Cobrança da Operadora Móvel como um método de pagamento. Se a operadora móvel de um cliente oferecer suporte a essa capacidade, o cliente pode fazer mais compras da Loja utilizando suas contas móveis.
 
-> **Observação**  Se a operadora móvel de um cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não encontrar essa opção em seu dispositivo, veja estas [etapas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> [!TIP]
+>  Se a operadora móvel de um cliente oferecer a Cobrança da Operadora Móvel, mas o cliente não encontrar essa opção em seu dispositivo, veja estas [etapas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
-Estamos trabalhando regularmente com as operadoras para expandir a disponibilidade desse método de pagamento. Se você gostaria de sugerir o suporte a uma operadora de telefonia celular que não estiver nas listas abaixo, entre em contato com a operadora móvel.
+Estamos trabalhando regularmente com as operadoras para expandir a disponibilidade desse método de pagamento. Se você gostaria de sugerir o suporte a uma operadora de telefonia celular que não estiver nas listas abaixo, entre em contato essa operadora e solicite que adicionem esse método de pagamento.
 
 ## <a name="mobile-operator-billing-for-windows-10-and-xbox-one-devices"></a>Cobrança da Operadora Móvel para dispositivos Windows 10 e Xbox One
 
@@ -30,18 +33,24 @@ A implementação do Windows 10 de Cobrança da Operadora Móvel tem suporte des
 
 | País/região  | Operadoras móveis     |
 |-----------------|----------------------|
-| Áustria         | Hutchison 3G Austria |
+| Áustria         | Hutchison 3G Austria, A1 Telekom |
+| Bélgica         | Base, Proximus       |
+| Canadá          | Telus                |
+| Dinamarca         | 3                    |
 | Finlândia         | DNA, Elisa           |
 | França          | Orange               |
 | Alemanha         | O2                   |
 | Hungria         | Telenor              |
-| Itália           | Wind                 |
+| Itália           | Wind, Tre            |
 | Noruega          | Telenor              |
 | Polônia          | Orange               |
+| Romênia         | Orange               |
 | Rússia          | Beeline              |
-| Suécia          | Telenor              |
+| Espanha           | Orange               |
+| Suécia          | Telenor, 3           |
 | Suíça     | Swisscom             |
-| Estados Unidos   | Sprint               |
+| Turquia          | Turkcell             |
+| Estados Unidos   | Sprint, Verizon      |
 | Reino Unido  | O2, 3 UK             |
 
  
@@ -56,17 +65,13 @@ Atualmente, a implementação herdada da Cobrança da Operadora Móvel tem o sup
 | País/região       | Operadoras móveis                                                   |
 |----------------------|--------------------------------------------------------------------|
 | Austrália            | Telstra                                                            |
-| Áustria              | A1 Telekom, T-Mobile                                               |
-| Bélgica              | BASE, Mobistar, Proximus                                           |
-| Canadá               | Fido, Rogers                                                       |
+| Áustria              | T-Mobile                                                           |
+| Bélgica              | Mobistar                                                           |
 | República Tcheca       | T-Mobile, Vodafone                                                 |
-| Finlândia              | TeliaSonera                                                        |
-| França               | Orange, SFR, Bouygues                                              |
+| França               | Orange, Bouygues                                              |
 | Alemanha              | Telefonica, Telekom Deutschland, Vodafone                          |
 | Grécia               | Vodafone                                                           |
-| Hungria              | Telenor, T-Mobile                                                  |
-| Índia                | Idea                                                               |
-| Indonésia            | Telkomsel, Hutchinson CP Telecommunications (HCPT)                 |
+| Hungria              | T-Mobile                                                           |
 | Irlanda              | O2, Vodafone, Three                                                |
 | Itália                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Países Baixos          | T-Mobile, Vodafone                                                 |
@@ -76,9 +81,9 @@ Atualmente, a implementação herdada da Cobrança da Operadora Móvel tem o sup
 | Eslováquia             | T-Mobile                                                           |
 | África do Sul         | Vodacom                                                            |
 | Espanha                | Movistar, Vodafone, Orange                                         |
-| Reino Unido       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
+| Reino Unido       | Telefonica (O2), Vodafone        |
 | Estados Unidos        | AT&T, T-Mobile                                                     |
-| Vietnã              | Viettel, Vinaphone, Mobifone                                       |
+
 
  
 

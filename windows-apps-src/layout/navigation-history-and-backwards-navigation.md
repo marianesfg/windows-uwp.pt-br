@@ -8,20 +8,24 @@ label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c2037c4b313b45309162ea4c0874418fe9463d17
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: cd3184ebe5e94c410d55a725129a38907aa6a01e
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Na Web, os sites individuais fornecem seus próprios sistemas de navegação, como índices analíticos, botões, menus, listas simples de links e outros. A experiência de navegação pode variar muito de um site para outro. No entanto, há uma experiência de navegação consistente: voltar. A maioria dos navegadores oferece um botão Voltar que se comporta da mesma maneira, independentemente do site.
+
+> **APIs importantes**: [SystemNavigationManager class](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager), [BackRequested event](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager#Windows_UI_Core_SystemNavigationManager_BackRequested), [OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/br227508)
 
 Por motivos semelhantes, a Plataforma Universal do Windows (UWP) oferece um sistema de navegação regressiva consistente a fim de percorrer o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
 
@@ -111,7 +115,7 @@ Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
 Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
     BackRequested += ref new Windows::Foundation::EventHandler<
     Windows::UI::Core::BackRequestedEventArgs^>(
-        this, &amp;App::App_BackRequested);
+        this, &App::App_BackRequested);
 ```
 
 Este é o manipulador de eventos [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) correspondente que chama [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) no quadro raiz do aplicativo.
@@ -129,7 +133,7 @@ Esse manipulador é invocado em um evento Voltar global. Se a pilha Voltar dentr
 >
 >    // Navigate back if possible, and if the event has not 
 >    // already been handled .
->    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
+>    if (rootFrame.CanGoBack && e.Handled == false)
 >    {
 >        e.Handled = true;
 >        rootFrame.GoBack();

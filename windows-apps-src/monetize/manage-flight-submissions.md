@@ -4,22 +4,23 @@ ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios de pacote de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: "Gerenciar envios de pacote de pré-lançamento"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, envios pré-lançamento"
-ms.openlocfilehash: 98240f3a1f40f020474c62537d6b0444fe10bb99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 046eba917d66f28567a9e58a8fc29b3313816fbb
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
 A API de envio da Windows Store oferece métodos que é possível usar para gerenciar envios de pacote de pré-lançamento dos aplicativos, inclusive distribuições de pacote graduais. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
-
->**Importante**&nbsp;&nbsp;Se você usar a API de envio da Windows Store a fim de criar um envio para pré-lançamento de pacote, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> [!IMPORTANT]
+> Se você usar essa API de envio da Windows Store para criar um envio para um pacote de pré-lançamento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 <span id="methods-for-package-flight-submissions" />
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para gerenciar envios do pacote de pré-lançamento
@@ -84,38 +85,32 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 3. [Criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) executando o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
+    ```
 
-  O corpo da resposta contém três itens: a ID do novo envio, os dados do novo envio (inclusive todas as listagens e informações de preço) e o URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes de aplicativos do envio para o armazenamento de Blob do Azure.
-
-  >**Observação**&nbsp;&nbsp;Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações contextuais sobre URIs SAS e o uso com o armazenamento do Blob do Azure, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    O corpo da resposta contém um recurso [envio de versão de pré-lançamento](#flight-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os pacotes para o envio para o armazenamento de Blobs do Azure e os dados do novo envio (inclusive todas as listagens e informações de preço).
+        > [!NOTE]
+        > A SAS URI provides access to a secure resource in Azure storage without requiring account keys. For background information about SAS URIs and their use with Azure Blob storage, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) and [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Se você estiver adicionando novos pacotes para o envio, [prepare os pacotes](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e adicione-os a um arquivo ZIP.
 
-5. Revise os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de pacote de pré-lançamento](update-a-flight-submission.md).
+5. Revise os dados de [envio de versão de pré-lançamento](#flight-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de pacote de pré-lançamento](update-a-flight-submission.md).
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
-  ```
-
-  <span/>
-  >**Observação**&nbsp;&nbsp;Se você estiver adicionando novos pacotes para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
+    ```
+    PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
+    ```
+      > [!NOTE]
+      > Se você estiver adicionando novos pacotes para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
 
 4. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP no [armazenamento do Blob do Azure](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando o URI SAS que foi fornecido no corpo da resposta do método POST chamado anteriormente. Existem bibliotecas do Azure diferentes que é possível usar para fazer isso em uma grande variedade de plataformas, inclusive:
 
-  * [Biblioteca de Cliente do Armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-  * [SDK de Armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-  * [SDK de Armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-
-  <span/>
+    * [Biblioteca de Cliente do Armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [SDK de Armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [SDK de Armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
   O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
-  > [!div class="tabbedCodeSnippets"]
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
   Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob blockBob =
@@ -125,19 +120,17 @@ Para criar um envio para um pacote de pré-lançamento, siga este processo.
 
 5. [Confirme o envio do pacote de pré-lançamento](commit-a-flight-submission.md) realizando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
+    ```
 
 6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de pacote de pré-lançamento](get-status-for-a-flight-submission.md).
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
-  ```
+    ```
+    GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
+    ```
 
-  Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
+    Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
 
@@ -150,7 +143,8 @@ Os artigos a seguir dão exemplos de código detalhados que demonstram como cria
 * [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Exemplos de código em Python](python-code-examples-for-the-windows-store-submission-api.md)
 
->**Observação**&nbsp;&nbsp;além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre o envio da Windows Store API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker é usado ativamente na Microsoft como o modo principal de enviar diversos apps primários para a loja. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
+> [!NOTE]
+> Além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre API de envio da Windows Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
 
 <span id="manage-gradual-package-rollout">
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>Gerenciar uma distribuição de pacote gradual para um envio de pacote de pré-lançamento
@@ -324,7 +318,8 @@ Esse recurso fornece detalhes sobre um pacote em um envio.
 
 Esse recurso tem os valores a seguir.
 
->**Observação**&nbsp;&nbsp;Durante a chamada do método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md), somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
+> [!NOTE]
+> Durante a chamada do método [atualizar um envio de pacote de pré-lançamento](update-a-flight-submission.md) somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
 
 | Valor           | Tipo    | Descrição              |
 |-----------------|---------|------|
@@ -377,9 +372,10 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  string   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  string   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+| fallbackSubmissionId    |  string   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
->**Observação**&nbsp;&nbsp;os valores de *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de Desenvolvimento e não devem ser configurados pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados. 
+> [!NOTE]
+> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de Desenvolvimento e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
 
 <span/>
 

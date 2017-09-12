@@ -2,7 +2,7 @@
 author: Karl-Bridge-Microsoft
 Description: "Adicione um InkToolbar padrão a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP), adicione um botão de caneta personalizada ao InkToolbar e vincule o botão de caneta personalizada a uma definição de caneta personalizada."
 title: "Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)"
-label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
+label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
 keywords: "Windows Ink, escrita à tinta Windows, DirectInk, InkPresenter, InkCanvas, InkToolbar, Plataforma Universal do Windows, UWP, interação do usuário, entrada"
 ms.author: kbridge
@@ -11,11 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
-ms.openlocfilehash: dd307bd6d7551c1e95de29360a8601484b37e742
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a4bff46c2ab0f0f1f9a689f2744c9a77ac90630d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/25/2017
 ---
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Adicionar um InkToolbar a um aplicativo de escrita à tinta da Plataforma Universal do Windows (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Adicionar um InkToolbar a um app de escrita à tinta da Plataforma Universal do Windows (UWP)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
@@ -31,7 +33,7 @@ Como uma sobreposição completamente transparente, o InkCanvas não fornece qua
 
   As APIs do InkPresenter permitem dar suporte à personalização abrangente da experiência de escrita à tinta. Para obter mais detalhes, consulte [Interações com caneta em aplicativos UWP](pen-and-stylus-interactions.md).
 
-- Associar um [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) ao InkCanvas. Por padrão, o InkToolbar fornece uma interface do usuário básica para ativar recursos de tinta e definir propriedades de tinta, como tamanho do traço, cor da tinta e forma da ponta da caneta.
+- Associar um [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) ao InkCanvas. Por padrão, o InkToolbar fornece uma coleção de botões personalizável e extensível para ativar recursos relacionados à tinta, como tamanho do traço, cor da tinta e tipo de ponta da caneta.
 
   Vamos falar sobre o InkToolbar neste tópico.
 
@@ -47,16 +49,18 @@ Como uma sobreposição completamente transparente, o InkCanvas não fornece qua
 
 ## <a name="default-inktoolbar"></a>InkToolbar padrão
 
-Por padrão, o InkToolbar inclui botões para desenhar, apagar, realçar e exibir uma régua. Dependendo do recurso, outras configurações e comandos, como a cor da tinta, a espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
+Por padrão, o [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) inclui botões para desenhar, apagar, realçar e exibir um estêncil (régua ou transferidor). Dependendo do recurso, outras configurações e comandos, como a cor da tinta, a espessura do traço, apagar toda a tinta, são fornecidos em um submenu.
 
 ![InkToolbar](.\images\ink\ink-tools-invoked-toolbar-small.png)  
 *Barra de ferramentas do Windows Ink padrão*
 
-Para adicionar um InkToolbar padrão básico:
+Para adicionar um [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) padrão a um aplicativo de escrita à tinta, basta colocá-lo na mesma página que o [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e associar os dois controles.
+
 1. Em MainPage.xaml, declare um objeto de contêiner (para este exemplo, usamos um controle Grid) para a superfície de escrita à tinta.
 2. Declare um objeto InkCanvas como filho do contêiner. (O tamanho do InkCanvas é herdado do contêiner).
 3. Declare um InkToolbar e use o atributo TargetInkCanvas para associá-lo ao InkCanvas.
-  Certifique-se de que o InkToolbar seja declarado após o InkCanvas. Caso contrário, a sobreposição do InkCanvas torna o InkToolbar inacessível.
+    > [!NOTE]  
+    > Certifique-se de que o InkToolbar seja declarado após o InkCanvas. Caso contrário, a sobreposição do InkCanvas torna o InkToolbar inacessível.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -808,6 +812,10 @@ Para saber mais sobre a secagem personalizada, veja [Windows Ink e interações 
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
 **Exemplos**
-* [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta simples (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Exemplo de tinta complexa (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Tutorial de Introdução: oferecer suporte à tinta em seu aplicativo UWP](https://aka.ms/appsample-ink)
+* [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
+* [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
+

@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "Propriedades de informações do dispositivo"
 description: "Cada dispositivo tem propriedades DeviceInformation associadas que você poderá usar quando precisar de informações específicas ou quando estiver criando um seletor de dispositivo."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 68e427a4d94b7c599e1fec375f0f66b5ff2704e0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 37b88b501c3bdb0f38b04f2f7b6d936cb0d201b4
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="device-information-properties"></a>Propriedades de informações do dispositivo
 
@@ -77,7 +79,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.Category**       | String\[\] | Uma lista de descrições das categorias às quais o dispositivo pertence. Essa lista é fornecida como categorias singulares. Por exemplo, "Display", "Phone" ou "Audio device".  |
 | **System.Devices.CategoryIds**    | String\[\] | Contém uma lista de categorias às quais esse dispositivo pertence. Por exemplo, **Audio.Headphone**, **Display.Monitor** ou **Input.Gaming**.                                  |
-| **System.Devices.CateogryPlural** | String\[\] | Uma lista de descrições das categorias às quais o dispositivo pertence. Essa lista é fornecida como categorias plurais. Por exemplo, "Displays", "Phones" ou "Audio devices". |
+| **System.Devices.CategoryPlural** | String\[\] | Uma lista de descrições das categorias às quais o dispositivo pertence. Essa lista é fornecida como categorias plurais. Por exemplo, "Displays", "Phones" ou "Audio devices". |
 | **System.Devices.CompatibleIds**  | String\[\] | A coleção de IDs compatíveis para todos os objetos **DeviceInformationKind.Device** filho.                                                                       |
 | **System.Devices.Connected**      | Booliano    | Indica se o dispositivo está atualmente conectado ao sistema ou não.                                                                                          |
 | **System.Devices.GlyphIcon**      | String     | Caminho do ícone do glifo.                                                                                                                                           |

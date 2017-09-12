@@ -9,15 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 9190000a2c5a35a0b7125429a19e4743b388d503
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de produtos consumíveis no app
 
 
 > [!NOTE]
-> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [este artigo](enable-consumable-add-on-purchases.md).
 
 Ofereça produtos consumíveis no aplicativo — itens que podem ser comprados, usados e comprados novamente — por meio da plataforma de comércio da Loja para proporcionar aos seus clientes uma experiência de compra robusta e confiável. Isso é especialmente útil para itens como moedas em jogos (ouro, moedas etc.) que podem ser comprados e então usados para comprar power-ups específicos.
 

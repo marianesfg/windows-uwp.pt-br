@@ -6,14 +6,20 @@ ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ed43df4e1702064fbff0bd2f6fa4e4d736edc48c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: jeffarn
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: d85c32a1e0cbd826877fa22182647103bdc9eac9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="progress-controls"></a>Controles de progresso
 
@@ -21,15 +27,7 @@ translationtype: HT
 
 Um controle de progresso oferece feedback ao usuário que uma operação de execução longa está em andamento. Isso pode significar que o usuário não pode interagir com o aplicativo quando o indicador de progresso está visível e também pode indicar a duração do tempo de espera, dependendo do indicador usado.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe ProgressBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)</li>
-<li>[**Propriedade IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)</li>
-<li>[**Classe ProgressRing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx)</li>
-<li>[**Propriedade IsActive**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe ProgressBar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx), [propriedade IsIndeterminate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx), [classe ProgressRing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [propriedade IsActive](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)
 
 ## <a name="types-of-progress"></a>Tipo de progresso
 
@@ -172,8 +170,8 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 ## <a name="related-articles"></a>Artigos relacionados
 
 
-- [**Classe ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529)
-- [**Classe ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)
+- [Classe ProgressBar](https://msdn.microsoft.com/library/windows/apps/br227529)
+- [Classe ProgressRing](https://msdn.microsoft.com/library/windows/apps/br227538)
 
 **Para desenvolvedores (XAML)**
 - [Adicionando controles de progresso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)

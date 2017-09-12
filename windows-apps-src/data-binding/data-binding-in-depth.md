@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f1941a73937db19394e590026a16a023d025bba2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: efa83edaeb649ac5a321a4c1aae14a53f1175b6d
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -24,7 +26,8 @@ translationtype: HT
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-> **Observação**&nbsp;&nbsp;Este tópico descreve detalhadamente os recursos de vinculação de dados. Para obter uma introdução breve e prática, consulte [Visão geral da vinculação de dados](data-binding-quickstart.md).
+> [!Note]
+> Este tópico descreve detalhadamente os recursos de vinculação de dados. Para obter uma introdução breve e prática, consulte [Visão geral da vinculação de dados](data-binding-quickstart.md).
 
 
 A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados. A vinculação de dados permite separar a preocupação dos dados da preocupação da interface do usuário, e isso resulta em um modelo conceitual mais simples, bem como melhor legibilidade, capacidade de teste e capacidade de manutenção do seu aplicativo.

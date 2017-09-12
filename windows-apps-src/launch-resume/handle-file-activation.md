@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b35b8a9dcd6ea23b734de1041d829f620103fa6e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e05cc939d4a836e2f385a20f63d6ffb2242696db
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
@@ -80,8 +82,7 @@ Os aplicativos que se tornam padrão para um tipo de arquivo têm seus ícones e
 -   Seletor de arquivos
 -   Nos Resultados da pesquisa na tela inicial
 
-Combine a aparência do logotipo do bloco do aplicativo e use a cor de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas em segundo plano brancas. Para ícones de exemplo, consulte o [Amostra de inicialização de associação](http://go.microsoft.com/fwlink/p/?LinkID=620490).
-![o gerenciador de soluções com uma exibição dos arquivos na pasta imagens. Há 16, 32, 48 e 256 versões de pixels de 'icon.targetsize' e 'smalltile-sdk'](images/seviewofimages.png)
+Inclua um ícone 44x44 com seu projeto para que seu logotipo apareça nesses locais. Combine a aparência do logotipo do bloco do aplicativo e use a cor da tela de fundo do aplicativo em vez de deixar o ícone transparente. Faça o logotipo se estender até a borda sem preenchê-la. Teste seus ícones em telas de fundo brancas. Consulte [Diretrizes para ativos de bloco e ícone](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets) para obter mais detalhes sobre ícones.
 
 ## <a name="step-3-handle-the-activated-event"></a>Etapa 3: manipular o evento ativado
 

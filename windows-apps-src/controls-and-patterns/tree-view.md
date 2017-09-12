@@ -4,16 +4,14 @@ Description: "Use o código de exemplo de modo de exibição de árvore para cri
 title: "Exibição em árvore"
 label: Tree view
 template: detail.hbs
-ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c7ad99d20fe30ea4b94ad62de45b3832aae3805e
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="hierarchical-layout-with-treeview"></a>Layout hierárquico com TreeView
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="microsoft-internal-note">
-As linhas vermelhas para TreeView estão no Design Depot: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
-</div>
 
 TreeView é um padrão de lista hierárquica com nós de expansão e recolhimento que contêm itens aninhados. Os itens aninhados podem ser nós adicionais ou itens de lista normais. Você pode usar um [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para criar um modo de exibição de árvore para ilustrar uma estrutura de pastas ou relacionamentos aninhados em sua interface do usuário.
 

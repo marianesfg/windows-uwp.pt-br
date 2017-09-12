@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: bf0abd41262704ccf634350ae53e8f428d412bf5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 288cca64cc93438c8f8c0000cfeba1fdda918733
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -82,10 +84,15 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
 ## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
-
 O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que seja feita uma distinção em uma API ou que haja qualquer exigência em alguma interface do usuário do Windows específica do dispositivo, simplesmente nos referimos às duas interações como movimento panorâmico.
 
-Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando um dos seguintes:
+> <div id="main">
+> <strong><span class="uwpd-prelease">Pré-lançamento.</span> Fall Creators Update (Compilação 16215 e posteriores do Windows 10 Insider Preview) - mudança de comportamento</strong>
+> </div>
+> Por padrão, em vez de seleção de texto, uma caneta ativa agora fará rolagem/movimento panorâmico em aplicativos UWP (como toque, touchpad e caneta passiva).  
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Consulte o tópico de referência da API [Classe ScrollViewer] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obter mais detalhes.
+
+Dependendo do dispositivo de entrada, o usuário faz o deslocamento horizontal dentro da região com o movimento panorâmico usando uma das seguintes opções:
 
 -   Um mouse, um touchpad ou uma caneta para clicar nas setas de rolagem, arrastar a caixa de rolagem ou clicar na barra de rolagem.
 -   O botão de roda do mouse para emular a caixa de rolagem sendo arrastada.

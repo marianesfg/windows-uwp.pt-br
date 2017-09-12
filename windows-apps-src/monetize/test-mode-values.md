@@ -9,17 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, testes"
-ms.openlocfilehash: ec5b1c1723a7f58b20234d703fc786647268a3b3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0c3e713d9a2bb7c10bda0d9517f5cb882d5e2e57
+ms.sourcegitcommit: 6b772d2a224f8a9c557dc517c6ec0592545e9a43
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/02/2017
 ---
 # <a name="test-mode-values"></a>Valores de modo de teste
 
-Quando você usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) ou [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para exibir anúncios em seu aplicativo, você deve especificar um ID do aplicativo e de unidade de anúncios. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do aplicativo e a ID da unidade de anúncios de teste para ver como seu aplicativo renderiza anúncios durante o teste.
+Quando você usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), um [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) ou um [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) para exibir anúncios em seu app, deve especificar uma ID de unidade publicitárias e uma ID de aplicativo nas propriedades **AdUnitId** e **ApplicationId**. Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do aplicativo e a ID da unidade de anúncios de teste para ver como seu aplicativo renderiza anúncios durante o teste.
 
 Se você tentar usar valores de teste em seu aplicativo depois de publicá-lo, seu aplicativo dinâmico não receberá anúncios. Para receber anúncios em seu aplicativo publicado, você deve atualizar seu código para usar um ID do aplicativo um ID da unidade de anúncios fornecidos pelo painel do Centro de Desenvolvimento do Windows. Para obter mais informações, consulte [Configurar unidades de publicidade no aplicativo](set-up-ad-units-in-your-app.md).
  
-Veja a seguir os valores de teste a serem usados para anúncios intersticiais e em banner.
+Veja a seguir os valores de teste a serem usados para os diferentes tipos de anúncio.
 
 * Para os anúncios intersticiais:
 
@@ -33,7 +35,7 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais e 
     <tr class="header">
     <th align="left">Sistema operacional de destino</th>
     <th align="left">AdUnitId</th>
-    <th align="left">AppId</th>
+    <th align="left">ApplicationId</th>
     </tr>
     </thead>
     <tbody>
@@ -63,7 +65,7 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais e 
     <tr class="header">
     <th align="left">Sistema operacional de destino</th>
     <th align="left">AdUnitId</th>
-    <th align="left">AppId</th>
+    <th align="left">ApplicationId</th>
     </tr>
     </thead>
     <tbody>
@@ -80,8 +82,30 @@ Veja a seguir os valores de teste a serem usados para anúncios intersticiais e 
     </tbody>
     </table>
 
+* Para anúncios nativos:
 
-> **Importante**&nbsp;&nbsp;Para um **AdControl**, o tamanho de um anúncio em tempo real é definido pelas propriedades **Width** e **Height**. Para obter melhores resultados, certifique-se de que as propriedades **Width** e **Height** em seu código correspondam a [tamanhos aceitos para anúncios em banner](supported-ad-sizes-for-banner-ads.md). As propriedades **Width** e **Height** não mudarão com base no tamanho de um anúncio em tempo real.
+    <table>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th align="left">Sistema operacional de destino</th>
+    <th align="left">AdUnitId</th>
+    <th align="left">ApplicationId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td align="left"><p>UWP (Windows 10)</p></td>
+    <td align="left"><p>teste</p></td>
+    <td align="left"><p>d25517cb-12d4-4699-8bdc-52040c712cab</p></td>
+    </tbody>
+    </table>
+
+> [!IMPORTANT]
+> Para um **AdControl**, o tamanho de um anúncio em tempo real é definido pelas propriedades **Width** e **Height**. Para obter melhores resultados, certifique-se de que as propriedades **Width** e **Height** em seu código correspondam a [tamanhos aceitos para anúncios em banner](supported-ad-sizes-for-banner-ads.md). As propriedades **Width** e **Height** não mudarão com base no tamanho de um anúncio em tempo real.
 
 
  

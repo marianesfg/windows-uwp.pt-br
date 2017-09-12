@@ -9,15 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, compras no aplicativo, IAPs, complementos, catálogo, Windows.ApplicationModel.Store"
-ms.openlocfilehash: 69747b5700db9785d5e782cd71245ce60ee4150b
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 264db118c3d9f84cffcc966f017ddab4c14e28fb
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Gerenciar um catálogo abrangente de produtos no aplicativo
 
 
 > [!NOTE]
-> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se o aplicativo segmenta Windows 10, versão 1607, ou posterior, recomendamos usar membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Se o seu app oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo. Em versões anteriores ao Windows 10, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação. A partir do Windows 10, a Loja não tem limite para o número de listagens de produtos por conta de desenvolvedor, e o processo descrito neste artigo não é mais necessário.
 

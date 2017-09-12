@@ -5,21 +5,29 @@ title: Puxar para atualizar
 label: Pull-to-refresh
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 51a8c9a2e4618e054374308918a74cf2095119ef
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="pull-to-refresh"></a>Puxar para atualizar
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 O padrão puxar para atualizar permite a um usuário extrair uma lista de dados com toque para recuperar mais dados. O padrão puxar para atualizar é amplamente usado em aplicativos móveis, mas é útil em qualquer dispositivo com tela touch. Você pode manipular [eventos de manipulação](../input-and-devices/touch-interactions.md#manipulation-events) implementar o padrão puxar para atualizar em seu aplicativo.
+
+> **APIs importantes**: [classe ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [classe GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 O [exemplo de puxar para atualizar](http://go.microsoft.com/fwlink/p/?LinkId=620635) mostra como estender um controle [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para dar suporte a esse padrão. Neste artigo, usamos este exemplo para explicar os pontos-chave da implementação do padrão puxar para atualizar.
 
@@ -39,7 +47,7 @@ RefreshableListView fornece um modo de "atualização automática" que determina
 - Desativada: uma atualização só será solicitada se a lista for liberada ao ultrapassar `PullThreshold`. O indicador sai da exibição quando o usuário libera o controle de rolagem. O indicador de barra de status será mostrado se ele estiver disponível (no telefone).
 - Ativada: uma atualização é solicitada assim que o `PullThreshold` é excedido, esteja ou não liberado. O indicador permanece na exibição até os novos dados serem recuperados e, em seguida, sai da exibição. Um objeto **Deferral** é usado para notificar o aplicativo quando a busca dos dados é concluída.
 
-> **Observação**&nbsp;&nbsp;O código no exemplo também é aplicável a um [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar um GridView, gere a classe personalizada de GridView em vez de ListView e modifique o modelo padrão de GridView.
+> **Observação**&nbsp;&nbsp;O código no exemplo também é aplicável a um [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar um GridView, gere a classe personalizada de GridView em vez de ListView e modifique o modelo padrão de GridView.
 
 ## <a name="add-a-refresh-indicator"></a>Adicionar um indicador de atualização
 
@@ -51,7 +59,7 @@ Veja a seguir as diretrizes recomendadas para o indicador de atualização.
 
 **Modificar o modelo de exibição de lista**
 
-No exemplo do padrão puxar para atualizar, o modelo do controle `RefreshableListView` modifica o modelo **ListView** padrão adicionando um indicador de atualização. O indicador de atualização é colocado em uma [**grade**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) acima do [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), que é a parte que mostra os itens da lista.
+No exemplo do padrão puxar para atualizar, o modelo do controle `RefreshableListView` modifica o modelo **ListView** padrão adicionando um indicador de atualização. O indicador de atualização é colocado em uma [Grade](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) acima do [ItemsPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), que é a parte que mostra os itens da lista.
 
 > **Observação**&nbsp;&nbsp;A caixa de texto `DefaultRefreshIndicatorContent` fornece um indicador de fallback de texto que só será mostrado se a propriedade `RefreshIndicatorContent` não for definida	.
 
@@ -123,7 +131,7 @@ Você pode definir o conteúdo do indicador de atualização no XAML para a exib
 
 **Animar o controle giratório**
 
-Quando a lista é extraída, ocorre o evento `PullProgressChanged` do RefreshableListView. Você pode manipular esse evento em seu aplicativo para controlar o indicador de atualização. No exemplo, este storyboard é iniciado para animar o [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) do indicador e girar o indicador de atualização. 
+Quando a lista é extraída, ocorre o evento `PullProgressChanged` do RefreshableListView. Você pode manipular esse evento em seu aplicativo para controlar o indicador de atualização. No exemplo, este storyboard é iniciado para animar o [RotateTransform](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) do indicador e girar o indicador de atualização. 
 
 **XAML**
 ```xaml
@@ -142,13 +150,13 @@ Quando a lista é extraída, ocorre o evento `PullProgressChanged` do Refreshabl
 
 ## <a name="handle-scroll-viewer-manipulation-events"></a>Manipular eventos de manipulação do visualizador de rolagem
 
-O modelo de controle de exibição de lista inclui um [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) interno que permite ao usuário percorrer os itens da lista. Para implementar o padrão puxar para atualizar, você precisa manipular os eventos de manipulação no visualizador de rolagem integrado, bem como vários eventos relacionados. Para saber mais sobre eventos de manipulação, consulte [Interações por toque](../input-and-devices/touch-interactions.md).
+O modelo de controle de exibição de lista inclui um [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) interno que permite ao usuário percorrer os itens da lista. Para implementar o padrão puxar para atualizar, você precisa manipular os eventos de manipulação no visualizador de rolagem integrado, bem como vários eventos relacionados. Para saber mais sobre eventos de manipulação, consulte [Interações por toque](../input-and-devices/touch-interactions.md).
 
 ** OnApplyTemplate**
 
-Para obter acesso ao visualizador de rolagem e outras partes do modelo a fim de adicionar manipuladores de eventos e chamá-los posteriormente em seu código, é necessário substituir o método [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx). Em OnApplyTemplate, chame [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) para obter uma referência a uma parte nomeada no modelo de controle, que você pode salvar para usar posteriormente em seu código.
+Para obter acesso ao visualizador de rolagem e outras partes do modelo a fim de adicionar manipuladores de eventos e chamá-los posteriormente em seu código, é necessário substituir o método [OnApplyTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx). Em OnApplyTemplate, chame [GetTemplateChild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) para obter uma referência a uma parte nomeada no modelo de controle, que você pode salvar para usar posteriormente em seu código.
 
-No exemplo, as variáveis usadas para armazenar as partes do modelo são declaradas na região Variáveis Particulares. Depois que eles são recuperados no método OnApplyTemplate, os manipuladores de eventos são adicionados aos eventos [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) e [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx).
+No exemplo, as variáveis usadas para armazenar as partes do modelo são declaradas na região Variáveis Particulares. Depois que eles são recuperados no método OnApplyTemplate, os manipuladores de eventos são adicionados aos eventos [DirectManipulationStarted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [DirectManipulationCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [ViewChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) e [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx).
 
 **DirectManipulationStarted**
 
@@ -162,7 +170,7 @@ Quando o usuário para de extrair a lista, o código nesse manipulador verifica 
 
 Os manipuladores de eventos para animações também serão removidos.
 
-Com base no valor da propriedade `AutoRefresh`, a lista pode voltar para cima imediatamente ou aguardar até que a atualização seja concluída e, em seguida, voltar para cima. Um objeto [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) é usado para marcar a conclusão da atualização. Nesse ponto, o indicador de atualização da interface do usuário fica oculto.
+Com base no valor da propriedade `AutoRefresh`, a lista pode voltar para cima imediatamente ou aguardar até que a atualização seja concluída e, em seguida, voltar para cima. Um objeto [Deferral](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) é usado para marcar a conclusão da atualização. Nesse ponto, o indicador de atualização da interface do usuário fica oculto.
 
 Essa parte do manipulador de eventos DirectManipulationCompleted aciona o evento `RefreshRequested` e, se necessário, obtém o objeto Deferral.
 
@@ -232,7 +240,7 @@ No exemplo, o conteúdo para o indicador de atualização é fornecido e control
 
 ## <a name="composition-animations"></a>Animações de composição
 
-Por padrão, o conteúdo em um visualizador de rolagem é interrompido quando a barra de rolagem atinge a parte superior. Para permitir que o usuário continue a extrair a lista, você precisa acessar a camada visual e animar o conteúdo da lista. O exemplo usa [animações de composição](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation) para isso. Especificamente, [animações de expressão](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations).
+Por padrão, o conteúdo em um visualizador de rolagem é interrompido quando a barra de rolagem atinge a parte superior. Para permitir que o usuário continue a extrair a lista, você precisa acessar a camada visual e animar o conteúdo da lista. O exemplo usa [animações de composição](https://msdn.microsoft.com/windows/uwp/composition/composition-animation) para isso. Especificamente, [animações de expressão](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations).
 
 No exemplo, esse trabalho é feito principalmente no manipulador de eventos `CompositionTarget_Rendering` e no método`UpdateCompositionAnimations`.
 
@@ -242,4 +250,4 @@ No exemplo, esse trabalho é feito principalmente no manipulador de eventos `Com
 - [Interações por toque](../input-and-devices/touch-interactions.md)
 - [Exibição de lista e exibição de grade](listview-and-gridview.md)
 - [Modelos de item de exibição de lista](listview-item-templates.md)
-- [Animações de expressão](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [Animações de expressão](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations)

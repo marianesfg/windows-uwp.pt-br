@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
 title: Enumerar dispositivos
 description: "O namespace de enumeração permite localizar dispositivos que estejam conectados internamente ao sistema, externamente ou que possam ser detectados por protocolos de rede ou sem fio."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1bf6b8fc87061625b8bc206faf43da99a6b11bf5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: afd98ed5f522c4227ab199f2405c7976210478c3
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="enumerate-devices"></a>Enumerar dispositivos
 
@@ -154,7 +156,7 @@ Ao enumerar objetos **AssociationEndpoint**, **AssociationEndpointContainer** ou
 ## <a name="save-a-device-for-later-use"></a>Salvar um dispositivo para uso posterior
 
 
-Qualquer objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) exclusivamente identificado por uma combinação de duas informações: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) e [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Se você mantiver essas duas informações, poderá recriar o objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
+Qualquer objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) exclusivamente identificado por uma combinação de duas informações: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) e [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Se você mantiver essas duas informações, poderá recriar um objeto **DeviceInformation** depois de perdê-lo fornecendo essas informações para [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx). Se fizer isso, você poderá salvar as preferências do usuário para um dispositivo que se integra ao seu aplicativo.
 
 
  

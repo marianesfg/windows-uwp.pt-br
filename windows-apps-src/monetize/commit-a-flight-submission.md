@@ -4,14 +4,16 @@ ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: "Use este método na API de envio da Windows Store para confirmar um envio de pacote de pré-lançamento novo ou atualizado para o Centro de Desenvolvimento do Windows."
 title: "Confirmar um envio de pacote de pré-lançamento"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, confirmar envio de versão de pré-lançamento"
-ms.openlocfilehash: 5171fb89b9485ed314a8c7f0322db89019e9d512
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e0fd115dc5e394abe6c0353ba41ebc35fde086c4
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar um envio de pacote de pré-lançamento
 
@@ -29,8 +31,6 @@ Para usar este método, primeiro você precisa do seguinte:
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * [Crie um envio de pacote de pré-lançamento](create-a-flight-submission.md) e, em seguida, [atualize o envio](update-a-flight-submission.md) com as alterações necessárias para os dados de envio.
-
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## <a name="request"></a>Solicitação
 
@@ -56,7 +56,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento que você deseja confirmar. A ID da Loja do aplicativo está disponível no painel do Centro de Desenvolvimento.  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento, e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para confirmar. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um app](get-flights-for-an-app.md).  |
 | submissionId | string | Obrigatório. A ID do envio para confirmar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).  |
 
 <span/>

@@ -4,14 +4,16 @@ Description: "Você pode ajudar os clientes a descobrir seu aplicativo vinculand
 title: Link para seu app
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 145716d88cd6c940535cafe9c72fce3831151460
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
+ms.openlocfilehash: 2d0750493926937a6326c5f72f568d4294b137c5
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -20,34 +22,26 @@ Você pode ajudar os clientes a descobrir seu aplicativo vinculando aos detalhes
 
 ## <a name="getting-the-link-to-your-apps-store-listing"></a>Obtendo o link para os detalhes do seu aplicativo na Loja
 
+Para obter a URL da listagem da Loja do aplicativo, navegue até a página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento de aplicativo**. A URL está no formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`**.
 
-Você pode encontrar o link para os detalhes do seu aplicativo na Loja na página [Identidade do aplicativo](view-app-identity-details.md), na seção **Gerenciamento de aplicativo** de cada aplicativo em seu painel.
+Quando um cliente clicar nesse link, ele abre a página de listagem baseada na Web do aplicativo. Em dispositivos Windows, o aplicativo da Loja também inicia e exiba a listagem do aplicativo.
 
-Este link está no formato **`https://www.microsoft.com/store/apps/<your app's Store ID>`**
-
-Quando um cliente clicar nesse link, ele abrirá a página de listagem baseada na web do seu aplicativo. Se o aplicativo estiver disponível para o dispositivo do cliente, o aplicativo da Loja também será iniciado e exibirá a listagem do aplicativo.
-
-> **Observação**  Dependendo das versões de sistema operacional que você almeja, pode haver mais de um link aqui. Todos os aplicativos mostrarão a URL para Windows 10, que funcionará em qualquer sistema operacional. Você pode ver links adicionais para o Windows 8.1 e versões anteriores e/ou Windows Phone 8.1 e versões anteriores, que funcionarão somente nas versões de sistema operacional especificadas.
-
- 
 
 ## <a name="linking-to-your-apps-store-listing-with-the-windows-store-badge"></a>Vinculando aos detalhes de seu aplicativo na Loja com o selo da Windows Store
 
-
 Você pode vincular diretamente aos detalhes do seu aplicativo com um selo personalizado para que os clientes saibam que seu aplicativo está na Windows Store.
 
-Para criar o selo, visite a página [Selos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=534236). Você precisará ter a ID da Loja do seu aplicativo para usar esse formulário e gerar o selo e o link. Esse ID é formado pelos 12 últimos caracteres da **URL para Windows 10** mostrada na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento de aplicativo**.
+Para criar o selo, visite a página [Selos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=534236). Você precisará ter a **ID da Loja** de 12 caracteres do aplicativo para usar esse formulário, além de gerar o selo e o link. Você pode encontrar a **ID da Loja** do aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento do aplicativo**.
 
-> **Observação**  Consulte [Diretrizes para marketing de aplicativos](app-marketing-guidelines.md) para saber mais sobre como usar o selo da Windows Store.
+> [!NOTE]
+> Consulte [Diretrizes para marketing dos aplicativos](app-marketing-guidelines.md) para obter informações e requisitos relacionados ao uso do selo da Windows Store.
 
- 
 
 ## <a name="linking-directly-to-your-app-in-the-windows-store"></a>Criando um link direto para seu aplicativo na Windows Store
 
-
 Você pode criar um link que inicia a Windows Store e vai diretamente até a página de listagem do seu aplicativo sem abrir um navegador usando o esquema de URI **ms-windows-store:**.
 
-Esses links são úteis quando você sabe que os usuários estão em um dispositivo Windows e deseja que ele chegue diretamente na página de detalhes na Loja, por exemplo, após a verificação de cadeias de caracteres de agente de usuário em um navegador para confirmar o sistema operacional do usuário, ou quando você já está se comunicando via aplicativo UWP, talvez você queira aplicar esse protocolo.
+Esses links são úteis quando você sabe que os usuários estão em um dispositivo Windows e você deseja que eles sejam encaminhados diretamente para a página de listagem da Loja. Por exemplo, você pode usar o link depois de verificar as cadeias de caracteres de agente do usuário em um navegador para confirmar se o sistema operacional do usuário oferece suporte à Loja quando você já está se comunicando por um aplicativo UWP.
 
 Para usar o protocolo da Windows Store e vincular diretamente à listagem da Loja do seu aplicativo, acrescente a ID da Loja do aplicativo a este link:
 

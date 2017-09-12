@@ -6,14 +6,19 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 9a12e7490cc1cf7bd1aa65b694a3aeb345ba1128
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
@@ -21,12 +26,7 @@ translationtype: HT
 
 A pesquisa é uma das principais maneiras para os usuários encontrarem conteúdo em seu aplicativo. As diretrizes neste artigo abordam elementos da experiência de pesquisa, escopos da pesquisa, implementação e exemplos de pesquisa em contexto.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
@@ -209,23 +209,12 @@ Localizar na página tem um contador de correspondência:
 
 Para obter mais informações sobre como adicionar comandos à sua barra de comando, veja [Barra de comandos](app-bars.md).
 
-<div class="microsoft-internal-note">
-## Lista de verificação de globalização e localização
-
-<table>
-<tr>
-<th>Espaçamento vertical</th><td>Use caracteres não latinos para espaçamento vertical para garantir que scripts não latinos sejam exibidos corretamente, inclusive números.</td>
-</tr>
-<tr>
-<th>Considerações de bidirecional</th><td>O ícone de lupa não deve ser exibido no formulário espelhado bidirecional.</td>
-</tr>
-</table>
-</div>
+ 
 
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-* [**Caixa de sugestão automática**](auto-suggest-box.md)
+* [Caixa de sugestão automática](auto-suggest-box.md)
 
 
  

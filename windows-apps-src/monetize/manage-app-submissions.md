@@ -4,22 +4,23 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Use estes métodos na API de envio da Windows Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows."
 title: Gerenciar envios de aplicativo
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envios da Windows Store, envios de app
-ms.openlocfilehash: f6f0342619f91190bf021842c3ac3b0c61964d25
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c3da5bea559eb85b67fc2673df6f66c2b2ea78b6
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
 A API de envio da Windows Store oferece métodos que é possível usar para gerenciar envios dos aplicativos, inclusive distribuições de pacote graduais. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
-
->**Importante**&nbsp;&nbsp;Se você usar a API de envio da Windows Store a fim de criar um envio para um app, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> [!IMPORTANT]
+> Se você usar essa API de envio da Windows Store para criar um envio para um aplicativo, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 <span id="methods-for-app-submissions" />
 ## <a name="methods-for-managing-app-submissions"></a>Métodos para gerenciar envios de apps
@@ -79,45 +80,41 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 Para criar um envio de um aplicativo, siga este processo.
 
 1. Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Windows Store.
-
-  >**Observação**&nbsp;&nbsp;Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
+    > [!NOTE]
+    > Verifique se o aplicativo já tem pelo menos um envio concluído com as informações de [classificações etárias](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) preenchidas.
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Windows Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
 3. [Criar um envio de aplicativo](create-an-app-submission.md) executando o seguinte método na API de envio da Windows Store. Esse método cria um novo envio em andamento, que é uma cópia de seu último envio publicado.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
+    ```
 
-  O corpo da resposta contém três itens: a ID do novo envio, os dados do novo envio (inclusive todas as listagens e informações de preço) e o URI da Assinatura de Acesso Compartilhado (SAS) para carregar todos os pacotes de aplicativos e imagens de lista para o envio ao armazenamento do Blob do Azure.
+    O corpo da resposta contém um recurso [envio de complemento](#app-submission-object) que inclui a ID do novo envio, o URI da SAS (assinatura de acesso compartilhado) para o upload de todos os arquivos relacionados para o envio para o armazenamento de Blobs do Azure (como pacotes de aplicativo, imagens de listagem e arquivos de trailer) e todos os dados do novo envio (como as listagens e as informações sobre preços).
+        > [!NOTE]
+        > A SAS URI provides access to a secure resource in Azure storage without requiring account keys. For background information about SAS URIs and their use with Azure Blob storage, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) and [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-  >**Observação**&nbsp;&nbsp;Um URI SAS dá acesso a um recurso seguro no armazenamento do Azure sem exigir chaves de conta. Para obter informações contextuais sobre URIs SAS e o uso com o armazenamento do Blob do Azure, consulte [Assinaturas de acesso compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) e [Assinaturas de acesso compartilhado, parte 2: Criar e usar uma SAS com o armazenamento de Blob](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, [prepare os pacotes de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e [prepare as imagens, os trailers e as capturas de tela do app](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
+    > [!NOTE]
+    > No momento, a capacidade de enviar um trailer para seu envio de aplicativo que esteja usando essa API não está disponível para todas as contas de desenvolvedor. Se sua conta não tiver acesso a esse recurso, a matriz *trailers* do [recurso de envio de aplicativo](#app-submission-object) será nula quando você obtiver ou criar um envio.
 
-4. Se você estiver adicionando novos pacotes ou imagens para o envio, [prepare os pacotes de aplicativos](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) e [prepare as imagens e as capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Adicione todos esses arquivos a um arquivo ZIP.
+5. Revise os dados de [envio de aplicativo](#app-submission-object) com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de aplicativo](update-an-app-submission.md).
 
-5. Revise os dados de envio com as alterações necessárias para o novo envio e execute o método a seguir para [atualizar o envio de aplicativo](update-an-app-submission.md).
+    ```
+    PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
+    ```
+      > [!NOTE]
+      > Se você estiver adicionando novos arquivos para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
-  ```
+4. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP no [armazenamento do Blob do Azure](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando o URI SAS que foi fornecido no corpo da resposta do método POST chamado anteriormente. Existem bibliotecas do Azure diferentes que é possível usar para fazer isso em uma grande variedade de plataformas, inclusive:
 
-  <span/>
-  >**Observação**&nbsp;&nbsp;Se você estiver adicionando novos pacotes ou imagens para o envio, atualize os dados de envio para fazer referência ao nome e caminho relativo desses arquivos no arquivo ZIP.
-
-4. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP no [armazenamento do Blob do Azure](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando o URI SAS que foi fornecido no corpo da resposta do método POST chamado anteriormente. Existem bibliotecas do Azure diferentes que é possível usar para fazer isso em uma grande variedade de plataformas, inclusive:
-
-  * [Biblioteca de Cliente do Armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-  * [SDK de Armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-  * [SDK de Armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-
-  <span/>
+    * [Biblioteca de Cliente do Armazenamento do Azure para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [SDK de Armazenamento do Azure para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [SDK de Armazenamento do Azure para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
   O exemplo de código em C# a seguir demonstra como carregar um arquivo ZIP no armazenamento do Blob do Azure usando a classe [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) na Biblioteca de Cliente do Armazenamento do Azure para .NET. Este exemplo pressupõe que o arquivo ZIP já tenha sido escrito para um objeto de fluxo.
 
-  > [!div class="tabbedCodeSnippets"]
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
   Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob blockBob =
@@ -127,32 +124,43 @@ Para criar um envio de um aplicativo, siga este processo.
 
 5. [Confirme o envio de aplicativo](commit-an-app-submission.md) executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
+    ```
 
 6. Verifique o status de confirmação executando o método a seguir para [obter o status de envio de aplicativo](get-status-for-an-app-submission.md).
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
-  ```
+    ```
+    GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
+    ```
 
-  Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
+    Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
 7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
+
+<span id="advanced-listings"/>
+### <a name="game-options-and-trailers"></a>Opções de jogo e trailers
+
+Existem dois conjuntos de opções avançadas de listagem que podem não estar disponíveis em alguns envios: [opções de jogo](#gaming-options-object) e [trailers](#trailer-object).
+
+Essas opções de listagem foram adicionadas depois que a API de envio da Windows Store foi lançada pela primeira vez para desenvolvedores. Se você tiver criado um envio para um app por meio da API de envio antes da introdução dessas opções de listagem e se esse envio ainda estiver em andamento, você não poderá acessar essas opções de listagem até que confirme com êxito do envio ou o exclua.
+
+Para determinar se você pode acessar essas opções de listagem para um determinado app ao usar a API de envio, use o método [obter um app](get-an-app.md) e verifique se o campo *hasAdvancedListingPermission* de [Recurso de aplicativo](get-app-data.md#application_object) é true. Se você não puder acessar essas opções de listagem para um app, os valores de *gamingOptions* e *trailers* valores em seu [recurso de envio de aplicativo](#app-submission-object) serão nulos quando você [criar um envio de aplicativo](create-an-app-submission.md).
 
 <span/>
 ### <a name="code-examples-for-managing-app-submissions"></a>Exemplos de código para gerenciar envios de aplicativo
 
 Os artigos a seguir apresentam exemplos detalhados de código que demonstram como criar um envio de aplicativo em diversas linguagens de programação diferentes:
 
-* [Exemplos de código em C#](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplo de código Java](java-code-examples-for-the-windows-store-submission-api.md)
-* [Exemplos de código em Python](python-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de C#: envios de apps, complementos e versões de pré-lançamento](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de C#: envio de aplicativo com opções de jogo e trailers](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Exemplo de Java: envios de apps, complementos e versões de pré-lançamento](java-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de Java: envio de aplicativo com opções de jogo e trailers](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Exemplo de Python: envios para apps, complementos e versões de pré-lançamento](python-code-examples-for-the-windows-store-submission-api.md)
+* [Exemplo de Python: envio de aplicativo com opções de jogo e trailers](python-code-examples-for-submissions-game-options-and-trailers.md)
 
->**Observação**&nbsp;&nbsp;além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre o envio da Windows Store API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker é usado ativamente na Microsoft como o modo principal de enviar diversos apps primários para a loja. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
+> [!NOTE]
+> Além dos exemplos de código acima, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre API de envio da Windows Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja. Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
 
 <span id="manage-gradual-package-rollout">
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Métodos para gerenciar uma distribuição de pacote gradual
@@ -267,6 +275,7 @@ Esse recurso descreve um envio de aplicativo.
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -318,7 +327,8 @@ Esse recurso descreve um envio de aplicativo.
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 
@@ -337,18 +347,55 @@ Esse recurso tem os valores a seguir.
 | automaticBackupEnabled           |  booliano  |   Indica se o Windows pode incluir dados do aplicativo em backups automáticos no OneDrive. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
+| gamingOptions           |  array |   Uma matriz que contém um [recurso de opções de jogos](#gaming-options-object) que define as configurações relacionadas a jogos para o app.<br/><br/>**Observação:**&nbsp;&nbsp;no momento, a capacidade de configurar as opções de jogo usando essa API não está disponível para todas as contas de desenvolvedor. Se sua conta não tiver acesso a esse recurso, o valor de *gamingOptions* será nulo. Para determinar se você pode configurar as *gamingOptions* para um envio de aplicativo, use o método [obter um app](get-an-app.md) e verifique se o campo *hasAdvancedListingPermission* de [Recurso de aplicativo](get-app-data.md#application_object) é true.      |   
 | hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Windows Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   objeto  | Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros.       |    
-| fileUploadUrl           |   cadeia de caracteres  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes ou imagens para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para essa URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
+| fileUploadUrl           |   string  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes, imagens de listagem ou arquivos de trailer para o envio, carregue o arquivo ZIP que contém os pacotes e imagens para este URI. Para obter mais informações, consulte [Criar um envio de aplicativo](#create-an-app-submission).       |    
 | applicationPackages           |   matriz  | Uma matriz de [recursos do pacote de aplicativos](#application-package-object) que dão detalhes sobre cada pacote no envio. |    
 | packageDeliveryOptions    | objeto  | Um [recurso de opções de entrega do pacote](#package-delivery-options-object) que contém configurações da distribuição de pacote gradual e da atualização obrigatória para o envio.  |
 | enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
 | friendlyName           |   cadeia  |  O nome amigável do envio, conforme mostrado no painel do Centro de Desenvolvimento. Esse valor é gerado para você ao criar o envio.       |  
+| trailers           |  array |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>**Observação:**&nbsp;&nbsp;no momento, a capacidade de enviar um trailer para seu envio de aplicativo que esteja usando essa API não está disponível para todas as contas de desenvolvedor. Se sua conta não tiver acesso a esse recurso, o valor de *trailers* será nulo. Para determinar se você pode configurar os *trailers* para um envio de aplicativo, use o método [obter um app](get-an-app.md) e verifique se o campo *hasAdvancedListingPermission* de [Recurso de aplicativo](get-app-data.md#application_object) é true.   |  
+
+
+<span id="pricing-object" />
+### <a name="pricing-resource"></a>Recurso de preço
+
+Esse recurso contém informações de preço do aplicativo. Esse recurso tem os valores a seguir.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+|  trialPeriod               |    string     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
+|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
+|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
+|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do app.   |     
+|  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
+
+
+<span id="sale-object" />
+### <a name="sale-resource"></a>Recurso de venda
+
+Esse recurso contém informações de venda de um aplicativo.
+
+> [!IMPORTANT]
+> O recurso **Venda** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de aplicativo usando a API de envio da Windows Store. No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de aplicativo.
+>    * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de aplicativo.
+>    * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de venda de seu envio de aplicativo.
+
+Esse recurso tem os valores a seguir.
+
+| Valor           | Tipo    | Descrição    |
+|-----------------|---------|------|
+|  name               |    string     |   O nome da promoção.    |     
+|  basePriceId               |   string      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
+|  startDate               |   string      |   A data de início da promoção no formato ISO 8601.  |     
+|  endDate               |   string      |  A data de término da promoção no formato ISO 8601.      |     
+|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
 
 
 <span id="listing-object" />
@@ -376,60 +423,81 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 |  websiteUrl                |   string      |  A URL da [página da Web](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website) do seu aplicativo.    |    
 |  description               |    string     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
 |  features               |    array     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
-|  releaseNotes               |  string       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
+|  releaseNotes               |  cadeia de caracteres       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
 |  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
-|  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware) para o aplicativo.     |
+|  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
+|  minimumHardware               |     string    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
 |  title               |     cadeia de caracteres    |   O título da listagem do aplicativo.   |  
+|  shortDescription               |     string    |  Esse valor só se aplica a listagens para Xbox. Especifica a descrição curta para a listagem, que ajuda os usuários a entender sobre o que é o jogo, que tipo de jogo é e que tipo de jogadores poderão gostar dele. As entradas se limitam a 500 caracteres.   |  
+|  shortTitle               |     string    |  Esse valor só se aplica a listagens para Xbox. Especifica a versão curta da descrição do produto para contextos em que a descrição normal seria muito longa. O comprimento máximo é de 50 caracteres para todas as versões do título curto, incluindo padrão, localizada e substituição. Uma versão de substituição é exibida em uma única região em que o idioma alternativo é falado.    |  
+|  sortTitle               |     string    |   Esse valor só se aplica a listagens para Xbox. Isso especifica o título de classificação para obter a listagem. As entradas se limitam a 255 caracteres.   |  
+|  voiceTitle               |     string    |   Esse valor só se aplica a listagens para Xbox. Isso especifica o título de voz para obter a listagem. As entradas se limitam a 255 caracteres.    |  
+|  devStudio               |     string    |   Especifica esse valor se você quiser incluir um campo **Desenvolvido por** na listagem. (O campo **Publicado por** listará o nome de exibição do publicador associado à conta, independentemente de você fornecer ou não um valor para o campo *devStudio*).    |  
 
 <span id="image-object" />
 ### <a name="image-resource"></a>Recurso de imagem
 
-Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. Para obter mais informações sobre imagens e ícones para detalhes, consulte [Capturas de tela e imagens do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tem os seguintes valores.
+Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. Para obter mais informações sobre imagens e ícones para detalhes, consulte [Capturas de tela e imagens do aplicativo](../publish/app-screenshots-and-images.md). Este recurso tem os seguintes valores.
 
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
 |  fileName               |    string     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
 |  fileStatus               |   string      |  O status do arquivo de imagem. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | A ID da imagem, conforme especificado pelo Centro de Desenvolvimento.  |
-|  description  |  string  | A descrição da imagem.  |
-|  imageType  |  string  | Uma das seguintes cadeias de caracteres que indica o tipo da imagem: <ul><li>Unknown</li><li>Screenshot</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Ícone</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
+|  id  |  string  | A ID da imagem. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+|  descrição  |  string  | A descrição da imagem.  |
+|  imageType  |  string  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
-<span id="pricing-object" />
-### <a name="pricing-resource"></a>Recurso de preço
+<span id="gaming-options-object" />
+### <a name="gaming-options-resource"></a>Recurso de opções de jogo
 
-Esse recurso contém informações de preço do aplicativo. Esse recurso tem os valores a seguir.
+Esse recurso contém configurações relacionadas a jogo para o app. Os valores nesse recurso correspondem às [configurações de jogo](../publish/enter-app-properties.md#game-settings) para envios no painel do Centro de Desenvolvimento.
+
+> [!NOTE]
+> Esse recurso [pode não estar disponível para todos os envios](#advanced-listings).
+
+Se você tiver criado um envio para um app por meio da API de envio antes da introdução dessas opções de listagem e se esse envio ainda estiver em andamento, você não poderá acessar essas opções de listagem para todos os envios para o app até que confirme com êxito do envio ou o exclua. Para determinar se você pode acessar essas opções de listagem para um determinado app ao usar a API de envio, use o método [obter um app](get-an-app.md) e verifique se o campo *hasAdvancedListingPermission* de [Recurso de aplicativo](get-app-data.md#application_object) é true.
+
+```json
+{
+  "gamingOptions": [
+    {
+      "genres": [
+        "Games_ActionAndAdventure",
+        "Games_Casino"
+      ],
+      "isLocalMultiplayer": true,
+      "isLocalCooperative": true,
+      "isOnlineMultiplayer": false,
+      "isOnlineCooperative": false,
+      "localMultiplayerMinPlayers": 2,
+      "localMultiplayerMaxPlayers": 12,
+      "localCooperativeMinPlayers": 2,
+      "localCooperativeMaxPlayers": 12,
+      "isBroadcastingPrivilegeGranted": true,
+      "isCrossPlayEnabled": false,
+      "kinectDataForExternal": "Enabled"
+    }
+  ],
+}
+```
+
+Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  trialPeriod               |    string     |  Uma cadeia de caracteres que especifica o período de avaliação do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *priceId* para o mercado especificado.      |     
-|  sales               |   matriz      |  **Preterido**. Uma matriz de [recursos de venda](#sale-object) que contêm informações de venda do aplicativo.   |     
-|  priceId               |   cadeia de caracteres      |  A [faixa de preço](#price-tiers) que especifica o [preço base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) do app.   |     
-|  isAdvancedPricingModel               |   booliano      |  Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto expandido de faixas de preço de US$ 0,99 a US$ 1999,99. Se for **true**, sua conta de desenvolvedor tem acesso ao conjunto original de faixas de preço de US$ 0,99 a US$ 999,99. Para saber mais sobre as diferentes camadas, consulte [faixas de preço](#price-tiers).<br/><br/>**Observação**&nbsp;&nbsp;Esse campo é somente leitura.   |
-
-
-<span id="sale-object" />
-### <a name="sale-resource"></a>Recurso de venda
-
-Esse recurso contém informações de venda de um aplicativo.
-
->**Importante**&nbsp;&nbsp;O recurso **Promoção** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de aplicativo usando a API de envio da Windows Store:
-
-   > * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de aplicativo.
-   > * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de venda de seu envio de aplicativo.
-
-> No futuro, atualizaremos a API de envio da Windows Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de aplicativo.
-
-Este recurso tem os seguintes valores.
-
-| Valor           | Tipo    | Descrição    |
-|-----------------|---------|------|
-|  name               |    string     |   O nome da promoção.    |     
-|  basePriceId               |   string      |  A [faixa de preço](#price-tiers) a ser usada para o preço base da promoção.    |     
-|  startDate               |   string      |   A data de início da promoção no formato ISO 8601.  |     
-|  endDate               |   string      |  A data de término da promoção no formato ISO 8601.      |     
-|  marketSpecificPricings               |   object      |   Um dicionário de pares de chave e valor, onde cada chave é um código ISO 3166-1 alpha-2 de duas letras do país e cada valor é uma [faixa de preço](#price-tiers). Esses itens representam os [preços personalizados do aplicativo em mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Todos os itens nesse dicionário substituem o preço base especificado pelo valor *basePriceId* para o mercado especificado.    |
+|  gêneros               |    array     |  Uma matriz de uma ou mais das seguintes cadeias de caracteres que descrevem os gêneros do jogo: <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
+|  isLocalMultiplayer               |    booliano     |  Indica se o jogo dá suporte a multijogador local.      |     
+|  isLocalCooperative               |   booliano      |  Indica se o jogo dá suporte a cooperação local.    |     
+|  isOnlineMultiplayer               |   booliano      |  Indica se o jogo dá suporte a multijogador online.    |     
+|  isOnlineCooperative               |   booliano      |  Indica se o jogo dá suporte a cooperação online.    |     
+|  localMultiplayerMinPlayers               |   int      |   Especifica o número mínimo de jogadores a que o jogo dá suporte para multijogador local.   |     
+|  localMultiplayerMaxPlayers               |   int      |   Especifica o número máximo de jogadores a que o jogo dá suporte para multijogador local.  |     
+|  localCooperativeMinPlayers               |   int      |   Especifica o número mínimo de jogadores a que o jogo dá suporte para cooperação local.  |     
+|  localCooperativeMaxPlayers               |   int      |   Especifica o número máximo de jogadores a que o jogo dá suporte para cooperação local.  |     
+|  isBroadcastingPrivilegeGranted               |   booliano      |  Indica se o jogo dá suporte a difusão.   |     
+|  isCrossPlayEnabled               |   booliano      |   Indica se o jogo oferece suporte a sessões multijogador entre jogadores no Xbox e em computadores Windows 10.  |     
+|  kinectDataForExternal               |   string      |  Um dos seguintes valores de cadeia de caracteres que indica se o jogo pode coletar dados do Kinect e enviá-los a serviços externos: <ul><li>NotSet</li><li>Desconhecido</li><li>Habilitado</li><li>Desabilitado</li></ul>   |
 
 
 <span id="status-details-object" />
@@ -489,17 +557,18 @@ Esse recurso contém detalhes sobre um pacote de aplicativos para o envio.
 
 Esse recurso tem os valores a seguir.  
 
->**Observação**&nbsp;&nbsp;Durante a chamada do método [atualizar um envio de aplicativo](update-an-app-submission.md), apenas os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
+> [!NOTE]
+> Durante a chamada do método [atualizar um envio de aplicativo](update-an-app-submission.md), somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
 
 | Valor           | Tipo    | Descrição                   |
 |-----------------|---------|------|
 | fileName   |   string      |  O nome do pacote.    |  
 | fileStatus    | string    |  O status do pacote. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Uma ID que identifica exclusivamente o pacote. Esse valor é usado pelo Centro de Desenvolvimento.   |     
-| version    |  string   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| id    |  string   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Centro de Desenvolvimento.   |     
+| versão    |  string   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  A arquitetura do pacote (por exemplo, ARM).   |     
-| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas suportados](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| recursos    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  string   |  A versão mínima do DirectX que é compatível com o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | string    |  A RAM mínima necessária para o pacote do aplicativo. Isso pode ser definido apenas para aplicativos que visam o Windows 8.x; isso é ignorado para aplicativos destinados a outras versões. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Memory2GB</li></ul>   |       
 | targetDeviceFamilies    | array    |  Uma matriz de cadeias de caracteres que representam as famílias de dispositivos que o pacote segmenta. Esse valor é usado somente para pacotes destinados ao Windows 10; para pacotes destinados a versões anteriores, esse valor tem o valor **Nenhum**. As seguintes strings de família de dispositivos são atualmente suportadas para pacotes do Windows 10, onde *{0}* é uma string de versão do Windows 10, como 10.0.10240.0, 10.0.10586.0 ou 10.0.14393.0: <ul><li>Versão mínima do Windows.Universal *{0}*</li><li>Versão mínima do Windows.Desktop *{0}*</li><li>Versão mínima do Windows.Mobile *{0}*</li><li>Versão mínima do Windows.Xbox *{0}*</li><li>Versão mínima de Windows.Holographic *{0}*</li></ul>   |    
@@ -555,9 +624,76 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | isPackageRollout   |   booliano      |  Indica se a distribuição de pacote gradual está habilitada para o envio.    |  
 | packageRolloutPercentage    | flutuante    |  O percentual de usuários que receberão os pacotes na distribuição gradual.    |  
 | packageRolloutStatus    |  string   |  Uma das seguintes sequências que indicam o status da distribuição de pacote gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  string   |  A ID do envio que será recebida por clientes que não recebem os pacotes de distribuição gradual.   |          
+| fallbackSubmissionId    |  string   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
->**Observação**&nbsp;&nbsp;os valores de *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de Desenvolvimento e não devem ser configurados pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados. 
+> [!NOTE]
+> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de Desenvolvimento e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
+
+<span id="trailer-object" />
+### <a name="trailer-resource"></a>Recurso de trailer
+
+Esse recurso representa um trailer de vídeo para a listagem do app. Os valores nesse recurso correspondem às opções de [trailer](../publish/app-screenshots-and-images.md#trailers) para envios no painel do Centro de Desenvolvimento.
+
+Você pode adicionar até 15 recursos de trailer à matriz *trailers* em um [recurso de envio de aplicativo](#app-submission-object). Para carregar arquivos de vídeo do trailer e imagens em miniatura para um envio, adicione esses arquivos ao mesmo arquivo ZIP que contém os pacotes e as imagens de listagem para o envio e então carregue esse arquivo ZIP no URI da SAS (assinatura de acesso compartilhado) do envio. Para obter mais informações sobre o upload do arquivo ZIP no URI da SAS, consulte [Criar um envio de aplicativo](#create-an-app-submission).
+
+> [!NOTE]
+> Esse recurso [pode não estar disponível para todos os envios](#advanced-listings).
+
+```json
+{
+  "trailers": [
+    {
+      "id": "1158943556954955699",
+      "videoFileName": "Trailers\\ContosoGameTrailer.mp4",
+      "videoFileId": "1159761554639123258",
+      "trailerAssets": {
+        "en-us": {
+          "title": "Contoso Game",
+          "imageList": [
+            {
+              "fileName": "Images\\ContosoGame-Thumbnail.png",
+              "id": "1155546904097346923",
+              "description": "This is a still image from the video."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+Esse recurso tem os valores a seguir.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+|  id               |    string     |   A ID do trailer. Esse valor é fornecido pelo Centro de Desenvolvimento.   |
+|  videoFileName               |    string     |    O nome do arquivo de vídeo de trailer no arquivo ZIP que contém arquivos para o envio.    |     
+|  videoFileId               |   string      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Centro de Desenvolvimento.   |     
+|  trailerAssets               |   object      |  Um dicionário de pares de chave e valor, onde cada chave é um código de idioma e cada valor é um [recurso de ativos de trailer](#trailer-assets-object) que contém outros ativos específicos da localidade para o trailer. Para saber mais sobre os códigos de idioma com suporte, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
+
+
+<span id="trailer-assets-object" />
+### <a name="trailer-assets-resource"></a>Recurso de ativos de trailer
+
+Esse recurso contém outros ativos específicos da localidade para um trailer definido em um [recurso de trailer](#trailer-object). Esse recurso tem os valores a seguir.
+
+| Valor           | Tipo    | Descrição        |
+|-----------------|---------|------|
+| title   |   string      |  O título localizado do trailer. O título é exibido quando o usuário reproduz o trailer em modo de tela inteira.     |  
+| imageList    | array    |   Uma matriz que contém um recurso de [imagem](#image-for-trailer-object) que fornece a imagem em miniatura do trailer. Você só pode incluir um recurso de [imagem](#image-for-trailer-object) nessa matriz.  |   
+
+
+<span id="image-for-trailer-object" />
+### <a name="image-resource-for-a-trailer"></a>Recurso de imagem (para um trailer)
+
+Esse recurso descreve a imagem em miniatura para um trailer. Esse recurso tem os valores a seguir.
+
+| Valor           | Tipo    | Descrição           |
+|-----------------|---------|------|
+|  fileName               |    string     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
+|  id  |  string  | A ID da imagem em miniatura. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+|  description  |  string  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
 
 <span/>
 

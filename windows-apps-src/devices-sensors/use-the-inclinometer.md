@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "Usar o inclinômetro"
 description: "Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6544d4a598edb12d8d114bb27fac84831ce31d14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b0fcc9e45d1a9e1921e77ce8b59817a5ca1c0dd2
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-inclinometer"></a>Usar o inclinômetro
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Inclinômetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+
+**Exemplo**
+
+-   Para obter uma implementação completa, consulte o [exemplo de inclinômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 Saiba como usar o inclinômetro para determinar a rotação sobre o eixo x, a rolagem e a rotação sobre o eixo y.
 
@@ -175,6 +181,3 @@ Esses novos valores são gravados nos TextBlocks encontrados no XAML do projeto.
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## <a name="related-topics"></a>Tópicos relacionados
-
-* [Exemplo do inclinômetro](http://go.microsoft.com/fwlink/p/?linkid=241380)

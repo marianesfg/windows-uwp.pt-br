@@ -7,14 +7,16 @@ label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3862b008afece61648357c84a218ba210703727c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a491a13264a19c50affdbacded69c7ff73e99afa
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="define-page-layouts-with-xaml"></a>Definir layouts de página com XAML
 
@@ -25,7 +27,7 @@ XAML oferece um sistema de layout flexível que permite usar dimensionamento aut
 Aqui, abordamos como usar painéis de layout e propriedades XAML para deixar seu aplicativo dinâmico e adaptável. Compilamos informações importantes sobre design de interface do usuário responsiva e técnicas encontradas em [Introdução ao design do aplicativo UWP](../layout/design-and-ui-intro.md). Você deve compreender o que são pixels efetivos e entender cada uma das técnicas de design responsivo: reposicionar, redimensionar, refluir, revelar, substituir e reformular.
 
 > [!NOTE]
-> O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar um [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/nav-pane.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
+> O layout do aplicativo começa com o modelo de navegação escolhido, como se você deseja usar um [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) com o modelo [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) ou [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) com o modelo [‘nav pane’](../controls-and-patterns/navigationview.md). Para obter mais informações sobre isso, consulte [Noções básicas de design de navegação para aplicativos UWP](../layout/navigation-basics.md). Falamos aqui sobre as técnicas para tornar o layout de uma única página ou um de grupo de elementos dinâmico. Essas informações são aplicáveis independentemente de qual modelo de navegação você escolher para seu aplicativo.
 
 A estrutura XAML fornece vários níveis de otimização que você pode usar para criar uma interface do usuário responsiva.
 - **Layout fluido**

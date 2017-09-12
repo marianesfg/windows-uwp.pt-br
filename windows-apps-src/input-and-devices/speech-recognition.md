@@ -11,9 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 49cd1e7ac0fceff7e39679f337ea4c029fa98806
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 246db868cda1b1d6e61a33981fc756767ebdbd8d
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -54,48 +56,32 @@ Você pode usar vários tipos de restrições quando executar reconhecimento de 
 
     A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-    **Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.
-
-     
+    **Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.     
 
     Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 
-    Para usar restrições de serviço Web, você deve habilitar o suporte à entrada de fala e ao ditado em **Configurações** ativando a opção "Acessar meus dados" na página Configurações -&gt; Privacidade -&gt; Controle por voz, escrita a tinta e digitação.
+    Para usar restrições de serviço Web, você deve habilitar o suporte à entrada de fala e ao ditado em **Configurações** ativando a opção "Acessar meus dados" na página Configurações -> Privacidade -> Fala, escrita à tinta e digitação.
 
-    Aqui, nós mostramos como testar se a entrada de fala está habilitada. Caso não esteja, abra página Configurações -&gt; Privacidade -&gt; Controle por voz, escrita a tinta e digitação.
+    Aqui, nós mostramos como testar se a entrada de fala está habilitada. Caso não esteja, abra página Configurações -> Privacidade -> Fala, escrita à tinta e digitação.
 
     Primeiro, inicializamos uma variável global (HResultPrivacyStatementDeclined) para o valor HResult de 0x80045509. Consulte [Tratamento de exceções para em C\# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
-```    CSharp
-private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></td>
-    </tr>
-    </tbody>
-    </table>
-```
+    ```csharp
+    private static uint HResultPrivacyStatementDeclined = 0x80045509;
+    ```
 
-    We then catch any standard exceptions during recogntion and test if the [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) value is equal to the value of the HResultPrivacyStatementDeclined variable. If so, we display a warning and call `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` to open the Settings page.
-
+    Em seguida, pegamos quaisquer exceções padrão durante o reconhecimento e testamos se o valor [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) é igual ao valor da variável HResultPrivacyStatementDeclined. Se for, exibimos um aviso e chamamos `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` para abrir a página Configurações.
     
-```    CSharp
-    <colgroup>
-    <col width="100%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th align="left">C#</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-catch (Exception exception)
+    ```csharp
+    catch (Exception exception)
     {
       // Handle the speech privacy policy error.
       if ((uint)exception.HResult == HResultPrivacyStatementDeclined)
       {
         resultTextBlock.Visibility = Visibility.Visible;
-        resultTextBlock.Text = "The privacy statement was declined. 
-          Go to Settings -> Privacy -> Speech, inking and typing, and ensure you 
-          have viewed the privacy policy, and &#39;Get To Know You&#39; is enabled.";
+        resultTextBlock.Text = "The privacy statement was declined." + 
+          "Go to Settings -> Privacy -> Speech, inking and typing, and ensure you" +
+          "have viewed the privacy policy, and 'Get To Know You' is enabled.";
         // Open the privacy/speech, inking, and typing settings page.
         await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts")); 
       }
@@ -105,7 +91,7 @@ catch (Exception exception)
         await messageDialog.ShowAsync();
       }
     }
-```
+    ```
 
 2.  **Restrições da lista programática** ([**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)).
 
@@ -193,7 +179,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
     speechRecognizer.UIOptions.AudiblePrompt = "Say what you want to search for...";
-    speechRecognizer.UIOptions.ExampleText = @"Ex. &#39;weather for London&#39;";
+    speechRecognizer.UIOptions.ExampleText = @"Ex. 'weather for London'";
     speechRecognizer.Constraints.Add(webSearchGrammar);
 
     // Compile the constraint.

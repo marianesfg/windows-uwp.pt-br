@@ -1,83 +1,187 @@
 ---
 author: normesta
-Description: Distribuir o app UWP convertido usando a ponte de Desktop para UWP
+Description: "Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)"
 Search.Product: eADQiWindows 10XVcnh
-title: "Distribuição da ponte de Desktop para UWP"
+title: "Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos."
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
-ms.openlocfilehash: ee38bd22b6d4737cf5bb64eb489365e3f83efd53
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 24a005309271a91d669322787fb8d341e1a6d6ad
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/11/2017
 ---
-# <a name="desktop-to-uwp-bridge-distribute"></a>Ponte de Desktop para UWP: distribuição
+# <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)
 
-Existem três maneiras principais de implantar o aplicativo convertido: a Windows Store, o sideload e o registro de arquivo flexível.  
+Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos.  
 
-## <a name="windows-store"></a>Windows Store
+> [!NOTE]
+> Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo de ponte de desktop](#transition-users) deste guia para obter algumas ideias.
 
-A Windows Store é a maneira mais prática dos clientes obterem o aplicativo. Para começar, preencha o formulário em [Trazer os aplicativos e jogos existentes para a Windows Store usando a ponte da área de trabalho](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de integração.
+## <a name="distribute-your-app-by-publishing-it-to-the-windows-store"></a>Distribuir seu aplicativo publicando-o na Windows Store
 
-Você precisa ser o desenvolvedor e/ou publicador do aplicativo ou do jogo a fim de levá-lo para a Windows Store. Assim, certifique-se de que o nome e o endereço de email correspondam aos do site que você envia como a URL abaixo, de maneira que possamos validar você como o desenvolvedor e/ou o publicador.
+A [Windows Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-## <a name="sideloading"></a>Sideload
+<div style="float: left; padding: 10px">
+    ![Ícone da loja](images/desktop-to-uwp/store.png)
+</div>
+Publique seu aplicativo na loja para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através da [Windows Store para Empresas](https://www.microsoft.com/business-store).
 
-O sideload oferece uma maneira fácil de implantar em vários computadores. Isso é especialmente útil em cenários de empresa/linha de negócio (LOB) onde você queira um controle mais refinado sobre a experiência de distribuição e não deseja se envolver com o certificado da Loja.
+Se você planeja publicar na Windows Store, mas ainda não entrou em contato conosco, por favor preencha [esse formulário](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge), e a Microsoft entrará em contato com você para iniciar o processo de integração.
 
-Antes de implantar o aplicativo via sideload, você precisará assiná-lo usando um certificado. Para obter informações sobre a criação de um certificado, consulte [Assinar seu pacote de aplicativo do Windows](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx).
+Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 
-Veja a seguir como importar um certificado que você criou anteriormente. Você pode importar o certificado diretamente com o CERTUTIL, ou pode instalá-lo de um pacote de aplicativo do Windows que você assinou, como o cliente fará.
+>[!IMPORTANT]
+> Se você planeja publicar seu app na Windows Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executem o Windows 10 S. Esse é um requisito da loja. Consulte [Testar seu aplicativo do Windows para o Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
-Para instalar o certificado via CERTUTIL, execute o seguinte comando em um prompt de comando de administrador:
+## <a name="distribute-your-app-without-placing-it-onto-the-windows-store"></a>Distribuir seu aplicativo sem colocá-lo na Windows Store
 
-```cmd
-Certutil -addStore TrustedPeople <testcert.cer>
+Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode distribuir seus aplicativos manualmente para um ou mais dispositivos.
+
+Isso pode fazer sentido se você deseja ter mais controle sobre a experiência de distribuição ou se você não quiser se envolver com o processo de certificação da Windows Store.
+
+Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na loja, você precisa obter um certificado, assinar seu aplicativo usando esse certificado e fazer o sideload do aplicativo para esses dispositivos.
+
+Você pode [criar um certificado](../packaging/create-certificate-package-signing.md) ou obtê-lo de um fornecedor popular, como o [Verisign](https://www.verisign.com/).
+
+Se você pretende distribuir seu aplicativo para dispositivos com o Windows 10 S, seu aplicativo deve ser assinado pela Windows Store e você terá que passar pelo processo de envio da Loja antes de distribuir seu aplicativo para esses dispositivos.
+
+Se você criar um certificado, você precisa instalá-lo na loja de certificados **Trusted Root** ou **Trusted People** em cada dispositivo que executa seu aplicativo. Se você receber um certificado de um fornecedor popular, você não precisa instalar nada em outros sistemas além de seu aplicativo.  
+
+> [!IMPORTANT]
+> Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.
+
+Para assinar seu aplicativo usando um certificado, consulte [Assinar um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
+
+Para fazer o sideload do aplicativo em outros dispositivos, consulte [Fazer o sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
+
+**Vídeos**
+
+|Publicar seu aplicativo na Windows Store |Distribuir um aplicativo empresarial  |
+|---|---|
+|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
+
+<span id="transition-users" />
+## <a name="transition-users-to-your-desktop-bridge-app"></a>Transição de usuários para seu aplicativo de ponte de desktop
+
+Antes de distribuir o seu aplicativo, considere adicionar algumas extensões ao manifesto do pacote para ajudar os usuários a terem o hábito de usar seu aplicativo de ponte de desktop. Aqui estão algumas coisas que você pode fazer.
+
+* Aponte os blocos de Início e botões da barra de tarefas existentes para o seu aplicativo de ponte de desktop.
+* Associe seu aplicativo empacotado a um conjunto de tipos de arquivos.
+* Faça com que seu aplicativo de ponte de desktop abra certos tipos de arquivos por padrão.
+
+Para obter a lista completa das extensões e as orientações de como usá-las, consulte [Transição de usuários para seu aplicativo](desktop-to-uwp-extensions.md#transition-users-to-your-app).
+
+Além disso, considere adicionar código ao seu aplicativo de ponte de desktop que realize essas tarefas:
+
+* Migra os dados do usuário associados ao seu aplicativo desktop para as localizações de pastas apropriadas do seu aplicativo de ponte de desktop.
+* Ofereça aos usuários a opção de desinstalar a versão desktop do seu aplicativo.
+
+Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de dados do usuário.
+
+### <a name="migrate-user-data"></a>Migrar dados do usuário
+
+Se você vai adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
+
+Aqui está um exemplo de como você pode fazer isso em um aplicativo de ponte de desktop baseado em .NET.
+
+```csharp
+private void MigrateUserData()
+{
+    String sourceDir = Environment.GetFolderPath
+        (Environment.SpecialFolder.ApplicationData) + "\\AppName";
+
+    if (sourceDir != null)
+    {
+        String migrateMessage =
+            "Would you like to migrate your data from the previous version of this app?";
+
+        DialogResult migrateResult = MessageBox.Show
+            (migrateMessage, "Data Migration", MessageBoxButtons.YesNo);
+
+        if (migrateResult.Equals(DialogResult.Yes))
+        {
+            String destinationDir =
+                Windows.Storage.ApplicationData.Current.LocalFolder.Path + "\\AppName";
+
+            Process process = new Process();
+            process.StartInfo.FileName = "robocopy.exe";
+            process.StartInfo.Arguments = "%LOCALAPPDATA%\\AppName " + destinationDir + " /move";
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
+            process.WaitForExit();
+
+            if (process.ExitCode > 1)
+            {
+                //Migration was unsuccessful -- you can choose to block/retry/other action
+            }
+        }
+    }
+}
 ```
 
-Para importar o certificado do pacote de aplicativo do Windows como um cliente faria:
+### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar a versão desktop do seu aplicativo
 
-1.    No Explorador de Arquivos, clique com botão direito do mouse em um pacote de aplicativo do Windows que você assinou com um certificado de teste e escolha **Propriedades** no menu de contexto.
-2.    Clique ou toque na guia **Assinaturas Digitais**.
-3.    Clique ou toque no certificado e escolha **Detalhes**.
-4.    Clique ou toque em **Exibir Certificado**.
-5.    Clique ou toque em **Instalar Certificado**.
-6.    No grupo **Local de Armazenamento**, selecione **Máquina Local**.
-7.    Clique ou toque em **Avançar** e **OK** para confirmar a caixa de diálogo do UAC.
-8.    Na tela seguinte do Assistente para importação de certificados, mude a opção selecionada para **Colocar todos os certificados no repositório a seguir**.
-9.    Clique ou toque em **Procurar**. Na janela Selecionar Repositório de Certificados, role para baixo e selecione **Pessoas Confiáveis** e clique ou toque em **OK**.
-10.    Clique ou toque em **Avançar**. Uma nova tela aparece. Clique ou toque em **Concluir**.
-11.    Uma caixa de diálogo de confirmação deve aparecer. Em caso afirmativo, clique em **OK**. Caso apareça uma caixa diferente, isso significa que há um problema com o certificado. Talvez seja preciso solucionar esses problemas.
+É melhor não desinstalar o aplicativo desktop dos usuários sem antes solicitar a permissão deles. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo desktop ou oferecer suporte ao uso simultâneo de ambos os aplicativos.
 
-Observação: para o Windows confiar no certificado, o certificado deve estar no nó **Certificados (Computador Local) > Autoridades de Certificação Confiáveis > Certificados** ou no nó **Certificados (Computador Local) > Pessoas Confiáveis > Certificados**. Somente certificados nessas duas localizações podem validar a relação de confiança de certificado no contexto da máquina local. Caso contrário, aparece uma mensagem de erro que se parece com a seguinte cadeia de caracteres:
+Aqui está um exemplo de como você pode fazer isso em um aplicativo de ponte de desktop baseado em .NET.
 
-```CMD
-"Add-AppxPackage : Deployment failed with HRESULT: 0x800B0109, A certificate chain processed,
-but terminated in a rootcertificate which is not trusted by the trust provider.
-(Exception from HRESULT: 0x800B0109) error 0x800B0109: The root certificate of the signature
-in the app package must be trusted."
+Para exibir o contexto completo deste trecho de código, consulte o arquivo **MainWindow.cs** deste exemplo [Visualizador de imagens do WPF com transição/migração/desinstalação](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
+
+```csharp
+private void RemoveDesktopApp()
+{              
+    //Typically, you can find your uninstall string at this location.
+    String uninstallString = (String)Microsoft.Win32.Registry.GetValue
+        (@"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion" +
+         @"\Uninstall\{7AD02FB8-B85E-44BC-8998-F4803BA5A0E3}\", "UninstallString", null);
+
+    //Detect if the previous version of the Desktop App is installed.
+    if (uninstallString != null)
+    {
+        String uninstallMessage = "To have the best experience, consider uninstalling the "
+            +" previous version of this app. Would you like to do that now?";
+
+        DialogResult uninstallResult = MessageBox.Show
+            (uninstallMessage, "Uninstall the previous version", MessageBoxButtons.YesNo);
+
+        if (uninstallResult.Equals(DialogResult.Yes))
+        {
+                    string[] uninstallArgs = uninstallString.Split(' ');
+
+            Process process = new Process();
+            process.StartInfo.FileName = uninstallArgs[0];
+            process.StartInfo.Arguments = uninstallArgs[1];
+            process.StartInfo.CreateNoWindow = true;
+
+            process.Start();
+            process.WaitForExit();
+
+            if (process.ExitCode != 0)
+            {
+                //Uninstallation was unsuccessful - You can choose to block the app here.
+            }
+        }
+    }
+
+}
 ```
 
-Agora que o certificado foi marcado como confiável, há 2 maneiras de instalar o pacote, por meio do powershell ou clicando duas vezes no arquivo de pacote de aplicativo do Windows para instalá-lo.  Para instalar por meio do powershell, execute o seguinte cmdlet:
+### <a name="video"></a>Vídeo
 
-```powershell
-Add-AppxPackage <MyApp>.appx
-```
+<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Transition-Taskbar-Pins-Start-Tiles-File-Type-Associations-and-Protocol-Handlers-MD5mv5WhD_2406218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
-### <a name="loose-file-registration"></a>Registro de arquivo flexível
+## <a name="next-steps"></a>Próximas etapas
 
-O registro de arquivo flexível é útil para fins onde os arquivos são dispostos em disco em um local que você pode acessar facilmente e atualização e não requer um certificado ou assinatura de depuração.  
+**Encontrar respostas para dúvidas específicas**
 
-Para implantar seu aplicativo durante o desenvolvimento, execute o seguinte cmdlet do PowerShell:
+Nossa equipe monitora estas [marcas do StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
 
-```Add-AppxPackage –Register AppxManifest.xml```
+**Envie seus comentários sobre este artigo**
 
-Para atualizar os arquivos .exe ou .dll do seu aplicativo, simplesmente substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
-
-Observe o seguinte:
-
-* Qualquer unidade em que você instale seu aplicativo convertido deve ser formatada para o formato NTFS.
-* Um aplicativo convertido sempre é executado como o usuário interativo.
+Use a seção de comentários abaixo.

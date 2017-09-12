@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ba08e426fea4c494276978d96cf0b36f6956bdb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0adc0789c4e52e8b9943f774d786aea6efb60c91
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -181,7 +183,8 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 | **FallbackValue** | Especifica um valor a ser exibido quando a fonte ou caminho não podem ser resolvidos. |
 | **Mode** | Especifica o mode de associação como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}**, que é "OneWay" na maioria dos casos. |
 | **TargetNullValue** | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
-| **BindBack** | Especifica uma função a ser usada na direção inversa de uma associação bidirecional. | 
+| **BindBack** | Especifica uma função a ser usada na direção inversa de uma associação bidirecional. |
+| **UpdateSourceTrigger** | Especifica quando enviar as alterações de volta a partir do controle para o modelo na associações de TwoWay. O padrão para todas as propriedades exceto TextBox.Text é PropertyChanged, TextBox.Text é LostFocus.| 
 
 **Observação** Se você estiver convertendo a marcação de **{Binding}** para **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
  

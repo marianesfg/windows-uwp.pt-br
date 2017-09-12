@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: "Otimizar suspensão/retomada"
 description: "Crie apps da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 491ce616f557d26ad7a5fdf1c068f1c9784bd046
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f9e045c381fc6c51a769be31403114ad15cf06bd
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-suspendresume"></a>Otimizar suspensão/retomada
 

@@ -4,14 +4,16 @@ ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
 description: "Use este método na API de análise da Windows Store para obter dados detalhados de um erro específico do seu app."
 title: Obter detalhes de um erro em seu aplicativo
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, serviços da Loja, API de análise da Windows Store, erros, detalhes"
-ms.openlocfilehash: cfab1c8f5149d4c6d02a9fa94287a4e204a11a7f
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: b18a49fd1c035bf83ff7288efef8c71df8faef8f
+ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2017
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>Obter detalhes de um erro em seu aplicativo
 
@@ -164,3 +166,4 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Acessar dados analíticos usando serviços da Windows Store](access-analytics-data-using-windows-store-services.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)
 * [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)

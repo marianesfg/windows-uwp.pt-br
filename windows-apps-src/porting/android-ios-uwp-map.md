@@ -2,7 +2,7 @@
 author: GrantMeStrength
 Description: Compare os recursos entre as plataformas iOS, Android e Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: Conceitos de Windows para desenvolvedores do Android e iOS
+title: Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-ms.openlocfilehash: ce32bd7ebaca20827a637c456b2dbe82811817cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 72bb41939b0676dab7c212770cc9eddaef538c3f
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/28/2017
 ---
-#<a name="windows-concepts-for-android-and-ios-developers"></a>Conceitos de Windows para desenvolvedores do Android e iOS
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 
 Se você for um desenvolvedor com habilidades de Android ou iOS e/ou de código e quiser mudar para o Windows 10 e a Plataforma Universal do Windows (UWP), este método tem tudo o que você precisa para mapear recursos de plataforma — e seu conhecimento — entre as três plataformas.
 
@@ -128,13 +130,13 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <td align="left"><strong>Navegação de par.</strong> <br><br>Apresentar ao usuário métodos de navegação entre páginas de importância hierárquica igual.</td>
 <td align="left"><strong>Guias</strong>, <strong>visualizações de deslizar o dedo</strong> e <strong>gavetas de navegação</strong> fornecem <strong>navegação lateral</strong>.</td>
 <td align="left"><strong>Controladores de barra de guias</strong>, <strong>controladores de modo divisão</strong> e <strong>controladores de exibição de página</strong> permitem a navegação entre as visualizações de hierarquia igual.</td>
-<td align="left">Você pode exibir uma lista persistente de links/guias acima do conteúdo usando <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">guias/pivôs</a></strong>. O <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">painel de navegação/modo divisão</a></strong> permite que você exiba uma lista de links junto com o conteúdo.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
+<td align="left">Você pode exibir uma lista persistente de links/guias acima do conteúdo usando <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">guias/pivôs</a></strong>. O <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">painel de navegação/modo divisão</a></strong> permite que você exiba uma lista de links junto com o conteúdo.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Navegação hierárquica.</strong> <br><br>Navegação entre páginas pai e filho de uma hierarquia.</td>
 <td align="left"><strong>Listas</strong> e <strong>listas de grade</strong>, <strong>botões</strong> e outros controles fornecem <strong>navegação descendente</strong> quando usados com <strong>intenções</strong> de carregar outras <strong>atividades</strong>.</td>
 <td align="left"><strong>Controladores de navegação</strong> permitem que os usuários naveguem entre níveis de uma hierarquia.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> permitem que você mostre ao usuário uma visualização de conteúdo que pode ser selecionada para navegar até páginas filho. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Mestre/detalhes</a></strong> permite que os usuários escolham uma opção de uma lista de resumos de item que é exibida ao lado da seção de detalhes correspondente.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> permitem que você mostre ao usuário uma visualização de conteúdo que pode ser selecionada para navegar até páginas filho. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Mestre/detalhes</a></strong> permite que os usuários escolham uma opção de uma lista de resumos de item que é exibida ao lado da seção de detalhes correspondente.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navegação</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navegar entre duas páginas</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navegação do botão Voltar.</strong> <br><br>Navegar de volta através de um app.</td>
@@ -170,7 +172,7 @@ Consulte também o conteúdo de portabilidade em [Move from iOS to UWP](ios-to-u
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Voz.</strong> <br><br>Reconhecimento de fala para entrada de fala e recursos adicionais de voz.</td>
 <td align="left">A entrada de fala pode ser fornecida por qualquer app que implemente um <strong>RecognizerIntent</strong>, como a <strong>Pesquisa por voz do Google</strong>. A classe <strong>SpeechRecognizer</strong> permite que os apps usem a API de reconhecimento de fala do Google.</td>
-<td align="left">Não há APIs de reconhecimento de fala ou de entrada de fala internas.</td>
+<td align="left">Os aplicativos podem usar a classe <strong>SFSpeechRecognizer</strong> para implementar o reconhecimento de fala e entrada de fala.</td>
 <td align="left">Você pode usar a API de <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">reconhecimento de fala</a></strong> para interagir com seu app em primeiro plano. Você pode usar <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">interações da Cortana</a></strong> baseadas na fala para iniciar apps em primeiro ou segundo plano e interagir com apps em segundo plano.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">Interações de controle por voz</a></td>
 </tr>
 <tr class="even">

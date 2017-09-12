@@ -6,20 +6,23 @@ ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4a9a1b18984ed418fc31061ff2ee392230117609
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3c819f5ae605b5bc6955185c1899a6ceee2f74ef
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Blocos, selos e notificações para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-
 Saiba como usar blocos, selos, notificações do sistema e notificações para fornecer pontos de entrada em seu aplicativo e manter os usuários atualizados.
+
+> **APIs importantes**: [pacote NuGet de Notificações do kit de ferramentas da comunidade UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
 Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP tem um bloco. Você pode habilitar diferentes tamanhos de bloco (pequeno, médio, largo e grande).</p>
@@ -32,98 +35,27 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 <p>Uma <em>notificação por push</em> ou <em>notificação de dados brutos</em> é uma notificação enviada para seu aplicativo pelo Serviço de Notificação por Push do Windows (WNS) ou por uma tarefa em segundo plano. Seu aplicativo pode responder a essas notificações avisando o usuário que algo de interesse aconteceu (por meio de atualização de notificação, atualização de bloco ou notificação do sistema) ou de qualquer forma a sua escolha.</p>
 
  
-## <a name="tiles"></a>Blocos 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tópico</th>
-<th align="left">Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Criar blocos](tiles-and-notifications-creating-tiles.md)</p></td>
-<td align="left"><p>Personalize o bloco padrão para seu aplicativo e forneça ativos para diferentes tamanhos de tela.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Criar blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md)</p></td>
-<td align="left"><p>Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP).</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md)</p></td>
-<td align="left"><p>Veja os elementos e os atributos que você usa para criar blocos adaptáveis.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Modelos de blocos especiais](tiles-and-notifications-special-tile-templates-catalog.md)</p></td>
-<td align="left"><p>Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Ativos de ícone de aplicativo](tiles-and-notifications-app-assets.md)</p></td>
-<td align="left"><p>Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados.</p></td>
-</tr>
-</tbody>
-</table>
+## <a name="tiles"></a>Blocos
+| Artigo | Descrição |
+| --- | --- |
+| [Criar blocos](tiles-and-notifications-creating-tiles.md) | Personalize o bloco padrão para seu aplicativo e forneça ativos para diferentes tamanhos de tela. |
+| [Ativos de ícone de aplicativo](tiles-and-notifications-app-assets.md) | Ativos de ícone de aplicativo, exibidos em várias formas em todo o sistema operacional Windows 10, são os cartões de chamada do seu aplicativo de Plataforma Universal do Windows (UWP). Estas diretrizes detalham onde os ativos de ícone de aplicativo são exibidos no sistema e fornecem dicas de design aprofundadas sobre como criar os ícones mais elaborados. |
+| [APIs de bloco primário](tiles-and-notifications-primary-tile-apis.md) | Solicite fixar o bloco principal do aplicativo e verifique se o bloco primário está atualmente fixado. |
+| [Conteúdo do bloco](tiles-and-notifications-create-adaptive-tiles.md) | O conteúdo da notificação de bloco é especificado utilizando um novo recurso adaptável no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). |
+| [Esquema de conteúdo do bloco](tiles-and-notifications-adaptive-tiles-schema.md) | Veja os elementos e os atributos que você usa para criar blocos adaptáveis. |
+| [Modelos de blocos especiais](tiles-and-notifications-special-tile-templates-catalog.md) | Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. |
+| [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md) | Saiba como enviar uma notificação de bloco local, adicionando conteúdo dinâmico avançado ao Bloco Dinâmico. |
+
 
 ## <a name="notifications"></a>Notificações
 
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tópico</th>
-<th align="left">Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Notificações do sistema interativas e adaptáveis](tiles-and-notifications-adaptive-interactive-toasts.md)</p></td>
-<td align="left"><p>As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Visualizador de notificações](tiles-and-notifications-notifications-visualizer.md)</p></td>
-<td align="left"><p>Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na [Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Escolher um método de entrega de notificação](tiles-and-notifications-choosing-a-notification-delivery-method.md)</p></td>
-<td align="left"><p>Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)</p></td>
-<td align="left"><p>Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Visão geral de notificações periódicas](tiles-and-notifications-periodic-notification-overview.md)</p></td>
-<td align="left"><p>Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)</p></td>
-<td align="left"><p>Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Código gerado pelo assistente de notificação por push](tiles-and-notifications-the-code-generated-by-the-push-notification-wizard.md)</p></td>
-<td align="left"><p>Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure. O assistente do Visual Studio gera código para ajudá-lo a começar. Este tópico explica como o assistente modifica seu projeto, o que o código gerado faz, como usá-lo e o que pode ser feito em seguida para aproveitar ao máximo as notificações por push. Veja [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Visão geral de notificações brutas](tiles-and-notifications-raw-notification-overview.md)</p></td>
-<td align="left"><p>As notificações brutas são notificações por push curtas com finalidade geral. Elas são estritamente para instrução e não incluem componente de interface do usuário. Assim como nas outras notificações por push, o recurso WNS envia notificações brutas de seu serviço em nuvem para o aplicativo.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
- 
-
- 
-
-
-
-
+| Artigo | Descrição |
+| --- | --- |
+| [Notificações do sistema](tiles-and-notifications-adaptive-interactive-toasts.md) | As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional. |
+| [Enviar uma notificação do sistema local](tiles-and-notifications-send-local-toast.md) | Saiba como enviar uma notificação do sistema interativa. |
+| [Visualizador de notificações](tiles-and-notifications-notifications-visualizer.md) | Visualizador de Notificações é um novo aplicativo da Plataforma Universal do Windows (UWP) na [Loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de blocos dinâmicos adaptáveis para Windows 10. |
+| [Escolher um método de entrega de notificação](tiles-and-notifications-choosing-a-notification-delivery-method.md) | Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. |
+| [Visão geral de notificações periódicas](tiles-and-notifications-periodic-notification-overview.md) | Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem. |
+| [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md) | Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável. |
+| [Código gerado pelo assistente de notificação por push](tiles-and-notifications-the-code-generated-by-the-push-notification-wizard.md) | Ao usar um assistente no Visual Studio, você pode gerar notificações por push a partir de um serviço móvel que foi criado com os Serviços Móveis do Azure. O assistente do Visual Studio gera código para ajudá-lo a começar. Este tópico explica como o assistente modifica seu projeto, o que o código gerado faz, como usá-lo e o que pode ser feito em seguida para aproveitar ao máximo as notificações por push. Veja [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md). |
+| [Visão geral de notificações brutas](tiles-and-notifications-raw-notification-overview.md) | As notificações brutas são notificações por push curtas com finalidade geral. Elas são estritamente para instrução e não incluem componente de interface do usuário. Assim como nas outras notificações por push, o recurso WNS envia notificações brutas de seu serviço em nuvem para o aplicativo. |

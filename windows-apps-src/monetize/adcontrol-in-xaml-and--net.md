@@ -4,25 +4,27 @@ ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1."
 title: AdControl em XAML e .NET
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, anúncios, publicidade, AdControl, XAML, .net, passo a passo"
-ms.openlocfilehash: 9db232709d3aa4ca1b7a6c6672cb2d1c1dea5049
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, anúncios, publicidade, AdControl, controle de anúncios, XAML, .net, passo a passo"
+ms.openlocfilehash: be273ca4c17edb4affa5e0abb4b3317b03893280
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl em XAML e .NET
 
 
-Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1. Este guia passo a passo não usa o **AdMediatorControl** nem a mediação de anúncios.
+Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um aplicativo XAML para Windows 10 (UWP), Windows 8.1 ou Windows Phone 8.1.
 
 Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo XAML em C# e C++, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Para aplicativos UWP: instale o [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) com o Visual Studio 2015.
+* Para aplicativos UWP: instalar o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) com o Visual Studio 2015 ou uma versão posterior.
 * Em aplicativos do Windows 8.1 ou Windows Phone 8.1: instale o [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk) com o Visual Studio 2015 ou o Visual Studio 2013.
 
 ## <a name="code-development"></a>Desenvolvimento de código
@@ -41,18 +43,16 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 
     -   Para um projeto do Windows Phone 8.1: expanda **Windows Phone 8.1**, clique em **Extensões**e marque a caixa de seleção ao lado de **SDK do Ad Mediator para Windows Phone 8.1 XAML**. Essa opção adiciona as bibliotecas do Microsoft Advertising e do Ad Mediator ao seu projeto, mas você pode ignorar as bibliotecas do Ad Mediator.
 
-  ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
-
-    > **Observação**&nbsp;&nbsp;Esta imagem é do Visual Studio 2015 compilando um projeto UWP para Windows 10. Se você estiver compilando um app do Windows 8.1 ou Windows Phone 8.1 ou usando o Visual Studio 2013, sua tela terá uma aparência diferente.
+    ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
 3.  No **Gerenciador de Referências**, clique em OK.
+
 4.  Modifique o XAML da página em que você está inserindo anúncios para incluir o namespace **Microsoft.Advertising.WinRT.UI**. Por exemplo, no aplicativo de exemplo padrão gerado pelo Visual Studio (chamado, neste aplicativo, MyAdFundedWindows10AppXAML), a página XAML é **MainPage.XAML**.
 
-  A seção **Página** do arquivo MainPage.xaml gerado pelo Visual Studio tem o código a seguir.
+    A seção **Página** do arquivo MainPage.xaml gerado pelo Visual Studio tem o código a seguir.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <Page
+    ``` xml
+    <Page
       x:Class="MyAdFundedWindows10AppXAML.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -62,14 +62,13 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
       mc:Ignorable="d">
       <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       </Grid>
-  </Page>
-  ```
+    </Page>
+    ```
 
-  Adicione a referência ao namespace **Microsoft.Advertising.WinRT.UI** para que a seção **Página** do arquivo MainPage.xaml tenha o código a seguir.
+    Adicione a referência ao namespace **Microsoft.Advertising.WinRT.UI** para que a seção **Página** do arquivo MainPage.xaml tenha o código a seguir.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <Page
+    ``` xml
+    <Page
       x:Class="MyAdFundedWindows10AppXAML.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -80,32 +79,31 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
       mc:Ignorable="d">
       <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       </Grid>
-  </Page>
-  ```
+    </Page>
+    ```
 
-5. Na marca **Grade**, adicione o código do **AdControl**. Atribua as propriedades [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) e [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) na **Página** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md). Ajuste também a altura e a largura do controle para que ele tenha um dos [tamanhos de anúncio compatíveis com anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
+5. Na marca **Grade**, adicione o código do **AdControl**. Atribua as propriedades [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) e [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) na **Página** aos valores de teste fornecidos em [Valores de modo de teste](test-mode-values.md). Ajuste também a altura e a largura do controle para que ele tenha um dos [tamanhos de anúncio compatíveis para anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
-  > **Observação**&nbsp;&nbsp;Você substituirá os valores de teste de ID do aplicativo e ID da unidade de anúncio por valores dinâmicos antes de enviar seu aplicativo.
+    > [!NOTE]
+    > Cada **AdControl** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Loja, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
 
-  A marca **Grade** se parece com o código a seguir.
+    A marca **Grade** se parece com o código a seguir.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-      <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-            AdUnitId="10865270"
+    ``` xml
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
+            AdUnitId="test"
             HorizontalAlignment="Left"
             Height="250"
             VerticalAlignment="Top"
             Width="300"/>
-  </Grid>
-  ```
+    </Grid>
+    ```
 
-  O código completo do arquivo MainPage.xaml deve ter a aparência a seguir.
+    O código completo do arquivo MainPage.xaml deve ter a aparência a seguir.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` xml
-  <Page
+    ``` xml
+    <Page
       x:Class="MyAdFundedWindows10AppXAML.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -116,26 +114,37 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
       mc:Ignorable="d">
       <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
             <UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-                  AdUnitId="10865270"
+                  AdUnitId="test"
                   HorizontalAlignment="Left"
                   Height="250"
                   VerticalAlignment="Top"
                   Width="300"/>
-        </Grid>
+      </Grid>
     </Page>
     ```
 
 6.  Compile e execute o aplicativo para vê-lo com um anúncio.
 
+<span id="release" />
 ## <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Lançar seu aplicativo com anúncios dinâmicos usando o Centro de Desenvolvimento do Windows
 
-1.  No painel do Centro de Desenvolvimento, vá para a página **Monetização** &gt; **Monetizar com anúncios** para seu aplicativo e [crie uma unidade autônoma do Microsoft Advertising](../publish/monetize-with-ads.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
+1.  No painel do Centro de Desenvolvimento, vá até a página [Monetizar com anúncios](../publish/monetize-with-ads.md) do app e [crie uma unidade publicitária](../monetize/set-up-ad-units-in-your-app.md). Para obter o tipo de unidade de anúncio, especifique **Banner**. Anote o ID da unidade de anúncio e o ID do aplicativo.
 
-2.  Em seu código, substitua os valores da unidade de anúncio de teste (**ApplicationId** e **AdUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
+2. Se o seu app for um aplicativo UWP para o Windows 10, você pode, opcionalmente, ativar o controle de anúncios para o **AdControl** definindo as configurações na seção [Controle de anúncios](../publish/monetize-with-ads.md#mediation) na página [Monetizar com anúncios](../publish/monetize-with-ads.md). O controle de anúncios permite que você maximize seus recursos de promoção de apps e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas, como Taboola e Smaato e anúncios para campanhas promocionais de aplicativos da Microsoft.
 
-3.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+3.  Em seu código, substitua os valores da unidade publicitária de teste (**ApplicationId** e **AdUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
 
-4.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
+4.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+
+5.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
+
+<span id="manage" />
+## <a name="manage-ad-units-for-multiple-ad-controls-in-your-app"></a>Gerenciar unidades publicitárias para vários controles de anúncios em seu app
+
+Você pode usar vários objetos **AdControl** em um único app (por exemplo, cada página em seu app pode hospedar um objeto **AdControl** diferente). Nesse cenário, nós recomendamos que você atribua uma unidade publicitária diferente para cada controle. O uso de unidades publicitárias diferentes para cada controle permite que você [defina as configurações de mediação](../publish/monetize-with-ads.md#mediation) separadamente e obtenha [dados de relatório](../publish/advertising-performance-report.md) discretos para cada controle. Isso também permite que nossos serviços melhorem a otimização dos anúncios veiculados em seu app.
+
+> [!IMPORTANT]
+> Você pode usar cada unidade publicitária em apenas um app. Se você usar uma unidade publicitária em mais de um app, os anúncios não serão veiculados para essa unidade publicitária.
 
 ## <a name="notes"></a>Observações
 
@@ -150,5 +159,4 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em fa
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Exemplos de publicidade no GitHub](http://aka.ms/githubads)
-
- 
+* [Configurar unidades publicitárias para seu app](../monetize/set-up-ad-units-in-your-app.md)

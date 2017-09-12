@@ -1,17 +1,23 @@
 ---
 author: mijacobs
 Description: "Use animações pop-up para mostrar e ocultar a interface do usuário pop-up para submenus ou elementos de interface do usuário pop-up personalizados. Os elementos pop-up são contêineres que aparecem sobre o conteúdo do aplicativo e desaparecem quando o usuário toca ou clica fora do elemento pop-up."
-title: "Animações de interface do usuário pop-up em aplicativos UWP"
+title: "Animações pop-up da interface do usuário em aplicativos UWP"
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: cb5d70784e758b4e18092b75df9e0d77243af7fc
-
+ms.author: mijacobs
+ms.date: 05/19/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.openlocfilehash: c91e5cd3d4bad1b29d070f4750beb3dd95b3c5dc
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
-
-# <a name="pop-up-ui-animations"></a>Animações de interface pop-up
+# <a name="pop-up-ui-animations"></a>Animações pop-up da interface de usuário
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -47,11 +53,5 @@ Use animações pop-up para mostrar e ocultar a interface do usuário pop-up par
  
 
 
-
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

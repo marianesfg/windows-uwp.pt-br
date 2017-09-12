@@ -4,52 +4,82 @@ Description: "O relatório de uso no painel do Centro de Desenvolvimento do Wind
 title: "Relatório de uso"
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f15b72a814c713a389a1f6126e2261959a16ee6c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b3e7154a9dc8b7ecea8a319300ab482f61e0bb68
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="usage-report"></a>Relatório de uso
 
 
-O relatório **Uso** no painel do Centro de Desenvolvimento do Windows permite ver como os clientes estão usando o aplicativo no Windows 10 e obter informações sobre eventos personalizados definidos por você. É possível exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) a fim de exibi-lo off-line.
+O relatório **Uso** no painel do Centro de Desenvolvimento do Windows permite ver como os clientes estão usando o aplicativo no Windows 10 e mostra informações sobre eventos personalizados definidos por você. É possível exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) a fim de exibi-lo off-line.
 
-> **Observação**  Anteriormente, o relatório **Uso** só fornecia dados se você ativasse o SDK do Visual Studio Application Insights no aplicativo. Com o relatório **Uso** atualizado, isso não é mais necessário.
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar.
 
-Na parte superior da página, você pode expandir **Aplicar filtros** para filtrar todos os dados desta página pelo intervalo de datas e/ou grupo de produtos (versões relacionadas do sistema operacional).
+Também é possível expandir **Filtros** para filtrar os dados dessa página por versão do pacote, mercado e/ou por tipo de dispositivo.
 
--   **Data**: o filtro padrão é **Últimos 30 dias**, mas você pode expandi-lo até **Últimos 3 meses**.
 -   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, será possível escolher um específico aqui.
+-   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a aquisições em um ou mais mercados.
 -   **Tipo de dispositivo**: A configuração padrão é **Tudo**, mas é possível optar por mostrar dados apenas de um tipo de dispositivo específico.
 
-As informações de todos os gráficos listados abaixo refletirão o período de tempo selecionado em **Aplicar filtros**. Por padrão, isso incluirá dados de todas as versões do pacote e os tipos de dispositivo compatíveis, a menos que você tenha usado a seção **Aplicar filtros** para filtrar apenas um.
+As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados (exceto **Novos usuários** no gráfico **Uso**, que não será exibido se os filtros estiverem selecionados). Algumas seções também permitem que você aplique mais filtros.
 
-> **Observação** Somente os dados de uso dos clientes no Windows 10 estão incluídos nesse relatório.
+> [!IMPORTANT]
+> Esse relatório inclui apenas os dados de uso de clientes no Windows 10 que não aceitaram sem fornecer informações de telemetria.
 
-## <a name="total-user-sessions"></a>Total de sessões de usuário
 
-O gráfico **Total de sessões de usuário** mostra o número de sessões de usuário diário do seu aplicativo durante o período de tempo selecionado.
+##<a name="usage"></a>Uso
 
-Cada sessão do usuário representa um período distinto quando um cliente interagiu com o aplicativo. Considera-se cada sessão do usuário encerrada após um período de inatividade, de maneira que um único cliente possa ter várias sessões de usuário ao longo do mesmo dia. Este gráfico não acompanha usuários exclusivos do aplicativo.
+O gráfico **Uso** mostra detalhes sobre como os clientes estão usando seu aplicativo durante o período selecionado. Observe que este gráfico não rastreia usuários únicos do aplicativo ou sessões de usuário único (ou seja, um usuário é representado neste gráfico caso tenha usado seu aplicativo apenas uma vez ou várias vezes).
 
-## <a name="active-users"></a>Usuários ativos
+Este gráfico tem quatro guias separadas que você pode exibir, mostrando o uso por dia ou semana (dependendo da duração selecionada).
 
-O gráfico **Usuários ativos** mostra o número de clientes que usaram seu aplicativo em um dia específico durante o período de tempo selecionado.
+- **Usuários**: mostra o total de **sessões de usuário** durante o período de tempo selecionado. Cada sessão do usuário representa um período distinto quando um cliente interagiu com o aplicativo. Considera-se cada sessão do usuário encerrada após um período de inatividade, de maneira que um único cliente possa ter várias sessões de usuário ao longo do mesmo dia ou na mesma semana. O total de **Usuários ativos** (qualquer cliente que usa o aplicativo no dia ou na semana) e **novos usuários** (um cliente que usou o aplicativo pela primeira vez nesse dia ou na semana) também são mostrados. Observe que se você tiver aplicado quaisquer filtros à página, você não verá **Novos usuários** neste gráfico.
+- **Dispositivos**: mostra a quantidade de dispositivos diários usados para interagir com seu aplicativo por todos os usuários.
+- **Duração**: mostra os minutos de envolvimento total (minutos em que um usuário está usando ativamente o aplicativo).
+- **Retenção**: mostra o total de **DAU/MAU** (usuários diários ativos/usuários mensais ativos) durante o período selecionado.
 
-Cada usuário ativo representa um cliente que usou seu aplicativo nesse dia. Este gráfico não rastreia sessões de usuário únicos (ou seja, um cliente é representado neste gráfico se eles usou seu aplicativo apenas uma vez ou várias vezes nesse dia).
+
+## <a name="user-sessions"></a>Sessões de usuário
+
+O gráfico **Sessões de usuário** mostra o total de sessões de usuário do seu aplicativo por mercado durante o período selecionado.
+
+Como com as informações de **Sessões de usuário** no gráfico **Uso**, uma sessão de usuário representa um período distinto quando um cliente interagiu com o seu aplicativo, e este gráfico não rastreia usuários únicos do aplicativo.
+
+Você pode exibir esses dados em **Mapa** visual ou alternar a configuração para exibi-la como **Tabela**. A forma de Tabela mostrará cinco mercados ao mesmo tempo, classificados em ordem alfabética ou pela quantidade maior/menor de sessões do usuário. Também é possível baixar os dados para visualização das informações de todos os mercados juntos.
+
+
+## <a name="package-version"></a>Versão do pacote
+
+O gráfico **Sessões de usuário** mostra o total de usuários diários do aplicativo por versão de pacote durante o período selecionado.
+
+Assim como no gráfico de **Sessões do usuário**, uma sessão do usuário representa um período distinto quando um cliente interagiu com o aplicativo, e este gráfico não rastreia usuários únicos do aplicativo.
+
 
 ## <a name="custom-events"></a>Eventos personalizados
 
-O gráfico **Eventos personalizados** mostra o total de ocorrências de quaisquer eventos personalizados definidos por você para o aplicativo. Isso pode incluir várias ocorrências do mesmo cliente.
+O gráfico **Eventos personalizados** mostra o total de ocorrências de eventos personalizados definidos por você para o aplicativo. Isso pode incluir várias ocorrências do mesmo cliente. É possível usar os filtros para selecionar os eventos personalizados específicos para os quais você deseja ver esses dados.
 
 Eventos personalizados são implementados usando-se o método [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) no [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
+
+Para obter mais informações, consulte [Registrar eventos personalizados do Centro de Desenvolvimento](../monetize/log-custom-events-for-dev-center.md).
+
+
+## <a name="custom-events-breakdown"></a>Detalhamento de eventos personalizados
+
+O gráfico **Detalhamento de eventos personalizado** mostra mais detalhes sobre a frequência com que cada um dos eventos personalizados ocorreu. Isso pode ajudar você a determinar se os eventos ocorrem com mais frequência em um mercado específico, um tipo de dispositivo ou em versões do pacote.
+
+Para cada evento, você verá o nome do evento e uma contagem que corresponde a uma combinação específica de mercado do usuário, tipo de dispositivo e versão do pacote. Normalmente, você verá um evento listado várias vezes juntamente com diferentes combinações desses fatores. 
+
 
 
 

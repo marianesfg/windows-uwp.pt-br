@@ -4,60 +4,71 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: "Tipos de conta, localizações e taxas"
 description: "Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões."
 ms.author: wdg-dev-content
-ms.date: 03/07/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9f6cdace7d619ede77956fb081756e0bc5682e16
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 25ae63638a76df2d064dbbc6334d5793cdadbedf
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
 Oferecemos dois tipos de contas de desenvolvedor: contas individuais e contas empresariais. As contas de desenvolvedor são oferecidas em muitos [países e regiões](#developer-account-and-app-submission-markets). Os dois fornecem acesso para publicar aplicativos na loja e participar de programas adicionais de desenvolvedor da Microsoft.
 
-> **Observação**  Criando uma conta individual ou empresarial, você pode associar apenas uma conta da Microsoft à conta de desenvolvedor. Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor.
+> [!NOTE]
+> Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
 
-Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie apps, suplementos e serviços. As contas individuais são projetadas para desenvolvedores autônomos que trabalham por conta própria. Contas de empresa são projetadas para organizações e empresas e permitem o acesso a alguns recursos adicionais do app. Para algumas contas empresariais, nós exigimos uma [verificação](#account-verification) maior para confirmar se você está autorizado a configurar a conta para a sua empresa. 
+Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
 
-> **Importante**  Você não pode alterar o tipo de conta quando fizer a seleção, então tenha certeza de escolher o tipo certo.
+As contas de empresa são projetadas para organizações e empresas, e permitem o acesso a alguns recursos adicionais do aplicativo. Para algumas contas empresariais, nós exigimos uma [verificação](#account-verification) maior para confirmar se você está autorizado a configurar a conta para a sua empresa. As contas individuais são geralmente apropriadas para desenvolvedores autônomos que trabalham por conta própria, embora você tenha a opção de adicionar mais usuários da conta a qualquer tipo de conta.
+
+> [!IMPORTANT]
+> Não é possível alterar o tipo de conta após fazer a seleção, por isso é importante escolher corretamente da primeira vez.
 
 Aqui estão as principais diferenças entre os dois tipos de conta.
 
 | Conta individual | Conta empresarial |
 |--------------------|-----------------|
-| <ul><li>Não pode usar funcionalidades específicas do aplicativo</li><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> | <ul><li>Requer verificação via Symantec ou Dun & Bradstreet</li><li>Mais acesso a todas as funcionalidades do aplicativo</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Custa aproximadamente US$99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> |
+| <ul><li>Não pode usar funcionalidades específicas do aplicativo</li><li>Custa aproximadamente US$ 19 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> | <ul><li>Requer mais verificação de conta</li><li>Mais acesso a todas as funcionalidades do aplicativo</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Custa aproximadamente US$99 dólares (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Contas empresariais também permitem que você envie aplicativos que adicionam [declarações de funcionalidades do app](https://msdn.microsoft.com/library/windows/apps/Mt270968).
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Contas empresariais também permitem que você envie aplicativos que adicionam [declarações de funcionalidades do app](../packaging/app-capability-declarations.md).
 
 Você deve ter uma conta empresarial, especificamente para publicar apps que usam as três funcionalidades a seguir:
 
 -   **enterpriseAuthentication**—Usa credenciais do Windows para acessar uma intranet corporativa. Normalmente usado em aplicativos de linha de negócios que se conectam aos servidores em uma empresa. (Você não precisa dessa funcionalidade para comunicação genérica pela internet)
 -   **sharedUserCertificates**—Permite que um aplicativo acesse certificados de hardware e software, como certificados armazenados em um cartão inteligente. Isso normalmente é usado por aplicativos corporativos ou financeiros que exigem um cartão inteligente para autenticação.
--   **documentsLibrary**—Permite acesso programático aos Documentos do usuário, filtrados para a associação de tipo de arquivo declarada no manifesto de pacote. (Você não precisa declarar essa funcionalidade para acessar os Documentos de um usuário com o [seletor de arquivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Observe que aplicativos destinados até o Windows Phone 8.1 não podem usar a funcionalidade documentsLibrary.
+-   **documentsLibrary**—Permite acesso programático aos Documentos do usuário, filtrados para a associação de tipo de arquivo declarada no manifesto de pacote. (Você não precisa declarar essa funcionalidade para acessar os Documentos de um usuário com o [seletor de arquivos](../files/quickstart-using-file-and-folder-pickers.md)). Observe que aplicativos destinados até o Windows Phone 8.1 não podem usar a funcionalidade documentsLibrary.
 
-> **Observação**  Além disso, você deve contatar o suporte e obter uma aprovação antes de poder enviar aplicativos que declaram a funcionalidade **documentsLibrary**.
+> [!NOTE]
+> Além disso, você deve entrar em contato com o suporte e receber aprovação antes de enviar aplicativos que declaram a funcionalidade **documentsLibrary**.
 
-O fato de ter uma conta de empresa não garante que os aplicativos usando esses recursos passarão pela certificação. Esses recursos se destinam a cenários específicos, e a maioria dos aplicativos não os declara. Para obter mais informações, consulte [Declarações de funcionalidades do app](https://msdn.microsoft.com/library/windows/apps/Mt270968).
+O fato de ter uma conta de empresa não garante que os aplicativos usando esses recursos passarão pela certificação. Esses recursos se destinam a cenários específicos, e a maioria dos aplicativos não os declara. Para obter mais informações, consulte [Declarações de funcionalidades do app](../packaging/app-capability-declarations.md).
+
 
 ## <a name="account-verification"></a>Conta de Verificação
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, usamos a Symantec ou a Dun & Bradstreet para verificar que você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Não é possível enviar aplicativos de uma conta corporativa até que eles tenham sido verificados, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md), acessar seu painel do Centro de Desenvolvimento do Windows, e continuar compilando e testando seu aplicativo.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Não é possível enviar aplicativos de uma conta corporativa até que eles tenham sido verificados, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md), acessar seu painel do Centro de Desenvolvimento do Windows, e continuar compilando e testando seu aplicativo.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
+
 
 ## <a name="developer-account-and-app-submission-markets"></a>Mercados de conta de desenvolvedor e de envio de app
 
 Você pode se registrar para obter uma conta de desenvolvedor e enviar aplicativos se morar ou tiver uma empresa em um país ou região listado a seguir.
 
-Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua conta de desenvolvedor. Os preços estão sujeito a mudanças.
+Na tabela a seguir, a **Taxa de registro** é o custo atual para registrar sua conta de desenvolvedor. Essa é uma taxa única e não há cobrança pela renovação. Observe que os preços abaixo estão sujeitos a alterações.
 
-> **Observação**  Adicionaremos os impostos e as taxas aplicáveis à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
+> [!NOTE]
+> Adicionaremos todas as taxas e tarifas à taxa de registro quando você se inscrever. Além disso, quando pagarmos a você, o seu banco pode cobrar uma taxa para receber o pagamento.
 
-A coluna **Pagamento** descreve como [pagaremos a você](getting-paid-apps.md) o dinheiro que você ganha nos seus apps. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) em que depositaremos o dinheiro.
+A coluna **Pagamento** descreve como [pagaremos a você](getting-paid-apps.md) o dinheiro que você ganha nos seus apps. Você poderá escolher a [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) na qual depositaremos o dinheiro.
 
-> **Observação**  Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Apenas aplicativos grátis podem ser enviados para esses mercados.
+> [!NOTE]
+> Alguns mercados não dão suporte a aplicativos pagos (**pagamento**). Nesses mercados, apenas aplicativos gratuitos podem ser enviados.
 
 A coluna **PayPal** indica se o PayPal é um método de pagamento com suporte que pode ser usado para sua [conta de pagamento](setting-up-your-payout-account-and-tax-forms.md) (e, exceto onde observado, para sua taxa de registro na conta de desenvolvedor).
 

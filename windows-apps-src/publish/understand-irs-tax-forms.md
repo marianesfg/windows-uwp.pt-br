@@ -3,15 +3,17 @@ author: jnHs
 Description: "Saiba mais sobre os formulários fiscais emitidos pela Microsoft, inclusive quem os receberá e quando eles serão disponibilizados."
 title: "Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -26,7 +28,8 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 |1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Os formulários impressos serão protocolados até **31 de janeiro**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
 |1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos. | Os formulários impressos serão protocolados até **15 de março**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
 
-> **Observação** O endereço listado nos formulários fiscais da Receita Federal dos EUA vem do endereço de seu [Perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
+> [!NOTE]
+> O endereço listado nos formulários fiscais da Receita Federal dos EUA vem do endereço de seu [Perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos
 
@@ -68,7 +71,7 @@ EIN: \*\*\*\*\*4442<br>
      <th> Devo receber este formulário</th>
   </tr>
   <tr> 
-     <td valign="top">Recebi **pelo menos US$ 600 em pagamentos** de anúncios em apps (Microsoft Advertising) no ano fiscal aplicável</td>
+     <td valign="top">Recebi **pelo menos US$ 600 em pagamentos** de anúncios em aplicativos no ano fiscal aplicável</td>
     <td valign="top">**1099-MISC** :<br>
 Pagador: Microsoft Online Inc<br>
 EIN: \*\*\*\*\*0505<br>
@@ -76,7 +79,7 @@ EIN: \*\*\*\*\*0505<br>
 **Importante:** Certas pessoas jurídicas não receberão formulários 1099-MISC, independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.  </td>
   </tr>
   <tr> 
-     <td valign="top">Recebi **menos de US$ 600 em pagamentos** de anúncios em apps (Microsoft Advertising) no ano fiscal aplicável</td>
+     <td valign="top">Recebi **menos de US$ 600 em pagamentos** de anúncios em aplicativos no ano fiscal aplicável</td>
      <td valign="top">Nenhum</td>
   </tr>
 </table>
@@ -123,4 +126,5 @@ EIN: \*\*\*\*\*0505<br>
 </table>
 
 
-> **Observação** Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](http://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.
+> [!NOTE]
+> Se você tiver outras dúvidas ou preocupações relacionadas aos **formulários fiscais da Receita Federal dos EUA**, crie um [tíquete de suporte](http://aka.ms/storesupport). A Microsoft não pode responder a perguntas relacionadas a circunstâncias específicas de seu imposto; para essas perguntas, consulte seu contador.

@@ -6,34 +6,37 @@ ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
 op-migration-status: ready
-ms.author: jimwalk
-ms.date: 02/08/2017
+ms.author: mijacobs
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 87f3d5e75b361d1ba9d2c304e58542803da66cd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 629e6b4bc2b192f5e81bf49e2cc4c18fbd9a0d54
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição para um aplicativo
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-É possível ajudar os usuários a ser mais produtivos permitindo que eles exibam várias partes independentes do aplicativo em janelas separadas. Um exemplo típico é um aplicativo de email em que a interface do usuário principal mostra a lista de emails e uma visualização do email selecionado. Porém, os usuários também podem abrir mensagens em janelas separadas e exibi-las lado a lado.
+Ajude os usuários a serem mais produtivos permitindo que eles exibam partes independentes do aplicativo em janelas separadas. Quando você cria várias janelas para um aplicativo, cada janela se comporta de maneira independente. A barra de tarefas mostra cada janela separadamente. Os usuários podem mover, redimensionar, mostrar e ocultar janelas do aplicativo de maneira independente e alternar janelas do aplicativo como se elas fossem aplicativos separados. Cada janela funciona no próprio thread.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094)</li>
-<li>[**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)</li>
-</ul>
-</div> 
+![Estrutura delineada mostrando um aplicativo com várias janelas](images/multi-view.png)
 
-Quando você cria várias janelas para um aplicativo, cada janela se comporta de maneira independente. A barra de tarefas mostra cada janela separadamente. Os usuários podem mover, redimensionar, mostrar e ocultar janelas do aplicativo de maneira independente e alternar janelas do aplicativo como se elas fossem aplicativos separados. Cada janela funciona no próprio thread.
+> **APIs importantes**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+
+## <a name="when-should-an-app-use-multiple-views"></a>Quando um aplicativo deve usar vários modos de exibição?
+Há vários cenários que podem se beneficiar com vários modos de exibição. Veja aqui alguns exemplos:
+ - Um aplicativo de email que permite aos usuários exibir uma lista de mensagens recebidas ao redigir um novo email
+ - Um aplicativo de catálogo de endereços que permite aos usuários comparar as informações de contato de várias pessoas lado a lado
+ - Um player de música que permite aos usuários ver o que está sendo reproduzido durante a navegação em uma lista de outras músicas disponíveis
+ - Um aplicativo de anotações que permite aos usuários copiar informações de uma página de anotações para outra
+ - Um aplicativo de leitura que permite aos usuários abrir vários artigos para leitura posterior, após a oportunidade de ver todos os títulos principais
 
 ## <a name="what-is-a-view"></a>O que é um modo de exibição?
-
 
 Modo de exibição do aplicativo é o emparelhamento 1:1 de um thread e uma janela que o aplicativo usa para exibir conteúdo. Ele é representado por um objeto [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017).
 
@@ -45,8 +48,9 @@ Da mesma forma, a estrutura XAML encapsula o objeto [**CoreWindow**](https://msd
 
 ## <a name="show-a-new-view"></a>Mostrar um novo modo de exibição
 
+Embora cada layout de aplicativo seja exclusivo, é recomendável incluir um botão de "nova janela" em um local previsível, como o canto superior direito do conteúdo que pode ser aberto em uma nova janela. Considere também incluir uma opção de menu de contexto em "Abrir em uma nova janela".
 
-Antes de irmos além, consultemos as etapas para criar um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique do botão.
+Vamos examinar as etapas de criação de um novo modo de exibição. Aqui, o novo modo de exibição é iniciado em resposta a um clique de botão.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -131,7 +135,7 @@ Outros modos de exibição, inclusive todos os modos de exibição que você cri
 
 ## <a name="switch-from-one-view-to-another"></a>Alternar de um modo de exibição para outro
 
-Você deve oferecer uma maneira para o usuário navegar de uma janela secundária para a janela principal. Para fazer isso, use o método [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097). Você chama esse método no thread da janela da qual está alternando e passa a ID do modo de exibição da janela para a qual alternando.
+É recomendável oferecer uma maneira para o usuário navegar de uma janela secundária para sua janela pai. Para fazer isso, use o método [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097). Você chama esse método no thread da janela da qual está alternando e passa a ID do modo de exibição da janela para a qual alternando.
 
 ```csharp
 await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
@@ -139,10 +143,16 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 Ao usar [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097), você pode escolher se deseja fechar a janela inicial e removê-la da barra de tarefas especificando o valor de [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105).
 
- 
+## <a name="dos-and-donts"></a>O que fazer e o que não fazer
+
+* Forneça um ponto de entrada claro para o modo de exibição secundário utilizando o glifo "abrir nova janela".
+* Comunique aos usuários a finalidade do modo de exibição secundário.
+* Assegure que o aplicativo está totalmente funcional em um único modo de exibição e que os usuários abrirão um modo de exibição secundário apenas por conveniência.
+* Não conte com o modo de exibição secundário para fornecer notificações ou outros elementos visuais transitórios.
+
+## <a name="related-topics"></a>Tópicos relacionados
+
+* [ApplicationViewSwitcher](https://msdn.microsoft.com/library/windows/apps/dn281094)
+* [CreateNewView](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
  
-
-
-
-

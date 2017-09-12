@@ -11,26 +11,28 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 81d3a37103f1dcea6b68850d163fa5cc9aded5bc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 52a8a309758a02db072de5f8050b4e7183ff629d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/25/2017
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Armazenar e recuperar dados de traço do Windows Ink
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Os aplicativos UWP que dão suporte ao Windows Ink podem serializar e desserializar traços de tinta para um arquivo Ink Serialized Format (ISF). O arquivo ISF é uma imagem GIF com metadados adicionais para todos os comportamentos e propriedades de traço de tinta. Aplicativos que não são habilitados para tinta podem exibir a imagem GIF estática, incluindo transparência de plano de fundo de canal alfa.
 
+> [!NOTE]
+> O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
+
 <div class="important-apis" >
-<b>APIs Importantes</b><br/>
+<b>APIs importantes</b><br/>
 <ul>
 <li>[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)</li>
 <li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
 </ul>
 </div>
 
-
-> [!NOTE]
-> O ISF é a representação mais compacta e persistente de tinta. Ele pode ser inserido em um formato de documento binário, como um arquivo GIF, ou colocado diretamente na Área de Transferência.
 
  
 
@@ -149,7 +151,7 @@ public MainPage()
                 }
                 else
                 {
-                    // File couldn&#39;t be saved.
+                    // File couldn't be saved.
                 }
             }
             // User selects Cancel and picker returns null.
@@ -437,15 +439,12 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Interações com caneta](pen-and-stylus-interactions.md)
 
 **Exemplos**
-* [Amostra de tinta](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Amostra de tinta simples](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Amostra de tinta complexa](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta simples (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Exemplo de tinta complexa (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Exemplo de tinta (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Tutorial de Introdução: oferecer suporte à tinta em seu aplicativo UWP](https://aka.ms/appsample-ink)
 * [Exemplo de livro de colorir](https://aka.ms/cpubsample-coloringbook)
 * [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
-
-
- 
-
 
 
 

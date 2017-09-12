@@ -6,14 +6,19 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6ea53de0e200b3e60b55adf3f69bc745bfa01e82
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+doc-status: Published
+ms.openlocfilehash: c3ed48377d5a2290834df2e73179f3860a3d8e7d
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="flip-view"></a>Exibição de inversão
 
@@ -21,17 +26,10 @@ translationtype: HT
 
 Use um recurso exibição de inversão para procurar imagens ou outros itens em uma coleção, como fotos em um álbum ou itens em uma página de detalhes do produto, um item por vez. Em dispositivos sensíveis ao toque, deslizar o dedo em um item move a coleção. Com um mouse, os botões de navegação aparecem no foco do mouse. No teclado, as teclas de seta movem a coleção.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe FlipView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)</li>
-<li> [**Propriedade ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
-<li>[**Propriedade ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+> **APIs importantes**: [classe FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx), [propriedade ItemsSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx), [propriedade ItemTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
 
-</ul>
-</div>
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 O recurso exibição de inversão é melhor para examinar imagens em coleções pequenas a médias (até 25 itens ou algo assim). Exemplos de tais coleções incluem itens em uma página de detalhes do produto ou fotos em um álbum de fotos. Embora não recomendemos o modo de exibição invertido em coleções maiores, o controle é comum para a visualização de imagens individuais em um álbum de fotos.
 

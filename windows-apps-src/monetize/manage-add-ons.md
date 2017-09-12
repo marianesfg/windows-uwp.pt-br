@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Windows Store, complemento, produto no app, IAP
-ms.openlocfilehash: b442f48b7d03f0f972882ec240dbc1f37f018fd9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 4e85c7506ed9a8f420d13075dc0023bdef2c786f
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="manage-add-ons"></a>Gerenciar complementos
 
-Use os métodos a seguir na API de envio da Windows Store para gerenciar complementos (também conhecidos como produtos no app ou IAPs) para os aplicativos. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
-
->**Observação**&nbsp;&nbsp;Estes métodos só podem ser usados para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Essa permissão está sendo habilitada para contas de desenvolvedor em estágios, e nem todas as contas têm essa permissão habilitado no momento. Para solicitar acesso anterior, fazer logon no painel do Centro de Desenvolvimento, clique em **Comentários** na parte inferior do painel, selecione **API de envio** para a área de comentários e envie sua solicitação. Você receberá um email quando essa permissão for habilitada em sua conta.
+Use os métodos a seguir na API de envio da Windows Store para gerenciar complementos para os aplicativos. Para obter uma introdução à API de envio da Windows Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md).
 
 Esses métodos só podem ser usados para obter, criar ou excluir os complementos. Para criar envios para complementos, consulte os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
 

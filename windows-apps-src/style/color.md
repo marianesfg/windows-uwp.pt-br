@@ -6,14 +6,18 @@ ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0d4266d1335198cffb74900b0d1eb2bb48cd1879
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+design-contact: rybick
+doc-status: Published
+ms.openlocfilehash: fd37d69c2e9b20b46c34e6071f302bd55bbbba26
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="color"></a>Cor
 
@@ -132,13 +136,47 @@ O usuário pode selecionar uma única cor chamada de destaque em *Configuraçõe
       </tr>
   </table>
 
+Evite usar a cor de destaque como um plano de fundo, especialmente para texto e ícones. Como a cor de destaque pode mudar, se você precisa usá-la como um plano de fundo, existe um trabalho adicional que você deve fazer para garantir que o texto em primeiro plano possa ser lido facilmente. Por exemplo, se o texto é branco e a cor de destaque é cinza claro, será difícil visualizar o texto pois a taxa de contraste entre o branco e o cinza claro é pequena. Você pode contornar o problema testando a cor de destaque para determinar se ela é uma cor escura:  
 
-<div class="microsoft-internal-note">
-Como regra geral, quando a cor de destaque é usada como plano de fundo, sempre use texto branco sobre ela. A cor de destaque padrão que é fornecida com o Windows oferece excelente contraste com texto branco. Um usuário pode selecionar uma cor de destaque que tenha um contraste ruim com o branco de acordo com suas preferências, e isso é normal. Se tiver problema para ler, ele poderá selecionar uma cor de destaque mais escura.
-</div>
+Use o seguinte algoritmo para determinar se uma cor de fundo é clara ou escura.
+
+```C#
+void accentColorUpdated(FrameworkElement elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+
+    bool colorIsDark = (5 * c.G + 2 * c.R + c.B) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }
+}
+```
 
 
-Quando os usuários escolhem uma cor de destaque, ela aparece como parte do tema do sistema. As áreas afetadas são a tela inicial, a barra de tarefas, o cromado de janela, estados de interação selecionados e hiperlinks dentro de [controles comuns](../controls-and-patterns/index.md). Cada aplicativo pode incorporar ainda mais a cor de destaque em suas tipografias, planos de fundo e interações, ou ainda anulá-la para preservar sua identidade visual específica.
+```JS
+function accentColorUpdated(elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+    var colorIsDark (5 * c.g + 2 * c.r + c.b) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }     
+}
+```
+
+Depois que determinar se a cor de destaque é clara ou escura, escolha uma cor apropriada para o primeiro plano. É recomendável usar o SystemControlForegroundBaseHighBrush do tema claro para fundos escuros e usar a versão do tema escuro para fundos claros.
 
 ## <a name="color-palette-building-blocks"></a>Blocos de construção da paleta de cores
 
@@ -228,7 +266,7 @@ Você pode alterar temas facilmente alterando a propriedade **RequestedTheme** e
 </Application>
 ```
 
-Remover **RequestedTheme** significa que seu aplicativo manterá as configurações de modo de aplicativo do usuário, e eles poderão optar por exibir seu aplicativo no tema escuro ou claro. 
+Remover **RequestedTheme** significa que seu aplicativo manterá as configurações de modo de aplicativo do usuário, e eles poderão optar por exibir seu aplicativo no tema escuro ou claro.
 
 Certifique-se de levar o tema em consideração ao criar seu aplicativo, uma vez que o tema tem um grande impacto sobre a aparência do seu aplicativo.
 

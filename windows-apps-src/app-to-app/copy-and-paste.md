@@ -2,16 +2,18 @@
 description: "Este artigo explica como dar suporte a copiar e colar em aplicativos da Plataforma Universal do Windows (UWP) usando a área de transferência."
 title: Copiar e colar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: bb99a8ccdfb37039407e32634e5ce95d92878ecb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f49a417e87199a625a023f7aa867f855cbd5d3c9
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/19/2017
 ---
 #<a name="copy-and-paste"></a>Copiar e colar
 
@@ -63,12 +65,15 @@ Clipboard.SetContent(dataPackage);
 Para obter o conteúdo da área de transferência, chame o método estático [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent). Esse método retorna um [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) que inclui o conteúdo. Esse objeto é quase idêntico a um objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage), com a diferença de que seu conteúdo é somente leitura. Com esse objeto, você pode usar o método [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) ou [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String)) para identificar quais formatos estão disponíveis. Em seguida, você pode chamar o método correspondente [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) para obter os dados.
 
 ```cs
-DataPackageView dataPackageView = Clipboard.GetContent();
-if (dataPackageView.Contains(StandardDataFormats.Text))
+async void OutputClipboardText()
 {
-    string text = await dataPackageView.GetTextAsync();
-    // To output the text from this example, you need a TextBlock control
-    TextOutput.Text = "Clipboard now contains: " + text;
+    DataPackageView dataPackageView = Clipboard.GetContent();
+    if (dataPackageView.Contains(StandardDataFormats.Text))
+    {
+        string text = await dataPackageView.GetTextAsync();
+        // To output the text from this example, you need a TextBlock control
+        TextOutput.Text = "Clipboard now contains: " + text;
+    }
 }
 ```
 
@@ -77,7 +82,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 Além dos comandos de copiar e colar, você também pode controlar alterações de área de transferência. Faça isso manipulando o evento [**ContentChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged) da área da transferência.
 
 ```cs
-Clipboard.ContentChanged += (s, e) => 
+Clipboard.ContentChanged += async (s, e) => 
 {
     DataPackageView dataPackageView = Clipboard.GetContent();
     if (dataPackageView.Contains(StandardDataFormats.Text))

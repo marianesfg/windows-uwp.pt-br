@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: Sobrepor imagens lado a lado em um mapa
 description: "Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, local, imagens, sobreposição"
-ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d6def6405c8a5d731259b4522dff10cb996d178c
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
@@ -97,13 +99,12 @@ Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMa
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#provide-a-custom-uri) posteriormente neste tópico.
+    O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
 
-3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tiled-image-overview).
+3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
 
 O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da América do Norte. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é especificado no construtor do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Neste exemplo, os blocos são exibidos apenas nos limites geográficos especificados pela propriedade [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) opcional.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
         private void AddHttpMapTileSource()
         {
@@ -129,6 +130,7 @@ O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da A
             MapControl1.TileSources.Add(tileSource);
         }
 ```
+
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
@@ -160,9 +162,9 @@ Sobreponha imagens lado a lado armazenadas como arquivos em armazenamento local 
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#provide-a-custom-uri) posteriormente neste tópico.
+    Se o formato dos nomes dos arquivos exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
 
-3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tiled-image-overview).
+3.  Em seguida, siga as etapas restantes descritas anteriormente na seção [Visão geral da imagem lado a lado](#tileintro).
 
 Você pode usar os seguintes protocolos e locais para carregar blocos do armazenamento local:
 

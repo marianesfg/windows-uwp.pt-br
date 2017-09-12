@@ -7,14 +7,16 @@ label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b56cdeeb9a3c3d3ca89e19d8057e3d93241e6c3c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamanhos de tela e pontos de interrupção para um design responsivo
 
@@ -78,7 +80,7 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 <li>Encaixe [barras de aplicativo](../controls-and-patterns/app-bars.md) na parte inferior da janela para melhorar a acessibilidade</li>
 <li>Usar uma coluna/região de cada vez</li>
 <li>Use um ícone para representar a pesquisa (não mostre uma caixa de pesquisa).</li>
-<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo de sobreposição para conservar espaço na tela.</li>
+<li>Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de sobreposição para conservar espaço na tela.</li>
 <li>Se você estiver usando o [padrão de detalhes mestre](../controls-and-patterns/master-details.md), use o modo de apresentação empilhada para economizar espaço na tela.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -87,7 +89,7 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 <li>Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
 <li>Até duas colunas/regiões</li>
 <li>Mostre a caixa de pesquisa.</li>
-<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.</li>
+<li>Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo de fragmento de forma que uma faixa estreita de ícones sempre seja exibida.</li>
 <li>Considere fazer mais adaptações para [experiências de TV](http://go.microsoft.com/fwlink/?LinkId=760736).</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -96,7 +98,7 @@ Esta tabela descreve as classes de tamanho diferentes e fornece recomendações 
 <li>Coloque elementos de comando, como [barras de aplicativo](../controls-and-patterns/app-bars.md), na parte superior da janela do aplicativo.</li>
 <li>Até três colunas/regiões</li>
 <li>Mostre a caixa de pesquisa.</li>
-<li>Coloque o [painel de navegação](../controls-and-patterns/nav-pane.md) no modo encaixado para que ele sempre apareça.</li>
+<li>Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo encaixado para que ele sempre apareça.</li>
 </ul></td>
 </tr>
 </tbody>

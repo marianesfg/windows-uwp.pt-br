@@ -6,14 +6,19 @@ ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 464a726f4429eb24ad04acae130c7fc812971b3b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: af9a6883ac20d59c319c663c1f489247e2bb6f2e
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="rich-text-block"></a>Bloco de rich text
 
@@ -21,17 +26,9 @@ translationtype: HT
 
 Blocos Rich Text fornecem vários recursos para layout de texto avançado que você pode usar quando precisa de suporte para parágrafos, elementos de interface do usuário embutidos ou layouts de texto complexos.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
-<li>[**Classe RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)</li>
-<li>[**Classe Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)</li>
-<li> [**Classe Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [classe Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [classe Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use um **RichTextBlock** quando precisar de suporte para vários parágrafos, várias colunas ou outros layouts de texto complexos ou elementos de interface do usuário embutidos, como imagens.
 
@@ -50,7 +47,7 @@ RichTextBlock oferece suporte a:
 
 ### <a name="paragraphs"></a>Parágrafos
 
-Use elementos [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) para definir os blocos de texto a serem exibidos dentro de um controle RichTextBlock. Cada RichTextBlock deve incluir pelo menos um Paragraph. 
+Você usa os elementos [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) para definir os blocos de texto a serem exibidos dentro de um controle RichTextBlock. Cada RichTextBlock deve incluir pelo menos um Paragraph. 
 
 Você pode definir o valor de recuo para todos os parágrafos em RichTextBlock definindo a propriedade [RichTextBlock.TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx). Você pode substituir essa configuração para parágrafos específicos em RichTextBlock definindo a propriedade [Paragraph.TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.textindent.aspx) como um valor diferente.
 
@@ -64,7 +61,7 @@ Você pode definir o valor de recuo para todos os parágrafos em RichTextBlock d
 
 ### <a name="inline-ui-elements"></a>Elementos de interface do usuário embutidos
 
-A classe [**InlineUIContainer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) permite inserir qualquer UIElement embutido no seu texto. Um cenário comum é colocar uma Imagem embutida no texto, mas você também pode usar elementos interativos, como Button ou CheckBox.
+A classe [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) permite inserir qualquer UIElement embutido no seu texto. Um cenário comum é colocar uma Imagem embutida no texto, mas você também pode usar elementos interativos, como Button ou CheckBox.
 
 Se quiser inserir mais de um elemento embutido na mesma posição, considere usar um painel como o único InlineUIContainer filho e, em seguida, coloque os vários elementos dentro desse painel.
 
@@ -84,7 +81,7 @@ Este exemplo mostra como usar InlineUIContainer para inserir uma imagem em RichT
 
 ## <a name="overflow-containers"></a>Contêineres de excedente
 
-Você pode usar RichTextBlock com elementos [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para criar layouts de várias colunas ou outros layouts de página avançados. O conteúdo de um elemento RichTextBlockOverflow sempre vem de um elemento RichTextBlock. Vincule elementos RichTextBlockOverflow definindo-os como OverflowContentTarget de RichTextBlock ou outro RichTextBlockOverflow.
+Você pode usar RichTextBlock com elementos [RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para criar layouts de várias colunas ou outros layouts de página avançados. O conteúdo de um elemento RichTextBlockOverflow sempre vem de um elemento RichTextBlock. Vincule elementos RichTextBlockOverflow definindo-os como OverflowContentTarget de RichTextBlock ou outro RichTextBlockOverflow.
 
 Consulte um exemplo simples que cria um layout de duas colunas. Veja a seção Exemplos para obter um exemplo mais complexo.
 
@@ -150,8 +147,8 @@ Consulte Tipografia e Diretrizes para fontes.
 - [Diretrizes para entrada de texto](text-controls.md)
 
 **Para desenvolvedores (XAML)**
-- [**Classe TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Classe Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Classe TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Classe Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
 **Para desenvolvedores (outros)**

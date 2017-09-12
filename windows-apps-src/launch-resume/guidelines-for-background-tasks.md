@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 457c31a0657839632cbc60db0c908dca2cc4fafd
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
@@ -34,6 +36,8 @@ Se você usar uma tarefa em segundo plano para reproduzir mídia em segundo plan
 |Gatilhos disponíveis | Tarefas em segundo plano no processo não dão suporte aos seguintes gatilhos: [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) e **IoTStartupTask**. |
 |VoIP | Tarefas em segundo plano dentro do processo único não dão suporte à ativação de uma tarefa em segundo plano VoIP em seu aplicativo. |  
 
+**Limites sobre o número de instâncias de gatilho:** existem limites para a quantidade de instâncias de alguns gatilhos que um aplicativo pode registrar. Um aplicativo pode registrar somente [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) e [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396) uma vez a cada instância do aplicativo. Se um aplicativo ultrapassa esse limite, o registro emite uma exceção.
+
 **Cotas de CPU:**as tarefas em segundo plano são limitadas pela quantidade de tempo de uso que elas obtêm com base no tipo de gatilho. A maioria dos gatilhos são limitados a 30 segundos de uso de relógio, embora alguns tenham a capacidade de serem executados até 10 minutos para concluir tarefas de uso intensivo. As tarefas em segundo plano devem ser leves para economizar a duração da bateria e proporcionar melhor experiência do usuário para aplicativos em primeiro plano. Consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](support-your-app-with-background-tasks.md) para conhecer as restrições de recursos que se aplicam às tarefas em segundo plano.
 
 **Gerenciar tarefas em segundo plano:**seu aplicativo deve obter uma lista de tarefas em segundo plano registradas, registrar os manipuladores de progresso e conclusão e tratar esses eventos de forma adequada. Suas classes de tarefa em segundo plano devem relatar progresso, cancelamento e conclusão. Para obter mais informações, consulte [Tratar uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)e [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md).
@@ -52,7 +56,7 @@ As tarefas em segundo plano que são executadas no mesmo processo do aplicativo 
 
 > **Importante**  A partir do Windows 10, os aplicativos não precisam mais estar na tela de bloqueio como um pré-requisito para executar tarefas em segundo plano.
 
-Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tipos de tarefas com suporte sem serem fixados na tela de bloqueio. No entanto, os aplicativos devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano. Esse método retornará [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439) se o usuário tiver negado explicitamente permissões de tarefas em segundo plano para seu aplicativo nas configurações do dispositivo.
+Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tipos de tarefas com suporte sem serem fixados na tela de bloqueio. No entanto, os aplicativos devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano. Esse método retornará [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439) se o usuário tiver explicitamente negado permissões de tarefas em segundo plano para seu aplicativo nas configurações do dispositivo. Para obter mais informações sobre a escolha do usuário em relação à atividade em segundo plano e economia de bateria, consulte [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity). 
 ## <a name="background-task-checklist"></a>Lista de verificação da tarefa em segundo plano
 
 *Aplica-se a ambas as tarefas em segundo plano dentro e fora do processo*
@@ -78,16 +82,6 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 - Ao cancelar uma tarefa, certifique-se de que o manipulador de eventos `BackgroundActivated` seja encerrado antes que ocorra o cancelamento ou todo o processo será finalizado.
 -   Elabore tarefas em segundo plano de curta duração. As tarefas em segundo plano estão limitadas a 30 segundos de uso do relógio.
 -   Não conte com a interação do usuário nas tarefas em segundo plano.
-
-## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: lista de verificação de tarefa em segundo plano para aplicativos com recurso de tela de bloqueio
-
-Siga essas diretrizes ao desenvolver tarefas em segundo plano para aplicativos que podem estar na tela de bloqueio. Siga as diretrizes em [Diretrizes e lista de verificação para blocos da tela de bloqueio](https://msdn.microsoft.com/library/windows/apps/hh465403).
-
--   Verifique se o seu aplicativo precisa estar na tela de bloqueio antes de desenvolvê-lo contendo recurso de tela de bloqueio. Para obter mais informações, consulte [Visão geral da tela de bloqueio](https://msdn.microsoft.com/library/windows/apps/hh779720).
-
--   Verifique se o aplicativo continua funcionando fora da tela de bloqueio.
-
--   Inclua uma tarefa em segundo plano registrada com [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) ou [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) e a declare no manifesto do aplicativo. Verifique se o ponto de entrada e os tipos de gatilho estão corretos. Isso é necessário para certificação e permite que o usuário coloque o aplicativo na tela de bloqueio.
 
 **Observação**  
 Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).

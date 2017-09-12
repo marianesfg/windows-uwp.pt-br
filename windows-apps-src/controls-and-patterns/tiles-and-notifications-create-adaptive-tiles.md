@@ -6,14 +6,16 @@ ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 27d3de280201d92ee98f6e8a17afd85f76acd7d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b80772109f0349f23feb6ff7f7440ab2e9242288
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
@@ -34,7 +36,7 @@ Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que
 
 ## <a name="how-to-send-a-tile-notification"></a>Como enviar uma notificação de bloco
 
-Leia nosso [guia de início rápido sobre como enviar notificações de bloco local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/). A documentação nesta página explica todas as possibilidades visuais da interface do usuário que você tem com os blocos adaptáveis.
+Leia nosso [guia de início rápido sobre como enviar notificações de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md). A documentação nesta página explica todas as possibilidades visuais da interface do usuário que você tem com os blocos adaptáveis.
 
 
 ## <a name="usage-guidance"></a>Diretriz de uso
@@ -1395,7 +1397,7 @@ TileWide = new TileBinding()
 
 
 * [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md)
-* [Guia de início rápido: Enviar uma notificação de bloco local](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)
+* [Guia de início rápido: Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md)
 * [Biblioteca de notificações no GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [Catálogo de modelos de bloco especial](tiles-and-notifications-special-tile-templates-catalog.md)
  

@@ -1,39 +1,46 @@
 ---
-author: msatranjr
+author: normesta
 title: "Exibir mapas com modos de exibição 2D, 3D e Streetside"
 description: "Exiba mapas personalizáveis no aplicativo usando a classe MapControl. Este tópico também apresenta modos de exibição 3D e Streetside."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
-ms.author: misatran
-ms.date: 02/08/2017
+ms.author: normesta
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa"
-translationtype: Human Translation
-ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
-ms.openlocfilehash: 7a1687ceb188fdd28943f807b877b28e93ae6937
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a926188912cf0cd36e1bc787e7c0cbc32f8ae95b
+ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/08/2017
 ---
-
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+Exiba mapas personalizáveis no app usando a classe [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside.
 
-Exiba mapas personalizáveis no seu aplicativo usando a classe [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tópico também apresenta modos de exibição 3D e Streetside.
+> [!NOTE]
+> Para saber mais sobre como usar mapas em seu app, baixe a [amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-**Dica** Para saber mais sobre o uso de mapas em seu aplicativo, baixe o exemplo a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub.
+<span id="map-control" />
+## <a name="the-map-control"></a>O controle de mapa
 
--   [Exemplo de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+O controle de mapa pode exibir mapas de rodovias, visualizações aéreas, 3D, trajetos, resultados de busca e informações sobre trânsito. Em um mapa, você pode exibir a localização, o trajeto e pontos de interesse para o usuário. Um mapa também pode exibir vistas aéreas em 3D, modos de exibição Streetside, tráfego, trânsito e empresas locais.
 
-## <a name="add-the-map-control-to-your-app"></a>Adicionar o controle de mapa ao aplicativo
+Use um controle de mapa quando quiser que um mapa em seu app permita aos usuários ver informações geográficas gerais ou específicas do app. Ter um controle de mapa no seu app significa que os usuários não têm que sair do seu app para obter informações.
+
+> [!NOTE]
+>Se você não se importar que os usuários saiam do seu aplicativo para obter essas informações, considere usar o aplicativo Mapas do Windows para fornecer essas informações. Seu app pode iniciar o app Mapas do Windows para exibir mapas específicos, trajetos e resultados de pesquisa. Para saber mais, veja [Iniciar o app Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+
+## <a name="add-the-map-control-to-your-app"></a>Adicionar o controle de mapa ao app
 
 
 Exiba um mapa em uma página XAML adicionando um [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Para usar o **MapControl**, você deve declarar o namespace [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) na página XAML ou no seu código. Se você arrastar o controle da Caixa de Ferramentas, essa declaração de namespace será adicionada automaticamente. Se você adicionar o **MapControl** à página XAML manualmente, deverá adicionar a declaração de namespace manualmente na parte superior da página.
 
-O exemplo a seguir exibe um controle de mapa básico e configura o mapa para exibir os controles de zoom e inclinação além de aceitar entradas de toque. Para obter mais informações sobre como personalizar a aparência do mapa, consulte [Configurar o mapa](#configure-the-map).
+O exemplo a seguir exibe um controle de mapa básico e configura o mapa para exibir os controles de zoom e inclinação além de aceitar entradas de toque. Para obter mais informações sobre como personalizar a aparência do mapa, consulte [Configurar o mapa](#mapconfig).
 
 ```xml
 <Page
@@ -82,10 +89,10 @@ Para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps
 
 Defina a localização a ser exibida no mapa especificando a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) no código ou associando a propriedade na marcação XAML. O exemplo a seguir exibe um mapa com a cidade de Seattle no centro.
 
-**Dica**  Como uma cadeia de caracteres não pode ser convertida em um [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), você não pode especificar um valor para a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) na marcação XAML, a menos que use a vinculação de dados. (Essa limitação também se aplica à propriedade anexada [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264)).
+> [!NOTE]
+> Como uma cadeia de caracteres não pode ser convertida em um [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), você não pode especificar um valor para a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) na marcação XAML, a menos que use a vinculação de dados. (Essa limitação também se aplica à propriedade anexada [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264)).
 
  
-
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
@@ -103,7 +110,6 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 ![um exemplo de controle de mapa.](images/displaymapsexample1.png)
 
 ## <a name="set-the-current-location-of-the-map"></a>Definir a localização atual do mapa
-
 
 Para acessar a localização do usuário, o aplicativo deve chamar o método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152). Nesse momento, seu aplicativo deve estar em primeiro plano, e **RequestAccessAsync** deve ser chamado do thread da interface do usuário. Até que o usuário conceda permissão para a localização ao seu aplicativo, este não pode acessar dados de localização.
 
@@ -141,31 +147,92 @@ Ao exibir a localização do seu dispositivo em um mapa, leve em consideração 
 
 ## <a name="change-the-location-of-the-map"></a>Alterar a localização do mapa
 
-
 Para alterar a localização exibida em um mapa 2D, chame um das sobrecargas do método [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060). Use esse método para especificar novos valores para [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) e [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044). Você também pode especificar uma animação opcional para usar quando exibir alterações fornecendo uma constante da enumeração de [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002).
 
-Para alterar a localização de um mapa 3D, use em vez disso o método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296). Para saber mais, consulte [Mostrar modos de exibição 3D](#display-aerial-3d-views).
+Para alterar a localização de um mapa 3D, use em vez disso o método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296). Para saber mais, consulte [Mostrar modos de exibição 3D](#display3d).
 
 Chame o método [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) para exibir o conteúdo de uma [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) no mapa. Use esse método, por exemplo, para exibir uma rota e uma parte de uma rota no mapa. Para saber mais, consulte [Exibir rotas e trajetos em um mapa](routes-and-directions.md).
 
-## <a name="configure-the-map"></a>Configurar o mapa
+## <a name="customize-the-appearance-of-the-map"></a>Personalizar a aparência do mapa
 
+Para personalizar a aparência do mapa, defina a propriedade [**StyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol#Windows_UI_Xaml_Controls_Maps_MapControl_StyleSheet) do controle map para qualquer um dos objetos [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) existentes.
 
-Configure o mapa e sua aparência definindo os valores das seguintes propriedades do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+```csharp
+myMap.StyleSheet = MapStyleSheet.RoadDark();
+```
 
-**Configurações de mapa**
+![Mapa de estilo escuro](images/style-dark.png)
+
+Você pode também usar o JSON para definir estilos personalizados e então usar o JSON para criar um objeto [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet).
+
+```csharp
+myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
+    {
+        ""version"": ""1.0"",
+        ""settings"": {
+            ""landColor"": ""#FFFFFF"",
+            ""spaceColor"": ""#000000""
+        },
+        ""elements"": {
+            ""mapElement"": {
+                ""labelColor"": ""#000000"",
+                ""labelOutlineColor"": ""#FFFFFF""
+            },
+            ""water"": {
+                ""fillColor"": ""#DDDDDD""
+            },
+            ""area"": {
+                ""fillColor"": ""#EEEEEE""
+            },
+            ""political"": {
+                ""borderStrokeColor"": ""#CCCCCC"",
+                ""borderOutlineColor"": ""#00000000""
+            }
+        }
+    }
+");
+```
+
+![Mapa de estilo personalizado](images/style-custom.png)
+
+Para obter a referência de entrada JSON completa, consulte [Mapear referência de folha de estilo](elements-of-map-style-sheet.md).
+
+Você pode começar com uma planilha existente e então usar o JSON para substituir todos os elementos desejados. Este exemplo começa com um estilo existente e usa o JSON para alterar apenas a cor das áreas de água.
+
+```csharp
+MapStyleSheet customSheet = MapStyleSheet.ParseFromJson(@"
+    {
+        ""version"": ""1.0"",
+        ""elements"": {
+            ""water"": {
+                ""fillColor"": ""#DDDDDD""
+            }
+        }
+    }
+");
+
+MapStyleSheet builtInSheet = MapStyleSheet.RoadDark();
+
+myMap.StyleSheet = MapStyleSheet.Combine(new List<MapStyleSheet> { builtInSheet, customSheet });
+```
+
+![Combinar o mapa de estilo](images/style-combined.png)
+
+>[!NOTE]
+>Os estilos que você define na segunda folha de estilos substituem os estilos da primeira.
+
+## <a name="change-the-orientation-and-perspective-of-the-map"></a>Alterar a orientação e a perspectiva do mapa
+
+Aumente o zoom, reduza o zoom, gire e incline a câmera do mapa para obter apenas o ângulo certo para o efeito que você deseja. Experimente estas propriedades.
 
 -   Defina o **centro** do mapa como um ponto geográfico configurando a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005).
 -   Defina o **nível de zoom** do mapa configurando a propriedade [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) como um valor entre 1 e 20.
 -   Defina a **rotação** do mapa configurando a propriedade [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019), em que 0 ou 360 graus = Norte, 90 = Leste, 180 = Sul e 270 = Oeste.
 -   Defina a **inclinação** do mapa configurando a propriedade [**DesiredPitch**](https://msdn.microsoft.com/library/windows/apps/dn637012) como um valor entre 0 e 65 graus.
 
-**Aparência do mapa**
+## <a name="show-and-hide-map-features"></a>Mostrar e ocultar os recursos do mapa
 
--   Especifique o **tipo** do mapa (por exemplo, um mapa de estrada ou um mapa de vista aérea) configurando a propriedade [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) como uma das constantes de [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).
--   Defina o **esquema de cores** do mapa como claro ou escuro configurando a propriedade [**ColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637010) comi uma das constantes de [**MapColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637003).
-
-Mostre informações no mapa configurando os valores das seguintes propriedades do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Mostre ou oculte os recursos do mapa, como estradas e pontos de referência ao definir os valores das propriedades a seguir do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
 -   Mostre **edifícios e pontos de referência** no mapa habilitando ou desabilitando a propriedade [**LandmarksVisible**](https://msdn.microsoft.com/library/windows/apps/dn637023).
 -   Mostre **recursos para pedestres**, como escadas públicas, no mapa habilitando ou desabilitando a propriedade [**PedestrianFeaturesVisible**](https://msdn.microsoft.com/library/windows/apps/dn637042).
@@ -260,7 +327,7 @@ private async void display3DLocation()
       MapControl1.Style = MapStyle.Aerial3DWithRoads;
 
       // Specify the location.
-      BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 34.134, Longitude = -118.3216};
+      BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 43.773251, Longitude = 11.255474};
       Geopoint hwPoint = new Geopoint(hwGeoposition);
 
       // Create the map scene.
@@ -313,6 +380,14 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 -   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
 -   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
+## <a name="best-practice-recommendations"></a>Práticas recomendadas
+
+-   Use espaço amplo na tela (ou a tela inteira) para exibir o mapa para que os usuários não precisem aplicar Panorâmica e zoom excessivamente para ver informações geográficas.
+
+-   Se o mapa só é usado para apresentar uma exibição estática e informativa, convém usar um mapa menor. Se você optar por um mapa menor e estático, baseie suas dimensões na usabilidade - pequeno o suficiente para conservar espaço suficiente na tela, mas grande o suficiente para permanecer legível.
+
+-   Insira os pontos de interesse na cena do mapa cena usando [**elementos de mapa**](https://msdn.microsoft.com/library/windows/apps/dn637034); informações adicionais podem ser exibidas como uma interface do usuário temporária que se sobreponha à a cena do mapa.
+
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Central de Desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/)
@@ -323,4 +398,3 @@ Trate mudanças que acontecem quando o usuário ou o aplicativo altera as config
 * [Vídeo do build 2015: Aproveitando mapas e localização em telefones, tablets e computadores em seus aplicativos do Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Exemplo de aplicativo de tráfego UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
-

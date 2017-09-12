@@ -6,14 +6,16 @@ ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7082b8f81f45d5035cbe2d9b4bf482d0c985bb8f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 32e2ba7bc3aebf2d1fae80632f0ea663a203d73c
+ms.sourcegitcommit: 00c3f5a1208bd0125f5b275f972cf2a82d8eb9b6
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/13/2017
 ---
 # <a name="controls-by-function"></a>Controles por função
 
@@ -21,7 +23,7 @@ translationtype: HT
 
 A estrutura da IU XAML para Windows fornece uma biblioteca extensiva de controles que dão suporte ao desenvolvimento da interface do usuário. Alguns desses controles têm uma representação visual, outros funcionam como contêineres de outros controles ou conteúdos, como imagens e mídias. 
 
-Você também pode ver vários controles da IU do Windows em ação baixando o [**Amostra de noções básicas de interface do usuário XAML**](http://go.microsoft.com/fwlink/p/?LinkId=619992). 
+Você também pode ver vários controles da IU do Windows em ação baixando o [Amostra de noções básicas de interface do usuário XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992). 
 
 Aqui está uma lista por função dos controles XAML comuns que você pode usar em seu aplicativo. 
 
@@ -140,7 +142,7 @@ Referência: [FlipView](https://msdn.microsoft.com/library/windows/apps/xaml/win
 Design e instruções: [Guia do controle de exibição de inversão](flipview.md) 
 
 ### <a name="grid-view"></a>Exibição em grade
-Um controle que apresenta um conjunto de itens em linhas e colunas, as quais podem ser roladas horizontalmente.
+Um controle que apresenta um conjunto de itens em linhas e colunas, que podem ser roladas verticalmente.
 
 ```xaml
 <GridView x:Name="gridView1" SelectionChanged="GridView_SelectionChanged">
@@ -354,7 +356,7 @@ Um controle de contêiner que desenha uma borda, uma tela de fundo ou ambas em o
         Height="108" Width="64" 
         Padding="8" CornerRadius="4">
     <Canvas>
-        <Rectangle Fill="Yellow"/>
+        <Rectangle Fill="Orange"/>
         <Rectangle Fill="Green" Margin="0,44"/>
     </Canvas>
 </Border>
@@ -372,7 +374,7 @@ Um painel de layout que dá suporte ao posicionamento absoluto de elementos filh
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 
@@ -396,7 +398,7 @@ Um painel de layout que dá suporte à organização de elementos filho em linha
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -452,7 +454,7 @@ Um painel de layout que organiza os elementos filho em uma única linha que pode
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue"/>
     <Rectangle Fill="Green"/>
-    <Rectangle Fill="Yellow"/>
+    <Rectangle Fill="Orange"/>
 </StackPanel>
 ```
 
@@ -470,7 +472,7 @@ Um painel de layout que dá suporte à organização de elementos filho em linha
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" Width="80" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" Height="80" Width="80" 
+    <Rectangle Fill="Orange" Height="80" Width="80" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>

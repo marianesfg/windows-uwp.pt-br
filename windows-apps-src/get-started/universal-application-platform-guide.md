@@ -9,52 +9,46 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f1e69b302f9b979423e2b38a11cd477b1b805a4b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c3058f0dec2199eaa35c4d6de37f7e4534381333
+ms.sourcegitcommit: dca05b4a687e00b70033e78805916286d07c00ad
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/05/2017
 ---
-
 # <a name="intro-to-the-universal-windows-platform"></a>Introdução à Plataforma Universal do Windows
 
-Neste guia, você aprenderá sobre:
+Neste guia, você aprenderá sobre a UWP (Plataforma Universal do Windows) e o Windows 10:
 
--   O que é uma *família de dispositivos* e como decidir qual delas escolher.
--   Novos controles e painéis de interface do usuário que permitem que você adapte sua interface do usuário para fatores forma de dispositivo diferentes.
+-   O que é uma família de dispositivos e como decidir qual delas escolher.
+-   O que é um SDK de extensão e como ele fornece acesso a APIs específicos de uma classe de dispositivos.
+-   Novos controles de interface do usuário e painéis para adaptar sua interface do usuário a diferentes tamanhos de tela ou rotações.
 -   Como entender e controlar a superfície de API que está disponível para seu aplicativo.
 
-O Windows 8 introduziu o WinRT (Windows Runtime), que foi uma evolução do modelo de aplicativo do Windows. Esta, foi destinada para ser uma arquitetura de aplicativo comum.
-
-Quando o Windows Phone 8.1 se tornou disponível, o Tempo de Execução do Windows foi alinhado entre o Windows Phone 8.1 e Windows. Isso permitiu aos desenvolvedores criar *aplicativos Universais do Windows 8* destinados ao Windows e ao Windows Phone usando uma base de código compartilhada.
-
-O Windows 10 apresenta a UWP (Plataforma Universal do Windows), que desenvolve ainda mais o modelo do Windows Runtime e o incorpora no núcleo unificado do Windows 10. Como parte do núcleo, a UWP agora fornece uma plataforma comum para aplicativos disponível em cada dispositivo que executa o Windows 10. Com essa evolução, os aplicativos destinados à UWP podem chamar não apenas as APIs do WinRT que são comuns a todos os dispositivos, mas também as APIs (incluindo APIs do Win32 e .NET) que são específicas para a família de dispositivos que o aplicativo é executado. A UWP fornece uma camada de API de básica garantida entre dispositivos. Isso significa que você pode criar um único pacote do aplicativo que pode ser instalado em uma ampla variedade de dispositivos. E, com esse pacote do aplicativo único, a Windows Store fornece um canal de distribuição unificado para acessar todos os tipos de dispositivos no qual seu aplicativo pode ser executado.
+O Windows 10 apresenta a UWP (Plataforma Universal do Windows), que fornece uma plataforma de aplicativo comum disponível em cada dispositivo que executa o Windows 10. A UWP fornece uma API básica garantida entre dispositivos. Isso significa que você pode criar um único pacote de aplicativo que pode ser instalado em uma ampla variedade de dispositivos. E, com esse pacote do aplicativo único, a Windows Store fornece um canal de distribuição unificado para acessar todos os tipos de dispositivos no qual seu aplicativo pode ser executado. Os aplicativos destinados à UWP podem chamar não apenas as APIs do WinRT que são comuns a todos os dispositivos, mas também as APIs (incluindo APIs do Win32 e .NET) que são específicas da classe de dispositivos na qual o aplicativo está sendo executado.
 
 ![Os aplicativos da Plataforma Universal do Windows são executados em uma variedade de dispositivos, são compatíveis com interface do usuário adaptável, entrada do usuário natural, um repositório, um centro de desenvolvimento e serviços de nuvem](images/universalapps-overview.png)
 
-Como seu aplicativo UWP é executado em uma ampla variedade de dispositivos com diferentes fatores forma e modalidades de entrada, você quer ser adaptado para cada dispositivo e ser capaz de desbloquear os recursos exclusivos de cada dispositivo. Os dispositivos adicionam suas próprias APIs exclusivas para a camada de API garantida. Você pode escrever código para acessar essas APIs exclusivas condicionalmente para que seu aplicativo incremente os recursos específicos para um tipo de dispositivo durante a apresentação de uma experiência diferente em outros dispositivos. Controles de interface do usuário adaptáveis e novos painéis de layout ajudam você a adaptar sua interface do usuário em uma ampla variedade de resoluções de tela.
+Como seu aplicativo UWP é executado em uma ampla variedade de dispositivos com diferentes fatores forma e tipos de entrada, você quer que ele seja adaptado para cada dispositivo e seja capaz de desbloquear os recursos exclusivos de cada dispositivo. Além da camada de API básica garantida, você pode escrever o código para acessar APIs específicas de dispositivo para que seu aplicativo incremente os recursos específicos de um tipo de dispositivo durante a apresentação de uma experiência diferente em outros dispositivos. Controles de interface do usuário adaptáveis e novos painéis de layout ajudam você a adaptar sua interface do usuário em uma ampla variedade de resoluções e tamanhos de tela de dispositivo.
 
-## <a name="device-families"></a>Famílias de dispositivo
+## <a name="device-families"></a>Famílias de dispositivos
 
-Aplicativos do Windows 8.1 e Windows Phone 8.1 são executados em um SO (sistema operacional): Windows ou Windows Phone. Com o Windows 10 não é mais preciso focar em um sistema operacional; em vez disso, você direciona seu aplicativo para uma ou mais famílias de dispositivos. Uma família de dispositivos identifica as APIs, as características do sistema e os comportamentos esperados entre dispositivos dentro da família de dispositivos. Ela também determina o conjunto de dispositivos nos quais seu aplicativo pode ser instalado na Loja. Aqui está a hierarquia de família de dispositivos.
+Para entender como o Windows 10 permite a você escolher diferentes classes de dispositivos, é útil entender um conceito chamado famílias de dispositivos. Uma família de dispositivos identifica as APIs, as características do sistema e os comportamentos esperados em uma classe de dispositivos. Ela também determina o conjunto de dispositivos nos quais seu aplicativo pode ser instalado na Loja. Uma família de dispositivos (exceto a família de dispositivos Universal) é implementada como um SDK de extensão, que abordaremos em breve. Esta é a hierarquia da família de dispositivos.
 
 ![famílias de dispositivos](images/device-family-tree.png)
 
-Uma família de dispositivos é um conjunto de APIs reunidas que recebe um nome e um número de versão. Uma família de dispositivos é a base de um sistema operacional. Computadores executam a sistema operacional, que é baseado em uma família de dispositivos desktops. Telefones, tablets e etc., executam o sistema operacional móvel, que é baseado na família de dispositivos móveis. E assim em diante.
+Uma família de dispositivos define um conjunto de APIs e tem controle de versão. Uma família de dispositivos é a base de um sistema operacional. Os computadores e tablets executam o sistema operacional de desktop, que é baseado em uma família de dispositivos desktop. Telefones executam o sistema operacional móvel, que é baseado na família de dispositivos móveis.
 
-A família de dispositivos universais é especial. Não é, diretamente, a base de qualquer sistema operacional. Em vez disso, o conjunto de APIs na família de dispositivos universais é herdado por famílias de dispositivos filhos. As APIs da família de dispositivos universais, no entanto, têm garantia de estar presente em todo sistema operacional e em todo dispositivo.
+Cada família de dispositivos filho adiciona suas próprias APIs àqueles que ela herda. A união resultante de APIs de uma família de dispositivos filhos tem a garantia de estar presente no sistema operacional com base naquela família de dispositivos e em cada dispositivo executando o que o sistema operacional.
 
-Cada família de dispositivos filhos adiciona suas próprias APIs para aqueles que ela herda. A união resultante de APIs de uma família de dispositivos filhos tem a garantia de estar presente no sistema operacional com base naquela família de dispositivos e em cada dispositivo executando o que o sistema operacional.
-
-Uma vantagem das famílias de dispositivos é que seu aplicativo pode ser executado em qualquer ou até mesmo todas as variedades de dispositivos, de telefones, tablets, computadores desktop, Surface Hubs, Xbox e HoloLens. Seu aplicativo também pode usar código adaptável para detectar e usar recursos de um dispositivo que estiverem fora da família de dispositivos universais dinamicamente.
+Uma vantagem da família de dispositivos universal é que seu aplicativo pode ser executado em qualquer ou até mesmo em todas as variedades de dispositivos, em telefones, tablets, computadores desktop, Surface Hubs, consoles Xbox e HoloLens. Seu aplicativo também pode usar código adaptável para detectar e usar recursos de um dispositivo que estiverem fora da família de dispositivos universais dinamicamente.
 
 A decisão sobre qual família de dispositivos (ou famílias) será destinado seu aplicativo, é você quem deve fazer. E essa decisão afeta seu aplicativo nesses aspectos importantes. Isto determina:
 
 -   O conjunto de APIs que seu aplicativo pode presumir que esteja presente quando ele é executado (e, portanto, pode chamar livremente).
 -   O conjunto de chamadas de API que são seguras somente dentro das instruções condicionais.
--   O conjunto de dispositivos em que seu aplicativo pode ser instalado a partir da Loja (e, consequentemente, os fatores de forma que você precisa considerar).
+-   O conjunto de dispositivos em que seu aplicativo pode ser instalado a partir da Loja (e, consequentemente, os fatores forma que você precisa considerar ao criar a interface do usuário).
 
-Há dois consequências principais de fazer uma escolha de família de dispositivos: a superfície de API que pode ser chamada incondicionalmente pelo aplicativo e o número de dispositivos que o aplicativo pode acessar. Esses dois fatores envolvem as compensações estão inversamente relacionados. Por exemplo, um aplicativo UWP é um aplicativo especificamente direcionado à família de dispositivos universais e consequentemente está disponível para todos os dispositivos. Um aplicativo destinado à família de dispositivos universais pode pressupor a presença de apenas as APIs da família de dispositivos universais (porque é a qual ele se destina). Outras APIs devem ser chamadas condicionalmente. Além disso, esse aplicativo deve ter uma interface de usuário altamente adaptável e recursos de entrada abrangentes porque ele pode ser executado em uma ampla variedade de dispositivos. Um aplicativo móvel do Windows é um aplicativo especificamente direcionado à família de dispositivo móvel e está disponível para dispositivos cujo sistema operacional é baseado na família de dispositivos móveis (o que inclui telefones, tablets e dispositivos semelhantes). Um aplicativo de família de dispositivo móvel pode pressupor a presença de todas as APIs na família de dispositivos móveis e sua interface do usuário tem que ser moderadamente adaptável. Um aplicativo destinado à família de dispositivo IoT pode ser instalado apenas em dispositivos IoT e pode pressupor a presença de todas as APIs na família de dispositivos IoT. Esse aplicativo pode ser muito especializado em sua interface do usuário e recursos de entrada porque você sabe que ele será executado apenas em um tipo específico de dispositivo.
+Há dois consequências principais de fazer uma escolha de família de dispositivos: a superfície de API que pode ser chamada incondicionalmente pelo aplicativo e o número de dispositivos que o aplicativo pode acessar. Esses dois fatores envolvem as compensações estão inversamente relacionados. Por exemplo, um aplicativo UWP é um aplicativo especificamente direcionado à família de dispositivos universais e consequentemente está disponível para todos os dispositivos. Um aplicativo destinado à família de dispositivos universal pode pressupor a presença apenas das APIs da família de dispositivos universal. Outras APIs devem ser chamadas condicionalmente. Além disso, esse aplicativo deve ter uma interface de usuário altamente adaptável e recursos de entrada abrangentes porque ele pode ser executado em uma ampla variedade de dispositivos. Um aplicativo móvel do Windows é um aplicativo especificamente direcionado à família de dispositivo móvel e está disponível para dispositivos cujo sistema operacional é baseado na família de dispositivos móveis (o que inclui telefones, tablets e dispositivos semelhantes). Um aplicativo de família de dispositivo móvel pode pressupor a presença de todas as APIs na família de dispositivos móveis e sua interface do usuário tem que ser moderadamente adaptável. Um aplicativo destinado à família de dispositivo IoT pode ser instalado apenas em dispositivos IoT e pode pressupor a presença de todas as APIs na família de dispositivos IoT. Esse aplicativo pode ser muito especializado em sua interface do usuário e recursos de entrada porque você sabe que ele será executado apenas em um tipo específico de dispositivo.
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
@@ -62,9 +56,9 @@ Aqui estão algumas considerações para ajudá-lo a decidir qual família de di
 
 **Aumentar o alcance do seu aplicativo**
 
-Para atingir a máxima variedade de dispositivos com o seu aplicativo e para que ele seja executado na maioria dos tipos de dispositivos possíveis, seu aplicativo deverá se destinar à família de dispositivos universais. Fazendo isso, o aplicativo direciona automaticamente cada família de dispositivo baseada na universal (no diagrama, todos os filhos da universal). Isso significa que o aplicativo é executado em cada sistema operacional com base nessas famílias de dispositivo e em todos os dispositivos que executam esses sistemas operacionais. A única API que têm garantia de estar disponível em todos os dispositivos é o conjunto definido pela versão específica da família de dispositivos universais desejado. (Com este lançamento, essa versão é sempre 10.0.x.0.) Para descobrir como um aplicativo pode chamar APIs fora da versão da família de dispositivos de destino, veja Escrevendo código posteriormente neste tópico.
+Para atingir a máxima variedade de dispositivos com o seu aplicativo e para que ele seja executado na maioria dos tipos de dispositivos possíveis, seu aplicativo deverá se destinar à família de dispositivos universais. Fazendo isso, o aplicativo direciona automaticamente cada família de dispositivo baseada na universal (no diagrama, todos os filhos da universal). Isso significa que o aplicativo é executado em cada sistema operacional com base nessas famílias de dispositivo e em todos os dispositivos que executam esses sistemas operacionais. A única API que têm garantia de estar disponível em todos os dispositivos é o conjunto definido pela versão específica da família de dispositivos universais desejado. Para descobrir como um aplicativo pode chamar APIs fora da versão de família de dispositivos destinada, consulte [Escrevendo código](#writing-code) mais adiante neste tópico.
 
-**Limitar seu aplicativo para um tipo de dispositivo**
+**Limitando seu aplicativo a um tipo de dispositivo**
 
 Você pode não querer que seu aplicativo seja executado em uma ampla variedade de dispositivos, talvez que seja especializado para um computador desktop ou para um console Xbox. Nesse caso, você pode optar por direcionar seu aplicativo a uma das famílias de dispositivo filho. Por exemplo, se você estiver direcionado a família de dispositivos desktops, as APIs que estarão disponíveis para o seu aplicativo incluem as APIs herdadas de família de dispositivos universais e as APIs que são específicas para a família de dispositivos desktops.
 
@@ -77,6 +71,12 @@ Em vez de se destinar à família de dispositivos universais ou visando uma das 
 Em casos raros, você pode querer que seu aplicativo seja executado em todos os dispositivos exceto aqueles que com determinada versão de uma família de dispositivos específica. Por exemplo, digamos que seu aplicativo se destine a versão 10.0.x.0 da família de dispositivos universais. Quando houver alterações da versão do sistema operacional no futuro, digamos que altera para 10.0.x.2, nesse ponto você poderá especificar se seu aplicativo pode ser executado em todos os dispositivos exceto 10.0.x.1 de versão para Xbox, destinando seu aplicativo para 10.0.x.0 da versão universal e 10.0.x.2 do Xbox. Seu aplicativo estará disponível para o conjunto de versões da família de dispositivos no Xbox 10.0.x.1 (inclusive) e versões anteriores.
 
 Por padrão, o Microsoft Visual Studio especifica **Windows.Universal** como a família de dispositivos de destino no arquivo de manifesto do pacote do aplicativo. Para especificar a família ou as famílias de dispositivos para as quais seu aplicativo é oferecido na Loja, configure manualmente o elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) no arquivo Package.appxmanifest.
+
+## <a name="extension-sdks"></a>SDKs de extensão
+
+Depois que você tiver se decidido pela família de dispositivos ao qual seu aplicativo será destinado, adicione uma referência a SDKs de extensão que implementam as APIs dessa família de dispositivos.  Se você estiver direcionando a família de dispositivos Universal, não precisará fazer referência a um SDK de extensão. Mas, se você estiver direcionando uma família de dispositivos, além da Universal, no Visual Studio, adicionará uma referência ao SDK de extensão que corresponde à família de dispositivos que você escolheu.  Por exemplo, se você estiver direcionando a família de dispositivos móveis, adicionará uma referência às _Extensões do Windows Mobile para UWP_ no Gerenciador de Referências do Visual Studio.
+
+A seleção de uma família de dispositivos não impede que você adicione SDKs de extensão de outros tipos de dispositivos. Você só precisará garantir que testará a presença das APIs não incluídas na família de dispositivos escolhida conforme descrito abaixo em [Escrevendo código](#writing-code).
 
 ## <a name="ui-and-universal-input"></a>Interface do usuário e entrada universal
 
@@ -191,28 +191,22 @@ As seguintes APIs dão acesso à entrada:
 
 -   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) é uma nova API que permite consumir dados brutos no thread principal ou em um thread em segundo plano.
 -   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica dados brutos de toque, mouse e caneta em um conjunto único, consistente, de interfaces e eventos que podem ser consumidos no thread principal ou no thread em segundo plano usando-se **CoreInput.**
--   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta de maneira que você possa determinar quais modalidades de entrada estão disponíveis no dispositivo.
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) é uma API de dispositivo que dá suporte a recursos de dispositivo de consulta para que você possa determinar quais tipos de entrada estão disponíveis no dispositivo.
 -   O novo controle XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) e as APIs do Windows Runtime [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) permitem acessar dados de traço de tinta.
 
 ## <a name="writing-code"></a>Escrevendo código
 
-As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode optar por desenhar com DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML, e é claro, o HTML é um padrão da plataforma de toda a web. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
+As opções de linguagem de programação para o seu [projeto do Windows 10 no Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) incluem Visual C++, C#, Visual Basic e JavaScript. Para Visual C++, C# e Visual Basic, você pode usar XAML para uma experiência de interface do usuário nativa de total fidelidade. Para Visual C++, você pode escolher DirectX ou também usar o XAML. Para JavaScript, a camada de apresentação será em HTML e, é claro, o HTML é um padrão da Web entre plataformas. Grande parte do seu código e da interface do usuário será universal e ele será executado da mesma maneira em todos os lugares. No entanto, para código adaptado para famílias de dispositivos específicos e para interface do usuário adaptada para fatores forma específicos, você terá a opção de usar código e interface do usuário adaptáveis. Vamos dar uma olhada nesses casos diferentes.
 
-**Chamar uma API que é implementada por sua família de dispositivos destinada**
+**Chamar uma API que é implementada pela família de dispositivos de destino**
 
-Sempre que você desejar chamar uma API, você precisará saber se a API é implementada pela família de dispositivos que seu aplicativo se destina. Se estiver em dúvida, você pode procurar por ela na documentação de referência da API. Se você abre o tópico relevante e olha a seção Requisitos, você verá o que é a implementação de família de dispositivos. Digamos que seu aplicativo se destine à versão 10.0.x.0 da família de dispositivos universais e você deseje chamar membros da classe [**Windows.UI.Core.SystemNavigationManager**](https://msdn.microsoft.com/library/windows/apps/dn893595). Neste exemplo, a família de dispositivos é a "Universal". Convém confirmar se os membros da classe que você deseja chamar também estão dentro da família destinada, e nesse caso eles estão. Portanto, neste exemplo, você sabe que as APIs estão garantidas em cada dispositivo em que seu aplicativo pode ser instalado, e que você pode chamar as APIs em seu código, assim como faria normalmente.
+Sempre que você quiser chamar uma API em um aplicativo UWP, precisará saber se a API é implementada pela família de dispositivos ao qual seu aplicativo se destina. O Visual Studio Intellisense mostra apenas as APIs que estão disponíveis para os SDKs de extensão que você escolheu. Se você não tiver selecionado um SDK de extensão, verá apenas as APIs disponíveis para a família de dispositivos Universal.
 
-```csharp
-    Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += TestView_BackRequested;
-```
+A documentação da API informa também à qual família de dispositivos uma API pertence. Se você observar a seção Requisitos, verá qual é a família de dispositivos que está implementando e em qual versão dessa família de dispositivos a API aparece.
 
-Como outro exemplo, imagine que seu aplicativo se destina a versão 10.0.x.0 da família de dispositivos do Xbox, e o tópico de referência para uma API que você deseja chamar diz que a API foi introduzida na versão 10.0.x.0 da família de dispositivos do Xbox. Nesse caso, novamente, a API está garantida em cada dispositivo em que seu aplicativo pode ser instalado. Então você poderá chamar essa API em seu código normalmente.
+**Chamar uma API que NÃO é implementada por sua família de dispositivos de destino**
 
-Observe que o IntelliSense do Visual Studio não reconhece as APIs, a menos que elas sejam implementadas pela família de dispositivos destinada do seu aplicativo ou por qualquer extensão SDKs que você referenciou. Consequentemente, se você ainda não referenciou qualquer SDKs de extensão, você deve estar certo que quaisquer APIs exibidas no IntelliSense, portanto, devem estar em sua família de dispositivos destinada e você pode chamá-las sempre que necessário.
-
-**Chamar uma API que NÃO é implementada por sua família de dispositivos destinada**
-
-Haverá casos em que você desejará chamar uma API, mas sua família de dispositivos destinada não estará listada na documentação. Nesse caso, você pode optar por escrever código adaptável para chamar essa API.
+Haverá casos em que você precisará chamar uma API no SDK de extensão que referenciou, mas essa API não faz parte da família de dispositivos que você está direcionando. Por exemplo, você pode estar direcionando a família de dispositivos universal, mas há uma API de área de trabalho que você gostaria de usar se o aplicativo estiver sendo executado em um dispositivo móvel. Nesse caso, você pode optar por escrever código adaptável para chamar essa API.
 
 **Escrevendo código adaptável com a classe ApiInformation**
 
@@ -274,7 +268,7 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 -   Considere se há recursos do seu aplicativo que não fazem sentido em uma tela pequena de dispositivo móvel. Também pode haver áreas que não fazem sentido em um computador desktop e exigem um dispositivo móvel para se destacar. Por exemplo, a maioria dos cenários em torno de [local](https://msdn.microsoft.com/library/windows/apps/mt219698) implica em um dispositivo móvel.
 
--   Considere como você vai acomodar várias modalidades de entrada. Consulte as [Diretrizes para interações](https://msdn.microsoft.com/library/windows/apps/dn611861) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), [Controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121), [Interações por toque](https://msdn.microsoft.com/library/windows/apps/hh465370), o [Teclado virtual](https://msdn.microsoft.com/library/windows/apps/hh972345) e muito mais.
+-   Considere como você vai acomodar vários tipos de entrada. Consulte as [Diretrizes para interações](https://msdn.microsoft.com/library/windows/apps/dn611861) para saber como os usuários podem interagir com seu aplicativo usando [Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), [Controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121), [Interações por toque](https://msdn.microsoft.com/library/windows/apps/hh465370), o [Teclado virtual](https://msdn.microsoft.com/library/windows/apps/hh972345) e muito mais.
 
     Consulte as [Diretrizes para texto e entrada de texto](https://msdn.microsoft.com/library/windows/apps/dn611864) por obter mais experiências de interação tradicionais.
 
@@ -287,4 +281,3 @@ Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publ
 
 ## <a name="see-also"></a>Veja também ##
 Para mais material introdutório, consulte [Windows 10 - Uma Introdução sobre Como Compilar Aplicativos para Dispositivos Windows 10](https://msdn.microsoft.com/magazine/dn973012.aspx)
-

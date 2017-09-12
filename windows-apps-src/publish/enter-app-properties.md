@@ -4,32 +4,41 @@ Description: "A página Propriedades do aplicativo do processo de envio de aplic
 title: Insira as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 31385fe3edb9d9f38a4f444c84ef189faed49985
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e4d391d551cf4e41853a1aac0e4b5be8bf0b0c3f
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="enter-app-properties"></a>Insira as propriedades do aplicativo
 
-A página **Propriedades do aplicativo** do [processo de envio de aplicativo](app-submissions.md) permite definir a categoria do seu aplicativo e indicar as preferências de hardware ou outras declarações. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
-
-> **Observação**  Classificações etárias agora são uma página separada do processo de envio. Para saber mais, consulte [Classificações etárias](age-ratings.md).
+A página **Propriedades** do [processo de envio de aplicativo](app-submissions.md) permite definir a categoria do aplicativo e indicar as preferências de hardware ou outras declarações. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
 
 ## <a name="category-and-subcategory"></a>Categoria e subcategoria
 
 Nesta seção, você indica a categoria (e subcategoria, se aplicável) que a Loja deve usar para categorizar seu aplicativo. Especificar uma categoria é necessário para enviar seu aplicativo.
 
-Para saber mais, consulte [Tabela de categoria e subcategoria](category-and-subcategory-table.md).
+Para obter mais informações, consulte [Tabela de categorias e subcategorias](category-and-subcategory-table.md).
 
-## <a name="product-declarations"></a>Declarações de produto
+## <a name="game-settings"></a>Configurações do jogo
 
-Você pode marcar caixas nesta seção para indicar se qualquer uma das declarações se aplicam ao seu aplicativo. Isso pode afetar a forma em que seu aplicativo é exibido, se ele é oferecido para determinados clientes, ou como os clientes podem usá-lo.
+Esta seção só aparecerá se você tiver selecionado **Jogos** como categoria do produto. Aqui você pode especificar quais recursos são compatíveis com seu jogo. Todas as informações que você fornecer nesta seção serão exibidas na listagem da Loja do produto.
 
-Para saber mais, consulte [Declarações de aplicativo](app-declarations.md).
+Se o jogo oferecer suporte a qualquer uma das opções multijogador, indique o número mínimo e máximo de jogadores em uma sessão. Você não pode inserir mais que o mínimo ou o máximo de 1.000 jogadores.
+
+**Vários jogadores entre plataformas** significa que o jogo oferece suporte a sessões multijogador entre jogadores no Xbox e em computadores Windows 10.
+
+
+## <a name="product-declarations"></a>Declarações do produto
+
+Você pode marcar caixas nesta seção para indicar se qualquer uma das declarações se aplicam ao seu aplicativo. Isso pode afetar a forma como seu aplicativo é exibido, se ele é oferecido para determinados clientes ou como os clientes podem usá-lo.
+
+Para obter mais informações, consulte [Declarações de produto](app-declarations.md).
 
 ## <a name="system-requirements"></a>Requisitos do sistema
 
@@ -52,6 +61,7 @@ O comportamento dos clientes varia de acordo com os requisitos específicos e a 
 
 Também recomendamos adicionar verificações de tempo de execução para o hardware especificado em seu aplicativo, pois a Loja nem sempre pode detectar se os recursos selecionados estão ausentes no dispositivo do cliente e ele ainda poderá baixar seu aplicativo, mesmo se um aviso for exibido.
 
-> **Dica**  Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
+> [!TIP]
+> Se quiser impedir completamente que seu aplicativo UWP seja baixado em um dispositivo que não atende aos requisitos mínimos de memória ou nível do DirectX, você pode designar os requisitos mínimos em um arquivo XML StoreManifest. Para saber mais, consulte [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
 
 

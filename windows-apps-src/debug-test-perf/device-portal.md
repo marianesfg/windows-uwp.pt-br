@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Visão geral do Windows Device Portal"
 description: "Saiba como o Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f22600f2bbd5dc43996550c853c6defd04565ad4
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
 
@@ -41,7 +43,7 @@ Telefone | Habilitar dentro do Modo de Desenvolvedor | 80| 443 | http://127.0.0.
 \* Esse nem sempre é o caso, já que o Device Portal na área de trabalho declara portas no intervalo efêmero (>50.000) para evitar colisões com declarações de portas existentes no dispositivo.  Para saber mais, consulte a seção [Configurações de porta](device-portal-desktop.md#setting-port-numbers) para área de trabalho.  
 
 Para obter instruções de instalação específicas ao dispositivo, consulte:
-- [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal para HoloLens](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-hololens)
 - [Device Portal para IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [Device Portal para celulares](device-portal-mobile.md)
 - [Device Portal para Xbox](device-portal-xbox.md)
@@ -71,28 +73,28 @@ Fornece funcionalidade de gerenciamento e de instalação/desinstalação para p
 ![Device Portal para celulares](images/device-portal/mob-device-portal-apps.png)
 
 - **Aplicativos instalados**: remove e inicia aplicativos.
-- **Aplicativos em execução**: lista os aplicativos que estão em execução no momento.
+- **Apps em execução**: lista os apps que estão em execução no momento e fornece a opção para fechá-los.
 - **Instalar aplicativo**: seleciona pacotes de aplicativos para a instalação a partir de uma pasta em seu computador ou rede.
 - **Dependência**: adiciona dependências para o aplicativo que você pretende instalar.
 - **Implantar**: implanta o aplicativo selecionado e as dependências em seu dispositivo.
 
 **Para instalar um aplicativo**
 
-1.    Quando tiver [criado um pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), você poderá instalá-lo remotamente em seu dispositivo. Após a compilação no Visual Studio, uma pasta de saída será gerada.
+1.  Quando tiver [criado um pacote do aplicativo](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), você poderá instalá-lo remotamente em seu dispositivo. Após a compilação no Visual Studio, uma pasta de saída será gerada.
 
     ![Instalação de aplicativos](images/device-portal/iot-installapp0.png)
-2.    Clique em Procurar e localize o pacote do aplicativo (.appx).
-3.    Clique em Procurar e localize o arquivo de certificado (.cer). (Não é necessário em todos os dispositivos.)
-4.    Adicione dependências. Se você tiver mais de uma, adicione cada uma delas individualmente.     
-5.    Em **Implantar**, clique em **Ir**. 
-6.    Para instalar outro aplicativo, clique no botão **Redefinir** para limpar os campos..
+2.  Clique em Procurar e localize o pacote do aplicativo (.appx).
+3.  Clique em Procurar e localize o arquivo de certificado (.cer). (Não é necessário em todos os dispositivos.)
+4.  Adicione dependências. Se você tiver mais de uma, adicione cada uma delas individualmente.     
+5.  Em **Implantar**, clique em **Ir**. 
+6.  Para instalar outro aplicativo, clique no botão **Redefinir** para limpar os campos..
 
 
 **Para desinstalar um aplicativo**
 
-1.    Certifique-se de que seu aplicativo não esteja em execução. 
-2.    Se estiver, vá para 'aplicativos em execução' e feche-o. Se você tentar desinstalar enquanto o aplicativo estiver em execução, isso causará problemas ao tentar instalar o aplicativo novamente. 
-3.    Assim que estiver pronto, clique em **Desinstalar**.
+1.  Certifique-se de que seu aplicativo não esteja em execução. 
+2.  Se estiver, vá para 'aplicativos em execução' e feche-o. Se você tentar desinstalar enquanto o aplicativo estiver em execução, isso causará problemas ao tentar instalar o aplicativo novamente. 
+3.  Assim que estiver pronto, clique em **Desinstalar**.
 
 ### <a name="processes"></a>Processos
 

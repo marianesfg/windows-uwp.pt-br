@@ -1,121 +1,213 @@
 ---
 author: normesta
-Description: "Mostra como converter manualmente um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) em um aplicativo UWP (Plataforma Universal do Windows)."
+Description: "Mostra como empacotar manualmente um aplicativo de área de trabalho do Windows (Win32, WPF e Windows Forms) para Windows 10."
 Search.Product: eADQiWindows 10XVcnh
-title: "Manual de conversão da ponte de Desktop para UWP"
+title: Empacotar um app manualmente (Ponte de Desktop)
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
-ms.openlocfilehash: 8d09a0349620e071f5c4d680df18f716e3b10a8e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e8a09b6e362662b9bb207117d8a3fcc905da6ef4
+ms.sourcegitcommit: ae93435e1f9c010a054f55ed7d6bd2f268223957
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/10/2017
 ---
-# <a name="desktop-to-uwp-bridge-manual-conversion"></a>Ponte de Desktop para UWP: manual de conversão
+# <a name="package-an-app-manually-desktop-bridge"></a>Empacotar um app manualmente (Ponte de Desktop)
 
-O uso do [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) é prático e automático e será útil se houver dúvidas sobre o que o instalador faz. Mas se o app for instalado usando xcopy ou se você estiver familiarizado com as alterações que o instalador do seu app faz no sistema, poderá criar um pacote de aplicativo e manifestá-lo manualmente. Este artigo contém as etapas para você começar. Ele também explica como adicionar ativos sem fundo ao aplicativo, o que não é coberto pelo DAC.
+Este tópico mostra como empacotar seu app sem usar ferramentas como o Visual Studio ou o Desktop App Converter (DAC).
 
-Confira aqui como usar a conversão manual. Ou então, se você tiver um aplicativo .NET e estiver usando o Visual Studio, consulte o artigo [Guia de empacotamento de Ponte de Desktop para aplicativos de área de trabalho .NET com o Visual Studio](desktop-to-uwp-packaging-dot-net.md).  
+<div style="float: left; padding: 10px">
+    ![fluxo manual](images/desktop-to-uwp/manual-flow.png)
+</div>
 
-## <a name="create-a-manifest-by-hand"></a>Criar um manifesto manualmente
+Para empacotar seu aplicativo manualmente, crie um arquivo de manifesto do pacote e, em seguida, execute uma ferramenta de linha de comando para gerar um pacote de aplicativos do Windows.
 
-Seu arquivo _appxmanifest_ precisa ter o conteúdo a seguir (no mínimo). Altere os espaços reservados que estão formatados \*\*\*DESTA FORMA\*\*\* para os valores reais do seu app.
+Considere o empacotamento manual se instalar o aplicativo usando o comando xcopy ou se você estiver familiarizado com as alterações que o instalador do seu aplicativo faz no sistema e quiser um controle mais granular sobre o processo.
+
+Se não tiver certeza sobre quais alterações seu instalador faz no sistema, ou se você preferir usar ferramentas automatizadas para geral seu manifesto do pacote, considere qualquer uma [dessas](desktop-to-uwp-root.md#convert) opções.
+
+## <a name="first-consider-how-youll-distribute-your-app"></a>Primeiro, considere como você vai distribuir seu aplicativo
+Se você planeja publicar seu aplicativo na [Windows Store](https://www.microsoft.com/store/apps), comece preenchendo [esse formulário](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de instalação. Como parte deste processo, você irá reservar um nome na loja e obter informações que você precisará para empacotar seu aplicativo.
+
+## <a name="create-a-package-manifest"></a>Criar um manifesto do pacote
+
+Crie um arquivo, nomeie ele **appxmanifest.xml**, e, em seguida, adicione esse XML a ele.
+
+É um modelo básico que contém os elementos e atributos que seu pacote precisa. Vamos adicionar valores a eles na próxima seção.
 
 ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <Package
-       xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-       xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-       xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
-      <Identity Name="***YOUR_PACKAGE_NAME_HERE***"
-        ProcessorArchitecture="x64"
-        Publisher="CN=***COMPANY_NAME***, O=***ORGANIZATION_NAME***, L=***CITY***, S=***STATE***, C=***COUNTRY***"
-        Version="***YOUR_PACKAGE_VERSION_HERE***" />
-      <Properties>
-        <DisplayName>***YOUR_PACKAGE_DISPLAY_NAME_HERE***</DisplayName>
-        <PublisherDisplayName>Reserved</PublisherDisplayName>
-        <Description>No description entered</Description>
-        <Logo>***YOUR_PACKAGE_RELATIVE_DISPLAY_LOGO_PATH_HERE***</Logo>
-      </Properties>
-      <Resources>
-        <Resource Language="en-us" />
-      </Resources>
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="" Version="" Publisher="" ProcessorArchitecture="" />
+    <Properties>
+       <DisplayName></DisplayName>
+       <PublisherDisplayName></PublisherDisplayName>
+             <Description></Description>
+      <Logo></Logo>
+    </Properties>
+    <Resources>
+      <Resource Language="" />
+    </Resources>
       <Dependencies>
-        <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14316.0" MaxVersionTested="10.0.14316.0" />
+      <TargetDeviceFamily Name="Windows.Desktop" MinVersion="" MaxVersionTested="" />
       </Dependencies>
       <Capabilities>
         <rescap:Capability Name="runFullTrust"/>
       </Capabilities>
-      <Applications>
-        <Application Id="***YOUR_PRAID_HERE***" Executable="***YOUR_PACKAGE_RELATIVE_EXE_PATH_HERE***" EntryPoint="Windows.FullTrustApplication">
-          <uap:VisualElements
-           BackgroundColor="#464646"
-           DisplayName="***YOUR_APP_DISPLAY_NAME_HERE***"
-           Square150x150Logo="***YOUR_PACKAGE_RELATIVE_PNG_PATH_HERE***"
-           Square44x44Logo="***YOUR_PACKAGE_RELATIVE_PNG_PATH_HERE***"
-           Description="***YOUR_APP_DESCRIPTION_HERE***" />
-        </Application>
-      </Applications>
-    </Package>
+    <Applications>
+      <Application Id="" Executable="" EntryPoint="Windows.FullTrustApplication">
+        <uap:VisualElements DisplayName="" Description=""   Square150x150Logo=""
+                   Square44x44Logo=""   BackgroundColor="" />
+      </Application>
+     </Applications>
+  </Package>
 ```
 
-Tem ativos sem fundos que você gostaria de adicionar? Consulte a seção sobre [ativos sem fundo](#unplated-assets) mais adiante neste artigo para saber como.
+## <a name="fill-in-the-package-level-elements-of-your-file"></a>Preencha os elementos de nível de pacote do seu arquivo
 
-## <a name="run-the-makeappx-tool"></a>Executar a ferramenta MakeAppX
+Preencha este modelo com informações que descrevem o seu pacote.
 
-Use o [Empacotador de app (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) para gerar um pacote de aplicativo do Windows para seu projeto. O MakeAppx.exe está incluído no SDK do Windows 10.
+### <a name="identity-information"></a>Informações de identidade
 
-Para executar o MakeAppx, primeiro verifique se você criou um arquivo de manifesto conforme descrito anteriormente.
+Aqui está um exemplo de elemento **Identidade** com texto de espaço reservado para os atributos. Você pode definir o atributo ``ProcessorArchitecture`` para ``x64`` ou ``x86``.
 
-Em seguida, crie um arquivo de mapeamento. O arquivo deve começar com **[Files]**, em seguida, listar cada um dos seus arquivos de origem no disco seguido pelo caminho de destino no pacote. Aqui está um exemplo:
-
+```XML
+<Identity Name="MyCompany.MySuite.MyApp"
+          Version="1.0.0.0"
+          Publisher="CN=MyCompany, O=MyCompany, L=MyCity, S=MyState, C=MyCountry"
+                ProcessorArchitecture="x64">
 ```
-[Files]
-"C:\MyApp\StartPage.htm"     "default.html"
-"C:\MyApp\readme.txt"        "doc\readme.txt"
-"\\MyServer\path\icon.png"   "icon.png"
-"MyCustomManifest.xml"       "AppxManifest.xml"
+> [!NOTE]
+> Se você tiver reservado o nome do seu aplicativo na Windows store, você pode obter o nome e o Fornecedor usando o painel do Centro de Desenvolvimento do Windows. Se você pretende fazer o sideload do aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome de fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
+
+### <a name="properties"></a>Propriedades
+
+O elemento [Propriedades](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) possui 3 elementos filho necessários. Aqui está um nó exemplo **Propriedades** com texto de espaço reservado para os elementos. O **DisplayName** é o nome do seu aplicativo reservado na loja, para aplicativos que são carregados para a loja.
+
+```XML
+<Properties>
+  <DisplayName>MyApp</DisplayName>
+  <PublisherDisplayName>MyCompany</PublisherDisplayName>
+  <Logo>images\icon.png</Logo>
+</Properties>
 ```
 
-Por fim, execute este comando:
+### <a name="resources"></a>Recursos
 
-```cmd
-MakeAppx.exe pack /f mapping_filepath /p filepath.appx
+Aqui está um nó exemplo [Recursos](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-resources).
+
+```XML
+<Resources>
+  <Resource Language="en-us" />
+</Resources>
+```
+### <a name="dependencies"></a>Dependências
+
+Para aplicativos de ponte de desktop, sempre defina o atributo ``Name`` para ``Windows.Desktop``.
+
+```XML
+<Dependencies>
+<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14316.0" MaxVersionTested="10.0.15063.0" />
+</Dependencies>
 ```
 
-## <a name="sign-your-appx-package"></a>Assinar seu pacote AppX
+### <a name="capabilities"></a>Funcionalidades
+Para aplicativos de ponte de desktop, você deverá adicionar a funcionalidade ``runFullTrust``.
 
-O cmdlet Add-AppxPackage requer que o pacote do aplicativo (.appx) que está sendo implantado seja assinado. Use o [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx), que é fornecido no SDK do Microsoft Windows 10, para assinar o pacote de aplicativo do Windows.
-
-Exemplo de uso:
-
-```cmd
-C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
-C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
-C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
+```XML
+<Capabilities>
+  <rescap:Capability Name="runFullTrust"/>
+</Capabilities>
 ```
-Quando você executar o MakeCert.exe e for solicitado a inserir uma senha, selecione **none**. Para obter mais informações sobre assinatura e certificados, consulte o seguinte:
+## <a name="fill-in-the-application-level-elements"></a>Preencha os elementos de nível de aplicativo
 
-- [Como: criar certificados temporários para uso durante o desenvolvimento](https://msdn.microsoft.com/library/ms733813.aspx)
-- [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-- [SignTool.exe (ferramenta de assinatura)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+Preencha este modelo com informações que descrevem o seu aplicativo.
 
-<span id="unplated-assets" />
-## <a name="add-unplated-assets"></a>Adicionar ativos sem fundo
+### <a name="application-element"></a>Elemento do aplicativo
 
-Confira aqui como configurar opcionalmente os ativos de 44 x 44 para seu app que apareçam na barra de tarefas.
+Para aplicativos de ponte de desktop, o atributo ``EntryPoint`` do elemento do aplicativo é sempre ``Windows.FullTrustApplication``.
 
-1. Obtenha as imagens de 44 x 44 corretas e copie-as na pasta que contém suas imagens (isto é, os ativos).
+```XML
+<Applications>
+  <Application Id="MyApp"     
+        Executable="MyApp.exe" EntryPoint="Windows.FullTrustApplication">
+   </Application>
+</Applications>
+```
 
-2. Para cada imagem de 44 x 44, crie uma cópia na mesma pasta e acrescente *.targetsize-44_altform-unplated* ao nome do arquivo. Você deve ter duas cópias de cada ícone, cada uma nomeada de uma maneira específica. Por exemplo, após a conclusão do processo, sua pasta de ativos poderá conter *MYAPP_44x44.png* e *MYAPP_44x44.targetsize-44_altform-unplated.png* (observação: o primeiro é o ícone referenciado em appxmanifest, no atributo VisualElements *Square44x44Logo*).
+### <a name="visual-elements"></a>Elementos visuais
 
-3.    No AppXManifest, defina o valor de BackgroundColor para cada ícone que você estiver corrigindo como transparent. Esse atributo pode ser encontrado em VisualElements para cada app.
+Aqui está um nó exemplo [VisualElements](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements).
 
-4.    Abra CMD, mude o diretório para a pasta raiz do pacote e crie um arquivo priconfig.xml executando o comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
+```XML
+<uap:VisualElements
+    BackgroundColor="#464646"
+    DisplayName="My App"
+    Square150x150Logo="images\icon.png"
+    Square44x44Logo="images\small_icon.png"
+    Description="A useful description" />
+```
 
-5.    Usando CMD e permanecendo na pasta raiz do pacote, crie o(s) arquivo(s) resources.pri usando o comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por exemplo, o comando para o seu app poderia ser parecido com ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```.
+## <a name="optional-add-target-based-unplated-assets"></a>(Opcional) Adicionar ativos não incluídos no destino
 
-6.    Empacote seu pacote de aplicativo do Windows usando as instruções na próxima etapa para ver os resultados.
+Os ativos baseados no destino são para ícones e blocos que aparecem na barra de tarefas do Windows, na visão de tarefas, em ALT+TAB, no Assistente de Ajuste e no canto inferior direito dos blocos em Iniciar. Você pode ler mais sobre eles [aqui](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets#target-based-assets).
+
+1. Obtenha as imagens de 44x44 corretas e então copie-as na pasta que contém suas imagens (i.e., Ativos).
+
+2. Para cada imagem de 44 x 44, crie uma cópia na mesma pasta e acrescente **.targetsize-44_altform-unplated** ao nome do arquivo. Você deve ter duas cópias de cada ícone, cada uma nomeada de uma maneira específica. Por exemplo, após concluir o processo, sua pasta de ativos pode conter **MYAPP_44x44.png** e **MYAPP_44x44.targetsize-44_altform-unplated.png**.
+
+   > [!NOTE]
+   > Neste exemplo, o ícone chamado **MYAPP_44x44.png** é o ícone que você irá referenciar no atributo logo ``Square44x44Logo`` do seu pacote do aplicativo do Windows.
+
+3.  No pacote do aplicativo do Windows, defina a ``BackgroundColor`` para todo ícone que fizer transparente.
+
+4.  Abra o CMD, mude o diretório para a pasta raiz do pacote e, em seguida, crie um arquivo priconfig.xml executando o comando ``makepri createconfig /cf priconfig.xml /dq en-US``.
+
+5.  Crie o(s) arquivo(s) resources.pri usando o comando ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
+
+    Por exemplo, o comando para o seu aplicativo pode se parecer com isso: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+
+6.  Empacote seu pacote do aplicativo do Windows usando as instruções da próxima etapa para ver os resultados.
+
+<span id="make-appx" />
+## <a name="generate-a-windows-app-package"></a>Gerar um pacote do aplicativo do Windows
+
+Use o **MakeAppx.exe** para gerar um pacote do aplicativo do Windows para seu projeto. Ele é fornecido com o SDK do Windows 10 e, se você tiver o Visual Studio instalado, poderá ser facilmente acessado por meio do Prompt de Comando do Desenvolvedor para a sua versão do Visual Studio.
+
+Consulte [Criar um pacote do aplicativo com a ferramenta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)
+
+## <a name="run-the-packaged-app"></a>Execute o app empacotado
+
+Você pode executar seu aplicativo para testá-lo localmente sem precisar obter um certificado e assiná-lo. Basta executar este cmdlet do PowerShell:
+
+```Add-AppxPackage –Register AppxManifest.xml```
+
+Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
+
+> [!NOTE]
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade na qual você instale seu aplicativo empacotado deve estar formatada no formato NTFS.
+
+## <a name="next-steps"></a>Próximas etapas
+
+**Percorrer o código / encontrar e corrigir problemas**
+
+Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-debug.md)
+
+**Assine seu aplicativo e, em seguida, distribua-o**
+
+Consulte [Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-distribute.md)
+
+**Encontre respostas para dúvidas específicas**
+
+Nossa equipe monitora estas [marcas do StackOverflow](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+
+**Envie seus comentários sobre este artigo**
+
+Use a seção de comentários abaixo.

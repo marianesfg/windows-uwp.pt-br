@@ -3,15 +3,17 @@ author: mcleanbyron
 description: "Use esse método na API de envio da Windows Store a fim de parar uma distribuição de pacote para um pacote de pré-lançamento."
 title: "Interromper a distribuição da versão de pré-lançamento"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, API de envio da Windows Store, distribuição de pacote, envio de versão de pré-lançamento, interromper"
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
-ms.openlocfilehash: 804e447f5b650a986580752fcba2a29014560e98
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5a05b33a96e5f4b19fdfdf8d6cad04e247a46c8
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="halt-the-rollout-for-a-flight"></a>Interromper a distribuição da versão de pré-lançamento
 
@@ -27,8 +29,6 @@ Para usar este método, primeiro você precisa do seguinte:
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 * Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
 * Habilite uma distribuição de pacote gradual para o envio. Você pode fazer isso no [painel do Centro de Desenvolvimento](../publish/gradual-package-rollout.md) ou [usando a API de envio da Windows Store](manage-flight-submissions.md#manage-gradual-package-rollout).
-
->**Observação**&nbsp;&nbsp;Este método só pode ser usado para contas do Centro de Desenvolvimento do Windows que receberam permissões para usar a API de envio da Windows Store. Nem todas as contas têm essa permissão habilitada.
 
 ## <a name="request"></a>Solicitação
 
@@ -54,7 +54,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento com a porcentagem da distribuição de pacote que você deseja parar. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Necessário. A ID do pacote de pré-lançamento que contém o envio com a porcentagem da distribuição de pacote que você deseja parar. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
+| flightId | string | Necessário. A ID do pacote de pré-lançamento que contém o envio com a porcentagem da distribuição de pacote que você deseja parar. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md).  |
 | submissionId | string | Necessário. A ID do envio com a distribuição de pacote a ser parada. Essa ID está disponível no painel do Centro de Desenvolvimento e está incluída nos dados de resposta de solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).  |
 
 <span/>

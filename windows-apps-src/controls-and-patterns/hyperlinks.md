@@ -6,14 +6,20 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e2c04ea39eee88c225bfef277037363c084e8eff
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 5079d1782188b6d2e49fc14741a23a5651995c67
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="hyperlinks"></a>Hiperlinks
 
@@ -21,18 +27,12 @@ translationtype: HT
 
 Os hiperlinks levam o usuário para outra parte do aplicativo, para outro aplicativo ou para iniciar um URI (Uniform Resource Identifier) específico usando um aplicativo de navegador separado. Há duas maneiras como um hiperlink pode ser adicionado a um aplicativo XAML: o elemento de texto **Hyperlink** e o controle **HyperlinkButton**.
 
+> **APIs importantes**: [elemento de texto de Hiperlink](https://msdn.microsoft.com/library/windows/apps/dn279356), [controle HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)
+
 ![Um botão de hiperlink](images/controls/hyperlink-button.png)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Elemento de texto de hiperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
-<li>[**Controle HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
-</ul>
-</div>
 
-
-## <a name="is-this-the-right-control"></a>Esse é o controle correto?
+## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
 Use um hiperlink quando você precisar de texto que responda quando selecionado e o usuário navegar para obter mais informações sobre o texto que foi selecionado.
 
@@ -41,12 +41,6 @@ Escolha o tipo correto de hiperlink com base em suas necessidades:
 -   Use um elemento de texto **Hyperlink** embutido dentro de um controle de texto. Um elemento Hyperlink flui com outros elementos de texto e você pode usá-lo em qualquer InlineCollection. Use um hiperlink de texto se quiser uma quebra de texto automática e não precisar necessariamente de um destino de toque grande. O texto do hiperlink pode ser pequeno e ser difícil de direcionar, especialmente para toque.
 -   Use um **HyperlinkButton** para hiperlinks autônomos. Um HyperlinkButton é um controle de botão especializado que você pode usar em qualquer lugar onde usaria um botão.
 -   Use um **HyperlinkButton** com uma [(Imagem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) como seu conteúdo para criar uma imagem clicável.
-
-## <a name="examples"></a>Exemplos
-
-Hiperlinks no aplicativo Calculadora.
-
-![Exemplo de um hiperlink no aplicativo Calculadora](images/control-examples/hyperlinks-calculator.png)
 
 ## <a name="create-a-hyperlink-text-element"></a>Criar um elemento de texto de hiperlink
 
@@ -150,7 +144,7 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 ## <a name="recommendations"></a>Recomendações
 
 -   Só use hiperlinks para navegação; não os utilize para outras ações.
--   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [**fontes a rampa de tipos do Windows 10**](fonts.md).
+-   Use o estilo Body da rampa de tipos para hiperlinks baseados em texto. Leia mais sobre [fontes a rampa de tipos do Windows 10](fonts.md).
 -   Mantenha hiperlinks diferentes distantes o suficiente para que o usuário possa diferenciar entre eles e tenha facilidade ao selecionar cada uma deles.
 -   Adicione dicas de ferramentas aos hiperlinks que indicam para onde o usuário será direcionado. Se o usuário for direcionado para um site externo, inclua o nome do domínio de nível superior na dica de ferramenta e defina o estilo do texto com uma cor de fonte secundária.
 
@@ -160,5 +154,5 @@ A cor padrão do hiperlink é a cor de destaque do sistema. Você pode definir a
 - [Diretrizes de dicas de ferramenta](tooltips.md)
 
 **Para desenvolvedores (XAML)**
-- [**Classe Windows.UI.Xaml.Documents.Hyperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [**Classe Windows.UI.Xaml.Controls HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Classe Windows.UI.Xaml.Documents.Hyperlink](https://msdn.microsoft.com/library/windows/apps/dn279356)
+- [Classe Windows.UI.Xaml.Controls HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/br242739)

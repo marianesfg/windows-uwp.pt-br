@@ -1,17 +1,19 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Usar um temporizador para enviar um item de trabalho
 description: "Saiba como criar um item de trabalho que seja executado após um temporizador."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, temporizador, threads
-ms.openlocfilehash: 7148e14734f54c24275c4127801b487e5862bba9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 214a3ad9d84ffb8bc26a4aa02d79d0b1c06f2bfe
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Usar um temporizador para enviar um item de trabalho
 

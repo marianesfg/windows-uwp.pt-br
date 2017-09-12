@@ -6,20 +6,24 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 49a586aac0c846cdad02f8448532238bd3eb8551
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 O padrão mestre/detalhes tem um painel mestre (geralmente com uma [exibição de lista](lists.md)) e um painel de detalhes para o conteúdo. Quando um item na lista mestra é selecionado, o painel de detalhes é atualizado. Esse padrão é usado com frequência para email e catálogos de endereços.
+
+> **APIs importantes**: [classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [classe SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Exemplo do padrão mestre/detalhes](images/HIGSecOne_MasterDetail.png)
 
@@ -73,17 +77,11 @@ Para o painel mestre, um controle de [exibição de lista](lists.md) funciona be
 
 Para o painel de detalhes, use o elemento de conteúdo mais lógico. Se tiver muitos campos separados, considere o uso de um layout de grade para organizar os elementos em um formulário.
 
-## <a name="examples"></a>Exemplos
+## <a name="get-the-code-samples"></a>Obter as amostras de código
 
-Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria no telefone, o painel/lista mestra encontra-se à esquerda, com o painel de detalhes à direita.
+Para o código de exemplo que mostra o padrão mestre/detalhes, consulte estes exemplos: 
 
-![Exemplo de aplicativo usando o padrão mestre-detalhes no telefone](images/uap-finance-phone-masterdetails-600.png)
-
-Este design de aplicativo que rastreia o mercado de ações usa um padrão mestre/detalhes. Neste exemplo do aplicativo como apareceria na área de trabalho, o painel/lista mestra e o painel de detalhes ficam visíveis e em tela inteira. O painel mestre apresenta uma caixa de pesquisa na parte superior e uma barra de comandos na parte inferior.
-
-![Exemplo de um aplicativo que usa o padrão de detalhes mestre na área de trabalho](images/uap-finance-desktop700.png)
-
-Para código de exemplo que mostra o padrão mestre/detalhes, consulte
+- [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 
 - [Exemplo de ListView e GridView](http://go.microsoft.com/fwlink/p/?LinkId=619900)
 - [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
@@ -92,4 +90,4 @@ Para código de exemplo que mostra o padrão mestre/detalhes, consulte
 - [Listas](lists.md)
 - [Pesquisa](search.md)
 - [Aplicativo e barras de comandos](app-bars.md)
-- [**Classe ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Classe ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)

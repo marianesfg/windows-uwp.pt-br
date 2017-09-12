@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f74a93714b32613b6bee606a3916961b861b2d08
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0fe93670739a89c9416fdbfc28117a794a6a345d
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão de um URI
 
@@ -77,11 +79,11 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Em alguns casos, o sistema operacional solicitará que o usuário veja se realmente quer alternar entre aplicativos.
+Em alguns casos, o sistema operacional perguntará ao usuário se ele realmente deseja alternar entre aplicativos.
 
 ![uma caixa de diálogo de aviso é sobreposta em um plano de fundo esmaecido do aplicativo. a caixa de diálogo pergunta ao usuário se ele quer alternar entre aplicativos e tem botões 'sim' e 'não' na parte inferior direita. o botão 'não' está realçado.](images/warningdialog.png)
 
-Se você quiser que esse prompt ocorra sempre, use a propriedade [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://msdn.microsoft.com/library/windows/apps/hh701442) para indicar que o sistema operacional deve exibir um aviso.
+Se você quiser que esse aviso sempre apareça, use a propriedade [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://msdn.microsoft.com/library/windows/apps/hh701442) para informar o sistema operacional de que deseja exibi-lo.
 
 ```cs
 // The URI to launch

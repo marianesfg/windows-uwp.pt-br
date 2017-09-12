@@ -9,15 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas"
-ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8dc9c00bdeb47b5f07af0b9b27ef843e2afd4456
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
 Este artigo fornece diretrizes para proporcionar ótimas experiências com anúncios em faixa e intersticiais em seus apps. Para obter diretrizes gerais sobre como elaborar o visual dos apps, consulte [Design e interface do usuário](https://developer.microsoft.com/windows/apps/design).
 
->**Importante**&nbsp;&nbsp;Qualquer uso de publicidade em seu app deve estar em conformidade com as políticas da Windows Store – incluindo, sem limitação, a [política 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Conteúdo e Conduta de Publicidade). Em particular, a implementação de anúncios em faixa ou intersticiais em seu app deve atender aos requisitos na política da Windows Store [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10). Este artigo contém exemplos de implementações que poderiam violar essa política. Estes exemplos são fornecidos apenas para fins informativos, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar as políticas da Windows Store que não estão listadas neste artigo.
+> [!IMPORTANT]
+> Qualquer uso de publicidade em seu app deve estar em conformidade com as políticas da Windows Store – incluindo, sem limitação, a [política 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Conteúdo e Conduta de Publicidade). Em particular, a implementação de anúncios em faixa ou intersticiais em seu app deve atender aos requisitos na política da Windows Store [política 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10). Este artigo contém exemplos de implementações que poderiam violar essa política. Estes exemplos são fornecidos apenas para fins informativos, como uma maneira de ajudar você a entender melhor a política. Estes exemplos não são abrangentes e pode haver muitas outras maneiras de violar as políticas da Windows Store que não estão listadas neste artigo.
 
 ## <a name="guidelines-for-banner-ads"></a>Diretrizes para anúncios em faixa
 

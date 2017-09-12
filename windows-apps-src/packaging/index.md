@@ -2,36 +2,35 @@
 author: laurenhughes
 ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: Empacotando apps
-description: "Esta seção contém links ou se vincula a artigos sobre empacotamento de apps da Plataforma Universal do Windows (UWP)."
+description: "Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP)."
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0a9689738fac363012fb9af197f52ac8813b47c9
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp, empacotamento
+ms.openlocfilehash: 0b4f8cf2e90a125539c3dade51f6b3db78219e3f
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="packaging-apps"></a>Empacotando apps
 
-[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="purpose"></a>Finalidade
 
-Esta seção contém links ou se vincula a artigos sobre empacotamento de apps da Plataforma Universal do Windows (UWP).
+Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Empacotando apps UWP](packaging-uwp-apps.md) | Para vender seu app UWP ou distribuí-lo para outros usuários, você precisa criar um pacote appxupload para ele. Quando você criar o appxupload, outro pacote appx será gerado para uso no teste e no sideload. Você pode distribuir o app diretamente pelo sideload do pacote appx em um dispositivo. Este artigo descreve o processo de configuração, criação e teste de um pacote do app UWP. Para obter mais informações sobre o sideload, consulte [Fazer o sideload de apps com o DISM](http://go.microsoft.com/fwlink/?LinkID=231020). |
-| [Criar um pacote do app com a ferramenta MakeAppx.exe](create-app-package-with-makeappx-tool.md) | A MakeAppx.exe cria, criptografa, descriptografa e extrai arquivos de pacotes e lotes de apps. |
-| [Criar um certificado para assinatura de pacote](create-certificate-package-signing.md) | Crie e exporte um certificado para assinatura de pacote de app com as ferramentas do PowerShell. |
-| [Assinar um pacote do app usando a SignTool](sign-app-package-using-signtool.md) | Use SignTool para assinar manualmente um pacote do app com um certificado. |
-| [Instalar apps usando a ferramenta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um app UWP de um computador Windows 10 em qualquer dispositivo Windows 10 Mobile. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 Mobile está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse app. Este artigo descreve como instalar apps UWP usando essa ferramenta. |
-| [Configurar compilações automáticas para seu app UWP](auto-build-package-uwp-apps.md) | Se você quiser empacotar seu app como parte de um processo de compilação automática, este tópico mostra como usar o Visual Studio Team Services (VSTS) para fazer isso. |
-| [Declarações de funcionalidades do app](app-capability-declarations.md) | As funcionalidades devem ser declaradas no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) do app UWP para acessar determinada API ou recursos, como imagens, músicas ou dispositivos, como câmera ou microfone. |
-| [Baixar e instalar atualizações de pacote para seu app](self-install-package-updates.md) | Seu app UWP pode verificar programaticamente se há atualizações de pacote e instalar as atualizações. Seu app também pode consultar os pacotes que foram marcados como obrigatórios no painel do Centro de Desenvolvimento do Windows e desabilitar a funcionalidade até que a atualização obrigatória seja instalada. Este artigo descreve como realizar essas tarefas. |
- 
-
+| [União de um aplicativo UWP com o Visual Studio](packaging-uwp-apps.md) | Para distribuir ou vender seu aplicativo UWP (Plataforma Universal do Windows), será necessário criar um pacote de apps para ele. |
+| [Empacotamento manual de app](manual-packaging-root.md) | Se você quiser criar e assinar um pacote de app mas se não tiver usado o Visual Studio para desenvolver o app, precisará usar as ferramentas de empacotamento manual do app. |
+| [Arquitetura do pacote de apps](device-architecture.md) | Saiba mais sobre quais arquiteturas de processador você deve usar ao criar seu pacote de aplicativos UWP. | 
+| [Instalação de streaming de aplicativo UWP](streaming-install.md) | A instalação de streaming da Plataforma Universal do Windows (UWP) permite que você especifique as partes do seu aplicativo que você gostaria que a Windows Store baixasse primeiro. Quando os arquivos essenciais do aplicativo são baixados primeiro, o usuário pode iniciar e interagir com o aplicativo enquanto o resto termina de fazer o download em segundo plano. |
+| [Pacotes opcionais e conjunto de criação relacionado](optional-packages.md) | Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Estes são úteis para o conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original. | 
+| [Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo UWP de um computador Windows 10 em qualquer dispositivo Windows 10 Mobile. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 Mobile está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta. |
+| [Configurar compilações automáticas para seu aplicativo UWP](auto-build-package-uwp-apps.md) | Se você quiser empacotar seu aplicativo como parte de um processo de compilação automática, este tópico mostra como usar o Visual Studio Team Services (VSTS) para fazer isso. |
+| [Declarações de funcionalidades do app](app-capability-declarations.md) | As funcionalidades devem ser declaradas no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) do aplicativo UWP para acessar determinada API ou recursos, como imagens, músicas ou dispositivos, como câmera ou microfone. |
+| [Baixar e instalar atualizações de pacote para seu app](self-install-package-updates.md) | Seu aplicativo UWP pode verificar programaticamente se há atualizações de pacote e instalar as atualizações. Seu aplicativo também pode consultar os pacotes que foram marcados como obrigatórios no painel do Centro de Desenvolvimento do Windows e desabilitar a funcionalidade até que a atualização obrigatória seja instalada. Este artigo descreve como realizar essas tarefas. |

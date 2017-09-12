@@ -9,14 +9,16 @@ ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 825b6a8b2689143b5a68b9e7e1862ac2e6e92d28
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 44f272f3c93ab56623897e5d9c801256a12f0a18
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -24,13 +26,8 @@ translationtype: HT
 
 Você pode personalizar a estrutura e o comportamento visual de um controle criando um modelo de controle na estrutura XAML. Os controles têm muitas propriedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414), e [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que você pode definir para especificar diferentes aspectos da aparência do controle. Mas as mudanças que você pode fazer ao definir essas propriedades são limitadas. Você pode especificar personalizações adicionais criando um modelo usando a classe [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Aqui, mostramos a você como criar um **ControlTemplate** para personalizar a aparência de um controle [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)</li>
-<li>[**Propriedade Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)</li>
-</ul>
-</div>
+> **APIs importantes**: [**classe ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), [**propriedade Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+
 
 ## <a name="custom-control-template-example"></a>Amostra de modelo de controle personalizado
 

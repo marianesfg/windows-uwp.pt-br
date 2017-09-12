@@ -6,18 +6,25 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: ranjeshj
+doc-status: Published
+ms.openlocfilehash: 0249132942cbb15a009c85c929185bffcba23cd9
+ms.sourcegitcommit: 690320e6cbfc16ed9e935a136fecc44d68e95719
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="lists"></a>Listas
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 Listas são exibidas e permitem interações com conteúdo baseado em coleção. Os quatro padrões de lista abordados neste artigo incluem:
 
@@ -26,16 +33,15 @@ Listas são exibidas e permitem interações com conteúdo baseado em coleção.
 -   Listas suspensas, que permitem que os usuários escolham um item em uma lista de expansão
 -   Caixas de lista, que permitem que os usuários escolham um item ou vários itens em uma caixa que pode ser rolada
 
-Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista. No final do artigo há links para tópicos e APIs relacionados.
+Diretrizes de design, recursos e exemplos são fornecidos para cada padrão de lista.
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
-<li>[**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
-<li>[**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
-</ul>
-</div>
+> **APIs importantes**: [classe ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [classe GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [classe ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+
+> <div id="main">
+> <strong><span class="uwpd-prelease">Pré-lançamento.</span> Fall Creators Update (Compilação 16215 e posteriores do Windows 10 Insider Preview) - mudança de comportamento</strong>
+> </div>
+> Por padrão, em vez de realizar uma seleção, a caneta ativa agora fará rolagem/movimento panorâmico em listas em aplicativos UWP (como toque, touchpad e caneta passiva).
+> Se o seu aplicativo depende do comportamento anterior, você pode substituir a rolagem com caneta e reverter para o comportamento anterior. Consulte o tópico de referência da API [Classe ScrollViewer] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) para obter mais detalhes.
 
 ## <a name="list-views"></a>Modos de exibição de lista
 
@@ -180,10 +186,12 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 -   Limite o conteúdo de texto dos itens da caixa de combinação a uma única linha.
 -   Classifique os itens em uma caixa de combinação na ordem mais lógica. Agrupe opções relacionadas e coloque as opções mais comuns na parte superior. Classifique os nomes em ordem alfabética, os números em ordem numérica e as datas em ordem cronológica.
+-   Para fazer uma caixa de combinação com atualizações ao vivo enquanto o usuário estiver usando as teclas de seta (como um menu suspenso de seleção de Fonte), defina SelectionChangedTrigger como "Sempre".  
 
 ### <a name="text-search"></a>Pesquisa de texto
 
-As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida. 
+As caixas de combinação suportam automaticamente pesquisas dentro de suas coleções. Como os usuários digitam caracteres em um teclado físico enquanto enfocam uma caixa de combinação aberta ou fechada, os candidatos que correspondem à cadeia do usuário são inseridos na exibição. Essa funcionalidade é especialmente útil quando estiver navegando uma longa lista. Por exemplo, quando interage com uma lista suspensa contendo uma lista de estados, os usuários podem pressionar a tecla "w" para trazer "Washington" até a exibição para que haja uma seleção rápida.
+
 
 ## <a name="list-boxes"></a>Caixas de listagem
 
@@ -252,12 +260,12 @@ Veja recomendações sobre a barra de comandos em [Diretrizes de barras de coman
 
 - [Hub](hub.md)
 - [Mestre/detalhes](master-details.md)
-- [Painel de navegação](nav-pane.md)
+- [Painel de navegação](navigationview.md)
 - [Zoom semântico](semantic-zoom.md)
 - [Arrastar e soltar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Para desenvolvedores**
-- [**Classe ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [**Classe GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [**Classe ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [**Classe ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [Classe ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Classe GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
+- [Classe ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348)
+- [Classe ListBox](https://msdn.microsoft.com/library/windows/apps/br242868)

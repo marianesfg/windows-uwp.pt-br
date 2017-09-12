@@ -1,27 +1,29 @@
 ---
 author: TylerMSFT
 description: "Saiba como usar a execução estendida para manter o aplicativo em execução enquanto ele está minimizado"
-title: "Executar enquanto minimizado com execução estendida"
+title: "Adiar a suspensão do app com execução estendida"
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: "windows 10, uwp, execução estendida, minimizada, ExtendedExecutionSession, tarefa em segundo plano, ciclo de vida do aplicativo, tela de bloqueio"
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f82fa37ade38d6a92fa1fec427079f75057a1a4a
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="run-while-minimized-with-extended-execution"></a>Executar enquanto minimizado com execução estendida
+# <a name="postpone-app-suspension-with-extended-execution"></a>Adiar a suspensão do app com execução estendida
 
-Este artigo mostra como usar a execução estendida para adiar quando o aplicativo é suspenso, de maneira que ele possa ser executado minimizado.
+Este artigo mostra como usar a execução estendida para adiar quando o aplicativo é suspenso, de maneira que ele possa ser executado minimizado ou na tela de bloqueio.
 
 Quando o usuário minimiza ou sai de um aplicativo, este é colocado em um estado suspenso.  A memória é mantida, mas o código não é executado. Isso acontece em todas as edições de sistema operacional com uma interface do usuário visual. Para obter mais detalhes sobre quando o aplicativo é suspenso, consulte [Ciclo de vida do aplicativo](app-lifecycle.md).
 
-Há casos em que um aplicativo pode precisar continuar em execução, em vez de ser suspenso, enquanto ele está minimizado. Se um aplicativo precisar continuar em execução, o sistema operacional poderá mantê-lo em execução ou ele pode solicitar que continue em execução. Por exemplo, durante a reprodução de áudio em segundo plano, o sistema operacional poderá manter um aplicativo em execução por mais tempo se você seguir estas etapas para [Reprodução de mídia em segundo plano](../audio-video-camera/background-audio.md). Do contrário, você deve solicitar manualmente mais tempo.
+Há casos em que um aplicativo pode precisar continuar em execução, em vez de ser suspenso, enquanto ele está minimizado. Se um aplicativo precisar continuar em execução, o sistema operacional poderá mantê-lo em execução ou ele pode solicitar que continue em execução. Por exemplo, durante a reprodução de áudio em segundo plano, o sistema operacional poderá manter um aplicativo em execução por mais tempo se você seguir estas etapas para [Reprodução de mídia em segundo plano](../audio-video-camera/background-audio.md). Do contrário, você deve solicitar manualmente mais tempo. A quantidade de tempo que você talvez receba para realizar a execução em segundo plano pode levar alguns minutos, mas você deve estar preparado para trabalhar com a possibilidade da sessão ser revogada a qualquer momento.
 
-Crie um [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) a fim de solicitar mais tempo para concluir uma operação em segundo plano. O tipo de **ExtendedExecutionSession** criado é determinado pelo [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) fornecido ao criá-lo. Existem três valores de enumeração **ExtendedExecutionReason**: **Unspecified, LocationTracking** e **SavingData**.
+Crie um [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx) a fim de solicitar mais tempo para concluir uma operação em segundo plano. O tipo de **ExtendedExecutionSession** criado é determinado pelo [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) fornecido ao criá-lo. Existem três valores de enumeração **ExtendedExecutionReason**: **Unspecified, LocationTracking** e **SavingData**. Apenas uma **ExtendedExecutionSession** pode ser solicitada a qualquer momento; tentar criar outra sessão enquanto uma está atualmente ativa fará com que uma exceção seja lançada pelo construtor **ExtendedExecutionSession**. Não use [ExtendedExecutionForegroundSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession.aspx) e [ExtendedExecutionForegroundReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason.aspx); pois exigem recursos restritos e não estão disponíveis para uso em aplicativos da Loja.
 
 ## <a name="run-while-minimized"></a>Executar enquanto minimizado
 
@@ -35,7 +37,7 @@ Em todas as edições de sistema operacional, esse tipo de sessão de execução
 
 Especifique **ExtendedExecutionReason.LocationTracking** quando você criar um **ExtendedExecutionSession** se o aplicativo precisar registrar em log regularmente o local com base no [Geolocalizador](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx). Aplicativos para monitoramento de exercícios e navegação que precisam monitorar regularmente a localização do usuário e devem usar esse motivo.
 
-A sessão de execução estendida de acompanhamento da localização pode ser executada pelo tempo necessário. No entanto, só pode haver uma sessão assim em execução por dispositivo. Uma sessão de execução estendida de rastreamento do local só pode ser solicitada em primeiro plano, e o aplicativo deve estar no estado **Running**. Isso garante que o usuário esteja ciente de que o aplicativo iniciou uma sessão de rastreamento do local estendida. Ainda é possível usar o Geolocalizador enquanto o aplicativo está em segundo plano usando uma tarefa em segundo plano, ou um serviço de aplicativo, sem solicitar uma sessão de execução estendida de rastreamento do local.
+Uma sessão de execução estendida de rastreamento de localização pode ser executada por quanto tempo for necessário, incluindo enquanto a tela estiver bloqueada em um dispositivo móvel. No entanto, só pode haver uma sessão assim em execução por dispositivo. Uma sessão de execução estendida de rastreamento do local só pode ser solicitada em primeiro plano, e o aplicativo deve estar no estado **Running**. Isso garante que o usuário esteja ciente de que o aplicativo iniciou uma sessão de rastreamento do local estendida. Ainda é possível usar o Geolocalizador enquanto o aplicativo está em segundo plano usando uma tarefa em segundo plano, ou um serviço de aplicativo, sem solicitar uma sessão de execução estendida de rastreamento do local.
 
 ## <a name="save-critical-data-locally"></a>Salvar dados críticos localmente
 
@@ -43,7 +45,7 @@ Especifique **ExtendedExecutionReason.SavingData** quando você criar um **Exten
 
 Não use esse tipo de sessão para prolongar a vida útil de um aplicativo para carregar ou baixar dados. Se você precisar carregar dados, solicite uma [transferência em segundo plano](https://msdn.microsoft.com/windows/uwp/networking/background-transfers) ou registre um **MaintenanceTrigger** para manusear a transferência quando houver energia CA disponível. A sessão de execução estendida **ExtendedExecutionReason.SavingData** pode ser solicitada quando o aplicativo está em primeiro plano e no estado **Running** ou em segundo plano e no estado **Suspending**.
 
-O estado **Suspending** é a última oportunidade durante o ciclo de vida do aplicativo em que um aplicativo pode fazer o trabalho antes de ser encerrado. A solicitação de uma sessão de execução estendida **ExtendedExecutionReason.SavingData** com o aplicativo no estado **Suspending** cria um possível problema do qual você deve estar ciente. Se for solicitada uma sessão de execução estendida ainda no estado **Suspending** e o usuário solicitar que o aplicativo seja reiniciado, ele poderá demorar muito tempo para ser iniciado. Isso ocorre porque o período da sessão de execução estendida deve terminar antes da instância anterior do aplicativo ser fechada e uma nova instância do aplicativo ser iniciada. O tempo de desempenho de inicialização é sacrificado para garantir que o estado do usuário não seja perdido.
+O estado **Suspending** é a última oportunidade durante o ciclo de vida do aplicativo em que um aplicativo pode fazer o trabalho antes de ser encerrado. **ExtendedExecutionReason.SavingData** é o único tipo de **ExtendedExecutionSession** que pode ser solicitada no estado **Suspending**. A solicitação de uma sessão de execução estendida **ExtendedExecutionReason.SavingData** com o aplicativo no estado **Suspending** cria um possível problema do qual você deve estar ciente. Se for solicitada uma sessão de execução estendida ainda no estado **Suspending** e o usuário solicitar que o aplicativo seja reiniciado, ele poderá demorar muito tempo para ser iniciado. Isso ocorre porque o período da sessão de execução estendida deve terminar antes da instância anterior do aplicativo ser fechada e uma nova instância do aplicativo ser iniciada. O tempo de desempenho de inicialização é sacrificado para garantir que o estado do usuário não seja perdido.
 
 ## <a name="request-disposal-and-revocation"></a>Solicitação, alienação e revogação
 
@@ -54,7 +56,6 @@ Existem três interações fundamentais com uma sessão de execução estendida:
 ```csharp
 var newSession = new ExtendedExecutionSession();
 newSession.Reason = ExtendedExecutionReason.Unspecified;
-newSession.Description = "Raising periodic toasts";
 newSession.Revoked += SessionRevoked;
 ExtendedExecutionResult result = await newSession.RequestExtensionAsync();
 
@@ -163,7 +164,6 @@ static class ExtendedExecutionHelper
 
         var newSession = new ExtendedExecutionSession();
         newSession.Reason = ExtendedExecutionReason.Unspecified;
-        newSession.Description = "Running multiple tasks";
         newSession.Revoked += SessionRevoked;
 
         if(revoked != null)

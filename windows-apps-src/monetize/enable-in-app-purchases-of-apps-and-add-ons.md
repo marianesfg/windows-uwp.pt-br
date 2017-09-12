@@ -5,50 +5,57 @@ description: Saiba como usar o namespace Windows.Services.Store para comprar um 
 title: Habilitar compras no aplicativo e complementos no aplicativo
 keywords: windows 10, uwp, complementos, compras no aplicativo, IAPs, Windows.Services.Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b45d8b34bed361471c1fc95594ad6fd28e41fa6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a8da1394bfbee1cedcfdc4606c42b2ed4a41eb96
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras no aplicativo e complementos no aplicativo
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar membros no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para solicitar a compra do aplicativo atual ou um de seus complementos (também conhecidos como produtos no aplicativo ou IAPs) para o usuário. Por exemplo, se o usuário tem uma versão de avaliação do aplicativo, você pode usar esse processo para adquirir uma licença completa para o usuário. Como alternativa, você pode usar esse processo para adquirir um complemento, como um novo nível de jogo para o usuário.
+Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar membros no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para solicitar a compra do aplicativo atual ou um de seus complementos para o usuário. Por exemplo, se o usuário tem uma versão de avaliação do aplicativo, você pode usar esse processo para adquirir uma licença completa para o usuário. Como alternativa, você pode usar esse processo para adquirir um complemento, como um novo nível de jogo para o usuário.
 
 Para solicitar a compra de um aplicativo ou complemento, o [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) fornece vários métodos diferentes:
 * Se você souber o [ID da Loja](in-app-purchases-and-trials.md#store_ids) do aplicativo ou complemento, poderá usar o método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx).
-* Se você já tiver um objeto [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx), [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) ou [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx) que represente o aplicativo ou complemento, use os métodos **RequestPurchaseAsync** desses objetos.
+* Se você já tiver um objeto [**StoreProduct**, **StoreSku** ou **StoreAvailability**](in-app-purchases-and-trials.md#products-skus) que represente o aplicativo ou complemento, use os métodos **RequestPurchaseAsync** desses objetos. Para obter exemplos de diferentes maneiras de recuperar um **StoreProduct** em seu código, consulte [Obter informações de produto para apps e complementos](get-product-info-for-apps-and-add-ons.md).
 
 Cada método apresenta uma interface do usuário de compra padrão para o usuário e, em seguida, é concluído assincronamente após a conclusão da transação. O método retorna um objeto que indica se a transação foi bem-sucedida.
 
->**Observação**&nbsp;&nbsp;Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> [!NOTE]
+> Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [este artigo](enable-in-app-product-purchases.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows, e esse aplicativo foi publicado e disponibilizado na Loja. Pode ser um aplicativo que você deseja liberar para os clientes ou pode ser um aplicativo básico que atenda aos requisitos mínimos [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que você esteja usando somente para testes. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Se você quiser habilitar compras no aplicativo para um complemento para o app, também deverá [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
 * O arquivo de código tenha uma instrução **using** para o namespace **Windows.Services.Store**.
 * O aplicativo seja um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md#api_intro).
 
->**Observação**&nbsp;&nbsp;Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
+> [!NOTE]
+> Se você tiver um aplicativo da área de trabalho que utilize o [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), talvez seja necessário adicionar outro código não mostrado neste exemplo para configurar o objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obter mais informações, consulte [Usando a classe StoreContext em um aplicativo da área de trabalho que usa o Desktop Bridge](in-app-purchases-and-trials.md#desktop).
 
 ## <a name="code-example"></a>Exemplo de código
 
-Este exemplo demonstra como usar o método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para comprar um app ou complemento com uma [ID da Loja](in-app-purchases-and-trials.md#store_ids) conhecida.
+Este exemplo demonstra como usar o método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para comprar um app ou complemento com uma [ID da Loja](in-app-purchases-and-trials.md#store_ids) conhecida. Para obter um aplicativo de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnablePurchases](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseAddOnPage.xaml.cs#PurchaseAddOn)]
 
-Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+## <a name="video"></a>Vídeo
+
+Assista ao vídeo a seguir para obter uma visão geral de como implementar compras no aplicativo em seu app.
+<br/>
+<br/>
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Adding-In-App-Purchases-to-Your-UWP-App/player]
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -58,4 +65,3 @@ Para obter um app de exemplo completo, consulte o [Exemplo da Loja](https://gith
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Implementar uma versão de avaliação do seu aplicativo](implement-a-trial-version-of-your-app.md)
 * [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-

@@ -6,14 +6,16 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 11c8fbdfd8653fe93ab712c865dc1d23e7a76581
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ebeac8bb4d2787514c788ecfa0ab1381ff40820b
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="special-tile-templates"></a>Modelos de blocos especiais
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -35,13 +37,25 @@ As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco i
 
 **Etapa 1: Criar os ativos de imagem em formato PNG**
 
-Crie os ativos de ícone para o bloco e os coloque nos recursos de projeto com os outros ativos. No mínimo, crie um ícone de 200x200 pixels, que funciona para blocos pequenos e médios no telefone e no desktop. Para proporcionar a melhor experiência de usuário, crie um ícone para cada tamanho. Consulte os detalhes de dimensionamento na imagem abaixo.
+Crie os ativos de ícone para o bloco e os coloque nos recursos de projeto com os outros ativos. No mínimo, crie um ícone de 200x200 pixels, que funciona para blocos pequenos e médios no telefone e no desktop. Para proporcionar a melhor experiência de usuário, crie um ícone para cada tamanho. Nenhum preenchimento é necessário nesses ativos. Consulte os detalhes de dimensionamento na imagem abaixo.
 
 Salve ativos de ícone em formato PNG e com transparência. No Windows Phone, cada pixel não transparentes é exibido como branco (RGB 255, 255, 255). Para manter a consistência e a simplicidade, use branco para ícones da área de trabalho também.
 
 O Windows 10 em tablet, laptop e desktop só dá suporte a ativos de ícone quadrados. O telefone dá suporte a ativos quadrados e ativos mais altos do que têm de largura, até uma proporção largura:altura 2:3, que é útil para imagens como um ícone de telefone.
 
 ![dimensionamento de ícone em blocos pequenos e médios, em telefone e desktop](images/iconic-template-sizing-info.png)
+
+![dimensionamento de ativos com e sem selo](images/assetguidance24.png)
+
+Para ativos quadrados, ocorre a centralização automática dentro do contêiner:
+
+![dimensionamento de ativo quadrado, com e sem selo](images/assetguidance25.png)
+
+Para ativos não quadrados, ocorrem a centralização horizontal/vertical automática e o ajuste à largura/altura do contêiner:
+
+![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26a.png)
+
+![dimensionamento de ativo não quadrado, com e sem selo](images/assetguidance26b.png)
 
 **Etapa 2: Criar o bloco base**
 

@@ -3,34 +3,39 @@ author: jnHs
 Description: Veja como publicar seus aplicativos do Windows na Windows Store.
 title: Publicar aplicativos do Windows
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-ms.openlocfilehash: 3ed4fff6cb7d85fe36a732cc10224ddfe3565d4f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 84d0ef042e6eeb48fd790042f4f4c5469bf30911
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="publish-windows-apps"></a>Publicar aplicativos do Windows
 
 Você pode usar o painel do Centro de Desenvolvimento do Windows para publicar seus aplicativos na Windows Store. 
 
-> **Observação** Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows e enviar aplicativos.
+> [!NOTE]
+> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows e enviar aplicativos.
 
 Esta seção contém informações sobre como publicar e gerenciar seus aplicativos.
 
 | **Tópico** | **Descrição** |
 |-----------|-----------------|
 | [Usando o painel do Centro de Desenvolvimento do Windows](using-the-windows-dev-center-dashboard.md) | Saiba [como se registrar para obter uma conta](opening-a-developer-account.md) e tenha uma visão geral do que você pode fazer no painel do Centro de Desenvolvimento. |
-| [Crie seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md) | Veja como reservar nomes e encontrar sugestões para escolher um nome de aplicativo excelente. |
-| [Envios de aplicativos](app-submissions.md) | Um envio de aplicativo inclui [os detalhes de preço e disponibilidade](set-app-pricing-and-availability.md), [propriedades](enter-app-properties.md), [classificações etárias](age-ratings.md), [pacotes](upload-app-packages.md) e [detalhes da listagem da Loja](create-app-store-listings.md). Seu envio passará pelo [processo de certificação](the-app-certification-process.md) antes de ser publicado na Loja. Os recursos opcionais que você pode usar [liberação de pacotes de pré-lançamento](package-flights.md), [teste beta](beta-testing-and-targeted-distribution.md) e [distribuição de LOB diretamente para empresas](distribute-lob-apps-to-enterprises.md). |
+| [Gerenciar usuários de contas](manage-account-users.md) | Adicione usuários, grupos e aplicativos do Azure Active Directory à sua conta do Centro de Desenvolvimento com permissões designadas. |
+| [Criar seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md) | Veja como reservar nomes e encontrar sugestões para escolher um nome de aplicativo excelente. |
+| [Envios de aplicativos](app-submissions.md) | Um envio de aplicativo inclui [os detalhes de preço e disponibilidade](set-app-pricing-and-availability.md), [propriedades](enter-app-properties.md), [classificações etárias](age-ratings.md), [pacotes](upload-app-packages.md) e [detalhes da listagem da Loja](create-app-store-listings.md). Seu envio passará pelo [processo de certificação](the-app-certification-process.md) antes de ser publicado na Loja. Os recursos opcionais que você pode usar incluem [liberação de pacotes de pré-lançamento](package-flights.md), [teste beta](beta-testing-and-targeted-distribution.md), [distribuição gradual do pacote](gradual-package-rollout.md) e [distribuição de LOB diretamente para empresas](distribute-lob-apps-to-enterprises.md). |
 | [Envios de complemento](add-on-submissions.md) | Saiba como publicar complementos (produtos no aplicativo) por meio do painel do Centro de Desenvolvimento do Windows. |
 | [Monetizar com anúncios](monetize-with-ads.md) | Gerencie o uso de anúncios, incluindo configurações personalizadas de controle de anúncios e publicidade de afiliadas. |
 | [Gerenciamento de aplicativos e serviços](app-management-and-services.md) | Use serviços teste A/B (experimentação) e mapas, e veja como [ver os detalhes da identidade do aplicativo](view-app-identity-details.md) e [reservar nomes de aplicativos adicionais](manage-app-names.md). |
-| [Análises](analytics.md) | Obtenha dados de análise detalhados de seus aplicativos para ver como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do aplicativo, o uso de anúncios e muito mais. |
-| [Compromisso do cliente e promoção do aplicativo](app-promotion-and-customer-engagement.md) | Promova seu aplicativo com [campanhas publicitárias](create-an-ad-campaign-for-your-app.md), [códigos promocionais](generate-promotional-codes.md), [preço de venda](put-apps-and-add-ons-on-sale.md) e muito mais. 
-| [Sendo pago](getting-paid-apps.md) | Obtenha detalhes sobre como receber os lucros de seus aplicativos, complementos e o Microsoft Advertising. |
+| [Atraia clientes e promova seus aplicativos](attract-customers-and-promote-your-apps.md) | Promova seus produtos e amplie a base de clientes, incluindo [campanhas publicitárias](create-an-ad-campaign-for-your-app.md), [códigos promocionais](generate-promotional-codes.md), [preços de venda](put-apps-and-add-ons-on-sale.md) e muito mais. |
+| [Envolvimento com os clientes](engage-with-your-customers.md) | Promova o envolvimento e a satisfação do cliente ao usar recursos como [notificações](send-push-notifications-to-your-apps-customers.md), [ofertas direcionadas](use-targeted-offers-to-maximize-engagement-and-conversions.md), a possibilidade de responder a [avaliações](respond-to-customer-reviews.md) e [comentários](respond-to-customer-feedback.md), e muito mais. 
+| [Analisar o desempenho do aplicativo](analytics.md) | Obtenha dados de análise detalhados de seus aplicativos para ver como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele.|
+| [Recebimento de pagamentos](getting-paid-apps.md) | Obtenha detalhes sobre como receber os lucros de seus aplicativos, complementos e anúncios. |
 | [Código de Conduta e Políticas da Loja](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx) | Esta seção inclui as [Políticas da Loja](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) e critérios de [Qualidade do Aplicativo](https://msdn.microsoft.com/library/windows/apps/mt652261.aspx) que se aplicam aos aplicativos e ao conteúdo do Windows e ao [Código de Conduta](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx) que os desenvolvedores devem seguir. |
  

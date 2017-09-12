@@ -1,38 +1,36 @@
 ---
 author: Jwmsft
 Description: "As barras de comandos lhe dar aos usuários acesso fácil às tarefas mais comuns do seu app."
-title: Barra de aplicativos e barra de comandos
+title: Barra de comandos
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
-ms.openlocfilehash: 6dc3c9d15ebbda67dd055adb4b9d5548b6ac81e3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: ksulliv
+dev-contact: niallm
+doc-status: Published
+ms.openlocfilehash: f880f6ea6438e4a2f41a50c358ca0be4239e88b4
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/23/2017
 ---
-# <a name="app-bar-and-command-bar"></a>Barra de aplicativos e barra de comandos
+# <a name="command-bar"></a>Barra de comandos
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 As barras de comandos (também conhecidas como "barras de aplicativos") dão aos usuários acesso fácil às tarefas mais comuns do aplicativo e podem ser usadas para mostrar comandos ou opções específicas ao contexto do usuário, como uma seleção de fotos ou o modo de desenho. Elas também podem ser usadas para navegação entre páginas ou seções do aplicativo. As barras de comandos podem ser usadas com qualquer padrão de navegação.
 
-![Exemplo de uma barra de comandos com ícones](images/controls_appbar_icons.png)
+> **APIs importantes**: [classe CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx), [classe AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [classe AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx), [classe AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
 
-<div class="important-apis" >
-<b>APIs importantes</b><br/>
-<ul>
-<li>[**CommandBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)</li>
-<li>[**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx) </li>
-<li> [**AppBarToggleButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx)</li>
-<li>[**AppBarSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx) </li>
-</ul>
-</div>
+![Exemplo de uma barra de comandos com ícones](images/controls_appbar_icons.png)
 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
@@ -65,10 +63,10 @@ Esta é a mesma barra de comandos em seu estado aberto. Os rótulos identificam 
 ![Uma barra de comandos fechada](images/commandbar_anatomy_open.png)
 
 A barra de comandos é dividida em 4 áreas principais:
-- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. A propriedade [**OverflowButtonVisibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que os aplicativos alterem esse comportamento de se ocultar automaticamente por padrão.
-- A área de conteúdo está alinhada à esquerda da barra. Ela será mostrada se a propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) estiver preenchida.
-- A área de comando principal está alinhada à direita da barra, próxima ao botão "veja mais" \[•••\]. Ela será mostrada se a propriedade [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) estiver preenchida.  
-- O menu de estouro é mostrado somente quando a barra de comandos está aberta e a propriedade [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) está preenchida. O novo comportamento de estouro dinâmico moverá automaticamente comandos principais para a área SecondaryCommands quando espaço é limitado.
+- O botão "veja mais" \[•••\] é mostrado à direita da barra. Pressionar o botão "veja mais" \[•••\] tem 2 efeitos: revela os rótulos dos botões de comandos principais e abre o menu de estouro se quaisquer comandos secundários estiverem presentes. No SDK mais novo, o botão não ficará visível quando não houver comandos secundários nem rótulos ocultos. A propriedade [OverflowButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que os aplicativos alterem esse comportamento padrão de ocultação automática.
+- A área de conteúdo está alinhada à esquerda da barra. Ela será mostrada se a propriedade [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) estiver preenchida.
+- A área de comando principal está alinhada à direita da barra, próxima ao botão "veja mais" \[•••\]. Ela será mostrada se a propriedade [PrimaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) estiver preenchida.  
+- O menu de estouro é mostrado somente quando a barra de comandos está aberta e a propriedade [SecondaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) está preenchida. O novo comportamento de estouro dinâmico moverá automaticamente comandos principais para a área SecondaryCommands quando espaço é limitado.
 
 O layout é invertido quando [FlowDirection](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.flowdirection.aspx) é **RightToLeft**.
 
@@ -97,7 +95,7 @@ Este exemplo cria a barra de comandos mostrada anteriormente.
 ```
 
 ## <a name="commands-and-content"></a>Comandos e conteúdo
-O controle CommandBar tem 3 propriedades que você pode usar para adicionar comandos e conteúdo: [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx), [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) e [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx).
+O controle CommandBar tem três propriedades que você pode usar para adicionar comandos e conteúdo: [PrimaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx), [SecondaryCommands](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) e [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx).
 
 
 ### <a name="primary-actions-and-overflow"></a>Ações principais e estouro
@@ -106,21 +104,23 @@ Por padrão, os itens que você adiciona à barra de comandos são incluídos na
 
 Você pode adicionar comandos à coleção **SecondaryCommands**, mas esses itens serão mostrados na área de excedentes. Coloque comandos menos importantes dentro da área de excedentes.
 
-A área de excedentes padrão é estilizada para ser distinta da barra. Você pode ajustar o estilo definindo a propriedade [**CommandBarOverflowPresenterStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) para um [estilo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) cujo destino seja [**CommandBarOverflowPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx).
+A área de excedentes padrão é estilizada para ser distinta da barra. Você pode ajustar o estilo definindo a propriedade [CommandBarOverflowPresenterStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) para um [Estilo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) cujo destino seja [CommandBarOverflowPresenter](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx).
 
-Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário. 
+Você pode mover programaticamente comandos entre PrimaryCommands e SecondaryCommands conforme necessário.
 
+<!-- 
 <div class="microsoft-internal-note">
-Os comandos também podem entrar ou sair automaticamente do estouro com as alterações de largura da barra de comandos, por exemplo, quando os usuários redimensionam a janela do aplicativo. O estouro dinâmico está ativado por padrão, mas os aplicativos podem desativar esse comportamento alterando o valor da propriedade `IsDynamicOverflowEnabled`.
+Commands can also automatically move in or out of the overflow as the command bar width changes, for example when users resize their app window. Dynamic overflow is on by default but apps can turn off this behavior by changing the value of `IsDynamicOverflowEnabled` property.
 </div>
+-->
 
 ### <a name="app-bar-buttons"></a>Botões da barra de aplicativos
 
-PrimaryCommands e SecondaryCommands podem ser preenchidos somente com os elementos de comando [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [**AppBarToggleButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx) e [**AppBarSeparator**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx). Esses controles são otimizados para uso em uma barra de comandos, e sua aparência muda se o controle é usado no espaço de ação ou na área de excedentes.
+PrimaryCommands e SecondaryCommands podem ser preenchidos somente com os elementos de comando [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx) e [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx). Esses controles são otimizados para uso em uma barra de comandos, e sua aparência muda se o controle é usado no espaço de ação ou na área de excedentes.
 
-Os controles de botão da barra de aplicativos são caracterizados por um ícone e um rótulo associado. Eles têm dois tamanhos: normal e compacto. Por padrão, o rótulo de texto é mostrado. Quando a propriedade [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.iscompact.aspx) é definida como **true**, o rótulo de texto fica oculto. Quando usada em um controle CommandBar, a barra de comandos sobrescreve automaticamente a propriedade IsCompact do botão, conforme a barra de comandos é aberta ou fechada.
+Os controles de botão da barra de aplicativos são caracterizados por um ícone e um rótulo associado. Eles têm dois tamanhos: normal e compacto. Por padrão, o rótulo de texto é mostrado. Quando a propriedade [IsCompact](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.iscompact.aspx) é definida como **true**, o rótulo de texto fica oculto. Quando usada em um controle CommandBar, a barra de comandos sobrescreve automaticamente a propriedade IsCompact do botão, conforme a barra de comandos é aberta ou fechada.
 
-Para posicionar os rótulos dos botões da barra de aplicativos à direita do seus ícones, os aplicativos podem usar a nova propriedade [**DefaultLabelPosition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) do CommandBar.
+Para posicionar os rótulos dos botões da barra de aplicativos à direita do seus ícones, os aplicativos podem usar a nova propriedade [DefaultLabelPosition](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) de CommandBar.
 
 ```xaml
 <CommandBar DefaultLabelPosition="Right">
@@ -133,7 +133,7 @@ O trecho de código acima é semelhante ao seguinte quando desenhado por um apli
 
 ![Barra de comandos com rótulos à direita](images/app-bar-labels-on-right.png)
 
-Os botões individuais da barra de aplicativos não podem mover a posição de seu rótulo, isso deve ser feito na barra de comandos como um todo. Os botões da barra de aplicativos podem especificar que os rótulos jamais sejam mostrados definindo-se a nova propriedade [**LabelPosition**](https://msdn.microsoft.com/library/windows/apps/mt710920.aspx) como **Collapsed**. É recomendável limitar o uso dessa configuração para iconografia universalmente reconhecível como '+'.
+Os botões individuais da barra de aplicativos não podem mover a posição de seu rótulo, isso deve ser feito na barra de comandos como um todo. Os botões da barra de aplicativos podem especificar que os rótulos jamais sejam mostrados definindo-se a nova propriedade [LabelPosition](https://msdn.microsoft.com/library/windows/apps/mt710920.aspx) como **Collapsed**. É recomendável limitar o uso dessa configuração para iconografia universalmente reconhecível como '+'.
 
 Quando você colocar um botão de barra de aplicativos no menu de estouro (SecondaryCommands), ela será mostrada como somente texto. A **LabelPosition** dos botões da barra de aplicativos no estouro será ignorada. Este é o mesmo botão de alternância de barra de aplicativos mostrado no espaço de ação como um comando principal (superior) e na área de excedentes como um comando secundário (inferior).
 
@@ -158,18 +158,21 @@ Quando o rótulo quebra automaticamente no local indicado, ele tem esta aparênc
 
 Você pode adicionar qualquer elemento XAML à área de conteúdo definindo a propriedade **Content**. Se quiser adicionar mais de um elemento, você precisa colocá-los em um contêiner de painel e tornar o painel o único filho da propriedade Content.
 
-Quando há comandos principais e o conteúdo, os comandos principais têm precedência e poderão recortar o conteúdo. 
-<div class="microsoft-internal-note">
-O conteúdo não será recortado quando o estouro dinâmico for ativado porque os comandos principais entrariam no menu de estouro liberando espaço para conteúdo.
-</div>
+Quando há comandos principais e o conteúdo, os comandos principais têm precedência e poderão recortar o conteúdo.
 
-Quando [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) é **Compact**, o conteúdo poderá ser recortado se for maior do que o tamanho compacto da barra de comandos. Você deve tratar os eventos [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) e [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para mostrar ou ocultar partes da interface do usuário na área de conteúdo para que eles não sejam recortados. Consulte a seção [Estados abertos e fechados](#open-and-closed-states) para obter mais informações.
+<!--
+<div class="microsoft-internal-note">
+Content will not clip when dynamic overflow is enabled because the primary commands would move into the overflow menu freeing up space for content.
+</div>
+-->
+
+Quando [ClosedDisplayMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) é **Compact**, o conteúdo poderá ser recortado se for maior do que o tamanho compacto da barra de comandos. Você deve tratar os eventos [Opening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) e [Closed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para mostrar ou ocultar partes da interface do usuário na área de conteúdo para que eles não sejam recortados. Consulte a seção [Estados abertos e fechados](#open-and-closed-states) para obter mais informações.
 
 ## <a name="open-and-closed-states"></a>Estados abertos e fechados
 
-A barra de comandos pode estar aberta ou fechada. Um usuário pode alternar entre esses estados pressionando o botão "veja mais" \[•••\]. Você pode alternar entre eles programaticamente definindo a propriedade [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). Quando abertos, os botões de comando principal são mostrados com rótulos de texto e o menu de estouro será aberto se comandos secundários estiverem presentes, como mostrado anteriormente.
+A barra de comandos pode estar aberta ou fechada. Um usuário pode alternar entre esses estados pressionando o botão "veja mais" \[•••\]. Você pode alternar entre eles programaticamente definindo a propriedade [IsOpen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.isopen.aspx). Quando abertos, os botões de comando principal são mostrados com rótulos de texto e o menu de estouro será aberto se comandos secundários estiverem presentes, como mostrado anteriormente.
 
-Você pode usar os eventos [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx), [**Opened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opened.aspx), [**Closing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closing.aspx) e [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para responder à abertura ou ao fechamento da barra de comandos.  
+Você pode usar os eventos [Opening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx), [Opened](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opened.aspx), [Closing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closing.aspx) e [Closed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para responder à abertura ou ao fechamento da barra de comandos.  
 - Os eventos Opening e Closing ocorrem antes de começar a animação de transição.
 - Os eventos Opened e Closed ocorrem após a conclusão da transição.
 
@@ -202,7 +205,7 @@ private void CommandBar_Closing(object sender, object e)
 
 ### <a name="closeddisplaymode"></a>ClosedDisplayMode
 
-Você pode controlar como a barra de comandos é mostrada em seu estado fechado definindo a propriedade [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx). Há 3 modos de exibição fechada à sua escolha:
+Você pode controlar como a barra de comandos é mostrada em seu estado fechado definindo a propriedade [ClosedDisplayMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx). Há 3 modos de exibição fechada à sua escolha:
 - **Compact**: o modo padrão. Mostra o conteúdo, os ícones de comando principal sem rótulos e o botão "veja mais" \[•••\].
 - **Minimal**: mostra apenas uma barra fina que age como o botão "veja mais" \[•••\]. O usuário pode pressionar em qualquer lugar na barra para abri-lo.
 - **Hidden**: a barra de comandos não é mostrada quando está fechada. Isso pode ser útil para mostrar os comandos contextuais com uma barra de comandos embutida. Nesse caso, você deve abrir a barra de comandos programaticamente definindo a propriedade **IsOpen** ou alterando ClosedDisplayMode para **Minimal** ou **Compact**.
@@ -242,7 +245,7 @@ A alteração de ClosedDisplayMode para fornecer mais ou menos dicas para o usu�
 
 ### <a name="issticky"></a>IsSticky
 
-Depois de aberta a barra de comandos, se o usuário interagir com o aplicativo em qualquer lugar fora do controle, por padrão, o menu de estouro será ignorado e os rótulos serão ocultados. Esse modo de fechamento é chamado de *light dismiss*. Você pode controlar como a barra é ignorada definindo a propriedade [**IsSticky**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando a barra é fixa (`IsSticky="true"`), ela não é fechada por um gesto de light dismiss. A barra permanece aberta até que o usuário pressione o botão "veja mais" \[•••\] ou selecionar um item de menu de estouro. Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
+Depois de aberta a barra de comandos, se o usuário interagir com o aplicativo em qualquer lugar fora do controle, por padrão, o menu de estouro será ignorado e os rótulos serão ocultados. Esse modo de fechamento é chamado de *light dismiss*. Você pode controlar como a barra é ignorada definindo a propriedade [IsSticky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Quando a barra é fixa (`IsSticky="true"`), ela não é fechada por um gesto de light dismiss. A barra permanece aberta até que o usuário pressione o botão "veja mais" \[•••\] ou selecionar um item de menu de estouro. Recomendamos evitar barras de comandos fixas porque elas não estão em conformidade com as expectativas dos usuários em relação a light dismiss.
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -254,7 +257,7 @@ As barras de comandos podem ser colocadas na parte superior da janela do aplicat
 
 -   Para dispositivos portáteis pequenos, recomendamos o posicionamento das barras de comandos na parte inferior da tela para fácil acessibilidade.
 -   Em dispositivos com telas maiores, se você estiver colocando apenas uma barra de comandos, recomendamos colocá-la perto do topo da janela.
-Use a API [**DiagonalSizeInInches**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.diagonalsizeininches.aspx) para determinar o tamanho da tela física.
+Use a API [DiagonalSizeInInches](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.diagonalsizeininches.aspx) para determinar o tamanho da tela física.
 
 As barras de comandos podem ser posicionadas nas seguintes regiões da tela, em telas de exibição única (exemplo à esquerda) e em telas com várias exibições (exemplo à direita). As barras de comandos embutidas podem ser colocadas em qualquer lugar no espaço de ação.
 
@@ -276,18 +279,21 @@ Embora seja possível colocar todas as ações dentro da área de estouro para q
 
 ### <a name="command-bar-flyouts"></a>Submenus da barra de comandos
 
-Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responder, Responder a Todos e Encaminhar em um menu Responder. Em geral, embora um botão da barra do aplicativo ative um único comando, ele também pode ser usado para mostrar um [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx) ou um [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx) com conteúdo personalizado.
+Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responder, Responder a Todos e Encaminhar em um menu Responder. Em geral, embora um botão da barra do aplicativo ative um único comando, ele também pode ser usado para mostrar um [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx) ou um [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx) com conteúdo personalizado.
 
 ![Exemplo de submenus em uma barra de comandos](images/AppbarGuidelines_Flyouts.png)
 
 ### <a name="overflow-menu"></a>Menu de estouro
 
-![Exemplo de barra de comandos com área "Mais"](images/AppbarGuidelines_Illustration.png)
+![Exemplo de uma barra de comandos com área "Mais" e ícones](images/appbar_rs2_overflow_icons.png)
 
 -   O menu de estouro é representado pelo botão "veja mais" \[•••\], o ponto de entrada visível do menu. Ele fica à extrema direita da barra de ferramentas, ao lado das ações principais.
 -   A área de estouro é alocada para ações que são usadas com menos frequência.
 -   As ações podem alternar entre o espaço de ação principal e o menu de estouro nos pontos de interrupção. Você também pode designar ações para sempre permanecer no espaço de ação principal, independentemente do tamanho da tela ou da janela do aplicativo.
 -   Ações usadas com pouca frequência podem permanecer no menu estouro de mesmo quando a barra de aplicativos é expandida em telas maiores.
+- AppBarButtons no menu de estouro mostrará automaticamente seus ícones.
+
+> O tamanho dos ícones no menu de estouro é 16 x 16 px, ou seja, é menor do que os ícones na área de comando principal (com 20 x 20 px). Se você usar SymbolIcon, FontIcon ou PathIcon, o ícone será dimensionado automaticamente para o tamanho correto sem perda de fidelidade quando o comando entra na área de comando secundário.
 
 ## <a name="adaptability"></a>Capacidade de adaptação
 
@@ -305,4 +311,4 @@ Considere agrupamentos lógicos dos comandos como, por exemplo, colocar Responde
 ## <a name="related-articles"></a>Artigos relacionados
 
 * [Noções básicas de design de comandos para aplicativos UWP](../layout/commanding-basics.md)
-* [**Classe CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
+* [Classe CommandBar](https://msdn.microsoft.com/library/windows/apps/dn279427)

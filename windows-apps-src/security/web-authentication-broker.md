@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0c5ca9146dd3b5bc04433ef9680af0c2d1009bf7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2376a21efc0e2167afb64274cee4037f43ed1674
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -21,7 +23,8 @@ translationtype: HT
 
 Este artigo explica como conectar seu aplicativo da Plataforma Universal do Windows (UWP) a um provedor de identidade online que use protocolos de autenticação como OpenID ou OAuth, como Facebook, Twitter, Flickr, Instagram e assim por diante. O método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envia uma solicitação ao provedor de identidade online e obtém um token de acesso que descreve os recursos do provedor aos quais o aplicativo tem acesso.
 
-**Observação** para obter uma amostra de código funcional completa, clone o [WebAuthenticationBroker repo on GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+>[!NOTE]
+>Para obter uma amostra de código funcional completa, clone o [Repo WebAuthenticationBroker em GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 
@@ -35,7 +38,7 @@ Você deve registrar o aplicativo junto ao provedor de identidade online ao qual
 
 O URI de solicitação é composto pelo endereço para onde você envia a solicitação de autenticação para o seu provedor de identidade online junto com outras informações necessárias, como ID ou chave secreta do aplicativo, um URI de redirecionamento para o qual o usuário é enviado após concluir a autenticação e o tipo de resposta esperado. Seu provedor deverá informar quais são os parâmetros necessários.
 
-O URI de solicitação é enviado como o parâmetro *requestUri* do método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066). Ele deve ser um endereço seguro (deve começar com https://)
+O URI de solicitação é enviado como o parâmetro *requestUri* do método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066). Ele deve ser um endereço seguro (deve começar com `https://`)
 
 O exemplo a seguir mostra como criar o URI de solicitação.
 
@@ -86,14 +89,15 @@ catch (Exception ex)
 }
 ```
 
-Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos direcionados apenas ao Windows Phone 8.1 e foi preterido a partir do Windows 10.
+>[!WARNING]
+>Além do [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), o namespace [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contém um método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). Não chame esse método. Ele foi projetado para aplicativos direcionados apenas ao Windows Phone 8.1 e foi preterido a partir do Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conectando-se com logon único (SSO)
 
 
-Por padrão, o agente de autenticação da Web não permite cookies persistentes. Por isso, mesmo se o usuário do aplicativo indicar que deseja permanecer conectado (por exemplo, marcando uma caixa de seleção na caixa de diálogo de login do provedor), ele terá que efetuar login cada vez que quiser acessar os recursos desse provedor. Para efetuar login com SSO, o provedor de identidade online deve ter o modo SSO habilitado para o agente de autenticação da Web e seu aplicativo deve chamar a sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068) que não transmite um parâmetro *callbackUri*.
+Por padrão, o agente de autenticação da Web não permite cookies persistentes. Por isso, mesmo se o usuário do aplicativo indicar que deseja permanecer conectado (por exemplo, marcando uma caixa de seleção na caixa de diálogo de login do provedor), ele terá que efetuar login cada vez que quiser acessar os recursos desse provedor. Para efetuar login com SSO, o provedor de identidade online deve ter o modo SSO habilitado para o agente de autenticação da Web e seu aplicativo deve chamar a sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068) que não transmite um parâmetro *callbackUri*. Isso permitirá que os cookies persistentes sejam armazenados pelo agente de autenticação da Web para que as chamadas de autenticação futuras do mesmo aplicativo não precisem de conexão repetida pelo usuário (o usuário é efetivamente "conectado" até o token de acesso expirar).
 
-Para dar suporte ao modo SSO, o provedor online deve permitir que você registre um URI de redirecionamento na forma `ms-app://`*appSID*, onde *appSID* é o SID do seu aplicativo. Você pode localizar o SID do seu aplicativo na página do desenvolvedor de aplicativo para seu aplicativo ou chamando o método [**GetCurrentApplicationCallbackUri**](https://msdn.microsoft.com/library/windows/apps/br212069).
+Para oferecer suporte ao modo SSO, o provedor online deve permitir que você registre um URI de redirecionamento na forma `ms-app://<appSID>`, onde `<appSID>` é a SID do aplicativo. Você pode localizar o SID do seu aplicativo na página do desenvolvedor de aplicativo para seu aplicativo ou chamando o método [**GetCurrentApplicationCallbackUri**](https://msdn.microsoft.com/library/windows/apps/br212069).
 
 ```cs
 string result;

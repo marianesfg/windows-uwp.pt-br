@@ -1,23 +1,23 @@
 ---
-author: scottmill
+author: jwmsft
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: "Efeitos de composição"
 description: "As APIs de efeito permitem que os desenvolvedores personalizem como sua interface do usuário será renderizada."
-ms.author: scotmi
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 769727c8e128046cac44767dcd05b1b952af51ee
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3ee0d4c66dedfb0309a8426c779af3d71c8d1afc
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="composition-effects"></a>Efeitos de composição
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-A API do WinRT [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permite efeitos em tempo real que serão aplicados a imagens e interface do usuário com propriedades de efeitos que podem ser animados. Nesta visão geral, vamos realizar a execução por meio de funcionalidade disponível que permite adicionar efeitos a serem aplicados a uma composição visual.
+As APIs [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permitem que efeitos em tempo real sejam aplicados a imagens e interface do usuário com propriedades de efeito animáveis. Nesta visão geral, vamos realizar a execução por meio de funcionalidade disponível que permite adicionar efeitos a serem aplicados a uma composição visual.
 
 Para dar suporte a consistência da [Plataforma Universal do Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para desenvolvedores descrevendo efeitos em seus aplicativos, os efeitos de composição aproveitam a interface IGraphicsEffect do Win2D para usar as descrições do efeito via Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) Namespace.
 
@@ -25,13 +25,15 @@ Efeitos de pincel são usados para pintar áreas de um aplicativo pela aplicaç�
 
 Os pincéis de efeito são usados em elementos visuais de árvore de composição cujo conteúdo vem da saída de um gráfico de efeito. Os efeitos podem fazer referência a superfícies/texturas existentes, mas não à saída das outras árvores de composição.
 
+Os efeitos também podem ser aplicados a UIElements XAML usando um pincel de efeito com [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+
 ## <a name="effect-features"></a>Recursos de efeito
 
--   [Biblioteca de efeitos](./composition-effects.md#effect-library)
--   [Efeitos de encadeamento](./composition-effects.md#chaining-effects)
--   [Suporte de animação](./composition-effects.md#animation-support)
--   [Propriedades de efeito constantes versus animadas](./composition-effects.md#constant-vs-animated-effect-properties)
--   [Várias instâncias de efeito com propriedades independentes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
+- [Biblioteca de efeitos](./composition-effects.md#effect-library)
+- [Efeitos de encadeamento](./composition-effects.md#chaining-effects)
+- [Suporte de animação](./composition-effects.md#animation-support)
+- [Propriedades de efeito constantes versus animadas](./composition-effects.md#constant-vs-animated-effect-properties)
+- [Várias instâncias de efeito com propriedades independentes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>Biblioteca de efeitos
 
@@ -54,8 +56,6 @@ Atualmente, a composição é compatível com os efeitos a seguir:
 | Sépia                | Converte uma imagem em tons de sépia.                                                                                                                                                                                          |
 | Temperatura e tonalidade | Ajusta a temperatura e/ou a tonalidade de uma imagem.                                                                                                                                                                           |
 
- 
-
 Consulte o Namespace [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) do Win2D para obter informações mais detalhadas. Os efeitos sem suporte na composição são indicados como \[NoComposition\].
 
 ### <a name="chaining-effects"></a>Efeitos de encadeamento
@@ -75,9 +75,8 @@ new Microsoft.Graphics.Canvas.Effects.ArithmeticCompositeEffect
   MultiplyAmount = 0,
   Source1Amount = 0.5f,
   Source2Amount = 0.5f,
-  Offset = 0    
+  Offset = 0
 }
-  
 ```
 
 O exemplo acima descreve um efeito de composição aritmética que tem duas entradas. A segunda entrada tem um efeito de saturação com uma propriedade de saturação de 0,5.
@@ -86,7 +85,7 @@ O exemplo acima descreve um efeito de composição aritmética que tem duas entr
 
 As propriedades de efeito fornecem suporte à animação. Durante a compilação de efeito, você pode especificar as propriedades de efeito que podem ser animadas e quais podem ser "incorporadas" como constantes. As propriedades animáveis são especificadas por meio de cadeias de caracteres do formato "effect name.property name". Essas propriedades podem ser animadas de forma independente ao longo de várias instâncias do efeito.
 
-### <a name="constant-vs-animated-effect-properties"></a>Propriedades de efeito constantes versus animadas 
+### <a name="constant-vs-animated-effect-properties"></a>Propriedades de efeito constantes versus animadas
 
 Durante a compilação de efeitos, você pode especificar as propriedades do efeito como dinâmicas ou como propriedades que são "incorporadas" como constantes. As propriedades dinâmicas são especificadas por meio de cadeias de caracteres de forma "<effect name>.<property name>". As propriedades dinâmicas pode ser definidas com um valor específico ou podem ser animadas usando o sistema de animação de composição.
 
@@ -95,13 +94,13 @@ Ao compilar a descrição de efeito acima, você tem a flexibilidade de incorpor
 Compilar um efeito com saturação incorporada:
 
 ```cs
-var effectFactory = _compositor.CreateEffectFactory(graphicsEffect);              
+var effectFactory = _compositor.CreateEffectFactory(graphicsEffect);
 ```
 
 Compilar um efeito com saturação dinâmica:
 
 ```cs
-var effectFactory = _compositor.CreateEffectFactory(graphicsEffect, new[]{SaturationEffect.Saturation});
+var effectFactory = _compositor.CreateEffectFactory(graphicsEffect, new[]{"SaturationEffect.Saturation"});
 _catEffect = effectFactory.CreateBrush();
 _catEffect.SetSourceParameter("mySource", surfaceBrush);
 _catEffect.Properties.InsertScalar("saturationEffect.Saturation", 0f);
@@ -136,24 +135,24 @@ Ao especificar que um parâmetro deve ser dinâmico durante a compilação do ef
 
 Este tutorial de início rápido mostra como fazer uso de alguns dos recursos básicos de efeitos.
 
--   [Instalando o Visual Studio](./composition-effects.md#installing-visual-studio)
--   [Crie um novo projeto](./composition-effects.md#creating-a-new-project)
--   [Instalando o Win2D](./composition-effects.md#installing-win2d)
--   [Definindo o básico de composição](./composition-effects.md#setting-your-composition-basics)
--   [Criando um pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
--   [Criando, compilando e aplicando efeitos](./composition-effects.md#creating-compiling-and-applying-effects)
+- [Instalando o Visual Studio](./composition-effects.md#installing-visual-studio)
+- [Crie um novo projeto](./composition-effects.md#creating-a-new-project)
+- [Instalando o Win2D](./composition-effects.md#installing-win2d)
+- [Definindo o básico de composição](./composition-effects.md#setting-your-composition-basics)
+- [Criando um pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
+- [Criando, compilando e aplicando efeitos](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Instalando o Visual Studio
 
--   Se você não tiver uma versão compatível do Visual Studio instalado, vá até a página de Downloads do Visual Studio [aqui](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx).
+- Se você não tiver uma versão compatível do Visual Studio instalado, vá até a página de Downloads do Visual Studio [aqui](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx).
 
 ### <a name="creating-a-new-project"></a>Crie um novo projeto
 
--   Vá até Arquivo->Novo->Projeto...
--   Selecione 'Visual C#'
--   Crie um 'Aplicativo em Branco (Universal do Windows)' (Visual Studio 2015)
--   Digite um nome para o projeto de sua escolha
--   Clique em 'OK'
+- Vá até Arquivo->Novo->Projeto...
+- Selecione 'Visual C#'
+- Crie um 'Aplicativo em Branco (Universal do Windows)' (Visual Studio 2015)
+- Digite um nome para o projeto de sua escolha
+- Clique em 'OK'
 
 ### <a name="installing-win2d"></a>Instalando o Win2D
 
@@ -161,10 +160,10 @@ O Win2D é lançado como um pacote Nuget.org e deve ser instalado antes que voc�
 
 Há duas versões do pacote, uma para o Windows 10 e outra para o Windows 8.1. Para efeitos de composição, você usará a versão do Windows 10.
 
--   Inicie o Gerenciador de Pacotes NuGet em Ferramentas → Gerenciador de Pacotes NuGet → Gerenciar Pacotes NuGet para Solução.
--   Procure "Win2D" e selecione o pacote apropriado para a sua versão do Windows. Como Windows.UI. Composition dá suporte ao Windows 10 (mas não ao 8.1), selecione Win2D.uwp.
--   Aceite o contrato de licença
--   Clique em 'Fechar'
+- Inicie o Gerenciador de Pacotes NuGet em Ferramentas → Gerenciador de Pacotes NuGet → Gerenciar Pacotes NuGet para Solução.
+- Procure "Win2D" e selecione o pacote apropriado para a sua versão do Windows. Como Windows.UI. Composition dá suporte ao Windows 10 (mas não ao 8.1), selecione Win2D.uwp.
+- Aceite o contrato de licença
+- Clique em 'Fechar'
 
 Nas próximas etapas usaremos APIs de composição para aplicar um efeito de saturação a esta imagem de gato que removerá toda a saturação. Nesse modelo, o efeito foi criado e aplicado a uma imagem.
 
@@ -186,67 +185,66 @@ Desaturate();
 
 ```cs
 CompositionSurfaceBrush surfaceBrush = _compositor.CreateSurfaceBrush();
-LoadImage(surfaceBrush); 
+LoadImage(surfaceBrush);
 ```
 
 ### <a name="creating-compiling-and-applying-effects"></a>Criando, compilando e aplicando efeitos
 
-1.) Crie um efeito gráfico
-```cs
-var graphicsEffect = new SaturationEffect
-{
-  Saturation = 0.0f,
-  Source = new CompositionEffectSourceParameter("mySource")
-};
-```
+1. Crie um efeito gráfico
 
-2.) Compile o efeito e crie um pincel de efeito
-```cs
-var effectFactory = _compositor.CreateEffectFactory(graphicsEffect);
+    ```cs
+    var graphicsEffect = new SaturationEffect
+    {
+      Saturation = 0.0f,
+      Source = new CompositionEffectSourceParameter("mySource")
+    };
+    ```
 
-var catEffect = effectFactory.CreateBrush();
-catEffect.SetSourceParameter("mySource", surfaceBrush);
-```
+1. Compile o efeito e crie um pincel de efeito
 
-3.) Criar um SpriteVIsual na árvore de composição e aplique o efeito
-```cs
-var catVisual = _compositor.CreateSpriteVisual();
-  catVisual.Brush = catEffect;
-  catVisual.Size = new Vector2(219, 300);
-  _root.Children.InsertAtBottom(catVisual);
-}
-```
+    ```cs
+    var effectFactory = _compositor.CreateEffectFactory(graphicsEffect);
 
-4.) Crie sua fonte de imagem a ser carregada.
-```cs
-CompositionImage imageSource = _imageFactory.CreateImageFromUri(new Uri("ms-appx:///Assets/cat.png"));
-CompositionImageLoadResult result = await imageSource.CompleteLoadAsync();
-if (result.Status == CompositionImageLoadStatus.Success)
-```
+    var catEffect = effectFactory.CreateBrush();
+    catEffect.SetSourceParameter("mySource", surfaceBrush);
+    ```
 
-5.) Dimensione e pincele a superfície no SpriteVisual
-```cs
-brush.Surface = imageSource.Surface;
-```
+1. Crie um SpriteVisual na árvore de composição e aplique o efeito
 
-6.) Execute o aplicativo – seus resultados devem ser um gato sem saturação:
+    ```cs
+    var catVisual = _compositor.CreateSpriteVisual();
+      catVisual.Brush = catEffect;
+      catVisual.Size = new Vector2(219, 300);
+      _root.Children.InsertAtBottom(catVisual);
+    }
+    ```
+
+1. Crie sua fonte de imagem a ser carregada.
+
+    ```cs
+    CompositionImage imageSource = _imageFactory.CreateImageFromUri(new Uri("ms-appx:///Assets/cat.png"));
+    CompositionImageLoadResult result = await imageSource.CompleteLoadAsync();
+    if (result.Status == CompositionImageLoadStatus.Success)
+    ```
+
+1. Dimensione e pincele a superfície no SpriteVisual
+
+    ```cs
+    brush.Surface = imageSource.Surface;
+    ```
+
+1. Execute o aplicativo – seus resultados devem ser um gato sem saturação:
 
 ![Imagem sem saturação](images/composition-cat-desaturated.png)
+
 ## <a name="more-information"></a>Mais informações
 
--   [Microsoft – GitHub Composition](https://github.com/Microsoft/composition)
--   [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
--   [Equipe do Composition do Windows no Twitter](https://twitter.com/wincomposition)
--   [Visão geral da composição](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
--   [Noções básicas de árvore visual](composition-visual-tree.md)
--   [Pincéis de composição](composition-brushes.md)
--   [Visão geral de animações](composition-animation.md)
--   [Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw](composition-native-interop.md)
-
- 
-
- 
-
-
-
-
+- [Microsoft – GitHub Composition](https://github.com/Microsoft/composition)
+- [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+- [Equipe do Composition do Windows no Twitter](https://twitter.com/wincomposition)
+- [Visão geral da composição](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [Noções básicas de árvore visual](composition-visual-tree.md)
+- [Pincéis de composição](composition-brushes.md)
+- [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
+- [Visão geral de animações](composition-animation.md)
+- [Interoperação nativa entre DirectX e Direct2D de composição com BeginDraw e EndDraw](composition-native-interop.md)

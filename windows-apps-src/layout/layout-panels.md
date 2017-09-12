@@ -7,14 +7,16 @@ label: Layout panels
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 45c7c541ab278da1f00899a16636337dcdc20d3f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 55b7c431482b171e56e670cd5d2ce0fc9148a5f9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="layout-panels"></a>Painéis de layout
 
@@ -91,7 +93,7 @@ Este XAML mostra como organizar os elementos em um RelativePanel.
                RelativePanel.Below="RedRect" 
                RelativePanel.AlignLeftWith="RedRect" 
                RelativePanel.AlignRightWith="BlueRect"/>
-    <Rectangle Fill="Yellow"
+    <Rectangle Fill="Orange"
                RelativePanel.Below="GreenRect" 
                RelativePanel.AlignLeftWith="BlueRect" 
                RelativePanel.AlignRightWithPanel="True"
@@ -106,7 +108,7 @@ O resultado tem a seguinte aparência.
 Aqui estão algumas coisas a serem observadas sobre o dimensionamento dos retângulos.
 - O retângulo vermelho recebe um tamanho explícito de 44 x 44. Ele é colocado no canto superior esquerdo do painel, que é a posição padrão.
 - O retângulo verde recebe uma altura explícita de 44. Seu lado esquerdo é alinhado com o retângulo vermelho, e o lado direito é alinhado com o retângulo azul, o que determina a largura.
-- O retângulo amarelo não recebe um tamanho explícito. Seu lado esquerdo é alinhado com o retângulo azul. As bordas direita e inferior são alinhadas com a borda do painel. Seu tamanho é determinado por esses alinhamentos e será redimensionado à medida que o painel for redimensionado.
+- O retângulo laranja não recebe um tamanho explícito. Seu lado esquerdo é alinhado com o retângulo azul. As bordas direita e inferior são alinhadas com a borda do painel. Seu tamanho é determinado por esses alinhamentos e será redimensionado à medida que o painel for redimensionado.
 
 ## <a name="stackpanel"></a>StackPanel
 
@@ -121,7 +123,7 @@ O XAML a seguir mostra como criar um StackPanel vertical dos itens.
     <Rectangle Fill="Red" Height="44"/>
     <Rectangle Fill="Blue" Height="44"/>
     <Rectangle Fill="Green" Height="44"/>
-    <Rectangle Fill="Yellow" Height="44"/>
+    <Rectangle Fill="Orange" Height="44"/>
 </StackPanel>
 ```
 
@@ -155,7 +157,7 @@ Este exemplo de XAML mostra como criar um Grid com duas linhas e duas colunas.
     <Rectangle Fill="Red" Width="44"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -188,7 +190,7 @@ Aqui está como usar um VariableSizedWrapGrid em XAML.
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" 
+    <Rectangle Fill="Orange" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>
@@ -216,7 +218,7 @@ Aqui está um exemplo de um Canvas em XAML.
     <Rectangle Fill="Red" Height="44" Width="44"/>
     <Rectangle Fill="Blue" Height="44" Width="44" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Height="44" Width="44" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 

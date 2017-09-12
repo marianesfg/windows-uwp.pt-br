@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4997895e73e7c8bf0f20a2bc504b7b8c17c45339
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/27/2017
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
@@ -22,6 +24,11 @@ translationtype: HT
 **Observação**  Até que ponto você precisa de dados de amostra, e que quantidade pode ser útil, depende de as suas associações usarem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) ou a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e, portanto, apenas são apropriadas para **{Binding}**. Porém, se você estiver usando **{x:Bind}**, suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
 
 Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio. Para que seus controles sejam populados com dados (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos.
+
+**Aplicativos de amostra que demonstram {Binding}**
+
+-   Baixe o aplicativo [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
+-   Baixe o aplicativo [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
 
 <a name="setting-datacontext-in-markup"></a>Definindo DataContext na marcação
 -----------------------------

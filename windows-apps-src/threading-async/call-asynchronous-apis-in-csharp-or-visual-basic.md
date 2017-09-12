@@ -1,17 +1,19 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: "Chamar APIs assíncronas no Visual Basic ou C#"
 description: "A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, C#, Visual Basic, assíncrona"
-ms.openlocfilehash: a97db371702d3e498f91a3176840f44fd8a7534b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ad5d3432595761470a679bac690fe14711f9fdba
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Chamar APIs assíncronas no Visual Basic ou C#
 
@@ -34,8 +36,7 @@ Suponha que você tenha um aplicativo que lista os títulos das postagens de um 
 O exemplo a seguir obtém as listas de postagens de um blog chamando o método assíncrono, [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), e aguardando o resultado.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
-[!code-vb[Principal](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+[!code-csharp[Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)] [!code-vb[Principal](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
 

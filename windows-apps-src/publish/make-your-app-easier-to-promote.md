@@ -4,34 +4,36 @@ Description: "Chame atenção para seu aplicativo! Além de tornar seu aplicativ
 title: "Facilitar a promoção do seu app"
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9dee8e05dbf2384fc87c1974a732ff36459fa229
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8976e616910246366048cffa3c971b93b974e09d
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="make-your-app-easier-to-promote"></a>Facilitar a promoção do seu app
 
 
 Chame atenção para seu aplicativo! Além de tornar seu aplicativo o melhor possível, você pode seguir alguns procedimentos para facilitar sua divulgação pela Windows Store e por outros sites e colocá-lo sob os holofotes.
 
-## <a name="windows-store-requirements-for-featured-apps"></a>Requisitos da Windows Store para aplicativos em destaque
 
+## <a name="windows-store-requirements-for-featured-apps"></a>Requisitos da Windows Store para aplicativos em destaque
 
 A Windows Store expõe diversos aplicativos, agrupados por categoria ou tema. Há muitos aplicativos incríveis, por isso não é possível colocar todos em destaque. Além disso, não há como garantir que seu aplicativo será selecionado. Mas há algumas coisas que você pode fazer para aumentar as chances de seu aplicativo ser promovido na Loja.
 
 -   **Inclua capturas de tela e imagens promocionais atraentes**
 
-    Ao destacar os aplicativos, a Windows Store pode usar [capturas de tela e imagens do aplicativo](app-screenshots-and-images.md) em vários layouts. Certifique-se de criar ótimas capturas de tela que representem o seu aplicativo e verifique se a primeira captura de tela é especialmente representativa e atraente.
+    Ao destacar os aplicativos, a Windows Store pode usar [capturas de tela e imagens do aplicativo](app-screenshots-and-images.md) em vários layouts. Certifique-se de criar ótimas capturas de tela que representem o seu aplicativo e verifique se a primeira captura de tela é especialmente representativa e atraente. Você pode fornecer diferentes conjuntos de capturas de tela para mostrar a aparência do aplicativo em cada tipo de dispositivo compatível.
 
-    Para maximizar a chance de seu aplicativo ser destacados na loja, você também precisará fornecer pelo menos uma imagem promocional no envio do seu aplicativo. Fornecer o tamanho 2400 x 1200 pixels é o mais importante, já que podemos usar essa imagem de inúmeras formas na Loja para clientes do Windows 10. Tenha em mente que podemos cortar essa imagem em alguns layouts, então o centro da imagem deve os conter elementos visuais principais e a identidade visual/o logotipo de seu aplicativo. Você também pode fornecer tamanhos de imagem adicionais se seu aplicativo funcionar em versões anteriores do sistema operacional. Para obter mais detalhes e diretrizes, consulte [Arte promocional](app-screenshots-and-images.md#promotional-artwork).
+    Para maximizar a probabilidade de seu aplicativo ser destacados na Loja, você também deve incluir imagens promocionais no envio do aplicativo. Para obter mais detalhes e diretrizes, consulte [Imagens promocionais](app-screenshots-and-images.md#promotional-images).
 
--   **Crie apenas uma versão do aplicativo, não uma gratuita e outra paga**
+-   **Crie apenas uma versão do aplicativo, e não uma gratuita e outra paga**
 
-    Em vez de publicar uma versão gratuita e outra paga do mesmo aplicativo, ofereça uma versão de avaliação gratuita do aplicativo pago ou disponibilize-o gratuitamente e habilite a funcionalidade de compras no aplicativo. Desse modo, seu aplicativo terá um detalhe que funciona para todos os usuários: tanto os interessados em downloads gratuitos quanto aqueles que desejem fazer uma compra.
+    Em vez de publicar uma versão gratuita e outra paga do mesmo aplicativo, ofereça uma versão de avaliação gratuita do aplicativo pago ou disponibilize-o gratuitamente e ofereça complementos para que os clientes adquiram a funcionalidade avançada. Desse modo, seu aplicativo terá um detalhe que funciona para todos os usuários: tanto os interessados em downloads gratuitos quanto aqueles que desejem fazer uma compra.
 
 -   **Habilite filtros para aplicativos com conteúdo dirigido a 16+ e 18+**
 

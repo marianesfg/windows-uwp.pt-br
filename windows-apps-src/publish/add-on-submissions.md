@@ -4,14 +4,16 @@ Description: "Os complementos são publicados por meio do painel do Centro de De
 title: Envios de complemento
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7de8b6db65bb9ec58f16643dc8b477c274513c9a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 85ad5e297eed8daa5205aedc1253191fcff5fd49
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="add-on-submissions"></a>Envios de complemento
 
@@ -21,7 +23,8 @@ Os complementos são publicados por meio do painel do Centro de Desenvolvimento 
 
 A primeira etapa no processo de envio do complemento é criar o complemento no painel, [definindo seu tipo e ID de produto](set-your-add-on-product-id.md). Depois disso, você pode criar um envio para que seu complemento possa ser adquirido através da Windows Store. Você pode enviar um complemento ao mesmo tempo em que [envia seu aplicativo](app-submissions.md) ou pode trabalhar nele de forma independente. E você pode fazer [atualizações](#updating-an-add-on-after-publication) nos complementos depois que o aplicativo estiver na Loja, sem precisar reenviar o aplicativo.
 
-> **Observação**&nbsp;&nbsp;Esta seção da documentação descreve como enviar complementos no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de complementos.
+> [!NOTE]
+> Esta seção da documentação descreve como enviar complementos no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de complementos.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>Lista de verificação para o envio de um complemento
 
@@ -49,16 +52,17 @@ Aqui está uma lista das informações que você fornece ao criar o envio do com
 ### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
-| [**Preço base**](set-add-on-pricing-and-availability.md#base-price)                | Obrigatório                                    |
-| [**Mercados e precificação personalizada**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Padrão: disponível em todos os mercados possíveis |
+| [**Mercados**](set-add-on-pricing-and-availability.md#markets)  | Padrão: todos os mercados possíveis |
+| [**Visibilidade**](set-add-on-pricing-and-availability.md#visibility)   | Padrão: disponível para compra. Pode ser exibido nos detalhes do aplicativo |
+| [**Agenda**](set-add-on-pricing-and-availability.md#schedule)    | Padrão: Liberar o mais rápido possível
+| [**Preço**](set-add-on-pricing-and-availability.md#pricing)                | Necessário                                    |
 | [**Preço de venda**](put-apps-and-add-ons-on-sale.md)               | Opcional                             |
-| [**Distribuição e visibilidade**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Padrão: o complemento pode ser encontrado pelos clientes que navegam ou pesquisam na loja |
-| [**Data de publicação**](set-add-on-pricing-and-availability.md#publish-date)                | Padrão: publicar assim que o complemento for aprovado na certificação |
+| [**Data de publicação**](set-add-on-pricing-and-availability.md#publish-date)                | Padrão: publicar assim que possível |
 
 <span/>
 
 ### <a name="store-listings"></a>Listagens da Loja
-Uma listagem de Loja é necessária. É recomendável fornecer as listagens de Loja para cada [idioma](create-add-on-store-listings.md#languages) ao qual o seu aplicativo dá suporte.
+Uma listagem de Loja é necessária. É recomendável fornecer as listagens de Loja para cada [idioma](create-add-on-store-listings.md#store-listing-languages) ao qual o seu aplicativo dá suporte.
 
 | Nome do campo                    | Observações                                       |
 |-------------------------------|---------------------------------------------|
@@ -70,14 +74,16 @@ Uma listagem de Loja é necessária. É recomendável fornecer as listagens de L
 
 Quando você terminar de inserir essas informações, clique em **Enviar para a loja**. Na maioria dos casos, o processo de certificação leva cerca de uma hora. Depois disso, seu complemento será publicado na Loja e estará pronto para os clientes comprarem.
 
->**Observação**&nbsp;&nbsp;O complemento também deve ser implementado no código do seu app. Para obter mais informações, consulte [Compras no app e avaliações](../monetize/in-app-purchases-and-trials.md).
+> [!NOTE]
+> O complemento também deve ser implementado no código do aplicativo. Para obter mais informações, consulte [Compras no aplicativo e avaliações](../monetize/in-app-purchases-and-trials.md).
 
 
 ## <a name="updating-an-add-on-after-publication"></a>Atualizando um complemento após a publicação
 
 Você pode fazer alterações em um complemento publicado a qualquer momento. As alterações de complemento são enviadas e publicadas independentemente do seu aplicativo. Portanto, em geral, você não precisa atualizar o aplicativo inteiro para fazer alterações em um complemento, como atualizar o preço ou a descrição.
 
-> **Importante**&nbsp;&nbsp;Se o app estiver disponível para clientes no Windows 8.x, você deverá criar e publicar um novo envio de app para tornar as atualizações de complemento visíveis aos clientes. Da mesma forma, se você adicionar novos complementos a um aplicativo destinado ao Windows 8.x depois que o aplicativo for publicado, deverá atualizar o código do seu aplicativo para fazer referência a esses complementos e, em seguida, reenviar o aplicativo. Caso contrário, os novos complementos não serão visíveis aos clientes no Windows 8.x.
+> [!IMPORTANT]
+> Se o aplicativo estiver disponível para clientes no Windows 8.x, você deverá criar e publicar um novo envio de aplicativo para que as atualizações de complemento fiquem visíveis para os clientes. Da mesma forma, se você adicionar novos complementos a um aplicativo destinado ao Windows 8.x depois que o aplicativo for publicado, deverá atualizar o código do seu aplicativo para fazer referência a esses complementos e, em seguida, reenviar o aplicativo. Caso contrário, os novos complementos não serão visíveis aos clientes no Windows 8.x.
 
 Para enviar atualizações, acesse a página do complemento no seu painel e clique em **Atualizar**. Isso criará um novo envio para o complemento, usando as informações do seu envio anterior como um ponto de partida. Altere as informações desejadas e clique em **Enviar para a loja**.
 

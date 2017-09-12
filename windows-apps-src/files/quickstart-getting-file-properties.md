@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4412ccd88c73854c193e24e0ac4e3f03730a9f39
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e564c44a99419f1900ab6c322af4ea6dedb195cb
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
 
@@ -97,6 +99,8 @@ foreach (Windows.Storage.StorageFile file in files)
 Além das propriedades de nível superior e básicas (de um arquivo), há muitas propriedades associadas ao conteúdo do arquivo. Essas propriedades estendidas são acessadas com a chamada ao método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Um objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) é obtido chamando a propriedade [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225).) Embora propriedades de arquivo de nível superior e básicas sejam acessadas como propriedades de uma classe —[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) e **BasicProperties**, respectivamente — propriedades estendidas são obtidas transmitindo uma coleção [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) que representam os nomes das propriedades que devem ser recuperadas para o método **BasicProperties.RetrievePropertiesAsync**. Esse método então retorna uma coleção [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propriedade estendida é recuperada da coleção, por nome ou índice.
 
 Este exemplo enumera todos os arquivos da biblioteca Imagens, especifica os nomes das propriedades desejadas (**DataAccessed** e **FileOwner**) em um objeto [List](http://go.microsoft.com/fwlink/p/?LinkID=325246), transmite esse objeto [List](http://go.microsoft.com/fwlink/p/?LinkID=325246) para [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) para recuperar essas propriedades e, em seguida, recupera as propriedades pelo nome do objeto [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) retornado.
+
+Consulte as [Propriedades do Windows Core](https://msdn.microsoft.com/library/windows/desktop/mt805470) para obter uma lista completa das propriedades estendidas de um arquivo.
 
 ```csharp
 const string dateAccessedProperty = "System.DateAccessed";

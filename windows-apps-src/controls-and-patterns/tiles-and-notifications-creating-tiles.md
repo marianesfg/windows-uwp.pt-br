@@ -6,14 +6,16 @@ ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e0fccee6ede019b6bb8d8792956d2dca791bf63b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8907b57bce9c39c1c508b97536485a08e8e1bf83
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="tiles-for-uwp-apps"></a>Blocos de aplicativos UWP
 
@@ -26,6 +28,8 @@ translationtype: HT
 
 Quando você cria um novo projeto no Visual Studio, ele cria um bloco padrão simples que exibe o nome e o logotipo do seu aplicativo.
 
+Para editar seu bloco, clique duas vezes no arquivo **Package.appxmanifest** em seu projeto UWP principal para abrir o designer (ou clique com o botão direito do mouse no arquivo e selecione Exibir Código).
+
 ```XML
   <Applications>
     <Application Id="App"
@@ -33,8 +37,8 @@ Quando você cria um novo projeto no Visual Studio, ele cria um bloco padrão si
       EntryPoint="ExampleApp.App">
       <uap:VisualElements
         DisplayName="ExampleApp"
-        Square150x150Logo="Assets\Logo.png"
-        Square44x44Logo="Assets\SmallLogo.png"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
         Description="ExampleApp"
         BackgroundColor="#464646">
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -49,15 +53,15 @@ Há alguns itens que você deve atualizar:
 -   ShortName: como há espaço limitado para seu nome de exibição nos blocos, recomendamos que você especifique um ShortName também, para garantir que o nome do aplicativo não fique truncado.
 -   Imagens de logotipo:
 
-    Você deve substituir essas imagens por suas próprias. Você pode fornecer imagens para diferentes escalas visuais, mas não é necessário fornecer para todas elas. Para garantir que seu aplicativo tenha uma boa aparência em um vários dispositivos, recomendamos que você ofereça versões de escala em 100%, 200% e 400% de cada imagem.
+    Você deve substituir essas imagens por suas próprias. Você pode fornecer imagens para diferentes escalas visuais, mas não é necessário fornecer para todas elas. Para garantir que seu aplicativo tenha uma boa aparência em um vários dispositivos, recomendamos que você ofereça versões de escala em 100%, 200% e 400% de cada imagem. Consulte [Ativos de bloco e ícone](tiles-and-notifications-app-assets.md) para saber mais sobre a geração desses ativos.
 
-    As imagens dimensionadas seguem esta convenção de nomenclatura: testes
+    As imagens dimensionadas seguem esta convenção de nomenclatura:
     
     *&lt;nome da imagem&gt;*.scale-*&lt;fator de escala&gt;*.*&lt;extensão de arquivo de imagem&gt;* 
 
-    Por exemplo: SmallLogo.scale-100.png
+    Por exemplo: SplashScreen.scale-100.png
 
-    Quando você se referir à imagem, faça referência e ela como *&lt;nome da imagem&gt;*.*&lt;extensão de arquivo de imagem&gt;* ("SmallLogo.png" neste exemplo). O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
+    Quando você se referir à imagem, faça referência e ela como *&lt;nome da imagem&gt;*.*&lt;extensão de arquivo de imagem&gt;* ("SplashScreen.png" neste exemplo). O sistema selecionará automaticamente a imagem dimensionada apropriada para o dispositivo nas imagens fornecidas por você.
 
 -   Você não precisa, mas é altamente recomendável fornecer logotipos para tamanhos de bloco amplo e grande para que o usuário possa redimensionar o bloco do seu aplicativo para esses tamanhos. Para fornecer essas imagens adicionais, você cria um elemento `DefaultTile` e usa os atributos `Wide310x150Logo` e `Square310x310Logo` para especificar as imagens adicionais:
 ```    XML
@@ -67,13 +71,13 @@ Há alguns itens que você deve atualizar:
           EntryPoint="ExampleApp.App">
           <uap:VisualElements
             DisplayName="ExampleApp"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
+            Square150x150Logo="Assets\Square150x150Logo.png"
+            Square44x44Logo="Assets\Square44x44Logo.png"
             Description="ExampleApp"
             BackgroundColor="#464646">
             <uap:DefaultTile
-              Wide310x150Logo="Assets\WideLogo.png"
-              Square310x310Logo="Assets\LargeLogo.png">
+              Wide310x150Logo="Assets\Wide310x150Logo.png"
+              Square310x310Logo="Assets\Square310x310Logo.png">
             </uap:DefaultTile>
             <uap:SplashScreen Image="Assets\SplashScreen.png" />
           </uap:VisualElements>
@@ -84,25 +88,6 @@ Há alguns itens que você deve atualizar:
 ## <a name="use-notifications-to-customize-your-tile"></a>Use notificações para personalizar seu bloco
 
 
-Depois que seu aplicativo for instalado, você pode usar notificações para personalizar seu bloco. Você pode fazer isso na primeira vez que seu aplicativo for iniciado ou em resposta a algum evento, como uma notificação por push.
+Depois que seu aplicativo for instalado, você pode usar notificações para personalizar seu bloco. Você pode fazer isso na primeira vez que seu aplicativo for iniciado ou em resposta a um evento, como uma notificação por push.
 
-1.  Crie uma carga XML (na forma de um [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)) que descreve o bloco.
-
-    -   O Windows 10 apresenta um novo esquema de bloco adaptável que você pode usar. Para obter instruções, consulte [Blocos adaptáveis](tiles-and-notifications-create-adaptive-tiles.md). Para o esquema, consulte o artigo [Esquema de blocos adaptáveis](tiles-and-notifications-adaptive-tiles-schema.md). 
-
-    -   Você pode usar os modelos de bloco do Windows 8.1 para definir seu bloco. Para saber mais, consulte [Criando blocos e notificações (Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260).
-
-2.  Crie um objeto de notificação de bloco e passe para ele o [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173) que você criou. Existem vários tipos de objetos de notificação:
-    -   Um objeto [**Windows.UI.NotificationsTileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) para atualizar imediatamente o bloco.
-    -   Um objeto [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) para atualizar o bloco em algum momento no futuro.
-
-3.  Use [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623) para criar um objeto [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628).
-4.  Chame o método [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632) e passe para ele o objeto de notificação de bloco que você criou na etapa 2.
-
- 
-
- 
-
-
-
-
+Para saber como enviar notificações de blocos, consulte [Enviar uma notificação de bloco local](tiles-and-notifications-sending-a-local-tile-notification.md).

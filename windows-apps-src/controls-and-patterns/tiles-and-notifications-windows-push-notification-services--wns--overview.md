@@ -6,14 +6,16 @@ ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 35268ea199c139680c4a11c30744ecf54867e592
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 16c5092c8eb3c6d7460dd94c61c85522ef68a2fb
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -154,7 +156,7 @@ Este diagrama ilustra o fluxo de dados:
 
 Por padrão, as notificações de bloco e de selo expiram três dias depois que são baixadas. Quando uma notificação expira, o conteúdo é removido do bloco ou da fila e não é mais mostrado para o usuário. É recomendável definir uma expiração (usando um tempo que faça sentido para o aplicativo) em todas as notificações de bloco e de selo. Assim, você garante que o conteúdo do bloco não continue além do tempo relevante. Um tempo de expiração explícito é essencial para conteúdo com tempo de vida definido. Isso também garante a remoção de conteúdo obsoleto se seu serviço de nuvem parar de enviar notificações ou se o usuário se desconectar da rede por um período de tempo prolongado.
 
-Seu serviço de nuvem pode definir uma expiração para cada notificação com a definição do cabeçalho HTTP X-WNS-Expires para especificar o tempo (em segundos) que sua notificação permanecerá válida após o envio. Para saber mais, consulte [Cabeçalhos de solicitação e resposta do serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl).
+O serviço de nuvem pode definir uma expiração para cada notificação com a definição do cabeçalho HTTP X-WNS-TTL para especificar o tempo (em segundos) que sua notificação permanecerá válida após o envio. Para saber mais, consulte [Cabeçalhos de solicitação e resposta do serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl).
 
 Por exemplo, durante um dia de negociação ativo do mercado de ações, você pode definir a expiração para uma atualização de preços de ações para duas vezes mais do que seu intervalo de envio (por exemplo, uma hora após o recebimento, se estiver enviando notificações a cada meia hora). Outro exemplo é um aplicativo de notícias que pode determinar que um dia é um período de expiração adequado para a atualização de blocos de notícias diárias.
 
@@ -200,9 +202,9 @@ async public void CheckForEnergySaving()
       dontAskAgain = Convert.ToBoolean(dontAskSetting);
    }
    
-   // Check if battery saver is on and that it&#39;s okay to raise dialog
+   // Check if battery saver is on and that it's okay to raise dialog
    if ((PowerManager.EnergySaverStatus == EnergySaverStatus.On)
-         &amp;&amp; (dontAskAgain == false))
+         && (dontAskAgain == false))
    {
       // Check dialog results
       ContentDialogResult dialogResult = await saveEnergyDialog.ShowAsync();
@@ -214,7 +216,7 @@ async public void CheckForEnergySaving()
 
       // Save reminder preference
       if (dontAskAgainBox.IsChecked == true)
-      {  // Don&#39;t raise dialog again
+      {  // Don't raise dialog again
          localSettings.Values["dontAskAgainSetting"] = "true";
       }
    }

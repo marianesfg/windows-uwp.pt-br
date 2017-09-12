@@ -1,3 +1,19 @@
+---
+author: jwmsft
+title: "Análise de aplicativo"
+description: Analise seu aplicativo para os problemas de desempenho.
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2017
+---
 # <a name="app-analysis-overview"></a>Visão geral da análise de aplicativo
 
 Análise de aplicativo é uma ferramenta que fornece aos desenvolvedores uma notificação de ocorrência de problemas de desempenho. A Análise de aplicativos executa seu código de aplicativos em um conjunto de práticas recomendadas e diretrizes de desempenho.
@@ -105,7 +121,7 @@ Defina um tamanho de decodificação explícito para criar uma versão da imagem
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos recolhidos em tempo de carregamento
 
-Um padrão comum em aplicativos é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando X:deferloadstrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
+Um padrão comum em apps é ocultar elementos da interface do usuário inicialmente e mostrá-las posteriormente. Na maioria dos casos, esses elementos devem ser adiados usando x:Load ou x:DeferLoadStrategy para evitar pagar o custo de criar o elemento em tempo de carregamento.
 
 Isso inclui os casos em que um booleano para conversor de visibilidade é usado para ocultar itens até um momento posterior.
 
@@ -119,9 +135,9 @@ Essa regra foi disparada porque um elemento foi recolhido em tempo de carregamen
 
 ### <a name="solution"></a>Solução
 
-Usar x:DeferLoadStrategy, você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Isso é bom para atrasar a interface do usuário de processamento que não é visível no primeiro quadro. Você pode optar por carregar o elemento quando necessário ou como parte de um conjunto de lógica atrasada. Para disparar o carregamento, chame findName no elemento que você deseja carregar.
+Usando [x:Load attribute](../xaml-platform/x-load-attribute.md) ou [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785), você pode atrasar o carregamento de uma parte da interface do usuário e carregá-la quando necessário. Isso é bom para atrasar a interface do usuário de processamento que não é visível no primeiro quadro. Você pode optar por carregar o elemento quando necessário ou como parte de um conjunto de lógica atrasada. Para disparar o carregamento, chame findName no elemento que você deseja carregar. x:Load estende os recursos de x:DeferLoadStrategy, permitindo que os elementos sejam descarregados e que o estado de carregamento seja controlado via x:Bind.
 
-Em alguns casos, usar findName para mostrar uma parte da interface do usuário pode não ser a solução. Isso é verdadeiro se você está esperando obter uma parte significativa da interface do usuário no clique de um botão com latência muito baixa. Nesse caso, você deve usar X:deferloadstrategy e definir Visibility como Collapsed no elemento que você deseja obter. Depois que a página tiver sido carregada e o thread da interface do usuário estiver livre, você poderá chamar findName quando necessário para carregar os elementos. Os elementos não ficarão visíveis para o usuário até que você defina a Visibilidade do elemento como Visible.
+Em alguns casos, usar findName para mostrar uma parte da interface do usuário pode não ser a solução. Isso é verdadeiro se você está esperando obter uma parte significativa da interface do usuário no clique de um botão com latência muito baixa. Nesse caso, convém compensar a latência de interfaces do usuário mais rápidas às custas de memória adicional; nesse caso, você deve usar X:DeferLoadStrategy e definir Visibility como Collapsed no elemento que deseja observar. Depois que a página tiver sido carregada e o thread da interface do usuário estiver livre, você poderá chamar findName quando necessário para carregar os elementos. Os elementos não ficarão visíveis para o usuário até que você defina a Visibilidade do elemento como Visible.
 
 ## <a name="listview-is-not-virtualized"></a>ListView não está virtualizado
 

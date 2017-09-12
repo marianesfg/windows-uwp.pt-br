@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, anúncios, publicidade, AdControl, javascript"
-ms.openlocfilehash: b669925c3b630ddbfe82086231c46c951072244b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5a64f58c7f66dd1177549562364a483641b1fd32
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="create-an-adcontrol-in-javascript"></a>Criar um AdControl em JavaScript
-
-
-
 
 O exemplo deste artigo mostra como criar programaticamente um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) em JavaScript. Este artigo presume que você já adicionou as referências necessárias ao seu projeto para usar um **AdControl**. Para obter mais informações, incluindo um passo a passo detalhado para criar e inicializar um **AdControl** na marcação HTML em vez de JavaScript, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md).
 
@@ -42,7 +41,8 @@ Instancie o **AdControl** na função **app.onactivated**.
 
 Este exemplo presume que você já tenha declarado os métodos de manipulador de eventos chamados **myAdError**, **myAdRefreshed** e **myAdEngagedChanged**.
 
->**Observação**&nbsp;&nbsp;Os valores de *applicationId* e *adUnitId* mostrados neste exemplo são [valores de modo de teste](test-mode-values.md). Você deve [substituir esses valores por valores dinâmicos](set-up-ad-units-in-your-app.md) do Centro de Desenvolvimento do Windows antes de enviar seu app.
+> [!NOTE]
+> Os valores de *applicationId* e *adUnitId* mostrados neste exemplo são [valores de modo de teste](test-mode-values.md). Você deve [substituir esses valores por valores dinâmicos](set-up-ad-units-in-your-app.md) do Centro de Desenvolvimento do Windows antes de enviar seu app.
 
 Se você usa esse código e não vê anúncios, tente inserir um atributo **position:relative** no **div** que contém o **AdControl**. Isso substituirá a configuração padrão do **IFrame**. Os anúncios serão exibidos corretamente, a menos que eles não estejam sendo mostrados devido ao valor desse atributo. Observe que novas unidades de anúncios podem não estar disponíveis por até 30 minutos.
 

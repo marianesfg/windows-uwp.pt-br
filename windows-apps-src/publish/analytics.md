@@ -1,62 +1,50 @@
 ---
-author: shawjohn
-Description: "Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows."
-title: "Análises"
+author: JnHs
+Description: "Obtenha análises detalhadas de seus aplicativos do Windows no painel ou por outros métodos."
+title: Analisar o desempenho do aplicativo
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, análises, relatórios, painel, apps"
-ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 57e4a30258fa25411bb461cac56aa18d2f74981d
+ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/29/2017
 ---
-# <a name="analytics"></a>Análises
+# <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
-Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar informações sobre a integridade do aplicativo, o uso de anúncios e muito mais. Visualize os relatórios no painel ou [baixe os relatórios de que você precisa](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
+Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar métricas sobre a integridade do aplicativo, o uso de anúncios e muito mais.
 
-> [!NOTE]
-> Além dos relatórios do painel, é possível acessar programaticamente alguns dados analíticos usando a API REST de análises da [Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir relatórios de análise no painel ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
 
-## <a name="analytics-for-all-your-apps"></a>Análises para todos os seus aplicativos
+## <a name="view-key-analytics-for-all-your-apps"></a>Exibir análises chave para todos os aplicativos
 
-Para exibir análises importantes sobre seus aplicativos mais baixados, no menu de navegação superior, selecione **Visão geral** > **de análises**. Por padrão, a página **Visão geral de análises** mostra informações sobre os cinco aplicativos que têm mais aquisições durante seu ciclo de vida. Para escolher aplicativos diferentes a serem mostrados, selecione **Alterar filtros**.
+Para exibir análises importantes sobre seus aplicativos mais baixados, expanda **Analisar** e selecione **Visão geral**. Por padrão, a página **Visão geral de análises** mostra informações sobre os cinco aplicativos que têm mais aquisições durante seu ciclo de vida. Para escolher aplicativos publicados diferentes para exibição, selecione **Filtros**.
 
-## <a name="available-reports-for-each-app"></a>Relatórios disponíveis para cada aplicativo
+## <a name="view-individual-reports-for-each-app"></a>Exibir relatórios individuais de cada aplicativo
 
 Nesta seção, você encontrará detalhes sobre as informações apresentadas em cada um dos seguintes relatórios:
 
 -   [Relatório de aquisições](acquisitions-report.md)
 -   [Relatório de aquisições de complemento](add-on-acquisitions-report.md)
--   [Relatório de instalações](installs-report.md)
 -   [Relatório de uso](usage-report.md)
 -   [Relatório de integridade](health-report.md)
--   [Relatório de classificações](ratings-report.md)
 -   [Relatório de avaliações](reviews-report.md)
--   [Relatório de comentários](feedback-report.md)
--   [Relatório Canais e conversões](channels-and-conversions-report.md)
--   [Relatório de controle de anúncios](ad-mediation-report.md)
+-   [Relatório de feedback](feedback-report.md)
 -   [Relatório de desempenho de anúncios](advertising-performance-report.md)
--   [Relatório de desempenho de afiliadas](affiliates-performance-report.md)
--   [Relatório de promoção do seu app](promote-your-app-report.md)
+-   [Relatório de campanha publicitária](promote-your-app-report.md)
 
 > [!NOTE]
-> Dependendo dos recursos e implementação específicos do seu app, você não verá dados em todos esses relatórios.
-
-## <a name="page-and-section-filters"></a>Filtros de seção e página
-
-Cada relatório inclui filtros que você pode usar para fazer uma busca detalhada em seus dados. Próximo ao topo da página, você verá **Aplicar filtros**. Você pode usar esses filtros para limitar ou expandir o escopo de todos os gráficos e as informações contidas na página.
-
-Dentro de cada gráfico em particular, você também pode ver os filtros de seção individuais. Eles limitarão os dados mostrados apenas para esse gráfico específico.
-
-Os filtros específicos variam de acordo com o relatório. Os tópicos desta seção explicarão quais são os filtros disponíveis e descreverão os outros dados na página de cada relatório.
+> Dependendo dos recursos e da implementação específicos do aplicativo, você não verá dados em todos esses relatórios.
 
 <span id="no-dashboard"/>
 ## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Acessar os dados analíticos sem usar o painel do Centro de Desenvolvimento
 
-Além dos relatórios analíticos do painel, há várias outras maneiras de acessar seus dados analíticos.
+Além dos relatórios analíticos no painel, há várias outras maneiras de acessar seus dados de análise.
 
 ### <a name="windows-store-analytics-api"></a>API de análise da Windows Store
 
@@ -79,5 +67,3 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 
 Instale o aplicativo [Centro de Desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para exibir rapidamente os detalhes sobre a integridade e o desempenho de seus aplicativos em qualquer dispositivo Windows 10.
 
-## <a name="related-topics"></a>Tópicos relacionados
-- [Publique aplicativos do Windows](index.md)

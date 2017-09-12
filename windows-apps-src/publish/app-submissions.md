@@ -5,13 +5,15 @@ title: Envios de aplicativos
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: "lista de verificação"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d6764051a6f3d9d5c6d851f0ba15353da5f9d5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fdef30d07386a1c5ab7dc6bd62b9507ff5852194
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -20,12 +22,12 @@ Assim que tiver [criado seu aplicativo reservando um nome](create-your-app-by-re
 
 Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. O envio será salvo em seu painel, para que você possa trabalhar nele sempre que estiver pronto.
 
-Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo, clique em **Atualizar** ao lado de envio mais recente mostrado na página de visão geral do aplicativo.
+Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo.
 
-> **Observação**&nbsp;&nbsp;Esta seção da documentação descreve como usar um envio de aplicativo no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de aplicativos.
+> [!NOTE]
+> Esta seção da documentação descreve como criar um envio de aplicativo no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Windows Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de aplicativos.
 
 ## <a name="app-submission-checklist"></a>Lista de verificação de envio de aplicativo
-
 
 Aqui estão os detalhes que você pode fornecer quando for criar um envio de aplicativo, com links para mais informações.
 
@@ -34,23 +36,24 @@ Os itens que você será solicitado a fornecer ou especificar são indicados aba
 ### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Preço de base**                | Necessário                                    | [Preço de base](set-app-pricing-and-availability.md#base-price)              |
-| **Avaliação gratuita**                | Padrão: nenhuma avaliação gratuita                      | [Adicionando avaliações e compras no aplicativo](https://msdn.microsoft.com/library/windows/apps/jj193599)  |
-| **Mercados e preços personalizados** | Padrão: todos os mercados possíveis, nenhum preço personalizado | [Definir preço e seleção de mercado](define-pricing-and-market-selection.md)              |
-| **Preço de venda**              | Opcional                                    | [Colocar aplicativos e complementos à venda](put-apps-and-add-ons-on-sale.md)                                       |
-| **Distribuição e visibilidade** | Padrão: disponibilize este aplicativo na Loja. | [Distribuição e visibilidade](set-app-pricing-and-availability.md#distribution-and-visibility) |
-| **Licenciamento para organizações**    | Padrão: permitir aquisição de volume por organizações | [Opções de licenciamento para organizações](organizational-licensing.md)                        |
+| **Mercados**                   | Padrão: All possible markets,  | [Definir preço e seleção de mercado](define-pricing-and-market-selection.md)         |
+| **Visibilidade**                | Padrão: Make this app available and discoverable in the Store | [Visibilidade](set-app-pricing-and-availability.md#visibility) |
+| **Agenda**                  | Padrão: Liberar o mais rápido possível        | [Configurar o agendamento preciso do lançamento](configure-precise-release-scheduling.md) |
+| **Preço base**                | Necessário                                    | [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md)              |
+| **Avaliação gratuita**                | Padrão: Nenhuma avaliação gratuita                      | [Avaliação gratuita](set-app-pricing-and-availability.md#free-trial)              |
+| **Preço de venda**              | Opcional                                    | [Colocar aplicativos e complementos à venda](put-apps-and-add-ons-on-sale.md)           |
+| **Licenciamento para organizações**    | Padrão: permitir aquisição de volume por organizações | [Opções de licenciamento para organizações](organizational-licensing.md)        |
 | **Data de publicação**                | Padrão: publicar assim que possível      | [Data de publicação](set-app-pricing-and-availability.md#publish-date)          |
 
 <span/>
 
-### <a name="app-properties-page"></a>Página de propriedades do aplicativo
+### <a name="properties-page"></a>Página de propriedades
 
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Categoria e subcategoria**  | Necessário                                    | [Tabela de categoria e subcategoria](category-and-subcategory-table.md)       |
 | **Requisitos do sistema**      | Opcional                                    | [Requisitos do sistema](enter-app-properties.md#system-requirements)      |
-| **Declarações de aplicativo**          | Padrão: os clientes podem instalar esse aplicativo em drives alternativos ou armazenamento removível; o Windows pode incluir os dados desse aplicativo em backups automáticos do OneDrive. | [Declarações de aplicativo](app-declarations.md) |
+| **Declarações do produto**          | Padrão: os clientes podem instalar esse aplicativo em drives alternativos ou armazenamento removível; o Windows pode incluir os dados desse aplicativo em backups automáticos do OneDrive. | [Declarações do produto](app-declarations.md) |
 
 <span/>
 
@@ -80,19 +83,22 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Descrição**               | Necessário                                    | [Escreva uma ótima descrição do aplicativo](write-a-great-app-description.md) |
-| **Notas de versão**             | Opcional                                    | [Notas de versão](create-app-store-listings.md#release-notes)         |
-| **Capturas de tela**               | Obrigatório (pelo menos uma captura de tela)          | [Imagens e capturas de tela do aplicativo](app-screenshots-and-images.md)       |
-| **Ícone do bloco do aplicativo**             | Opcional, mas altamente recomendado para o Windows Phone 8.1 e versões anteriores | [Ícone do bloco do aplicativo](create-app-store-listings.md#app-tile-icon) |
-| **Arte final promocional**       | Opcional                                    | [Imagens e capturas de tela do aplicativo](app-screenshots-and-images.md)       |
-| **Recursos do aplicativo**              | Opcional                                    | [Recursos](create-app-store-listings.md#app-features)               |
-| **Requisitos adicionais do sistema**      | Opcional                                    | [Requisitos adicionais do sistema](create-app-store-listings.md#additional-system-requirements) |
-| **Palavras-chave**                  | Opcional                                    | [Palavras-chave](create-app-store-listings.md#keywords)                   |
+| **Notas de versão**             | Opcional                                    | [Notas de versão](create-app-store-listings.md#release-notes)       |
+| **Capturas de tela**               | Necessário (pelo menos uma captura de tela)          | [Capturas de tela](app-screenshots-and-images.md#screenshots)          |
+| **Logotipos da Loja**               | Opcional, mas altamente recomendado para o Windows Phone 8.1 e versões anteriores | [Logotipos da Loja](app-screenshots-and-images.md#store-logos)             |
+| **Imagens promocionais**        | Opcional                                    | [Imagens promocionais](app-screenshots-and-images.md#promotional-images) |
+| **Imagens do Xbox**               | Opcional                                    | [Imagens do Xbox](app-screenshots-and-images.md#xbox-images)              |
+| **Imagens promocionais opcionais**       | Opcional                            | [Imagens promocionais opcionais](app-screenshots-and-images.md#optional-promotional-images)       |
+| **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
+| **Recursos do aplicativo**              | Opcional                                    | [Recursos](create-app-store-listings.md#app-features)             |
+| **Requisitos adicionais do sistema**      | Opcional                                    | [Requisitos adicionais do sistema](create-app-store-listings.md#additional-system-requirements) 
+| **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
+| **Política de privacidade**            | Obrigatório para alguns aplicativos. Consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1) | [Política de privacidade](create-app-store-listings.md#privacy-policy)        |
 | **Informações sobre direitos autorais e marcas registradas** | Opcional                                 | [Informações sobre direitos autorais e marcas registradas](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Termos de licença adicionais**  | Opcional                                    | [Termos adicionais da licença](create-app-store-listings.md#additional-license-terms) |
-| **Site**                   | Opcional                                    | [Site](create-app-store-listings.md#website)                     |
-| **Informações de contato de suporte**      | Opcional                                    | [Informações de contato de suporte](create-app-store-listings.md)                |
-| **Política de privacidade**            | Obrigatório para alguns aplicativos. Consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1) | [Política de privacidade](create-app-store-listings.md#privacy-policy) |
-| **Listagens da Loja específicas da plataforma** | Opcional                               | [Criar listagens específicas de plataforma da Loja](create-platform-specific-store-listings.md) |
+| **Site**                   | Opcional                                    | [Site](create-app-store-listings.md#website)                   |
+| **Informações de contato de suporte**      | Opcional                                    | [Informações de contato de suporte](create-app-store-listings.md)              |
+| **Listagens da Loja específicas de plataforma** | Opcional                               | [Criar listagens específicas de plataforma da Loja](create-platform-specific-store-listings.md)  |
 
 <span/>
 

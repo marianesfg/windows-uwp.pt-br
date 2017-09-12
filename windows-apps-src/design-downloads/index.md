@@ -1,61 +1,40 @@
 ---
 description: "Obtenha os downloads e ferramentas mais recentes para o layout da interface do usuário e designs de controle de aplicativos UWP."
-keywords: "layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas de UWP"
-title: "Downloads de design para aplicativos UWP – Desenvolvimento de aplicativos do Windows"
+keywords: "layout de aplicativo UWP, interface do usuário, designs de interface do usuário, downloads, ferramentas UWP"
+title: Projetar kits de ferramentas e recursos para aplicativos UWP
 author: mijacobs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
-ms.openlocfilehash: 6f6edf982ffd329561b35c51ca19ee7a6fa92bf0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2a92a2160f326bc2a0e576f5e46b652983026d35
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/03/2017
 ---
-# <a name="design-downloads-for-uwp-apps"></a>Downloads de design para aplicativos UWP
+# <a name="design-toolkits-and-resources-for-uwp-apps"></a>Projetar kits de ferramentas e recursos para aplicativos UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Esta seção contém downloads relacionados a design e à interface do usuário para aplicativos UWP. Para ferramentas adicionais, como o Visual Studio, consulte [nossa página principal de downloads](https://developer.microsoft.com/downloads). 
+Esta seção contém design e downloads relacionados à interface do usuário para aplicativos UWP. Para ferramentas adicionais, como o Visual Studio, consulte [nossa página principal de downloads](https://developer.microsoft.com/downloads). 
 
 
-## <a name="design-templates"></a>Modelos de design
+## <a name="design-toolkits"></a>Kits de ferramentas de design
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-    <p><b>PowerPoint</b><br/>
-Este conjunto contém tudo o que você precisa para simular rapidamente esboços para aplicativos UWP, inclusive controles e layouts.<br/>[Baixar os modelos de design para PowerPoint](https://go.microsoft.com/fwlink/p/?LinkId=534632)</p>
-  </div>
-  <div class="side-by-side-content-right">
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=534632"><img src="images/powerpoint.jpg" alt="Download the PowerPoint design templates" /></a>
-  </div>
-</div>
-</div>
+Estes kits de ferramentas fornecem controles e modelos de layout para o design de aplicativos UWP.
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-            <p><b>Adobe Illustrator</b><br/>
-Estes modelos do Adobe Illustrator fornecem controles e layouts para o design de aplicativos UWP.<br/>[Baixar os modelos de design para Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534634)</p>    
-  </div>
-  <div class="side-by-side-content-right">
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=534634"><img src="images/illustrator.jpg" alt="Download the design templates for Adobe Illustrator" /></a>
-  </div>
-</div>
-</div>
+* [Kit de ferramentas do Adobe XD](http://download.microsoft.com/download/1/3/C/13CE5C92-024E-40C8-A867-83D891CC4D39/Adobe XD design toolkit for UWP apps v1707.zip)
+* [Kit de ferramentas do Adobe Illustrator](http://download.microsoft.com/download/C/C/4/CC478BD5-6469-450D-80EF-52D27EEAD4C4/Adobe Illustrator design toolkit for UWP apps v1705.zip)
+* [Kit de ferramentas do Adobe Photoshop](http://download.microsoft.com/download/C/D/A/CDA7FC2B-D5EA-48A4-906D-C6F4A4B311BB/Adobe Photoshop design toolkit for UWP apps v1705.zip)
+* [Kit de ferramentas do Framer (no GitHub)](https://github.com/Microsoft/windows-framer-toolkit)
+* [Kit de ferramentas do Sketch](http://download.microsoft.com/download/B/4/C/B4C6B0B9-C8BC-4CE2-A833-DCE89399060E/Sketch design toolkit for UWP apps v1707.zip)
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-            <p><b>Adobe Photoshop</b><br/>
-Os controles e layouts para criar aplicativos UWP no Adobe Photoshop.<br/>[Baixar os modelos de design para Adobe Photoshop](http://go.microsoft.com/fwlink/p/?LinkId=626453)</p>    
-  </div>
-  <div class="side-by-side-content-right">
-<a href="http://go.microsoft.com/fwlink/p/?LinkId=626453"><img src="images/photoshop.jpg" alt="Download the design templates for Adobe Photoshop" /></a>
-  </div>
-</div>
-</div>
+## <a name="fonts"></a>Fontes
+
+* [Segoe da interface do usuário e fontes de ícones MDL2](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe fonts v1705.2.zip)
+* [Fonte de ícone do Hololens](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens-font-v1705.zip)
 
 ## <a name="tools"></a>Ferramentas
 

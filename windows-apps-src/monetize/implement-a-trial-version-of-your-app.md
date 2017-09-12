@@ -3,24 +3,26 @@ author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: "Saiba como usar o namespace Windows.Services.Store para implementar uma versão de avaliação do seu aplicativo."
 title: "Implementar uma versão de avaliação do aplicativo"
-keywords: "windows 10, uwp, compras no aplicativo, avaliação, IAPs, Windows.Services.Store"
+keywords: "windows 10, uwp, avaliação, compras no aplicativo, Windows.Services.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 7cc8ae05bdf496b9d3a9973f8ebd09a7d3f0210a
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 2419c78e74a69d986ae23e70ced86683a7543cb4
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do aplicativo
 
 Se você configurar seu aplicativo como [avaliação gratuita no painel do Centro de Desenvolvimento do Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que os clientes possam usar seu aplicativo gratuitamente durante um período de avaliação, incentive seus clientes a atualizarem para a versão completa do seu aplicativo excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
-Os aplicativos destinados ao Windows 10, versão 1607 ou posterior, podem usar membros da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar se o usuário tem uma licença da versão de avaliação do seu aplicativo e ser notificado se o estado da licença mudar enquanto seu aplicativo estiver em execução.
+Este artigo mostra como usar membros da classe [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) no namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar se o usuário tem uma licença da versão de avaliação do seu aplicativo e ser notificado se o estado da licença mudar enquanto seu aplicativo estiver em execução. Este namespace está disponível para os apps direcionados ao Windows 10, versão 1607 ou posterior. 
 
 > [!NOTE]
-> Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607, ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> Este artigo se refere a aplicativos direcionados ao Windows 10, versão 1607 ou posterior. Se seu aplicativo for direcionado para uma versão anterior do Windows 10, use o namespace [ApplicationModel](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez do **Windows.Services.Store**. Para obter mais informações, consulte [este artigo](exclude-or-limit-features-in-a-trial-version-of-your-app.md).
 
 ## <a name="guidelines-for-implementing-a-trial-version"></a>Diretrizes para a implementação de uma versão de avaliação
 
@@ -61,7 +63,7 @@ Lembre-se de explicar como o app se comportará durante e após o período de av
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao Windows 10, versão 1607 ou posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows que está configurado como uma [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem tempo limite e esse aplicativo foi publicado e disponibilizado na Loja. Pode ser um aplicativo que você deseja liberar para os clientes ou pode ser um aplicativo básico que atenda aos requisitos mínimos [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que você esteja usando somente para testes. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows que está configurado como uma [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem tempo limite e esse aplicativo foi publicado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.

@@ -5,24 +5,25 @@ title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: uwp, complementos, compras no aplicativo, IAPs, Windows.ApplicationModel.Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1f7d4c60d077e3c556f0d369cc41d2e50ab9092b
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/09/2017
 ---
+# <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no app
 
-# <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no aplicativo
+> [!NOTE]
+> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar compras de produto no aplicativo. Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [este artigo](enable-in-app-purchases-of-apps-and-add-ons.md).
 
->**Observação**&nbsp;&nbsp;Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Se seu aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para gerenciar complementos (também conhecidos como produtos no aplicativo ou IAPs), em vez do namespace **Windows.ApplicationModel.Store**. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Consulte a seguir como habilitar esses produtos em seu aplicativo.
 
-Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo.
-
-> **Observação**&nbsp;&nbsp;Produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do app. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
+> [!NOTE]
+> Os produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -41,17 +42,19 @@ Quando seu app estiver em processo de inicialização, obtenha o objeto [License
 
 Para cada recurso a ser disponibilizado por meio de uma transação de produto no aplicativo, crie uma oferta e adicione-a ao seu app.
 
-> **Importante**&nbsp;&nbsp;Você deve adicionar todos os produtos no aplicativo que deseja apresentar aos clientes antes de enviar o app à Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
+> [!IMPORTANT]
+> Você deve adicionar todos os produtos no aplicativo que deseja apresentar para seus clientes antes de enviá-lo para a Loja. Para adicionar novos produtos no aplicativo depois, você deve atualizar o aplicativo e reenviar uma nova versão.
 
 1.  **Crie um token de oferta no aplicativo**
 
     Você pode identificar cada produto no seu aplicativo por um token. Esse token é uma cadeia de caracteres que você define e usa no aplicativo e na Loja para identificar um produto no aplicativo específico. Dê (ao aplicativo) um nome exclusivo e significativo, para poder identificar o recurso correto que ele representa durante a codificação. Este são alguns exemplos de nomes:
 
-    -   "SpaceMissionLevel4"
+    * "SpaceMissionLevel4"
+    * "ContosoCloudSave"
+    * "RainbowThemePack"
 
-    -   "ContosoCloudSave"
-
-    -   "RainbowThemePack"
+  > [!NOTE]
+  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor da [ID do produto](../publish/set-your-add-on-product-id.md#product-id) especificado quando você [define o complemento correspondente para o seu aplicativo no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
 
 2.  **Codifique o recurso em um bloco de condições**
 
@@ -77,7 +80,10 @@ Esta etapa é fácil: basta mudar todas as referências a [CurrentAppSimulator](
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Etapa 4: Configurar o produto no aplicativo na Loja
 
-No painel do Centro de Desenvolvimento, defina a ID do produto, o tipo, o preço e outras propriedades para seu produto no aplicativo. Lembre-se de configurá-lo com a mesma configuração que você definiu no WindowsStoreProxy.xml durante o teste. Para obter mais informações, consulte [Envios de IAP](https://msdn.microsoft.com/library/windows/apps/mt148551).
+No painel do Centro de Desenvolvimento, navegue até seu aplicativo e [crie um complemento](../publish/add-on-submissions.md) que corresponda à sua oferta de produto no aplicativo. Defina a ID do produto, o tipo, o preço e outras propriedades para o complemento. Lembre-se de configurá-lo com a mesma configuração que você definiu no WindowsStoreProxy.xml durante o teste.
+
+  > [!NOTE]
+  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor da [ID do produto](../publish/set-your-add-on-product-id.md#product-id) especificado para o complemento correspondente no painel.
 
 ## <a name="remarks"></a>Comentários
 
@@ -92,4 +98,3 @@ Se você precisar usar recibos para verificar se o usuário fez uma compra no ap
 * [Gerenciar um catálogo abrangente de produtos no aplicativo](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para verificar compras de produtos](use-receipts-to-verify-product-purchases.md)
 * [Exemplo da Loja (demonstra avaliações e compras no aplicativo)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-

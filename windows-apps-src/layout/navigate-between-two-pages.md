@@ -7,38 +7,33 @@ label: Peer-to-peer navigation between two pages
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7e1529d641920c93ce7914c39d38001c2cbdfd78
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5d0b0303218415d529b60e2dcaf28a21a28e430
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="peer-to-peer-navigation-between-two-pages"></a>Navegação ponto a ponto entre duas páginas
+# <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Universal do Windows (UWP) passo a passo.
+Saiba como usar um quadro e páginas para habilitar a navegação básica no aplicativo. 
+<p></p>
+<table>
+    <tr>
+        <td>APIs importantes:</td><td>Classe [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682), classe [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503), namespace [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)</td>
+    </tr>
+</table>
 
-![exemplo de navegação passo a passo de duas páginas](images/nav-peertopeer-2page.png)
-
-<div class="important-apis" >
-<b>APIs Importantes</b><br/>
-<ul>
-<li>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)</li>
-<li>[**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)</li>
-<li>[**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)</li>
-</ul>
-</div>
+## <a name="1-create-a-blank-app"></a>1. Criar um aplicativo em branco
 
 
-
-## <a name="create-the-blank-app"></a>Criar o aplicativo em branco
-
-
-1.  No menu do Microsoft Visual Studio, escolha **Arquivo &gt; Novo projeto**.
+1.  No menu Microsoft Visual Studio, escolha **Arquivo &gt; Novo Projeto**.
 2.  No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha o nó **Visual C# -&gt; Windows -&gt; Universal** ou o nó **Visual C++ -&gt; Windows -&gt; Universal**.
 3.  No painel central, selecione **Aplicativo em Branco**.
 4.  Na caixa **Nome**, insira **NavApp1** e selecione o botão **OK**.
@@ -49,9 +44,9 @@ Saiba como navegar em um aplicativo básico de duas páginas da Plataforma Unive
 
     Uma página em branco é exibida.
 
-6.  Pressione Shift+F5 para parar de depurar e retorne ao Visual Studio.
+6.  Pressione Shift+F5 para interromper a depuração e retorne ao Visual Studio.
 
-## <a name="add-basic-pages"></a>Adicionar páginas básicas
+## <a name="2-add-basic-pages"></a>2. Adicionar páginas básicas
 
 Em seguida, adicione duas páginas de conteúdo ao projeto.
 
@@ -195,7 +190,7 @@ Aqui, especificamos `Page1` na chamada para [**Frame.Navigate**](https://msdn.mi
 > 
 >     if (rootFrame.Content == null)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame.Navigate(typeof(Page1), e.Arguments);
@@ -219,7 +214,7 @@ Aqui, especificamos `Page1` na chamada para [**Frame.Navigate**](https://msdn.mi
 > 
 >         rootFrame->NavigationFailed += 
 >             ref new Windows::UI::Xaml::Navigation::NavigationFailedEventHandler(
->                 this, &amp;App::OnNavigationFailed);
+>                 this, &App::OnNavigationFailed);
 > 
 >         if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
 >         {
@@ -232,7 +227,7 @@ Aqui, especificamos `Page1` na chamada para [**Frame.Navigate**](https://msdn.mi
 > 
 >     if (rootFrame->Content == nullptr)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame->Navigate(Windows::UI::Xaml::Interop::TypeName(Page1::typeid), e->Arguments);
@@ -245,9 +240,9 @@ Aqui, especificamos `Page1` na chamada para [**Frame.Navigate**](https://msdn.mi
 
 **Observação**  O código aqui usa o valor de retorno de [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) para lançar uma exceção de aplicativo caso a navegação ao quadro da janela inicial do aplicativo falhe. Quando **Navigate** retorna **true**, a navegação acontece.
 
-Agora, crie e execute o aplicativo. Clique no link que diz "Clique para ir à página 2". A segunda página, que diz "Página 2" no topo, deve ser carregada e exibida no quadro.
+Agora, crie e execute o aplicativo. Clique no link que diz "Clique para ir à página 2". A segunda página, intitulada "Página 2" no topo, será carregada e exibida no quadro.
 
-## <a name="frame-and-page-classes"></a>Classes Frame e Page
+## <a name="about-the-frame-and-page-classes"></a>Sobre as classes Frame e Page
 
 Antes de adicionarmos mais funcionalidades ao nosso aplicativo, vejamos como as páginas que adicionamos oferecem suporte de navegação ao aplicativo.
 
@@ -263,7 +258,7 @@ No nosso exemplo, `Page1` é passado ao método [**Navigate**](https://msdn.micr
 
 Sempre que uma página é carregada no quadro, ela é adicionada como um [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572) ao [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) ou [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) do [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504).
 
-## <a name="pass-information-between-pages"></a>Transmitir informações entre páginas
+## <a name="3-pass-information-between-pages"></a>3. Transmitir informações entre páginas
 
 Nosso aplicativo navega entre duas páginas, mas ainda não faz nada de interessante. Geralmente, quando um aplicativo tem várias páginas, as páginas precisam compartilhar informações. Vamos passar algumas informações da primeira para a segunda página.
 
@@ -281,7 +276,7 @@ Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/
 </StackPanel>
 ```
 
-No manipulador evento `HyperlinkButton_Click` do arquivo de code-behind Page1.xaml, adicione um parâmetro referenciando a propriedade `Text` do `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) para o método `Navigate`.
+No manipulador de eventos `HyperlinkButton_Click` do arquivo code-behind Page1.xaml, adicione um parâmetro que faça referência à propriedade `Text` do `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) para o método `Navigate`.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -297,15 +292,28 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
-No arquivo de code-behind Page2.xaml, substitua o método `OnNavigatedTo` com o seguinte:
+Em Page2.xaml, substitua o [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) que você adicionou antes pelo seguinte [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+
+Aqui, adicionamos um [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) para exibir uma cadeia de caracteres de texto transmitida por Page1.
+
+```xaml
+<StackPanel>
+    <TextBlock HorizontalAlignment="Center" Name="greeting"/>
+    <HyperlinkButton Content="Click to go to page 1" 
+                     Click="HyperlinkButton_Click"
+                     HorizontalAlignment="Center"/>
+</StackPanel>
+```
+
+No arquivo code-behind Page2.xaml, substitua o método `OnNavigatedTo` pelo seguinte:
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    if (e.Parameter is string)
+    if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
     {
-        greeting.Text = "Hi, " + e.Parameter.ToString();
+        greeting.Text = $"Hi, {e.Parameter.ToString()}";
     }
     else
     {
@@ -329,9 +337,9 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Execute o aplicativo, digite o seu nome na caixa de texto e clique no link que diz **Clique para ir à página 2**. Quando você chamou o `this.Frame.Navigate(typeof(Page2), tb1.Text)` no evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), a propriedade `name.Text` foi passada para `Page2`, e o valor dos dados do evento é usado para a mensagem exibida na página.
+Execute o aplicativo, digite o seu nome na caixa de texto e clique no link que diz **Clique para ir à página 2**. Quando você chamou o `this.Frame.Navigate(typeof(Page2), name.Text)` no evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), a propriedade `name.Text` foi passada para `Page2`, e o valor dos dados do evento é usado para a mensagem exibida na página.
 
-## <a name="cache-a-page"></a>Armazenar uma página em cache
+## <a name="4-cache-a-page"></a>4. Armazenar uma página em cache
 
 O estado e o conteúdo da página não é armazenado em cache por padrão, você deve habilitá-lo em cada página do seu aplicativo.
 

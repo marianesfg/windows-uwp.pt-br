@@ -3,15 +3,17 @@ author: jnHs
 Description: "O tempo estimado para transferir pagamentos, os limites de pagamento aplicáveis e os marketplaces Microsoft dos quais você pode receber pagamentos podem variar dependendo do país/região e do tipo de conta de pagamento."
 title: "Limites, formas e períodos de pagamento"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0d0e421108de5daecb552c606b3f2c00b722fb89
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
@@ -23,14 +25,15 @@ Para qualquer país/região, usaremos ACH/SEPA ou transferência eletrônica par
 
 Normalmente enviaremos qualquer pagamento devido em um dado mês até o 15º dia desse mês, mas levará um tempo adicional para o pagamento chegar à conta. O número de dias irá variar de acordo com a forma de pagamento que usamos para a conta, conforme descrito abaixo. 
 
-> **Observação** Os dias mostrados abaixo são aproximados; qualquer pagamento pode demorar mais ou menos tempo.
+> [!NOTE]
+> Os dias mostrados abaixo são aproximados; qualquer pagamento pode demorar mais ou menos tempo.
 
 
-| Forma de pagamento | Número de dias até chegar à conta de pagamento |
+| Forma de pagamento     | Número de dias até chegar à conta de pagamento     |
 |--------------------|--------------------------------------------|
-| PayPal | 1 dia útil |    
-| ACH/SEPA |De 2 a 3 dias úteis |
-| Transferência eletrônica | De 7 a 10 dias úteis |
+| PayPal             | 1 dia útil                             | 
+| ACH/SEPA           | De 2 a 3 dias úteis                          |
+| Transferência eletrônica      | De 7 a 10 dias úteis                         |
 
 &nbsp;
 
@@ -38,7 +41,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
 
 ## <a name="payment-thresholds-and-methods"></a>Limites e formas de pagamento
 
-> **Observação** Os limites de pagamento estão listados em USD. Em alguns mercados, é usado o equivalente em moeda local. 
+> [!NOTE]
+> Os limites de pagamento estão listados em USD. Em alguns mercados, é usado o equivalente em moeda local. 
 
 - [Windows Store](#windows-store)
 - [Microsoft Advertising](#microsoft-advertising)
