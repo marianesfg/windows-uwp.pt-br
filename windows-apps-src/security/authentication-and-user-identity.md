@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: ddc397e5155190902dc00ff54190bcb8ac95ce1e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 # <a name="authentication-and-user-identity"></a>Autenticação e identidade do usuário
 

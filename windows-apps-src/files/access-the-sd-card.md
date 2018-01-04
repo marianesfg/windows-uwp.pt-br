@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, cartão sd, armazenamento"
-ms.openlocfilehash: 89dfed0cbd8a4a87f432a747e4155cdef3bbc757
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 44354bbacd5ea775c8a973fe7f82aaf65b3f70db
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-the-sd-card"></a>Acessar o cartão SD
 
-\[Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Você pode armazenar e acessar dados não essenciais em um cartão microSD opcional, principalmente em dispositivos de baixo custo que possuem espaço de armazenamento interno limitado e slot de cartão SD.

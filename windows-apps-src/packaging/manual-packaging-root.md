@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp, empacotamento
 ms.openlocfilehash: 8eca88588b2e444450daccd997aebb9e838a90d4
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 # <a name="manual-app-packaging"></a>Empacotamento manual de app
 

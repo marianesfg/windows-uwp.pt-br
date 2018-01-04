@@ -11,7 +11,8 @@ keywords: windows 10, uwp, jogos, mouse, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.openlocfilehash: dff08052af7f005366f9cb5154b307c13a316953
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>Movimento relativo do mouse e CoreWindow
 

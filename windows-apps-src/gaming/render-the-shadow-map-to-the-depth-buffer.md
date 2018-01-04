@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, jogos, renderização, mapa de sombra, buffer de profundidade, direct3d"
 ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Renderizar o mapa de sombra para o buffer de profundidade
 

@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 07b8b769cbcaf86bfa70a562de568cab65c91a77
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 62dc1cf81bd26ca5ba4adf181cc9f710e41565c2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="download-and-install-package-updates-for-your-app"></a>Baixar e instalar atualizações de pacote para seu aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Desde o Windows 10, versão 1607, você pode usar uma API no namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para verificar programaticamente se há atualizações do pacote do aplicativo atual, baixar e instalar os pacotes atualizados. Você também pode consultar os pacotes que foram [marcados como obrigatórios no painel do Centro de Desenvolvimento do Windows](#mandatory-dashboard) e desabilitar a funcionalidade no aplicativo até que a atualização obrigatória seja instalada.
 

@@ -9,14 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a69ad9bdff70dc04f9bdf9eb4f5117a22a005969
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a2baf9058f841c2d8de938df65d07f0584b736e9
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Mapeamentos do .NET Framework dos tipos do Windows Runtime
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A tabela a seguir lista os mapeamentos que o .NET Framework faz entre os tipos da Plataforma Universal do Windows (UWP) e os tipos do .NET Framework. Em um aplicativo Universal do Windows escrito com código gerenciado, o IntelliSense mostra o tipo do .NET Framework, em vez do tipo UWP. Por exemplo, caso um método do Windows Runtime utilize um parâmetro do tipo IVector&lt;string&gt;, o IntelliSense mostra um parâmetro do tipo IList&lt;string&gt;. Da mesma forma, em um componente do Tempo de Execução do Windows escrito com código gerenciado, você usa o tipo do .NET Framework em assinaturas de membro. Quando a [Ferramenta de Exportação de Metadados do Tempo de Execução do Windows (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) gera o componente do Tempo de Execução do Windows, o tipo do .NET Framework se torna o tipo UWP correspondente.
 

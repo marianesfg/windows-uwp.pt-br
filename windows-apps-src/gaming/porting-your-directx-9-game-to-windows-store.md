@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: pt-BR
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Portar do DirectX 9 para a Plataforma Universal do Windows (UWP)
 
