@@ -8,18 +8,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite"
-localizationpriority: medium
-ms.openlocfilehash: 11c11e339cacccbaa841fd6442009946d53d8890
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 098ec71f2f3e487b76f9992c297ad7cba9ac5538
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Use o Sistema de Gerenciamento de Recursos do Windows 10 em um app ou jogo herdado
 
 ## <a name="overview"></a>Visão geral
 
-Os apps e jogos .NET e Win32 geralmente são localizados em diferentes idiomas para expandir totalmente o mercado ao qual se destinam. Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../globalizing/globalizing-portal.md). Empacotando o app ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de app personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
+Os apps e jogos .NET e Win32 geralmente são localizados em diferentes idiomas para expandir totalmente o mercado ao qual se destinam. Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md). Empacotando o app ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de app personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
 
 Há muitas maneiras de localizar um aplicativo Win32 tradicionais, mas o Windows 8 introduziu um [novo sistema de gerenciamento de recursos](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) que funciona entre linguagens de programação, entre tipos de aplicativos e fornece uma funcionalidade que transcende a simples localização. Esse sistema será chamado de "MRT" neste tópico. Antigamente, a sigla significava "Modern Resource Technology", mas o termo "Modern" deixou de ser utilizado. O gerenciador de recursos também pode ser conhecido como MRM (Modern Resource Manager) ou PRI ( Índice de Recurso do Pacote).
 

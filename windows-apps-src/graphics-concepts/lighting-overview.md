@@ -2,16 +2,19 @@
 title: "Visão geral de iluminação"
 description: "Ao usar a iluminação do Direct3D, você permite que o Direct3D processe os detalhes de iluminação para você. Os usuários avançados podem executar a iluminação por conta própria, se desejado."
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7f4ca6fdbd93d42dbefd955f31bd514b93886d03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 47280437ad902d0679e0ef266bbd7ad9b6b635af
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lighting-overview"></a>Visão geral de iluminação
 

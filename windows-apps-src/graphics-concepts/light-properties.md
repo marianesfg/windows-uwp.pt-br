@@ -3,15 +3,18 @@ title: Propriedades de luz
 description: "As propriedades de luz descrevem o tipo (ponto, direcional, destaque), a atenuação, a cor, a direção, a posição e o intervalo da fonte de luz."
 ms.assetid: E832C3FD-9921-41C4-87B8-056E16B61B77
 keywords: Propriedades de luz
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 04a985f5005b88d4457551c8a62abd90f08ff1d2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 89a204e867b7f6b9a1c6de64345b4fd0b50a7845
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="light-properties"></a>Propriedades de luz
 

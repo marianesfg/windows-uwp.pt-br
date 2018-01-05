@@ -3,15 +3,18 @@ title: "Estágio de fusão de saída (OM)"
 description: "Estágio de fusão de saída – combina vários tipos de dados de saída (valores de sombreador de pixel, informações de profundidade e estêncil) com o conteúdo do destino de renderização e buffers de profundidade/estêncil para gerar o resultado do pipeline final."
 ms.assetid: ED2DC4A0-2B92-47AF-884A-BFC2183C78B8
 keywords: "Estágio de fusão de saída (OM)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 35d242502441d9f7539a811fbcd376ac6e0b8794
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 47725e562008e2ac948f552107816fa9fe015001
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="output-merger-om-stage"></a>Estágio de fusão de saída (OM)
 

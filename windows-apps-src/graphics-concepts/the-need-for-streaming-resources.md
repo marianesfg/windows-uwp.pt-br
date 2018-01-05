@@ -3,15 +3,18 @@ title: A necessidade de recursos de streaming
 description: "Os recursos de streaming são necessários para que a memória da GPU não seja desperdiçada com o armazenamento de regiões de superfícies que não serão acessadas e para dizer para o hardware como filtrar entre os blocos adjacentes."
 ms.assetid: A88BE65B-104F-4176-9809-C12580A3684C
 keywords: A necessidade de recursos de streaming
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 5060d0076d93f8bca7e1547c4d9fb05ad4b1a3f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f166fd4d645c5308ae5351503061fe3bfa1d7c4e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-need-for-streaming-resources"></a>A necessidade de recursos de streaming
 

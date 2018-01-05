@@ -3,15 +3,18 @@ title: "Modos de exibição"
 description: "O termo \\ 0034;modo de exibição \\ 0034; é usado para indicar \\ 0034;dados no formato exigido \\ 0034;. Por exemplo, um modo de exibição de buffer constante (CBV) deve ser dados de buffer constantes formatados corretamente. Esta seção descreve os modos de exibição mais comuns e úteis."
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
 keywords: "Modos de exibição"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 0091afb549c778f367e12726054cb908eb0c3eba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 270fdafb0383b73eb6b47d721bae4d994b3ad393
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="views"></a>Modos de exibição
 

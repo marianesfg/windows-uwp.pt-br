@@ -3,15 +3,18 @@ title: "Modo de exibição de saída de fluxo (SOV)"
 description: "Os modos de exibição de saída de fluxo permitem que as informações de vértice que os sombreadores de vértice, geometria e mosaico adotaram sejam transmitidas de volta para o aplicativo para uso adicional."
 ms.assetid: F528A920-0EAD-4634-BA5F-CB34A8FAEFFA
 keywords: "Modo de exibição de saída de fluxo (SOV)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: a7af4ab83f796ce5f506fd5ec956faec108024d9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8268a93eba804af1c16ffec5a9ef07a4c05e69ec
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stream-output-view-sov"></a>Modo de exibição de saída de fluxo (SOV)
 

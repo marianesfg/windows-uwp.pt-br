@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1eb756c794e23a17420c14af7e27ec315305f232
-ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.localizationpriority: medium
+ms.openlocfilehash: 2aae0e634ea219ef602eafdb1516d1d42b9c7913
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Criar um plug-in personalizado para o Device Portal
 
@@ -187,15 +188,15 @@ Importante: o uso dos métodos HttpPost/DeleteExpect200 em webbRest executará a
 Para depurar a tarefa em segundo plano, você deve alterar a maneira como o Visual Studio executa seu código. Siga as etapas abaixo para depuração de uma conexão de serviço de app para verificar como seu provedor está manipulando as solicitações HTTP:
 
 1.  No menu Depurar, selecione Propriedades de DevicePortalProvider. 
-1.  Na guia Depuração, na seção da ação Iniciar, selecione "Não executar, mas depurar o meu código quando ele for iniciado".  
+2.  Na guia Depuração, na seção da ação Iniciar, selecione "Não executar, mas depurar o meu código quando ele for iniciado".  
 ![colocar o plug-in em modo de depuração](images/device-portal/plugin-debug-mode.png)
-1.  Defina um ponto de interrupção na função do manipulador RequestReceived.
+3.  Defina um ponto de interrupção na função do manipulador RequestReceived.
 ![ponto de interrupção no manipulador requestreceived](images/device-portal/plugin-requestreceived-breakpoint.png)
-    > [!NOTE]
-    > Verifique se a arquitetura de compilação corresponde exatamente à arquitetura do destino.  Se estiver usando um computador de 64 bits, você deve implantar usando uma compilação AMD64.
-1.  Pressione F5 para implantar seu app
-1.  Desative o Desativar Device Portal e então o ative novamente para que ele localize seu app (isso só será necessário quando o manifesto do app for alterado - nas outras ocasiões, você poderá simplesmente reimplantar e ignorar esta etapa). 
-1.  Em seu navegador, acesse o namespace do provedor e o ponto de interrupção deverá ser alcançado.
+> [!NOTE] 
+> Verifique se a arquitetura de compilação corresponde exatamente à arquitetura do destino. Se estiver usando um computador de 64 bits, você deve implantar usando uma compilação AMD64. 
+4.  Pressione F5 para implantar seu app
+5.  Desative o Desativar Device Portal e então o ative novamente para que ele localize seu app (isso só será necessário quando o manifesto do app for alterado - nas outras ocasiões, você poderá simplesmente reimplantar e ignorar esta etapa). 
+6.  Em seu navegador, acesse o namespace do provedor e o ponto de interrupção deverá ser alcançado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Visão geral do Windows Device Portal](device-portal.md)

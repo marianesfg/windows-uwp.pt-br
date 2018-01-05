@@ -3,15 +3,18 @@ title: "Estágio do sombreador de vértice (VS)"
 description: "O estágio do Sombreador de Vértice (VS) processa vértices, normalmente realizando operações como transformações, aplicação de capas e iluminação. Um sombreador de vértice usa um único vértice de entrada para produzir um vértice de saída."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
 keywords: "Estágio do sombreador de vértice (VS)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 521b3254fd8f3f86e8b55923627b8560d2991ae6
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vertex-shader-vs-stage"></a>Estágio do sombreador de vértice (VS)
 

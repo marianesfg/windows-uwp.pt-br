@@ -3,15 +3,18 @@ title: "Criação de pool de blocos"
 description: "Os aplicativos podem criar um ou mais pools de blocos por dispositivo Direct3D. O tamanho total de cada pool de blocos é restrito ao limite de tamanho de recursos do Direct3D 11, que é aproximadamente 1/4 da RAM da GPU (unidade de processamento gráfico)."
 ms.assetid: BD51EDD3-4AD3-4733-B014-DD77B9D743BB
 keywords: "Criação de pool de blocos"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 315c1b2e1a2b8c89b432a89278ae1b3b240c5ad5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4336d38bca354da3c30cfe2d7e4b092cff15af83
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tile-pool-creation"></a>Criação de pool de blocos
 

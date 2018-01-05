@@ -3,15 +3,18 @@ title: Acesso pipeline aos recursos de streaming
 description: "Recursos de streaming podem ser usados nos modos de exibição de recurso de sombreador (SRV), modos de exibição de destino de renderização (RTV), modos de exibição de estêncil de profundidade (DSV) e modos de exibição de acesso não ordenados (UAV), bem como alguns pontos de vinculação onde os modos de exibição não são usados, como vinculações de buffer de vértice."
 ms.assetid: 18DA5D61-930D-4466-8EFE-0CED566EA4A6
 keywords: Acesso pipeline aos recursos de streaming
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b730a8c15f4327397e945b616c6c1edc2e1ad5a9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2eabbe1b5b7ffc848243f75237e90bc69d8a43dc
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pipeline-access-to-streaming-resources"></a>Acesso pipeline aos recursos de streaming
 

@@ -3,15 +3,18 @@ title: "Iluminação emissiva"
 description: "Iluminação emissive fica claro que é emitido por um objeto; por exemplo, um brilho."
 ms.assetid: 262EB9E2-DF96-401F-93D6-51A7BB60074B
 keywords: "Iluminação emissiva"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 6e67a38f1ec7d036646abd06d641e8bf9d900ce3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b2717a482e0ea1ad80f0f13dc09bb6789863ef7e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emissive-lighting"></a>Iluminação emissiva
 

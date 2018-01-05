@@ -3,15 +3,18 @@ title: "Nível 2"
 description: "O suporte de Nível 2 para recursos de streaming adiciona funcionalidades além do Nível 1, como garantir o mipmap de textura não compactado quando o tamanho é de pelo menos uma forma de bloco padrão; instruções do sombreador para fixação de nível de detalhe (LOD) e para a obtenção do status da operação do sombreador; além disso, a leitura de blocos com mapeamentos NULOS tratam esse valor de amostragem como zero."
 ms.assetid: 111A28EA-661A-4D29-921A-F2E376A46DC5
 keywords: "Nível 2"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: c8a1d1c830c201018c3384096d3eeae3b25962b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 29031b50bba88a1ee91c4953273b7554bfc4139f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tier-2"></a>Nível 2
 
