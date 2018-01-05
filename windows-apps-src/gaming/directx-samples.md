@@ -9,10 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogo, directx, exemplos, 3D
-ms.openlocfilehash: 3bd5f6ced66ba52aef4a0aa0580f348e3faa0a09
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 51aac640791884c80503464b75b5ebbd736382f6
+ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="directx-samples"></a>Exemplos de DirectX
 
@@ -31,7 +33,7 @@ Estes são alguns exemplos de jogos desenvolvidos com o DirectX.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Criar um jogo simples UWP com o DirectX](tutorial--create-your-first-metro-style-directx-game.md)</p></td>
+<td align="left"><p>[Criar um jogo simples UWP com o DirectX](tutorial--create-your-first-uwp-directx-game.md)</p></td>
 <td align="left"><p>Criar um jogo básico UWP (Plataforma Universal do Windows) com o DirectX e o C++. Este conjunto de tutoriais se concentra nas principais técnicas e considerações de desenvolvimento de jogos DirectX UWP.</p></td>
 </tr>
 <tr class="even">
