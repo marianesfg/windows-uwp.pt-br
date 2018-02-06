@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo."
+Description: To understand your tax considerations for price selection, payout implications, and tax responsibility, see your countries/regions of distribution in the tables below.
 title: Detalhes de impostos para aplicativos pagos
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.author: wdg-dev-content
-ms.date: 07/19/2017
+ms.date: 1/1/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 99b370c5bfc6d06e9ab05f56d2d0698b4669842a
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+keywords: "windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais, expansão do comércio, taxa de imposto"
+ms.localizationpriority: high
+ms.openlocfilehash: 17d922c3b32ebaf697be250ce34f0238fb741605
+ms.sourcegitcommit: aca78f1c5207efe61242f5fadd5aa0c41c786550
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
@@ -21,10 +22,12 @@ ms.lasthandoff: 07/19/2017
 Para entender suas considerações fiscais para seleção de preço, implicações de pagamento e responsabilidade fiscal, veja seus países/regiões de distribuição nas tabelas abaixo.
 
 > [!NOTE]
-> O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> O Ajuste de Expansão do Comércio pode ter implicações de pagamento em um conjunto limitado de países/regiões. Para obter detalhes adicionais sobre o Ajuste de Expansão do Comércio e os mercados ao qual se aplica, consulte o [Contrato do Desenvolvedor de Aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e a lista de [países/regiões afetados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
 > Taxas de imposto estão sujeitas à alteração a qualquer momento. A Microsoft não poderá garantir que as taxas nas tabelas acima serão sempre precisas.
+> 
+> A responsabilidade fiscal para circunstâncias e países/regiões de revenda (como descrito [abaixo](#reseller-countriesregions)) é abordada no Anexo C do [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), apesar das informações na tabela abaixo.
 
  
 
@@ -37,7 +40,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Angola                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Antígua e Barbuda              | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Argentina                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado  | Desenvolvedor          |
-| Armênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Armênia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 20%)                 | Microsoft          |
 | Austrália                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 10%)                 | Microsoft          |
 | Áustria                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.       | 70% de (preço selecionado menos imposto de 20%)     | Microsoft          |
 | Azerbaijão                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -45,7 +48,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Bahrein                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Bangladesh                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Barbados                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Belarus                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Belarus                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 20%)                | Microsoft          |
 | Bélgica                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 21%) | Microsoft          |
 | Belize                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Benim                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -106,7 +109,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Honduras                         | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | RAE de Hong Kong                    | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Hungria                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 27%) | Microsoft          |
-| Islândia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Islândia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 24%)               | Microsoft         |
 | Índia                            | Os impostos são adicionados ao preço que está sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
 | Indonésia                        | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.  | 70% do preço selecionado                 | Desenvolvedor          |
 | Iraque                             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -179,7 +182,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Samoa                            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | San Marino                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | São Tomé e Príncipe            | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Arábia Saudita                     | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Arábia Saudita                     | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 5%)                 | Microsoft          |
 | Senegal                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Sérvia                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
 | Seicheles                       | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -210,7 +213,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 | Tuvalu                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Uganda                           | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
 | Ucrânia                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
-| Emirados Árabes Unidos             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
+| Emirados Árabes Unidos             | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% de (preço selecionado menos imposto de 5%)                 | Microsoft          |
 | Reino Unido                   | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis. Os impostos são subtraídos do preço antes do pagamento.              | 70% de (preço selecionado menos imposto de 20%) | Microsoft          |
 | Estados Unidos (inclui Porto Rico)  | Os impostos são adicionados ao preço que está sendo selecionado.                                                                                                      | 70% do preço selecionado                 | Microsoft          |
 | Uruguai                          | O preço selecionado é o preço de venda final e inclui todos os impostos aplicáveis.                                                                   | 70% do preço selecionado                 | Desenvolvedor          |
@@ -227,7 +230,7 @@ Para entender suas considerações fiscais para seleção de preço, implicaçõ
 ## <a name="mixed-remittance-countriesregions"></a>Países/regiões de remessa misturados
 
 
-Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Loja nos seguintes países/regiões: Os [relatórios](payout-summary.md#downloading-payment-transactions) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Loja. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
+Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos sobre vendas, uso, bens e serviços, valor agregado ou similares, se houver, aplicáveis à aquisição pelos Clientes seus Aplicativos e/ou Produtos no Aplicativo por meio da Store nos seguintes países/regiões: Os [relatórios](payout-summary.md#downloading-payment-transactions) que a Microsoft disponibiliza para você identificarão as transações nas quais o parceiro de cobrança cobrou vendas, utilização, bens e serviços, valor agregado e outros impostos semelhantes aplicáveis à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo por meio da Store. Com exceção de transações descritas em tais relatórios, nem a Microsoft nem seus provedores de serviços de cobrança remeterão quaisquer vendas, uso, bens e serviços, valor agregado ou outra semelhante em relação à aquisição dos Clientes de seus Aplicativos ou Produtos no Aplicativo nesses países/regiões. Você é responsável por analisar o relatório fornecido e por determinar e cumprir quaisquer obrigações, se houver, para registrar, cobrar e remeter impostos relacionados às transações envolvendo seus Aplicativos ou Produtos no Aplicativo.
 
 | Países/regiões de remessa misturados |
 |------------------------------------|
@@ -239,12 +242,12 @@ Determinados parceiros de cobrança da Microsoft podem coletar e pagar impostos 
 ## <a name="reseller-countriesregions"></a>Países/regiões de revenda
 
 
-Em determinados países/regiões, a Microsoft atua como revendedor, e não agente, ao disponibilizar seus aplicativos e produtos no aplicativo na loja. Para obter mais detalhes sobre termos e condições dos países/regiões de revenda, consulte o [Contrato de Desenvolvimento de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058).
+Em determinados países/regiões, a Microsoft atua como revendedor, e não agente, ao disponibilizar seus aplicativos e produtos no aplicativo na loja. Para obter mais detalhes sobre termos e condições dos países/regiões de revenda, consulte o [Contrato de Desenvolvimento de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
 |                    Países/regiões de revenda                                                                          |
 |------------------------------------------------------------------------------------------------------------------------|
 | China (exceto em dispositivos de comunicação móvel com o Windows Phone 7.x e em PCs com o Windows 8. x) |
-| Brasil (somente para compras feitas em dispositivos que executam o Windows 10 e compras feitas por meio de cobrança da operadora móvel)     |
+| Brasil (somente para compras realizadas por meio de dispositivos com Windows 10)     |
 
  
 

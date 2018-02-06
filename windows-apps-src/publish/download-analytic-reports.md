@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Você pode baixar arquivos .tsv que contêm os dados de análise para que possa revisar suas estatísticas e informações offline."
+Description: You can download .tsv files that contain your analytics data so that you can review your stats and info offline.
 title: "Baixar relatórios de análise"
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f18dd0f240644c0a962b73e78c5c4dd9b1bc8682
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 72dcf823c62065514cceb0744b4efcd705209a75
+ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="download-analytics-reports"></a>Baixar relatórios de análise
 
@@ -24,3 +25,5 @@ Ao exibir seus relatórios de análises, você verá um ícone de seta em cada s
 
 Você também pode baixar relatórios para todos seus aplicativos ou para um aplicativo específico, ao expandir **Analisar** no menu de navegação esquerdo e selecionar **Baixar relatórios**. Na lista suspensa **Selecionar um aplicativo**, selecione **Todos os aplicativos** ou um aplicativo específico. Selecione o relatório que você deseja baixar e, em seguida, escolha o nível de agregação e o intervalo de datas desejado. Clique no botão **Baixar relatórios** a fim de gerar um arquivo .tsv para download, o qual pode ser aberto no Microsoft Excel ou outro programa com suporte para arquivos de valores separados por tabulações (TSV).
 
+> [!NOTE]
+> Os dados de desempenho de anúncios não estão disponíveis atualmente por meio da página **Baixar relatórios**. Para baixar esses dados para uso offline, navegue até o [Relatório de desempenho de anúncios](advertising-performance-report.md) e clique nos itens de seta nessa página. 

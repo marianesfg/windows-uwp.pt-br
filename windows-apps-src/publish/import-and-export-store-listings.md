@@ -1,27 +1,29 @@
 ---
 author: jnHs
-Description: "Você também pode criar listagens da Loja para seus aplicativos sem utilizar o painel do Centro de Desenvolvimento ao exportar suas listagens em um arquivo .csv, inserindo as informações e os ativos, e importando o arquivo atualizado."
-title: Importar e exportar as listagens da Loja
+Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
+title: Importar e exportar as listagens da Store
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 691074727bab67e616541b393468eb70f0b20a05
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: "windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store"
+ms.localizationpriority: high
+ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Loja
+# <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Store
+Em vez de [inserir informações de listagens da Store diretamente no painel](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações por meio da exportação de suas listagens em um arquivo .csv, inserindo as informações e os ativos, e importação do arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
 
-Você pode criar [listagens da Loja](create-app-store-listings.md) para seus aplicativos sem utilizar o painel do Centro de Desenvolvimento ao exportar suas listagens em um arquivo .csv, inserindo as informações e os ativos, e importando o arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas. 
-
-Observe que você não pode usar esse método para criar ou atualizar [listagens da Loja de específicas de plataforma](create-platform-specific-store-listings.md) para o aplicativo.
+Essa opção é especialmente útil se você deseja criar ou atualizar Listagens da Store para seu produto em vários idiomas, pois você pode copiar/colar as mesmas informações em vários campos e facilmente fazer as alterações que devem ser aplicada para idiomas específicos. Contudo, você não pode usar esse método para criar ou atualizar [listagens da Store de específicas de plataforma](create-platform-specific-store-listings.md) para o aplicativo. 
 
 > [!TIP]
-> Você também pode usar esse recurso para importar e exportar os detalhes da listagem da Loja de um complemento. Para complementos, o processo funciona da mesma maneira exceto que [somente os campos relevantes para complementos](#add-ons) são incluídos.
+> Você também pode usar esse recurso para importar e exportar os detalhes da listagem da Store de um complemento. Para complementos, o processo funciona da mesma maneira exceto que [somente os campos relevantes para complementos](#add-ons) são incluídos.
+
+Lembre-se de que você sempre pode criar ou atualizar listagens diretamente no painel do Centro de Desenvolvimento (mesmo se você já usou o método de importação/exportação). A atualização direta no painel pode ser mais fácil quando você só está fazendo uma simples alteração, mas você pode usar outros métodos a qualquer momento.
 
 ## <a name="export-listings"></a>Exportar listagens
 
@@ -34,10 +36,10 @@ Se você ainda não criou todas as listagem para seu produto, o arquivo .CSV exp
 Se você já criou listagens (ou se já tiver carregado pacotes), também é possível ver colunas identificadas com códigos de idioma-localidade que correspondem ao idioma para cada detalhe que você criou (ou que detectamos nos seus pacotes), bem como quaisquer informações de detalhes que você forneceu anteriormente.
      
 Veja uma visão geral do que está contido em cada uma das colunas no arquivo .CSV exportado:
-- A coluna **Campo** contém um nome associado a cada parte de uma listagem da Loja. Elas correspondem aos mesmos itens que você pode fornecer ao criar listagens da Loja no painel, embora alguns dos nomes sejam um pouco diferentes. Para itens que você pode inserir mais de um do mesmo tipo, é possível ver diversas linhas, até o número máximo que você pode fornecer. Por exemplo, para **Recursos do aplicativo**, você verá **Recurso1**, **Recurso2** etc. até **Recurso20** (desde que você possa fornecer até 20 recursos do aplicativo).
+- A coluna **Campo** contém um nome associado a cada parte de uma listagem da Store. Elas correspondem aos mesmos itens que você pode fornecer ao criar listagens da Store no painel, embora alguns dos nomes sejam um pouco diferentes. Para itens que você pode inserir mais de um do mesmo tipo, é possível ver diversas linhas, até o número máximo que você pode fornecer. Por exemplo, para **Recursos do aplicativo**, você verá **Recurso1**, **Recurso2** etc. até **Recurso20** (desde que você possa fornecer até 20 recursos do aplicativo).
 - A coluna **ID** contém um número que o Centro de Desenvolvimento associa a cada campo. 
 - A coluna **Tipo** fornece diretrizes gerais sobre qual tipo de informações devem ser fornecidas para o campo, como **Texto** ou **Caminho relativo (ou URL para o arquivo no Centro de Desenvolvimento)**. 
-- A coluna **Padrão** (e qualquer outra coluna identificada com códigos de idioma-localidade) representam o texto ou ativos associados a cada parte da listagem da loja. Você pode editar os campos nessas colunas para fazer atualizações em suas listagens da Loja.
+- A coluna **Padrão** (e qualquer outra coluna identificada com códigos de idioma-localidade) representam o texto ou ativos associados a cada parte da listagem da loja. Você pode editar os campos nessas colunas para fazer atualizações em suas listagens da Store.
 
 >[!IMPORTANT]
 > Não altere qualquer uma das informações nas colunas **Campo**, **ID** ou **Tipo**. As informações nessas colunas devem ser alteradas para que o arquivo importado seja processado.
@@ -50,7 +52,7 @@ Juntamente com a coluna **padrão**, cada idioma para o qual você criou uma lis
 
 Você pode usar a coluna **padrão** para inserir informações que você deseja compartilhar em todas as descrições do aplicativo. Se o campo de determinado idioma for deixado em branco, as informações da coluna padrão serão usadas para esse idioma. Você pode substituir esse campo para um idioma específico ao inserir informações diferentes para esse idioma.
 
-A maioria dos campos de listagem da Loja é opcional. A **Descrição** e uma captura de tela são necessárias para cada detalhe; para idiomas sem pacotes associados, você também deverá fornecer um **Título** para indicar quais dos seus nomes de aplicativo reservado devem ser usados nessa lista. Para todos os outros campos, você pode deixar o campo vazio se você não quiser incluí-lo na listagem. Lembre-se de que se você deixar um campo para um idioma específico, analisaremos para ver se há informações nesse campo na coluna padrão. Em caso afirmativo, essas informações serão usadas. 
+A maioria dos campos de listagem da Store é opcional. A **Descrição** e uma captura de tela são necessárias para cada detalhe; para idiomas sem pacotes associados, você também deverá fornecer um **Título** para indicar quais dos seus nomes de aplicativo reservado devem ser usados nessa lista. Para todos os outros campos, você pode deixar o campo vazio se você não quiser incluí-lo na listagem. Lembre-se de que se você deixar um campo para um idioma específico, analisaremos para ver se há informações nesse campo na coluna padrão. Em caso afirmativo, essas informações serão usadas. 
 
 Por exemplo, imagine o seguinte exemplo: 
 
@@ -63,11 +65,11 @@ Se você não quiser fazer quaisquer edições em um campo específico, você po
 
 A exclusão das informações em um campo para um idioma, sem remover a linha inteira, funciona de maneira diferente dependendo do campo. Para campos cujo **Tipo** é **Texto**, a exclusão das informações em um campo apenas remove essa entrada da listagem nesse idioma.  Entretanto, a exclusão das informações em um campo de uma imagem, como uma captura de tela ou um logotipo, não terão nenhum efeito; a imagem anterior ainda será usada, exceto se você pode removê-la editando diretamente no Centro de Desenvolvimento. A exclusão das informações de um campo de trailer realmente remove esse trailer do Centro de Desenvolvimento, portanto, certifique-se de que ter uma cópia de todos os arquivos necessários antes de fazer isso.
 
-Diversos campos em suas listagens exportadas exigem a entrada de texto, como aqueles no exemplo acima, **Descrição** e **Notas de versão**. Para esses tipos de campos, digite o texto apropriado no campo para cada idioma. Certifique-se de seguir o tamanho e outros requisitos de cada campo. Para saber mais sobre esses requisitos, consulte [Criar listagens da Loja do aplicativo](create-app-store-listings.md).
+Diversos campos em suas listagens exportadas exigem a entrada de texto, como aqueles no exemplo acima, **Descrição** e **Notas de versão**. Para esses tipos de campos, digite o texto apropriado no campo para cada idioma. Certifique-se de seguir o tamanho e outros requisitos de cada campo. Para saber mais sobre esses requisitos, consulte [Criar listagens da Store do aplicativo](create-app-store-listings.md).
 
 O fornecimento de informações para os campos que correspondem aos ativos, como imagens e trailers, é um pouco mais complicado. Em vez de **Texto**, o **Tipo** desses ativos é o **Caminho relativo (ou URL do arquivo no Centro de Desenvolvimento)**. 
      
-Se você já tiver carregado ativos para a listagem da Loja, esses ativos serão representados por uma URL. Essas URLs podem ser reutilizadas em várias descrições de um produto ou mesmo em produtos diferentes na mesma conta de desenvolvedor, portanto, você pode copiar essas URLs para reutilizá-las em um campo diferente, se desejar.
+Se você já tiver carregado ativos para a listagem da Store, esses ativos serão representados por uma URL. Essas URLs podem ser reutilizadas em várias descrições de um produto ou mesmo em produtos diferentes na mesma conta de desenvolvedor, portanto, você pode copiar essas URLs para reutilizá-las em um campo diferente, se desejar.
 
 > [!TIP]
 > Para confirmar qual ativo corresponde a uma URL, é possível inserir a URL em um navegador para exibir a imagem (ou baixar o vídeo do trailer).  Você deve estar conectado à sua conta do Centro de Desenvolvimento para que a URL funcione.
@@ -84,7 +86,7 @@ Por exemplo, se a pasta raiz for **my_folder** e você quiser usar uma imagem ch
 
 ## <a name="import-listings"></a>Importar listagens
 
-Depois de inserir todas as alterações no arquivo .csv (e incluir quaisquer ativos que você deseja carregar), é necessário salvar o arquivo antes de carregá-lo. Se você estiver usando uma versão do Microsoft Excel com suporte à codificação UTF-8, certifique-se de selecionar **Salvar como** e usar o formato **UTF-8 CSV (delimitado por vírgula) (*. csv)**. Se você usar um editor diferente para exibir e editar o arquivo .csv, verifique se que o arquivo está codificado em UTF-8 antes de carregar.
+Depois de inserir todas as alterações no arquivo .csv (e incluir quaisquer ativos que você deseja carregar), é necessário salvar o arquivo antes de carregá-lo. Se você estiver usando uma versão do Microsoft Excel com suporte à codificação UTF-8, certifique-se de selecionar **Salvar como** e usar o formato **UTF-8 CSV (delimitado por vírgula) (*.csv)**. Se você usar um editor diferente para exibir e editar o arquivo .csv, verifique se que o arquivo está codificado em UTF-8 antes de carregar.
 
 Quando você estiver pronto para carregar o arquivo .csv atualizado e importar seus dados de listagem, selecione **Importar listagens** na página de visão geral do envio. Se você estiver importando apenas um arquivo .csv, escolha **Importar. csv**, navegue até o arquivo e clique em **Abrir**. Se você estiver importando uma pasta com arquivos de imagem, escolha Importar pasta, navegue até a pasta e clique em **Selecionar pasta**. Verifique se há apenas um arquivo .csv na pasta, juntamente com quaisquer ativos que estiver carregando. 
 
@@ -101,8 +103,8 @@ Você pode continuar a fazer atualizações nas listagens importando outro arqui
 
 ## <a name="add-ons"></a>Complementos
 
-Para complementos, a importação e a exportação de listagens da Loja usam o mesmo processo descrito acima, exceto que você verá apenas os três campos relevantes para [Listagens da Loja de complementos](create-add-on-store-listings.md): **Descrição**, **Título** e **StoreLogo300x300** (conhecido como **Ícone** na página de listagem da Loja no Centro de Desenvolvimento). O campo **Título** é obrigatório e os outros dois campos são opcionais.
+Para complementos, a importação e a exportação de listagens da Store usam o mesmo processo descrito acima, exceto que você verá apenas os três campos relevantes para [Listagens da Store de complementos](create-add-on-store-listings.md): **Descrição**, **Título** e **StoreLogo300x300** (conhecido como **Ícone** na página de listagem da Store no Centro de Desenvolvimento). O campo **Título** é obrigatório e os outros dois campos são opcionais.
 
-Observe que você deve importar e exportar listagens da Loja separadamente para cada complemento em seu aplicativo, navegando até a página de visão geral de envio do complemento.
+Observe que você deve importar e exportar listagens da Store separadamente para cada complemento em seu aplicativo, navegando até a página de visão geral de envio do complemento.
 
 

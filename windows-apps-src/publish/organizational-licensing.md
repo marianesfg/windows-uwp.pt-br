@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Você pode indicar se e como seu aplicativo pode ser oferecido para compras em grande volume por meio da Microsoft Store para Empresas e Microsoft Store para Educação na seção Licenciamento organizacional de um envio de aplicativo."
+Description: You can indicate whether and how your app can be offered for volume purchases through the Microsoft Store for Business and Microsoft Store for Education in the Organizational licensing section of an app submission.
 title: "Opções de licenciamento organizacional"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.author: wdg-dev-content
-ms.date: 06/14/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, windows store para empresas, store para educação, organizacional, licenciamento por volume"
-ms.openlocfilehash: 8bb44a65f2ded280cfe8eda39663b64ef2edb3c8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: "windows 10, uwp, store para empresas, store para educação, organizacional, licenciamento por volume, empresa, store educacional, store empresarial, compra em volume, massa"
+localizationpriority: high
+ms.openlocfilehash: 7437b087c0966939bb5f5d8110d310f4dd5e73df
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="organizational-licensing-options"></a>Opções de licenciamento organizacional
 
@@ -22,14 +23,18 @@ Você pode indicar se e como seu aplicativo pode ser oferecido para compras em g
 
 Por meio dessas configurações, você pode optar por permitir que seu aplicativo fique disponível para organizações (empresarial e educacional) que adquirem e implantam várias licenças para os usuários delas, oferecendo uma oportunidade de aumentar seu alcance para organizações entre os tipos de dispositivos do Windows 10, incluindo PCs, tablets e celulares.
 
+Você também precisará permitir licenciamento organizacional para quaisquer [aplicativos de linha de negócios (LOB)](distribute-lob-apps-to-enterprises.md) que você publicar diretamente para as empresas.
+
 > [!NOTE]
 > As seleções de cada um dos seus aplicativos são configuradas independentemente umas das outras. Você pode alterar as preferências de um aplicativo a qualquer momento, criando um novo envio, e suas alterações terão efeito após o envio do [processo de certificação](the-app-certification-process.md).
 
-Você também precisará permitir licenciamento organizacional para quaisquer [aplicativos de linha de negócios (LOB)](distribute-lob-apps-to-enterprises.md) que você publicar diretamente para as empresas.
+> [!IMPORTANT]
+> Os envios que usam a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) não ficarão disponíveis na Microsoft Store para Empresas e Microsoft Store para Educação. Para disponibilizar seu aplicativo para compras em volume por organizações, você deve usar o painel do Centro de Desenvolvimento do Windows para criar e realizar seus envios.
+
 
 ## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Permitindo que seu aplicativo seja oferecido para organizações
 
-Por padrão, a caixa chamada **Make my app available to organizations with Store-managed (online) licensing and distribution** é marcada. Isso significa que você deseja que seu aplicativo se torne disponível para inclusão em catálogos de aplicativos que serão disponibilizados para organizações para aquisição em grande volume, com licenças de aplicativo gerenciadas por meio do sistema de licenciamento online da Loja.
+Por padrão, a caixa chamada **Make my app available to organizations with Store-managed (online) licensing and distribution** é marcada. Isso significa que você deseja que seu aplicativo se torne disponível para inclusão em catálogos de aplicativos que serão disponibilizados para organizações para aquisição em grande volume, com licenças de aplicativo gerenciadas por meio do sistema de licenciamento online da Store.
 
 > [!NOTE]
 > Isso não garante que seu aplicativo estará disponível para todas as organizações.
@@ -46,7 +51,7 @@ Muitas organizações precisam de aplicativos habilitados para licenciamento off
 
 Observe que esta caixa está **desmarcada** por padrão. Você deve marcá-la para permitir que seu aplicativo fique disponível para organizações verificadas que o instalarão usando licenciamento gerenciado pela organização (offline). As organizações devem passar por validação adicional para instalar aplicativos pagos para seus usuários finais dessa maneira.
 
-O licenciamento offline permite que as organizações adquiram seu aplicativo por volume e depois instalem o aplicativo sem precisar que cada dispositivo contate com o sistema de licenciamento da Loja. A organização é capaz de baixar o pacote do aplicativo com uma licença que lhes permite instalá-lo para dispositivos (por meio de suas próprias ferramentas de gerenciamento ou da pré-carregamento de aplicativos em imagens do sistema operacional) sem notificar à Loja quando uma licença específica foi usada. Habilitar esse cenário aumenta bastante a flexibilidade de implantação e pode aumentar significativamente a atratividade de seu aplicativo para esses clientes.
+O licenciamento offline permite que as organizações adquiram seu aplicativo por volume e depois instalem o aplicativo sem precisar que cada dispositivo contate com o sistema de licenciamento da Store. A organização é capaz de baixar o pacote do aplicativo com uma licença que lhes permite instalá-lo para dispositivos (por meio de suas próprias ferramentas de gerenciamento ou da pré-carregamento de aplicativos em imagens do sistema operacional) sem notificar à Store quando uma licença específica foi usada. Habilitar esse cenário aumenta bastante a flexibilidade de implantação e pode aumentar significativamente a atratividade de seu aplicativo para esses clientes.
 
 > [!IMPORTANT]
 > Não há suporte para o licenciamento offline de pacotes .xap.  
@@ -57,7 +62,7 @@ O licenciamento offline permite que as organizações adquiram seu aplicativo po
 Atualmente, as contas de desenvolvedor localizadas em determinados mercados podem oferecer aplicativos pagos para aquisição de volume por meio da Microsoft Store para Empresas. 
 
 > [!NOTE]
-> Em alguns mercados, o preço exibido para um aplicativo na Microsoft Store para Empresas ou Microsoft Store para Educação pode ser diferente do preço mostrado para clientes comerciais na Windows Store na mesma faixa de preço. O pagamento de receitas das compras organizacionais funciona da mesma maneira que para compras de consumidor do seu aplicativo. Para obter mais informações, consulte [Recebendo pagamento](getting-paid-apps.md) e o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058). Para obter uma lista dos mercados onde a Microsoft Store para Empresas e Microsoft Store para Educação estão disponíveis, consulte [Visão geral da Microsoft Store para Empresas e Microsoft Store para Educação](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
+> Em alguns mercados, o preço exibido para um aplicativo na Microsoft Store para Empresas ou Microsoft Store para Educação pode ser diferente do preço mostrado para clientes comerciais na Microsoft Store na mesma faixa de preço. O pagamento de receitas das compras organizacionais funciona da mesma maneira que para compras de consumidor do seu aplicativo. Para obter mais informações, consulte [Recebendo pagamento](getting-paid-apps.md) e o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058). Para obter uma lista dos mercados onde a Microsoft Store para Empresas e Microsoft Store para Educação estão disponíveis, consulte [Visão geral da Microsoft Store para Empresas e Microsoft Store para Educação](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
 
 Caso seu país ou região não esteja listado abaixo, seus aplicativos pagos não serão oferecidos na Microsoft Store para Empresas e Microsoft Store para Educação. Se esse for o caso, as seleções de licenciamento organizacionais feitas para seus aplicativos pagos poderão ser aplicadas futuramente, pois podemos adicionar o suporte para envios de outros mercados de conta de desenvolvedor no futuro.
 

@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Ao enviar um complemento, as opções da página Propriedades ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes."
+Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
 title: Inserir propriedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 253e008d3622094dcfe765531d71e5f37b7777b0
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: "windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo"
+ms.localizationpriority: high
+ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
@@ -29,28 +30,31 @@ O tipo de produto é selecionado quando você [cria o complemento primeiro](set-
 
 Os campos disponíveis nesta página variam de acordo com o tipo de produto do complemento.
 
-## <a name="product-lifetime"></a>Tempo de vida do produto
 
+## <a name="product-lifetime"></a>Tempo de vida do produto
 
 Se você selecionou **Durável** como o tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se preferir, você pode definir o **Ciclo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1 a 365 dias).
 
+
 ## <a name="quantity"></a>Quantidade
 
-
-Se você selecionou **Consumível gerenciado pela Loja** como o tipo de produto, a **Quantidade** será mostrada aqui. Você precisará inserir um número entre 1 e 1000000. Essa quantidade será concedida para o cliente quando ele adquirir o complemento, e a Loja detectará o equilíbrio conforme o aplicativo relatar o consumo do cliente do complemento.
+Se você selecionou **Consumível gerenciado pela Store** como o tipo de produto, a **Quantidade** será mostrada aqui. Você precisará inserir um número entre 1 e 1000000. Essa quantidade será concedida para o cliente quando ele adquirir o complemento, e a Store detectará o equilíbrio conforme o aplicativo relatar o consumo do cliente do complemento.
 
 
 ## <a name="subscription-period"></a>Período de assinatura
 
-Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Você precisará escolher uma das opções disponíveis (**Mensal**, **Três meses**, **Seis meses**, **Anual** ou **24 meses**) para indicar a frequência de cobrança da assinatura de um cliente. Observe que depois que o complemento é publicado, você não pode alterar a seleção **Período de assinatura**.
+Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Selecione uma opção para especificar a frequência com a qual o cliente será cobrado pela assinatura. A opção padrão é **Mensalmente, mas você também pode selecionar **3 meses**, **6 meses**, **Anualmente** ou**24 meses**. 
 
-> [!NOTE]
-> No momento, a capacidade de criar complementos por assinatura está disponível somente para um conjunto de contas de desenvolvedor que participam de um programa de adoção antecipada. Disponibilizaremos complementos de assinatura para todas as contas de desenvolvedor no futuro, e a documentação preliminar será disponibilizada agora para fornecer aos desenvolvedores uma prévia desse recurso. Para obter mais informações, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
+> [!IMPORTANT]
+> Depois que o complemento é publicado, você não pode alterar a seleção **Período de assinatura**.
 
 
 ## <a name="free-trial"></a>Avaliação gratuita
 
-Para complementos de assinatura, a **Avaliação gratuita** também é mostrada aqui. Você deve optar por permitir que os clientes usem o complemento gratuitamente por um período específico (**1 semana** ou **1 mês**), ou se deseja oferecer **Sem avaliação gratuita**. Observe que depois que o complemento é publicado, você não pode alterar a seleção da **Avaliação gratuita**.
+Se você selecionou **Assinatura** como o tipo de produto, a **Avaliação gratuita** também será mostrada aqui. A opção padrão é **Sem avaliação gratuita.** Se for da sua preferência, você pode permitir que os clientes usem o complemento gratuito por um determinado período de tempo (**1 semana** ou **1 mês**). 
+
+> [!IMPORTANT]
+> Depois que o complemento é publicado, você não pode alterar a seleção da **Avaliação gratuita**.
 
 
 ## <a name="content-type"></a>Tipo de conteúdo

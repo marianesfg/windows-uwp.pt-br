@@ -1,27 +1,25 @@
 ---
 author: jnHs
-Description: "Ao enviar um complemento, as opções na página Preço e disponibilidade determinam quanto cobrar por seu complemento e como ele deve ser oferecido aos clientes."
+Description: When submitting an add-on, the options on the Pricing and availability page determine what to charge for your add-on and how it should be offered to customers.
 title: "Definir disponibilidade e preço de complemento"
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 09671148e670acbfdbc944558a2738712f848dd5
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: "windows 10, uwp, complemento, cra, preço"
+ms.localizationpriority: high
+ms.openlocfilehash: 8eb2321ec6d2bc8602438e2dc66ca1d96690a3f8
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
 
 Ao enviar um complemento, as opções na página **Preço e disponibilidade** determinam quanto cobrar por seu complemento e como ele deve ser oferecido aos clientes.
-
-> [!NOTE]
-> Recentemente, atualizamos as opções disponíveis desta página. Se você tinha qualquer envio em andamento antes dessas opções mais recentes estarem disponíveis, esse envio ainda poderá mostrar as opções mais antigas. Você pode excluir esse envio e, em seguida, criar um novo se quiser usar as novas opções. Caso contrário, as opções mais recentes serão disponibilizadas com a próxima atualização depois que você publicar o envio em andamento.
 
 ## <a name="markets"></a>Mercados
 
@@ -35,12 +33,12 @@ Para obter mais informações e obter uma lista completa dos mercados disponíve
 
 Você pode determinar se seu complemento deve ser oferecido para compra aos clientes. 
 
-A opção padrão é **Podem ser exibidos na listagem da Loja do produto pai**. Deixe essa opção marcada para complementos que serão disponibilizados para qualquer cliente. 
+A opção padrão é **Podem ser exibidos na listagem da Store do produto pai**. Deixe essa opção marcada para complementos que serão disponibilizados para qualquer cliente. 
 
-Para complementos que você não quer disponibilizar por completo, selecione **Oculto na Loja** e uma das seguintes opções:
+Para complementos que você não quer disponibilizar por completo, selecione **Oculto na Store** e uma das seguintes opções:
 
--   **Disponível para compra somente no produto pai**: a seleção dessa opção permite que qualquer cliente adquira o complemento no aplicativo, mas o complemento não será exibido na listagem da Loja do aplicativo. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
--   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Loja do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não tem suporte para os clientes no Windows 8.1 ou versões anteriores**. Se o seu aplicativo estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta deste complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e depois publicar um novo envio do aplicativo. Isso é recomendado mesmo se o seu aplicativo não for para o Windows 8.1 ou versões anteriores. Seus clientes terão uma experiência melhor se você nunca lhes oferecer um complemento que você optou por tornar indisponível.
+-   **Disponível para compra somente no produto pai**: a seleção dessa opção permite que qualquer cliente adquira o complemento no aplicativo, mas o complemento não será exibido na listagem da Store do aplicativo. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
+-   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Store do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não tem suporte para os clientes no Windows 8.1 ou versões anteriores**. Se o seu aplicativo estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta deste complemento aos clientes no Windows 8.1 ou anterior, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e depois publicar um novo envio do aplicativo. Isso é recomendado mesmo se o seu aplicativo não for para o Windows 8.1 ou versões anteriores. Seus clientes terão uma experiência melhor se você nunca lhes oferecer um complemento que você optou por tornar indisponível.
     
  > [!NOTE] 
  > A seleção da opção **Parar aquisição** e/ou enviar uma atualização de aplicativo que remove o complemento do código do aplicativo não afeta clientes que já adquiriram o complemento, independentemente do sistema operacional.
@@ -48,7 +46,7 @@ Para complementos que você não quer disponibilizar por completo, selecione **O
 
 ## <a name="schedule"></a>Agenda
 
-Por padrão (a menos que você tenha selecionado uma das opções **Ocultar na Loja** na seção **Visibilidade**), o complemento estará disponível para os clientes assim que ele for aprovado na certificação e concluir o processo de publicação. Para escolher outras datas, selecione **Mostrar opções** para expandir essa seção. 
+Por padrão (a menos que você tenha selecionado uma das opções **Ocultar na Store** na seção **Visibilidade**), o complemento estará disponível para os clientes assim que ele for aprovado na certificação e concluir o processo de publicação. Para escolher outras datas, selecione **Mostrar opções** para expandir essa seção. 
 
 Para obter mais informações, consulte [Configurar agendamento preciso do lançamento](configure-precise-release-scheduling.md).
 
@@ -71,14 +69,14 @@ Se você quiser oferecer seu complemento por um preço reduzido por um período 
 
 Por padrão, seu envio iniciará o processo de publicação assim que for aprovado na certificação, a menos que você tenha configurado as datas na seção [**Agendamento**](#schedule) descrita acima. 
 
-Para controlar quando o complemento deve ser publicado na Loja, use a seção **Agendamento**. Na maioria dos envios, você deve usar essa seção para agendar o lançamento do aplicativo e deixar a seção **Data de publicação** definida como a opção padrão, **Publicar o envio assim que for aprovado na certificação**. Isso impedirá que o aplicativo seja publicado antes das datas definidas na seção **Agendamento**. As datas que você selecionou na seção **Agendamento** determinam quando o complemento será disponibilizado para os clientes na Loja.
+Para controlar quando o complemento deve ser publicado na Store, use a seção **Agendamento**. Na maioria dos envios, você deve usar essa seção para agendar o lançamento do aplicativo e deixar a seção **Data de publicação** definida como a opção padrão, **Publicar o envio assim que for aprovado na certificação**. Isso impedirá que o aplicativo seja publicado antes das datas definidas na seção **Agendamento**. As datas que você selecionou na seção **Agendamento** determinam quando o complemento será disponibilizado para os clientes na Store.
 
 Se você ainda não quiser definir uma data de lançamento e preferir que o envio permaneça não publicado até você decidir manualmente iniciar o processo de publicação, escolha **Publicar este aplicativo manualmente**. Escolher essa opção significa que a seleção só será publicada depois que você confirmar. Depois que o complemento for aprovado na certificação, publique-o selecionando **Publicar agora** na página de status da certificação ou selecionando uma data específica, conforme descrito a seguir.
 
 Escolha **Não antes de \[data\]** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado.
  
 > [!NOTE]
-> Atrasos durante a certificação ou publicação podem fazer com que a data real do lançamento seja posterior à data solicitada. A Windows Store não pode garantir que seu complemento (ou atualização) estará disponível em uma data específica.  
+> Atrasos durante a certificação ou publicação podem fazer com que a data real do lançamento seja posterior à data solicitada. A Microsoft Store não pode garantir que seu complemento (ou atualização) estará disponível em uma data específica.  
 
 
 

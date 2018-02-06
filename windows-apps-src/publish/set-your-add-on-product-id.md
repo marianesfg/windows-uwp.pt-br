@@ -1,21 +1,22 @@
 ---
 author: jnHs
-Description: "Quando você cria um novo complemento no painel do Centro de Desenvolvimento do Windows, precisa especificar um tipo de produto e atribuir uma ID do produto (product ID)."
-title: Defina seu tipo de produto e a ID do produto (product ID) do complemento
+Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
+title: Definir seu tipo de produto e ID do produto (product ID) do complemento
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 136077edcf4704f3ea71416719e7c37db43dafda
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: "windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo"
+ms.localizationpriority: high
+ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="set-your-add-on-product-type-and-product-id"></a>Defina seu tipo de produto e a ID do produto (product ID) do complemento
+# <a name="set-your-add-on-product-type-and-product-id"></a>Definir seu tipo de produto e ID do produto (product ID) do complemento
 
 Um complemento deve estar associado a um aplicativo que você já tenha criado no painel (mesmo se você ainda não o enviou). Você pode encontrar o botão **Criar um novo complemento** na página **Visão geral** ou em **Complementos** do aplicativo.
 
@@ -42,21 +43,18 @@ Se o complemento puder ser comprado, usado (consumido) e depois recomprado, voc�
 
 Há dois tipos de complementos para consumo:
 - **Consumível gerenciado pelo desenvolvedor**: o saldo e o cumprimento devem ser gerenciados no aplicativo. Compatível com todas as versões do sistema operacional.
-- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe que você não poderá enviar um complemento consumível gerenciado pela Loja para a Loja até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Loja na etapa **Propriedades** do envio.
+- **Consumível gerenciado pela Store:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe que você não poderá enviar um complemento consumível gerenciado pela Store para a Store até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Store na etapa **Propriedades** do envio.
 
 <span id="subscription" />
 ### <a name="subscription"></a>Assinatura
 
 Se você deseja cobrar os clientes pelo complemento com frequência, escolha **Assinatura**.
 
-> [!NOTE]
-> No momento, a capacidade de criar complementos por assinatura está disponível somente para um conjunto de contas de desenvolvedor que participam de um programa de adoção antecipada. Disponibilizaremos complementos de assinatura para todas as contas de desenvolvedor no futuro, e a documentação preliminar será disponibilizada agora para fornecer aos desenvolvedores uma prévia desse recurso. Para obter mais informações, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
-
 Depois que um complemento de assinatura inicialmente é adquirido por um cliente, eles continuarão a ser cobrados em intervalos recorrentes para continuar usando o complemento. O cliente pode cancelar a assinatura a qualquer momento para evitar cobranças futuras. É necessário especificar o período de assinatura e se deseja ou não oferecer uma avaliação gratuita na etapa **Propriedades** do envio.
 
 Há suporte para complementos de assinatura somente para os clientes que executam o Windows 10, versão 1607 ou posterior. O aplicativo pai deve ser compilado utilizando o Windows 10 SDK, versão 14393 ou posterior, e deve usar a API de compras no aplicativo no namespace **Windows.Services.Store**, em vez do namespace **ApplicationModel**. Para obter mais informações sobre as diferenças entre esses namespaces, consulte [Compras no aplicativo e avaliações](../monetize/in-app-purchases-and-trials.md).
 
-Você deve enviar o produto pai antes de publicar o complemento de assinaturas na Loja (embora seja possível criar o envio no painel e começar a trabalhar nele a qualquer momento).
+Você deve enviar o produto pai antes de publicar o complementos de assinatura na Store (embora seja possível criar o envio no painel e começar a trabalhar nele a qualquer momento).
 
 ## <a name="product-id"></a>ID do Produto
 
@@ -69,5 +67,5 @@ Aqui estão algumas coisas para se ter em mente ao escolher uma ID do produto (p
 -   Uma ID do produto (product ID) não pode ter mais de 100 caracteres.
 -   Um ID do produto não pode incluir nenhum dos seguintes caracteres: **&lt; &gt; \* % & : \\ ? + ,**
 -   Para oferecer seu complemento em todas as versões OS, você deve usar apenas caracteres alfanuméricos, pontos e/ou sublinhados. Se você usar outros tipos de caracteres, o complemento não estará disponível para compra para clientes que executam o Windows Phone 8.1 ou anterior.
--   Uma ID de produto não precisa ser exclusiva dentro da Windows Store, mas ela deve ser exclusiva para sua conta de desenvolvedor.
+-   Uma ID de produto não precisa ser exclusiva dentro da Microsoft Store, mas ela deve ser exclusiva para sua conta de desenvolvedor.
  
