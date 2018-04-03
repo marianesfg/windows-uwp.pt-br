@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
-title: "Relatório de análise do Xbox"
+title: Relatório de análise do Xbox
 ms.author: wdg-dev-content
-ms.date: 10/30/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox"
+keywords: windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox
 ms.localizationpriority: high
-ms.openlocfilehash: ad40d33d51287126cd1940eb830b1be0c5ba7812
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xbox-analytics-report"></a>Relatório de análise do Xbox
 
@@ -55,8 +55,7 @@ Esta seção mostra o número total de clientes que têm desbloqueado cada conqu
 Esta seção inclui as guias onde você pode optar por mostrar dados diferentes para os clientes do seu jogo. Observe que as estatísticas nesta seção referem-se ao uso do recurso em geral e não ao seu produto específico.
 
 - A guia **Uso social** mostra dados relacionados a como os clientes interagem socialmente.
-   - **Hub de jogos** mostra a porcentagem de seus clientes que interagem com hubs de jogos. Esses dados só estão disponíveis para produtos no Xbox e referem-se a quantos de seus clientes usam os hubs de jogos em geral, não o hub de jogos de seu produto especificamente.
-   - **Convites de jogos** mostra o percentual de seus clientes que enviou os convites (para qualquer jogo).
+   - **Convites para jogar** mostra o percentual de seus clientes que enviaram convites (para qualquer jogo).
    - **Chat de terceiros** mostra a porcentagem de seus clientes que usa o bate-papo de terceiros (para qualquer jogo).
    - **Mensagens de texto** mostra a porcentagem de seus clientes que envia mensagens por meio do shell do Xbox (para qualquer jogo).
 - A guia **Uso de streaming** mostra as porcentagens de clientes do seu jogo que assiste ou transmite o jogo (para qualquer jogo) no Twitch e YouTube.

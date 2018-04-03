@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "O Resumo de pagamentos mostra detalhes do dinheiro que você ganhou com os seus aplicativos e complementos. Ele também permite saber quando você receberá os pagamentos e quanto você será pago."
-title: Resumo do pagamento
+Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
+title: Resumo de pagamentos
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: d6a069bab6bc24c6f6388eec7ad63c0c79525fd9
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
+ms.localizationpriority: high
+ms.openlocfilehash: 5be84a7fe6918a0ba272aead83ec26e68669c477
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
@@ -27,8 +28,9 @@ Se você vender produtos no Azure Marketplace, também verá informações sobre
 > [!NOTE]
 > Para se qualificar ao pagamento, sua receita deve atingir o [limite de pagamentos](payment-thresholds-methods-and-timeframes.md) aplicável. Se a receita for inferior ao limite de pagamento, ela permanecerá na categoria **Reservado** até que o limite seja atingido. Para obter mais detalhes sobre o limite de pagamento para receita do aplicativo, consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058). Para receita gerada por anúncios, o limite de pagamento é US$ 50 (ou o equivalente em moeda local). 
 >
-> Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e prazos de pagamento](payment-thresholds-methods-and-timeframes.md).
+> Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e períodos de pagamento](payment-thresholds-methods-and-timeframes.md).
 
+Para exibir seu **Resumo de pagamentos**, clique no ícone **Pagamento** que é exibido próximo ao canto superior direito do Centro de Desenvolvimento e selecione **Resumo de pagamentos**.
 
 ## <a name="current-proceeds-and-payments"></a>Receita e pagamentos atuais
 
@@ -56,7 +58,7 @@ Abaixo da seção **Total pago até a data**, você verá seus três últimos de
 
 Na parte superior de cada demonstrativo, você verá o valor total de seu pagamento mensal. Logo abaixo, na área de **pagamentos efetuados**, você verá um resumo da forma como o valor dos pagamentos foi calculado.
 
-Abaixo na seção **Divisão de receitas**, você pode ver detalhes sobre quanto dinheiro foi ganho por mercado e por fonte de receita (por exemplo, Loja do Windows Phone, Windows Store 8, Windows Store, etc.) por aplicativo. Você também verá detalhes sobre quaisquer [ajustes](#proceeds-by-app-and-adjustments) feitos, inclusive a data, o valor e o motivo do ajuste.
+Abaixo, na seção **Divisão de receitas**, você pode ver detalhes sobre quanto dinheiro foi ganho por mercado e por fonte de receita (por exemplo, Microsoft Store, Windows Store 8, Loja do Windows Phone etc.) por app. Você também verá detalhes sobre todos os [ajustes](#proceeds-by-app-and-adjustments) feitos, inclusive a data, o valor e o motivo do ajuste.
 
 As seções mencionadas acima mostram apenas informações sobre sua receita (e ajustes) de vendas do aplicativo. Se ganhar dinheiro com publicidade, você verá uma seção separada da Microsoft Advertising com detalhes sobre os pagamentos e as conversões de moeda.
 
@@ -80,7 +82,7 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 
 | Nome do campo              | Descrição                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fonte de Receita          | A fonte de sua receita, com base no local onde ocorreu a transação (por exemplo, Windows Store, Loja do Windows Phone, Windows Store 8, anúncio etc.) |
+| Fonte de Receita          | A fonte de sua receita, com base no local onde ocorreu a transação (por exemplo, Microsoft Store, Loja do Windows Phone, Windows Store 8, anúncio etc.) |
 | ID do Pedido                |  Identificador exclusivo do pedido. Essa ID permite identificar as transações de compra com suas respectivas transações de não compra (como reembolsos, estornos, etc.). Ambas terão a mesma ID de Pedido. Além disso, no caso de uma cobrança dividida, onde várias formas de pagamento são usadas em uma compra única, isso permitirá que você vincule as transações de compra.                                                                                                          |
 | ID da transação          |       Identificador exclusivo da transação.  |
 | Data/hora da transação   | A data e a hora em que a transação ocorreu (UTC).                                                                                        |
@@ -89,7 +91,7 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | Nome do produto pai     | Nome do produto pai. Observação: se não houver um produto pai para a transação, então Nome do produto pai = Nome do produto.   |
 | Nome do produto            | Nome do produto.                                                                                                                     |
 | Tipo do Produto            | Tipo de produto (por exemplo, app, complemento, jogo, etc.)                                                                                        |
-| Quantidade                | Quando a origem da receita é a Windows Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1.    |
+| Quantidade                | Quando a fonte de receita é a Microsoft Store para Empresas, a quantidade representa o número de licenças adquiridas. Para todas as outras fontes de receita, a quantidade sempre será 1. Observação: mesmo quando uma única transação é dividida em dois itens de linha porque foram usados dois métodos de pagamento diferentes, cada item de linha mostrará uma quantidade de 1.    |
 | Tipo de transação        | Tipo de transação (por exemplo, compra, reembolso, estorno, etc.)                                                                |
 | Forma de pagamento          | A forma de pagamento do cliente usada na transação (por exemplo, cartão de crédito, conta de celular, PayPal, etc)                                 |
 | País/região        | País/região onde ocorreu a transação.                                                                                            |

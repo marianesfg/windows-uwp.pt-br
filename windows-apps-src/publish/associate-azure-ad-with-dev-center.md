@@ -3,17 +3,17 @@ author: jnHs
 Description: In order to add and manage account users, you must first associate your Dev Center account with your organization's Azure Active Directory.
 title: Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários"
+keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: high
-ms.openlocfilehash: ef53a8b339f7f6444373d7445721b641926f00a3
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory
 
@@ -22,7 +22,7 @@ Para [adicionar e gerenciar usuários da conta](add-users-groups-and-azure-ad-ap
 O Centro de Desenvolvimento do Windows aproveita o Azure AD para acesso e gerenciamento de contas de vários usuários. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode criar um novo inquilino do Azure AD no Centro de Desenvolvimento sem nenhum custo adicional.
 
 > [!TIP]
-> Este tópico é específico para o programa de desenvolvedores de aplicativos do Windows, mas a associação de um locatário e o gerenciamento de usuário funcionam de forma semelhante para contas no programa de desenvolvedores de hardware do Windows. Nesta seção, as referências à função **Gerente** também se aplicariam a contas de hardware com a função **Administrador**. Para saber mais sobre o gerenciamento de usuários no programa de desenvolvedores de hardware, consulte [Administração do Painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration).
+> Este tópico é específico para o programa de desenvolvedores de aplicativos do Windows, mas a associação de um locatário e o gerenciamento de usuários funcionam da mesma forma para contas no Programa de Aplicativos da Área de Trabalho do Windows (consulte [Programa de Aplicativos da Área de Trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504#users) para obter mais informações) e no Programa de Desenvolvedores de Hardware para Windows (em que a função **Gerente** também se aplicaria a contas de hardware com a função **Administrador**; consulte [Administração do Painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações).
 
 Um único locatário do Azure AD pode ser associado a várias contas do Centro de Desenvolvimento. Você só precisa ter um locatário do Azure AD associado à sua conta do Centro de Desenvolvimento para adicionar vários usuários da conta. No entanto, você também tem a opção de adicionar vários locatários do Azure AD a uma única conta do Centro de Desenvolvimento. Qualquer usuário com a função **Gerente** na conta do Centro de Desenvolvimento terá a opção de adicionar e remover locatários do Azure AD.
 

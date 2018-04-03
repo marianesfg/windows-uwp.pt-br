@@ -8,13 +8,13 @@ ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo"
+keywords: windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: high
-ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 12ed8eb58f9f7f7a5fec55c62f19afe0bf6fa2d5
+ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Definir seu tipo de produto e ID do produto (product ID) do complemento
 
@@ -39,11 +39,11 @@ O **Ciclo de vida do produto** padrão de um complemento durável é **Para semp
 <span id="consumable" />
 ### <a name="consumable"></a>Consumível
 
-Se o complemento puder ser comprado, usado (consumido) e depois recomprado, você desejará selecionar um dos tipos de produto **consumíveis**. Complementos consumíveis geralmente são usados para coisas como moedas em jogos (ouro, moedas etc.) que podem ser adquiridas em valores definidos e, em seguida, usadas pelo cliente. Para obter mais informações sobre como incluir complementos consumíveis no aplicativo, consulte [Habilitar compras de complementos consumíveis](../monetize/enable-consumable-add-on-purchases.md).
+Se o complemento puder ser comprado, usado (consumido) e depois recomprado, você desejará selecionar um dos tipos de produto **consumíveis**. Complementos consumíveis geralmente são usados para coisas como moedas em jogos (ouro, moedas etc.) que podem ser adquiridas em valores definidos e, em seguida, usadas pelo cliente. Para obter mais informações, consulte [Habilitar compras de complementos consumíveis](../monetize/enable-consumable-add-on-purchases.md).
 
 Há dois tipos de complementos para consumo:
 - **Consumível gerenciado pelo desenvolvedor**: o saldo e o cumprimento devem ser gerenciados no aplicativo. Compatível com todas as versões do sistema operacional.
-- **Consumível gerenciado pela Store:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe que você não poderá enviar um complemento consumível gerenciado pela Store para a Store até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Store na etapa **Propriedades** do envio.
+- **Consumível gerenciado pela Loja:** O saldo será acompanhado pela Microsoft em todos os dispositivos do cliente nos quais o Windows 10, versão 1607, ou posterior esteja em execução; não compatível em versões anteriores do sistema operacional. Para usar essa opção, o produto pai deve ser compilado usando-se o SDK do Windows 10 versão 14393 ou posterior. Observe que você não poderá enviar um complemento consumível gerenciado pela Loja para a Loja até o produto pai ter sido publicado (embora possa criar o envio no painel e começar a trabalhar nele a qualquer momento). Você deverá inserir a quantidade para o complemento consumível gerenciado pela Loja na etapa **Propriedades** do envio.
 
 <span id="subscription" />
 ### <a name="subscription"></a>Assinatura
@@ -52,9 +52,9 @@ Se você deseja cobrar os clientes pelo complemento com frequência, escolha **A
 
 Depois que um complemento de assinatura inicialmente é adquirido por um cliente, eles continuarão a ser cobrados em intervalos recorrentes para continuar usando o complemento. O cliente pode cancelar a assinatura a qualquer momento para evitar cobranças futuras. É necessário especificar o período de assinatura e se deseja ou não oferecer uma avaliação gratuita na etapa **Propriedades** do envio.
 
-Há suporte para complementos de assinatura somente para os clientes que executam o Windows 10, versão 1607 ou posterior. O aplicativo pai deve ser compilado utilizando o Windows 10 SDK, versão 14393 ou posterior, e deve usar a API de compras no aplicativo no namespace **Windows.Services.Store**, em vez do namespace **ApplicationModel**. Para obter mais informações sobre as diferenças entre esses namespaces, consulte [Compras no aplicativo e avaliações](../monetize/in-app-purchases-and-trials.md).
+Há suporte para complementos de assinatura somente para os clientes que executam o Windows 10, versão 1607 ou posterior. O aplicativo pai deve ser compilado utilizando o Windows 10 SDK, versão 14393 ou posterior, e deve usar a API de compras no aplicativo no namespace **Windows.Services.Store**, em vez do namespace **ApplicationModel**. Para obter mais informações, consulte [Habilitar complementos de assinatura para o aplicativo](../monetize/enable-subscription-add-ons-for-your-app.md).
 
-Você deve enviar o produto pai antes de publicar o complementos de assinatura na Store (embora seja possível criar o envio no painel e começar a trabalhar nele a qualquer momento).
+Você deve enviar o produto pai antes de publicar os complementos de assinatura na Store (embora seja possível criar o envio no painel e começar a trabalhar nele a qualquer momento).
 
 ## <a name="product-id"></a>ID do Produto
 

@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Saiba mais sobre os formulários fiscais emitidos pela Microsoft, inclusive quem os receberá e quando eles serão disponibilizados."
-title: "Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft"
+Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
+title: Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos, imposto, imposto de renda, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 0bdae8a8489ddf4f2ec7eb7a619631bd4fa26e9e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -26,7 +27,7 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 | Formulário fiscal da Receita Federal dos EUA | Descrição | Disponibilidade |
 |--------------|-------------|--------------|
 |1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Os formulários impressos serão protocolados até **31 de janeiro**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
-|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos. | Os formulários impressos serão protocolados até **15 de março**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
+|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Os formulários impressos serão protocolados até **15 de março**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
 > O endereço listado nos formulários fiscais da Receita Federal dos EUA vem do endereço de seu [Perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
@@ -39,15 +40,15 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
      <th> Devo receber este formulário</th>
   </tr>
   <tr> 
-     <td valign="top">Atingi a marca de **mais de 200 vendas de app** com um valor total de compra dessas vendas **superior a US$ 20.000** no ano fiscal aplicável (**sem** contar vendas feitas no Brasil e na China por meio da Loja do Windows 10.)</td>
-    <td valign="top">**1099-K** :<br>
+     <td valign="top">Atingi a marca de **mais de 200 vendas de app** com um valor total de compra dessas vendas **superior a USD 20.000** no ano fiscal aplicável (**sem** contar vendas feitas no Brasil e na China por meio da Microsoft Store no Windows 10).</td>
+    <td valign="top">**1099-K**:<br>
 Declarante: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
 <br>
 **Importante:** O formulário 1099-K contém os valores de **compra brutos**, e não os pagamentos feitos a você.</td>
   </tr>
   <tr> 
-     <td valign="top">Recebi **pelo menos US$ 10 em pagamentos** por vendas de app feitas no Brasil e na China por meio da Loja do Windows 10.<br>
+     <td valign="top">Recebi **pelo menos US$ 10 em pagamentos** por (i) vendas de app feitas no Brasil e na China por meio da Microsoft Store no Windows 10 ou (ii) vendas no Minecraft Marketplace.<br>
 <br>
 **OU**<br>
 <br>

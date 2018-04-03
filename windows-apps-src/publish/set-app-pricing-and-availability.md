@@ -1,31 +1,30 @@
 ---
 author: jnHs
-Description: "A página Preço e disponibilidade do processo de envio de aplicativo permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes."
-title: "Definir a disponibilidade e o preço do aplicativo"
+Description: The Pricing and availability page of the app submission process lets you determine how much your app will cost, whether you'll offer a free trial, and how, when, and where it will be available to customers.
+title: Definir a disponibilidade e o preço do aplicativo
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9686876bf0e5e3d89ce527eb07535f1c0a704f2a
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.localizationpriority: high
+ms.openlocfilehash: 3e94aadefb418aa7cefa90b8f274868c80f3e480
+ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 
-> [!NOTE]
-> Recentemente, atualizamos as opções disponíveis desta página. Se você tinha qualquer envio em andamento antes dessas opções mais recentes estarem disponíveis, esse envio ainda poderá mostrar as opções mais antigas. É possível excluir esse envio e, em seguida, criar um novo se quiser usar as novas opções desse aplicativo. Caso contrário, as opções mais recentes serão disponibilizadas com a próxima atualização depois que você publicar o envio em andamento.
 
 A página **Preço e disponibilidade** do [processo de envio de aplicativo](app-submissions.md) permite que você determine quanto seu aplicativo vai custar, se você oferecerá uma avaliação gratuita e como, quando e onde ele estará disponível para os clientes. Aqui, nós o guiaremos pelas opções desta página e o que você deve considerar ao inserir essas informações.
 
 
 ## <a name="markets"></a>Mercados
 
-A Windows Store abrange clientes em mais de 200 países e regiões em todo o mundo. Por padrão, ofereceremos seu aplicativo em todos os mercados possíveis. Se você preferir, poderá escolher os mercados específicos nos quais deseja oferecer seu aplicativo. 
+A Microsoft Store abrange clientes em mais de 200 países e regiões em todo o mundo. Por padrão, ofereceremos seu aplicativo em todos os mercados possíveis. Se você preferir, poderá escolher os mercados específicos nos quais deseja oferecer seu aplicativo. 
 
 Para obter mais informações, consulte [Definir seleção de mercado](define-pricing-and-market-selection.md).
 
@@ -46,7 +45,8 @@ Se você quiser ocultar seu aplicativo na Loja, mas ainda quiser torná-lo dispo
 - **Somente para pessoas no Windows Phone 8.x: somente as pessoas que você especificar abaixo podem baixar este produto em um dispositivo Windows Phone 8.x. Qualquer pessoa com um link direto e um código promocional podem baixar o produto em um dispositivo Windows 10.** Essa opção pode não aparecer em todos os envios. Ele só se aplicará se você tiver pacotes que podem ser executados no Windows Phone 8. x. Somente os clientes cujos endereços de email (associados às suas contas da Microsoft) você inserir na caixa (separados por ponto-e-vírgulas) poderão baixar seu aplicativo no Windows Phone 8.x usando o link direto para sua listagem. Você também pode gerar códigos promocionais para realizar a distribuição a pessoas específicas no Windows 10, conforme descrito acima. 
 
 > [!TIP]
-> Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Loja, e os novos clientes não poderão obtê-lo por meio de qualquer método. Esta ação substituirá qualquer uma das opções que você escolheu aqui: ele não estará disponível para novos clientes. Para disponibilizá-lo para novos clientes novamente, você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+> Se você desejar parar completamente de oferecer um aplicativo para quaisquer novos clientes, é necessário selecionar **Tornar aplicativo indisponível** na página de visão geral. Depois que você confirmar que deseja tornar o aplicativo indisponível, em algumas horas ele não estará mais visível na Microsoft Store, e os novos clientes não poderão obtê-lo (exceto com um [código promocional](generate-promotional-codes.md) e se estiver no dispositivo Windows 10). Esta ação substituirá as seleções de **Visibilidade** no seu envio. Para disponibilizar o aplicativo para novos clientes novamente (de acordo com seleções de **Visibilidade**), você pode a qualquer momento clicar em **Tornar aplicativo disponível** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+
 
 ## <a name="schedule"></a>Agenda
 
@@ -54,15 +54,18 @@ Por padrão (a menos que você tenha selecionado uma das opções **Disponibiliz
 
 Para obter mais informações, consulte [Configurar agendamento preciso do lançamento](configure-precise-release-scheduling.md).
 
+
 ## <a name="display-release-date"></a>Exibir data de lançamento
 
 Por padrão, a data de lançamento do aplicativo será a data em que ele aparece na Loja. Se você quiser substituir isso e fornecer uma data de lançamento personalizada, marque a caixa nesta seção e insira a data de lançamento. Observe que a data de lançamento nem sempre é exibida nas listagens da Loja.
+
 
 ## <a name="pricing"></a>Preço
 
 É necessário selecionar um preço base para seu aplicativo (a não ser que você tenha selecionado uma das opções de **Disponibilizar este produto mas não torná-lo detectável na Loja** na seção [Visibilidade](#visibility) seção), escolhendo **Gratuito** ou uma das faixas de preço disponíveis. Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do aplicativo deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 
 Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
+
 
 ## <a name="free-trial"></a>Avaliação gratuita
 
@@ -85,9 +88,9 @@ Escolha **Ilimitado** para permitir que os clientes acessem seu aplicativo gratu
 Por padrão, a versão de avaliação será disponibilizada assim que o aplicativo for publicado e a oferta nunca será interrompida. Se quiser, você pode especificar a data e a hora em que sua versão de avaliação deve começar a ser oferecida e quando essa oferta deve ser interrompida. 
 
 >[!NOTE]
-> Essas datas se aplicam somente a clientes no Windows 10. Se a versão de avaliação se aplicar a clientes nas versões anteriores do sistema operacional, a versão de avaliação será oferecida enquanto seu produto estiver disponível. 
+> Essas datas se aplicam somente a clientes no Windows 10 (incluindo o Xbox). Se o app estiver disponível para os clientes nas versões anteriores do sistema operacional, a versão de avaliação será oferecida a esses clientes enquanto seu produto estiver disponível. 
 
-Para definir as datas em que sua avaliação deve ser oferecida, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado. 
+Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado. 
 
 >[!NOTE]
 > Diferente da seção [Agendamento](configure-precise-release-scheduling.md), as datas que você selecionar para a **Avaliação gratuita** não poderão ser personalizadas para mercados específicos. 
@@ -107,6 +110,7 @@ Por padrão, seu aplicativo pode ser oferecido para que as organizações compre
 
 Para obter mais informações, consulte [Opções de licenciamento para organizações](organizational-licensing.md).
 
+
 ## <a name="publish-date"></a>Data de publicação
 
 Por padrão, seu envio iniciará o processo de publicação assim que for aprovado na certificação, a menos que você tenha configurado as datas na seção [**Agendamento**](#schedule) descrita acima. 
@@ -118,7 +122,7 @@ Se você ainda não quiser definir uma data de lançamento e preferir que o envi
 Escolha **Não antes de \[data\]** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado.
  
 > [!NOTE]
-> Atrasos durante a certificação ou publicação podem fazer com que a data real do lançamento seja posterior à data solicitada. A Windows Store não pode garantir que seu aplicativo (ou atualização) estará disponível em uma data específica.  
+> Atrasos durante a certificação ou publicação podem fazer com que a data real do lançamento seja posterior à data solicitada. A Microsoft Store não pode garantir que seu aplicativo (ou atualização) estará disponível em uma data específica.  
 
 Você também pode mudar a data de lançamento após enviar o aplicativo, desde que ele ainda não tenha entrado na etapa Publicação. 
 

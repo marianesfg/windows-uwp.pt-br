@@ -1,28 +1,27 @@
 ---
 author: jnHs
-Description: "A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para escolher um nome excelente para o seu aplicativo."
-title: Crie seu app reservando um nome
-keywords: windows 10, uwp
+Description: The first step in creating a new app in your Windows Dev Center dashboard is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
+title: Criar seu app reservando um nome
+keywords: windows 10, uwp, reserva de nome, nome do app, nomes de aplicativo, nomes, nome de produto, nomenclatura
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 55bd36cf1a84cc8d79d7e7373da22e97e571542e
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 960acceb9f665b9d2f2d1def680626876c3aa29b
+ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crie seu app reservando um nome
 
 
-A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes e encontrar sugestões para [escolher um nome excelente para o seu aplicativo](#choosing-your-apps-name). Cada nome reservado deve ser exclusivo em toda a Loja.
+A primeira etapa na criação de um novo aplicativo no painel do Centro de Desenvolvimento do Windows é reservar um nome de aplicativo. Veja como reservar nomes de app e encontrar sugestões para [escolher um nome excelente para o seu app](#choosing-your-apps-name). Cada nome reservado deve ser exclusivo em toda a Microsoft Store.
 
-Quando você [carrega os pacotes do aplicativo](upload-app-packages.md), o valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-displayname) deve corresponder ao nome reservado para o aplicativo. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
-
-Se você tiver um aplicativo do Windows Phone criado no painel antigo do Windows Phone e nunca reservou um nome para ele, ainda será possível gerenciar e enviar o aplicativo. No entanto, para carregar pacotes .appx pacotes para ele, ou [exibir detalhes de identidade de aplicativo](view-app-identity-details.md) específicos para pacotes .appx, você precisará reservar um nome exclusivo seguindo as etapas abaixo. Isso também impede que outra pessoa reserve o nome para si.
+Ao [carregar os pacotes do aplicativo](upload-app-packages.md), o valor [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-displayname) deve corresponder ao nome reservado para o app. Se você usar o Microsoft Visual Studio para criar o pacote de seu aplicativo, esse atributo será preenchido para você.
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>Crie seu aplicativo reservando um novo nome
 
@@ -32,12 +31,15 @@ Reservar um nome é a primeira etapa na criação de um aplicativo no painel. Vo
 2.  Na caixa de texto, insira o nome que você deseja usar e, em seguida, selecione **Verificar disponibilidade**. Se o nome estiver disponível, você verá uma marca de seleção verde. (Se o nome que você inseriu já estiver reservado ou sendo usado por outro desenvolvedor, você verá uma mensagem de que o nome não está disponível).
 3.  Clique em **Reservar nome do produto**.
 
-O nome agora fica reservado e você pode começar a trabalhar em seu [envio](app-submissions.md) quando estiver pronto.
+O nome agora está reservado, e você pode começar a trabalhar em seu [envio](app-submissions.md) quando estiver pronto.
 
 > [!NOTE]
-> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum aplicativo listado com esse nome na Loja. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o aplicativo dele, mas ainda não enviou o aplicativo. Se você não puder reservar um nome registrado por você ou sobre o qual possua outros direitos jurídicos, ou se achar outro aplicativo na Windows Store com o mesmo nome, [fale com a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
+> Talvez você descubra que não pode reservar um nome, mesmo que não exista nenhum app com esse nome listado na Microsoft Store. Geralmente isso ocorre porque outro desenvolvedor reservou o nome para o app dele, mas ainda não o enviou. Se você não conseguir reservar um nome que tenha sido registrado por você ou sobre o qual você possui outros direitos legais, ou se encontrar outro app na Microsoft Store com o mesmo nome, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
 
-Depois de reservar um nome, você terá um ano para enviar o aplicativo. Se você não enviá-lo em um ano, a reserva do nome expirará e outro desenvolvedor poderá usar o nome em um aplicativo. Você pode encontrar um erro se tentar enviar um aplicativo sob um nome que deixou expirar.
+Depois de reservar um nome, você tem um ano para enviar o aplicativo. Se você não enviá-lo em um ano, a reserva do nome expirará e outro desenvolvedor poderá usar o nome em um aplicativo. Você pode encontrar um erro se tentar enviar um aplicativo sob um nome que deixou expirar.
+
+> [!NOTE]
+> Se você tiver um aplicativo do Windows Phone criado no painel do Windows Phone mais antigo e nunca reservou um nome para ele, é necessário fazer isso para carregar pacotes .appX para ele ou a fim de [exibir detalhes de identidade de aplicativo](view-app-identity-details.md) específicos para pacotes .AppX. A reserva de um nome exclusivo também impede que outra pessoa reserve o nome para si. No entanto, se você não reservar um nome, ainda é possível gerenciar e enviar o aplicativo para seus clientes do Windows Phone 8.x.
 
 
 ## <a name="choosing-your-apps-name"></a>Escolhendo o nome do aplicativo
@@ -51,7 +53,9 @@ Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um no
 
 -   **Seja original.** Assegure que o nome do aplicativo seja diferente o suficiente para que não seja confundido com um aplicativo existente.
 -   **Não use nomes com marca comercial de outros.** Certifique-se de ter os direitos de uso do nome reservado. Caso alguém tenha registrado o nome, ele poderá relatar uma infração, e você não poderá continuar usando o nome. Se isso ocorrer após a publicação do aplicativo, ele será removido da Loja. Desse modo, você precisará alterar o nome do seu aplicativo e todas as instâncias do nome em todo o aplicativo e seu conteúdo antes de [enviar o aplicativo](app-submissions.md) para certificação novamente.
--   **Evite adicionar informações de diferenciação no fim do nome.** Caso as informações que diferenciam vários aplicativos sejam adicionadas ao final do nome, é possível que os clientes não as vejam, principalmente se o nome for longo; assim, parecerá que todos os aplicativos têm o mesmo nome. Se não for possível evitar isso, use logotipos e imagens do aplicativo diferentes para facilitar a diferenciação dos vários aplicativos.
+-   **Evite adicionar informações de diferenciação no fim do nome.** Caso as informações que diferenciam vários aplicativos sejam adicionadas ao final do nome, é possível que os clientes não as vejam, principalmente se o nome for longo; assim, parecerá que todos os aplicativos têm o mesmo nome. Se não for possível evitar essa situação, use logotipos e imagens do aplicativo diferentes para facilitar a diferenciação entre um app e outro.
+-   **Não inclua emojis no nome.** Você não poderá reservar um nome que inclua emojis ou outros caracteres não compatíveis.
+
 
 ## <a name="manage-additional-app-names"></a>Gerenciar nomes de aplicativos adicionais
 

@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "O relatório de aquisições no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com detalhes demográficos e de plataforma."
-title: "Relatório de aquisições"
+Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+title: Relatório de aquisições
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: d6540db7a3d0a045fa6a2c8fec617f045f4a1bf4
-ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
+ms.localizationpriority: high
+ms.openlocfilehash: d1675b3a2ffe879585ea2fd3792b47e7bdc7a8af
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
 
-O relatório de **Aquisições** no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com detalhes demográficos e de plataforma. Ele também permite que você obtenha informações sobre como os clientes no Windows 10 chegaram à listagem do aplicativo.
+O relatório de **Aquisições** no painel do Centro de Desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com detalhes demográficos e de plataforma. Ele também permite que você obtenha informações sobre como os clientes com o Windows 10 (incluindo o Xbox) chegaram aos detalhes do seu aplicativo.
 
-Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode visualizar esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizá-lo offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma **aquisição** significa que um novo cliente obteve uma licença para seu aplicativo (independentemente se você cobrou ou ofereceu gratuitamente). Uma **instalação** se refere ao aplicativo sendo instalado em um dispositivo Windows 10.
 
@@ -37,9 +38,9 @@ Na parte superior da página, você pode selecionar o período para o qual você
 Você também pode expandir **Filtros** para filtrar os dados dessa página por mercado e/ou por tipo de dispositivo.
 
 -   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a aquisições em um ou mais mercados.
--   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
+-   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se você deseja mostrar dados de aquisições apenas de um determinado tipo de dispositivo (por exemplo, computador, console ou tablet), pode escolher um dispositivo específico aqui.
 
-As informações de todos os gráficos listados abaixo refletem o intervalo de datas e quaisquer filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
+As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
 
 
 ## <a name="acquisitions"></a>Aquisições
@@ -55,10 +56,10 @@ Você pode filtrar os resultados se a aquisição foi originada do cliente ou da
 
 ## <a name="installs"></a>Instalações
 
-O gráfico de **Instalações** mostra quantas vezes detectamos que os clientes instalaram com sucesso seu aplicativo em dispositivos Windows 10 durante o período selecionado. A quantidade total é mostrada, juntamente com um gráfico mostrando as instalações por dia ou semana (dependendo da duração selecionada). Você pode filtrar os resultados por uma versão específica do pacote.
+O gráfico **Instalações** mostra quantas vezes detectamos que os clientes instalaram seu app com êxito em dispositivos Windows 10 (incluindo consoles Xbox One) durante o período selecionado. O total é mostrado, juntamente com um gráfico mostrando as instalações por dia ou semana (dependendo da duração selecionada). Você pode filtrar os resultados por uma versão específica do pacote.
 
 O total de instalação inclui:
--   **Instalações em vários dispositivos Windows 10.** Por exemplo, se o mesmo cliente instalar o aplicativo em dois computadores com Windows 10 e um telefone Windows 10, isso será considerado como três instalações.
+-   **Instalações em vários dispositivos Windows 10.** Por exemplo, se o mesmo cliente instalar o app em dois computadores Windows 10 e um console Xbox One, isso será considerado como três instalações.
 -   **Reinstalações.** Por exemplo, se um cliente instalar o app hoje, desinstalar seu app amanhã e, em seguida, reinstalar o app próximo mês, isso contará como duas instalações.
 
 O total de instalação não inclui ou reflete:
@@ -76,7 +77,7 @@ O total de instalação não inclui ou reflete:
 O **funil aquisição** mostra quantos clientes concluíram cada etapa do funil, da visualização da página da Loja ao uso do aplicativo, juntamente com a taxa de conversão. Esses dados podem ajudar você a identificar áreas em que convém investir mais para aumentar as aquisições, as instalações ou o uso.
 
 > [!IMPORTANT]
-> O **funil de aquisição** mostra dados somente para os cliente no Windows 10 nos últimos 90 dias.
+> O **Funil de aquisição** mostra os dados somente sobre cliente com o Windows 10 (incluindo o Xbox) dos últimos 90 dias.
 
 As etapas no funil são:
 

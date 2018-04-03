@@ -1,19 +1,19 @@
 ---
 author: QuinnRadich
 title: Novidades no Windows 10 para desenvolvedores, ferramentas e recursos
-description: "O Windows 10, compilação 16299 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da UWP (Plataforma Universal do Windows)."
-keywords: "novidade, novidades, atualização, atualizações, recursos, novo, Windows 10, 1709, outubro, mais recente, desenvolvedores, 16299, criadores do segundo semestre"
+description: O Windows 10, compilação 16299 e as novas ferramentas de desenvolvedor fornecem as ferramentas, os recursos e as experiências da UWP (Plataforma Universal do Windows).
+keywords: novidade, novidades, atualização, atualizações, recursos, novo, Windows 10, 1709, outubro, mais recente, desenvolvedores, 16299, criadores do segundo semestre
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 852d59433f3dfe24da6509e588e350dbe1011bbf
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 1e61ede3d16d9c92c28a0e40a0dd65951444ef3a
+ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Novidades no Windows 10 para desenvolvedores, compilação 16299
 
@@ -31,6 +31,8 @@ Efeitos do Design Fluent | Esses novos efeitos fazem parte do Sistema de Design 
 Aceleradores de teclado | Aumente a acessibilidade e a usabilidade do aplicativo com [aceleradores de teclado](../design/input/keyboard-accelerators.md) ou atalhos. Eles permitem aos usuários invocar de forma intuitiva as ações ou comandos comuns sem navegar na interface de usuário do aplicativo, bem como podem ser configurados para se adequar ao escopo necessário da sua função.
 Escrita à tinta | As APIs de [CoreIncrementalInkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreincrementalinkstroke) permitem a criação de traços de tinta individuais que podem ser renderizados de forma incremental por meio de objetos **InkPoint**. </br></br> As APIs de [CoreInkPresenterHost](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreinkpresenterhost) permitem que você hospede um objeto **InkPresenter** sem um controle **InkCanvas** associado.
 Controlador radial | As APIs de [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration) foram atualizadas com a capacidade de definir o menu **RadialController** para a exibição ou o processo de um aplicativo.
+Blocos Dinâmicos | Fixe os [blocos secundários desde apps Win32 de Ponte de Desktop](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md).
+Notificações do sistema | Use a [atualização pendente](../design/shell/tiles-and-notifications/toast-pending-update.md) nos botões para criar a interatividade de várias etapas em suas notificações do sistema.
 Controles de interface de usuário | Esses novos controles facilitam a rápida criação de uma interface de usuário com ótima aparência. </br>* O [controle do seletor de cores](../design/controls-and-patterns/color-picker.md) permite que os usuários naveguem e selecionem cores. </br>* O [controle de modo de exibição de navegação](../design/controls-and-patterns/navigationview.md) torna mais fácil adicionar navegação de ponta ao seu aplicativo. </br>* O [controle de imagem da pessoa](../design/controls-and-patterns/person-picture.md) exibe a imagem de avatar para uma pessoa. </br>* O [controle de classificação](../design/controls-and-patterns/rating.md) permite que os usuários facilmente visualizem e definam classificações que refletem o grau de satisfação com o conteúdo e serviços.
 Voz e tom | Adicionamos novas [orientações de voz em tom em aplicativos UWP](../design/style/voice-and-tone.md) a fim de fornecer recomendações para a criação de textos em seu aplicativo. Independentemente do que estiver criando, é importante que a linguagem usada seja acessível, amigável e informativa.
 

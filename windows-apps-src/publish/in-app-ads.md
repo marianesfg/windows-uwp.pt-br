@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
-title: "Anúncios no aplicativo"
+title: Anúncios no aplicativo
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 12/04/2017
+ms.date: 2/24/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: f0faa69cef0f98171c4679d6a94b01199b215cb4
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 66c0ae56c3722162ebef5a8660cc2322d69a278b
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -78,8 +78,10 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
+Observe que, se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, ela receberá o rótulo **Inativa**e, por fim, removeremos essa unidade do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+
 <span id="mediation" />
-## <a name="mediation-settings"></a>Ajustes de controle
+## <a name="mediation-settings"></a>Configurações de mediação
 
 Quando você [Criar uma nova unidade publicitária UWP](#create-ad-unit) ou [Editar uma unidade publicitária UWP existente](#available-ad-units), use as opções desta seção para configurar a mediação de anúncios para a unidade publicitária. O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas e os anúncios não relacionados à geração de receitas para campanhas promocionais de aplicativos da Microsoft. Assumimos o controle das solicitações de anúncios em faixa nas redes de publicidade escolhidas. Se você já tiver uma unidade publicitária UWP associada ao anúncio em faixa, intersticial ou nativo no aplicativo, a habilitação do controle de anúncios não requer nenhuma alteração de código no aplicativo.
 
@@ -120,8 +122,8 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 | AOL e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio das redes parceiras AOL e AppNexus.<p/>**Observação**: AOL e AppNexus sempre aparecem em primeiro lugar na lista **Redes de publicidade pagas** das unidades publicitárias Em faixa e não podem ser rebaixadas de posição nesses tipos de anúncios. | Faixa, Vídeo intersticial |
 | AppNexus (direto) | Selecione esta opção para veicular anúncios intersticiais em vídeo da [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
-| Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa  |
-| Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](http://www.revcontent.com/). |  Faixa  |
+| Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa, faixa intersticial  |
+| Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](http://www.revcontent.com/). |  Faixa, nativo  |
 | Smaato |  Selecione esta opção para veicular anúncios da [Smaato](https://www.smaato.com/). |  Faixa  |
 | smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |

@@ -1,77 +1,96 @@
 ---
 author: jnHs
-Description: "Selecione o preço base de um aplicativo e agende alterações de preço. Você também pode personalizar essas opções para mercados específicos."
-title: "Definir e agendar o preço do aplicativo"
+Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
+title: Definir e agendar o preço do aplicativo
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 65d2fa64e4d442da42b8c546693c61eda817aa18
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
+ms.localizationpriority: high
+ms.openlocfilehash: 2be7e664279cb19527a262ad3c170d04f8d026fb
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 
-A seção **Preço** da página [Preço e disponibilidade](set-app-pricing-and-availability.md) permite que você selecione o preço base de um aplicativo. Você também pode [agendar alterações de preço](#schedule-price-changes) para indicar a data e a hora em que o preço do aplicativo deve ser alterado. Além disso, você tem a opção de [personalizar essas alterações para mercados específicos](#customize-pricing-for-specific-markets). 
+A seção **Preço** da página [Preço e disponibilidade](set-app-pricing-and-availability.md) permite que você selecione o preço base de um aplicativo. Você também pode [agendar alterações de preço](#schedule-price-changes) para indicar a data e a hora em que o preço do app deve ser alterado. Além disso, você tem a opção de [substituir o preço base para mercados específicos](#override-base-price-for-specific-markets), selecionando uma nova faixa de preço ou inserindo um preço livre na moeda local do mercado.
 
 > [!NOTE]
-> Embora este tópico se refira aos aplicativos, a seleção de preço para envios de complemento usa o mesmo processo.
+> Embora este tópico refira-se a apps, a seleção de preço para envios de complementos usa o mesmo processo.
 
 ## <a name="base-price"></a>Preço de base
 
-Quando você selecionar o **Preço base** do seu aplicativo, esse preço será usado em todos os mercados em que o aplicativo é vendido, a menos que você especifique um preço personalizado para um mercado específico.
+Ao selecionar o **Preço base** do seu app, esse preço será usado em todos os mercados em que o app for vendido, a menos que você substitua o preço base em algum mercado.
 
-Você pode definir o **Preço base** para **Gratuito** ou escolher uma faixa de preços disponível, que defina o preço de venda em todos os países em que você opte por distribuir seu aplicativo. As faixas de preço começam em USD 0,99, com níveis adicionais disponíveis em incrementos crescentes (USD 1,09, USD 1,19 e assim por diante). Esses incrementos geralmente aumentam à medida que o preço também aumenta. 
+Você pode definir o **Preço base** como **Gratuito** ou pode escolher uma faixa de preço disponível, que define o preço em todos os países em que você optar por distribuir seu app. As faixas de preço começam em USD 0,99, com faixas adicionais disponíveis em incrementos crescentes (USD 1,09, USD 1,19 e assim por diante). Esses incrementos geralmente aumentam à medida que o preço também aumenta. 
 
 > [!NOTE]
 > Essas faixas de preço também se aplicam aos complementos. 
 
-Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moedas oferecidas pela Loja. Usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Você pode selecionar seu preço base em qualquer moeda, e nós usaremos automaticamente o valor correspondente para diferentes mercados.
+Cada faixa de preço tem um valor correspondente em cada uma das mais de 60 moedas oferecidas pela Loja. Usamos esses valores para ajudar você a vender seus aplicativos com um preço proporcional em todo o mundo. Você pode selecionar seu preço base em qualquer moeda, e usaremos automaticamente o valor correspondente para diferentes mercados. Observe que, às vezes, podemos ajustar o valor correspondente em um determinado mercado para compensar as alterações nas taxas de conversão de moeda.
 
-Na seção **Preços**, clique em **exibir tabela** para ver os preços correspondentes em todas as moedas. Isso também exibe um número de ID associado a cada faixa de preços, que será necessário se você estiver usando a [API de envio da Windows Store](../monetize/manage-app-submissions.md#price-tiers) para inserir preços. Você pode clicar em **Download** para baixar uma cópia da tabela de faixa de preços como um arquivo. csv.
+Na seção **Preços**, clique em **exibir tabela de conversão** para ver os preços correspondentes em todas as moedas. Isso também exibe um número de ID associado a cada faixa de preço, que será necessário se você estiver usando a [API de envio da Microsoft Store](../monetize/manage-app-submissions.md#price-tiers) para inserir preços. Você pode clicar em **Baixar** para baixar uma cópia da tabela de faixa de preço como um arquivo .csv.
 
 Lembre-se de que a faixa de preços selecionada pode incluir impostos sobre vendas ou valor agregado que seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Você também deve analisar as [considerações de preço para mercados específicos](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+
 
 ## <a name="schedule-price-changes"></a>Agendar alterações de preço
 
 Opcionalmente, você pode agendar uma ou mais alterações de preço se quiser que o preço base do seu aplicativo seja alterado para uma data e hora específicas. 
 
 > [!IMPORTANT]
-> As alterações de preço são mostradas apenas para clientes no Windows 10. Se seu aplicativo oferecer suporte a versões anteriores do sistema operacional, as alterações de preço não serão aplicadas. 
+> As alterações de preço são mostradas apenas para clientes em dispositivos Windows 10 (incluindo o Xbox). Se o app oferecer suporte a versões anteriores do SO, as alterações de preço não serão aplicadas. 
 >
 > - Para clientes no Windows 8, o aplicativo sempre será oferecido em seu **Preço base** (e não em qualquer preço específico de mercado), mesmo se você agendar alterações de preço adicionais. 
-> - Para clientes no Windows 8.1 e no Windows Phone 8.1 e versões anteriores, o aplicativo sempre será oferecido a um preço inicial para o mercado do cliente, mesmo se você agendar alterações de preço adicionais nesse mercado.
+> - Para clientes no Windows 8.1 e no Windows Phone 8.1 e versões anteriores, o app sempre será oferecido a uma faixa de preço inicial para o mercado do cliente, mesmo se você agendar alterações de preço adicionais nesse mercado.
 > 
-> Tenha isso em mente ao agendar alterações de preço. Por exemplo, se você inicialmente lançar seu aplicativo a um preço mais baixo e, depois, agendar uma data em que o preço aumentará, os clientes nas versões anteriores do sistema operacional que compraram o aplicativo pagarão um preço menor (original).
+> Tenha isso em mente ao agendar alterações de preço. Por exemplo, se você lançar seu app a uma faixa preço mais baixa inicialmente e depois agendar uma data em que o preço deve aumentar, seus clientes em versões anteriores do SO que comprarem o app pagarão o preço mais baixo (original).
 
-Clique em **Agendar uma alteração de preço** para ver as opções de alteração de preço. Escolha a faixa de preços que você deseja usar e selecione a data, a hora e o fuso horário.
+Clique em **Agendar uma alteração de preço** para ver as opções de alteração de preço. Escolha a faixa de preço que você deseja usar (ou insira um preço livre para substituições de preço base para um único mercado) e selecione a data, a hora e o fuso horário.
 
-Você pode clicar em **Schedule a price change again** para agendar quantas alterações desejar.
+Você pode clicar em **Schedule a price change again** para agendar quantas alterações quiser.
 
 > [!NOTE]
-> As alterações de preço agendadas funcionam de forma diferente no [Preço de venda](put-apps-and-add-ons-on-sale.md). Quando você coloca um aplicativo à venda, os clientes que estão visualizando a listagem da Loja verão que o preço foi reduzido e poderão comprar o aplicativo a um preço menor durante o período selecionado por você. Após o período de venda, ele retornará ao preço base.
+> As alterações de preço agendadas funcionam de forma diferente do [preço de venda](put-apps-and-add-ons-on-sale.md). Ao colocar um app à venda, o preço é mostrado com um tachado na Store, e os clientes poderão comprar o app ao preço de venda durante o período selecionado. Após o período de venda, o preço de venda não será mais aplicável, e o app estará disponível ao seu preço base (ou um preço diferente que você especificou para esse mercado, se aplicável).
 >
-> Com uma alteração de preço agendada, você pode ajustar o preço para ser maior ou menor. A alteração será realizada na data em que você especificar, mas ela não será exibida como uma venda na Loja; o aplicativo terá apenas um novo preço base. 
+> Com uma alteração de preço agendada, você pode ajustar o preço para ser mais alto ou mais baixo. A alteração será realizada na data que você especificar, mas ela não será exibida como uma venda na Store e não terá nenhuma formatação especial aplicada. O app apenas terá um novo preço base. 
 
-## <a name="customize-pricing-for-specific-markets"></a>Personalizar o preço para mercados específicos
 
-Por padrão, as opções que você selecionar acima serão aplicadas a todos os mercados em que o aplicativo for oferecido. Para personalizar o preço para mercados específicos, selecione **Personalizar para mercados específicos**. A janela pop-up **Seleção de mercado** será exibida, listando todos os mercados em que você optou disponibilizar o aplicativo. Se você excluiu algum mercado na seção Mercados, esses mercados não serão mostrados aqui. 
+## <a name="override-base-price-for-specific-markets"></a>Substituir o preço base para mercados específicos
+
+Por padrão, as opções selecionadas acima serão aplicadas a todos os mercados em que o aplicativo for oferecido. Você pode optar por alterar o preço de um ou mais mercados, escolhendo uma faixa de preço diferente ou inserindo um preço livre na moeda local do mercado.
 
 > [!IMPORTANT]
-> Os clientes no Windows 8 sempre verão o aplicativo em seu **Preço base**, mesmo se você selecionar um preço diferente para seu mercado.
+> Os clientes no Windows 8 sempre verão o app em seu **Preço base**, mesmo se você selecionar um preço diferente para seu mercado.
 
-Para adicionar a personalização de preços para um mercado, selecione-a e clique em **Salvar**. Depois, você verá as mesmas opções **Preço base** e **Agendar uma alteração de preço** como descrito acima, mas as seleções feitas serão específicas desse mercado.
+Para alterar o preço para mercados específicos, clique em **Escolha os mercados para substituir o preço**. A janela pop-up **Seleção de mercado** será exibida, listando todos os mercados em que você optou por disponibilizar o app. (Se você excluir algum mercado na seção **Mercados**, ele não estará disponível.) 
 
-Para adicionar a personalização de preço para vários mercados, crie um *grupo de mercados*. Para fazer isso, selecione os mercados que você deseja incluir e insira um nome para o grupo. (Esse nome é somente para referência e não ficará visível para todos os clientes.) Quando terminar, clique em **Salvar**. Depois, você verá as mesmas opções **Preço base** e **Agendar uma alteração de preço** como descrito acima, mas as seleções feitas serão específicas desse grupo de mercados.
+Você pode substituir o preço base para um mercado de cada vez ou para um grupo de mercados juntos. Após fazer isso, você pode substituir o preço base para um mercado adicional (ou um grupo de mercados adicionais), selecionando **Escolha os mercados para substituir o preço** novamente e repetindo o processo descrito abaixo. Para remover a substituição de preço especificada para um mercado (ou grupo de mercados), clique em **Remover**.
+
+
+### <a name="override-the-base-price-for-a-single-market"></a>Substituir o preço base para um único mercado
+
+Para alterar o preço para apenas um mercado, selecione-o e clique em **Criar**. Depois, você verá as mesmas opções **Preço base** e **Agendar uma alteração de preço** como descrito acima, mas as seleções feitas serão específicas desse mercado. Como você está substituindo o preço base para apenas um mercado, as faixas de preço serão mostradas na moeda local desse mercado. Clique em **exibir tabela de conversão** para ver os preços correspondentes em todas as moedas. 
+
+A substituição do preço base para um único mercado também oferece a opção de inserir um preço livre de sua preferência na moeda local do mercado. Você pode inserir o preço que quiser (dentro de uma faixa mínima e máxima), mesmo que não corresponda a uma das faixas de preço padrão. Esse preço será usado apenas para clientes no Windows 10 (incluindo o Xbox) no mercado selecionado. 
+
+> [!IMPORTANT]
+> Se você inserir um preço livre, esse preço não será ajustado (mesmo que as taxas de conversão mudem), a não ser que envie uma atualização com um novo preço. 
+
+### <a name="override-the-base-price-for-a-market-group"></a>Substituir o preço base para um grupo de mercados
+
+Para substituir o preço base para vários mercados, crie um *grupo de mercados*. Para fazer isso, selecione os mercados que você deseja incluir. Em seguida, você pode optar por inserir um nome para o grupo. (Esse nome é somente para sua referência e não ficará visível para nenhum cliente.) Quando terminar, clique em **Criar**. Depois, você verá as mesmas opções **Preço base** e **Agendar uma alteração de preço** como descrito acima, mas as seleções feitas serão específicas desse grupo de mercados. Observe que os preços livres não podem ser usados com grupos de mercados. Você precisará selecionar uma faixa de preço disponível.
+
+Para alterar os mercados incluídos em um grupo de mercados, clique no nome do grupo de mercados, adicione ou remova os mercados que desejar e clique em **OK** para salvar as alterações. 
 
 > [!NOTE]
-> Um mercado não pode pertencer a mais de um dos grupos de mercados usados na seção Preços.
+> Um mercado não pode pertencer a vários grupos de mercados na seção **Preços**.
 
-Para adicionar uma personalização de preços para um mercado adicional ou um grupo de mercados adicional, Selecione **Personalizar para mercados específicos** e repita essas etapas. Para alterar os mercados incluídos em um grupo de mercados, selecione seu nome. Para remover os preços de um grupo de mercados (ou um mercado individual), clique em **Remover**.
+
 
 
 

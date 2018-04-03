@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "O relatório de aquisições de Complemento do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma."
-title: "Relatório de aquisições de complemento"
+Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+title: Relatório de aquisições de complementos
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 46d5ee3d0e0ac9c2a3599f51e17ea4d7425ab5af
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: windows 10, uwp, vendas de complementos, aquisições de complementos, vendas de iap, produtos no aplicativo, iaps, complementos
+ms.localizationpriority: high
+ms.openlocfilehash: 5b8d0bb140206612a5096f48d87029b2285a0770
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complemento
+# <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complementos
 
 
-O relatório de **aquisições de Complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Ele também permite obter informações de conversão de clientes no Windows 10.
+O relatório de **aquisições de Complemento** do painel do Centro de Desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além das informações demográficas e dos detalhes da plataforma. Ele também permite que você obtenha informações de conversão de clientes no Windows 10 (incluindo o Xbox).
 
-Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibir offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complemento](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Windows Store](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode visualizar esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizá-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma aquisição de complemento significa que um cliente adquiriu um complemento de você (ou adquiriu sem pagar, se for oferecido gratuitamente). Várias compras do mesmo complemento consumível pelo mesmo cliente são contadas como aquisições de complementos separadas.
 
@@ -36,9 +37,9 @@ Você também pode expandir **Filtros** para filtrar os dados dessa página por 
 
 -   **Complemento**: o filtro padrão é **Todos os complementos**, mas você pode limitar os dados a um ou mais complementos do aplicativo.
 -   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a aquisições em um ou mais mercados.
--   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se desejar mostrar dados para aquisições de um determinado tipo de dispositivo apenas, você pode escolher um específico aqui.
+-   **Tipo de dispositivo**: a configuração padrão é **Todos os dispositivos**. Se você deseja mostrar dados de aquisições apenas de um determinado tipo de dispositivo (por exemplo, computador, console ou tablet), pode escolher um dispositivo específico aqui.
 
-As informações de todos os gráficos listados abaixo refletem o intervalo de datas e quaisquer filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
+As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados. Algumas seções também permitem que você aplique mais filtros.
 
 
 ## <a name="add-on-acquisitions"></a>Aquisições de complemento
@@ -67,7 +68,7 @@ Você pode exibir esses dados em **Mapa** visual ou alternar a configuração pa
 
 ## <a name="add-on-page-views-and-conversions-by-campaign-id"></a>Exibições e conversões de página do complemento por ID de campanha
 
-O gráfico **Visualizações e conversões de página de complemento por ID da campanha** mostra o total de conversões de complemento (aquisições) por ID da campanha durante o período selecionado, ajudando você a acompanhar conversões e visualizações de página dos clientes no Windows 10 para cada uma de suas [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md). Somente as conversões de complemento são mostradas neste gráfico.
+O gráfico **Add-on page views and conversions by campaign ID** mostra o total de conversões de complementos (aquisições) por ID de campanha durante o período selecionado, ajudando você a acompanhar conversões e exibições de página de clientes do Windows 10 (incluindo o Xbox) para cada uma de suas [campanhas de promoção personalizadas](create-a-custom-app-promotion-campaign.md). Somente as conversões de complementos são mostradas neste gráfico.
 
 > [!NOTE]
 > Os clientes podem chegar à listagem do aplicativo ao clicar em uma campanha personalizada que não foi criada por você. Marcamos cada modo de exibição de página em uma sessão com a ID da campanha a partir da qual o cliente entrou na Loja pela primeira vez. Em seguida, nós atribuímos conversões a essa ID de campanha para todas as aquisições nas últimas 24 horas. Por isso, você pode observar um número maior de conversões totais do que o total de conversões para suas IDs de campanha, e você pode ter conversões ou conversões de complemento com nenhuma exibição de página. 

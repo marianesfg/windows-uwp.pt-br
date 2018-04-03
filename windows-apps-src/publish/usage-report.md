@@ -1,24 +1,25 @@
 ---
 author: jnHs
-Description: "O relatório de uso no painel do Centro de Desenvolvimento do Windows permite ver como os clientes estão usando o aplicativo."
-title: "Relatório de uso"
+Description: The Usage report in the Windows Dev Center dashboard lets you see how customers are using your app.
+title: Relatório de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 08/16/2017
+ms.date: 3/8/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: b3e7154a9dc8b7ecea8a319300ab482f61e0bb68
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
+ms.localizationpriority: high
+ms.openlocfilehash: 35bc42e8a65441d9ee4387b65c60c3a51903142c
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="usage-report"></a>Relatório de uso
 
 
-O relatório **Uso** no painel do Centro de Desenvolvimento do Windows permite ver como os clientes estão usando o aplicativo no Windows 10 e mostra informações sobre eventos personalizados definidos por você. É possível exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) a fim de exibi-lo off-line.
+O relatório **Uso** no painel do Centro de Desenvolvimento do Windows permite ver como os clientes estão usando o aplicativo no Windows 10 (incluindo o Xbox) e mostra informações sobre eventos personalizados definidos por você. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -28,13 +29,13 @@ Na parte superior da página, você pode selecionar o período para o qual você
 Também é possível expandir **Filtros** para filtrar os dados dessa página por versão do pacote, mercado e/ou por tipo de dispositivo.
 
 -   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, será possível escolher um específico aqui.
--   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a aquisições em um ou mais mercados.
--   **Tipo de dispositivo**: A configuração padrão é **Tudo**, mas é possível optar por mostrar dados apenas de um tipo de dispositivo específico.
+-   **Mercado**: o filtro padrão é **Todos os mercados**, mas você pode limitar os dados a um ou mais mercados.
+-   **Tipo de dispositivo**: A configuração padrão é **Tudo**, mas é possível optar por mostrar dados apenas de um tipo de dispositivo específico (computador, console, tablet etc.)
 
 As informações de todos os gráficos listados abaixo refletem o intervalo de datas e todos os filtros selecionados (exceto **Novos usuários** no gráfico **Uso**, que não será exibido se os filtros estiverem selecionados). Algumas seções também permitem que você aplique mais filtros.
 
 > [!IMPORTANT]
-> Esse relatório inclui apenas os dados de uso de clientes no Windows 10 que não aceitaram sem fornecer informações de telemetria.
+> Esse relatório inclui apenas os dados de uso de clientes no Windows 10 (incluindo o Xbox) que não se recusaram a fornecer informações de telemetria. Os dados de uso para jogos Xbox são incluídos aqui, não importa se o cliente estava ou não conectado ao Xbox Live. 
 
 
 ##<a name="usage"></a>Uso
@@ -43,9 +44,9 @@ O gráfico **Uso** mostra detalhes sobre como os clientes estão usando seu apli
 
 Este gráfico tem quatro guias separadas que você pode exibir, mostrando o uso por dia ou semana (dependendo da duração selecionada).
 
-- **Usuários**: mostra o total de **sessões de usuário** durante o período de tempo selecionado. Cada sessão do usuário representa um período distinto quando um cliente interagiu com o aplicativo. Considera-se cada sessão do usuário encerrada após um período de inatividade, de maneira que um único cliente possa ter várias sessões de usuário ao longo do mesmo dia ou na mesma semana. O total de **Usuários ativos** (qualquer cliente que usa o aplicativo no dia ou na semana) e **novos usuários** (um cliente que usou o aplicativo pela primeira vez nesse dia ou na semana) também são mostrados. Observe que se você tiver aplicado quaisquer filtros à página, você não verá **Novos usuários** neste gráfico.
+- **Usuários**: mostra o total de **sessões de usuário** durante o período de tempo selecionado. Cada sessão do usuário representa um período distinto, a partir do qual o app é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade. Por isso, um único cliente pode ter várias sessões do usuário ao longo do mesmo dia ou semana. O total de **Usuários ativos** (qualquer cliente que usa o aplicativo no dia ou na semana) e **novos usuários** (um cliente que usou o aplicativo pela primeira vez nesse dia ou na semana) também são mostrados. Observe que se você tiver aplicado quaisquer filtros à página, você não verá **Novos usuários** neste gráfico.
 - **Dispositivos**: mostra a quantidade de dispositivos diários usados para interagir com seu aplicativo por todos os usuários.
-- **Duração**: mostra os minutos de envolvimento total (minutos em que um usuário está usando ativamente o aplicativo).
+- **Duração**: mostra o total de horas de envolvimento (horas em que um usuário está usando ativamente o app).
 - **Retenção**: mostra o total de **DAU/MAU** (usuários diários ativos/usuários mensais ativos) durante o período selecionado.
 
 
