@@ -2,18 +2,19 @@
 author: GrantMeStrength
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar seu dispositivo para desenvolvimento
-description: "Configure seu dispositivo Windows 10 para desenvolvimento e depuração."
-keywords: "Introdução, Licença de desenvolvedor, Visual Studio, licença de desenvolvedor, habilitar dispositivo"
+description: Configure seu dispositivo Windows 10 para desenvolvimento e depuração.
+keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de desenvolvedor, habilitar dispositivo
 ms.author: jken
 ms.date: 03/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8a7b01205acf12d4a0ab6d3d7024311b3944f103
-ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.localizationpriority: high
+ms.openlocfilehash: 09a5fd69d0a2f38adc6ba5f1b241df06211465b6
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -54,15 +55,15 @@ Aqui está a página de configurações na família de dispositivos móveis:
 
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
--   *Aplicativos da Windows Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
--   *Sideload* significa instalar e executar ou testar um app que não foi certificado pela Windows Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
+-   *Aplicativos UWP* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
+-   *Sideload* significa instalar e executar ou testar um app que não foi certificado pela Microsoft Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
 -   *Modo de desenvolvedor* permite o sideload de aplicativos e também executar aplicativos do Visual Studio no modo de depuração. 
 
-Por padrão, você só pode instalar aplicativos da Plataforma Universal do Windows (UWP) da Windows Store. A alteração dessas configurações para usar recursos de desenvolvedor pode alterar o nível de segurança do seu dispositivo. Você não deve instalar aplicativos de fontes não verificadas.
+Por padrão, você só pode instalar aplicativos da Plataforma Universal do Windows (UWP) da Microsoft Store. A alteração dessas configurações para usar recursos de desenvolvedor pode alterar o nível de segurança do seu dispositivo. Você não deve instalar aplicativos de fontes não verificadas.
 
 ### <a name="sideload-apps"></a>Fazer o sideload de aplicativos
 
-A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Windows Store. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos da Windows Store*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introdução à implantação de aplicativo no Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+A configuração Sideload de aplicativos normalmente é usada por empresas ou escolas que precisam instalar aplicativos personalizados em dispositivos gerenciados sem passar pela Microsoft Store. Nesse caso, é comum para a organização impor uma política que desabilita a configuração *Aplicativos UWP*, como mostrado anteriormente na imagem da página de configurações. A organização também fornece o certificado necessário e o local de instalação para o sideload de aplicativos. Para saber mais, veja os artigos do TechNet [Sideload de aplicativos no Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introdução à implantação de aplicativo no Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
 
 Informações específicas à família de dispositivos
 
@@ -70,43 +71,31 @@ Informações específicas à família de dispositivos
 
 -   Na família de dispositivos móveis: se o certificado necessário já estiver instalado, você poderá tocar no arquivo para instalar qualquer .appx enviado a você por email ou em um cartão SD.
 
+
 **O sideload de aplicativos** é uma opção mais segura que o Modo de Desenvolvedor, pois você não pode instalar aplicativos no dispositivo sem um certificado confiável.
 
 > [!NOTE]
-> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um aplicativo de sideload que não foi certificado pela Windows Store, você concorda que obteve todos os direitos necessários para fazer sideload do aplicativo e que é o único responsável por qualquer dano resultante da instalação e da execução do aplicativo. Veja a seção Windows &gt; Windows Store desta [política de privacidade](http://go.microsoft.com/fwlink/?LinkId=521839).
+> Se você fizer o sideload de aplicativos, ainda deverá instalar aplicativos somente de fontes confiáveis. Ao instalar um app de sideload que não foi certificado pela Microsoft Store, você concorda que obteve todos os direitos necessários para fazer sideload do app e que é o único responsável por qualquer dano resultante da instalação e da execução do app. Veja a seção Windows &gt; Microsoft Store desta [política de privacidade](http://go.microsoft.com/fwlink/?LinkId=521839).
+
 
 ### <a name="developer-mode"></a>Modo de Desenvolvedor
 
 O Modo de Desenvolvedor substitui os requisitos do Windows 8.1 de uma licença de desenvolvedor.  Além de sideload, a configuração Modo de Desenvolvedor permite a depuração e outras opções de implantação. Isso inclui iniciar um serviço SSH para permitir a implantação desse dispositivo. Para interromper esse serviço, você precisa desabilitar o Modo de Desenvolvedor.
 
-Informações específicas à família de dispositivos
+Quando você habilita o Modo de Desenvolvedor no desktop, é instalado um pacote de recursos que inclui:
+- Portal de Dispositivos do Windows. O Portal de Dispositivos é habilitado e as regras de firewall só serão configuradas para ele somente quando a opção **Habilitar o Portal de Dispositivos** estiver ativada.
+- Instala e configura as regras de firewall para serviços SSH que permitem a instalação remota de apps. Habilitar a **Descoberta de Dispositivo** ativará o servidor SSH.
 
--   Na família de dispositivos de desktop:
-
-    Habilite o Modo de Desenvolvedor para desenvolver e depurar aplicativos no Visual Studio. Conforme mencionado anteriormente, você receberá um aviso no Visual Studio se o Modo de Desenvolvedor não estiver habilitado.
-
-    Em computadores anteriores ao Fall Creators Update, isso permite a habilitação do subsistema do Windows para o Linux. Para obter mais informações, consulte [Sobre Bash do Ubuntu no Windows](https://msdn.microsoft.com/commandline/wsl/about).  O Modo de Desenvolvedor não é mais necessário para WSL, a partir do Fall Creators Update.  
-
--   Na família de dispositivos móveis:
-
-    Habilite o modo de desenvolvedor para implantar aplicativos no Visual Studio e depurá-los no dispositivo.
-
-    Você pode tocar no arquivo para instalar qualquer .appx enviado a você por email ou em um cartão SD. Não instale apps de fontes não verificadas.
 
 ## <a name="additional-developer-mode-features"></a>Recursos adicionais do Modo de Desenvolvedor
 
 Recursos de desenvolvedor adicionais podem estar disponíveis para cada família de dispositivos. Esses recursos estão disponíveis apenas quando o Modo de Desenvolvedor está habilitado no dispositivo e podem variar dependendo da sua versão do sistema operacional.
 
-Quando você habilita o Modo de Desenvolvedor, é instalado um pacote de opções que inclui:
-- Windows Device Portal. O Device Portal é habilitado e regras de firewall são definidas para ele somente quando a opção **Habilitar o Portal de Dispositivos** estiver ativada.
-- Instala, habilita e configura as regras de firewall para serviços SSH que permitem a instalação remota de aplicativos.
+Esta imagem mostra os recursos de desenvolvedor para o Windows 10:
 
+![Opções do modo de desenvolvedor](images/devmode-mob-options.png) 
 
-Esta imagem mostra os recursos de desenvolvedor para a família de dispositivos móveis com Windows 10:
-
-![Opções do Modo de desenvolvedor para dispositivos móveis](images/devmode-mob-options.png) 
-
-### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Device Portal
+### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Portal de Dispositivos
 
 Para saber mais sobre o Device Portal, consulte [Visão geral do Windows Device Portal](../debug-test-perf/device-portal.md).
 
@@ -119,40 +108,40 @@ Para obter instruções de instalação específicas ao dispositivo, consulte:
 
 Se você tiver problemas para habilitar o Modo de Desenvolvedor ou o Device Portal, consulte o fórum dos [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas ou visite [Falha ao instalar o pacote do Modo de Desenvolvedor](#failure-to-install-developer-mode-package) para obter detalhes adicionais e saber quais KBs WSUS você deve permitir para desbloquear o pacote do Modo de Desenvolvedor. 
 
-###<a name="ssh"></a>SSH
+### <a name="ssh"></a>SSH
 
-Os serviços SSH são habilitados quando você ativa o Modo de Desenvolvedor em seu dispositivo.  Isso é usado quando o dispositivo é um destino de implantação para aplicativos UWP.   Os nomes dos serviços são "SSH Server Broker" e "SSH Server Proxy".
+Os serviços SSH são habilitados quando você habilita a Descoberta de Dispositivo em seu dispositivo.  Isso é usado quando o dispositivo é um destino de implantação remoto para aplicativos UWP.   Os nomes dos serviços são "SSH Server Broker" e "SSH Server Proxy".
 
 > [!NOTE]
-> Isso não é a implementação de OpenSSH da Microsoft, que pode ser encontrada em [GitHub](https://github.com/PowerShell/Win32-OpenSSH).
+> Isso não é a implementação de OpenSSH da Microsoft, que pode ser encontrada em [GitHub](https://github.com/PowerShell/Win32-OpenSSH).  
 
-Para aproveitar os serviços SSH, você pode habilitar a descoberta de dispositivos e permitir que o emparelhamento de PIN. Se você pretende executar outro serviço SSH, configure-o em uma porta diferente ou desative os serviços SSH do Modo de Desenvolvedor. Para desativar os serviços SSH, basta desabilitar o Modo de Desenvolvedor.  
+Para aproveitar os serviços SSH, você pode habilitar a descoberta de dispositivos e permitir que o emparelhamento de PIN. Se você pretende executar outro serviço SSH, configure-o em uma porta diferente ou desative os serviços SSH do Modo de Desenvolvedor. Para desativar os serviços SSH, desative a Descoberta de Dispositivo.  
+
+O logon SSH é feito por meio da conta "DevToolsUser", que aceita uma senha para autenticação.  Essa senha é o PIN exibido no dispositivo depois de pressionar o botão "Emparelhar" de descoberta de dispositivo e só é válida enquanto o PIN é exibido.  Um subsistema SFTP também é habilitado, para o gerenciamento manual da pasta DevelopmentFiles onde são instaladas as implantações flexíveis de arquivo do Visual Studio. 
+
+#### <a name="caveats-for-ssh-usage"></a>Restrições de uso de SSH
+O servidor SSH existente usado no Windows ainda não é compatível com protocolo, portando o uso de um cliente SFTP ou SSH poderá exigir configuração especial.  Em particular, o subsistema SFTP é executado na versão 3 ou inferior, de forma que qualquer cliente conectado deve ser configurado para esperar um servidor antigo.  O servidor SSH em dispositivos mais antigos usa `ssh-dss` para autenticação de chave pública, que o OpenSSH substituiu.  Para se conectar a tais dispositivos, o cliente SSH cliente deve ser configurado manualmente para aceitar `ssh-dss`.  
 
 ### <a name="device-discovery"></a>Descoberta de dispositivos
 
-Ao habilitar a descoberta de dispositivos, você permite que seu dispositivo fique visível para outros dispositivos na rede por meio de mDNS.  Esse recurso também permite que você obtenha o PIN SSH para emparelhamento com este dispositivo.  
+Ao habilitar a descoberta de dispositivos, você permite que seu dispositivo fique visível para outros dispositivos na rede por meio de mDNS.  Esse recurso também permite que você obtenha o PIN SSH para emparelhamento com esse dispositivo pressionando o botão "Emparelhar" exposto assim que a descoberta de dispositivo for habilitada.  Essa solicitação de PIN deve ser exibida na tela para a conclusão da sua primeira implantação do Visual Studio direcionada ao dispositivo.  
 
 ![Emparelhamento de PIN](images/devmode-pc-pinpair.PNG)
 
 Você deve habilitar a descoberta de dispositivos somente se pretender transformar o dispositivo em um destino de implantação. Por exemplo, se você usar o Device Portal para implantar um aplicativo em um telefone para teste, precisará ativar a descoberta de dispositivos no telefone, mas não no computador de desenvolvimento.
-
-### <a name="error-reporting-mobile-only"></a>Relatório de erros (somente celular)
-
-Defina esse valor para especificar quantos despejos de memória são salvos no seu telefone.
-
-A coleta de despejos de memória no telefone oferece acesso instantâneo a informações importantes da falha logo depois que a falha ocorre. Os despejos são coletados somente para aplicativos assinados pelo desenvolvedor. Você pode encontrar os despejos no armazenamento do telefone, na pasta Documents\\Debug. Para saber mais sobre arquivos de despejo, consulte [Usando arquivos de despejo](https://msdn.microsoft.com/library/d5zhxt22.aspx).
 
 ### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a>Otimizações para Windows Explorer, Área de Trabalho Remota e PowerShell (somente desktop)
 
  Na família de dispositivos de desktop, a página de configurações **Para desenvolvedores** tem atalhos para as configurações que você pode usar para otimizar seu computador para tarefas de desenvolvimento. Para cada configuração, você pode marcar a caixa de seleção e clicar em **Aplicar**, ou clicar no link **Mostrar configurações** para abrir a página de configurações dessa opção. 
 
 
+## <a name="notes"></a>Observações
+Em versões anteriores do Windows 10 Mobile, uma opção Despejos de Memória estava presente no menu Configurações de Desenvolvedor.  Isso foi movido para o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para que ele possa ser usado remotamente em vez de apenas por USB.  
 
-**Dica**  
-Há várias ferramentas que você pode usar para implantar um aplicativo de um computador Windows 10 para um dispositivo móvel Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Qualquer uma das maneiras listadas instala apenas o pacote do aplicativo (.appx); elas não instalam certificados.
+Há várias ferramentas que você pode usar para implantar um app de um computador Windows 10 para um dispositivo Windows 10. Ambos os dispositivos devem estar conectados à mesma sub-rede da rede por uma conexão com ou sem fio, ou eles devem estar conectados por USB. Ambas as maneiras listadas instalam somente o pacote do aplicativo (.appx/.appxbundle); elas não instalam certificados.
 
 -   Use a ferramenta de implantação de aplicativos do Windows 10 (WinAppDeployCmd). Saiba mais sobre [a ferramenta WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
--   A partir do Windows 10, versão 1511, você pode usar o [Device Portal](../debug-test-perf/device-portal-desktop.md) para implantar do seu navegador para um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
+-   Você pode usar o [Portal de Dispositivos](../debug-test-perf/device-portal.md) para implantar do seu navegador para um dispositivo móvel executando o Windows 10, versão 1511 ou posterior. Use a página **[Aplicativos](../debug-test-perf/device-portal.md#apps-manager)** no Device Portal para carregar um pacote de aplicativo (.appx) e instalá-lo no dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Falha ao instalar o pacote do Modo de Desenvolvedor
 Às vezes, devido a problemas de rede ou de ordem administrativa, o Modo de Desenvolvedor não é instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para implantação **remota** neste computador, usando o Device Portal em um navegador ou a descoberta de dispositivos para habilitar SSH, mas não para o desenvolvimento local.  Mesmo que você encontre esses problemas, você ainda pode implantar seu aplicativo localmente por meio do Visual Studio ou deste dispositivo para outro. 
@@ -189,7 +178,7 @@ Para resolver este problema:
 
 ## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Usar políticas de grupo ou chaves do Registro para habilitar um dispositivo
 
-Para a maioria dos desenvolvedores, convém usar o aplicativo Configurações para habilitar seu dispositivo para depuração. Em determinados cenários, como testes automatizados, você pode usar outras maneiras de habilitar seu dispositivo de desktop Windows 10 para desenvolvimento.
+Para a maioria dos desenvolvedores, convém usar o aplicativo Configurações para habilitar seu dispositivo para depuração. Em determinados cenários, como testes automatizados, você pode usar outras maneiras de habilitar seu dispositivo de desktop Windows 10 para desenvolvimento.  Observe que essas etapas não habilitarão o servidor SSH ou permitirão que o dispositivo seja direcionado para depuração e implantação remota. 
 
 Você pode usar gpedit.msc para definir as políticas de grupo para habilitar seu dispositivo, a menos que você tenha o Windows 10 Home. Se você tiver o Windows 10 Home, será necessário usar regedit ou comandos do PowerShell para definir as chaves do Registro diretamente para habilitar seu dispositivo.
 
@@ -206,7 +195,7 @@ Você pode usar gpedit.msc para definir as políticas de grupo para habilitar se
     Para habilitar o modo de desenvolvedor, edite as políticas para habilitar estas duas opções:
 
     -   **Permitir instalação de todos os aplicativos confiáveis**
-    -   **Permitir o desenvolvimento de aplicativos da Windows Store e a instalação de um ambiente de desenvolvimento integrado (IDE)**
+    -   **Permitir o desenvolvimento de aplicativos UWP e a instalação de um ambiente de desenvolvimento integrado (IDE)**
 
 4.  Reinicialize o computador.
 
@@ -252,8 +241,8 @@ Erro: DEP0700: Falha no registro do app.
 ## <a name="see-also"></a>Consulte também
 
 * [Seu primeiro app](your-first-app.md)
-* [Publicar aplicativos da Windows Store](https://developer.microsoft.com/store/publish-apps).
-* [Artigos de instruções sobre como desenvolver apps UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
+* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
 * [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
-* [O que é um aplicativo Universal do Windows?](whats-a-uwp.md)
-* [Inscreva-se para a conta do Windows](sign-up.md)
+* [O que é um aplicativo UWP?](universal-application-platform-guide.md)
+* [Inscreva-se em uma conta do Windows](sign-up.md)

@@ -2,22 +2,23 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
-description: "Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta."
+description: Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Microsoft Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 726c2edebe5c12120c0f034414516b3076bf3795
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 5a82afad1c56a5e06e3d82d6b6e6e381fa8934dd
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
-Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Windows Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
+Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a Microsoft Store e outros programas da Microsoft ajudará você entender o processo de configuração de sua conta.
 
 > [!NOTE]
 > Quando você se inscreve em uma conta de desenvolvedor, o endereço de email fornecido nas informações de contato é usado para enviar comunicações por email relacionadas à sua conta. Às vezes, isso incluir emails informativos sobre nossos programas. Mesmo que você opte por não receber esses emails informativos, [recusando-os](http://go.microsoft.com/fwlink/p/?LinkId=533280), ainda enviaremos emails transacionais (por exemplo, para que você saiba que seu aplicativo foi aprovado para certificação ou que um pagamento está sendo feito). Esses emails são uma parte fundamental da sua conta e, a menos que você feche sua conta, continuará a receber esses emails transacionais.
@@ -35,7 +36,8 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 
   > [!NOTE]
   > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte o [Contrato de Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/Hh694058) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
-6.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
+
+  6.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 
   > [!NOTE]
   > Usaremos essas informações para entrar em contato com você sobre assuntos relacionados à conta. Por exemplo, você receberá uma mensagem de confirmação por email após concluir o registro. Depois disso, nós enviaremos mensagens quando formos pagar você ou se você precisar corrigir alguma coisa com a sua conta. Também podemos enviar emails informativos conforme descrito acima, a menos que você recuse o recebimento de emails não transacionais.
@@ -59,13 +61,13 @@ Ao criar uma conta da empresa, recomendamos que você siga estas diretrizes se m
 > [!IMPORTANT]
 > Para permitir que vários usuários acessem sua conta do Centro de Desenvolvimento, recomendamos usar o Azure Active Directory para atribuir funções a usuários individuais. Cada usuário pode acessar a conta do Centro de Desenvolvimento fazendo logon com as credenciais individuais do Azure AD. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
 
--   Crie sua conta da Microsoft usando um endereço de email que ainda não pertença a você ou outra pessoa, como MyCompany_DevCenter@outlook.com. Você não poderá usar um endereço de email no domínio da sua empresa, principalmente se a empresa já usa o Azure AD.
+-   Crie sua conta da Microsoft usando um endereço de email que já não pertença a você ou a outra pessoa, como MyCompany_DevCenter@outlook.com. Você não poderá usar um endereço de email no domínio da sua empresa, especialmente se a sua empresa já usa o Azure AD.
 -   Limite o acesso a essa conta da Microsoft ao menor número possível de usuários.
 -   Configure uma lista de distribuição de emails corporativos que inclua todos aqueles que precisam acessar a conta de desenvolvedor, e adicione este endereço de email às suas informações de segurança. Isso permite que todos os funcionários na lista recebam os códigos de segurança quando necessário. Se não for possível criar uma lista de distribuição, o proprietário da conta de email individual deverá estar disponível para acessar e compartilhar o código de segurança quando solicitado (como quando novas informações de segurança são adicionadas à conta ou quando é acessada em um novo dispositivo).
 -   Adicione um número de telefone comercial sem ramal e que seja acessível para os principais membros da equipe.
 -   Em geral, solicite que os desenvolvedores usem dispositivos confiáveis para fazer logon na conta de desenvolvedor da sua empresa. Todos os membros principais da equipe devem ter acesso a esses dispositivos confiáveis. Isso reduzirá a necessidade do envio de códigos de segurança durante o acesso à conta. Existe um limite quanto ao número de códigos que podem ser gerados por conta a cada semana.
 -   Se você precisar permitir acesso à conta a partir de um computador não confiável, limite esse acesso a no máximo cinco desenvolvedores. Idealmente, esses desenvolvedores devem acessar a conta de computadores que compartilham o mesmo local geográfico e de rede.
--   Revise com frequência as informações de segurança da empresa em [https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648) para assegurar que estejam atualizadas.
+-   Analise frequentemente as informações de segurança da empresa em [https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648) para garantir que elas estejam atualizadas.
 
 ## <a name="developer-account-security"></a>Segurança da conta do desenvolvedor
 
@@ -83,9 +85,9 @@ Recomendamos designar os computadores que você usa com frequência como disposi
 
 As contas dos desenvolvedores não expiram, então, não há necessidade de renovar sua conta a fim de mantê-la aberto. Se você decidir fechar sua conta completamente, pode fazê-lo entrando em contato com o suporte.
 
-Quando você fechar sua conta, é importante entender o que acontece com qualquer aplicativo que você tenha publicado na Windows Store:
+Quando você fechar sua conta, é importante entender o que acontece com qualquer app que você tenha publicado na Microsoft Store:
 
--   Clientes atuais do seu aplicativo ainda poderão usar o aplicativo. Entretanto, eles não poderão fazer compras no aplicativo.
+-   Os clientes atuais do seu aplicativo ainda poderão usar o app. Entretanto, eles não poderão fazer compras no aplicativo.
 -   Mesmo que o aplicativo continue disponível para os clientes que já o compraram, os detalhes do aplicativo serão removidos da Loja. Novos clientes não poderão comprar seu aplicativo.
 -   O nome de seu aplicativo será liberado para possível uso de outro desenvolvedor.
 -   Se houver algum saldo resultante de vendas anteriores do aplicativo, você pode solicitar o pagamento dessa quantia mesmo que o valor devido não obedeça o limite usual de pagamento.

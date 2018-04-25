@@ -1,24 +1,27 @@
 ---
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
-title: "Gerenciar configurações da conta e informações de perfil"
-description: "Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção Configurações da conta do painel unificado do Centro de Desenvolvimento do Windows."
+title: Gerenciar configurações da conta e informações de perfil
+description: Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção Configurações da conta do painel unificado do Centro de Desenvolvimento do Windows.
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor"
+keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: high
-ms.openlocfilehash: 840eb445eaf5cac05201a58140a7ea7f505d7e14
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 5bedc2bb91478d86af95f45d57369f5409e7cea1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
 Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e as informações de perfil na seção **Configurações da conta** do [painel do Centro de Desenvolvimento do Windows](using-the-windows-dev-center-dashboard.md). 
+
+> [!NOTE]
+> As preferências de notificação (como qual será o tipo de notificações recebido e como recebê-lo) podem ser gerenciadas no **Centro de Mensagens** (que você pode acessar selecionando o ícone de mensagem na parte superior do painel).
 
 ## <a name="account-settings"></a>Configurações da conta
 

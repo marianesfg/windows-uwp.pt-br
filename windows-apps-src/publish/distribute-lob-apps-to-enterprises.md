@@ -4,17 +4,17 @@ Description: You can publish line-of-business (LOB) apps directly to enterprises
 title: Distribuir aplicativos LOB para empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa"
+keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: high
-ms.openlocfilehash: 3857e8e6e494700233d41832fb9edce6c65b89bc
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 97a56ec68e2aa51f0ee733c2eedaee18dc3cedb9
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
 
@@ -54,6 +54,7 @@ Depois que **Distribuição de linha de negócios (LOB)** for selecionada, as op
 Você deve selecionar pelo menos uma empresa para publicar um aplicativo como linha de negócios.
 
 <span id="organizational" />
+
 ### <a name="organizational-licensing"></a>Licenciamento para organizações
 
 Por padrão, a caixa para **licenciamento por volume gerenciado pela Store (online)** é marcada quando você envia um aplicativo. Na publicação de aplicativos LOB, essa caixa permanecer marcada, para que a empresa possa adquirir seu aplicativo em volume. Isso não tornará o aplicativo disponível para qualquer pessoa fora das empresas que você selecionou na seção **Distribuição e visibilidade**.
@@ -82,7 +83,7 @@ Para saber mais, veja [Trabalhando com aplicativos de linha de negócios](http:/
 
 Para publicar atualizações de um aplicativo que você já publicou como LOB, basta criar um novo envio. Você pode carregar novos pacotes ou fazer quaisquer outras alterações e, em seguida, clicar em **Enviar à Store** para disponibilizar a versão atualizada. Certifique-se de manter as mesmas seleções da empresa em **Visibilidade**, a menos que você queira realmente alterá-las, como, por exemplo, selecionar uma empresa adicional para adquirir o aplicativo ou remover uma das empresas às quais você o distribuiu anteriormente.
 
-Se quiser parar de oferecer um aplicativo publicado anteriormente como linha de negócios, e impedir novas aquisições, você deverá criar um novo envio. Primeiro, você precisará alterar sua seleção em **Visibilidade** de **Distribuição de linha de negócios (LOB)** para **Distribuição comercial**. Em seguida,na seção **Visibilidade**, selecione **Disponibilizar este produto mas não torná-lo detectável na Store** com a opção **Parar aquisição**.
+Se quiser parar de oferecer um aplicativo publicado anteriormente como linha de negócios, e impedir novas aquisições, você deverá criar um novo envio. Primeiro, você precisará alterar sua seleção em **Visibilidade** de **Distribuição de linha de negócios (LOB)** para **Distribuição comercial**. Em seguida,na seção [Detectabilidade](choose-visibility-options.md#discoverability), selecione **Disponibilizar este produto mas não torná-lo detectável na Store** com a opção **Parar aquisição**.
 
 Depois que o envio passar pelo processo de certificação, o aplicativo não estará mais disponível para novas aquisições (embora quem já o tiver possa continuar a usá-lo).
 

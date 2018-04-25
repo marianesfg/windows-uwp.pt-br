@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
-ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
+ms.openlocfilehash: a16f86512a3c33055cb4825966282f1487ea158d
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="desktop-bridge"></a>Ponte de Desktop
 
@@ -58,6 +58,7 @@ Você planeja publicar seu aplicativo para a [loja de aplicativos Windows ](http
 Em seguida, examine o artigo [Preparar para empacotar seu aplicativo da área de trabalho](desktop-to-uwp-prepare.md) e resolva todos os problemas que se apliquem ao app antes de criar um pacote de aplicativo Windows para ele. Talvez você não precise fazer muitas alterações no seu app antes de criar o pacote. No entanto, existem algumas situações que podem exigir que você ajuste seu app antes de criar um pacote para ele.
 
 <a id="convert" />
+
 ## <a name="package"></a>Pacote
 
 Aqui estão algumas ferramentas que você pode usar para criar um pacote de aplicativo do Windows para seu app.
@@ -114,6 +115,9 @@ Você pode usar o [Instalador Avançado](http://www.advancedinstaller.com/) para
 O Advanced Installer também fornece uma extensão para o Visual Studio 2017 e 2015 que pode ser usada para [compilar e depurar aplicativos de ponte de Desktop](http://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
 
 Veja este [vídeo](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) para uma rápida visão geral.
+
+> [!TIP]
+> Não se esqueça de conferir o recém-lançado [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
 
 #### <a name="cloudhouse-compatibility-containers"></a>Contêineres de Compatibilidade Cloudhouse
 

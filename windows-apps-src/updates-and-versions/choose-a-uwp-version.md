@@ -1,38 +1,42 @@
 ---
 author: QuinnRadich
-title: "Escolher uma versão do UWP"
-description: "Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Saiba mais sobre a diferença entre as diferentes versões de UWP e como configurar suas escolhas em projetos novos e existentes."
+title: Escolher uma versão do UWP
+description: Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Saiba mais sobre a diferença entre as diferentes versões de UWP e como configurar suas escolhas em projetos novos e existentes.
 ms.author: quradic
-ms.date: 06/06/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualizar, atualizações
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
-ms.openlocfilehash: 141560d379efab8f0bf8f745ec9e77972d847eec
-ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.localizationpriority: high
+ms.openlocfilehash: 61ca2a307fb2e6c5e69ba1801748336269ae7bc2
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
-Cada versão do Windows 10 trouxe recursos novos e aprimorados para a plataforma UWP. Ao criar um aplicativo UWP no Microsoft Visual Studio, você pode escolher qual a versão alvo.
+Cada versão do Windows 10 trouxe recursos novos e aprimorados para a plataforma UWP. Ao criar um aplicativo UWP no Microsoft Visual Studio, você pode escolher qual a versão alvo. Os projetos que usam [.NET Standard 2.0](https://docs.microsoft.com/dotnet/standard/net-standard) devem ter uma **Versão Mínima** do Build 16299 ou posterior.
+
+Observe que quaisquer projetos UWP criados em versões atuais do Visual Studio 2017 não podem ser abertos no Visual Studio 2015.
 
 A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que esta tabela só se aplica para a construção de aplicativos UWP, que são suportados apenas no Windows 10. Você não pode desenvolver aplicativos UWP para versões mais antigas do Windows, e você deve ter [instalado a compilação apropriada do SDK](http://go.microsoft.com/fwlink/?LinkId=821431) para segmentar essa versão. 
 
 | Versão | Descrição |
 | --- | --- |
-| Compilação 15063 (Atualização dos Criadores) | Esta é a versão mais recente do Windows 10, lançada em março de 2017. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows**. Alguns recursos em destaque desta versão incluem:  </br> \* **Análise do Ink:** O Windows Ink agora pode categorizar traços de tinta dentro dos traços de escrita ou desenho, e reconhecer texto, formas e estruturas básicas de layout. </br> \* **Windows.Ui.Composition APIs:** Combine e aplique com facilidade animações em seu aplicativo. </br> \* **Edição ao Vivo:** Edite XAML enquanto seu aplicativo está em execução, e visualize as mudanças aplicadas em tempo real. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-version-1703.md)  |
-| Build 14393 (Atualização de Aniversário) | Esta versão do Windows 10 foi lançada em julho de 2016. Alguns recursos em destaque desta versão incluem: </br> \* **Windows Ink:** Novos controles InkCanvas e InkToolbar. </br> \* **APIs da Cortana:** Use as novas ações da Cortana para integrar o suporte da Cortana com funções específicas do seu aplicativo. </br> \* **Windows Hello:** O Microsoft Edge agora oferece suporte ao Windows Hello, dando aos desenvolvedores da Web acesso à autenticação biométrica. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-version-1607.md)  |
-| Build 10586 | Esta versão do Windows 10 foi lançada em novembro de 2015. Os recursos destacados incluem a introdução das APIs de ORTC (comunicações em tempo real do objeto) para a comunicação de vídeo no Microsoft Edge e as APIs de provedores para permitir que os aplicativos usem a autenticação de rosto do Windows Hello. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-version-1511.md) |
-| Build 10240 | Esta é a versão de lançamento inicial do Windows 10, em julho de 2015. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-version-1507.md) |
+| Build 16299 (Fall Creators Update, versão 1709) | Esta é a versão mais recente do Windows 10, lançada em outubro de 2017. **Observe que você _deve_ usar o Visual Studio 2017 para ter como destino essa versão do Windows** Alguns recursos em destaque nesta versão incluem: </br> \* **.NET Standard 2.0:** Aproveite um grande aumento no número de APIs .NET e incorpore seus pacotes NuGet favoritos e bibliotecas de terceiros ao .NET Standard. Veja mais detalhes e explore a documentação [aqui](https://docs.microsoft.com/dotnet/standard/net-standard). Observe que você deve definir sua **versão mínima** como Build 16299 para acessar essas novas APIs. </br> \* **Design Fluente:** Use luz, profundidade, perspectiva e movimento para aprimorar seu app e ajudar os usuários a se concentrarem nos elementos importantes da interface de usuário. </br> \* **XAML condicional:** defina com facilidade propriedades e instancie objetos com base na presença de uma API em tempo de execução, permitindo que seus aplicativos sejam executados perfeitamente em todos os dispositivos e versões. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-16299.md)
+| Build 15063 (Creators Update, versão 1703) | Esta versão do Windows 10 foi lançada em março de 2017. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows**. Alguns recursos em destaque desta versão incluem:  </br> \* **Análise do Ink:** O Windows Ink agora pode categorizar traços de tinta dentro dos traços de escrita ou desenho, e reconhecer texto, formas e estruturas básicas de layout. </br> \* **Windows.Ui.Composition APIs:** Combine e aplique com facilidade animações em seu aplicativo. </br> \* **Edição ao Vivo:** Edite XAML enquanto seu aplicativo está em execução, e visualize as mudanças aplicadas em tempo real. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-15063.md)  |
+| Build 14393 (Atualização de Aniversário, versão 1607) | Esta versão do Windows 10 foi lançada em julho de 2016. Alguns recursos em destaque desta versão incluem: </br> \* **Windows Ink:** Novos controles InkCanvas e InkToolbar. </br> \* **APIs da Cortana:** Use as novas ações da Cortana para integrar o suporte da Cortana com funções específicas do seu aplicativo. </br> \* **Windows Hello:** O Microsoft Edge agora oferece suporte ao Windows Hello, dando aos desenvolvedores da Web acesso à autenticação biométrica. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-14393.md)  |
+| Build 10586 (Atualização de novembro, versão 1511) | Esta versão do Windows 10 foi lançada em novembro de 2015. Os recursos destacados incluem a introdução das APIs de ORTC (comunicações em tempo real do objeto) para a comunicação de vídeo no Microsoft Edge e as APIs de provedores para permitir que os aplicativos usem a autenticação de rosto do Windows Hello. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10586.md) |
+| Build 10240 (Windows 10, versão 1507) | Esta é a versão de lançamento inicial do Windows 10, em julho de 2015. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10240.md) |
 
-É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (15063). Desenvolvedores que criam aplicativos Corporativos devem considerar fortemente o suporte a uma **Versão Mínima** mais antiga.
+É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (16299). Os desenvolvedores que escrevem apps Corporativos devem considerar o suporte a uma **Versão Mínima** mais antiga.
 
 ## <a name="whats-different-in-each-uwp-version"></a>O que está diferente em cada versão do UWP?
 
-APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessivas do Windows 10. Para obter informações específicas sobre quais recursos foram adicionados a qual versão, consulte [Novidades para desenvolvedores no Windows 10](../whats-new/windows-10-version-1703.md).
+APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessivas do Windows 10. Para obter informações específicas sobre quais recursos foram adicionados a qual versão, consulte [Novidades para desenvolvedores no Windows 10](../whats-new/windows-10-version-latest.md).
 
 Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
@@ -47,4 +51,4 @@ Lembre-se de que você está declarando que seu aplicativo funciona em qualquer 
 
 * Em seu código, você pode livremente (ou seja, sem verificações de condição) chamar qualquer API que exista na versão especificada pela **Versão mínima**.
 * Certifique-se de testar seu código em um dispositivo que executa a **Versão mínima** para ter certeza de que ele funciona sem a necessidade de APIs presentes apenas na **Versão de destino**.
-* O valor de **Versão de destino** é usado para identificar todas as referências (contrato winmds) usadas para compilar seu projeto. Mas essas referências permitirão que você compile o código com chamadas para APIs que não existem necessariamente em dispositivos para os quais você declarou que oferece suporte (via **Versão mínima**). Portanto, qualquer API introduzida após a **Versão mínima** precisará ser chamada por meio do código adaptável. Para obter mais informações sobre o código adaptável, consulte o [Guia para aplicativos UWP (Plataforma Universal do Windows)](../get-started/universal-application-platform-guide.md).
+* O valor de **Versão de destino** é usado para identificar todas as referências (contrato winmds) usadas para compilar seu projeto. Mas essas referências permitirão que você compile o código com chamadas para APIs que não existem necessariamente em dispositivos para os quais você declarou que oferece suporte (via **Versão mínima**). Portanto, qualquer API introduzida após a **Versão mínima** precisará ser chamada por meio do código adaptável. Para saber mais sobre o código adaptável, consulte [Código adaptável de versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).

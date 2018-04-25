@@ -1,33 +1,33 @@
 ---
 author: JnHs
-Description: "Saiba como criar grupos de usuários conhecidos para uso na liberação de versões de pré-lançamento e muito mais."
-title: "Criar grupos de usuários conhecidos"
+Description: Learn how to create known user groups to use for package flighting and more.
+title: Criar grupos de usuários conhecidos
 ms.author: wdg-dev-content
-ms.date: 08/08/2017
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, segmento, segmentos, grupo de destino, clientes
-ms.openlocfilehash: fc3986520e55ae0c636eb2db731df065463002b5
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: windows 10, uwp, grupo direcionado, clientes, grupo de versão de pré-lançamento, grupos de usuários, usuários conhecidos
+ms.localizationpriority: high
+ms.openlocfilehash: 06922ba9cde98f4bdf678dc281d261dda3bce2b0
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-known-user-groups"></a>Criar grupos de usuários conhecidos
 
-Grupos de usuários conhecidos permitem que você adicione pessoas específicas a um grupo usando o endereço de e-mail associado à sua conta da Microsoft. Esses grupos de usuários conhecidos são mais frequentemente usados com [pacotes de pré-lançamento](package-flights.md) para distribuir pacotes específicos a um grupo selecionado de pessoas. Eles podem ser usados para enviar [notificações direcionadas](send-push-notifications-to-your-apps-customers.md) ou [ofertas direcionadas](use-targeted-offers-to-maximize-engagement-and-conversions.md) para um grupo de clientes específicos como parte das campanhas de envolvimento.
+Grupos de usuários conhecidos permitem que você adicione pessoas específicas a um grupo usando o endereço de e-mail associado à sua conta da Microsoft. Esses grupos de usuários conhecidos são frequentemente utilizados para distribuir pacotes específicos para um seleto grupo de pessoas com [pacotes de pré-lançamento](package-flights.md) ou para a distribuição de um envio para um [público particular](choose-visibility-options.md#audience). Eles podem ser usados para campanhas de envolvimento, como o envio de [notificações direcionadas](send-push-notifications-to-your-apps-customers.md) ou de [ofertas direcionadas](use-targeted-offers-to-maximize-engagement-and-conversions.md) para um grupo de clientes específicos.
 
-Para ser considerado um membro do grupo, cada pessoa deve ser autenticada na Loja usando a conta da Microsoft associada ao endereço de e-mail fornecido. Para pacotes de pré-lançamento, eles devem estar usando [um dispositivo Windows 10 compatível com o pacote de pré-lançamento](package-flights.md) para baixar o aplicativo.
-
+Para ser considerado um membro do grupo, cada pessoa deve ser autenticada na Loja usando a conta da Microsoft associada ao endereço de e-mail fornecido. Para baixar o app por meio de pacotes de pré-lançamento, os membros do grupo deverão usar uma versão do Windows 10 que dê suporte a pacotes de pré-lançamento (Windows. Desktop build 10586 ou posterior; Windows.Mobile build 10586.63 ou posterior; ou Xbox One). Com os envios para audiência particular, os membros do grupo deverão usar o Windows 10, versão 1607 ou posterior (incluindo o Xbox One).
 
 ## <a name="to-create-a-known-user-group"></a>Para criar um grupo de usuários conhecido
 
-1.  No painel do Centro de Desenvolvimento do Windows, expanda **Envolver** no menu de navegação esquerdo e, em seguida, selecione **Grupos de clientes**. 
-2.  Na seção **Meus grupos de clientes**, selecione **Criar novo grupo**.
-3.  Na próxima página, selecione o botão de opção **Grupo de usuários conhecido**.
-4.  Na caixa **Nome do grupo**, insira um nome para o grupo de usuários conhecido.
-5.  Insira os endereços de e-mail das pessoas que você gostaria de adicionar ao grupo. Você deve incluir pelo menos um endereço de e-mail, com limite máximo de 10.000. Você pode inserir endereços de e-mail diretamente no campo (separados por espaços, vírgulas, ponto-e-vírgula ou quebras de linha) ou clicar no link **Importar .csv** para criar o grupo de versões de pré-lançamento a partir de uma lista de endereços de e-mail em um arquivo .csv.
+1. No painel do Centro de Desenvolvimento do Windows, expanda **Envolver** no menu de navegação esquerdo e, em seguida, selecione **Grupos de clientes**. 
+2. Na seção **Meus grupos de clientes**, selecione **Criar novo grupo**.
+3. Na próxima página, insira um nome para seu grupo na caixa **Nome do grupo**.
+4. Verifique se o botão de opção **Grupo de usuários conhecido** está selecionado.
+5. Insira os endereços de e-mail das pessoas que você gostaria de adicionar ao grupo. Você deve incluir pelo menos um endereço de e-mail, com limite máximo de 10.000. Você pode inserir endereços de e-mail diretamente no campo (separados por espaços, vírgulas, ponto-e-vírgula ou quebras de linha) ou clicar no link **Importar .csv** para criar o grupo de versões de pré-lançamento a partir de uma lista de endereços de e-mail em um arquivo .csv.
 6. Selecione **Salvar**.
 
 O grupo agora estará disponível para uso.
@@ -47,7 +47,7 @@ Depois de selecionar o grupo que você deseja editar, é possível adicionar ou 
 
 Para alterações maiores, selecione **Exportar .csv** para salvar as informações de associação do grupo em um arquivo .csv. Faça suas alterações nesse arquivo, clique em **Importar .csv** para usar a nova versão para atualizar a associação do grupo.
 
-Observe que a implementação das alterações na associação do grupo de versão de pré-lançamento pode demorar até 30 minutos. Se você adicionar pessoas a um grupo de usuários conhecido depois de publicar um pacote de pré-lançamento para o grupo, os pacotes serão enviados para o novo pessoal automaticamente; você não precisa criar e publicar um novo envio para esse pacote de pré-lançamento. 
+Observe que a implementação das alterações na associação do grupo de versão de pré-lançamento pode demorar até 30 minutos. Você não precisa publicar um novo envio para que os novos membros do grupo poderão acessar seu envio por meio de pacotes de pré-lançamento ou de público particular; eles terão acesso assim que as alterações forem implementadas. 
 
 
 

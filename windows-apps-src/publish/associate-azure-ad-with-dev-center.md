@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: high
-ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: f488a72b916e2950a46a5b48e79be2795806a900
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory
 
@@ -51,9 +51,9 @@ Se você precisa configurar um novo Azure AD para vincular com sua conta do Cent
 1.  Acesse suas **Configurações da conta** e clique em **Locatários**.
 2.  Selecione **Criar novo Azure AD**.
 3.  Insira as informações de diretório para seu novo Azure AD:
- - **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com".
- - **Email de contato**: um endereço de email onde possamos contatá-lo sobre a sua conta, se necessário.
- - **Informações de conta de usuário do administrador global**: o nome, sobrenome, nome de usuário e senha que você deseja usar para a nova conta de administrador global.
+    - **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com".
+    - **Email de contato**: um endereço de email onde possamos contatá-lo sobre a sua conta, se necessário.
+    - **Informações de conta de usuário do administrador global**: o nome, sobrenome, nome de usuário e senha que você deseja usar para a nova conta de administrador global.
 4.  Clique em **Criar** para confirmar as novas informações de domínio e conta.
 5.  Entre com o nome de usuário e senha do novo Azure AD para começar a [adicionar e gerenciar usuários de contas adicionais](add-users-groups-and-azure-ad-applications.md).
 

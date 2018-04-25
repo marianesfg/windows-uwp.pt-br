@@ -1,23 +1,24 @@
 ---
 author: jnHs
-Description: "Quando você terminar de criar o envio do seu aplicativo, clique em Enviar à Loja. Ele entrará na etapa de certificação."
-title: "O processo de certificação de aplicativos"
+Description: When you finish creating your app's submission and click Submit to the Store, the submission enters the certification step.
+title: O processo de certificação de aplicativos
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.author: wdg-dev-content
-ms.date: 04/13/2017
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: f075dc6e112a526d7aee71f0f9aa7d4da570d649
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+keywords: windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendente, enviar, publicar, status
+ms.localizationpriority: high
+ms.openlocfilehash: 0b2191808457401a41fe6bb0996d3f5a5ed4943d
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
-Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Loja**. Ele entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio é aprovado na certificação, pode levar até 24 horas para que os clientes vejam os detalhes do aplicativo (ou suas atualizações para um aplicativo publicado anteriormente) na loja. Você verá uma notificação quando seu envio for publicado e estiver disponível para os clientes, e o status do aplicativo no painel será **Na Loja**.
+Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio é aprovado na certificação, pode levar até 24 horas para que os clientes vejam os detalhes do aplicativo (ou suas atualizações para um aplicativo publicado anteriormente) na loja. Você verá uma notificação quando seu envio for publicado e estiver disponível para os clientes, e o status do aplicativo no painel será **Na Loja**.
 
 ## <a name="preprocessing"></a>Pré-processamento
 
@@ -31,7 +32,7 @@ Durante essa fase, vários testes são realizados:
 -   **Testes de conformidade técnica:** a conformidade técnica é testada pelo Kit de Certificação de Aplicativos Windows. (Você deve sempre garantir o [teste do aplicativo com o Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviá-lo à loja).
 -   **Conformidade de conteúdo:** o tempo necessário varia dependendo da complexidade do aplicativo, da quantidade de conteúdo visual e de quantos aplicativos foram enviados recentemente. Não se esqueça de fornecer todas as informações importantes aos testadores na página [Notas para certificação](notes-for-certification.md).
 
-Após a conclusão do processo de certificação, você receberá um relatório de certificação informando se o aplicativo passou ou não na certificação. Se ele não for aprovado, o relatório indicará em qual teste ele falhou ou qual [política](https://msdn.microsoft.com/library/windows/apps/dn764944) não foi atendida. Depois de corrigir o problema, você pode criar um novo envio para o seu aplicativo para iniciar o processo de certificação novamente.
+Após a conclusão do processo de certificação, você receberá um relatório de certificação informando se o aplicativo passou ou não na certificação. Se ele não for aprovado, o relatório indicará em qual teste ele falhou ou qual [política](https://docs.microsoft.com/legal/windows/agreements/store-policies) não foi atendida. Depois de corrigir o problema, você pode criar um novo envio para o seu aplicativo para iniciar o processo de certificação novamente.
 
 ## <a name="release"></a>Versão
 
@@ -41,13 +42,14 @@ Quando seu aplicativo for aprovado na certificação, ele estará pronto para se
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo o avisará quando seus novos pacotes e detalhes de listagem da Loja forem disponibilizados para clientes em cada uma das versões de seu sistema operacional com suporte. Seu aplicativo permanecerá na fase de publicação até os novos pacotes e detalhes estarem disponíveis para todos os clientes em potencial do seu aplicativo, o que pode levar até 24 horas. 
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo o avisará quando seus novos pacotes e detalhes de listagem da Loja forem disponibilizados para clientes em cada uma das versões de seu sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até o processo ser concluído, o que significa que os novos pacotes e detalhes estão disponíveis para todos os clientes em potencial do seu app. Isso pode demorar até 24 horas. 
 
-## <a name="in-the-store"></a>Na Loja 
+## <a name="in-the-store"></a>Na Store 
 
-Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Loja**. Seu envio será disponibilizado na Windows Store para que os clientes baixem (a menos que você tenha escolhido outra opção de [Visibilidade](set-app-pricing-and-availability.md#visibility)). 
+Depois de passar pelas etapas acima com êxito, o status do envio será alterado de **Publicação** para **Na Store**. Seu envio será disponibilizado na Microsoft Store para que os clientes baixem (a menos que você tenha escolhido outra opção de [Detectabilidade](choose-visibility-options.md#discoverability)). 
 
-**Observação**  Também fazemos verificações específicas nos aplicativos após eles serem publicados, para que possamos identificar problemas potenciais e garantir que seu aplicativo esteja em conformidade com todas as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944). Se encontrarmos quaisquer problemas, você será notificado sobre o erro e como corrigi-lo, se aplicável, ou se ele foi removido da loja.
+> [!NOTE]
+> Nós também fazemos verificações específicas nos aplicativos após eles serem publicados, para que possamos identificar problemas potenciais e garantir que seu aplicativo esteja em conformidade com todas as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Se encontrarmos quaisquer problemas, você será notificado sobre o erro e como corrigi-lo, se aplicável, ou se ele foi removido da loja.
 
  
 

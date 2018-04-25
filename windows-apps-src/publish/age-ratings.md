@@ -4,17 +4,17 @@ Description: The Age ratings page of the app submission process lets you provide
 title: Classificações etárias
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 02/06/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: high
-ms.openlocfilehash: 0af2d316b0d0c4705c4669ef910f37845ca78aa8
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 8ee0b2dd91de7cf18fc71ace8b97abc795e22e6b
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
@@ -27,7 +27,7 @@ Na primeira vez que você enviar um aplicativo (ou na primeira vez que você atu
 > [!IMPORTANT]
 > Se você já preencheu ao questionário do aplicativo em outra vitrine e tem uma ID de classificação da IARC, é possível selecionar a opção para nos informar sua ID de classificação. Usaremos sua ID para associar as classificações existentes ao seu app na Microsoft Store.
 
-É necessário que você responda às perguntas de forma precisa. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
+É necessário que você responda às perguntas de forma precisa. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
 
 A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
 
@@ -44,6 +44,7 @@ Na próxima vez que atualizar o seu aplicativo, você verá todas as classifica�
 > Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://go.microsoft.com/fwlink/?linkid=867281). 
 
 <span id="appeal" />
+
 ## <a name="appealing-ratings-or-refused-classifications"></a>Classificações atraentes ou recusadas
 
 Se você tiver dúvidas sobre a classificação etária que seu aplicativo recebeu, ou quiser contestá-la, entre em contato com o IARC por meio do link que aparece no email de certificado de classificação que você receberá depois que o aplicativo for publicado.

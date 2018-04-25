@@ -1,20 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
-title: "Baixar e instalar atualizações de pacote para seu aplicativo"
-description: "Saiba como marcar pacotes como obrigatórios no painel do Centro de Desenvolvimento e escrever código no aplicativo para baixar e instalar atualizações do pacote."
+title: Baixar e instalar atualizações de pacote para seu aplicativo
+description: Saiba como marcar pacotes como obrigatórios no painel do Centro de Desenvolvimento e escrever código no aplicativo para baixar e instalar atualizações do pacote.
 ms.author: mcleans
-ms.date: 03/15/2017
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 62dc1cf81bd26ca5ba4adf181cc9f710e41565c2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: ce2f6d6607f09186a3969f37b6808fa1f04fb338
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-package-updates-for-your-app"></a>Baixar e instalar atualizações de pacote para seu aplicativo
 
@@ -29,9 +29,9 @@ Os aplicativos voltados para o Windows 10, versão 1607, ou posteriores, podem u
 
 |  Método  |  Descrição  |
 |----------|---------------|
-| [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetAppAndOptionalStorePackageUpdatesAsync) | Chame esse método para obter a lista de atualizações de pacote que estão disponíveis. Observe que pode haver um atraso de até um dia entre o momento quando um pacote passa pelo processo de certificação e quando o método **GetAppAndOptionalStorePackageUpdatesAsync** reconhece que a atualização do pacote está disponível para o aplicativo. |
-| [RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_RequestDownloadStorePackageUpdatesAsync_Windows_Foundation_Collections_IIterable_Windows_Services_Store_StorePackageUpdate__) | Chame esse método para baixar (mas não instalar) as atualizações de pacote disponíveis. Esse sistema operacional exibe uma caixa de diálogo que solicita a permissão do usuário para baixar as atualizações. |
-| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_RequestDownloadAndInstallStorePackageUpdatesAsync_Windows_Foundation_Collections_IIterable_Windows_Services_Store_StorePackageUpdate__) | Chame esse método para baixar e instalar as atualizações de pacote disponíveis. O sistema operacional exibe as caixas de diálogo que pedem a permissão do usuário para baixar e instalar as atualizações. Se você já tiver baixado as atualizações de pacote chamando **RequestDownloadStorePackageUpdatesAsync**, esse método ignorará o processo de download e só instalará as atualizações.  |
+| [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetAppAndOptionalStorePackageUpdatesAsync) | Chame esse método para obter a lista de atualizações de pacote que estão disponíveis. Observe que pode haver um atraso de até um dia entre o momento quando um pacote passa pelo processo de certificação e quando o método **GetAppAndOptionalStorePackageUpdatesAsync** reconhece que a atualização do pacote está disponível para o aplicativo. |
+| [RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadstorepackageupdatesasync) | Chame esse método para baixar (mas não instalar) as atualizações de pacote disponíveis. Esse sistema operacional exibe uma caixa de diálogo que solicita a permissão do usuário para baixar as atualizações. |
+| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) | Chame esse método para baixar e instalar as atualizações de pacote disponíveis. O sistema operacional exibe as caixas de diálogo que pedem a permissão do usuário para baixar e instalar as atualizações. Se você já tiver baixado as atualizações de pacote chamando **RequestDownloadStorePackageUpdatesAsync**, esse método ignorará o processo de download e só instalará as atualizações.  |
 
 <span/>
 
@@ -39,8 +39,8 @@ Esses métodos utilizam objetos [StorePackageUpdate](https://docs.microsoft.com/
 
 |  Propriedade  |  Descrição  |
 |----------|---------------|
-| [Obrigatório](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate#Windows_Services_Store_StorePackageUpdate_Mandatory) | Use essa propriedade para determinar se o pacote é marcado como obrigatório no painel do Centro de Desenvolvimento. |
-| [Pacote](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate#Windows_Services_Store_StorePackageUpdate_Package) | Use essa propriedade para acessar os dados subjacentes relacionados ao pacote. |
+| [Obrigatório](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate.Mandatory) | Use essa propriedade para determinar se o pacote é marcado como obrigatório no painel do Centro de Desenvolvimento. |
+| [Pacote](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate.Package) | Use essa propriedade para acessar os dados subjacentes relacionados ao pacote. |
 
 <span/>
 
@@ -50,7 +50,7 @@ Os exemplos de código a seguir demonstram como baixar e instalar atualizações
 * O código é executado no contexto de uma [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
 * A **Page** contém uma [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx) chamada ```downloadProgressBar``` para informar o status da operação de transferência.
 * O arquivo de código tem uma declaração **em uso** para o **Windows.Services.Store**, **Windows.Threading.Tasks** e namespaces **Windows.UI.Popups**.
-* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetForUser_Windows_System_User_) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetDefault).
+* O aplicativo é um aplicativo de usuário único executado somente no contexto do usuário que iniciou o aplicativo. Para um [aplicativo multiusuário](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use o método [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) para obter um objeto **StoreContext**, e não o método [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault).
 
 <span/>
 
@@ -221,11 +221,12 @@ private void HandleMandatoryPackageError()
 
 ### <a name="display-progress-info-for-the-download-and-install"></a>Exibir informações de progresso para transferência e instalação
 
-Quando você chama **RequestDownloadStorePackageUpdatesAsync** ou **RequestDownloadAndInstallStorePackageUpdatesAsync**, você pode atribuir um manipulador de [Progresso](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) que é chamado uma vez para cada etapa no processo de download (ou download e instalação) para cada pacote nesta solicitação. O manipulador recebe um objeto do [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) que fornece informações sobre o pacote de atualização que gerou a notificação de progresso. Os exemplos anteriores usam o campo **PackageDownloadProgress** do objeto **StorePackageUpdateStatus** para exibir o progresso da transferência e instalar o processo.
+Quando você chama **RequestDownloadStorePackageUpdatesAsync** ou **RequestDownloadAndInstallStorePackageUpdatesAsync**, você pode atribuir um manipulador de [Progresso](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress-2.progress) que é chamado uma vez para cada etapa no processo de download (ou download e instalação) para cada pacote nesta solicitação. O manipulador recebe um objeto do [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) que fornece informações sobre o pacote de atualização que gerou a notificação de progresso. Os exemplos anteriores usam o campo **PackageDownloadProgress** do objeto **StorePackageUpdateStatus** para exibir o progresso da transferência e instalar o processo.
 
 Saiba que quando você chamar **RequestDownloadAndInstallStorePackageUpdatesAsync** para baixar e instalar pacotes de atualizações em uma única operação, o campo **PackageDownloadProgress** aumenta de 0,0 para 0,8 durante o processo de transferência de um pacote, e depois ele aumenta de 0,8 para 1,0 durante a instalação. Portanto, se você mapear a porcentagem mostrada em seu progresso de interface de usuário personalizado diretamente ao valor do campo **PackageDownloadProgress**, sua interface de usuário será exibida como 80% quando o pacote terminar de baixar e o OS exibir o diálogo de instalação. Se você quiser que seu progresso personalizado da interface do usuário exiba 100% quando o pacote é baixado e está pronto para ser instalado, você pode modificar o código para atribuir 100% ao seu progresso da interface do usuário quando o campo **PackageDownloadProgress** atingir 0,8.
 
 <span id="mandatory-dashboard" />
+
 ## <a name="make-a-package-submission-mandatory-in-the-dev-center-dashboard"></a>Tornar o envio de um pacote obrigatório no painel do Centro de Desenvolvimento
 
 Ao criar um envio de pacote para um aplicativo destinado ao Windows 10, versão 1607, ou posterior, você pode marcar o pacote como obrigatório e a data/hora em que ele se torna obrigatório. Quando essa propriedade está definida e o aplicativo descobre que a atualização do pacote está disponível usando-se a API descrita anteriormente neste artigo, o aplicativo pode determinar se o pacote de atualizações é obrigatório e alterar o comportamento até a atualização ser instalada (por exemplo, o aplicativo pode desabilitar recursos).

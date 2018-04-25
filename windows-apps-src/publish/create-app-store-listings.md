@@ -1,34 +1,32 @@
 ---
 author: jnHs
-Description: "A seção de listagens da Loja do processo de envio de aplicativo é onde você fornece o texto e as imagens que os clientes verão na página de detalhes do seu aplicativo na Loja."
-title: Criar listagens de apps da Loja
+Description: The Store listings section of the app submission process is where you provide the text and images that customers will see when viewing your app's listing in the Microsoft Store.
+title: Criar listagens da Store do app
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 08/08/2017
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 004169178c906ac892865569fd2ed483bd2471fa
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
+ms.localizationpriority: high
+ms.openlocfilehash: 91242f7bd5f43b9d8af605b3b814e80006c90ce4
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="create-app-store-listings"></a>Criar listagens de apps da Loja
+# <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
 
-A seção de **listagens da Loja** do [processo de envio de aplicativo](app-submissions.md) é onde você fornece o texto e as [imagens](app-screenshots-and-images.md) que os clientes verão na listagem da Loja do seu aplicativo.
+A seção **Listagens da Store** do [processo de envio de aplicativo](app-submissions.md) é onde você fornece o texto e as [imagens](app-screenshots-and-images.md) que os clientes verão na listagem do seu app na Microsoft Store.
 
-> [!NOTE]
-> Recentemente, atualizamos as opções desta página. Se você tinha um envio em andamento antes das opções mais recentes estarem disponíveis, esse envio ainda mostrará as opções mais antigas. Você pode excluir esse envio e, em seguida, criar um novo se quiser usar as novas opções desse aplicativo. Caso contrário, as opções mais recentes serão disponibilizadas com a próxima atualização depois que você publicar o envio em andamento.
-
-Muitos dos campos da seção **listagem da Loja** são opcionais, mas sugerimos o fornecimento de várias imagens e tantas informações quanto possível para fazer a sua listagem se destacar. O mínimo necessário para a etapa **listagens da Loja** ser considerada completa é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots).
+Muitos dos campos em uma **listagem da Store** são opcionais, mas sugerimos que você forneça várias imagens e o máximo de informações possível para a listagem se destacar. O mínimo necessário para etapa de **listagens da Microsoft Store** ser considerada como concluída é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots). Para alguns envios, os campos [Política de privacidade](#privacy-policy) e [Informações de contato de suporte](#support-contact-info) também são necessários. 
 
 > [!TIP]
-> Também é possível [importar e exportar listagens da Loja](import-and-export-store-listings.md) se você deseja inserir as informações de listagem offline em um arquivo .csv em vez de fornecer essas informações diretamente no painel. Isso pode ser útil com listagens em vários idiomas.
+> Opcionalmente, também é possível [importar e exportar listagens da Store](import-and-export-store-listings.md) se você prefere inserir as informações de listagem offline em um arquivo .csv em vez de fornecer essas informações e carregar arquivos diretamente no painel. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo. 
 
-Por padrão, usaremos a mesma listagem da Loja (por idioma) para todos os seus sistemas operacionais de destino. Se você quiser usar uma listagem da Loja personalizada para um sistema operacional específico, poderá [criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md). A listagem padrão sempre será mostrada aos clientes no Windows 10.
+Por padrão, usaremos a mesma listagem da Store (por idioma) para todos os seus sistemas operacionais de destino. Se você quiser usar uma listagem da Store personalizada para um sistema operacional específico com suporte para seu envio, poderá [criar listagens da Store específicas de plataforma](create-platform-specific-store-listings.md). A listagem padrão sempre será mostrada aos clientes no Windows 10.
 
 ## <a name="store-listing-languages"></a>Idiomas da listagem da Loja
 
@@ -56,24 +54,35 @@ O campo Descrição é onde você pode informar aos clientes o que seu aplicativ
 
 Para obter algumas dicas sobre como fazer a sua descrição se destacar, consulte [Escrever uma ótima descrição do aplicativo](write-a-great-app-description.md).
 
-## <a name="release-notes"></a>Notas de versão
+<span id="release-notes" />
 
-Se esta for a primeira vez em que está enviando o seu aplicativo, provavelmente você vai querer deixar este campo em branco. No caso da atualização de um aplicativo existente, é aqui que você pode informar ao cliente o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres.
+## <a name="whats-new-in-this-version"></a>Novidades desta versão
+
+Se esta for a primeira vez em que está enviando o seu app, deixe esse campo em branco. No caso da atualização de um aplicativo existente, é aqui que você pode informar ao cliente o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres. (Anteriormente, esse campo foi chamado de **Notas de versão**).
+
+## <a name="app-features"></a>Recursos do aplicativo
+
+Trata-se de resumos dos principais recursos do aplicativo. Eles são exibidos para o cliente como uma lista com marcadores na seção **Recursos** da listagem da Store do app, juntamente com a **Descrição**. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por recurso. Você pode incluir até 20 recursos.
+
+> [!NOTE]
+> Os recursos do aplicativo aparecerão com marcadores na listagem da Store. Portanto, não adicione marcadores próprios.
 
 ## <a name="screenshots"></a>Capturas de tela
 
-Uma captura de tela é necessária para enviar seu aplicativo. É recomendável fornecer pelo menos uma captura de tela para cada tipo de dispositivo compatível com seu aplicativo.
+Uma captura de tela é necessária para enviar seu aplicativo. Recomendamos que você forneça pelo menos quatro capturas de tela de cada tipo de dispositivos compatíveis com seu app para que todos vejam como será a aparência do app no tipo de dispositivo.
 
-Para obter mais informações, consulte [Capturas de tela e imagens do aplicativo](app-screenshots-and-images.md#screenshots).
+Para obter mais informações, consulte [Capturas de tela e imagens do app](app-screenshots-and-images.md#screenshots).
+
 
 ## <a name="store-logos"></a>Logotipos da Loja 
 
-Os logotipos da Loja são imagens opcionais que você pode carregar para melhorar a forma como o aplicativo será exibido para os clientes. Você também pode especificar que somente as imagens carregadas aqui deverão ser usadas na listagem da Loja do aplicativo para clientes do Windows 10, em vez de permitir que a Loja use as imagens de logotipo dos pacotes do aplicativo.
+Os logotipos da Loja são imagens opcionais que você pode carregar para melhorar a forma como o aplicativo será exibido para os clientes. Você também pode especificar que somente as imagens carregadas aqui deverão ser usadas na listagem da Store do app para clientes no Windows 10 (incluindo o Xbox), em vez de permitir que a Store use as imagens de logotipo dos pacotes do app.
 
 > [!IMPORTANT]
 > Se o aplicativo oferecer suporte ao Xbox ou for compatível com Windows Phone 8.1 ou anterior, forneça determinadas imagens aqui para que a listagem apareça corretamente na Loja. 
 
 Para obter mais informações, consulte [Logotipos da Loja](app-screenshots-and-images.md#store-logos).
+
 
 ## <a name="additional-art-assets"></a>Ativos de arte adicionais
 
@@ -81,56 +90,65 @@ Você pode enviar ativos adicionais do seu produto, incluindo trailers e imagens
 
 Para obter mais informações, consulte [Ativos de arte adicionais](app-screenshots-and-images.md#additional-art-assets).
 
-## <a name="additional-information"></a>Informações adicionais
 
-Os campos desta seção são todos opcionais, mas podem ser usados para ajudar os clientes a entender mais sobre o que seu aplicativo faz e o que é necessário para ter a melhor experiência. Sugerimos a análise das opções descritas abaixo e o fornecimento de qualquer informação que os clientes talvez precisem saber sobre seu aplicativo ou que possa atraí-los para o download.
+## <a name="supplemental-information"></a>Informações complementares
 
-### <a name="app-features"></a>Recursos do aplicativo
+Os campos nesta seção são todos opcionais. Os recursos do app e os requisitos do sistema podem ser usados para ajudar os clientes a entender mais sobre o que seu aplicativo faz e o que é necessário para ter a melhor experiência. Outras opções ajudam a fornecer uma experiência ideal para seu produto em diferentes cenários. Examine as informações abaixo para determinar se a apresentação dessas informações faz sentido para o seu envio.
 
-Trata-se de resumos dos principais recursos do aplicativo. Eles são exibidos para o cliente como uma lista com marcadores na listagem da Loja do aplicativo, juntamente com a Descrição. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por recurso. Você pode incluir até 20 recursos.
+### <a name="short-title"></a>Título curto
 
-> [!NOTE]
-> Os recursos do aplicativo aparecerão com marcadores na listagem da Loja. Portanto, não adicione marcadores próprios.
+Uma versão mais curta do nome do seu produto. Se fornecido, esse nome mais curto pode aparecer em vários lugares no Xbox One (durante a instalação, em Conquistas etc.) no lugar do título completo do seu produto.
 
-### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema
+O **Título curto** tem um limite de 50 caracteres.
 
-Se necessário, você poderá descrever as configurações de hardware necessárias para que o aplicativo funcione corretamente (além das informações fornecidas na seção **Requisitos do sistema** em [Propriedades do aplicativo](enter-app-properties.md#system-requirements). Essas informações são especialmente importantes se o aplicativo exigir um hardware que possa não estar disponível em todo computador.
 
-Você pode inserir até 11 itens tanto para **Hardware mínimo** quanto para **Hardware recomendado**.  Elas são exibidas para o cliente na forma de uma lista com marcadores nos detalhes do seu aplicativo. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por item.
+### <a name="sort-title"></a>Título curto
 
-As informações que você insere aqui serão mostradas aos clientes que estão exibindo a listagem da Loja do aplicativo no Windows 10, versão 1607 ou posterior, juntamente com os requisitos que você indicou na página de propriedades do produto.
-
-> [!NOTE]
-> Os requisitos de sistema adicionais serão exibidos com marcadores na listagem da loja; portanto, não adicione marcadores próprios.
-
-### <a name="developed-by"></a>Desenvolvido por
-
-Digite o texto aqui se você quiser incluir um campo **Desenvolvido por** na listagem da loja do seu aplicativo. (O campo **Publicado por** listará o nome de exibição do fornecedor associado à conta, independentemente de você fornecer um valor para o campo **Desenvolvido por**.)
+Se seu produto puder ser colocado em ordem alfabética ou escrito de maneiras diferentes, você poderá inserir outra versão aqui. Isso permite que os clientes encontrem seu produto com mais rapidez se eles digitarem essa versão durante a pesquisa. 
 
 Este campo tem um limite de 255 caracteres.
 
 
-## <a name="shared-fields"></a>Campos compartilhados
+### <a name="voice-title"></a>Título de voz
 
-Os itens descritos abaixo ajudam os clientes a descobrir e entender seu produto. As informações inseridas aqui se aplicarão a todas as listagens da Loja em um determinado idioma, independentemente do sistema operacional, mesmo se você [criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md).
+Um nome alternativo para seu produto que, se fornecido, pode ser usado na experiência de áudio no Xbox One ao usar o Kinect ou um headset.
+
+Este campo tem um limite de 255 caracteres.
+
+
+### <a name="short-description"></a>Descrição breve
+
+Usado somente para jogos. Essa descrição é exibida na seção informações do Hub de jogos no Xbox One e ajuda os clientes a entender mais sobre o seu jogo.
+
+Este campo tem um limite de 500 caracteres.
+
+
+### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema
+
+Se necessário, você poderá descrever as configurações de hardware necessárias para que o aplicativo funcione corretamente (além das informações fornecidas na seção **Requisitos do sistema** em [Propriedades do aplicativo](enter-app-properties.md#system-requirements). Essas informações são especialmente importantes se o aplicativo exigir um hardware que possa não estar disponível em todo computador. Por exemplo, se o aplicativo funciona corretamente somente com o hardware USB externo, como uma impressora 3D ou microcontrolador, sugerimos que você os insira aqui. As informações que você insere aqui serão mostradas aos clientes que estão exibindo a listagem da Store do aplicativo no Windows 10, versão 1607 ou posterior (incluindo o Xbox), juntamente com os requisitos que você indicou na página de propriedades do produto. 
+
+Você pode inserir até 11 itens tanto para **Hardware mínimo** quanto para **Hardware recomendado**. Eles são exibidos para o cliente na forma de uma lista com marcadores na listagem da Microsoft Store. Deixe-os resumidos, com apenas algumas palavras (e não mais que 200 caracteres) por item.
+
+> [!NOTE]
+> Os requisitos de sistema adicionais serão exibidos com marcadores na listagem da Store; portanto, não adicione marcadores próprios.
+
+
+<span id="shared-fields" />
+
+## <a name="additional-information"></a>Informações adicionais
+
+Os itens descritos abaixo ajudam os clientes a descobrir e entender seu produto. As informações inseridas aqui se aplicarão a todas as listagens da Loja em um determinado idioma, independentemente do sistema operacional, mesmo se você [criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md). (Esta seção anteriormente era chamada de **Campos compartilhados**).
 
 ### <a name="search-terms"></a>Termos de pesquisa
 
-Os termos de pesquisa (antigamente denominados palavras-chave) são termos isolados ou pequenas frases que não são exibidos para os clientes, mas podem ajudar seu aplicativo a aparecer nos resultados de pesquisa relacionados ao termo. Você pode incluir até sete termos de pesquisa com no máximo 30 caracteres e usar até 21 palavras separadas em todos os termos de pesquisa.
+Os termos de pesquisa (antigamente denominados palavras-chave) são termos isolados ou pequenas frases que não são exibidos para os clientes, mas podem ajudar a tornar seu app detectável na Store quando os clientes pesquisarem usando esses termos. Você pode incluir até sete termos de pesquisa com no máximo 30 caracteres e usar até 21 palavras separadas em todos os termos de pesquisa.
 
 Ao adicionar termos de pesquisa, pense nas palavras que os clientes podem usam ao procurar aplicativos como o seu, especialmente se elas não fizerem parte do nome do seu aplicativo. Não deixe de usar termos de pesquisa que não sejam relevantes para o aplicativo.
-
-
-### <a name="privacy-policy"></a>Política de privacidade
-
-Se seu aplicativo tiver uma política de privacidade, insira a URL aqui. Você é responsável por garantir que seu aplicativo esteja em conformidade com as leis e as normas privacidade e por fornecer uma política de privacidade, se necessário.
-
-> [!IMPORTANT]
-> A Microsoft não fornece uma política de privacidade padrão para o aplicativo. Da mesma forma, o aplicativo não é coberto por nenhuma política de privacidade da Microsoft. Para determinar se o aplicativo requer uma política de privacidade, consulte o [Contrato de Desenvolvedor de Aplicativo](https://msdn.microsoft.com/library/windows/apps/hh694058) e as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 ### <a name="copyright-and-trademark-info"></a>Informações sobre direitos autorais e marcas registradas
 
 Se quiser fornecer informações adicionais sobre direitos autorais e/ou marca comercial, digite-as aqui. Este campo tem um limite de 200 caracteres.
+
 
 ### <a name="additional-license-terms"></a>Termos de licença adicionais
 
@@ -142,14 +160,16 @@ Se você inserir uma única URL para este campo, ela será exibido para os clien
 
 Você também pode inserir até 10.000 caracteres de texto neste campo. Se você fizer isso, os clientes verão esses termos de licença adicionais exibidos como texto sem formatação.
 
-### <a name="website"></a>Site
 
-Insira a URL da página da Web do seu aplicativo. A URL deve apontar para uma página em seu próprio site, não para os detalhes do seu aplicativo na Loja.
+### <a name="developed-by"></a>Desenvolvido por
 
-### <a name="support-contact-info"></a>Informações de contato de suporte
+Digite o texto aqui se você quiser incluir um campo **Desenvolvido por** na listagem da loja do seu aplicativo. (O campo **Publicado por** listará o nome de exibição do fornecedor associado à conta, independentemente de você fornecer um valor para o campo **Desenvolvido por**.)
 
-Insira a URL da página da Web em que seus clientes podem buscar suporte relacionado ao seu aplicativo ou o endereço de email que os seus clientes podem contatar para obter suporte).
+Este campo tem um limite de 255 caracteres.
+ 
 
-> [!IMPORTANT]
-> A Microsoft não fornece suporte para seu aplicativo aos seus clientes.
+<span id="privacy-policy" />
+
+> [!NOTE]
+> Os campos **Política de privacidade**, **Site** e **Informações de contato de suporte** agora estão localizados na página [Propriedades](enter-app-properties.md).
 

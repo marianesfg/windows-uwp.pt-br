@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notificações direcionadas, notificações por push, notificações do sistema, bloco
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: high
-ms.openlocfilehash: f7b4558b6c5ea2cc9dbc30cb605f1cb06432504f
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: e41b6f10a41fa954c92a0de0a258ab6482ac8456
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
@@ -50,16 +50,15 @@ Siga estas etapas para criar uma notificação no painel e enviá-la para um seg
 > [!NOTE]
 > Para que um app possa receber notificações do Centro de Desenvolvimento, primeiro você deverá chamar o método [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) no app a fim de registrá-lo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1.  No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), expanda a seção **Interagir** e, em seguida, selecione **Notificações**.
-2.  Na página **Notificações**, selecione **Nova notificação**.
-3.  Na seção **Selecionar um modelo**, escolha o tipo de notificação que deseja enviar. Para obter detalhes, consulte [Tipos de modelo de notificação](#notification-template-types). <!-- ![Notification templates](images/push-notifications-template.png) -->
-4.      Na próxima página, <!-- use the drop-down menu to choose either a **Single app** or **Multiple apps** for which you want to generate a notification. --> selecione um app <!-- or apps --> (que deve ser configurado para receber notificações usando o Microsoft Store Services SDK).
-5.  Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. <!-- (Notifications sent to multiple apps can only be sent to all customers of those apps.) --> Se quiser usar um segmento que ainda não foi criado, selecione **Criar novo grupo de clientes**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
-6.  Se você quiser especificar quando a notificação deverá ser enviada, desmarque a caixa de seleção **Enviar a notificação imediatamente** e escolha uma data e uma hora específicas (no horário UTC para todos os clientes, a menos que você especifique o uso do fuso horário local de cada cliente).
-7.  Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas (em UTC).
-8.  <!-- For notifications to a single app: --> If you want to filter the recipients so that your notification is only delivered to people who use certain languages or are in specific time zones, check the **Use filters** checkbox. You can then specify the language and/or time zone options you want to use.
-<!-- and don't forget to update numbers when this comes back... 9.      For notifications to multiple apps: Specify whether to send the notification only to the last active app on each device (per customer), or to all apps on each device. -->
-9.  Na seção **Conteúdo da notificação**, no menu **Idioma**, escolha os idiomas em que você deseja que sua notificação seja exibida. Para obter mais informações, consulte [Traduzir suas notificações](#translate-your-notifications).
+1. No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), expanda a seção **Interagir** e, em seguida, selecione **Notificações**.
+2. Na página **Notificações**, selecione **Nova notificação**.
+3. Na seção **Selecionar um modelo**, escolha o tipo de notificação que deseja enviar. Para obter detalhes, consulte [Tipos de modelo de notificação](#notification-template-types).
+4. Na próxima página, selecione um app (que deve ser configurado para receber notificações usando o Microsoft Store Services SDK).
+5. Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. Se quiser usar um segmento que ainda não foi criado, selecione **Criar novo grupo de clientes**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
+6. Se você quiser especificar quando a notificação deverá ser enviada, desmarque a caixa de seleção **Enviar a notificação imediatamente** e escolha uma data e uma hora específicas (no horário UTC para todos os clientes, a menos que você especifique o uso do fuso horário local de cada cliente).
+7. Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas (em UTC).
+8. Se você deseja filtrar os destinatários para que a notificação seja entregue apenas para pessoas que usam determinados idiomas ou que estejam em fusos horários específicos, marque a caixa de seleção **Usar filtros**. Em seguida, você pode especificar as opções de idioma e/ou de fuso horário que deseja usar.
+9. Na seção **Conteúdo da notificação**, no menu **Idioma**, escolha os idiomas em que você deseja que sua notificação seja exibida. Para obter mais informações, consulte [Traduzir suas notificações](#translate-your-notifications).
 10. Na seção **Opções**, insira texto e configure as outras opções que desejar. Se você começou com um modelo, parte disso é fornecido por padrão, mas você pode fazer quaisquer alterações que desejar.
    As opções disponíveis variam, dependendo de qual tipo de notificação você está usando. Algumas das opções são:
    - **Tipo de ativação** (tipo de notificação do sistema interativa). Você pode escolher **Em primeiro plano**, **Em segundo plano**, ou **Protocolo**.
@@ -67,11 +66,11 @@ Siga estas etapas para criar uma notificação no painel e enviá-la para um seg
    - **Acompanhar taxa de inicialização do aplicativo** (tipo de notificação do sistema interativa). Se desejar avaliar quão bem você está interagindo com seus clientes por meio de cada notificação, marque essa caixa de seleção. Para obter mais detalhes, consulte [Avaliar o desempenho das notificações](#measure-notification-performance).
    - **Duração** (tipo de notificação do sistema interativa). Você pode escolher **Curta** ou **Longa**.
    - **Cenário** (tipo de notificação do sistema interativa). Você pode escolher **Padrão**, **Alarme**, **Lembrete** ou **Chamada de entrada**.
-   - **URI base** (tipo de notificação do sistema interativa). Para obter mais detalhes, veja [BaseUri](https://msdn.microsoft.com/library/windows/apps/br208712).
-   - **Adicionar consulta de imagem** (tipo de notificação do sistema interativa). Para obter mais detalhes, consulte [addImageQuery](https://msdn.microsoft.com/library/windows/apps/br230847).
-   - **Visual**. Uma imagem, vídeo ou som. Para obter mais detalhes, consulte [visual](https://msdn.microsoft.com/library/windows/apps/br230847).
+   - **URI base** (tipo de notificação do sistema interativa). Para obter mais detalhes, veja [BaseUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.baseuri#Windows_UI_Xaml_FrameworkElement_BaseUri).
+   - **Adicionar consulta de imagem** (tipo de notificação do sistema interativa). Para obter mais detalhes, consulte [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
+   - **Visual**. Uma imagem, vídeo ou som. Para obter mais detalhes, consulte [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
    - **Entrada**/**Ação**/**Seleção** (tipo de notificação do sistema interativa). Permite que você possibilite aos usuários interagirem com a notificação. Para obter mais informações, consulte [Notificações do sistema interativas e adaptáveis](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-   - **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, consulte [associação](https://msdn.microsoft.com/library/windows/apps/br230843).
+   - **Associar** (tipo de bloco interativo). O modelo de notificação do sistema. Para obter mais detalhes, consulte [associação](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
 
    > [!TIP]
    > Tente usar o aplicativo [Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1) para projetar e testar os blocos adaptáveis e as notificações interativas do sistema.
@@ -106,17 +105,17 @@ Você pode escolher dentre uma variedade de modelos de notificação.
 Você pode avaliar quão bem está interagindo com seus clientes por meio de cada notificação.
 
 
-###<a name="to-measure-notification-performance"></a>Avaliar o desempenho das notificações
+### <a name="to-measure-notification-performance"></a>Avaliar o desempenho das notificações
 
 1.  Quando você cria uma notificação, na seção **Conteúdo da notificação**, selecione a caixa de diálogo **Acompanhar taxa de inicialização do aplicativo**.
 2.  Em seu aplicativo, chame o método [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) para notificar o Centro de Desenvolvimento que seu aplicativo foi iniciado em resposta a uma notificação direcionada. Esse método é fornecido pelo Microsoft Store Services SDK. Para obter mais informações sobre como chamar esse método, consulte [Configurar seu aplicativo para receber notificações do Centro de Desenvolvimento](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
-###<a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
+### <a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
 
 Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode usar o painel para ver a qualidade do desempenho de suas notificações.
 
-1.  No [painel do Centro de Desenvolvimento do Windows](https://developer.microsoft.com/dashboard/overview), expanda a seção **Interagir** e, em seguida, selecione **Notificações**.
+1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
 2.  Na página **Notificações por push direcionadas**, selecione **Em andamento** ou **Completed** e, em seguida, examine as colunas **Taxa de entrega** e **Taxa de inicialização do aplicativo** para ver o desempenho de alto nível de cada notificação.
 3.  Para ver mais detalhes de desempenho granular, selecione um nome de notificação. Na seção **Estatísticas de entrega**, você pode exibir as informações **Contagem** e **Porcentagem** para os seguintes tipos de **Status** de notificação:
  - **Falha**: A notificação não foi enviada por algum motivo. Isso pode acontecer, por exemplo, se ocorrer um problema no Serviço de Notificação do Windows (WNS).
@@ -129,7 +128,7 @@ Quando você tiver configurado a notificação e seu aplicativo para medir o des
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 
-Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. O Centro de Desenvolvimento torna mais fácil para você traduzir suas notificações automaticamente, aproveitando a capacidade do serviço [Microsoft Translator](https://msdn.microsoft.com/library/dd576287.aspx).
+Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. O Centro de Desenvolvimento torna mais fácil para você traduzir suas notificações automaticamente, aproveitando a capacidade do serviço [Microsoft Translator](https://www.microsoft.com/translator/home.aspx).
 
 1.  Depois de escrever sua notificação em seu idioma padrão, selecione **Adicionar idiomas** (abaixo do menu **Idiomas** na seção **Conteúdo da notificação**).
 2.  Na janela **Adicionar idiomas**, selecione os idiomas adicionais em que você deseja que suas notificações apareçam e selecione **Atualizar**.
@@ -146,4 +145,3 @@ Coisas a serem lembradas sobre tradução:
 - [Visão geral do WNS (Serviços de Notificação por Push do Windows)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [Aplicativo Visualizador de Notificações](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | método registerNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
-- [Segmentação de clientes e notificações por push: um novo recurso do Programa Insider do Centro de Desenvolvimento do Windows (postagem de blog)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)

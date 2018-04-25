@@ -4,17 +4,17 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: Gerar códigos promocionais
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 01/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: high
-ms.openlocfilehash: 634c0857982924ca1b588519172d77d97dd74791
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: 7043b12dc3b9d6e7a9813fb1d7b81b836902f92f
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
@@ -33,7 +33,7 @@ No painel do Centro de Desenvolvimento do Windows, você pode:
 -   Analisar o uso de código promocional.
 
 > [!NOTE]
-> Você pode gerar códigos promocionais mesmo se tiver selecionado a opção [Visibilidade](set-app-pricing-and-availability.md#visibility) **Parar a aquisição: os clientes com um link direto poderão ver a listagem da Loja do produto, mas só poderão baixá-lo se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10.**
+> Você pode gerar códigos promocionais mesmo se tiver selecionado **Disponibilizar este produto mas não torná-lo detectável na Store** com a opção **Parar a aquisição: os clientes com um link direto poderão ver a listagem da Store do produto, mas só poderão baixá-lo se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** na seção [Detectabilidade](choose-visibility-options.md#discoverability) do seu envio.
 
 Observe que o aplicativo deve passar na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) para que os usuários possam resgatar um código promocional para instalá-lo.
 
@@ -80,7 +80,7 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
     -   **Nome do produto**: o nome do aplicativo ou complemento ao qual o código está associado.
     -   **Nome do pedido**: o nome do pedido no qual esse código foi gerado.
     -   **Código promocional**: o código propriamente dito. Consiste em uma sequência 5x5 de caracteres alfanuméricos separados por hífens. Por exemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **URL Resgatável**: a URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou complemento. A URL tem o seguinte formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code>
+    -   **URL Resgatável**: a URL que um cliente pode usar para resgatar o código e instalar seu aplicativo ou complemento. A URL tem este formato: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;código_promocional>
     -   **Data de início**: a data em que este código foi ativado.
     -   **Data de validade**: a data de validade deste código.
     -   **ID do Código**: uma ID exclusiva para este código.
@@ -97,7 +97,7 @@ Para baixar um pedido atendido de códigos promocionais e distribuir os códigos
 
 ## <a name="code-redemption-user-experience"></a>Experiência de resgate do código pelo usuário
 
-Após distribuir um código promocional (ou sua URL resgatável) a um cliente, ele podem usar essa URL para obter o produto gratuitamente. Clique na URL resgatável para iniciar a página autenticada **Resgatar um código** em <https://account.microsoft.com/billing/redeem>. Esta página inclui uma descrição do aplicativo que o usuário está prestes a resgatar. Se o cliente não estiver conectado com a conta da Microsoft, ele poderá ser solicitado a fazê-lo. O cliente também pode acessar <https://account.microsoft.com/billing/redeem> e inserir o código diretamente.
+Após distribuir um código promocional (ou sua URL resgatável) a um cliente, ele podem usar essa URL para obter o produto gratuitamente. Clicar na URL resgatável iniciará uma página **Resgatar seu código** autenticada em <https://account.microsoft.com/billing/redeem>. Esta página inclui uma descrição do aplicativo que o usuário está prestes a resgatar. Se o cliente não estiver conectado com a conta da Microsoft, ele poderá ser solicitado a fazê-lo. O cliente também pode visitar <https://account.microsoft.com/billing/redeem> e inserir o código diretamente.
 
 > [!IMPORTANT]
 > É recomendável não distribuir códigos promocionais para seus clientes até que o produto conclua o processo de publicação (mesmo se você tiver selecionado **Disponibilizar este produto mas não torná-lo detectável na Loja**). Os clientes verão um erro se tentarem usar um código promocional para um produto que ainda não foi publicado.
@@ -111,12 +111,12 @@ Depois que o cliente clicar em **Resgatar**, a Microsoft Store abrirá a página
 ## <a name="review-your-promotional-codes"></a>Analisar os códigos promocionais
 
 Para analisar um resumo detalhado de pedidos de códigos promocionais de seus apps e complementos, navegue até a página **Códigos promocionais** (no menu de navegação esquerdo do painel do Centro de Desenvolvimento, expanda **Atrair** e clique em **Códigos promocionais**). Você pode analisar os seguintes detalhes de todos os seus códigos promocionais atuais e inativos:
-    -   Nome do pedido
-    -   Aplicativo ou complemento
-    -   Data de início
-    -   Data de validade
-    -   Disponível
-    -   Resgatado
+-   Nome do pedido
+-   Aplicativo ou complemento
+-   Data de início
+-   Data de validade
+-   Disponível
+-   Resgatado
 
 Você também pode [baixar](#download-and-distribute-promotional-codes) um pedido desta tabela.
 

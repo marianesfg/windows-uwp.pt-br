@@ -3,19 +3,20 @@ author: jnHs
 Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
 title: Importar e exportar as listagens da Store
 ms.author: wdg-dev-content
-ms.date: 12/22/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store"
+keywords: windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store
 ms.localizationpriority: high
-ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: fb9a3e6fd93600392ef724226368d33ed1585c76
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Store
+
 Em vez de [inserir informações de listagens da Store diretamente no painel](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações por meio da exportação de suas listagens em um arquivo .csv, inserindo as informações e os ativos, e importação do arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
 
 Essa opção é especialmente útil se você deseja criar ou atualizar Listagens da Store para seu produto em vários idiomas, pois você pode copiar/colar as mesmas informações em vários campos e facilmente fazer as alterações que devem ser aplicada para idiomas específicos. Contudo, você não pode usar esse método para criar ou atualizar [listagens da Store de específicas de plataforma](create-platform-specific-store-listings.md) para o aplicativo. 
@@ -29,7 +30,7 @@ Lembre-se de que você sempre pode criar ou atualizar listagens diretamente no p
 
 Na página de visão geral do envio de um aplicativo, clique em **Exportar listagem** (na seção **Listagens da loja**) para gerar um arquivo .csv codificado em UTF-8. Salve esse arquivo em um local no seu computador.
 
-Você pode usar o Microsoft Excel ou outro editor para editar o arquivo. Observe que as versões do Excel para Office 365 permitem que você salve um arquivo .csv como **UTF-8 CSV (delimitado por vírgula) (*.csv)**, mas outras versões podem não oferecer suporte a isso. Você pode encontrar detalhes sobre quais versões do Excel oferecem suporte a esse recurso no [Boletim de novos recursos do Excel 2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73) e saber mais sobre como codificar UTF-8 em vários editores de codificação [aqui](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Você pode usar o Microsoft Excel ou outro editor para editar o arquivo. Observe que as versões do Excel para o Office 365 permitem que você salve um arquivo .csv como **UTF-8 CSV (delimitado por vírgula) (*.csv)**, mas outras versões podem não oferecer suporte a isso. Você pode encontrar detalhes sobre quais versões do Excel oferecem suporte a esse recurso no [Boletim de novos recursos do Excel 2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73) e saber mais sobre como codificar UTF-8 em vários editores de codificação [aqui](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Se você ainda não criou todas as listagem para seu produto, o arquivo .CSV exportado não conterá todos os dados personalizados. Você verá colunas para **Campo**, **ID**, **Tipo** e **Padrão**, além de linhas que correspondem a todos os itens que podem ser exibidos em um repositório de listagem.
 

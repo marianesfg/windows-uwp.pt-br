@@ -1,48 +1,47 @@
 ---
 author: jnHs
-Description: "Ao enviar seu aplicativo, você tem a opção de usar a página Notas para certificação para fornecer informações adicionais aos testadores de certificação. Essas informações podem ajudar a garantir que seu aplicativo seja testado corretamente."
-title: "Notas para certificação"
+Description: As you submit your app, you have the option to use the Notes for certification page to provide additional info to the certification testers. This info can help ensure that your app is tested correctly.
+title: Notas para certificação
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 04/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: f342329e32aa4377696330c39920119c0ad7ecdb
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: windows 10, uwp, notas para testadores
+ms.localizationpriority: high
+ms.openlocfilehash: db1c7025a29b46833d4b93a79f3b67347ac32905
+ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="notes-for-certification"></a>Notas para certificação
 
 
-Ao enviar seu aplicativo, você tem a opção de usar a página **Notas para certificação** para fornecer informações adicionais aos testadores de certificação. Essas informações podem ajudar a garantir que seu aplicativo seja testado corretamente.
+Ao enviar seu aplicativo, você tem a opção de usar a página **Notas para certificação** para fornecer informações adicionais aos testadores de certificação. Essas informações podem ajudar a garantir que seu aplicativo seja testado corretamente. A inclusão dessas notas é particularmente importante para os produtos que usam os Serviços Xbox Live e/ou que exigem o logon em uma conta. Se não pudermos testar seu envio por completo, ele poderá falhar na certificação.
 
 Certifique-se de incluir (se aplicável ao seu aplicativo):
 
--   **Nomes de usuário e senhas para testar as contas**
+-   **Nomes de usuário e senhas para testar contas** Se o seu aplicativo exigir que os usuários façam logon em uma conta de mídia social ou de serviço, forneça o nome de usuário e a senha para uma conta de teste. Os testadores de certificação usarão a conta ao examinar o aplicativo.
 
-    Se o seu aplicativo requer que os usuários façam logon em um serviço, forneça o nome de usuário e a senha para uma conta de teste. Os testadores de certificação usarão a conta ao examinar o aplicativo.
+-   **As etapas para acessar recursos ocultos ou bloqueados** Descreva brevemente como os testadores podem acessar quaisquer recursos, modos ou conteúdo que talvez não sejam óbvios. Os aplicativos que parecerem incompletos podem não ser certificados.
 
--   **Etapas para acessar recursos ocultos ou bloqueados**
+-   **Etapas para verificar o uso de áudio em segundo plano** Se o seu app permitir que o áudio seja executado em segundo plano, talvez os testadores precisem de instruções sobre como acessar esse recurso para que eles possam confirmar se ele funciona corretamente.
 
-    Se o seu aplicativo tem recursos que podem não ser óbvios para os testadores, descreva brevemente como eles podem acessar esses recursos. Os aplicativos que parecerem incompletos podem não ser certificados.
+-  **Diferenças esperadas no comportamento com base na região ou em outras configurações de cliente** Por exemplo, se clientes em diferentes regiões verão conteúdo diferente, deixe isso claro de forma que os testadores entendam as diferenças e analisem adequadamente.
 
--   **Etapas para verificar o uso de áudio em segundo plano**
+-   **Informações sobre o que foi alterado em uma atualização do app** Para fazer atualizações de apps já publicados, talvez seja conveniente informar aos testadores o que foi alterado, principalmente se os seus pacotes forem os mesmos e se você está apenas alterando um detalhe do aplicativo (como adicionar mais capturas de tela, alterar a categoria do aplicativo ou editar a descrição).
 
-    Se o seu aplicativo permite que o áudio seja executado em segundo plano, os testadores podem precisar de instruções sobre como acessar esse recurso para que eles possam confirmar se ele funciona corretamente.
+-   **A data em que você está inserindo as notas** Isso é especialmente importante se você estiver usando uma área restrita de desenvolvimento no Centro de Desenvolvimento (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), já que as notas inseridas ao publicar em uma área restrita permanecerão quando você solicitar a certificação. Ver a data ajuda os testadores a avaliar se há algum problema temporário que não se aplica mais.
 
--   **Informações sobre o que mudou em uma atualização de aplicativo**
-
-    Para atualizações de aplicativos já publicados, talvez seja conveniente informar aos testadores o que foi alterado, principalmente se os seus pacotes forem os mesmos e você está apenas alterando um detalhe do aplicativo (como adicionar mais capturas de tela, alterar a categoria do aplicativo ou editar a descrição).
+-  **Qualquer outra coisa que você ache necessário que os testadores entendam sobre o seu envio**
 
 Ao considerar o que escrever, lembre-se:
 
 -   **Uma pessoa real lerá essas notas.** Os testadores valorizarão uma observação educada e instruções úteis.
--   **Seja sucinto e crie instruções simples.** Se você realmente precisar dar mais explicações, poderá incluir um link para uma página com mais informações. Lembre-se de que os clientes do seu aplicativo não verão esses detalhes. Se precisar fornecer instruções complicadas para testar seu aplicativo, considere simplificá-lo para que os clientes saibam como usá-lo.
--   **Serviços e componentes externos devem estar online e disponíveis.** Se o aplicativo se conecta a um serviço como parte de sua função, verifique se o serviço estará online e disponível. Inclua informações sobre o serviço necessárias aos testadores. Se o aplicativo não puder se conectar a um serviço necessário para o teste, ele poderá ser reprovado na certificação.
+-   **Seja sucinto e crie instruções simples.** Se você realmente precisar explicar algo em detalhes, poderá incluir a URL a uma página com mais informações. No entanto, tenha em mente que os clientes do seu app não verão essas notas. Se você achar que precisa fornecer instruções complicadas para testar seu app, considere simplificá-lo para que os clientes (e os testadores) saibam como usá-lo.
+-   **Serviços e componentes externos devem estar online e disponíveis.** Se o app precisar se conectar a um serviço para funcionar, verifique se o serviço estará online e disponível. Inclua qualquer informação sobre o serviço que sejam necessárias aos testadores, como as informações de logon. Se o aplicativo não puder se conectar a um serviço necessário para o teste, ele poderá ser reprovado na certificação.
 
  
 

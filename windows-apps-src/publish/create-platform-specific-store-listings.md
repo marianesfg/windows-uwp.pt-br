@@ -1,48 +1,60 @@
 ---
 author: jnHs
-Description: "Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da listagem da Loja para os diferentes sistemas operacionais de destino."
-title: "Criar listagens específicas de plataforma da Loja"
+Description: If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems.
+title: Criar listagens específicas de plataforma da Store
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 3/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 4a4aac5c5990807f2988be1ba818992b1bccbea3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: windows 10, uwp, personalizar, listagem, descrição, anteriormente
+ms.localizationpriority: high
+ms.openlocfilehash: b3b515c09cc31cf45d0690af2fa6fd535e32cdca
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="create-platform-specific-store-listings"></a>Criar listagens específicas de plataforma da Loja
+# <a name="create-platform-specific-store-listings"></a>Criar listagens específicas de plataforma da Store
 
 
-Caso tenha fornecido pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da listagem da Loja para os diferentes sistemas operacionais de destino. Você não não verá essa opção a menos que você já tenha carregado pacotes e inclua pacotes para versões anteriores do sistema operacional (Windows 8.x ou versões anteriores e/ou Windows Phone 8.x ou anterior).
+Se o aplicativo tiver pacotes direcionados a diferentes sistemas operacionais, você tem a opção de personalizar partes da listagem da Store para clientes em versões anteriores do sistema operacional (Windows 8. x ou versões anteriores e/ou Windows Phone 8. x ou anterior). 
 
-> **Importante**  Os clientes no Windows 10 sempre verão sua listagem de Loja padrão.
+> [!IMPORTANT]
+> Os clientes no Windows 10 sempre verão a [listagem padrão da Microsoft Store](create-app-store-listings.md). Você não verá a opção de criar listagens da Microsoft Store específicas da plataforma, exceto se você já tiver carregado pacotes que oferecem suporte a uma ou mais versões anteriores do sistema operacional. 
 
 Listagens da Loja específicas da plataforma podem ser úteis se você quer mencionar recursos que aparecem apenas em uma versão do sistema operacional ou se quer fornecer capturas de tela que sejam específicas a um determinado sistema operacional (independentemente do tipo de dispositivo), em vez de todos os clientes verem a mesma listagem da Loja.
 
-> **Observação**  Criar uma listagem da Loja específica da plataforma em um idioma não cria uma listagem da Loja específica da plataforma em outros idiomas que seu aplicativo aceita, mesmo que você tenha [inserido informações de listagem da Loja](create-app-store-listings.md) desses idiomas. Você precisará criar a listagem da Loja específica da plataforma separadamente para cada idioma.
+> [!NOTE]
+> A criação de uma listagem da Microsoft Store específica de plataforma em um idioma não cria uma listagem da Microsoft Store específica da plataforma em outros idiomas aos quais o aplicativo oferece suporte. Você precisará criar a listagem da Loja específica da plataforma separadamente para cada idioma. Observe também que você não pode importar e exportar dados de listagem da Microsoft Store para listagens específicas da plataforma.
+
 
 ## <a name="creating-a-platform-specific-store-listing"></a>Criando uma listagem específica da Loja da plataforma
 
-Próximo da parte superior da página de **listagem da Loja**, você verá um link para **criar uma listagem da Loja de aplicativos específicos da plataforma** se você tiver carregado pacotes que oferecem suporte a versões anteriores do sistema operacional (Windows 8.x ou versões anteriores e/ou Windows Phone 8.x ou versões anteriores).
+Próximo da parte superior da página de **Listagem da Microsoft Store**, se o aplicativo oferecer suporte para versões anteriores do sistema operacional (Windows 8.x ou versões anteriores e/ou Windows Phone 8.x ou versões anteriores), você pode selecionar **criar uma listagem da App Store específica da plataforma**. 
 
-> **Dica** Você não pode criar listagens da Loja específicas da plataforma até ter carregado os pacotes.
+> [!TIP]
+> Você só verá a opção de criação de listagens da Microsoft Store específica de plataforma após ter carregado os pacotes.
 
-Quando você clicar no link para **criar uma listagem da Loja de aplicativos específicos da plataforma**, um menu pop-up será exibido solicitando que você escolha entre seus sistemas operacionais de destino com suporte. O Windows 10 não está incluído na lista de opções, pois os clientes no Windows 10 sempre verão a listagem da Loja padrão do aplicativo.
+Depois de selecionar essa opção, você deverá escolher entre as versões do sistema operacional direcionadas e compatíveis com o envio. Depois que você tiver criado listagens da Microsoft Store específicas de plataforma para todas as versões de sistema operacional às quais seu aplicativo se destina, não será possível fazer outra seleção. (O Windows 10 não está incluído na lista de opções, pois os clientes no Windows 10 sempre verão a listagem da Microsoft Store padrão do aplicativo.)
 
-> **Observação**  Caso ainda não tenha criado listagens da Loja específicas da plataforma para todas as versões de sistema operacional às quais o seu aplicativo se destina, não será possível fazer uma seleção.
+Você pode usar a listagem da Microsoft Store padrão como ponto de partida, o que mostrará o texto e as imagens aplicáveis inseridos na listagem da Microsoft Store padrão. Em seguida, você poderá fazer as alterações que quiser antes de salvar. Você também pode iniciar uma listagem da Loja completamente nova se preferir.
 
-Você pode optar por usar a listagem da Loja padrão como um ponto de partida, o que mostrará todo o texto e as imagens inseridos na listagem da Loja padrão. Em seguida, você poderá fazer alterações que quiser antes de salvar. Você também pode iniciar uma listagem da Loja completamente nova se preferir.
+Depois que você clicar em **Continuar**, a página **Listagem da Microsoft Store** agora incluirá uma seção para a listagem da Microsoft Store específica de plataforma que você acabou de criar. Esta seção incluirá seu próprio conjunto de campos para **Descrição** (necessário), **Novidades desta versão**, **Capturas de tela**, **Ícone do bloco do aplicativo**, **Recursos do aplicativo** e **Requisitos adicionais do sistema**. Certifique-se de inserir informações em cada campo em que você deseja exibir informações na listagem da Loja personalizada, mesmo que sejam as mesmas informações da listagem da Loja padrão. Se você deixar um desses campos em branco, nenhuma informação será exibida para tal campo na listagem da Loja personalizada.
 
-Depois que você clicar em **Continuar**, a página **listagem da Loja** incluirá uma seção para a listagem da Loja específica da plataforma que você acabou de criar (sob a seção [Listagem da Loja padrão](create-app-store-listings.md#default-store-listing-fields)). Esta seção incluirá seu próprio conjunto de campos para **Descrição** (necessário), **Notas de versão**, **Capturas de tela**, **Ícone do bloco do aplicativo**, **Recursos do aplicativo** e **Requisitos adicionais do sistema**. Certifique-se de inserir informações em cada campo em que você deseja exibir informações na listagem da Loja personalizada, mesmo que sejam as mesmas informações da listagem da Loja padrão. Se você deixar um desses campos em branco, nenhuma informação será exibida para tal campo na listagem da Loja personalizada.
 
-> **Observação**  Nem todos os campos de listagem da Loja do seu aplicativo podem ser personalizados para um sistema operacional de destino específico. Para saber mais, consulte [Campos compartilhados](create-app-store-listings.md#shared-fields).
+> [!IMPORTANT]
+> Os campos da seção [Informações adicionais](create-app-store-listings.md#additional-information) da listagem da Store não podem ser personalizados para diferentes versões do sistema operacional.
+> 
+> Além disso, como alguns campos na página padrão [listagem da Store](create-app-store-listings.md) se aplicam apenas aos clientes no Windows 10, você não verá as mesmas opções ao criar uma listagem da Store específica da plataforma. Por exemplo, você não pode adicionar trailers a uma listagem da Microsoft Store específica da plataforma, pois os trailers são exibidos somente para clientes no Windows 10, versão 1607 ou posterior. 
 
-## <a name="removing-a-platform-specific-store-listing"></a>Removendo uma listagem da Loja específica de plataforma
 
-Se você criar uma listagem da Loja específica de plataforma e depois decidir que quer mostrar a listagem da Loja padrão para os clientes desse sistema operacional, clique no link **Excluir**. Depois de confirmar que você deseja mostrar a listagem da Loja padrão aos clientes, clique em **OK**. A listagem da Loja específica de plataforma será removida. Se decidir tê-la de volta mais tarde, você sempre pode criar uma nova listagem da Loja específica de plataforma para o sistema operacional seguindo as etapas listadas acima.
+## <a name="removing-a-platform-specific-store-listing"></a>Removendo uma listagem da Microsoft Store específica de plataforma
+
+Se você criar uma listagem da Microsoft Store específica de plataforma e depois decidir que quer mostrar a listagem padrão para os clientes desse sistema operacional, selecione o link **Excluir** ao lado da listagem.
+
+Depois de confirmar que você deseja mostrar a listagem da Microsoft Store padrão aos clientes, selecione **OK**. A listagem da Microsoft Store específica da plataforma será removida (para todos os idiomas em que existia) e os clientes com essa versão do sistema operacional agora exigem sua listagem padrão da Microsoft Store. Se mudar de ideia, você pode criar outra listagem da Microsoft Store específica da plataforma para o sistema operacional seguindo as etapas listadas acima.
 
  
 

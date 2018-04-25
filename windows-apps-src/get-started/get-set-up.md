@@ -1,17 +1,20 @@
 ---
 author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: "Prepare-se para começar"
-description: "É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10."
+title: Prepare-se para começar
+description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 85c949307183cf71f8b770d190d983db28b61a9f
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
 
@@ -29,7 +32,6 @@ Para desenvolver aplicativos UWP, você precisará da versão mais recente do Wi
 Você é assinante do MSDN? É possível obter os downloads ISO aqui:
 
 -   Obtenha o Windows 10 em [Downloads para Assinantes do MSDN](http://go.microsoft.com/fwlink/p/?LinkId=266384)
-
 
 
 ## <a name="2-download-or-update-visual-studio"></a>2. Baixe ou atualize o Visual Studio
@@ -65,7 +67,7 @@ Você pode começar a desenvolver aplicativos agora, mas antes de enviá-los par
 
 ## <a name="whats-next"></a>O que vem em seguida?
 
-Após instalar as ferramentas e obtido uma licença de desenvolvedor ou uma conta de desenvolvedor, use o nosso tutorial para criar seu primeiro aplicativo:
+Depois de instalar as ferramentas e de habilitar seu dispositivo para o desenvolvimento, use o nosso tutorial para criar seu primeiro app:
 
 -   Tutoriais para [Criar seu primeiro aplicativo](your-first-app.md)
 
@@ -77,8 +79,8 @@ Para obter a lista completa de ferramentas e downloads, consulte [Downloads](htt
 ## <a name="see-also"></a>Consulte também
 
 * [Seu primeiro app](your-first-app.md)
-* [Publicar aplicativos da Windows Store](https://developer.microsoft.com/store/publish-apps).
+* [Publicando seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
 * [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
 * [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
-* [O que é um aplicativo Universal do Windows?](whats-a-uwp.md)
+* [O que é um aplicativo UWP?](universal-application-platform-guide.md)
 * [Inscreva-se para a conta do Windows](sign-up.md)

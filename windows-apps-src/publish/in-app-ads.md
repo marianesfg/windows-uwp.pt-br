@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 66c0ae56c3722162ebef5a8660cc2322d69a278b
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 04d4ca665a8f0dff495b144868767506d7a210f8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -26,6 +26,7 @@ Use a página **Monetizar** &gt; **Anúncios no aplicativo** no painel do Centro
 Para obter mais informações sobre como integrar esses SDKs com seus aplicativos para exibir anúncios, consulte [Exibir anúncios em seu aplicativo com o SDK do Microsoft Advertising](../monetize/display-ads-in-your-app.md).
 
 <span id="create-ad-unit" />
+
 ## <a name="create-ad-units"></a>Criar unidades publicitárias
 
 Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banner-ads.md), [Anúncio intersticial](../monetize/interstitial-ads.md) ou [Anúncio nativo](../monetize/native-ads.md) em seu aplicativo:
@@ -61,6 +62,7 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
 Depois de criar a nova unidade publicitária, ela aparecerá na tabela de unidades publicitárias disponíveis na página **Monetizar** &gt; **Anúncios em aplicativo**.
 
 <span id="available-ad-units" />
+
 ## <a name="review-and-edit-ad-units"></a>Revisar e editar unidades de anúncio
 
 Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta, essas unidades aparecem em uma tabela na parte inferior da página **Monetizar** &gt; **Anúncios em aplicativos**. Esta tabela mostra a **ID do aplicativo** e **ID da unidade publicitária** para cada unidade publicitária, juntamente com outras informações. Para mostrar anúncios em seu aplicativo, você precisará usar estes valores em seu código. Para obter mais informações, consulte [Configurar unidades de anúncio no aplicativo](../monetize/set-up-ad-units-in-your-app.md).
@@ -81,6 +83,7 @@ Para editar as [Configurações de mediação](#mediation) para uma unidade publ
 Observe que, se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, ela receberá o rótulo **Inativa**e, por fim, removeremos essa unidade do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
+
 ## <a name="mediation-settings"></a>Configurações de mediação
 
 Quando você [Criar uma nova unidade publicitária UWP](#create-ad-unit) ou [Editar uma unidade publicitária UWP existente](#available-ad-units), use as opções desta seção para configurar a mediação de anúncios para a unidade publicitária. O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas e os anúncios não relacionados à geração de receitas para campanhas promocionais de aplicativos da Microsoft. Assumimos o controle das solicitações de anúncios em faixa nas redes de publicidade escolhidas. Se você já tiver uma unidade publicitária UWP associada ao anúncio em faixa, intersticial ou nativo no aplicativo, a habilitação do controle de anúncios não requer nenhuma alteração de código no aplicativo.
@@ -113,6 +116,7 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 10. Clique em **Criar unidade publicitária** (se você estiver criando uma nova unidade publicitária) ou **Salvar** (se você estiver editando uma unidade publicitária existente).
 
 <span id="paid-networks" />
+
 ### <a name="supported-paid-ad-networks"></a>Redes de anúncios pagas com suporte
 
 A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de anúncio. Observe que algumas dessas redes [não estão disponíveis em todos os mercados](#network-markets).
@@ -131,6 +135,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 
 
 <span id="other-networks" />
+
 ### <a name="other-ad-networks"></a>Outras redes de publicidade
 
 A tabela a seguir lista as outras redes atualmente com suporte para cada tipo de anúncio.
@@ -142,6 +147,7 @@ A tabela a seguir lista as outras redes atualmente com suporte para cada tipo de
 
 
 <span id="network-markets" />
+
 ### <a name="supported-markets-for-ad-networks"></a>Mercados com suporte para redes de publicidade
 
 As redes de publicidade disponíveis veiculam anúncios em todos os [mercados com suporte](define-pricing-and-market-selection.md#microsoft-store-consumer-markets), com as seguintes exceções.
@@ -153,6 +159,7 @@ As redes de publicidade disponíveis veiculam anúncios em todos os [mercados co
 | smartclip | Áustria, Bélgica, Dinamarca, Finlândia, Alemanha, Itália, Países Baixos, Noruega, Suécia, Suíça  |
 
 <span id="coppa" />
+
 ## <a name="coppa-compliance"></a>Conformidade com o COPPA
 
 Quando você [cria uma unidade publicitária](#create-ad-unit) ou [seleciona uma unidade publicitária existente](#available-ad-units), a seção **Conformidade com o COPPA** aparece na parte inferior da página do painel se o aplicativo selecionado para a unidade publicitária tiver pelo menos uma assinatura que tenha chegado à etapa [na Store](../publish/the-app-certification-process.md#in-the-store) no processo de certificação do aplicativo.

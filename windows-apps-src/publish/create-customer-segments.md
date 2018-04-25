@@ -1,6 +1,6 @@
 ---
 author: JnHs
-Description: "Saiba como criar segmentos de cliente para que você possa segmentar um subconjunto de sua base de clientes para fins promocionais ou de envolvimento."
+Description: Learn how to create customer segments so you can target a subset of your customer base for promotional or engagement purposes.
 title: Criar segmentos de cliente
 ms.author: wdg-dev-content
 ms.date: 07/26/2017
@@ -9,17 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, segmento, segmentos, grupo de destino, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
-ms.openlocfilehash: 7c55528a47fe00782e5997e60fedca920cfdeb48
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: high
+ms.openlocfilehash: 9b3af4a04889a46c0ff2b2592eceafd2605f139a
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-customer-segments"></a>Criar segmentos de cliente
 
 Há momentos em que você talvez queira direcionar um subconjunto de sua base de clientes para fins promocionais e de envolvimento. Você pode fazer isso no Centro de Desenvolvimento do Windows com a criação de um tipo de [grupo de clientes](create-customer-groups.md) conhecido como *segmento* que inclui os clientes do Windows 10 que satisfazem os critérios demográficos ou de receita escolhidos.
 
-Por exemplo, você poderia criar um segmento que inclua apenas os clientes que têm 50 anos ou mais, ou que inclua os clientes que gastaram mais de US$ 10 na Windows Store. Você também pode combinar esses critérios e criar um segmento que inclui todos os clientes com mais de 50 anos que gastaram mais de US$ 10 na Loja. 
+Por exemplo, você poderia criar um segmento que inclua apenas os clientes que têm 50 anos ou mais, ou que inclua os clientes que gastaram mais de US$ 10 na Microsoft Store. Você também pode combinar esses critérios e criar um segmento que inclui todos os clientes com mais de 50 anos que gastaram mais de US$ 10 na Loja. 
 
 Oferecemos alguns modelos de segmento para ajudá-lo a começar, mas você pode definir e combinar os critérios da maneira que quiser.
 
@@ -39,8 +40,8 @@ Observações importantes sobre segmentos de cliente:
 2.  Na página **Grupos de clientes**, siga um destes procedimentos:
  - Na seção **Meu grupos de clientes**, selecione **Criar novo grupo** para definir um segmento do zero. Na próxima página, selecione o botão de opção **Segmento**.
  - Na seção **Modelos de segmento**, selecione **Cópia** ao lado dos segmentos pré-definidos (que você pode usar como está ou modificar para atender às suas necessidades).
-4.  Na caixa **Nome do grupo**, insira um nome para o segmento.
-3.  Na lista **Incluir clientes desse aplicativo**, selecione um dos seus aplicativos para direcionar.
+3.  Na caixa **Nome do grupo**, insira um nome para o segmento.
+4.  Na lista **Incluir clientes desse aplicativo**, selecione um dos seus aplicativos para direcionar.
 5.  Na seção **Definir condições de inclusão**, especifique os critérios de filtro para o segmento.
 
     Você pode escolher entre diversos de critérios de filtro, incluindo **Aquisições**, **Fonte de aquisições**, **Uso**, **Demografia**, **Classificação**, **Previsão de rotatividade**, **Compras da Loja**, **Aquisições na Loja** e **Gasto da Loja**.

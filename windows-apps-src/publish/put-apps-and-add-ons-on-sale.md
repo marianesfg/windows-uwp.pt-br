@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Você também pode promover o seu aplicativo ou complemento na Windows Store colocando-o em promoção por um tempo limitado."
-title: "Colocar apps e complementos à venda"
+Description: You can promote your app or add-on in the Microsoft Store by putting it on sale for a limited time.
+title: Colocar apps e complementos à venda
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
 ms.author: wdg-dev-content
 ms.date: 08/21/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d17394808232aeffbe81404427e668fb9c06e677
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: high
+ms.openlocfilehash: 0cc26403c10e9300e983275d28a1a969af513dc3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Colocar apps e complementos à venda
 
-Você também pode promover o seu aplicativo ou complemento na Windows Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem.
+Você também pode promover o seu aplicativo ou complemento na Microsoft Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem.
 
 Ao usar a seção **Preço de venda** da página **Preço e disponibilidade** de um envio para reduzir temporariamente o preço do seu aplicativo ou complemento, os clientes que acessarem a listagem da Loja verão um preço tachado indicando a redução (em vez de ter passado por uma [alteração de preço agendada](set-and-schedule-app-pricing.md#schedule-price-changes), o que pode reduzir ou elevar o preço sem exibi-lo como uma alteração na Loja). 
 
@@ -60,7 +61,7 @@ Promoções agendadas como parte do envio de um aplicativo ou complemento. Se vo
 
 > [!NOTE]
 > É possível selecionar uma faixa de preços maior que o preço base do seu aplicativo. No entanto, o preço de venda só será mostrado aos clientes se o preço de venda for menor que o preço normal do aplicativo no mercado.
-
+>
 > Selecionar um preço que seja maior que o preço base do seu aplicativo pode ser apropriado para seu venda, se você já definiu preços personalizados em certos mercados que são maiores do que o preço base do seu aplicativo, e você deseja reduzir temporariamente o preço nesses mercados (mas o preço de venda ainda é maior do que o preço base do aplicativo). Se suas seleções resultariam num preço mais alto do aplicativo em um determinado mercado, não mostraremos esse preço (maior) para os clientes nesse mercado; eles continuarão a ver o aplicativo com seu preço anterior (inferior). Também mostraremos aos clientes o preço mais baixo disponível se você agendar promoções sobrepostas separadas com preços diferentes.
 
 ## <a name="changing-or-canceling-a-scheduled-sale"></a>Alterando ou cancelando uma promoção agendada

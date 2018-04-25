@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox
 ms.localizationpriority: high
-ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4f00d400724d07a00970f0145326068e15ea9054
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="xbox-analytics-report"></a>Relatório de análise do Xbox
 
@@ -116,7 +116,7 @@ Por padrão, este gráfico exibe os principais seis serviços pela contagem de e
 
 ### <a name="service-availability"></a>Disponibilidade de serviço
 
-O gráfico **Disponibilidade de serviço** mostra a disponibilidade diária em cada serviço Xbox Live durante o período de tempo selecionado. Isso é calculado como *1-(erros de servidor total (5xx)/respostas totais)*e é específico para seu produto, não para o Xbox Live como um todo.
+O gráfico **Disponibilidade de serviço** mostra a disponibilidade diária em cada serviço Xbox Live durante o período de tempo selecionado. Isso é calculado como *1-(erros de servidor total (5xx)/respostas totais)* e é específico para seu produto, não para o Xbox Live como um todo.
 
 Por padrão, este gráfico exibe os seis serviços que obtiveram a disponibilidade mais baixa. Você pode selecionar o ícone de filtro no canto superior direito desta seção para escolher serviços diferentes. Você pode exibir disponibilidade para até seis serviços ao mesmo tempo. 
 
@@ -131,7 +131,7 @@ A tabela **Erros de cliente por ponto de extremidade** mostra o número de erros
 Você também pode exibir apenas os erros do limite de taxa selecionando **Limite de taxa**. Isso mostra o número de limitar taxa diária (429) e taxa de limitar erros isento (429E) em cada serviço Xbox Live, ponto de extremidade e código de status durante o período de tempo selecionado.
 
 > [!NOTE]
-Um código de status 429E foi retornado com êxito como um código de status 200, mas teria sido limitado pela taxa se o serviço tivesse um grande volume no momento, portanto, recomendamos que você trate-o exatamente da mesma maneira que foi imposto (429).
+> Um código de status 429E foi retornado com êxito como um código de status 200, mas teria sido limitado pela taxa se o serviço tivesse um grande volume no momento, portanto, recomendamos que você trate-o exatamente da mesma maneira que foi imposto (429).
 
 
 

@@ -2,7 +2,7 @@
 author: mijacobs
 Description: Use the ParallaxView control to add depth and movement to your app.
 title: Como usar o controle ParallaxView para adicionar profundidade e movimento ao seu aplicativo.
-ms.assetid: 
+ms.assetid: ''
 label: Parallax View
 template: detail.hbs
 ms.author: mijacobs
@@ -16,17 +16,17 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: ae11bb0c3d2d3230f4111a08d33b4fa839ffedd7
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 69bb202a7e13f087ead7ea2a379f803219bbd2d4
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="parallax"></a>Paralaxe
 
 Paralaxe é um efeito visual onde os itens mais próximos ao visualizador se movem mais rápido do que itens no plano de fundo. A Paralaxe cria uma sensação de profundidade, perspectiva e movimento. Em um aplicativo UWP, você pode usar o controle ParallaxView para criar um efeito de paralaxe.  
 
-> **APIs importantes**: [classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift), [propriedade HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift)
+> **APIs importantes**: [classe ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propriedade VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propriedade HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Exemplos
 
@@ -59,7 +59,7 @@ Em uma interface de usuário, você pode criar um efeito paralaxe movendo objeto
 
 Para criar um efeito paralaxe, use o controle [ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview). Esse controle vincula a posição de rolagem de um elemento do primeiro plano, como uma lista, a um elemento de fundo, como uma imagem. Enquanto você navega através do elemento do primeiro plano, ele anima o elemento de fundo para criar um efeito paralaxe. 
 
-Para usar o controle ParallaxView, você fornece um elemento de origem, um elemento de fundo e define as propriedades [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift) (para rolagem vertical) e/ou [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift) (para rolagem horizontal) como um valor maior que zero. 
+Para usar o controle ParallaxView, você fornece um elemento de origem, um elemento de fundo e define as propriedades [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift) (para rolagem vertical) e/ou [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift) (para rolagem horizontal) como um valor maior que zero. 
 * A propriedade de Origem recebe uma referência do elemento do primeiro plano. Para que o efeito paralaxe ocorra, o primeiro plano deve ser um [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) ou um elemento que contenha um ScrollViewer, como uma [ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview) ou uma [RichTextBox](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). 
 
 * Para definir o elemento de fundo, adicione esse elemento como um filho do controle ParallaxView. O elemento de fundo pode ser qualquer [UIElement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement), como uma [Imagem](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Image) ou um painel que contém outros elementos de interface do usuário. 

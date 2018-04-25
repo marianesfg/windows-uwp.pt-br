@@ -4,17 +4,17 @@ Description: The App properties page of the app submission process lets you defi
 title: Inserir as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 01/24/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado
+keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado, política de privacidade, informações de contato de suporte, site do app, informações de suporte
 ms.localizationpriority: high
-ms.openlocfilehash: 8ecdeb0dd4ebba83a387666ab87067ff419a9303
-ms.sourcegitcommit: 8d9d4f17e272b78e38b346f846b96260c922bbb2
+ms.openlocfilehash: 35d7be3aa88ca17219c2f2e4024bd2e692fb1abc
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="enter-app-properties"></a>Inserir as propriedades do aplicativo
 
@@ -26,6 +26,37 @@ A página **Propriedades** do [processo de envio de aplicativo](app-submissions.
 Você deve indicar a categoria (e subcategoria/gênero, se aplicável) que a Store deve usar para categorizar seu app. Especificar uma categoria é necessário para enviar seu aplicativo.
 
 Para obter mais informações, consulte [Tabela de categorias e subcategorias](category-and-subcategory-table.md).
+
+
+## <a name="support-info"></a>Informações de suporte
+
+Esta seção permite que você forneça informações para ajudar os clientes a entender mais sobre o seu app e como obter suporte.
+
+### <a name="privacy-policy-url"></a>URL da política de privacidade
+
+Você é responsável por garantir que seu aplicativo esteja em conformidade com as leis e as normas privacidade e por fornecer uma URL da política de privacidade válida, se necessário.
+
+Nesta seção, você deve indicar se o seu app acessa, coleta ou transmite quaisquer [informações pessoais](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information). Se você responder **Sim**, será necessária uma URL da política de privacidade. Caso contrário, será opcional (embora se determinamos que seu app exige uma política de privacidade, e se você não tiver fornecido uma, seu envio poderá falhar na certificação).
+
+> [!NOTE]
+> Se detectarmos que seus pacotes declaram [recursos](../packaging/app-capability-declarations.md) que podem permitir que as informações pessoais sejam acessados, transmitidos ou coletados, marcaremos essa pergunta como **Sim** e você precisará inserir uma URL da política de privacidade.
+
+Para ajudar a determinar se o app requer uma política de privacidade, consulte o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information). 
+
+> [!NOTE]
+> A Microsoft não fornece uma política de privacidade padrão para o aplicativo. Da mesma forma, o aplicativo não é coberto por nenhuma política de privacidade da Microsoft. 
+
+
+### <a name="website"></a>Site
+
+Insira a URL da página da Web do seu aplicativo. A URL deve apontar para uma página em seu próprio site, não para os detalhes do seu aplicativo na Store. Esse campo é opcional, mas recomendado.
+
+### <a name="support-contact-info"></a>Informações de contato de suporte
+
+Insira a URL da página da Web em que seus clientes podem buscar suporte relacionado ao seu app ou o endereço de email que os seus clientes podem contatar para obter suporte. É recomendável incluir essas informações para todos os envios, para que seus clientes saibam como obter suporte, se necessário. Observe que a Microsoft não fornece suporte para seu app aos seus clientes.
+
+> [!IMPORTANT]
+> O campo **Informações de contato de suporte** será obrigatório se o seu app ou jogo estiver disponível no Xbox. Caso contrário, será opcional, mas recomendado.
 
 
 ## <a name="game-settings"></a>Configurações do jogo
