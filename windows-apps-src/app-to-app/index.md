@@ -1,7 +1,7 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: "Esta seção explica como compartilhar dados entre aplicativos UWP (Plataforma Universal do Windows), incluindo como usar o contrato de Compartilhamento, copiar e colar, e arrastar e soltar."
-title: "Comunicação de app a app"
+description: Esta seção explica como compartilhar dados entre aplicativos UWP (Plataforma Universal do Windows), incluindo como usar o contrato de Compartilhamento, copiar e colar, e arrastar e soltar.
+title: Comunicação de app a app
 author: msatranjr
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 938c2d20067dc99a84939c8501971a06fa702515
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: 6cc0b8fb9d1388db0e79e5f029ae69bfae1e4c69
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1706961"
 ---
-# <a name="app-to-app-communication"></a>Comunicação de app a app
+# <a name="app-to-app-communication"></a>Comunicação entre apps
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção explica como compartilhar dados entre aplicativos UWP (Plataforma Universal do Windows), incluindo como usar o contrato de Compartilhamento, copiar e colar, e arrastar e soltar.
 
@@ -36,7 +37,7 @@ Além do contrato de Compartilhamento, os aplicativos também podem integrar té
 | [Compartilhar dados](share-data.md) | Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo UWP. O contrato de Compartilhamento é uma maneira fácil de compartilhar dados como texto, links, fotos e vídeos entre aplicativos rapidamente. Por exemplo, um usuário pode querer compartilhar uma página da Web com seus amigos usando um aplicativo de rede social ou salvar um link em um aplicativo de anotações para consultar mais tarde. |
 | [Receber dados](receive-data.md) | Este artigo explica como receber conteúdo em seu aplicativo UWP compartilhado de outro aplicativo usando o contrato de Compartilhamento. Este contrato de Compartilhamento permite que seu aplicativo seja apresentado como uma opção quando o usuário invoca o compartilhamento. |
 | [Copiar e colar](copy-and-paste.md) | Este artigo explica como dar suporte a copiar e colar em aplicativos UWP usando a área de transferência. Copiar e colar é a maneira clássica de trocar dados entre aplicativos ou dentro de um aplicativo, e quase todos os aplicativos podem suportar operações da área de transferência em algum grau. |
-| [Arrastar e soltar](drag-and-drop.md) | Este artigo explica como adicionar o recurso de arrastar e soltar ao aplicativo UWP. Arrastar e soltar é uma maneira clássica e natural de interagir com conteúdo, como imagens e arquivos. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo. |
+| [Arrastar e soltar](../design/input/drag-and-drop.md) | Este artigo explica como adicionar o recurso de arrastar e soltar ao aplicativo UWP. Arrastar e soltar é uma maneira clássica e natural de interagir com conteúdo, como imagens e arquivos. Uma vez implementada, a função arrastar e soltar funciona diretamente em todas as direções, incluindo de aplicativo para aplicativo, de aplicativo para área de trabalho e de área de trabalho para aplicativo. |
 
 ## <a name="see-also"></a>Consulte também
 - [Desenvolver aplicativos UWP](https://developer.microsoft.com/windows/develop)

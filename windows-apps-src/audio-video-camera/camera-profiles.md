@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR."
-title: "Descobrir e selecionar as funcionalidades da câmera com perfis de câmera"
+description: Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR.
+title: Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f45fea396c775a7d9e783be1d0a821ff68716279
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f842b10ce056d02d1c30c2fe285a87d5fe20dca8
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832250"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo discute como usar perfis de câmera para descobrir e gerenciar as funcionalidades de diferentes dispositivos de captura de vídeo. Isso inclui tarefas como selecionar perfis com suporte a resoluções ou taxas de quadro específicos, perfis que dão suporte ao acesso simultâneo a várias câmeras e perfis compatíveis com HDR.
@@ -47,7 +50,7 @@ Se a ID do dispositivo retornada do método auxiliar **GetVideoProfileSupportedD
 
 [!code-cs[GetDeviceWithProfileSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetDeviceWithProfileSupport)]
 
-## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Selecionar um perfil com base na resolução e na taxa de quadros com suporte
+## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Selecione um perfil com base na resolução e na taxa de quadros com suporte
 
 Para selecionar um perfil com determinadas funcionalidades, como a capacidade de alcançar uma determinada resolução e uma taxa de quadros, você deve primeiro chamar o método auxiliar definido acima para obter a ID de um dispositivo de captura que ofereça suporte ao uso de perfil de câmeras.
 
@@ -61,21 +64,18 @@ Depois que você preencher **MediaCaptureInitializationSettings** com o perfil d
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## <a name="select-a-profile-that-supports-concurrence"></a>Selecionar um perfil que ofereça suporte à simultaneidade
+## <a name="use-media-frame-source-groups-to-get-profiles"></a>Usar grupos de origem do quadro de mídia para obter perfis
 
-Você pode usar perfis de câmera para determinar se um dispositivo oferece suporte à captura de vídeo de várias câmeras simultaneamente. Para esse cenário, será necessário criar dois conjuntos de objetos de captura: um para a câmera frontal e outro para a câmera traseira. Para cada câmera, crie **MediaCapture**, **MediaCaptureInitializationSettings** e uma cadeia de caracteres para manter a ID do dispositivo de captura. Além disso, adicione uma variável booliana que detectará se a simultaneidade tem ou não suporte.
+A partir do Windows 10, versão 1803, você pode usar a classe [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup) para obter perfis de câmera com funcionalidades específicas antes de inicializar o objeto **MediaCapture**. Os grupos de origem de quadro permitem que os fabricantes de dispositivo representem grupos de sensores ou capturem funcionalidades como um único dispositivo virtual. Isso possibilita cenários de fotografia computacional, como o uso de câmeras de profundidade e cor juntas, mas também pode ser usado para selecionar perfis de câmera para cenários de captura simples. Para obter mais informações sobre o uso de **MediaFrameSourceGroup**, consulte [Processar quadros de mídia com MediaFrameReader](process-media-frames-with-mediaframereader.md).
 
-[!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
+O método de exemplo abaixo mostra como usar objetos **MediaFrameSourceGroup** para encontrar um perfil de câmera compatível com um perfil de vídeo conhecido, como o que oferece suporte a HDR ou à sequência de fotos variável. Primeiro, chame [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obter uma lista de grupos de origem de quadro de mídia disponível no dispositivo atual. Faça um loop de cada grupo de origem e chame [**MediaCapture.FindKnownVideoProfiles**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.findknownvideoprofiles) para obter uma lista de todos os perfis de vídeo do grupo de origem atual com suporte ao perfil especificado, nesse caso, HDR com foto WCG. Se um perfil que atende aos critérios for encontrado, crie um novo objeto **MediaCaptureInitializationSettings** e defina o **VideoProfile** para o perfil de seleção e o **VideoDeviceId** para a propriedade **Id** do grupo de origem do quadro de mídia atual. Assim, por exemplo, você poderia passar o valor **KnownVideoProfile.HdrWithWcgVideo** para esse método para fim de obter configurações de captura que oferecem suporte a vídeo HDR. Passe **KnownVideoProfile.VariablePhotoSequence** a fim de obter as configurações que oferecem suporte à sequência de fotos variável.
 
-O método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) retorna uma lista dos perfis de câmera compatíveis com o dispositivo de captura especificado que também oferece suporte à simultaneidade. Use uma consulta Linq para encontrar um perfil que ofereça suporte à simultaneidade e seja compatível com as câmeras frontal e traseira. Se um perfil que atenda a esses requisitos for encontrado, defina o perfil em cada um dos objetos **MediaCaptureInitializationSettings** e defina a variável booliana de detecção de simultaneidade como true.
+ [!code-cs[FindKnownVideoProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindKnownVideoProfile)]
 
-[!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video-legacy-technique"></a>Usar perfis conhecidos para encontrar um perfil com suporte a vídeo HDR (técnica herdada)
 
-Chame **MediaCapture.InitializeAsync** para a câmera principal do cenário de seu aplicativo. Se houver suporte para a simultaneidade, inicialize também a segunda câmera.
-
-[!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
-
-## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>Usar perfis conhecidos para encontrar um perfil com suporte a vídeo HDR
+> [!NOTE] 
+> As APIs descritas nesta seção foram preteridas a partir do Windows 10, versão 1803. Veja a seção anterior, **Usar grupos de origem de quadro de mídia para obter perfis**.
 
 A seleção de um perfil que ofereça suporte a HDR é feita como a de outros cenários. Crie **MediaCaptureInitializationSettings** e uma cadeia de caracteres para conter a ID do dispositivo de captura. Adicione uma variável booliana que detectará se o vídeo HDR tem suporte.
 
