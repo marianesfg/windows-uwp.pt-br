@@ -1,35 +1,41 @@
 ---
 author: drewbatgit
 ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
-description: "Este artigo indica os recursos da câmera que estão disponíveis para aplicativos UWP e links para os artigos de instruções que mostram como usá-los."
-title: "Câmera"
+description: Este artigo indica os recursos da câmera que estão disponíveis para aplicativos UWP e links para os artigos de instruções que mostram como usá-los.
+title: Câmera
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 883a8977839d8f93ff878b075a52df8b9a587aa9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a1b8a63609bbc9caa452093517ca43f71e8d5ccc
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664696"
 ---
 # <a name="camera"></a>Câmera
 
 Esta seção fornece orientação para a criação de aplicativos da Plataforma Universal do Windows (UWP) que usam a câmera ou o microfone para capturar fotos, vídeos ou áudio.
 
-##<a name="use-the-windows-built-in-camera-ui"></a>Usar a interface do usuário da câmera interna do Windows
-| Tópico                                                                                             | Descrição                                                                                                                                                                                                                                                                                    |
+## <a name="use-the-windows-built-in-camera-ui"></a>Usar a interface do usuário da câmera interna do Windows
+
+| Tópico | Descrição |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Capturar fotos e vídeos com a interface do usuário da câmera interna do Windows](capture-photos-and-video-with-cameracaptureui.md) | Mostra como usar a classe [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.CameraCaptureUI) para capturar fotos ou vídeos usando a interface do usuário da câmera integrada ao Windows. Se você só deseja permitir que o usuário capture uma foto ou um vídeo e retornar o resultado para seu aplicativo, essa é a maneira mais rápida e fácil de fazer isso.  |
-##<a name="basic-mediacapture-tasks"></a>Tarefas básicas de MediaCapture
-| Tópico                                                                                             | Descrição                                                                                                                                                                                                                                                                                    |
+
+## <a name="basic-mediacapture-tasks"></a>Tarefas básicas de MediaCapture
+
+| Tópico | Descrição |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Exibir a visualização da câmera](simple-camera-preview-access.md) | Mostra como exibir rapidamente o fluxo de visualização da câmera em uma página XAML em um aplicativo UWP. |
 | [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md) | Mostra a maneira mais simples de capturar fotos e vídeo usando a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture). A classe **MediaCapture** expõe um conjunto robusto de APIs que fornecem controle aprofundado sobre o pipeline de captura e permite a captura de cenários avançados, mas este artigo se destina a ajudá-lo a adicionar captura de mídia básica ao seu aplicativo com rapidez e facilidade. |
 | [Recursos da interface do usuário da câmera para dispositivos móveis](camera-ui-features-for-mobile-devices.md) | Mostra como tirar proveito dos recursos especiais da interface do usuário da câmera que estão presentes apenas em dispositivos móveis.  |
                                                                                                                
-##<a name="advanced-mediacapture-tasks"></a>Tarefas avançadas do MediaCapture   
+## <a name="advanced-mediacapture-tasks"></a>Tarefas avançadas do MediaCapture   
                                                                                                                
 | Tópico                                                                                             | Descrição                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
