@@ -1,17 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: b7333924-d641-4ba5-92a2-65925b44ccaa
-description: "Este artigo mostra como reproduzir mídia enquanto seu aplicativo é executado em segundo plano."
-title: "Reproduzir mídia em segundo plano"
+description: Este artigo mostra como reproduzir mídia enquanto seu aplicativo é executado em segundo plano.
+title: Reproduzir mídia em segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 148bb77f9386864a1b127341aa875beb7123bae9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f8fdc99355ef5a024757cc2e415b1d259965c1ce
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690492"
 ---
 # <a name="play-media-in-the-background"></a>Reproduzir mídia em segundo plano
 Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou sair do aplicativo de alguma outra forma, o aplicativo poderá continuar a reproduzir o áudio. 
@@ -65,7 +69,7 @@ Em seguida, adicione o recurso *backgroundMediaPlayback* ao elemento **Capabilit
 </Capabilities>
 ```
 
-##<a name="handle-transitioning-between-foreground-and-background"></a>Tratar a transição entre primeiro e segundo plano
+## <a name="handle-transitioning-between-foreground-and-background"></a>Tratar a transição entre primeiro e segundo plano
 Quando o aplicativo é movido do primeiro para o segundo plano, o evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) é acionado. E quando o aplicativo retorna ao primeiro plano, o evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) é acionado. Como eles são eventos de ciclo de vida do aplicativo, é necessário registrar manipuladores para esses eventos quando o aplicativo for criado. No modelo de projeto padrão, isso significa adicioná-los ao construtor de classe **App** em App.xaml.cs. 
 
 [!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
@@ -88,7 +92,7 @@ A parte mais importante de manipulação da transição entre primeiro e segundo
 ## <a name="network-availability-for-background-media-apps"></a>Disponibilidade da rede para aplicativos de mídia em segundo plano
 Todas as fontes de mídia com reconhecimento de rede, aquelas que não são criadas de um fluxo ou de um arquivo, manterão a conexão de rede ativa enquanto recuperam conteúdo remoto, e a liberarão quando não estiverem recuperando conteúdo remoto. [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource), especificamente, depende do aplicativo reportar corretamente o intervalo de buffer correto à plataforma, usando [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762). Depois que todo o conteúdo for armazenado totalmente em buffer, a rede não será mais reservada em nome do aplicativo.
 
-Se você precisar fazer chamadas de rede que ocorrem em segundo plano quando a mídia não estiver sendo baixada, elas deverão ser encapsuladas em uma tarefa apropriada como [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) ou [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger). Para saber mais, consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
+Se você precisar fazer chamadas de rede que ocorrem em segundo plano quando a mídia não estiver sendo baixada, elas deverão ser encapsuladas em uma tarefa apropriada como [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) ou [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger). Para saber mais, consulte [Dar suporte a seu aplicativo com tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Reprodução de mídia](media-playback.md)

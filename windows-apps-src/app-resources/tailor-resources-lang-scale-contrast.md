@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "Este tópico descreve o conceito geral dos qualificadores, como usá-los e a finalidade de cada nome de qualificador."
-title: Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
+Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
+title: Personalizar os recursos de idioma, escala, alto contraste e outros qualificadores
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/10/2017
@@ -9,22 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
-localizationpriority: medium
-ms.openlocfilehash: 930a49ab3d9bab034f771a323b17484ae6aa0e16
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1700792"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
-Este tópico descreve o conceito geral dos qualificadores de recurso, como usá-los e a finalidade de cada nome de qualificador. Consulte [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) para obter uma tabela de referência de todos os valores de qualificador possíveis.
+Este tópico descreve o conceito geral dos qualificadores de recurso, como usá-los e a finalidade de cada nome de qualificador. Consulte [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para obter uma tabela de referência de todos os valores de qualificador possíveis.
 
-Seu app pode carregar ativos e recursos que são personalizados com base em contextos de tempo de execução, como idioma, alto contraste, [fator de escala de exibição](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) e muitos outros. Para isso, nomeie as pastas ou os arquivos dos recursos de modo que correspondam aos nomes e valores de qualificador desses contextos. Por exemplo, talvez seja necessário que o app carregue um conjunto diferente de ativos de imagem no modo de alto contraste.
+Seu app pode carregar ativos e recursos que são personalizados com base em contextos de tempo de execução, como idioma, alto contraste [exibir fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) e muitos outros. Para isso, nomeie as pastas ou os arquivos dos recursos de modo que correspondam aos nomes e valores de qualificador desses contextos. Por exemplo, talvez seja necessário que o app carregue um conjunto diferente de ativos de imagem no modo de alto contraste.
 
-Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../globalizing/globalizing-portal.md).
+Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
 
 ## <a name="qualifier-name-qualifier-value-and-qualifier"></a>Nome do qualificador, valor do qualificador e qualificador
 
@@ -40,7 +39,7 @@ Portanto, para alto contraste, o conjunto de qualificadores é `contrast-standar
 
 ## <a name="use-qualifiers-in-folder-names"></a>Usar qualificadores em nomes de pasta
 
-Este é um exemplo do uso de qualificadores para nomear pastas que contêm arquivos de ativo. Use qualificadores em nomes de pasta, se você tiver vários arquivos de ativo por qualificador. Dessa forma, você definirá o qualificador uma vez no nível da pasta, e o qualificador será aplicado a todos os itens contidos na pasta.
+Este é um exemplo do uso de qualificadores para nomear pastas que contêm arquivos de ativo. Use qualificadores em nomes de pasta, se você tiver vários arquivos de ativo por qualificador. Dessa forma, você definirá o qualificador uma vez no nível da pasta, e o qualificador aplicará isso a tudo que estiver contido na pasta.
 
 ```
 \Assets\Images\contrast-standard\<logo.png, and other image files>
@@ -89,7 +88,7 @@ Se você só precisar de um conjunto de ativos para alto contraste e outro para 
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
 
-Para obter mais detalhes sobre como funciona a correspondência de qualificador, consulte [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947).
+Para obter mais detalhes sobre como funciona a correspondência de qualificador, consulte [Sistema de Gerenciamento de Recursos](resource-management-system.md).
 
 ## <a name="multiple-qualifiers"></a>Vários qualificadores
 
@@ -137,7 +136,6 @@ O qualificador `contrast` é usado para fornecer os recursos que melhor correspo
 
 O app pode definir um valor para o qualificador `custom`; em seguida, os recursos que melhor correspondem a esse valor serão carregados. Por exemplo, convém carregar os recursos com base na licença do app. Quando o app for iniciado, ele verificará a respectiva licença e a usará como o valor para o qualificador `custom` chamando [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_), conforme mostrado no exemplo de código.
 
-**C#**
 ```csharp
 public void SetLicenseLevel(BrandID brand)
 {
@@ -160,7 +158,7 @@ Nesse cenário, você informará os nomes de recursos que incluem os qualificado
 
 ## <a name="devicefamily"></a>DeviceFamily
 
-Dificilmente você precisará do nome de qualificador `devicefamily`. Você pode e deve evitar usá-lo sempre que possível, pois existem técnicas que você pode usar no lugar dele que são muito mais convenientes e eficazes. Essas técnicas são descritas em [Detectando a plataforma na qual seu app está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) e [Escrevendo código](../get-started/universal-application-platform-guide.md#writing-code).
+Dificilmente você precisará do nome de qualificador `devicefamily`. Você pode e deve evitar usá-lo sempre que possível, pois existem técnicas que você pode usar no lugar dele que são muito mais convenientes e eficazes. Essas técnicas são descritas em [Detectando a plataforma em que o app está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) e [Código adaptável da versão](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 Mas, como último recurso, é possível usar os qualificadores devicefamily para nomear pastas que armazenarão as exibições XAML (uma exibição XAML é um arquivo XAML que contém controles e layout de interface do usuário).
 
@@ -199,7 +197,7 @@ Dificilmente você precisará do nome de qualificador `dxfeaturelevel`. Ele foi 
 
 O qualificador `homeregion` corresponde à configuração do usuário referente ao país ou à região. Ele representa o local de residência do usuário. Os valores incluem qualquer [marca de região BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) válida. Ou seja, qualquer código de região de duas letras **ISO 3166-1 alpha-2**, além do conjunto de códigos geográficos de três dígitos **ISO 3166-1 numeric** para regiões compostas (consulte [composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](http://go.microsoft.com/fwlink/p/?linkid=247929)). Códigos para "Indicadores econômicos selecionados e outros agrupamentos" não são válidos.
 
-## <a name="language"></a>Language
+## <a name="language"></a>Idioma
 
 O qualificador `language` corresponde à configuração de idioma de exibição. Os valores incluem qualquer [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) válida. Para obter uma lista de idiomas, consulte [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303).
 
@@ -230,13 +228,13 @@ Consulte [Localizar as cadeias de caracteres de interface do usuário](localize-
 
 ## <a name="layoutdirection"></a>LayoutDirection
 
-O qualificador `layoutdirection` corresponde à direção de layout da configuração de idioma de exibição. Por exemplo, talvez uma imagem precise ser espelhada para um idioma com leitura da direita para a esquerda, como o árabe ou o hebraico. Os painéis e as imagens de layout da interface do usuário responderão à direção do layout adequadamente se você definir a propriedade [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement?branch=live#Windows_UI_Xaml_FrameworkElement_FlowDirection) (consulte [Ajustar layout e fontes e fornecer suporte a RTL](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)). No entanto, o qualificador `layoutdirection` destina-se aos casos em que a simples inversão não é adequada e permite que você responda à direcionalidade da ordem de leitura e do alinhamento de texto de forma mais geral.
+O qualificador `layoutdirection` corresponde à direção de layout da configuração de idioma de exibição. Por exemplo, talvez uma imagem precise ser espelhada para um idioma com leitura da direita para a esquerda, como o árabe ou o hebraico. Os painéis e as imagens de layout da interface do usuário responderão à direção do layout adequadamente se você definir a propriedade [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (consulte [Ajustar layout e fontes e fornecer suporte a RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)). No entanto, o qualificador `layoutdirection` destina-se aos casos em que a simples inversão não é adequada e permite que você responda à direcionalidade da ordem de leitura e do alinhamento de texto de forma mais geral.
 
 ## <a name="scale"></a>Escala
 
-O Windows seleciona automaticamente um fator de escala para cada monitor com base em seu DPI (pontos por polegada) e na distância de exibição do dispositivo. Consulte [Pixels efetivos e fator de escala](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Você deve criar suas imagens em vários tamanhos recomendados (pelo menos 100, 200 e 400) para que o Windows possa escolher o tamanho perfeito ou pode usar o tamanho mais próximo e dimensioná-las. Para que o Windows possa identificar qual arquivo físico contém o tamanho correto da imagem para o fator de escala de exibição, use um qualificador `scale`. A escala de um recurso corresponde ao valor de [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation?branch=live#Windows_Graphics_Display_DisplayInformation_ResolutionScale) ou ao próximo recurso com a maior escala.
+O Windows seleciona automaticamente um fator de escala para cada monitor com base em seu DPI (pontos por polegada) e na distância de exibição do dispositivo. Consulte [Pixels efetivos e fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Você deve criar suas imagens em vários tamanhos recomendados (pelo menos 100, 200 e 400) para que o Windows possa escolher o tamanho perfeito ou pode usar o tamanho mais próximo e dimensioná-las. Para que o Windows possa identificar qual arquivo físico contém o tamanho correto da imagem para o fator de escala de exibição, use um qualificador `scale`. A escala de um recurso corresponde ao valor de [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) ou ao próximo recurso com a maior escala.
 
-Veja um exemplo de como definir o qualificador no nível da pasta.
+Aqui está um exemplo de como definir o qualificador no nível da pasta.
 
 ```
 \Assets\Images\scale-100\<logo.png, and other image files>
@@ -252,7 +250,7 @@ Este exemplo o define no nível do arquivo.
 \Assets\Images\logo.scale-400.png
 ```
 
-Para obter informações sobre como qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
+Para obter informações sobre qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para tamanho alvo](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
 ## <a name="targetsize"></a>TargetSize
 
@@ -260,25 +258,26 @@ O qualificador `targetsize` é usado basicamente para especificar [ícones de as
 
 Você pode definir os ativos que representam os vários tamanhos do valor de qualificador `targetsize` para o ícone do app (`/Assets/Square44x44Logo.png`) na guia Ativos Visuais do designer de manifesto do pacote do app.
 
-Para obter informações sobre como qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
+Para obter informações sobre qualificar um recurso para `scale` e `targetsize`, consulte [Qualificar um recurso de imagem para tamanho alvo](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
 ## <a name="theme"></a>Tema
 
-O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master#Windows_UI_Xaml_Application_RequestedTheme).
+O qualificador `theme` é usado para fornecer os recursos que melhor correspondem à configuração de modo de app padrão ou a substituição do app usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master.RequestedTheme).
 
 ## <a name="important-apis"></a>APIs importantes
 
+* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 * [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Pixels efetivos e fator de escala](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
-* [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947)
+* [Pixels efetivos e fator de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Sistema de Gerenciamento de Recursos](resource-management-system.md)
 * [Como se preparar para a localização](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
 * [Detectando a plataforma em que o app está sendo executado](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Escrevendo código](../get-started/universal-application-platform-guide.md#writing-code)
+* [Visão geral das famílias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Localizar as cadeias de caracteres de interface do usuário](localize-strings-ui-manifest.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Composição M49 de códigos de região da Divisão de Estatísticas das Nações Unidas](http://go.microsoft.com/fwlink/p/?linkid=247929)
 * [Registro da submarca de idioma IANA](http://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Ajustar layout e fontes e fornecer suporte a RTL](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* [Ajustar layout e fontes e fornecer suporte a RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)
