@@ -1,19 +1,20 @@
 ---
 author: ptorr-msft
-title: "Usando o MRT para jogos e aplicativos de área de trabalho convertidos"
-description: "Empacotando o app ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de app personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas."
+title: Usando o MRT para jogos e aplicativos de área de trabalho convertidos
+description: Empacotando o app ou jogo .NET ou Win32 como um pacote AppX, você pode aproveitar o Sistema de Gerenciamento de Recursos para carregar recursos de app personalizados para o contexto de tempo de execução. Este tópico detalhado descreve as técnicas.
 ms.author: ptorr
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite"
+keywords: windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite
 ms.localizationpriority: medium
 ms.openlocfilehash: 098ec71f2f3e487b76f9992c297ad7cba9ac5538
 ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396475"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Use o Sistema de Gerenciamento de Recursos do Windows 10 em um app ou jogo herdado
 
