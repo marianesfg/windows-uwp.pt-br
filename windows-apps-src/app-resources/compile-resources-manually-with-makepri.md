@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: "O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado."
+Description: MakePri.exe is a command line tool that you can use to create and dump PRI files. It is integrated as part of MSBuild within Microsoft Visual Studio, but it could be useful to you for creating packages manually or with a custom build system.
 title: Compilar recursos manualmente com o MakePri.exe
 template: detail.hbs
 ms.author: stwhi
@@ -9,18 +9,26 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
-localizationpriority: medium
-ms.openlocfilehash: 16d2a270a69497bc66f7b17109bc28b062f14b5e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 261a2b747d25284351bb6f4e51f108158b6e2bc5
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1707021"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="compile-resources-manually-with-makepriexe"></a>Compilar recursos manualmente com o MakePri.exe
 
 O MakePri.exe é uma ferramenta de linha de comando que você pode usar para criar e despejar arquivos PRI. Ele é integrado como parte do MSBuild no Microsoft Visual Studio, mas pode ser útil para criar pacotes manualmente ou com um sistema de compilação personalizado.
+
+O limite de tamanho em um arquivo PRI é 64 KB.
+
+## <a name="in-this-section"></a>Nesta seção
+|Tópico|Descrição|
+|-|-|
+| [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md) | O MakePri.exe tem o conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` e `versioned`. Este tópico descreve detalhadamente as opções de linha de comando para seu uso. |
+| [Arquivo de configuração MakePri.exe](makepri-exe-configuration.md) | Este tópico descreve o esquema do arquivo de configuração XML MakePri.exe. |
+| [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md) | Este tópico descreve os indexadores específicos de formato usados pela ferramenta MakePri.exe para gerar seu índice de recursos. |
 
 ## <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
@@ -59,7 +67,6 @@ Os sistemas de compilação também podem usar o indexador específico de format
 Quando forem criados arquivos PRI para outros componentes, bibliotecas de classes, assemblies, DLLs e SDKs, a configuração **initialPath** deverá ser usada para garantir que os recursos de componente tenham seus próprios mapas de sub-recursos que não gerem conflitos com o app no qual estão incluídos.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-
 * [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md)
 * [Configuração do MakePri.exe](makepri-exe-configuration.md)
 * [Indexadores específicos de formato do MakePri.exe](makepri-exe-format-specific-indexers.md)

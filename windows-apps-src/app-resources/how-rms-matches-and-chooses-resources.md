@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos analisará todos os candidatos e determinará o melhor deles para ser retornado. Este tópico descreve detalhadamente esse processo e fornece exemplos."
-title: "Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe"
+Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
+title: Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
@@ -9,20 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
-localizationpriority: medium
-ms.openlocfilehash: 4731ae7add7d5b969ab98da60b3f6740dbbbee1b
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690422"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
-
 Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos irá analisar todos os candidatos e determinar o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
 
-Nesse processo de classificação, os diferentes qualificadores recebem prioridades distintas: o idioma tem o maior impacto sobre a classificação geral, seguido por contraste, depois escala e assim por diante. Para cada qualificador, qualificadores candidatos são comparados com o valor do qualificador de contexto para determinar uma qualidade de correspondência. A foma como a comparação é feita depende do qualificador.
+Nesse processo de classificação, os diferentes qualificadores recebem prioridades distintas: o idioma tem o maior impacto sobre a classificação geral, seguido por contraste, depois escala e assim por diante. Para cada qualificador, qualificadores candidatos são comparados com o valor do qualificador de contexto para determinar uma qualidade de correspondência. A forma como a comparação é feita depende do qualificador.
+
+Para obter detalhes específicos sobre como a correspondência de marca de idioma é feita, consulte [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](how-rms-matches-lang-tags.md).
 
 Para alguns qualificadores, como escala e contraste, há sempre um grau mínimo de correspondência. Por exemplo, um candidato qualificado como "scale-100" corresponde em certo grau a um contexto "scale-400", embora não tanto quanto um candidato qualificado como "scale-200" ou, para uma correspondência perfeita, como "scale-400".
 
@@ -41,7 +41,6 @@ Para todos os candidatos a recurso ainda em consideração, o carregador de recu
 Se houver um vínculo, o valor do qualificador de contexto com a próxima prioridade mais alta será inspecionado e o processo continua, até que uma correspondência melhor seja encontrada.
 
 ## <a name="example-of-choosing-a-resource-candidate"></a>Exemplo de escolha de um candidato a recurso
-
 Considere estes arquivos.
 
 ```
@@ -85,7 +84,7 @@ Em seguida, o Sistema de Gerenciamento de Recursos usa o qualificador de context
 en/images/logo.scale-400.jpg
 ```
 
-Você pode usar o método avançado [**NamedResource.ResolveAll**](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_) para recuperar todos os candidatos na ordem em que eles correspondem às configurações de contexto. No exemplo que acabamos de analisar, **ResolveAll** retorna candidatos nesta ordem.
+Você pode usar o método avançado [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) para recuperar todos os candidatos na ordem em que eles correspondem às configurações de contexto. No exemplo que acabamos de analisar, **ResolveAll** retorna candidatos nesta ordem.
 
 ```
 en/images/logo.scale-400.jpg
@@ -95,7 +94,6 @@ fr/images/logo.scale-100.jpg
 ```
 
 ## <a name="example-of-producing-a-fallback-choice"></a>Exemplo de produção de uma opção de fallback
-
 Considere estes arquivos.
 
 ```
@@ -138,9 +136,7 @@ de/images/contrast-standard/logo.jpg
 ```
 
 ## <a name="important-apis"></a>APIs importantes
-
-* [NamedResource.ResolveAll](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_)
+* [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-
 * [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)
