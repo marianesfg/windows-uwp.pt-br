@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f6da2ae68ab2b40f11d1a9d092eb8ff447f2844
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: b881d3bdaa9adec28b78a72e127dcebd49ee1df6
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664006"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976421"
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
@@ -86,7 +86,7 @@ Para obter uma lista dos campos com suporte, consulte a tabela a seguir. Valores
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição do complemento. Substitua os valores de *inAppProductId* e *applicationId* pela ID da Loja apropriada para seu complemento ou aplicativo.
+Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição do complemento. Substitua os valores de *inAppProductId* e *applicationId* pela ID da Store apropriada para seu complemento ou aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -120,19 +120,19 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor               | Tipo    | Descrição        |
 |---------------------|---------|---------------------|
 | date                | string  | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
-| inAppProductId      | string  | A ID da Loja do complemento do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
+| inAppProductId      | string  | A ID da Store do complemento do qual você está recuperando dados de aquisição.                                                                                                                                                                 |
 | inAppProductName    | string  | O nome de exibição do complemento. Este valor só será exibido nos dados de resposta se o parâmetro *aggregationLevel* for definido como **day**, a menos que você especifique o campo **inAppProductName** no parâmetro *groupby*.                                                                                                                                                                                                            |
-| applicationId       | string  | A ID da Loja do aplicativo para o qual você deseja recuperar dados de aquisição do complemento.                                                                                                                                                           |
+| applicationId       | string  | A ID da Store do aplicativo para o qual você deseja recuperar dados de aquisição do complemento.                                                                                                                                                           |
 | applicationName     | string  | O nome de exibição do app.                                                                                                                                                                                                             |
 | deviceType          | string  | O tipo de dispositivo que concluiu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                  |
 | orderName           | string  | O nome do pedido.                                                                                                                                                                                                                   |
-| storeClient         | string  | A versão da Loja onde ocorreu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                            |
+| storeClient         | string  | A versão da Store onde ocorreu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                            |
 | osVersion           | string  | A versão do sistema operacional no qual ocorreu a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                   |
 | market              | string  | O código de país ISO 3166 do mercado onde ocorreu a aquisição.                                                                                                                                                                  |
 | gender              | string  | O sexo do usuário que fez a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                    |
 | ageGroup            | string  | A faixa etária do usuário que fez a aquisição. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                 |
 | acquisitionType     | string  | O tipo de aquisição (grátis, pago e assim por diante). Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                                    |
-| acquisitionQuantity | inumber | O número de aquisições que ocorreram.                        |
+| acquisitionQuantity | número inteiro | O número de aquisições que ocorreram.                        |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

@@ -3,25 +3,25 @@ author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter dados de conquistas do Xbox Live.
 title: Obter dados de conquistas do Xbox Live
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, conquistas
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cbe9abf3b6d668bb157e40f3e61aff885e3cbb
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 09800229b45b9eb1a0a456e8e421412ca1a88f8d
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816011"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976048"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Obter dados de conquistas do Xbox Live
 
 Use este método na API de análise da Microsoft Store para obter o número de clientes que desbloquearam cada conquista para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) durante o dia mais recente para o qual os dados de conquista estão disponíveis, os 30 dias anteriores a esse dia e o tempo de vida total do seu jogo até esse dia. Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 > [!IMPORTANT]
-> No momento, este método só dá suporte a jogos habilitados para o Xbox Live publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) ou enviados por meio do [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Ele não retorna dados para jogos enviados por meio do [Programa de Criadores do Xbox Live](../xbox-live/developer-program-overview.md#xbox-live-creators-program).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

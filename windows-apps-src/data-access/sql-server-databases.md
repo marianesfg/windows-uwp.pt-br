@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQL Server, banco de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 461e3578aad11dea0d9afcd7c93dfda9a246bb10
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 31a173efbe30cffed85336a302ced504a4cad50d
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662176"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983487"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
@@ -68,7 +68,7 @@ sealed partial class App : Application
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
 
-    public string ConnectionString { get => connectionString; set => connectionString = value;  
+    public string ConnectionString { get => connectionString; set => connectionString = value; }
 
     ...
 }
@@ -222,6 +222,16 @@ Inicie o projeto e veja os produtos do banco de dados Northwind aparecerem na in
 ![Produtos Northwind](images/products-northwind.png)
 
 Explore o namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) para ver que outras coisas você pode fazer com dados em seu banco de dados do SQL Server.
+
+## <a name="trouble-connecting-to-your-database"></a>Problemas para se conectar ao seu banco de dados?
+
+Na maioria dos casos, alguns aspectos da configuração do SQL Server precisam ser alterados. Se conseguir se conectar ao seu banco de dados de outro tipo de aplicativo da área de trabalho, como um aplicativo Windows Forms ou WPF, certifique-se de ter habilitado o TCP/IP para SQL Server. Você pode fazer isso no console de **Gerenciamento do computador**.
+
+![Gerenciamento do computador](images/computer-management.png)
+
+Em seguida, certifique-se de que o serviço do SQL Server Browser está em execução.
+
+![Serviço do SQL Server Browser](images/sql-browser-service.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 

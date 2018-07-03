@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e3eecf6e6263e0126dbdf8c50f7ddb0431b66116
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 00d6d67bccf9eb91e1d90aa547d9e857cfa83c19
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817021"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917725"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
@@ -103,7 +103,7 @@ Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no 
 1. Declaração para **xmlns:com**
 2. Declaração para **xmlns:desktop**
 3. No atributo **IgnorableNamespaces**, **com** e **desktop**
-4. **com:Extension** do servidor COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
+4. **com:Extension** do ativador COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
 5. **desktop:Extension** para **windows.toastNotificationActivation** a fim de declarar a CLSID do ativador de notificação do sistema (a GUID da etapa 4).
 
 **Package.appxmanifest**
@@ -220,9 +220,9 @@ if (SUCCEEDED(hr))
     hr = DesktopNotificationManagerCompat::CreateToastNotifier(&notifier);
     if (SUCCEEDED(hr))
     {
-        // Create the notification itself
+        // Create the notification itself (using helper method from compat library)
         ComPtr<IToastNotification> toast;
-        hr = MakeAndInitialize<ToastNotification>(&toast, doc.Get());
+        hr = DesktopNotificationManagerCompat::CreateToastNotification(doc, &toast);
         if (SUCCEEDED(hr))
         {
             // And show it!
@@ -231,6 +231,9 @@ if (SUCCEEDED(hr))
     }
 }
 ```
+
+> [!IMPORTANT]
+> Os aplicativos clássicos do Win32 não podem usar modelos de notificação do sistema herdados (como ToastText02). A ativação dos modelos herdados falha quando CLSID COM é especificada. Você deve usar os modelos ToastGeneric do Windows 10 conforme visto acima.
 
 
 ## <a name="step-8-handling-activation"></a>Etapa 8: manipular a ativação
@@ -445,4 +448,5 @@ if (IsWindows10OrGreater())
 ## <a name="resources"></a>Recursos
 
 * [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/desktop-toasts)
+* [Notificações do sistema a partir de aplicativos da área de trabalho](toast-desktop-apps.md)
 * [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)

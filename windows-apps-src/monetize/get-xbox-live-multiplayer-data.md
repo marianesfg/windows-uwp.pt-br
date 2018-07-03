@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter dados de multijogador do Xbox Live.
 title: Obter dados de multijogador do Xbox Live
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, multijogador
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ca2b37db16aec9e84ea57793175039c68e2291
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 89c6ea0821a54e0ada8953071072e1e89c57fc2f
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817284"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976664"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obter dados de multijogador do Xbox Live
 
@@ -22,7 +22,7 @@ ms.locfileid: "1817284"
 Use este método na API de análise da Microsoft Store para obter dados de multijogador para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) por dia ou por mês. Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 > [!IMPORTANT]
-> No momento, este método só dá suporte a jogos habilitados para o Xbox Live publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) ou enviados por meio do [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Ele não retorna dados para jogos enviados por meio do [Programa de Criadores do Xbox Live](../xbox-live/developer-program-overview.md#xbox-live-creators-program).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -78,7 +78,7 @@ Authorization: Bearer <your access token>
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
 | Valor      | array  | Uma matriz de objetos que contêm dados de multijogador, onde cada objeto representa um conjunto de dados para o tempo especificado por dia ou por mês e organizado pelos valores **filter** e **groupby** especificados. Para obter mais informações sobre os dados em cada objeto, consulte as seções [Análises de multijogador por dia](#daily-multiplayer-analytics) e [Análise de multijogador por mês](#monthly-multiplayer-analytics).     |
-| @nextLink  | string | Se houver páginas adicionais de dados, essa sequência conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados para a consulta. |
+| @nextLink  | string | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor é retornado se o parâmetro **top** da solicitação estiver definido como 10000, mas houver mais de 10000 linhas de dados para a consulta. |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta. |
 
 

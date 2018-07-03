@@ -14,12 +14,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cefcefc9df85b512456c5fb2e556ad95e56d4999
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 824f0e83408893bf95d856067282b1fea1313876
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831980"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895403"
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
@@ -190,16 +190,16 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Não há qualquer elemento de navegação que seja sempre presente (como guias/pivôs ou um painel de navegação encaixado) que ofereça navegação direta para as duas páginas.</p></td>
+<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Não há qualquer elemento de navegação que seja sempre presente (como o painel de navegação superior ou um painel de navegação esquerdo encaixado) que ofereça navegação direta para as duas páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
-<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares. As páginas não usam guias ou um painel de navegação encaixado, então a navegação é adicionada ao histórico de navegação.</p>
+<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares. As páginas não usam uma barra de navegação superior ou um painel de navegação esquerdo encaixado, então a navegação é adicionada ao histórico de navegação.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação. Por exemplo, as duas páginas usam o mesmo elemento guias/pivôs ou ambas as páginas aparecem em um painel de navegação encaixado.</p></td>
-<td style="vertical-align:top;"><strong>Não</strong>
-<p>Quando o usuário pressiona Voltar, ele volta para a última página visitada antes que o usuário navegasse para o grupo de par atual.</p>
+<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação. Por exemplo, as duas páginas usam o mesmo elemento do painel superior guias/pivôs ou ambas as páginas aparecem em um painel de navegação esquerdo encaixado.</p></td>
+<td style="vertical-align:top;"><strong>Depende</strong>
+<p>Sim, adicione ao histórico de navegação, mas com duas exceções notáveis. Se você espera que os usuários do seu aplicativo alternem entre as páginas no grupo de pares com frequência ou se desejar preservar o estado/histórico de navegação em uma página do grupo de pares, então não adicione ao histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

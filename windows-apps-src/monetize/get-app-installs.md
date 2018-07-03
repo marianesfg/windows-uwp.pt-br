@@ -4,23 +4,23 @@ ms.assetid: FAD033C7-F887-4217-A385-089F09242827
 description: Use este método na API de análise da Microsoft Store para obter os dados de instalação agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter as instalações do aplicativo
 ms.author: mcleans
-ms.date: 03/17/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, instalações de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 162678fef3b431483a36d1de89c7adf2811b8d9f
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: fe2e9a012a094a5eeb5bc60510fc8fb115c57fb0
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663326"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1975968"
 ---
 # <a name="get-app-installs"></a>Obter as instalações do aplicativo
 
 
-Use este método na API de análise da Microsoft Store para obter dados agregados de instalação em formato JSON de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de instalações](../publish/installs-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados agregados de instalação em formato JSON de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições](../publish/acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -56,7 +56,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | endDate | date | A data final no intervalo de datas de dados de instalação a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
-| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>mercado</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li></ul> | Não   |
+| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li></ul> | Não   |
 | aggregationLevel | string | Especifica o intervalo de tempo para o qual recuperar dados agregados. Pode ser uma das seguintes cadeias de caracteres: <strong>day</strong>, <strong>week</strong> ou <strong>month</strong>. Se não for especificado, o padrão será <strong>day</strong>. | Não |
 | orderby | cadeia | Uma instrução que classifica os valores dos dados resultantes de cada instalação. A sintaxe é <em>orderby=field [order],field [order],...</em>. O parâmetro <em>field</em> pode ser um dos seguintes campos do corpo da resposta:<p/><ul><li><strong>applicationName</strong></li><li><strong>date</strong><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>packageVersion</strong></li><li><strong>successfulInstallCount</strong></li></ul><p>O parâmetro <em>order</em> é opcional e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
 | groupby | string | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>applicationName</strong></li><li><strong>date</strong><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>packageVersion</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>successfulInstallCount</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  Não  |
@@ -64,7 +64,7 @@ Para usar este método, primeiro você precisa do seguinte:
  
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra várias solicitações de obtenção de dados de instalação do aplicativo. Substitua o valor de *applicationId* pela ID da Loja de seu aplicativo.
+O exemplo a seguir demonstra várias solicitações de obtenção de dados de instalação do aplicativo. Substitua o valor de *applicationId* pela ID da Store de seu aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/installs?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -91,8 +91,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
 | date                | cadeia | A primeira data no intervalo de datas dos dados de instalação. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
-| applicationId       | cadeia | A ID da Loja do aplicativo do qual você está recuperando dados de instalação.     |
-| applicationName     | cadeia | O nome de exibição do app.     |
+| applicationId       | cadeia | A ID da Store do aplicativo do qual você está recuperando dados de instalação.     |
+| applicationName     | string | O nome de exibição do app.     |
 | deviceType          | string | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo que concluiu a instalação:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>  |
 | packageVersion           | cadeia | A versão do pacote do aplicativo que foi instalado.  |
 | osVersion           | cadeia | Uma das seguintes cadeias de caracteres que especifica a versão do sistema operacional no qual ocorreu a instalação:<p/><ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>   |

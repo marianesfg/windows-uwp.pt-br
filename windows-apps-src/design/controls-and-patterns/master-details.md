@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c39243217f28dd4f88c4776c058a1b93c145c50
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 68a8a812c6e5080630254014552a8bb05747749b
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393525"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983517"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -99,7 +99,7 @@ Para criar um layout adaptável, definir diferentes [**VisualStates**](https://d
 Os exemplos a seguir implementam o padrão de mestre/detalhes com layouts adaptáveis e demonstram a vinculação de dados para estático, banco de dados e recursos online: 
 - [Amostra de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
 - [Exemplo de seleção além de mestre/detalhes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Exemplo do Windows Template Studio de mestre/detalhes](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Pages/MasterDetail)
+- [Exemplo do Windows Template Studio de mestre/detalhes](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [Exemplo de leitor RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 

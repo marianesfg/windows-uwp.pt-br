@@ -3,30 +3,32 @@ author: stevewhims
 description: Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT.
 title: Interoperabilidade entre C++/WinRT e ABI
 ms.author: stwhi
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 84f9f557134e69c396ed63ace3474325856c6cd0
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: af9c14043fdfcc10828f87e8c954430f8f587412
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832036"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912894"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>Interoperabilidade entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e a ABI
-Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. Você pode usar essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou pode usá-las à medida que migra gradativamente o código da ABI para o C++/WinRT.
+Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) do SDK e objetos do C++/WinRT. Você pode usar essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou pode usá-las à medida que migra gradativamente o código da ABI para o C++/WinRT.
 
-## <a name="what-are-windows-runtime-abi-types"></a>Quais são os tipos de ABI do Windows Runtime?
+## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Qual é a ABI do Windows Runtime e quais são os tipos ABI?
+Uma classe do Windows Runtime (classe do tempo de execução) é uma abstração. Essa abstração define uma interface binária (a Interface binária do aplicativo ou ABI), que permite a interação entre várias linguagens de programação com um objeto. Independentemente da linguagem de programação, a interação do código de cliente com um objeto do Windows Runtime acontece no nível mais baixo, com construções de linguagem do cliente convertidas em chamadas na ABI do objeto.
+
 Os cabeçalhos do SDK do Windows na pasta "%WindowsSdkDir%Include\10.0.17134.0\winrt" (ajuste o número de versão do SDK para a sua ocorrência, se necessário) são os arquivos de cabeçalho ABI do Windows Runtime. Eles foram gerados pelo compilador MIDL. Este é um exemplo da inclusão de um desses cabeçalhos.
 
 ```
 #include <windows.foundation.h>
 ```
 
-E este é um exemplo simplificado de um dos tipos de ABI que você encontrará nesse cabeçalho específico.
+Veja um exemplo simplificado de um dos tipos de ABI que você encontrará nesse cabeçalho de SDK específico. Observe o namespace do **ABI**; **Windows::Foundation**, e os demais namespaces do Windows são declarados pelos cabeçalhos do SDK no namespace do **ABI**.
 
 ```
 namespace ABI::Windows::Foundation
@@ -63,10 +65,12 @@ namespace winrt::Windows::Foundation
 }
 ```
 
-A interface aqui é o C++ padrão moderno. Ele dispensa os **HRESULT**s (o C++/WinRT gera exceções, se necessário). A função do acessador retorna um objeto de cadeia de caracteres simples, que é removido no final do seu escopo.
+A interface aqui é o C++ padrão moderno. Ele dispensa os **HRESULT**s (o C++/WinRT gera exceções, se necessário). A função do acessor retorna um objeto de cadeia de caracteres simples, que é removido no final do seu escopo.
+
+Este tópico serve nos casos em que você desejar fazer a portabilidade ou interoperabilidade com um código que funciona na camada da Interface binária do aplicativo (ABI).
 
 ## <a name="converting-to-and-from-abi-types-in-code"></a>Realizando a conversão dos tipos de ABI no código
-Para fins de segurança e praticidade, nas conversões em ambas as direções, você pode simplesmente usar [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) e [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). Este é um exemplo de código (baseado no modelo de projeto do **app de console**), que também ilustra como você pode lidar com conflitos de namespace entre a projeção e a ABI.
+Para fins de segurança e praticidade, nas conversões em ambas as direções, você pode simplesmente usar [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) e [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function). Veja um exemplo de código (com base no modelo de projeto do **Aplicativo de console**), que também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de solucionar possíveis conflitos de namespace entre as projeção do C++/WinRT e o ABI.
 
 ```cppwinrt
 // main.cpp
@@ -88,7 +92,7 @@ namespace abi
 int main()
 {
     winrt::init_apartment();
-    
+
     winrt::Uri uri(L"http://aka.ms/cppwinrt");
 
     // Convert to an ABI type.
@@ -124,11 +128,11 @@ Estas são outras técnicas de conversão de nível inferior similares, mas que 
 
 ```cppwinrt
     ...
-    
+
     // Copy to an owning raw ABI pointer with copy_to_abi.
     abi::IStringable* owning = nullptr;
     winrt::copy_to_abi(uri, *reinterpret_cast<void**>(&owning));
-    
+
     // Copy from a raw ABI pointer.
     uri = nullptr;
     winrt::copy_from_abi(uri, owning);
@@ -139,13 +143,13 @@ Nas conversões de nível inferior, que apenas copiam endereços, você pode usa
 
 ```cppwinrt
     ...
-    
+
     // Lowest-level conversions that only copy addresses
-    
+
     // Convert to a non-owning ABI object with get_abi.
     abi::IStringable* non_owning = static_cast<abi::IStringable*>(winrt::get_abi(uri));
     WINRT_ASSERT(non_owning);
-    
+
     // Avoid interlocks this way.
     owning = static_cast<abi::IStringable*>(winrt::detach_abi(uri));
     WINRT_ASSERT(!uri);

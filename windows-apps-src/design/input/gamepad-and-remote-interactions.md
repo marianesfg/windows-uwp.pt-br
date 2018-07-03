@@ -13,17 +13,25 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3713d74edd93f437726c04dd68b604cb8a22da8f
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: da1248937d8f7d1a5a1da27e376690cde2ac7ef6
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1392425"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842846"
 ---
-# <a name="gamepad-and-remote-control-interactions"></a>Interações de Gamepad e controle remoto
+# <a name="gamepad-and-remote-control-interactions"></a>Interações de gamepad e controle remoto
 
-Os aplicativos UWP (Plataforma Universal do Windows) agora dão suporte à entrada de gamepad e de controle remoto. Gamepads e controles remotos são os dispositivos de entrada principais para Xbox e experiências com TV. Os aplicativos UWP devem ser otimizados para esses tipos de dispositivo de entrada, da mesma forma como são otimizados para entrada de mouse e de teclado em um computador e entrada por toque em um telefone ou tablet. Verificar se seu aplicativo funciona bem com esses dispositivos de entrada é a etapa mais importante ao otimizar para Xbox e os programas de TV.
-Agora você pode conectar e usar o gamepad com aplicativos UWP no computador o que facilita a validação do trabalho.
+![Controle remoto e direcional](images/dpad-remote/dpad-remote.png)
+
+Agora, os aplicativos da Plataforma Universal do Windows (UWP) oferecem suporte à entrada por gamepad e controle remoto, que são os dispositivos de entrada principais para experiências de Xbox e TV.
+
+Os aplicativos UWP devem ser otimizados para esses tipos de dispositivo de entrada, da mesma forma como são otimizados para entrada de mouse e de teclado em um computador e entrada por toque em um telefone ou tablet.
+
+Certifique-se de que o aplicativo funciona bem com esses dispositivos de entrada. Essa é a etapa mais importante ao otimizar para Xbox e os programas de TV.
+
+> [!NOTE] 
+> Agora você pode conectar e usar o gamepad com aplicativos UWP no computador o que facilita a validação do trabalho.
 
 Para garantir uma experiência de usuário bem-sucedida e agradável para seu aplicativo UWP ao usar um gamepad ou controle remoto, você deve considerar o seguinte:
 

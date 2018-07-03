@@ -12,12 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c61de6dbeb8b1c455c1312cc993d0eee7b1bba7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 40abeae4048784599deadd9a1a62a995447159be
+ms.sourcegitcommit: 03a3c02c7b3b0b0a3d1b14705cc1fd73788ac034
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653985"
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "1903190"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
@@ -90,8 +90,6 @@ private void GetTouchProperties()
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) usada para recuperar se um dispositivo detectado der suporte à entrada de ponteiro (toque, touchpad, mouse ou caneta). Basta criar um novo objeto **PointerDevice** e obter as propriedades que interessam a você.
 
 **Observação**  Os valores retornados pelas propriedades abordadas aqui são baseados em todos os dispositivos de ponteiro detectados: as propriedades boolianas retornam não zero se pelo menos um dispositivo der suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por qualquer dispositivo de ponteiro.
-
- 
 
 O código a seguir usa uma tabela para exibir as propriedades e valores de cada dispositivo de ponteiro.
 

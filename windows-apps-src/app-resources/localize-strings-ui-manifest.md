@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: b96ec6b28de142cd5d81230aa729d840b89b7f5c
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.openlocfilehash: d1c95c530cb8e62b5ac228798d69bfb6d0871218
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700802"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989630"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -80,6 +80,11 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Farewell");
 ```
 
+```cppwinrt
+auto resourceLoader{ Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView() };
+myXAMLTextBlockElement().Text(resourceLoader.GetString(L"Farewell"));
+```
+
 ```cpp
 auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView();
 this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
@@ -136,24 +141,29 @@ Para definir o escopo de uma referência de identificador de recurso de cadeia d
 <TextBlock x:Uid="/ErrorMessages/PasswordTooWeak"/>
 ```
 
+Você só precisa adicionar `/<resources-file-name>/` antes do identificador de recurso de cadeia de caracteres para arquivos de recursos *diferentes* de `Resources.resw`. Isso ocorre porque "Resources.resw" é o nome de arquivo padrão; portanto, essa será a expectativa se você omitir um nome de arquivo (como fizemos nos exemplos anteriores deste tópico).
+
 O exemplo de código abaixo assume que `ErrorMessages.resw` contém um recurso cujo nome é "MismatchedPasswords" e cujo valor descreve o erro.
 
 > [!NOTE]
 > Se você tiver uma chamada para qualquer método **GetForCurrentView** que *possa* ser executado em um thread de trabalho/segundo plano, proteja essa chamada com um teste `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)`. Chamar **GetForCurrentView** em um thread de trabalho/segundo plano impossibilitará a criação da exceção "*&lt;typename&gt; em threads que não têm uma CoreWindow*".
 
 ```csharp
-var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ManifestResources");
-this.myXAMLTextBlockElement.Text = resourceLoader.GetString("/ErrorMessages/MismatchedPasswords");
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("MismatchedPasswords");
+```
+
+```cppwinrt
+auto resourceLoader{ Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView(L"ErrorMessages") };
+myXAMLTextBlockElement().Text(resourceLoader.GetString(L"MismatchedPasswords"));
 ```
 
 ```cpp
-auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView("ManifestResources");
-this->myXAMLTextBlockElement->Text = resourceLoader->GetString("/ErrorMessages/MismatchedPasswords");
+auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView("ErrorMessages");
+this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswords");
 ```
 
 Se você pretendia mover o recurso "AppDisplayName" de `Resources.resw` para `ManifestResources.resw`, no manifesto do pacote de aplicativos, altere `ms-resource:AppDisplayName` para `ms-resource:/ManifestResources/AppDisplayName`.
-
-Você só precisa adicionar `/<resources-file-name>/` antes do identificador de recurso de cadeia de caracteres para arquivos de recursos *diferentes* de `Resources.resw`. Isso ocorre porque "Resources.resw" é o nome de arquivo padrão; portanto, essa será a expectativa se você omitir um nome de arquivo (como fizemos nos exemplos anteriores deste tópico).
 
 ## <a name="load-a-string-for-a-specific-language-or-other-context"></a>Carregar uma cadeia de caracteres para um idioma específico ou outro contexto
 O [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) padrão (obtido em [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView)) contém um valor de qualificador para cada nome de qualificador, representando o contexto de tempo de execução padrão (em outras palavras, as configurações do usuário atual e da máquina). Os arquivos de recursos (.resw) são comparados, com base nos qualificadores contidos em seus nomes, com os valores de qualificador nesse contexto de tempo de execução.

@@ -4,23 +4,20 @@ Description: With the package resource indexing (PRI) APIs, you can develop a cu
 title: APIs de índice de recurso do pacote (PRI) e sistemas de compilação personalizados
 template: detail.hbs
 ms.author: stwhi
-ms.date: 02/20/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 8947f9305829e5045a418ac2fdd2d6c327acb2a1
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 58473101f0972040fe80c7f7f582ad33eafeb009
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707347"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862495"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>APIs de índice de recurso do pacote (PRI) e sistemas de compilação personalizados
-> [!NOTE]
-> **Algumas informações estão relacionadas a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.**
-
 Com as [APIs de índice de recurso do pacote (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), você pode desenvolver um sistema de compilação personalizado para recursos do aplicativo UWP. O sistema de compilação será capaz de criar, controlar a versão e despejar os arquivos de índice de recurso do pacote (PRI) (como XML) em qualquer nível de complexidade exigido pelo aplicativo UWP. Se você tiver um sistema de compilação personalizado que use atualmente a ferramenta de linha de comando MakePri.exe (consulte [Compilar recursos manualmente com o MakePri.exe](makepri-exe-command-options.md)), para melhorar o desempenho e o controle, é recomendável passar a chamar as APIs de PRI, em vez de chamar o MakePri.exe.
 
 As APIs de PRI foram incorporadas no SDK do Windows para Windows 10, versão 1803. As APIs assumem a forma de APIs do Windows Win32, o que significa que você tem algumas opções para chamá-las. Você pode chamá-las diretamente de um app Win32, por meio de [invocação de plataforma](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live) em um app .NET ou até mesmo em um aplicativo UWP.

@@ -4,18 +4,18 @@ ms.assetid: 8425F704-8A03-493F-A3D2-8442E85FD835
 description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico de hardware. Esse método destina-se apenas para OEMs.
 title: Obter detalhes de um erro de hardware OEM
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
-ms.openlocfilehash: 429ebc5237ce35baa6f9c3f31a25d480410d9c86
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: c4ac647559b71b7c8cf2724940e857fd99c557f5
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663206"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989550"
 ---
 # <a name="get-details-for-an-oem-hardware-error"></a>Obter detalhes de um erro de hardware OEM
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de erros detalhados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.          |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.        |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.        |
 
 
 Os elementos na matriz *Value* contêm os valores a seguir.
@@ -97,7 +97,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | failureHash     | string  | O identificador exclusivo do erro.     |
 | osVersion       | cadeia  | A versão de quatro partes do sistema operacional no qual o erro ocorreu.    |
 | mercado          | string  | O código de país ISO 3166 do mercado do dispositivo.     |
-| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>     |
+| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>Computador</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>     |
 | moduleName     | cadeia  | O nome exclusivo do módulo que está associado a esse erro.      |
 | moduleVersion  | cadeia  | O versão do módulo que está associado a esse erro.   |
 | architecture | cadeia |  A arquitetura do dispositivo no qual o erro ocorreu.  |
@@ -105,7 +105,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | baseboard | cadeia | O nome da placa do dispositivo no qual ocorreu o erro. |
 | modelFamily | cadeia | O nome da família de modelo de dispositivo no qual ocorreu o erro. |
 | modo | cadeia | Esse valor é sempre *kernel*. |
-| cabIdHash         | cadeia  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
+| cabIdHash         | string  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
 | cabType         | cadeia  | O tipo do arquivo CAB.   |
 | cabExpirationTime  | string  | A data e a hora em que o arquivo CAB expirou e não pôde mais ser baixado, no formato ISO 8601.   |
 

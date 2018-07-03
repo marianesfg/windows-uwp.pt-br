@@ -4,18 +4,18 @@ ms.assetid: BAC79A64-445D-4702-8E96-7727FF180245
 description: Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados dos drivers do Windows 10 para um determinado intervalo de datas e outros filtros opcionais. Esse método destina-se apenas para IHVs.
 title: Obter dados de relatório de erro para drivers do Windows 10
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
-ms.openlocfilehash: 9590c307cbbb45c4f177704d1cd4cd3d22e03c7d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: e87a836c08f29e1e7279c19566ead8a8d7e36453
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663386"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989400"
 ---
 # <a name="get-error-reporting-data-for-windows-10-drivers"></a>Obter dados de relatório de erro para drivers do Windows 10
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de relatório de erros agregados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.     |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.     |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.     |
 
 
 Os elementos na matriz *Value* contêm os valores a seguir.
@@ -101,14 +101,14 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | osName       | cadeia  | O nome do sistema operacional no qual o erro ocorreu.  |
 | eventType       | cadeia  | O tipo do erro que ocorreu.      |
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.   |
-| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>    |
+| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>Computador</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>    |
 | driverName     | cadeia  | O nome exclusivo do driver associado a esse erro.      |
 | driverVersion  | cadeia  | O versão do driver associado a esse erro.   |
 | architecture | cadeia |  A arquitetura do dispositivo no qual o erro ocorreu.  |
 | oemName | cadeia | O nome do OEM do dispositivo no qual o erro ocorreu. |
 | oemModel | cadeia | O nome do modelo do dispositivo no qual o erro ocorreu. |
 | flightRing | cadeia | O nome de versão de pré-lançamento do sistema operacional no qual o erro ocorreu. |
-| eventCount      | inumber | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
+| eventCount      | número inteiro | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

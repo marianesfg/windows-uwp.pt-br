@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5b30e9fe2fb4f3bfbec81366a920cd74a19dcec
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673873"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018490"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.
@@ -33,9 +33,12 @@ Os objetos de filtro devem ser construídos antes ou enquanto o objeto **RemoteS
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetMakeFilterList)]
 
-> [!TIP]
+> [!NOTE]
 > O valor de filtro "proximal" não garante o grau de proximidade física. Para cenários que exigem uma proximidade física confiável, use o valor [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) no filtro. No momento, esse filtro permite somente dispositivos descobertos por Bluetooth. Como novos mecanismos de descoberta e protocolos que garantem a proximidade física são compatíveis, eles serão incluídos aqui também.  
 Há também uma propriedade na classe [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)que indica se um dispositivo descoberto está na verdade na proximidade física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
+
+> [!NOTE]
+> Se você pretende descobrir dispositivos em uma rede local (determinada pela seleção do filtro de tipo de descoberta), a rede precisa usar um perfil "privado" ou de "domínio". O dispositivo não vai descobrir outros dispositivos em uma rede "pública".
 
 Depois que uma lista de objetos [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter) é criada, ela pode ser transmitida para o construtor de um **RemoteSystemWatcher**.
 
@@ -65,9 +68,6 @@ bool isRemoteSystemLaunchUriCapable = remoteSystem.GetCapabilitySupportedAsync(K
 ```
 
 ## <a name="cross-user-discovery"></a>Descoberta entre usuários
-
-> [!WARNING]
-> Os recursos nesta seção não estão disponíveis atualmente para desenvolvedores.
 
 Os desenvolvedores podem especificar a detecção de _todos_ os dispositivos próximos ao dispositivo cliente, não apenas dispositivos registrados para o mesmo usuário. Isso é implementado por meio um **IRemoteSystemFilter**, [**RemoteSystemAuthorizationKindFilter**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkindfilter) especial. Ele é implementado como os outros tipos de filtro:
 

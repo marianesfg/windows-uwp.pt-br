@@ -4,18 +4,18 @@ ms.assetid: 2FBA0B73-17C6-4F25-A79D-63F2F262491A
 description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro de driver do Windows 7 ou Windows 8.x. Esse método destina-se apenas para IHVs.
 title: Obtenha informações sobre o erro de driver do Windows 7 ou Windows 8. x
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
-ms.openlocfilehash: 84ea23f5989f9b8c6a28b9c355175e28cae7695c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: aa3eaf0915ba7e26d2b27b4f21df95fae8a5c0e1
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663916"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989480"
 ---
 # <a name="get-details-for-a-windows-7-or-windows-8x-driver-error"></a>Obtenha informações sobre o erro de driver do Windows 7 ou Windows 8. x
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de erros detalhados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.          |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.        |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.        |
 
 
 Os elementos na matriz *Value* contêm os valores a seguir.
@@ -108,7 +108,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | oemModel | cadeia | O nome do modelo do dispositivo no qual o erro ocorreu. |
 | flightRing | cadeia | O nome de versão de pré-lançamento do sistema operacional no qual o erro ocorreu. |
 | clientDeviceId | cadeia | A ID do dispositivo no qual o erro ocorreu. |
-| cabIdHash         | cadeia  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
+| cabIdHash         | string  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
 | cabType         | cadeia  | O tipo do arquivo CAB.   |
 | cabExpirationTime  | string  | A data e a hora em que o arquivo CAB expirou e não pôde mais ser baixado, no formato ISO 8601.   |
 

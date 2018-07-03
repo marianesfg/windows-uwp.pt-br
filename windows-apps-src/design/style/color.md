@@ -10,16 +10,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ab0d375971bc006cd477341fc51f3e6d6d91f78
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: fc348dc4f4733feae86a94e0ada1693326a201d8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816721"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843186"
 ---
 # <a name="color"></a>Cor
 
-![imagem de cabeçalho](images/color/header-color.svg)
+![imagem hero](images/header-color.svg)
 
 A cor é uma maneira intuitiva de comunicar informações aos usuários em seu aplicativo: ela pode ser usada para indicar interatividade, enviar comentários sobre ações do usuário e oferecer uma noção de continuidade visual para a interface. 
 

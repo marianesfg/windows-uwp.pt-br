@@ -15,107 +15,65 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1423aeff139758c780dcecb079141744931cdd7b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: ffe26e949be254e85d28dde4a98a1730baa84a3e
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816531"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843479"
 ---
-# <a name="motion-for-uwp-apps"></a>Movimento para apps UWP
+# <a name="motion-for-uwp-apps"></a>Movimento para aplicativos UWP
 
-Um movimento proposital e bem projetado traz vida ao seu aplicativo e faz com que a experiência seja elaborada e refinada. O movimento ajuda os usuários a entenderem as alterações de contexto e onde elas estão dentro da hierarquia de navegação do seu aplicativo. Ele vincula experiências através de transições visuais. O movimento acrescenta uma sensação de ritmo e dimensionalidade à experiência.
+![imagem hero](images/header-motion2.svg)
 
-## <a name="benefits-of-motion"></a>Benefícios do movimento
+O movimento fluente tem um propósito em seu aplicativo. Ele fornece um comentários inteligentes com base no comportamento do usuário, mantém a interface do usuário ativa e guia a navegação do usuário no aplicativo. O movimento fluente gera uma conexão emocional entre um usuário e sua experiência digital. Aproveitamos uma base de movimento natural que o usuário já entende do mundo físico e ampliamos nosso sistema a partir daí.
 
-O movimento é mais do que fazer as coisas se moverem. O movimento é uma ferramenta para criar um ecossistema físico para o usuário viver e manipular através de uma variedade de tipos de entrada, como mouse, teclado, toque e caneta. A qualidade da experiência depende de quão bem o aplicativo responde ao usuário, e que tipo de personalidade a interface de usuário comunica.
+## <a name="fluent-motion-principles"></a>Princípios de movimento fluente
 
-Certifique-se de que o movimento tem um propósito em seu aplicativo. Os melhores aplicativos da Plataforma Universal do Windows (UWP) usam movimento para dar vida à interface de usuário. O movimento deve:
+### <a name="physical"></a>Físico
 
-- Fornecer feedback baseado no comportamento do usuário.
-- Ensinar ao usuário como interagir com a interface do usuário.
-- Indicar como navegar a exibições anteriores ou para as próximas.
+Objetos em movimento apresentam comportamentos de objetos no mundo real. Um movimento fluente e dinâmico faz com que a experiência seja natural, criando conexões emocionais e adicionando personalidade.
 
-Conforme um usuário passa mais tempo dentro de seu aplicativo, ou conforme as tarefas em seu aplicativo se tornam mais sofisticadas, movimento de alta qualidade torna-se cada vez mais importante: ele pode ser utilizado para modificar o modo como o usuário percebe sua carga cognitiva e a facilidade de uso de seu aplicativo. O movimento possui muitos outros benefícios diretos:
+![Exemplo de interface do usuário de movimento físico](images/Physical.gif)
+> Quando você interage com a interface do usuário por meio de toque, o movimento da interface está diretamente relacionado à velocidade da interação. Como o toque é a manipulação direta, o objeto com o qual você interage afeta os objetos ao redor.
 
-- **O movimento oferece suporte à interação e à orientação.**
+### <a name="functional"></a>Funcional
 
-    O movimento é direcional: ele se move para frente e para trás, para dentro e para fora do conteúdo, deixando uma trilha de pistas mental sobre como o usuário chegou na exibição atual. As transições podem ajudar os usuários a aprender como operar novas aplicações desenhando analogias com tarefas que o usuário já é familiarizado.
+O movimento tem um propósito e uma convicção. Ele orienta o usuário pela complexidade e ajuda a estabelece a hierarquia. O movimento oferece a impressão de desempenho aprimorado e otimiza a experiência do usuário, ocultando a latência percebida.
 
-- **O movimento pode dar a impressão de desempenho aprimorado.**
+![Exemplo de interface do usuário de movimento funcional](images/functional.gif)
+> As transições de página têm finalidade específica. Elas fornecem dicas sobre como as páginas são relacionadas entre si. Elas se movem de forma considerada rápida até mesmo quando o desempenho não é ideal.
 
-    Quando as velocidades da rede diminuem ou o sistema interrompe seu trabalho, as animações podem fazer com que a espera do usuário pareça menor. As animações podem ser utilizadas para permitir que o usuário saiba que o aplicativo está processando e não travado, e pode exibir passivamente novas informações sobre as quais o usuário pode estar interessado.
+### <a name="continuous"></a>Contínuo
 
-- **O movimento acrescenta personalidade.**
+O movimento fluente de um ponto a outro naturalmente atrai a atenção e orienta o usuário. Com elegância, ele une uma tarefa do usuário, fazendo parecer mais amigável e consumível.
 
-    O movimento é geralmente o segmento comum que comunica sua a personalidade de seus aplicativos conforme um usuário se move ao longo de uma experiência.
+![Exemplo de interface do usuário de movimento contínuo](images/continuous3.gif)
+> Objetos podem deslocar de cena em cena ou se transformar dentro de uma cena para fornecer continuidade e ajudar o usuário a manter o contexto.
 
-- **O movimento acrescenta elegância.**
+### <a name="contextual"></a>Contextual
 
-    Um movimento fluido e dinâmico faz com que as experiências sejam naturais, criando conexões emocionais com a experiência.
+Movimento inteligente fornece comentários ao usuário de forma alinhada com a manipulação da interface do usuário. A interação está centralizada no usuário. O movimento parece apropriado ao fator forma e é projetado tendo em vista o cenário. Deve ser confortável para cada usuário.
 
-## <a name="examples-of-motion"></a>Exemplos de movimento
+![Exemplo de interface do usuário de movimento contextual](images/Contextual.gif)
+> A animação deve se relacionar à interação do usuário. Um menu de contexto é implantado a partir do ponto em que o usuário o ativa. 
 
-Aqui estão alguns exemplos de movimento em um aplicativo.
+## <a name="motion-articles"></a>Artigos sobre movimento
 
-Aqui, um aplicativo usa uma animação conectada para animar uma imagem conforme ela "continua" a fazer parte do cabeçalho da próxima página. O efeito ajuda a manter o contexto de usuário entre a transição.
-
-![Animação Conectada](images/connected-animations/example.gif)
-
-Aqui, um efeito de paralaxe visual move objetos diferentes em diferentes taxas quando a interface de usuário rola ou faz um movimento panorâmico para criar uma sensação de profundidade, perspectiva e movimento.
-
-![Um exemplo de paralaxe com uma imagem de fundo e uma lista](images/_Parallax_v2.gif)
-
-
-## <a name="types-of-motion"></a>Tipos de movimento
-
-<table>
-    <tr>
-        <th align="left">Tipo de movimento</th>
-        <th align="left">Descrição</th>
-    </tr>
-    <tr>
-        <td><a href="motion-list.md">Adicionar e excluir</a>
-        </td>
-        <td>Animações de lista permitem inserir ou remover um ou vários itens de uma coleção, como um álbum de fotos ou uma lista de resultados de pesquisa.
-        </td>
-    </tr>
-    <tr>
-        <td><a href="connected-animation.md">Animação conectada</a>
-        </td>
-        <td>As animações conectadas permitem que você crie uma experiência de navegação dinâmica e convincente através da animação da transição de um elemento entre duas exibições diferentes. Isso ajuda o usuário a manter o contexto e oferece continuidade entre os modos de exibição. Em uma animação conectada, um elemento parece "continuar" entre duas exibições durante uma alteração no conteúdo da interface de usuário, voando pela tela desde a sua localização na exibição de origem até seu destino na nova exibição. Isso enfatiza o conteúdo comum entre os modos de exibição e cria um efeito belo e dinâmico como parte de uma transição. 
-        </td>
-    </tr>
-    <tr>
-        <td><a href="content-transition-animations.md">Transição de conteúdo</a>
-        </td>
-        <td>As animações de transição de conteúdo permitem que você mude o conteúdo de uma área da tela enquanto mantém o recipiente ou o plano de fundo constantes. O novo conteúdo aparece. Se houver conteúdo existente para ser substituído, esse conteúdo desaparecerá. </td>
-    </tr>
-    <tr>
-        <td><a href="motion-fade.md">Esmaecimento</a>
-        </td>
-        <td>Use animações de fade para trazer itens para uma exibição ou retirá-los de uma exibição. As duas animações comuns de esmaecimento são o fade-in e o fade-out. </td>
-    </tr>
-    <tr>
-        <td><a href="page-transitions.md">Transições de página</a>
-        </td>
-        <td>As transições de página navegam entre as páginas de um app, fornecendo comentários como o relacionamento entre as páginas.
-        </td>
-    </tr>
-    <tr>
-        <td><a href="parallax.md">Paralaxe</a>
-        </td>
-        <td>Um efeito de paralaxe visual ajuda a criar uma sensação de profundidade, perspectiva e movimento. Ele alcança este efeito movendo objetos diferentes em diferentes taxas quando a interface de usuário rola ou faz um movimento panorâmico.
-        </td>
-    </tr> 
-    <tr>
-        <td><a href="motion-pointer.md">Pressione feedback</a>
-        </td>
-        <td>As animações de apertar ponteiro fornecem aos usuários feedback visual quando o usuário toca em um item. A animação de ponteiro para baixo encolhe e inclina um pouco o item pressionado e aparece quando um item é tocado pela primeira vez. A animação de ponteiro para cima, que restaura o item à sua posição original, aparece quando o usuário solta o ponteiro.
-        </td>
-    </tr>
-</table>
-
-## <a name="animations-in-xaml"></a>Animações em XAML
-
-Para saber mais sobre como usar animações internas em XAML ou criar as suas próprias, confira [Animações em XAML](xaml-animation.md). 
+:::linha::: :::coluna:::
+        ### [Timing and easing](timing-and-easing.md)
+        Timing and easing are important elements that make motion feel natural for objects entering, exiting, or moving within the UI.
+    :::column-end:::
+    :::column:::
+        ### [Directionality and gravity](directionality-and-gravity.md)
+        Directional signals help provide a solid mental model of the journey a user takes across experiences. Directional movement is subject to forces like gravity, which reinforces the natural feel of the movement.
+    :::column-end:::
+:::fim da linha::: :::linha::: :::coluna:::
+        ### [Page transitions](page-transitions.md)
+        Page transitions navigate users between pages in an app, providing feedback about the relationship between pages. They help users understand where they are in the navigation hierarchy.
+    :::column-end:::
+    :::column:::
+        ### [Connected animation](connected-animation.md)
+        Connected animations let you create a dynamic and compelling navigation experience by animating the transition of an element between two different views.
+    :::column-end:::
+:::fim da linha:::

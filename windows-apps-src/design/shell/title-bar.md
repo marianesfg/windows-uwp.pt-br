@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 556234eb4047418b0798a432d917268fb3634996
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: d7c620d5e6a45d48442a2761285f8509db91961d
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691002"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863162"
 ---
 # <a name="title-bar-customization"></a>Personalização da barra de título
 
@@ -71,7 +71,7 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 > Este código pode ser colocado em seu método de aplicativo [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) (_App.xaml.cs_), após a chamada [Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), ou na primeira página do seu aplicativo.
 
 > [!TIP]
-> O Kit de ferramentas de comunidade de UWP fornece extensões que permitem que você defina essas propriedades de cor em XAML. Para obter mais informações, consulte a [Documentação do Kit de Ferramentas da Comunidade UWP](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions).
+> O Kit de Ferramentas da Comunidade do Windows fornece extensões que permitem que você defina essas propriedades de cor em XAML. Para obter mais informações, consulte a [Documentação do Kit de Ferramentas da Comunidade do Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions).
 
 Há algumas coisas que devem ser lembradas ao definir cores da barra de título:
 

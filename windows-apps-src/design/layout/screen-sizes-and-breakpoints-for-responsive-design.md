@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d84530c1a7c3795c566495c1eae121691b0766a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1688932"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843026"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
@@ -29,14 +29,14 @@ Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Wi
 ## <a name="breakpoints"></a>Pontos de interrupção
 Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 
-![pontos de interrupção de design dinâmico](images/rsp-design/rspd-breakpoints.png)
+![Pontos de interrupção do design responsivo](images/breakpoints/size-classes.svg)
 
 <table>
 <thead>
 <tr class="header">
 <th align="left">Classe de tamanho</th>
 <th align="left">Pontos de interrupção</th>
-<th align="left">Tamanho da tela (diagonal)</th>
+<th align="left">Tamanho da tela típico (diagonal)</th>
 <th align="left">Dispositivos</th>
 <th align="left">Tamanhos de janela</th>
 </tr>
@@ -45,15 +45,15 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 <tr class="even">
 <td style="vertical-align:top;">Pequeno</td>
 <td style="vertical-align:top;">640 px ou menos</td>
-<td style="vertical-align:top;">4&quot; a 6&quot;</td>
-<td style="vertical-align:top;">Telefones</td>
+<td style="vertical-align:top;">4&quot; a 6&quot;; 20&quot; a 65&quot;</td>
+<td style="vertical-align:top;">Telefones e TVs</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;">Médio</td>
 <td style="vertical-align:top;">641 px a 1007 px</td>
 <td style="vertical-align:top;">7&quot; a 12&quot;</td>
-<td style="vertical-align:top;">Phablets, tablets, TVs</td>
+<td style="vertical-align:top;">Phablets, tablets</td>
 <td style="vertical-align:top;">960 x 540</td>
 </tr>
 <tr class="even">
@@ -65,6 +65,17 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 </tr>
 </tbody>
 </table>
+
+## <a name="why-are-tvs-considered-small"></a>Por que as TVs são consideradas "pequenas"? 
+
+Embora a maioria das TVs sejam fisicamente muito grandes (40 a 65 polegadas é comum) e tenham resoluções altas (HD ou 4K), projetar para TVs 1080p colocadas a 10 pés de distância é diferente de projetar para um monitor de 1080p a um pé distância em sua mesa. Quando você considera a distância, as TVs de 1080 pixels são mais como um monitor de 540 pixels muito mais próximo.
+
+O sistema de pixel efetivo da UWP automaticamente considera a distância de exibição para você. Ao especificar um tamanho para um controle ou um intervalo de ponto de interrupção, você está realmente usando pixels "efetivos". Por exemplo, se você criar código responsivo para 1080 pixels e superior, um monitor 1080 usará esse código, mas uma TV de 1080p não porque embora uma TV de 1080 tenha 1080 pixels físicos, ela só tem 540 pixels efetivos. Projetar para TV é semelhante a projetar para um telefone.
+
+## <a name="effective-pixels-and-scale-factor"></a>Pixels efetivos e fator de escala
+
+Os aplicativos UWP ajustam automaticamente a escala da interface do usuário para garantir que o app seja legível em todos os dispositivos Windows 10. O Windows ajusta automaticamente a escala de cada monitor com base em seu DPI (pontos por polegada) e na distância de exibição do dispositivo. Os usuários podem substituir o valor padrão e ao acessar a página de definições de **Configurações** > **Exibição** > **Escala e layout**. 
+
 
 ## <a name="general-recommendations"></a>Recomendações gerais
 
@@ -94,6 +105,4 @@ Esta tabela descreve as diferentes classes de tamanho e pontos de interrupção.
 >[!TIP] 
 > Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar dispositivos móveis compatíveis com o Windows 10 a um monitor, um mouse e um teclado para fazê-los funcionar como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
 
-## <a name="effective-pixels-and-scale-factor"></a>Pixels efetivos e fator de escala
 
-Os aplicativos UWP ajustam automaticamente a escala da interface do usuário para garantir que o app seja legível em todos os dispositivos Windows 10. O Windows ajusta automaticamente a escala de cada monitor com base em seu DPI (pontos por polegada) e na distância de exibição do dispositivo. Os usuários podem substituir o valor padrão e ao acessar a página de definições de **Configurações** > **Exibição** > **Escala e layout**. 

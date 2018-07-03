@@ -4,18 +4,18 @@ ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
 description: Use este método na API de análise da Microsoft Store para obter os rastreamentos de pilha de um erro em seu app.
 title: Obter o rastreamento de pilha de um erro em seu aplicativo
 ms.author: mcleans
-ms.date: 06/16/2017
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: d29237bfc36c745933c5c40bba9c584d2e705947
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 902bf87f1650cc5b9f4aeabd8539da4a774dce75
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662776"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989530"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obter o rastreamento de pilha de um erro em seu aplicativo
 
@@ -53,13 +53,13 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Loja do app para o qual você deseja obter a pilha de rastreamento. A ID da Loja está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | string | A ID da Store do app para o qual você deseja obter a pilha de rastreamento. A ID da Store está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Store de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | cabId | string | A ID exclusiva do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha. Para obter essa ID, use o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar os detalhes de um erro específico em seu app, e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
 
  
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra como obter um rastreamento de pilha usando esse método. Substitua o valor de *applicationId* pela ID da Loja de seu app.
+O exemplo a seguir demonstra como obter um rastreamento de pilha usando esse método. Substitua o valor de *applicationId* pela ID da Store de seu app.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/stacktrace?applicationId=9NBLGGGZ5QDR&cabId=1336373323853 HTTP/1.1
@@ -75,7 +75,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | Valor      | array   | Uma matriz de objetos contendo cada um deles um quadro de dados de rastreamento de pilha. Para obter mais informações sobre os dados em cada objeto, consulte a seção [Valores de rastreamento de pilha](#stack-trace-values) a seguir. |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.          |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.          |
 
 
 ### <a name="stack-trace-values"></a>Valores de rastreamento de pilha

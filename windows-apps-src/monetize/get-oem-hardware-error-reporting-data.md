@@ -4,18 +4,18 @@ ms.assetid: AE3E003F-BDEC-438B-A80A-3CE1675B369C
 description: Use este método na API de análise da Microsoft Store para obter dados de relatório de erros de hardware agregados para um determinado intervalo de datas e outros filtros opcionais. Esse método destina-se apenas para OEMs.
 title: Obter dados de relatórios de erros de hardware OEM
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1e7d83b8094a79cb87a6611e2e6d8b8f05159e
-ms.sourcegitcommit: b7032f083bcbb71f5a7dd1a200dcc81dba496a81
+ms.openlocfilehash: f8d7a85a37272eb7046ca1e7f64476f94d9556e2
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "1527334"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989450"
 ---
 # <a name="get-oem-hardware-error-reporting-data"></a>Obter dados de relatórios de erros de hardware OEM
 
@@ -58,7 +58,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | endDate | date | A data de término no intervalo de datas dos dados do relatório de erros a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |
-| filter |string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>mode</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul> | Não   |
+| filter |string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Você pode especificar os campos a seguir:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>modo</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul> | Não   |
 | aggregationLevel | string | Especifica o intervalo de tempo para o qual recuperar dados agregados. Pode ser uma das seguintes cadeias de caracteres: <strong>day</strong>, <strong>week</strong> ou <strong>month</strong>. Se não for especificado, o padrão será <strong>day</strong>. Se você especificar <strong>week</strong> ou <strong>month</strong>, os valores <em>failureName</em> e <em>failureHash</em> serão limitados a 1.000 buckets. | Não |
 | orderby | string | Uma instrução que ordena os valores dos dados de resultado. A sintaxe é <em>orderby=field [order],field [order],....</em>. Você pode especificar os seguintes campos do corpo da resposta:<p/><ul><li><strong>date</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>modo</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul><p>O parâmetro <em>order</em> é opcional, e pode ser <strong>asc</strong> ou <strong>desc</strong> para especificar a ordem crescente ou decrescente de cada campo. O padrão é <strong>asc</strong>.</p><p>Este é um exemplo de cadeia de caracteres <em>orderby</em>: <em>orderby=date,market</em></p> |  Não  |
 | groupby | string | Uma instrução que aplica a agregação de dados apenas aos campos especificados. Você pode especificar os campos a seguir do corpo da resposta:<p/><ul><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>eventType</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>moduleName</strong></li><li><strong>moduleVersion</strong></li><li><strong>modo</strong></li><li><strong>architecture</strong></li><li><strong>model</strong></li><li><strong>baseboard</strong></li><li><strong>modelFamily</strong></li><li><strong>flightRing</strong></li></ul><p>As linhas de dados retornados conterão os campos especificados no parâmetro <em>groupby</em>, bem como o seguinte:</p><ul><li><strong>date</strong></li><li><strong>eventCount</strong></li></ul><p>O parâmetro <em>groupby</em> pode ser usado com o parâmetro <em>aggregationLevel</em>. Por exemplo <em>&amp;groupby=failureName,market&amp;aggregationLevel=week</em></p></p> |  Não  |
@@ -87,7 +87,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de relatório de erros agregados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.     |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.     |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.     |
 
 <span/>
 
@@ -103,7 +103,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | osVersion       | cadeia  | A versão de quatro partes do sistema operacional no qual o erro ocorreu.  |
 | eventType       | cadeia  | O tipo do erro que ocorreu.       |
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.   |
-| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>    |
+| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>Computador</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>    |
 | moduleName     | cadeia  | O nome exclusivo do módulo que está associado a esse erro.      |
 | moduleVersion  | cadeia  | O versão do módulo que está associado a esse erro.   |
 | architecture | cadeia |  A arquitetura do dispositivo no qual o erro ocorreu.  |
@@ -112,7 +112,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | modelFamily | cadeia | O nome da família de modelo de dispositivo no qual ocorreu o erro. |
 | flightRing | cadeia | O nome de versão de pré-lançamento do sistema operacional no qual o erro ocorreu. |
 | modo | cadeia | Esse valor é sempre *kernel*. |
-| eventCount      | inumber | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
+| eventCount      | número inteiro | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
 
 <span/> 
 

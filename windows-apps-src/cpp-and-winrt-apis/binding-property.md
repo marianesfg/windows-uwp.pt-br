@@ -3,23 +3,20 @@ author: stevewhims
 description: Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela.
 title: Controles XAML; vincular a uma propriedade C++/WinRT
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: b54f0dd60a90cd13e5b3586a956b09e30f6d9755
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 25ea4c4caf5135b13b88eeea6f43bb36bd691c11
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832280"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863212"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>Controles XAML; vincular a uma propriedade [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-> [!NOTE]
-> **Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.**
-
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em C++/WinRT, e como vincular controles de XAML a elas.
 
 > [!IMPORTANT]
@@ -31,7 +28,7 @@ Digamos que uma classe de tempo de execução nomeada **BookSku** tem uma propri
 Um elemento de texto ou controle de XAML pode se associar a e manipular esses eventos, recuperando os valores atualizados e, em seguida, atualizando ele mesmo para mostrar o novo valor.
 
 > [!NOTE]
-> Para obter informações sobre a disponibilidade atual do Visual Studio Extension (VSIX) de C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild de C++/WinRT), veja [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="create-a-blank-app-bookstore"></a>Criar um Aplicativo em branco (Bookstore)
 Inicie criando um novo projeto no Microsoft Visual Studio. Crie um projeto do **Aplicativo em branco do Visual C++ (C++/WinRT)** e nomeie-o *Bookstore*.
@@ -211,7 +208,7 @@ namespace BookstoreCPPWinRT
 
 Recompile o projeto para gerar os arquivos de código de origem onde a classe de tempo de execução **MainPage** é implementada (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`). Copie os stubs de acessador para a propriedade ViewModel fora dos arquivos gerados e em `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`.
 
-Para `\Bookstore\Bookstore\MainPage.h`, adicione um membro particular para armazenar o modelo de exibição. Observe que a função de acessador de propriedade (e o membro m_mainViewModel) são implementados em termos de **Bookstore::BookstoreViewModel**, que é o tipo projetado. O tipo de implementação está no mesmo projeto (unidade de compilação), portanto, construímos m_mainViewModel por meio da sobrecarga de construtor que leva `nullptr`.
+Para `\Bookstore\Bookstore\MainPage.h`, adicione um membro particular para armazenar o modelo de exibição. Observe que a função de acessador de propriedade (e o membro m_mainViewModel) são implementados em termos de **Bookstore::BookstoreViewModel**, que é o tipo projetado. O tipo de implementação está no mesmo projeto (unidade de compilação), portanto, construímos m_mainViewModel por meio da sobrecarga de construtor que leva `nullptr_t`.
 
 ```cppwinrt
 // MainPage.h

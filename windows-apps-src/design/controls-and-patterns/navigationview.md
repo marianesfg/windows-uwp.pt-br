@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc365a7dbc69819ce88a22db2490b327412c8b4
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: c7817bf7ff60a52ea48c988bdebd6d4d2eeacdb7
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675363"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992145"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 
@@ -151,9 +151,9 @@ Por padrão, o sistema seleciona automaticamente o modo de exibição ideal com 
 
 O modo de exibição NavigationView muda automaticamente o modo de exibição com base na quantidade de espaço disponível na tela.
 
-> [!NOTE] 
-NavigationView deve servir como contêiner de raiz do aplicativo, uma vez que esse controle foi projetado para abranger a largura inteira e a altura da janela do aplicativo.
-Se você deseja alterar estas larguras nas quais a visualização de navegação altera os modos de exibição por usar as propriedades [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) e [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth). 
+> [!NOTE]
+> NavigationView deve servir como contêiner de raiz do aplicativo, uma vez que esse controle foi projetado para abranger a largura inteira e a altura da janela do aplicativo.
+Se você deseja alterar estas larguras nas quais a visualização de navegação altera os modos de exibição por usar as propriedades [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) e [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth).
 
 Considere estes cenários que ilustram quando você pode personalizar o comportamento do modo de exibição.
 
@@ -448,13 +448,13 @@ Desenho na barra de título tem o efeito colateral de ocultar o título do seu a
 
 ```xaml
 <Grid>
-
-    <TextBlock x:Name="AppTitle" 
+    <TextBlock x:Name="AppTitle"
         xmlns:appmodel="using:Windows.ApplicationModel"
-        Text="{x:Bind appmodel:Package.Current.DisplayName}" 
-        Style="{StaticResource CaptionTextBlockStyle}" 
-        IsHitTestVisible="False" 
+        Text="{x:Bind appmodel:Package.Current.DisplayName}"
+        Style="{StaticResource CaptionTextBlockStyle}"
+        IsHitTestVisible="False"
         Canvas.ZIndex="1"/>
+    
 
     <NavigationView Canvas.ZIndex="0" ... />
 
@@ -464,6 +464,10 @@ Desenho na barra de título tem o efeito colateral de ocultar o título do seu a
 Você também precisará ajustar as margens do AppTitle dependendo visibilidade do botão Voltar. E, quando o aplicativo está em FullScreenMode, você precisará remover o espaçamento para a seta Voltar, mesmo que a barra de título reserva espaço para ele.
 
 ```csharp
+var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+Window.Current.SetTitleBar(AppTitle);
+coreTitleBar.ExtendViewIntoTitleBar = true;
+
 void UpdateAppTitle()
 {
     var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);

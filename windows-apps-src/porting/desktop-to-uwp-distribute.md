@@ -4,26 +4,26 @@ Description: Distribute a packaged desktop app (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
 title: Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos.
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aff2635094064c0758f9d0d2ca56b7aa73cfda1
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816831"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989620"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)
 
 Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos.  
 
 > [!NOTE]
-> Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo de ponte de desktop](#transition-users) deste guia para obter algumas ideias.
+> Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo empacotado](#transition-users) deste guia para obter algumas ideias.
 
 ## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Distribuir seu aplicativo publicando-o na Microsoft Store
 
@@ -31,7 +31,7 @@ A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveni
 
 Publique seu aplicativo na loja para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através da [Microsoft Store para Empresas](https://www.microsoft.com/business-store).
 
-Se você planeja publicar na Microsoft Store, mas ainda não entrou em contato conosco, por favor preencha [esse formulário](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge), e a Microsoft entrará em contato com você para iniciar o processo de integração.
+Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
 
 Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 
@@ -69,19 +69,19 @@ Para fazer o sideload do aplicativo em outros dispositivos, consulte [Fazer o si
 
 <a id="transition-users" />
 
-## <a name="transition-users-to-your-desktop-bridge-app"></a>Transição de usuários para seu aplicativo de ponte de desktop
+## <a name="transition-users-to-your-packaged-app"></a>Transição dos usuários para o aplicativo empacotado
 
-Antes de distribuir o seu aplicativo, considere adicionar algumas extensões ao manifesto do pacote para ajudar os usuários a terem o hábito de usar seu aplicativo de ponte de desktop. Aqui estão algumas coisas que você pode fazer.
+Antes de distribuir o seu aplicativo, considere adicionar algumas extensões ao manifesto do pacote para ajudar os usuários a terem o hábito de usar seu aplicativo empacotado. Aqui estão algumas coisas que você pode fazer.
 
-* Aponte os blocos de Início e botões da barra de tarefas existentes para o seu aplicativo de ponte de desktop.
+* Aponte os blocos Iniciar e os botões da barra de tarefas existentes para o seu aplicativo empacotado.
 * Associe seu aplicativo empacotado a um conjunto de tipos de arquivos.
-* Faça com que seu aplicativo de ponte de desktop abra certos tipos de arquivos por padrão.
+* Faça com que seu aplicativo empacotado abra certos tipos de arquivos por padrão.
 
 Para obter a lista completa das extensões e as orientações de como usá-las, consulte [Transição de usuários para seu aplicativo](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
-Além disso, considere adicionar código ao seu aplicativo de ponte de desktop que realize essas tarefas:
+Além disso, considere adicionar código ao seu aplicativo empacotado que realize estas tarefas:
 
-* Migra os dados do usuário associados ao seu aplicativo desktop para as localizações de pastas apropriadas do seu aplicativo de ponte de desktop.
+* Migra os dados do usuário associados ao seu aplicativo desktop para as localizações de pastas apropriadas do seu aplicativo empacotado.
 * Ofereça aos usuários a opção de desinstalar a versão desktop do seu aplicativo.
 
 Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de dados do usuário.
@@ -90,7 +90,7 @@ Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de da
 
 Se você vai adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
 
-Aqui está um exemplo de como você pode fazer isso em um aplicativo de ponte de desktop baseado em .NET.
+Aqui está um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 
 ```csharp
 private void MigrateUserData()
@@ -100,11 +100,9 @@ private void MigrateUserData()
 
     if (sourceDir != null)
     {
-        String migrateMessage =
-            "Would you like to migrate your data from the previous version of this app?";
-
         DialogResult migrateResult = MessageBox.Show
-            (migrateMessage, "Data Migration", MessageBoxButtons.YesNo);
+            ("Would you like to migrate your data from the previous version of this app?",
+             "Data Migration", MessageBoxButtons.YesNo);
 
         if (migrateResult.Equals(DialogResult.Yes))
         {
@@ -131,7 +129,7 @@ private void MigrateUserData()
 
 É melhor não desinstalar o aplicativo desktop dos usuários sem antes solicitar a permissão deles. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo desktop ou oferecer suporte ao uso simultâneo de ambos os aplicativos.
 
-Aqui está um exemplo de como você pode fazer isso em um aplicativo de ponte de desktop baseado em .NET.
+Veja um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 
 Para exibir o contexto completo deste trecho de código, consulte o arquivo **MainWindow.cs** deste exemplo [Visualizador de imagens do WPF com transição/migração/desinstalação](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
 
@@ -146,11 +144,10 @@ private void RemoveDesktopApp()
     //Detect if the previous version of the Desktop App is installed.
     if (uninstallString != null)
     {
-        String uninstallMessage = "To have the best experience, consider uninstalling the "
-            +" previous version of this app. Would you like to do that now?";
-
         DialogResult uninstallResult = MessageBox.Show
-            (uninstallMessage, "Uninstall the previous version", MessageBoxButtons.YesNo);
+            ("To have the best experience, consider uninstalling the "
+              + " previous version of this app. Would you like to do that now?",
+              "Uninstall the previous version", MessageBoxButtons.YesNo);
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {

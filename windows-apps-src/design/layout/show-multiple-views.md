@@ -1,7 +1,7 @@
 ---
 author: Jwmsft
 Description: View multiple parts of your app in separate windows.
-title: Mostrar vários modos de exibição de um app
+title: Mostrar vários modos de exibição de um aplicativo
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c54f3569d6add5e3e2bd2784f2a9e8907b5b2cea
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 5bda75f71b1230974ecb4d136e5b40e85b7e5259
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707387"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843406"
 ---
-# <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição para um aplicativo
+# <a name="show-multiple-views-for-an-app"></a>Mostrar vários modos de exibição de um aplicativo
+
+![Estrutura delineada mostrando um aplicativo com várias janelas](images/multi-view.gif)
 
 Ajude os usuários a serem mais produtivos permitindo que eles exibam partes independentes do aplicativo em janelas separadas. Quando você cria várias janelas para um aplicativo, cada janela se comporta de maneira independente. A barra de tarefas mostra cada janela separadamente. Os usuários podem mover, redimensionar, mostrar e ocultar janelas do aplicativo de maneira independente e alternar janelas do aplicativo como se elas fossem aplicativos separados. Cada janela funciona no próprio thread.
-
-![Estrutura delineada mostrando um aplicativo com várias janelas](images/multi-view.png)
 
 > **APIs importantes**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
 

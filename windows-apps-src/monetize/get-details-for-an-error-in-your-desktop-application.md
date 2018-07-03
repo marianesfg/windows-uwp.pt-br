@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu aplicativo da área de trabalho.
 title: Obter detalhes de um erro em seu aplicativo da área de trabalho
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e24d3c44743cae77fdbf2c42dcf0792d0ce11b4
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 5c7836119b99e885bd0328a8ea313409a6fcf6dc
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663819"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989540"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obter detalhes de um erro em seu aplicativo da área de trabalho
 
@@ -83,7 +83,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de erros detalhados. Para saber mais sobre os dados em cada objeto, consulte a seção de [Valores de detalhes de erros](#error-detail-values) a seguir.          |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.        |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.        |
 
 
 <span id="error-detail-values"/>
@@ -105,7 +105,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationVersion         | string  |   A versão do executável do aplicativo em que ocorreu o erro.     |
 | deviceModel           | string  | Uma sequência que especifica o modelo do dispositivo no qual o app era executado quando o erro ocorreu.   |
 | osVersion       | string  | Uma das seguintes sequências que especifica a versão do sistema operacional no qual o aplicativo da área de trabalho está instalado:<p/><ul><li><strong>Windows 7</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Windows Server 2016</strong></li><li><strong>Windows Server 1709</strong></li><li><strong>Desconhecido</strong></li></ul>    |
-| osRelease       | string  |  Uma das sequências a seguir que especifica a versão do sistema operacional ou anel de liberação de versões de pré-lançamento (como uma subpopulação na versão do sistema operacional) no qual o aplicativo da área de trabalho está instalado.<p/><p>No Windows 10:</p><ul><li><strong>Versão1507</strong></li><li><strong>Versão1511</strong></li><li><strong>Versão1607</strong></li><li><strong>Versão1703</strong></li><li><strong>Versão1709</strong></li><li><strong>Versão prévia de lançamento</strong></li><li><strong>Participante do Programa Windows Insider - Modo Rápido</strong></li><li><strong>Participante do Programa Windows Insider - Modo Lento</strong></li></ul><p/><p>Para o Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para o Windows Server 2016:</p><ul><li><strong>Versão1607</strong></li></ul><p>No Windows 8.1:</p><ul><li><strong>Atualização 1</strong></li></ul><p>No Windows 7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Se a versão do sistema operacional ou anel de liberação de versão de pré-lançamento for desconhecida, este campo terá o valor <strong>Desconhecido</strong>.</p>    |
+| osRelease       | string  |  Uma das sequências a seguir que especifica a versão do sistema operacional ou anel de liberação de versões de pré-lançamento (como uma subpopulação na versão do sistema operacional) no qual o erro ocorreu.<p/><p>No Windows 10:</p><ul><li><strong>Versão1507</strong></li><li><strong>Versão1511</strong></li><li><strong>Versão1607</strong></li><li><strong>Versão1703</strong></li><li><strong>Versão1709</strong></li><li><strong>Versão1803</strong></li><li><strong>Versão prévia de lançamento</strong></li><li><strong>Participante do Programa Windows Insider - Modo Rápido</strong></li><li><strong>Participante do Programa Windows Insider - Modo Lento</strong></li></ul><p/><p>Para o Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Para o Windows Server 2016:</p><ul><li><strong>Versão1607</strong></li></ul><p>No Windows 8.1:</p><ul><li><strong>Atualização 1</strong></li></ul><p>No Windows 7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Se a versão do sistema operacional ou anel de liberação de versão de pré-lançamento for desconhecida, este campo terá o valor <strong>Desconhecido</strong>.</p>    |
 | deviceType      | string  | Uma das seguintes sequências que indica o tipo de dispositivo no qual ocorreu o erro: <p/><ul><li><strong>Computador</strong></li><li><strong>Servidor</strong></li><li><strong>Desconhecido</strong></li></ul>     |
 | cabDownloadable           | booliano  | Indica se o arquivo CAB está disponível para download para esse usuário.   |
 | fileName           | string  | O nome do arquivo executável do aplicativo da área de trabalho para o qual você recuperou os detalhes do erro.  |

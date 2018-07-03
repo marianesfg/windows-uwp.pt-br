@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 5e3dce1950de907462b62967291d456fb062bd9c
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816251"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989259"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>empacotar um app usando o Visual Studio (Ponte de Desktop)
 
@@ -27,11 +27,9 @@ A versão mais recente do Visual Studio fornece uma nova versão do projeto empa
 >[!IMPORTANT]
 >A Ponte de Desktop foi introduzida na versão 1607 do Windows 10 e pode ser usada somente em projetos para a Atualização de Aniversário do Windows 10 (10.0; compilação 14393) ou uma versão posterior no Visual Studio.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>Primeiro, considere como você vai distribuir o aplicativo
+## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Se você planeja publicar seu aplicativo na [Microsoft Store](https://www.microsoft.com/store/apps), comece preenchendo [este formulário](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de instalação. Como parte deste processo, você irá reservar um nome na loja e obter informações que você precisará para empacotar seu aplicativo.
-
-Além disso, certifique-se de revisar este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo (Ponte de Desktop)](desktop-to-uwp-prepare.md).
+Consulte este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo (Ponte de Desktop)](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -72,7 +70,8 @@ Além disso, certifique-se de revisar este guia antes de começar a criar um pac
 
 **Vídeo**
 
-<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>Próximas etapas
 

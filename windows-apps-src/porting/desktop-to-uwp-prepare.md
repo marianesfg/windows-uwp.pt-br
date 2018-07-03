@@ -4,19 +4,19 @@ Description: This article lists things you need to know before packaging your ap
 Search.Product: eADQiWindows 10XVcnh
 title: Preparar para empacotar um aplicativo (Ponte de Desktop)
 ms.author: normesta
-ms.date: 02/21/2018
+ms.date: 05/18/20188
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4836992675f65773e9b5c890aca243e2a9e172
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 46e71812acdad92a5d017cee44490e7d8cc0de32
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832540"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905387"
 ---
 # <a name="prepare-to-package-an-app-desktop-bridge"></a>Preparar para empacotar um aplicativo (Ponte de Desktop)
 
@@ -105,7 +105,7 @@ As dependências não serão instaladas se o app for instalado por sideload. Par
 
 + __Seu aplicativo inicia um utilitário para executar tarefas__. Evite iniciar utilitários de comando, como o PowerShell e o Cmd.exe. Na verdade, se os usuários instalarem seu aplicativo em um sistema que executa o Windows 10 S, o seu aplicativo não será capaz de iniciá-los de maneira alguma. Isso pode bloquear o envio do seu app para a Microsoft Store porque todos os apps enviados para a Microsoft Store devem ser compatíveis com o Windows 10 S.
 
-Iniciar um utilitário pode geralmente fornecer uma maneira conveniente para obter informações do sistema operacional, acessar o registro ou acessar as funcionalidades do sistema. No entanto, você pode usar APIs UWP para realizar esses tipos de tarefas. Esses APIs são mais eficientes, porque eles não precisam de um executável separado para ser executado, mas o mais importante é que eles impedem que o aplicativo saia do pacote. O design do aplicativo permanece consistente com o isolamento, a confiança e a segurança que acompanham o aplicativo de ponte de desktop, e seu aplicativo irá se comportar como esperado em sistemas que executam o Windows 10 S.
+Iniciar um utilitário pode geralmente fornecer uma maneira conveniente para obter informações do sistema operacional, acessar o registro ou acessar as funcionalidades do sistema. No entanto, você pode usar APIs UWP para realizar esses tipos de tarefas. Esses APIs são mais eficientes, porque eles não precisam de um executável separado para ser executado, mas o mais importante é que eles impedem que o aplicativo saia do pacote. O design do aplicativo permanece consistente com o isolamento, a confiança e a segurança que acompanham o aplicativo empacotado com a ponte de desktop, e seu aplicativo se comportará como esperado em sistemas que executam o Windows 10 S.
 
 + __Seu aplicativo hospeda suplementos, plug-ins ou extensões__.   Em muitos casos, as extensões do estilo COM provavelmente continuarão a funcionar desde que a extensão não tenha sido empacotada e seja instalada com confiança total. Isso ocorre porque esses instaladores podem usar suas funcionalidades de confiança total para modificar o registro e colocar arquivos de extensão em qualquer lugar que o seu aplicativo espere encontrá-los.
 

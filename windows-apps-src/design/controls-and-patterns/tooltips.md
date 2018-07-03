@@ -16,22 +16,20 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b60b06d9dbe8c0eb6216c2c909cc5184855056d5
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: dfd702f9ba6e28e1902ea8e595287ba10b46f4bb
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1493603"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895278"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
- 
 
 Dica de ferramenta é uma breve descrição vinculada a outro controle ou objeto. Dicas de ferramenta ajudam os usuários a entender objetos desconhecidos que não estão descritos diretamente na UI. Eles são exibidos automaticamente quando o usuário move o foco, pressiona e mantém ou passa o ponteiro do mouse sobre um controle. A dica de ferramenta desaparece após alguns segundos, ou quando o usuário move o foco do dedo, do ponteiro ou do teclado/gamepad.
 
 ![Dica de ferramenta](images/controls/tool-tip.png)
 
-> **APIs importantes**: [classe ToolTip](https://msdn.microsoft.com/library/windows/apps/br227608), [classe ToolTipService](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
-
+> **APIs importantes**: [classe ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [classe ToolTipService](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
@@ -39,25 +37,25 @@ Use uma dica de ferramenta para descobrir mais informações sobre um controle a
 
 Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas:
 
--   **Informações devem se tornar visíveis com base no foco do ponteiro?**
+- **Informações devem se tornar visíveis com base no foco do ponteiro?**
     Se não, use outro controle. Exiba dicas apenas como resultado da interação do usuário; nunca as exiba por conta própria.
 
--   **Um controle tem um rótulo de texto?**
+- **Um controle tem um rótulo de texto?**
     Se não, use uma dica de ferramenta para fornecer o rótulo. É uma boa prática de design de UX rotular a maioria dos controles em linha, e para isso você não precisa de dicas de ferramenta. Controles de barra de ferramentas e botões de comando que mostrem apenas ícones precisam de dicas de ferramentas.
 
--   **Um objeto se beneficia de uma descrição ou informações adicionais?**
+- **Um objeto se beneficia de uma descrição ou informações adicionais?**
     Se sim, use uma dica de ferramenta. Mas o texto deve ser complementar, ou seja, não essencial às tarefas principais. Se for essencial, coloque-o diretamente na interface do usuário para que os usuários não precisem procurar nem buscá-lo.
 
--   **As informações complementares são um erro, aviso ou status?**
+- **As informações complementares são um erro, aviso ou status?**
     Se sim, use outro elemento da interface do usuário, como um menu suspenso.
 
--   **Os usuários precisam interagir com a dica?**
+- **Os usuários precisam interagir com a dica?**
     Se sim, use outro controle. Os usuários não podem interagir com dicas porque mover o mouse faz com que elas desapareçam.
 
--   **Os usuários precisam imprimir as informações complementares?**
+- **Os usuários precisam imprimir as informações complementares?**
     Se sim, use outro controle.
 
--   **Os usuários irão considerar as dicas incômodas ou distrativas?**
+- **Os usuários irão considerar as dicas incômodas ou distrativas?**
     Se sim, considere usar outra solução, incluindo não fazer nada. Se você usar dicas onde elas possam distrair os usuários, deixe que eles as ative ou desative.
 
 ## <a name="example"></a>Exemplo
@@ -79,6 +77,56 @@ Quando devo usar uma dica de ferramenta? Para decidir, considere estas perguntas
 Uma dica de ferramenta no aplicativo Bing Mapas.
 
 ![Uma dica de ferramenta no aplicativo Bing Mapas](images/control-examples/tool-tip-maps.png)
+
+## <a name="create-a-tooltip"></a>Criar uma dica de ferramenta
+
+Uma [Dica de ferramenta](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) deve ser atribuída a outro elemento de interface do usuário que é seu proprietário. A classe [ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice) fornece métodos estáticos para exibir uma dica de ferramenta.
+
+No XAML, use a propriedade associada **ToolTipService.Tooltip** para atribuir a dica de ferramenta a um proprietário.
+
+```xaml
+<Button Content="Submit" ToolTipService.ToolTip="Click to submit"/>
+```
+
+No código, use o método [ToolTipService.SetToolTip](/uwp/api/windows.ui.xaml.controls.tooltipservice.settooltip) para atribuir a dica de ferramenta a um proprietário.
+
+```xaml
+<Button x:Name="submitButton" Content="Submit"/>
+```
+
+```csharp
+ToolTip toolTip = new ToolTip();
+toolTip.Content = "Click to submit";
+ToolTipService.SetToolTip(submitButton, toolTip);
+```
+
+### <a name="content"></a>Conteúdo
+
+Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) de uma dica de ferramenta. Veja um exemplo de uso de uma [Imagem](/uwp/api/windows.ui.xaml.controls.image) em uma dica de ferramenta.
+
+```xaml
+<TextBlock Text="store logo">
+    <ToolTipService.ToolTip>
+        <Image Source="Assets/StoreLogo.png"/>
+    </ToolTipService.ToolTip>
+</TextBlock>
+```
+
+### <a name="placement"></a>Posicionamento
+
+Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a dica de ferramenta seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
+
+Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o posicionamento. Use a propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou a propriedade **ToolTipService.Placement** associada para posicionar a dica de ferramenta acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) e [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta.
+
+```xaml
+<!-- A TextBlock with an offset ToolTip. -->
+<TextBlock Text="TextBlock with an offset ToolTip.">
+    <ToolTipService.ToolTip>
+        <ToolTip Content="Offset ToolTip."
+                 HorizontalOffset="20" VerticalOffset="30"/>
+    </ToolTipService.ToolTip>
+</TextBlock>
+```
 
 ## <a name="recommendations"></a>Recomendações
 

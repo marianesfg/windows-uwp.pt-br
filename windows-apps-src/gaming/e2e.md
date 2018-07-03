@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: de899d95e25489fa815f099d696752389cc3f94e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817447"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862255"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -93,12 +93,12 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
         <td><a href="../xbox-live/index.md">Guia do desenvolvedor do Xbox Live</a></td>
     </tr>
     <tr>
-        <td>Documentação do desenvolvedor do Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx">Documentação do XDK do Xbox One</a></td>
+        <td>Documentação de desenvolvimento do Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-home">Desenvolvimento para Xbox One</a></td>
     </tr>
     <tr>
-        <td>White papers para desenvolvedores do Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx">White Papers</a></td>
+        <td>White papers para desenvolvimento do Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-whitepapers">White Papers</a></td>
     </tr>
     <tr>
         <td>Documentação do Mixer Interactive</td>
@@ -227,8 +227,8 @@ Há muitas amostras de jogos e aplicativos do Windows 10 disponíveis para ajuda
         <td><a href="https://github.com/Microsoft/xbox-live-samples">exemplos do xbox-live</a></td>
     </tr>
     <tr>
-        <td>Exemplos de jogos do Xbox One (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx">Exemplos</a></td>
+        <td>Exemplos de jogos do Xbox One (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Exemplos</a></td>
     </tr>
     <tr>
         <td>Exemplos de jogos do Windows (Galeria de Códigos do MSDN)</td>
@@ -1645,7 +1645,7 @@ Não deixe que problemas de certificação atrasem o lançamento de seu jogo. Aq
 </table>
  
 
-### <a name="store-manifest-storemanifestxml"></a>Manifesto da Loja (StoreManifest.xml)
+### <a name="store-manifest-storemanifestxml"></a>Manifesto da Store (StoreManifest.xml)
 
 O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional que pode ser incluído no pacote do aplicativo. O manifesto da loja fornece recursos adicionais que não fazem parte do arquivo AppxManifest.xml. Por exemplo, você pode usar o manifesto da loja para bloquear a instalação de seu jogo se um dispositivo de destino não tiver o nível de recurso mínimo especificado do DirectX ou o mínimo especificado para a memória do sistema.
 
@@ -1711,7 +1711,7 @@ O Visual Studio Application Insights fornece análises de desempenho, telemetria
     </tr>
     <tr>
         <td>Habilitar o Application Insights em aplicativos do Windows</td>
-        <td><a href="https://azure.microsoft.com/documentation/articles/app-insights-windows-get-started/">Application Insights para aplicativos do Windows Phone e da Loja</a></td>
+        <td><a href="https://azure.microsoft.com/documentation/articles/app-insights-windows-get-started/">Application Insights para aplicativos do Windows Phone e da Store</a></td>
     </tr>
 </table>
 

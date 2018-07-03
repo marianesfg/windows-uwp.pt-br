@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: e59c90bae19116f725b58fc6ec9fdbb41e5dccb3
-ms.sourcegitcommit: 0ee9c6848cb9d624f15cdab1d0c5991ca7245e70
+ms.openlocfilehash: 4f76bc94c80a5191cf7bad86b43230f0d03e81b1
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "1641686"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917705"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -25,7 +25,7 @@ ms.locfileid: "1641686"
 Uma notificação do sistema é uma mensagem que um aplicativo pode construir e fornecer ao usuário enquanto não estão no seu aplicativo. Este Guia de início rápido conduz você pelas etapas para criar, disponibilizar e exibir uma notificação do sistema Windows 10 com os novos modelos adaptáveis e ações interativas. Estas ações são demonstradas por meio de uma notificação local, que é a notificação mais simples para implementação.
 
 > [!IMPORTANT]
-> Os aplicativos da área de trabalho (Ponte de Desktop e Win32 clássico) têm etapas diferentes para enviar notificações e processar a ativação. Consulte a documentação de [Desktop C#](send-local-toast-desktop.md) e [Desktop C++ WRL](send-local-toast-desktop-cpp-wrl.md) para saber mais sobre como implementar notificações do sistema.
+> Os aplicativos da área de trabalho (Ponte de Desktop e Win32 clássico) têm etapas diferentes para enviar notificações e processar a ativação. Consulte a documentação de [Aplicativos da área de trabalho](toast-desktop-apps.md) para saber mais sobre como implementar notificações do sistema.
 
 Explicaremos os seguintes procedimentos:
 
@@ -382,7 +382,7 @@ BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAs
 // Create the background task
 BackgroundTaskBuilder builder = new BackgroundTaskBuilder()
 {
-    Name = "MyToastNotificationActionTrigger",
+    Name = taskName
 };
 
 // Assign the toast action trigger

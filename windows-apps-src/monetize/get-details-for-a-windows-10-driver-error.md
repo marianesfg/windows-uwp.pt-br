@@ -4,18 +4,18 @@ ms.assetid: 79DC7C99-70F1-499A-856B-D2A83FC6F867
 description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro de driver do Windows 10. Esse método destina-se apenas para IHVs.
 title: Obter detalhes sobre um erro de driver do Windows 10
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
-ms.openlocfilehash: 93a8ee084bae4862beebe0c7998f440f279862a8
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 66729d94f4ea8c6db42b3e573e0e9407d6295e91
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663666"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989370"
 ---
 # <a name="get-details-for-a-windows-10-driver-error"></a>Obter detalhes sobre um erro de driver do Windows 10
 
@@ -85,7 +85,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de erros detalhados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.          |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.        |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.        |
 
 
 Os elementos na matriz *Value* contêm os valores a seguir.
@@ -102,7 +102,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | osName       | cadeia  | O nome do sistema operacional no qual o erro ocorreu.  |
 | eventType       | cadeia  | O tipo do erro que ocorreu.      |
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.     |
-| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>     |
+| deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>Computador</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>     |
 | driverName     | cadeia  | O nome exclusivo do driver associado a esse erro.      |
 | driverVersion  | cadeia  | O versão do driver associado a esse erro.   |
 | architecture | cadeia |  A arquitetura do dispositivo no qual o erro ocorreu.  |
@@ -110,7 +110,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | oemModel | cadeia | O nome do modelo do dispositivo no qual o erro ocorreu. |
 | flightRing | cadeia | O nome de versão de pré-lançamento do sistema operacional no qual o erro ocorreu. |
 | clientDeviceId | cadeia | A ID do dispositivo no qual o erro ocorreu. |
-| cabIdHash         | cadeia  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
+| cabIdHash         | string  | A ID exclusiva do arquivo CAB que está associado a esse erro.   |
 | cabType         | cadeia  | O tipo do arquivo CAB.   |
 | cabExpirationTime  | string  | A data e a hora em que o arquivo CAB expirou e não pôde mais ser baixado, no formato ISO 8601.   |
 

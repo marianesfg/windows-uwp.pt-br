@@ -4,18 +4,18 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: Use a API de envio da Microsoft Store para criar e gerenciar de forma programática os envios de apps que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Criar e gerenciar envios
 ms.author: mcleans
-ms.date: 02/28/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 037f76e9d0c7c9751786ba501478057687bfa910
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 9bd8d2f800969102d6957cafa92e04f482323611
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663676"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976461"
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
 
@@ -31,7 +31,7 @@ As etapas a seguir descrevem o processo completo de usar a API de envio da Micro
 <span id="not_supported" />
 
 > [!IMPORTANT]
-> Se você usar essa API para criar um envio para um app, um pacote de pré-lançamento ou um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo envio.
+> Se você usar essa API para criar um envio para um app, um pacote de pré-lançamento ou um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 > [!IMPORTANT]
 > Você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md) ou publicar os envios de [aplicativos LOB](../publish/distribute-lob-apps-to-enterprises.md) diretamente para empresas. Para esses dois cenários, você deve usar o painel do Centro de Desenvolvimento do Windows para publicar o envio.
@@ -57,7 +57,7 @@ Antes de começar a escrever o código para chamar a API de envio da Microsoft S
 
   * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir um pacote do aplicativo, [prepare o pacote do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
-  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir capturas de tela ou imagens para a listagem da Loja, [prepare as imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * Se você estiver criando ou atualizando um envio de aplicativo e você precisar incluir capturas de tela ou imagens para a listagem da Store, [prepare as imagens e capturas de tela do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
 
   * Se você estiver criando ou atualizando um envio de complemento e você precisar incluir um ícone, [prepare o ícone](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
 
@@ -70,11 +70,11 @@ Antes de usar a API de envio da Microsoft Store, você deverá associar um aplic
 > [!NOTE]
 > Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
-1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e [associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização](../publish/associate-azure-ad-with-dev-center.md).
+1.  No Centro de Desenvolvimento, [associe a conta do Centro de Desenvolvimento ao Azure AD de sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar aplicativos do Azure AD**, adicione o aplicativo do Azure AD que representa o aplicativo ou o serviço que você usará para acessar envios de sua conta do Centro de Desenvolvimento e atribua-o a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Adicionar aplicativos do Azure AD**. Para obter mais informações, consulte [Adicionar aplicativos do Azure AD à sua conta do Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  Em seguida, na página **Usuários** na seção **Configurações da conta** do Centro de Desenvolvimento, [adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa o aplicativo ou o serviço que você usará para acessar envios da sua conta do Centro de Desenvolvimento. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no Azure AD, você pode [criar um novo aplicativo do Azure AD no Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).  
 
-3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
+3.  Volte para a página **Usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
 4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte [Gerenciar chaves para um aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
@@ -133,7 +133,7 @@ Os artigos a seguir fornecem exemplos detalhados de código que demonstram como 
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
 Para obter mais informações, consulte nosso [StoreBroker página no GitHub](https://aka.ms/storebroker).
 

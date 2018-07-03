@@ -15,12 +15,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 528353ba8da8efb35adae60b0810ad6be3045ff1
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 384110e404e5520f9edacc1385242f4aa131a92c
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1493653"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935836"
 ---
 # <a name="semantic-zoom"></a>Zoom semântico
 
@@ -124,7 +124,7 @@ Aqui está o controle GridView para a exibição ampliada. A exibição ampliada
 A aparência dos cabeçalhos de grupo é definida no recurso `ZoomedInGroupHeaderTemplate`. A aparência dos itens é definida no recurso `ZoomedInTemplate`. 
 
 ```xaml
-<DataTemplate x:Key="" x:DataType="data:ControlInfoDataGroup">
+<DataTemplate x:Key="ZoomedInGroupHeaderTemplate" x:DataType="data:ControlInfoDataGroup">
     <TextBlock Text="{x:Bind Title}" 
                Foreground="{ThemeResource ApplicationForegroundThemeBrush}" 
                Style="{StaticResource SubtitleTextBlockStyle}"/>
@@ -199,7 +199,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - veja todos os controles XAML em um formato interativo.
 
 
 ## <a name="related-articles"></a>Artigos relacionados

@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter os rastreamentos de pilha de um erro em seu aplicativo da área de trabalho.
 title: Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 64413600d1e7cb91ce3e8c90d1b64f921cfc21a2
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: dfe496c771c4e69bc51b562c476469e8fef53c92
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663076"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989320"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | Valor      | array   | Uma matriz de objetos contendo cada um deles um quadro de dados de rastreamento de pilha. Para obter mais informações sobre os dados em cada objeto, consulte a seção [Valores de rastreamento de pilha](#stack-trace-values) a seguir. |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10, mas houver mais de 10 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.          |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.          |
 
 
 ### <a name="stack-trace-values"></a>Valores de rastreamento de pilha

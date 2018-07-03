@@ -12,12 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5da807d430683689cf38f2db6920af2dc058a99
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707287"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895135"
 ---
 # <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
 
@@ -704,9 +704,11 @@ Este aplicativo específico usa cor e animação para realçar o ponteiro princi
 **Baixar esse exemplo em [Exemplo de entrada de ponteiro (UserControl com animação)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
 
 ### <a name="visual-feedback"></a>Feedback visual
+
 Definimos um **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)**, com base em um objeto XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)**, que destaca onde cada ponteiro está na tela e usa um **[Storyboard](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar a elipse que corresponde ao ponteiro principal.
 
 **Aqui está o XAML:**
+
 ```xaml
 <UserControl
     x:Class="UWP_Pointers.PointerEllipse"

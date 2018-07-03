@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Test your app for Windows 10 S without having to install Windows 10 S.
+Description: Test your app for Windows 10 in S mode.
 Search.Product: eADQiWindows 10XVcnh
 title: Testar seu aplicativo do Windows para o Windows 10 S
 ms.author: normesta
@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10 S, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5810789ab2457ed14964a61bf278c84e7deb416
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 69cceb86710cea0e9066454fba4ef4e1746633d1
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662706"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874314"
 ---
-# <a name="test-your-windows-app-for-windows-10-s"></a>Testar seu aplicativo do Windows para o Windows 10 S
+# <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Testar seu aplicativo do Windows para o Windows 10 no modo S
 
-Você pode testar seu aplicativo do Windows para verificar se ele funcionará corretamente em dispositivos que executam o Windows 10 S. Na verdade, se você planeja publicar seu app na Microsoft Store, deverá fazer isso porque é um requisito da loja. Para testar seu aplicativo, você pode aplicar uma política de integridade de código do Device Guard em um dispositivo que estiver executando o Windows 10 Pro.
+Você pode testar seu aplicativo do Windows para garantir que ele funcione corretamente em dispositivos que executam o Windows 10 no modo S. Na verdade, se planeja publicar o aplicativo na Microsoft Store, você deve fazer isso, pois é um requisito da Store. Para testar seu aplicativo, você pode aplicar uma política de integridade de código do Device Guard em um dispositivo que estiver executando o Windows 10 Pro.
 
 > [!NOTE]
 > O dispositivo no qual você aplica a política de integridade de código do Device Guard deve estar executando o Windows 10 Creators Edition (10.0; compilação 15063) ou posterior.
@@ -39,8 +39,8 @@ Em seguida, escolha o que faz mais sentido para você. Aqui está o resumo de ca
 
 |Política |Imposição |Certificado de autenticação |Nome do arquivo |
 |--|--|--|--|
-|Política do modo de auditoria |Registra problemas / não bloqueia |Loja |SiPolicy_Audit.p7b |
-|Política de modo de produção |Sim |Loja |SiPolicy_Enforced.p7b |
+|Política do modo de auditoria |Registra problemas / não bloqueia |Store |SiPolicy_Audit.p7b |
+|Política de modo de produção |Sim |Store |SiPolicy_Enforced.p7b |
 |Política de modo de produto com aplicativos auto-assinados |Sim |Certificado de teste do AppX  |SiPolicy_DevModeEx_Enforced.p7b |
 
 Recomendamos que você comece com a política de modo de auditoria. Você pode revisar os registros de eventos de integridade do código e usar essas informações para ajudá-lo a fazer ajustes em seu aplicativo. Em seguida, aplique a política de modo de produção quando estiver pronto para testes finais.
@@ -80,7 +80,7 @@ Recomendamos que você aplique essas políticas a uma máquina virtual porque es
 
 Se você deseja aplicar essas políticas à sua máquina local, é melhor começar com a política de Modo de auditoria. Com esta política, você pode revisar os registros de eventos de integridade do código para garantir que nada crítico seja bloqueado em uma política forçada.
 
-Quando estiver pronto para aplicar uma política, encontre o arquivo .P7B para a política que você escolheu, renomeie-o para **SIPolicy.P7B** e, em seguida, guarde esse arquivo para esse local no seu sistema: **C:\Windows\System32\CodeIntegrity\**.
+Quando estiver pronto para aplicar uma política, encontre o arquivo .P7B para a política escolhida, renomeie-o para **SIPolicy.P7B** e salve esse arquivo neste local do sistema: **C:\Windows\System32\CodeIntegrity\\**.
 
 Em seguida, reinicie o sistema.
 
@@ -101,6 +101,6 @@ Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulte [Como portar e testar seus aplicativos da área de trabalho clássicos no Windows 10 S com a Ponte de Desktop](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
 
-**Saiba mais sobre as ferramentas que facilitam os testes do Windows S**
+**Saiba mais sobre as ferramentas que facilitam os testes do Windows no modo S**
 
 Consulte [Descompactar, modificar, reempacotar, assinar um APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).

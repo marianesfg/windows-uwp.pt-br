@@ -6,18 +6,18 @@ title: Testes de acessibilidade
 label: Accessibility testing
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 02/08/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b059a3088f3f8f9491cb3cccfdddee0a3eeb707
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 02ba4a94bdca7ae9964cc40e7aba40f72beb5429
+ms.sourcegitcommit: e020e9a4d947368a68e4eeba1eea65e9b3a725af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655215"
+ms.lasthandoff: 05/28/2018
+ms.locfileid: "1924349"
 ---
 # <a name="accessibility-testing"></a>Testes de acessibilidade  
 
@@ -30,7 +30,9 @@ Os procedimentos de teste a serem seguidos para garantir que o seu aplicativo da
 O Software Development Kit do Windows (SDK do Windows) inclui várias ferramentas de teste, como [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239), [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) e [**UI Accessibility Checker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985). Essas ferramentas podem ajudar você a identificar a acessibilidade do seu aplicativo. Lembre-se de verificar todos os cenários e elementos da interface do usuário do aplicativo.
 
 Você pode iniciar as ferramentas de teste de acessibilidade a partir de um prompt de comando do Microsoft Visual Studio ou de uma pasta de ferramentas do SDK do Windows (o subdiretório bin de onde o SDK do Windows está instalado na sua máquina de desenvolvimento).
-
+  
+> [!VIDEO https://www.youtube.com/embed/ce0hKQfY9B8]
+  
 <span id="AccScope"/>
 <span id="accscope"/>
 <span id="ACCSCOPE"/>

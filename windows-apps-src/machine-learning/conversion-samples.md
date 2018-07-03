@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, windows machine learning, WinML, WinMLTools, ONNX, ONNXMLTools, scikit-learn, Core ML
 ms.localizationpriority: medium
-ms.openlocfilehash: 882efca26730c990093a89a5ed3ff4b5587e05bf
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 7b2e9c8b661ccd2b0358882992da6c4f160b49f0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832674"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842996"
 ---
 # <a name="convert-existing-ml-models-to-onnx"></a>Converter modelos do ML existentes em ONNX
 
-O [WinMLTools](https://aka.ms/winmltools) permite aos usuários converter modelos treinados em outras estruturas em formato ONNX. Aqui, demonstramos como instalar o pacote WinMLTools e como converter modelos existentes em scikit-learn e Core ML em ONNX por meio de código Python.
+O [WinMLTools](https://pypi.org/project/winmltools/) permite aos usuários converter modelos treinados em outras estruturas em formato ONNX. Aqui, demonstramos como instalar o pacote WinMLTools e como converter modelos existentes em scikit-learn e Core ML em ONNX por meio de código Python.
 
 ## <a name="install-winmltools"></a>Instalar WinMLTools
 
@@ -49,6 +49,9 @@ Detalhes adicionais sobre como usar o WinMLTools podem ser encontrados na docume
 ```
 help(winmltools)
 ```
+
+> [!NOTE]
+> Com a extensão Visual Studio Tools for AI, você também pode usar o WinMLTools no Visual Studio IDE para uma experiência mais amigável de cliques para converter seus modelos em formato ONNX. Para saber mais, visite [VS Tools for AI](https://github.com/Microsoft/vs-tools-for-ai/).
 
 ## <a name="scikit-learn-models"></a>Modelos do Scikit-learn
 

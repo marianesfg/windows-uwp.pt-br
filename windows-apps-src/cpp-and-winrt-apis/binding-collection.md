@@ -3,18 +3,18 @@ author: stevewhims
 description: Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela.
 title: Controles de itens XAML; vincular a uma coleção C++/WinRT
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, coleção
 ms.localizationpriority: medium
-ms.openlocfilehash: 2384dd385208574276dc0b6d03a56f838aad7b84
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 3d9f74e6d0c755e0a247a65751bdab65964ac1f7
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832300"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935722"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>Controles de itens XAML; vincular a uma coleção [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -33,10 +33,13 @@ Se uma classe de tempo de execução que representa uma coleção escolhe aciona
 Um controle de itens XAML pode se associar a e manipular esses eventos, recuperando a coleção atualizada e, em seguida, atualizando ele mesmo para mostrar os elementos atuais.
 
 > [!NOTE]
-> Para obter informações sobre a disponibilidade atual do Visual Studio Extension (VSIX) de C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild de C++/WinRT), veja [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="implement-singlethreadedobservablevectorlttgt"></a>Implementar **single_threaded_observable_vector&lt;T&gt;**
-É bom ter um modelo de vetor observável para servir como uma implementação útil e de uso geral de [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_). Veja uma listagem de uma classe chamada **single_threaded_observable_vector&lt;T&gt;**. No futuro, se isso se tornar um tipo C++/WinRT, será fácil alternar para usar a versão oficial do mesmo.
+É bom ter um modelo de vetor observável para servir como uma implementação útil e de uso geral de [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_). Veja uma lista de uma classe chamada **single_threaded_observable_vector\<T>**.
+
+> [!NOTE]
+> Se você instalou a [Versão Prévia 17661 do SDK do Windows 10](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK) ou posterior, é possível usar diretamente o tipo **winrt::single_threaded_observable_vector\<T\>** em vez da lista de códigos abaixo. Se você ainda não usar essa versão do SDK, é fácil alternar da versão de lista de código para o tipo **winrt** quando quiser.
 
 ```cppwinrt
 // single_threaded_observable_vector.h

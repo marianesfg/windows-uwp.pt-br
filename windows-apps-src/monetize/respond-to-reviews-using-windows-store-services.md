@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: c92c0ea8-f742-4fc1-a3d7-e90aac11953e
 description: Use a API de análises da Microsoft Store para enviar respostas programaticamente às críticas do seu app na Store.
-title: Responder às críticas usando serviços da Loja
+title: Responder às críticas usando serviços da Store
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de análises da Microsoft Store, responder às análises
 ms.localizationpriority: medium
-ms.openlocfilehash: 6800948e0aa65743278342fcf7340a6c4063b18a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: ba921b03011b36507c9cc9f0f05ecda126a2ace5
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654225"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976431"
 ---
-# <a name="respond-to-reviews-using-store-services"></a>Responder às críticas usando serviços da Loja
+# <a name="respond-to-reviews-using-store-services"></a>Responder às críticas usando serviços da Store
 
 Use a *API de análises da Microsoft Store* para enviar respostas às críticas ao seu aplicativo de forma programada na Store. Essa API é especialmente útil para desenvolvedores que desejam responder em massa às diversas análises sem usar o painel do Centro de Desenvolvimento do Windows. Essa API usa o Azure Active Directory (Azure AD) para autenticar as chamadas do seu app ou serviço.
 
@@ -44,11 +44,11 @@ Antes de começar a escrever o código para chamar a API de análises da Microso
 
 Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e recuperar os valores necessários:
 
-1.  No Centro de Desenvolvimento, acesse suas **Configurações de conta**, clique em **Gerenciar usuários** e [associe a sua conta do Centro de Desenvolvimento ao diretório do Azure AD da sua organização](../publish/associate-azure-ad-with-dev-center.md).
+1.  No Centro de Desenvolvimento, [associe a conta do Centro de Desenvolvimento ao Azure AD de sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Na página **Gerenciar usuários**, clique em **Adicionar apps do Azure AD**, adicione o app do Azure AD que representa o app ou o serviço que você usará para gerenciar campanhas promocionais de sua conta do Centro de Desenvolvimento e atribua a ele a função **Gerente**. Se esse aplicativo já existe no diretório do Azure AD, selecione-o na página **Adicionar aplicativos do Azure AD** para adicioná-lo à sua conta do Centro de Desenvolvimento. Do contrário, você pode criar um novo aplicativo do Azure AD na página **Add Azure AD applications**. Para obter mais informações, consulte [Adicionar aplicativos do Azure AD à sua conta do Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  Em seguida, na página **Usuários** na seção **Configurações da conta** do Centro de Desenvolvimento, [adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa o aplicativo ou o serviço que você usará para responder às análises. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no Azure AD, você pode [criar um novo aplicativo do Azure AD no Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account). 
 
-3.  Volte para a página **Gerenciar usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
+3.  Volte para a página **Usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
 4. Clique em **Adicionar nova chave**. Na tela seguinte, copie o valor da **Chave**. Você não poderá acessar essas informações novamente depois que você sair desta página. Para obter mais informações, consulte [Gerenciar chaves para um aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 

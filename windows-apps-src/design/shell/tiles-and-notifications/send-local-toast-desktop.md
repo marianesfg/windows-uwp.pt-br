@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C#, c sharp
 ms.localizationpriority: medium
-ms.openlocfilehash: e869ebb4fad7be55ef4f31c1c7e544ce8c290e4a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816661"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983452"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 
@@ -101,7 +101,7 @@ Se você estiver usando a Ponte de Desktop (ou se ambos forem compatíveis), no 
 1. Declaração para **xmlns:com**
 2. Declaração para **xmlns:desktop**
 3. No atributo **IgnorableNamespaces**, **com** e **desktop**
-4. **com:Extension** do servidor COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
+4. **com:Extension** do ativador COM usando a GUID da etapa 4. Certifique-se de incluir `Arguments="-ToastActivated"` para saber que a inicialização foi de uma notificação do sistema
 5. **desktop:Extension** para **windows.toastNotificationActivation** a fim de declarar a CLSID do ativador de notificação do sistema (a GUID da etapa 4).
 
 **Package.appxmanifest**
@@ -238,6 +238,9 @@ var toast = new ToastNotification(doc);
 DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
 ```
 
+> [!IMPORTANT]
+> Os aplicativos clássicos do Win32 não podem usar modelos de notificação do sistema herdados (como ToastText02). A ativação dos modelos herdados falha quando CLSID COM é especificada. Você deve usar os modelos ToastGeneric do Windows 10 conforme visto acima.
+
 
 ## <a name="step-8-handling-activation"></a>Etapa 8: manipular a ativação
 
@@ -260,7 +263,7 @@ public class MyNotificationActivator : NotificationActivator
         Application.Current.Dispatcher.Invoke(delegate
         {
             // Tapping on the top-level header launches with empty args
-            if (arguments.Length = 0)
+            if (arguments.Length == 0)
             {
                 // Perform a normal launch
                 OpenWindowIfNeeded();
@@ -406,4 +409,6 @@ Se você instalou a Ponte de Desktop e o aplicativo do Win32 clássico, observe 
 ## <a name="resources"></a>Recursos
 
 * [Exemplo de código completo em GitHub](https://github.com/WindowsNotifications/desktop-toasts)
+* [Notificações do sistema a partir de aplicativos da área de trabalho](toast-desktop-apps.md)
 * [Conteúdo e documentação sobre notificações do sistema](adaptive-interactive-toasts.md)
+

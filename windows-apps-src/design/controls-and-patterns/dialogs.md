@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ceb698bfbe95693ff9d5785b4bea94f1ec3070c
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 7b263fda1de798473f581e2191d3fa01385060e6
+ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675373"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1893841"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -255,8 +255,7 @@ Uma caixa de diálogo de confirmação típica tem dois botões: um botão de af
 <ul>
     <li>
         <p>Em geral, o botão de afirmação fica à esquerda (o botão primário) e o botão Cancelar (o botão secundário) fica à direita.</p>
-         ![Uma caixa de diálogo OK/Cancelar](images/dialogs/dialog_RS2_delete_file.png)
-
+        <img alt="An OK/cancel dialog" src="images/dialogs/dialog_RS2_delete_file.png" />
     </li>
     <li>Conforme observado na seção de recomendações gerais, use botões com texto que identifiquem respostas específicas para a instrução ou o conteúdo principal.
     </li>

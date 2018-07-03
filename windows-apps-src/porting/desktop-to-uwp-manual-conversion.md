@@ -4,19 +4,19 @@ Description: Shows how to manually package a Windows desktop application (like W
 Search.Product: eADQiWindows 10XVcnh
 title: Empacotar um app manualmente (Ponte de Desktop)
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 81d5b9b0b52ef0f7529b277215e7fe0b95683f0a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: eeadd41debcfcf5cfde23948c52bdfe1ce32e9df
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689762"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989640"
 ---
 # <a name="package-an-app-manually-desktop-bridge"></a>Empacotar um app manualmente (Ponte de Desktop)
 
@@ -31,8 +31,9 @@ Se não tiver certeza sobre quais alterações seu instalador faz no sistema, ou
 >[!IMPORTANT]
 >A Ponte de Desktop foi introduzida na versão 1607 do Windows 10 e pode ser usada somente em projetos para a Atualização de Aniversário do Windows 10 (10.0; compilação 14393) ou uma versão posterior no Visual Studio.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>Primeiro, considere como você vai distribuir o aplicativo
-Se você planeja publicar seu aplicativo na [Microsoft Store](https://www.microsoft.com/store/apps), comece preenchendo [este formulário](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). A Microsoft entrará em contato com você para iniciar o processo de instalação. Como parte deste processo, você irá reservar um nome na loja e obter informações que você precisará para empacotar seu aplicativo.
+## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
+
+Consulte este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo (Ponte de Desktop)](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Criar um manifesto do pacote
 
@@ -111,7 +112,7 @@ Aqui está um nó exemplo [Recursos](https://docs.microsoft.com/uwp/schemas/appx
 ```
 ### <a name="dependencies"></a>Dependências
 
-Para aplicativos de ponte de desktop, sempre defina o atributo ``Name`` para ``Windows.Desktop``.
+Para aplicativos da área de trabalho empacotados usando a ponte da desktop, sempre defina o atributo ``Name`` como ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -120,7 +121,7 @@ Para aplicativos de ponte de desktop, sempre defina o atributo ``Name`` para ``W
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para aplicativos de ponte de desktop, você deverá adicionar a funcionalidade ``runFullTrust``.
+Para aplicativos da área de trabalho empacotados usando a ponte da desktop, adicione a funcionalidade ``runFullTrust``.
 
 ```XML
 <Capabilities>
@@ -133,7 +134,7 @@ Preencha este modelo com informações que descrevem o seu aplicativo.
 
 ### <a name="application-element"></a>Elemento do aplicativo
 
-Para aplicativos de ponte de desktop, o atributo ``EntryPoint`` do elemento do aplicativo é sempre ``Windows.FullTrustApplication``.
+Para aplicativos da área de trabalho empacotados usando a ponte da desktop, o atributo ``EntryPoint`` do elemento Application é sempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>

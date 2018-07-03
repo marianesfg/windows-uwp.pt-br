@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e54af14d23b255718f5247605b9bdd611f172308
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663836"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862415"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -27,7 +27,7 @@ Este artigo é acompanhado por um exemplo de código:
 
 ## <a name="introduction-to-app-extensions"></a>Introdução a extensões de aplicativo
 
-Plug-ins, suplementos e complementos são nomes diferentes, talvez você esteja familiarizado com o que chamamos de extensões de aplicativos na Plataforma Universal do Windows (UWP). Extensões do Microsoft Edge são extensões de aplicativos UWP. Extensões de aplicativos UWP foram introduzidas na edição de aniversário do Windows 10 (versão 1607, compilação 10.0.14393).
+Na Plataforma Universal do Windows (UWP), as extensões de aplicativo fornecem funcionalidades semelhante às funções de plug-ins, suplementos e complementos em outras plataformas. Por exemplo, extensões do Microsoft Edge são extensões de aplicativos UWP. Extensões de aplicativos UWP foram introduzidas na edição de aniversário do Windows 10 (versão 1607, compilação 10.0.14393).
 
 Extensões de aplicativos UWP são aplicativos UWP que têm uma declaração de extensão que permite que eles compartilhem os eventos de conteúdo e implantação com um aplicativo de hospedagem. Um aplicativo de extensão pode fornecer várias extensões.
 
@@ -423,6 +423,7 @@ Este tópico fornece uma introdução às extensões de aplicativo. Os principai
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
+* [Introdução às extensões de aplicativo](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
 * [Sessão da compilação 2016 sobre extensões de aplicativo](https://channel9.msdn.com/Events/Build/2016/B808)
 * [Exemplo de código de extensão de aplicativo de compilação 2016](https://github.com/Microsoft/App-Extensibility-Sample)
 * [Torne seu aplicativo compatível com tarefas em segundo plano](support-your-app-with-background-tasks.md)

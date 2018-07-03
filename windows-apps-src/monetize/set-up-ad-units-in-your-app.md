@@ -1,29 +1,35 @@
 ---
 author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Loja.
+description: Saiba como adicionar valores de ID da unidade de anúncios e do aplicativo do painel do Centro de Desenvolvimento do Windows ao seu aplicativo antes de enviá-lo para a Store.
 title: Configurar unidades de anúncios em seu aplicativo
 ms.author: mcleans
-ms.date: 10/04/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, unidades publicitária, testes
 ms.localizationpriority: medium
-ms.openlocfilehash: 6473d571ed44f60f8001b8a565d70c58d43407d1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 978f0599ec783b5dcfade82b97c92d1dec9fb541
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654655"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880947"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 
-Cada controle de anúncio no aplicativo UWP (Plataforma Universal do Windows) anúncio intersticial ou controle de anúncio nativo em seu aplicativo tem uma *unidade publicitária* correspondente usada por nossos serviços para veicular anúncios ao controle. Cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo* que você deve atribuir ao [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) ou [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) em seu aplicativo.
+Cada controle de anúncio no aplicativo UWP (Plataforma Universal do Windows) anúncio intersticial ou controle de anúncio nativo em seu aplicativo tem uma *unidade publicitária* correspondente usada por nossos serviços para veicular anúncios ao controle. Cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo* que você deve atribuir ao código em seu aplicativo.
 
 Fornecemos [valores de unidade publicitária de teste](#test-ad-units) que você pode usar durante os testes para confirmar se o aplicativo mostra anúncios de teste. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Se você tentar usar valores de teste em seu aplicativo depois de publicá-lo, seu aplicativo dinâmico não receberá anúncios.
 
 Depois de terminar de testar seu aplicativo UWP e se preparar para enviá-lo ao Centro de Desenvolvimento do Windows, você deve [criar uma unidade publicitária ativa](#live-ad-units) na página [Anúncios no app](../publish/in-app-ads.md) no painel do Centro de Desenvolvimento do Windows e atualizar seu código de aplicativo para usar valores da ID de aplicativo e ID da unidade publicitária para essa unidade publicitária.
+
+Para obter mais informações sobre como atribuir os valores da ID do aplicativo e ID da unidade de anúncios no código do seu aplicativo, consulte os artigos a seguir:
+* [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md)
+* [Anúncios intersticiais](../monetize/interstitial-ads.md)
+* [Anúncios nativos](../monetize/native-ads.md)
 
 <span id="test-ad-units" />
 
@@ -56,15 +62,13 @@ Para obter uma unidade publicitária ativa do painel do Centro de Desenvolviment
 
 2.  Depois de criar a nova unidade publicitária, recupere o **ID do Aplicativo** e a **ID da unidade publicitária** para a unidade publicitária na tabela de unidades publicitárias disponíveis na página **Monetizar** &gt; **Anúncios no app**.
     > [!NOTE]
-    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Ao criar uma unidade publicitária dinâmica UWP no painel, o valor da ID de aplicativo da unidade publicitária sempre corresponde à ID da Microsoft Store do seu aplicativo (um valor de valor da ID da Microsoft Store é semelhante a 9NBLGGH4R315).
+    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Ao criar uma unidade publicitária dinâmica UWP no painel, o valor da ID de aplicativo da unidade publicitária sempre corresponde à ID da Store do seu aplicativo (um valor de valor da ID da Store é semelhante a 9NBLGGH4R315).
 
-3.  Atribua os valores de **ID do Aplicativo** e de **ID da unidade publicitária** no código do seu app:
-
-    * Se o app mostrar anúncios em faixa, atribua esses valores às propriedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) e [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) do seu objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx). Para saber mais, consulte [AdControl em XAML e .NET](../monetize/adcontrol-in-xaml-and--net.md) e [AdControl em HTML5 e JavaScript](../monetize/adcontrol-in-html-5-and-javascript.md).
-
-    * Se seu aplicativo mostrar anúncios intersticiais, passe esses valores para o método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) de seu objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx). Para obter mais informações, consulte [Anúncios intersticiais](../monetize/interstitial-ads.md).
-
-    * Se o app mostrar anúncios nativos, passe esses valores para os parâmetros *applicationId* e *adUnitId* do construtor [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.nativeadsmanager.aspx). Para obter mais informações, consulte [Anúncios nativos](../monetize/native-ads.md).
+3.  Atribua os valores de ID do aplicativo e de ID da unidade publicitária no código do seu aplicativo. Para obter mais informações, consulte os seguintes artigos:
+    * [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)
+    * [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md)
+    * [Anúncios intersticiais](../monetize/interstitial-ads.md)
+    * [Anúncios nativos](../monetize/native-ads.md)
 
 <span id="manage" />
 

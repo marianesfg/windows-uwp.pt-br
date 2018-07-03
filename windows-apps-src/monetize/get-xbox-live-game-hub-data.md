@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter dados do Hub de Jogos Xbox Live.
 title: Obter dados do hub de jogos Xbox Live
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, Hubs de Jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d34c95e615a10131b3e7f3ffe9ceb246b652727
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 70a76f82c37a4cfba6e0a562c8a6295da38976db
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815781"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976191"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Obter dados do Hub de Jogos Xbox Live
 
@@ -22,7 +22,7 @@ ms.locfileid: "1815781"
 Use este método na API de análise da Microsoft Store para obter dados do Hub de Jogos para seu [jogo habilitado para Xbox Live](../xbox-live/index.md). Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
 
 > [!IMPORTANT]
-> No momento, este método só dá suporte a jogos habilitados para o Xbox Live publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) ou enviados por meio do [programa ID@Xbox](../xbox-live/developer-program-overview.md#id). Ele não retorna dados para jogos enviados por meio do [Programa de Criadores do Xbox Live](../xbox-live/developer-program-overview.md#xbox-live-creators-program).
+> Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -88,6 +88,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | gameHubLikeCount     | number |   O número de curtidas adicionadas à página do Hub de Jogos na data especificada.   |
 | gameHubCommentCount          | number |  O número de comentários adicionados à página do Hub de Jogos para seu app na data especificada.  |
 | gameHubShareCount           | number | O número de vezes que a página do Hub de Jogos para seu app foi compartilhada por clientes na data especificada.   |
+| gameHubFollowerCount          | number | O número de seguidores da página do Hub do jogo para seu aplicativo.   |
 
 
 ### <a name="response-example"></a>Exemplo de resposta
@@ -102,14 +103,16 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 10,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15924
     },
     {
       "date": "2018-01-05",
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 12,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15931
     }
   ],
   "@nextLink": null,

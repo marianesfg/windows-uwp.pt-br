@@ -7,28 +7,22 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 05/19/2017
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 07b9ce7b5a57f6dc1ba202ed57e8b2d4d93e583f
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 09f775ad0ba596379b6d3ddf158285849520111f
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654385"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842563"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
-Em um aplicativo da Plataforma Universal do Windows (UWP), *elementos de comando* são os elementos interativos da interface do usuário que permitem aos usuários executar ações, como enviar um email, excluir um item ou enviar um formulário. 
-
-Este artigo descreve os elementos de comando comuns, as interações a que eles dão suporte e as superfícies de comando para hospedá-los.
-
-![elementos de comando no aplicativo Mapas](images/maps.png)
-
-Acima, veja exemplos de elementos de comando no aplicativo Mapas.
+Em um aplicativo da Plataforma Universal do Windows (UWP), *elementos de comando* são os elementos interativos da interface do usuário que permitem aos usuários executar ações, como enviar um email, excluir um item ou enviar um formulário. Este artigo descreve os elementos de comando comuns, as interações a que eles dão suporte e as superfícies de comando para hospedá-los.
 
 ## <a name="provide-the-right-type-of-interactions"></a>Forneça o tipo correto de interações
 
@@ -46,106 +40,54 @@ Algumas interações que talvez seja bom fornecer a seu aplicativo incluem:
 
 Usar os elementos certos para permitir as interações de comando pode fazer a diferença entre um aplicativo que parece intuitivo e fácil de usar e um que parece difícil ou confuso. A Plataforma Universal do Windows (UWP) fornece um grande conjunto de elementos de comando que você pode usar em seu aplicativo. Aqui está uma lista de alguns dos controles mais comuns e um resumo das interações que eles podem habilitar.
 
-<div class="mx-responsive-img">
-<table>
-<thead>
-<tr class="header">
-<th align="left">Categoria</th>
-<th align="left">Elementos</th>
-<th align="left">Interação</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><b>Botões</b><br/><br/>
-    <img src="../controls-and-patterns/images/controls/button.png" alt="button" /></td>
-<td align="left"><a href="../controls-and-patterns/buttons.md">Botão</a></td>
-<td align="left">Aciona uma ação imediata. Dentre alguns exemplos estão: enviar um email, enviar dados de formulários ou confirmar uma ação em uma caixa de diálogo.</td>
-</tr>
-<tr class="even">
-<td align="left">Listas<br/><br/>
-    <img src="../controls-and-patterns/images/controls/combo-box-open.png" alt="drop down list" /></td>
-<td align="left"><a href="../controls-and-patterns/lists.md">lista suspensa, caixa de listagem, modo de exibição de lista e modo de exibição de grade</a></td>
-<td align="left">Apresenta itens em uma lista interativa ou em uma grade. Geralmente usado para muitas opções ou itens de exibição.</td>
-</tr>
-<tr class="odd">
-<td align="left">Controles de seleção<br/><br/>
-    <img src="../controls-and-patterns/images/controls/radio-button.png" alt="radio button" /></td>
-<td align="left"><a href="../controls-and-patterns/checkbox.md">caixa de seleção</a>, <a href="../controls-and-patterns/radio-button.md">botão de opção</a>, <a href="../controls-and-patterns/toggles.md">botão de alternância</a></td>
-<td align="left">Permite que os usuários escolham entre algumas opções, por exemplo, quando concluir uma pesquisa ou definir as configurações do aplicativo.</td>
-</tr>
-<tr class="even">
-<td align="left">Seletores de data e hora<br/><br/>
-    <img src="../controls-and-patterns/images/controls/calendar-date-picker-open.png" alt="date picker" /></td>
-<td align="left"><a href="../controls-and-patterns/date-and-time.md">seletor de data do calendário, modo de exibição de calendário, seletor de data, seletor de hora</a></td>
-<td align="left">Permite que os usuários exibam e modifique informações de data e hora, como quando criar um evento ou definir um alarme.</td>
-</tr>
-<tr class="odd">
-<td align="left">Entrada de texto previsto<br/><br/>
-    <img src="../controls-and-patterns/images/controls/auto-suggest-box.png" alt="autosuggest box" /></td>
-<td align="left"><a href="../controls-and-patterns/auto-suggest-box.md">Caixa de sugestão automática</a></td>
-<td align="left">Fornece sugestões à medida que os usuários digitam, tais como ao inserirem dados ou realizar consultas.</td>
-</tr>
-</tbody>
-</table>
-</div>
+:::linha::: :::coluna::: ![imagem do botão](images/commanding/thumbnail-button.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Botões</b>
 
-Para obter uma lista completa, consulte [Controles e elementos de interface do usuário](https://dev.windows.com/design/controls-patterns)
+        <a href="../controls-and-patterns/buttons.md" style="text-decoration:none">Buttons</a> trigger an immediate action. Examples include sending an email, submitting form data, or confirming an action in a dialog.
+:::fim da linha:::
+
+:::linha::: :::coluna::: ![imagem da lista](images/commanding/thumbnail-list.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Listas</b>
+
+        <a href="../controls-and-patterns/lists.md" style="text-decoration:none">Lists</a> present items in a interactive list or a grid. Usually used for many options or display items. Examples include drop-down list, list box, list view and grid view.
+:::fim da linha:::
+
+:::linha::: :::coluna::: ![imagem do controle de seleção](images/commanding/thumbnail-selection.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Controles de seleção</b>
+
+        Lets users choose from a few options, such as when completing a survey or configuring app settings. Examples include <a href="../controls-and-patterns/checkbox.md">check box</a>, <a href="../controls-and-patterns/radio-button.md">radio button</a>, and <a href="../controls-and-patterns/toggles.md">toggle switch</a>.
+:::fim da linha:::
+
+:::linha::: :::coluna::: ![Imagem de calendário](images/commanding/thumbnail-calendar.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Seletores de calendário, data e hora</b>
+
+        <a href="../controls-and-patterns/date-and-time.md">Calendar, date and time pickers</a> enable users to view and modify date and time info, such as when creating an event or setting an alarm. Examples include calendar date picker, calendar view, date picker, time picker.
+:::fim da linha:::
+
+:::linha::: :::coluna::: ![Imagem de entrada de texto com previsão](images/commanding/thumbnail-autosuggest.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Entrada de texto com previsão</b>
+
+        Provides suggestions as users type, such as when entering data or performing queries. Examples include <a href="../controls-and-patterns/auto-suggest-box.md">auto-suggest box</a>.<br>
+:::fim da linha:::
+
+Para obter uma lista completa, consulte [Controles e elementos de interface do usuário](../controls-and-patterns/index.md)
 
 ##  <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 Você pode colocar elementos de comando em várias superfícies no aplicativo, inclusive na tela do aplicativo ou em elementos de comando especial, como barras de comando, menus, caixas de diálogo e submenus.
 
 Observe que, sempre que possível, você deve permitir que os usuários manipulem diretamente o conteúdo em vez de usar comandos que atuam no conteúdo. Por exemplo, permita que os usuários reorganizem listas arrastando e soltando itens da lista, em vez de usar botões de comando para cima e para baixo.
-  
-Caso contrário, se os usuários não puderem manipular o conteúdo diretamente, coloque os elementos de comando em uma superfície de comando no seu aplicativo:
 
-<div class="mx-responsive-img">
-<table class="uwpd-top-aligned-table">
+Caso contrário, se os usuários não puderem manipular o conteúdo diretamente, coloque os elementos de comando em uma superfície de comando no seu aplicativo. Veja uma lista de algumas das superfícies de comando mais comuns.
 
-<tr class="header">
-<th align="left">Superfície</th>
-<th align="left">Descrição</th>
-<th align="left">Exemplo</th>
-</tr>
+:::linha::: :::coluna::: ![imagem da tela do aplicativo](images/commanding/thumbnail-canvas.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Tela do aplicativo (área de conteúdo)</b>
 
-<tr class="odd">
-<td align="left" style="vertical-align: top">Tela do aplicativo (área de conteúdo)
-<p><img src="images/content-area.png" alt="The content area of an app" /></p></td>
+        If a command is constantly needed for users to complete core scenarios, put it on the canvas. Because you can put commands near (or on) the objects they affect, putting commands on the canvas makes them easy and obvious to use. However, choose the commands you put on the canvas carefully. Too many commands on the app canvas take up valuable screen space and can overwhelm the user. If the command won't be frequently used, consider putting it in another command surface.
+:::fim da linha:::
 
-<td align="left" style="vertical-align: top;">Se um comando for constantemente necessário para que os usuários concluam os principais cenários, coloque-o na tela. Como você pode colocar comandos próximos dos objetos que eles afetam (ou sobre eles), colocar os comandos na tela torna seu uso fácil e evidente.
-<p>No entanto, escolha com atenção os comandos que você colocará na tela. O excesso de comandos na tela do aplicativo ocupa espaço valioso e pode sobrecarregar o usuário. Se o comando não for usado com frequência, considere a possibilidade de colocá-lo em outra superfície de comando.</p> 
-</td><td>
-Uma caixa de sugestão automática na tela do aplicativo Mapas.
-<br></br>
-  <img src="images/maps-canvas.png" alt="autosuggest box on Maps app canvas"/>
-</td>
-</tr>
+:::linha::: :::coluna::: ![imagem da barra de comando](images/commanding/thumbnail-commandbar.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Barras de comando</b>
 
-<tr class="even">
-<td align="left" style="vertical-align: top;"><a href="../controls-and-patterns/app-bars.md">Barra de comandos</a>
-<p><img src="../controls-and-patterns/images/controls_appbar_icons.png" alt="Example of a command bar with icons" /></p></td>
-<td align="left" style="vertical-align: top;"> Barras de comando ajudam a organizar comandos e facilitar o acesso a eles. As barras de comandos podem ser posicionadas na parte superior, na parte inferior ou na parte superior e inferior da tela. 
-</td>
-<td>
-Uma barra de comando na parte superior do aplicativo Mapas.
-<br></br>
-<img src="images/maps-commandbar.png" alt="command bar in Maps app"/>
-</td>
-</tr>
+        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen.
+:::fim da linha:::
 
-<tr class="odd">
-<td align="left" style="vertical-align: top;"><a href="../controls-and-patterns/menus.md">Menus e menus de contexto</a>
-<p><img src="images/controls-contextmenu-singlepane.png" alt="Example of a single-pane context menu" /></p></td>
-<td align="left" style="vertical-align: top;">Às vezes, é mais eficiente agrupar vários comandos em um menu de comando para economizar espaço. Menus e menus de contexto exibem uma lista de comandos ou opções quando o usuário os solicita.
-<p>Os menus de contexto podem fornecer atalhos para ações comumente usadas e fornecer acesso aos comandos secundários que são relevantes somente em determinados contextos, como área de transferência ou comandos personalizados. Menus de contexto geralmente são acionados quando o usuário clica o botão direito do mouse.</p>
-</td><td>
-Um menu de contexto é exibido quando os usuários clicam com o botão direito do mouse no aplicativo Mapas.
-<br></br>
-  <img src="images/maps-contextmenu.png" alt="context menu in Maps app"/>
-</td>
-</tr>
-</table>
-</div>
+:::linha::: :::coluna::: ![imagem do menu de contexto](images/commanding/thumbnail-contextmenu.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Menus e menus de contexto</b>
+
+        Sometimes it is more efficient to group multiple commands into a command menu to save space. <a href="../controls-and-patterns/menus.md">Menus and context menus</a> display a list of commands or options when the user requests them. Context menus can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands. Context menus are usually prompted by a user right-clicking.
+:::fim da linha:::
 
 ## <a name="provide-feedback-for-interactions"></a>Envie comentários sobre as interações
 
@@ -153,48 +95,21 @@ Os comentários transmitem os resultados dos comandos e permite que os usuários
 
 Aqui estão algumas maneiras de fornecer comentários em seu aplicativo.
 
-<div class="mx-responsive-img">
-<table class="uwpd-top-aligned-table">
+:::linha::: :::coluna::: ![imagem da área de conteúdo da barra de comando](images/commanding/thumbnail-commandbar2.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Barra de comando</b>
 
-<tr class="header">
-<th align="left">Superfície</th>
-<th align="left">Description</th>
-</tr>
+        The content area of the <a href="../controls-and-patterns/app-bars.md">command bar</a> is an intuitive place to communicate status to users if they'd like to see feedback.
+:::fim da linha:::
 
-<tr class="odd">
-<td align="left" style="vertical-align: top;"> <a href="../controls-and-patterns/app-bars.md">Barra de comandos</a>
-<p><img src="../controls-and-patterns/images/controls_appbar_icons.png" alt="Example of a command bar with icons" /></p>
-</td>
-<td align="left" style="vertical-align: top;"> A área de conteúdo da barra de comandos é um lugar intuitivo para comunicar o status aos usuários se eles quiserem ver os comentários.
-<p>
-  <img src="images/commandbar_anatomy.png" alt="Command bar content area for feedback"/>
-  </p>
-</td>
-</tr>
+:::linha::: :::coluna::: ![imagem de submenu](images/commanding/thumbnail-flyout.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Submenus</b>
 
-<tr class="even">
-<td align="left" style="vertical-align: top;"><a href="../controls-and-patterns/dialogs.md">Submenu</a>
-<p><img src="images/controls-flyout-default-200.png" alt="Image of default flyout" /></p></td>
-<td align="left" style="vertical-align: top;">
-Um popup contextual leve que pode ser ignorado tocando ou clicando em algum lugar fora do submenu.
-<p>
-  <img src="../controls-and-patterns/images/controls/flyout.png" alt="Flyout above button"/>
-  </p>
-</td>
-</tr>
+       <a href="../controls-and-patterns/dialogs.md">Flyouts</a> are lightweight contextual popups that can be dismissed by tapping or clicking somewhere outside the flyout.
+:::fim da linha:::
 
-<tr class="odd">
-<td align="left" style="vertical-align: top;"><a href="../controls-and-patterns/dialogs.md">Controles de caixa de diálogo</a>
-<p><img src="images/controls-dialog-twobutton-200.png" alt="Example of a simple two-button dialog" /></p></td>
-<td align="left" style="vertical-align: top;">Caixas de diálogo são sobreposições de interface do usuário modais que fornecem informações contextuais do aplicativo. Na maioria dos casos, as caixas de diálogo bloqueiam interações com a janela do aplicativo até que sejam explicitamente ignoradas e muitas vezes solicitam algum tipo de ação do usuário.
-<p>As caixas de diálogo podem causar interrupções e só devem ser usadas em determinadas situações. Para obter mais informações, consulte a seção [Quando confirmar ou desfazer ações](#when-to-confirm-or-undo-actions).</p>
-<p>
-  <img src="../controls-and-patterns/images/dialogs/dialog_RS2_delete_file.png" alt="dialog delete file"/></p>
-</td>
-</tr>
+:::linha::: :::coluna::: ![imagem da caixa de diálogo](images/commanding/thumbnail-dialog.svg) :::fim da coluna::: :::extensão da coluna="2"::: <b>Controles de caixa de diálogo</b>
 
-</table>
-</div>
+        <a href="../controls-and-patterns/dialogs.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
+    :::column-end:::
+:::fim da linha:::
 
 > [!TIP]
 > Tome cuidado com a quantidade de caixas de diálogo de confirmação que seu aplicativo usa; elas podem ser muito úteis quando o usuário comete um erro, mas são um obstáculo sempre que ele está tentando executar intencionalmente uma ação.
@@ -203,18 +118,26 @@ Um popup contextual leve que pode ser ignorado tocando ou clicando em algum luga
 
 Não importa se a interface do usuário foi bem projetada e se o usuário é cuidadoso; em algum momento, todos os usuários executarão uma ação que desejariam não ter feito. Seu aplicativo pode ajudar nessas situações ao exigir que o usuário confirme uma ação, ou ao fornecer uma forma de desfazer ações recentes.
 
--   Para ações que não podem ser desfeitas e têm consequências importantes, recomendamos o uso de uma caixa de diálogo de confirmação. Exemplos de tais ações incluem:
-    -   Substituir um arquivo
-    -   Não salvar um arquivo antes de fechar
-    -   Confirmar a exclusão permanente de um arquivo ou dados
-    -   Fazer uma compra (a menos que o usuário opte por não exigir uma confirmação)
-    -   Enviar um formulário, por exemplo, inscrever-se para algo
--   Para ações que podem ser desfeitas, oferecer um comando Desfazer simples geralmente é suficiente. Exemplos de tais ações incluem:
-    -   Excluir um arquivo
-    -   Excluir um email (não permanentemente)
-    -   Modificar o conteúdo ou editar texto
-    -   Renomear um arquivo
+::: linha:::::: coluna::: ![imagem do que fazer](images/do.svg)
+
+        For actions that can't be undone and have major consequences, we recommend using a confirmation dialog. Examples of such actions include:
+        -   Overwriting a file
+        -   Not saving a file before closing
+        -   Confirming permanent deletion of a file or data
+        -   Making a purchase (unless the user opts out of requiring a confirmation)
+        -   Submitting a form, such as signing up for something
+    :::column-end:::
+    :::column:::
+        ![do image](images/do.svg)
+
+        For actions that can be undone, offering a simple undo command is usually enough. Examples of such actions include:
+        -   Deleting a file
+        -   Deleting an email (not permanently)
+        -   Modifying content or editing text
+        -   Renaming a file
+:::fim da linha:::
 
 ##  <a name="optimize-for-specific-input-types"></a>Otimizar para tipos específicos de entrada
 
 Consulte a [Cartilha de interação](../input/index.md) para obter mais detalhes sobre a otimização de experiências do usuário em relação a um tipo de entrada ou um dispositivo específico.
+

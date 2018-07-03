@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cce355ab6f571f932d9dc10a1b185821118266c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: a6442857f8d7914ab423c0981ae97598084f0068
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690312"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862838"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Ativação do Modo de Desenvolvedor do Xbox One
 
@@ -61,9 +61,9 @@ O Modo de Desenvolvedor pode ser habilitado em qualquer console Xbox One de vare
 ## <a name="switch-between-retail-and-developer-mode"></a>Alternar entre o Modo de Varejo e o Modo de Desenvolvedor
 Quando o Modo de Desenvolvedor tiver sido habilitado no seu console, use **Dev Home** para alternar entre ele e o Modo de Varejo. Para saber mais sobre como iniciar e usar a Dev Home, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).
 
-* Para alternar para o modo de varejo, abra a **Dev Home** e navegue até a guia **Configurações**. Em **Configurações do console**, selecione **Sair do modo de desenvolvimento**. Isso reiniciará o seu console no modo de varejo.    
+* Para alternar para o Modo de varejo, abra a **Home Page de Desenvolvimento**. Em **Ações rápidas**, selecione **Sair do Modo de desenvolvimento**. Isso reiniciará o console no Modo de varejo.    
 
-  ![Etapa de Ativação 13](images/activation-step-13-rs2.png)  
+  ![Etapa de Ativação 13](images/activation-step-13-rs4.png)  
   
 * Para alternar para o Modo de Desenvolvedor, use o aplicativo Ativação do Modo de Desenvolvedor. Abra o aplicativo e selecione **Alternar e reiniciar**. Isso reiniciará o seu console no Modo de Desenvolvedor.  
 

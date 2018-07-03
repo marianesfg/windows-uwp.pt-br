@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21dc29758a4622f810a02e7e5bb0ec117e4dbc2a
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638550"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976504"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -54,16 +54,14 @@ Abra as páginas de propriedades do projeto.
 
 Nas configurações **Geral** do grupo de configurações **C/C++**, defina o campo **Consume Windows Runtime Extension** como **Sim(/ZW)**.
 
-   ![Consumir a Extensão do Windows Runtime](images/desktop-to-uwp/enable-winrt-objects.png)
+   ![Consumir a Extensão do Windows Runtime](images/desktop-to-uwp/consume-runtime-extensions.png)
 
 Abra a caixa de diálogo **Diretórios #using adicionais** e adicione esses diretórios.
 
-* C:\Arquivos de Programas (x86)\Microsoft Visual Studio 14.0\VC\vcpackages
+* %VSInstallDir%\Common7\IDE\VC\vcpackages
 * C:\Arquivos de Programas (x86)\Windows Kits\10\UnionMetadata
 * C:\Arquivos de Programas (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\<*última versão*>
 * C:\Arquivos de Programas (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\<*latest version*>
-
-![Diretórios using adicionais](images/desktop-to-uwp/additional-using.png)
 
 Abra a caixa de diálogo **Diretórios Include Adicionais** e adicione este diretório: C:\Arquivos de Programas (x86)\Windows Kits\10\Include\<*última versão*>\um
 
@@ -238,7 +236,7 @@ A maneira mais fácil de adicionar verificações de tempo de execução ao seu 
 
 * [Exemplo do Hello World](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [Bloco Secundário](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
-* [Exemplo de API da Loja](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
+* [Exemplo de API da Store](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
 * [App WinForms que implementa uma UpdateTask UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Exemplos de ponte de aplicativo de desktop para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 

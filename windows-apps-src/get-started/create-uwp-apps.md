@@ -3,94 +3,77 @@ author: QuinnRadich
 title: Criar apps com a Plataforma Universal do Windows
 description: É mais fácil do que você imagina criar um aplicativo UWP (Plataforma Universal do Windows) para Windows 10.
 ms.author: quradic
-ms.date: 08/24/2017
+ms.date: 5/7/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: 66536a3059ea6d9b17709c836f4149b1ec583165
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: c31a659b7584bec5a8f71307c40a220e17d62b53
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692707"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843529"
 ---
-# <a name="create-apps-for-windows-10"></a>Criar apps para Windows 10
+# <a name="start-coding"></a>Comece a codificar
 
 ![Criar seu aplicativo](images/build-your-app.png)
 
-Bem-vindo à [plataforma UWP](universal-application-platform-guide.md)! Se você estiver interessado em começar a usar seu primeiro aplicativo UWP ou estiver tentando usar recursos mais avançados, estes tutoriais colocarão você no caminho certo. Você aprenderá a:
+Bem-vindo à [plataforma UWP](universal-application-platform-guide.md)! Nessa página, indicaremos as informações corretas para você começar a codificar os aplicativos do Windows 10 que deseja criar.
 
--   Criar projetos UWP no Microsoft Visual Studio.
--   Adicionar elementos de interface do usuário e código ao projeto.
--   Use XAML, vinculação de dados e outros elementos fundamentais da UWP.
--   Incorpore recursos UWP exclusivos, como Tinta e Discagem, em seu aplicativo.
--   Use bibliotecas de terceiros para adicionar nova funcionalidade.
--   Compilar e depurar o app no computador local.
+Antes de começar o desenvolvimento, você deve [preparar-se.](get-set-up.md)
 
-## <a name="ask-a-bot"></a>Perguntar em um bot!
+## <a name="learning-tracks"></a>Acompanhamento de aprendizagem
 
-Se você não conseguir mais avançar ou precisar de ajuda para encontrar os documentos certos, tente perguntar no bot de chat experimental abaixo. Por exemplo, pergunte "Onde posso baixar o Visual Studio?" ou diga "Fale-me sobre o Design Fluent". Se você não receber uma resposta útil, tente reescrever a consulta.
+Os acompanhamentos de aprendizagem a seguir mostram o que você precisa saber para concluir algumas tarefas básicas e onde você pode encontrar essas informações. Eles não são tutoriais, mas fornecem código de referência para garantir que você está no caminho certo.
 
-<iframe src='https://webchat.botframework.com/embed/DocBot4?s=T2nP6qZUXC8.cwA.lvc.AR-ZBwtULpaITu6_dAhMwrmg4R2GSLNzIoiMNFL8M7M' height="400" width="400"></iframe>
+| Tarefa | Descrição |
+| --- | --- |
+| [Construir um formulário](construct-form-learning-track.md) | Saiba como criar um formulário fácil de usar e com boa aparência independentemente do tamanho da tela. | 
+| [Exibir clientes em uma lista](display-customers-in-list-learning-track.md) | Saiba como exibir e editar os dados na sua interface do usuário. | 
+| [Salvar e carregar configurações](settings-learning-track.md) | Saiba como e onde salvar e recuperar configurações. |
+| [Trabalhar com arquivos](fileio-learning-track.md) | Saiba como ler e gravar arquivos, e quais pastas você pode ou não acessar. | 
 
-## <a name="write-your-first-uwp-app-in-your-favorite-programming-language"></a>Escrever seu primeiro aplicativo UWP na sua linguagem de programação favorita
+Todos os acompanhamentos de aprendizado foram criados para desenvolvedores experientes que estão familiarizados com o Windows 10. Se você for um iniciante, comece com o conteúdo [para novos desenvolvedores](#For-new-developers).
 
-Se você for um novo desenvolvedor ou se você estiver familiarizado com a plataforma Windows e deseja começar a usar a UWP, confira estes tutoriais básicos:
+## <a name="for-new-developers"></a>Para novos desenvolvedores
 
-* [Crie seu primeiro aplicativo UWP com C#, Visual C++ ou JavaScript](your-first-app.md)
+Se você for um novo desenvolvedor, a Microsoft tem muitos recursos para ensinar os fundamentos de uso do código e das ferramentas necessárias para desenvolvimento do Windows 10. 
 
-Você é desenvolvedor do IOS?
+* [Criar um aplicativo "Hello, World"](your-first-app.md)
 
-* Use a [Ponte do Windows para iOS](https://developer.microsoft.com/windows/bridges/ios) para converter o código existente em aplicativo UWP e manter o desenvolvimento em Objective-C.
+Se você deseja um tutorial mais detalhado sobre as noções básicas de codificação, a linguagem C#, o Visual Studio ou os recursos da Plataforma Universal do Windows, confira os recursos a seguir:
 
-Se você ainda estiver aprendendo ou precisar refrescar a memória, tente ler estes recursos externos:
+**Documentos:**
 
-* [Guia do desenvolvedor para o Windows 10](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [Introdução ao C#](https://docs.microsoft.com/dotnet/csharp/getting-started/)
+* [Guia de início rápido do C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/index)
+* [Introdução ao Visual Studio](https://docs.microsoft.com/visualstudio/ide/)
 
-## <a name="customize-your-apps-layout-and-appearance-with-xaml"></a>Personalizar o layout e a aparência do app com XAML
+**Vídeos**
 
-A maioria dos aplicativos UWP usa a linguagem de marcação XAML para criar a interface do usuário. Saiba como você pode usar seus principais recursos para personalizar a apresentação visual do seu aplicativo e explorar essa orientação para criar uma aparência exclusiva para seu aplicativo.
+* [Microsoft virtual academy](https://mva.microsoft.com/training-topics/c-app-development#!level=Beginner&lang=1033)
+* [LinkedIn Learning](https://www.linkedin.com/learning/learning-universal-windows-app-development/welcome)
 
-* [Introdução ao design da interface do usuário de aplicativos](../design/basics/design-and-ui-intro.md)
-* [Tutorial: Criar uma interface do usuário em XAML](../design/basics/xaml-basics-ui.md)
-* [Layout para aplicativos UWP](../design/layout/index.md)
-* [Controles e padrões para aplicativos UWP](../design/controls-and-patterns/index.md)
+## <a name="using-the-docs"></a>Uso dos documentos
 
-## <a name="use-features-unique-to-windows-10"></a>Usar recursos exclusivos do Windows 10
+Se você já explorou nossos acompanhamentos de aprendizagem ou se estiver interessado em algo que eles não incluem, você deve consultar a documentação. Veja um resumo rápido que você pode encontrar em cada área:
 
-O que torna o Windows 10 especial? Aprender a usar apenas alguns de seus recursos exclusivos
+| Área | Descrição |
+| --- | --- |
+| **Novidades** | Cada atualização importante do Windows 10 amplia os documentos com novas diretrizes. Esses documentos têm informações sobre o recurso e diretrizes para desenvolvedores que adicionamos para cada versão, além de listas das novas APIs: </br>   [Novidades para desenvolvedores na última versão do Windows10](../whats-new/windows-10-version-latest.md) </br> As versões principais não são o único momento em que atualizamos os documentos. Sempre há novas informações adicionadas para explorar e nós mantemos você atualizado sobre as últimas informações: </br>   [Quais são as novidades nos docs](../whats-new/windows-docs-latest.md) |
+| **Design e interface do usuário** | Todas as informações sobre a apresentação visual e a interface do usuário do seu aplicativo estão contidas nessa área dos documentos. Se você estiver interessado em obter mais detalhes sobre a linguagem de marcação XAML ou apenas quiser criar uma aparência exclusiva para seus documentos, comece aqui: </br>   [Noções básicas de design para aplicativos UWP](../design/basics/index.md) |
+| **Desenvolver aplicativos** | Se você deseja obter informações detalhadas sobre um recurso específico do Windows 10 ou apenas está interessado em ver o que pode fazer com o desenvolvimento da UWP, confira esta área dos documentos: </br>   [recursos de aplicativo UWP](../develop/index.md). </br> A referência de API para aplicativos do Windows 10 está hospedada em um conjunto relacionado de documentos, que pode ser encontrado aqui: </br>   [Namespaces de UWP do Windows](https://docs.microsoft.com/en-us/uwp/api/) </br>   [Arquivo e esquemas XML](https://docs.microsoft.com/uwp/schemas/) |
+| **Desenvolver jogos** | Esses documentos contêm informações sobre como desenvolver jogos no Windows ou no Xbox. Isso inclui instruções de instalação, programas de desenvolvedor e instruções para programar com recursos do DirectX ou Xbox. </br>   [Introdução ao desenvolvimento de jogos](../gaming/getting-started.md) |
+| **Publicar** | Esses documentos contêm informações sobre como publicar seu aplicativo da Microsoft Store, do envio de aplicativo ao preço para promoção e compromisso do cliente: </br>   [Publicar seu aplicativo na Microsoft Store](../publish/index.md) |
 
-* [Tutorial: Oferecer suporte à tinta no aplicativo UWP](../design/input/ink-walkthrough.md)
-* [Tutorial: suporte ao Surface Dial](../design/input/radialcontroller-walkthrough.md)
-* [Explore as novidades da versão mais recente do Windows](../whats-new/windows-10-version-latest.md)
+## <a name="other-docs"></a>Outros documentos
 
-Explore artigos de instruções e documentação detalhada para o desenvolvimento do Windows 10:
+Algumas plataformas especializadas do Windows 10, como o desenvolvimento para a Web ou de realidade misturada, têm seus próprios conjuntos de documentos. Se você estiver interessado em desenvolver um aplicativo com esses recursos, confira a documentação:
 
-* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Referência de API para aplicativos UWP](https://docs.microsoft.com/en-us/uwp/)
-
-## <a name="develop-javascript-and-web-apps"></a>Desenvolver apps JavaScript e Web
-
-A UWP é uma plataforma extremamente flexível que oferece suporte a uma ampla variedade de linguagens e estruturas. Crie aplicativos UWP com JavaScript e use suas habilidades para criar apps Web hospedados que podem estar em destaque na Microsoft Store.
-
-* [Usufrua de seus conhecimentos sobre a Web para criar aplicativos usando HTML5, CSS3 e JavaScript.](your-first-app.md#javascript-and-html)
-
-Interessado em mais informações sobre como criar apps Web?
-
-* [Documentação do desenvolvedor do Microsoft Edge](https://docs.microsoft.com/microsoft-edge/)
-
-## <a name="cross-platform-and-mobile-development"></a>Desenvolvimento móvel e plataforma cruzada
-
-* Necessário para direcionar o Android e iOS? Confira [Xamarin](https://www.xamarin.com).
-
-## <a name="see-also"></a>Consulte também
-
-* [Como publicar seu aplicativo UWP](https://developer.microsoft.com/store/publish-apps).
-* [Artigos de instruções sobre como desenvolver aplicativos UWP](https://developer.microsoft.com/windows/apps/develop)
-* [Amostras de código para desenvolvedores UWP](https://developer.microsoft.com/windows/samples)
-* [O que é um aplicativo UWP?](universal-application-platform-guide.md)
-* [Faça a configuração](get-set-up.md)
-* [Inscreva-se para a conta do Windows](sign-up.md)
+| Documentos | Descrição |
+| --- | --- |
+| **Microsoft Azure** | Encontre Informações sobre o desenvolvimento em nuvem e o Microsoft Azure na [documentação de desenvolvedor do Microsoft Azure.](https://docs.microsoft.com/azure/) |
+| **Desenvolvimento para a Web** | Encontre informações sobre o Microsoft Edge, WebVR e outros recursos de desenvolvimento para a Web do Windows na [documentação de desenvolvedor do Microsoft Edge.](https://docs.microsoft.com/microsoft-edge/) |
+| **Windows Mixed Reality** | A realidade misturada combina conteúdo real e virtual em experiências onde objetos físicos e digitais coexistem. Encontre informações sobre como criar aplicativos para o Microsoft HoloLens e outros headsets imersivos na [documentação do Windows Mixed Reality.](https://docs.microsoft.com/en-us/windows/mixed-reality/)|

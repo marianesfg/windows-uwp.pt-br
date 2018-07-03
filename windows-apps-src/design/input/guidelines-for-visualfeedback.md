@@ -12,15 +12,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a986d6de680a3024ae252ba640871f9c5d22141
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 4653e07d6d81f884ee6519206e75350aa47945f8
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707041"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917581"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
-
 
 Use o feedback visual para mostrar aos usuários quando suas interações são detectadas, interpretadas e manipuladas. O feedback visual poderá ajudar os usuários incentivando a interação. Ele indica o sucesso da interação, o que oferece ao usuário uma sensação de controle. Ele também retransmite o status do sistema e reduz os erros.
 
@@ -28,10 +27,13 @@ Use o feedback visual para mostrar aos usuários quando suas interações são d
 
 ## <a name="recommendations"></a>Recomendações
 
--   Tente permanecer o mais próximo do modelo de controle original quanto possível, para obter controle e desempenho de aplicativo otimizados.
--   Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
--   Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
+- Tente limitar modificações de um modelo de controle para aqueles diretamente relacionados à sua intenção de design, pois grandes alterações podem afetar o desempenho e a acessibilidade do controle e de seu aplicativo. 
+    - Consulte [estilos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) para obter mais informações sobre como personalizar as propriedades de um controle, incluindo propriedades de estado visual.
+    - Consulte a [Classe UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para obter mais detalhes sobre como fazer alterações em um modelo de controle
+    - Considere criar seu próprio controle de modelo personalizado se precisar fazer alterações significativas em um modelo de controle. Para obter um exemplo de um controle de modelo personalizado, consulte o [exemplo de Controle de edição personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+- Não use visualizações de toque em situações em que possam interferir com o uso do aplicativo. Para obter mais informações, consulte [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+- Não exiba comentários a menos que seja absolutamente necessário. Mantenha a interface do usuário clara e organizada sem mostrar o feedback visual, a menos que você esteja agregando valor que não esteja disponível em nenhum outro lugar.
+- Tente não personalizar os comportamentos do feedback visual dos gestos internos do Windows em excesso, porque isso pode criar uma experiência inconsistente e confusa para o usuário.
 
 ## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
@@ -39,8 +41,8 @@ As visualizações por contato são especialmente críticas para as interações
 
 Usar os controles da plataforma padrão XAML disponíveis garante que o aplicativo funcione corretamente em todos os dispositivos e em situações de entrada. Se o seu aplicativo permitir interações personalizadas que exijam comentários personalizados, você deverá garantir que os comentários sejam adequados, que eles se propaguem em dispositivos de entrada e que não distraiam o usuário da tarefa. Isso pode ser um problema específico em aplicativos de jogos ou de desenho, em que o feedback visual pode entrar em conflito ou até mesmo obscurecer uma interface do usuário essencial.
 
-> [!Important] 
-> Não recomendamos mudar o comportamento da interação dos gestos internos. 
+> [!Important]
+> Não recomendamos mudar o comportamento da interação dos gestos internos.
 
 **Comentários em todos os dispositivos**
 
@@ -59,6 +61,8 @@ Estes são alguns exemplos de visualizações internas de contato do Windows.
 ## <a name="high-visibility-focus-visuals"></a>Elementos visuais de foco de alta visibilidade
 
 Todos os aplicativos do Windows ostentam elementos visual de foco mais definido em torno de controles interativos do aplicativo. Esses novos elementos visuais de foco são totalmente personalizáveis, assim como desativáveis quando necessário.
+
+Para a **experiência de 10 pés** típica do uso de Xbox e programa de TV, o Windows oferece suporte ao **Foco de revelação**, um efeito de iluminação que anima a borda de elementos de foco, como um botão, quando estão em foco pela entrada do gamepad ou teclado. Para obter mais informações, consulte [Projetar para Xbox e TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv#reveal-focus).
 
 ## <a name="color-branding--customizing"></a>Personalização e identidade visual de cores
 

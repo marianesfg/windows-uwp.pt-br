@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0015a74750e08d575cad9d0ae78f8c864b7c09
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4fcce21608bf8711a97f9272a800d73c0476cdcb
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573203"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976604"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 
@@ -29,9 +29,6 @@ Graças à [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/de
 > **Requer a Fall Creators Update**: você deve usar o SDK 16299 e executar o build 16299 ou posterior para marcar blocos secundários nos aplicativos de Ponte de Desktop.
 
 Adicionar um bloco secundário do aplicativo WPF ou WinForms é muito parecido com um aplicativo UWP puro. A única diferença é que você deve especificar o identificador da janela principal (HWND). Isso ocorre porque, ao fixar um bloco, o Windows exibe uma caixa de diálogo modal solicitando que o usuário confirme se deseja fixar o bloco. Se o aplicativo da área de trabalho não configurar o objeto SecondaryTile com a janela do proprietário, o Windows não saberá onde exibir a caixa de diálogo, e a operação falhará.
-
-> [!IMPORTANT]
-> Atualmente, as notificações de bloco não são permitidas em blocos secundários criados pela Ponte de Desktop. Estamos trabalhando para habilitar esse recurso. 
 
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Empacotar o aplicativo com a Ponte de Desktop
@@ -96,7 +93,10 @@ bool isPinned = await tile.RequestCreateAsync();
 
 ## <a name="send-tile-notifications"></a>Enviar notificações de bloco
 
-Atualmente, as notificações de bloco enviadas para blocos secundários não são compatíveis com aplicativos da Ponte de Desktop. Se você tentar enviar uma notificação de bloco para um bloco secundário, você receberá uma exceção *Elemento não encontrado* com HResult 0x80070490. Estamos trabalhando para habilitar esse recurso.
+> [!IMPORTANT]
+> **Requer a versão 17134.81 de abril de 2018 ou posterior**: você deve executar a versão 17134.81 ou posterior para enviar as notificações de bloco para blocos secundários pelos aplicativos da Ponte de Desktop. Antes da atualização de serviço .81, uma exceção de 0x80070490 *Elemento não encontrado* não ocorreria ao enviar notificações de bloco para blocos secundários pelos aplicativos de Ponte de Desktop.
+
+O envio de notificações de bloco ou selo é o mesmo para aplicativos UWP. Consulte [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) para começar.
 
 
 ## <a name="resources"></a>Recursos

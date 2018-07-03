@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 layout: LandingPage
-description: A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Loja.
+description: A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Store.
 title: Documentação da UWP - desenvolvedor de aplicativo UWP | Documentos da Microsoft
 ms.prod: windows
 ms.topic: landing-page
@@ -10,12 +10,12 @@ ms.date: 08/4/2017
 ms.technology: uwp
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48faa2eb29e29dd95028d8404190a7add2536352
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: 48c5dc7352a44e3e07b78e78ae0b5e099660ec4f
+ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692331"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1893861"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.
@@ -117,13 +117,13 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
                             <a href="enterprise/index.md">Aplicativos corporativos</a>
                         </p>
                         <p>
-                            <a href="packaging/index.md">Empacotar apps</a>
+                            <a href="packaging/index.md">Empacotar aplicativos</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de ferramentas da Comunidade UWP</a>
+                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de Ferramentas da Comunidade do Windows</a>
                         </p>
                         <p>
-                            <a href="porting/index.md">Portando apps para o Windows 10</a>
+                            <a href="porting/index.md">Portabilidade de aplicativos para o Windows 10</a>
                         </p>
                         <p>
                             <a href="winrt-components/index.md">Componentes do Tempo de Execução do Windows</a>

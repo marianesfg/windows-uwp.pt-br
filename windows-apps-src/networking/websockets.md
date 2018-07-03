@@ -4,18 +4,18 @@ description: Os WebSockets fornecem um mecanismo para comunicações bidireciona
 title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, rede, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: 35997bbfcb59ed92403cf51afaf896b9564ed871
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 3a9cec73cc31fb04b03c1a3d49246f4dc803e4ea
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817757"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983653"
 ---
 # <a name="websockets"></a>WebSockets
 Os WebSockets fornecem um mecanismo para comunicações bidirecionais rápidas e seguras entre um cliente e um servidor na Web usando HTTP(S), suportando tanto mensagens UTF-8 quanto binárias.
@@ -26,9 +26,9 @@ Para estabelecer uma conexão de WebSocket, um handshake baseado em HTTP é troc
 
 **Observação** Um cliente não pode usar WebSockets para transferir dados, a menos que o servidor também use o protocolo WebSocket. Se o servidor não puder dar suporte a WebSockets, use outro método de transferência de dados.
 
-A Plataforma Universal do Windows (UWP) dá suporte ao uso de WebSockets pelo cliente e pelo servidor. O namespace [**Windows.Networking.Sockets**](/uwp/api/windows.networking.sockets?branch=live) define duas classes de WebSocket a serem usadas por clientes&mdash;[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket?branch=live) e [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket?branch=live). Está é uma comparação dessas duas classes de WebSocket.
+A Plataforma Universal do Windows (UWP) dá suporte ao uso de WebSockets pelo cliente e pelo servidor. O namespace [**Windows.Networking.Sockets**](/uwp/api/windows.networking.sockets) define duas classes de WebSocket a serem usadas por clientes&mdash;[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) e [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket). Está é uma comparação dessas duas classes de WebSocket.
 
-| [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket?branch=live) | [StreamWebSocket](/uwp/api/windows.networking.sockets.streamwebsocket?branch=live) |
+| [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket) | [StreamWebSocket](/uwp/api/windows.networking.sockets.streamwebsocket) |
 | - | - |
 | Uma mensagem WebSocket inteira é lida/gravada em uma operação única. | Seções de uma mensagem podem ser lidas com cada operação de leitura. |
 | Apropriado quando as mensagens não são muito grandes. | Adequado quando arquivos muito grandes (como fotos ou vídeos) são transferidos. |
@@ -53,8 +53,25 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Networking.Sockets.h>
+#include <winrt/Windows.UI.Xaml.Navigation.h>
+#include <sstream>
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml::Navigation;
+...
+IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
+{
+    Windows::Networking::Sockets::MessageWebSocket webSocket;
+    co_await webSocket.ConnectAsync(Uri{ L"wss://www.contoso.com/mywebservice" });
+}
+```
+
 ## <a name="use-messagewebsocket-to-connect"></a>Use MessageWebSocket para conectar
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket?branch=live) permite que uma mensagem WebSocket inteira seja lida/gravada em uma operação única. Consequentemente, ele é apropriado quando as mensagens não são muito grandes. A classe suporta tanto mensagens UTF-8 quanto binárias.
+[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) permite que uma mensagem WebSocket inteira seja lida/gravada em uma operação única. Consequentemente, ele é apropriado quando as mensagens não são muito grandes. A classe suporta tanto mensagens UTF-8 quanto binárias.
 
 Este exemplo de código abaixo usa o servidor de eco WebSocket.org&mdash;um serviço que exibe de volta para o remetente qualquer mensagem enviada a ele.
 
@@ -120,18 +137,94 @@ private void WebSocket_Closed(Windows.Networking.Sockets.IWebSocket sender, Wind
 }
 ```
 
-```cpp
-#include <ppltasks.h>
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Networking.Sockets.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.UI.Xaml.Navigation.h>
 #include <sstream>
 
-    ...
-    
+using namespace winrt;
 using namespace Windows::Foundation;
 using namespace Windows::Storage::Streams;
 using namespace Windows::UI::Xaml::Navigation;
+...
+private:
+    Windows::Networking::Sockets::MessageWebSocket m_messageWebSocket;
+    winrt::event_token m_messageReceivedEventToken;
+    winrt::event_token m_closedEventToken;
 
-    ...
+public:
+    IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
+    {
+        // In this example, we send/receive a string, so we need to set the MessageType to Utf8.
+        m_messageWebSocket.Control().MessageType(Windows::Networking::Sockets::SocketMessageType::Utf8);
 
+        m_messageReceivedEventToken = m_messageWebSocket.MessageReceived({ this, &MessageWebSocketPage::OnWebSocketMessageReceived });
+        m_closedEventToken = m_messageWebSocket.Closed({ this, &MessageWebSocketPage::OnWebSocketClosed });
+
+        try
+        {
+            co_await m_messageWebSocket.ConnectAsync(Uri{ L"wss://echo.websocket.org" });
+            SendMessageUsingMessageWebSocketAsync(L"Hello, World!");
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+
+private:
+    IAsyncAction SendMessageUsingMessageWebSocketAsync(std::wstring message)
+    {
+        DataWriter dataWriter{ m_messageWebSocket.OutputStream() };
+        dataWriter.WriteString(message);
+
+        co_await dataWriter.StoreAsync();
+        dataWriter.DetachStream();
+        std::wstringstream wstringstream;
+        wstringstream << L"Sending message using MessageWebSocket: " << message.c_str() << std::endl;
+        ::OutputDebugString(wstringstream.str().c_str());
+    }
+
+    void OnWebSocketMessageReceived(Windows::Networking::Sockets::MessageWebSocket const& /* sender */, Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs const& args)
+    {
+        try
+        {
+            DataReader dataReader{ args.GetDataReader() };
+
+            dataReader.UnicodeEncoding(Windows::Storage::Streams::UnicodeEncoding::Utf8);
+            auto message = dataReader.ReadString(dataReader.UnconsumedBufferLength());
+            std::wstringstream wstringstream;
+            wstringstream << L"Message received from MessageWebSocket: " << message.c_str() << std::endl;
+            ::OutputDebugString(wstringstream.str().c_str());
+            m_messageWebSocket.Close(1000, L"");
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+
+    void OnWebSocketClosed(Windows::Networking::Sockets::IWebSocket const& /* sender */, Windows::Networking::Sockets::WebSocketClosedEventArgs const& args)
+    {
+        std::wstringstream wstringstream;
+        wstringstream << L"WebSocket_Closed; Code: " << args.Code() << ", Reason: \"" << args.Reason().c_str() << "\"" << std::endl;
+        ::OutputDebugString(wstringstream.str().c_str());
+        // Add additional code here to handle the WebSocket being closed.
+    }
+```
+
+```cpp
+#include <ppltasks.h>
+#include <sstream>
+...
+using namespace Windows::Foundation;
+using namespace Windows::Storage::Streams;
+using namespace Windows::UI::Xaml::Navigation;
+...
 private:
     Windows::Networking::Sockets::MessageWebSocket^ messageWebSocket;
 
@@ -203,99 +296,18 @@ private:
     }
 ```
 
-```cppwinrt
-#include "winrt/Windows.Foundation.h"
-#include "winrt/Windows.Networking.Sockets.h"
-#include "winrt/Windows.Storage.Streams.h"
-#include "winrt/Windows.UI.Xaml.Navigation.h"
-#include <sstream>
-
-using namespace winrt;
-using namespace Windows::Foundation;
-using namespace Windows::Storage::Streams;
-using namespace Windows::UI::Xaml::Navigation;
-...
-
-private:
-    Windows::Networking::Sockets::MessageWebSocket m_messageWebSocket;
-    winrt::event_token m_messageReceivedEventToken;
-    winrt::event_token m_closedEventToken;
-
-public:
-    IAsyncAction OnNavigatedTo(NavigationEventArgs const&)
-    {
-        // In this example, we send/receive a string, so we need to set the MessageType to Utf8.
-        m_messageWebSocket.Control().MessageType(Windows::Networking::Sockets::SocketMessageType::Utf8);
-
-        m_messageReceivedEventToken = m_messageWebSocket.MessageReceived({ this, &MainPage::OnWebSocketMessageReceived });
-        m_closedEventToken = m_messageWebSocket.Closed({ this, &MainPage::OnWebSocketClosed });
-
-        try
-        {
-            co_await m_messageWebSocket.ConnectAsync(Uri{ L"wss://echo.websocket.org" });
-            SendMessageUsingMessageWebSocketAsync(L"Hello, World!");
-        }
-        catch (winrt::hresult_error const& ex)
-        {
-            Windows::Web::WebErrorStatus webErrorStatus = Windows::Networking::Sockets::WebSocketError::GetStatus(ex.code());
-            // Add additional code here to handle exceptions.
-        }
-    }
-
-private:
-    IAsyncAction SendMessageUsingMessageWebSocketAsync(std::wstring const& message)
-    {
-        DataWriter dataWriter{ m_messageWebSocket.OutputStream() };
-        dataWriter.WriteString(message);
-
-        co_await dataWriter.StoreAsync();
-        dataWriter.DetachStream();
-        std::wstringstream wstringstream;
-        wstringstream << L"Sending message using MessageWebSocket: " << message.c_str() << std::endl;
-        ::OutputDebugString(wstringstream.str().c_str());
-    }
-
-    void OnWebSocketMessageReceived(Windows::Networking::Sockets::MessageWebSocket const&, Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs const& args)
-    {
-        try
-        {
-            DataReader dataReader{ args.GetDataReader() };
-
-            dataReader.UnicodeEncoding(Windows::Storage::Streams::UnicodeEncoding::Utf8);
-            auto message = dataReader.ReadString(dataReader.UnconsumedBufferLength());
-            std::wstringstream wstringstream;
-            wstringstream << L"Message received from MessageWebSocket: " << message.c_str() << std::endl;
-            ::OutputDebugString(wstringstream.str().c_str());
-            m_messageWebSocket.Close(1000, L"");
-        }
-        catch (winrt::hresult_error const& ex)
-        {
-            Windows::Web::WebErrorStatus webErrorStatus = Windows::Networking::Sockets::WebSocketError::GetStatus(ex.code());
-            // Add additional code here to handle exceptions.
-        }
-    }
-
-    void OnWebSocketClosed(Windows::Networking::Sockets::IWebSocket const&, Windows::Networking::Sockets::WebSocketClosedEventArgs const& args)
-    {
-        std::wstringstream wstringstream;
-        wstringstream << L"WebSocket_Closed; Code: " << args.Code() << ", Reason: \"" << args.Reason().c_str() << "\"" << std::endl;
-        ::OutputDebugString(wstringstream.str().c_str());
-        // Add additional code here to handle the WebSocket being closed.
-    }
-```
-
 ### <a name="handle-the-messagewebsocketmessagereceived-and-messagewebsocketclosed-events"></a>Manipule os eventos MessageWebSocket.MessageReceived e MessageWebSocket.Closed
 Conforme mostrado no exemplo acima, antes de estabelecer uma conexão e enviar dados com um **MessageWebSocket**, você deve assinar os eventos [**MessageWebSocket.MessageReceived**](/uwp/api/windows.networking.sockets.messagewebsocket.MessageReceived) e [**MessageWebSocket.Closed**](/uwp/api/windows.networking.sockets.messagewebsocket.Closed).
  
-**MessageReceived** é acionado quando dados são recebidos. Os dados podem ser acessados por meio de [**MessageWebSocketMessageReceivedEventArgs**](/uwp/api/windows.networking.sockets.messagewebsocketmessagereceivedeventargs?branch=live). **Closed** é acionado quando o cliente ou servidor fecha o soquete.
+**MessageReceived** é acionado quando dados são recebidos. Os dados podem ser acessados por meio de [**MessageWebSocketMessageReceivedEventArgs**](/uwp/api/windows.networking.sockets.messagewebsocketmessagereceivedeventargs). **Closed** é acionado quando o cliente ou servidor fecha o soquete.
  
 ### <a name="send-data-on-a-messagewebsocket"></a>Envie dados em um MessageWebSocket
-Quando uma conexão é estabelecida, é possível enviar dados ao servidor. Você pode fazer isso usando a propriedade [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) e um [**DataWriter**](/uwp/api/windows.storage.streams.datawriter?branch=live), para gravar os dados. 
+Quando uma conexão é estabelecida, é possível enviar dados ao servidor. Você pode fazer isso usando a propriedade [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) e um [**DataWriter**](/uwp/api/windows.storage.streams.datawriter), para gravar os dados. 
 
 **Observação** O **DataWriter** se apropria do fluxo de saída. Quando o **DataWriter** sai do escopo, se o fluxo de saída for anexado a ele, o **DataWriter** desalocará o fluxo de saída. Após isso, as tentativas subsequentes para usar o fluxo de saída falharão com um valor HRESULT de 0x80000013. Mas você pode chamar [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para desanexar o fluxo de saída do **DataWriter** e retornar a propriedade do fluxo para o **MessageWebSocket**.
 
 ## <a name="use-streamwebsocket-to-connect"></a>Use StreamWebSocket para conectar
-[**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket?branch=live) permite que seções de uma mensagem sejam lidas com cada operação de leitura. Consequentemente, é adequado quando arquivos muito grandes (como fotos ou vídeos) são transferidos. A classe oferece suporte para mensagens binárias somente.
+[**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) permite que seções de uma mensagem sejam lidas com cada operação de leitura. Consequentemente, é adequado quando arquivos muito grandes (como fotos ou vídeos) são transferidos. A classe oferece suporte para mensagens binárias somente.
 
 Este exemplo de código abaixo usa o servidor de eco WebSocket.org&mdash;um serviço que exibe de volta para o remetente qualquer mensagem enviada a ele.
 
@@ -372,18 +384,100 @@ private void WebSocket_Closed(Windows.Networking.Sockets.IWebSocket sender, Wind
 }
 ```
 
-```cpp
-#include <ppltasks.h>
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Networking.Sockets.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.UI.Xaml.Navigation.h>
 #include <sstream>
 
-    ...
-    
+using namespace winrt;
 using namespace Windows::Foundation;
 using namespace Windows::Storage::Streams;
 using namespace Windows::UI::Xaml::Navigation;
+...
+private:
+    Windows::Networking::Sockets::StreamWebSocket m_streamWebSocket;
+    winrt::event_token m_closedEventToken;
 
-    ...
+public:
+    IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
+    {
+        m_closedEventToken = m_streamWebSocket.Closed({ this, &StreamWebSocketPage::OnWebSocketClosed });
 
+        try
+        {
+            co_await m_streamWebSocket.ConnectAsync(Uri{ L"wss://echo.websocket.org" });
+            ReceiveMessageUsingStreamWebSocket();
+            SendMessageUsingStreamWebSocket({ 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09 });
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+
+private:
+    IAsyncAction SendMessageUsingStreamWebSocket(std::vector< byte > message)
+    {
+        try
+        {
+            DataWriter dataWriter{ m_streamWebSocket.OutputStream() };
+            dataWriter.WriteBytes(message);
+
+            co_await dataWriter.StoreAsync();
+            dataWriter.DetachStream();
+            std::wstringstream wstringstream;
+            wstringstream << L"Sending data using StreamWebSocket: " << message.size() << L" bytes" << std::endl;
+            ::OutputDebugString(wstringstream.str().c_str());
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+
+    IAsyncAction ReceiveMessageUsingStreamWebSocket()
+    {
+        try
+        {
+            DataReader dataReader{ m_streamWebSocket.InputStream() };
+            dataReader.InputStreamOptions(InputStreamOptions::Partial);
+
+            unsigned int bytesLoaded = co_await dataReader.LoadAsync(256);
+            std::vector< byte > message(bytesLoaded);
+            dataReader.ReadBytes(message);
+            std::wstringstream wstringstream;
+            wstringstream << L"Data received from StreamWebSocket: " << message.size() << " bytes" << std::endl;
+            ::OutputDebugString(wstringstream.str().c_str());
+            m_streamWebSocket.Close(1000, L"");
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+
+    void OnWebSocketClosed(Windows::Networking::Sockets::IWebSocket const&, Windows::Networking::Sockets::WebSocketClosedEventArgs const& args)
+    {
+        std::wstringstream wstringstream;
+        wstringstream << L"WebSocket_Closed; Code: " << args.Code() << ", Reason: \"" << args.Reason().c_str() << "\"" << std::endl;
+        ::OutputDebugString(wstringstream.str().c_str());
+        // Add additional code here to handle the WebSocket being closed.
+    }
+```
+
+```cpp
+#include <ppltasks.h>
+#include <sstream>
+...
+using namespace Windows::Foundation;
+using namespace Windows::Storage::Streams;
+using namespace Windows::UI::Xaml::Navigation;
+...
 private:
     Windows::Networking::Sockets::StreamWebSocket^ streamWebSocket;
 
@@ -474,15 +568,15 @@ private:
 Antes de estabelecer uma conexão e enviar dados com um **StreamWebSocket**, você deve assinar o evento [**Streamwebsocket.Closed**](/uwp/api/windows.networking.sockets.streamwebsocket.Closed). **Closed** é acionado quando o cliente ou servidor fecha o soquete.
  
 ### <a name="send-data-on-a-streamwebsocket"></a>Envie dados em um StreamWebSocket
-Quando uma conexão é estabelecida, é possível enviar dados ao servidor. Você pode fazer isso usando a propriedade [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) e um [**DataWriter**](/uwp/api/windows.storage.streams.datawriter?branch=live), para gravar os dados.
+Quando uma conexão é estabelecida, é possível enviar dados ao servidor. Você pode fazer isso usando a propriedade [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) e um [**DataWriter**](/uwp/api/windows.storage.streams.datawriter), para gravar os dados.
 
 **Observação** Se você quiser gravar mais dados no mesmo soquete, certifique-se de chamar [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para desanexar o fluxo de saída do **DataWriter** antes que o **DataWriter** saia do escopo. Isso retorna a propriedade do fluxo para o **MessageWebSocket**.
 
 ### <a name="receive-data-on-a-streamwebsocket"></a>Receba dados em um StreamWebSocket
-Use a propriedade [**StreamWebSocket.InputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) e um [**DataReader**](/uwp/api/windows.storage.streams.datareader?branch=live), para ler os dados.
+Use a propriedade [**StreamWebSocket.InputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) e um [**DataReader**](/uwp/api/windows.storage.streams.datareader), para ler os dados.
 
 ## <a name="advanced-options-for-messagewebsocket-and-streamwebsocket"></a>Opções avançadas para MessageWebSocket e StreamWebSocket
-Antes de estabelecer uma conexão, você pode definir opções avançadas em um soquete definindo propriedades em [**MessageWebSocketControl**](/uwp/api/windows.networking.sockets.messagewebsocketcontrol?branch=live) ou [**StreamWebSocketControl**](/uwp/api/windows.networking.sockets.streamwebsocketcontrol). Você acessa uma instância dessas classes do objeto do soquete através da propriedade [**MessageWebSocket.Control**](/uwp/api/windows.networking.sockets.messagewebsocket.control) ou [**StreamWebSocket.Control**](/uwp/api/windows.networking.sockets.streamwebsocket.control), conforme apropriado.
+Antes de estabelecer uma conexão, você pode definir opções avançadas em um soquete definindo propriedades em [**MessageWebSocketControl**](/uwp/api/windows.networking.sockets.messagewebsocketcontrol) ou [**StreamWebSocketControl**](/uwp/api/windows.networking.sockets.streamwebsocketcontrol). Você acessa uma instância dessas classes do objeto do soquete através da propriedade [**MessageWebSocket.Control**](/uwp/api/windows.networking.sockets.messagewebsocket.control) ou [**StreamWebSocket.Control**](/uwp/api/windows.networking.sockets.streamwebsocket.control), conforme apropriado.
 
 Veja um exemplo usando **StreamWebSocket**. O mesmo padrão se aplica a **MessageWebSocket**.
 
@@ -493,6 +587,15 @@ var streamWebSocket = new Windows.Networking.Sockets.StreamWebSocket();
 streamWebSocket.Control.NoDelay = false;
 
 await streamWebSocket.ConnectAsync(new Uri("wss://echo.websocket.org"));
+```
+
+```cppwinrt
+Windows::Networking::Sockets::StreamWebSocket streamWebSocket;
+
+// By default, the Nagle algorithm is not used. This overrides that, and causes it to be used.
+streamWebSocket.Control().NoDelay(false);
+
+auto connectAsyncAction = streamWebSocket.ConnectAsync(Uri{ L"wss://echo.websocket.org" });
 ```
 
 ```cpp
@@ -507,16 +610,16 @@ auto connectTask = Concurrency::create_task(streamWebSocket->ConnectAsync(ref ne
 **Observação** Não tente alterar uma propriedade de controle *depois* de chamar **ConnectAsync**. A única exceção a essa regra é [MessageWebSocketControl.MessageType](/uwp/api/windows.networking.sockets.messagewebsocketcontrol.MessageType).
 
 ## <a name="websocket-information-classes"></a>Classes de informações de WebSocket
-[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket?branch=live) e [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket?branch=live) têm uma classe correspondente que fornece informações adicionais sobre o objeto.
+[**MessageWebSocket**](/uwp/api/windows.networking.sockets.messagewebsocket) e [**StreamWebSocket**](/uwp/api/windows.networking.sockets.streamwebsocket) têm uma classe correspondente que fornece informações adicionais sobre o objeto.
 
-[**MessageWebSocketInformation**](/uwp/api/windows.networking.sockets.messagewebsocketinformation?branch=live) fornece informações sobre um **MessageWebSocket**. Recupere uma instância dele usando a propriedade [**MessageWebSocket.Information**](/uwp/api/windows.networking.sockets.messagewebsocket.Information).
+[**MessageWebSocketInformation**](/uwp/api/windows.networking.sockets.messagewebsocketinformation) fornece informações sobre um **MessageWebSocket**. Recupere uma instância dele usando a propriedade [**MessageWebSocket.Information**](/uwp/api/windows.networking.sockets.messagewebsocket.Information).
 
-[**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation?branch=live) fornece informações sobre um **StreamWebSocket**. Recupere uma instância da classe de informações usando a propriedade [**StreamWebSocket.Information**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information).
+[**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation) fornece informações sobre um **StreamWebSocket**. Recupere uma instância da classe de informações usando a propriedade [**StreamWebSocket.Information**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Information).
 
 Observe que todas as propriedades destas classes de informações são somente leitura, porém você pode usá-la para recuperar informações a qualquer momento durante o tempo de vida de um objeto WebSocket.
 
 ## <a name="handling-exceptions"></a>Tratando exceções
-Um erro encontrado em uma operação [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket?branch=live) ou [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket?branch=live) é retornado como um valor **HRESULT**. Você pode passar o valor **HRESULT** para o método [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) para convertê-lo em um valor de enumeração [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus).
+Um erro encontrado em uma operação [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) ou [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) é retornado como um valor **HRESULT**. Você pode passar o valor **HRESULT** para o método [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) para convertê-lo em um valor de enumeração [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus).
 
 A maioria dos valores de enumeração **WebErrorStatus** corresponde a um erro retornado pela operação nativa de cliente HTTP. Seu aplicativo pode alternar valores de enumeração **WebErrorStatus** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
@@ -565,19 +668,82 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Networking.Sockets.h>
+#include <winrt/Windows.UI.Xaml.Navigation.h>
+#include <sstream>
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml::Navigation;
+...
+private:
+    Windows::Networking::Sockets::MessageWebSocket m_messageWebSocket;
+
+    IAsyncAction TimeoutAsync()
+    {
+        // Return control to the caller, and resume again to complete the async action after the timeout period.
+        // 5 seconds, in this example.
+        co_await(std::chrono::seconds{ 5 });
+    }
+
+public:
+    IAsyncAction OnNavigatedTo(NavigationEventArgs /* e */)
+    {
+        try
+        {
+            // Return control to the caller, and then immediately resume on a thread pool thread.
+            co_await winrt::resume_background();
+
+            auto connectAsyncAction = m_messageWebSocket.ConnectAsync(Uri{ L"wss://echo.websocket.org" });
+
+            TimeoutAsync().Completed([connectAsyncAction](IAsyncAction const& sender, AsyncStatus const)
+            {
+                // TimeoutAsync completes after the timeout period. After that period, it's safe
+                // to cancel the ConnectAsync action even if it has already completed.
+                connectAsyncAction.Cancel();
+            });
+
+            try
+            {
+                // Block until the ConnectAsync action completes or is canceled.
+                connectAsyncAction.get();
+            }
+            catch (winrt::hresult_error const& ex)
+            {
+                std::wstringstream wstringstream;
+                wstringstream << L"ConnectAsync threw an exception: " << ex.message().c_str() << std::endl;
+                ::OutputDebugString(wstringstream.str().c_str());
+            }
+
+            if (connectAsyncAction.Status() == AsyncStatus::Completed)
+            {
+                // connectTask ran to completion, so we know that the MessageWebSocket is connected.
+                // Add additional code here to use the MessageWebSocket.
+            }
+            else
+            {
+                // connectTask did not run to completion.
+            }
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            Windows::Web::WebErrorStatus webErrorStatus{ Windows::Networking::Sockets::WebSocketError::GetStatus(ex.to_abi()) };
+            // Add additional code here to handle exceptions.
+        }
+    }
+```
+
 ```cpp
 #include <agents.h>
 #include <ppltasks.h>
 #include <sstream>
-
-    ...
-    
+...
 using namespace Windows::Foundation;
 using namespace Windows::Storage::Streams;
 using namespace Windows::UI::Xaml::Navigation;
-
-    ...
-
+...
 private:
     Windows::Networking::Sockets::MessageWebSocket^ messageWebSocket;
 
@@ -643,33 +809,33 @@ protected:
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [DataReader](/uwp/api/Windows.Storage.Streams.DataReader?branch=live)
-* [DataWriter](/uwp/api/Windows.Storage.Streams.DataWriter?branch=live)
+* [DataReader](/uwp/api/Windows.Storage.Streams.DataReader)
+* [DataWriter](/uwp/api/Windows.Storage.Streams.DataWriter)
 * [DataWriter.DetachStream](/uwp/api/windows.storage.streams.datawriter.DetachStream)
-* [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket?branch=live)
+* [MessageWebSocket](/uwp/api/windows.networking.sockets.messagewebsocket)
 * [MessageWebSocket.Closed](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Closed)
 * [MessageWebSocket.ConnectAsync](/uwp/api/windows.networking.sockets.messagewebsocket.connectasync)
 * [MessageWebSocket.Control](/uwp/api/windows.networking.sockets.messagewebsocket.control)
 * [MessageWebSocket.Information](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Information)
 * [MessageWebSocket.MessageReceived](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.MessageReceived)
 * [MessageWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream)
-* [MessageWebSocketControl](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl?branch=live)
+* [MessageWebSocketControl](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl)
 * [MessageWebSocketControl.MessageType](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl.MessageType)
-* [MessageWebSocketInformation](/uwp/api/Windows.Networking.Sockets.MessageWebSocketInformation?branch=live)
-* [MessageWebSocketMessageReceivedEventArgs](/uwp/api/Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs?branch=live)
-* [SocketMessageType](/uwp/api/windows.networking.sockets.socketmessagetype?branch=live)
-* [StreamWebSocket](/uwp/api/Windows.Networking.Sockets.StreamWebSocket?branch=live)
+* [MessageWebSocketInformation](/uwp/api/Windows.Networking.Sockets.MessageWebSocketInformation)
+* [MessageWebSocketMessageReceivedEventArgs](/uwp/api/Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs)
+* [SocketMessageType](/uwp/api/windows.networking.sockets.socketmessagetype)
+* [StreamWebSocket](/uwp/api/Windows.Networking.Sockets.StreamWebSocket)
 * [StreamWebSocket.Closed](/uwp/api/Windows.Networking.Sockets.StreamWebSocket.Closed)
 * [StreamSocket.ConnectAsync](/uwp/api/windows.networking.sockets.streamsocket.connectasync)
-* [StreamWebSocket.Control](/uwp/api/windows.networking.sockets.streamwebsocket.control?branch=live)
+* [StreamWebSocket.Control](/uwp/api/windows.networking.sockets.streamwebsocket.control)
 * [StreamWebSocket.Information](/uwp/api/windows.networking.sockets.streamwebsocket.Information)
 * [StreamWebSocket.InputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream)
 * [StreamWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream)
-* [StreamWebSocketControl](/uwp/api/Windows.Networking.Sockets.StreamWebSocketControl?branch=live)
-* [StreamWebSocketInformation](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation?branch=live)
-* [WebErrorStatus](/uwp/api/Windows.Web.WebErrorStatus?branch=live) 
+* [StreamWebSocketControl](/uwp/api/Windows.Networking.Sockets.StreamWebSocketControl)
+* [StreamWebSocketInformation](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation)
+* [WebErrorStatus](/uwp/api/Windows.Web.WebErrorStatus) 
 * [WebSocketError.GetStatus](/uwp/api/windows.networking.sockets.websocketerror.getstatus)
-* [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets?branch=live)
+* [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ec676446562d5d97ff2a7020fc494f248323450b
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691935"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018622"
 ---
 # <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 
@@ -26,8 +26,8 @@ Você pode mover o código para bibliotecas .NET Standard e, em seguida, criar u
 Posicione o tanto de código que você puder nas bibliotecas de classe .NET Standard 2.0.  Contanto que seu código use APIs que são definidos no padrão, você pode reutilizá-los em um aplicativo UWP. É mais fácil do que nunca foi compartilhar código em uma biblioteca .NET padrão porque muitas APIs mais estão incluídas no .NET padrão 2.0.
 
 Veja um vídeo excelente que informa mais sobre isso.
-<br><br>
-<iframe src="https://www.youtube.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/YI4MurjfMn8]
 
 ### <a name="add-net-standard-libraries"></a>Adicionar bibliotecas .NET Standard
 
@@ -56,10 +56,10 @@ Vamos começar com pacotes Nuget e outros arquivos dll que você obteve de terce
 Se seu aplicativo usa qualquer um deles, determine se eles são compatíveis com o .NET Standard 2.0. Você pode usar uma extensão do Visual Studio ou um utilitário de linha de comando para fazer isso.
 
 Use essas ferramentas para analisar seu código. Baixe as ferramentas aqui ([dotnet apiport](https://github.com/Microsoft/dotnet-apiport/releases)) e, em seguida, assista a este vídeo para saber como usá-las.
-<br><br>
-<iframe src="https://www.youtube.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/rzs_FGPyAlY]
 
- Se seu código não for compatível com o padrão, considere a possibilidade de outras maneiras de poder implementar esse código. Comece abrindo o [Navegador .NET API](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Você pode usar esse navegador para examinar a API que está disponível no .NET Standard 2.0. Certifique-se de definir o escopo de lista para o .NET Standard 2.0.
+Se seu código não for compatível com o padrão, considere a possibilidade de outras maneiras de poder implementar esse código. Comece abrindo o [Navegador .NET API](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Você pode usar esse navegador para examinar a API que está disponível no .NET Standard 2.0. Certifique-se de definir o escopo de lista para o .NET Standard 2.0.
 
 ![opção de ponto de internet](images/desktop-to-uwp/dot-net-option.png)
 
@@ -101,7 +101,7 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-Porém, o [Navegador .NET API](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) nos mostra uma alternativa. Podemos usar as classe ``DbConnection``, ``DbCommand`` e ``DbDataReader`` porque elas estão disponíveis no .NET Standard 2.0.  
+É possível usar o [Navegador de API .NET](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) para encontrar uma alternativa. Use as classes ``DbConnection``, ``DbCommand`` e ``DbDataReader`` disponíveis no .NET Standard 2.0.  
 
 Essa versão revisada usa essas classes para obter uma lista de clientes, mas para criar uma classe ``DbConnection``, será necessário passar um objeto de fábrica que criamos no aplicativo cliente.
 
@@ -158,9 +158,9 @@ public partial class Customers : Form
 ## <a name="reach-all-windows-devices"></a>Alcance de todos os dispositivos Windows
 
 Agora você está pronto para adicionar um aplicativo UWP à sua solução.
-<div style="float: left; padding: 10px">
-    ![desktop para imagem de ponte UWP](images/desktop-to-uwp/adaptive-ui.png)
-</div>
+
+![desktop para imagem de ponte UWP](images/desktop-to-uwp/adaptive-ui.png)
+
 Você ainda terá de projetar páginas de interface do usuário em XAML e gravar qualquer dispositivo ou o código específico de plataforma, mas quando tiver terminado, você poderá acessar toda a experiência do dispositivos Windows 10 e as páginas do aplicativo terão uma aparência moderna que se adapta bem a resoluções e tamanhos de tela diferentes.
 
 Seu aplicativo responderá a mecanismos de entrada que não seja apenas um teclado e mouse, e recursos e configurações serão intuitivas em todos os dispositivos. Isso significa que os usuários aprendem a fazer as coisas uma vez e, em seguida, ele funciona de maneira bastante familiar, independentemente do dispositivo.
@@ -211,9 +211,8 @@ Para começar com UWP, consulte [O que é um aplicativo UWP](https://docs.micros
 ## <a name="reach-ios-and-android-devices"></a>Acessar dispositivos iOS e Android
 
 Você pode entrar em dispositivos Android e iOS adicionando projetos Xamarin.  
-<div style="float: left; padding: 10px">
-    ![Aplicativos Xamarin](images/desktop-to-uwp/xamarin-apps.png)
-</div>
+
+![Aplicativos Xamarin](images/desktop-to-uwp/xamarin-apps.png)
 
 Esses projetos permitem que você use C# para criar aplicativos Android e iOS com total acesso às APIs específicas de plataforma e específicas do dispositivo. Esses aplicativos aproveitam a aceleração de hardware específica de plataforma e são compiladas para desempenho nativo.
 

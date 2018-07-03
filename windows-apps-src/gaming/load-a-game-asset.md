@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, carregamento de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cd2ca426f5a73a6cf8953ab599f8a7332be43a4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655608"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983549"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
 
 
-A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados. Aqui, vamos examinar uma exibição de alto nível daquilo que é preciso considerar ao carregar esses arquivos para uso no jogo da UWP (Plataforma Universal do Windows).
+A maioria dos jogos, em algum momento, carrega recursos e ativos (por exemplo, sombreadores, texturas, malhas predefinidas ou outros dados gráficos) do armazenamento local ou de algum outro fluxo de dados. Aqui, vamos examinar uma exibição de alto nível daquilo que é preciso considerar ao carregar esses arquivos para uso no jogo DirectX C/C++ da UWP (Plataforma Universal do Windows).
 
 Por exemplo, é possível que as malhas para objetos poligonais do jogo tenham sido criadas com outra ferramenta e exportadas para um formato específico. O mesmo é verdadeiro para texturas e muito mais, por isso: embora um bitmap descompactado possa ser rotineiramente criado pela maioria das ferramentas e entendido por grande parte das APIs gráficas, esse bitmap pode ser extremamente ineficiente se usado no jogo. Nesta seção, vamos guiá-lo pelas etapas básicas do carregamento de três tipos diferentes de recursos gráficos para uso com o Direct3D: malhas (modelos), texturas (bitmaps) e objetos de sombreador compilados.
 

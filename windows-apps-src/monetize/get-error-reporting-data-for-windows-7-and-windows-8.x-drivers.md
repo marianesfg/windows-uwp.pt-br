@@ -4,18 +4,18 @@ ms.assetid: 2F30E68B-B643-4387-9430-793D08AAF0E7
 description: Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados dos drivers do Windows 7 e Windows 8.x para um determinado intervalo de datas e outros filtros opcionais. Esse método destina-se apenas para IHVs.
 title: Obter dados de relatório de erro para drivers do Windows 7 e Windows 8. x
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a816f9665cdaa5673adad1a4de5e976c0cd0c1
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 75a1b16e8882e961ccd0a10e99e94038948f59fd
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663366"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989590"
 ---
 # <a name="get-error-reporting-data-for-windows-7-and-windows-8x-drivers"></a>Obter dados de relatório de erro para drivers do Windows 7 e Windows 8. x
 
@@ -83,7 +83,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Valor      | array   | Uma matriz de objetos que contêm dados de relatório de erros agregados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir.     |
 | @nextLink  | cadeia  | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de erros para a consulta. |
-| TotalCount | inumber | O número total de linhas no resultado dos dados da consulta.     |
+| TotalCount | número inteiro | O número total de linhas no resultado dos dados da consulta.     |
 
 
 Os elementos na matriz *Value* contêm os valores a seguir.
@@ -106,7 +106,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | oemName | cadeia | O nome do OEM do dispositivo no qual o erro ocorreu. |
 | oemModel | cadeia | O nome do modelo do dispositivo no qual o erro ocorreu. |
 | flightRing | cadeia | O nome de versão de pré-lançamento do sistema operacional no qual o erro ocorreu. |
-| eventCount      | inumber | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
+| eventCount      | número inteiro | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

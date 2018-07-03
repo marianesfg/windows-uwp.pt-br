@@ -3,18 +3,18 @@ author: stevewhims
 description: Este tópico mostra duas funções auxiliares que podem ser usada para realizar a conversão entre os objetos C++/CX e C++/WinRT.
 title: Interoperabilidade entre C++/WinRT e C++/CX
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 616bd9ea8c4b89599e703ef9467206b028fd596b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831780"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912914"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilidade entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e C++/CX
 Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. Você pode usá-los para favorecer a interoperabilidade entre o código que usa as duas projeções de linguagem ou pode usar as funções ao migrar gradativamente o código de C++/CX para C++/WinRT.
@@ -27,11 +27,11 @@ template <typename T>
 T from_cx(Platform::Object^ from)
 {
     T to{ nullptr };
- 
+
     winrt::check_hresult(reinterpret_cast<::IUnknown*>(from)
         ->QueryInterface(winrt::guid_of<T>(),
-                         reinterpret_cast<void**>(winrt::put_abi(to))));
- 
+            reinterpret_cast<void**>(winrt::put_abi(to))));
+
     return to;
 }
 ```
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 ```
 
 ## <a name="code-example"></a>Exemplo de código
-Este é um exemplo de código (baseado no modelo de projeto **Aplicativo em Branco** do C++/CX) que mostra as duas funções auxiliares em uso. Ele também ilustra como você pode lidar com conflitos de namespace entre as duas projeções.
+Este é um exemplo de código (baseado no modelo de projeto **Aplicativo em Branco** do C++/CX) que mostra as duas funções auxiliares em uso. Também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de lidar com outros possíveis conflitos de namespace entre as projeções do C++/WinRT e do C++/CX.
 
 ```cppwinrt
 // MainPage.xaml.cpp
@@ -109,7 +109,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [Interface IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
 * [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [Função winrt::get_abi](/uwp/cpp-ref-for-winrt/get-abi)

@@ -3,27 +3,24 @@ author: stevewhims
 description: Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT.
 title: Manejar eventos usando delegados em C++/WinRT
 ms.author: stwhi
-ms.date: 04/23/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 44eb49e0e9797ec363c160ef701e19b58f8227a1
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 1cf3c87411bb6d8eb5886e7205f96c466d707220
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832005"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976484"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Manejar eventos usando delegados em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-> [!NOTE]
-> **Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.**
-
 Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. Você pode manipular um evento usando qualquer objeto de função de C++ padrão.
 
 > [!NOTE]
-> Para obter informações sobre a disponibilidade atual do Visual Studio Extension (VSIX) de C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild de C++/WinRT), veja [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Registrar um delegado para manipular um evento
 Um exemplo simples está manipulando um evento de clique do botão. É comum usar marcação XAML para registrar uma função de membro para manipular o evento, como este.
@@ -123,7 +120,9 @@ private:
 };
 ```
 
-Como alternativa, quando você registra um delegado, você pode especificar **winrt::auto_revoke** (que é um valor do tipo [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar um revogador de evento. Quando esse revogador sai do escopo, ele automaticamente revoga seu delegado. Neste exemplo, não há necessidade de armazenar a origem do evento e não há necessidade de um destruidor.
+Em vez de uma referência forte, como no exemplo acima, você pode armazenar uma referência fraca no botão (veja [Referências fracas no C++/WinRT](weak-references.md)).
+
+Como alternativa, ao registrar um delegado, você pode especificar **winrt::auto_revoke** (um valor do tipo [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar um revogador de evento (do tipo **winrt::event_revoker**). O revocador do evento mantém uma referência fraca à origem do evento (o objeto de acionamento do evento) para você. Você pode revogar manualmente ao chamar a função membro **event_revoker::revoke**; mas o revogador de evento chama essa função automaticamente quando sai do escopo. A função **revoke** verifica se o fonte do evento ainda existe e, caso afirmativo, revoga o delegado. Neste exemplo, não há necessidade de armazenar a origem do evento e não há necessidade de um destruidor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -151,7 +150,7 @@ winrt::event_token Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& han
 void Click(winrt::event_token const& token) const;
 
 // Revoke with event_revoker
-event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
+winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
     winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
 ```
 
@@ -188,12 +187,22 @@ void ProcessFeedAsync()
         // use syndicationFeed;
     });
     
-    // or (but this function must then return IAsyncAction)
+    // or (but this function must then be a coroutine and return IAsyncAction)
     // SyndicationFeed syndicationFeed = co_await async_op_with_progress;
 }
 ```
 
-Como sugere o comentário acima, em vez de usar um delegado com os eventos concluídos de ações assíncronas e operações, você provavelmente achará mais natural para usar rotinas concomitantes. Para obter detalhes e exemplos de código, consulte [Operações de concorrência e assíncrona com C++/WinRT](concurrency.md).
+Como sugere o comentário da "corrotina", em vez de usar um delegado com os eventos concluídos de ações assíncronas e operações, você provavelmente achará mais natural para usar rotinas concomitantes. Para obter detalhes e exemplos de código, consulte [Operações de concorrência e assíncrona com C++/WinRT](concurrency.md).
+
+Mas, se você continuar com os delegados, é possível optar por uma sintaxe mais simples.
+
+```cppwinrt
+async_op_with_progress.Completed(
+    [](auto&& /*sender*/, AsyncStatus const)
+{
+    ....
+});
+```
 
 ## <a name="delegate-types-that-return-a-value"></a>Tipos de delegado que retornam um valor
 Alguns tipos de delegado devem retornar eles mesmos um valor. Um exemplo é [**ListViewItemToKeyHandler**](/uwp/api/windows.ui.xaml.controls.listviewitemtokeyhandler), que retorna uma sequência. Aqui está um exemplo de criação de um delegado desse tipo (observe que a função lambda retorna um valor).
@@ -261,5 +270,5 @@ Na cláusula de captura lambda, é criada uma variável temporária, que represe
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar eventos com C++/WinRT](author-events.md)
+* [Simultaneidade e operações assíncronas com C++/WinRT](concurrency.md)
 * [Referências fracas em C++/WinRT](weak-references.md)
-

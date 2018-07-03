@@ -12,32 +12,51 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 910920c1f5eb5bdc3e55b51d7886be1632559c14
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396605"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862095"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
-
 ![tipos de entrada do windows](images/input-interactions/icons-inputdevices03.png)
 
-As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, olhar, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
+As interações do usuário na Plataforma Universal do Windows (UWP) são uma combinação de fontes de entrada e saída (como mouse, teclado, caneta, toque, touchpad, controle por voz, **Cortana**, controlador, gesto, foco, etc.), juntamente com vários modos, ou modificadores que permitem experiências estendidas (incluindo os botões e a roda do mouse, a borracha e os botões da caneta, o teclado virtual e os serviços de aplicativo em segundo plano).
 
 A UWP usa um sistema de interação contextual "inteligente" que, na maioria dos casos, elimina a necessidade de manipular individualmente os tipos de entrada exclusivos recebidos pelo seu aplicativo. Isso inclui manipular a entrada por touch, touchpad, mouse e caneta como um tipo de ponteiro genérico para dar suporte a gestos estáticos, como tocar ou pressionar e segurar, para gestos de manipulação como deslizar para movimento panorâmico ou para renderizar tinta digital.
 
 Familiarize-se com cada tipo de dispositivo de entrada e seus comportamentos, recursos e limitações quando combinados com determinados fatores forma. Isso pode ajudar você a decidir se os controles e as funcionalidades da plataforma são suficientes para seu aplicativo, ou exigem que você forneça experiências de interação personalizadas.
 
-## <a name="surface-dial"></a>Surface Dial
+## <a name="gaze"></a>Focar
 
-Para a Atualização de Aniversário do Windows 10, lançaremos uma nova categoria de dispositivo de entrada chamado Windows Wheel. O Surface Dial é o primeiro nessa classe de dispositivo. 
+Na **Atualização de abril de 2018 para o Windows 10**, introduziu o suporte para entrada usando o foco com dispositivos de entrada com acompanhamento de movimentos de olho e cabeça. 
+
+> [!NOTE]
+> O suporte para o hardware de acompanhamento com os olhos foi introduzido no **Windows 10 Fall Creators Update** juntamente com [Controle com os olhos](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), um recurso interno que permite usar seus olhos para controlar o ponteiro virtual, digitar com o teclado virtual e se comunicar com pessoas usando a conversão de texto em fala.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
--   Tablet
--   Computadores e notebooks
+- Tablet
+- Computadores e notebooks
+
+### <a name="typical-usage"></a>Uso típico
+
+Acompanhe o foco, a atenção e a presença do usuário com base na localização e na movimentação de seus olhos. Essa nova maneira eficiente de usar e interagir com seus aplicativos UWP é útil como uma tecnologia adaptativa para usuários com doenças neuro musculares (por exemplo, ALS) e outras deficiências envolvendo funções musculares ou dos nervos. Entrada com foco também oferece oportunidades atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e aplicativos de produtividade tradicionais, quiosques e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis ou onde pode ser útil para liberar as mãos do usuário para outras tarefas (por exemplo, segurar bolsas de compras).
+
+### <a name="more-info"></a>Mais informações
+
+[Interações de foco e rastreamento de olhos](gaze-interactions.md)
+
+## <a name="surface-dial"></a>Surface Dial
+
+Na **Atualização de Aniversário do Windows 10**, introduzimos a categoria de dispositivo de entrada chamada Windows Wheel. O Surface Dial é o primeiro nessa classe de dispositivo.
+
+### <a name="device-support"></a>Suporte a dispositivos
+
+- Tablet
+- Computadores e notebooks
 
 ### <a name="typical-usage"></a>Uso típico
 
@@ -46,7 +65,6 @@ Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial desti
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do Surface Dial](windows-wheel-interactions.md)
-
 
 ## <a name="cortana"></a>Cortana
 
@@ -79,7 +97,7 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 
 O controle por voz é uma forma eficiente e natural para as pessoas interagirem com aplicativos. É uma maneira fácil e precisa de se comunicar com aplicativos, e permite que as pessoas sejam produtivas e se mantenham informadas em diversas situações.
 
-O controle por voz pode complementar ou, em muitos casos, ser o tipo de entrada principal, dependendo do dispositivo do usuário. Por exemplo, dispositivos como HoloLens e Xbox não dão suporte a tipos de entrada tradicionais (além de um teclado de software em situações específicas). Em vez disso, eles dependem da entrada e saída de voz (geralmente em combinação com outros tipos de entrada não tradicionais, como olhar e gesto) para a maioria das interações do usuário.
+O controle por voz pode complementar ou, em muitos casos, ser o tipo de entrada principal, dependendo do dispositivo do usuário. Por exemplo, dispositivos como HoloLens e Xbox não dão suporte a tipos de entrada tradicionais (além de um teclado de software em situações específicas). Em vez disso, eles dependem da entrada e saída de voz (geralmente em combinação com outros tipos de entrada não tradicionais, como foco e gesto) para a maioria das interações do usuário.
 
 A conversão de texto em fala (também conhecida como TTS ou sintetização de voz) é usada para informar ou direcionar o usuário.
 

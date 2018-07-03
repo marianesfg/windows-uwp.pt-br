@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 24b54e202835bb3dba9098591ae08527e12565bf
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: c06a4348ba1f974aaf7151456267ce7585b56a10
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832580"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983601"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproduzir áudio e vídeo com o MediaPlayer
 
@@ -23,6 +23,8 @@ Este artigo mostra como reproduzir mídia em seu aplicativo Universal do Windows
 
 Este artigo fornecerá orientações sobre os recursos do **MediaPlayer** que serão usados por um aplicativo típico de reprodução de mídia. Observe que o **MediaPlayer** usa a classe [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) como um contêiner para todos os itens de mídia. Essa classe permite carregar e reproduzir mídia de várias origens diferentes, incluindo arquivos locais, fluxos de memória e origens de rede, todos usando a mesma interface. Também há classes de nível superior que funcionam com o **MediaSource**, como [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) e [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList), que oferecem recursos mais avançados, como playlists e a capacidade de gerenciar origens de mídia com várias faixas de áudio, vídeo e metadados. Para obter mais informações sobre **MediaSource** e APIs relacionadas, consulte [Itens de mídia, playlists e faixas](media-playback-with-mediasource.md).
 
+> [!NOTE] 
+> As edições do Windows 10 N e Windows 10 KN não incluem os recursos de mídia necessários para usar o **MediaPlayer** para reprodução. Esses recursos podem ser instalados manualmente. Para obter mais informações, consulte [Pacote de recursos de mídia para Windows 10 N e Windows 10 KN](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions).
 
 ## <a name="play-a-media-file-with-mediaplayer"></a>Reproduzir um arquivo de mídia com o MediaPlayer  
 A reprodução básica de mídia com o **MediaPlayer** é bastante simples de implementar. Primeiro, crie uma nova instância da classe **MediaPlayer**. Seu aplicativo pode ter várias instâncias ativas do **MediaPlayer** simultaneamente. Em seguida, defina a propriedade [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) do player como um objeto que implemente a [ **IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource), como uma [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), um [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) ou um [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). Neste exemplo, um **MediaSource** é criado a partir de um arquivo contido no armazenamento local do aplicativo e, em seguida, um **MediaPlaybackItem** é criado a partir da origem e é atribuído à propriedade **Source** do player.
@@ -78,6 +80,10 @@ O exemplo a seguir mostra como implementar um manipulador de clique de botão qu
 O próximo exemplo ilustra o uso de um botão de alternância para alternar entre a velocidade de reprodução normal e 2 X a velocidade definindo a propriedade [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate) da sessão.
 
 [!code-cs[SpeedChecked](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSpeedChecked)]
+
+A partir do Windows 10, versão 1803, você pode definir a rotação de apresentação do vídeo no **MediaPlayer** em incrementos de 90 graus.
+
+[!code-cs[SetRotation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetRotation)]
 
 ### <a name="detect-expected-and-unexpected-buffering"></a>Detectar buffer esperado e inesperado
 O objeto **MediaPlaybackSession** descrito na seção anterior fornece dois eventos de detecção quando o arquivo de mídia em reprodução começa e encerra o buffer, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** e **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)**. Isso permite que você atualize a interface do usuário para mostrar ao usuário que o buffer está ocorrendo. O buffer inicial é esperado quando um arquivo de mídia é aberto pela primeira vez ou quando o usuário alterna para um novo item de uma playlist. O buffer inesperado pode ocorrer quando a velocidade de rede degrada ou se o sistema de gerenciamento de conteúdo que fornece o conteúdo tiver problemas técnicos. A partir do RS3, você pode usar o evento **BufferingStarted** para determinar se o evento de buffer é esperado ou se é inesperado e interrompe a reprodução. Você pode usar essas informações como dados de telemetria para o serviço de entrega do aplicativo ou mídia. 

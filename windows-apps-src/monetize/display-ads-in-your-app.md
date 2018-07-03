@@ -4,18 +4,18 @@ ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: O SDK do Microsoft Advertising oferece várias maneiras de monetizar seu aplicativo com anúncios.
 title: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b5e8181dbf9cc661600a0ad15f5eb713621c5b3
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816081"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843016"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
@@ -96,15 +96,15 @@ Para obter instruções e exemplos de código, consulte [este artigo](native-ads
 
 Depois que você terminar de testar seu app e estiver pronto para enviá-lo para a Store, crie uma unidade publicitária na página [Anúncios no app](../publish/in-app-ads.md) no painel do Centro de Desenvolvimento do Windows. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
-Por padrão, o aplicativo exibirá anúncios da rede da Microsoft para anúncios pagos. Para maximizar a receita do anúncio, você pode habilitar o controle de anúncios da unidade publicitária para exibir anúncios de outras redes de publicidade pagas, como o Taboola e o Smaato. Você também pode aumentar os recursos de promoção de apps ao veicular anúncios de campanhas promocionais de aplicativos da Microsoft.
+Por padrão, o aplicativo exibirá anúncios da rede da Microsoft para anúncios pagos. Para maximizar a receita do anúncio, você pode habilitar o [controle de anúncios](ad-mediation-service.md) da unidade publicitária para exibir anúncios de outras redes de publicidade pagas, como o Taboola e o Smaato. Você também pode aumentar os recursos de promoção de apps ao veicular anúncios de campanhas promocionais de aplicativos da Microsoft.
 
 Para começar a usar o controle de anúncios em seu aplicativo UWP, [definir configurações de controle de anúncios](../publish/in-app-ads.md#mediation-settings) para sua unidade publicitária. Por padrão, configuramos automaticamente as configurações de controle usando algoritmos de aprendizado de máquina para ajudá-lo a maximizar sua receita de publicidade em todos os mercados que seu aplicativo suporte. No entanto, você também tem a opção de escolher manualmente as redes que deseja usar. De qualquer forma, as configurações de mediação são totalmente configuradas nos nossos servidores; você não precisa fazer alterações de código em seu app.    
 
 ## <a name="step-4-submit-your-app-and-review-performance"></a>Etapa 4: Enviar seu app e analisar o desempenho
 
-Após a conclusão do desenvolvimento de seu aplicativo com anúncios, você poderá [enviar seu app atualizado](https://docs.microsoft.com/windows/uwp/publish/app-submissions) para o painel do Centro de Desenvolvimento do Windows para que ele seja disponibilizado na Loja. Os apps que exibem anúncios devem atender aos requisitos adicionais especificados na [seção 10.10 das Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) e no [Anexo E do Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+Após a conclusão do desenvolvimento de seu aplicativo com anúncios, você poderá [enviar seu app atualizado](https://docs.microsoft.com/windows/uwp/publish/app-submissions) para o painel do Centro de Desenvolvimento do Windows para que ele seja disponibilizado na Store. Os apps que exibem anúncios devem atender aos requisitos adicionais especificados na [seção 10.10 das Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) e no [Anexo E do Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-Depois que o app for publicado e estiver disponível na Loja, você poderá examinar seus [relatórios de desempenho de anúncios](../publish/advertising-performance-report.md) no painel e continuar a fazer alterações em suas configurações de controle para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
+Depois que o app for publicado e estiver disponível na Store, você poderá examinar seus [relatórios de desempenho de anúncios](../publish/advertising-performance-report.md) no painel e continuar a fazer alterações em suas configurações de controle para otimizar o desempenho de seus anúncios. Sua receita de publicidade está incluída no seu [resumo de pagamento](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

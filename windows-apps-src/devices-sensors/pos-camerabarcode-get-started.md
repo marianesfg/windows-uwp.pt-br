@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbb26fb3c977917732a079f28d274f7f2bfba41
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833039"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976028"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Introdução ao scanner de código de barras da câmera
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Etapa 1: adicionar declarações de funcionalidades ao manifesto do seu aplicativo
@@ -84,7 +84,7 @@ Se a câmera está integrada ao chassi do computador, o nome pode diferenciar en
 Use [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync#Windows_Devices_PointOfService_BarcodeScanner_ClaimScannerAsync) para ter o uso exclusivo do scanner de código de barras da câmera.
 
 ## <a name="step-7-system-provided-preview"></a>Etapa 7: visualização fornecida do sistema
-A visualização da câmera é necessária para que o usuário mire a câmera em códigos de barras com sucesso.  O Windows fornece uma visualização de câmera simples que iniciará um diálogo que habilita o controle básico do scanner de código de barras da câmera.  Basta chamar [ClaimedBarcodeScanner.ShowideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync) para abrir o diálogo e [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) para abri-lo quando finalizado.
+A visualização da câmera é necessária para que o usuário mire a câmera em códigos de barras com sucesso.  O Windows fornece uma visualização de câmera simples que iniciará um diálogo que habilita o controle básico do scanner de código de barras da câmera.  Basta chamar [ClaimedBarcodeScanner.ShowVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync) para abrir o diálogo e [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) para abri-lo quando finalizado.
 
 > [!TIP]
 > Consulte [Visualização da hospedagem](pos-camerabarcode-hosting-preview.md) para hospedar a visualização do scanner de código de barras da câmera no aplicativo.

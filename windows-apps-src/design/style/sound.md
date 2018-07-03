@@ -16,16 +16,16 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dbe59b422a83ad31727928c406a1f4a6dd550301
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: c6e85bcbf131755af6909fd0ae7ee42bc36544b8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638390"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842796"
 ---
 # <a name="sound"></a>Som
 
- 
+![imagem hero](images/header-sound.svg)
 
 Há muitas maneiras de usar o som para aprimorar o aplicativo. Você pode usar som para complementar outros elementos de interface do usuário permitindo que os usuários reconheçam eventos de maneira audível. O som pode ser um elemento de interface do usuário efetivo para pessoas com deficiências visuais. É possível usar som para criar uma atmosfera que envolva o usuário; por exemplo, convém executar uma trilha sonora extravagante em segundo plano do quebra-cabeça ou usar efeitos sonoros de suspense para um jogo de terror/sobrevivência.
 

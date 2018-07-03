@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, fraca, referência
 ms.localizationpriority: medium
-ms.openlocfilehash: 63ffad19c0ae8a52737ae13a54e5657df875d0b5
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 69294115af93ec464abfe908df948c8ff5504efc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832600"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842450"
 ---
 # <a name="weak-references-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Referências fracas em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Você deve ser capaz, na maioria das vezes, de criar suas próprias APIs C++/WinRT de modo a evitar a necessidade de referências cíclicas e referências fracas. No entanto, quando se trata da implementação nativa da estrutura da IU baseada em XAML, devido ao design histórico da estrutura, o mecanismo de referência fraca em C++/WinRT é necessário para tratar as referências cíclicas. Fora do XAML, você dificilmente precisará usar referências fracas (embora, não haja nada específico de XAML sobre eles na teoria).

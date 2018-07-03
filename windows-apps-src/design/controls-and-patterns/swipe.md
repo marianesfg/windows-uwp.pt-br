@@ -15,12 +15,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43150acef5c7e9ce73132cd35061d4239821f6d0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 47a2e48be14df6a59aec4404d760f416804bad6b
+ms.sourcegitcommit: 3522d888781ff6f063b129b54760a5cbefd38139
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673543"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "1937082"
 ---
 # <a name="swipe"></a>Deslizar o dedo
 
@@ -158,6 +158,7 @@ Aqui está um ListView com o SwipeControl aplicada em seu item de DataTemplate. 
     <ListView.ItemContainerStyle>
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         </Style>
     </ListView.ItemContainerStyle>
     <ListView.ItemTemplate>
@@ -166,7 +167,7 @@ Aqui está um ListView com o SwipeControl aplicada em seu item de DataTemplate. 
                           LeftItems="{StaticResource RevealOptions}"
                           RightItems="{StaticResource ExecuteDelete}"
                           Height="60">
-                <StackPanel Orientation="Vertical" Margin="5">
+                <StackPanel Orientation="Vertical">
                     <TextBlock Text="{x:Bind}" FontSize="18"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." FontSize="12"/>
@@ -238,7 +239,7 @@ Aqui, um _resposta_ item de passar o dedo é definido para fechar depois que ele
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

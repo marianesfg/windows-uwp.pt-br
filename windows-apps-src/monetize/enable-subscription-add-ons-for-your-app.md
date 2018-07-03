@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 59a85512eacf880b61b3245726f4d15bb359a7ad
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: f0bed75a8201b9875f79419c0a77c8a35918b77e
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674883"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877148"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de assinatura para o app
 
@@ -39,27 +39,28 @@ Para habilitar a compra de complementos de assinatura em seu app, siga estas eta
 
 1. [Crie um envio de complemento](../publish/add-on-submissions.md) para sua assinatura no painel do Centro de Desenvolvimento e publique o envio. Conforme você segue o processo de envio de complemento, preste atenção às seguintes propriedades:
 
-  * [Tipo de produto](../publish/set-your-add-on-product-id.md#product-type): selecione **Assinatura**.
+    * [Tipo de produto](../publish/set-your-add-on-product-id.md#product-type): selecione **Assinatura**.
 
-  * [Período de assinatura](../publish/enter-add-on-properties.md#subscription-period): escolha o período de cobrança recorrente para sua assinatura. Você não poderá alterar o período de assinatura depois de publicar o complemento.
+    * [Período de assinatura](../publish/enter-add-on-properties.md#subscription-period): escolha o período de cobrança recorrente para sua assinatura. Você não poderá alterar o período de assinatura depois de publicar o complemento.
 
-    Cada complemento de assinatura dá suporte a um único período de assinatura e período de avaliação. Você deve criar um complemento de assinatura diferente para cada tipo de assinatura que deseja oferecer em seu app. Por exemplo, se você quiser oferecer uma assinatura mensal sem avaliação, uma assinatura mensal com uma versão de avaliação de um mês, uma assinatura anual sem avaliação e uma assinatura anual com uma versão de avaliação de um mês, precisará criar quatro complementos de assinatura.
+        Cada complemento de assinatura dá suporte a um único período de assinatura e período de avaliação. Você deve criar um complemento de assinatura diferente para cada tipo de assinatura que deseja oferecer em seu app. Por exemplo, se você quiser oferecer uma assinatura mensal sem avaliação, uma assinatura mensal com uma versão de avaliação de um mês, uma assinatura anual sem avaliação e uma assinatura anual com uma versão de avaliação de um mês, precisará criar quatro complementos de assinatura.
 
-  * [Período de avaliação](../publish/enter-add-on-properties.md#free-trial): considere a escolha de um período de avaliação de uma semana ou de um mês para sua assinatura para permitir que os usuários experimentem o conteúdo da assinatura antes de comprá-la. Você não poderá alterar ou remover o período de assinatura depois de publicar o complemento da assinatura.
+    * [Período de avaliação](../publish/enter-add-on-properties.md#free-trial): considere a escolha de um período de avaliação de uma semana ou de um mês para sua assinatura para permitir que os usuários experimentem o conteúdo da assinatura antes de comprá-la. Você não poderá alterar ou remover o período de assinatura depois de publicar o complemento da assinatura.
 
-    Para adquirir uma avaliação gratuita de sua assinatura, um usuário precisará comprar sua assinatura por meio do processo padrão de compra no aplicativo, incluindo uma forma de pagamento válida. Eles não são cobrados durante o período de avaliação. No final do período de avaliação, a assinatura é automaticamente convertida na assinatura completa e o instrumento de pagamento do usuário será cobrado pelo primeiro período da assinatura paga. Se o usuário optar por cancelar sua assinatura durante o período de avaliação, a assinatura permanecerá ativa até o final do período de avaliação. Alguns períodos de avaliação não estão disponíveis para todos os períodos de assinatura.
+        Para adquirir uma avaliação gratuita de sua assinatura, um usuário precisará comprar sua assinatura por meio do processo padrão de compra no aplicativo, incluindo uma forma de pagamento válida. Eles não são cobrados durante o período de avaliação. No final do período de avaliação, a assinatura é automaticamente convertida na assinatura completa e o instrumento de pagamento do usuário será cobrado pelo primeiro período da assinatura paga. Se o usuário optar por cancelar sua assinatura durante o período de avaliação, a assinatura permanecerá ativa até o final do período de avaliação. Alguns períodos de avaliação não estão disponíveis para todos os períodos de assinatura.
+
         > [!NOTE]
-        > Each customer can acquire a free trial for a subscription add-on only one time. After a customer acquires a free trial for a subscription, the Store prevents the same customer from ever acquiring the same free trial subscription again.
+        > Cada cliente pode adquirir uma avaliação gratuita para um complemento de assinatura somente uma vez. Depois que um cliente adquire uma avaliação gratuita de uma assinatura, a Store impede que o mesmo cliente adquira a mesma assinatura de avaliação gratuita novamente.
 
-  * [Visibilidade](../publish/set-add-on-pricing-and-availability.md#visibility): se você estiver criando um complemento de teste que usará somente para testar a experiência de compra no aplicativo para a sua assinatura, nós recomendamos que você selecione uma das opções **Oculto na Store**. Caso contrário, você pode selecionar a melhor opção de visibilidade para seu cenário.
+    * [Visibilidade](../publish/set-add-on-pricing-and-availability.md#visibility): se você estiver criando um complemento de teste que usará somente para testar a experiência de compra no aplicativo para a sua assinatura, nós recomendamos que você selecione uma das opções **Oculto na Store**. Caso contrário, você pode selecionar a melhor opção de visibilidade para seu cenário.
 
-  * [Preço](../publish/set-add-on-pricing-and-availability.md?#pricing): escolha o preço de sua assinatura nesta seção. Você não poderá elevar o preço da assinatura depois de publicar o complemento. No entanto, você poderá reduzir o preço mais tarde.
-      > [!IMPORTANT]
-      > Por padrão, quando você criar qualquer complemento, o preço será inicialmente definido como **Grátis**. Como você não pode aumentar o preço de um complemento de assinatura depois de concluir o envio de complemento, escolha o preço de sua assinatura aqui.
+    * [Preço](../publish/set-add-on-pricing-and-availability.md?#pricing): escolha o preço de sua assinatura nesta seção. Você não poderá elevar o preço da assinatura depois de publicar o complemento. No entanto, você poderá reduzir o preço mais tarde.
+        > [!IMPORTANT]
+        > Por padrão, quando você criar qualquer complemento, o preço será inicialmente definido como **Grátis**. Como você não pode aumentar o preço de um complemento de assinatura depois de concluir o envio de complemento, escolha o preço de sua assinatura aqui.
 
 2. Em seu app, use as APIs no namespace [**Windows.Services.Store**](https://docs.microsoft.com/uwp/api/windows.services.store) para determinar se o usuário atual já adquiriu o complemento de assinatura e então oferecê-lo para venda ao usuário como uma compra no aplicativo. Consulte os [exemplos de código](#code-examples) neste artigo para obter mais detalhes.
 
-3. Teste a implementação de compra no aplicativo de sua assinatura em seu app. Será necessário baixar seu app uma vez da Loja para seu dispositivo de desenvolvimento para usar sua licença para teste. Para obter mais informações, consulte nossas [diretrizes de teste](in-app-purchases-and-trials.md#testing) para compras no aplicativo.  
+3. Teste a implementação de compra no aplicativo de sua assinatura em seu app. Será necessário baixar seu app uma vez da Store para seu dispositivo de desenvolvimento para usar sua licença para teste. Para obter mais informações, consulte nossas [diretrizes de teste](in-app-purchases-and-trials.md#testing) para compras no aplicativo.  
 
 4. Criar e publicar um envio de aplicativo que inclui o pacote do app atualizado, incluindo seu código testado. Para obter mais informações, consulte [Envios de aplicativo](../publish/app-submissions.md).
 
@@ -71,7 +72,7 @@ Os exemplos de código nesta seção demonstram como usar as APIs no namespace [
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Microsoft Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Microsoft Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Store enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
 * Você [criou um complemento de assinatura para o app](../publish/add-on-submissions.md) no painel do Centro de Desenvolvimento.
 
 O código nestes exemplos pressupõe que:
@@ -104,7 +105,7 @@ Este exemplo de código demonstra como obter informações para todos os complem
 
 ## <a name="manage-subscriptions-from-your-services"></a>Gerenciar assinaturas de seus serviços
 
-Depois que seu app atualizado estiver na Loja e os clientes puderem comprar seu complemento de assinatura, talvez haja cenários onde será necessário gerenciar a assinatura para um cliente. Nós fornecemos APIs REST que você pode chamar de seus serviços para realizar as seguintes tarefas de gerenciamento de assinatura:
+Depois que seu app atualizado estiver na Store e os clientes puderem comprar seu complemento de assinatura, talvez haja cenários onde será necessário gerenciar a assinatura para um cliente. Nós fornecemos APIs REST que você pode chamar de seus serviços para realizar as seguintes tarefas de gerenciamento de assinatura:
 
 * [Obtenha as assinaturas que um usuário tem um direito de usar](get-subscriptions-for-a-user.md). Se sua assinatura fizer parte de um serviço de plataforma cruzada, você poderá chamar essa API para determinar se o usuário especificado tem direito à sua assinatura e o status da assinatura no contexto de seu aplicativo UWP. Então você poderá usar essas informações para atualizar o status da assinatura em outras plataformas compatíveis com o seu serviço.
 
@@ -126,7 +127,7 @@ Não oferecemos períodos de carência para cobrança de assinatura. Se não pud
 
 No momento, os cenários a seguir não têm suporte para complementos de assinatura.
 
-* No momento, não há suporte para a venda de assinaturas para clientes diretamente por meio da Loja. As assinaturas só estão disponíveis para compras no aplicativo de produtos digitais.
+* No momento, não há suporte para a venda de assinaturas para clientes diretamente por meio da Store. As assinaturas só estão disponíveis para compras no aplicativo de produtos digitais.
 * Os clientes não podem trocar de períodos de assinatura usando a página [http://account.microsoft.com/services](http://account.microsoft.com/services) para a conta da Microsoft. Para alternar para um período de assinatura diferente, os clientes devem cancelar sua assinatura atual e então comprar uma assinatura com um período de assinatura diferente do seu aplicativo.
 * No momento, a troca de camada não tem suporte para complementos de assinatura (por exemplo, alternar um cliente de uma assinatura básica para uma assinatura premium com mais recursos).
 * No momento, não há suporte a [vendas](../publish/put-apps-and-add-ons-on-sale.md) e [códigos promocionais](../publish/generate-promotional-codes.md) para complementos de assinatura.

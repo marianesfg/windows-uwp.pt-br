@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 61711098d07d830d4f6a1a6cdabed1a31217d2ea
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: a443dd7505ce399d82cbd33c5691ec9b35a18b93
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396705"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983693"
 ---
 # <a name="surface-dial-interactions"></a>Interações com o Surface Dial
 
@@ -29,11 +29,11 @@ ms.locfileid: "1396705"
 Os dispositivos de rolagem do Windows, como o Surface Dial, são uma nova categoria de dispositivo de entrada que proporcionam uma série de experiências de interação do usuário atraentes e exclusivas para Windows e aplicativos do Windows. 
 
 > [!IMPORTANT]
-> Neste tópico, nos referimos especificamente a interações com o Surface Dial, mas as informações são aplicáveis a todos os dispositivos de rolagem do Windows.
+> Neste tópico, nos referimos especificamente a interações com o Surface Dial, mas as informações são aplicáveis a todos os dispositivos de rolagem do Windows. 
 
 | Vídeos |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
+| <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
 | *Parceiros de aplicativo do Surface Dial* | *Surface Dial para desenvolvedores* |
 
 Com um fator forma com base em uma ação (ou gesto) *girar*, o Surface Dial destina-se como um dispositivo de entrada secundário para vários tipos de mídia que complementa a entrada de um dispositivo principal. Na maioria dos casos, o dispositivo é manipulado pela mão não dominante de um usuário durante a execução de uma tarefa com a mão dominante (por exemplo, escrita à tinta com uma caneta). Ele não foi projetado para entrada de ponteiro de precisão (por exemplo, toque, caneta ou mouse). 
