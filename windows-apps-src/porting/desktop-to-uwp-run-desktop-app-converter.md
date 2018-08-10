@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: 141d87bf48b5b4835055375320f1e4a79498a42f
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 3d03ad8aa066a4d3b8f5aaaf2532f09d9ce0acbe
+ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989670"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "2411196"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>Empacotar um app usando o Desktop App Converter (Ponte de Desktop)
 
@@ -363,7 +363,7 @@ Se você quiser, você pode verificar a pasta VFS e excluir quaisquer arquivos q
 Durante o processo de conversão, o DesktopAppConverter executa automaticamente o PEHeaderCertFixTool para corrigir todos os cabeçalhos PE corrompidos. No entanto, você também pode executar o PEHeaderCertFixTool em um pacote de aplicativos UWP do Windows, arquivos soltos ou um binário específico. Veja um exemplo.
 
 ```CMD
-PEHeaderCertFixTool.exe <binary file>|<.appx package>|&lt;folder> [/c] [/v]
+PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
  /c   -- check for corrupted certificate but do not fix (optional)
  /v   -- verbose (optional)
 example1: PEHeaderCertFixTool app.exe
