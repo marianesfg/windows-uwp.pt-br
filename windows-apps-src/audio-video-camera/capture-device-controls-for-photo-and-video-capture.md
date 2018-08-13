@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: "Este artigo mostra como usar controles de dispositivo manuais para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem óptica e zoom suave."
-title: "Controles manuais da câmera para a captura de fotos e vídeos"
+description: Este artigo mostra como usar controles de dispositivo manuais para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem óptica e zoom suave.
+title: Controles manuais da câmera para a captura de fotos e vídeos
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
 ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.locfileid: "201402"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuais da câmera para a captura de fotos e vídeos
 
