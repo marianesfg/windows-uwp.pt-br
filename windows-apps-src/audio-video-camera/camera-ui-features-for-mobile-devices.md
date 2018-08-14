@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: c43d4af3-9a1a-4eae-a137-1267c293c1b5
-description: "Este artigo mostra como tirar proveito dos recursos especiais da interface do usuário da câmera que estão presentes apenas em dispositivos móveis."
-title: "Recursos da interface do usuário da câmera para dispositivos móveis"
+description: Este artigo mostra como tirar proveito dos recursos especiais da interface do usuário da câmera que estão presentes apenas em dispositivos móveis.
+title: Recursos da interface do usuário da câmera para dispositivos móveis
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 7b9db18d83c9d4811c446f90c40ff3e0044dccf2
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.locfileid: "199164"
 ---
 #<a name="camera-ui-features-for-mobile-devices"></a>Recursos da interface do usuário da câmera para dispositivos móveis
 

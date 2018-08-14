@@ -1,8 +1,8 @@
 ---
 author: laurenhughes
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
-description: "Este artigo lista as opções de codificação que podem ser usadas com BitmapEncoder."
-title: "Referência de opções de BitmapEncoder"
+description: Este artigo lista as opções de codificação que podem ser usadas com BitmapEncoder.
+title: Referência de opções de BitmapEncoder
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: adfd360c22fd6737d9e95e6e3153f4e2767a4c99
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.locfileid: "199182"
 ---
 # <a name="bitmapencoder-options-reference"></a>Referência de opções de BitmapEncoder
 
