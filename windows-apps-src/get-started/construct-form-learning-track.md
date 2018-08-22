@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: introdução, uwp, o windows 10, acompanhamento de aprendizado, layout, formulário
 ms.localizationpriority: medium
-ms.openlocfilehash: 20146c8a1bae92a46fc8cf878acd4d2dc5d2fb1e
-ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
-ms.translationtype: HT
+ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "1992092"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795448"
 ---
 # <a name="create-and-customize-a-form"></a>Criar e personalizar um formulário
 
@@ -48,9 +48,9 @@ Leia [esta documentação nos painéis de layout](../design/layout/layout-panels
 
 ## <a name="what-goes-in-a-form"></a>O é incluído em um formulário?
 
-Você deverá preencher o formulário com vários [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Você provavelmente está familiarizado com isso, mas fique à vontade para ler caso precise se atualizar. Você deseja controles específicos que permitem ao usuário inserir texto ou escolher a partir de uma lista de valores. Esta é uma lista das opções básicas que você pode adicionar. Não é preciso ler tudo sobre elas, apenas o suficiente para compreender o que são e como funcionam.
+Você deverá preencher o formulário com vários [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Você provavelmente está familiarizado com isso, mas fique à vontade para ler caso precise se atualizar. Você deseja controles específicos que permitem ao usuário inserir texto ou escolher a partir de uma lista de valores. Esta é uma lista básica das opções que você pode adicionar – você não precisa ler tudo sobre cada um deles, apenas o suficiente para compreender o que elas se parecem e como eles funcionam.
 
-* [TextBox](../design/controls-and-patterns/text-box.md) permite que um usuário insira texto em seu aplicativo.
+* [TextBox](../design/controls-and-patterns/text-box.md) permite que um texto de entrada do usuário em seu aplicativo.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite que um usuário selecione entre duas opções.
 * [DatePicker](../design/controls-and-patterns/date-picker.md) permite que um usuário selecione um valor de data.
 * [TimePicker](../design/controls-and-patterns/time-picker.md) permite que um usuário selecione um valor de tempo.
@@ -71,18 +71,18 @@ Com esse aviso, você deve começar a adicionar seus controles de preferência n
         <TextBox x:Name="Address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" HorizontalAlignment="Left" />
         <TextBox x:Name="Address2" Margin="0,24,0,0" PlaceholderText="Address 2" HorizontalAlignment="Left" />
             <RelativePanel>
-                <TextBox x:Name="City" PlaceholderText="City" Margin="0,24,0,0"HorizontalAlignment="Left" />
+                <TextBox x:Name="City" PlaceholderText="City" Margin="0,24,0,0" HorizontalAlignment="Left" />
                 <ComboBox x:Name="State" PlaceholderText="State" Margin="24,24,0,0" RelativePanel.RightOf="City">
                     <!--List of valid states-->
                 </ComboBox>
             </RelativePanel>
     </StackPanel>
-    <StackPanel x:Name="Associate" Margin="20" RelativePanel.RightOf="Customer">
+    <StackPanel x:Name="Associate" Margin="20" RelativePanel.Below="Customer">
         <TextBox x:Name="AssociateName" Header= "Associate" Margin="0,24,0,0" HorizontalAlignment="Left" />
         <DatePicker x:Name="TargetInstallDate" Header="Target install Date" HorizontalAlignment="Left" Margin="0,24,0,0"></DatePicker>
         <TimePicker x:Name="InstallTime" Header="Install Time" HorizontalAlignment="Left" Margin="0,24,0,0"></TimePicker>
     </StackPanel>
-    <StackPanel x:Name="Save" Orientation="Horizontal" RelativePanel.Below="Customer">
+    <StackPanel x:Name="Save" Orientation="Horizontal" RelativePanel.Below="Associate">
         <Button Content="Save" Margin="24" />
         <Button Content="Cancel" Margin="24" />
     </StackPanel>
@@ -110,9 +110,9 @@ Os **estados visuais** são ainda mais importantes do que os layouts dinâmicos.
             </VisualState.StateTriggers>
 
             <VisualState.Setters>
-                <Setter Target="Associate.(RelativePanel.RightOf)" Value=""/>
-                <Setter Target="Associate.(RelativePanel.Below)" Value="Customer"/>
-                <Setter Target="Save.(RelativePanel.Below)" Value="Associate"/>
+                <Setter Target="Associate.(RelativePanel.RightOf)" Value="Customer"/>
+                <Setter Target="Associate.(RelativePanel.Below)" Value=""/>
+                <Setter Target="Save.(RelativePanel.Below)" Value="Customer"/>
             </VisualState.Setters>
         </VisualState>
     </VisualStateGroup>
@@ -136,7 +136,7 @@ Ao criar layouts mais complexos com mais elementos visuais, é recomendado consu
 
 ## <a name="going-further"></a>Aprofundamento
 
-Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Fique à vontade para ler novamente os documentos que você recebeu e para experimentar com seu formulário, adicionando novos recursos da interface do usuário e aperfeiçoando a experiência do usuário. Se você quiser orientações passo a passo por meio de destaques de layout mais detalhados, veja nosso [tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md)
+Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Se sentir livres voltem os documentos, podemos vinculou a e experimentar o formulário que tiver, adicionando novos recursos de interface do usuário e refinando a experiência do usuário. Se você quiser orientação passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial adaptável layout](../design/basics/xaml-basics-adaptive-layout.md)
 
 Os formulários também não precisam existir no vácuo: você pode ir além e incorporar o seu em um [padrão principal/detalhes](../design/controls-and-patterns/master-details.md) ou de um [controle de pivot](../design/controls-and-patterns/tabs-pivot.md). Ou se quiser começar a trabalhar no código por trás do formulário, é recomendado começar com a [visão geral dos eventos](../xaml-platform/events-and-routed-events-overview.md).
 

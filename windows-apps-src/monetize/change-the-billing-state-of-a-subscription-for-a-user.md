@@ -4,18 +4,18 @@ ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Use este método na API de compra da Microsoft Store para alterar o estado de cobrança de uma assinatura para um usuário.
 title: Alterar o estado de cobrança de uma assinatura para um usuário
 ms.author: mcleans
-ms.date: 03/16/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb4a3de45d19b1a43af1de06a46f0b440fe53e6
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664879"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796317"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Alterar o estado de cobrança de uma assinatura para um usuário
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Nome         | Tipo  | Descrição   |  Necessário  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadeia | A ID da assinatura que deseja alterar. Para obter essa ID, chame o método [obter assinaturas para um usuário](get-subscriptions-for-a-user.md), identifique a entrada de corpo de resposta que representa o complemento de assinatura que você deseja alterar e use o valor d campo **Id** para a entrada.     | Sim      |
+| recurrenceId | cadeia | A ID da assinatura que deseja alterar. Para obter essa ID, chame o método [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) , identificar a entrada de corpo de resposta que representa o complemento de assinatura que você deseja alterar e use o valor do campo **id** para a entrada.     | Sim      |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -74,7 +74,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 O exemplo a seguir demonstra como usar esse método para estender o período de inscrição por 5 dias. Substitua o valor *b2bKey* pela [chave ID da Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa a identidade do usuário cuja assinatura você deseja alterar.
 
 ```json
-POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query HTTP/1.1
+POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/mdr:0:bc0cb6960acd4515a0e1d638192d77b7:77d5ebee-0310-4d23-b204-83e8613baaac/change HTTP/1.1
 Authorization: Bearer <your access token>
 Content-Type: application/json
 Host: https://purchase.mp.microsoft.com
@@ -120,12 +120,13 @@ O corpo de resposta contém os seguintes dados.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
+| expirationTimeWithGrace | string | A data e hora que ela expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perderão o acesso à assinatura de após a inscrição falhou renovar automaticamente.    |
 | id | cadeia |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |
 | mercado | cadeia | O código do país (no formato ISO-3166-1 alpha-2 de duas letras) no qual o usuário adquiriu a assinatura.      |
-| productId | cadeia | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o complemento de assinatura no catálogo da Microsoft Store. Um exemplo de ID da Loja para um produto é 9NBLGGH42CFD.     |
-| skuId | cadeia |  A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o complemento de assinatura no catálogo da Microsoft Store. Um exemplo de ID da Loja para SKU é 0010.    |
+| productId | cadeia | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o complemento de assinatura no catálogo da Microsoft Store. Um exemplo de ID da Store para um produto é 9NBLGGH42CFD.     |
+| skuId | cadeia |  A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) que representa o complemento de assinatura no catálogo da Microsoft Store. Um exemplo de ID da Store para uma SKU é 0010.    |
 | startTime | cadeia |  A data e a hora de início da assinatura, no formato ISO 8601.     |
 | recurrenceState | cadeia  |  Um dos seguintes valores:<ul><li>**Nenhum**:&nbsp;&nbsp;isso indica uma assinatura permanente.</li><li>**Ativa**:&nbsp;&nbsp;a assinatura está ativa e o usuário está qualificado para usar os serviços.</li><li>**Inativa**:&nbsp;&nbsp;a assinatura passou da data de expiração, e o usuário desativou a opção de renovação automática da assinatura.</li><li>**Cancelada**:&nbsp;&nbsp;a assinatura foi encerrada propositadamente antes da data de expiração, com ou sem um reembolso.</li><li>**Pagamento atrasado**:&nbsp;&nbsp;a assinatura está com *pagamento atrasado* (ou seja, assinatura está prestes a expirar e a Microsoft está tentando adquirir fundos para renovar automaticamente a assinatura).</li><li>**Falha**:&nbsp;&nbsp;o período de pagamento acabou e a assinatura não pôde ser renovada após várias tentativas.</li></ul><p>**Observação:**</p><ul><li>**Inativa**/**Canceleda**/**Falha** são estados terminais. Quando uma inscrição entra em um desses estados, o usuário deve recomprar a assinatura para ativá-la novamente. O usuário não tem direito a usar os serviços nesses estados.</li><li>Quando uma assinatura for **Cancelada**, o expirationTime será atualizado com a data e hora de cancelamento.</li><li>A ID da assinatura permanecerá a mesmo durante toda a sua vida. Ela não irá mudar se a opção de renovação automática for ativada ou desativada. Se um usuário recomprar uma inscrição depois de chegar a um estado terminal, será criada uma nova ID de inscrição.</li><li>O ID de uma assinatura deve ser usado para executar qualquer operação em uma assinatura individual.</li><li>Quando um usuário recompra uma assinatura depois de cancelar ou descontinuar, se você consultar os resultados para o usuário, você receberá duas entradas: uma com a ID da assinatura antiga em um estado terminal e uma com a nova ID da inscrição em um estado ativo.</li><li>É sempre uma boa prática verificar os tempos de recorrência e expiração, uma vez que as atualizações do estado de recorrência podem ser atrasadas em poucos minutos (ou ocasionalmente horas).       |
 | cancellationDate | cadeia   |  A data e hora que é assinatura do usuário foi cancelada, sem formato ISO 8601.     |

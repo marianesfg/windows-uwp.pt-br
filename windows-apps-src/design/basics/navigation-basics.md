@@ -7,18 +7,18 @@ label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: sezhen
-ms.date: 11/27/2017
+ms.date: 7/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0980f24394a075596b60e4a8005b303857b91304
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792787"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -28,7 +28,9 @@ Se você considera um aplicativo uma coleção de páginas, *navegação* descre
 
 Há várias opções de navegação. É possível:
 
-:::linha::: :::coluna::: ![exemplo de navegação 1](images/nav/nav-1.svg)
+:::row:::
+    :::column:::
+        ![exemplo de navegação 1](images/nav/nav-1.svg)
 
         Require users to go through a series of pages in order.
     :::column-end:::
@@ -42,7 +44,7 @@ Há várias opções de navegação. É possível:
 
         Place everything on a single page and provide filtering mechanisms for viewing content.
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 Embora não haja nenhum design de navegação simples que funcione para todos os aplicativos, há princípios e diretrizes para ajudá-lo a decidir o design ideal para seu aplicativo.
 
@@ -56,7 +58,7 @@ Vamos começar com os princípios básicos de bom design de navegação:
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usar [controles padrão](#use-the-right-controls) com os quais os usuários estão familiarizados e seguir convenções padrão para ícones, localização, e estilo tornarão a navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários fazem está familiarizado com e convenções padrão a seguir para ícones, local e o estilo fará navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -66,7 +68,9 @@ A navegação deve ser consistente com as expectativas dos usuários. Usar [cont
 
 Menos itens de navegação simplificam a tomada de decisão para os usuários. Fornecer acesso fácil a destinos importantes e ocultar itens menos importantes ajudarão os usuários a chegarem onde desejam mais rapidamente.
 
-:::linha::: :::coluna::: ![exemplo do que fazer](images/nav/do.svg)
+:::row:::
+    :::column:::
+        ![exemplo do que fazer](images/nav/do.svg)
 
         ![navview good](images/nav/navview-good.svg)
 
@@ -77,9 +81,9 @@ Menos itens de navegação simplificam a tomada de decisão para os usuários. F
 
         ![navview bad](images/nav/navview-bad.svg)
 
-        Constantly provide many navigation options to overwhelm the user.
+        Overwhelm users with many navigation options.
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ### <a name="clarity"></a>Clareza
 
@@ -93,9 +97,9 @@ Caminhos claros permitem navegação lógica para os usuários. Tornar as opçõ
 
 Agora, vamos usar nossos princípios de design, ou seja, consistência, simplicidade e clareza, para criar algumas recomendações gerais.
 
-1. Pense em seus usuários. Trace os caminhos típicos que eles podem tomar por meio de seu aplicativo e, para cada página, pense no motivo de o usuário estar lá e onde eles podem querer ir. 
+1. Pense em seus usuários. Trace os caminhos típicos que eles podem tomar por meio de seu aplicativo e, para cada página, pense no motivo de o usuário estar lá e onde eles podem querer ir.
 
-2. Evite aprofundar as hierarquias de navegação. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
+2. Evite hierarquias de navegação de profundidade. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
 
 3. Evite o "pula-pula". O "pula-pula" ocorre quando há conteúdo relacionado, mas a navegação até ele requer que o usuário suba um nível e desça novamente.
 
@@ -103,39 +107,50 @@ Agora, vamos usar nossos princípios de design, ou seja, consistência, simplici
 
 Agora que você está familiarizado com os princípios gerais de navegação, como você deve estruturar seu aplicativo? Existem duas estruturas gerais: simples e hierárquica.
 
-:::linha::: :::coluna::: ![Páginas organizadas em uma estrutura simples](images/nav/flat-lateral-structure.svg) :::fim da coluna::: :::extensão da coluna="2":::
+:::row:::
+    :::column:::
+        ![Páginas dispostas em uma estrutura simples](images/nav/flat-lateral-structure.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2":::
         ### Flat/lateral
 
-        In a flat/lateral structure, pages exist side-by-side. You can go from on page to another in any order. 
+        In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
 
         We recommend using a flat structure when:
-        <ul>
-        <li>The pages can be viewed in any order.</li>
-        <li>The pages are clearly distinct from each other and don't have an obvious parent/child relationship.</li>
-        <li>There are fewer than 8 pages in the group.<br/>
-        (When there are more pages, it might be difficult for users to understand how the pages are unique or to understand their current location within the group. If you don't think that's an issue for your app, go ahead and make the pages peers. Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.)</li>
-        </ul>
+
+        - The pages can be viewed in any order.
+        - The pages are clearly distinct from each other and don't have an obvious parent/child relationship.
+        - There are less than 8 pages in the group. <br>
+        (When there are more pages, it might be difficult for users to understand how the pages are unique or to understand their current location within the group. If you don't think that's an issue for your app, go ahead and make the pages peers. Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.)
 
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
-:::linha::: :::coluna::: ![Páginas organizadas em uma hierarquia](images/nav/hierarchical-structure.svg) :::fim da coluna::: :::extensão da coluna="2":::
+:::row:::
+    :::column:::
+        ![Páginas dispostas em uma hierarquia](images/nav/hierarchical-structure.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
 
-        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page. 
+        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page.
 
-        We recommend a hiearchical structure when:
-        <ul>
-        <li>Pages should be traversed in a specific order.</li>
-        <li>There is a clear parent-child relationship between pages.</li>
-        <li>There are more than 7 pages in the group.</li>
-        </ul>
+        We recommend a hierarchical structure when:
+        
+        - Pages should be traversed in a specific order.
+        - There is a clear parent-child relationship between pages.
+        - There are more than 7 pages in the group.
+        
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
-:::linha::: :::coluna::: ![um aplicativo com uma estrutura híbrida](images/nav/combining-structures.svg) :::fim da coluna::: :::extensão da coluna="2":::
+:::row:::
+    :::column:::
+        ![um aplicativo com uma estrutura híbrida](images/nav/combining-structures.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -143,56 +158,81 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
         If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree. Consider the adjacent illustration, which shows a navigation structure that has two levels:
 
         - At level 1, the peer-to-peer navigation element should provide access to pages A, B, C, and D.
-        - At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages. They should not link to level 2 pages in the C subtree. 
+        - At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages. They should not link to level 2 pages in the C subtree.
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="use-the-right-controls"></a>Use os controles corretos
 
-Após decidir-se por uma estrutura de página, você precisará decidir como os usuários navegarão por essas páginas. A UWP oferece uma variedade de controles de navegação para ajudar a garantir uma experiência de navegação consistente e confiável em seu aplicativo. 
+Após decidir-se por uma estrutura de página, você precisará decidir como os usuários navegarão por essas páginas. A UWP oferece uma variedade de controles de navegação para ajudar a garantir uma experiência de navegação consistente e confiável em seu aplicativo.
 
-É recomendável selecionar um controle de navegação com base no número de elementos de navegação em seu aplicativo. Se você tiver cinco ou menos itens de navegação, utilize navegação de nível superior, como [guias e pivô](../controls-and-patterns/tabs-pivot.md). Se você tem seis ou mais itens de navegação, use a navegação à esquerda, como [modo de exibição navegação](../controls-and-patterns/navigationview.md) ou [mestre/detalhes](../controls-and-patterns/master-details.md).
-
-:::linha::: :::coluna::: ![Imagem do quadro](images/nav/thumbnail-frame.svg) :::fim da coluna::: :::extensão da coluna="2"::: <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Frame"><b>Quadro</b></a>
+:::row:::
+    :::column:::
+        ![Imagem do quadro](images/nav/thumbnail-frame.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2"::: [ **quadro**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
-:::fim da linha:::
+:::row-end:::
 
-:::linha::: :::coluna::: ![guias e imagem pivô](images/nav/thumbnail-tabs-pivot.svg) :::fim da coluna::: :::extensão da coluna="2"::: <a href="../controls-and-patterns/tabs-pivot.md"><b>Guias e pivô</b></a><br>
+:::row:::
+    :::column:::
+        ![imagem de pivot e guias](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2"::: [ **guias e navegação superior**](../controls-and-patterns/navigationview.md)
 
-        Displays a horizontal list of links to pages at the same level. Use when:
-        <ul>
-        <li>There are 2-5 pages. (You can use tabs/pivots when there are more than 5 pages, but it might be difficult to fit all the tabs/pivots on the screen.)</li>
-        <li>You expect users to switch between pages frequently.</li>
-        </ul>
-:::fim da linha:::
+        Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
+        
+        Use top navigation when:
 
-:::linha::: :::coluna::: ![guias e imagem pivô](images/nav/thumbnail-navview.svg) :::fim da coluna::: :::extensão da coluna="2"::: <a href="../controls-and-patterns/navigationview.md"><b>Exibição de navegação</b></a><br>
+        - You want to show all navigation options on the screen.
+        - You desire more space for your app's content.
+        - Icons cannot clearly describe your navigation categories.
+        
+        Use tabs when:
+
+        - You want to preserve navigation history and page state.
+        - You expect users to switch between tabs frequently.
+
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![imagem de navview](images/nav/thumbnail-navview.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2"::: [de **navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
-        <ul>
-        <li>The pages exist at the top level.</li>
-        <li>There are many navigational items (more than 5).</li>
-        <li>You don't expect users to switch between pages frequently.</li>
-        </ul>
-:::fim da linha:::
+        
+        - The pages exist at the top level.
+        - There are many navigation items (more than 5)
+        - You don't expect users to switch between pages frequently.
+        
+:::row-end:::
 
-:::linha::: :::coluna::: ![Imagem de detalhes principal](images/nav/thumbnail-master-detail.svg) :::fim da coluna::: :::extensão da coluna="2"::: <a href="../controls-and-patterns/master-details.md"><b>Principal/detalhes</b></a><br>
+:::row:::
+    :::column:::
+        ![Imagem de detalhes mestre](images/nav/thumbnail-master-detail.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2"::: [ **detalhes do mestre**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
-        <ul>
-        <li>You expect users to switch between child items frequently.</li>
-        <li>You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.</li>
-        </ul>
+        
+        - You expect users to switch between child items frequently.
+        - You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.
 
         Master/details is well suited for email inboxes, contact lists, and data entry.
-:::fim da linha:::
+:::row-end:::
 
-:::linha::: :::coluna::: ![Hiperlinks e imagem de botões](images/nav/thumbnail-hyperlinks-buttons.svg) :::fim da coluna::: :::extensão da coluna="2"::: <a href="../controls-and-patterns/hyperlinks.md"><b>Hiperlinks</b></a> e <a href="../controls-and-patterns/buttons.md"><b>botões</b></a><br>
+:::row:::
+    :::column:::
+        ![Hiperlinks e botões de imagem](images/nav/thumbnail-hyperlinks-buttons.svg)
+    :::column-end:::
+    ::: extensão da coluna = "2"::: [ **hiperlinks**](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="next-add-navigation-code-to-your-app"></a>Próximo: Adicionar código de navegação ao aplicativo
 
-O próximo artigo, [Implementar a navegação básica](navigate-between-two-pages.md), mostra o código necessário para usar um controle de Quadro que habilitará a navegação básica entre duas páginas no aplicativo. 
+O próximo artigo, [Implementar a navegação básica](navigate-between-two-pages.md), mostra o código necessário para usar um controle de Quadro que habilitará a navegação básica entre duas páginas no aplicativo.

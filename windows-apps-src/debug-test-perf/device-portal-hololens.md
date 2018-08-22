@@ -8,23 +8,21 @@ ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, portal de dispositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e73519f57d9b08e08a7400f322367b6634cf945
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792476"
 ---
-# <a name="device-portal-for-hololens"></a>Portal de Dispositivos para HoloLens
+# <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>Configurar o Device Portal no HoloLens
 
 ### <a name="enable-device-portal"></a>Habilitar o Device Portal
-
-**Para habilitar o Device Portal**
 
 1. Ligue seu HoloLens e coloque o dispositivo.
 2. Faça o gesto [bloom](https://dev.windows.com/holographic/Gestures.html#Bloom) para iniciar o menu principal.
@@ -37,7 +35,7 @@ ms.locfileid: "1817717"
 
 ### <a name="pair-your-device"></a>Emparelhar seu dispositivo
 
-### <a name="connect-over-wi-fi"></a>Conectar-se por Wi-Fi 
+#### <a name="connect-over-wi-fi"></a>Conectar-se por Wi-Fi 
 
 1. Conecte seu HoloLens ao Wi-Fi.
 2. Procure pelo endereço IP do seu dispositivo.– localize o endereço IP do dispositivo em Configurações > Rede e Internet > Wi-Fi > Opções Avançadas.
@@ -46,18 +44,21 @@ ms.locfileid: "1817717"
 3. Usando um navegador da Web em seu computador, acesse `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - O navegador exibirá a seguinte mensagem: "Há um problema com o certificado de segurança deste site". Isso acontece porque o certificado emitido para o Device Portal é um certificado de teste. Você pode ignorar esse erro de certificado por enquanto e continuar.
 
-### <a name="connect-over-usb"></a>Conectar-se por USB 
+#### <a name="connect-over-usb"></a>Conectar-se por USB 
 
 1. Instale as ferramentas para certificar-se de que você tem o Visual Studio Update 1 com as ferramentas de desenvolvedor do Windows 10 instaladas no computador. Isso permite a conectividade por USB.
 2. Conecte seu HoloLens ao computador com um cabo Micro USB.
 3. Usando um navegador da Web em seu computador, acesse `http://127.0.0.1:10080`.
 
-### <a name="connect-to-an-emulator"></a>Conectar-se a um emulador 
+> [!IMPORTANT]
+> Se o seu PC não pôde encontrar o dispositivo, tente usar o endereço IP de rede real do dispositivo HoloLens, em vez de `http://127.0.0.1:10080`.
+
+#### <a name="connect-to-an-emulator"></a>Conectar-se a um emulador 
 
 Você também pode usar o Device Portal com seu emulador. Para se conectar ao Device Portal, use a barra de ferramentas. Clique neste ícone:
 - Open Device Portal: abra o Windows Device Portal para o sistema operacional HoloLens no emulador.
 
-### <a name="create-a-username-and-password"></a>Criar um nome de usuário e senha 
+#### <a name="create-a-username-and-password"></a>Criar um nome de usuário e senha 
 
 Na primeira vez que se conectar ao Device Portal em seu HoloLens, você precisará criar um nome de usuário e senha.
 1. Em um navegador da Web em seu computador, digite o endereço IP do HoloLens. A página Set up access é aberta.
@@ -69,7 +70,7 @@ Na primeira vez que se conectar ao Device Portal em seu HoloLens, você precisar
 
 Se quiser alterar o nome de usuário ou a senha, você pode repetir esse processo a qualquer momento entrando na página de segurança do dispositivo, seja clicando no link Segurança na parte superior direita ou acessando: `https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`.
 
-### <a name="security-certificate"></a>Certificado de segurança 
+#### <a name="security-certificate"></a>Certificado de segurança 
 
 Se você vir um "erro de certificado" no navegador, poderá corrigi-lo criando uma relação de confiança com o dispositivo.
 

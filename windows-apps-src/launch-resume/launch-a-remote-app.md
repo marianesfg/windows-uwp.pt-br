@@ -7,15 +7,15 @@ ms.date: 02/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de projeto
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 146b7e9b642bc196558ce8f1a4da03a70a07a6e8
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658092"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796678"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar um app em um dispositivo remoto
 
@@ -29,7 +29,7 @@ O recurso de inicialização remota proporciona experiências de usuário orient
 
 ### <a name="add-the-remotesystem-capability"></a>Adicionar funcionalidade remoteSystem
 
-Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do pacote do aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
+Para seu app iniciar um app em um dispositivo remoto, você deve adicionar a funcionalidade `remoteSystem` ao manifesto do conjunto de aplicativo. Você pode usar o designer de manifesto de pacote para adicioná-lo selecionando Sistema Remoto na guia **Remote System** em **Funcionalidades**, ou adicionar manualmente a linha a seguir ao arquivo _Package.appxmanifest_ do projeto.
 
 ``` xml
 <Capabilities>

@@ -1,6 +1,6 @@
 ---
 title: Comparar buffers
-description: Este exemplo de código mostra como comparar buffers em um app da Plataforma Universal do Windows (UWP).
+description: Este exemplo de código mostra como comparar buffers em um aplicativo da Plataforma Universal do Windows (UWP).
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: msatranjr
 ms.author: misatran
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fd9875028d6751bb03e353db8d8ce28afd0a979
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 139514166d623dc9a621b533cd3ce4bb7fdea0c5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690202"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789241"
 ---
 # <a name="compare-buffers"></a>Comparar buffers
 

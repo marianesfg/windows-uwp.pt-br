@@ -4,18 +4,18 @@ Description: The Store listings section of the app submission process is where y
 title: Criar listagens da Store do app
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
-ms.localizationpriority: high
-ms.openlocfilehash: 871eb3cd8b8bdfd0cf12859dcb401df2158bf5b7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816941"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795806"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -42,12 +42,22 @@ Na seção **Idiomas adicionais da listagem da Loja**, você pode clicar em **Ge
 
 Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
 
-> [!NOTE]
-> Ao criar uma listagem da Loja em um idioma sem suporte nos seus pacotes, é necessário indicar quais dos nomes de aplicativo reservados devem ser exibidos na listagem da Loja, pois não há um pacote associado nesse idioma para obter o nome. O nome que você escolher aqui se aplicará somente à listagem da Loja desse idioma e não causará impacto no nome exibido quando um cliente instalar o aplicativo.
+## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações sobre a listagem de repositório
 
-Para editar uma listagem da Loja, clique no nome do idioma na página de visão geral do envio.
+Para editar um repositório de listagem, selecione o nome do idioma a página de visão geral de envio.
 
 Na parte superior da página **Listagem da Loja**, estão os campos associados à listagem da Loja padrão do idioma selecionado. Esses campos serão mostrados para todos os seus clientes, a menos que você tenha pacotes direcionados a versões anteriores do sistema operacional (Windows 8.x ou versões anteriores; Windows Phone 8.x ou versões anteriores) e crie listagens da Loja específicas da plataforma para incluir capturas de tela diferentes ou informações a serem exibidas aos clientes em versões específicas do sistema operacional. Para saber mais, consulte [Criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md).
+
+## <a name="product-name"></a>Nome do produto
+
+Essa caixa de lista suspensa permite especificar qual nome deve ser usado na listagem de repositório (se você tiver mais de um nome para o aplicativo reservada).
+
+Caso você tenha carregado pacote (s) no mesmo idioma como a listagem de repositório que você está trabalhando, o nome usado nesses pacotes será selecionado. Se for necessário [Renomear o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ela for já foi publicada, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
+
+Se você ainda não carregou pacotes para o idioma você está trabalhando e você tiver mais de um nome reservado, você precisará selecionar um dos seus nomes reservados app, desde que não há um pacote associado no mesmo idioma do qual receber o nome.
+
+> [!NOTE]
+> O **nome do produto** que você selecionar somente se aplica para o repositório listando no idioma que você está trabalhando. Ela não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome proveniente o manifesto do pacote que obtém instalado. Para evitar confusão, é recomendável que o pacote (s) e a listagem de repositório de cada idioma usam o mesmo nome.
 
 ## <a name="description"></a>Descrição
 
@@ -91,8 +101,9 @@ Você pode enviar ativos adicionais do seu produto, incluindo trailers e imagens
 
 Para obter mais informações, consulte [Ativos de arte adicionais](app-screenshots-and-images.md#additional-art-assets).
 
+<a id="supplemental-information" />
 
-## <a name="supplemental-information"></a>Informações complementares
+## <a name="supplemental-fields"></a>Campos suplementares
 
 Os campos nesta seção são todos opcionais. Examine as informações abaixo para determinar se a apresentação dessas informações faz sentido para o seu envio. Em particular, a **Descrição curta** é recomendada para a maioria dos envios. Os outros campos podem ajudar a fornecer uma experiência ideal para seu produto em diferentes cenários.
 
@@ -123,7 +134,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Este campo tem um limite de 500 caracteres.
+Para obter melhores resultados, mantenha sua descrição curta 270 em caracteres. O campo tem um limite de 500 caracteres, mas em algumas exibições, somente os primeiros 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição curta).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema
@@ -155,7 +166,7 @@ Se quiser fornecer informações adicionais sobre direitos autorais e/ou marca c
 
 ### <a name="additional-license-terms"></a>Termos de licença adicionais
 
-Deixe este campo em branco se quiser que seu aplicativo seja licenciado para os seus clientes sob os **Termos de Licença de Aplicativo Padrão** (associados ao [Contrato do Desenvolvedor de Aplicativos](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+Deixe este campo em branco se quiser que seu aplicativo seja licenciado para os seus clientes sob os **Termos de Licença de Aplicativo Padrão** (associados ao [Contrato do Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)).
 
 Se os termos de licença forem diferentes dos **Termos de Licença de Aplicativo Padrão**, insira-os aqui.
 

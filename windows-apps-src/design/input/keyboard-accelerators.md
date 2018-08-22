@@ -14,12 +14,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 051d3d5251a135dcb1a41e1cd005f462fb074c3b
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983633"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792194"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -355,35 +355,98 @@ Observe que algumas dessas combinações não são válidas para versões locali
 
 Como aceleradores de teclado normalmente não são descritos diretamente na interface do usuário do seu aplicativo UWP, você pode melhorar a detectabilidade por meio das [dicas de ferramenta](../controls-and-patterns/tooltips.md), que são exibidas automaticamente quando o usuário move o foco, pressiona e segura um item ou passa o ponteiro do mouse sobre um controle. A dica de ferramenta pode identificar se um controle tem um acelerador de teclado associado e, em caso afirmativo, qual é a combinação de teclas aceleradoras.
 
-A partir do Windows 10, versão 1803, quando KeyboardAccelerators são declarados, os controles apresentam as combinações de teclas correspondentes em uma dica de ferramenta por padrão (a menos que estejam associados a objetos [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem), consulte os [Rótulos]()). Se um controle tiver mais de um acelerador definido, apenas o primeiro será apresentado na dica de ferramenta.
+**Windows 10, versão 1803 (atualização de abril de 2018) e mais recente**
+
+Por padrão, quando são declarados aceleradores de teclado, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
+
+> [!NOTE] 
+> Se um controle tiver mais de um acelerador definido, somente a primeira é apresentada.
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Combinação de teclas aceleradoras em dica de ferramenta*
 
-Para os objetos [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), o acelerador de teclado é anexado ao rótulo.
+Para objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), o Acelerador de teclado é acrescentado a dica de ferramenta de padrão do controle. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto de submenu.
+
+> [!NOTE]
+> Especificando uma dica de ferramenta (consulte Button1 no exemplo a seguir) substitui esse comportamento.
 
 ```xaml
-<AppBarButton Label="Save" Icon="Save">
-  <Button.KeyboardAccelerators>
-    <KeyboardAccelerator Key="S" Modifiers="Control" />
-  </Button.KeyboardAccelerators>
+<StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
+    <Button Content="Button1" Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto" 
+            ToolTipService.ToolTip="Tooltip">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="A" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+    <Button Content="Button2"  Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="B" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+    <Button Content="Button3"  Margin="20"
+            Click="OnSave" 
+            KeyboardAcceleratorPlacementMode="Auto">
+        <Button.KeyboardAccelerators>
+            <KeyboardAccelerator  Key="C" Modifiers="Windows"/>
+        </Button.KeyboardAccelerators>
+    </Button>
+</StackPanel>
+```
+
+![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-button-small.png)
+
+*Combinação de teclas acelerador acrescentada a dica de ferramenta do botão padrão*
+
+```xaml
+<AppBarButton Icon="Save" Label="Save">
+    <AppBarButton.KeyboardAccelerators>
+        <KeyboardAccelerator Key="S" Modifiers="Control"/>
+    </AppBarButton.KeyboardAccelerators>
 </AppBarButton>
 ```
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbarbutton-small.png)
 
-*Combinação de teclas aceleradoras anexada ao rótulo de controle*
+*Combinação de teclas acelerador acrescentada a dica de ferramenta do AppBarButton padrão*
+
+```xaml
+<AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
+    <AppBarButton.Flyout>
+        <MenuFlyout>
+            <MenuFlyoutItem AccessKey="A" Icon="Refresh" Text="Refresh A">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="R" Modifiers="Control"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem AccessKey="B" Icon="Globe" Text="Refresh B" />
+            <MenuFlyoutItem AccessKey="C" Icon="Globe" Text="Refresh C" />
+            <MenuFlyoutItem AccessKey="D" Icon="Globe" Text="Refresh D" />
+            <ToggleMenuFlyoutItem AccessKey="E" Icon="Globe" Text="ToggleMe">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Q" Modifiers="Control"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </ToggleMenuFlyoutItem>
+        </MenuFlyout>
+    </AppBarButton.Flyout>
+</AppBarButton>
+```
+
+![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
+
+*Combinação de teclas acelerador acrescentada ao texto do MenuFlyoutItem*
 
 Controle o comportamento de apresentação usando a propriedade [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que aceita dois valores: [Automático](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) ou [Oculto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 
 ```xaml
-<Button Content="Save" Click="OnSave">
-  <Button.KeyboardAccelerators> 
-    <KeyboardAccelerator 
-      Key="S" Modifiers="Control" 
-      KeyboardAcceleratorPlacementMode="Hidden" /> 
-  </Button.KeyboardAccelerators>  
+<Button Content="Save" Click="OnSave" KeyboardAcceleratorPlacementMode="Auto">
+    <Button.KeyboardAccelerators>
+        <KeyboardAccelerator Key="S" Modifiers="Control" />
+    </Button.KeyboardAccelerators>
 </Button>
 ```
 
@@ -393,10 +456,12 @@ Aqui, mostramos como usar a propriedade KeyboardAcceleratorPlacementTarget para 
 
 ```xaml
 <Grid x:Name="Container" Padding="30">
-  <Button Content="Save" Click="OnSave">
+  <Button Content="Save"
+    Click="OnSave"
+    KeyboardAcceleratorPlacementMode="Auto"
+    KeyboardAcceleratorPlacementTarget="{x:Bind Container}">
     <Button.KeyboardAccelerators>
-      <KeyboardAccelerator  Key="S" Modifiers="Control" 
-        KeyboardAcceleratorPlacementTarget="{x:Bind Container}"/>
+      <KeyboardAccelerator  Key="S" Modifiers="Control" />
     </Button.KeyboardAccelerators>
   </Button>
 </Grid>
@@ -547,3 +612,15 @@ public class MyListView : ListView
   …
 }
 ```
+
+## <a name="related-articles"></a>Artigos relacionados
+
+* [Interações por teclado](keyboard-interactions.md)
+* [Teclas de acesso](access-keys.md)
+
+**Exemplos**
+* [Galeria de controles de XAML (também conhecido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+
+
+ 
+

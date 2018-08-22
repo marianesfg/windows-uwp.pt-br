@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792675"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)
 
@@ -31,7 +31,7 @@ A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveni
 
 Publique seu aplicativo na loja para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através da [Microsoft Store para Empresas](https://www.microsoft.com/business-store).
 
-Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
+Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 

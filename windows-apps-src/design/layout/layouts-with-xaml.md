@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a175ad48255c0179335ce9204f51a0a62fd2b4f3
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707217"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795162"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -98,7 +98,8 @@ Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibilit
 
 Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro.
 
-> **Dica**&nbsp;&nbsp;Quando você tiver elementos em sua interface do usuário **Collapsed** por padrão, ainda assim os objetos serão criados na inicialização, mesmo quando não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> [!Tip]
+> Quando você tem elementos em sua interface do usuário que estão **recolhido** por padrão, os objetos são criados ainda na inicialização, mesmo que eles não estão visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -138,7 +139,7 @@ Para aplicar um estado visual no código, você chama o método [**VisualStateMa
 Aqui, um [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contém duas definições VisualState. A primeira, `DefaultState`, está vazia. Quando ela é aplicada, os valores definidos na página XAML são aplicados. A segunda, `WideState`, altera a propriedade [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) do [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) para **Inline** e abre o painel. Esse estado é aplicado no manipulador de eventos caso a largura da janela seja superior a 640 pixels efetivos.
 
 > [!NOTE]
-O Windows não permite que o app detecte o dispositivo em que o app está sendo executado. Ele pode informar a família de dispositivos (móvel, área de trabalho etc) em que o aplicativo está sendo executado, a resolução efetiva e a quantidade de espaço na tela disponível para o aplicativo (o tamanho da janela do aplicativo). É recomendável definir estados visuais para [tamanhos de tela e pontos de interrupção](screen-sizes-and-breakpoints-for-responsive-design.md).
+> O Windows não permite que o app detecte o dispositivo em que o app está sendo executado. Ele pode informar a família de dispositivos (móvel, área de trabalho etc) em que o aplicativo está sendo executado, a resolução efetiva e a quantidade de espaço na tela disponível para o aplicativo (o tamanho da janela do aplicativo). É recomendável definir estados visuais para [tamanhos de tela e pontos de interrupção](screen-sizes-and-breakpoints-for-responsive-design.md).
 
 
 ```xaml
@@ -234,7 +235,8 @@ Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplif
 </Page>
 ```
 
-> **Importante**&nbsp;&nbsp;No exemplo anterior, a propriedade anexada VisualStateManager.VisualStateGroups está definida no elemento **Grid**. Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
+> [!Important]
+> No exemplo anterior, a propriedade VisualStateManager.VisualStateGroups anexado é definida no elemento de **grade** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
 ### <a name="attached-property-syntax"></a>Sintaxe da propriedade anexada
 

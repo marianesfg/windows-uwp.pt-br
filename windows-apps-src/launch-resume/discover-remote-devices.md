@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de projeto
 ms.localizationpriority: medium
-ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018490"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794657"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.
@@ -60,7 +60,7 @@ Um objeto **RemoteSystem** será recuperado se o objeto **HostName** válido for
 
 ## <a name="querying-a-capability-on-a-remote-system"></a>Consultando uma funcionalidade em um sistema remoto
 
-Embora separada da filtragem de descoberta, consultar os recursos do dispositivo pode ser uma parte importante do processo de detecção. Com o método [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_), você pode consultar sistemas remotos descobertos para oferecer suporte a determinados recursos, como conectividade de sessão remota ou compartilhamento de entidade espacial (holográfica). Consulte a classe [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) para obter a lista dos recursos que podem ser consultados.
+Embora separada da filtragem de descoberta, consultar os recursos do dispositivo pode ser uma parte importante do processo de detecção. Com o método [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem.GetCapabilitySupportedAsync), você pode consultar sistemas remotos descobertos para oferecer suporte a determinados recursos, como conectividade de sessão remota ou compartilhamento de entidade espacial (holográfica). Consulte a classe [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) para obter a lista dos recursos que podem ser consultados.
 
 ```csharp
 // Check to see if the given remote system can accept LaunchUri requests

@@ -7,15 +7,15 @@ ms.date: 12/6/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30a072ddc3489ca310875a6fc4a2d00902986277
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674813"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792131"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -173,12 +173,13 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-Neste exemplo, passamos a cadeia de caracteres ""wl.basic" para o parâmetro de _escopo_. Escopo representa o tipo de informação que você está solicitando do serviço em um usuário específico. Determinados escopos fornecem acesso somente a informações básicas do usuário, como nome e email, enquanto outros escopos podem conceder acesso a informações confidenciais, como as fotos do usuário ou a caixa de entrada de email. Em geral, seu app deve usar o escopo menos permissivo necessário para obter sua função.
-
-Os provedores de serviço fornecerão documentação sobre quais escopos são necessários para obter tokens para uso com os serviços. 
+Neste exemplo, passamos a cadeia de caracteres ""wl.basic" para o parâmetro de _escopo_. Escopo representa o tipo de informação que você está solicitando do serviço em um usuário específico. Determinados escopos fornecem acesso somente a informações básicas do usuário, como nome e email, enquanto outros escopos podem conceder acesso a informações confidenciais, como as fotos do usuário ou a caixa de entrada de email. Em geral, seu app deve usar o escopo menos permissivo necessário para obter sua função. Os provedores de serviço fornecerão documentação sobre quais escopos são necessários para obter tokens para uso com os serviços. 
 
 * Para os escopos do Office 365 e do Outlook.com, consulte [Autenticar APIs do Office 365 e do Outlook.com usando o ponto de extremidade de autenticação v 2.0](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2). 
 * Para escopos do OneDrive, consulte [Autenticação e credenciais no OneDrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
+
+> [!TIP]
+> Opcionalmente, se seu aplicativo usa uma dica de logon (para preencher o campo de usuário com um endereço de email padrão) ou outros direitos de propriedade especiais relacionados à experiência entrar, liste-a na propriedade **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Isso fará com que o sistema ignorar a propriedade quando a conta de web, o que impede que incompatibilidades de conta no cache de armazenamento em cache.
 
 Se estiver desenvolvendo um aplicativo empresarial, você provavelmente desejará se conectar a uma instância do Azure Active Directory (AAD) e usar a API do Microsoft Graph em vez de serviços MSA normais. Nesse cenário, use o código a seguir: 
 

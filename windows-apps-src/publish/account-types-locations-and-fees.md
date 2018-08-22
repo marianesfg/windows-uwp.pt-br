@@ -4,18 +4,18 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de conta, localizações e taxas
 description: Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões.
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
-ms.localizationpriority: high
-ms.openlocfilehash: e337c5fe18089bfd39981c04647ca1386c3a5b40
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832407"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801084"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -37,11 +37,11 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Segundo as [políticas da Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), uma conta empresarial é necessária para publicar aplicativos com determinadas funcionalidades, como aplicativos que acessam informações financeiras da conta ou que requerem autenticação para acessar a funcionalidade principal (sem o uso de um provedor de autenticação de terceiros dedicado seguro).
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pelas [Políticas de armazenamento](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), aplicativos com algumas funcionalidades, como aquelas que acessam a conta financeira informações ou que exigem autenticação para acessar a funcionalidade principal (sem usar um provedor de autenticação dedicado seguro de terceiros), só podem ser publicados por contas da empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Não é possível enviar aplicativos de uma conta corporativa até que eles tenham sido verificados, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md), acessar seu painel do Centro de Desenvolvimento do Windows, e continuar compilando e testando seu aplicativo.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não pode enviar aplicativos a partir de uma conta da empresa até que é verificado, mas enquanto você está aguardando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar a criação e teste de aplicativos e trabalhar em Preparando-se seus envios.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
 

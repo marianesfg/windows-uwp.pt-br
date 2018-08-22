@@ -1,21 +1,21 @@
 ---
 author: TylerMSFT
 title: Depurar uma tarefa em segundo plano
-description: Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em segundo plano no log de eventos do Windows.
+description: Aprenda a depurar uma tarefa em segundo plano, incluindo ativação e rastreamento de depuração de tarefas em seguindo plano no log de eventos do Windows.
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: tarefa do plano de fundo do Windows 10, uwp,
 ms.localizationpriority: medium
-ms.openlocfilehash: 40b3893d7e661acedc004d1dfab8e4eedbcb0471
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "918636"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791267"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 

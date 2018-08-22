@@ -6,18 +6,18 @@ title: Pares de automação personalizados
 label: Custom automation peers
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 09/25/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab0ac8b89815a67be2c963979b3712f022248b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656561"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800532"
 ---
 # <a name="custom-automation-peers"></a>Pares de automação personalizados  
 
@@ -122,7 +122,6 @@ Se você estiver escrevendo uma classe de controle personalizada e pretende tamb
 
 Por exemplo, o código a seguir declara que o controle personalizado `NumericUpDown` deve usar o par `NumericUpDownPeer` para fins de Automação da Interface do Usuário.
 
-C#
 ```csharp
 using Windows.UI.Xaml.Automation.Peers;
 ...
@@ -138,7 +137,6 @@ public class NumericUpDown : RangeBase {
 }
 ```
 
-Visual Basic
 ```vb
 Public Class NumericUpDown
     Inherits RangeBase
@@ -151,7 +149,29 @@ Public Class NumericUpDown
 End Class
 ```
 
-C++
+```cppwinrt
+// NumericUpDown.idl
+namespace MyNamespace
+{
+    runtimeclass NumericUpDown : Windows.UI.Xaml.Controls.Primitives.RangeBase
+    {
+        NumericUpDown();
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDown.h
+...
+struct NumericUpDown : NumericUpDownT<NumericUpDown>
+{
+    ...
+    Windows::UI::Xaml::Automation::Peers::AutomationPeer OnCreateAutomationPeer()
+    {
+        return winrt::make<MyNamespace::implementation::NumericUpDownAutomationPeer>(*this);
+    }
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives::RangeBase
@@ -160,7 +180,7 @@ public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives:
 protected:
     virtual AutomationPeer^ OnCreateAutomationPeer() override
     {
-         return ref new NumericUpDown(this);
+         return ref new NumericUpDownAutomationPeer(this);
     }
 };
 ```
@@ -193,20 +213,38 @@ Se você derivar diretamente de [**ContentControl**](https://msdn.microsoft.com/
 ## <a name="initialization-of-a-custom-peer-class"></a>Inicialização de uma classe de par personalizada  
 O par de automação deve definir um construtor de tipo seguro que usa uma instância do controle do proprietário para a inicialização base. No próximo exemplo, a implementação passa o valor de *owner* para a base de [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) e, em última instância, é o [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) que realmente usa *owner* para definir [**FrameworkElementAutomationPeer.Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner).
 
-C#
 ```csharp
 public NumericUpDownAutomationPeer(NumericUpDown owner): base(owner)
 {}
 ```
 
-Visual Basic
 ```vb
 Public Sub New(owner As NumericUpDown)
     MyBase.New(owner)
 End Sub
 ```
 
-C++
+```cppwinrt
+// NumericUpDownAutomationPeer.idl
+import "NumericUpDown.idl";
+namespace MyNamespace
+{
+    runtimeclass NumericUpDownAutomationPeer : Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    {
+        NumericUpDownAutomationPeer(NumericUpDown owner);
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDownAutomationPeer.h
+...
+struct NumericUpDownAutomationPeer : NumericUpDownAutomationPeerT<NumericUpDownAutomationPeer>
+{
+    ...
+    NumericUpDownAutomationPeer(MyNamespace::NumericUpDown const& owner);
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDownAutomationPeer sealed :  Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer
@@ -225,7 +263,6 @@ Ao implementar um par para um controle personalizado, substitua todos os método
 
 Sempre que você define uma nova classe de par, implemente pelo menos o método [**GetClassNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore), como mostra o próximo exemplo.
 
-C#
 ```csharp
 protected override string GetClassNameCore()
 {
@@ -244,7 +281,6 @@ Algumas tecnologias assistenciais usam o valor [**GetAutomationControlType**](ht
 
 Sua implementação de [**GetAutomationControlTypeCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) descreve seu controle retornando um valor de [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Você pode retornar **AutomationControlType.Custom**, mas deve retornar um dos tipos de controle mais específicos se ele descrever precisamente os cenários principais de seu controle. Veja um exemplo.
 
-C#
 ```csharp
 protected override AutomationControlType GetAutomationControlTypeCore()
 {
@@ -268,7 +304,7 @@ Se uma classe de par é herdada de outro par e todos os relatórios de padrão e
 
 Embora este não seja o código literal, este exemplo é próximo da implementação de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) já presente no [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506).
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -288,7 +324,7 @@ Um par pode relatar que dá suporte a mais de um padrão. Nesse caso, a substitu
 
 Consulte um exemplo da uma substituição de [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) para um par personalizado. Ele relata o suporte a dois padrões, [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) e [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653). Este é um controle de exibição de mídia que pode ser mostrado em tela inteira (o modo de alternância) e tem uma barra de progresso na qual os usuários podem escolher uma posição (o controle de intervalo). Esse código vem do [Exemplo de acessibilidade XAML](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -311,7 +347,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### <a name="forwarding-patterns-from-sub-elements"></a>Encaminhando padrões de subelementos  
 Uma implementação do método [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) também pode especificar um subelemento ou uma parte como um provedor de padrões para seu host. Este exemplo imita a maneira como [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) transfere o tratamento do padrão de rolagem para o par de seu controle [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) interno. Para especificar um subelemento para o tratamento de padrão, esse código obtém o objeto de subelemento, cria um par para esse subelemento usando o método [**FrameworkElementAutomationPeer.CreatePeerForElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.createpeerforelement) e retorna o novo par.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -403,7 +439,7 @@ Consultemos como escrever um par para um controle que implementa um comportament
 
 Em uma implementação típica, as APIs do provedor primeiro chamam [**Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner) para acessar a instância do controle em tempo de execução. Depois, os métodos de comportamento necessários podem ser chamados nesse objeto.
 
-C#
+
 ```csharp
 public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCollapseProvider {
     private IndexCard ownerIndexCard;
@@ -447,7 +483,7 @@ Os clientes de Automação de Interface do Usuário podem se inscrever nos event
 
 O próximo exemplo de código mostra como obter o objeto de par do código de definição do controle e chamar um método para disparar um evento desse par. Como uma otimização, o código determina se há algum ouvinte para esse tipo de evento. Disparar o evento e criar o objeto par somente quando há ouvintes evita sobrecarga desnecessária e ajuda o controle a continuar respondendo.
 
-C#
+
 ```csharp
 if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 {

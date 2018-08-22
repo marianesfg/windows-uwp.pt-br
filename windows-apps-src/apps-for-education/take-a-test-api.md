@@ -4,26 +4,24 @@ title: API JavaScript Fazer um Teste.
 author: PatrickFarley
 ms.author: pafarley
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 10/06/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
-ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691355"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792580"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um Teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um app baseado em navegador que renderiza avaliações online bloqueadas para teste decisivo, permitindo que os educadores enfoquem no conteúdo de avaliação, e não em como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP baseados em navegador que renderiza bloqueado avaliações de online para teste de altas apostas, permitindo professores focalizar em avaliação de conteúdo, e não como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
-Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app.
-
-Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
+Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentação de referência
 A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs dependem de um objeto `SecureBrowser` global.
@@ -32,12 +30,9 @@ A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs 
 |-----------|-------------|
 |[namespace de segurança](#security-namespace)|Contém APIs que permitem bloquear o dispositivo para testar e impor um ambiente de teste. |
 
-> [!NOTE]
-> O namespace de conversão de texto em fala (TTS) foi removido a partir do Windows 10 versão 1709. A [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/), uma implementação da [W3C Speech Api](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html), agora é a solução recomendada para implementação da conversão de texto em fala.
-
 ### <a name="security-namespace"></a>Namespace de segurança
 
-O namespace de segurança permite bloquear o dispositivo, verificar a lista de processos de usuário e sistema, obter endereços MAC e IP e limpar recursos da web em cache.
+O namespace de segurança permite bloquear o dispositivo, verifique a lista de processos de usuário e do sistema, obter endereços MAC e IP e desmarque os recursos da web em cache.
 
 | Método | Descrição   |
 |--------|---------------|

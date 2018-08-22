@@ -8,14 +8,14 @@ ms.date: 08/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 470984ce9f9a3304350a3479a01bc31a403bd8af
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 9e53c15b01a08c8c617529fe074929ce89a68ce9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674973"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800310"
 ---
 # <a name="customize-the-print-workflow"></a>Personalizar o fluxo de trabalho de impressão
 
@@ -220,7 +220,7 @@ internal async void OnXpsDataAvailable(PrintWorkflowForegroundSession sessionMan
 }
 ```
 
-Além disso, a instância **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)** exposta pelos argumentos de evento permite cancelar o trabalho de impressão ou informar que o trabalho foi bem-sucedido, mas não será necessário nenhum trabalho de impressão de saída. Isso é feito chamando o método **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation#Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedOperation_Complete_Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedStatus_)** com um valor **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)**.
+Além disso, a instância **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)** exposta pelos argumentos de evento permite cancelar o trabalho de impressão ou informar que o trabalho foi bem-sucedido, mas não será necessário nenhum trabalho de impressão de saída. Isso é feito chamando o método **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation.Complete)** com um valor **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)**.
 
 > [!NOTE]
 > Se o app de fluxo de trabalho cancelar o trabalho de impressão, é altamente recomendável que ele forneça uma notificação do sistema informando por que o trabalho foi cancelado. 
@@ -244,9 +244,9 @@ A diferença é que, embora os WSDAs sejam ativados automaticamente para o usuá
 
 ### <a name="set-the-workflow-apps-policy"></a>Definir a política do app de fluxo de trabalho
 A política do app de fluxo de trabalho é definida pelos comandos do Powershell no dispositivo executará o app de fluxo de trabalho. Os comandos Set-Printer, Add-Printer (porta existente) e Add-Printer (nova porta WSD) serão modificados para permitir que as políticas de fluxo de trabalho sejam definidas. 
-* `Off`: Os apps de fluxo de trabalho não serão ativados.
-* `Optional`: Os apps de fluxo de trabalho serão ativados se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, ainda assim, a impressão continuará. 
-* `On`: O contrato do fluxo de trabalho será ativado se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, a impressão apresentará falha. 
+* `Disabled`: Os apps de fluxo de trabalho não serão ativados.
+* `Uninitialized`: Os apps de fluxo de trabalho serão ativados se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, ainda assim, a impressão continuará. 
+* `Enabled`: O contrato do fluxo de trabalho será ativado se o DCA de fluxo de trabalho for instalado no sistema. Se o app não estiver instalado, a impressão apresentará falha. 
 
 O comando a seguir torna o app de fluxo de trabalho necessário na impressora especificada.
 ```Powershell

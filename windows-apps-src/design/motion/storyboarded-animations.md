@@ -4,22 +4,20 @@ ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: Animações com storyboard
 description: As animações com storyboard não são apenas animações no sentido visual.
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5fad5bdea602767484fa55e943d262e7a1798fa
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675573"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797860"
 ---
 # <a name="storyboarded-animations"></a>Animações de storyboard
-
-
 
 As animações com storyboard não são apenas animações no sentido visual. Uma animação com storyboard é uma maneira de alterar o valor de uma propriedade de dependência como uma função de tempo. Um dos principais motivos pelos quais você pode precisar de uma animação com storyboard que não faça parte da Biblioteca de Animação é para definir o estado visual de um controle, como parte de um modelo de controle ou de uma definição de página.
 
@@ -49,17 +47,23 @@ Em geral, uma animação com storyboard é definida através da criação de XAM
 Consultemos um exemplo simples. Neste XAML de exemplo, a propriedade [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) é animada em um objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) específico.
 
 ```xaml
-<!-- Animates the rectangle's opacity. -->
-<Storyboard x:Name="myStoryboard">
-  <DoubleAnimation
-    Storyboard.TargetName="MyAnimatedRectangle"
-    Storyboard.TargetProperty="Opacity"
-    From="1.0" To="0.0" Duration="0:0:1"/>
-</Storyboard>
+<Page ...>
+  <Page.Resources>
+    <!-- Storyboard resource: Animates a rectangle's opacity. -->
+    <Storyboard x:Name="myStoryboard">
+      <DoubleAnimation
+        Storyboard.TargetName="MyAnimatedRectangle"
+        Storyboard.TargetProperty="Opacity"
+        From="1.0" To="0.0" Duration="0:0:1"/>
+    </Storyboard>
+  </Page.Resources>
 
-<!-- A different area of the XAML. -->
-<Rectangle x:Name="MyAnimatedRectangle"
-  Width="300" Height="200" Fill="Blue"/>
+  <!--Page root element, UI definition-->
+  <Grid>
+    <Rectangle x:Name="MyAnimatedRectangle"
+      Width="300" Height="200" Fill="Blue"/>
+  </Grid>
+</Page>
 ```
 
 ### <a name="identifying-the-object-to-animate"></a>Identificando o objeto a ser animado
@@ -213,10 +217,10 @@ O próximo exemplo mostra como o exemplo anterior [**Storyboard**](https://msdn.
     </Storyboard>
   </Page.Resources>
   <!--Page root element, UI definition-->
-  <StackPanel>
+  <Grid>
     <Rectangle x:Name="MyAnimatedRectangle"
       Width="300" Height="200" Fill="Blue"/>
-  </StackPanel>
+  </Grid>
 </Page>
 ```
 
@@ -291,6 +295,10 @@ O manipulador de eventos inicia o [**Storyboard**](https://msdn.microsoft.com/li
 
 ```csharp
 myStoryboard.Begin();
+```
+
+```cppwinrt
+myStoryboard().Begin();
 ```
 
 ```cpp

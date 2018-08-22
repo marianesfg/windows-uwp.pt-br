@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, solução de problemas, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: a971aa26ceab462fedc37ebb7cdba584c55efe93
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d20f816bc6e4010daf01ebad87c0138df0f1243d
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655628"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791341"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guia de solução de problemas de XAML e C#
 
@@ -58,7 +58,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
                   Width="728" Height="90" />
     ```
 
-4.  Verifique a posição do elemento. O [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) deve estar dentro da área visível.
+4.  Verifique a posição do elemento. O [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) deve estar dentro da área visível.
 
 5.  Verifique a propriedade **Visibility**. A propriedade opcional **Visibility** não deve ser definida como recolhida ou oculta. Essa propriedade pode ser definida embutida (como mostrado abaixo) ou em uma folha de estilos externa.
 
@@ -70,17 +70,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
                   Width="728" Height="90" />
     ```
 
-6.  Verifique a propriedade **IsEnabled**. A propriedade opcional `IsEnabled` deve ser definida como `True`.
-
-    > [!div class="tabbedCodeSnippets"]
-    ``` xml
-    <UI:AdControl AdUnitId="{AdUnitID}"
-                  ApplicationId="{ApplicationID}"
-                  IsEnabled="True"
-                  Width="728" Height="90" />
-    ```
-
-7.  Verifique o pai do **AdControl**. Se o elemento **AdControl** residir em um elemento pai, o pai deverá ser ativo e visível.
+6.  Verifique o pai do **AdControl**. Se o elemento **AdControl** residir em um elemento pai, o pai deverá ser ativo e visível.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -91,9 +81,9 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     </StackPanel>
     ```
 
-8.  Certifique-se de que o **AdControl** não esteja oculto no visor. O **AdControl** deve estar visível para que os anúncios sejam exibidos corretamente.
+7.  Certifique-se de que o **AdControl** não esteja oculto no visor. O **AdControl** deve estar visível para que os anúncios sejam exibidos corretamente.
 
-9.  Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** está funcionando como esperado, use os [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationId** e **AdUnitId**.
+8.  Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** está funcionando como esperado, use os [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationId** e **AdUnitId**.
 
 <span id="xaml-blackboxblinksdisappears"/>
 
@@ -127,7 +117,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
     O erro mais comum que causa uma caixa preta é “Nenhum anúncio disponível”. Esse erro significa que não há anúncios disponíveis para serem retornados da solicitação.
 
-3.  O [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) está funcionando normalmente.
+3.  O [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) está funcionando normalmente.
 
     Por padrão, o **AdControl** será recolhido quando não conseguir exibir um anúncio. Se outros elementos forem filhos do mesmo pai, eles poderão se mover para preencher a lacuna do **AdControl** recolhido e se expandir quando a próxima solicitação for feita.
 
@@ -135,7 +125,7 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 ### <a name="ads-not-refreshing"></a>Anúncios não são atualizados
 
-1.  Verifique a propriedade [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx). Por padrão, essa propriedade opcional é definida como **True**. Quando definida como **False**, o método [Refresh](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) deverá ser usado para recuperar outro anúncio.
+1.  Verifique a propriedade [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled). Por padrão, essa propriedade opcional é definida como **True**. Quando definida como **False**, o método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh) deverá ser usado para recuperar outro anúncio.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -228,21 +218,9 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
     adControl.Visibility = System.Windows.Visibility.Visible;
     ```
 
-8.  Verifique a propriedade **IsEnabled**. A propriedade opcional **IsEnabled** deve ser definida como **True**.
+8.  Verifique o pai do **AdControl**. O pai deve estar ativo e visível.
 
-    > [!div class="tabbedCodeSnippets"]
-    ``` cs
-    adControl = new AdControl();
-    adControl.ApplicationId = "{ApplicationID}";
-    adControl.AdUnitId = "{AdUnitID}";
-    adControl.Height = 90;
-    adControl.Width = 728;
-    adControl.IsEnabled = True;
-    ```
-
-9.  Verifique o pai do **AdControl**. O pai deve estar ativo e visível.
-
-10. Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** está funcionando como esperado, use os [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationId** e **AdUnitId**.
+9. Valores dinâmicos para **ApplicationId** e **AdUnitId** não devem ser testados no emulador. Para garantir que o **AdControl** está funcionando como esperado, use os [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationId** e **AdUnitId**.
 
 <span id="csharp-blackboxblinksdisappears"/>
 
@@ -272,9 +250,9 @@ Este tópico contém soluções para problemas comuns de desenvolvimento com as 
 
 ### <a name="ads-not-refreshing"></a>Anúncios não são atualizados
 
-1.  Verifique se a propriedade [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) do **AdControl** está definida como false. Por padrão, essa propriedade opcional é definida como **true**. Quando definida como **false**, o método **Refresh** deve ser usado para recuperar outro anúncio.
+1.  Verifique se a propriedade [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) do **AdControl** está definida como false. Por padrão, essa propriedade opcional é definida como **true**. Quando definida como **false**, o método **Refresh** deve ser usado para recuperar outro anúncio.
 
-2.  Verifique as chamadas para o método [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Ao usar a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Ao usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
+2.  Verifique as chamadas para o método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Ao usar a atualização automática (**IsAutoRefreshEnabled** definido como **true**), não é possível usar **Refresh** para recuperar outro anúncio. Ao usar a atualização manual (**IsAutoRefreshEnabled** definido como **false**), **Refresh** só deverá ser chamado depois de um intervalo mínimo de 30 a 60 segundos dependendo da conexão de dados atual do dispositivo.
 
     O exemplo a seguir demonstra como chamar o método **Refresh**.
 

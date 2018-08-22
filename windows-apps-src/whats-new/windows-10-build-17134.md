@@ -8,13 +8,13 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 7652e45cd4c5fc416429248929889eeffc04dba3
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832570"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792073"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novidades no Windows 10 para desenvolvedores, compilação 17134
 
@@ -38,7 +38,7 @@ Puxar para atualizar | O controle [Efetuar pull para atualizar](../design/contro
 Modo de exibição de navegação | O controle [modo de exibição de Navegação](../design/controls-and-patterns/navigationview.md) fornece um menu de navegação recolhível para a navegação de nível superior em seu app. Esse controle implementa o padrão de painel de navegação, ou menu hambúrguer, e adapta automaticamente o modo de exibição do painel a diferentes tamanhos de janela.
 Foco do Revelação | O novo efeito [Foco do Revelação](../design/style/reveal-focus.md) fornece iluminação para experiências como o Xbox One e as telas de televisão. Ele anima a borda de elementos focalizáveis, como botões, quando o usuário move o foco do gamepad ou do teclado até eles.
 Som | Agora, o XAML dá suporte a Áudio 3D com a propriedade **SpatialAudioMode**. Consulte [Som](../design/style/sound.md) para obter informações sobre como ele pode ser configurado.
-Blocos | As [notificações de bloco rastreável](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) agora têm suporte em aplicativos UWP baseados em JavaScript.
+Blocos | As [notificações de bloco rastreável](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) agora têm suporte em aplicativos UWP baseados em JavaScript.<br><br>Notificações de blocos e emblema secundárias são [agora com suporte do apps ponte de área de trabalho](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Modo de exibição de árvore | O controle [TreeView](../design/controls-and-patterns/tree-view.md) habilita uma lista hierárquica com nós em expansão e em colapso que contêm itens aninhados. Ele pode ser usado para ilustrar uma estrutura de pastas ou relacionamentos aninhados em sua interface do usuário.
 Estilo de escrita | Nós fizemos upgrade e expandimos nosso artigo em voz e tom, transformando-o em [Diretrizes de estilo de escrita](../design/style/writing-style.md). Essas novas informações fornecem princípios para a criação de texto eficaz em seu app e mostram as práticas recomendadas para escrever para controles como mensagens de erro ou caixas de diálogo.
 
@@ -59,7 +59,7 @@ C++/WinRT | O [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-a
 Aplicativos UWP de console | Agora você pode escrever apps de console UWP C++ /WinRT ou /CX que são executados em uma janela de console, como a janela de console do DOS ou do PowerShell. Os apps de console usam a janela do console para entrada e saída. Os apps de console UWP podem ser publicados para a Microsoft Store, tem uma entrada na lista de aplicativos e um bloco principal que pode ser fixado no menu Iniciar. Para obter mais informações, consulte [Criar um app de console da Plataforma Universal do Windows](../launch-resume/console-uwp.md)
 Funcionalidades expandidas do manifesto do app | Vários recursos foram adicionados ao esquema de Manifesto de Pacote do Aplicativo, incluindo: amplo acesso ao sistema de arquivos, habilitação de scanners de código de barras para dispositivos de ponto de serviço, definição de um app de console UWP e muito mais. Consulte [alterações de manifesto de aplicativo no Windows 10](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) para obter mais detalhes.
 Pontos de referência e títulos com suporte para a AT (tecnologia acessível) | Os marcos e títulos definem seções de uma interface do usuário que auxiliam na navegação eficiente para os usuários de tecnologia adaptativa, como leitores de tela. Para obter mais informações, consulte [Marcos e títulos](../design/accessibility/landmarks-and-headings.md).
-Aprendizado de Máquina | O Windows Machine Learning permite que você crie apps que avaliam previamente modelos treinados localmente em seus dispositivos Windows 10. Para saber mais sobre a plataforma, consulte [Windows Machine Learning](../machine-learning/index.md). </br> O namespace [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) contém classes que permitem que os apps carreguem modelos de aprendizado de máquina, associem dados como entradas e avaliem os resultados.
+Aprendizado de Máquina | O Windows Machine Learning permite que você crie apps que avaliam previamente modelos treinados localmente em seus dispositivos Windows 10. Para saber mais sobre a plataforma, consulte [Windows Machine Learning](https://docs.microsoft.com/windows/ai/). </br> O namespace [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) contém classes que permitem que os apps carreguem modelos de aprendizado de máquina, associem dados como entradas e avaliem os resultados.
 Controles de mapa | A classe [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) tem uma nova propriedade chamada **Region**, que você pode usar para mostrar conteúdo em um controle de mapa com base no idioma de uma região específica (por exemplo, o estado ou a província).
 Elementos de mapa | A classe [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) tem uma nova propriedade chamada **IsEnabled**, que você pode usar para especificar se os usuários podem interagir com o [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement).
 Informações de locais do mapa | A classe [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) contém um novo método **CreateFromAddress**, que você pode usar para criar um [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) usando um endereço e um nome de endereço.
@@ -73,7 +73,7 @@ Captura de tela | O [namespace Windows.Graphics.Capture](https://docs.microsoft.
 Gatilhos do sistema | O [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) permite que você defina um gatilho do sistema quando o sistema operacional não fornece um gatilho do sistema necessário. Por exemplo, quando um driver de hardware e o aplicativo UWP pertencerem a terceiros, e o driver de hardware precisar gerar um evento personalizado que seu app possa manipular Por exemplo, uma placa de áudio que precisa notificar um usuário quando uma tomada de áudio está conectada.
 Atividades do usuário | A nova [documentação da UserActivity](../launch-resume/useractivities.md) explica como ajudar os usuários a retomar o que eles estavam fazendo no seu aplicativo, mesmo em vários dispositivos.</br>A classe **UserActivitySessionHistoryItem** tem novos métodos que recuperam as atividades recentes do usuário. Consulte [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) e sua sobrecarga para obter detalhes.
 APIs do Windows Mixed Reality | Para dar suporte à crescente plataforma Windows Mixed Reality, novas APIs foram adicionadas aos namespaces [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) e [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
-Documentos do Windows Mixed Reality | Agora, as diretrizes de desenvolvedor do Windows Mixed Reality são [hospedadas em docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Assim como nestes documentos UWP, agora você pode arquivar comentários nos Problemas do GitHub ou enviar suas próprias contribuições por meio de uma solicitação por pull.
+Documentos do Windows Mixed Reality | A orientação do desenvolvedor de realidade misto do Windows é [agora está hospedado em docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Assim como na docs UWP, você pode agora comentários com GitHub problemas de arquivos ou enviar suas próprias contribuições por meio de uma solicitação de recepção.
 
 ## <a name="publish--monetize-windows-apps"></a>Publique e monetize aplicativos do Windows
 

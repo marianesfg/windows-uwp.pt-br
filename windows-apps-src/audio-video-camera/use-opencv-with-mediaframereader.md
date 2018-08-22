@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d9c2ac6ad4de6dc67cc4c661e055ad43ecb143ec
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789801"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Use a Biblioteca de visão do computador do código-fonte aberto (OpenCV) com MediaFrameReader
 
-Este artigo mostra como usar a Biblioteca de visão do computador do código-fonte aberto (OpenCV), uma biblioteca de código nativo que fornece diversos algoritmos de processamento de imagem, com a classe [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) que pode ler diversos quadros de mídia de várias fontes simultaneamente. O código de exemplo neste artigo orienta você pelas etapas de criação de um aplicativo simples que obtém os quadros de um sensor de cor, desfoca cada quadro usando a biblioteca OpenCV e depois exibe a imagem processada em um controle de **imagem** XAML.
+Este artigo mostra como usar a Biblioteca de visão do computador do código-fonte aberto (OpenCV), uma biblioteca de código nativo que fornece diversos algoritmos de processamento de imagem, com a classe [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) que pode ler diversos quadros de mídia de várias fontes simultaneamente. O código de exemplo neste artigo orienta você pelas etapas de criação de um aplicativo simples que obtém os quadros de um sensor de cor, desfoca cada quadro usando a biblioteca OpenCV e depois exibe a imagem processada em um controle de **imagem** XAML. 
+
+>[!NOTE]
+>OpenCV.Win.Core e OpenCV.Win. ImgProc não são atualizadas regularmente, mas ainda são recomendados para a criação de um OpenCVHelper conforme descrito nesta página.
 
 Este artigo se baseia no conteúdo de dois outros artigos:
 
@@ -29,7 +32,8 @@ Este artigo se baseia no conteúdo de dois outros artigos:
 
 Além desses artigos, para exibir e baixar um exemplo de funcional completo de ponta a ponta do cenário descrito neste artigo, consulte [Quadros de câmera + exemplo de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) no repositório do GitHub de amostras universais do Windows.
 
-Inclua a biblioteca OpenCV em um projeto de aplicativo UWP por meio de pacotes NuGet. O exemplo neste artigo usa os pacotes NuGet OpenCV.Win.Core e OpenCV.Win.ImgProc. O artigo [Processar bitmaps de software com OpenCV](process-software-bitmaps-with-opencv.md) inclui instruções para adicionar esses pacotes à sua solução. As informações sobre o desenvolvimento com o OpenCV podem ser encontradas em [http://opencv.org](http://opencv.org)
+Para começar a desenvolver rapidamente, você pode incluir a biblioteca OpenCV em um projeto de aplicativo UWP usando pacotes NuGet, mas esses pacotes não podem passar o processo de certficication app quando você envia seu aplicativo para o repositório, então, é recomendável que você baixe o OpenCV biblioteca de código-fonte e crie os binários antes de enviar o seu aplicativo. As informações sobre o desenvolvimento com o OpenCV podem ser encontradas em [http://opencv.org](http://opencv.org)
+
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar o componente nativo do Tempo de Execução do Windows OpenCVHelper
 Siga as etapas em [Processar bitmaps de software com OpenCV](process-software-bitmaps-with-opencv.md) para criar o componente do tempo de execução do Windows auxiliar OpenCV e adicionar uma referência para o projeto de componente à sua solução de aplicativo UWP.

@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
-ms.openlocfilehash: c96a90e458d2363bc3bc748e80728df30ff55a5c
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 8d6ebe8e3344f5276939471d7ac569ae83d48311
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701132"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792876"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Recursos do sistema para jogos e aplicativos UWP no Xbox One
 
@@ -59,3 +59,5 @@ Para obter mais informações sobre recursos do sistema para aplicativos UWP no 
 ## <a name="see-also"></a>Consulte também
 - [UWP no Xbox One](index.md)
 - [Introdução ao Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
+- [DirectX e UWP Xbox One](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+

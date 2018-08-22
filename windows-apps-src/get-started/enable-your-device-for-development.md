@@ -9,13 +9,13 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: cf8f0e0c7382d52eddb783b7fbbaa6ccc23a2a15
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935774"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800508"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -56,7 +56,7 @@ Aqui está a página de configurações na família de dispositivos móveis:
 
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
--   *Aplicativos UWP* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
+-   *Aplicativos Microsoft Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
 -   *Sideload* significa instalar e executar ou testar um app que não foi certificado pela Microsoft Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
 -   *Modo de desenvolvedor* permite o sideload de aplicativos e também executar aplicativos do Visual Studio no modo de depuração. 
 
@@ -148,6 +148,9 @@ Há várias ferramentas que você pode usar para implantar um app de um computad
 Às vezes, devido a problemas de rede ou de ordem administrativa, o Modo de Desenvolvedor não é instalado corretamente. O pacote do Modo de Desenvolvedor é necessário para implantação **remota** neste computador, usando o Device Portal em um navegador ou a descoberta de dispositivos para habilitar SSH, mas não para o desenvolvimento local.  Mesmo que você encontre esses problemas, você ainda pode implantar seu aplicativo localmente por meio do Visual Studio ou deste dispositivo para outro. 
 
 Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
+
+> [!NOTE]
+> Se o modo de desenvolvedor não for instalado corretamente, recomendamos que você para uma solicitação de comentários de arquivos. No app **Hub de comentários** , selecione **Adicionar comentários de novo**e escolha a categoria de **Plataforma do desenvolvedor** e a subcategoria de **Modo do desenvolvedor** . Enviar comentários ajudarão Microsoft resolver o problema que você encontrou.
 
 ### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
 
