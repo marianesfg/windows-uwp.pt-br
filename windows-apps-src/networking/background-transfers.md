@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f533ab00cd80838d630a78f6f877f65fc1d617ba
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: fb273b6a37cb2f6322b0c9e3842b69676f82c616
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691485"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788621"
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede. A API de transferência em segundo plano fornece recursos avançados de carregamento e download que são executados em segundo plano durante a suspensão do aplicativo e persistirão após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
@@ -29,9 +29,10 @@ Se você for baixar recursos pequenos que, provavelmente, serão completos com r
 ### <a name="how-does-the-background-transfer-feature-work"></a>Como o recurso Transferência em Segundo Plano funciona?
 Quando um aplicativo usa transferência em segundo plano para iniciar uma transferência, a solicitação é configurada e inicializada usando os objetos de classe [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) ou [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140). Cada operação de transferência é manipulada individualmente pelo sistema e separada do aplicativo de chamada. As informações de andamento estão disponíveis se você deseja fornecer ao usuário status na interface de usuário do aplicativo, e seu aplicativo pode pausar, retomar, cancelar ou mesmo ler os dados enquanto ocorre a transferência. A maneira como as transferências são manipuladas pelo sistema promove o uso inteligente de energia e evita problemas que poderiam surgir quando um aplicativo conectado encontra eventos como suspensão e finalização de aplicativo ou alterações repentinas no status de rede.
 
-Além disso, a Transferência em Segundo Plano usa eventos de Agente de Evento do Sistema. Dessa forma, o número de downloads é limitado pela quantidade de eventos disponíveis no sistema. Por padrão, são 500 eventos, mas esses eventos são compartilhados entre todos os processos. Portanto, um único aplicativo não deve criar mais de 100 transferências em segundo plano por vez.
+> [!NOTE]
+> Devido às restrições de recurso por app, um app não deve ter mais de 200 transferências (DownloadOperations + UploadOperations) de cada vez. Exceder esse limite pode deixar a fila de transferência do app em um estado irrecuperável.
 
-Quando um aplicativo inicia uma transferência em segundo plano, o aplicativo deve chamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) em todos os objetos [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) existentes. Não fazer isso pode causar um vazamento desses eventos e, portanto, inutilizar o recurso Transferência em Segundo Plano.
+Quando um aplicativo é iniciado, ele deve chamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) em todos os objetos [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) e [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) existentes. Se não fizer isso fará com que o vazamento de transferências já concluído e será eventualmente inutilizar o uso do recurso de transferência de plano de fundo.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Executando solicitações de arquivos autenticados com a transferência em segundo plano
 A transferência em segundo plano proporciona métodos que oferecem suporte para credenciais básicas de servidor e proxy, cookies e uso de cabeçalhos HTTP personalizados (via [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operação de transferência.
@@ -167,8 +168,6 @@ Quaisquer recursos de sistema associados são liberados na conclusão ou no canc
 Quando a transferência em segundo plano é usada, cada download existe como uma [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) que expõe uma quantidade de métodos de controle usados para pausar, retomar, reiniciar e cancelar a operação. Eventos de aplicativo (ex.: suspensão ou finalização) e alterações de conectividade são manipulados automaticamente pelo sistema por **DownloadOperation**. Os downloads continuarão durante os períodos de suspensão ou pausas do aplicativo e prosseguirão depois da finalização do aplicativo. Para situações de rede móvel, a configuração da propriedade [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) indicará se seu aplicativo iniciará ou continuará downloads quando uma rede limitada estiver sendo usada para conectividade com a Internet ou não.
 
 Se você for baixar recursos pequenos que, provavelmente, serão completos com rapidez, é melhor usar as APIs [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ao invés da transferência em segundo plano.
-
-Devido às restrições de recurso por app, um app não deve ter mais de 200 transferências (DownloadOperations + UploadOperations) de cada vez. Exceder esse limite pode deixar a fila de transferência do app em um estado irrecuperável.
 
 Os exemplos a seguir o guiarão através da criação e da inicialização de um download básico e como enumerar e reintroduzir operações persistidas de uma sessão de aplicativo anterior.
 

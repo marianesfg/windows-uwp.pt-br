@@ -4,21 +4,20 @@ description: Descrevemos o conceito de programação de eventos em um aplicativo
 title: Visão geral de eventos e eventos roteados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 61e55fa85e54970ba48413767ccf5a65b05af471
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691185"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788791"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
-
 
 **APIs Importantes**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -40,39 +39,50 @@ Uma das tarefas de programação mais comuns para um aplicativo do Tempo de Exec
 
 Você define a interface do usuário para o seu aplicativo do Windows Runtime gerando a XAML. Esse XAML é geralmente o resultado de uma superfície de design no Visual Studio. A XAML também pode ser escrita em um editor de texto sem formatação ou em um editor XAML de terceiros. Durante a geração dessa XAML, você pode conectar manipuladores de eventos de elementos individuais da interface do usuário e, ao mesmo tempo, definir todos os demais atributos que estabelecem valores de propriedade desse elemento da interface do usuário.
 
-Para conectar os eventos em XAML, você pode especificar o nome em forma de cadeia de caracteres do método do manipulador que já definiu ou vai definir posteriormente no code-behind. Por exemplo, esta XAML define um objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) com outras propriedades ([atributo x:Name](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) atribuídas como atributos e transfere um manipulador para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do botão referenciando um método chamado `showUpdatesButton_Click`:
+Para conectar os eventos em XAML, você pode especificar o nome em forma de cadeia de caracteres do método do manipulador que já definiu ou vai definir posteriormente no code-behind. Por exemplo, esta XAML define um objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) com outras propriedades ([atributo x:Name](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) atribuídas como atributos e transfere um manipulador para o evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) do botão referenciando um método chamado `ShowUpdatesButton_Click`:
 
-```XML
+```xaml
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
-  Click="showUpdatesButton_Click"/>
+  Click="ShowUpdatesButton_Click"/>
 ```
 
 **Dica**  *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
 
-Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="showUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `showUpdatesButton_Click` como parte do código do aplicativo. `showUpdatesButton_Click` deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por exemplo, este código define o manipulador `showUpdatesButton_Click`.
+Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="ShowUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `ShowUpdatesButton_Click` como parte do código do aplicativo. `ShowUpdatesButton_Click` deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por exemplo, este código define o manipulador `ShowUpdatesButton_Click`.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
-private void showUpdatesButton_Click (object sender, RoutedEventArgs e) {
+private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
+{
     Button b = sender as Button;
     //more logic to do here...
 }
 ```
+
 ```vb
-Private Sub showUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+Private Sub ShowUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
     Dim b As Button = CType(sender, Button)
     '  more logic to do here...
 End Sub
 ```
+
+```cppwinrt
+void winrt::MyNamespace::implementation::BlankPage::ShowUpdatesButton_Click(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& e)
+{
+    auto b{ sender.as<Windows::UI::Xaml::Controls::Button>() };
+    // More logic to do here.
+}
+```
+
 ```cpp
-void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) {
+void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) 
+{
     Button^ b = (Button^) sender;
     //more logic to do here...
 }
 ```
 
-Neste exemplo, o método `showUpdatesButton_Click` baseia-se no delegado de [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Você saberia que esse é o delegado a ser usado, porque você verá esse delegado nomeado na sintaxe para o método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) na página de referência do MSDN.
+Neste exemplo, o método `ShowUpdatesButton_Click` baseia-se no delegado de [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Você saberia que esse é o delegado a ser usado, porque você verá esse delegado nomeado na sintaxe para o método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) na página de referência do MSDN.
 
 **Dica**  O Visual Studio fornece um jeito bem conveniente de nomear o manipulador de eventos e definir o método do manipulador enquanto você está editando o XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em **&lt;Novo Manipulador de Eventos&gt;** na lista, o Microsoft Visual Studio sugerirá um nome de método com base no **x:Name** do elemento (ou nome do tipo), no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá no menu suspenso de preenchimento automático com a opção **&lt;Novo Manipulador de Eventos&gt;**. Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
 
@@ -104,7 +114,7 @@ Em C#, a sintaxe é usar o operador `+=`. Você registra o manipulador fazendo r
 
 Se você está usando código para adicionar manipuladores de eventos a objetos que aparecem na interface do usuário em tempo de execução, uma prática comum é adicionar esses manipuladores em resposta a um evento de ciclo de vida do objeto ou de retorno de chamada – como, por exemplo, [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) ou [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737), de maneira que os manipuladores de eventos no objeto relevante estejam prontos para eventos iniciados pelo usuário no tempo de execução. Este exemplo mostra uma estrutura de tópicos XAML da estrutura da página e, em seguida, fornece a sintaxe da linguagem C# para adicionar um manipulador de eventos a um objeto.
 
-```xml
+```xaml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -143,15 +153,19 @@ End Sub
 
 **Observação**  O Visual Studio e a sua superfície de design em XAML costumam promover a técnica de manipulação de instâncias em vez da palavra-chave **Handles**. Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
 
-Em C++, você também usa a sintaxe **+=**, mas há diferenças no formulário básico em C#:
+Em C + + / CX, você também de usar o **+=** sintaxe, mas há algumas diferenças do formulário c# básico:
 
 -   Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
 -   O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.
 -   O construtor delegate requer o endereço do método como o segundo parâmetro, de maneira que o operador de referência **&** preceda o nome do método.
 
+```cppwinrt
+textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
+```
+
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
+ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 ```
 
 ### <a name="removing-event-handlers-in-code"></a>Removendo manipuladores de eventos em código
@@ -170,10 +184,10 @@ Há alguns casos em que você quer remover manipuladores de eventos explicitamen
 
 Por exemplo, é possível remover um manipulador de eventos chamado **textBlock1\_PointerEntered** do objeto de destino **textBlock1** usando esse código.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
 ```
+
 ```vb
 RemoveHandler textBlock1.PointerEntered, AddressOf textBlock1_PointerEntered
 ```
@@ -294,5 +308,3 @@ A definição de um evento personalizado normalmente é feita como parte do exer
 * [Eventos .NET e delegados](http://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Criando componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
- 
-

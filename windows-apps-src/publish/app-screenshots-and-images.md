@@ -4,18 +4,18 @@ Description: You can select the screenshots, logos, and other art assets (such a
 title: Capturas de tela, imagens e trailers do app
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.author: wdg-dev-content
-ms.date: 4/30/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
-ms.localizationpriority: high
-ms.openlocfilehash: e0ac8e01aab07e68e0a4f22160cb58e558b4dc42
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817777"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788431"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -85,11 +85,13 @@ Essa imagem pode aparecer em várias páginas da Store para Windows 10 (incluind
 
 Essa imagem é necessária para a exibição correta no Windows Phone 8.1 e versões anteriores. Se o seu app for compatível com o Windows Phone 8.1 ou versões anteriores e você não fornecer essa imagem, os clientes verão um ícone em branco com a listagem do seu app. (isso também se aplica aos clientes no Windows 10, se o aplicativo tiver apenas pacotes direcionados para o Windows Phone 8.1 ou anterior.) Se o envio incluir *apenas* pacotes UWP, não será necessário fornecer essa imagem. Observe que se o envio incluir pacotes do Windows Phone 8.x e pacotes UWP, e você fornecer essa imagem, ele poderá ser usado no Windows 10 em determinados layouts da Store. Se quiser evitar isso, crie [listagens específicas de plataforma](create-platform-specific-store-listings.md) para as versões do Windows Phone compatível com seu app e só inclua o ícone do bloco de aplicativo nesse local).
 
-Você também pode impedir que a Store use as imagens do logotipo nos pacotes do aplicativo ao exibir a listagem para os clientes no Windows 10 (incluindo o Xbox) e, em vez disso, permitir que a Store use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox).
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregado somente imagens de logotipo no repositório
 
-Para usar somente imagens enviadas para exibição na Store no Windows 10 (incluindo o Xbox), marque a caixa de seleção **Para clientes com Windows 10, exibir imagens de logotipo carregadas em vez das imagens dos meus pacotes**. (Se você não marcar essa caixa, as imagens de pacotes do app serão usadas).
+Você tem a opção para impedir que o repositório usando as imagens de logotipo nos pacotes do seu aplicativo ao exibir sua listagem para os clientes Windows 10 (incluindo Xbox) e em vez disso, ter o repositório use apenas imagens que você carregar. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens a partir de seus pacotes, mesmo se você usar essa opção.)
 
-Ao marcar essa caixa, uma nova seção chamada **Logotipos da Store enviados** é exibida. Aqui, você pode enviar três imagens, incluindo o tamanho do "ícone do bloco de aplicativo" de 300 x 300 (se você marcar a caixa, o campo para fornecer essa imagem se moverá para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
+Para ter o repositório usar apenas as imagens que você pode carregar (para clientes no Windows 10, incluindo Xbox), e não usar qualquer imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir carregados imagens de logotipo, em vez das imagens de meus pacotes **.
+
+Quando você marcar essa caixa, uma nova seção denominada **repositório exibir imagens** é exibida. Aqui, você pode carregar 3 imagens, incluindo o tamanho de **Bloco de 1:1 app ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem será movido para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
 
 
 <span id="promotional-images" />
@@ -209,7 +211,7 @@ Ao fornecer os trailers, verifique estes requisitos estão sendo cumpridos:
 - O título não pode exceder 255 caracteres. 
 - Não inclua classificações etárias em seus trailers.
 
-Assim como os outros campos na página de listagem da Store, os trailers devem passar na certificação para que você possa publicá-los na Microsoft Store. Verifique se os trailers estão em conformidade com as [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx).
+Assim como os outros campos na página de listagem da Store, os trailers devem passar na certificação para que você possa publicá-los na Microsoft Store. Verifique se os trailers estão em conformidade com as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 Há requisitos adicionais dependendo do tipo de arquivo.
 

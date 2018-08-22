@@ -2,26 +2,26 @@
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Kit de Certificação de Aplicativos Windows
-description: Para aumentar as chances de seu aplicativo ser publicado na Windows Store ou obter certificação do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
+description: Para dar seu aplicativo melhor chance de que está sendo publicado no Microsoft Store, ou se tornando Windows Certified, validar e testá-lo localmente antes de enviá-la para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+keywords: Windows 10, uwp, certificação de aplicativo
+ms.localizationpriority: medium
+ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2017
-ms.locfileid: "695460"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788461"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Para aumentar as chances de seu aplicativo ser [publicado na Windows Store](https://msdn.microsoft.com/library/windows/apps/Hh694062) ou obter a [certificação do Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx), valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o [Kit de Certificação de Aplicativos Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666).
+Para obter o seu aplicativo de [Certificados do Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação no repositório da Microsoft](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e testá-lo localmente pela primeira vez. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativo do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo é seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -46,7 +46,7 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 3.  Depois de inserir ou selecionar o aplicativo que você deseja testar, clique em **Avançar**.
 
-4.  Na próxima tela, você verá o fluxo de trabalho de teste que se alinha ao tipo de aplicativo que você está testando. Se um teste estiver esmaecido na lista, ele não é aplicável ao seu ambiente. Por exemplo, se você estiver testando um Windows 10 app no Windows 7, somente os testes estáticos serão aplicadas ao fluxo de trabalho. Observe que a Windows Store pode aplicar todos os testes desse fluxo de trabalho. Selecione os testes que você deseja executar e clique em **Avançar**.
+4.  Na próxima tela, você verá o fluxo de trabalho de teste que se alinha ao tipo de aplicativo que você está testando. Se um teste estiver esmaecido na lista, ele não é aplicável ao seu ambiente. Por exemplo, se você estiver testando um Windows 10 app no Windows 7, somente os testes estáticos serão aplicadas ao fluxo de trabalho. Observe que o Microsoft Store podem se aplicar a todos os testes deste fluxo de trabalho. Selecione os testes que você deseja executar e clique em **Avançar**.
 
     O Kit de Certificação de Aplicativos Windows começa a validar o aplicativo.
 
@@ -90,14 +90,14 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
-As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do aplicativo atende às [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), recomendamos que você teste seu aplicativo em um computador com baixo consumo de energia, tal como um computador baseado no processador Intel Atom com uma resolução de tela de 1366 x 768 (ou superior) e um disco rígido rotacional (em vez de um disco rígido de estado sólido).
+As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [Diretivas de repositório do Microsoft](https://msdn.microsoft.com/library/windows/apps/Dn764944), recomendamos que você teste seu aplicativo em um computador de economia de energia, como um Intel Atom baseados no processador computador com uma resolução de tela de 1366 x 768 (ou superior) e uma rotação disco rígido unidade (e não um disco rígido de estado sólido).
 
-As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) mais recentes e teste seu aplicativo com a versão mais atual do Kit de Certificação de Aplicativos Windows para garantir que ele atenda aos últimos requisitos de desempenho.
+As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as mais recentes [Microsoft as políticas de armazenamento](https://msdn.microsoft.com/library/windows/apps/Dn764944) e teste seu aplicativo com a versão mais atual do Kit de certificação de aplicativo do Windows para certificar-se de que seu aplicativo é compatível com os requisitos de desempenho mais recentes.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Testes do Kit de Certificação de Aplicativos Windows](windows-app-certification-kit-tests.md)
-* [Políticas da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  
 
  

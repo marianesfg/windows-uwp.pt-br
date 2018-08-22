@@ -4,18 +4,18 @@ title: Sobrepor imagens lado a lado em um mapa
 description: Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fontes de blocos. Use fontes de blocos para sobrepor informações especializadas, como dados de previsão do tempo, dados de população ou dados sísmicos; ou use fontes de blocos para substituir por completo o mapa padrão.
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
-ms.openlocfilehash: fb2fafb3feeb5242c9069ea9e871eebc90351714
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691062"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788631"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
@@ -34,11 +34,9 @@ Quando você usa fontes de blocos, não precisa escrever código para solicitar 
 
 Aqui está um exemplo da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) para um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
 
-``` syntax
-    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+```syntax
+http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 ```
-
- 
 
 (As coordenadas X e Y representam a localização do bloco individual dentro do mapa do mundo no nível de detalhe especificado. O sistema de numeração de bloco começa em {0, 0} no canto superior esquerdo do mapa. Por exemplo, o bloco em {1, 2} está na segunda coluna da terceira linha da grade de blocos).
 
@@ -58,7 +56,7 @@ Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**Map
 
     O exemplo a seguir instancia um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Este exemplo especifica o valor do [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) no construtor do **HttpMapTileDataSource**.
 
-    ```cs
+    ```csharp
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
           "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
@@ -67,7 +65,7 @@ Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**Map
 
     O exemplo a seguir especifica o [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149) no construtor do [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
 
-    ```cs
+    ```csharp
         MapTileSource tileSource = new MapTileSource(dataSource);
     ```
 
@@ -80,7 +78,7 @@ Sobreponha imagens lado a lado de uma fonte de blocos em um mapa usando a [**Map
 
 3.  Adicione o [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144) para a coleção [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637053) do [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-    ```cs
+    ```csharp
          MapControl1.TileSources.Add(tileSource);
     ```
 
@@ -93,7 +91,7 @@ Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMa
 2.  Especifique o formado do Uri que o serviço Web espera como o valor da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992). Para criar esse valor, insira parâmetros substituíveis no Uri base. Por exemplo, no exemplo de código a seguir, o valor do **UriFormatString** é:
 
     ``` syntax
-        http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
     O serviço Web precisar oferecer suporte para um Uri que contenha os parâmetros substituíveis {x}, {y} e {zoomlevel}. A maioria dos serviços Web (por exemplo, Nokia, Bing e Google) oferece suporte a URIs nesse formato. Se o serviço Web exigir argumentos adicionais que não estiverem disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992), você deve criar um Uri personalizado. Crie e retorne um Uri personalizado manipulando o evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993). Para obter mais informações, consulte a seção [Forneça um URI personalizado](#customuri) posteriormente neste tópico.
@@ -103,47 +101,71 @@ Sobreponha imagens lado a lado recuperadas de um serviço Web usando o [**HttpMa
 O exemplo a seguir sobrepõe blocos de um serviço Web fictício em um mapa da América do Norte. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) é especificado no construtor do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986). Neste exemplo, os blocos são exibidos apenas nos limites geográficos especificados pela propriedade [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) opcional.
 
 ```csharp
-        private void AddHttpMapTileSource()
-        {
-            // Create the bounding box in which the tiles are displayed.
-            // This example represents North America.
-            BasicGeoposition northWestCorner =
-                new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
-            BasicGeoposition southEastCorner =
-                new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
-            GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
+private void AddHttpMapTileSource()
+{
+    // Create the bounding box in which the tiles are displayed.
+    // This example represents North America.
+    BasicGeoposition northWestCorner =
+        new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
+    BasicGeoposition southEastCorner =
+        new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
+    GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
 
-            // Create an HTTP data source.
-            // This example retrieves tiles from a fictitious web service.
-            HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-                "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    // Create an HTTP data source.
+    // This example retrieves tiles from a fictitious web service.
+    HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-            // Optionally, add custom HTTP headers if the web service requires them.
-            dataSource.AdditionalRequestHeaders.Add("header name", "header value");
+    // Optionally, add custom HTTP headers if the web service requires them.
+    dataSource.AdditionalRequestHeaders.Add("header name", "header value");
 
-            // Create a tile source and add it to the Map control.
-            MapTileSource tileSource = new MapTileSource(dataSource);
-            tileSource.Bounds = boundingBox;
-            MapControl1.TileSources.Add(tileSource);
-        }
+    // Create a tile source and add it to the Map control.
+    MapTileSource tileSource = new MapTileSource(dataSource);
+    tileSource.Bounds = boundingBox;
+    MapControl1.TileSources.Add(tileSource);
+}
+```
+
+```cppwinrt
+...
+#include <winrt/Windows.Devices.Geolocation.h>
+#include <winrt/Windows.UI.Xaml.Controls.Maps.h>
+...
+void MainPage::AddHttpMapTileSource()
+{
+    Windows::Devices::Geolocation::BasicGeoposition northWest{ 48.38544, -124.667360 };
+    Windows::Devices::Geolocation::BasicGeoposition southEast{ 25.26954, -80.30182 };
+    Windows::Devices::Geolocation::GeoboundingBox boundingBox{ northWest, southEast };
+
+    Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource dataSource{
+        L"http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}" };
+
+    dataSource.AdditionalRequestHeaders().Insert(L"header name", L"header value");
+
+    Windows::UI::Xaml::Controls::Maps::MapTileSource tileSource{ dataSource };
+    tileSource.Bounds(boundingBox);
+
+    MapControl1().TileSources().Append(tileSource);
+}
+...
 ```
 
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
-       BasicGeoposition northWest = { 48.38544, -124.667360 };
-       BasicGeoposition southEast = { 25.26954, -80.30182 };
-       GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
+    BasicGeoposition northWest = { 48.38544, -124.667360 };
+    BasicGeoposition southEast = { 25.26954, -80.30182 };
+    GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
 
-       auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
-             "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-       dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
+    dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
 
-       auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
-       tileSource->Bounds = boundingBox;
+    auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
+    tileSource->Bounds = boundingBox;
 
-       this->MapControl1->TileSources->Append(tileSource);
+    this->MapControl1->TileSources->Append(tileSource);
 }
 ```
 
@@ -202,7 +224,6 @@ O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de
 
 ## <a name="provide-a-custom-uri"></a>Forneça um URI personalizado
 
-
 Se os parâmetros substituíveis disponíveis com a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) do [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) ou a propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) não são suficientes para recuperar seus blocos, você deve criar um Uri personalizado. Crie e retorne um Uri personalizado fornecendo um manipulador personalizado para o evento **UriRequested**. O evento **UriRequested** é gerado para cada bloco individual.
 
 1.  Em seu manipulador personalizado para o evento **UriRequested**, junte os argumentos personalizados exigidos com as propriedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) e [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) do [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177) para criar o Uri personalizado.
@@ -247,7 +268,6 @@ using System.Threading.Tasks;
 ```
 
 ## <a name="overlay-tiles-from-a-custom-source"></a>Sobreponha blocos de uma fonte personalizada
-
 
 Sobreponha blocos personalizados usando o [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crie blocos programaticamente na memória em tempo real ou escreva seu próprio código para carregar blocos existentes de outra fonte.
 
@@ -316,47 +336,87 @@ using System.Threading.Tasks;
         }
 ```
 
-```cpp
-InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
+```cppwinrt
+...
+#include <winrt/Windows.Storage.Streams.h>
+...
+Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::InMemoryRandomAccessStream> MainPage::CustomRandomAccessStream()
 {
-       int pixelHeight = 256;
-       int pixelWidth = 256;
-       int bpp = 4;
+    constexpr int pixelHeight{ 256 };
+    constexpr int pixelWidth{ 256 };
+    constexpr int bpp{ 4 };
 
-       Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+    std::array<uint8_t, pixelHeight * pixelWidth * bpp> bytes;
 
-       for (int y = 0; y < pixelHeight; y++)
-       {
-              for (int x = 0; x < pixelWidth; x++)
-              {
-                     int pixelIndex = y * pixelWidth + x;
-                     int byteIndex = pixelIndex * bpp;
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex{ y * pixelWidth + x };
+            int byteIndex{ pixelIndex * bpp };
 
-                     // Set the current pixel bytes.
-                     bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
-                     bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
-                     bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
-                     bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
-              }
-       }
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
 
-       // Create RandomAccessStream from byte array.
-       InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
-       IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
-       DataWriter^ writer = ref new DataWriter(outputStream);
-       writer->WriteBytes(bytes);
+    // Create RandomAccessStream from byte array.
+    Windows::Storage::Streams::InMemoryRandomAccessStream randomAccessStream;
+    Windows::Storage::Streams::IOutputStream outputStream{ randomAccessStream.GetOutputStreamAt(0) };
+    Windows::Storage::Streams::DataWriter writer{ outputStream };
+    writer.WriteBytes(bytes);
 
-       create_task(writer->StoreAsync()).then([writer](unsigned int)
-       {
-              create_task(writer->FlushAsync());
-       });
+    co_await writer.StoreAsync();
+    co_await writer.FlushAsync();
 
-       return randomAccessStream;
+    co_return randomAccessStream;
+}
+...
+```
+
+```cpp
+InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
+{
+    int pixelHeight = 256;
+    int pixelWidth = 256;
+    int bpp = 4;
+
+    Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex = y * pixelWidth + x;
+            int byteIndex = pixelIndex * bpp;
+
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
+
+    // Create RandomAccessStream from byte array.
+    InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
+    IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
+    DataWriter^ writer = ref new DataWriter(outputStream);
+    writer->WriteBytes(bytes);
+
+    create_task(writer->StoreAsync()).then([writer](unsigned int)
+    {
+        create_task(writer->FlushAsync());
+    });
+
+    return randomAccessStream;
 }
 ```
 
 ## <a name="replace-the-default-map"></a>Substituir o mapa padrão
-
 
 Para substituir o mapa padrão inteiramente com blocos de terceiros ou personalizados:
 

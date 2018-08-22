@@ -1,6 +1,6 @@
 ---
 title: Copiar de e para matrizes de bytes
-description: Este exemplo de código mostra como copiar de e para matrizes de bytes em um app da Plataforma Universal do Windows (UWP).
+description: Este exemplo de código mostra como copiar de e para matrizes de bytes em um aplicativo da Plataforma Universal do Windows (UWP).
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
 author: msatranjr
 ms.author: misatran
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 066ce6f058bae42144be0ba9523db72716544543
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: cc7119ba2d97bfc6e1fb3f1a519b6d650027b1a3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689002"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2786708"
 ---
 # <a name="copy-to-and-from-byte-arrays"></a>Copiar de e para matrizes de bytes
 

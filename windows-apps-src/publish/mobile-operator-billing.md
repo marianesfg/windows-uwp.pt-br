@@ -4,18 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: Cobrança da operadora móvel
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
-ms.localizationpriority: high
-ms.openlocfilehash: 8e10f3d1cdee250e2d9ca140759a90cbdf0a8773
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bfb2fbbea42aaf1ed3c0ffc42f71dc38b2a1ede
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817507"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788111"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -46,14 +46,13 @@ No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de c
 | Países Baixos     | KPN                              |
 | Noruega          | Telenor, Telia                   |
 | Polônia          | Orange                           |
-| Romênia         | Orange                           |
-| Rússia          | Beeline                          |
-| Cingapura       | M1 Limited                       |
+| Cingapura       | M1 Limited, StarHub              |
 | Eslováquia        | Slovak Telekom                   |
 | Espanha           | Orange                           |
 | Suécia          | Telenor, 3                       |
 | Suíça     | Swisscom, Sunrise                |
 | Turquia          | Turkcell                         |
+| Emirados Árabes Unidos | Etisalat                    |
 | Estados Unidos   | Sprint, Verizon                  |
 | Reino Unido  | O2, 3 UK, EE                     |
 

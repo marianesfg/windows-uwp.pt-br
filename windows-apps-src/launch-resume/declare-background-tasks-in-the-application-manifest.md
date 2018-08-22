@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
-ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+keywords: tarefa do plano de fundo do Windows 10, uwp,
+ms.localizationpriority: medium
+ms.openlocfilehash: 00e685085c004cced24b9a42ef2261a26eef10bb
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2017
-ms.locfileid: "848423"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788301"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -213,7 +213,7 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Execute em um novo processo sempre que um gatilho é acionado com o atributo SupportsMultipleInstances
 
-Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar esse atributo, você deve possuir a versão '10.0.15063' (Atualização do Windows 10 para Criadores) do SDK ou superior.
+Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar este atributo devem ser direcionados SDK versão '10.0.15063' (atualização de criadores de 10 do Windows) ou superior.
 
 ```xml
 <Package
