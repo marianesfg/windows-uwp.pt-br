@@ -1,6 +1,6 @@
 ---
 author: serenaz
-Description: The Universal Windows Platform (UWP) provides a consistent back navigation system for traversing the user's navigation history within an app and, depending on the device, from app to app.
+Description: Learn how to implement backwards navigation for traversing the user's navigation history within an UWP app.
 title: Histórico de navegação e navegação retroativa (aplicativos do Windows)
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
@@ -8,32 +8,32 @@ label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
 ms.author: sezhen
-ms.date: 11/22/2017
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 824f0e83408893bf95d856067282b1fea1313876
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: 0400e04a86675adccd1da14d8cb2652028fbfd30
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895403"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800961"
 ---
-#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
+# <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
 > **APIs importantes**: [BackRequested event](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager class](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 A Plataforma Universal do Windows (UWP) oferece um sistema de navegação regressiva consistente a fim de percorrer o histórico de navegação do usuário dentro de um aplicativo e, dependendo do dispositivo, de aplicativo para aplicativo.
 
-Para implementar navegação retroativa no seu aplicativo, coloque um [botão Voltar](#Back-button) no canto superior esquerdo da interface do usuário do seu aplicativo. Se seu aplicativo usa o controle [NavigationView](../controls-and-patterns/navigationview.md), você pode usar o [botão Voltar integrado no NavigationView ](../controls-and-patterns/navigationview.md#backwards-navigation). 
+Para implementar navegação retroativa no seu aplicativo, coloque um [botão Voltar](#Back-button) no canto superior esquerdo da interface do usuário do seu aplicativo. Se seu aplicativo usa o controle [NavigationView](../controls-and-patterns/navigationview.md), você pode usar o [botão Voltar integrado no NavigationView ](../controls-and-patterns/navigationview.md#backwards-navigation).
 
 O usuário espera que o botão Voltar navegue para o local anterior no histórico de navegação do aplicativo. Note que cabe a você decidir quais ações de navegação serão adicionadas ao histórico de navegação e como responder ao pressionar o botão Voltar.
 
 ## <a name="back-button"></a>Botão Voltar
 
-Para criar um botão Voltar, use o controle [Botão](../controls-and-patterns/buttons.md) com o `NavigationBackButtonNormalStyle` estilo e posicione o botão no canto superior esquerdo da interface do usuário do seu aplicativo.
+Para criar um botão Voltar, use o controle de [botão](../controls-and-patterns/buttons.md) com o `NavigationBackButtonNormalStyle` estilo e colocar o botão no canto superior esquerdo da interface de usuário do seu aplicativo (para obter detalhes, consulte os exemplos de código XAML abaixo).
 
 ![Botão Voltar na parte superior esquerda da interface do usuário do aplicativo](images/back-nav/BackEnabled.png)
 
@@ -59,6 +59,7 @@ Para minimizar a movimentação em seu aplicativo de elementos de interface do u
 O exemplo de código a seguir demonstra como implementar o comportamento de navegação regressiva com um botão Voltar. O código responde ao evento do botão [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) e desabilita/habilita a visibilidade do botão no [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_), que é chamado ao navegar para uma nova página. O exemplo de código também manipula entradas de teclas Voltar de hardware e sistema de software registrando um ouvinte para o evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested).
 
 ```xaml
+<!-- MainPage.xaml -->
 <Page x:Class="AppName.MainPage">
 ...
 <Button x:Name="BackButton" Click="Back_Click" Style="{StaticResource NavigationBackButtonNormalStyle}"/>
@@ -69,6 +70,7 @@ O exemplo de código a seguir demonstra como implementar o comportamento de nave
 Code-behind:
 
 ```csharp
+// MainPage.xaml.cs
 public MainPage()
 {
     KeyboardAccelerator GoBack = new KeyboardAccelerator();
@@ -111,11 +113,75 @@ private void BackInvoked (KeyboardAccelerator sender, KeyboardAcceleratorInvoked
 }
 ```
 
-Aqui, nós registramos um ouvinte global para evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) no arquivo de code-behind `App.xaml`. É possível se registrar para esse evento em cada página se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código no nível da página antes de exibi-la.
+```cppwinrt
+// MainPage.cpp
+#include "pch.h"
+#include "MainPage.h"
+
+#include "winrt/Windows.System.h"
+#include "winrt/Windows.UI.Xaml.Controls.h"
+#include "winrt/Windows.UI.Xaml.Input.h"
+#include "winrt/Windows.UI.Xaml.Navigation.h"
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml;
+
+namespace winrt::PageNavTest::implementation
+{
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+
+        Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
+        goBack.Key(Windows::System::VirtualKey::GoBack);
+        goBack.Invoked({ this, &MainPage::BackInvoked });
+        Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
+        altLeft.Key(Windows::System::VirtualKey::Left);
+        altLeft.Invoked({ this, &MainPage::BackInvoked });
+        KeyboardAccelerators().Append(goBack);
+        KeyboardAccelerators().Append(altLeft);
+        // ALT routes here.
+        altLeft.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
+    }
+
+    void MainPage::OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e)
+    {
+        BackButton().IsEnabled(Frame().CanGoBack());
+    }
+
+    void MainPage::Back_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        On_BackRequested();
+    }
+
+    // Handles system-level BackRequested events and page-level back button Click events.
+    bool MainPage::On_BackRequested()
+    {
+        if (Frame().CanGoBack())
+        {
+            Frame().GoBack();
+            return true;
+        }
+        return false;
+    }
+
+    void MainPage::BackInvoked(Windows::UI::Xaml::Input::KeyboardAccelerator const& sender,
+        Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
+    {
+        args.Handled(On_BackRequested());
+    }
+}
+```
+
+Acima, podemos com versões anteriores tratar a navegação para uma única página. Se você deseja excluir páginas específicas de navegação regressiva ou você deseja executar código em nível de página antes de exibir a página, você pode manipular a navegação em cada página.
+
+Para tratar de navegação para um aplicativo inteiro com versões anteriores, você vai registrar um ouvinte global para o evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) no `App.xaml` arquivo code-behind.
 
 code-behind App.xaml:
 
 ```csharp
+// App.xaml.cs
 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
 Frame rootFrame = Window.Current.Content;
 rootFrame.PointerPressed += On_PointerPressed;
@@ -127,12 +193,74 @@ private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEvent
 
 private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
 {
-    bool isXButton1Pressed = e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
+    bool isXButton1Pressed =
+        e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
 
     if (isXButton1Pressed)
     {
         e.Handled = On_BackRequested();
     }
+}
+
+private bool On_BackRequested()
+{
+    Frame rootFrame = Window.Current.Content as Frame;
+    if (rootFrame.CanGoBack)
+    {
+        rootFrame.GoBack();
+        return true;
+    }
+    return false;
+}
+```
+
+```cppwinrt
+// App.cpp
+#include <winrt/Windows.UI.Core.h>
+#include "winrt/Windows.UI.Input.h"
+#include "winrt/Windows.UI.Xaml.Input.h"
+
+#include "App.h"
+#include "MainPage.h"
+
+using namespace winrt;
+...
+
+    Windows::UI::Core::SystemNavigationManager::GetForCurrentView().BackRequested({ this, &App::App_BackRequested });
+    Frame rootFrame{ nullptr };
+    auto content = Window::Current().Content();
+    if (content)
+    {
+        rootFrame = content.try_as<Frame>();
+    }
+    rootFrame.PointerPressed({ this, &App::On_PointerPressed });
+...
+
+void App::App_BackRequested(IInspectable const& /* sender */, Windows::UI::Core::BackRequestedEventArgs const& e)
+{
+    e.Handled(On_BackRequested());
+}
+
+void App::On_PointerPressed(IInspectable const& sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
+{
+    bool isXButton1Pressed =
+        e.GetCurrentPoint(sender.as<UIElement>()).Properties().PointerUpdateKind() == Windows::UI::Input::PointerUpdateKind::XButton1Pressed;
+
+    if (isXButton1Pressed)
+    {
+        e.Handled(On_BackRequested());
+    }
+}
+
+// Handles system-level BackRequested events.
+bool App::On_BackRequested()
+{
+    if (Frame().CanGoBack())
+    {
+        Frame().GoBack();
+        return true;
+    }
+    return false;
 }
 ```
 
@@ -165,7 +293,24 @@ Anteriormente, os aplicativos UWP usavam [AppViewBackButtonVisibility](https://d
 
 Se seu aplicativo continua a usar [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), o botão Voltar será renderizado dentro da barra de título, como de costume.
 
-![botão Voltar da barra de título](images/nav-back-pc.png)
+- Se seu aplicativo for **tabulada não**, o botão Voltar é processado dentro da barra de título. As interações de usuário e a experiência visuais do botão regressivo permanecem inalteradas das compilações anteriores.
+
+    ![Título da barra botão Voltar](images/nav-back-pc.png)
+
+- Se um aplicativo está **com guias**, então o botão Voltar é renderizado dentro de um novo sistema para trás barra.
+
+    ![Sistema back desenhadas barra botões](images/back-nav/tabs.png)
+
+### <a name="system-back-bar"></a>Sistema para trás barra
+
+> [!NOTE]
+> "Sistema para trás barra" é apenas uma descrição, não é um nome oficial.
+
+Do sistema para trás barra é uma faixa que é inserida entre a faixa de guia e a área de conteúdo do aplicativo s. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. A faixa tem uma altura vertical de 32 pixels para garantir que o tamanho de destino sensível adequada para o botão back.
+
+A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar está visível, do sistema para trás barra seja inserida, deslocando conteúdo de aplicativo para baixo por 32 pixels abaixo da faixa de guia. Quando o botão Voltar está oculto, do sistema para trás barra dinamicamente é removida, o mudando conteúdo de aplicativo para cima por 32 pixels para atender a faixa de guia. Para evitar ter shift de interface do usuário do seu aplicativo para cima ou para baixo, é recomendável um [botão de back - app](#back-button)de desenho.
+
+[Personalizações da barra de título](../shell/title-bar.md) continuará até a guia app e o sistema back barra. Se seu aplicativo especifica as propriedades de cor de plano de fundo e com [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), então as cores serão aplicadas à parte traseira do sistema e guia barra.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Diretrizes para o comportamento da navegação regressiva personalizada
 
@@ -190,16 +335,16 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Não há qualquer elemento de navegação que seja sempre presente (como o painel de navegação superior ou um painel de navegação esquerdo encaixado) que ofereça navegação direta para as duas páginas.</p></td>
+<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Há não na tela elemento de navegação (por exemplo, [NavigationView](../controls-and-patterns/navigationview.md)) que fornece navegação direta para ambas as páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
-<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares. As páginas não usam uma barra de navegação superior ou um painel de navegação esquerdo encaixado, então a navegação é adicionada ao histórico de navegação.</p>
+<p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de ponto e a navegação deve ser adicionada no histórico de navegação.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação. Por exemplo, as duas páginas usam o mesmo elemento do painel superior guias/pivôs ou ambas as páginas aparecem em um painel de navegação esquerdo encaixado.</p></td>
+<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação, como [NavigationView](../controls-and-patterns/navigationview.md).</p></td>
 <td style="vertical-align:top;"><strong>Depende</strong>
-<p>Sim, adicione ao histórico de navegação, mas com duas exceções notáveis. Se você espera que os usuários do seu aplicativo alternem entre as páginas no grupo de pares com frequência ou se desejar preservar o estado/histórico de navegação em uma página do grupo de pares, então não adicione ao histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
+<p>Sim, adicione no histórico de navegação, com duas exceções notáveis. Se você espera que os usuários do seu aplicativo para alternar entre páginas do grupo de ponto com frequência, ou se você deseja preservar a hierarquia de navegação, em seguida, não adicione no histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
@@ -222,7 +367,7 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 
 ### <a name="resuming"></a>Retomando
 
-Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, recomendamos retornar para a última página no histórico de navegação
+Quando o usuário alternar para outro aplicativo e retornar ao seu aplicativo, recomendamos retornar para a última página no histórico de navegação.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
