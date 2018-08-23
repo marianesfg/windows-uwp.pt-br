@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2800357"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2816082"
 ---
 # <a name="usage-report"></a>Relatório de uso
 
@@ -50,10 +50,10 @@ Este gráfico tem quatro guias separadas que você pode exibir, mostrando o uso 
 - **Duração**: mostra o total de horas de envolvimento (horas em que um usuário está usando ativamente o app).
 - **Retenção**: mostra o total de **DAU/MAU** (usuários diários ativos/usuários mensais ativos) durante o período selecionado.
 
-Quando a **30 D** período de tempo é selecionada, talvez você veja marcadores círculo ao exibir as guias de **duração** , **dispositivos**ou **usuários**. Eles representam um aumento significativo ou diminuir em um determinado valor pensamos que você vai querer saber sobre. A data em que o círculo aparece representa o fim da semana em que podemos detectado um aumento significativo ou diminuição comparada à semana antes que. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Quando a **30 D** período estiver selecionado, você poderá ver marcadores em círculo ao exibir as guias de **usuários**, **dispositivos**ou **duração** . Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber. A data na qual o círculo aparece representa o fim da semana em que foi detectado um aumento significativo ou diminuir em comparação com a semana anterior a ele. Para ver mais detalhes sobre o que foi alterado, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório ideias](insights-report.md).
+> Você pode exibir mais ideias relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sessões de usuário

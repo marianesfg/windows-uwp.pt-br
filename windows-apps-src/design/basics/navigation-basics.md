@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2792787"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2816244"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -58,7 +58,7 @@ Vamos começar com os princípios básicos de bom design de navegação:
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários fazem está familiarizado com e convenções padrão a seguir para ícones, local e o estilo fará navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando os [controles padrão](#use-the-right-controls) que os usuários estão familiarizados com e seguintes convenções padrão para ícones, local e estilo fará navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -99,7 +99,7 @@ Agora, vamos usar nossos princípios de design, ou seja, consistência, simplici
 
 1. Pense em seus usuários. Trace os caminhos típicos que eles podem tomar por meio de seu aplicativo e, para cada página, pense no motivo de o usuário estar lá e onde eles podem querer ir.
 
-2. Evite hierarquias de navegação de profundidade. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
+2. Evite hierarquias de navegação profundo. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
 
 3. Evite o "pula-pula". O "pula-pula" ocorre quando há conteúdo relacionado, mas a navegação até ele requer que o usuário suba um nível e desça novamente.
 
@@ -177,7 +177,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
 :::row:::
     :::column:::
-        ![imagem de pivot e guias](images/nav/thumbnail-tabs-pivot.svg)
+        ![guias e imagem dinâmica](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
     ::: extensão da coluna = "2"::: [ **guias e navegação superior**](../controls-and-patterns/navigationview.md)
 
@@ -200,7 +200,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column:::
         ![imagem de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: [de **navegação à esquerda**](../controls-and-patterns/navigationview.md)
+    ::: extensão da coluna = "2"::: [ **de navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         

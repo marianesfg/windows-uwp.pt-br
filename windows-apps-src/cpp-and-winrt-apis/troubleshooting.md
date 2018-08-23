@@ -3,27 +3,26 @@ author: stevewhims
 description: A tabela de sintomas de solução de problemas e soluções neste tópico pode ser útil se você estiver recortando um novo código ou fazendo a portabilidade de um app existente.
 title: Solucionando problemas de C++/WinRT
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: 21f5fc4773979b2d7940b85871264e27d56d29c4
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 4129c50a2273c8ac425f6ea972898aa09fe0fcf3
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832260"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2816311"
 ---
 # <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Solucionando problemas de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
-> **Algumas informações estão relacionadas a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.**
-
-> [!NOTE]
-> Para obter informações sobre a disponibilidade atual da Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 Este tópico é fornecido como precaução para que você fique atento a ele imediatamente, mesmo que você ainda não esteja precisando dessas informações. A tabela de sintomas de solução de problemas e soluções a seguir pode ser útil se você estiver recortando um novo código ou fazendo a portabilidade de um app existente. Se você estiver fazendo a portabilidade e estiver ansioso para avançar e chegar ao estágio de compilação e execução do projeto, poderá fazer um progresso temporário comentando ou eliminando qualquer código não essencial que esteja causando problemas e retornando para resolver esse problema mais tarde.
+
+Para obter uma lista de perguntas frequentes, consulte [Perguntas frequentes](faq.md).
 
 ## <a name="tracking-down-xaml-issues"></a>Rastreando problemas de XAML
 Pode ser difícil diagnosticar exceções de análise XAML, especialmente se não houver mensagens de erro significativas na exceção. Certifique-se de que o depurador esteja configurado para capturar exceções de primeira chance (para tentar e capturar a exceção de análise logo no início). Você pode inspecionar a variável de exceção no depurador para determinar se o HRESULT ou a mensagem tem informações úteis. Além disso, verifique na janela de saída do Visual Studio se há mensagens de erro de saída do analisador XAML.
@@ -42,10 +41,16 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | O compilador C++ gera o erro "*cannot convert from 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Isso poderá acontecer quando você passar um std::vector de std::wstring para uma API do Windows Runtime que espera uma coleção. Para obter mais informações, consulte [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md).|
 | O compilador C++ gera o erro "*cannot convert from 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Isso poderá acontecer quando você passar um std::vector de winrt::hstring para uma API assíncrona do Windows Runtime que espera uma coleção e não tiver copiado nem movido o vetor para o computador chamado assíncrono. Para obter mais informações, consulte [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md).|
 | Ao abrir um projeto, o Visual Studio gera o erro "*The application for the project is not installed*".|Se você ainda não tiver instalado **Windows Universal tools for C++ development** na caixa de diálogo **New Project**, precisará fazê-lo. Se isso não resolver o problema, possivelmente o projeto dependerá da Extensão do Visual Studio (VSIX) do C++/WinRT (consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).|
-| Os testes do Kit de Certificação de Aplicativos Windows produzem um erro informando que uma das suas classes de tempo de execução "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*".|A classe base definitiva de cada classe de tempo de execução *declarada no aplicativo* deve ser um tipo originário em um namespace Windows.*. Você pode derivar um modelo de exibição de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Como alternativa, declare uma classe base associável derivada de **DependencyObject** e derive seus modelos de exibição a partir dela.|
+| Os testes do Kit de Certificação de Aplicativos Windows produzem um erro informando que uma das suas classes de tempo de execução "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*".|Qualquer classe de tempo de execução (que você declara em seu aplicativo) que deriva de uma classe base é conhecido como um *compostos* classe. A classe base definitiva de uma classe de compostos deve ser um tipo de origem em um namespace Windows.*; Por exemplo, [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Consulte [XAML controla; ligar a C + + / WinRT propriedade](binding-property.md) para obter mais detalhes.|
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de delegação de EventHandler ou TypedEventHandler.|Em vez disso, é recomendável o uso de **winrt::delegate&lt;...T&gt;**. Consulte [Criar eventos em C++/WinRT](author-events.md).|
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de operação assíncrona do Windows Runtime.|É recomendável retornar uma [**tarefa**](https://msdn.microsoft.com/library/hh750113) PPL (Parallel Patterns Library). Consulte [Simultaneidade e operações assíncronas](concurrency.md).|
 | O compilador C++ gera "*error C2220: warning treated as error - no 'object' file generated*".|Corrija o aviso ou defina **C/C++** > **Geral** > **Tratar Avisos como Erros** para **Não (/WX-)**.|
 | O app falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Consulte [Usando *este* objeto em um manipulador de eventos](handle-events.md#using-the-this-object-in-an-event-handler).|
 | O compilador C++ gera "*error C2338: This is only for weak ref support*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Consulte [Recusando o suporte de referência fraca](weak-references.md#opting-out-of-weak-reference-support)|
-| O vinculador C++ produz "*error LNK2019: Unresolved external symbol*" para uma API nos cabeçalhos de namespace do Windows na projeção C++/WinRT (no namespace winrt).|A API é declarada antecipadamente em um cabeçalho que você incluiu, mas sua definição está em um cabeçalho que você ainda não incluiu. Inclua o cabeçalho nomeado para o namespace da API e compile-o novamente.|
+| O vinculador C++ produz "*erro LNK2019: símbolo externo não resolvido*"|Consulte [por que é o vinculador me dar uma "LNK2019: símbolo externo não resolvido" Erro?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)|
+| Toolchain LLVM e Clang produz erros quando usado com C + + / WinRT.|Não oferecemos suporte da toolchain LLVM e Clang para C + + / WinRT, mas se você quisesse emular como podemos usá-la internamente, e em seguida, você pode tentar um experimento, como o descrito no [posso usar LLVM/Clang para compilar com C + + / WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
+| O compilador C++ produz "*Nenhum construtor padrão apropriado disponível*" para um tipo projetado. | Se você estiver tentando para atrasar a inicialização de um objeto de classe em tempo de execução, ou consumir e implementar uma classe em tempo de execução no mesmo projeto, você precisará chamar o `nullptr_t` construtor. Para obter mais informações, consulte [Consumir APIs com C++/WinRT](consume-apis.md). |
+| O compilador C++ produz "*erro C3861: 'from_abi': identificador não encontrado*" e outros erros de origem em *base.h*. Você verá esse erro se você estiver usando Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803). | Um destino uma posterior (mais compatível) versão do SDK do Windows, ou definir a propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissiva-** aparece na propriedade do projeto **C/C++**  >  **Idioma** > de**linha de comando** em **Outras opções**, em seguida, excluí-lo). |
+
+> [!NOTE]
+> Se este tópico não responder à sua pergunta, você pode encontrar ajuda usando a [`c++-winrt`marca no Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

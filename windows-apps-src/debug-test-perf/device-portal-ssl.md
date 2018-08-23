@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivo
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2786694"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815238"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Portal de dispositivo de provisão com um certificado SSL personalizado
 No Windows 10 criadores Update, Portal de dispositivo do Windows adicionado uma maneira dos administradores do dispositivo instalar um certificado personalizado para uso na comunicação HTTPS. 
