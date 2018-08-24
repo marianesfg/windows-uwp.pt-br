@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: tarefa do plano de fundo do Windows 10, uwp,
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd0361886181d3c5a3395112c728db3bf57d58f
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2819218"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2840098"
 ---
 # <a name="register-a-background-task"></a>Registrar uma tarefa em segundo plano
 

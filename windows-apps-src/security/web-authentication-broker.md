@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 245fb2cfb3a62dc739abc7cfb2522da6495429ed
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2814489"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2840489"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -159,12 +159,15 @@ Geralmente é possível determinar o que não está funcionando usando logs oper
 
 O depurador da Web Fiddler pode ser usado com aplicativos.
 
-1.  Por o AuthHost executar no seu próprio contêiner de aplicativo para dar maior capacidade de rede privada, você deve definir uma chave de registro: Windows Registry Editor Version 5.00
+1.  Desde que o AuthHost é executado em seu próprio contêiner app, a fim de conceder a capacidade de rede privada você deve definir uma chave do registro: Editor de registro do Windows versão 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-                         Data type  
-                         DWORD
+    Se você não tiver essa chave do registro, você pode criá-lo em um Prompt de comando com privilégios de administrador.
+
+    ```cmd 
+    REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f
+    ```
 
 2.  Adicione uma regra para o AuthHost, uma vez que é ele quem gera o tráfego de saída.
     ```syntax
