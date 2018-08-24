@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815018"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2832022"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -113,7 +113,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opções de suspensão de publicação**     | Padrão: Publicar este envio assim que ele for aprovado na certificação (ou de acordo com as datas selecionadas por você na seção Agendar)      | [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options)    
 | **Notas para certificação**     | Recomendações          | [Notas para certificação](notes-for-certification.md)             |
-| **Funcionalidades restritas**     | Necessário se o seu produto declara qualquer [recursos restritos] (… /Packaging/App-capability-Declarations.MD#Restricted-Capabilities    | [Funcionalidades restritas](manage-submission-options.md#publishing-hold-options)       
+| **Funcionalidades restritas**     | Necessário se o seu produto declara quaisquer [recursos restritos](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restritas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de projeto
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: 51f11dd7b3d44e39da86e7b8c33aa59ef5bdda4e
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2820130"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2830435"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Apps e dispositivos conectados (projeto Roma)
 
@@ -39,3 +39,5 @@ Para obter mais informações gerais sobre o Project Rome, incluindo recursos de
 | [Descobrir dispositivos remotos](discover-remote-devices.md)  | Saiba como descobrir dispositivos aos quais você pode se conectar. |
 | [Comunicar-se com um serviço de app remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um app em um dispositivo remoto. |
 | [Conectar dispositivos por meio de sessões remotas](remote-sessions.md) | Crie experiências compartilhadas em vários dispositivos ingressando-os em uma sessão remota. |
+| [Continue a atividade do usuário, mesmo entre dispositivos](useractivities.md)| Ajuda os usuários para retomar o que eles foram fazendo em seu aplicativo, até mesmo em vários dispositivos.|
+| [Práticas recomendadas de atividades de usuário](useractivities-best-practices.md)| Saiba as práticas recomendadas para criação e atualização de atividades do usuário.|
