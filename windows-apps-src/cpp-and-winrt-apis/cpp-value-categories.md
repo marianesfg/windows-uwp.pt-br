@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, standard, c + +, cpp, winrt, projeção, mover, encaminhamento, categorias de valor, semântica de movimentação, encaminhamento perfeito, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.openlocfilehash: cbccaf78b45d85d93619977d149431c4eec9e10a
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2835028"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2867845"
 ---
 # <a name="value-categories-and-references-to-them"></a>Categorias de valor e referências a eles
 Este tópico descreve as várias categorias de valores (e referências aos valores) que existem no C++. Você já deve ter ouvido de *lvalues* e *rvalues*, mas você não pode pensa nos termos que este tópico apresenta. E existem outros tipos de valores, muito.

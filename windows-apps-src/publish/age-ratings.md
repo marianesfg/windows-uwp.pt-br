@@ -42,7 +42,7 @@ Na próxima vez que atualizar o seu aplicativo, você verá todas as classifica�
 > A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
 
 > [!NOTE]
-> Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://go.microsoft.com/fwlink/?linkid=867281). 
+> If you are submitting a game that will be available in Taiwan, you are required by law to register the provided CSRR rating using [this form](https://go.microsoft.com/fwlink/?linkid=867281). 
 
 <span id="appeal" />
 

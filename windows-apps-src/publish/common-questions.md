@@ -45,7 +45,7 @@ Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação 
 
 As campanhas publicitárias atualmente têm suporte nestes países e regiões:
 
-Argélia, Argentina, Austrália, Áustria, Bahamas, Bahrein, Barbados, Bélgica, Belize, Bolívia, Brasil, Canadá, Chile, China, Colômbia, Dinamarca, República Dominicana, Equador, Egito, El Salvador, Finlândia, França, Alemanha, Guatemala, Haiti, Honduras, RAE de Hong Kong, Índia, Indonésia, Iraque, Irlanda, Itália, Jamaica, Jordânia, Kuwait, Líbano, Malásia, México, Marrocos, Nova Zelândia, Países Baixos, Nicarágua, Noruega, Omã, Panamá, Paraguai, Peru, Filipinas, Porto Rico, Catar, Arábia Saudita, Cingapura, Espanha, África do Sul, Suécia, Suíça, Taiwan, Tailândia, Trinidad e Tobago, Tunísia, Emirados Árabes Unidos, Reino Unido, Unidos estados, Uruguai, Venezuela, Vietnã.
+Algeria, Argentina, Australia, Austria, Bahamas, Bahrain, Barbados, Belgium, Belize, Bolivia, Brazil, Canada, Chile, China, Colombia, Denmark, Dominican Republic, Ecuador, Egypt, El Salvador, Finland, France, Germany, Guatemala, Haiti, Honduras, Hong Kong SAR, India, Indonesia, Iraq, Ireland, Italy, Jamaica, Jordan, Kuwait, Lebanon, Malaysia, Mexico, Morocco, New Zealand, Netherlands, Nicaragua, Norway, Oman, Panama, Paraguay, Peru, Philippines, Puerto Rico, Qatar, Saudi Arabia, Singapore, Spain, South Africa, Sweden, Switzerland, Taiwan, Thailand, Trinidad and Tobago, Tunisia, United Arab Emirates, United Kingdom, United States, Uruguay, Venezuela, Vietnam.
 
 ### <a name="what-languages-are-supported-for-ad-campaigns"></a>Que idiomas têm suporte para campanhas publicitárias?
 
