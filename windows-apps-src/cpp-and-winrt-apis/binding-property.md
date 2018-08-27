@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 6343832801926254c64fcefc269ce7fda9ed6dfc
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.openlocfilehash: 31913ae162bfe541d04f304db87b4dff962a8af4
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2831448"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2862863"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>Controles XAML; vincular a uma propriedade [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em C++/WinRT, e como vincular controles de XAML a elas.
@@ -100,7 +100,7 @@ namespace winrt::Bookstore::implementation
     {
     }
 
-    hstring BookSku::Title()
+    winrt::hstring BookSku::Title()
     {
         return m_title;
     }
@@ -114,7 +114,7 @@ namespace winrt::Bookstore::implementation
         }
     }
 
-    event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
+    winrt::event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
     {
         return m_propertyChanged.add(handler);
     }
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files` para a pasta de projeto e os inclua no projeto. Abra esses arquivos e implementar a classe de tempo de execução, conforme mostrado abaixo. Observação como, no `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookSku**).
+Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files` para a pasta de projeto e os inclua no projeto. Abra esses arquivos e implementar a classe de tempo de execução, conforme mostrado abaixo. Observação como, no `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookSku**). E podemos estiver restaurando o construtor padrão, removendo `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
