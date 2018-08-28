@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2863360"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2888245"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
@@ -42,7 +42,7 @@ Na próxima vez que atualizar o seu aplicativo, você verá todas as classifica�
 > A legislação sul-coreana exige que os jogos disponibilizados na Coreia do Sul sejam classificados pelo [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) da Coreia do Sul. Se você estiver enviando um jogo, e quiser oferecê-lo na Coreia do Sul, deve preencher esta seção adicional e carregar o certificado de classificação. Observe que, se o seu aplicativo não for um jogo, ou se você não quiser oferecê-lo na Coreia do Sul, você poderá deixar essa seção em branco.
 
 > [!NOTE]
-> If you are submitting a game that will be available in Taiwan, you are required by law to register the provided CSRR rating using [this form](https://go.microsoft.com/fwlink/?linkid=867281). 
+> Se você estiver enviando um jogo que estará disponível em Taiwan, é exigido por lei que você registre a classificação CSRR fornecida usando [este formulário](https://go.microsoft.com/fwlink/?linkid=867281). 
 
 <span id="appeal" />
 
