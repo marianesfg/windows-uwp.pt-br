@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, localização, mapa, localização geográfica
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906513"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Diretrizes de aplicativos com reconhecimento de local
 
@@ -51,7 +51,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
     Libere o objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) se o usuário desativar o acesso às informações de localização por meio de Configurações. O aplicativo receberá os resultados de **ACCESS\_DENIED** em todas as chamadas de API de localização. No caso de o aplicativo salvar ou armazenar dados de localização em cache, limpe todos os dados do cache quando o usuário revogar o acesso às informações de localização. Ofereça um jeito alternativo de inserir manualmente as informações de localização quando os dados da localização não estiverem disponíveis via serviços de localização.
 
--   Forneça a interface do usuário para reabilitar os serviços de localização. Por exemplo, fornecem um botão de atualização que reinstancia o objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e tenta obter as informações de local novamente.
+-   Forneça a interface do usuário para reabilitar os serviços de localização. Por exemplo, fornece um botão de atualização que crie uma nova instância do objeto [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) e tenta obter informações de localização novamente.
 
     Forneça em seu aplicativo a interface do usuário para reabilitar os serviços de localização—
 
@@ -91,7 +91,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
         Por exemplo:
 
         -   Se o seu aplicativo está obtendo localização para ajuste de anúncios, notícias, tempo, etc, uma precisão de 5000 metros geralmente é suficiente.
-        -   Se seu aplicativo está exibindo os próximos acordos na bairro, uma precisão de 300 medidor é geralmente bom fornecer resultados.
+        -   Se seu aplicativo está exibindo negócios nas proximidades, uma precisão de 300 metros geralmente é boa para fornecer resultados.
         -   Se o usuário está à procura de recomendações de restaurantes nas proximidades, provavelmente queremos obter uma posição dentro de um quarteirão; portanto, uma precisão de 100 metros é suficiente.
         -   Se o usuário estiver tentando compartilhar sua posição, o aplicativo deverá solicitar uma precisão de cerca de 10 metros.
     -   Use a propriedade [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) se seu aplicativo tiver requisitos de precisão específicos. Por exemplo, aplicativos de navegação devem utilizar a propriedade **Geocoordinate.accuracy** para determinar se os dados de localização disponíveis atendem aos requisitos do aplicativo.

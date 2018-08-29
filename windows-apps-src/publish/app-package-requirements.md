@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888365"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905279"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 
@@ -41,7 +41,7 @@ Os pacotes do seu aplicativo não precisam ser assinados com um certificado prov
 
 ### <a name="app-bundles"></a>Pacotes de aplicativos
 
-Para aplicativos que têm como alvo 10 do Windows, Windows 8.1 e/ou Windows Phone 8.1, Visual Studio pode gerar um pacote de aplicativo (.appxbundle) para reduzir o tamanho do aplicativo que os usuários baixar. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
+Para aplicativos destinados ao Windows 10, Windows 8.1 e/ou Windows Phone 8.1, o Visual Studio pode gerar um lote de aplicativo (. appxbundle) para reduzir o tamanho do aplicativo que os usuários baixam. Isso pode ser útil se você definiu ativos específicos de idioma, uma variedade de ativos em escala de imagem ou recursos que se aplicam a versões específicas do Microsoft DirectX.
 
 > [!NOTE]
 > Um pacote de aplicativos pode conter seus pacotes para todas as arquiteturas. Você deve enviar apenas um pacote para cada sistema operacional de destino.
@@ -61,7 +61,7 @@ Seu manifesto deve incluir algumas informações específicas sobre sua conta e 
 > Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem coincidir. Insira os valores com cuidado e os revise para garantir que estejam corretos.
 
 
-Pacotes de aplicativo (.appxbundle) usam um manifesto diferente. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que, em um .appxbundle, o .appxmanifest de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento de [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Lotes de aplicativo (. appxbundle) usam outro manifesto. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que, no appxbundle, o .appxmanifest de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Execute o [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.
@@ -88,7 +88,7 @@ As versões compatíveis atualmente variam de:
 
 ## <a name="storemanifest-xml-file"></a>Arquivo XML StoreManifest
 
-StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, o StoreManifest.xml é enviado com o pacote de aplicativos e deve ser na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml é um arquivo de configuração opcional que pode ser incluído em pacotes de aplicativos. Seu objetivo é habilitar recursos, como declarar seu aplicativo como um aplicativo de dispositivo da Microsoft Store ou declarar que os requisitos dos quais um pacote depende são aplicáveis a um dispositivo, que o manifesto de pacote não abrange. Se usado, storemanifest. XML é enviado com o pacote do aplicativo e deve ser na pasta raiz do projeto principal do seu aplicativo. Para saber mais, consulte [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910189"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -159,7 +159,7 @@ Geralmente é possível determinar o que não está funcionando usando logs oper
 
 O depurador da Web Fiddler pode ser usado com aplicativos.
 
-1.  Desde que o AuthHost é executado em seu próprio contêiner app, a fim de conceder a capacidade de rede privada você deve definir uma chave do registro: Editor de registro do Windows versão 5.00
+1.  O AuthHost executar no seu próprio contêiner de aplicativo, para dar a ele a funcionalidade de rede privada você deve definir uma chave do registro: Windows Registry Editor Version 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 

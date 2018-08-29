@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, painel, centro de des, centro de desenvolvimento
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885015"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910090"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usando o painel do Centro de Desenvolvimento do Windows
 
 
-O [Painel de controle do Windows Dev Center](https://partner.microsoft.com/dashboard) lhe permite gerenciar e enviar todos os seus aplicativos para os dispositivos do Windows em um único local.
+O [painel do Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um só lugar.
 
 > [!NOTE]
 > Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o painel do Centro de Desenvolvimento do Windows.
@@ -33,13 +33,13 @@ Alguns destaques da experiência do painel são:
 - Um único local no canto superior direito para acessar detalhes relevantes do perfil e da conta, demonstrativos de pagamento, suporte e notificações.
 - Acesso instantâneo a todos os programas de desenvolvedor sem precisar entrar e sair de cada um deles. Também sugeriremos novos programas que possam ser de seu interesse quando forem disponibilizados.
 
-Quando você [criar um envio para seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você poderá [carregar pacotes app](upload-app-packages.md) para qualquer suporte para a versão do sistema operacional e o repositório automaticamente oferecer aos clientes o pacote que trabalharão melhor para eles.
+Quando você [criar um envio para seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer versão do sistema operacional com suporte, e a loja automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles.
 
-[Complementos (produtos - app)](add-on-submissions.md) são gerenciados independentemente de envio do seu aplicativo. Isso proporciona a você maior flexibilidade e a capacidade de fazer alterações de forma independente.
+[Complementos (produtos no aplicativo)](add-on-submissions.md) são gerenciados independentemente do envio do seu aplicativo. Isso proporciona a você maior flexibilidade e a capacidade de fazer alterações de forma independente.
 
-Centro de desenvolvimento do Windows também oferece recursos para [Adicionar vários usuários](manage-account-users.md)[de gerenciamento de aplicativo e configurando os serviços](app-management-and-services.md), [Analisando dados analíticos](analytics.md), [relatórios de pagamento](payout-summary.md), [promovendo seus aplicativos](attract-customers-and-promote-your-apps.md), [Contratar com seu os clientes](engage-with-your-customers.md), [teste beta](beta-testing-and-targeted-distribution.md), [Distribuindo aplicativos LOB para empresas de grande porte](distribute-lob-apps-to-enterprises.md)e muito mais.
+Centro de desenvolvimento do Windows também oferece recursos para [Adicionar vários usuários](manage-account-users.md)[de gerenciamento e configuração de serviços](app-management-and-services.md), [revisão de dados analíticos](analytics.md), [relatório de pagamento](payout-summary.md), [promover seus aplicativos](attract-customers-and-promote-your-apps.md), [interagindo com seus os clientes](engage-with-your-customers.md), [o teste beta](beta-testing-and-targeted-distribution.md), [Distribuindo aplicativos LOB para empresas](distribute-lob-apps-to-enterprises.md)e muito mais.
 
-Seus comentários nos ajudam a criar os melhores recursos e experiências possíveis. Enquanto você trabalha no painel, use o link de **comentários** no canto superior direito do painel de controle para compartilhar pensamentos e sugestões.
+Seus comentários nos ajudam a criar os melhores recursos e experiências possíveis. Enquanto você trabalha no painel, use o link **comentários** no canto superior direito do painel para compartilhar suas ideias e sugestões.
 
 
  

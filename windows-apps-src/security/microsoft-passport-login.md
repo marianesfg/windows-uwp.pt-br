@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885670"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907432"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
@@ -33,9 +33,9 @@ Antes de começar, você deve ler a visão geral do [Windows Hello](microsoft-pa
 ## <a name="get-started"></a>Introdução
 
 
-Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisa estar usando o Visual Studio de 2015 (Community Edition ou posterior), ou uma versão posterior do Visual Studio, em uma máquina Windows 10. Embora a versão mínima necessária 2015 do Visual Studio, recomendamos que você use a versão mais recente do Visual Studio para as atualizações de segurança e de desenvolvedor mais recentes.
+Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisará ser usando o Visual Studio 2015 (Community Edition ou superior), ou uma versão posterior do Visual Studio, em um computador Windows 10. Embora o Visual Studio 2015 é a versão mínima necessária, recomendamos que você use a versão mais recente do Visual Studio para as últimas atualizações de segurança e de desenvolvedor.
 
--   Abra o Visual Studio e selecione Arquivo > Novo > projeto.
+-   Abra o Visual Studio e selecione File > New > Project.
 -   Isso abrirá uma janela "New Project". Navegação para Templates > Visual C#.
 -   Escolha o aplicativo em branco (Windows Universal) e nomeie seu aplicativo "PassportLogin".
 -   Compile e execute o novo aplicativo (F5); você deve ver uma janela em branco na tela. Feche o app.

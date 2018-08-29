@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888425"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913626"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
 
 Assim que tiver [criado seu aplicativo reservando um nome](create-your-app-by-reserving-a-name.md), você poderá começar a trabalhar na publicação dele. A primeira etapa é criar um **envio**.
 
-Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. Atualizações feitas ao envio são salvas, para que você possa voltar e trabalhar nele sempre que você está pronto.
+Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. Atualizações feitas ao seu envio são salvas, para que você possa voltar e trabalhar nele sempre que você está pronto.
 
 > [!NOTE]
-> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para poder acessar o [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) e enviar apps para o Microsoft Store.
+> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) e enviar aplicativos na Microsoft Store.
 
-Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo. Você também pode [Remover um aplicativo do repositório de](guidance-for-app-package-management.md#removing-an-app-from-the-store) se precisar fazê-lo (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
+Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo. Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
 > [!NOTE]
 > Esta seção da documentação descreve como criar um envio de aplicativo no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.
@@ -36,7 +36,7 @@ Depois que o aplicativo for publicado, você poderá publicar uma versão atuali
 
 Aqui estão os detalhes que você pode fornecer quando for criar um envio de aplicativo, com links para mais informações.
 
-Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não tem que trabalhar nestas seções na ordem listada aqui.
+Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não precisa trabalhar com essas seções na ordem listada aqui.
 
 ### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |
@@ -98,7 +98,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 | **Logotipos da Store**               | Recomendado; necessário em algumas versões do sistema operacional | [Logotipos da Store](app-screenshots-and-images.md#store-logos)             |
 | **Ativos de arte adicionais**     | Recomendado (especialmente para algumas versões do sistema operacional)         | [Ativos de arte adicionais](app-screenshots-and-images.md#additional-art-assets) |
 | **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
-| **Campos suplementares**  | Opcional                                    | [Informações complementares](create-app-store-listings.md#supplemental-fields) 
+| **Campos complementares**  | Opcional                                    | [Informações complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações sobre direitos autorais e marcas registradas** | Opcional                                 | [Informações sobre direitos autorais e marcas registradas](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Termos de licença adicionais**  | Opcional                                    | [Termos de licença adicionais](create-app-store-listings.md#additional-license-terms) |
@@ -113,7 +113,7 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opções de suspensão de publicação**     | Padrão: Publicar este envio assim que ele for aprovado na certificação (ou de acordo com as datas selecionadas por você na seção Agendar)      | [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options)    
 | **Notas para certificação**     | Recomendações          | [Notas para certificação](notes-for-certification.md)             |
-| **Funcionalidades restritas**     | Necessário se o seu produto declara quaisquer [recursos restritos](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restritas](manage-submission-options.md#publishing-hold-options)       
+| **Funcionalidades restritas**     | Obrigatório se seu produto declara [funcionalidades restritas](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restritas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

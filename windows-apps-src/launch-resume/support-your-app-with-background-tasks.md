@@ -8,14 +8,14 @@ ms.date: 08/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885605"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2904634"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -28,18 +28,18 @@ Desde o Windows 10, versão 1607, a execução de áudio no segundo plano está 
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>Tarefas em segundo plano dentro do processo e fora do processo
 
-Há duas abordagens para implementar a tarefas em segundo plano:
+Há duas abordagens para implementar tarefas em segundo plano:
 
-* Em processo: o aplicativo e seu processo de plano de fundo executados no mesmo processo
-* Fora do processo: o aplicativo e o processo de plano de fundo executados em processos separados.
+* No processo: o aplicativo e seu processo em segundo plano são executados no mesmo processo
+* Fora do processo: o aplicativo e o processo em segundo plano são executados em processos separados.
 
 O suporte em segundo plano dentro do processo foi introduzido no Windows 10, versão 1607, para simplificar a gravação de tarefas em segundo plano. Mas você ainda pode desenvolver tarefas em segundo plano fora do processo. Consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md) para obter recomendações sobre quando gravar uma tarefa em segundo plano dentro versus fora do processo.
 
-Tarefas fora do processo de plano de fundo são mais resilientes, pois o processo de plano de fundo não pode derrubar seu processo de app se algo saia errado. Mas a resiliência vem com o preço de maior complexidade para gerenciar a comunicação de processo cruzado entre o aplicativo e a tarefa de plano de fundo.
+Tarefas em segundo plano fora do processo são mais resilientes porque o processo em segundo plano não pode derrubar o processo de aplicativo se algo der errado. Mas a resiliência vem ao custo de uma complexidade maior para gerenciar a comunicação entre processos entre o aplicativo e a tarefa em segundo plano.
 
-Tarefas fora do processo de plano de fundo são implementadas como leves classes que implementam a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que o sistema operacional é executado em um processo separado (backgroundtaskhost.exe). Registre-se uma tarefa de plano de fundo, usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
+Tarefas em segundo plano fora do processo são implementadas como classes leves que implementam a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que o sistema operacional é executado em um processo separado (backgroundtaskhost.exe). Registre uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
 
-No Windows 10, versão 1607, você pode habilitar a atividade em segundo plano sem criar uma tarefa em segundo plano. Em vez disso, você pode executar seu código de plano de fundo diretamente dentro do processo do aplicativo de primeiro plano.
+No Windows 10, versão 1607, você pode habilitar a atividade em segundo plano sem criar uma tarefa em segundo plano. Em vez disso, você pode executar seu código em segundo plano diretamente dentro do processo do aplicativo em primeiro plano.
 
 Para começar rapidamente tarefas em segundo plano dentro do processo, consulte [Criar e registrar uma tarefa em segundo plano dentro do processo](create-and-register-an-inproc-background-task.md).
 
@@ -75,11 +75,11 @@ Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois
 | **UserNotPresent**       | O usuário deve estar ausente.            |
 | **UserPresent**          | O usuário deve estar presente.         |
 
-Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Esta condição salva power porque a tarefa de plano de fundo não irá executar até que a rede esteja disponível. Essa condição não fornece ativação em tempo real.
+Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Essa condição economiza energia, pois a tarefa em segundo plano não é executada até que a rede está disponível. Essa condição não fornece ativação em tempo real.
 
-Se sua tarefa de plano de fundo requer conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permanece backup enquanto executa a tarefa de plano de fundo. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa de plano de fundo não definida **IsNetworkRequested**, em seguida, sua tarefa de plano de fundo não poderão acessar a rede quando no modo de espera conectado (por exemplo, quando a tela de um telefone está desativada.)
+Se sua tarefa em segundo plano requer conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano seja executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa em segundo plano não definido **IsNetworkRequested**, em seguida, sua tarefa em segundo plano não poderão acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada).
  
-Para obter mais informações sobre condições de tarefa do plano de fundo, consulte [definir condições para executar uma tarefa do plano de fundo](set-conditions-for-running-a-background-task.md).
+Para obter mais informações sobre as condições de tarefa em segundo plano, consulte [definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>Requisitos do manifesto do aplicativo
 
@@ -143,7 +143,7 @@ Em dispositivos com memória restrita, existe um limite quanto ao número de apl
 
 A menos que você isente seu aplicativo para que ele ainda possa executar tarefas em segundo plano e receber notificações por push quando a Economia de Bateria estiver ativada, o recurso Economia de Bateria, quando habilitado, impedirá que tarefas em segundo plano sejam executadas quando o dispositivo não estiver conectado à energia externa e a bateria estiver com uma carga restante abaixo do especificado. Isso não o impedirá de registrar tarefas em segundo plano.
 
-No entanto, para os aplicativos do enterprise e aplicativos que não serão publicados no Microsoft Store, consulte [executar em segundo plano indefinidamente](run-in-the-background-indefinetly.md) para aprender a usar um recursos para executar uma tarefa de plano de fundo ou a sessão de execução estendido indefinidamente em segundo plano.
+No entanto, para aplicativos corporativos e aplicativos que não serão publicados na Microsoft Store, consulte a [ser executado em segundo plano indefinidamente](run-in-the-background-indefinetly.md) para aprender a usar um recursos para executar uma tarefa em segundo plano ou a sessão de execução estendida em segundo plano indefinidamente.
 
 ## <a name="background-task-resource-guarantees-for-real-time-communication"></a>O recurso de tarefa em segundo plano garante a comunicação em tempo real
 
@@ -162,7 +162,7 @@ Seu aplicativo pode acessar sensores e dispositivos periféricos a partir de uma
 > [!IMPORTANT]
 > O **DeviceUseTrigger** e o **DeviceServicingTrigger** não podem ser usados com tarefas em segundo plano dentro do processo.
 
-Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte [sincronização de dispositivo e atualização para aplicativos do dispositivo de armazenamento do Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+Algumas operações críticas de dispositivos, como atualizações de firmware de longa execução não podem ser executadas com o [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Elas podem ser executadas somente no computador por um aplicativo privilegiado que usa o [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Um *aplicativo privilegiado* é um aplicativo que o fabricante do dispositivo autorizou a executar tais operações. Os metadados do dispositivo são usados para especificar qual aplicativo, se houver, foi designado como o aplicativo privilegiado para um dispositivo. Para obter mais informações, consulte a [sincronização de dispositivo e atualização para aplicativos de dispositivo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=306619)
 
 ## <a name="managing-background-tasks"></a>Gerenciando tarefas em segundo plano
 
@@ -171,7 +171,7 @@ Tarefas em segundo plano podem indicar o progresso, a conclusão e o cancelament
 [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 
-Verifica seu registro de tarefa do plano de fundo durante a inicialização do aplicativo. Certifique-se de que as tarefas de plano de fundo desagrupado do seu aplicativo estão presentes no BackgroundTaskBuilder.AllTasks. Registre novamente aqueles que não estão presentes. Cancelar o registro de quaisquer tarefas que não são mais necessários. Isso garante que todos os registros de tarefas do plano de fundo estão atualizados toda vez que o aplicativo é iniciado.
+Verifica o registro de tarefa em segundo plano durante a inicialização do aplicativo. Certifique-se de que as tarefas de plano de fundo desagrupada do seu aplicativo estão presentes no BackgroundTaskBuilder.AllTasks. Registre novamente aqueles que não estão presentes. Cancelar o registro de qualquer tarefa que não é mais necessários. Isso garante que todos os registros de tarefas em segundo plano sejam atualizados sempre que o aplicativo é iniciado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

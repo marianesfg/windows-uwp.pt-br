@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, aplicativo da área de trabalho
 ms.localizationpriority: medium
 ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905779"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obter dados de relatório de erros do seu aplicativo da área de trabalho
 
-Use este método na API de análise da Microsoft Store para obter os dados de relatório de erros agregados para um aplicativo da área de trabalho que você adicionou ao [programa do Aplicativo da Área de Trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Esse método pode recuperar apenas os erros que ocorreram nos últimos 30 dias. Essas informações também estão disponíveis no [Relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter os dados de relatório de erros agregados para um aplicativo da área de trabalho que você adicionou ao [programa do Aplicativo da Área de Trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Esse método só pode recuperar erros que ocorreram nos últimos 30 dias. Essas informações também estão disponíveis no [Relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no painel do Centro de Desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -49,7 +49,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
 | applicationId | string | A ID de produto do aplicativo da área de trabalho para o qual você deseja recuperar dados de relatório de erros. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
-| startDate | date | A data de início no intervalo de datas dos dados do relatório de erros a serem recuperados, no formato ```mm/dd/yyyy```. O padrão é a data atual.<p/><p/>**Observação:**&nbsp;&nbsp;esse método pode recuperar somente os erros que ocorreram nos últimos 30 dias.  |  Não  |
+| startDate | date | A data de início no intervalo de datas dos dados do relatório de erros a serem recuperados, no formato ```mm/dd/yyyy```. O padrão é a data atual.<p/><p/>**Observação:**&nbsp;&nbsp;este método só pode recuperar erros que ocorreram nos últimos 30 dias.  |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados do relatório de erros a serem recuperados, no formato ```mm/dd/yyyy```. O padrão é a data atual.   |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
 | skip | int | O número de linhas a serem ignoradas na consulta. Use este parâmetro para percorrer grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recuperam as primeiras 10.000 linhas de dados, top=10000 e skip=10000 recuperam as próximas 10.000 linhas de dados e assim por diante. |  Não  |

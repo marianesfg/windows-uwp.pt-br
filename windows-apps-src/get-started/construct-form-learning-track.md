@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: introdução, uwp, o windows 10, acompanhamento de aprendizado, layout, formulário
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916494"
 ---
 # <a name="create-and-customize-a-form"></a>Criar e personalizar um formulário
 
@@ -48,7 +48,7 @@ Leia [esta documentação nos painéis de layout](../design/layout/layout-panels
 
 ## <a name="what-goes-in-a-form"></a>O é incluído em um formulário?
 
-Você deverá preencher o formulário com vários [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Você provavelmente está familiarizado com isso, mas fique à vontade para ler caso precise se atualizar. Você deseja controles específicos que permitem ao usuário inserir texto ou escolher a partir de uma lista de valores. Esta é uma lista básica das opções que você pode adicionar – você não precisa ler tudo sobre cada um deles, apenas o suficiente para compreender o que elas se parecem e como eles funcionam.
+Você deverá preencher o formulário com vários [controles XAML](../design/controls-and-patterns/controls-and-events-intro.md). Você provavelmente está familiarizado com isso, mas fique à vontade para ler caso precise se atualizar. Você deseja controles específicos que permitem ao usuário inserir texto ou escolher a partir de uma lista de valores. Isso é uma lista das opções que você pode adicionar básicas – você não precisa ler tudo sobre elas, apenas o suficiente para entender sua aparência e como eles funcionam.
 
 * [TextBox](../design/controls-and-patterns/text-box.md) permite que um texto de entrada do usuário em seu aplicativo.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite que um usuário selecione entre duas opções.
@@ -136,7 +136,7 @@ Ao criar layouts mais complexos com mais elementos visuais, é recomendado consu
 
 ## <a name="going-further"></a>Aprofundamento
 
-Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Se sentir livres voltem os documentos, podemos vinculou a e experimentar o formulário que tiver, adicionando novos recursos de interface do usuário e refinando a experiência do usuário. Se você quiser orientação passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial adaptável layout](../design/basics/xaml-basics-adaptive-layout.md)
+Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Fique à vontade para consultar os documentos que você e experimentar com a forma que você tiver, adicionando novos recursos de interface do usuário e aperfeiçoando a experiência do usuário. Se você quiser orientações passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md)
 
 Os formulários também não precisam existir no vácuo: você pode ir além e incorporar o seu em um [padrão principal/detalhes](../design/controls-and-patterns/master-details.md) ou de um [controle de pivot](../design/controls-and-patterns/tabs-pivot.md). Ou se quiser começar a trabalhar no código por trás do formulário, é recomendado começar com a [visão geral dos eventos](../xaml-platform/events-and-routed-events-overview.md).
 

@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, portal de dispositivo
+keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888295"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910307"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -197,11 +197,11 @@ Este é um espaço de trabalho em branco, que você pode personalizar de acordo 
 
 ![Adicionar ferramentas ao espaço de trabalho](images/device-portal-xbox-13.png)
 
-### <a name="game-event-data"></a>Dados de evento jogo
+### <a name="game-event-data"></a>Dados de eventos de jogo
 
-Na página **dados de evento jogo** , você pode exibir um gráfico de tempo real que fluxos no número de eventos de jogo Event Tracing for Windows (ETW) registrada no momento no seu Xbox One. Se houver eventos jogos registrados no sistema, você também pode exibir os detalhes (nome do evento, ocorrência do evento e o título jogo) descrevendo cada evento em uma tabela de dados abaixo do gráfico de dados. A tabela só estará disponível se existem eventos gravados.
+Na página de **dados de eventos de jogo** , você pode exibir um gráfico em tempo real que fluxos no número de eventos de jogo de rastreamento de eventos para Windows (ETW) registrados atualmente no seu Xbox One. Se houver jogos eventos registrados no sistema, você também pode exibir detalhes (nome do evento, ocorrência de evento e o título de jogo) que descreve cada evento em uma tabela de dados abaixo do gráfico de dados. A tabela só está disponível se não houver eventos registrados.
 
-![Dados de evento jogo](images/device-portal-xbox-22.PNG)
+![Dados de eventos de jogo](images/device-portal-xbox-22.PNG)
 
 ## <a name="see-also"></a>Veja também
 

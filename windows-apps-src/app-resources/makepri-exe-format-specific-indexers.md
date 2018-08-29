@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ec6b2a31f4f577de30dac1c96a411c6aee6e9dc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892602"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905789"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos de formato do MakePri.exe
 
 Este tópico descreve os indexadores específicos de formato usados pela ferramenta [MakePri.exe](compile-resources-manually-with-makepri.md) para gerar seu índice de recursos.
 
 > [!NOTE]
-> MakePri.exe é instalado quando você marcar a opção de **Windows SDK para aplicativos gerenciados de UWP** enquanto instala o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas denominada para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe é instalado quando você verificar a opção de **SDK do Windows para aplicativos gerenciados do UWP** ao instalar o Software Development Kit do Windows. Ele é instalado no caminho `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (bem como nas pastas nomeadas para as outras arquiteturas). Por exemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 O MakePri.exe é normalmente usado com o comando `new`, `versioned` ou `resourcepack`. Consulte [Opções de linha de comando do MakePri.exe](makepri-exe-command-options.md). Nesses casos, ele indexa os arquivos de origem para gerar um índice de recursos. O MakePri.exe usa vários indexadores individuais para ler diferentes arquivos de recurso de origem ou contêineres de recursos. O indexador mais simples é o indexador de pasta, que indexa o conteúdo de uma pasta, como imagens `.jpg` ou `.png`.
 

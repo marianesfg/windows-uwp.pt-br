@@ -1,7 +1,7 @@
 ---
 author: cphilippona
-description: Revele o que foco é um efeito de iluminação que anima a borda do controle elementos quando o usuário move o foco do teclado ou gamepad a eles.
-title: Revelar foco
+description: Revela que foco é um efeito de iluminação que anima a borda de elementos focalizáveis quando o usuário move o foco do gamepad ou teclado até eles.
+title: Foco do revelação
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 03/1/2018
@@ -14,29 +14,29 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909719"
 ---
-# <a name="reveal-focus"></a>Revelar foco
+# <a name="reveal-focus"></a>Foco do revelação
 
 ![imagem hero](images/header-reveal-focus.svg)
 
-Revele o que foco é um efeito de iluminação para [experiências de 10-pé](/windows/uwp/design/devices/designing-for-tv), como um Xbox e televisão as telas. Ele anima a borda de elementos focalizáveis, como botões, quando o usuário move o foco do gamepad ou do teclado até eles. Ele está desativado por padrão, mas é fácil de habilitar. 
+Revela que foco é um efeito de iluminação para [experiências de 10 pés](/windows/uwp/design/devices/designing-for-tv), como Xbox One e telas de televisão. Ele anima a borda de elementos focalizáveis, como botões, quando o usuário move o foco do gamepad ou do teclado até eles. Ele está desativado por padrão, mas é fácil de habilitar. 
 
-(Para o efeito revelar realçar, um efeito de iluminação que destaca elementos interativos, consulte o [artigo revelar destacar](/windows/uwp/design/style/reveal).)
+(Para o efeito de realce de revelação, um efeito de iluminação que destaca elementos interativos, consulte o [artigo do realce de revelação](/windows/uwp/design/style/reveal).)
 
 
 > **APIs importantes**: [propriedade Application.FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [enumeração FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind) e [propriedade Control.UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
 ## <a name="how-it-works"></a>Como funciona
-Revele chamadas atenção aos elementos focados adicionando um brilho animado em torno da borda do elemento:
+Revela foco chama a atenção para elementos em foco adicionando um brilho animado ao redor da borda do elemento:
 
 ![Visual do Revelação](images/traveling-focus-fullscreen-light-rf.gif)
 
-Isso é especialmente útil em cenários de 10-pé onde o usuário pode não estar completa Observação atenta toda a tela de TV. 
+Isso é especialmente útil em cenários de 10 pés onde o usuário pode não estar prestando atenção total à toda a tela de TV. 
 
 ## <a name="examples"></a>Exemplos
 
@@ -45,7 +45,7 @@ Isso é especialmente útil em cenários de 10-pé onde o usuário pode não est
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo de <strong style="font-weight: semi-bold">Galeria de controles XAML</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RevealFocus">Abrir o aplicativo e consulte revelar o foco em ação</a>.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/RevealFocus">Abrir o aplicativo e ver o foco do revelação em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtenha o código-fonte (GitHub)</a></li>
@@ -56,7 +56,7 @@ Isso é especialmente útil em cenários de 10-pé onde o usuário pode não est
 
 ## <a name="how-to-use-it"></a>Como usá-lo
 
-Revele que foco está desativado por padrão. Para habilitá-lo:
+Revela que foco está desativada por padrão. Para habilitá-lo:
 1. No construtor do app, chame a propriedade [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) e verifique se a família de dispositivos atual é `Windows.Xbox`.
 2. Se a família de dispositivos for `Windows.Xbox`, defina a propriedade [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) como `FocusVisualKind.Reveal`. 
 
@@ -67,22 +67,22 @@ Revele que foco está desativado por padrão. Para habilitá-lo:
     }
 ```
 
-Depois de definir a propriedade **FocusVisualKind** , o sistema aplica automaticamente o efeito revelar foco a todos os controles cuja propriedade [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) é definida como **True** (o valor padrão para a maioria dos controles). 
+Depois de definir a propriedade **FocusVisualKind** , o sistema aplica automaticamente o efeito de foco do revelação a todos os controles cuja propriedade [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) é definida como **True** (o valor padrão da maioria dos controles). 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não revelar foco por padrão? 
-Como você pode ver, é bastante fácil ativar revelar o foco quando o aplicativo detecta que ele é executado em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco revelar aumenta o tamanho do foco visual, que pode causar problemas com o layout da interface do usuário. Em alguns casos, você desejará personalizar o efeito revelar o foco para otimizá-lo para seu aplicativo.
+Como você pode ver, é muito fácil ativar revelar o foco quando o app detectar que ele é executado em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
 
-## <a name="customizing-reveal-focus"></a>Personalizando o foco Reveal
+## <a name="customizing-reveal-focus"></a>Personalizando o foco do revelação
 
-Você pode personalizar o efeito revelar foco modificando as propriedades de foco visual para cada controle: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)e [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Essas propriedades permitem que você personalize a cor e a espessura do retângulo de foco. (Elas são as mesmas propriedades que você usa para criar [elementos visuais de foco de alta visibilidade](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals).) 
+Você pode personalizar o efeito de foco do revelação modificando as propriedades visuais de foco para cada controle: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)e [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Essas propriedades permitem que você personalize a cor e a espessura do retângulo de foco. (Elas são as mesmas propriedades que você usa para criar [elementos visuais de foco de alta visibilidade](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals).) 
 
-Mas antes de começar a customzing, ele é útil conhecer um pouco mais sobre os componentes que compõem a revelar o foco.
+Mas antes de começar a pena, vale a pena saber um pouco mais sobre os componentes que compõem o foco do revelação.
 
-Há três partes em visuais de foco revelar o padrão: a borda principal, da borda secundária e do Reveal com brilho. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. Brilho revelar foco tem uma espessura proporcional à espessura da borda principal e executa em torno de *fora* da borda principal.
+Há três partes nos elementos visuais de foco do revelação padrão: a borda principal, a borda secundária e o brilho do revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do foco do revelação tem espessura proporcional à espessura da borda principal e é executado em torno do *fora* da borda principal.
 
-Além dos elementos estáticos, visuais revelar foco recurso uma luz animada que pulsates em pousar e move na direção do foco ao mover o foco.
+Além dos elementos estáticos, elementos visuais de foco do revelação apresentam uma luz animada que pulsates quando estão em repouso e se move na direção do foco ao mover o foco.
 
-![Revelar camadas de foco](images/reveal-breakdown.svg)
+![Camadas do foco do revelação](images/reveal-breakdown.svg)
 
 ## <a name="customize-the-border-thickness"></a>Personalizar a espessura da borda
 
@@ -112,7 +112,7 @@ Uma margem negativa move a borda para mais longe do centro do controle, e uma ma
 
 ## <a name="customize-the-color"></a>Personalizar a cor
 
-Para alterar a cor do foco revelar visual, use as propriedades [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) e [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
+Para alterar a cor do foco do revelação visual, use as propriedades [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) e [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
 
 | Propriedade | Recurso padrão | Valor do recurso padrão |
 | ---- | ---- | --- | 
@@ -167,16 +167,16 @@ Se você gostaria de usar apenas o brilho sem o elemento visual de foco principa
 
 ## <a name="use-your-own-focus-visuals"></a>Use seus próprios elementos visuais de foco
 
-Outra maneira para personalizar o foco revelar é recusar os elementos visuais do foco fornecido pelo sistema desenhando seus próprios usando estados visuais. Para saber mais, consulte a [amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Outra maneira para personalizar o foco do revelação é recusar os elementos visuais de foco fornecida pelo sistema desenhando seus próprios estados visuais de uso. Para saber mais, consulte a [amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
-## <a name="reveal-focus-and-the-fluent-design-system"></a>Revelar o foco e o sistema de Design Fluent
+## <a name="reveal-focus-and-the-fluent-design-system"></a>Revelar foco e o sistema de Design fluente
 
-Revele o que foco é um componente do sistema de Design Fluent que adiciona claro ao seu aplicativo. Para saber mais sobre o sistema de Design Fluente e seus outros componentes, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
+Revela que foco é um componente do sistema de Design Fluent que acrescenta luz ao seu aplicativo. Para saber mais sobre o sistema de Design Fluente e seus outros componentes, consulte a [visão geral do Design Fluente para UWP](../fluent-design-system/index.md).
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Revelar realce](https://docs.microsoft.com/windows/uwp/design/style/reveal)
+- [Realce do revelação](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Projetando para Xbox e TV](/windows/uwp/design/devices/designing-for-tv)
 - [Interações de gamepad e controle remoto](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
 - [Amostra de elementos visuais de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)

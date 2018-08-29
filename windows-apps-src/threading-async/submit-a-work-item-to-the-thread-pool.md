@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, threads, pool de threads
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888065"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905489"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar um item de trabalho ao pool de threads
 
@@ -35,7 +35,7 @@ Crie um item de trabalho chamando [**RunAsync**](https://msdn.microsoft.com/libr
 Três versões de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) estão disponíveis para que, opcionalmente, você possa especificar a prioridade do item de trabalho e controlar se ele é executado simultaneamente com outros itens de trabalho.
 
 >[!NOTE]
->Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
+>Use o [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar o thread de interface do usuário e mostrar o progresso do item de trabalho.
 
 O exemplo a seguir cria um item de trabalho e fornece um lambda para fazer o trabalho:
 

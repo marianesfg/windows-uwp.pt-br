@@ -15,11 +15,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 7f92b12ab9c8962fe98d8eed22b21e7d10330c99
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916954"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -40,7 +40,7 @@ Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyPr
 ```
 
 > [!NOTE]
-> Estamos apenas usando [**Canvas. Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como uma propriedade de exemplo anexado sem totalmente explicando por que usá-lo. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) ou [Definir layouts com XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+> Estamos usando [**Canvas. Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como uma propriedade de exemplo anexada sem explicar totalmente por que você deve usá-lo. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) ou [Definir layouts com XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## <a name="why-use-attached-properties"></a>Por que usar propriedades anexadas?
 
@@ -76,7 +76,7 @@ Para obter o valor de uma propriedade anexada no código, chame o método [**Get
 
 ### <a name="using-the-xaml-accessor-pattern"></a>Usando o padrão de acessador XAML
 
-Um processador XAML deve ser capaz de definir esses valores de propriedade anexada quando o XAML é analisado em uma árvore de objetos. O tipo de proprietário da propriedade anexada deve implementar os métodos de assessor dedicado denominados no formato **obter * * * PropertyName* e **Definir * * * PropertyName*. Esses métodos acessadores dedicados também são uma boa maneira de obter ou definir a propriedade anexada em código. Sob a perspectiva de código, uma propriedade anexada é similar a um campo existente que contém acessadores de método em vez de acessadores de propriedade. Esse campo existente pode existir em qualquer objeto, não sendo necessário defini-lo especificamente.
+Um processador XAML deve ser capaz de definir esses valores de propriedade anexada quando o XAML é analisado em uma árvore de objetos. O tipo de proprietário da propriedade anexada deve implementar métodos acessadores dedicados denominados na forma **obter * * * PropertyName* e **Definir * * * PropertyName*. Esses métodos acessadores dedicados também são uma boa maneira de obter ou definir a propriedade anexada em código. Sob a perspectiva de código, uma propriedade anexada é similar a um campo existente que contém acessadores de método em vez de acessadores de propriedade. Esse campo existente pode existir em qualquer objeto, não sendo necessário defini-lo especificamente.
 
 O próximo exemplo mostra como você pode definir uma propriedade anexada no código usando a API do acessador XAML. Neste exemplo, `myCheckBox` é uma instância da classe [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316). A última linha é o código que efetivamente define o valor; as linhas anteriores apenas estabelecem as instâncias e o relacionamento pai-filho. A última linha não comentada será a sintaxe se você usar o sistema de propriedades. A última linha comentada será a sintaxe se você usar o padrão do acessador XAML.
 
@@ -127,9 +127,9 @@ O ponto no nome de uma propriedade anexada é uma parte essencial do padrão de 
 - Para especificar uma propriedade anexada como parte de um caminho de destino para uma animação, coloque o nome da propriedade anexada entre parênteses ("()") — por exemplo, "(Canvas.Left)". Para obter mais informações, consulte [Sintaxe de caminho e propriedade](property-path-syntax.md).
 
 > [!WARNING]
-> Uma limitação existente da implementação XAML de tempo de execução do Windows é que não é possível animar uma propriedade personalizada de anexado.
+> Uma limitação existente da implementação XAML do Windows Runtime é que você não pode animar uma propriedade anexada personalizada.
 
-- Para especificar uma propriedade anexada como a propriedade de destino de uma referência a recurso em um arquivo de recurso como **x:Uid**, use uma sintaxe especial que injeta uma declaração **using:** totalmente qualificada em estilo de código dentro de colchetes ("\[\]"), para criar uma interrupção de escopo deliberada. Por exemplo, supondo que exista um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que tem como destino o valor **Canvas. Top** nessa instância é "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recurso e XAML, consulte [Início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- Para especificar uma propriedade anexada como a propriedade de destino de uma referência a recurso em um arquivo de recurso como **x:Uid**, use uma sintaxe especial que injeta uma declaração **using:** totalmente qualificada em estilo de código dentro de colchetes ("\[\]"), para criar uma interrupção de escopo deliberada. Por exemplo, supondo que haja um elemento `<TextBlock x:Uid="Title" />`, a chave de recurso no arquivo de recurso que direciona o valor **Canvas. Top** nessa instância é "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obter mais informações sobre arquivos de recurso e XAML, consulte [Início rápido: Traduzindo recursos da interface do usuário](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

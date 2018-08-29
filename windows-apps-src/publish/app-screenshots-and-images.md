@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912380"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -85,13 +85,13 @@ Essa imagem pode aparecer em várias páginas da Store para Windows 10 (incluind
 
 Essa imagem é necessária para a exibição correta no Windows Phone 8.1 e versões anteriores. Se o seu app for compatível com o Windows Phone 8.1 ou versões anteriores e você não fornecer essa imagem, os clientes verão um ícone em branco com a listagem do seu app. (isso também se aplica aos clientes no Windows 10, se o aplicativo tiver apenas pacotes direcionados para o Windows Phone 8.1 ou anterior.) Se o envio incluir *apenas* pacotes UWP, não será necessário fornecer essa imagem. Observe que se o envio incluir pacotes do Windows Phone 8.x e pacotes UWP, e você fornecer essa imagem, ele poderá ser usado no Windows 10 em determinados layouts da Store. Se quiser evitar isso, crie [listagens específicas de plataforma](create-platform-specific-store-listings.md) para as versões do Windows Phone compatível com seu app e só inclua o ícone do bloco de aplicativo nesse local).
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregado somente imagens de logotipo no repositório
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados somente imagens de logotipo na loja
 
-Você tem a opção para impedir que o repositório usando as imagens de logotipo nos pacotes do seu aplicativo ao exibir sua listagem para os clientes Windows 10 (incluindo Xbox) e em vez disso, ter o repositório use apenas imagens que você carregar. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens a partir de seus pacotes, mesmo se você usar essa opção.)
+Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e, em vez disso, tenha a Store use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usa essa opção.)
 
-Para ter o repositório usar apenas as imagens que você pode carregar (para clientes no Windows 10, incluindo Xbox), e não usar qualquer imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir carregados imagens de logotipo, em vez das imagens de meus pacotes **.
+Tenha a Store use apenas as imagens carregadas (para clientes no Windows 10, incluindo o Xbox), e não use as imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir imagens de logotipo em vez das imagens dos meus pacotes enviadas **.
 
-Quando você marcar essa caixa, uma nova seção denominada **repositório exibir imagens** é exibida. Aqui, você pode carregar 3 imagens, incluindo o tamanho de **Bloco de 1:1 app ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem será movido para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
+Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 imagens, incluindo o tamanho do **Bloco de aplicativo 1:1 ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem se moverá para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
 
 
 <span id="promotional-images" />

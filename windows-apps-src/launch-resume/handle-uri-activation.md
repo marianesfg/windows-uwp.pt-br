@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889385"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905982"
 ---
 # <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
@@ -31,7 +31,7 @@ Recomendamos que você só se registre para um nome de esquema de URI se quiser 
 Estas etapas mostram como se registrar para um nome de esquema de URI personalizado, `alsdk://`, e como ativar seu aplicativo quando o usuário inicia um URI `alsdk://`.
 
 > [!NOTE]
-> Em aplicativos UWP, determinadas extensões de arquivo e URIs são reservadas para uso por aplicativos internos e o sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Veja [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, de esquemas de URI que você não pode registrar para seus aplicativos UWP porque eles são reservados ou proibidos.
+> Em aplicativos UWP, determinados URIs e extensões de arquivo são reservados para uso por aplicativos nativos e o sistema operacional. Tentativas de registrar seu aplicativo com um URI ou extensão de arquivo reservada serão ignoradas. Veja [Nomes de esquemas de URI e tipos de arquivos reservados](reserved-uri-scheme-names.md) para obter uma lista, em ordem alfabética, de esquemas de URI que você não pode registrar para seus aplicativos UWP porque eles são reservados ou proibidos.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Etapa 1: especificar o ponto de extensão no manifesto do pacote
 
@@ -138,7 +138,7 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 ```
 
 > [!NOTE]
-> Quando iniciado por meio do protocolo contrato, certifique-se de que botão Voltar leva o usuário volta para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
 
 O código a seguir inicia de maneira programática o aplicativo por meio do seu URI:
 
@@ -159,10 +159,10 @@ Quando iniciado por Ativação de protocolo, os aplicativos devem considerar inc
 Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os maliciosos. Assim, qualquer dado que você obtenha no URI pode vir de uma fonte não confiável. Recomendamos que você nunca execute uma ação permanente com base nos parâmetros recebidos no URI. Por exemplo, os parâmetros de URI podem ser usados para iniciar o aplicativo em uma página de conta de usuário, mas nunca devem ser usados para modificar diretamente a conta do usuário.
 
 > [!NOTE]
-> Se você estiver criando um novo nome do esquema URI para seu aplicativo, certifique-se de que siga as orientações em [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
+> Se você estiver criando um novo nome de esquema URI para seu aplicativo, certifique-se de seguir as orientações na [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
 
 > [!NOTE]
-> Quando iniciado por meio do protocolo contrato, certifique-se de que botão Voltar leva o usuário volta para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
 
 É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre um novo destino de Uri. Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
 

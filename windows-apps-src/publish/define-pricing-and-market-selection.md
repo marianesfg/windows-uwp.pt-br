@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882682"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906583"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
 
 A Microsoft Store abrange clientes em mais de 200 países e regiões em todo o mundo. Você pode escolher os mercados em que deseja oferecer seu aplicativo, com a opção de personalizar muitos recursos de [preço e disponibilidade](set-app-pricing-and-availability.md) por mercado ou por grupo de mercados.
 
-Para informações ajudar a tornar seu aplicativo adequada para clientes em todo o mundo, consulte [diretrizes para globalização](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) e [tornar seu aplicativo localizável](../design/globalizing/prepare-your-app-for-localization.md).
+Para obter informações ajudar a tornar seu aplicativo adequado para clientes em todo o mundo, consulte [diretrizes de globalização](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) e [fazer seu aplicativo localizável](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Embora este tópico se refira aos aplicativos, a seleção de mercado para envios de complemento usa o mesmo processo.
@@ -48,9 +48,9 @@ Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e re
 Você também verá uma caixa de seleção que permitirá a você informar se deseja oferecer seu aplicativo em qualquer mercado que a Loja possa adicionar no futuro. Se você deixar essa caixa marcada e posteriormente adicionamos novos mercados, o preço base e a data de disponibilidade geral do seu envio serão usados para o aplicativo nesses mercados. Se você não quiser que isso aconteça, desmarque essa caixa; nesse caso, não listaremos seu aplicativo em nenhum mercado futuro (porém, você sempre poderá adicioná-lo posteriormente).
  
 
-## <a name="microsoft-store-consumer-markets"></a>Microsoft Store consumidor mercados
+## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor da Microsoft Store
 
-Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir. Os mercados com um asterisco suportam o Microsoft Store em um Xbox; Você verá **Xbox** ao lado de seus nomes na janela pop-up de **seleção de mercado** .
+Você pode optar por listar seu aplicativo (ou complemento) em um ou mais dos mercados a seguir. Os mercados com um asterisco suportam da Microsoft Store no Xbox One; Você verá **Xbox** ao lado de seus nomes na janela pop-up de **seleção de mercado** .
 
 
 <table>
@@ -480,7 +480,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto do mundo" para Windows 8.x
 
-Se seu aplicativo inclui pacotes direcionamento Windows 8. x, é importante Lembre-se de que um número de mercados é tratado como um mercado único "de restante do mundo" para clientes que usam o armazenamento no Windows 8. x, mesmo se eles serão exibidos como mercados individuais no Centro de desenvolvimento do Windows Painel de controle (em vez de painel repositório anterior, em que houve uma opção de mercado "Restante do mundo" para agrupar todos esses mercados).
+Se seu aplicativo inclui pacotes para Windows 8. x, é importante estar ciente de que um número de mercados é tratado como um mercado único "de resto do mundo" para os clientes que usam o armazenamento no Windows 8. x, mesmo que eles são mostrados como mercados individuais no Centro de desenvolvimento do Windows painel (em vez do painel da Store anterior, onde havia uma opção de mercado "Resto do mundo" para agrupar todos esses mercados).
 
 Se você deixar a seleção padrão ao enviar seu aplicativo, não precisará se preocupar com isso, e seu aplicativo estará disponível para todos os mercados possíveis. No entanto, se você deseja excluir determinados mercados, lembre-se de que excluir até mesmo um desses mercados "Resto do mundo" significa que seu aplicativo não estará disponível em nenhum dos mercados "Resto do mundo" para clientes no Windows 8 ou Windows 8.1.
 

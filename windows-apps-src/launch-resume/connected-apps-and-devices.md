@@ -7,15 +7,15 @@ ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, Roma de projeto
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2884693"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916723"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Apps e dispositivos conectados (projeto Roma)
 
@@ -39,5 +39,5 @@ Para obter mais informações gerais sobre o Project Rome, incluindo recursos de
 | [Descobrir dispositivos remotos](discover-remote-devices.md)  | Saiba como descobrir dispositivos aos quais você pode se conectar. |
 | [Comunicar-se com um serviço de app remoto](communicate-with-a-remote-app-service.md) | Saiba como interagir com um app em um dispositivo remoto. |
 | [Conectar dispositivos por meio de sessões remotas](remote-sessions.md) | Crie experiências compartilhadas em vários dispositivos ingressando-os em uma sessão remota. |
-| [Continue a atividade do usuário, mesmo entre dispositivos](useractivities.md)| Ajuda os usuários para retomar o que eles foram fazendo em seu aplicativo, até mesmo em vários dispositivos.|
-| [Práticas recomendadas de atividades de usuário](useractivities-best-practices.md)| Saiba as práticas recomendadas para criação e atualização de atividades do usuário.|
+| [Continue a atividade do usuário, mesmo entre dispositivos](useractivities.md)| Ajude os usuários a retomar o que eles estavam fazendo no seu aplicativo, mesmo em vários dispositivos.|
+| [Práticas recomendadas de atividades de usuário](useractivities-best-practices.md)| Aprenda as práticas recomendadas para criar e atualizar as atividades do usuário.|

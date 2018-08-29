@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 description: Revelação é um efeito de iluminação que ajuda a trazer profundidade e foco para os elementos interativos do seu aplicativo.
-title: Revelar realce
+title: Realce do revelação
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 08/9/2017
@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888895"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915310"
 ---
-# <a name="reveal-highlight"></a>Revelar realce
+# <a name="reveal-highlight"></a>Realce do revelação
 
 ![imagem hero](images/header-reveal-highlight.svg)
 
-Revele que realce é um efeito de iluminação que destaca elementos interativos, como barras de comandos, quando o usuário move o ponteiro próximo-los. 
+Revela que destaque é um efeito de iluminação que destaca elementos interativos, como barras de comandos, quando o usuário move o ponteiro perto deles. 
 
 > **APIs importantes**: [classe RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [classe RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [classe RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [classe RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [classe VisualState](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Como funciona
-Revele atenção de chamadas de realce para elementos interativos por revelando o recipiente do elemento quando o ponteiro estiver próximo, conforme mostrado nesta ilustração:
+Revela destaque chama a atenção para elementos interativos, revelando o contêiner do elemento quando o ponteiro está próximo, conforme mostrado nesta ilustração:
 
 ![Visual do Revelação](images/Nav_Reveal_Animation.gif)
 
@@ -58,7 +58,7 @@ Por meio da exposição das bordas ocultas ao redor de objetos, o Revelação pr
 
 ## <a name="how-to-use-it"></a>Como usá-lo
 
-O Revelação funciona automaticamente para alguns controles. Para outros controles, você pode habilitar Reveal atribuindo um estilo especial para o controle, conforme descrito nas seções deste artigo [Habilitando revelar em outros controles](#enabling-reveal-on-other-controls) e [Habilitando revelar em controles personalizados](#enabling-reveal-on-custom-controls) .
+O Revelação funciona automaticamente para alguns controles. Para outros controles, você pode habilitar o revelação atribuindo um estilo especial ao controle, conforme descrito nas seções deste artigo [Habilitando o revelação em outros controles](#enabling-reveal-on-other-controls) e [Habilitando o revelação em controles personalizados](#enabling-reveal-on-custom-controls) .
 
 ## <a name="controls-that-automatically-use-reveal"></a>Controles que usam o Revelação automaticamente
 
@@ -69,7 +69,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustrações mostram revelar realçar em vários controles diferentes:
+Estas ilustrações mostram o realce do revelação em vários controles diferentes:
 
 ![Exemplos do Revelação](images/RevealExamples_Collage.png)
 
@@ -134,8 +134,8 @@ Você pode adicionar o Revelação a controles personalizados. Antes de fazer is
 
 
 Esses efeitos são definidos por dois pincéis: 
-* Borda revelar é definido por **RevealBorderBrush**
-* Foco Reveal é definido por **RevealBackgroundBrush**
+* Revelação borda é definido por **RevealBorderBrush**
+* Revelação hover é definido por **RevealBackgroundBrush**
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ Veja a seguir um modelo completo da aparência de um botão do Revelação:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustando o efeito do Revelação em um controle personalizado 
 
-Quando você habilita Reveal em um controle personalizado ou re-modelo ou uma superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
+Ao habilitar o revelação em um controle personalizado ou remodelado ou um superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
  
 * Nos itens adjacentes com tamanhos que não estão alinhados em altura ou largura (particularmente em listas): remova o comportamento de abordagem da borda e mantenha as bordas mostradas somente no foco.
 * Para itens de comando que entram e saem do estado desabilitado com frequência: coloque o pincel de abordagem da borda nos backplates dos elementos, bem como em suas bordas para enfatizar seu estado.
 * Para elementos de comandos adjacentes que estão tão próximos que chegam a se tocar: adicione uma margem de 1px entre os dois elementos. 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
-### <a name="do"></a>Execute:
+### <a name="do"></a>Fazer:
 - Use o Revelação nos elementos em que o usuário pode executar muitas ações (CommandBars, menus de navegação)
 - Use o Revelação em agrupamentos de elementos interativos que não têm separadores visuais por padrão (listas, faixas de opções)
 - Use o Revelação em áreas com uma grande quantidade de elementos interativos (cenários de comando)

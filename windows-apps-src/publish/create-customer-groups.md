@@ -11,17 +11,17 @@ keywords: windows 10, uwp, grupos de clientes, segmento, grupo de versão de pr�
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: 88101d9f8cc7ca40d37f88202667f36ecf5d8a3f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2880595"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905559"
 ---
 # <a name="create-customer-groups"></a>Criar grupos de clientes
 
-Você pode criar *grupos de clientes* que incluem um subconjunto dos clientes do seu aplicativo. Esses grupos podem ser usados para os clientes de destino para promoções, teste e outras finalidades.
+Você pode criar *grupos de clientes* que incluem um subconjunto de clientes do seu aplicativo. Esses grupos podem ser usados para os clientes de destino para promoções, testes e outros fins.
 
-Para exibir e criar grupos de cliente, expanda **Engage** no menu de navegação à esquerda do [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard)e selecione **grupos de clientes**.
+Para exibir e criar grupos de clientes, expanda **envolver** no menu de navegação à esquerda do [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard), selecione os **grupos de clientes**.
 
 Atualmente, dois tipos de grupos de clientes são permitidos:
 

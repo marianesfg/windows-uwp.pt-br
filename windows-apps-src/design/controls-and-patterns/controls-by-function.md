@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2908787"
 ---
 # <a name="controls-by-function"></a>Controles por função
 
@@ -30,7 +30,7 @@ Você também pode ver vários controles da IU do Windows em ação baixando o [
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo de <strong style="font-weight: semi-bold">Galeria de controles XAML</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir o aplicativo e ver o NavigationView em ação</a> </p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/NavigationView">Abrir o aplicativo e ver o NavigationView em ação</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtenha o código-fonte (GitHub)</a></li>
@@ -299,7 +299,7 @@ Um menu personalizado que apresenta os comandos especificados por você.
 
 Referência: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Design e instruções: [Dialogs](dialogs-and-flyouts/dialogs.md) 
+Design e instruções: [caixas de diálogo](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>Dica de ferramenta
 Uma janela pop-up que exibe as informações de um elemento. 
@@ -555,7 +555,7 @@ Veja Elemento de mídia.
 
 ### <a name="navigationview"></a>NavigationView
 
-Um contêiner adaptável e modelo flexível de navegação que implementa o painel de navegação à esquerda, a navegação superior e o padrão de guias.
+Um contêiner adaptável e o modelo de navegação flexível que implementa o painel de navegação à esquerda, a navegação superior e o padrão de guias.
 
 Referência: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

@@ -2,25 +2,25 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Testes do Kit de Certificação de Aplicativos Windows
-description: Kit de certificação de aplicativo do Windows contém um número de testes que pode ajudar a garantir que o seu aplicativo está pronto para ser publicado no Microsoft Store.
+description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo está pronto para ser publicado na Microsoft Store.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, certificação de aplicativo
+keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906063"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
 
-O [Kit de certificação de aplicativo do Windows](windows-app-certification-kit.md) contém um número de testes que ajudam a garantir que seu aplicativo está pronto para ser publicado para o Microsoft Store. Os testes estão listados abaixo com seus critérios, detalhes e ações no caso de falha sugeridas.
+O [Kit de certificação de aplicativo do Windows](windows-app-certification-kit.md) contém diversos testes que ajudam a garantir que seu aplicativo esteja pronto para ser publicado na Microsoft Store. Os testes estão listados abaixo com seus critérios, detalhes e ações no caso de falha sugeridas.
 
 ## <a name="deployment-and-launch-tests"></a>Implantação e testes de inicialização
 
@@ -60,7 +60,7 @@ Verifica se o aplicativo do Windows pode ser executado em uma versão futura do 
 
 ### <a name="background"></a>Histórico
 
-Informações de versão do sistema operacional tem restrita uso para o Microsoft Store. Elas têm sido usadas incorretamente com frequência pelos aplicativos para verificar a versão do sistema operacional, de forma que o aplicativo possa fornecer aos usuários as funcionalidades específicas de uma versão do sistema operacional.
+Informações de versão do sistema operacional têm uso restrito para a Microsoft Store. Elas têm sido usadas incorretamente com frequência pelos aplicativos para verificar a versão do sistema operacional, de forma que o aplicativo possa fornecer aos usuários as funcionalidades específicas de uma versão do sistema operacional.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -128,7 +128,7 @@ Analisa o manifesto do aplicativo para verificar se o conteúdo está correto, c
 
 -   **Verificação de comunicação entre processos (IPC)**
 
-    Esse teste impõe a exigência de aplicativos UWP não se comunicam fora do contêiner para componentes de Desktop app. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) com nome igual a "DesktopApplicationPath" falham nesse teste.
+    Esse teste impõe o requisito de que os aplicativos UWP não se comunicam fora do contêiner do aplicativo para componentes de Desktop. A comunicação entre processos é destinada apenas a aplicativos de sideload. Os aplicativos que especificam o [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) com nome igual a "DesktopApplicationPath" falham nesse teste.
 
 ### <a name="corrective-action"></a>Ação corretiva
 
@@ -248,7 +248,7 @@ AppContainerCheck verifica se o bit **appcontainer** no cabeçalho PE de um bin�
 
 Se um arquivo executável nativo for reprovado no teste, verifique se você usou o vinculador e o compilador mais recentes para criar o arquivo e se usou o sinalizador */appcontainer* no vinculador.
 
-Se um executável gerenciado falhar o teste, certifique-se de que você usou o compilador mais recente e o vinculador, como o Microsoft Visual Studio, para criar o aplicativo UWP.
+Se um executável gerenciado falhar no teste, certifique-se de que você usou o vinculador, como o Microsoft Visual Studio e o compilador mais recentes para criar o aplicativo UWP.
 
 **Comentários**
 
@@ -308,22 +308,22 @@ Teste o aplicativo em relação ao uso de quaisquer APIs não compatíveis.
 
 ### <a name="background"></a>Histórico
 
-Aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou as APIs do Win32 suportados) seja certificado para o Store do Microsoft. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
+Os aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou APIs do Win32 com suporte) para ser certificados para a Microsoft Store. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
 
 ### <a name="test-details"></a>Detalhes do teste
 
--   Certifica-se de que cada binário dentro do pacote de aplicativos não têm uma dependência em uma API Win32 que não há suporte para o desenvolvimento de aplicativos UWP, verificando a tabela de endereços de importação do binário.
+-   Verifica se cada binário no pacote do aplicativo não tem uma dependência em uma API do Win32 que não há suporte para desenvolvimento de aplicativos UWP, verificando a tabela de endereço de importação do binário.
 -   Verifica se cada binário gerenciado no pacote do app não depende de uma função fora do perfil aprovado.
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
 Verifique se o aplicativo foi compilado como uma compilação de versão e não como uma compilação de depuração.
 
-> **Observação**  A compilação de depuração de um aplicativo falharão esse teste, mesmo se o aplicativo usa [APIs para UWP aplicativos](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Observação**  A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Examine as mensagens de erro para identificar a API os usos de aplicativo que não seja uma [API para UWP aplicativos](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+Examine as mensagens de erro para identificar a API os usos de aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Observação**  Aplicativos C++ que são compilados em uma configuração de depuração falharão esse teste, mesmo se a configuração somente usa APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas para APIs do Windows nos aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
+> **Observação**  Aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
 ## <a name="performance-tests"></a>Testes de desempenho
 
@@ -433,7 +433,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>O arquivo "resources.pri" não deve ter o AutoMerge habilitado.</p>
 </td><td>
-<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Nós não recomendamos isso para aplicativos que você pretende distribuir por meio do Microsoft Store. O resources.pri de um aplicativo que seja distribuído por meio do Microsoft Store deve ser na raiz do pacote do aplicativo e contém todas as referências de idiomas suportados pelo aplicativo.</p>
+<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo.</p>
 </td></tr>
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
@@ -485,7 +485,7 @@ Use a tabela a seguir como guia.
 
 ### <a name="branding-validation"></a>Validação de marca
 
-Aplicativos UWP devem ser concluída e totalmente funcional. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
+Aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -501,7 +501,7 @@ Teste o aplicativo para ter certeza de que ele não é uma compilação de depur
 
 ### <a name="background"></a>Histórico
 
-Para obter a certificação para o Microsoft Store, aplicativos não devem ser compilados para depuração e eles não devem fazer referência a versões de depuração de um arquivo executável. Além disso, você deve criar seu código como otimizado para que seu aplicativo passe nesse teste.
+Para serem certificados para a Microsoft Store, aplicativos não devem ser compilados para depuração e não devem referenciar versões de depuração de um arquivo executável. Além disso, você deve criar seu código como otimizado para que seu aplicativo passe nesse teste.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -509,7 +509,7 @@ Teste o aplicativo para garantir que ele não é uma compilação de depuração
 
 ### <a name="corrective-actions"></a>Ações corretivas
 
--   Crie o aplicativo como um build de lançamento antes de enviá-lo para o Microsoft Store.
+-   Crie o aplicativo como uma compilação de versão antes de enviá-lo na Microsoft Store.
 -   Verifique se a versão correta do .NET framework está instalada.
 -   Certifique-se de que o aplicativo não está vinculando versões de depuração de uma estrutura e se a versão é de liberação. Se o aplicativo contém componentes .NET, certifique-se de instalar a versão correta da estrutura .NET.
 
@@ -537,7 +537,7 @@ Testa aplicativos Microsoft Direct3D para garantir que funcionam em todos os dis
 
 ### <a name="background"></a>Histórico
 
-Microsoft Store requer que todos os aplicativos usando Direct3D para renderizar adequadamente ou falham normalmente em cartões de gráficos de nível 1-9 \ do recurso.
+Microsoft Store exige que todos os aplicativos usando o Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
 
 Como os usuários podem alterar o hardware gráfico de seus dispositivos depois que o aplicativo for instalado, se você escolher um nível mínimo de recursos maior que 9\-1, o aplicativo deverá detectar durante a inicialização se o hardware atual atende ou não aos requisitos mínimos. Se os requisitos mínimos não forem atendidos, o aplicativo deverá exibir uma mensagem para o usuário detalhando os requisitos do Direct3D. Além disso, se um aplicativo for baixado em um dispositivo com o qual ele não é compatível, ele deverá detectar isso na inicialização e exibir uma mensagem para o cliente detalhando os requisitos.
 
@@ -551,7 +551,7 @@ Verifique se o aplicativo renderiza corretamente no recurso nível 9\-1 do Direc
 
 ### <a name="direct3d-trim-after-suspend"></a>Corte Direct3D após a suspensão
 
-> **Observação**  Esse teste só se aplica aos aplicativos UWP desenvolvidos para Windows 8.1 e posterior.
+> **Observação**  Esse teste só se aplica a aplicativos UWP desenvolvidos para Windows 8.1 e versões posteriores.
 
 ### <a name="background"></a>Histórico
 

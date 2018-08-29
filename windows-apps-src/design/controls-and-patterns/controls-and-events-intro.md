@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905959"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 
@@ -25,7 +25,7 @@ No desenvolvimento de aplicativos UWP, um *controle* é um elemento de interface
 
 > **APIs importantes**: [namespace Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [mestre/detalhes](master-details.md) é uma maneira que você pode usar um controle [SplitView](split-view.md) para a navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [NavigationView](navigationview.md) para implementar o padrão de guia.
+Um *padrão* é a receita para modificar um controle ou combinar vários controles para criar algo novo. Por exemplo, o padrão de [mestre/detalhes](master-details.md) é uma maneira que você pode usar um controle [SplitView](split-view.md) para navegação do aplicativo. Da mesma forma, você pode personalizar o modelo de um controle [NavigationView](navigationview.md) para implementar o padrão de guia.
 
 Em muitos casos, você pode usar um controle da forma como ele se apresenta. No entanto, os controles XAML separam a função da estrutura e aparência para que você possa fazer vários níveis de modificação para torná-los adequados às suas necessidades. Na seção [Estilo](../style/index.md), você pode aprender a usar [estilos XAML](xaml-styles.md) e [modelos de controle](control-templates.md) para modificar um controle.
 

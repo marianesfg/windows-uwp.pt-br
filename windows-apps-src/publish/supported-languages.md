@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905119"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
 
-Você pode enviar apps para o Microsoft Store em mais de 100 idiomas.
+Você pode enviar aplicativos na Microsoft Store em mais de 100 idiomas.
 
-Para saber mais sobre como configurar a idiomas em seus aplicativos, consulte [globalização e localização](../design/globalizing/globalizing-portal.md) e [Noções básicas sobre idiomas de perfil de usuário e de idiomas de manifesto do aplicativo](../design/globalizing/manage-language-and-region.md). Também temos um [Kit de Ferramentas de Aplicativo Multilíngue](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) para ajudar você a criar aplicativos com suporte para vários idiomas.
+Para saber mais sobre a configuração de idiomas em seus aplicativos, consulte [globalização e localização](../design/globalizing/globalizing-portal.md) e [Noções básicas sobre idiomas de perfil de usuário e idiomas de manifesto do aplicativo](../design/globalizing/manage-language-and-region.md). Também temos um [Kit de Ferramentas de Aplicativo Multilíngue](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) para ajudar você a criar aplicativos com suporte para vários idiomas.
 
 ## <a name="supported-languages"></a>Idiomas compatíveis
 
 
-Esses são os idiomas que suporta o Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas, e ele não deve especificar nenhum outro códigos de idioma que não esteja incluído aqui.
+Estes são os idiomas compatíveis com a Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas, e ele não deve especificar nenhum outro códigos de idioma que não esteja incluído aqui.
 
 | Nome do idioma         | Códigos dos idiomas permitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

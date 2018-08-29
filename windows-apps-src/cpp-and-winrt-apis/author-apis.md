@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: d2f9b336d9a95efe28668991d66ab0a9e48e96e7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889285"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912363"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como criar APIs de C++/WinRT, usando a estrutura de base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), direta ou indiretamente. Sinônimos parar *criar* neste contexto são *produzir* ou *implementar*. Este tópico aborda os seguintes cenários para a implementação de APIs em um tipo de C++/WinRT, nesta ordem.
@@ -252,14 +252,14 @@ namespace MyProject
 }
 ```
 
-Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **tornar** retorna a interface de padrão do tipo de implementação.
+Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **fazer** retorna a interface padrão do tipo de implementação.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
 ```
 
 > [!NOTE]
-> No entanto, se você estiver fazendo referência a seu tipo de sua interface de usuário do XAML, então haverá um tipo de implementação e um tipo projetado no mesmo projeto. Nesse caso, **fazer** retorna uma instância do tipo projetado. Para obter um exemplo de código desse cenário, consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
+> No entanto, se você estiver fazendo referência a seu tipo de sua interface de usuário do XAML, então haverá um tipo de implementação e um tipo projetado no mesmo projeto. Nesse caso, **faça** retorna uma instância do tipo projetado. Para obter um exemplo de código desse cenário, consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Assim, você pode chamar [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) nela para consultar outras interfaces, que você pode usar ou retornar.
 

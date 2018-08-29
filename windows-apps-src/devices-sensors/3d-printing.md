@@ -11,29 +11,29 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894304"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905769"
 ---
 # <a name="3d-printing"></a>Impressão 3D
 
 
-Esta seção descreve como utilizar o [namespace Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para adicionar a funcionalidade de impressão 3D ao seu aplicativo do Windows Universal.  
+Esta seção descreve como utilizar o [namespace Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para adicionar funcionalidade de impressão 3D ao seu aplicativo universal do Windows.  
 
-Para obter mais informações sobre como imprimir 3D com Windows 10, incluindo recursos para parceiros de hardware, fóruns de discussão da comunidade e obter informações gerais sobre recursos de impressão 3D, consulte o site [3D imprimir com 10 do Windows](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) no Centro de desenvolvimento do Hardware.
+Para obter mais informações sobre a impressão 3D com o Windows 10, incluindo recursos para parceiros de hardware, fóruns de discussão da comunidade e obter informações gerais sobre funcionalidades de impressão 3D, consulte o site de [impressão 3D com o Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) no Centro de desenvolvimento do Hardware.
 
 | Tópico | Descrição |
 |-------|-------------|
 | [Impressão 3D a partir do seu aplicativo](3d-print-from-app.md) | Saiba como adicionar a funcionalidade de impressão 3D ao seu aplicativo UWP. Esse tópico aborda como iniciar a caixa de diálogo de impressão 3D após verificar se o seu modelo 3D é imprimível e está no formato correto. |
-| [Gerar um pacote 3MF](generate-3mf.md) | Descreve a estrutura do tipo de arquivo de formato de fabricação 3D e como ele pode ser criado e manipulado com as APIs Windows.Graphics.Printing3D. |
+| [Gerar um pacote 3MF](generate-3mf.md) | Descreve a estrutura do tipo de arquivo de formato de manufatura 3D e como ele pode ser criado e manipulado com as APIs Windows.Graphics.Printing3D. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Impressão 3D com o Windows 10 (Centro de Desenvolvimento de Hardware)](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10)
 * [Namespace Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
-* [Amostra de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
-* [Impressão 3D da amostra de unidade](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
+* [Exemplo de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
+* [Impressão 3D do exemplo do Unity](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
 
  

@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886131"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913073"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -360,13 +360,13 @@ Como aceleradores de teclado normalmente não são descritos diretamente na inte
 Por padrão, quando são declarados aceleradores de teclado, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
 
 > [!NOTE] 
-> Se um controle tiver mais de um acelerador definido, somente a primeira é apresentada.
+> Se um controle tiver mais de um acelerador definido, apenas o primeiro será apresentado.
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Combinação de teclas aceleradoras em dica de ferramenta*
 
-Para objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), o Acelerador de teclado é acrescentado a dica de ferramenta de padrão do controle. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto de submenu.
+Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta do controle padrão. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
 
 > [!NOTE]
 > Especificando uma dica de ferramenta (consulte Button1 no exemplo a seguir) substitui esse comportamento.
@@ -400,7 +400,7 @@ Para objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-button-small.png)
 
-*Combinação de teclas acelerador acrescentada a dica de ferramenta do botão padrão*
+*Combinação de teclas aceleradoras anexada a dica de ferramenta do botão padrão*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">
@@ -412,7 +412,7 @@ Para objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbarbutton-small.png)
 
-*Combinação de teclas acelerador acrescentada a dica de ferramenta do AppBarButton padrão*
+*Combinação de teclas aceleradoras anexada a dica de ferramenta do AppBarButton padrão*
 
 ```xaml
 <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
@@ -438,7 +438,7 @@ Para objetos de [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*Combinação de teclas acelerador acrescentada ao texto do MenuFlyoutItem*
+*Combinação de teclas aceleradoras acrescentada ao texto do MenuFlyoutItem*
 
 Controle o comportamento de apresentação usando a propriedade [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que aceita dois valores: [Automático](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) ou [Oculto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 
@@ -619,7 +619,7 @@ public class MyListView : ListView
 * [Teclas de acesso](access-keys.md)
 
 **Exemplos**
-* [Galeria de controles de XAML (também conhecido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [XAML Controls Gallery (também conhecido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 
  

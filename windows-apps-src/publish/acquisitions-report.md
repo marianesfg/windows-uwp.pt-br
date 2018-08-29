@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885818"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910021"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
 
-O relatório de **aquisições** no painel do Centro de desenvolvimento do Windows permite que você veja o que tenha adquirido e instalado seu aplicativo, juntamente com demográficas e detalhes de plataforma e mostra informações sobre como os clientes do Windows 10 (incluindo Xbox) tem chegado a seu aplicativo listagem. Também é possível exibir perto de dados de aquisição em tempo real para o último período ou setenta e duas horas. 
+O relatório de **aquisições** no painel do Centro de desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram do seu aplicativo listagem. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
 
 Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -34,7 +34,7 @@ Neste relatório, uma **aquisição** significa que um novo cliente obteve uma l
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto nos dados de **aplicativo cumulativo** ). O tempo **1h** e **72 H** períodos somente se aplicam à guia **App diariamente** do gráfico **aquisições** e à guia **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto em dados **cumulativo do aplicativo** ). O tempo de **1 H** e **72h** períodos só se aplicam à guia **aplicativo diariamente** do gráfico **aquisições** e para a guia de **aquisições** do gráfico **mercados** . 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por mercado e/ou por tipo de dispositivo.
 
@@ -48,17 +48,17 @@ As informações de todos os gráficos listados abaixo refletem o intervalo de d
 
 O gráfico **Aquisições** mostra a quantidade de aquisições diárias ou semanais (um novo cliente que obtém uma licença do aplicativo) durante o período selecionado. (Quando você usa **Aplicar filtros** para mostrar dados de um período maior, os dados de aquisição serão agrupados por semana.) Somente as aquisições efetuadas por clientes conectados com uma conta da Microsoft válida são incluídas neste gráfico. 
 
-Por padrão, mostramos a exibição de **App diariamente** , que inclui um perto dados em tempo real. Você também pode ver a quantidade de aquisições do tempo de vida do aplicativo ao selecionar **Cumulativo do aplicativo**. Isso mostra o total cumulativo de todas as aquisições, desde quando o seu aplicativo foi publicado pela primeira vez.
+Por padrão, mostramos a exibição do **aplicativo diariamente** , que inclui dados em tempo real aproximado. Você também pode ver a quantidade de aquisições do tempo de vida do aplicativo ao selecionar **Cumulativo do aplicativo**. Isso mostra o total cumulativo de todas as aquisições, desde quando o seu aplicativo foi publicado pela primeira vez.
 
 Você pode filtrar os resultados se a aquisição foi originada do cliente ou da loja Web e/ou por versão do sistema operacional.
 
 > [!NOTE]
 > Você também pode recuperar de forma programática esses dados usando o método [obter aquisições de aplicativo](../monetize/get-app-acquisitions.md) na [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Na exibição de **App diariamente** , quando a **30 D** período de tempo é selecionada, talvez você veja marcadores de círculo. Eles representam um aumento significativo ou diminuir em um determinado valor pensamos que você vai querer saber sobre. A data em que o círculo aparece representa o fim da semana em que podemos detectado um aumento significativo ou diminuição comparada à semana antes que. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Na exibição de **aplicativo diariamente** , quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório ideias](insights-report.md).
+> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="installs"></a>Instalações
 

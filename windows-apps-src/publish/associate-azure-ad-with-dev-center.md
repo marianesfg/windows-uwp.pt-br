@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890680"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910428"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory
 
@@ -35,7 +35,7 @@ Um único locatário do Azure AD pode ser associado a várias contas do Centro d
 
 Se sua organização já usa o Azure AD, siga estas etapas para vincular sua conta do Centro de Desenvolvimento.
 
-1.  No [painel do Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e selecione **configurações de conta**. No menu **configurações** , selecione **inquilinos**.
+1.  No [painel Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **locatários**.
 2.  Selecione **Associar sua conta do Centro de Desenvolvimento ao Azure AD**.
 3.  Insira suas credenciais do Azure AD para o locatário que deseja associar.
 4.  Revise os nomes da organização e do domínio da conta do inquilino do Azure AD. Para concluir a associação, selecione **Confirmar**.
@@ -49,7 +49,7 @@ Se sua organização já usa o Azure AD, siga estas etapas para vincular sua con
 
 Se você precisa configurar um novo Azure AD para vincular com sua conta do Centro de Desenvolvimento, siga estas etapas.
 
-1.  No [painel do Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e selecione **configurações de conta**. No menu **configurações** , selecione **inquilinos**.
+1.  No [painel Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **locatários**.
 2.  Selecione **Criar novo Azure AD**.
 3.  Insira as informações de diretório para seu novo Azure AD:
     - **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com".
@@ -78,7 +78,7 @@ Qualquer usuário que tenha a função **Gerente** de uma conta do Centro de Des
 > [!IMPORTANT]
 > Ao remover um locatário, todos os usuários adicionados à conta do Centro de Desenvolvimento desse locatário não serão mais capazes de entrar na conta. 
 
-Para remover um locatário, localizar seu nome na página de **inquilinos** (nas **configurações de conta**) e selecionando **Remover**. Você precisará confirmar que deseja remover o locatário. Após realizar essa operação, nenhum usuário do Centro de Desenvolvimento será capaz de acessar a conta do Centro de Desenvolvimento e todas as permissões que você configurou para esse usuário serão removidas.
+Para remover um locatário, encontre o nome na página **locatários** (nas **configurações da conta**) e selecione **Remover**. Você precisará confirmar que deseja remover o locatário. Após realizar essa operação, nenhum usuário do Centro de Desenvolvimento será capaz de acessar a conta do Centro de Desenvolvimento e todas as permissões que você configurou para esse usuário serão removidas.
 
 > [!TIP]
 > Você não pode remover um locatário se estiver atualmente conectado ao Centro de Desenvolvimento usando uma conta no mesmo locatário. Para remover um locatário, você deve acessar o Centro de Desenvolvimento como **Gerente** para outro locatário que esteja associado à conta. Se houver apenas um locatário associado com a conta, esse locatário só poderá ser removido após o acesso à conta da Microsoft que abriu a conta.

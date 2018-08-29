@@ -8,18 +8,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912943"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -31,11 +31,11 @@ ms.locfileid: "2894074"
 
 Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada.
 
-Às vezes, tarefas de plano de fundo exigem certas condições sejam atendidas para a tarefa de plano de fundo ter sucesso. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada depois que o gatilho foi acionado. A tarefa de plano de fundo serão então enfileirada, mas ela não será executada até que todas as condições forem satisfeitas.
+Às vezes, tarefas em segundo plano exigem que certas condições sejam atendidas para a tarefa em segundo plano seja executado com êxito. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada após o gatilho já tiver sido disparado. A tarefa em segundo plano será, em seguida, ser colocados em fila, mas ele não será executado até que todas as condições forem atendidas.
 
-Colocar as condições nas tarefas do plano de fundo salva a vida útil da bateria e CPU, impedindo a execução de tarefas sejam executados desnecessariamente. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente executando apenas a tarefa em segundo plano quando o temporizador tiver expirado *e* a Internet estiver disponível.
+Colocar condições em tarefas em segundo plano poupa bateria e CPU, impedindo que tarefas em execução desnecessariamente. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente executando apenas a tarefa em segundo plano quando o temporizador tiver expirado *e* a Internet estiver disponível.
 
-Também é possível combinar várias condições, chamando **AddCondition** várias vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
+Também é possível integrar várias condições chamando **AddCondition** várias vezes no mesmo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Tome cuidado para não adicionar condições conflitantes, como **UserPresent**e **UserNotPresent**.
 
 ## <a name="create-a-systemcondition-object"></a>Criar um objeto SystemCondition
 
@@ -43,9 +43,9 @@ Este tópico pressupõe que você tenha uma tarefa em segundo plano já associad
 
 Este tópico se aplica a tarefas em segundo plano executadas fora do processo, bem como àquelas executadas no mesmo processo do aplicativo em primeiro plano.
 
-Antes de adicionar a condição, crie um objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para representar a condição que deve estar em vigor para executar uma tarefa em segundo plano. No construtor, especifique a condição que deve ser atendida com um valor de enumeração [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) .
+Antes de adicionar a condição, crie um objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para representar a condição que precisa estar em vigor para executar uma tarefa em segundo plano. No construtor, especifique a condição que deve ser atendida com um valor de enumeração [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) .
 
-O código a seguir cria um objeto de [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que especifica a condição de **InternetAvailable** :
+O código a seguir cria um objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que especifica **a internetavailable** :
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -64,7 +64,7 @@ SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionTyp
 
 Para adicionar a condição, chame o método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) no objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) e passe a ele o objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834).
 
-O código a seguir usa **taskBuilder** para adicionar a condição de **InternetAvailable** .
+O código a seguir usa **taskBuilder** para adicionar **a internetavailable** .
 
 ```csharp
 taskBuilder.AddCondition(internetCondition);
@@ -80,7 +80,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>Registrar sua tarefa em segundo plano
 
-Agora você pode registrar sua tarefa de plano de fundo com o método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) e a tarefa de plano de fundo não será iniciado até que a condição especificada for atendida.
+Agora você pode registrar sua tarefa em segundo plano com o método de [**registrar**](https://msdn.microsoft.com/library/windows/apps/br224772) e a tarefa em segundo plano não será iniciado até que a condição especificada for atendida.
 
 O código a seguir registra a tarefa e armazena o objeto BackgroundTaskRegistration resultante:
 
@@ -109,9 +109,9 @@ Para garantir que seu aplicativo Universal do Windows continue a ser executado c
 Para adicionar várias condições, seu aplicativo faz várias chamadas ao método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) . Essas chamadas devem ser feitas antes que o registro da tarefa se torne efetivo.
 
 > [!NOTE]
-> Tome cuidado para não adicionar condições conflitantes a uma tarefa de plano de fundo.
+> Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano.
 
-O trecho a seguir mostra várias condições no contexto de criar e registrar uma tarefa de plano de fundo.
+O trecho a seguir mostra várias condições no contexto de criar e registrar uma tarefa em segundo plano.
 
 ```csharp
 // Set up the background task.
@@ -182,7 +182,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Escolha condições para a sua tarefa de plano de fundo para que seja executada somente quando ele é necessário e não é executada quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
+> Escolha as condições certas para a sua tarefa em segundo plano para que seja executada somente quando for necessária e não é executado quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

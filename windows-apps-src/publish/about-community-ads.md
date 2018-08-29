@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2883606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912993"
 ---
 # <a name="about-community-ads"></a>Sobre anúncios de comunidade
 
-Se seu aplicativo [exibe banner ou anúncios intersticiais faixa](../monetize/display-ads-in-your-app.md), poderá cross-promover seu aplicativo com outros desenvolvedores com aplicativos no Microsoft Store para gratuito. Chamamos este recurso de *anúncios de comunidade*.  
+Se seu aplicativo [exibe anúncios em faixa ou anúncios intersticiais em faixa](../monetize/display-ads-in-your-app.md), você pode promover seu aplicativo com outros desenvolvedores com aplicativos na Microsoft Store para gratuitos. Chamamos este recurso de *anúncios de comunidade*.  
 
 Veja como este programa funciona:
 
-* Depois que você opt-in para anúncios de comunidade, conforme descrito abaixo, você pode [criar uma campanha de ad gratuito para a comunidade](create-an-ad-campaign-for-your-app.md). Seu aplicativo, em seguida, compartilharão espaço da ad promocional com outros desenvolvedores que optarem também anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
+* Depois que você optar por em anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
 * Ganhe créditos para o espaço de anúncio promocional em outros aplicativos, mostrando anúncios de comunidade em seu aplicativo. Os créditos são calculados de acordo com o seguinte processo:
   * Para cada país ou região em que um aplicativo que serve anúncios da comunidade está disponível, o valor de eCPM (custo efetivo por mil impressões) da taxa do mercado atual para o país ou a região é multiplicado pelo número de solicitações de anúncios da comunidade feitas pelo seu aplicativo nesse país ou região. Esse valor corresponde aos créditos que você ganhou para o seu aplicativo nesse país ou nessa região.
   * Seus créditos totais acumulados por um determinado tempo são iguais à soma de todos os créditos obtidos em cada país ou região para cada um dos seus aplicativos que está servindo anúncios da comunidade.
@@ -32,19 +32,19 @@ Veja como este programa funciona:
 
 ### <a name="opt-in-to-community-ads"></a>Para aceitar anúncios da comunidade
 
-Antes de criar uma campanha publicitária de comunidade de um dos seus aplicativos, você deve aceitar no **Monetize** &gt; página **no aplicativo ads** no painel do Centro de desenvolvimento do Windows.
+Antes de criar uma campanha publicitária de comunidade para um dos seus aplicativos, você deve aceitar na **monetizar** &gt; página de **anúncios no aplicativo** no painel do Centro de desenvolvimento do Windows.
 
-Optarem ads da comunidade para um aplicativo UWP:
+Para aceitar anúncios da comunidade para um aplicativo UWP:
 
-1. Na seção **configurações de mediação** na página **ads - app** , selecione uma unidade de anúncio que você está usando o aplicativo.
-2. Se a opção **Permitir que o Microsoft escolher as configurações recomendadas de mediação para seu aplicativo** estiver selecionada, os anúncios de comunidade estão habilitados para sua unidade de ad automaticamente. Caso contrário, selecione a configuração de linha de base ou uma configuração de mercado específico na lista suspensa **destino** e verifique se a caixa **ads na comunidade Microsoft** na lista de **outras redes ad** .
+1. Na seção **configurações de controle** na página de **anúncios no app** , selecione uma unidade de anúncio que você está usando no aplicativo.
+2. Se a opção **Permitir que a Microsoft Escolha as melhores configurações de mediação para seu aplicativo** é selecionada, anúncios de comunidade são habilitados para sua unidade publicitária automaticamente. Caso contrário, selecione a configuração de linha de base ou uma configuração específicas de mercado na lista suspensa **destino** e, em seguida, marque a caixa de **anúncios da Microsoft Community** na lista de **outras redes de anúncios** .
 
     > [!NOTE]
-    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar de redes pagas e outras redes ad incluindo anúncios de comunidade.
+    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar da redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
 
-Optarem ads da comunidade para o Windows 8. x ou do aplicativo do Windows Phone 8. x,
+Para aceitar anúncios da comunidade para que o Windows 8. x ou Windows Phone 8. x aplicativo
 
-1. Na página **ads - app** , marque a caixa de **Mostrar anúncios de comunidade em meu aplicativo** .
+1. Na página de **anúncios no app** , marque a caixa **Mostrar anúncios da comunidade em meu aplicativo** .
 
 Você não precisa republicar o aplicativo depois de fazer suas seleções. Depois de aceitar, você poderá selecionar **Anúncio de comunidade (gratuito)** como o tipo de campanha ao [criar uma campanha publicitária ](create-an-ad-campaign-for-your-app.md).
 

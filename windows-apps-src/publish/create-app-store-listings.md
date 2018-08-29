@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910286"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -42,22 +42,22 @@ Na seção **Idiomas adicionais da listagem da Loja**, você pode clicar em **Ge
 
 Quando terminar de fazer suas seleções, clique em **Salvar** para retornar à página de visão geral do envio.
 
-## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações sobre a listagem de repositório
+## <a name="add-and-edit-store-listing-info"></a>Adicionar e editar informações de listagem da loja
 
-Para editar um repositório de listagem, selecione o nome do idioma a página de visão geral de envio.
+Para editar uma listagem da loja, selecione o nome do idioma na página de visão geral do envio.
 
 Na parte superior da página **Listagem da Loja**, estão os campos associados à listagem da Loja padrão do idioma selecionado. Esses campos serão mostrados para todos os seus clientes, a menos que você tenha pacotes direcionados a versões anteriores do sistema operacional (Windows 8.x ou versões anteriores; Windows Phone 8.x ou versões anteriores) e crie listagens da Loja específicas da plataforma para incluir capturas de tela diferentes ou informações a serem exibidas aos clientes em versões específicas do sistema operacional. Para saber mais, consulte [Criar listagens da Loja específicas de plataforma](create-platform-specific-store-listings.md).
 
 ## <a name="product-name"></a>Nome do produto
 
-Essa caixa de lista suspensa permite especificar qual nome deve ser usado na listagem de repositório (se você tiver mais de um nome para o aplicativo reservada).
+Essa caixa de lista suspensa permite que você especifique qual nome deve ser usado na listagem da loja (se você tiver reservado mais de um nome para o aplicativo).
 
-Caso você tenha carregado pacote (s) no mesmo idioma como a listagem de repositório que você está trabalhando, o nome usado nesses pacotes será selecionado. Se for necessário [Renomear o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ela for já foi publicada, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
+Se você tiver carregado pacotes no mesmo idioma da listagem da loja que você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um outro nome reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
 
-Se você ainda não carregou pacotes para o idioma você está trabalhando e você tiver mais de um nome reservado, você precisará selecionar um dos seus nomes reservados app, desde que não há um pacote associado no mesmo idioma do qual receber o nome.
+Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, pois não há um pacote associado nesse idioma no qual obter o nome.
 
 > [!NOTE]
-> O **nome do produto** que você selecionar somente se aplica para o repositório listando no idioma que você está trabalhando. Ela não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome proveniente o manifesto do pacote que obtém instalado. Para evitar confusão, é recomendável que o pacote (s) e a listagem de repositório de cada idioma usam o mesmo nome.
+> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
 
 ## <a name="description"></a>Descrição
 
@@ -103,7 +103,7 @@ Para obter mais informações, consulte [Ativos de arte adicionais](app-screensh
 
 <a id="supplemental-information" />
 
-## <a name="supplemental-fields"></a>Campos suplementares
+## <a name="supplemental-fields"></a>Campos complementares
 
 Os campos nesta seção são todos opcionais. Examine as informações abaixo para determinar se a apresentação dessas informações faz sentido para o seu envio. Em particular, a **Descrição curta** é recomendada para a maioria dos envios. Os outros campos podem ajudar a fornecer uma experiência ideal para seu produto em diferentes cenários.
 
@@ -134,7 +134,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Para obter melhores resultados, mantenha sua descrição curta 270 em caracteres. O campo tem um limite de 500 caracteres, mas em algumas exibições, somente os primeiros 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição curta).
+Para obter melhores resultados, manter sua descrição curta em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, apenas os primeiro 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema

@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, promover, app, campanha, relatório, instalações
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906433"
 ---
 # <a name="ad-campaign-report"></a>Relatório de campanha publicitária
 
-O relatório de **campanha publicitária** no painel do Centro de desenvolvimento do Windows permite ver como suas promoção de app [campanhas da ad](create-an-ad-campaign-for-your-app.md) são executados. Para ver o relatório, expanda **Attract** no menu de navegação à esquerda e selecione **campanhas da Ad**.
+O relatório de **campanha publicitária** no painel do Centro de desenvolvimento do Windows permite que você veja o desempenho de promoção do aplicativo [campanhas publicitárias](create-an-ad-campaign-for-your-app.md) . Para ver o relatório, expanda **atrair** no menu de navegação esquerdo e selecione **campanhas publicitárias**.
 
 ## <a name="definitions"></a>Definições
 

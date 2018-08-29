@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888345"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905859"
 ---
 # <a name="code-your-app-for-experimentation"></a>Codificar seu aplicativo para experimentação
 
@@ -29,7 +29,7 @@ Para adicionar esse comportamento ao seu aplicativo, você vai usar APIs forneci
 As seções a seguir descrevem o processo geral de obtenção de variações para o seu experimento e de registro de eventos em log no Centro de Desenvolvimento. Depois de codificar seu aplicativo para experimentação, você poderá [definir um experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md). Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 > [!NOTE]
-> Alguns dos experimentação de APIs no SDK dos serviços de repositório da Microsoft usam o [padrão assíncrono](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar dados de Dev Center. Isso significa que parte da execução desses métodos pode ocorrer depois que os métodos são invocados. Portanto, a interface do usuário do seu aplicativo pode permanecer responsiva enquanto as operações são concluídas. O padrão assíncrono requer que seu aplicativo use a palavra-chave **async** e o operador **await** ao chamar as APIs, como demonstrado pelos exemplos de código neste artigo. Por convenção, os métodos assíncronos terminam com **Async**.
+> Algumas APIs no Microsoft Store Services SDK de experimentação usam o [padrão assíncrono](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar dados do Centro de desenvolvimento. Isso significa que parte da execução desses métodos pode ocorrer depois que os métodos são invocados. Portanto, a interface do usuário do seu aplicativo pode permanecer responsiva enquanto as operações são concluídas. O padrão assíncrono requer que seu aplicativo use a palavra-chave **async** e o operador **await** ao chamar as APIs, como demonstrado pelos exemplos de código neste artigo. Por convenção, os métodos assíncronos terminam com **Async**.
 
 ## <a name="configure-your-project"></a>Configurar seu projeto
 
@@ -42,7 +42,7 @@ Para começar, instale o Microsoft Store Services SDK no seu computador de desen
 4. Na lista de SDKs, marque a caixa de seleção ao lado de **Microsoft Engagement Framework** e clique em **OK**.
 
 > [!NOTE]
-> Os exemplos de código neste artigo consideram que o seu arquivo de código tem **usando** declarações para os namespaces **System.Threading.Tasks** e **Microsoft.Services.Store.Engagement** .
+> Os exemplos de código neste artigo pressupõem que o arquivo de código tem instruções **using** para os namespaces **Tasks** e **Engagement** .
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>Obter dados de variação e registrar o evento de exibição para o seu experimento
 
@@ -60,7 +60,7 @@ As etapas a seguir descrevem as partes importantes desse processo em detalhes.
 
 2. Declare uma variável de cadeia de caracteres que é atribuída à [ID de projeto](run-app-experiments-with-a-b-testing.md#terms) do experimento que você deseja recuperar.
     > [!NOTE]
-    > Você obter um projeto ID quando você [criar um projeto no painel do Centro de desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). A ID do projeto mostrada abaixo é apenas para fins de exemplo.
+    > Obter um projeto ID quando você [criar um projeto no painel do Centro de desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). A ID do projeto mostrada abaixo é apenas para fins de exemplo.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
 

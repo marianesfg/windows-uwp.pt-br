@@ -8,18 +8,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: ef57c6293b37f91653b5f825881b1446e38a824b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2883952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907710"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Monitorar o progresso e a conclusão de tarefas em segundo plano
 
@@ -38,9 +38,9 @@ O progresso e a conclusão da tarefa em segundo plano podem ser monitorados pelo
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Criar um manipulador de eventos para gerenciar as tarefas em segundo plano concluídas
 
 ### <a name="step-1"></a>Etapa 1
-Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Este código precisa acompanhar um espaço específico, que utiliza um objeto de [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) e um objeto [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) .
+Crie uma função de manipulador de eventos para gerenciar as tarefas em segundo plano concluídas. Este código deve seguir um volume de memória específico, o que leva um objeto [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) e um objeto [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) .
 
-Use a seguinte pegadas para o método manipulador de eventos de tarefa do **OnCompleted** plano de fundo.
+Use o seguinte volume de memória para o método de manipulador de eventos de tarefa do **OnCompleted** em segundo plano.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)

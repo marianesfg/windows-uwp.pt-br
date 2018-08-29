@@ -8,23 +8,23 @@ ms.date: 08/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, revisão, comentário, revisor
+keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912404"
 ---
 # <a name="reviews-report"></a>Relatório de opiniões
 
 
-O relatório **analisa** no painel do Centro de desenvolvimento do Windows permite ver as análises (comentários) que os clientes inseridos quando o seu aplicativo no repositório de classificação.
+O relatório **de avaliações** no painel do Centro de desenvolvimento do Windows permite que você veja as análises (comentários) que os clientes inseriram na classificação do seu aplicativo na loja.
 
-Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizar offline. Como alternativa, você pode recuperar programaticamente esses dados usando o método [get app revisões](../monetize/get-app-reviews.md) na [API REST de análise de armazenamento do Microsoft](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizar offline. Como alternativa, você pode recuperar programaticamente esses dados usando o método [obter avaliações de aplicativo](../monetize/get-app-reviews.md) na da [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Você também pode responder ao cliente revisões [diretamente a partir desta página](respond-to-customer-reviews.md), por meio de programação [através da API do Microsoft Store revisões](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+Você também pode responder ao cliente análises [diretamente a partir desta página](respond-to-customer-reviews.md), por meio de programação [por meio da API de análises da Microsoft Store](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
 
 > [!TIP]
 > Para visualizar rapidamente avaliações, classificações e comentários do usuário para todos seus aplicativos nos últimos 30 dias, expanda **Interagir** no menu de navegação esquerdo e selecione **Avaliações e comentários.** 
@@ -37,14 +37,14 @@ Na parte superior da página, você pode selecionar o período para o qual você
 É possível expandir os **Filtros** para filtrar as análises mostradas nessa página pelas seguintes opções. Esses filtros não serão aplicado aos gráficos de **Análise de classificações** e **Média de classificação ao longo do tempo**.
 
 -   **Classificação**: por padrão, as análises com classificação por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
-- **Revisar o conteúdo**: A configuração padrão é **classificações com analisar o conteúdo**, que significa que serão exibidas somente classificações com conteúdo de revisão. Você pode selecionar **todos** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto escrito revisão. Observe que o gráfico de **divisão de classificações** sempre serão exibidas todas as revisões, independentemente da sua seleção.
+- **Revisar o conteúdo**: A configuração padrão é **classificações com conteúdo de crítica**, o que significa que somente classificações com conteúdo de crítica serão mostradas. Você pode selecionar **todos os** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto de crítica escrito. Observe que o gráfico de **análise de classificações** sempre mostrará todas as análises, independentemente de sua seleção.
 -   **Versão do sistema operacional**: a configuração padrão é **Todos**. Você poderá escolher a versão específica do sistema operacional se quiser que essa página mostre somente análises deixadas por clientes nessa versão do sistema operacional.
 -   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, é possível selecionar um específico aqui para mostrar somente análises deixadas pelos clientes com esse pacote quando analisaram seu aplicativo.
 -   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
 -   **Atualizações**: a configuração padrão é **Todas**. Você pode optar por filtrar as análises para mostrar apenas as análises atualizadas pelo cliente desde que você [respondeu a uma análise](respond-to-customer-reviews.md), ou apenas aquelas que ainda não foram atualizadas pelo cliente.
 -   **Mercado**: a configuração padrão é **Todos os mercados**. Você pode escolher um mercado específico, se quiser que esta página mostre somente as críticas de clientes desse mercado.
 -   **Tipo do dispositivo**: o filtro padrão é **Todos os dispositivos**. Você poderá escolher um tipo de dispositivo específico, se quiser que essa página mostre somente análises deixadas por clientes que estão usando esse dispositivo.
--   **Nome da categoria**: o filtro padrão é **Todos**. Você pode escolher um específicos [Revise categoria insight](#review-insight-categories) para mostrar somente as revisões que podemos ter associado a essa categoria. 
+-   **Nome da categoria**: o filtro padrão é **Todos**. Você pode escolher um específico de [categoria de informações de análise](#review-insight-categories) para mostrar apenas análises associadas nessa categoria. 
 
 > [!TIP]
 > Se você não vir quaisquer análises na página, verifique se os seus filtros não excluíram todas as análises. Por exemplo, se você filtrar por um sistema operacional de destino que não dá suporte ao seu aplicativo, você não verá quaisquer análises
@@ -52,7 +52,7 @@ Na parte superior da página, você pode selecionar o período para o qual você
 
 ## <a name="ratings-breakdown"></a>Detalhamento das classificações
 
-O gráfico de **divisão de classificações** aparece na parte superior deste relatório para que você possa obter uma rápida visualização o seguinte: 
+O gráfico de **análise de classificações** aparece na parte superior desse relatório para que você pode obter uma visão geral a seguir: 
 - A classificação média por estrela do aplicativo.
 - O total de classificações do aplicativo nos últimos 12 meses.
 - O total de classificações de cada classificação por estrelas.
@@ -63,16 +63,16 @@ O gráfico de **divisão de classificações** aparece na parte superior deste r
 > [!TIP]
 > A classificação média que um cliente visualiza na Loja leva em consideração o mercado e o tipo de dispositivo do cliente, portanto, pode ser diferente do que você vê nesse relatório.
 
-Observe que esse gráfico sempre inclui todas suas revisões, mesmo se você tiver selecionado **que classificações com analisar o conteúdo** do filtro de **revisar o conteúdo** de página.
+Observe que este gráfico sempre inclui todas as análises, mesmo se você selecionou **que classificações com conteúdo de crítica** no filtro de página **revisar o conteúdo** .
 
-Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre classificações do seu aplicativo.
+Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre a classificação do seu aplicativo.
 
 
-< span id = "categorias de percepção de revisão / >
+< span id = "categorias de informações de revisão / >
 
-## <a name="insight-categories"></a>Categorias de percepção
+## <a name="insight-categories"></a>Categorias de informações
 
-Grupos de gráficos de **categorias de Insight** análises de acordo com as categorias que determinamos podem ser associados a revisão.
+Os grupos de gráfico de **categorias de informações** revisões de acordo com categorias que determinamos podem ser associados com a crítica.
 
 > [!NOTE]
 > As análises com menos de 24 horas e/ou em um idioma diferente do inglês não são incluídas ao visualizar análises por categorias.
@@ -88,7 +88,7 @@ Cada opinião do cliente contém:
 
 -   O título e o texto da opinião fornecidos pelo cliente. (Críticas escritas por clientes no Windows Phone 8.1 e versões anteriores não terão um título).
 -   A data da revisão.
--   O nome do revisor como ele aparece no Microsoft Store.
+-   O nome do revisor como ele aparece na Microsoft Store.
 -   País/região do revisor.
 -   A versão do pacote do aplicativo no dispositivo do cliente no momento em que a crítica foi deixada. (Essas informações não estão disponíveis para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores.)
 -   A versão do sistema operacional do dispositivo que o cliente estava usando quando a crítica foi feita.
@@ -97,9 +97,9 @@ Cada opinião do cliente contém:
 
 Observe que os clientes podem deixar uma classificação para o seu aplicativo sem adicionar qualquer comentário, para que você veja normalmente menos análises do que classificações.
 
-Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link de **Classificar por** para exibir opções para classificar por **Data** e/ou **classificação**.
+Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link **Classificar por** para exibir opções de classificação por **Data** e/ou **classificação**.
 
-Você também pode usar a caixa Pesquisar para procurar por palavras ou frases em revisões do seu aplicativo específicas. Observe que apenas o texto revisão original gravado pelo cliente é pesquisado, mesmo se a revisão foi escrita em um idioma diferente. Convertido de revisão de texto não é pesquisado.
+Você também pode usar a caixa de pesquisa para procurar palavras ou frases em críticas do seu aplicativo específicas. Observe que apenas o texto revisão original escrito pelo cliente é pesquisado, mesmo se a crítica foi escrita em um idioma diferente. Texto de crítica traduzido não é pesquisado.
 
 > [!NOTE]
 > Às vezes, você pode observar que as avaliações desaparecem desse relatório. Isso pode acontecer porque a Microsoft remove revisões da Loja escritas por clientes que executam determinadas compilações do Insider e pré-lançamento do Windows 10. Fazemos isso para reduzir a possibilidade de uma análise negativa causada por um problema em uma compilação de versão de pré-lançamento do Windows. Também podemos remover avaliações da Loja que foram identificadas como spam, inadequadas, ofensivas ou que tenham outras violações de política. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
@@ -111,12 +111,12 @@ Por padrão, críticas que não foram escritas em seu idioma preferencial são t
 
 Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido caso deseje compará-lo à tradução ou traduzi-lo por meio de algum outro meio.
 
-Conforme observado anteriormente, quando pesquisando suas revisões, somente o texto original deixado pelo cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver caixa **Traduzir analisa** verificada.
+Como observado acima, quando pesquisar as críticas, somente o texto original deixado pelo cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver a caixa **Traduzir análises** marcada.
 
 
 ## <a name="responding-to-customer-reviews"></a>Respondendo às análises dos clientes
 
-Você pode usar o painel Microsoft Store Dev Center, o [repositório do Microsoft revisa API](../monetize/submit-responses-to-app-reviews.md)ou o [app Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) envie respostas para muitas das revisões dos seus clientes. Para obter mais informações, consulte [Responder às análises dos clientes](respond-to-customer-reviews.md)
+Você pode usar o painel da Microsoft Store Dev Center, a [API de análises da Microsoft Store](../monetize/submit-responses-to-app-reviews.md)ou o [aplicativo do Centro de desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respostas a muitas das críticas dos clientes. Para obter mais informações, consulte [Responder às análises dos clientes](respond-to-customer-reviews.md)
 
 Veja algumas ações adicionais que você pode realizar com base nas classificações e críticas observadas.
 

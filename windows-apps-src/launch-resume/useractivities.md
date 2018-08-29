@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886694"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905219"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continue a atividade do usuário, mesmo entre dispositivos
 
@@ -28,7 +28,7 @@ Nosso tempo todo dia é distribuído em vários dispositivos. Nós podemos usar 
 
 Da mesma forma, vincular seu telefone ao seu computador Windows permite que você continue o que estava fazendo anteriormente no dispositivo Android ou iOS.
 
-Pense em uma **UserActivity** como algo específico o usuário estava trabalhando dentro de seu aplicativo. For example, if you are using a RSS reader, a **UserActivity** could be the feed that you are reading. Se você estiver jogando um jogo, o **UserActivity** poderia ser o nível que você está executando. Se você está ouvindo um aplicativo de música, o **UserActivity** poderia ser a playlist que você está ouvindo. Se você estiver trabalhando em um documento, o **UserActivity** poderia ser onde estava trabalhando nisso e assim por diante.  Em poucas palavras, uma **UserActivity** representa um destino dentro de seu aplicativo que permite que o usuário retome o que estava fazendo.
+Pense em uma **UserActivity** como algo específico o usuário estava trabalhando dentro de seu aplicativo. Por exemplo, se você estiver usando um leitor RSS, um **UserActivity** poderia ser o feed que você está lendo. Se você estiver jogando um jogo, o **UserActivity** poderia ser o nível que você está executando. Se você está ouvindo um aplicativo de música, o **UserActivity** poderia ser a playlist que você está ouvindo. Se você estiver trabalhando em um documento, o **UserActivity** poderia ser onde estava trabalhando nisso e assim por diante.  Em poucas palavras, uma **UserActivity** representa um destino dentro de seu aplicativo que permite que o usuário retome o que estava fazendo.
 
 Quando você se envolve com uma **UserActivity** chamando [UserActivity.CreateSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.createsession), o sistema cria um registro de histórico que indica a hora de início e fim de **UserActivity**. Conforme você se envolver novamente com que **UserActivity** ao longo do tempo, vários registros de histórico são registrados para ele.
 
@@ -171,7 +171,7 @@ Você pode usar a API [UserActivity](https://docs.microsoft.com/uwp/api/windows.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Atividades do usuário (docs Roma Project)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Atividades do usuário (documentos do projeto Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Cartões adaptáveis](https://docs.microsoft.com/adaptive-cards/)
 * [Visualizador de cartões adaptáveis, amostras](http://adaptivecards.io/)
 * [Manipular a ativação do URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)

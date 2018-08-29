@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887895"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909697"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar erros comuns de certificação
 
@@ -23,7 +23,7 @@ ms.locfileid: "2887895"
 Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem aplicativos de serem certificados ou que podem ser identificados durante uma verificação pontual após o aplicativo ser publicado.
 
 > [!NOTE]
-> Certifique-se de revisar as [Diretivas de armazenamento da Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies) para garantir que seu aplicativo atende a todos os requisitos listados.
+> Certifique-se de revisar as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) para garantir que seu aplicativo atenda a todos os requisitos listados aqui.
 
 -   Envie seu aplicativo apenas quando ele estiver pronto. Fique à vontade para usar a descrição de seu aplicativo para mencionar recursos futuros, mas não deixe seções incompletas, links para páginas da Web em construção ou qualquer outra coisa que possa dar ao cliente a impressão de que seu aplicativo está incompleto.
 
@@ -35,7 +35,7 @@ Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem a
 
 -   [Forneça todas as informações necessárias](notes-for-certification.md) para uso do aplicativo, como nome de usuário e senha da conta de teste (caso seu aplicativo exija o logon em um serviço) ou etapas necessárias para acessar recursos ocultos ou bloqueados.
 
--   Inclua uma [política de privacidade](create-app-store-listings.md#privacy-policy) se o aplicativo exigir; por exemplo, se o aplicativo acessar qualquer tipo de informações pessoais de qualquer forma ou como exigido por lei. Para ajudar a determinar se seu aplicativo exige uma diretiva de privacidade, examine o [Contrato de desenvolvedor do aplicativo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Diretivas de armazenamento da Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Inclua uma [política de privacidade](create-app-store-listings.md#privacy-policy) se o aplicativo exigir; por exemplo, se o aplicativo acessar qualquer tipo de informações pessoais de qualquer forma ou como exigido por lei. Para ajudar a determinar se seu aplicativo requer uma política de privacidade, revise o [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Assegure que a descrição de seu aplicativo represente claramente o que seu aplicativo faz. Para obter ajuda, veja nossa orientação sobre [como elaborar uma ótima descrição de aplicativo](write-a-great-app-description.md).
 

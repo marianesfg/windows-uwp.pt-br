@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1d808dd2991aa2ffd1e30967d329b3eced9f99
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914094"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -140,7 +140,7 @@ Adicione uma interface do usuário XAML ao seu projeto UWP. Veja o XAML do mapa 
 
 ### <a name="add-a-protocol-extension"></a>Adicionar uma extensão de protocolo
 
-No **Gerenciador de Soluções**, abra o arquivo **package.appxmanifest** do projeto UWP da sua solução e adicione essa extensão.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione essa extensão.
 
 ```xml
 <Extensions>
@@ -311,9 +311,9 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-uwp-project"></a>Adicionar uma extensão de serviço de aplicativo ao projeto UWP
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicionar uma extensão de serviço de aplicativo para o projeto de empacotamento
 
-Abrir o arquivo **package.appxmanifest** do projeto UWP e adicione uma extensão de serviço de aplicativo ao elemento ``<Application>``.
+Abra o arquivo **Package. appxmanifest** do projeto de empacotamento e adicione uma extensão de serviço de aplicativo para o ``<Application>`` elemento.
 
 ```xml
 <Extensions>
@@ -398,7 +398,7 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 ### <a name="add-a-share-target-extension"></a>Adicionar uma extensão de destino de compartilhamento
 
-No **Gerenciador de Soluções**, abra o arquivo **package.appxmanifest** do projeto UWP da sua solução e adicione a extensão.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão.
 
 ```xml
 <Extensions>
@@ -512,7 +512,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Configurar a tarefa em segundo plano
 
-No designer de manifesto, abra o arquivo **package.appxmanifest** do projeto UWP em sua solução.
+No designer de manifesto, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução.
 
 Na guia **Declarações**, adicione uma declaração **Tarefas em segundo plano**.
 

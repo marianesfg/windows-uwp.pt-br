@@ -11,15 +11,15 @@ keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: 407ffb5fdebdc90a63ed7f65b4e97f8358dc58c8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915116"
 ---
 # <a name="gradual-package-rollout"></a>Distribuição de pacote gradual
 
-Quando você publica uma atualização para o envio de um, você pode optar por gradualmente distribuir os pacotes atualizados para uma porcentagem de clientes do seu aplicativo no Windows 10 (incluindo Xbox). Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
+Quando você publica uma atualização para um envio, você pode optar por distribuir gradualmente os pacotes atualizados para um percentual de clientes do seu aplicativo no Windows 10 (incluindo o Xbox). Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode aumentar a porcentagem (ou parar a atualização) a qualquer tempo sem precisar criar um novo envio. 
 
 > [!IMPORTANT]
 > Suas seleções de distribuição se aplicam a todos os pacotes, mas se aplicarão somente aos clientes que executam versões do sistema operacional compatíveis com pacotes de pré-lançamento (Windows.Desktop build 10586 ou posterior, Windows.Mobile build 10586.63 ou posterior e Xbox), incluindo os clientes que obtêm o aplicativo via [Licenciamento gerenciado pela Loja (online)](organizational-licensing.md) através da [Microsoft Store para Empresas](https://businessstore.microsoft.com/store) ou da [Microsoft Store para Educação](https://educationstore.microsoft.com/store). Ao usar a distribuição de pacote gradual, os clientes em versões anteriores do sistema operacional não receberão pacotes do envio mais recente até finalizar a distribuição de pacote, conforme descrito a seguir.

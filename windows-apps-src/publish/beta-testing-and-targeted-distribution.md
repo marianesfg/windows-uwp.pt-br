@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914375"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
@@ -35,7 +35,7 @@ Seja qual for o método escolhido, aqui estão algumas coisas para ter em mente 
 
 Se você quiser permitir que os testadores usem seu aplicativo antes que ele esteja disponível para outras pessoas e certificar-se que ninguém mais possa ver sua listagem, use a opção **Audiência particular** em [Visibilidade](choose-visibility-options.md) (na página **Preço e disponibilidade** do seu envio). Esse é o único método que permite que você distribua seu app para os testadores enquanto impede totalmente que qualquer outra pessoa veja a listagem da Store do app, mesmo se eles forem capazes de digitar o link direto. 
 
-A opção de **audiência privada** pode podem apenas ser usada quando você não tiver publicado já seu aplicativo para um público em geral. Você pode usar essa opção com aplicativos de direcionamento de qualquer versão do sistema operacional, mas suas testadores devem estar executando o Windows 10, versão 1607 ou superior (inclusive Xbox uma) e devem estar conectados com a conta da Microsoft associada com o endereço de email que você fornecer.
+A opção de **audiência** pode pode apenas ser usada quando você não tiver publicado já seu aplicativo para uma audiência pública. Você pode usar essa opção com aplicativos destinados a qualquer versão do sistema operacional, mas seus testadores devem estar executando o Windows 10, versão 1607 ou posterior (incluindo o Xbox One) e devem estar conectados com a conta da Microsoft associada ao endereço de email que você fornecer.
 
 Para saber mais, consulte a [Audiência particular](choose-visibility-options.md#audience).
 
@@ -53,7 +53,7 @@ Para saber mais, veja [Pacotes de pré-lançamento](package-flights.md).
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Como ocultar o app na Store e usar códigos promocionais
 
-Essa opção oferece outra maneira de limitar a distribuição de um aplicativo para apenas um determinado grupo de testadores, ao mesmo tempo, impedindo que outro usuário descobrir seu aplicativo no repositório de (ou adquiri-lo sem um código promocional). No entanto, ao contrário da opção de audiência privada, seria possível para qualquer um ver a listagem do seu app se tivesse o link direto. Se confidencialidade for essencial para seu envio, é recomendável publicar para uma audiência particular em vez disso.
+Essa opção oferece outra maneira de limitar a distribuição de um aplicativo para apenas um determinado grupo de testadores, enquanto impede que outra pessoa descobrir seu aplicativo na loja (ou adquiri-lo sem um código promocional). No entanto, ao contrário da opção de audiência privada, seria possível para qualquer um ver a listagem do seu app se tivesse o link direto. Se confidencialidade for essencial para seu envio, é recomendável publicar para uma audiência particular em vez disso.
 
 Ocultar o app e usar os códigos promocionais podem ser usados com os apps direcionados a qualquer versão do sistema operacional, mas seus testadores só poderão obter o app se estiverem executando o Windows 10.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910562"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -86,7 +86,7 @@ Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Cen
 |---------------|--------------------|
 | Aquisições, conversões e instalações |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatórios de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Ideias | <ul><li>[Obter dados ideias para seu aplicativo](get-insights-data-for-your-app.md)</li></ul>  |
+| Percepções | <ul><li>[Obter dados de ideias de seu aplicativo](get-insights-data-for-your-app.md)</li></ul>  |
 | Classificações e opiniões | <ul><li>[Obter classificações de app](get-app-ratings.md)</li><li>[Obter avaliações de app](get-app-reviews.md)</li></ul> |
 | Anúncios no app e campanhas publicitárias | <ul><li>[Obter dados de desempenho de anúncios](get-ad-performance-data.md)</li><li>[Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -97,9 +97,9 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 | Cenário       | Métodos      |
 |---------------|--------------------|
 | Instalações |  <ul><li>[Obter instalações de aplicativo da área de trabalho](get-desktop-app-installs.md)</li></ul> |
-| Blocos |  <ul><li>[Obtenha os blocos de atualização para seu aplicativo de área de trabalho](get-desktop-block-data.md)</li><li>[Conheça os detalhes de bloco de atualização para o seu aplicativo de área de trabalho](get-desktop-block-data-details.md)</li></ul> |
+| Blocos |  <ul><li>[Obter a atualização de blocos para seu aplicativo da área de trabalho](get-desktop-block-data.md)</li><li>[Obter detalhes de bloqueio de atualização de seu aplicativo da área de trabalho](get-desktop-block-data-details.md)</li></ul> |
 | Erros de aplicativo |  <ul><li>[Obter dados de relatório de erros do seu aplicativo da área de trabalho](get-desktop-application-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Ideias | <ul><li>[Obter dados de ideias para o seu aplicativo de área de trabalho](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Percepções | <ul><li>[Obter dados de ideias para seu aplicativo da área de trabalho](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para serviços Xbox Live
 
@@ -121,7 +121,7 @@ Os métodos adicionais a seguir estão disponíveis para uso por contas de desen
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware e drivers
 
-Contas de desenvolvedor que pertencem ao [programa do Centro de desenvolvimento de Hardware do Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) têm acesso a um conjunto adicional de métodos para recuperar dados de análise para hardware e drivers. Para obter mais informações, consulte [o painel de Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Contas de desenvolvedor que pertencem ao [programa do Centro de desenvolvimento de Hardware do Windows](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) têm acesso a um conjunto adicional de métodos para recuperar dados analíticos de hardware e drivers. Para obter mais informações, consulte [o painel de Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Exemplo de código
 

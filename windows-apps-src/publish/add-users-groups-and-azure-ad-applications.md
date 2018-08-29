@@ -7,18 +7,18 @@ ms.date: 07/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, azure ad application, aad, usuário, grupo, vários usuários, multiusuário
+keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906613"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
-A seção de **usuários** do Windows Dev Center (em **configurações de conta**) permite o uso do Azure Active Directory para adicionar usuários à sua conta Dev Center. Cada usuário recebe uma função (ou conjunto de permissões personalizadas) que define o acesso à conta. Você pode adicionar [grupos de usuários](#groups) e [aplicativos Azure AD](#azure-ad-applications) para conceder acesso à conta do Centro de Desenvolvimento.
+A seção de **usuários** do Centro de desenvolvimento do Windows (em **configurações da conta**) permite que você use o Azure Active Directory para adicionar usuários à sua conta do Centro de desenvolvimento. Cada usuário recebe uma função (ou conjunto de permissões personalizadas) que define o acesso à conta. Você pode adicionar [grupos de usuários](#groups) e [aplicativos Azure AD](#azure-ad-applications) para conceder acesso à conta do Centro de Desenvolvimento.
 
 Depois que os usuários são adicionados à conta, você pode [editar detalhes da conta](#edit), alterar [funções e permissões](set-custom-permissions-for-account-users.md) ou [remover usuários](#remove).
 
@@ -45,7 +45,7 @@ Você pode selecionar os usuários que já existem no locatário da sua organiza
 
 <span id="from-directory" />
 
-1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e selecione **configurações de conta**. No menu **configurações** , selecione **os usuários**.
+1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
 2.  Na página **Usuários**, selecione **Adicionar usuários**. 
 3.  Selecione um ou mais usuários na lista exibida. Você pode usar a caixa de pesquisa para procurar usuários específicos.
     > [!TIP]
@@ -58,8 +58,8 @@ Você pode selecionar os usuários que já existem no locatário da sua organiza
 
 Se você estiver conectado com uma conta de gerenciador que também tem permissões de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para o locatário do Azure AD em que você está trabalhando, terá outras opções para adicionar usuários à sua conta do Centro de Desenvolvimento. Selecione uma das seguintes opções:
 
--   **Adicionar usuários existentes**: escolha os usuários que já existem no diretório da sua organização e conceda acesso à sua conta Dev Center, usando o método descrito acima.
--   **Criar novos usuários**: criar contas de usuário de novo para adicionar ao diretório da sua organização de tanto e sua conta Dev Center
+-   **Adicionar usuários existentes**: escolha os usuários que já existem no diretório da organização e conceda a eles acesso à sua conta do Centro de desenvolvimento, usando o método descrito acima.
+-   **Criar novos usuários**: Crie novas contas de usuário para adicionar ao diretório da organização tanto e à conta do Centro de desenvolvimento
 -   **Convidar usuários externos**: envie convites por email aos usuários que não estão no diretório da organização atualmente. Eles serão convidados a acessar sua conta do Centro de Desenvolvimento, e uma nova conta de [usuário convidado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) será criada para eles no seu locatário do Azure AD.
 
 <span id="new-user" />
@@ -69,7 +69,7 @@ Se você estiver conectado com uma conta de gerenciador que também tem permiss�
 > [!IMPORTANT]
 > Você deve estar conectado com uma conta de administrador global em seu locatário do Azure AD para criar novos usuários.
 
-1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e selecione **criar novos usuários**.
+1.  Na página de **usuários** (em **configurações da conta**), selecione **Adicionar usuários**e escolha **criar novos usuários**.
 2.  Insira o nome, o sobrenome e o nome de usuário do novo usuário.
 3.  Se quiser que o novo usuário tenha uma [Conta de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) no diretório da organização, marque a caixa rotulada **Tornar esse usuário um Administrador Global no Azure AD, com controle total sobre todos os recursos de diretório**. Isso dará ao usuário acesso completo a todos os recursos administrativos no Azure AD de sua empresa. Eles poderão adicionar e gerenciar usuários no diretório da organização (embora não no Centro de Desenvolvimento, a menos que você conceda à conta as [funções/permissões](set-custom-permissions-for-account-users.md) adequadas). Se você marcar essa caixa, será necessário fornecer um **Email de recuperação de senha** para o usuário.
 4.  Se você marcou a caixa **Tornar este usuário um administrador Global em seu Azure AD**, insira um email que o usuário pode usar caso precise recuperar a senha.
@@ -86,7 +86,7 @@ Se você estiver conectado com uma conta de gerenciador que também tem permiss�
 > [!IMPORTANT]
 > Você deve estar conectado com uma conta de administrador global no seu locatário do Azure AD para convidar usuários externos.
 
-1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar usuários**e selecione **Convidar usuários por email**.
+1.  Na página de **usuários** (em **configurações da conta**), selecione **Adicionar usuários**e escolha **Convidar usuários por email**.
 1.  Insira um ou mais endereços de email (até dez), separados por vírgulas ou pontos e vírgulas.
 2.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o usuário.
 3.  Clique em **Salvar**.
@@ -103,8 +103,8 @@ Se você precisar enviar um convite novamente, localize o usuário na página **
 
 Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se você tiver fornecido um **Email de recuperação de senha** ao criar a conta de usuário. Você também pode atualizar a senha do usuário seguindo as etapas a seguir (se você estiver conectado com uma conta de administrador global no seu locatário do Azure AD para alterar a senha do usuário). Observe que isso altera a senha do usuário no seu locatário do Azure AD, juntamente com a senha que esse usuário usa para acessar o Centro de Desenvolvimento. 
 
-1.  Na página **usuários** (em **configurações de conta**), selecione o nome da conta de usuário que você deseja editar.
-2.  Selecione o botão **Redefinir a senha** na parte inferior da página.
+1.  Na página de **usuários** (em **configurações da conta**), selecione o nome da conta de usuário que você deseja editar.
+2.  Selecione o botão **Redefinir senha** na parte inferior da página.
 3.  Uma página de confirmação será exibida mostrando as informações de logon do usuário, incluindo uma senha temporária.
 
     > [!IMPORTANT]
@@ -118,8 +118,8 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Cen
 
 ### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
 
-1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e selecione **configurações de conta**. No menu **configurações** , selecione **os usuários**.
-2. Na página **usuários** , selecione **Adicionar grupos**.
+1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
+2. Na página de **usuários** , selecione **Adicionar grupos**.
 2.  Selecione um ou mais grupos na lista exibida. Você pode usar a caixa de pesquisa para procurar grupos específicos.
     > [!TIP]
     > Se você selecionar mais de um grupo para adicionar à sua conta do Centro de Desenvolvimento, você deve atribuir a eles a mesma função ou conjunto de permissões personalizados. Para adicionar vários grupos com permissões/funções diferentes, repita as etapas abaixo para cada função ou um conjunto de permissões personalizados.
@@ -133,8 +133,8 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Cen
 
 Se deseja conceder acesso ao Centro de Desenvolvimento a um novo grupo, você pode criar um novo grupo na seção **Usuários**. Observe que o novo grupo será criado no diretório da sua organização, não apenas na sua conta do Centro de Desenvolvimento.
 
-1.  Na página **usuários** (em **configurações de conta**), clique em **Adicionar grupos**.
-2.  Na página seguinte, selecione o **novo grupo**.
+1.  Na página de **usuários** (em **configurações da conta**), clique em **Adicionar grupos**.
+2.  Na próxima página, selecione o **novo grupo**.
 3.  Insira o nome de exibição para o novo grupo.
 4.  Especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o grupo. Todos os membros do grupo poderão acessar sua conta do Centro de Desenvolvimento com as permissões que você aplica ao grupo, independentemente das funções/permissões associado à sua conta individual.
 5.  Selecione os usuários para atribuir ao novo grupo na lista que aparece. Você pode usar a caixa de pesquisa para procurar usuários específicos.
@@ -151,7 +151,7 @@ Você pode permitir que os aplicativos ou os serviços que fazem parte do Azure 
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Adicionar aplicativos do Azure AD do diretório da sua organização
 
-1.  1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e selecione **configurações de conta**. No menu **configurações** , selecione **os usuários**.
+1.  1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
 2. Na página **Usuários**, selecione **Adicionar aplicativos Azure AD**.
 3.  Selecione um ou mais aplicativos Azure AD na lista exibida. Você pode usar a caixa de pesquisa para procurar aplicativos Azure AD específicos.
     > [!TIP]
@@ -169,8 +169,8 @@ Se você deseja conceder acesso ao Centro de Desenvolvimento a uma nova conta do
 > [!TIP]
 > Se você usa esse aplicativo Azure AD principalmente para autenticação do Centro de Desenvolvimento e não precisa que os usuários o acessem diretamente, insira qualquer endereço válido para a **URL de resposta** e **URI da ID do Aplicativo**, contanto que esses valores não sejam usados por nenhum outro aplicativo do Azure AD no seu diretório.
 
-1.  Na página **usuários** (em **configurações de conta**), selecione **Adicionar aplicativos do Azure AD**.
-2.  Na página seguinte, selecione o **aplicativo de novo Azure AD**.
+1.  Na página de **usuários** (em **configurações da conta**), selecione **Adicionar aplicativos Azure AD**.
+2.  Na próxima página, selecione o **aplicativo de novo Azure AD**.
 3.  Insira a **URL de Resposta** para o novo aplicativo Azure AD. Essa é a URL onde os usuários podem entrar e usar seu aplicativo Azure AD (às vezes, também conhecida como a URL do Aplicativo ou a URL de Logon). A **URL de Resposta** não pode ter mais de 256 caracteres e deve ser exclusiva em seu diretório.
 4.  Insira o **URI da ID do Aplicativo** para o novo aplicativo Azure AD. Ele é um identificador lógico do aplicativo Azure AD apresentado quando ele envia uma solicitação de logon único para o Azure AD. Observe que o **URI da ID do Aplicativo** deve ser exclusivo para cada aplicativo Azure AD no diretório, e não pode ter mais de 256 caracteres. Para saber mais sobre o **URI da ID do Aplicativo**, consulte [Como integrar os aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant).
 5.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o aplicativo Azure AD.
@@ -187,7 +187,7 @@ Após adicionar ou criar um aplicativo Azure AD, você pode retornar à seção 
 
 Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisará de uma chave. Você pode criar chaves para um aplicativo Azure AD ao editar suas informações no Centro de Desenvolvimento. Você também pode remover as chaves que não são mais necessárias.
 
-1.  Na página **usuários** (em **configurações de conta**), selecione o nome do aplicativo Azure AD.
+1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do aplicativo do Azure AD.
     > [!TIP]
     > Ao clicar no nome do aplicativo Azure AD, você verá todas as suas chaves ativas, incluindo a data de criação e de expiração da chave. Para remover uma chave que não é mais necessária, clique em **Remover**.
 
@@ -196,7 +196,7 @@ Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisar�
     > [!IMPORTANT]
     > Certifique-se de imprimir ou copiar essas informações, já que você não conseguirá acessá-la novamente depois que sair dessa página.
 
-4.  Se você deseja criar mais de chaves, selecione **Adicionar outra chave**.
+4.  Se você quiser criar mais chaves, selecione **Adicionar outra chave**.
 
 <span id="edit" />
 
@@ -207,7 +207,7 @@ Depois de adicionar usuários, grupos e/ou aplicativos Azure AD à conta do Cent
 > [!IMPORTANT]
 > As alterações feitas às [funções ou permissões](set-custom-permissions-for-account-users.md) afetarão somente o acesso ao Centro de Desenvolvimento. Todas as outras alterações (por exemplo, alterar o nome do usuário ou associação de grupo, ou a URL de resposta e URI da ID do aplicativo para um aplicativo Azure AD) serão refletidas no locatário do Azure AD da sua organização, bem como em sua conta do Centro de Desenvolvimento. 
 
-1.  Na página **usuários** (em **configurações de conta**), selecione o nome do usuário, grupo ou conta de aplicativos do Azure AD que você deseja editar.
+1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do usuário, grupo ou conta de aplicativo do Azure AD que você deseja editar.
 2.  Faça as alterações desejadas. Os itens que você pode editar são:
     -   Para um **usuário**, você pode editar o nome, o sobrenome ou o nome de usuário do usuário. Você também pode selecionar ou desmarcar grupos na seção **Associação de grupo** para atualizar a participação no grupo.
     -   Para um **grupo**, você pode editar o nome do grupo. (para atualizar a associação de grupo, os usuários que você deseja adicionar ou remover do grupo e fazer alterações para editar a seção **Membros do grupo**.)
@@ -221,13 +221,13 @@ Depois de adicionar usuários, grupos e/ou aplicativos Azure AD à conta do Cent
 
 Como proprietário da conta, você pode exibir o histórico de navegação detalhado de qualquer usuário que você adicionou à conta.
 
-Na página **usuários** (em **configurações de conta**), selecione o link mostrado em **última atividade** do usuário cujo histórico de navegação que você gostaria de revisar. Você poderá exibir os URLs de todas as páginas que o usuário visitou nos últimos 30 dias.
+Na página **usuários** (em **configurações da conta**), selecione o link mostrado em **última atividade** do usuário cujo histórico de navegação você deseja revisar. Você poderá exibir os URLs de todas as páginas que o usuário visitou nos últimos 30 dias.
 
 <span id="remove" />
 
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>Remover usuários, grupos e aplicativos Azure AD
 
-Para remover um usuário, grupo ou aplicativo do Azure AD da sua conta Dev Center, selecione o link **Remover** que aparece por seu nome na página **usuários** . Depois de confirmar que deseja removê-la, esse usuário, grupo ou aplicativo do Azure AD não poderá mais acessar sua conta do Centro de Desenvolvimento (a menos que você a adicione novamente mais tarde).
+Para remover um usuário, grupo ou aplicativo Azure AD de sua conta do Centro de desenvolvimento, selecione o link **Remover** que aparece ao lado do nome na página **usuários** . Depois de confirmar que deseja removê-la, esse usuário, grupo ou aplicativo do Azure AD não poderá mais acessar sua conta do Centro de Desenvolvimento (a menos que você a adicione novamente mais tarde).
 
 > [!IMPORTANT]
 > Remover um usuário, um grupo ou um aplicativo Azure AD significa que ele não terá mais acesso à sua conta do Centro de Desenvolvimento. Isso **não** exclui o usuário, grupo ou aplicativo Azure AD do diretório da organização.

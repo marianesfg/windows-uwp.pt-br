@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916408"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -23,13 +23,13 @@ Se você encontrar erros depois de enviar seu aplicativo para a Loja, deverá re
 
 ## <a name="uwp-apps"></a>Aplicativos UWP
 
-Se estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não for um arquivo .appxupload gerado pelo Visual Studio para a Loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo de pacote do seu aplicativo e carregar somente o arquivo .appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx ou .appxbundle.
+Se estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não for um arquivo .appxupload gerado pelo Visual Studio para a Loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo. appxupload na página [pacotes](upload-app-packages.md) do envio, e não um appx ou. appxbundle.
 
 Caso um erro de compilação seja exibido, certifique-se de que você consiga compilar o seu aplicativo no modo Versão com êxito. Para obter mais informações, consulte [Erros do compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
-## <a name="desktop-application"></a>Aplicativo de área de trabalho
+## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você planeja enviar um pacote que contém os binários Win32 e UWP, certifique-se de que você cria esse pacote usando-se o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 atualização 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote para o repositório ou sideload-lo em outros PCs. Mesmo se o pacote publica com êxito, talvez se comportam de maneiras inesperadas no PC do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de área de trabalho)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-apps"></a>Aplicativos do Windows Phone
 
@@ -53,7 +53,7 @@ Se você vir um erro que diz **The name found in the package is not one of your 
 - Se o seu aplicativo já tiver uma identidade, você talvez ainda precise reservar o nome que você deseja usar no seu pacote. Em **Gerenciamento de Aplicativos**, clique em [Gerenciar nomes de aplicativos](manage-app-names.md). Digite o nome que você gostaria de usar e clique em **Reservar o nome do aplicativo**.
 
 > [!IMPORTANT]
->  Se o nome que você deseja usar não estiver disponível, outro aplicativo pode ter já reservada esse nome. Se seu aplicativo já está publicado sob esse nome, ou se você acha que tem o direito de usá-lo, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+>  Se o nome que você deseja usar não estiver disponível, outro aplicativo talvez já tenha reservado esse nome. Se seu aplicativo já tiver sido publicado sob esse nome, ou se você acha que tem o direito de usá-lo, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 

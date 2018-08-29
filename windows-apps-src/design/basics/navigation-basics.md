@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888255"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909884"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -58,7 +58,7 @@ Vamos começar com os princípios básicos de bom design de navegação:
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários fazem está familiarizado com e convenções padrão a seguir para ícones, local e o estilo fará navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários estão familiarizados com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -99,7 +99,7 @@ Agora, vamos usar nossos princípios de design, ou seja, consistência, simplici
 
 1. Pense em seus usuários. Trace os caminhos típicos que eles podem tomar por meio de seu aplicativo e, para cada página, pense no motivo de o usuário estar lá e onde eles podem querer ir.
 
-2. Evite hierarquias de navegação de profundidade. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
+2. Evite hierarquias de navegação profunda. Se você for além de três níveis de navegação, você corre o risco de deixar o usuário empacado em uma hierarquia profunda da qual ele terá dificuldade de sair.
 
 3. Evite o "pula-pula". O "pula-pula" ocorre quando há conteúdo relacionado, mas a navegação até ele requer que o usuário suba um nível e desça novamente.
 
@@ -177,7 +177,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
 :::row:::
     :::column:::
-        ![imagem de pivot e guias](images/nav/thumbnail-tabs-pivot.svg)
+        ![guias e imagem Pivô](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
     ::: extensão da coluna = "2"::: [ **guias e navegação superior**](../controls-and-patterns/navigationview.md)
 
@@ -200,7 +200,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column:::
         ![imagem de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: [de **navegação à esquerda**](../controls-and-patterns/navigationview.md)
+    ::: extensão da coluna = "2"::: [ **navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         
@@ -212,9 +212,9 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
 :::row:::
     :::column:::
-        ![Imagem de detalhes mestre](images/nav/thumbnail-master-detail.svg)
+        ![Imagem de mestre / detalhes](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: [ **detalhes do mestre**](../controls-and-patterns/master-details.md)
+    ::: extensão da coluna = "2"::: [ **mestre/detalhes**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         

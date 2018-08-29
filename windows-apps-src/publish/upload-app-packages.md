@@ -8,20 +8,20 @@ ms.date: 5/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, pacotes, carregar, carregamento de pacote
+keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887835"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909906"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
 A página **Pacotes** é onde você carrega todos os arquivos de pacote (.appx, .appxupload, .appxbundle e/ou .xap) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa. Quando um cliente baixar o aplicativo, a Loja fornecerá automaticamente para cada cliente o pacote que funciona melhor para os dispositivos. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
 
-Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também desejará Saiba mais sobre [como os números de versão podem afetar quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
+Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão podem afetar quais pacotes são entregues a clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Carregando pacotes para seu envio
 
@@ -32,7 +32,7 @@ Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em p
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-Se é possível detectar erros com um pacote enquanto validá-lo, podemos vai exiba uma mensagem para que você saiba o que está errado. Você precisará remover o pacote para corrigir o problema e tente carregá-la novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
+Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para que você saiba o que está errado. Você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
 
 
 ## <a name="device-family-availability"></a>Disponibilidade da família de dispositivos
@@ -44,7 +44,7 @@ Para obter mais informações, consulte [Disponibilidade da família de disposit
 
 ## <a name="package-details"></a>Detalhes do pacote
 
-Seus pacotes carregados estão listados aqui, agrupados por um sistema operacional de destino. O nome, a versão e a arquitetura do pacote serão exibidos. Para obter mais informações, como os idiomas compatíveis, os recursos do aplicativo e o tamanho do arquivo de cada pacote, clique em **Mostrar detalhes**.
+Os pacotes carregados estão listados, agrupados por sistema operacional de destino. O nome, a versão e a arquitetura do pacote serão exibidos. Para obter mais informações, como os idiomas compatíveis, os recursos do aplicativo e o tamanho do arquivo de cada pacote, clique em **Mostrar detalhes**.
 
 Se você precisar remover um pacote do envio, clique no link **Remover** na parte inferior da seção **Detalhes** de cada pacote.
 

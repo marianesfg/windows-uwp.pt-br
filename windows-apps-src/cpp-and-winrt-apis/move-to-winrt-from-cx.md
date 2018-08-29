@@ -10,22 +10,22 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 4aba8f559b7b6f0518a620d5127692d541953255
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905939"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Mover do C++/CX para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como transferir o código do [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) para seu equivalente no C++/WinRT.
 
 > [!IMPORTANT]
-> Se você quiser gradualmente porta sua [C + + / CX](/cpp/cppcx/visual-c-language-reference-c-cx) código C + + / WinRT, então você pode. C + + / CX e C + + / WinRT código pode coexistir no mesmo projeto, com exceção de suporte de compilador XAML e componentes de tempo de execução do Windows. Para exceções, será necessário direcionar qualquer C + + / CX ou C + + / WinRT dentro do mesmo projeto. Mas você pode usar um componente de tempo de execução do Windows ao código fator fora do seu aplicativo XAML conforme você a porta. Mova o máximo C + + / CX código conforme você pode em um componente e, em seguida, altere o projeto XAML C + + / WinRT. Ou deixe outro projeto XAML como C + + / CX, crie um novo C + + / componente WinRT e começar a portabilidade C + + / código CX para fora do projeto XAML e para o componente. Você poderia ter um C + + / projeto de componente CX junto com um C + + / projeto de componente WinRT dentro da mesma solução, referenciar ambos da partir do seu projeto de aplicativo e de porta gradualmente de um para o outro.
+> Se você quiser fazer a portabilidade gradualmente seus [C++ c++ CX](/cpp/cppcx/visual-c-language-reference-c-cx) código c++ c++ WinRT, é possível. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows. Para essas exceções, será necessário direcionar o C + c++ /CX ou C++ c++ WinRT dentro do mesmo projeto. Mas você pode usar um componente do tempo de execução do Windows para código de fator fora de seu aplicativo XAML conforme você portá-lo. Mova máximo C + c++ CX código pode em um componente e, em seguida, altere o projeto XAML para C++ c++ WinRT. Ou outro deixar o projeto XAML como C++ c++ CX, crie um novo C + c++ componente WinRT e começar a compatibilizar C++ c++ código CX fora do projeto XAML e no componente. Você também poderia ter C++ c++ projeto de componente CX junto com C++ c++ projeto de componente WinRT dentro da mesma solução, faça referência ambos do seu projeto de aplicativo e gradualmente portabilidade de um para o outro.
 
 > [!NOTE]
 > O [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) e o SDK do Windows declaram tipos no namespace raiz **Windows**. Um tipo do Windows projetado no C++/WinRT tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt**. Esses namespaces distintos permitem que você faça a transferência do C++/CX para o C++/WinRT em seu próprio ritmo.
 
-Identificando em mente as exceções mencionadas acima, a primeira etapa na portando um projeto C + + / WinRT é adicionar manualmente C + + / suporte WinRT (consulte [suporte do Visual Studio para o C + + / WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É uma boa ideia deixar todas as suas dependências suporte desativado para que as mensagens de compilação ajudarão-lo find (e porta) no C + + / CX, ou você pode ativar o suporte novamente (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consume tempo de execução do Windows Extensão** \> **Sim (/ZW)**) e a porta gradualmente.
+Que ostentam em mente as exceções mencionadas acima, a primeira etapa na portabilidade de um projeto c++ c++ WinRT é adicionar manualmente C++ c++ WinRT suporte (consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É recomendável deixar o suporte desativado para que as mensagens de compilação ajudam você a localização (e porta) todas as dependência no C++ c++ /CX ou você pode ativar o suporte (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consume Windows Runtime Extensão** \> **Sim (/ZW)**) e transferir gradualmente.
 
 Defina a propriedade do projeto **Geral** \> **Versão da plataforma de destino** como 10.0.17134.0 (Windows 10, versão 1803) ou posterior.
 
@@ -204,7 +204,7 @@ auto token = myButton().Click([&](IInspectable const& sender, RoutedEventArgs co
 
 Em vez de uma função lambda, você pode optar por implementar seu delegado como uma função livre como uma função de ponteiro para membro. Para obter mais informações, consulte [Processar eventos usando delegados no C++/WinRT](handle-events.md).
 
-Se estiver transferindo de uma base de código C++/CX em que os eventos e delegados são usados internamente (e não em binários), [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate) ajudará você a replicar esse padrão no C++/WinRT. Consulte também [Parameterized representantes, sinais simples e retornos de chamada dentro de um projeto](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project).
+Se estiver transferindo de uma base de código C++/CX em que os eventos e delegados são usados internamente (e não em binários), [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate) ajudará você a replicar esse padrão no C++/WinRT. Consulte também [Parameterized delegados, sinais simples e retornos de chamada dentro de um projeto](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project).
 
 ## <a name="revoking-a-delegate"></a>Revogar um delegado
 No C++/CX, você usa o operador `-=` para revogar um registro de evento anterior.
@@ -226,14 +226,14 @@ O C++/CX fornece vários tipos de dados no namespace **Platform**. Esses tipos n
 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
-| **Plataforma:: Agile\ ^** | [**WinRT::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **Platform:: Agile\ ^** | [**WinRT:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
 | **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
 | **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagileref"></a>Porta **plataforma:: Agile\ ^** para **winrt::agile_ref**
-O **plataforma:: Agile\ ^** tipo no C + + / CX representa uma classe de tempo de execução do Windows que possa ser acessada a partir de qualquer segmento. C + + / WinRT equivalente é [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
+### <a name="port-platformagile-to-winrtagileref"></a>Porta **Platform:: Agile\ ^** para **WinRT:: agile_ref**
+O **Platform:: Agile\ ^** tipo em C++ c++ /CX representa uma classe de tempo de execução do Windows que pode ser acessada de qualquer thread. C++ c++ WinRT equivalente é [**WinRT:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
 
 No C++/CX.
 

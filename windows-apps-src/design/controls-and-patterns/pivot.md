@@ -15,17 +15,17 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e8f0fbbfacc3fa4edb602f7505ea1e88f211a81a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913013"
 ---
 # <a name="pivot"></a>Pivot
 
-O controle [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite que você posicionar sensível entre um pequeno conjunto de seções de conteúdo.
+Permite que o controle [Pivot segundo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) toque dedo entre um pequeno conjunto de seções de conteúdo.
 
-> **APIs importante**: [classe Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), a [classe de NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **APIs importantes**: [classe Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [classe NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Exemplos
 
@@ -34,7 +34,7 @@ O controle [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.P
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Se você tiver o aplicativo de <strong style="font-weight: semi-bold">Galeria de controles XAML</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Pivot">Abrir o aplicativo e ver o controle Pivot em ação</a>.</p>
+    <p>Se você tiver o aplicativo <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> instalado, clique aqui para <a href="xamlcontrolsgallery:/item/Pivot">Abrir o aplicativo e ver o controle Pivot em ação</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtenha o aplicativo XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtenha o código-fonte (GitHub)</a></li>
@@ -43,26 +43,26 @@ O controle [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.P
 </tr>
 </table>
 
-O controle Pivot, assim como [NavigationView](navigationview.md), sublinha o item selecionado.
+O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o item selecionado.
 
 ![Foco padrão sublinha cabeçalho selecionado](images/pivot_focus_selectedHeader.png)
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para atingir comuns de navegação superior e os padrões de guias, é recomendável usar o [NavigationView](navigationview.md), que automaticamente se adapta às diferentes tamanhos de tela e permite maior personalização.
+Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
-No entanto, se sua navegação exigir dedo de toque, é recomendável usar o Pivot.
+No entanto, se sua navegação requer o dedo por toque, recomendamos usar o pivô.
 
-Principais diferenças entre os controles NavigationView e Pivot são o comportamento padrão de estouro e a API de navegação:
+Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
-- Estouro de carrosséis itens, enquanto NavigationView usa um menu suspenso de estouro para que os usuários podem ver todos os itens de tabela dinâmica.
-- Pivot manipula a navegação entre seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
+- Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários possam ver todos os itens de pivô.
+- Pivot manipula a navegação entre as seções de conteúdo, enquanto o NavigationView permite mais controle sobre o comportamento de navegação.
 
-## <a name="use-navigationview-instead-of-pivot"></a>Use NavigationView em vez de Pivot
+## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
-Se a interface de usuário do seu aplicativo usa o controle Pivot, em seguida, você pode converter Pivot para NavigationView com o código a seguir.
+Se a interface do usuário do seu aplicativo usa o controle de pivô, em seguida, você pode converter pivô para NavigationView com o código a seguir.
 
-Esse XAML cria um NavigationView com 3 seções de conteúdo, como o exemplo Pivot em [criar um controle pivot](#create-a-pivot-control).
+Este XAML cria um NavigationView com 3 seções de conteúdo, como o exemplo de pivô em [criar um controle de pivô](#create-a-pivot-control).
 
 ```xaml
 <NavigationView x:Name="rootNavigationView" Header="Category Title"
@@ -87,7 +87,7 @@ Esse XAML cria um NavigationView com 3 seções de conteúdo, como o exemplo Piv
 </Page>
 ```
 
-NavigationView fornece mais controle sobre a personalização de navegação e exige o código-behind correspondente. Para acompanhar o XAML acima, use o seguinte code-behind:
+NavigationView fornece mais controle sobre a personalização de navegação e requer código-behind correspondente. Para acompanhar o XAML acima, use o seguinte code-behind:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,11 +116,11 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código simule a experiência de navegação interna do controle Pivot, menos a experiência de toque-dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, os parâmetros de navegação e recursos de pilha.
+Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
 
 ## <a name="create-a-pivot-control"></a>Criar um controle de pivô
 
-Este código cria um controle Pivot básico com 3 seções de conteúdo.
+Esse código cria um controle de pivô básico com 3 seções de conteúdo.
 
 ```xaml
 <Pivot x:Name="rootPivot" Title="Category Title">

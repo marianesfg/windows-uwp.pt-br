@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886462"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918737"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um app "Hello, world" (XAML)
 
@@ -50,9 +50,9 @@ Aqui, você aprenderá a:
 
 2.  No menu **arquivo** , selecione **Novo > projeto** para abrir a caixa de diálogo *Novo projeto* .
 
-3.  Na lista de modelos no lado esquerdo, escolha **Installed > Visual c# > Windows Universal** para ver a lista de modelos de projeto UWP.
+3.  Na lista de modelos no lado esquerdo, escolha **instalado > Visual c# > universal do Windows** para ver a lista de modelos de projeto UWP.
 
-    (Se você não vir nenhum modelo universal, talvez faltem componentes para a criação de aplicativos UWP. Você pode repetir o processo de instalação e adicionar suporte para UWP, clicando em **Abrir Instalador do Visual Studio** na caixa de diálogo *Novo Projeto*. Consulte [Configurar o](get-set-up.md)).
+    (Se você não vir nenhum modelo universal, talvez faltem componentes para a criação de aplicativos UWP. Você pode repetir o processo de instalação e adicionar suporte para UWP, clicando em **Abrir Instalador do Visual Studio** na caixa de diálogo *Novo Projeto*. Consulte [Prepare-se](get-set-up.md).)
 
     ![Como repetir o processo de instalação](images/win10-cs-install.png)
 

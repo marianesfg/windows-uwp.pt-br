@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 00e685085c004cced24b9a42ef2261a26eef10bb
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910229"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tarefas em segundo plano no manifesto do aplicativo
 
@@ -213,7 +213,7 @@ Aqui está o XML de exemplo que declara uma tarefa em segundo plano que é execu
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Execute em um novo processo sempre que um gatilho é acionado com o atributo SupportsMultipleInstances
 
-Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar este atributo devem ser direcionados SDK versão '10.0.15063' (atualização de criadores de 10 do Windows) ou superior.
+Esse exemplo declara uma tarefa em segundo plano executada em um novo processo que obtém seus próprios limites de recursos (memória e CPU) sempre que um novo gatilho é acionado. Observe o uso de `SupportsMultipleInstances`, que habilita esse comportamento. Para usar esse atributo, você deve usar o SDK versão '10.0.15063' (Windows 10 para criadores) ou superior.
 
 ```xml
 <Package

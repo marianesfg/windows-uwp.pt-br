@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ofertas direcionadas, ofertas, notificações
 ms.localizationpriority: medium
 ms.openlocfilehash: 727c438bacf51fd2ead03df72421363116c4701b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2880738"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913143"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas direcionadas para maximizar o envolvimento e as conversões
 
@@ -28,7 +28,7 @@ Direcione segmentos específicos dos seus clientes com conteúdo atrativo e pers
 Basicamente, você precisa tomar três medidas para usar ofertas direcionadas:
 
 1. **Criar a oferta no painel.** Navegue até a página **Interagir > Ofertas direcionadas** para criar ofertas. Veja mais informações sobre esse processo a seguir.
-2. **Implemente a experiência de oferta no aplicativo.** Use o *repositório do Microsoft voltadas oferece API* no código do seu aplicativo para recuperar as ofertas disponíveis para um determinado usuário. Você também precisará criar a experiência de aplicativo para a oferta direcionada. Para obter mais informações, consulte [Gerenciar ofertas direcionadas usando os serviços da Loja](../monetize/manage-targeted-offers-using-windows-store-services.md).
+2. **Implemente a experiência de oferta no aplicativo.** Use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar as ofertas disponíveis para um determinado usuário. Você também precisará criar a experiência de aplicativo para a oferta direcionada. Para obter mais informações, consulte [Gerenciar ofertas direcionadas usando os serviços da Loja](../monetize/manage-targeted-offers-using-windows-store-services.md).
 3. **Envie seu aplicativo para a Loja.** O aplicativo deve ser publicado com a experiência de oferta no aplicativo para que as ofertas sejam disponibilizadas aos clientes.
 
 Após concluir essas etapas, os clientes que usam seu aplicativo visualizam as ofertas disponíveis para eles naquele momento, com base na sua participação nos segmentos associados às suas ofertas. Observe que, embora façamos todos os esforços para mostrar todas as ofertas disponíveis aos clientes, ocasionalmente podem ocorrer problemas que afetam a disponibilidade da oferta.
