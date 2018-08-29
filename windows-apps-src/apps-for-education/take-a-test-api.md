@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917612"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP baseados em navegador que renderiza bloqueado avaliações de online para teste de altas apostas, permitindo professores focalizar em avaliação de conteúdo, e não como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP com base em navegador que renderiza avaliações online bloqueado para testes de alto risco, permitindo que os educadores concentre-se a avaliação de conteúdo em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
 Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
 
@@ -32,7 +32,7 @@ A API Fazer um Teste existe nos seguintes namespaces. Observe que todas as APIs 
 
 ### <a name="security-namespace"></a>Namespace de segurança
 
-O namespace de segurança permite bloquear o dispositivo, verifique a lista de processos de usuário e do sistema, obter endereços MAC e IP e desmarque os recursos da web em cache.
+O namespace de segurança permite bloquear o dispositivo, verificar a lista de processos de usuário e do sistema, obter endereços MAC e IP e limpar recursos da web em cache.
 
 | Método | Descrição   |
 |--------|---------------|

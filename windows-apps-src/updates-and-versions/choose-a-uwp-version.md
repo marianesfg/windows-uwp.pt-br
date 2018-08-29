@@ -11,18 +11,18 @@ keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualiza
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bb9aad1fa9da79708b3c785da80811006153767
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918927"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
 Cada versão do Windows 10 trouxe recursos novos e aprimorados para a plataforma UWP. Ao criar um aplicativo UWP no Microsoft Visual Studio, você pode escolher qual a versão alvo. Os projetos que usam [.NET Standard 2.0](https://docs.microsoft.com/dotnet/standard/net-standard) devem ter uma **Versão Mínima** do Build 16299 ou posterior.
 
 > [!WARNING]
-> Projetos UWP criados em versões atuais do Visual Studio não podem ser abertos no 2015 do Visual Studio.
+> Projetos UWP criados em versões atuais do Visual Studio não podem ser abertos no Visual Studio 2015.
 
 A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que esta tabela só se aplica para a construção de aplicativos UWP, que são suportados apenas no Windows 10. Você não pode desenvolver aplicativos UWP para versões mais antigas do Windows, e você deve ter [instalado a compilação apropriada do SDK](http://go.microsoft.com/fwlink/?LinkId=821431) para segmentar essa versão. 
 
@@ -43,13 +43,13 @@ APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessi
 
 Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
-## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API do .NET em versões UWP
+## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET nas versões UWP
 
-UWP oferece suporte a um subconjunto limitado de APIs do .NET, o que estão disponíveis, independentemente da **Versão de destino** ou a **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
+UWP dá suporte a um subconjunto limitado de APIs .NET, que estão disponíveis, independentemente do **Versão de destino** ou uma **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Se quiser criar bibliotecas de plataforma cruzada reutilizáveis, .NET Standard é compatível com UWP. A [documentação .NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) fornece informações no qual .NET Standard é suportado nas quais UWP versões.
+Se você quiser criar bibliotecas de plataforma cruzada reutilizáveis, .NET Standard é compatível com UWP. A [documentação do .NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) fornece informações no qual .NET Standard é compatível com as versões UWP.
 
-Se você estiver desenvolvendo um aplicativo de área de trabalho, consulte em vez disso, [dependências e versões do .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obter informações detalhadas sobre a disponibilidade do .NET framework.
+Se você estiver desenvolvendo um aplicativo da área de trabalho, consulte em vez disso, [as dependências e versões do .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obter informações detalhadas sobre a disponibilidade do .NET framework.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>Escolha qual versão deve ser usada para o seu aplicativo
 

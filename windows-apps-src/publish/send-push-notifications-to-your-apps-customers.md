@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificações direcionadas, notificações por push,
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2884265"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917555"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
@@ -53,8 +53,8 @@ Siga estas etapas para criar uma notificação no painel e enviá-la para um seg
 
 1. No [painel do Centro de Desenvolvimento do Windows](https://partner.microsoft.com/dashboard/), expanda a seção **Interagir** e, em seguida, selecione **Notificações**.
 2. Na página **Notificações**, selecione **Nova notificação**.
-3. Na seção **Selecionar um modelo** , escolha o [tipo de notificação](#notification-template-types) que você deseja enviar e clique em **Okey**.
-4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você só pode selecionar os aplicativos que foram [configurados para receber notificações usando o repositório de serviços do Microsoft SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+3. Na seção **Selecionar um modelo** , escolha o [tipo de notificação](#notification-template-types) que você deseja enviar e, em seguida, clique em **Okey**.
+4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas os aplicativos que foram [configurados para receber notificações usando o Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 5. Na seção **Configurações de notificação**, escolha um **Nome** para a sua notificação e, se aplicável, escolha o **Grupo de clientes** para o qual você deseja enviar a notificação. (As notificações enviadas para vários aplicativos só podem ser enviadas para todos os clientes desses aplicativos). Se você quiser usar um segmento que você ainda não criou, selecione **Criar novo grupo de cliente**. Observe que serão necessárias 24 horas para que você possa usar um novo segmento para notificações. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
 6. Se você quiser especificar quando a notificação deverá ser enviada, desmarque a caixa de seleção **Enviar a notificação imediatamente** e escolha uma data e uma hora específicas (no horário UTC para todos os clientes, a menos que você especifique o uso do fuso horário local de cada cliente).
 7. Se você quiser que a notificação expire em algum momento, limpe a caixa de seleção **Notificação nunca expira** e escolha data e hora de expiração específicas (em UTC).
@@ -120,10 +120,10 @@ Você pode avaliar quão bem está interagindo com seus clientes por meio de cad
 
 Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode usar o painel para ver a qualidade do desempenho de suas notificações.
 
-Para analisar dados detalhados para cada notificação:
+Para analisar os dados detalhados para cada notificação:
 
 1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
-2.  Na tabela de notificações existentes, selecione **em andamento** ou **concluído**e, em seguida, examine as colunas de **taxa de entrega** e a **taxa de início do aplicativo** para ver o desempenho de alto nível de cada notificação.
+2.  Na tabela de notificações existentes, selecionar **em andamento** ou **concluído**e, em seguida, examine as colunas de **taxa de entrega** e **taxa de inicialização do aplicativo** para ver o desempenho de alto nível de cada notificação.
 3.  Para ver mais detalhes de desempenho granular, selecione um nome de notificação. Na seção **Estatísticas de entrega**, você pode exibir as informações **Contagem** e **Porcentagem** para os seguintes tipos de **Status** de notificação:
     * **Falha**: A notificação não foi enviada por algum motivo. Isso pode acontecer, por exemplo, se ocorrer um problema no Serviço de Notificação do Windows (WNS).
     * **Falha de expiração de canal**: A notificação não pôde ser entregue porque o canal entre o aplicativo e o Centro de Desenvolvimento expirou. Isso pode acontecer, por exemplo, se o cliente não abre o aplicativo há muito tempo.
@@ -132,13 +132,13 @@ Para analisar dados detalhados para cada notificação:
     * **Inicia**: A notificação foi enviada, o cliente clicou nela e o aplicativo foi aberto em resultado disso. Observe que isso apenas rastreia inicializações de aplicativos. Notificações que convidam o cliente para realizar outras ações, como iniciar a Loja para deixar uma classificação, não são incluídas nesse status.
     * **Desconhecido**: Não foi possível determinar o status dessa notificação.
 
-Para analisar dados de atividade do usuário para todas as notificações:
+Para analisar os dados de atividade do usuário para todas as suas notificações:
 
 1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
-2.  Na página **notificações** , clique na guia **Analisar** . Essa guia exibe os seguintes dados:
-    * Modos de exibição de gráfico dos diversos estados de ação do usuário para o brindes e as notificações de centro de ação.
-    * Centro de exibições do mapa do mundo as click por meio de taxas para seu brindes e a ação de notificações.
-3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados de aplicativo e de mercado.
+2.  Na página de **notificações** , clique na guia **Analisar** . Este guia exibe os seguintes dados:
+    * Modos de exibição de gráfico dos vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
+    * Modos de exibição de mapa de mundo as clique por meio de taxas de suas notificações do sistema e a ação de centro de notificações.
+3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e no mercado.
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 

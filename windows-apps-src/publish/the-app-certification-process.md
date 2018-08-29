@@ -8,18 +8,18 @@ ms.date: 07/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, publicação, pré-processamento, certificação, liberar, pendentes, enviar, publicar, status, tempo
+keywords: Windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendentes, enviar, publicar, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918857"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
-Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que o envio passa certificação, pode demorar até 24 horas para que os clientes vejam a listagem do aplicativo para o envio de um novo, ou para um envio atualizado com alterações aos pacotes. Se a sua atualização só altera listando os detalhes do repositório, o processo de publicação será concluído em menos de uma hora.  Você será notificado quando o envio é publicado e status do aplicativo no painel será **In the Store**.
+Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio for aprovado na certificação, pode levar até 24 horas para que os clientes vejam os detalhes do aplicativo para um novo envio, ou para um envio atualizado com as alterações para pacotes. Se a atualização é alterado apenas detalhes de listagem da loja, será concluído o processo de publicação em menos de uma hora.  Você será notificado quando o envio for publicado, e o status do aplicativo no painel será **Na loja**.
 
 ## <a name="preprocessing"></a>Pré-processamento
 
@@ -37,21 +37,21 @@ Após a conclusão do processo de certificação, você receberá um relatório 
 
 ## <a name="release"></a>Versão
 
-Quando seu aplicativo passa certificação, está pronto para migrar para o processo de **publicação** .
+Quando seu aplicativo for aprovado na certificação, ele estará pronto para mover para o processo de **publicação** .
 
-- Se você tiver indicado que seu envio deve ser publicado o mais breve possível (a opção padrão), o processo de publicação será iniciado imediatamente.
-- Se essa for a primeira vez ter publicado o aplicativo e você especificou uma **Data de lançamento** na seção [agenda](configure-precise-release-scheduling.md#release) , o aplicativo serão disponibilizados de acordo com suas seleções de **Data do lançamento** .
-- Se você tiver usado a [publicação mantenha opções](manage-submission-options.md#publishing-hold-options) para especificar que ele não deve ser liberado até uma determinada data, vamos aguardar até essa data para começar o processo de publicação, a menos que você selecione a **Data de lançamento de alteração**.
-- Se você tiver usado a [publicação mantenha opções](manage-submission-options.md#publishing-hold-options) para especificar que você deseja publicar o envio manualmente, não iniciamos o processo de publicação até que você selecione **Publicar agora** (ou selecione a **Data de lançamento de alteração** e selecione uma data específica).
+- Se você indicou que seu envio deve ser publicado assim que possível (a opção padrão), o processo de publicação começará imediatamente.
+- Se esta for a primeira vez que você publicou o aplicativo e você especificou uma **Data de lançamento** na seção [Agendar](configure-precise-release-scheduling.md#release) , o aplicativo ficará disponível de acordo com suas seleções de **Data de lançamento** .
+- Se você já usou [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options) para especificar que ele não deve ser lançado até uma data específica, vamos aguardar até essa data para começar o processo de publicação, a menos que você selecione **Alterar data do lançamento**.
+- Se você já usou [Opções de suspensão de publicação](manage-submission-options.md#publishing-hold-options) para especificar que você deseja publicar o envio manualmente, nós não iniciar o processo de publicação até que você selecionar **Publicar agora** (ou selecione a **Data de lançamento de alteração** e selecionar uma data específica).
 
 
 ## <a name="publishing"></a>Publicação
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para obter atualizações que apenas alteradas opções como repositório listando detalhes, mas não os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
+Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para atualizações somente alterar as opções, como detalhes de listagem da loja, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
 
-Enquanto seu aplicativo estiver na fase de publicação, o link **Mostrar detalhes** na coluna Status para envio do seu aplicativo permite que você sabe quando seus novos pacotes e o repositório listando detalhes estão disponíveis para os clientes em cada um dos seus versões suportadas do sistema operacional. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até que o processo for concluído, o que significa que os novos pacotes e/ou listando detalhes está disponível para todos os clientes potenciais do seu aplicativo.
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e detalhes de listagem da loja estão disponíveis para clientes em cada uma das suas versões do sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até a conclusão do processo, isso significa que os novos pacotes e/ou detalhes estão disponíveis para todos os clientes em potencial do seu aplicativo.
 
 ## <a name="in-the-store"></a>Na Store 
 

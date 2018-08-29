@@ -7,15 +7,15 @@ ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918887"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
 
@@ -72,7 +72,7 @@ O código de exemplo abaixo atribui uma condição que exige que o usuário este
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Coloque seu código de atividade em segundo plano em OnBackgroundActivated()
 
-Coloque o código de atividade de plano de fundo em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder às gatilho seu plano de fundo quando ele é acionado. **OnBackgroundActivated** pode ser tratado como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que contém tudo o que fornece o método **execute** . Por exemplo, em App.xaml.cs:
+Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder ao seu gatilho em segundo plano quando ele for acionado. **OnBackgroundActivated** pode ser tratado como [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que contém tudo o que fornece o método **Run** . Por exemplo, em App.xaml.cs:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -92,7 +92,7 @@ sealed partial class App : Application
 }
 ```
 
-Para obter um exemplo de **OnBackgroundActivated** mais sofisticado, consulte [converter um serviço de aplicativo para ser executado no mesmo processo do seu aplicativo host](convert-app-service-in-process.md).
+Para obter um exemplo de **OnBackgroundActivated** mais sofisticado, consulte [converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Manipular progresso e conclusão de tarefas em segundo plano
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, integridade, falhas, eventos sem resposta, integridade de aplicativo, dados de integridade, rastreamento de pilha, arquivo cab, falha, falhas, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913556"
 ---
 # <a name="health-report"></a>Relatório de integridade
 
@@ -26,7 +26,7 @@ Como alternativa, você pode recuperar os dados desse relatório de forma progra
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **72H** (72 horas), mas você pode escolher **30D** em vez disso, para mostrar os dados nos últimos 30 dias. Observe que os dados são mostrados em seu fuso horário local para o modo de exibição de **72 H** e em UTC para o modo de exibição de **30 D** .
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **72H** (72 horas), mas você pode escolher **30D** em vez disso, para mostrar os dados nos últimos 30 dias. Observe que os dados são mostrados em seu fuso horário local para o modo de exibição **72h** e em UTC para a exibição **30d** .
 
 Também é possível expandir **Filtros** para filtrar os dados dessa página por versão do pacote, mercado e/ou por tipo de dispositivo.
 
@@ -46,10 +46,10 @@ As informações de todos os gráficos listados abaixo refletem o intervalo de d
 
 O gráfico **Ocorrências de falhas** mostra a quantidade de falhas e eventos diários que os clientes observaram ao usar o aplicativo durante o período de tempo selecionado. Cada tipo de evento que o aplicativo experimentou é rastreado separadamente: falhas, travamentos, exceções de JavaScript e falhas de memória.
 
-Quando a **30 D** período de tempo é selecionada, talvez você veja marcadores de círculo. Eles representam um aumento significativo ou diminuir em um determinado valor pensamos que você vai querer saber sobre. A data em que o círculo aparece representa o fim da semana em que podemos detectado um aumento significativo ou diminuição comparada à semana antes que. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório ideias](insights-report.md).
+> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="failure-hits-by-market"></a>Ocorrências de falha por mercado
 
@@ -74,18 +74,18 @@ O gráfico **Falhas** mostra o número total de falhas e eventos durante o perí
 Para exibir o relatório **Detalhes da falha** de uma falha específica, selecione o nome da falha. Se você tiver incluído arquivos de símbolo, o relatório **Detalhes da falha** incluirá o número de ocorrências de falhas ao longo do mês anterior, bem como um log de falhas que lista os detalhes das ocorrências (data, versão do pacote, tipo de dispositivo, modelo de dispositivo, compilação do sistema operacional) e um link para o rastreamento de pilha e/ou arquivo CAB, se disponível.
 
 > [!TIP]
-> Arquivos CAB estarão disponíveis somente quando a falha ocorrer em um computador usando uma compilação do Windows Insider, portanto, nem todas as falhas incluem a opção de baixar o CAB. Para mostrar somente as falhas que possuem arquivos CAB, selecione **falhas com downloads** do filtro de seção. Também é possível clicar o cabeçalho de **Links** no **log de falha** para classificar os resultados para que seja exibido na parte superior da lista de falhas que incluem arquivos CAB.
+> Arquivos CAB estarão disponíveis somente quando a falha ocorrer em um computador usando uma compilação do Windows Insider, portanto, nem todas as falhas incluem a opção de baixar o CAB. Para mostrar apenas as falhas que têm arquivos CAB, selecione **falhas com downloads** no filtro de seção. Você também pode clicar no cabeçalho **Links** o **log de falhas** para classificar os resultados para que as falhas que incluem arquivos CAB apareçam na parte superior da lista.
 
-Na página **detalhes de falha** , você verá também o gráfico de **chamadas de pilha** , que mostra a parte superior de pilhas que contribuíram para a falha, ordenados por porcentagem e o gráfico de **configuração de dispositivo (30 D)** , que fornece detalhes sobre o configuração de dispositivos que apresentaram falha. 
+Na página de **detalhes da falha** , você também verá o gráfico de **prevalência de pilha** , que mostra a parte superior de pilhas que contribuíram para a falha, ordenados por percentual e o gráfico de **configuração do dispositivo (30d)** , que fornece detalhes sobre o configuração dos dispositivos que ocorreu a falha. 
 
 
-## <a name="crash-free-sessions-and-devices-30d"></a>Sessões de travamento livre e dispositivos (30D)
+## <a name="crash-free-sessions-and-devices-30d"></a>Sessões livre de falhas e dispositivos (30d)
 
-O gráfico de **dispositivos e sessões de travamento livre** mostra a porcentagem dos dispositivos ou sessões de usuário que não teve uma falha nos últimos 30 dias. Essas informações da ajudam você a entender como amplamente o falha está afetando os usuários. Por exemplo, um aplicativo poderia ter 10.000 falhas em um dia. Se 90% dos seus dispositivos são afetados, em seguida, você faria provavelmente classificar que como crítico e agir para corrigi-lo imediatamente. No entanto, se que representa somente 5% dos dispositivos usando seu aplicativo, a prioridade pode ser menor.
+O gráfico de **dispositivos e sessões livre de pane** mostra a porcentagem de dispositivos ou sessões de usuário que não teve uma falha nos últimos 30 dias. Essas informações ajudam você a entender a amplitude seus falhas estão afetando seus usuários. Por exemplo, um aplicativo poderia ter 10.000 falhas em um dia. Se 90% dos dispositivos forem afetados, em seguida, você seria provavelmente classificar que como crítica e agir para corrigi-lo imediatamente. No entanto, se que representa apenas 5% dos dispositivos usando seu aplicativo, a prioridade pode ser menor.
 
 Este gráfico tem duas guias:
-- **Dispositivos de travamento livre**: mostra a porcentagem de dispositivos exclusivas que não teve uma falha em cada dia (durante os últimos 30 dias).
-- **Sessões de travamento livre**: mostra a porcentagem de sessões de usuário exclusiva que não teve uma falha em cada dia (durante os últimos 30 dias).
+- **Dispositivos livre de falha**: mostra o percentual de dispositivos exclusivos que não teve uma falha em cada dia (durante os últimos 30 dias).
+- **Sessões livre de falha**: mostra a porcentagem de sessões de usuário exclusivo que não teve uma falha em cada dia (durante os últimos 30 dias).
 
 
  

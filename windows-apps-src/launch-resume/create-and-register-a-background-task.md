@@ -8,18 +8,18 @@ ms.date: 07/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefa do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: a599fdef47bb681ef4909fe5bba2a01a1687ba66
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891868"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918357"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo
 
@@ -36,18 +36,18 @@ Crie uma classe de tarefa em segundo plano e a registre para ser executada quand
 
 ## <a name="create-the-background-task-class"></a>Criar a classe de tarefa em segundo plano
 
-Você pode executar código em segundo plano criando classes que implementam a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Este código é executado quando um evento específico é disparado por meio, por exemplo, [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) ou [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517).
+Você pode executar código em segundo plano criando classes que implementam a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Esse código é executado quando um evento específico for acionado pelo uso, por exemplo, [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) ou [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517).
 
 As seguintes etapas mostram como escrever uma nova classe que implementa a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
-1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para fazer isso, clique com botão direito no nó sua solução no **Solution Explorer** e selecione **Adicionar** \> **Novo projeto**. Em seguida, selecione o tipo de projeto do **Componente de tempo de execução do Windows** , o nome do projeto e clique em Okey.
-2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP). Para um c# ou C++ app, em seu projeto de aplicativo, clique com botão direito em **referências** e selecione **Add New Reference**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
-3.  Para o projeto de tarefas do plano de fundo, adicione uma nova classe que implementa a interface [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . O método [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) é um ponto de entrada necessária que será chamado quando o evento específico é disparado; Esse método é necessário em cada tarefa de plano de fundo.
+1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para fazer isso, clique com botão direito no nó da solução no **Gerenciador de soluções** e selecione **Adicionar** \> **Novo projeto**. Em seguida, selecione o tipo de projeto de **Componente do tempo de execução do Windows** , o nome do projeto e clique em Okey.
+2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP). Para um c# ou C++ aplicativo, no seu projeto de aplicativo, clique com botão direito em **referências** e selecione **Adicionar nova referência**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
+3.  Para o projeto de tarefas em segundo plano, adicione uma nova classe que implementa a interface [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . O método [**ibackgroundtask. Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) é um ponto de entrada obrigatório que será chamado quando o evento especificado é disparado; Esse método é obrigatório em todas as tarefas em segundo plano.
 
 > [!NOTE]
-> A classe de tarefa do plano de fundo propriamente dita&mdash;e todas as outras classes do projeto de tarefa do plano de fundo&mdash;precisam ser classes **públicas** que estão **fechada** (ou **final**).
+> A própria classe de tarefa em segundo plano&mdash;e todas as outras classes no projeto de tarefa em segundo plano&mdash;precisam ser classes **públicas** que são **seladas** (ou **final**).
 
-O código de exemplo a seguir mostra um ponto de partida muito básico para uma classe de tarefa do plano de fundo.
+O exemplo de código a seguir mostra um ponto inicial bem básico para uma classe de tarefa em segundo plano.
 
 ```csharp
 // ExampleBackgroundTask.cs
@@ -144,11 +144,11 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 }
 ```
 
-4.  Se você executar um código assíncrono na sua tarefa em segundo plano, então ela precisará usar um adiamento. Se você não usar um adiamento, em seguida, o processo de tarefa do plano de fundo pode encerrar inesperadamente se o método **Run** retorna antes de qualquer trabalho assíncrono tenha executado com êxito.
+4.  Se você executar um código assíncrono na sua tarefa em segundo plano, então ela precisará usar um adiamento. Se você não usar um adiamento, em seguida, o processo de tarefa em segundo plano poderá ser encerrado inesperadamente se o método **Run** retorna antes de qualquer trabalho assíncrono foi executado até a conclusão.
 
-Solicite o adiamento no método **execute** antes de chamar o método assíncrono. Salve o adiamento um membro de dados de classe para que ele pode ser acessado a partir do método assíncrono. Declare o adiamento como concluído após a conclusão do código assíncrono.
+Solicite o adiamento no método **Executar** antes de chamar o método assíncrono. Salve o adiamento em um membro de dados de classe para que ele pode ser acessado do método assíncrono. Declare o adiamento como concluído após a conclusão do código assíncrono.
 
-O código de exemplo a seguir obtém o adiamento, salva e libera-lo quando o código assíncrono for concluído.
+O exemplo de código a seguir obtém um adiamento, salva-o e libera quando o código assíncrono é concluído.
 
 ```csharp
 BackgroundTaskDeferral _deferral; // Note: defined at class scope so that we can mark it complete inside the OnCancel() callback if we choose to support cancellation
@@ -204,20 +204,20 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 ```
 
 > [!NOTE]
-> Em C#, os métodos assíncronos da tarefa em segundo plano podem ser chamados usando as palavras-chave **async/await**. Em C + + / CX, um resultado semelhante pode ser obtido usando uma cadeia de tarefa.
+> Em C#, os métodos assíncronos da tarefa em segundo plano podem ser chamados usando as palavras-chave **async/await**. No C++ c++ /CX, um resultado semelhante pode ser alcançado usando uma cadeia da tarefa.
 
 Para mais informações sobre padrões assíncronos, consulte [Programação assíncrona](https://msdn.microsoft.com/library/windows/apps/mt187335). Para exemplos adicionais sobre como usar os adiamentos para evitar que uma tarefa em segundo plano pare antecipadamente, consulte a [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 O procedimento abaixo é concluído em uma de suas classes de aplicativo (por exemplo, MainPage.xaml.cs).
 
 > [!NOTE]
-> Você também pode criar uma função dedicada ao Registrando tarefas em segundo plano&mdash;consulte [registrar uma tarefa de plano de fundo](register-a-background-task.md). Nesse caso, em vez de usar as próximas três etapas, você pode simplesmente construir o gatilho e forneça-lo para a função de registro, juntamente com o nome da tarefa, o ponto de entrada de tarefa e (opcionalmente) uma condição.
+> Você também pode criar uma função dedicada a registrar tarefas em segundo plano&mdash;consulte [registrar uma tarefa em segundo plano](register-a-background-task.md). Nesse caso, em vez de usar as próximas três etapas, você pode simplesmente construir o gatilho e fornecê-las para a função de registro juntamente com o nome da tarefa, ponto de entrada da tarefa e (opcionalmente) uma condição.
 
 ## <a name="register-the-background-task-to-run"></a>Registre a tarefa em segundo plano a ser executada
 
-1.  Descubra se a tarefa de plano de fundo já estiver registrada repetindo a propriedade [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) . Esta etapa é importante; se seu aplicativo não verificar a existência de registros de tarefas em segundo plano, ele poderá facilmente registrar a tarefa várias vezes, causando problemas de desempenho e extrapolando o tempo de CPU disponível para a tarefa antes que esta possa ser concluída.
+1.  Descubra se a tarefa em segundo plano já está registrada Iterando através da propriedade [**Alltasks**](https://msdn.microsoft.com/library/windows/apps/br224787) . Esta etapa é importante; se seu aplicativo não verificar a existência de registros de tarefas em segundo plano, ele poderá facilmente registrar a tarefa várias vezes, causando problemas de desempenho e extrapolando o tempo de CPU disponível para a tarefa antes que esta possa ser concluída.
 
-O exemplo a seguir itera na propriedade **AllTasks** e define uma variável de sinalizador como true se a tarefa já está registrada.
+O exemplo a seguir itera na propriedade **AllTasks** e define uma variável de sinalização como true se a tarefa já está registrada.
 
 ```csharp
 var taskRegistered = false;
@@ -276,7 +276,7 @@ while (hascur)
 
 O gatilho da tarefa em segundo plano controla quando a tarefa será executada. Para obter uma lista dos possíveis gatilhos, consulte [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Por exemplo, este código cria uma nova tarefa de plano de fundo e o define para ser executado quando ocorre o gatilho **TimeZoneChanged** :
+Por exemplo, esse código cria uma nova tarefa de plano de fundo e define para ser executada quando o gatilho **TimeZoneChanged** ocorre:
 
 ```csharp
 var builder = new BackgroundTaskBuilder();
@@ -348,7 +348,7 @@ Para obter mais informações, consulte [Diretrizes para tarefas em segundo plan
 
 ## <a name="handle-background-task-completion-using-event-handlers"></a>Manipular a conclusão da tarefa em segundo plano usando manipuladores de eventos
 
-Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Dessa forma, seu aplicativo poderá obter resultados da tarefa em segundo plano. Quando o aplicativo é iniciado ou foi reiniciado, o método marcado será chamado se a tarefa de plano de fundo foi concluída desde a última vez em que o aplicativo foi em primeiro plano. (O método OnCompleted será chamado imediatamente se a tarefa em segundo plano for concluída enquanto o aplicativo estiver em primeiro plano.)
+Registre um método com o [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Dessa forma, seu aplicativo poderá obter resultados da tarefa em segundo plano. Quando o aplicativo é iniciado ou retomado, o método marcado será chamado se a tarefa em segundo plano foi concluída desde a última vez em que o aplicativo estava em primeiro plano. (O método OnCompleted será chamado imediatamente se a tarefa em segundo plano for concluída enquanto o aplicativo estiver em primeiro plano.)
 
 1.  Escreva um método OnCompleted para manipular a conclusão das tarefas em segundo plano. Por exemplo, o resultado da tarefa em segundo plano pode ocasionar uma atualização da interface do usuário. O volume do método mostrado aqui é necessário para o método do manipulador de eventos OnCompleted, mesmo que este exemplo não use o parâmetro *args*.
 
@@ -415,15 +415,15 @@ task.Completed({ this, &MainPage::OnCompleted });
 task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &MainPage::OnCompleted);
 ```
 
-## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>Declarar no manifesto do aplicativo que o seu aplicativo usa tarefas em segundo plano
+## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>Declarar no manifesto do aplicativo que seu aplicativo usa tarefas em segundo plano
 
-Antes de o seu aplicativo conseguir executar tarefas em segundo plano, você deve declarar cada tarefa em segundo plano no manifesto do aplicativo. Se seu aplicativo tenta registrar uma tarefa de plano de fundo com um gatilho que não está listado no manifesto, o registro da tarefa de plano de fundo falhará com um erro de "classe de tempo de execução não registrada".
+Antes de o seu aplicativo conseguir executar tarefas em segundo plano, você deve declarar cada tarefa em segundo plano no manifesto do aplicativo. Se o aplicativo tentar registrar uma tarefa em segundo plano com um disparador que não esteja listado no manifesto, o registro da tarefa em segundo plano falhará com um erro de "classe de tempo de execução não registrada".
 
 1.  Abra o designer de manifesto do pacote abrindo o arquivo chamado Package.appxmanifest.
 2.  Abra a guia **Declarações**.
 3.  Na lista suspensa **Declarações Disponíveis**, selecione **Tarefas em Segundo Plano** e clique em **Adicionar**.
 4.  Marque a caixa de seleção **Evento do sistema**.
-5.  No **ponto de entrada:** textbox, insira o nome da classe seu plano de fundo que é para este exemplo é Tasks.ExampleBackgroundTask e o namespace.
+5.  No **ponto de entrada:** textbox, insira o namespace e nome de sua classe de plano de fundo que, para este exemplo é Tasks.ExampleBackgroundTask.
 6.  Feche o designer de manifesto.
 
 O seguinte elemento Extensions é adicionado ao arquivo Package.appxmanifest para registrar a tarefa em segundo plano:

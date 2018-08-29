@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a16339e0918f8291f7b1cc7a3a6dfef3ccf375d
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918867"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -28,16 +28,16 @@ Cada pacote que você fornece precisa ter um número de versão (fornecido como 
 ## <a name="version-numbering-for-windows-10-packages"></a>Numeração de versão para pacotes do Windows 10
 
 > [!IMPORTANT]
-> Para os pacotes do Windows 10, a última seção (quarta) do número de versão está reservada para uso do repositório e deve ser deixada como 0 quando você cria seu pacote (embora o repositório pode alterar o valor desta seção).
+> Para pacotes do Windows 10, a última (quarta) seção do número da versão é reservada para uso da loja e deve ser deixada como 0 quando você compilar o pacote (embora a loja possa alterar o valor nessa seção).
 
 Quando for escolher um pacote do Windows 10 de seu envio publicado, a Microsoft Store sempre usará o pacote com versão mais alta que for aplicável ao dispositivo do cliente. Isso proporciona maior flexibilidade e coloca você no controle de quais pacotes serão fornecidos para clientes em tipos específicos de dispositivos. Importante, você pode enviar esses pacotes em qualquer ordem. Você não está limitado a fornecer pacotes com maior número de versão em cada envio subsequente.
 
 > [!TIP]
-> Se seu aplicativo também tiver pacotes para o Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote Windows 10 deve sempre ser maior que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
+> Se seu aplicativo também tiver pacotes para Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote do Windows 10 deve ser sempre maior do que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
 
-Você pode fornecer vários pacotes de 10 do Windows com o mesmo número de versão. Contudo, os pacotes que compartilharem um número de versão não poderão ter também a mesma arquitetura, pois a identidade completa que a Loja usa para cada um de seus pacotes deve ser única. Para obter mais informações, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
+Você pode fornecer vários pacotes do Windows 10 com o mesmo número de versão. Contudo, os pacotes que compartilharem um número de versão não poderão ter também a mesma arquitetura, pois a identidade completa que a Loja usa para cada um de seus pacotes deve ser única. Para obter mais informações, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
 
-Quando você fornece vários pacotes de 10 do Windows que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual deles é de classificação mais alto (quando o repositório determina qual pacote para fornecer ao dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
+Quando você fornece vários pacotes do Windows 10 que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
 Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte a dispositivos acessíveis aos quais não oferecia suporte anteriormente. Você pode adicionar pacotes com maior número de versão com dependências mais estritas para aproveitar o hardware ou os recursos do sistema operacional, ou pode adicionar pacotes com maior número de versão que servem como atualizações para alguns ou toda a sua base de clientes existentes.
 
@@ -61,7 +61,7 @@ Você pode usar as regras de versão de pacotes para mover gradualmente seus cli
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usando a numeração de versão para reverter para um pacote enviado anteriormente para novas aquisições
 
-Se você mantiver cópias, você poderá reverter pacote do seu aplicativo no repositório a um pacote do Windows 10 anterior se você descobrir problemas com uma versão. Essa é uma maneira temporária de limitar a interrupção para seus clientes enquanto você corrige o problema.
+Se você mantém cópias, você poderá reverter o pacote do aplicativo na loja para um pacote anterior do Windows 10 se você descobrir problemas com uma versão. Essa é uma maneira temporária de limitar a interrupção para seus clientes enquanto você corrige o problema.
 
 Para fazer isso, crie um novo [envio](app-submissions.md). Remova o pacote problemático e carregue o pacote antigo que você deseja fornecer na Loja. Os clientes que já receberam o pacote que você está revertendo ainda terão o pacote problemático (já que seu pacote mais antigo terá um número de versão anterior). Mas isso impedirá que qualquer um adquira o pacote problemático, enquanto permite que o aplicativo fique disponível na Loja.
 
@@ -77,7 +77,7 @@ Para pacotes .appx destinados a Windows 8 e Windows 8.1, a mesma regra se aplica
 Além disso, o número de versão dos pacotes do Windows 8.1 devem ser sempre maiores do que os números de versão de seus pacotes do Windows 8 para o mesmo aplicativo. Em outras palavras, o número de versão de qualquer pacote do Windows 8 que você enviar deve ser menor do que o número de versão de qualquer pacote do Windows 8.1 que você enviar para o mesmo aplicativo.
 
 > [!NOTE]
-> Se seu aplicativo também tiver pacotes de 10 do Windows, o número da versão dos pacotes de 10 do Windows deve ser maior do que aqueles para qualquer um dos seus pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)).
+> Se seu aplicativo também tiver pacotes do Windows 10, o número de versão dos pacotes do Windows 10 deve ser maior do que aqueles para qualquer um dos seus pacotes do Windows 8, Windows 8.1 e/ou Windows Phone 8.1. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)).
 
 Aqui estão alguns exemplos do que acontece em diferentes situações de atualização de números de versão para Windows 8 e Windows 8.1
 

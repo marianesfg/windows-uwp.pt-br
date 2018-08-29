@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887475"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916975"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -56,7 +56,7 @@ Aqui está a página de configurações na família de dispositivos móveis:
 
  Você pode habilitar um dispositivo para desenvolvimento ou apenas para sideload.
 
--   *Aplicativos Microsoft Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
+-   *Aplicativos da Microsoft Store* é a configuração padrão. Se você não estiver desenvolvendo aplicativos ou estiver usando aplicativos de desenvolvimento emitidos pela sua empresa, mantenha essa configuração ativa.
 -   *Sideload* significa instalar e executar ou testar um app que não foi certificado pela Microsoft Store. Por exemplo, um aplicativo que é interno somente para sua empresa.
 -   *Modo de desenvolvedor* permite o sideload de aplicativos e também executar aplicativos do Visual Studio no modo de depuração. 
 
@@ -150,7 +150,7 @@ Há várias ferramentas que você pode usar para implantar um app de um computad
 Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
 
 > [!NOTE]
-> Se o modo de desenvolvedor não for instalado corretamente, recomendamos que você para uma solicitação de comentários de arquivos. No app **Hub de comentários** , selecione **Adicionar comentários de novo**e escolha a categoria de **Plataforma do desenvolvedor** e a subcategoria de **Modo do desenvolvedor** . Enviar comentários ajudarão Microsoft resolver o problema que você encontrou.
+> Se o modo de desenvolvedor não for instalado corretamente, Encorajamos você a uma solicitação de comentários. No aplicativo de **Hub de Feedback** , selecione **Adicionar novos comentários**e escolha a categoria de **Plataforma do desenvolvedor** e a subcategoria de **Modo de desenvolvedor** . Enviar comentários ajuda a Microsoft resolver o problema que é encontrado.
 
 ### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
 

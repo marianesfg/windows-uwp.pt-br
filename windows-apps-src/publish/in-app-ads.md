@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2893744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917229"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -37,9 +37,9 @@ Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banne
 3.  No campo **Nome da unidade de anúncio**, insira um nome para a unidade publicitária. Pode ser qualquer cadeia de caracteres descritiva a ser usada para identificar a unidade publicitária para fins de relatório.
 4.  Na lista suspensa **Tipo de unidade de anúncio**, selecione o tipo de anúncio.
 
-    * Se você está mostrando uma faixa de anúncio no seu aplicativo, selecione **Banner**.
-    * Se você está mostrando um anúncio intersticial de vídeo ou intersticial banner em seu aplicativo, selecione **vídeo intersticial** ou **Banner intersticial** (certifique-se de selecionar a opção apropriada para o tipo de intersticial ad que você deseja mostrar).
-    * Se você está mostrando um anúncio nativo no seu aplicativo, selecione **Native**.
+    * Se você estiver mostrando um anúncio em faixa em seu aplicativo, selecione a **faixa**.
+    * Se você estiver mostrando um vídeo intersticial ou anúncio intersticial de banner em seu aplicativo, selecione o **vídeo intersticial** ou **faixa intersticial** (certifique-se de selecionar a opção adequada para o tipo de anúncio intersticial que você quer mostrar).
+    * Se você estiver mostrando um anúncio nativo em seu aplicativo, selecione **nativo**.
 
 5. Na lista suspensa **Família de dispositivos**, selecione a família de dispositivos direcionada pelo aplicativo no qual a unidade publicitária será usada. As opções disponíveis são: **UWP (Windows 10)**, **Computador/Tablet (Windows 8.1)** ou **Celular (Windows Phone 8.x)**.
 
@@ -61,7 +61,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 
 * Se o aplicativo mostrar [anúncios em banner](../monetize/banner-ads.md), atribua esses valores às propriedades [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) e [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) de seu objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol).
 * Se seu aplicativo mostrar [anúncios intersticiais](../monetize/interstitial-ads.md), passe esses valores para o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) de seu objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad).
-* Se seu aplicativo mostrar [ads nativos](../monetize/native-ads.md), passa esses valores para o construtor **NativeAdsManagerV2** .
+* Se seu aplicativo mostra [anúncios nativos](../monetize/native-ads.md), passe esses valores para o construtor **NativeAdsManagerV2** .
   > [!IMPORTANT]
   > Você pode usar cada unidade publicitária em apenas um app. Se você usar uma unidade publicitária em mais de um app, os anúncios não serão veiculados para essa unidade publicitária.
 
@@ -71,13 +71,13 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade de ad não tem nenhuma atividade para os últimos seis meses, podemos será rotule-o como **inativo**e, por fim, remova-o do seu painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
 ## <a name="mediation-settings"></a>Configurações de mediação
 
-Quando você [criar uma nova unidade da ad UWP](#create-ad-unit) ou [Editar uma unidade de ad UWP existente](#available-ad-units), use as opções nesta seção para configurar a [mediação da ad](../monetize/ad-mediation-service.md) para a unidade do ad. O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas e os anúncios não relacionados à geração de receitas para campanhas promocionais de aplicativos da Microsoft. Assumimos o controle das solicitações de anúncios em faixa nas redes de publicidade escolhidas. Se você já tiver uma unidade publicitária UWP associada ao anúncio em faixa, intersticial ou nativo no aplicativo, a habilitação do controle de anúncios não requer nenhuma alteração de código no aplicativo.
+Quando você [criar uma nova unidade publicitária UWP](#create-ad-unit) ou [Editar uma unidade de publicitária UWP existente](#available-ad-units), use as opções desta seção para configurar o [controle de anúncios](../monetize/ad-mediation-service.md) para a unidade de anúncio. O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas e os anúncios não relacionados à geração de receitas para campanhas promocionais de aplicativos da Microsoft. Assumimos o controle das solicitações de anúncios em faixa nas redes de publicidade escolhidas. Se você já tiver uma unidade publicitária UWP associada ao anúncio em faixa, intersticial ou nativo no aplicativo, a habilitação do controle de anúncios não requer nenhuma alteração de código no aplicativo.
 
 > [!NOTE]
 > Ao habilitar um controle de anúncio para uma unidade publicitária UWP, não é necessário obter uma unidade publicitária em redes publicitárias de terceiros. Nosso serviço de controle de anúncios criará automaticamente quaisquer unidades publicitárias de terceiros necessárias.
@@ -85,13 +85,13 @@ Quando você [criar uma nova unidade da ad UWP](#create-ad-unit) ou [Editar uma 
 Para definir as configurações de controle de anúncio de uma unidade de anúncio UWP no UWP:
 
 1. [Criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade de anúncio existente](#available-ad-units).
-2. Na página **no aplicativo ads** , vá para a seção **configurações de mediação** e a configuração suas configurações.
+2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
-    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes do ad que você deseja usar na configuração. Desmarque as redes do ad que você não quer ser parte da configuração e nosso algoritmo garantirá que o seu aplicativo só recebe ads das redes ad selecionado.
-    * Se desejar escolher seu próprios ad configurações de mediação, escolha **modificar configurações do padrão**.
+    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garante que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
+    * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
-    > As etapas restantes nesta seção só são aplicáveis se você escolher **modificar configurações do padrão**.
+    > As etapas restantes nesta seção só são aplicáveis se você escolher **as configurações padrão de modificar**.
 
 4. Na lista suspensa **Destino**, escolha **Linha de Base** para definir as configurações padrão do controle de anúncios. Essa configuração padrão será aplicada a todos os mercados, exceto para mercados em que você pode definir configurações específicas de mercado.
 6. Em seguida, especifique a proporção de anúncios que você deseja mostrar no controle de redes pagas (que pagarão a receita das impressões) e outras redes de anúncios (que não pagarão a receita das impressões). Para fazer isso, insira um valor entre 0 e 100 nos campos **Peso** de **Redes de publicidade pagas** e **Outras redes de publicidade**.  
@@ -111,17 +111,17 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 
 |  Rede de publicidade  |  Descrição  |  Tipos de anúncio com suporte  |
 |--------------|---------------|---------------------|
-| Juramento e AppNexus |  Esta é uma rede de ad Microsoft gerenciados que serve ads através de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus é sempre classificados primeiro na lista **pago ad redes** para unidades de ad banner, e ele não pode ser alterado para uma classificação inferior para esses tipos de anúncios. | Faixa, Vídeo intersticial |
-| AppNexus (direto) | Selecione essa opção para servir anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
+| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e ele não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
+| AppNexus (direto) | Selecione esta opção para veicular anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
-| Recomendações de conteúdo do MSN |  Selecione essa opção para servir anúncios de recomendações de conteúdo do MSN. |  Faixa, faixa intersticial  |
+| Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |
 | Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa, faixa intersticial  |
 | Revcontent |  Selecione esta opção para veicular anúncios da [Revcontent](http://www.revcontent.com/). |  Faixa, nativo  |
 | Smaato |  Selecione esta opção para veicular anúncios da [Smaato](https://www.smaato.com/). |  Faixa  |
 | smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |
 | Taboola |  Selecione esta opção para veicular anúncios da [Taboola](https://www.taboola.com/). |  Faixa  |
-| Undertone | Selecione essa opção para servir anúncios de [Undertone](https://www.undertone.com/). | Banner intersticial |
+| Undertone | Selecione esta opção para veicular anúncios de [Undertone](https://www.undertone.com/). | Faixa intersticial |
 
 
 <span id="other-networks" />

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917164"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Perguntas comuns sobre campanhas publicitárias
 
@@ -41,7 +41,7 @@ Se usar um dos modelos de anúncios padrão, você poderá escolher o tamanho, a
 
 ### <a name="where-will-my-ad-appear"></a>Onde aparecerá o meu anúncio?
 
-Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação etária e versão do sistema operacional. Você define essas propriedades quando você publica seu aplicativo no Microsoft Store. Para campanhas "Universal", seus anúncios também aparecerão em MSN.com, Outlook.com, Skype e outras propriedades de premium da Microsoft.
+Seu anúncio aparecerá em aplicativos que compartilharem a sua classificação etária e versão do sistema operacional. Você define essas propriedades ao publicar seu aplicativo na Microsoft Store. Para campanhas "Universal", seus anúncios também aparecerão em MSN.com, Outlook.com, Skype e outras propriedades de premium da Microsoft.
 
 As campanhas publicitárias atualmente têm suporte nestes países e regiões:
 

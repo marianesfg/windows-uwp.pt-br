@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894227"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914557"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
@@ -54,7 +54,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     * Se você recebeu um cupom de um representante da Microsoft para pagar uma campanha publicitária, clique em **Usar um cupom**, insira o código do cupom e clique em **Aplicar** para aplicar o cupom à campanha.
 
-    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de ad House, desde que eles executados somente em seus próprios aplicativos.
+    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios internos, pois são executados somente em seus próprios aplicativos.
 
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
     * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
@@ -71,10 +71,10 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     Esta seção também exibe um gráfico **Alcance estimado**. Esse gráfico mostra o público-alvo que você pode esperar alcançar com suas seleções de direcionamento atuais como um percentual de todos os usuários do aplicativo habilitado por anúncio do Windows nos mercados selecionados.
 
-10.  Se você escolheu **Aumentar o envolvimento do app** como seu objetivo de campanha, poderá selecionar um dos segmentos de cliente para direcionar. Os anúncios criados usando essa campanha serão mostrados apenas para os clientes que estão incluídos no segmento. Apenas um segmento pode ser selecionado por campanha publicitária. Para obter informações sobre segmentos, consulte [Criar segmentos de clientes](create-customer-segments.md). Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Design do anúncio**. Esta etapa não está disponível para campanhas da ad de casa, porque eles são executados somente em seus próprios aplicativos.
+10.  Se você escolheu **Aumentar o envolvimento do app** como seu objetivo de campanha, poderá selecionar um dos segmentos de cliente para direcionar. Os anúncios criados usando essa campanha serão mostrados apenas para os clientes que estão incluídos no segmento. Apenas um segmento pode ser selecionado por campanha publicitária. Para obter informações sobre segmentos, consulte [Criar segmentos de clientes](create-customer-segments.md). Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Design do anúncio**. Esta etapa não está disponível para campanhas de anúncios internos, porque eles são executados somente em seus próprios aplicativos.
 
 11.  Na página **Design de anúncio**, escolha uma destas opções:
-    * **Gerado automaticamente**. Essa é a opção padrão e permite que você crie um anúncio de nossos modelos padrão. Você pode fazer seleções a fim de personalizar o conteúdo do anúncio, e visualizaremos a aparência do anúncio com base em suas opções (automaticamente atualizadas à medida que você faz as seleções).
+    * **Gerado automaticamente**. Essa é a opção padrão, e permite que você criar um anúncio de modelos padrão. Você pode fazer seleções a fim de personalizar o conteúdo do anúncio, e visualizaremos a aparência do anúncio com base em suas opções (automaticamente atualizadas à medida que você faz as seleções).
         * Na lista suspensa **Idioma**, selecione o idioma do anúncio. O texto para o selo da Microsoft Store será exibido no idioma selecionado.
         * Para adicionar uma linha extra de texto ao anúncio, digite o texto no campo **Slogan personalizado**.
             > [!NOTE]
@@ -86,7 +86,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
             * **Mostrar que meu aplicativo é gratuito**. Se o aplicativo for gratuito em todos os mercados selecionados, você também terá a opção de marcar essa caixa de seleção.
             * **Chamada para ação**. Se você escolheu **Aumentar o envolvimento do app** como objetivo da campanha, defina o botão de chamada para ação de seu anúncio como **Abrir**, **Reproduzir**, **Ler**, **Escutar** ou **Comprar**.  
 
-    * **Personalizado**. Escolha essa opção para usar seus próprios designs de anúncios. Observe que, se você selecionou um segmento de cliente anteriormente, você deve usar criativos personalizados. Você pode carregar arquivos diferentes para cada um dos tamanhos de anúncios disponíveis. Os arquivos devem cumprir os requisitos e as diretrizes a seguir:
+    * **Personalizado**. Escolha essa opção para usar seus próprios designs de anúncios. Observe que, se você selecionou um segmento de cliente anteriormente, você deverá usar criativos personalizados. Você pode carregar arquivos diferentes para cada um dos tamanhos de anúncios disponíveis. Os arquivos devem cumprir os requisitos e as diretrizes a seguir:
         * Cada arquivo deve ser um .png ou .jpg com 40 KB ou menos.
         * Seus designs de anúncios devem atender aos requisitos especificados na [Política de Aceitação de Criatividade da Microsoft](http://go.microsoft.com/fwlink?LinkId=532595).
         * O conteúdo em seus designs de anúncios deve ser relevante para o aplicativo que você está promovendo. Designs de anúncios não relacionadas ao aplicativo não serão distribuídos a anúncios em outros aplicativos.
