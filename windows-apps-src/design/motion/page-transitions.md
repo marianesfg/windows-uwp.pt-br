@@ -1,9 +1,9 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: Learn how to use page transitions in your UWP apps.
 title: Transições de página em aplicativos UWP
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 04/08/2018
 ms.topic: article
 ms.prod: windows
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: cba05cd9106d64f443e87b1e8373b2501d0ce451
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0afc2c55ab0d0bdd2bee0206f986b2724d331eaf
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842233"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116334"
 ---
 # <a name="page-transitions"></a>Transições de página
 
 As transições de página navegam entre as páginas de um app, fornecendo comentários como o relacionamento entre as páginas. As transições de página ajudam os usuários a compreender se eles estão na parte superior de uma hierarquia de navegação, movendo entre as páginas irmãs ou navegando pela hierarquia da página.
 
-Duas animações diferentes são fornecidas para navegação entre páginas em um aplicativo, *Atualização de página* e *Análise detalhada*, e são representadas por subclasses de [**NavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
+Duas animações diferentes são fornecidas para navegação entre páginas em um aplicativo, *Atualização de página* e *Análise detalhada*, e são representadas por subclasses de [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
 
 ## <a name="page-refresh"></a>Atualização de página
 
@@ -32,7 +32,7 @@ A sensação desejada é que o usuário tenha recomeçado.
 
 ![animação de atualização de página](images/page-refresh.gif)
 
-A animação de atualização de página é representada pelo [**EntranceNavigationTransitionInfoClass**](/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo).
+A animação de atualização de página é representada pelo [**EntranceNavigationTransitionInfoClass**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo).
 
 ```csharp
 // Explicitly play the page refresh animation
@@ -50,7 +50,7 @@ A sensação desejada é que o usuário tenha entrado mais profundamente no apli
 
 ![animação de análise detalhada](images/drill.gif)
 
-A animação de análise detalhada é representada pela classe [**DrillInNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo).
+A animação de análise detalhada é representada pela classe [**DrillInNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo).
 
 ```csharp
 // Play the drill in animation
@@ -59,7 +59,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="suppress"></a>Supressão
 
-Para evitar a reprodução de qualquer animação durante a navegação, use [**SuppressNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) em vez de outros subtipos de **NavigationTransitionInfo**.
+Para evitar a reprodução de qualquer animação durante a navegação, use [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) em vez de outros subtipos de **NavigationTransitionInfo**.
 
 ```csharp
 // Suppress the default animation

@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 984741de5be585f7d6d726ec4c736e6ebce78830
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905739"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118882"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
-Uso de tecnologias de mapeamento do Microsoft mapear folhas de estilos para definir a aparência de mapas.  Uma folha de estilos de mapa é definida usando JavaScript Object Notation (JSON) e pode ser usada várias maneiras, incluindo em de um aplicativo Windows Store [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) por meio do método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
+Tecnologias de mapeamento da Microsoft usam _folhas de estilos de mapa_ para definir a aparência de mapas.  Uma folha de estilos de mapa é definida usando JavaScript Object Notation (JSON) e pode ser usada várias maneiras, incluindo em de um aplicativo Windows Store [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) por meio do método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
-Por exemplo, você usaria o JSON seguinte para exibir áreas aquáticas em vermelho, rótulos em verde e áreas terrestres em azul:
+Folhas de estilos podem ser criadas interativamente usando o aplicativo do [Editor de folha de estilos de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+
+O JSON a seguir pode ser usado para tornar áreas de água aparecem em vermelho, os rótulos de água aparecem em verde e áreas de terra aparecem em azul:
 
 ```json
     {"version":"1.*",
@@ -30,7 +32,8 @@ Por exemplo, você usaria o JSON seguinte para exibir áreas aquáticas em verme
         "elements":{"water":{"fillColor":"#FF0000","labelColor":"#00FF00"}}
     }
 ```
-Você também poderia usar o JSON para remover todos os rótulos e pontos de um mapa.
+
+Este JSON pode ser usado para remover todos os rótulos e pontos de um mapa.
 
 ```json
 

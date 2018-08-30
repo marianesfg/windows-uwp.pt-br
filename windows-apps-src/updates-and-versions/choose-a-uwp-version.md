@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualizar, atualizações
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb9aad1fa9da79708b3c785da80811006153767
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2918927"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3127116"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
@@ -35,7 +35,7 @@ A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que e
 | Build 10586 (Atualização de novembro, versão 1511) | Esta versão do Windows 10 foi lançada em novembro de 2015. Os recursos destacados incluem a introdução das APIs de ORTC (comunicações em tempo real do objeto) para a comunicação de vídeo no Microsoft Edge e as APIs de provedores para permitir que os aplicativos usem a autenticação de rosto do Windows Hello. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10586.md) |
 | Build 10240 (Windows 10, versão 1507) | Esta é a versão de lançamento inicial do Windows 10, em julho de 2015. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10240.md) |
 
-É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (16299). Os desenvolvedores que escrevem apps Corporativos devem considerar o suporte a uma **Versão Mínima** mais antiga.
+É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (17134). Os desenvolvedores que escrevem apps Corporativos devem considerar o suporte a uma **Versão Mínima** mais antiga.
 
 ## <a name="whats-different-in-each-uwp-version"></a>O que está diferente em cada versão do UWP?
 

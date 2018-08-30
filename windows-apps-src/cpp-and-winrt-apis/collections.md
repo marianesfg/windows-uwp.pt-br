@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, coleção
 ms.localizationpriority: medium
-ms.openlocfilehash: dacfe4135402b85bac68b63c06f99f97001fa5b9
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 5495649a6b7fad633e24e244aa3f6efbcc05e441
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2907700"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118066"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Coleções com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-Como você pode ver no exemplo de código acima, depois de criar a coleção você pode acrescentar elementos, iterar sobre eles e geralmente tratarem o objeto como faria com qualquer objeto de coleção do Windows Runtime que você pode ter recebido de uma API. Se você precisar de um modo de exibição imutável na coleção, você pode chamar [IVector::GetView](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão mostrado acima&mdash;criar e consumir uma coleção&mdash;é adequado para cenários simples onde você deseja passar dados em ou obter dados fora, uma API.
+Como você pode ver no exemplo de código acima, depois de criar a coleção você pode acrescentar elementos, iterar sobre eles e geralmente tratarem o objeto como faria com qualquer objeto de coleção do Windows Runtime que você pode ter recebido de uma API. Se você precisar de um modo de exibição imutável na coleção, você pode chamar [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão mostrado acima&mdash;criar e consumir uma coleção&mdash;é adequado para cenários simples onde você deseja passar dados em ou obter dados fora, uma API.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>Coleção de uso geral, preparada de dados
 

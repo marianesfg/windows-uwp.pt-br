@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendentes, enviar, publicar, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2918857"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118810"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 

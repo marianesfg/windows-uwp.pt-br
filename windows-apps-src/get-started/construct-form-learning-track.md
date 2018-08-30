@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: introdução, uwp, o windows 10, acompanhamento de aprendizado, layout, formulário
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2916494"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122179"
 ---
 # <a name="create-and-customize-a-form"></a>Criar e personalizar um formulário
 

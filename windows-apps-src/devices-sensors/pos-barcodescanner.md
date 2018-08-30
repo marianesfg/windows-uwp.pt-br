@@ -3,18 +3,18 @@ author: TerryWarwick
 title: Scanner de código de barras
 description: Este artigo indica os recursos do scanner de código de barras que estão disponíveis para aplicativos UWP e links para os artigos de instruções que mostram como usá-los.
 ms.author: jken
-ms.date: 05/1/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: c6021b00b9ec993aa6c09df93b8845dcc789678c
-ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
-ms.translationtype: HT
+ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1874384"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3129090"
 ---
 # <a name="barcode-scanner"></a>Scanner de código de barras
 
@@ -24,8 +24,10 @@ Esta seção fornece diretrizes para criar aplicativos UWP (Plataforma Universal
 
 |Tópico |Descrição |
 |------|------------|
-| [Introdução](pos-barcodescanner-get-started.md)  |  |
+| [Configurar um scanner de código de barras](../devices-sensors/pos-barcodescanner-configure.md)  | Saiba como configurar um scanner de código de barras para o aplicativo desejado. |
+| [Usar um gatilho de software](../devices-sensors/pos-barcodescanner-software-trigger.md) | Saiba como controlar o ato de verificação de software. |
 | [Trabalhando com simbologias](pos-barcodescanner-symbologies.md) | Saiba como determinar os tipos de código de barras que oferecem suporte a um scanner de código de barras e controlar quais tipos são reconhecidos pelo scanner de código de barras do aplicativo. |
+| [Obter e compreender os dados de código de barras](pos-barcodescanner-scan-data.md) | Saiba como obter e interpretar os dados de código de barras que você digitaliza. |
 | [Scanner de código de barras da câmera](pos-camerabarcode.md) | Leia códigos de barras por meio de uma lente de câmera padrão de um aplicativo da Plataforma Universal do Windows. Requer a Atualização de abril de 2018 para o Windows 10 (build 17134 ou posterior). |
 |
  

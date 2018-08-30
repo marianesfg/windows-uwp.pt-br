@@ -1,21 +1,21 @@
 ---
-author: serenaz
-Description: An overview of the universal design features that are included in every UWP app to help you build apps that scale beautifully across a range of devices.
+author: mijacobs
+Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
 title: Introdução ao design de aplicativos UWP (Plataforma Universal do Windows) (aplicativos do Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-ms.author: sezhen
+ms.author: mijacobs
 ms.date: 05/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f5d17a9fbdc044c3e1c0fcd152e6bafe2705a7
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877268"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126743"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -48,14 +48,15 @@ Você pode ignorar a densidade de pixels e a resolução de tela real ao projeta
 
 ### <a name="multiples-of-four"></a>Múltiplos de quatro
 
-:::linha::: :::extensão da coluna::: Quando o sistema escalona a interface do usuário do seu aplicativo, ele faz isso em múltiplos de quatro.
+:::row:::
+    ::: extensão da coluna::: os tamanhos, margens e posições dos elementos de interface do usuário devem estar sempre em **múltiplos de 4 epx** em seus aplicativos UWP.
 
-        As a result, the sizes, margins, and positions of **UI elements should always be in multiples of 4 epx**. This results in the best rendering by aligning with whole pixels. It also ensures that UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+        UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
     :::column:::
         ![grid](images/4epx.svg)
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="layout"></a>Layout
 
@@ -63,17 +64,25 @@ Como os aplicativos UWP são dimensionados automaticamente para todos os disposi
 
 ### <a name="windows-frames-and-pages"></a>Windows, quadros e páginas
 
-:::linha::: :::coluna::: Quando um aplicativo UWP é lançado em qualquer dispositivo Windows 10, ele inicia o [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) com um [Quadro](/uwp/api/Windows.UI.Xaml.Controls.Frame), que pode navegar entre instâncias de [Página](/uwp/api/Windows.UI.Xaml.Controls.Page).
-:::final da coluna::: :::coluna::: ![Quadro](images/frame.svg) :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        Quando um aplicativo UWP é lançado em qualquer dispositivo Windows 10, ele abre em uma [janela](/uwp/api/Windows.UI.Xaml.Controls.Window) com um [quadro](/uwp/api/Windows.UI.Xaml.Controls.Frame), que pode navegar entre instâncias de [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
+    :::column-end:::
+    :::column:::
+        ![Quadro](images/frame.svg)
+    :::column-end:::
+:::row-end:::
 
-:::linha::: :::coluna::: Você pode pensar na interface do usuário do aplicativo como uma coleção de páginas. Cabe a você decidir o que deve ir em cada página e as relações entre elas.
+:::row:::
+    :::column:::
+        Você pode pensar da interface do usuário do seu aplicativo como uma coleção de páginas. Cabe a você decidir o que deve ir em cada página e as relações entre elas.
 
         To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
     :::column-end:::
     :::column:::
         ![Frame](images/collection-pages.svg)
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ### <a name="page-layout"></a>Layout de página
 
@@ -107,7 +116,9 @@ Os controles comuns são altamente personalizáveis: você pode alterar a cor de
 
 ## <a name="shell"></a>Shell
 
-:::linha::: :::coluna::: Seu aplicativo UWP interage com a experiência mais ampla do Windows com blocos e notificações no [Shell](../shell/tiles-and-notifications/creating-tiles.md) do Windows.
+:::row:::
+    :::column:::
+        Seu aplicativo UWP interage com a experiência mais ampla do Windows com blocos e notificações no [Shell](../shell/tiles-and-notifications/creating-tiles.md)do Windows.
 
         Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
 
@@ -116,12 +127,18 @@ Os controles comuns são altamente personalizáveis: você pode alterar a cor de
     :::column:::
         ![tiles on start menu](images/shell.svg)
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="inputs"></a>Entradas
 
-:::linha::: :::coluna::: Os aplicativos UWP dependem de interações inteligentes. Você pode criar uma interação de clique sem precisar saber nem definir se o clique vem de um mouse, de uma caneta, ou do toque de um dedo. No entanto, você também pode criar seus aplicativos para [modos de entrada específicos](../input/input-primer.md).
-:::final da coluna::: :::coluna::: ![entradas](images/inputs.svg) :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        Aplicativos UWP dependem de interações inteligentes. Você pode criar uma interação de clique sem precisar saber nem definir se o clique vem de um mouse, de uma caneta, ou do toque de um dedo. No entanto, você também pode criar seus aplicativos para [modos de entrada específicos](../input/input-primer.md).
+    :::column-end:::
+    :::column:::
+        ![entradas](images/inputs.svg)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="devices"></a>Dispositivos
 

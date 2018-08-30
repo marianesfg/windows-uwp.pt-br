@@ -1,11 +1,11 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: The toggle switch represents a physical switch that allows users to turn things on or off.
 title: Diretrizes para controles de switches de alternância
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
@@ -16,20 +16,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a62adf816ece7217de6f2f6cb0ccd505f0a5ad56
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816361"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122578"
 ---
 # <a name="toggle-switches"></a>Switches de alternância
 
-O [botão de alternância](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx) representa um comutador físico que permite aos usuários ativar ou desativar itens, como um interruptor. Use os controles de botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
+O botão de alternância representa um comutador físico que permite aos usuários ativar ou desativar itens, como um interruptor. Use os controles de botão de alternância para apresentar aos usuários duas opções mutuamente excludentes (como ligar/desligar), em que a escolha de uma opção apresenta resultados imediatos.
 
-Para criar um controle de botão de alternância, use a [classe ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx).
+Para criar um controle de botão de alternância, use a [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **APIs importantes**: [classe ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx), [propriedade IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx), [evento Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+> **APIs importantes**: [classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propriedade IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
@@ -101,7 +101,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="ison"></a>IsOn
 
-O switch pode ser ativado ou desativado. Use a propriedade [IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) para determinar o estado do botão. Quando o switch é usado para controlar o estado de outra propriedade binária, você pode usar uma associação, conforme mostrado aqui.
+O switch pode ser ativado ou desativado. Use a propriedade [IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) para determinar o estado do botão. Quando o switch é usado para controlar o estado de outra propriedade binária, você pode usar uma associação, conforme mostrado aqui.
 
 ```xaml
 <StackPanel Orientation="Horizontal">
@@ -112,7 +112,7 @@ O switch pode ser ativado ou desativado. Use a propriedade [IsOn](https://msdn.m
 
 ### <a name="toggled"></a>Toggled
 
-Em outros casos, você pode manipular o evento [Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) para responder a alterações no estado.
+Em outros casos, você pode manipular o evento [Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) para responder a alterações no estado.
 
 Este exemplo mostra como adicionar um manipulador de evento Toggled no XAML e no código. O evento Toggled é manipulado para ativar ou desativar a um anel de progresso e alterar sua visibilidade.
 
@@ -156,7 +156,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>Rótulos Ligar/desligar
 
-Por padrão, o switch de alternância inclui rótulos Ligar/desligar literais, que são localizados automaticamente. Você pode substituir esses rótulos ao definir as propriedades [OnContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) e [OffContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx).
+Por padrão, o switch de alternância inclui rótulos Ligar/desligar literais, que são localizados automaticamente. Você pode substituir esses rótulos ao definir as propriedades [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) e [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent).
 
 Este exemplo substitui os rótulos Ligar/desligar por rótulos Mostrar/ocultar.
 
@@ -166,7 +166,7 @@ Este exemplo substitui os rótulos Ligar/desligar por rótulos Mostrar/ocultar.
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-Você também pode usar conteúdo mais complexo, ao definir as propriedades [OnContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) e [OffContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx).
+Você também pode usar conteúdo mais complexo, ao definir as propriedades [OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) e [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate).
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -175,11 +175,11 @@ Você também pode usar conteúdo mais complexo, ao definir as propriedades [OnC
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Classe ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [Classe ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Botões de opção](radio-button.md)
 - [Switches de alternância](toggles.md)
 - [Caixas de seleção](checkbox.md)
