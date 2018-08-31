@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado, política de privacidade, informações de contato de suporte, site do app, informações de suporte
 ms.localizationpriority: medium
 ms.openlocfilehash: d23fb0cb3fb4668682df1957cbf0c88bcf8649c1
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3121105"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3230229"
 ---
 # <a name="enter-app-properties"></a>Inserir as propriedades do aplicativo
 

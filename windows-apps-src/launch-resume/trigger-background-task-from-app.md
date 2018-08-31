@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: gatilho da tarefa em segundo plano, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ccd171f53795ef71830ffb022d0468facb3ac4f
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3121830"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3234335"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Ativar uma tarefa em segundo plano no seu aplicativo
 

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: a2e475cc39118824dcdfe777b8729fe2b7da1a1b
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.openlocfilehash: ef8e9cab3ce3bcdb390b527efc5ec65c5f92dd9f
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3112714"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3228061"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -265,7 +265,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > No entanto, se você estiver fazendo referência a seu tipo de sua interface de usuário do XAML, então haverá um tipo de implementação e um tipo projetado no mesmo projeto. Nesse caso, **faça** retorna uma instância do tipo projetado. Para obter um exemplo de código desse cenário, consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Portanto, você pode chamar [**IUnknown:: as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) nele de consulta de outros tipos projetados ou interfaces, que você pode também usar ou retornar.
+Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Portanto, você pode chamar [**IUnknown:: as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) nele de consulta de outros tipos projetados ou interfaces, que você pode também usar ou retornar.
 
 ```cppwinrt
 istringable.ToString();

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3123293"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3232398"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 

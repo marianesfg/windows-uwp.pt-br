@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3118882"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3237168"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 

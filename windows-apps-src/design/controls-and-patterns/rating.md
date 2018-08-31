@@ -15,11 +15,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 242ecdaf128e1e01b1bdeac4cce649504b8efc74
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3112077"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3228738"
 ---
 # <a name="rating-control"></a>Controle de classificação
 

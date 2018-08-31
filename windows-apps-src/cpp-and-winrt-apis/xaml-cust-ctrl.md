@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
-ms.openlocfilehash: 81eb7f29e511f76d1126c1e4a43a2b96f1fa6f9f
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.openlocfilehash: 25e17888c3292cbaf7b84c8a4bdd7c411530b558
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3119098"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3233058"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controles personalizados (modelos) de XAML com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -189,7 +189,7 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 };
 ```
 
-Funções de *Overridable* apresentam propriamente ditos diferente de projeções de idiomas diferentes. Em c#, por exemplo, função substituível normalmente aparecem como funções virtuais protegidas. No C++ c++ WinRT, elas são virtuais nem protegido, mas você ainda pode substituí-los e fornecer sua própria implementação, como mostrado acima.
+Funções de *Overridable* apresentam propriamente ditos diferente de projeções de linguagem diferente. Em c#, por exemplo, substituíveis funções normalmente aparecem como funções virtuais protegidas. No C++ c++ WinRT, elas são virtuais nem protegido, mas você ainda pode substituí-los e fornecer sua própria implementação, como mostrado acima.
 
 ## <a name="important-apis"></a>APIs importantes
 * [Controle](/uwp/api/windows.ui.xaml.controls.control)

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 63f730e5256cb88c04549cc64e36003885e02fb6
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3113296"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3228101"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Mover do C++/CX para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como transferir o código do [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) para seu equivalente no C++/WinRT.
@@ -198,7 +198,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Wind
 }
 ```
 
-O equivalente C + c++ WinRT código substitui o `dynamic_cast` com uma chamada para a função [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) , que encapsula **QueryInterface**. Você também tem a opção para chamar [**IUnknown::_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function), em vez disso, que gera uma exceção se estiver consultando a interface necessária (a interface padrão do tipo que você está solicitando) não é retornado. Aqui está um C + c++ exemplo de código do WinRT.
+O equivalente C + c++ WinRT código substitui o `dynamic_cast` com uma chamada para a função [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) , que encapsula **QueryInterface**. Você também tem a opção de chamar [**IUnknown:: as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function), em vez disso, que gera uma exceção se estiver consultando a interface necessária (a interface padrão do tipo que você está solicitando) não é retornado. Aqui está um C + c++ exemplo de código do WinRT.
 
 ```cppwinrt
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)

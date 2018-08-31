@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 25e3c76ae09ed6835f89f0d98c308f11c7a99624
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3112263"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3231968"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
