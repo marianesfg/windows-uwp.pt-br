@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3117533"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3241554"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 

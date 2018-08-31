@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 33091903ebf1a7ff1150dcaa9bd83a3e76417926
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3117573"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3239293"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2017
 
