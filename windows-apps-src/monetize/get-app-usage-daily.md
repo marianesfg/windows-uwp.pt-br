@@ -1,25 +1,25 @@
 ---
 author: Xansky
 ms.assetid: 99DB5622-3700-4FB2-803B-DA447A1FD7B7
-description: Use este método na API de análise da Microsoft Store para obter dados de uso diário do aplicativo para um determinado intervalo de datas e outros filtros opcionais.
-title: Obter uso diário do aplicativo
+description: Use esse método em análise da Microsoft Store API obter diariamente dados de uso do aplicativo para um determinado intervalo de datas e outros filtros opcionais.
+title: Obtenha o uso diário do aplicativo
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, serviços da Store, API, uso de análise da Microsoft Store
+keywords: Windows 10, uwp, serviços de armazenamento, análise de Microsoft Store API, uso
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3244344"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3376122"
 ---
-# <a name="get-daily-app-usage"></a>Obter uso diário do aplicativo
+# <a name="get-daily-app-usage"></a>Obtenha o uso diário do aplicativo
 
-Use este método na API de análise da Microsoft Store para obter dados de uso agregados (não incluindo o Xbox multijogador) no formato JSON para um aplicativo durante um determinado intervalo de datas (últimos 90 dias somente) e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de uso](../publish/usage-report.md) no painel do Centro de desenvolvimento do Windows.
+Use esse método na API de análise do Microsoft Store para obter dados de uso agregado (não incluindo vários jogadores do Xbox) no formato JSON para um aplicativo durante um determinado período (últimos 90 dias apenas) e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de uso](../publish/usage-report.md) no painel de controle do Windows Dev Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -60,7 +60,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de dados de uso diário do aplicativo. Substitua o valor de *applicationId* pela ID da Store de seu app.
+O exemplo a seguir demonstra uma solicitação para obter dados de uso diariamente app. Substitua o valor de *applicationId* pela ID da Store de seu app.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagedaily?applicationId=XXXXXXXXXXXX&startDate=2018-08-10&endDate=2018-08-14 HTTP/1.1
@@ -75,7 +75,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                                                                                                                         |
 |------------|--------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de uso agregados. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir. |
+| Valor      | array  | Uma matriz de objetos que contêm dados de uso agregadas. Para obter mais informações sobre os dados em cada objeto, consulte a tabela a seguir. |
 | @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de análise para a consulta.                 |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                          |
 
@@ -87,20 +87,20 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor                     | Tipo    | Descrição                                                               |
 |---------------------------|---------|---------------------------------------------------------------------------|
 | date                      | string  | A primeira data no intervalo de datas para os dados de uso. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas.        |
-| applicationId             | string  | A ID da loja do aplicativo para o qual você está recuperando dados de uso.          |
+| applicationId             | string  | A ID da loja do aplicativo para o qual você estiver recuperando dados de uso.          |
 | applicationName           | string  | O nome de exibição do app.                                              |
-| deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                         |
+| deviceType                | string  | Uma das seguintes sequências de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                         |
 | packageVersion            | string  | A versão do pacote em que ocorreu o uso.                          |
-| market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou seu aplicativo. |
-| subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                            |
+| market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou o seu aplicativo. |
+| subscriptionName          | string  | Indica se o uso era a passagem de jogo do Xbox.                            |
 | dailySessionCount         | comprimento    | O número de sessões de usuário em um dia.                                  |
-| engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando o aplicativo medido por um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.             |
-| dailyActiveUsers          | comprimento    | O número de clientes usando o aplicativo nesse dia.                           |
-| dailyActiveDevices        | comprimento    | O número de dispositivos diários usados para interagir com seu aplicativo por todos os usuários.  |
+| engagementDurationMinutes | double  | Os minutos onde usuários estão ativamente usando o aplicativo medido por um período distinto, iniciado quando o aplicativo é iniciado (início do processo) e terminam quando ele termina (Finalizar processo) ou após um período de inatividade.             |
+| dailyActiveUsers          | comprimento    | O número de clientes que usam o aplicativo nesse dia.                           |
+| dailyActiveDevices        | comprimento    | O número de dispositivos de diários usados para interagir com seu aplicativo por todos os usuários.  |
 | dailyNewUsers             | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez nesse dia.    |
-| monthlyActiveUsers        | comprimento    | O número de clientes usando o aplicativo nesse mês.                         |
-| monthlyActiveDevices      | comprimento    | O número de dispositivos executando o aplicativo para um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                                      |
-| monthlyNewUsers           | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez nesse mês.  |
+| monthlyActiveUsers        | comprimento    | O número de clientes que usam o aplicativo nesse mês.                         |
+| monthlyActiveDevices      | comprimento    | O número de dispositivos que executam seu aplicativo por um período de tempo, iniciado quando o aplicativo é iniciado (Iniciar processo) distinto e terminam quando ele termina (Finalizar processo) ou após um período de inatividade.                                      |
+| monthlyNewUsers           | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez esse mês.  |
 
 
 ### <a name="response-example"></a>Exemplo de resposta
@@ -170,7 +170,7 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obter mensal ussage de aplicativo](get-app-usage-monthly.md)
+* [Obter ussage de aplicativo mensal](get-app-usage-monthly.md)
 * [Obter aquisições de app](get-app-acquisitions.md)
 * [Obter aquisições de complemento](get-in-app-acquisitions.md)
 * [Obter dados de relatório de erros](get-error-reporting-data.md)

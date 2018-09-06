@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3231212"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3382162"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -84,8 +84,8 @@ Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Cen
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
-| Aquisições, conversões e instalações |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li></ul> |
-| Erros de app | <ul><li>[Obter dados de relatórios de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
+| Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li><li>[Obter uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter mensal uso do aplicativo](get-app-usage-monthly.md)</li></ul> |
+| Erros de app | <ul><li>[Obter dados de relatórios de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha de um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | Percepções | <ul><li>[Obter dados de ideias de seu aplicativo](get-insights-data-for-your-app.md)</li></ul>  |
 | Classificações e opiniões | <ul><li>[Obter classificações de app](get-app-ratings.md)</li><li>[Obter avaliações de app](get-app-reviews.md)</li></ul> |
 | Anúncios no app e campanhas publicitárias | <ul><li>[Obter dados de desempenho de anúncios](get-ad-performance-data.md)</li><li>[Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)</li></ul> |

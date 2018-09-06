@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3229668"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3376829"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory
 
