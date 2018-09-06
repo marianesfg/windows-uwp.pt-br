@@ -11,11 +11,11 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, registrar eventos
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b9cd4d7c527001bb382596c9c805be4ad5e7b08
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3390242"
+ms.locfileid: "3413895"
 ---
 # <a name="log-custom-events-for-dev-center"></a>Registrar eventos personalizados para o Centro de Desenvolvimento
 

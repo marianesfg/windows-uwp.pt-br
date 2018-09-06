@@ -11,11 +11,11 @@ keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualiza
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3392832"
+ms.locfileid: "3411279"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
