@@ -9,13 +9,13 @@ ms.prod: windows
 ms.topic: article
 keywords: introdução, windows 10, uwp, xaml, c#
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 9e2cd95cfc74273f4c9f6c949a5a618542b99acf
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8d7ad7835e56b874c37b9376eb00278fea055dd1
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815741"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3398478"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introdução aos aplicativos do Windows 10 
  
@@ -75,7 +75,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                         <h3>Comece a codificar</h3>
                         <p>Se você for um desenvolvedor experiente ou se estiver criando seu primeiro app, obtenha experiência prática com a plataforma Windows 10 e documentos.</p>
                         <ul>
-                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Criar apps para Windows</a></li>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Comece a codificar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui">Noções básicas sobre a interface do usuário</a></p>
                     <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding">Associação de dados</a></p>
-                    <p><a href="//docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-basics-style">Estilos personalizados</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-style">Estilos personalizados</a></p>
                 </div>
             </div>
         </div>
@@ -219,7 +219,7 @@ Crie apps que funcionam em todos os dispositivos Windows 10 ou aprimore seus app
                 <div class="card">
                     <div class="cardText">
                         <h3>Ferramentas de desenvolvedor</h3>
-                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de ferramentas da Comunidade UWP</a></p>
+                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Kit de Ferramentas da Comunidade do Windows</a></p>
                         <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">Máquinas virtuais</a></p>
                         <p><a href="//docs.microsoft.com/windows/wsl/about">Bash do Ubuntu no Windows</a></p>
                         </div>
