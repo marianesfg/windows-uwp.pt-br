@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3417931"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665700"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2018
 
@@ -32,7 +32,7 @@ Os recursos a seguir foram adicionados para o Windows compilações do Insider P
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [divisão](../design/controls-and-patterns/buttons.md#create-a-split-button)e [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) fornecem controles de botão com recursos especializados para aprimorar a interface do usuário do seu aplicativo.
 
-![Um botão de divisão para a seleção de cor do primeiro plano](../design/controls-and-patterns/images/split-button-rtb.png)
+![Um botão de divisão para a seleção de cor de primeiro plano](../design/controls-and-patterns/images/split-button-rtb.png)
 
 * NavigationView agora oferece suporte a [navegação superior](../design/controls-and-patterns/navigationview.md), para casos em que seu aplicativo tem um número menor de opções de navegação e exigem mais espaço para conteúdo do seu aplicativo.
 

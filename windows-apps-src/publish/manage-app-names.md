@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: o Windows 10, uwp, nomes de aplicativo, alterar o nome do aplicativo, atualização de nome do aplicativo, jogo, nome do produto
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d2c6f72e2f69f0b768af55f9bddeb9bb008027
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3418273"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661267"
 ---
 # <a name="manage-app-names"></a>Gerenciar nomes de aplicativo
 

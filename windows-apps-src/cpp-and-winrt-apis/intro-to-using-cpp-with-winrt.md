@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: 03abe68fd19573d7b2deba9937c515a8641e8fca
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3409582"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3660911"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -54,7 +54,7 @@ Em seguida, será possível criar e criar ou abrir, C++ c++ WinRT projeto no Vis
 
 Após adicionar essa propriedade, você receberá o suporte do MSBuild para C++/WinRT no projeto, incluindo a invocação da ferramenta `cppwinrt.exe`.
 
-Como o C++/WinRT usa recursos do padrão C++17, ele precisa da propriedade de projeto **C/C++** > **Linguagem** > **Padrão ISO C++17 (/std:c++17)**. Talvez também seja necessário definir **Modo de conformidade: Sim (/permissive-)**, o que restringirá ainda mais seu código para que seja compatível com padrões.
+Como C++ c++ WinRT usa recursos a partir do padrão c++17, ele precisa da propriedade **C/C++** do projeto > **idioma** > **Padrão de linguagem C++** > **ISO padrão c++17 (/ std:c++17 + + 17)**. Talvez também seja necessário definir **Modo de conformidade: Sim (/permissive-)**, o que restringirá ainda mais seu código para que seja compatível com padrões.
 
 Outra propriedade de projeto a ser considerada é **C/C++** > **Geral** > **Tratar Avisos como Erros**. Defina-a como **Sim (/WX)** ou **Não (/WX-)** para fazer um teste. Às vezes, os arquivos de origem gerados pela ferramenta `cppwinrt.exe` geram avisos até você adicionar a implementação a eles.
 

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, coleção
 ms.localizationpriority: medium
-ms.openlocfilehash: 5495649a6b7fad633e24e244aa3f6efbcc05e441
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: dc52274c80f3689d2cb10b98bda38788e3400b4e
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421094"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661571"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Coleções com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-Como você pode ver no exemplo de código acima, depois de criar a coleção você pode acrescentar elementos, iterar sobre eles e geralmente tratarem o objeto como faria com qualquer objeto de coleção do Windows Runtime que você pode ter recebido de uma API. Se você precisar de um modo de exibição imutável na coleção, você pode chamar [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão mostrado acima&mdash;criar e consumir uma coleção&mdash;é adequado para cenários simples onde você deseja passar dados em ou obter dados fora, uma API.
+Como você pode ver no exemplo de código acima, depois de criar a coleção você pode acrescentar elementos, iterar sobre eles e geralmente tratarem o objeto como faria com qualquer objeto de coleção do Windows Runtime que você pode ter recebido de uma API. Se você precisar de um modo de exibição imutável na coleção, você pode chamar [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), conforme mostrado. O padrão mostrado acima&mdash;criar e consumir uma coleção&mdash;é adequado para cenários simples onde você deseja passar dados em ou obter dados fora, uma API. Você pode passar um **IVector**ou um **IVectorView**, em qualquer lugar um [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) é esperado.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>Coleção de uso geral, preparada de dados
 
@@ -85,7 +85,14 @@ auto bookSkus{ winrt::single_threaded_vector<Windows::Foundation::IInspectable>(
 bookSkus.Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 ```
 
-A coleção acima *pode* ser vinculado a um controle de itens XAML; mas a coleção não é observável.
+Você pode criar uma coleção de tempo de execução do Windows de dados e obter uma visão nele pronto para passar para uma API, sem copiar nada.
+
+```cppwinrt
+std::vector<float> values{ 0.1f, 0.2f, 0.3f };
+IVectorView<float> view{ winrt::single_threaded_vector(std::move(values)).GetView() };
+```
+
+Nos exemplos acima, a coleção criamos *pode* ser vinculado a um controle de itens XAML; mas a coleção não é observável.
 
 ### <a name="observable-collection"></a>Coleção observável
 

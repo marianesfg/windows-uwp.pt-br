@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b52bf8e33bbf111dd02c695d8c3baf77e1338ac
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 1b0aa1a53ce69369c442cef7f3b5912631593242
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413589"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3660648"
 ---
 # <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar eventos com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -28,7 +28,7 @@ Este tópico demonstra como criar um componente do Tempo de Execução do Window
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Criar um componente do Tempo de Execução do Windows (BankAccountWRC)
 
-Comece criando um novo projeto no Microsoft Visual Studio. Crie um projeto **Componente do Tempo de Execução do Windows com Visual C++ (C++/WinRT)** e nomeie *BankAccountWRC* (para "conta bancária do componente do Tempo de Execução do Windows").
+Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **componente do Windows Runtime (C++ c++ WinRT)** projeto e nomeie- *BankAccountWRC* (para "conta bancária componente de tempo de execução do Windows").
 
 O projeto recém-criado contém um arquivo chamado `Class.idl`. Renomeie o arquivo `BankAccount.idl` (renomear o `.idl` arquivo renomeia automaticamente o dependente `.h` e `.cpp` arquivos, também). Substitua o conteúdo do `BankAccount.idl` com a lista abaixo.
 
@@ -101,7 +101,7 @@ Se quaisquer avisos impedirem-lo de construção, resolvê-los ou defina a propr
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um aplicativo principal (BankAccountCoreApp) para testar o componente do Tempo de Execução do Windows
 
-Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Crie um projeto do **Aplicativo principal do Visual C++ (C++/WinRT)** e nomeie-o *BankAccountCoreApp*.
+Agora crie um novo projeto (em sua solução `BankAccountWRC` ou em uma nova). Criar um **Visual C++** > **Universal do Windows** > **aplicativo principal (C + c++ WinRT)** projeto e nomeie- *BankAccountCoreApp*.
 
 Adicione uma referência e navegue até `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (ou adicione uma referência de projeto a projeto, se os dois projetos estiverem na mesma solução). Clique em **Adicionar** e, depois, em **OK**. Agora crie BankAccountCoreApp. No evento improvável que você vir um erro que o arquivo de carga `readme.txt` não existe, exclua esse arquivo do projeto do componente de tempo de execução do Windows, reconstrua-o e recompile BankAccountCoreApp.
 
