@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
-ms.openlocfilehash: 31913ae162bfe541d04f304db87b4dff962a8af4
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: bdf4d3ff17dcdf51dba2e37929228560e2e58fb5
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413490"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661949"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>Controles XAML; vincular a uma propriedade [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em C++/WinRT, e como vincular controles de XAML a elas.
@@ -31,7 +31,7 @@ Um elemento de texto ou controle de XAML pode se associar a e manipular esses ev
 > Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="create-a-blank-app-bookstore"></a>Criar um Aplicativo em branco (Bookstore)
-Inicie criando um novo projeto no Microsoft Visual Studio. Crie um projeto do **Aplicativo em branco do Visual C++ (C++/WinRT)** e nomeie-o *Bookstore*.
+Inicie criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **aplicativo em branco (C++ c++ WinRT)** projeto e nomeie- *Bookstore*.
 
 Vamos criar uma nova classe para representar um livro que tem uma propriedade de título observável. Estamos criando e consumindo a classe dentro da mesma unidade de compilação. Mas queremos poder associar a essa classe do XAML, e por isso ela será uma classe de tempo de execução. E vamos usar C++/WinRT para criar e consumi-lo.
 

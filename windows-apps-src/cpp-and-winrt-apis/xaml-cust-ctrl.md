@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
-ms.openlocfilehash: 25e17888c3292cbaf7b84c8a4bdd7c411530b558
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422191"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3664853"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controles personalizados (modelos) de XAML com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -27,7 +27,7 @@ ms.locfileid: "3422191"
 Um dos recursos mais avançados de Universal Windows Platform (UWP) é a flexibilidade que fornece a pilha de interface do usuário (IU) para criar controles personalizados com base no tipo de [**controle**](/uwp/api/windows.ui.xaml.controls.control) do XAML. A estrutura de XAML UI fornece recursos, como [Propriedades de dependência personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) e propriedades anexadas e [modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates), que tornam mais fácil criar controles rico e personalizáveis. Este tópico o orienta pelas etapas de criação de um controle personalizado (modelo) com C++ c++ WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Criar um aplicativo em branco (BgLabelControlApp)
-Comece criando um novo projeto no Microsoft Visual Studio. Criar um **aplicativo em branco do Visual C++ (C++ c++ WinRT)** do projeto e nomeie- *BgLabelControlApp*.
+Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++** > **Universal do Windows** > **aplicativo em branco (C++ c++ WinRT)** projeto e nomeie- *BgLabelControlApp*.
 
 Vamos criar uma nova classe para representar um controle personalizado (modelo). Estamos criando e consumindo a classe dentro da mesma unidade de compilação. Mas queremos poder criar uma instância dessa classe da marcação XAML e para que o motivo pelo qual vai ser uma classe de tempo de execução. E vamos usar C++/WinRT para criar e consumi-lo.
 

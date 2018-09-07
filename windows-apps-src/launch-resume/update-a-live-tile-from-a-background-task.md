@@ -9,14 +9,14 @@ ms.date: 01/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: tarefas do plano de fundo do Windows 10, uwp,
+keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413576"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3664708"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 

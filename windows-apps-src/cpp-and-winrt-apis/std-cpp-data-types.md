@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, tipos de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 729a3c30f84e20a89912b728db1efecc3e54ad9e
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422474"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3663963"
 ---
 # <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Tipos de dados C++ padrão e [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Com o C++/WinRT, você pode chamar APIs do Windows Runtime usando tipos de dados C++ padrão, incluindo alguns tipos de dados da Biblioteca Padrão C++. Você pode passar cadeias de caracteres padrão para APIs (consulte [cadeia de caracteres de manipulação no C++ c++ WinRT](strings.md)), e você pode passar inicializador listas e contêineres padrão para APIs que espera uma coleção semanticamente equivalente.
