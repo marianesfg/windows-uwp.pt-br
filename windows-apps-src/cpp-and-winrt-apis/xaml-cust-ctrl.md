@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: fd1843afc58bc758db1c6e575f3733bdc4f47b4e
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664853"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821030"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Controles personalizados (modelos) de XAML com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -192,10 +192,10 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 Funções de *Overridable* apresentam propriamente ditos diferente de projeções de linguagem diferente. Em c#, por exemplo, substituíveis funções normalmente aparecem como funções virtuais protegidas. No C++ c++ WinRT, elas são virtuais nem protegido, mas você ainda pode substituí-los e fornecer sua própria implementação, como mostrado acima.
 
 ## <a name="important-apis"></a>APIs importantes
-* [Controle](/uwp/api/windows.ui.xaml.controls.control)
-* [DependencyProperty](/uwp/api/windows.ui.xaml.dependencyproperty)
-* [FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement)
-* [UIElement](/uwp/api/windows.ui.xaml.uielement)
+* [Classe de controle](/uwp/api/windows.ui.xaml.controls.control)
+* [Classe DependencyProperty](/uwp/api/windows.ui.xaml.dependencyproperty)
+* [Classe de FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement)
+* [Classe UIElement](/uwp/api/windows.ui.xaml.uielement)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Modelos de controle](/windows/uwp/design/controls-and-patterns/control-templates)

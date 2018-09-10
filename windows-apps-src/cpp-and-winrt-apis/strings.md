@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, cadeia de caracteres
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e41abffdfa79847353af4de47bcbfa050c00627
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: 332edcf17f2b6bbf595def67c9df7043f21828c7
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912934"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821120"
 ---
 # <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Tratamento de cadeia de caracteres em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Com o C + + WinRT, você pode chamar APIs do Windows Runtime usando tipos de cadeia de caracteres longa da Biblioteca Padrão C++, como **std::wstring** (observação: mas não com tipos de cadeia de caracteres curta, como **std::string**). O C++/WinRT tem um tipo de cadeia de caracteres personalizado chamado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido na biblioteca C++/WinRT, que é `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Esse é o tipo de cadeia de caracteres que construtores, funções e propriedades do Windows Runtime podem retornar. Mas, em muitos casos, graças aos construtores e operadores de conversão **hstring**, você pode optar se deseja ou não estar ciente do **hstring** no código cliente. Se você estiver *criando* APIs, provavelmente precisará saber sobre a existência de **hstring**.
@@ -176,5 +176,5 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt::to_string](/uwp/cpp-ref-for-winrt/to-string)
-* [winrt::to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
+* [função to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
+* [função WinRT:: to_string](/uwp/cpp-ref-for-winrt/to-string)

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: a29c095e49b49baa63bd547c0bb928ad7f78aa86
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664649"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821990"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Manejar eventos usando delegados em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. Você pode manipular um evento usando qualquer objeto de função de C++ padrão.
@@ -264,7 +264,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 Na cláusula de captura lambda, é criada uma variável temporária, que representa uma referência fraca a *isso*. No corpo do lambda, se uma referência forte a *isso* puder ser obtida, então a função **OnCompositionScaleChanged** é chamada. Dessa forma, dentro de **OnCompositionScaleChanged**, *isso* pode ser usado com segurança.
 
 ## <a name="important-apis"></a>APIs Importantes
-* [winrt::auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [struct de marcador WinRT:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [Função winrt::implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [Função winrt::implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 
