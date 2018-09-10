@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: eba4922240983f76a1f83770e2797063ba30b8b7
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 598d0e7b4a374c18ece48f52947cec64a0f79dab
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3662302"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3824820"
 ---
 # <a name="consume-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir componentes COM [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -477,6 +477,6 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 ```
 
 ## <a name="important-apis"></a>APIs importantes
-* [WinRT:: check_hresult](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
-* [winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
+* [winrt::check_hresult function](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
+* [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [Struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)

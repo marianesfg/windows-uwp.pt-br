@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 9829144a23d96f9bb53332b12181b67ba6a58565
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 051c24e0acc645150f4ca7ff74480f7de3ce456b
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3658835"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3825326"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -380,13 +380,13 @@ Até você fazer a edição descrita acima (para passar esse parâmetro do const
 
 ## <a name="important-apis"></a>APIs Importantes
 * [Modelo de estrutura winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
+* [função WinRT::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
 * [Modelo de função winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
 * [modelo de função WinRT::get_self](/uwp/cpp-ref-for-winrt/get-self)
 * [Modelo de estrutura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
 * [Modelo de função winrt::make](/uwp/cpp-ref-for-winrt/make)
 * [Modelo de função winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
-* [winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
+* [Função winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Consumir APIs com C++/WinRT](consume-apis.md)

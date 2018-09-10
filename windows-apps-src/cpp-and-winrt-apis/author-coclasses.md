@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, o autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 428e1e963c89b7f9061d6b579b3bd5368a3a0ad1
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3659031"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3825223"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar componentes COM [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -22,8 +22,6 @@ C++ c++ WinRT pode ajudar você a criar aplicativos clássicos (COM Component Ob
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
-//
-
 #include "pch.h"
 
 using namespace winrt;
@@ -47,6 +45,8 @@ int main()
 }
 ```
 
+Consulte também [componentes de consumir COM C++ c++ WinRT](consume-com.md).
+
 ## <a name="a-more-realistic-and-interesting-example"></a>Um exemplo mais realista e interessante
 
 O restante deste tópico explica como criar um projeto de aplicativo de console mínimo que usa C++ c++ WinRT para implementar uma fábrica coclass e classe básica. O aplicativo de exemplo mostra como fornecer uma notificação do sistema com um botão de retorno de chamada nele, e o coclass (que implementa a interface **INotificationActivationCallback** COM) permite que o aplicativo ser iniciado e chamado quando o usuário clicar nesse botão na notificação.
@@ -60,8 +60,6 @@ Comece criando um novo projeto no Microsoft Visual Studio. Criar um **Visual C++
 Abra `main.cpp`e remover as usando-diretivas que gera o modelo de projeto. Em seu lugar, cole o seguinte código (o que nos dá a bibliotecas, cabeçalhos e nomes de tipo que precisamos).
 
 ```cppwinrt
-#pragma comment(lib, "onecore")
-#pragma comment(lib, "propsys")
 #pragma comment(lib, "shell32")
 
 #include <iomanip>
@@ -80,7 +78,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Implementar a fábrica coclass e de classe
 
-No C++ c++ WinRT, você implementa coclasses e fábricas de classe, derivando diretamente de struct [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) base. Imediatamente após as três usando-diretivas mostradas acima (e antes de `main`), cole este código para implementar o componente de ativador COM notificação do sistema.
+No C++ c++ WinRT, você implementa coclasses e fábricas de classe, derivando struct [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) base. Imediatamente após as três usando-diretivas mostradas acima (e antes de `main`), cole este código para implementar o componente de ativador de notificação COM notificação do sistema.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -93,15 +91,22 @@ std::wstring const this_app_name{ L"ToastAndCallback" };
 struct callback : winrt::implements<callback, INotificationActivationCallback>
 {
     HRESULT __stdcall Activate(
-        [[maybe_unused]] LPCWSTR app,
-        [[maybe_unused]] LPCWSTR args,
+        LPCWSTR app,
+        LPCWSTR args,
         [[maybe_unused]] NOTIFICATION_USER_INPUT_DATA const* data,
         [[maybe_unused]] ULONG count) noexcept final
     {
-        std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
-        std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
-        std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
-        return S_OK;
+        try
+        {
+            std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
+            std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
+            std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
+            return S_OK;
+        }
+        catch (...)
+        {
+            return winrt::to_hresult();
+        }
     }
 };
 
@@ -137,9 +142,9 @@ O coclass que implementamos apenas é conhecido como o *ativador COM* para notif
 
 ## <a name="best-practices-for-implementing-com-methods"></a>Práticas recomendadas para implementar métodos COM
 
-Técnicas para o tratamento de erros e gerenciamento de recursos podem ir mão em conjunto. É mais conveniente e prático usar exceções de códigos de erro. E se você implante a aquisição de recurso são o idioma de inicialização (RAII), então você pode evitar a: verificar se há explicitamente códigos de erro; e, em seguida, explicitamente liberando recursos. Isso torna seu código mais complicado que o necessário, e fornece erros muitos locais para ocultar. Em vez disso, use RAII e capturar exceções. Dessa forma, seus alocações de recursos são prova de exceções, e seu código é simple.
+Técnicas para o tratamento de erros e gerenciamento de recursos podem ir mão em conjunto. É mais conveniente e prático usar exceções de códigos de erro. E se você usar o idioma de (RAII)-aquisição-for-inicialização de recursos, em seguida, você pode evitar explicitamente verificando códigos de erro e, em seguida, explicitamente liberando recursos. Essas verificações explícitas tornam seu código mais complicado que o necessário e dá bugs muitos locais para ocultar. Em vez disso, use RAII e jogue/catch exceções. Dessa forma, seus alocações de recursos são prova de exceções, e seu código é simple.
 
-No entanto, você não deve permitir exceções escapar suas implementações de método COM. Você pode assegurar que usando o `noexcept` especificador em seus métodos COM. É okey para exceções seja lançada em qualquer lugar no gráfico de chamada do seu método, desde que você manipulá-los antes do método é encerrado.
+No entanto, você não deve permitir exceções escapar suas implementações de método COM. Você pode assegurar que usando o `noexcept` especificador em seus métodos COM. É okey para exceções seja lançada em qualquer lugar no gráfico de chamada do seu método, desde que você manipulá-los antes do método é encerrado. Se você usar `noexcept`, mas você, em seguida, permitir que uma exceção no seu método de escape, seu aplicativo será encerrado.
 
 ## <a name="add-helper-types-and-functions"></a>Adicionar funções e tipos auxiliares
 
@@ -376,3 +381,13 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 ## <a name="how-to-test-the-example-application"></a>Como testar o aplicativo de exemplo
 
 Criar o aplicativo e, em seguida, executá-lo a pelo menos uma vez como administrador para fazer com que o registro e outra instalação, o código para ser executado. Ou não que está executando como administrador e pressione pré-lançados ' para fazer com que uma notificação do sistema a ser exibido. Clique no botão **ToastAndCallback de retorno de chamada** tanto diretamente da notificação do sistema que estalos para cima ou da Central de ações e seu aplicativo serão iniciados, o coclass instanciado e o INotificationActivationCallback ** :: Ativar** método executado.
+
+## <a name="important-apis"></a>APIs Importantes
+* [Interface IInspectable](https://msdn.microsoft.com/library/br205821)
+* [Interface IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
+* [Modelo de estrutura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
+
+## <a name="related-topics"></a>Tópicos relacionados
+* [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [Consumir componentes COM C++ c++ WinRT](consume-com.md)
+* [Enviar uma notificação do sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

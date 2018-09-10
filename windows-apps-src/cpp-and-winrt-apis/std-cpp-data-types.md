@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, tipos de dados
 ms.localizationpriority: medium
-ms.openlocfilehash: 729a3c30f84e20a89912b728db1efecc3e54ad9e
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 0b004b5dfbeaa1d123398db780582382857eec25
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3663963"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823620"
 ---
 # <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Tipos de dados C++ padrão e [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Com o C++/WinRT, você pode chamar APIs do Windows Runtime usando tipos de dados C++ padrão, incluindo alguns tipos de dados da Biblioteca Padrão C++. Você pode passar cadeias de caracteres padrão para APIs (consulte [cadeia de caracteres de manipulação no C++ c++ WinRT](strings.md)), e você pode passar inicializador listas e contêineres padrão para APIs que espera uma coleção semanticamente equivalente.
@@ -156,7 +156,7 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 Você pode continuar a usar a [Biblioteca de padrões paralelos (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl) ao chamar APIs assíncronas do Windows Runtime. No entanto, em muitos casos, rotinas concomitantes de C++ fornecem um idioma eficiente e mais facilmente codificado para interagir com objetos assíncronos. Para obter mais informações e exemplos de código, consulte [simultaneidade e operações assíncronas com C++ c++ WinRT](concurrency.md).
 
 ## <a name="important-apis"></a>APIs importantes
-* [IVector&lt;T&gt;](/uwp/api/windows.foundation.collections.ivector_t_)
+* [IVector&lt;T&gt; interface](/uwp/api/windows.foundation.collections.ivector_t_)
 * [Modelo de struct winrt::array_view](/uwp/cpp-ref-for-winrt/array-view)
 
 ## <a name="related-topics"></a>Tópicos relacionados

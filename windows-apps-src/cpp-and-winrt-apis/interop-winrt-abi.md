@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: af9c14043fdfcc10828f87e8c954430f8f587412
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: b641591e7be23226edc354e02513d723fbe8afba
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912894"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3822550"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>Interoperabilidade entre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) e a ABI
 Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) do SDK e objetos do C++/WinRT. Você pode usar essas técnicas para favorecer a interoperabilidade entre o código que usa essas duas maneiras de programação com o Windows Runtime ou pode usá-las à medida que migra gradativamente o código da ABI para o C++/WinRT.
@@ -234,13 +234,13 @@ int main()
 ```
 
 ## <a name="important-apis"></a>APIs importantes
-* [AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379)
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [winrt::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
+* [Função AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379)
+* [Função QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [função WinRT:: attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
 * [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi](/uwp/cpp-ref-for-winrt/copy-to-abi)
-* [winrt::detach_abi](/uwp/cpp-ref-for-winrt/detach-abi)
-* [winrt::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
+* [função WinRT:: copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [função WinRT:: copy_to_abi](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [função WinRT:: detach_abi](/uwp/cpp-ref-for-winrt/detach-abi)
+* [Função winrt::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
 * [Função membro winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 * [Função membro winrt::Windows::Foundation::IUnknown::try_as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)
