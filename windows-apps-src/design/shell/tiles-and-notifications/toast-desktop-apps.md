@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Discover the different options desktop Win32 apps have for sending toast notifications
 title: Notificações do sistema a partir de aplicativos da área de trabalho
 label: Toast notifications from desktop apps
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd6cfaeeaa8cc5f2b166a7749c565c252fbd26
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 9f54519fd0ddc975c1e57c2aebde583ef971850d
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917779"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3846760"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 

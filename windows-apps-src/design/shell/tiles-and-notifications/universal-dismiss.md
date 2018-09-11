@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Universal Dismiss on your toast notifications.
 title: Ignorar universal
 label: Universal Dismiss
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, notificação do sistema, Central de ações na nuvem, ignorar universal, notificação, entre dispositivos, ignorar uma vez, ignorar em todos os locais
 ms.localizationpriority: medium
-ms.openlocfilehash: ef7d0c55c902f179f0375a63735c7cc3a6a9f96d
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 90ad60949504d4478341ff9455fe0f7da90d78a9
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523175"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3847240"
 ---
 # <a name="universal-dismiss"></a>Ignorar universal
 

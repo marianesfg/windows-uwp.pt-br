@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how Win32 C# apps can send local toast notifications and handle the user clicking the toast.
 title: Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C#, c sharp
 ms.localizationpriority: medium
-ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983452"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3847140"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 
@@ -70,7 +70,7 @@ Copie o [arquivo DesktopNotificationManagerCompat.cs do GitHub](https://raw.gith
 
 ## <a name="step-4-implement-the-activator"></a>Etapa 4: implementar o ativador
 
-Você deve implementar um manipulador de ativação de notificação do sistema para que, quando o usuário clicar em sua notificação do sistema, seu aplicativo pode fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
+Você deve implementar um manipulador de ativação de notificação do sistema, de modo que quando o usuário clica na notificação do sistema, seu aplicativo pode fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
 
 Estenda a classe **NotificationActivator** e adicione os três atributos listados abaixo e crie uma CLSID de GUID exclusiva para o aplicativo usando um dos muitos geradores de GUID online. Essa CLSID (identificador de classe) é como a Central de Ações sabe qual classe ativar para COM.
 

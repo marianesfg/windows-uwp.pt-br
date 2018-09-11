@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3821190"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845082"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 

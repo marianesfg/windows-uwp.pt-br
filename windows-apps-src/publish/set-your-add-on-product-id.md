@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complementos, cra, durável, consumível, assinatura, tipo de produto, id do produto, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0673048fc9a1ed8fb7c439607ebc4197039699e9
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3820330"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845530"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Definir seu tipo de produto e ID do produto (product ID) do complemento
 
