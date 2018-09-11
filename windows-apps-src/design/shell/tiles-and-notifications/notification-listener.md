@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Notification Listener to access all of the user's notifications.
 title: Ouvinte de notificação
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
-ms.openlocfilehash: 00774817574c209826050a084bba77084d404ace
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674613"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850580"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
@@ -281,19 +281,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento em primeiro plano para notificação adicionada/ignorada
 
 > [!IMPORTANT] 
-> Problema conhecido: o evento em primeiro plano não funciona (e não temos planos de imediatos de corrigir isso). 
+> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para Windows, podemos irá corrigir isso.
 
-Se você tiver um cenário que requeira o evento em primeiro plano, informe-nos. No entanto, a maioria dos cenários (se não todos) usará a tarefa em segundo plano assim mesmo, pois seu app provavelmente precisará ser ativado em segundo plano para eventos de notificação. Por exemplo, o app do dispositivo acessório raramente está em primeiro plano e precisa saber sobre as novas notificações do segundo plano.
-
-Além disso, graças ao [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md), é fácil usar gatilhos de tarefa em segundo plano no app em primeiro plano. Então, se você precisa receber eventos em primeiro plano, basta usar o gatilho de segundo plano com o modelo de processo único.
+Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receba eventos notificações de alteração de ambos os enquanto seu aplicativo está em execução ou fechado.
 
 ```csharp
-// Subscribe to foreground event
+// Subscribe to foreground event (DON'T USE THIS)
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event DOES NOT WORK. Use the background task instead.
+    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
 }
 ```
 

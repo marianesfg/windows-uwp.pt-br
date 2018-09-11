@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 43e727100872421ac519a7c00363e6f6eeaf832c
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877128"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849870"
 ---
 # <a name="designing-for-sets"></a>Projetando para conjuntos
 
@@ -119,7 +119,7 @@ Se você colocou conteúdo ou funcionalidade na interface do usuário da barra d
 
 Para garantir que o ícone do aplicativo tenha a melhor aparência em um Conjunto, você deve fornecer um ícone alternativo, sem fundo para o aplicativo. (o ícone do aplicativo usado na guia é o mesmo ícone usado na barra de tarefas). A finalidade do ícone alternativo é a aparência em relação a qualquer cor de fundo. O ícone alternativo será usado, se disponível.
 
-No manifesto do aplicativo, especifique um ícone sem fundo de forma alternativa além de ícone normal. Para obter mais informações, veja as [Diretrizes de ativo de bloco e ícone](./tiles-and-notifications/app-assets.md) . O ícone para especificar está documentado como "Ativos da lista de tamanho desejado sem fundo" na seção [Tipos de ativos](./tiles-and-notifications/app-assets.md#asset-types) do artigo.
+No manifesto do aplicativo, especifique um ícone sem fundo de forma alternativa além de ícone normal. Para obter mais informações, consulte [logotipos e ícones de aplicativos](/windows/uwp/design/style/app-icons-and-logos). O ícone para especificar está documentado como "ativos da lista de tamanho desejado sem fundo" na seção [mais informações sobre os ativos de ícone de aplicativo](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) do artigo.
 
 Caso não especifique um ícone alternativo no manifesto do aplicativo, o sistema usará novamente a corda da guia no ícone do bloco.
 
