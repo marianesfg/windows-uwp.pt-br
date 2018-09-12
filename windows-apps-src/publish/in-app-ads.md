@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851316"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930428"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -71,7 +71,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade publicitária tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e eventualmente removê-lo do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -87,7 +87,7 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 1. [Criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade de anúncio existente](#available-ad-units).
 2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
-    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garante que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
+    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garantirá que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
     * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
@@ -111,7 +111,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 
 |  Rede de publicidade  |  Descrição  |  Tipos de anúncio com suporte  |
 |--------------|---------------|---------------------|
-| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e ele não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
+| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
 | AppNexus (direto) | Selecione esta opção para veicular anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
 | Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |

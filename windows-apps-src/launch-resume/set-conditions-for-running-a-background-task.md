@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848370"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3936533"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -31,7 +31,7 @@ ms.locfileid: "3848370"
 
 Saiba como definir condições que controlam quando a sua tarefa em segundo plano será executada.
 
-Às vezes, tarefas em segundo plano exigem que certas condições sejam atendidas para a tarefa em segundo plano seja executado com êxito. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada após o gatilho já tiver sido disparado. A tarefa em segundo plano será, em seguida, ser colocados em fila, mas ele não será executado até que todas as condições forem atendidas.
+Às vezes, tarefas em segundo plano exigem que certas condições sejam atendidas para a tarefa em segundo plano seja executado com êxito. Você pode definir uma ou mais das condições especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) ao registrar sua tarefa em segundo plano. A condição será verificada após o gatilho já tiver sido disparado. A tarefa em segundo plano, em seguida, será em fila, mas ele não será executado até que todas as condições forem atendidas.
 
 Colocar condições em tarefas em segundo plano poupa bateria e CPU, impedindo que tarefas em execução desnecessariamente. Por exemplo, se a sua tarefa em segundo plano é executada com um temporizador e requer conectividade com a Internet, adicione a condição **InternetAvailable** a [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar a tarefa. Isso ajudará a evitar que a tarefa use recursos do sistema e duração da bateria desnecessariamente executando apenas a tarefa em segundo plano quando o temporizador tiver expirado *e* a Internet estiver disponível.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847200"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932281"
 ---
 # <a name="handle-uri-activation"></a>Tratar a ativação do URI
 
@@ -138,7 +138,7 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 ```
 
 > [!NOTE]
-> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não para o conteúdo do aplicativo anterior.
 
 O código a seguir inicia de maneira programática o aplicativo por meio do seu URI:
 
@@ -162,7 +162,7 @@ Qualquer aplicativo ou site pode usar seu nome de esquema de URI, inclusive os m
 > Se você estiver criando um novo nome de esquema URI para seu aplicativo, certifique-se de seguir as orientações na [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Isso garante que seu nome atenda aos padrões de esquemas de URI.
 
 > [!NOTE]
-> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de protocolo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não para o conteúdo do aplicativo anterior.
 
 É recomendável que os aplicativos criem um novo [**Quadro**](https://msdn.microsoft.com/library/windows/apps/br242682) XAML para cada evento de ativação que abre um novo destino de Uri. Dessa forma, o backstack de navegação do novo **Quadro** XAML não terá nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso.
 

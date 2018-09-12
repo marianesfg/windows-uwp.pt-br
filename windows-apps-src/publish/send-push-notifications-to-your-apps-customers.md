@@ -11,11 +11,11 @@ keywords: windows 10, uwp, notificações direcionadas, notificações por push,
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849830"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930396"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
@@ -132,13 +132,13 @@ Para analisar os dados detalhados para cada notificação:
     * **Inicia**: A notificação foi enviada, o cliente clicou nela e o aplicativo foi aberto em resultado disso. Observe que isso apenas rastreia inicializações de aplicativos. Notificações que convidam o cliente para realizar outras ações, como iniciar a Loja para deixar uma classificação, não são incluídas nesse status.
     * **Desconhecido**: Não foi possível determinar o status dessa notificação.
 
-Para analisar os dados de atividade do usuário para todas as suas notificações:
+Para analisar os dados de atividade de usuário para todas as suas notificações:
 
 1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
 2.  Na página de **notificações** , clique na guia **Analisar** . Este guia exibe os seguintes dados:
     * Modos de exibição de gráfico dos vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
-    * Modos de exibição de mapa de mundo as clique por meio de taxas de suas notificações do sistema e a ação de centro de notificações.
-3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e no mercado.
+    * Modos de exibição de mapa de mundo as clique por meio de taxas para suas notificações do sistema e a ação de centro de notificações.
+3. Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é 30D (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode expandir **filtros** para filtrar todos os dados por aplicativo e mercado.
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 

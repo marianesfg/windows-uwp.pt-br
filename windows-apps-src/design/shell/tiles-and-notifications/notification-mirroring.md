@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notificação do sistema, central de ações na nuvem, espelhamento de notificação, notificação, entre dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: eb8e2ceb16add551f3c8e3a71a69d36b99f21c62
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845470"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932983"
 ---
 # <a name="notification-mirroring"></a>Espelhamento de notificação
 
@@ -29,7 +29,7 @@ Com o espelhamento de notificação e a Cortana, os usuários podem receber e ag
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Os desenvolvedores obtêm dois grandes benefícios de espelhamento de notificação: as notificações espelhadas resultam em mais envolvimento do usuário com seu serviço, e eles também ajudam os usuários a descobrir seu aplicativo da área de trabalho da Microsoft Store! Os usuários talvez não saibam que você tem um aplicativo UWP incrível disponível para seu computador Windows 10. Quando os usuários recebem a notificação espelhada do telefone, os usuários podem clicar a notificação do sistema para ser levado para a Microsoft Store, onde eles podem instalar seu aplicativo da área de trabalho da UWP.
+Os desenvolvedores obtêm dois grandes benefícios de espelhamento de notificação: as notificações espelhadas resultam em obter mais envolvimento do usuário com seu serviço, e eles também ajudam os usuários descobrir seu aplicativo da área de trabalho da Microsoft Store! Os usuários talvez não saibam que você tem um aplicativo UWP incrível disponível para seu computador Windows 10. Quando os usuários recebem a notificação espelhada do telefone, os usuários podem clicar a notificação do sistema para ser levado para a Microsoft Store, onde eles podem instalar seu aplicativo da área de trabalho de UWP.
 
 O espelhamento funciona no Windows Phone e no Android. Os usuários devem estar conectados à Cortana no telefone e no computador para que o espelhamento de notificação funcione.
 

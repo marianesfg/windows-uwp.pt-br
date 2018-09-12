@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848720"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931859"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
@@ -58,7 +58,7 @@ Você pode filtrar os resultados se a aquisição foi originada do cliente ou da
 Na exibição de **aplicativo diariamente** , quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="installs"></a>Instalações
 

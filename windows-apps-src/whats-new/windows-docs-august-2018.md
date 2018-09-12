@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Novidades do Windows Docs em agosto de 2018 - desenvolver aplicativos UWP
-description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 de agosto de 2018.
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a agosto de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, agosto
 ms.author: quradic
 ms.date: 08/14/2018
@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849880"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3928766"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2018
 
@@ -28,7 +28,7 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 Os recursos a seguir foram adicionados para o Windows compilações do Insider Preview, disponíveis por meio do programa [Windows Insider](https://insider.windows.com/) .
 
-* A [Biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de fichas do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não tiverem a versão mais recente do sistema operacional.
+* A [Biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de fichas do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não tenham a versão mais recente do sistema operacional.
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [divisão](../design/controls-and-patterns/buttons.md#create-a-split-button)e [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) fornecem controles de botão com recursos especializados para aprimorar a interface do usuário do seu aplicativo.
 
@@ -40,7 +40,7 @@ Os recursos a seguir foram adicionados para o Windows compilações do Insider P
 
 ### <a name="package-support-framework"></a>Estrutura de suporte do pacote
 
-A estrutura de suporte do pacote é um kit de código-fonte aberto que ajuda você a aplicar correções em seu aplicativo win32 quando você não tiver acesso ao código-fonte, para que ele pode ser executado em um contêiner de MSIX.
+A estrutura de suporte do pacote é um kit de código-fonte aberto que ajuda você a aplicar correções em seu aplicativo win32 quando você não tem acesso ao código-fonte, para que ele possa executar em um contêiner de MSIX.
 
 Para saber mais, consulte [correções de tempo de execução de aplicar um pacote MSIX usando a estrutura de suporte do pacote](../porting/package-support-framework.md).
 
@@ -48,7 +48,7 @@ Para saber mais, consulte [correções de tempo de execução de aplicar um paco
 
 ### <a name="web-api-extensions"></a>Extensões de API da Web
 
-Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdadas [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar rich web informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar rich web informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ c++ exemplos de código do WinRT
 
@@ -66,7 +66,7 @@ O plug-in do Xbox Live para o Unity contém suporte para adicionar a assinatura 
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 

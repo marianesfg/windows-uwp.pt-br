@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a16339e0918f8291f7b1cc7a3a6dfef3ccf375d
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847210"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932031"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -33,7 +33,7 @@ Cada pacote que você fornece precisa ter um número de versão (fornecido como 
 Quando for escolher um pacote do Windows 10 de seu envio publicado, a Microsoft Store sempre usará o pacote com versão mais alta que for aplicável ao dispositivo do cliente. Isso proporciona maior flexibilidade e coloca você no controle de quais pacotes serão fornecidos para clientes em tipos específicos de dispositivos. Importante, você pode enviar esses pacotes em qualquer ordem. Você não está limitado a fornecer pacotes com maior número de versão em cada envio subsequente.
 
 > [!TIP]
-> Se seu aplicativo também tiver pacotes para Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote do Windows 10 deve ser sempre maior do que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
+> Se seu aplicativo também tiver pacotes para Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote do Windows 10 deve sempre ser maior do que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
 
 Você pode fornecer vários pacotes do Windows 10 com o mesmo número de versão. Contudo, os pacotes que compartilharem um número de versão não poderão ter também a mesma arquitetura, pois a identidade completa que a Loja usa para cada um de seus pacotes deve ser única. Para obter mais informações, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
 

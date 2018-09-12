@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848890"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935277"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -69,7 +69,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustrações mostram o realce do revelação em vários controles diferentes:
+Estas ilustrações mostram revelar destaque em vários controles diferentes:
 
 ![Exemplos do Revelação](images/RevealExamples_Collage.png)
 

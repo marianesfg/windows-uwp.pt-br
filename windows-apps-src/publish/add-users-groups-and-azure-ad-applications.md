@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3846010"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934915"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
@@ -119,7 +119,7 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Cen
 ### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
 
 1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
-2. Na página de **usuários** , selecione **Adicionar grupos**.
+2. Selecione a página de **usuários** , **grupos de adicionar**.
 2.  Selecione um ou mais grupos na lista exibida. Você pode usar a caixa de pesquisa para procurar grupos específicos.
     > [!TIP]
     > Se você selecionar mais de um grupo para adicionar à sua conta do Centro de Desenvolvimento, você deve atribuir a eles a mesma função ou conjunto de permissões personalizados. Para adicionar vários grupos com permissões/funções diferentes, repita as etapas abaixo para cada função ou um conjunto de permissões personalizados.

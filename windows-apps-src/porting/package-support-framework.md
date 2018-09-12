@@ -2,7 +2,7 @@
 author: normesta
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 Search.Product: eADQiWindows 10XVcnh
-title: Corrigir problemas que impedem que seu aplicativo da área de trabalho seja executado em um contêiner de MSIX
+title: Corrigir problemas que impedem que seu aplicativo da área de trabalho sejam executados em um contêiner de MSIX
 ms.author: normesta
 ms.date: 07/02/2018
 ms.topic: article
@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851086"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930016"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
-A estrutura de suporte do pacote é um kit de código-fonte aberto que ajuda você a aplicar correções para o seu aplicativo win32 quando você não tiver acesso ao código-fonte, para que ele pode ser executado em um contêiner de MSIX. A estrutura de suporte do pacote ajuda a seu aplicativo siga as práticas recomendadas do ambiente de tempo de execução moderno.
+A estrutura de suporte do pacote é um kit de código-fonte aberto que ajuda você a aplicar correções para o seu aplicativo win32 quando você não tem acesso ao código-fonte, para que ele possa executar em um contêiner de MSIX. A estrutura de suporte do pacote ajuda a seu aplicativo siga as práticas recomendadas do ambiente de tempo de execução moderno.
 
 Para criar a estrutura de suporte do pacote, aproveitamos a tecnologia de [desvios](https://www.microsoft.com/en-us/research/project/detours) que é uma estrutura de código-fonte aberto desenvolvida pela Microsoft Research (MSR) e ajuda com redirecionamento de API e interceptação.
 
-Essa estrutura é livre, leve, e você pode usá-lo para resolver problemas de aplicativo rapidamente. Ele também oferece a oportunidade para consultar a comunidade em todo o mundo e compilar sobre os investimentos de terceiros.
+Essa estrutura é livre, leve, e você pode usá-lo para resolver problemas de aplicativo rapidamente. Ele também oferece a oportunidade para consultar com a comunidade em todo o mundo e compilar sobre os investimentos de terceiros.
 
 ## <a name="a-quick-look-inside-of-the-package-support-framework"></a>Uma rápida olhada dentro a estrutura de suporte do pacote
 
@@ -31,9 +31,9 @@ A estrutura de suporte de pacote contém um executável, uma DLL do Gerenciador 
 
 ![Estrutura de suporte do pacote](images/desktop-to-uwp/package-support-framework.png)
 
-Veja como funciona. Você criará um arquivo de configuração que especifica o fix(s) que você deseja aplicar ao seu aplicativo. Em seguida, você modificará seu pacote para apontar para o arquivo executável do iniciador de correção.
+Veja como funciona. Você criará um arquivo de configuração que especifica o fix(s) que você deseja aplicar ao seu aplicativo. Em seguida, você precisará modificar seu pacote para apontar para o arquivo executável do iniciador de correção.
 
-Quando os usuários iniciam o seu aplicativo, o inicializador de correção é o primeiro executável que é executado. Lê o arquivo de configuração e injeta fix(s) o tempo de execução e a DLL do Gerenciador de tempo de execução no processo do aplicativo.
+Quando os usuários iniciam o seu aplicativo, o inicializador de correção é o primeiro executável que é executado. Lê o arquivo de configuração e injeta fix(s) o tempo de execução e o Gerenciador de tempo de execução DLL no processo do aplicativo.
 
 ![Injeção de DLL de estrutura de suporte do pacote](images/desktop-to-uwp/package-support-framework-2.png)
 
@@ -49,11 +49,11 @@ Primeiro, crie um pacote para seu aplicativo. Em seguida, instalá-lo, executá-
 
 ### <a name="using-process-monitor-to-identify-an-issue"></a>Usando o Monitor de processo para identificar um problema
 
-[Monitor de processo](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) é um utilitário poderoso para observar o arquivo de um aplicativo e as operações do registro e os resultados.  Isso pode ajudar você a compreender os problemas de compatibilidade de aplicativo.  Após a abertura do Monitor do processo, adicione um filtro (filtro > filtro...) para incluir apenas os eventos do executável do aplicativo.
+[Monitor de processo](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) é um utilitário poderoso para observar arquivos de um aplicativo e operações de registro e seus resultados.  Isso pode ajudar você a compreender os problemas de compatibilidade de aplicativo.  Após a abertura do Monitor do processo, adicione um filtro (filtro > filtro...) para incluir apenas os eventos do executável do aplicativo.
 
 ![Filtro de aplicativo ProcMon](images/desktop-to-uwp/procmon_app_filter.png)
 
-Será exibida uma lista de eventos. Para muitos desses eventos, a palavra **êxito** será exibida na coluna do **resultado** .
+Será exibida uma lista de eventos. Para muitos desses eventos, a palavra **sucesso** aparecerá na coluna do **resultado** .
 
 ![Eventos de ProcMon](images/desktop-to-uwp/procmon_events.png)
 
@@ -61,11 +61,11 @@ Opcionalmente, você pode filtrar os eventos para mostrar apenas somente falhas.
 
 ![Excluir ProcMon sucesso](images/desktop-to-uwp/procmon_exclude_success.png)
 
-Se você suspeitar que existe uma falha de acesso do sistema de arquivos, procure eventos de falha que estão sob o System32/SysWOW64 ou o caminho do arquivo de pacote. Filtros também podem ajudar aqui também. Iniciar na parte inferior desta lista e role para cima. Falhas que aparecem na parte inferior desta lista ocorreram mais recentemente. Preste atenção a maioria dos erros que contêm as cadeias de caracteres como "acesso negado" e "caminho/nome não encontrado" e ignorar as coisas que não parecerem suspeitas. O [PSFSample](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/samples/PSFSample/) tem dois problemas. Você pode ver esses problemas na lista que aparece na imagem a seguir.
+Se você suspeitar que existe uma falha de acesso do sistema de arquivos, procure eventos de falha que estão sob o System32/SysWOW64 ou o caminho do arquivo de pacote. Filtros também podem ajudar aqui também. Iniciar na parte inferior desta lista e role para cima. Falhas que aparecem na parte inferior desta lista ocorreram mais recentemente. Preste atenção a maioria dos erros que contêm cadeias de caracteres como "acesso negado" e "caminho/nome não encontrado" e ignorar as coisas que não têm suspeitas. O [PSFSample](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/samples/PSFSample/) tem dois problemas. Você pode ver esses problemas na lista que aparece na imagem a seguir.
 
 ![ProcMon txt](images/desktop-to-uwp/procmon_config_txt.png)
 
-Na primeira saída aparece nesta imagem, o aplicativo está falhando ler o arquivo "Txt" que está localizado no caminho "C:\Windows\SysWOW64". É improvável que o aplicativo está tentando fazer referência a esse caminho diretamente. Provavelmente, ele está tentando ler esse arquivo usando um caminho relativo, e por padrão, "System32/SysWOW64" é o diretório de trabalho do aplicativo. Isso sugere que o aplicativo está esperando seu diretório de trabalho atual para ser definido como em algum lugar no pacote. Procurando dentro de appx, podemos ver que o arquivo existe no mesmo diretório do executável.
+No primeiro problema que aparece nesta imagem, o aplicativo está falhando ler o arquivo "Txt" que está localizado no caminho "C:\Windows\SysWOW64". É improvável que o aplicativo está tentando fazer referência a esse caminho diretamente. Provavelmente, ele está tentando ler esse arquivo usando um caminho relativo, e por padrão, "System32/SysWOW64" é o diretório de trabalho do aplicativo. Isso sugere que o aplicativo está esperando seu diretório de trabalho atual para ser definido como em algum lugar no pacote. Procurando dentro de appx, podemos ver que o arquivo existe no mesmo diretório do executável.
 
 ![Txt de aplicativo](images/desktop-to-uwp/psfsampleapp_config_txt.png)
 
@@ -83,9 +83,9 @@ O PSF contém correções de tempo de execução que você pode usar no momento,
 
 ### <a name="file-redirection-shim"></a>Correção de redirecionamento de arquivo
 
-Você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para redirecionar tentativas de gravação ou leitura de dados em um diretório que não está acessível de um aplicativo que é executado em um contêiner de MSIX.
+Você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para redirecionar tentativas de gravar ou ler dados em um diretório que não está acessível de um aplicativo que é executado em um contêiner de MSIX.
 
-Por exemplo, se seu aplicativo grava em um arquivo de log que esteja no mesmo diretório que seus aplicativos executáveis, em seguida, você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para criar esse arquivo de log em outro local, como o armazenamento de dados de aplicativo local.
+Por exemplo, se seu aplicativo grava em um arquivo de log que está no mesmo diretório que seus aplicativos executáveis, você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para criar esse arquivo de log em outro local, como o repositório de dados de aplicativo local.
 
 ### <a name="runtime-fixes-from-the-community"></a>Correções de tempo de execução da comunidade
 
@@ -113,7 +113,7 @@ makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.appx /d PackageContent
 
 ```
 
-Isso lhe dará algo parecido com o seguinte.
+Isso lhe dará algo que se parece com o seguinte.
 
 ![Layout do pacote](images/desktop-to-uwp/package_contents.png)
 
@@ -125,9 +125,9 @@ Você pode obter o pacote Nuget PSF usando o Visual Studio. Você também pode o
 
 #### <a name="get-the-package-by-using-visual-studio"></a>Obter o pacote usando o Visual Studio
 
-No Visual Studio, clique no nó do seu projeto ou solução e escolha um dos comandos Manage Nuget Packages.  Procurar **Microsoft.PackageSupportFramework** ou **PSF** para localizar o pacote em Nuget.org. Em seguida, instalá-lo.
+No Visual Studio, clique com botão direito seu nó solução ou o projeto e selecione um dos comandos gerenciar pacotes Nuget.  Procure **Microsoft.PackageSupportFramework** ou **PSF** localizar o pacote em Nuget.org. Em seguida, instalá-lo.
 
-#### <a name="get-the-package-by-using-the-command-line-tool"></a>Obter o pacote usando a ferramenta de linha de comando
+#### <a name="get-the-package-by-using-the-command-line-tool"></a>Obtenha o pacote usando a ferramenta de linha de comando
 
 Instalar a ferramenta de linha de comando do Nuget deste local: https://www.nuget.org/downloads. Em seguida, na linha de comando Nuget, execute este comando:
 
@@ -137,7 +137,7 @@ nuget install Microsoft.PackageSupportFramework
 
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>Adicionar os arquivos de pacote estrutura de suporte ao pacote
 
-Adicione as DLLs de PSF necessária de 32 bits e 64 bits e os arquivos executáveis no diretório do pacote. Use a tabela a seguir como guia. Você também vai querer incluir qualquer correção de tempo de execução que você precisa. No nosso exemplo, precisamos a correção de tempo de execução de redirecionamento de arquivo.
+Adicione as DLLs de PSF necessária de 32 bits e 64 bits e os arquivos executáveis ao diretório do pacote. Use a tabela a seguir como guia. Você também vai querer incluir qualquer correção de tempo de execução que você precisa. No nosso exemplo, precisamos a correção de tempo de execução de redirecionamento de arquivo.
 
 | Executável do aplicativo esteja x64 | Executável do aplicativo esteja x86 |
 |-------------------------------|-----------|
@@ -168,7 +168,7 @@ Abra o manifesto do pacote em um editor de texto e, em seguida, defina o `Execut
 
 ### <a name="create-a-configuration-file"></a>Criar um arquivo de configuração
 
-Criar um nome de arquivo ``config.json``e salve-o para a pasta raiz do pacote. Modificar a ID do aplicativo declarado do arquivo config.json para apontar para o executável que você acabou de ser substituído. Usando o conhecimento que você obteve usem o Monitor do processo, você pode também definir o diretório de trabalho, bem como usar a correção de redirecionamento de arquivo para redirecionar leituras e gravações para arquivos. log no diretório relativo ao pacote "PSFSampleApp".
+Criar um nome de arquivo ``config.json``e salve esse arquivo para a pasta raiz do seu pacote. Modificar a ID do aplicativo declarado do arquivo config.json para apontar para o executável que você acabou de ser substituído. Usando o conhecimento que você obteve usem o Monitor do processo, você pode também definir o diretório de trabalho, bem como usar a correção de redirecionamento de arquivo para redirecionar leituras e gravações para arquivos. log no diretório relativo ao pacote "PSFSampleApp".
 
 ```json
 {
@@ -209,10 +209,10 @@ Veja a seguir um guia para o esquema de config.json:
 |-------|-----------|-------|
 | applications | id |  Use o valor do `Id` atributo do `Application` elemento no manifesto do pacote. |
 | applications | executável | O caminho relativo de pacote para o executável que você deseja iniciar. Na maioria dos casos, você pode obter esse valor do seu arquivo de manifesto do pacote antes de modificá-lo. Ele é o valor do `Executable` atributo do `Application` elemento. |
-| applications | workingDirectory | (Opcional) Um caminho relativo a pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
+| applications | workingDirectory | (Opcional) Um caminho relativo ao pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
 | processos | executável | Na maioria dos casos, isso será o nome do `executable` configurado acima com a extensão de arquivo e caminho removida. |
 | correções | DLL | Caminho relativo ao pacote AppX a correção para carregar. |
-| correções | config | (Opcional) Controla como a lista de distribuição de correção se comporta. O formato exato desse valor varia em uma base de correção por correção como cada correção pode interpretar essa "blob" conforme desejar. |
+| correções | config | (Opcional) Controla como a lista de distribuição de correção se comporta. O formato desse valor exato varia em uma base de correção por correção como cada correção pode interpretar essa "blob" quanto desejar. |
 
 O `applications`, `processes`, e `shims` chaves são matrizes. Isso significa que você pode usar o arquivo config.json para especificar mais de um aplicativo, processos e correção DLL.
 
@@ -236,7 +236,7 @@ Para obter mais informações, consulte [como criar um certificado de assinatura
 Usando o PowerShell, instale o pacote.
 
 >[!NOTE]
-> Lembre-se desinstalar o pacote primeiro.
+> Lembre-se desinstalar o pacote pela primeira vez.
 
 ```
 powershell Add-AppxPackage .\PSFSamplePackageFixup.appx
@@ -246,7 +246,7 @@ Execute o aplicativo e observar o comportamento aplicado de correção de tempo 
 
 ### <a name="use-the-trace-shim"></a>Usar a correção de rastreamento
 
-Uma técnica alternativa para diagnosticar problemas de compatibilidade de aplicativo empacotado é usar a correção de rastreamento. Essa DLL está incluída com o PSF e fornece uma visão detalhada de diagnóstico do comportamento do aplicativo, semelhante ao processo de Monitor.  Ele foi projetado especialmente para revelar problemas de compatibilidade de aplicativo.  Usar a correção de rastreamento, adicionar a DLL do pacote, adicionar o fragmento a seguir ao seu config.json e, em seguida, pacote e instalar seu aplicativo.
+Uma técnica para diagnosticar problemas de compatibilidade de aplicativo empacotado alternativa é usar a correção de rastreamento. Essa DLL está incluída com o PSF e fornece uma visão detalhada de diagnóstico do comportamento do aplicativo, semelhante ao processo de Monitor.  Ele foi projetado especialmente para revelar problemas de compatibilidade de aplicativo.  Usar a correção de rastreamento, adicionar a DLL do pacote, adicionar o fragmento a seguir ao seu config.json e, em seguida, pacote e instalar seu aplicativo.
 
 ```json
 {
@@ -259,9 +259,9 @@ Uma técnica alternativa para diagnosticar problemas de compatibilidade de aplic
 }
 ```
 
-Por padrão, a correção de rastreamento estejam falhas que podem ser consideradas "esperadas".  Por exemplo, aplicativos podem tentar incondicionalmente excluir um arquivo sem verificar se ele já existir, ignorando o resultado. Isso tem a consequência ruim que algumas falhas inesperadas podem obter filtradas, portanto, no exemplo acima, podemos optar por receber todas as falhas de funções de sistema de arquivos. Fazemos isso porque sabemos de antes que a tentativa de ler o arquivo txt falhar com a mensagem "arquivo não encontrado". Isso é uma falha observada com frequência e não geralmente considerada inesperado. Na prática é provavelmente melhor começar filtragem somente a falhas inesperadas e, em seguida, voltando para todas as falhas se houver um problema que ainda não pode ser identificado.
+Por padrão, a correção de rastreamento filtra falhas que podem ser consideradas "esperadas".  Por exemplo, aplicativos podem tentar incondicionalmente excluir um arquivo sem verificar se ele já existe, ignorando o resultado. Isso tem a consequência ruim que algumas falhas inesperadas podem obter filtradas, portanto, no exemplo acima, podemos optar por receber todas as falhas de funções de sistema de arquivos. Fazemos isso porque sabemos de antes que a tentativa de ler o arquivo txt falhar com a mensagem "arquivo não encontrado". Isso é uma falha observada com frequência e não geralmente considerada inesperado. Na prática é provavelmente melhor para iniciar a filtragem somente a falhas inesperadas e, em seguida, voltando para todas as falhas se houver um problema que ainda não pode ser identificado.
 
-Por padrão, a saída de correção de rastreamento é enviada para o depurador anexado. Neste exemplo, não são indo para anexar um depurador e usará em vez disso, o programa de [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) da SysInternals para exibir sua saída. Depois de executar o aplicativo, podemos ver as falhas mesmas como antes, que seria direcioná-nas mesma correções de tempo de execução.
+Por padrão, a saída de correção de rastreamento é enviada para o depurador anexado. Para este exemplo, não estão indo para anexar um depurador e usará o programa [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) da SysInternals para exibir sua saída. Depois de executar o aplicativo, podemos ver as falhas mesmas como antes, que seria direcioná-nas mesma correções de tempo de execução.
 
 ![TraceShim arquivo não encontrado](images/desktop-to-uwp/traceshim_filenotfound.png)
 
@@ -309,7 +309,7 @@ Se você ainda não tiver um **Projeto de empacotamento de aplicativo do Windows
 
 ![Modelo de projeto do pacote](images/desktop-to-uwp/package-project-template.png)
 
-Para obter mais informações sobre o projeto de empacotamento de aplicativo do Windows, consulte o [pacote de seu aplicativo usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Para obter mais informações sobre o projeto de empacotamento de aplicativo do Windows, consulte o [pacote do seu aplicativo usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 No **Gerenciador de soluções**, clique com botão direito do projeto de empacotamento, selecione **Editar**e, em seguida, adicioná-lo na parte inferior do arquivo de projeto:
 
@@ -333,7 +333,7 @@ Adicione um projeto de **Biblioteca de vínculo dinâmico (DLL)** do C++ à solu
 
 Clique com botão direito que do projeto e escolha **Propriedades**.
 
-Nas páginas de propriedades, localize o campo de **Idioma de C++ padrão** e, em seguida, na lista suspensa ao lado de campo, selecione o **ISO padrão c++17 (/ std:c++17 + + 17)** opção.
+Nas páginas de propriedades, localize o campo de **Idioma de C++ padrão** e, em seguida, na lista suspensa ao lado do campo, selecione o **ISO padrão c++17 (/ std:c++17 + + 17)** opção.
 
 ![ISO 17 opção](images/desktop-to-uwp/iso-option.png)
 
@@ -347,7 +347,7 @@ Procure o *PSF** Nuget empacotar e, em seguida, instalá-lo para este projeto.
 
 Se você deseja depurar ou estender uma correção de tempo de execução existente, adicione os arquivos de correção de tempo de execução que você obteve usando as diretrizes descritas na seção [Localizar uma correção de tempo de execução](#find) deste guia.
 
-Se você pretende criar uma nova correção, não adicione nada a este projeto ainda. Ajudaremos você a adicionar os arquivos direito a este projeto mais tarde neste guia. Por enquanto, continuaremos configurar sua solução.
+Se você pretende criar uma correção totalmente nova, não adicione qualquer coisa a este projeto ainda. Ajudaremos você a adicionar os arquivos direito a este projeto mais tarde neste guia. Por enquanto, continuaremos configurar sua solução.
 
 ### <a name="add-a-project-that-starts-the-shim-launcher-executable"></a>Adicione um projeto que inicia o inicializador de correção executável
 
@@ -357,7 +357,7 @@ Adicione um projeto C++ **Projeto vazio** à solução.
 
 Adicione o pacote Nuget **PSF** a este projeto usando as mesmas diretrizes descritas na seção anterior.
 
-Abra as páginas de propriedades do projeto e na página de configurações **gerais** , defina a propriedade de **Nome de destino** para ``ShimLauncher32`` ou ``ShimLauncher64`` dependendo da arquitetura de seu aplicativo.
+Abra as páginas de propriedades para o projeto e, na página de configurações **gerais** , defina a propriedade de **Nome de destino** para ``ShimLauncher32`` ou ``ShimLauncher64`` dependendo da arquitetura de seu aplicativo.
 
 ![referência de iniciador de correção](images/desktop-to-uwp/shim-exe-reference.png)
 
@@ -388,7 +388,7 @@ Escolha o projeto do iniciador de correção e seu projeto de aplicativo da áre
 >[!NOTE]
 > Se você não tiver o código-fonte para o seu aplicativo, basta escolha o projeto de iniciador de correção. Mostraremos a você como fazer referência a seu executável quando você cria um arquivo de configuração.
 
-No nó de **aplicativos** , clique com botão direito do aplicativo inicializador de correção e escolha **Definir como ponto de entrada**.
+No nó de **aplicativos** , clique com botão direito o aplicativo inicializador de correção e escolha **Definir como ponto de entrada**.
 
 ![Definir ponto de entrada](images/desktop-to-uwp/set-startup-project.png)
 
@@ -423,10 +423,10 @@ Fornece um valor para cada chave. Use esta tabela como um guia.
 |-------|-----------|-------|
 | applications | id |  Use o valor do `Id` atributo do `Application` elemento no manifesto do pacote. |
 | applications | executável | O caminho relativo de pacote para o executável que você deseja iniciar. Na maioria dos casos, você pode obter esse valor do seu arquivo de manifesto do pacote antes de modificá-lo. Ele é o valor do `Executable` atributo do `Application` elemento. |
-| applications | workingDirectory | (Opcional) Um caminho relativo a pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
+| applications | workingDirectory | (Opcional) Um caminho relativo ao pacote a ser usado como o diretório de trabalho do aplicativo que é iniciado. Se você não definir esse valor, o sistema operacional usa o `System32` diretório como o diretório de trabalho do aplicativo. |
 | processos | executável | Na maioria dos casos, isso será o nome do `executable` configurado acima com a extensão de arquivo e caminho removida. |
-| correções | DLL | Caminho relativo ao pacote de correção de DLL para carregar. |
-| correções | config | (Opcional) Controla como a lista de distribuição de correção se comporta. O formato exato desse valor varia em uma base de correção por correção como cada correção pode interpretar essa "blob" conforme desejar. |
+| correções | DLL | Caminho do pacote relativo para a correção de DLL para carregar. |
+| correções | config | (Opcional) Controla como a lista de distribuição de correção se comporta. O formato desse valor exato varia em uma base de correção por correção como cada correção pode interpretar essa "blob" quanto desejar. |
 
 Quando terminar, o ``config.json`` arquivo terá a aparência desta forma.
 
@@ -454,22 +454,22 @@ Quando terminar, o ``config.json`` arquivo terá a aparência desta forma.
 
 ### <a name="debug-a-runtime-fix"></a>Depurar uma correção de tempo de execução
 
-No Visual Studio, pressione F5 para iniciar o depurador.  A primeira coisa que é iniciado é o aplicativo de iniciador de correção, que por sua vez, inicia o aplicativo da área de trabalho de destino.  Para depurar o aplicativo da área de trabalho de destino, você precisará manualmente anexar ao processo do aplicativo da área de trabalho escolhendo **Depurar**->**anexar ao processo**e, em seguida, selecionando o processo do aplicativo. Para permitir a depuração de um aplicativo .NET com uma correção de tempo de execução nativo DLL, selecione os tipos de código gerenciado e nativo (depuração de modo misto).  
+No Visual Studio, pressione F5 para iniciar o depurador.  A primeira coisa que é iniciado é o aplicativo de iniciador de correção, que por sua vez, inicia seu aplicativo da área de trabalho de destino.  Para depurar o aplicativo da área de trabalho de destino, você precisará manualmente anexar ao processo do aplicativo da área de trabalho, escolhendo **Depurar**->**anexar ao processo**e, em seguida, selecionando o processo do aplicativo. Para permitir a depuração de um aplicativo .NET com uma correção de tempo de execução nativo DLL, selecione os tipos de código gerenciado e nativo (depuração de modo misto).  
 
-Depois que você configurou isso, você pode definir pontos de interrupção ao lado de linhas de código no código do aplicativo da área de trabalho e o projeto de correção de tempo de execução. Se você não tiver o código-fonte para o seu aplicativo, você poderá definir os pontos de interrupção apenas ao lado de linhas de código em seu projeto de correção de tempo de execução.
+Depois que você configurou isso, você pode definir pontos de interrupção ao lado de linhas de código no código do aplicativo da área de trabalho e o projeto de correção de tempo de execução. Se você não tiver o código-fonte para o seu aplicativo, você poderá definir pontos de interrupção apenas ao lado de linhas de código em seu projeto de correção de tempo de execução.
 
 >[!NOTE]
 > Enquanto o Visual Studio oferece o desenvolvimento mais simples e depuração experiência, existem algumas limitações, portanto, mais adiante neste guia, vamos discutir outras técnicas de depuração que você pode aplicar.
 
 ## <a name="create-a-runtime-fix"></a>Criar uma correção de tempo de execução
 
-Se não existe um tempo de execução corrigir o problema que você deseja resolver, você pode criar uma nova correção de tempo de execução, escrevendo funções de substituição e incluindo quaisquer dados de configuração que faz sentido. Vamos examinar cada parte.
+Se não existe um tempo de execução corrigir o problema que você deseja resolver, você pode criar uma nova solução de tempo de execução, escrevendo funções de substituição e incluindo quaisquer dados de configuração que faz sentido. Vamos examinar cada parte.
 
 ### <a name="replacement-functions"></a>Funções de substituição
 
-Primeiro, identifique qual função falha nas chamadas quando seu aplicativo é executado em um contêiner de MSIX. Em seguida, você pode criar funções de substituição que você deseja chamar em vez disso, o Gerenciador de tempo de execução. Isso lhe dá a oportunidade de substituir a implementação de uma função com o comportamento em conformidade com as regras do ambiente de tempo de execução moderno.
+Primeiro, identifique qual função chamadas falhem quando seu aplicativo é executado em um contêiner de MSIX. Em seguida, você pode criar funções de substituição que você deseja chamar em vez disso, o Gerenciador de tempo de execução. Isso lhe dá a oportunidade de substituir a implementação de uma função com o comportamento que está em conformidade com as regras do ambiente de tempo de execução moderno.
 
-No Visual Studio, abra o projeto de correção de tempo de execução que você criou anteriormente neste guia.
+No Visual Studio, abra o projeto de correção de tempo de execução que você criou no início deste guia.
 
 Declare o ``SHIM_DEFINE_EXPORTS`` macro e, em seguida, adicione uma instrução de incluir para o `shim_framework.h` na parte superior de cada um. Arquivo CPP em que você pretende adicionar as funções de sua correção de tempo de execução.
 
@@ -508,7 +508,7 @@ Para obter mais informações sobre `reentrancy_guard` consulte [authoring.md](h
 
 ### <a name="configuration-data"></a>Dados de configuração
 
-Se você deseja adicionar dados de configuração para a correção de tempo de execução, considere adicioná-lo para o ``config.json``. Dessa forma, você pode usar o `ShimQueryCurrentDllConfig` facilmente analisar esses dados. Este exemplo analisa um valor booleano e cadeia de caracteres do arquivo de configuração.
+Se você deseja adicionar dados de configuração para sua correção de tempo de execução, considere adicioná-lo para o ``config.json``. Dessa forma, você pode usar o `ShimQueryCurrentDllConfig` facilmente analisar esses dados. Este exemplo analisa um valor booleano e cadeia de caracteres do arquivo de configuração.
 
 ```c++
 if (auto configRoot = ::ShimQueryCurrentDllConfig())
@@ -531,13 +531,13 @@ if (auto configRoot = ::ShimQueryCurrentDllConfig())
 
 Embora o Visual Studio oferece o desenvolvimento mais simples e a experiência de depuração, existem algumas limitações.
 
-Primeiro, a depuração F5 executa o aplicativo arquivos soltos do caminho de pasta de layout do pacote de implantação, em vez de instalação de um pacote. AppX.  A pasta de layout normalmente não tem as mesmas restrições de segurança como uma pasta de pacote instalado. Como resultado, talvez não seja possível reproduzir erros de negação de acesso de caminho de pacote antes da aplicação de uma correção de tempo de execução.
+Primeiro, a depuração F5 executa o aplicativo Implantando arquivos soltos do caminho de pasta de layout do pacote, em vez de instalação de um pacote. AppX.  A pasta de layout normalmente não tem as mesmas restrições de segurança como uma pasta de pacote instalado. Como resultado, talvez não seja possível reproduzir erros de negação de acesso de caminho de pacote antes da aplicação de uma correção de tempo de execução.
 
-Para resolver esse problema, use a implantação do pacote. AppX, em vez de implantação de arquivo flexível F5.  Para criar um arquivo de pacote. AppX, use o utilitário [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) do SDK do Windows, conforme descrito acima. Ou, de dentro do Visual Studio, clique com botão direito o nó do seu projeto de aplicativo e selecione **Store**->**Criar pacotes de aplicativo**.
+Para resolver esse problema, use a implantação do pacote. AppX, em vez de implantação de arquivo flexível F5.  Para criar um arquivo de pacote. AppX, use o utilitário [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) do SDK do Windows, conforme descrito acima. Ou, de dentro do Visual Studio, clique com botão direito o nó do seu projeto de aplicativo e selecione **armazenamento**->**Criar pacotes de aplicativo**.
 
 Outro problema com o Visual Studio é que ele não tem suporte interno para anexar a quaisquer processos filho iniciados pelo depurador.   Isso dificulta depurar lógica no caminho de inicialização do aplicativo de destino, que deve ser anexado manualmente pelo Visual Studio após o lançamento.
 
-Para resolver esse problema, use um depurador que ofereça suporte a anexar processo filho.  Observe que geralmente não é possível anexar um depurador do just-in-time (JIT) para o aplicativo de destino.  Isso ocorre porque a maioria das técnicas JIT envolvem iniciar o depurador no lugar do aplicativo de destino, por meio da chave do registro ImageFileExecutionOptions.  Isso destrói o mecanismo detouring usado pela ShimLauncher.exe para injetar ShimRuntime.dll no aplicativo de destino.  WinDbg, incluídos nas [Ferramentas de depuração para Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)e obtidos do [SDK do Windows](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk), processo de filho dá suporte à anexar.  Ele também agora oferece suporte diretamente [Iniciar e depuração de um aplicativo UWP](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app).
+Para resolver esse problema, use um depurador que é compatível com processo filho anexar.  Observe que geralmente não é possível anexar um depurador do just-in-time (JIT) para o aplicativo de destino.  Isso ocorre porque a maioria das técnicas JIT envolvem iniciando o depurador no lugar do aplicativo de destino, por meio de chave do registro ImageFileExecutionOptions.  Isso destrói o mecanismo detouring usado pela ShimLauncher.exe para injetar ShimRuntime.dll no aplicativo de destino.  WinDbg, incluídos nas [Ferramentas de depuração para Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)e obtidos do [SDK do Windows](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk), processo de filho dá suporte à anexar.  Ele também dá suporte a diretamente [Iniciando e depuração de um aplicativo UWP](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app).
 
 Para depurar a inicialização do aplicativo de destino como um processo filho, inicie ``WinDbg``.
 

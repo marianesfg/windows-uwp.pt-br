@@ -11,16 +11,16 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845320"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935461"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
 
-Design e downloads relacionados à interface do usuário para aplicativos de Design fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Design e downloads relacionados à interface do usuário para aplicativos UWP/Design fluente. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -64,7 +64,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 :::row:::
     :::column:::
-        ![Miniatura de biblioteca WinUI](images/WinUI-library.png) <b>Biblioteca de interface do usuário do Windows</b><br>
+        ![Miniatura de biblioteca de WinUI](images/WinUI-library.png) <b>Biblioteca de interface do usuário do Windows</b><br>
         Controles e outros elementos de interface do usuário para aplicativos UWP.<br/>
         <a href="/uwp/toolkits/winui/getting-started">Instruções de instalação</a><br/>
     :::column-end:::
@@ -95,7 +95,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
     
 ## <a name="samples"></a>Exemplos
 
-![criar a imagem de conversão](images/buildcast.png)
+![Criar imagem de conversão](images/buildcast.png)
 **BuildCast**<br>
 O BuildCast é uma amostra de ponta a ponta criada para demonstrar o sistema de Design Fluent, bem como outros recursos da plataforma universal do Windows. Ele permite navegar, baixar e executar podcasts em vídeo seletos, incluindo uma amostra dos mais populares do Channel 9 e alguns feeds populares de entusiasta da tecnologia do Windows. Ele também apresenta anotações à tinta, indicadores e execução remota. Essa amostra foi inicialmente mostrada na conferência Build de 2017 durante a palestra <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crie aplicativos incríveis com o Design Fluent</a>. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Baixe a amostra do BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Confira a amostra do BuildCast no GitHub</a>

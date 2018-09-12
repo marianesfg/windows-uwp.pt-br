@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850923"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3929788"
 ---
 # <a name="color"></a>Cor
 
@@ -40,7 +40,7 @@ Quando a cor é usada com moderação para realçar os elementos importantes, el
 
 :::row:::
     :::column:::
-        **A cor é pessoal.**
+        **Cor é pessoal.**
 No Windows, os usuário pode escolher uma cor de destaque e um tema claro ou escuro, que são refletidos durante sua experiência. Você pode escolher como incorporar a cor de destaque e o tema do usuário no aplicativo, personalizando a experiência.
     :::column-end:::
     :::column:::
@@ -108,7 +108,7 @@ Os pincéis de tema são usados para:
 
 :::row:::
     :::column:::
-        Ao criar modelos para controles personalizados, use pincéis de tema em vez de valores de cores embutidos no código. Assim, seu aplicativo pode adaptar-se a qualquer tema.
+        Ao criar modelos para controles personalizados, use os pincéis de tema em vez de valores de cores embutidos no código. Assim, seu aplicativo pode adaptar-se a qualquer tema.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::

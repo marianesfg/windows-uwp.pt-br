@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851396"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935828"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>Criar um aplicativo de console da Plataforma Universal do Windows
 
-Este tópico descreve como criar um [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) ou C++ c++ /CX Universal Windows Platform (UWP) aplicativo de console.
+Este tópico descreve como criar um [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) ou C++ c++ aplicativo de console CX Universal Windows Platform (UWP).
 
 A partir do Windows 10, versão 1803, você pode escrever C++ c++ /WinRT ou C++ c++ aplicativos de console CX UWP que são executados em uma janela de console, como uma janela de console DOS ou PowerShell. Aplicativos de console usam a janela do console para entrada e saída e podem usar funções de [Tempo de execução C Universal](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) como **printf** e **getchar**. Aplicativos de console UWP podem ser publicados na Microsoft Store. Eles têm uma entrada na lista de aplicativos e um bloco principal que pode ser fixado no menu Iniciar. Aplicativos de console UWP podem ser iniciados no menu Iniciar, embora você serão normalmente iniciados na linha de comando.
 
@@ -28,13 +28,13 @@ Para ver um em ação, veja um vídeo sobre como criar um aplicativo de Console 
 
 ## <a name="use-a-uwp-console-app-template"></a>Usar um modelo de aplicativo de console UWP 
 
-Para criar um aplicativo de console UWP, primeiro instale os **Modelos de projeto de aplicativo de console (Universal)**, disponíveis no [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal). Os modelos instalados estão disponíveis no **Novo projeto** > **instalado** > **Outros idiomas** > **Visual C++** > **Universal do Windows** como **aplicativo de console c++ WinRT (Universal Windows) **e **Console aplicativo C + c++ /CX (Windows Universal)**.
+Para criar um aplicativo de console UWP, primeiro instale os **Modelos de projeto de aplicativo de console (Universal)**, disponíveis no [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal). Os modelos instalados, em seguida, estão disponíveis no **Novo projeto** > **instalado** > **Outros idiomas** > **Visual C++** > **Universal do Windows** como **aplicativo de console c++ WinRT (Universal Windows) **e **Console aplicativo C + c++ /CX (Windows Universal)**.
 
 ## <a name="add-your-code-to-main"></a>Adicione o código ao main()
 
 Os modelos adicionam **Program.cpp**, que contém a função `main()`. Aqui é onde começa a execução em um aplicativo de console UWP. Acesse os argumentos de linha de comando com os parâmetros `__argc` e `__argv`. O aplicativo de console UWP sai quando o controle retorna de `main()`.
 
-O exemplo a seguir do **Program. cpp** é adicionado pelo **aplicativo de console c++ WinRT** modelo:
+O exemplo a seguir do **Program. cpp** é adicionado pela **aplicativo de console c++ WinRT** modelo:
 
 ```cppwinrt
 #include "pch.h"

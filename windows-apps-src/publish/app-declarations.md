@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847640"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933577"
 ---
 # <a name="product-declarations"></a>Declarações do produto
 
 A seção de **declarações de produto** da página [Propriedades](enter-app-properties.md) do [processo de envio](app-submissions.md) de ajuda certificar-se de que seu aplicativo é exibido adequadamente e oferecido ao conjunto correto do clientes, ajudando-os a entender como eles podem usar seu aplicativo.
 
-As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que dois essas declarações são marcada por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de revisar todas as declarações e garantir que eles refletem com precisão seu envio.
+As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que dois essas declarações são verificadas por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de revisar todas as declarações e garantir que eles refletem com precisão seu envio.
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Este aplicativo permite que os usuários façam compras, mas não usa o sistema de comércio da Microsoft Store.
 
-Para quase todas as envio, você deve deixar essa caixa desmarcada, desde que os aplicativos que oferecem oportunidades para comprar itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API de compra no aplicativo Microsoft Store para criar e enviar os complementos. Pelo [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, podem continuar oferecendo a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com o [ Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
+Para quase todas as envio, você deve deixar essa caixa desmarcada, desde aplicativos que oferecem oportunidades para comprar itens que são ou podem ser consumidos ou usados dentro de seu aplicativo devem usar a API de compra no aplicativo Microsoft Store para criar e enviar os complementos. Pelo [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), aplicativos que foram criados e enviados antes de 29 de junho de 2015, podem continuar oferecendo a funcionalidade de compra no aplicativo sem usar o mecanismo de comércio da Microsoft, desde que a funcionalidade de compra esteja em conformidade com o [ Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Se isso se aplica ao seu aplicativo, você deve marcar esta caixa. Caso contrário, deixe-a desmarcada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Este aplicativo foi testado para atender às diretrizes de acessibilidade.
 
@@ -48,7 +48,7 @@ Para obter mais informações, consulte [acessibilidade](../design/accessibility
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
-Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo para o armazenamento removível ou externo unidade de mídia, como um cartão SD, ou para um volume fora do sistema, como uma unidade externa. (Para o Windows Phone 8.1, isso foi anteriormente indicado por meio do Storemanifest.)
+Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo para o armazenamento externo ou removível unidade de mídia, como um cartão SD, ou em um volume do sistema não como uma unidade externa. (Para o Windows Phone 8.1, isso foi anteriormente indicado por meio do Storemanifest.)
 
 Se você deseja impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitem apenas a instalação na unidade de disco rígido interno em seus dispositivos, desmarque essa caixa.
 

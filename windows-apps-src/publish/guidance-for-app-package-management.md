@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3846630"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3936075"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
@@ -32,7 +32,7 @@ Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e c
 
 Diferentes sistemas operacionais podem executar diferentes tipos de pacotes. Se mais de um dos seus pacotes puder ser executado no dispositivo do cliente, a Microsoft Store fornecerá a melhor correspondência disponível.
 
-De modo geral, as versões posteriores do sistema operacional podem executar pacotes para versões anteriores do sistema operacional para a mesma família de dispositivos. No entanto, os clientes só obterão esses pacotes se o aplicativo não incluir um pacote direcionado a versão do sistema operacional atual.
+De modo geral, as versões posteriores do sistema operacional podem executar pacotes para versões anteriores do sistema operacional para a mesma família de dispositivos. No entanto, os clientes só obterão esses pacotes se o aplicativo não incluir um pacote destinado a versão do sistema operacional atual.
 
 Por exemplo, os dispositivos Windows 10 podem executar todas as versões anteriores suportadas do sistema operacional (por família de dispositivos). Os dispositivos de desktop Windows 10 podem executar aplicativos criados para o Windows 8.1 ou Windows 8; os dispositivos móveis Windows 10 podem executar aplicativos criados para Windows Phone 8.1, Windows Phone 8 e até mesmo Windows Phone 7.x. 
 
@@ -99,7 +99,7 @@ Depois de tornar o aplicativo indisponível, você continuará a vê-lo em seu p
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Removendo pacotes para uma família de dispositivos com suporte anterior
 
-Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo anteriormente com suporte, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página de **pacotes** .
+Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo anteriormente compatível, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página de **pacotes** .
 
 Quando você publica um envio que remove todos os pacotes que podem ser executado em uma família de dispositivos que seu aplicativo suporte anteriormente, novos clientes não poderão adquirir o aplicativo nessa família. Você sempre pode publicar outra atualização posteriormente para fornecer pacotes para essa família de dispositivos novamente.
 
@@ -122,9 +122,9 @@ Para obter mais informações sobre como empacotar aplicativos UWP para a Micros
 > [!IMPORTANT]
 > Lembre-se que se você fornecer pacotes destinados à família de dispositivos universal, todo cliente que já tiver o aplicativo em algum sistema operacional anterior (Windows Phone 8, Windows 8.1 etc.) e atualizar para o Windows 10 será atualizado para obter o pacote do Windows 10.
 > 
-> Isso acontece mesmo se você excluiu uma família de dispositivos específica na etapa [disponibilidade da família de dispositivos](device-family-availability.md) de seu envio, desde que seção só se aplica a novas aquisições. Se não quiser que cada cliente anterior obtenha o pacote universal do Windows 10, atualize o elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) em seu manifesto appx para incluir somente a família de dispositivos específica à qual você deseja dar suporte.
+> Isso acontece mesmo se você excluiu uma família de dispositivos específica na etapa [disponibilidade da família de dispositivo](device-family-availability.md) de seu envio, desde que seção só se aplica a novas aquisições. Se não quiser que cada cliente anterior obtenha o pacote universal do Windows 10, atualize o elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) em seu manifesto appx para incluir somente a família de dispositivos específica à qual você deseja dar suporte.
 > 
-> Por exemplo, digamos que seus clientes do Windows 8 e Windows 8.1 que atualizaram para um dispositivo da área de trabalho do Windows 10 para obter seu novo aplicativo UWP, mas deseja que os clientes do Windows Phone que agora são em dispositivos Windows 10 Mobile para manter os pacotes anteriormente feitos availabl e (destinados ao Windows Phone 8 ou Windows Phone 8.1). Para fazer isso, você precisará atualizar a [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) em seu manifesto appx para incluir somente **Windows. Desktop** (para a família de dispositivos da área de trabalho), em vez de deixá-lo como o valor **Windows. universal** (para a família de dispositivos universal) que o Microsoft Visual Studio inclui no manifesto por padrão. Não envie nenhum pacote UWP destinado às famílias de dispositivos Universal ou Mobile (**Windows.Universal** ou **Windows.Universal**). Dessa forma, seus clientes do Windows 10 Mobile não obterão nenhum dos seus pacotes UWP.
+> Por exemplo, digamos que seus clientes do Windows 8 e Windows 8.1 que atualizaram para um dispositivo da área de trabalho do Windows 10 para obter seu novo aplicativo UWP, mas deseja que os clientes do Windows Phone que agora estão em dispositivos Windows 10 Mobile para manter os pacotes anteriormente fez availabl e (destinados ao Windows Phone 8 ou Windows Phone 8.1). Para fazer isso, você precisará atualizar a [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) em seu manifesto appx para incluir somente **Windows. Desktop** (para a família de dispositivos de desktop), em vez de deixá-lo como o valor **Windows. universal** (para a família de dispositivos universal) que o Microsoft Visual Studio inclui no manifesto por padrão. Não envie nenhum pacote UWP destinado às famílias de dispositivos Universal ou Mobile (**Windows.Universal** ou **Windows.Universal**). Dessa forma, seus clientes do Windows 10 Mobile não obterão nenhum dos seus pacotes UWP.
 
 
 ## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Mantendo a compatibilidade de pacote para o Windows Phone 8.1

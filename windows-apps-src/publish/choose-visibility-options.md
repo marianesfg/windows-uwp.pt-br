@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, visibilidade, audiência particular, disponível, detectável
 ms.localizationpriority: medium
 ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845730"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930578"
 ---
 # <a name="choose-visibility-options"></a>Escolher as opções de visibilidade
 
@@ -75,7 +75,7 @@ As seleções na seção **Detectabilidade** indicam como os clientes podem desc
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Disponibilizar este produto e torná-lo detectável na Store
 
-Essa é a opção padrão. Deixe esta opção selecionada se quiser que seu aplicativo seja listado na loja para os clientes encontrarem via link direto do aplicativo e/ou por outros métodos, como pesquisa, navegação e inclusão em listas comissionadas. 
+Essa é a opção padrão. Deixe esta opção selecionada se quiser que seu aplicativo para ser listado na loja para os clientes encontrarem via link direto do aplicativo e/ou por outros métodos, como pesquisa, navegação e inclusão em listas comissionadas. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Disponibilizar este produto mas não torná-lo detectável na Store
 

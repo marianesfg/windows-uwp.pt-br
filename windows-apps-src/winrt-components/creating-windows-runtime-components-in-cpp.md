@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Criando componentes do Windows Runtime em C++
-description: Este tópico mostra como usar C++ c++ /CX para criar um componente do tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
+description: Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.author: misatran
 ms.date: 05/14/2018
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851356"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934397"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Criando componentes do Windows Runtime em C++/CX
 > [!NOTE]
-> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente do Windows Runtime usando C++ c++ WinRT, consulte [criar eventos em C++ com c++ WinRT](../cpp-and-winrt-apis/author-events.md).
+> Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente de tempo de execução do Windows usando C++ c++ WinRT, consulte [criar eventos em C++ com c++ WinRT](../cpp-and-winrt-apis/author-events.md).
 
-Este tópico mostra como usar C++ c++ /CX para criar um componente do tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
+Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
 
 Há vários motivos para a criação de um componente do tempo de execução do Windows.
 - Obter a vantagem em termos de desempenho do C++ em operações complexas ou intensivas.
@@ -85,7 +85,7 @@ O código do cliente cria uma instância do componente usando a palavra-chave **
 
 Uma classe ativável deve ser declarada como **classe ref pública selado**. A palavra-chave **ref class** informa ao compilador para criar a classe como um tipo compatível do Windows Runtime e a palavra-chave sealed especifica que a classe não pode ser herdada. O Windows Runtime não dá suporte no momento a um modelo de herança generalizado; um modelo de herança limitado dá suporte à criação de controles XAML personalizados. Para obter mais informações, consulte [Classes e estruturas de referência (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699870.aspx).
 
-Para C++ c++ /CX, todas as primitivas numéricas são definidas no namespace padrão. O namespace de [plataforma](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) contém C++ c++ classes CX que são específicas para o Windows Runtime digite system. Isso inclui as classes [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) e [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx). Os tipos de coleção concretos como as classes [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) e [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) são definidos no namespace [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx). As interfaces públicas que esses tipos implementam são definidas no [Namespace Windows::Foundation::Collections (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx). São esses tipos de interface consumidos por JavaScript, C# e Visual Basic. Para obter mais informações, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
+Para C++ c++ /CX, todas as primitivas numéricas são definidas no namespace padrão. O namespace de [plataforma](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) contém C++ c++ classes CX que são específicas para o Windows Runtime tipos system. Isso inclui as classes [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) e [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx). Os tipos de coleção concretos como as classes [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) e [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) são definidos no namespace [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx). As interfaces públicas que esses tipos implementam são definidas no [Namespace Windows::Foundation::Collections (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx). São esses tipos de interface consumidos por JavaScript, C# e Visual Basic. Para obter mais informações, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
 ## <a name="method-that-returns-a-value-of-built-in-type"></a>Método que retorna um valor de tipo interno
 ```cpp
@@ -206,7 +206,7 @@ document.getElementById('P4').innerHTML = num;
 ```
 
 ## <a name="net"></a>.NET
-As linguagens .NET reconhecem sobrecargas em C++ c++ classe ref CX assim como em qualquer classe do .NET Framework.
+As linguagens .NET reconhecem sobrecargas em C++ c++ classe de ref CX assim como em qualquer classe do .NET Framework.
 
 ## <a name="datetime"></a>DateTime
 No Windows Runtime, um objeto [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx) é apenas um inteiro assinado de 64 bits que representa o número de intervalos de 100 nanossegundos antes ou depois de 1° de janeiro de 1601. Não há método em um objeto Windows:Foundation::DateTime. Em vez disso, cada linguagem projeta o DateTime da maneira nativa para essa linguagem: o objeto Date em JavaScript e os tipos System.DateTime e System.DateTimeOffset no .NET Framework.

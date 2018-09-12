@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847700"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930380"
 ---
 # <a name="pivot"></a>Pivot
 
-Permite que o controle [Pivot segundo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) toque dedo entre um pequeno conjunto de seções de conteúdo.
+O controle de [pivô](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite toque-passar o dedo entre um pequeno conjunto de seções de conteúdo.
 
 > **APIs importantes**: [classe Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [classe NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -49,18 +49,18 @@ O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
+Para alcançar comuns de navegação superior e padrões de guias, é recomendável usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
-No entanto, se sua navegação requer o dedo por toque, recomendamos usar o pivô.
+No entanto, se sua navegação requer dedo toque, recomendamos usar o pivô.
 
 Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
-- Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários possam ver todos os itens de pivô.
-- Pivot manipula a navegação entre as seções de conteúdo, enquanto o NavigationView permite mais controle sobre o comportamento de navegação.
+- Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários podem ver todos os itens de pivô.
+- Pivot manipula a navegação entre seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
-Se a interface do usuário do seu aplicativo usa o controle de pivô, em seguida, você pode converter pivô para NavigationView com o código a seguir.
+Se a interface do usuário do seu aplicativo usa o controle de pivô, em seguida, você pode converter pivô em NavigationView com o código a seguir.
 
 Este XAML cria um NavigationView com 3 seções de conteúdo, como o exemplo de pivô em [criar um controle de pivô](#create-a-pivot-control).
 

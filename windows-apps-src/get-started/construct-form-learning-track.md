@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: introdução, uwp, o windows 10, acompanhamento de aprendizado, layout, formulário
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849470"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3929808"
 ---
 # <a name="create-and-customize-a-form"></a>Criar e personalizar um formulário
 
@@ -136,7 +136,7 @@ Ao criar layouts mais complexos com mais elementos visuais, é recomendado consu
 
 ## <a name="going-further"></a>Aprofundamento
 
-Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Fique à vontade para consultar os documentos que você e experimentar com a forma que você tiver, adicionando novos recursos de interface do usuário e aperfeiçoando a experiência do usuário. Se você quiser orientações passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md)
+Embora você tenha criado um formulário aqui, os conceitos de layouts e controles são aplicáveis em todas as interfaces do usuário XAML que você pode construir. Fique à vontade para consultar os documentos que você e experimentar com o formulário que tiver, adicionando novos recursos de interface do usuário e aperfeiçoando a experiência do usuário. Se você quiser orientações passo a passo por meio de recursos de layout mais detalhadas, consulte nosso [tutorial de layout adaptável](../design/basics/xaml-basics-adaptive-layout.md)
 
 Os formulários também não precisam existir no vácuo: você pode ir além e incorporar o seu em um [padrão principal/detalhes](../design/controls-and-patterns/master-details.md) ou de um [controle de pivot](../design/controls-and-patterns/tabs-pivot.md). Ou se quiser começar a trabalhar no código por trás do formulário, é recomendado começar com a [visão geral dos eventos](../xaml-platform/events-and-routed-events-overview.md).
 

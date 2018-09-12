@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849420"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931929"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
 Você pode usar pacotes de pré-lançamento para distribuir pacotes específicos para um grupo de testadores limitado. Os pacotes que você já tiver publicado na Store serão usados para seus clientes, para que sua experiência não será afetada.
 
-Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam a receber os pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
+Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam recebendo seus pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
 
 Ao configurar pacotes de pré-lançamento, você pode especificar as pessoas que devem receber pacotes específicos, adicionando-as para um **grupo de usuários conhecido** (às vezes chamado de grupo de versão de pré-lançamento). Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. (Os pacotes de pré-lançamento podem incluir pacotes que segmentem qualquer versão de sistema operacional, inclusive Windows 8.1/Windows Phone 8.1 ou anteriores). Qualquer pessoa que não tiver sido adicionada a um dos grupos de versão de pré-lançamento ou que esteja usando um dispositivo não compatível com pacotes de pré-lançamento receberá pacotes do envio de versão completa.
 
@@ -59,7 +59,7 @@ Você tem a opção de selecionar pacotes que estavam associados a um envio publ
 
 Se seu aplicativo der suporte a várias famílias de dispositivos, verifique se que você incluiu pacotes para dar suporte ao mesmo conjunto de famílias de dispositivos na sua versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento **só** poderão obter pacotes dessa versão. Elas não poderão acessar nenhum pacote de outras versões de pré-lançamento nem de seu envio de versão completa. 
 
-Lembre-se também que suas informações de listagem da loja e disponibilidade da família do dispositivo é baseada em seu envio de versão completa. Os clientes nos grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com o envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
+Também Lembre-se de que suas informações de listagem da loja e disponibilidade da família do dispositivo é baseada em seu envio de versão completa. Os clientes nos grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com o envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
 
 
 ## <a name="gradual-package-rollout"></a>Distribuição gradual de pacote

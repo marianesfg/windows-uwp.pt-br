@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, coleção
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850723"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932941"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>Controles de itens XAML; vincular a uma coleção [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -37,7 +37,7 @@ Se uma classe de tempo de execução que representa uma coleção escolhe aciona
 É bom ter um modelo de vetor observável para servir como uma implementação útil e de uso geral de [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_). Veja uma lista de uma classe chamada **single_threaded_observable_vector\<T>**.
 
 > [!NOTE]
-> Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)ou posterior, em seguida, é possível diretamente usar a função de fábrica do **WinRT:: < t \ >** em vez de listagem de código abaixo (mostraremos o código exato mais tarde neste tópico). Se você não ainda estiver nessa versão do SDK, será fácil alternar da usando a versão de listagem de código para a função **winrt** quando você estiver.
+> Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)ou mais tarde, em seguida, você pode apenas usar diretamente a função de fábrica do **WinRT:: < t \ >** em vez de listagem de código abaixo (mostraremos o código exato mais tarde neste tópico). Se você não ainda estiver nessa versão do SDK, será fácil alternar da usando a versão de listagem de código para a função **winrt** quando você estiver.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -305,7 +305,7 @@ runtimeclass BookstoreViewModel
 ```
 
 > [!IMPORTANT]
-> Na listagem de MIDL 3.0 acima, observe que o tipo da propriedade **BookSkus** é [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) de [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). Na próxima seção deste tópico, nós vai ser associando a origem de itens de uma [**caixa de listagem**](/uwp/api/windows.ui.xaml.controls.listbox) a **BookSkus**. Uma caixa de listagem é um controle de itens e para configurar a propriedade [**ItemsControl**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) corretamente, você precisa defini-lo como um valor do tipo **IVector** **IInspectable**, ou de um tipo de interoperabilidade como [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
+> Na listagem da MIDL 3.0 acima, observe que o tipo da propriedade **BookSkus** é [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) de [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). Na próxima seção deste tópico, nós vai ser associando a origem de itens de uma [**caixa de listagem**](/uwp/api/windows.ui.xaml.controls.listbox) a **BookSkus**. Uma caixa de listagem é um controle de itens e para configurar a propriedade [**ItemsControl**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) corretamente, você precisa defini-lo como um valor do tipo **IVector** de **IInspectable**ou de um tipo de interoperabilidade como [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
 
 Salvar e compilar. Copie os stubs de acessador de `BookstoreViewModel.h` e `BookstoreViewModel.cpp` na pasta `Generated Files` e implemente-os.
 
@@ -352,7 +352,7 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Boo
 ```
 
 ## <a name="if-you-have-a-windows-10-sdk-preview-build"></a>Se você tiver um Windows 10 SDK Preview Build
-Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), ou posterior, em seguida, substitua esta linha de código
+Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), ou posterior, substitua esta linha de código
 
 ```cppwinrt
 m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849940"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934221"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Use a Biblioteca de visão do computador do código-fonte aberto (OpenCV) com MediaFrameReader
 
@@ -32,7 +32,7 @@ Este artigo se baseia no conteúdo de dois outros artigos:
 
 Além desses artigos, para exibir e baixar um exemplo de funcional completo de ponta a ponta do cenário descrito neste artigo, consulte [Quadros de câmera + exemplo de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) no repositório do GitHub de amostras universais do Windows.
 
-Para começar a desenvolver rapidamente, você pode incluir a biblioteca OpenCV em um projeto de aplicativo UWP usando pacotes NuGet, mas esses pacotes não podem passar o processo do aplicativo certficication quando você enviar seu aplicativo para a loja, portanto, é recomendável que você baixe o OpenCV biblioteca de código-fonte e criar os binários antes de enviar seu aplicativo. As informações sobre o desenvolvimento com o OpenCV podem ser encontradas em [http://opencv.org](http://opencv.org)
+Para começar a desenvolver rapidamente, você pode incluir a biblioteca OpenCV em um projeto de aplicativo UWP usando pacotes NuGet, mas esses pacotes não podem passar o processo de certficication do aplicativo quando você enviar seu aplicativo para a loja, portanto, é recomendável que você baixe o OpenCV biblioteca de código-fonte e criar os binários antes de enviar seu aplicativo. As informações sobre o desenvolvimento com o OpenCV podem ser encontradas em [http://opencv.org](http://opencv.org)
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar o componente nativo do Tempo de Execução do Windows OpenCVHelper

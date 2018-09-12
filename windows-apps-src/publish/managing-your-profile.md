@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850320"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935241"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -48,7 +48,7 @@ A alteração de seu nome para exibição de editor fará com que verifiquemos s
 
 Abaixo estão alguns dos outros itens que você encontrará na seção **Configurações da conta**.
 
-- **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualizar significativamente as informações de contato), você pode analisar o status da verificação aqui.
+- **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualiza significativamente as informações de contato), você pode analisar o status da verificação aqui.
 - **Do programa Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) na página principal do página de **configurações da conta** .
 - **Conta de pagamento** e **Perfil fiscal**: aqui é onde você pode [configurar a conta de pagamento e os formulários fiscais](setting-up-your-payout-account-and-tax-forms.md). Você precisará fazer isso antes de cobrar pelos aplicativos ou complementos.
 - **Associações empresariais**: aceite convites de empresas as quais desejam que você publique aplicativos para uso exclusivo. Para saber mais, consulte [Distribuir aplicativos de linha de negócios para empresas](distribute-lob-apps-to-enterprises.md) a fim de obter mais informações.

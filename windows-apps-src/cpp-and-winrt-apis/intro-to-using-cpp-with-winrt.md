@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução
 ms.localizationpriority: medium
 ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3846250"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932839"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -41,9 +41,9 @@ Com o C++/WinRT, você também pode implementar suas próprias classes de tempo 
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>Suporte do Visual Studio para C++/WinRT e o VSIX
 Para modelos de projeto C++/WinRT no Visual Studio, bem como para propriedades e destinos C++/WinRT do MSBuild, baixe e instale a [Extensão do Visual Studio (VSIX) do C++/WinRT](https://aka.ms/cppwinrt/vsix) no [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
-Você precisará do Visual Studio 2017 (pelo menos a versão15.6; recomendamos no mínimo a 15.7), e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803). Se você ainda não instalou-lo, você precisará instalar a opção de **Ferramentas do C++ Universal Windows Platform** de dentro do instalador do Visual Studio. E, nas **configurações**do Windows > **atualização \ & segurança** > **para desenvolvedores**, escolha a opção de **modo de desenvolvedor** , em vez da opção de **Sideload de aplicativos** .
+Você precisará do Visual Studio 2017 (pelo menos a versão15.6; recomendamos no mínimo a 15.7), e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803). Se você ainda não instalou-lo, você precisará instalar a opção de **Ferramentas de C++ Universal Windows Platform** de dentro do instalador do Visual Studio. E, nas **configurações**do Windows > **atualização \ & segurança** > **para desenvolvedores**, escolha a opção de **modo de desenvolvedor** , em vez da opção de **Sideload de aplicativos** .
 
-Em seguida, será possível criar e criar ou abrir, C++ c++ WinRT projeto no Visual Studio e implantá-lo. Como alternativa, você pode converter um projeto existente adicionando o `<CppWinRTEnabled>true</CppWinRTEnabled>` propriedade para seu `.vcxproj` arquivo.
+Em seguida, será possível criar e compilar ou abrir, C++ c++ WinRT projeto no Visual Studio e implantá-lo. Como alternativa, você pode converter um projeto existente adicionando a `<CppWinRTEnabled>true</CppWinRTEnabled>` propriedade para seu `.vcxproj` arquivo.
 
 ```xml
 <Project ...>

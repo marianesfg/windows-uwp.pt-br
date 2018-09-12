@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845680"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930440"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -89,7 +89,7 @@ private:
 
 No método **OnCanceled** que você criou na etapa 1, defina a variável de sinalizador **\_CancelRequested** como **true**.
 
-[Amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) total método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
+[Amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -137,7 +137,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 Quando uma solicitação de cancelamento é recebida, o método que realiza a tarefa em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** está definido como **true**. Para tarefas em segundo plano no processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Executar** .
 
-Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** torna-se definido como true, o trabalho de continuar.
+Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** é definido como true, o trabalho de continuar.
 
 O [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
 
@@ -181,7 +181,7 @@ else
 ```
 
 > [!NOTE]
-> O exemplo de código mostrado anteriormente usa a [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). Propriedade de [**progresso**](https://msdn.microsoft.com/library/windows/apps/br224800) que está sendo usada para registrar o progresso da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
+> O código de exemplo mostrado acima usa a [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). Propriedade de [**progresso**](https://msdn.microsoft.com/library/windows/apps/br224800) que está sendo usada para registrar o progresso da tarefa em segundo plano. O progresso é relatado para o aplicativo usando a classe [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
 
 Modifique o método **Run** para que depois que o trabalho tiver parado, ele registre se a tarefa foi concluída ou foi cancelada. Esta etapa é válida para tarefas em segundo plano fora do processo porque você precisa de uma maneira de comunicação entre processos quando a tarefa em segundo plano foi cancelada. Para tarefas em segundo plano dentro do processo, você pode simplesmente compartilhar o estado com o aplicativo para indicar que a tarefa foi cancelada.
 

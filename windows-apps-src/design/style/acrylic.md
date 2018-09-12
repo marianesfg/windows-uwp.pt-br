@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851256"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933533"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -106,7 +106,7 @@ Widgets ou aplicativos leves podem reforçar seu uso como aplicativos de utilida
 ![O aplicativo de utilidade Calculadora com acrílico com seu contexto completo.](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> Renderização de superfícies consome GPU, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
+> Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
 
 
 ## <a name="acrylic-blend-types"></a>Tipos de mistura de acrílico

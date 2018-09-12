@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto, de partida
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1bd5f23f40c5d0238f8089c91ee69c6a52313f
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851346"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933789"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Introdução ao [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico fornece instruções para você se atualizar sobre o uso do C++/WinRT por um exemplo de código simples.
@@ -26,7 +26,7 @@ Este tópico fornece instruções para você se atualizar sobre o uso do C++/Win
 Crie um novo projeto **Aplicativo de Console do Windows (C++/WinRT)**.
 
 > [!IMPORTANT]
-> Se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803), em seguida, um recém-criado C + de direcionamento c++ WinRT projeto talvez não consiga compilar com o erro "*erro C3861: 'from_abi': identificador não encontrado*"e outros erros que se originam no *base.h*. A solução é qualquer destino uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade de projeto ** C/C++** > **idioma** > de**linha de comando** em **Opções adicionais**, exclua-o).
+> Se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803), em seguida, recém-criado C + de direcionamento c++ WinRT projeto pode apresentar falha ao compilar com o erro "*erro C3861: 'from_abi': identificador não encontrado*"e outros erros que se originam no *base.h*. A solução é qualquer destino uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade do projeto ** C/C++** > **idioma** > de**linha de comando** em **Opções adicionais**, exclua-o).
 
 
 Edite `pch.h` e `main.cpp` para que tenha a aparência a seguir.

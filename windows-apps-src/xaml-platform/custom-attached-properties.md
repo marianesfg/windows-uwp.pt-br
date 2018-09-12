@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848910"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934869"
 ---
 # <a name="custom-attached-properties"></a>Propriedades anexadas personalizadas
 
@@ -43,7 +43,7 @@ Se estiver definindo a propriedade anexada estritamente para uso em outros tipos
 
 Defina sua propriedade anexada como uma propriedade de dependência declarando uma propriedade **public** **static** **readonly** do tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Essa propriedade é definida com o uso do valor de retorno do método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833). O nome da propriedade deve coincidir com o nome da propriedade anexada especificada como o parâmetro **RegisterAttached** *name*, com a cadeia de caracteres "Property" acrescentada ao final. Esta é a convenção estabelecida para nomeação das entidades de propriedades de dependência em relação às propriedades que representam.
 
-A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), você também deve fornecer estático **obter * * * PropertyName* e **Definir * * * PropertyName* métodos acessadores para a propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
+A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), você também deve fornecer estático **obter * * * PropertyName* e **Definir * * * PropertyName* métodos como acessadores para a propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
 
 > [!IMPORTANT]
 > Se você não definir os acessadores corretamente, o processador XAML não pode acessar a propriedade anexada e qualquer pessoa que tenta usá-lo, provavelmente receberá um erro do analisador XAML. Além disso, as ferramentas de design e codificação normalmente dependem das convenções "\*Property" para nomeação de identificadores, quando elas encontram um propriedade de dependência personalizada em um assembly referenciado.
@@ -234,7 +234,7 @@ Se estiver definindo a propriedade em um elemento que também está no mesmo nam
 ```
 
 > [!NOTE]
-> Se você estiver escrevendo uma UI XAML com C++, você deve incluir o cabeçalho para o tipo personalizado que define a propriedade anexada, sempre que uma página XAML usa esse tipo. Cada página XAML tem um cabeçalho code-behind .xaml.h associado. É aí que você deve incluir (usando **\#include**) o cabeçalho da definição do tipo de proprietário da propriedade anexada.
+> Se você estiver escrevendo uma UI XAML com C++, você deve incluir o cabeçalho para o tipo personalizado que define a propriedade anexada, a qualquer momento que uma página XAML usa esse tipo. Cada página XAML tem um cabeçalho code-behind .xaml.h associado. É aí que você deve incluir (usando **\#include**) o cabeçalho da definição do tipo de proprietário da propriedade anexada.
 
 ## <a name="value-type-of-a-custom-attached-property"></a>Tipo de valor de uma propriedade anexada personalizada
 

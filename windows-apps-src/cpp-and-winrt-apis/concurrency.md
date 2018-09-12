@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
 ms.openlocfilehash: 85071fb28cb87c991e2f5ba7f64b681c6850c819
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3851476"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3936403"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Simultaneidade e operações assíncronas com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -69,7 +69,7 @@ Chamar **get** é conveniente para a codificação e é ideal para aplicativos d
 C++/WinRT integra rotinas concomitantes de C++ no modelo de programação para fornecer uma maneira natural de esperar cooperativamente por um resultado. Você pode produzir sua própria operação assíncrona do Windows Runtime criando uma rotina concomitante. No exemplo de código abaixo, **ProcessFeedAsync** é a rotina concomitante.
 
 > [!NOTE]
-> A função de **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ projeto WinRT. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar porque não é parte da superfície da interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction** **obter** .
+> A função de **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ WinRT projeto. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar como **obter** não é parte da superfície de interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction**.
 
 ```cppwinrt
 // main.cpp

@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847680"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934247"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
@@ -251,7 +251,7 @@ Nos exemplos anteriores de chamada de [**DependencyProperty.Register**](https://
 Normalmente, você fornece um [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como uma instância criada embutida, dentro dos parâmetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
 > [!NOTE]
-> Se você estiver definindo uma implementação de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , você deve usar o método utilitário [**PropertyMetadata. Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) em vez de chamar um construtor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir a instância de **PropertyMetadata** .
+> Se você estiver definindo uma implementação de [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) , você deve usar o método utilitário [**PropertyMetadata. Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) em vez de chamar um construtor de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir a instância de **PropertyMetadata** .
 
 Este próximo exemplo modifica os exemplos de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) mostrados antes fazendo referência a uma instância de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) com um valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). A implementação do retorno de chamada "OnLabelChanged" é mostrada posteriormente nesta seção.
 
