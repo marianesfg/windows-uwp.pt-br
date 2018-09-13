@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: a2c2acc8351e8b646353a05e8d408dee57e633b0
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929400"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958504"
 ---
 # <a name="common-cryptography-tasks"></a>Tarefas comuns de criptografia
 

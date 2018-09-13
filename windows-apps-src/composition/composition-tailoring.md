@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 66384c4df3195ae0fff35ae5dd7e1b1983204068
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928136"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961240"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptar efeitos & experiências usando a interface do usuário do Windows
 

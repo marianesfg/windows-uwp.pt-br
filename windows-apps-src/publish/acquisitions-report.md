@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3931859"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961344"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 

@@ -12,12 +12,12 @@ keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 136a52cedd7d4b0599adaff08fd0860260da4ce3
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.openlocfilehash: e947b00c3a070a8d95a21e38c56bda07cd45d3c4
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928384"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964700"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e ícones de aplicativos 
 
@@ -129,7 +129,7 @@ Para iniciar o Designer de manifesto:
 :::row-end:::
 :::row:::
     :::column:::
-        2. no **Gerenciador de soluções**, clique duas vezes no arquivo Package AppManifest.
+        2. no **Gerenciador de soluções**, clique duas vezes no arquivo Package.appmxanifest.
     :::column-end:::
     :::column:::
         ![O Designer de manifesto do Visual Studio 2017](images/icons/vs-solution-explorer.png)

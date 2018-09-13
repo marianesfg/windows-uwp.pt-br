@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932951"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958146"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 

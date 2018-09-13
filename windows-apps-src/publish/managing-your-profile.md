@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3935241"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3963104"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
