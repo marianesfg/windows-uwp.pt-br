@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989311"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
@@ -119,7 +119,7 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Cen
 ### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
 
 1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
-2. Selecione a página de **usuários** , **grupos de adicionar**.
+2. Na página de **usuários** , selecione **Adicionar grupos**.
 2.  Selecione um ou mais grupos na lista exibida. Você pode usar a caixa de pesquisa para procurar grupos específicos.
     > [!TIP]
     > Se você selecionar mais de um grupo para adicionar à sua conta do Centro de Desenvolvimento, você deve atribuir a eles a mesma função ou conjunto de permissões personalizados. Para adicionar vários grupos com permissões/funções diferentes, repita as etapas abaixo para cada função ou um conjunto de permissões personalizados.
@@ -207,7 +207,7 @@ Depois de adicionar usuários, grupos e/ou aplicativos Azure AD à conta do Cent
 > [!IMPORTANT]
 > As alterações feitas às [funções ou permissões](set-custom-permissions-for-account-users.md) afetarão somente o acesso ao Centro de Desenvolvimento. Todas as outras alterações (por exemplo, alterar o nome do usuário ou associação de grupo, ou a URL de resposta e URI da ID do aplicativo para um aplicativo Azure AD) serão refletidas no locatário do Azure AD da sua organização, bem como em sua conta do Centro de Desenvolvimento. 
 
-1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do usuário, grupo ou conta de aplicativo do Azure AD que você deseja editar.
+1.  Na página de **usuários** (em **configurações da conta**), selecione o nome de usuário, grupo ou conta de aplicativo do Azure AD que você deseja editar.
 2.  Faça as alterações desejadas. Os itens que você pode editar são:
     -   Para um **usuário**, você pode editar o nome, o sobrenome ou o nome de usuário do usuário. Você também pode selecionar ou desmarcar grupos na seção **Associação de grupo** para atualizar a participação no grupo.
     -   Para um **grupo**, você pode editar o nome do grupo. (para atualizar a associação de grupo, os usuários que você deseja adicionar ou remover do grupo e fazer alterações para editar a seção **Membros do grupo**.)

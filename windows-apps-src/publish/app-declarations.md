@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: Product declarations help make sure your app is displayed appropriately in the Microsoft Store and offered to the right set of customers.
-title: Declarações do produto
+title: Declarações de produto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.author: wdg-dev-content
 ms.date: 12/05/2017
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961126"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981387"
 ---
-# <a name="product-declarations"></a>Declarações do produto
+# <a name="product-declarations"></a>Declarações de produto
 
 A seção de **declarações de produto** da página [Propriedades](enter-app-properties.md) do [processo de envio](app-submissions.md) de ajuda certificar-se de que seu aplicativo é exibido adequadamente e oferecido ao conjunto correto do clientes, ajudando-os a entender como eles podem usar seu aplicativo.
 

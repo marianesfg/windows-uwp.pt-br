@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3957868"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987047"
 ---
 # <a name="get-daily-app-usage"></a>Obter uso diário do aplicativo
 
@@ -90,17 +90,17 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationId             | string  | A ID da loja do aplicativo para o qual você está recuperando dados de uso.          |
 | applicationName           | string  | O nome de exibição do app.                                              |
 | deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                         |
-| packageVersion            | string  | A versão do pacote em que ocorreu o uso.                          |
+| packageVersion            | string  | A versão do pacote onde ocorreu o uso.                          |
 | market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou seu aplicativo. |
 | subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                            |
 | dailySessionCount         | comprimento    | O número de sessões de usuário em um dia.                                  |
 | engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando o aplicativo medido por um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.             |
-| dailyActiveUsers          | comprimento    | O número de clientes que estão usando o aplicativo nesse dia.                           |
+| dailyActiveUsers          | comprimento    | O número de clientes usando o aplicativo nesse dia.                           |
 | dailyActiveDevices        | comprimento    | O número de dispositivos diários usados para interagir com seu aplicativo por todos os usuários.  |
-| dailyNewUsers             | comprimento    | O número de clientes que usaram seu aplicativo pela primeira vez nesse dia.    |
-| monthlyActiveUsers        | comprimento    | O número de clientes que estão usando o aplicativo nesse mês.                         |
+| dailyNewUsers             | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez nesse dia.    |
+| monthlyActiveUsers        | comprimento    | O número de clientes usando o aplicativo nesse mês.                         |
 | monthlyActiveDevices      | comprimento    | O número de dispositivos executando o aplicativo para um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                                      |
-| monthlyNewUsers           | comprimento    | O número de clientes que usaram seu aplicativo pela primeira vez nesse mês.  |
+| monthlyNewUsers           | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez nesse mês.  |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

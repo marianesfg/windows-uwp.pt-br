@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3964494"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3988435"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -26,12 +26,12 @@ O **relatório de comentários** no painel do Centro de Desenvolvimento do Windo
 
 Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ótima maneira de aprender sobre os problemas e recursos que são mais importantes para eles. Quando seus clientes sabem que podem enviar comentários diretamente, eles têm menos probabilidade de deixar esses comentários como uma análise negativa na Loja.
 
-Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por essa razão, você pode ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
+Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório mesmo que não tenha especificamente solicitado comentários dentro de seu aplicativo.
 
 O feedback também pode ser importante ao usar o [pacote de liberação de versões de pré-lançamento](package-flights.md), pois o relatório de comentários mostra o pacote específico que cada cliente tinha instalado em seu dispositivo ao deixar os comentários.
 
 > [!TIP]
-> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **envolver** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
+> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **interagir** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -58,7 +58,7 @@ Nesse relatório, você encontrará os comentários individuais deixados por seu
 - **Mais populares**: mostra os comentários que tiveram votos a favor por outros clientes nos últimos sete dias, começando com os comentários que obtiveram a atividade mais recente.
 - **Mais recentes**: mostra todos os comentários, começando com os comentários deixados mais recentemente.
 
-Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente que enviou os comentários for um membro do Windows Insider programa.
+Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente enviou os comentários for um membro do Windows Insider programa.
 
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3957558"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3988599"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
@@ -40,7 +40,7 @@ Lembre-se das seguintes políticas para códigos promocionais:
 -   Você deve seguir os requisitos definidos no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluindo a seção **3k. Códigos promocionais**.
 
 > [!NOTE]
-> Você pode usar códigos promocionais mesmo se seu aplicativo não está disponível para os clientes (ou seja, se você selecionou **disponibilizar este produto mas não detectável na loja** com a aquisição de parada **: os clientes com um link direto poderão ver da loja do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** opção na seção de [Descoberta](choose-visibility-options.md#discoverability) do envio). Com essa opção, os clientes devem estar na Windows 10 (incluindo o Xbox) para adquirir seu produto com um código promocional.
+> Você pode usar códigos promocionais mesmo se seu aplicativo não está disponível para os clientes (isto é, se você selecionou **disponibilizar este produto mas não detectável na loja** com a aquisição de parada **: os clientes com um link direto poderão ver da loja do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** opção na seção de [Descoberta](choose-visibility-options.md#discoverability) do seu envio). Com essa opção, os clientes devem estar na Windows 10 (incluindo o Xbox) para adquirir seu produto com um código promocional.
 
 
 ## <a name="order-promotional-codes"></a>Solicitar códigos promocionais

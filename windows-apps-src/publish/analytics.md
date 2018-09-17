@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981245"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
@@ -37,9 +37,9 @@ Nesta seção, você encontrará detalhes sobre as informações apresentadas em
 -   [Relatório de integridade](health-report.md)
 -   [Relatório de classificações](ratings-report.md)
 -   [Relatório de avaliações](reviews-report.md)
--   [Relatório de comentários](feedback-report.md)
+-   [Relatório de feedback](feedback-report.md)
 -   [Relatório de análise do Xbox](xbox-analytics-report.md)
--   [Relatório de ideias](insights-report.md)
+-   [Relatório de insights](insights-report.md)
 -   [Relatório de desempenho de anúncios](advertising-performance-report.md)
 -   [Relatório de campanha publicitária](promote-your-app-report.md)
 

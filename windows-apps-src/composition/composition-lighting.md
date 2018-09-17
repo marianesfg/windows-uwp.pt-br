@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e634b18fffc4f601f6512d6ceeed51efbe9c1886
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981733"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de luzes na interface do usuário do Windows
 
@@ -87,7 +87,7 @@ Dependendo do tipo de luz usado, uma luz pode ter propriedades de atenuação e 
 
 Propriedade | Descrição
 --- | ---
-**Color** | A [cor](/uwp/api/windows.ui.color) da luz. Iluminação cor valores são definidos pela [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) difusa, ambientes e especulares que define a cor emitida. Iluminação Use valores RGBA de luzes; o componente de cor alfa não é usado.
+**Cor** | A [cor](/uwp/api/windows.ui.color) da luz. Iluminação cor valores são definidos pela [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) difusa, ambientes e especulares que define a cor emitida. Iluminação Use valores RGBA de luzes; o componente de cor alfa não é usado.
 **Direção** | A direção da luz. A direção em que a luz está apontando é especificada em relação ao seu Visual [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) .
 **Espaço de coordenadas** | Cada elemento Visual que tem um espaço de coordenadas 3D implícito. Direção X é da esquerda para a direita. Direção Y é de cima para baixo. Direção Z é um ponto fora do plano. O ponto original essa coordenada é o canto superior esquerdo do elemento visual e a unidade é pixels independentes do dispositivo (DIP). Deslocamento da luz definido nessa coordenada.
 **Cones internos e externos** | Destaques emitem um cone de luz com duas partes: um cone interno brilhante e um cone externo. Composição permite que você controle cor e ângulos de cone interno e externo.
