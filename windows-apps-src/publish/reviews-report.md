@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: The Reviews report in the Windows Dev Center dashboard lets you see the reviews (comments) that customers entered when rating your app in the Store.
-title: Relatório de opiniões
+title: Relatório de avaliações
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
 ms.date: 08/16/2018
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
-ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958684"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989535"
 ---
-# <a name="reviews-report"></a>Relatório de opiniões
+# <a name="reviews-report"></a>Relatório de avaliações
 
 
 O relatório **de avaliações** no painel do Centro de desenvolvimento do Windows permite que você veja as análises (comentários) que os clientes inseriram na classificação do seu aplicativo na loja.
@@ -37,7 +37,7 @@ Na parte superior da página, você pode selecionar o período para o qual você
 É possível expandir os **Filtros** para filtrar as análises mostradas nessa página pelas seguintes opções. Esses filtros não serão aplicado aos gráficos de **Análise de classificações** e **Média de classificação ao longo do tempo**.
 
 -   **Classificação**: por padrão, as análises com classificação por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
-- **Revisar o conteúdo**: A configuração padrão é **classificações com conteúdo de crítica**, o que significa que somente classificações com conteúdo de crítica serão mostradas. Você pode selecionar **todos os** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto de crítica escrito. Observe que o gráfico de **análise de classificações** sempre mostrará todas as análises, independentemente de sua seleção.
+- **Revisar o conteúdo**: A configuração padrão é **classificações com conteúdo de crítica**, o que significa que somente classificações com conteúdo de revisão serão mostradas. Você pode selecionar **todos os** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto de crítica escrito. Observe que o gráfico de **análise de classificações** sempre mostrará todas as análises, independentemente de sua seleção.
 -   **Versão do sistema operacional**: a configuração padrão é **Todos**. Você poderá escolher a versão específica do sistema operacional se quiser que essa página mostre somente análises deixadas por clientes nessa versão do sistema operacional.
 -   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, é possível selecionar um específico aqui para mostrar somente análises deixadas pelos clientes com esse pacote quando analisaram seu aplicativo.
 -   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
@@ -52,7 +52,7 @@ Na parte superior da página, você pode selecionar o período para o qual você
 
 ## <a name="ratings-breakdown"></a>Detalhamento das classificações
 
-O gráfico de **análise de classificações** aparece na parte superior desse relatório para que você possa obter uma rápida olhada o seguinte: 
+O gráfico de **análise de classificações** aparece na parte superior desse relatório para que você pode obter uma rápida olhada o seguinte: 
 - A classificação média por estrela do aplicativo.
 - O total de classificações do aplicativo nos últimos 12 meses.
 - O total de classificações de cada classificação por estrelas.
@@ -65,10 +65,10 @@ O gráfico de **análise de classificações** aparece na parte superior desse r
 
 Observe que este gráfico sempre inclui todas as análises, mesmo se você selecionou **que classificações com conteúdo de crítica** no filtro de página **revisar o conteúdo** .
 
-Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre as classificações do seu aplicativo.
+Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre a classificação do seu aplicativo.
 
 
-< span id = "categorias de informações de revisão / >
+<span id = "review-insight-categories" />
 
 ## <a name="insight-categories"></a>Categorias de informações
 
@@ -111,7 +111,7 @@ Por padrão, críticas que não foram escritas em seu idioma preferencial são t
 
 Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido caso deseje compará-lo à tradução ou traduzi-lo por meio de algum outro meio.
 
-Como observado acima, quando pesquisar as críticas, somente o texto original deixados por cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver a caixa **Traduzir análises** marcada.
+Como observado acima, quando pesquisar as críticas, somente o texto original deixado pelo cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver a caixa **Traduzir análises** marcada.
 
 
 ## <a name="responding-to-customer-reviews"></a>Respondendo às análises dos clientes
