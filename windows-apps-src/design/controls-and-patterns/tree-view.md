@@ -14,11 +14,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 20de58d13c4ace6b71ec952dc88cd59d1ab6114f
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4023002"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -78,14 +78,14 @@ Você pode incluir um ícone no modelo de dados do item de modo de exibição á
 
 ## <a name="create-a-tree-view"></a>Criar uma exibição de árvore
 
-Você pode criar um modo de exibição de árvore associando o [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a uma fonte de dados hierárquicos, ou você pode criar e gerenciar objetos TreeViewNode por conta própria.
+Você pode criar uma exibição de árvore associando o [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a uma fonte de dados hierárquicos, ou você pode criar e gerenciar objetos TreeViewNode por conta própria.
 
-Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
+Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Você pode criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
 
-A partir do Windows Insider Preview, você pode associar uma fonte de dados hierárquicos à propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo de modo de exibição de árvore, como faria com ItemsSource do ListView. Da mesma forma, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para fornecer um DataTemplate que renderiza o item.
+A partir do Windows Insider Preview, você pode associar uma fonte de dados hierárquicos para a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo de modo de exibição de árvore, assim como faria com ItemsSource do ListView. Da mesma forma, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para fornecer um DataTemplate que renderiza o item.
 
 > [!IMPORTANT]
-> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa ItemsSource, nós criados para você, e você possa acessá-los da propriedade TreeView.RootNodes.
+> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa o ItemsSource, nós criados para você, e você possa acessá-los da propriedade TreeView.RootNodes.
 
 Aqui está um exemplo de uma exibição de árvore simples declarada em XAML. Você normalmente adiciona os nós no código, mas mostraremos a hierarquia XAML aqui porque ele pode ser útil para visualizar como a hierarquia de nós é criada.
 
@@ -129,11 +129,11 @@ Se você usar TreeView.ItemsSource, essas APIs estão disponíveis para obter o 
 | **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtém o item de dados para o contêiner TreeViewItem especificado. |
-| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtém o contêiner TreeViewItem para o item de dados especificadas. |
+| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtém o contêiner TreeViewItem para o item de dados especificada. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
-| [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | Obtém o TreeViewNode do contêiner TreeViewItem especificado. |
+| [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | Obtém o TreeViewNode para o contêiner TreeViewItem especificado. |
 | [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | Obtém o contêiner TreeViewItem para o TreeViewNode especificado. |
 
 ### <a name="manage-tree-view-nodes"></a>Gerenciar nós de exibição de árvore
@@ -514,7 +514,7 @@ End Sub
 
 ### <a name="tree-view-using-data-binding"></a>Modo de exibição de árvore usando vinculação de dados
 
-Este exemplo mostra como criar a mesma visualização de árvore do exemplo anterior. No entanto, em vez de criar a hierarquia de dados em XAML, os dados são criados no código e vinculados a propriedade ItemsSource de exibição de árvore. (Os manipuladores de eventos de botão mostrados no exemplo anterior se aplicam a esse exemplo também.)
+Este exemplo mostra como criar o modo de exibição de árvore mesmo que o exemplo anterior. No entanto, em vez de criar a hierarquia de dados em XAML, os dados são criados no código e vinculados a propriedade ItemsSource de exibição de árvore. (Os manipuladores de eventos de botão mostrados no exemplo anterior se aplicam a esse exemplo também.)
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="100">

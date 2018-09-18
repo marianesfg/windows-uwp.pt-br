@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015090"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 
@@ -61,7 +61,7 @@ Seu manifesto deve incluir algumas informações específicas sobre sua conta e 
 > Os valores no manifesto diferenciam maiúsculas de minúsculas. Espaços e outros sinais de pontuação também devem coincidir. Insira os valores com cuidado e os revise para garantir que estejam corretos.
 
 
-Lotes de aplicativo (. appxbundle) usam outro manifesto. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que, no appxbundle, o .appxmanifest de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Lotes de aplicativo (. appxbundle) usam outro manifesto. Confira a documentação [Manifesto do pacote](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para ver os detalhes e requisitos de manifestos de pacotes de aplicativos. Observe que, na appxbundle, o .appxmanifest de cada pacote incluído deve usar os mesmos elementos e atributos, exceto para o atributo **ProcessorArchitecture** do elemento [identidade](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Execute o [Kit de Certificação de Aplicativos Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar seus pacotes. Ele pode ajudar a determinar se o manifesto apresenta algum problema que possa causar falhas na certificação ou no envio.

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, suspensão de publicação, data de publicação, enviar para publicar, aprovação de funcionalidade restrita
 ms.localizationpriority: medium
 ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015134"
 ---
 # <a name="manage-submission-options"></a>Gerenciar opções de envio
 
@@ -30,19 +30,19 @@ Por padrão, publicaremos seu envio assim que ele passar na certificação (ou d
 
 **Publicar este envio assim que ele for aprovado na certificação (ou de acordo com as datas selecionadas na seção Agendar)** é a seleção padrão e significa que seu envio iniciará o processo de publicação assim que ele for aprovado na certificação, a menos que você tenha configurado datas na seção [Agendar](configure-precise-release-scheduling.md) da página **Preço e disponibilidade**.   
 
-Para a maioria dos envios, recomendamos deixar a seção **Opções de suspensão de publicação** definida para essa opção. Se quiser especificar determinadas datas para que seu envio seja publicado, use **Publicar o envio assim que for aprovado na certificação (ou de acordo com as datas selecionadas na seção Agendar)**. Deixar essa seção definida como a opção padrão não fará com que o envio seja publicado até as datas definidas na seção **Agendar**. As datas que você selecionou na seção **Agendar** serão usadas para determinar quando seu produto se torna disponível para os clientes na loja.
+Para a maioria dos envios, recomendamos deixar a seção **Opções de suspensão de publicação** definida para essa opção. Se quiser especificar determinadas datas para que seu envio seja publicado, use **Publicar o envio assim que for aprovado na certificação (ou de acordo com as datas selecionadas na seção Agendar)**. Deixar essa seção definida como a opção padrão não fará com que o envio seja publicado até as datas definidas na seção **Agendar**. As datas que você selecionou na seção **Agendar** serão usadas para determinar quando seu produto será disponibilizado para os clientes na loja.
 
 
 ### <a name="publish-your-submission-manually"></a>Publicar seu envio manualmente
 
-Se você ainda não quiser definir uma data de lançamento e preferir que o envio permaneça não publicado até você decidir manualmente iniciar o processo de publicação, escolha **Não publicar este envio até eu selecionar Publicar agora**. Escolher esta opção significa que seu envio não será publicado até você indicar que ele deve ser. Depois de certificação de passagens de seu envio, você pode publicá-lo selecionando **Publicar agora** na página de status da certificação ou selecionando uma data específica da mesma maneira, conforme descrito a seguir.
+Se você ainda não quiser definir uma data de lançamento e preferir que o envio permaneça não publicado até você decidir manualmente iniciar o processo de publicação, escolha **Não publicar este envio até eu selecionar Publicar agora**. Escolher esta opção significa que seu envio não será publicado até você indicar que ele deve ser. Depois de certificação de passagens de seu envio, você pode publicá-lo selecionando **Publicar agora** na página de status da certificação ou selecionando uma data específica da mesma maneira, conforme descrito abaixo.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Iniciar a publicação de seu envio em uma data específica
 
 Escolha **Iniciar a publicação deste envio em** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado. 
 
-Você pode alterar essa data de lançamento depois de enviar seu produto, desde que ele ainda não tenha entrado na etapa publicação ainda. 
+Você pode alterar essa data de lançamento depois de enviar seu produto, desde que ele ainda não tenha entrado na etapa publicação. 
  
 Conforme observado anteriormente, se você quiser especificar determinadas datas de publicação para seu envio, use **Publicar este envio assim que ele for aprovado na certificação (ou de acordo com as datas selecionadas por você na seção Agendar)** e deixe **Opções de suspensão de publicação** definido como a seleção padrão. Usando a opção **Iniciar a publicação deste envio em** significa que seu envio não iniciará o processo de publicação até essa data, mas atrasos durante a certificação ou publicação podem fazer com a data real de lançamento seja posterior à data selecionada. 
 

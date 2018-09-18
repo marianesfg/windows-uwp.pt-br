@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3986269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4018324"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -99,7 +99,7 @@ Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibilit
 Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro.
 
 > [!Tip]
-> Quando você tiver elementos da interface do usuário que são **recolhido** por padrão, os objetos ainda são criados na inicialização, mesmo que eles não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Quando você tiver elementos da interface do usuário que são **recolhido** por padrão, os objetos ainda são criados na inicialização, mesmo quando não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 

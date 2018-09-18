@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020058"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um app "Hello, world" (XAML)
 

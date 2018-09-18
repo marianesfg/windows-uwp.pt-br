@@ -15,11 +15,11 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: b4e3678e17e7545dfe9cb4049ace7ff864198156
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017074"
 ---
 # <a name="xaml-lighting"></a>Iluminação de XAML
 
@@ -29,7 +29,7 @@ Você pode aplicar luzes a [**Visuals**](https://msdn.microsoft.com/library/wind
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Aplicação de luzes a UIElements XAML
 
-Os objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) são usados para aplicar [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinamicamente UIElements XAML. XamlLight fornece métodos para direcionar UIElements ou pincéis XAML, aplicando luzes a árvores de UIElements, e ajudar a gerenciar a vida útil de CompositionLight usam recursos com base em se estiver no momento.
+Os objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) são usados para aplicar [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) para iluminar dinamicamente UIElements XAML. XamlLight fornece métodos para direcionar UIElements ou pincéis XAML, aplicando luzes a árvores de UIElements, e ajudar a gerenciar a vida útil do CompositionLight usam recursos com base em se estiver no momento.
 
 - Se você tiver um **Brush** como destino de uma XamlLight, então as partes de quaisquer UIElements que usem esse Brush serão iluminadas.
 - Se você tiver um **UIElement** como destino de uma XamlLight, então o UIElement inteiro e seus UIElements filhos serão iluminados.
@@ -461,7 +461,7 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-Você pode aplicar esta luz para qualquer UIElement XAML ou o pincel de luz-los. Este exemplo mostra diferentes usos potenciais.
+Em seguida, você pode aplicar esta luz para qualquer UIElement XAML ou o pincel de luz-los. Este exemplo mostra diferentes usos potenciais.
 
 > [!Important]
 > Para [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), remova as duas ocorrências de `local:OrangeSpotLight.IsTarget="True"` da marcação abaixo. As propriedades anexadas já são definidas no code-behind.

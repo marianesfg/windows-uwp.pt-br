@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, vendas de complementos, aquisições de complementos, vendas de iap, produtos no aplicativo, iaps, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017246"
 ---
 # <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complementos
 
@@ -32,7 +32,7 @@ Neste relatório, uma aquisição de complemento significa que um cliente adquir
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **H 1** ou **72h** para mostrar dados de aquisição em tempo quase real para uma hora ou setenta e duas horas. Esses períodos de tempo só se aplicam à guia **complementar diariamente** do gráfico de **aquisições de complemento** e para a guia de **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Você também pode selecionar **H 1** ou **72h** para mostrar dados de aquisição em tempo quase real para uma hora ou setenta e duas horas; Esses períodos de tempo só se aplicam à guia **complementar diariamente** do gráfico de **aquisições de complemento** e para a guia de **aquisições** do gráfico de **mercados** . 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por complementos específicos, por mercado e/ou por tipo de dispositivo.
 

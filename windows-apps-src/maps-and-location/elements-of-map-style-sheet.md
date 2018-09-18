@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019292"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
 Tecnologias de mapeamento da Microsoft usam _folhas de estilo de mapa_ para definir a aparência de mapas.  Uma folha de estilos de mapa é definida usando JavaScript Object Notation (JSON) e pode ser usada em várias maneiras incluindo em de um aplicativo Windows Store [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) por meio do método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
-Folhas de estilo podem ser criadas interativamente usando o aplicativo de [Editor de folha de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+Folhas de estilo podem ser criadas interativamente usando o aplicativo do [Editor de folha de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
 
 O JSON a seguir pode ser usado para tornar áreas de água aparecem em vermelho, rótulos de água aparecem em verde e áreas de terra aparecem em azul:
 
@@ -80,7 +80,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins médicos (por exemplo: um campus de hospital). |
 | >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem bases militares ou têm usos militares. |
 | >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins náuticos relacionados. |
-| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de ambiente. |
+| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área do bairro. |
 | >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que é usado como uma pista avião. |
 | >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas arenosas, como praias. |
 | >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de chão alocadas para shopping centers ou outros centros comerciais. |
@@ -94,7 +94,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem a natureza reserva. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Todos os recursos que são desenhados com um ícone de algum tipo de ponto. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Rótulos de números de endereço. |
-| >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam recursos naturais. |
+| >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam os recursos naturais. |
 | >>>> peak                    | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam picos de montanha. |
 | >>>>> volcanicPeak           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam picos de vulcão. |
 | >>>> waterPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam os locais de recursos hídricos, como uma cachoeira. |
@@ -102,9 +102,9 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam qualquer locaiton de negócios. |
 | >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam atrações turísticas como museus, zoos, etc. |
 | >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam os locais de uso geral para a comunidade. |
-| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam escolas e outro education relacionado locais. |
+| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam escolas e outro education relacionados locais. |
 | >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam entretenimento como teatros cinemas, etc. |
-| >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam serviços essenciais, como vaga, bancos, pedal, etc. |
+| >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam serviços essenciais como vaga, bancos, pedal, etc. |
 | >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam restaurantes, cafés etc. |
 | >>>>> lodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam hotéis e outras empresas de hospedagem. |
 | >>>>> realEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam as empresas imóveis. |
@@ -130,7 +130,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rodovias de acesso controlado grande. |
 | >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam vias de acesso de alta velocidade que normalmente se conectam à controlada rodovias de acesso. |
 | >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rodovias. |
-| >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam estradas principais. |
+| >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam as estradas principais. |
 | >>>> arterialRoad            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam arterial estradas. |
 | >>>> street                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam ruas. |
 | >>>>> ramp                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam vias de acesso que normalmente se conectam à rodovias. |
@@ -183,8 +183,8 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 | officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se os itens que possuem uma propriedade de cor oficial (como linhas de trânsito na China) devem desenhar essa cor. Por exemplo, desative esse valor para um mapa em preto e branco. |
 | rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se deseja ou não desenhar regiões de rasterização onde eles têm uma representação melhor que vetores (Japão e Coreia). |
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se é possível ou não desenhar o sombreamento de elevações no mapa. |
-| shadedReliefDarkColor        | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado escuro do baixo relevo sombreado.  O canal alfa representa o valor máximo alfa. |
-| shadedReliefLightColor       | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado claro do baixo relevo sombreado.  O canal alfa representa o valor máximo alfa. |
+| shadedReliefDarkColor        | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado escuro do baixo relevo sombreado.  O canal alfa representa o máximo alfa. |
+| shadedReliefLightColor       | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado claro do baixo relevo sombreado.  O canal alfa representa o máximo alfa. |
 | shadowColor                  | Cor   |      |      |      |  ✔️   | A cor da sombra por trás de ícones que usam sombras. |
 | spaceColor                   | Color   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB para a área ao redor do mapa. |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se as cores originais no SVG devem ser usados em vez de com a entrada de paleta de cores em uma imagem. |
@@ -231,7 +231,7 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 | Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
-| plano de fundo de forma             | Float   |      |      |      |  ✔️   | Forma para usar como o plano de fundo do ícone – substituindo qualquer forma que existe. |
+| plano de fundo de forma             | Float   |      |      |      |  ✔️   | Forma de usar como o plano de fundo do ícone, substituindo qualquer forma que existe. |
 | stemAnchorRadiusScale        | Float   |      |      |  ✔   |  ✔   | Quantidade pela qual o ponto de ancoramento de um tronco do ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | stemColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do tronco oriundo da parte inferior do ícone no modo de 3D. |
 | stemHeightScale              | Float   |      |      |  ✔   |  ✔   | Quantidade pela qual o tamanho do tronco de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |

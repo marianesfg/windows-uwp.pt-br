@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019148"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -58,7 +58,7 @@ Vamos começar com os princípios básicos de bom design de navegação:
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários estejam familiarizados com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários estão familiarizados com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -111,7 +111,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![Páginas dispostas em uma estrutura simples](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":::
+    ::: extensão da coluna = "2":
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
@@ -130,7 +130,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![Páginas dispostas em uma hierarquia](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":::
+    ::: extensão da coluna = "2":
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -150,7 +150,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![um aplicativo com uma estrutura híbrida](images/nav/combining-structures.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":::
+    ::: extensão da coluna = "2":
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -200,7 +200,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column:::
         ![imagem de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: [ **navegação à esquerda**](../controls-and-patterns/navigationview.md)
+    ::: extensão da coluna = "2"::: [ **de navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         

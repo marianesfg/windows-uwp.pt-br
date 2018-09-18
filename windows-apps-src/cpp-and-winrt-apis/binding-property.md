@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
 ms.openlocfilehash: bdf4d3ff17dcdf51dba2e37929228560e2e58fb5
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015298"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>Controles XAML; vincular a uma propriedade [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em C++/WinRT, e como vincular controles de XAML a elas.
@@ -49,11 +49,11 @@ namespace Bookstore
 ```
 
 > [!NOTE]
-> Suas classes de modelo de exibição&mdash;na verdade, qualquer classe de tempo de execução que você declara em seu aplicativo&mdash;não precisa derivar de uma classe base. A classe **BookSku** declarada acima é um exemplo disso. Ele implementa uma interface, mas ele não deriva de qualquer classe base.
+> Suas classes de modelo de exibição&mdash;na verdade, qualquer classe de tempo de execução que você declarar em seu aplicativo&mdash;não precisa derivar de uma classe base. A classe **BookSku** declarada acima é um exemplo disso. Ele implementa uma interface, mas ele não deriva de qualquer classe base.
 >
-> Qualquer classe de tempo de execução que você declara no aplicativo que *faz* derivar de uma base de classe é conhecido como um *composable* classe. E há restrições ao redor composable classes. Para um aplicativo passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (e, portanto, para o aplicativo ser inserido com êxito na Microsoft Store), uma classe composta deve Por fim derive de uma classe base do Windows. Isso significa que a classe na raiz muito da hierarquia de herança deve ser um tipo originando do namespace. Se você precisar derivar uma classe de tempo de execução de uma classe base&mdash;por exemplo, para implementar uma classe **BindableBase** para todos os seus modelos de exibição derivar de&mdash;, em seguida, você pode derivar de [**DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
+> Qualquer classe de tempo de execução que você declarar no aplicativo que *faz* derivar de uma base de classe é conhecido como um *composable* classe. E há restrições ao redor composable classes. Para um aplicativo passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (e, portanto, para o aplicativo ser inserido com êxito na Microsoft Store), uma classe composable deve Por fim derive de uma classe base do Windows. Isso significa que a classe na raiz muito da hierarquia de herança deve ser um tipo originando do namespace. Se você precisa derivar uma classe de tempo de execução de uma classe base&mdash;por exemplo, para implementar uma classe **BindableBase** para todos os seus modelos de exibição derivar de&mdash;, em seguida, você pode derivar de [**DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 >
-> Um modelo de exibição é uma abstração de um modo de exibição e, portanto, ele é vinculado diretamente para o modo de exibição (a marcação XAML). Um modelo de dados é uma abstração de dados, e ele tem consumido somente de seus modelos de exibição e não vinculado diretamente em XAML. Portanto, você pode declarar seus modelos de dados não como classes de tempo de execução, mas como classes ou estruturas de C++. Eles não precisam ser declaradas no MIDL, e você pode usar qualquer hierarquia que desejar.
+> Um modelo de exibição é uma abstração de um modo de exibição e, portanto, ele está vinculado diretamente para o modo de exibição (a marcação XAML). Um modelo de dados é uma abstração de dados, e ele tem consumido somente de seus modelos de exibição e não vinculado diretamente em XAML. Portanto, você pode declarar seus modelos de dados não como classes de tempo de execução, mas como classes ou estruturas de C++. Eles não precisam ser declaradas no MIDL, e você pode usar qualquer hierarquia que desejar.
 
 Salve o arquivo e compile o projeto. Durante o processo de compilação, a ferramenta `midl.exe` é executada para criar um arquivo de metadados do componente do Tempo de Execução do Windows (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`), descrevendo a classe de tempo de execução. Em seguida, a ferramenta `cppwinrt.exe` é executada para gerar arquivos de código fonte para dar suporte a você na criação e no consumo da classe de tempo de execução. Esses arquivos incluem stubs para ajudar você a começar a implementar a classe de tempo de execução **BookSku** que foi declarada em sua IDL. Esses stubs são `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` e `BookSku.cpp`.
 
@@ -126,7 +126,7 @@ namespace winrt::Bookstore::implementation
 }
 ```
 
-A função de modificador de **título** , verificamos se um valor está sendo definido que diferente do valor atual. E, em caso afirmativo, podemos atualizar o título e também disparar o evento [**INotifyPropertyChanged:: PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) com um argumento igual ao nome da propriedade que foi alterada. Isso é feito para que a interface do usuário (IU) saiba qual valor de propriedade consultar novamente.
+A função de modificador de **título** , verificamos se um valor está sendo definido que que é diferente do valor atual. E, em caso afirmativo, podemos atualizar o título e também disparar o evento [**INotifyPropertyChanged:: PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) com um argumento igual ao nome da propriedade que foi alterada. Isso é feito para que a interface do usuário (IU) saiba qual valor de propriedade consultar novamente.
 
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>Declare e implemente **BookstoreViewModel**
 Nossa página principal de XAML associará a um modelo de exibição principal. E esse modelo de exibição terá várias propriedades, incluindo uma do tipo **BookSku**. Nesta etapa, vamos declarar e implementar nossa classe de tempo de execução do modelo de exibição principal.
@@ -212,7 +212,7 @@ Salve o arquivo. O projeto não será compilado para a conclusão no momento, ma
 
 Se você omitir a inclusão de `BookstoreViewModel.idl` (consulte a listagem de `MainPage.idl` acima), em seguida, você verá o erro **esperando \ < próximo "MainViewModel"**. Outra dica é certificar-se de que você deixe todos os tipos no mesmo namespace: o namespace que é mostrado nas listagens de código.
 
-Para resolver o erro que esperamos que, agora será necessário copie os stubs de acessador para a propriedade **MainViewModel** fora dos arquivos gerados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`) e em `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`.
+Para resolver o erro que esperamos que, agora será necessário copiar os stubs de acessador para a propriedade **MainViewModel** fora dos arquivos gerados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`) para `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`.
 
 Em `\Bookstore\Bookstore\MainPage.h`, inclua `BookstoreViewModel.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookstoreViewModel**). Adicione um membro particular para armazenar o modelo de exibição. Observe que a função de acessador de propriedade (e o membro m_mainViewModel) são implementados em termos de **Bookstore::BookstoreViewModel**, que é o tipo projetado. O tipo de implementação está no mesmo projeto (unidade de compilação) como o aplicativo, portanto, construímos m_mainViewModel por meio da sobrecarga de construtor que leva `nullptr_t`. Também remova a propriedade **MyProperty** .
 

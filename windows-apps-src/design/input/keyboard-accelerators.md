@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022942"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -366,7 +366,7 @@ Por padrão, quando são declarados aceleradores de teclado, todos os controles 
 
 *Combinação de teclas aceleradoras em dica de ferramenta*
 
-Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta de padrão do controle. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
+Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta do controle padrão. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
 
 > [!NOTE]
 > Especificando uma dica de ferramenta (consulte Button1 no exemplo a seguir) substitui esse comportamento.

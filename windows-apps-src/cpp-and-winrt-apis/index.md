@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
 ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020564"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Com o C++/WinRT, você pode criar e consumir APIs do Windows Runtime usando qualquer compilador C++17 compatível com padrões. O SDK do Windows inclui o C++/WinRT; ele foi introduzido na versão 10.0.17134.0 (Windows 10, versão 1803).
@@ -29,7 +29,7 @@ A linguagem de programação C++ é usada na empresa *e* em segmentos de fornece
 
 Do ponto de vista do idioma, C++ sempre foi sobre criação e consumo de abstrações dos tipos rico e leve. Mas o idioma mudou radicalmente desde os ponteiros brutos, loops brutos e alocação de memória criteriosa e liberação de C++98. C++ moderno (do C++11 em diante) é sobre expressão clara de ideias, simplicidade, leitura fácil e uma menor probabilidade de introdução de bugs.
 
-Para criar e consumir APIs do Windows Runtime usando C++, há C++/WinRT. Essa é a substituição recomendada da Microsoft para o [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) projeção de linguagem e a [Biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
+Para criar e consumir APIs do Windows Runtime usando C++, há C++/WinRT. Isso é a substituição recomendada da Microsoft para o [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) projeção de linguagem e a [Biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
 
 Você usa tipos de dados C++ padrão, algoritmos e palavras-chave ao usar C++/WinRT. A projeção tem seus próprios tipos de dados personalizados, mas na maioria dos casos você não precisa aprendê-los, porque eles fornecem as conversões apropriadas para e de tipos padrão. Dessa forma, você pode continuar a usar os recursos de linguagem C++ padrão que você está acostumado a usar e o código-fonte que você já tem. C++/WinRT torna extremamente fácil chamar as APIs do Windows Runtime em qualquer aplicativo de C++, do Win32 a UWP.
 
@@ -52,13 +52,13 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Processamento de erros com C++/WinRT](error-handling.md) | Este tópico aborda as estratégias para processar erros ao programar com C++/WinRT. |
 | [Manejar eventos usando delegados](handle-events.md) | Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. |
 | [Criar eventos](author-events.md) | Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos. |
-| [Coleções com C++ c++ WinRT](collections.md) | C++ c++ WinRT fornece funções e classes base que economizar muito tempo e esforço quando você deseja implementar e/ou passe coleções. |
+| [Coleções com C++ c++ WinRT](collections.md) | C++ c++ WinRT fornece funções e classes base que poupar muito tempo e esforço quando você deseja implementar e/ou passar coleções. |
 | [Simultaneidade e operações assíncronas](concurrency.md) | Este tópico mostra as maneiras nas quais você pode criar e consumir objetos assíncronos do Windows Runtime com C++/WinRT. |
 | [Controles XAML; vincular a uma propriedade C++/WinRT](binding-property.md) | Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela. |
 | [Controles de itens XAML; vincular a uma coleção C++/WinRT](binding-collection.md) | Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela. |
 | [Controles personalizados (modelos) de XAML com C++ c++ WinRT](xaml-cust-ctrl.md) | Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis. |
 | [Consumir componentes COM C++ c++ WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. |
-| [Criar componentes COM C++ c++ WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda você a criar classes de tempo de execução do Windows. |
+| [Criar componentes COM C++ c++ WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudá-lo a criar componentes COM clássicos, assim como ele ajuda a criar classes de tempo de execução do Windows. |
 | [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. |
 | [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT. |
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |

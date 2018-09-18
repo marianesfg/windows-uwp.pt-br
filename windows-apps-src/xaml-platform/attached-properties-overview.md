@@ -15,11 +15,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 7f92b12ab9c8962fe98d8eed22b21e7d10330c99
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022456"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -40,7 +40,7 @@ Em XAML, você define propriedades anexadas usando a sintaxe _AttachedPropertyPr
 ```
 
 > [!NOTE]
-> Estamos usando [**Canvas. Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como uma propriedade de exemplo anexada sem explicar totalmente por que você deve usá-lo. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) ou [Definir layouts com XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+> Estamos usando [**Canvas. Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como uma propriedade de exemplo anexada sem explicar totalmente por que usá-lo. Se quiser saber mais sobre a finalidade de **Canvas.Left** e como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) manipula seus filhos de layout, consulte o tópico de referência [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) ou [Definir layouts com XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## <a name="why-use-attached-properties"></a>Por que usar propriedades anexadas?
 

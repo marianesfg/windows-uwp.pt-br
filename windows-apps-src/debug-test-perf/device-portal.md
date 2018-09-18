@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017232"
 ---
 # <a name="windows-device-portal-overview"></a>Visão geral do Windows Device Portal
 
@@ -56,7 +56,7 @@ Para obter instruções de instalação específicas ao dispositivo, consulte:
 ### <a name="toolbar-and-navigation"></a>Barra de ferramentas e navegação
 
 A barra de ferramentas na parte superior da página fornece acesso a recursos comumente usados.
-- **Ligar/desligar**: acessar opções de energia.
+- **Ligar/desligar**: acesso a opções de energia.
   - **Desligar**: desativa o dispositivo.
   - **Reiniciar**: repete o ciclo de energia no dispositivo.
 - **Ajuda**: abre a página de ajuda.
@@ -69,9 +69,9 @@ As ferramentas que são comuns em famílias de dispositivos são descritas aqui.
 
 O Gerenciador de aplicativos fornece instalação/desinstalação e funcionalidade de gerenciamento de aplicativo pacotes e pacotes no dispositivo host.
 
-![Página do Gerenciador de aplicativos de Portal de dispositivo](images/device-portal/wdp-apps.png)
+![Página de Gerenciador de aplicativos do Portal de dispositivo](images/device-portal/wdp-apps.png)
 
-- **Aplicativos instalados**: Use o menu suspenso para remover ou iniciar aplicativos que estão instalados no dispositivo. Instale um novo aplicativo clicando em **Adicionar**. Isso inicia o experiência do usuário para implantar aplicativos empacotados no local de instalação, rede ou web hospeda e registre arquivos soltos de compartilhamentos de rede.
+- **Aplicativos instalados**: Use o menu suspenso para remover ou iniciar aplicativos que estão instalados no dispositivo. Instale um novo aplicativo clicando em **Adicionar**. Isso inicia o experiência do usuário para implantar aplicativos empacotados no local de instalação, rede ou web hospeda e registrar arquivos soltos de compartilhamentos de rede.
 - **Aplicativos em execução**: obter informações sobre os aplicativos que estão sendo executados e fechá-los conforme necessário.
 
 #### <a name="install-an-app"></a>Instalar um aplicativo
@@ -86,31 +86,31 @@ O Gerenciador de aplicativos fornece instalação/desinstalação e funcionalida
 
 #### <a name="uninstall-an-app"></a>Desinstalar um aplicativo
 1.  Certifique-se de que seu aplicativo não esteja em execução. 
-2.  Se estiver, vá para **aplicativos em execução** e feche-o. Se você tentar desinstalar enquanto o aplicativo é executado, ele causará problemas ao tentar reinstalar o aplicativo. 
+2.  Se estiver, vá para **aplicativos em execução** e feche-o. Se você tentar desinstalar enquanto o aplicativo é executado, isso causará problemas ao tentar reinstalar o aplicativo. 
 3.  Selecione o aplicativo na lista suspensa e clique em **Remover**.
 
 ### <a name="running-processes"></a>Processos em execução
 
 Esta página mostra detalhes sobre processos em execução no dispositivo host. Isso inclui aplicativos e processos do sistema. Em algumas plataformas (área de trabalho, IoT e HoloLens), você pode encerrar processos.
 
-![Dispositivo executando o Portal processa a página](images/device-portal/mob-device-portal-processes.png)
+![Portal de dispositivo executando processa a página](images/device-portal/mob-device-portal-processes.png)
 
 ### <a name="file-explorer"></a>Explorador de Arquivos
 
-Esta página permite que você exiba e manipule arquivos armazenados por qualquer aplicativos de sideload. Consulte a postagem para saber mais sobre o Explorador de arquivos e como usá-lo o blog [usando o Explorador de arquivos do aplicativo](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) . 
+Esta página permite que você exiba e manipule arquivos armazenados por qualquer aplicativos de sideload. Consulte o blog [usando o Explorador de arquivos do aplicativo](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) postagem para saber mais sobre o Explorador de arquivos e como usá-lo. 
 
 ![Página do explorer de arquivo do Portal de dispositivo](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>Desempenho
 
-A página de desempenho mostra gráficos em tempo real das informações de diagnóstico do sistema como o uso de energia, taxa de quadros, e a carga da CPU.
+A página de desempenho mostra gráficos em tempo real das informações de diagnóstico do sistema como o uso de energia, taxa de quadros e a carga da CPU.
 
 Estas são as métricas disponíveis:
 - **CPU**: porcentagem do total de utilização da CPU disponível
 - **Memória**: Total, em uso, disponível confirmado, paginado e não paginada
 - **E/s**: as quantidades de dados de leitura e gravação
 - **Rede**: recepção e envio de dados
-- **GPU**: utilização de mecanismo % do total GPU disponível
+- **GPU**: utilização do mecanismo % de GPU disponível total
 
 
 ![Página de desempenho do Portal de dispositivo](images/device-portal/mob-device-portal-perf.png)
@@ -146,21 +146,21 @@ A página de rastreamento de desempenho permite que você para exibir os rastrea
 - **Perfis disponíveis**: selecione o perfil WPR na lista suspensa e clique ou toque em **Iniciar** para iniciar o rastreamento.
 - **Perfis personalizados**: clique ou toque em **Procurar** para escolher um perfil WPR do seu computador. Clique ou toque em **Carregar e iniciar** para iniciar o rastreamento.
 
-Para interromper o rastreamento, clique em **Parar**. Fique nesta página até que o arquivo de rastreamento (. ETL) Download concluído.
+Para interromper o rastreamento, clique em **Parar**. Fique nesta página até que o arquivo de rastreamento (. ETL) download for concluído.
 
 Capturado. Arquivos ETL podem ser abertos para análise no [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/desktop/hh448170.aspx).
 
 ### <a name="device-manager"></a>Gerenciador de dispositivos
 
-A página do Gerenciador de dispositivos enumera todos os periféricos conectados ao dispositivo. Você pode clicar nos ícones de configurações para exibir as propriedades de cada um.
+A página do Gerenciador de dispositivos enumera todos os periféricos conectados ao seu dispositivo. Você pode clicar nos ícones de configurações para exibir as propriedades de cada um.
 
 ![Página de Gerenciador de dispositivo do Portal de dispositivo](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>Rede
 
-A página de rede gerencia conexões de rede no dispositivo. A menos que você esteja conectado ao Device Portal por meio de USB, alterar essas configurações provavelmente desconectarão você do Device Portal.
-- **Redes disponíveis**: mostra as redes Wi-Fi disponíveis para o dispositivo. Clicar ou tocar em uma rede permitirá que você se conecte a ela e forneça uma chave de acesso, se necessário. Portal de dispositivos ainda não oferece suporte a autenticação de empresa. Você também pode usar a lista suspensa **perfis** para tentar se conectar a qualquer um dos perfis de Wi-Fi conhecidos para o dispositivo.
-- **Configuração de IP**: mostra informações de endereço sobre cada host portas de rede do dispositivo.
+A página de rede gerencia conexões de rede no dispositivo. A menos que você estiver conectado ao Device Portal por meio de USB, alterar essas configurações provavelmente desconectarão você do Device Portal.
+- **Redes disponíveis**: mostra as redes Wi-Fi disponíveis para o dispositivo. Clicar ou tocar em uma rede permitirá que você se conecte a ela e forneça uma chave de acesso, se necessário. Portal de dispositivo ainda não oferece suporte para autenticação de empresa. Você também pode usar a lista suspensa **perfis** para tentar se conectar a qualquer um dos perfis de Wi-Fi conhecidos para o dispositivo.
+- **Configuração de IP**: mostra as informações de endereço sobre cada host portas de rede do dispositivo.
 
 ![Página de Portal de rede do dispositivo](images/device-portal/mob-device-portal-network.png)
 

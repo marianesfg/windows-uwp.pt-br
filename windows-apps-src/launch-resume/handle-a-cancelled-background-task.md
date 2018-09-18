@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020594"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -137,7 +137,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 Quando uma solicitação de cancelamento é recebida, o método que realiza a tarefa em segundo plano precisa parar o trabalho e sair reconhecendo quando **\_cancelRequested** está definido como **true**. Para tarefas em segundo plano no processo, isso significa retornar do método **OnBackgroundActivated** . Para tarefas em segundo plano fora do processo, isso significa retornar do método **Executar** .
 
-Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** é definido como true, o trabalho de continuar.
+Modifique o código da classe de tarefa em segundo plano para verificar a variável de sinalizador enquanto ela está funcionando. Se **\_cancelRequested** torna-se definido como true, o trabalho de continuar.
 
 O [exemplo de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) inclui uma verificação que interrompe o retorno de chamada do temporizador periódico se a tarefa em segundo plano é cancelada.
 

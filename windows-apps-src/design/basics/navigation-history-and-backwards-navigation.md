@@ -14,12 +14,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 714a1af932dfb8d5b0aab5c84437f92d5c2bd90e
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.openlocfilehash: 4eb8bc40c2e9066487a14d217f53a6433266b308
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016058"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
@@ -174,7 +174,7 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-Acima, manipulamos para trás navegação para uma única página. Você pode manipular a navegação em cada página se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código em nível de página antes de exibir a página.
+Acima, manipulamos para trás navegação para uma única página. Se você quiser excluir páginas específicas da navegação regressiva ou quiser executar código em nível de página antes de exibir a página, você pode manipular a navegação em cada página.
 
 Para manipular a navegação para um aplicativo inteiro para trás, você precisará registrar um ouvinte global para o evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) no `App.xaml` arquivo code-behind.
 
@@ -297,7 +297,7 @@ Se seu aplicativo continua a usar [AppViewBackButtonVisibility](https://docs.mic
 
     ![Botão Voltar barra de título](images/nav-back-pc.png)
 
-- Se um aplicativo estiver **com guias**, o botão Voltar é renderizado dentro de um novo voltar do sistema barra.
+- Se um aplicativo estiver **com guias**, o botão Voltar é renderizado dentro de um novo sistema para trás barra.
 
     ![Sistema voltar desenhado barra de botões](images/back-nav/tabs.png)
 
@@ -306,9 +306,9 @@ Se seu aplicativo continua a usar [AppViewBackButtonVisibility](https://docs.mic
 > [!NOTE]
 > "Voltar do sistema barra" é apenas uma descrição, não um nome oficial.
 
-Voltar do sistema barra é uma faixa inserida entre a faixa de guia e a área de conteúdo do aplicativo s. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. O faixa tem uma altura vertical de 32 pixels para garantir que o tamanho de destino de toque adequado para o botão Voltar.
+Voltar do sistema barra é uma faixa inserida entre a faixa de guia e a área de conteúdo do aplicativo. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. O faixa tem uma altura vertical de 32 pixels para garantir que o tamanho de destino de toque adequado para o botão Voltar.
 
-A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar estiver visível, Voltar do sistema barra é inserida, mudando o conteúdo do aplicativo por 32 pixels abaixo da faixa da guia. Quando o botão Voltar é oculto, Voltar do sistema barra é removida dinamicamente, mudando o conteúdo do aplicativo para cima por 32 pixels para atender a faixa da guia. Para evitar shift de interface do usuário do seu aplicativo para cima ou para baixo, é recomendável desenhar um [botão Voltar no aplicativo](#back-button).
+A barra de voltar do sistema é exibida dinamicamente com base na visibilidade do botão Voltar. Quando o botão Voltar estiver visível, Voltar do sistema barra é inserida, mudando o conteúdo do aplicativo por 32 pixels abaixo da faixa da guia. Quando o botão Voltar é oculto, Voltar do sistema barra é removida dinamicamente, mudando o conteúdo do aplicativo para cima por 32 pixels para atender a faixa da guia. Para evitar que shift de interface do usuário do seu aplicativo para cima ou para baixo, é recomendável desenhar um [botão Voltar no aplicativo](#back-button).
 
 [Personalizações da barra de título](../shell/title-bar.md) continuará até a guia do aplicativo e voltar barra. Se seu aplicativo especifica as propriedades de cor de primeiro e segundo planos com [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), as cores serão aplicadas à parte traseira do sistema e guia barra.
 
@@ -335,14 +335,14 @@ Se você optar por fornecer sua própria pilha Voltar de navegação, a experiê
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, sem elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Há não na tela elemento de navegação (por exemplo, o [NavigationView](../controls-and-patterns/navigationview.md)) que ofereça navegação direta para as duas páginas.</p></td>
+<p>O usuário navega de uma página para outra com o mesmo grupo de pares. Há não na tela elemento de navegação (por exemplo, o <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que ofereça navegação direta para as duas páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sim</strong>
 <p>Na ilustração a seguir, o usuário navega entre duas páginas no mesmo grupo de pares e a navegação deve ser adicionada ao histórico de navegação.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página, mesmo grupo de par, com elemento de navegação na tela</strong>
-<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação, como o [NavigationView](../controls-and-patterns/navigationview.md).</p></td>
+<p>O usuário navega de uma página para outra no mesmo grupo de pares. Ambas as páginas são mostradas no mesmo elemento de navegação, como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
 <td style="vertical-align:top;"><strong>Depende</strong>
 <p>Sim, adicione ao histórico de navegação, com duas exceções notáveis. Se você espera que os usuários do seu aplicativo alternem entre as páginas no grupo de pares com frequência, ou se desejar preservar a hierarquia de navegação, em seguida, não adicione ao histórico de navegação. Nesse caso, quando o usuário pressiona Voltar, ele retorna para a última página visitada antes do usuário navegar para o grupo de pares atual. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>

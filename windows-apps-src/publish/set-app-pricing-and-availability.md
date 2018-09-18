@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, preço, disponível, detectável, avaliação gratuita, avaliações, avaliação, apps, data de lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015156"
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 
@@ -74,7 +74,7 @@ Por padrão, a versão de avaliação será disponibilizada assim que o aplicati
 >[!NOTE]
 > Essas datas se aplicam somente a clientes no Windows 10 (incluindo o Xbox). Se o app estiver disponível para os clientes nas versões anteriores do sistema operacional, a versão de avaliação será oferecida a esses clientes enquanto seu produto estiver disponível. 
 
-Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado.) Você pode selecionar **Personalizar para mercados específicos** , se você deseja definir datas diferentes para algum mercado.
+Para definir as datas em que sua avaliação deve ser oferecida aos clientes no Windows 10, altere a lista suspensa **Começa em** e/ou **Termina em** para **em** e escolha a data e a hora. Se você fizer isso, poderá escolher **UTC** para que a hora selecionada seja no fuso horário Horário Coordenado Universal (UTC) ou escolha **Local** para que esses períodos sejam usados em cada fuso horário associado a um mercado. (Observe que, no caso de mercados que incluem mais de um fuso horário, apenas um fuso horário desse mercado será usado. Para os Estados Unidos, o fuso horário do Leste dos EUA é usado.) Se você deseja definir datas diferentes para qualquer um mercado, você pode selecionar **Personalizar para mercados específicos** .
 
 
 ## <a name="sale-pricing"></a>Preço de venda

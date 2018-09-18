@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017010"
 ---
 # <a name="color"></a>Cor
 
@@ -40,7 +40,7 @@ Quando a cor é usada com moderação para realçar os elementos importantes, el
 
 :::row:::
     :::column:::
-        **Cor é pessoal.**
+        **A cor é pessoal.**
 No Windows, os usuário pode escolher uma cor de destaque e um tema claro ou escuro, que são refletidos durante sua experiência. Você pode escolher como incorporar a cor de destaque e o tema do usuário no aplicativo, personalizando a experiência.
     :::column-end:::
     :::column:::
@@ -150,7 +150,7 @@ Os controles comuns usam uma cor de destaque para transmitir informações de es
         ![cabeçalho de destaque selecionado pelo usuário](images/color/user-accent.svg) ![cor de destaque selecionado pelo usuário](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
-        ![cabeçalho de destaque personalizada](images/color/custom-accent.svg) ![cor de destaque da marca personalizada](images/color/brand-color.svg)
+        ![cabeçalho de destaque personalizado](images/color/custom-accent.svg) ![cor de destaque da marca personalizada](images/color/brand-color.svg)
     :::column-end:::
 :::row-end:::
 

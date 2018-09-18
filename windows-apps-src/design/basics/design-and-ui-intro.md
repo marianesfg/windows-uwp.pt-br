@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016068"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -66,7 +66,7 @@ Como os aplicativos UWP são dimensionados automaticamente para todos os disposi
 
 :::row:::
     :::column:::
-        Quando um aplicativo UWP é iniciado em qualquer dispositivo Windows 10, ele é iniciado em uma [janela](/uwp/api/Windows.UI.Xaml.Controls.Window) com um [quadro](/uwp/api/Windows.UI.Xaml.Controls.Frame), que pode navegar entre instâncias de [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
+        Quando um aplicativo UWP é lançado em qualquer dispositivo Windows 10, ele abre em uma [janela](/uwp/api/Windows.UI.Xaml.Controls.Window) com um [quadro](/uwp/api/Windows.UI.Xaml.Controls.Frame), que pode navegar entre instâncias de [página](/uwp/api/Windows.UI.Xaml.Controls.Page) .
     :::column-end:::
     :::column:::
         ![Quadro](images/frame.svg)

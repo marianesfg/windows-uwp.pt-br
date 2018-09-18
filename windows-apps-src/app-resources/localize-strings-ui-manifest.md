@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3990271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016108"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -98,7 +98,7 @@ Se um nome de recurso é segmentado (ele contém "." caracteres), em seguida, su
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI do seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
+Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI de seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -175,13 +175,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Se você pretendia mover o recurso "AppDisplayName" de `Resources.resw` para `ManifestResources.resw`, no manifesto do pacote de aplicativos, altere `ms-resource:AppDisplayName` para `ms-resource:/ManifestResources/AppDisplayName`.
 
-Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), deixe os pontos no nome ao fazer referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
+Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), em seguida, deixar os pontos no nome quando você faz referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI do seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
+Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI de seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -268,13 +268,13 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Para uma biblioteca de tempo de execução do Windows (universal do Windows), se o namespace padrão é segmentado (ele contém "." caracteres), use pontos no nome do mapa de recursos.
+Para uma biblioteca de tempo de execução do Windows (universal do Windows), se o namespace padrão é segmentado (ele contém "." caracteres), em seguida, use pontos no nome do mapa de recursos.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-Você não precisará fazer isso para uma biblioteca de classes (Universal Windows). Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o componente ou do arquivo PRI da biblioteca. Cada recurso `uri` é mostrada no arquivo despejado.
+Você não precisa fazer isso para uma biblioteca de classes (Universal Windows). Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o componente ou do arquivo PRI da biblioteca. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 051c24e0acc645150f4ca7ff74480f7de3ce456b
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022134"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -37,7 +37,7 @@ O cenário mais simples é onde você está implementando uma interface do Windo
 > [!NOTE]
 > Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C + c++ WinRT)** modelo de projeto ilustra o padrão de **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C++ c++ WinRT)** modelo de projeto ilustra o padrão **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -290,7 +290,7 @@ No caso em que você tiver um objeto de interface e souber que é uma interface 
 > [!NOTE]
 > Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)ou posterior, em seguida, você pode chamar [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) em vez de [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi).
 
-Veja um exemplo. [Implementar a classe de controle personalizado de **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
+Veja um exemplo. [Implemente a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -318,7 +318,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado pelo `cppwinrt.exe` ferramenta) que torna isso possível.
+Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado o `cppwinrt.exe` ferramenta) que torna isso possível.
 
 ## <a name="deriving-from-a-type-that-has-a-non-trivial-constructor"></a>Derivando de um tipo que tem um construtor não trivial
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) é um exemplo de um construtor não trivial. Não há nenhum padrão construtor; então, para construir um **ToggleButtonAutomationPeer**, você precisa passar um *proprietário*. Consequentemente, se você derivar de **ToggleButtonAutomationPeer**, então você precisa fornecer um construtor que leva um *proprietário* e passá-lo para a base. Vamos ver um exemplo disso na prática.

@@ -11,11 +11,11 @@ keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualiza
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015070"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
@@ -43,7 +43,7 @@ APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessi
 
 Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
-## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET em versões UWP
+## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET nas versões UWP
 
 UWP dá suporte a um subconjunto limitado de APIs .NET, que estão disponíveis, independentemente do **Versão de destino** ou uma **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, cadeia de caracteres
 ms.localizationpriority: medium
 ms.openlocfilehash: 332edcf17f2b6bbf595def67c9df7043f21828c7
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020616"
 ---
 # <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Tratamento de cadeia de caracteres em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Com o C + + WinRT, você pode chamar APIs do Windows Runtime usando tipos de cadeia de caracteres longa da Biblioteca Padrão C++, como **std::wstring** (observação: mas não com tipos de cadeia de caracteres curta, como **std::string**). O C++/WinRT tem um tipo de cadeia de caracteres personalizado chamado [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definido na biblioteca C++/WinRT, que é `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Esse é o tipo de cadeia de caracteres que construtores, funções e propriedades do Windows Runtime podem retornar. Mas, em muitos casos, graças aos construtores e operadores de conversão **hstring**, você pode optar se deseja ou não estar ciente do **hstring** no código cliente. Se você estiver *criando* APIs, provavelmente precisará saber sobre a existência de **hstring**.

@@ -17,11 +17,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 703667bf22ce11c119463008e868a943d447c7ff
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3986307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019462"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -54,7 +54,7 @@ Para mostrar um conjunto de vários menus de nível superior em uma linha horizo
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menus versus CommandBar
 
-Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para seus usuários. Barra de menu fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais organização ou agrupamento e permite que um CommandBar.
+Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para os usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais organização ou agrupamento e permite que um CommandBar.
 
 Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a barra de menus para fornecer a maior parte dos comandos e o CommandBar para realçar os comandos mais usados.
 
@@ -76,7 +76,7 @@ Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a 
 
 ## <a name="menus-vs-context-menus"></a>Menus x menus de contexto
 
-Menus e menus de contexto são semelhantes em termos de aparência e o que podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
+Menus e menus de contexto são semelhantes em termos de aparência e que podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
 
 Quando você deve usar um menu ou um menu de contexto?
 
@@ -212,7 +212,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-### <a name="light-dismiss"></a>Ignorar rapidamente
+### <a name="light-dismiss"></a>Ignorar
 
 Os controles light dismiss, como menus, menus de contexto e outros submenus, prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [LightDismissOverlayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). Por padrão, as interfaces do usuário transitórias desenham a sobreposição de ignorar no Xbox (**Automático**), mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição como sempre **Ativada** ou **Desativada**.
 
@@ -224,12 +224,12 @@ Os controles light dismiss, como menus, menus de contexto e outros submenus, pre
 
 > **Visualização**: barra de menus requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Você pode usar os mesmos elementos para criar menus em uma barra de menu como em um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como um menu de nível superior.
+Você pode usar os mesmos elementos para criar menus em uma barra de menu como um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como menu de nível superior.
 
 ![Exemplo de uma barra de menu](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> Este exemplo mostra apenas como criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
+> Este exemplo mostra como somente criar a estrutura de interface do usuário, mas não mostrar a implementação de qualquer um dos comandos.
 
 ```xaml
 <MenuBar>
