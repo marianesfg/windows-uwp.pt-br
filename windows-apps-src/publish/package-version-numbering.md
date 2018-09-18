@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a16339e0918f8291f7b1cc7a3a6dfef3ccf375d
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4024402"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -33,11 +33,11 @@ Cada pacote que você fornece precisa ter um número de versão (fornecido como 
 Quando for escolher um pacote do Windows 10 de seu envio publicado, a Microsoft Store sempre usará o pacote com versão mais alta que for aplicável ao dispositivo do cliente. Isso proporciona maior flexibilidade e coloca você no controle de quais pacotes serão fornecidos para clientes em tipos específicos de dispositivos. Importante, você pode enviar esses pacotes em qualquer ordem. Você não está limitado a fornecer pacotes com maior número de versão em cada envio subsequente.
 
 > [!TIP]
-> Se seu aplicativo também tiver pacotes para Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote do Windows 10 deve sempre ser maior do que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
+> Se seu aplicativo também tiver pacotes para Windows 8, Windows 8.1 e/ou Windows Phone 8.1, o número de versão de qualquer pacote do Windows 10 deve ser sempre maior do que qualquer um dos números de versão nesses pacotes. (Para obter mais informações, consulte [Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)).
 
 Você pode fornecer vários pacotes do Windows 10 com o mesmo número de versão. Contudo, os pacotes que compartilharem um número de versão não poderão ter também a mesma arquitetura, pois a identidade completa que a Loja usa para cada um de seus pacotes deve ser única. Para obter mais informações, consulte [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
 
-Quando você fornece vários pacotes do Windows 10 que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
+Quando você fornecer vários pacotes do Windows 10 que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
 Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte a dispositivos acessíveis aos quais não oferecia suporte anteriormente. Você pode adicionar pacotes com maior número de versão com dependências mais estritas para aproveitar o hardware ou os recursos do sistema operacional, ou pode adicionar pacotes com maior número de versão que servem como atualizações para alguns ou toda a sua base de clientes existentes.
 

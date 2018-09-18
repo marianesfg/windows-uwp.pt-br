@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4024382"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -41,7 +41,7 @@ As contas empresariais são um pouco mais caras, principalmente porque exigem al
 
 ## <a name="account-verification"></a>Verificação da conta
 
-Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não poderá enviar aplicativos de uma conta corporativa até ele tenham sido verificado, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e funciona em Preparando seus envios.
+Depois de concluir o processo de inscrição, sua conta passará pelo processo de verificação. Para contas individuais, verificamos se outra empresa já não está usando seu nome de exibição do editor. Para contas empresariais, nosso parceiro de verificação Dun & Bradstreet confirmará se você está autorizado a criar uma conta para a empresa que está representando. Este processo pode demorar de alguns dias a algumas semanas e geralmente inclui uma chamada telefônica para a sua empresa (verifique se todas as informações de contato estão atualizadas ao preencher os formulários de registro). Você não poderá enviar aplicativos de uma conta corporativa até que ele tenham sido verificado, mas enquanto está esperando, você pode [reservar um nome de aplicativo](create-your-app-by-reserving-a-name.md) continuar compilando e testando aplicativos e funciona em Preparando seus envios.
 
 Você pode verificar o status da verificação na página **Configurações da conta**. 
 

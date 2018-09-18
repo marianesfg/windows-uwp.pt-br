@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4023964"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -41,15 +41,15 @@ Para criar o selo, visite a página de [selos da Microsoft Store](http://go.micr
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Vincular diretamente ao seu aplicativo na Microsoft Store
 
-Você pode criar um link que inicia a Microsoft Store e vai diretamente para a página de listagem do seu aplicativo sem abrir um navegador usando o **ms-windows-store:** esquema de URI.
+Você pode criar um link que inicia o Microsoft Store e vai diretamente para a página de listagem do seu aplicativo sem abrir um navegador usando o **ms-windows-store:** esquema de URI.
 
 Esses links são úteis quando você sabe que os usuários estão em um dispositivo Windows e você deseja que eles sejam encaminhados diretamente para a página de listagem da Loja. Por exemplo, você pode usar o link depois de verificar as cadeias de caracteres de agente do usuário em um navegador para confirmar se o sistema operacional do usuário oferece suporte à Loja quando você já está se comunicando por um aplicativo UWP.
 
-Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do aplicativo a este link:
+Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do seu aplicativo a este link:
 
 `ms-windows-store://pdp/?ProductId=`
 
-Para obter mais informações sobre como usar o protocolo de Microsoft Store, consulte [Iniciar o aplicativo da Microsoft](../launch-resume/launch-store-app.md).
+Para obter mais informações sobre como usar o protocolo da Microsoft Store, consulte [Iniciar o aplicativo da Microsoft](../launch-resume/launch-store-app.md).
 
  
 

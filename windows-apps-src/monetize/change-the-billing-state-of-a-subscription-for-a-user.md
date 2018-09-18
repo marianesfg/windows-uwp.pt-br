@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4024080"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Alterar o estado de cobrança de uma assinatura para um usuário
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 | Nome         | Tipo  | Descrição   |  Necessário  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | cadeia | A ID da assinatura que deseja alterar. Para obter essa ID, chame o método [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) , identifique a entrada de corpo de resposta que representa o complemento de assinatura que você deseja alterar e use o valor do campo **id** para a entrada.     | Sim      |
+| recurrenceId | cadeia | A ID da assinatura que deseja alterar. Para obter essa ID, chame o método [obter assinaturas para um usuário](get-subscriptions-for-a-user.md) , identifique a entrada de corpo de resposta que representa o complemento de assinatura que deseja alterar e use o valor do campo de **id** para a entrada.     | Sim      |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -120,7 +120,7 @@ O corpo de resposta contém os seguintes dados.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
-| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura depois que a assinatura não pôde ser renovada automaticamente.    |
+| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura após a assinatura não pôde ser renovada automaticamente.    |
 | id | cadeia |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |

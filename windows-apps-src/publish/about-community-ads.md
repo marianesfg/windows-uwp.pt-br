@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4023976"
 ---
 # <a name="about-community-ads"></a>Sobre anúncios de comunidade
 
@@ -40,9 +40,9 @@ Para aceitar anúncios da comunidade para um aplicativo UWP:
 2. Se a opção **Permitir que a Microsoft Escolha as melhores configurações de mediação para o seu aplicativo** estiver selecionada, anúncios de comunidade são habilitados para sua unidade publicitária automaticamente. Caso contrário, selecione a configuração de linha de base ou uma configuração específicas de mercado na lista suspensa **destino** e, em seguida, marque a caixa de **anúncios da Microsoft Community** na lista de **outras redes de anúncios** .
 
     > [!NOTE]
-    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar da redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
+    > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar de redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
 
-Para aceitar anúncios da comunidade para que o Windows 8. x ou Windows Phone 8. x aplicativo,
+Para aceitar anúncios da comunidade para que o Windows 8 ou o aplicativo do Windows Phone 8.x,
 
 1. Na página de **anúncios no app** , marque a caixa **Mostrar anúncios da comunidade em meu aplicativo** .
 
