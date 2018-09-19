@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
-description: Converta uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada em seu processo de app em primeiro plano.
+title: Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
+description: Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada em seu processo de aplicativo em primeiro plano.
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano, o serviço de aplicativo
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4020266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055776"
 ---
-# <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Converter uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
 
-A maneira mais simples de converter sua atividade de segundo plano fora do processo em uma atividade no processo é trazer seu código de método [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) em seu aplicativo e iniciá-lo em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
+A maneira mais simples de portar sua atividade de segundo plano fora do processo (OOP) atividade no processo é trazer seu código de método [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) dentro de seu aplicativo e iniciá-lo de [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). A técnica que está sendo descrita aqui não é sobre a criação de uma correção de uma tarefa de plano de fundo OOP em uma tarefa em segundo plano no processo; seu reescrever sobre (ou fazendo a portabilidade) uma versão OOP para uma versão no processo.
 
 Se seu aplicativo tem várias tarefas em segundo plano, o [Exemplo de ativação em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) mostra como usar `BackgroundActivatedEventArgs.TaskInstance.Task.Name` para identificar qual tarefa está sendo iniciada.
 

@@ -12,11 +12,11 @@ keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4019730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055862"
 ---
 # <a name="designing-for-sets"></a>Projetando para conjuntos
 
