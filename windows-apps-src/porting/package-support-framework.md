@@ -10,34 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060958"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
 A estrutura de suporte do pacote é um kit de código-fonte aberto que ajuda você a aplicar correções em seu aplicativo win32 existentes quando você não tiver acesso ao código-fonte, para que ele pode ser executado em um contêiner de MSIX. A estrutura de suporte do pacote ajuda a seu aplicativo siga as práticas recomendadas do ambiente de tempo de execução moderno.
 
-Para criar a estrutura de suporte do pacote, aproveitamos a tecnologia de [desvios](https://www.microsoft.com/en-us/research/project/detours) que é uma estrutura de código-fonte aberto desenvolvida pela Microsoft Research (MSR) e ajuda com redirecionamento de API e interceptação.
-
-Essa estrutura é livre, leve, e você pode usá-lo para resolver problemas de aplicativo rapidamente. Ele também oferece a oportunidade para consultar a comunidade em todo o mundo e compilar sobre os investimentos de outras pessoas.
-
-## <a name="a-quick-look-inside-of-the-package-support-framework"></a>Uma rápida olhada dentro a estrutura de suporte do pacote
-
-A estrutura de suporte de pacote contém um executável, uma DLL do Gerenciador de tempo de execução e um conjunto de correções de tempo de execução.
-
-![Estrutura de suporte do pacote](images/desktop-to-uwp/package-support-framework.png)
-
-Veja como funciona. Você criará um arquivo de configuração que especifica o fix(s) que você deseja aplicar ao seu aplicativo. Em seguida, você modificará seu pacote para apontar para o arquivo executável do iniciador de correção.
-
-Quando os usuários iniciam o seu aplicativo, o inicializador de correção é o primeiro executável que é executado. Lê o arquivo de configuração e injeta fix(s) o tempo de execução e a DLL do Gerenciador de tempo de execução no processo do aplicativo.
-
-![Injeção de DLL de estrutura de suporte do pacote](images/desktop-to-uwp/package-support-framework-2.png)
-
-O Gerenciador de tempo de execução se aplica a correção quando for necessária, o aplicativo seja executado dentro de um contêiner MSIX.
+Para saber mais, consulte a [Estrutura de suporte do pacote](https://docs.microsoft.com/windows/msix/package-support-framework-overview).
 
 Este guia ajudará você a identificar problemas de compatibilidade de aplicativo e encontrar, aplicar e estender o tempo de execução correções que solucioná-los.
 
