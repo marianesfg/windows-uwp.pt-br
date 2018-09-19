@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, integridade, falhas, eventos sem resposta, integridade de aplicativo, dados de integridade, rastreamento de pilha, arquivo cab, falha, falhas, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4019014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4054034"
 ---
 # <a name="health-report"></a>Relatório de integridade
 

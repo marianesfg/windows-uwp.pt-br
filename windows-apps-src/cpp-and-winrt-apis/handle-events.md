@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4019066"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4053158"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Manejar eventos usando delegados em [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. Você pode manipular um evento usando qualquer objeto de função de C++ padrão.
