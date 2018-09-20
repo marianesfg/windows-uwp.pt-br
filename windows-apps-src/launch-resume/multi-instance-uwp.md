@@ -4,31 +4,31 @@ title: Crie um aplicativo universal do Windows de várias instâncias
 description: Este tópico descreve como escrever aplicativos UWP que dão suporte a várias instâncias.
 keywords: uwp de várias instâncias
 ms.author: twhitney
-ms.date: 02/22/2018
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0717ac9a2af0a0e1078e39af8f7300ac506823
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9302ed0375739153eb95ac2b54c1ed396b14daee
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816541"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4085185"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
 Este tópico descreve como criar aplicativos da Plataforma Universal do Windows (UWP) de várias instâncias.
 
-Antes do Windows 10, versão 1803, apenas uma instância de um aplicativo UWP pode ser executada por vez. Agora, um aplicativo UWP pode aceitar o suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
+Do Windows 10, versão 1803 (10.0; Build 17134), seu aplicativo UWP pode aceitar para dar suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
 
-## <a name="opt-in-to-multi-instance-behavior"></a>Concorde com comportamento de várias instâncias
+## <a name="opt-in-to-multi-instance-behavior"></a>Aceitar o comportamento de várias instâncias
 
 Se você estiver criando um novo aplicativo de várias instâncias, você pode instalar o **Templates.VSIX de projeto de aplicativo de várias instâncias**, disponível no [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Depois de instalar os modelos, eles estarão disponíveis na caixa de diálogo **Novo Projeto** em **Visual C# > Universal do Windows** (ou **Outras linguagens > Visual C++ > Universal do Windows**).
 
 Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você deseja apenas depois que a instância de cada vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
 
-Adicionar a extensão `SupportsMultipleInstances` ao seu arquivo package.appxmanifest Observe o prefixo de namespace `desktop4`e `iot2`: somente várias instâncias dar suporte a projetos direcionados a área de trabalho ou projetos de Internet das Coisas (IoT):
+Ambos os modelos adicionam `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo do namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
 
 ```xml
 <Package
@@ -53,10 +53,13 @@ Adicionar a extensão `SupportsMultipleInstances` ao seu arquivo package.appxman
 
  Várias instâncias de suporte para aplicativos UWP vai além de simplesmente possibilitando a iniciar várias instâncias do aplicativo. Ele permite a personalização em casos em que você deseja selecionar se uma nova instância do seu aplicativo for iniciada ou uma instância que já está em execução é ativada. Por exemplo, se o aplicativo é iniciado para editar um arquivo que já está sendo editado em outra instância, convém redirecionar a ativação para essa instância em vez de abrir outra instância que já está editando o arquivo.
 
-Para vê-lo em ação, assista a este vídeo sobre como criar aplicativos UWP de várias instâncias:
+Para vê-lo em ação, assista a este vídeo sobre como criar aplicativos UWP de várias instâncias.
+
 > [!VIDEO https://www.youtube.com/embed/clnnf4cigd0]
 
-O modelo de **aplicativo UWP de redirecionamento de várias instâncias** adiciona `SupportsMultipleInstances` ao arquivo package.appxmanifest, como mostrado acima, e também adiciona um **Program.cs** (ou **Program.cpp**, se você estiver usando a versão C++ do modelo) ao seu projeto que contém uma função `Main()`. Vai para a lógica para redirecionar a ativação da função `Main` . O modelo para **Program.cs** tem esta aparência:
+O modelo de **aplicativo UWP de redirecionamento de várias instâncias** adiciona `SupportsMultipleInstances` ao arquivo package.appxmanifest, como mostrado acima, e também adiciona um **Program.cs** (ou **Program.cpp**, se você estiver usando a versão C++ do modelo) ao seu projeto que contém uma função `Main()`. Vai para a lógica para redirecionar a ativação da função `Main` . O modelo para **Program.cs** é mostrado abaixo.
+
+A propriedade [AppInstance.RecommendedInstance](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa a instância fornecida pelo shell preferencial para essa solicitação de ativação, se houver uma (ou `null` se houver um). Se o shell fornece uma preferência, em seguida, você pode pode redirecionar ativação para essa instância ou você pode ignorá-lo se você escolher.
 
 ``` csharp
 public static class Program
@@ -73,8 +76,8 @@ public static class Program
         // logic for generating the key for this instance.
         IActivatedEventArgs activatedArgs = AppInstance.GetActivatedEventArgs();
 
-        // In some scenarios, the platform might indicate a recommended instance.
-        // If so, we can redirect this activation to that instance instead, if we wish.
+        // If the Windows shell indicates a recommended instance, then
+        // the app can choose to redirect this activation to that instance instead.
         if (AppInstance.RecommendedInstance != null)
         {
             AppInstance.RecommendedInstance.RedirectActivationTo();
@@ -87,7 +90,7 @@ public static class Program
             // to the first instance. In practice, the app should produce a key
             // that is sometimes unique and sometimes not, depending on its own needs.
             string key = Guid.NewGuid().ToString(); // always unique.
-            //string key = "Some-App-Defined-Key"; // never unique.
+                                                    //string key = "Some-App-Defined-Key"; // never unique.
             var instance = AppInstance.FindOrRegisterInstanceForKey(key);
             if (instance.IsCurrentInstance)
             {
@@ -112,7 +115,6 @@ O código acima determina se um existente ou nova instância do seu aplicativo f
 
 Se uma instância registrada com a chave for encontrada, essa instância é ativada. Se a chave não for encontrado, em seguida, a instância atual (a instância que está sendo executado `Main`) cria seu objeto de aplicativo e começa a ser executado.
 
-
 ## <a name="background-tasks-and-multi-instancing"></a>Tarefas em segundo plano agora podem ter várias instâncias
 
 - Tarefas em segundo plano fora do processo suportam a várias instâncias. Normalmente, cada novo disparador resulta em uma nova instância da tarefa em segundo plano (embora tecnicamente falando várias tarefas em segundo plano pode ser executado no mesmo processo de host). No entanto, é criada uma instância da tarefa em segundo plano de fundo diferente.
@@ -131,7 +133,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 
 ## <a name="sample"></a>Exemplo
 
-Consulte [exemplo de várias instâncias](https://aka.ms/Kcrqst) para obter um exemplo de redirecionamento de ativação de várias instâncias.
+Veja um exemplo de redirecionamento de ativação de várias instâncias de [exemplo de várias instâncias](https://aka.ms/Kcrqst) .
 
 ## <a name="see-also"></a>Veja também
 
