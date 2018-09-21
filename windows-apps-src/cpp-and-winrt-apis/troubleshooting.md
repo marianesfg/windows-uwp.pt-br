@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: 4129c50a2273c8ac425f6ea972898aa09fe0fcf3
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: cccc58c0b9dd5f922c87d3e6860bb2f2045ea767
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085723"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4115300"
 ---
 # <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Solucionando problemas de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -37,7 +37,7 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | O compilador C++ gera o erro "*attempting to reference a deleted function*". | Isso poderá acontecer quando você chamar **make** e o tipo de implementação passado como parâmetro de modelo tiver um construtor padrão `= delete`. Edite o arquivo de cabeçalho do tipo de implementação e altere `= delete` para `= default`. Você também pode adicionar um construtor em IDL para a classe de tempo de execução. |
 | Você implementou [**INotifyPropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged), mas suas associações XAML não estão sendo atualizadas (e a interface do usuário não está assinando [**PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)). | Lembre-se de definir `Mode=OneWay` (ou TwoWay) em sua expressão de associação na marcação XAML. Consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md). |
 | Você está associando um controle de itens XAML a uma coleção observável, e uma exceção é lançada em tempo de execução com a mensagem "The parameter is incorrect". | No IDL e na implementação, declare qualquer coleção observável como tipo **Windows.Foundation.Collections.IVector<IInspectable>**. Mas retorne um objeto que implementa **Windows.Foundation.Collections.IObservableVector<T>**, em que T é o tipo de elemento. Consulte [Controles de itens XAML; associar a uma coleção C++/WinRT](binding-collection.md).  |
-| O compilador C++ gera um erro do formulário "*'MyImplementationType_base&lt;MyImplementationType&gt;': no appropriate default constructor available*".|Isso poderá acontecer quando você fizer a derivação de um tipo que tem um construtor não trivial. O construtor do tipo derivado precisa passar os parâmetros que o construtor do tipo base precisa. Para obter um exemplo trabalhado, consulte [Fazendo a derivação de um tipo que tem um construtor não trivial](author-apis.md#deriving-from-a-type-that-has-a-non-trivial-constructor).|
+| O compilador C++ gera um erro do formulário "*'MyImplementationType_base&lt;MyImplementationType&gt;': no appropriate default constructor available*".|Isso poderá acontecer quando você fizer a derivação de um tipo que tem um construtor não trivial. O construtor do tipo derivado precisa passar os parâmetros que o construtor do tipo base precisa. Para obter um exemplo trabalhado, consulte [Fazendo a derivação de um tipo que tem um construtor não trivial](author-apis.md#deriving-from-a-type-that-has-a-non-default-constructor).|
 | O compilador C++ gera o erro "*cannot convert from 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Isso poderá acontecer quando você passar um std::vector de std::wstring para uma API do Windows Runtime que espera uma coleção. Para obter mais informações, consulte [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md).|
 | O compilador C++ gera o erro "*cannot convert from 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*".|Isso poderá acontecer quando você passar um std::vector de winrt::hstring para uma API assíncrona do Windows Runtime que espera uma coleção e não tiver copiado nem movido o vetor para o computador chamado assíncrono. Para obter mais informações, consulte [Tipos de dados C++ padrão e C++/WinRT](std-cpp-data-types.md).|
 | Ao abrir um projeto, o Visual Studio gera o erro "*The application for the project is not installed*".|Se você ainda não tiver instalado **Windows Universal tools for C++ development** na caixa de diálogo **New Project**, precisará fazê-lo. Se isso não resolver o problema, possivelmente o projeto dependerá da Extensão do Visual Studio (VSIX) do C++/WinRT (consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).|
