@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089031"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119290"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
