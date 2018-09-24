@@ -8,14 +8,14 @@ ms.date: 8/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: o Windows 10, uwp, nomes de aplicativo, alterar o nome do aplicativo, atualização de nome do aplicativo, jogo, nome do produto
+keywords: Windows 10, uwp, nomes de aplicativo, altere o nome do aplicativo, atualização de nome do aplicativo, jogo, nome do produto
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d2c6f72e2f69f0b768af55f9bddeb9bb008027
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4125901"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4153399"
 ---
 # <a name="manage-app-names"></a>Gerenciar nomes de aplicativo
 
@@ -38,7 +38,7 @@ Se você não quiser usar um nome que já reservou anteriormente, libere-o, excl
 
 Para excluir um dos nomes reservados do seu aplicativo, encontre o nome que você não deseja mais usar e, em seguida, clique em **Excluir**. Na caixa de diálogo de confirmação, clique em **Excluir** novamente para confirmar.
 
-Observe que seu aplicativo deve ter pelo menos um nome reservado. Para completamente remover um aplicativo do painel (e liberar todos os nomes reservados desse aplicativo), clique em **Excluir este aplicativo** na página **Visão geral do aplicativo** . Se você tiver um envio do aplicativo em andamento, é necessário excluir o envio primeiro. Observe que se você já tiver publicado o aplicativo para a loja, você não pode exclui-lo do painel (embora você pode usar a funcionalidade de **Mostrar/ocultar produtos** em sua página de **Visão geral** para ocultá-lo). 
+Observe que seu aplicativo deve ter pelo menos um nome reservado. Para completamente remover um aplicativo do painel (e liberar todos os nomes reservados desse aplicativo), clique em **Excluir este aplicativo** na página **Visão geral do aplicativo** . Se você tiver um envio do aplicativo em andamento, é necessário excluir o envio primeiro. Observe que se você já tiver publicado o aplicativo para a loja, você não pode excluí-lo do painel (embora você pode usar a funcionalidade de **Mostrar/ocultar produtos** em sua página de **Visão geral** para ocultá-lo). 
 
 
 ## <a name="rename-an-app-that-has-already-been-published"></a>Renomear um aplicativo já publicado
@@ -46,7 +46,7 @@ Observe que seu aplicativo deve ter pelo menos um nome reservado. Para completam
 Se o aplicativo já está na Loja e você deseja renomeá-lo, é possível fazer isso reservando um novo nome para ele (seguindo as etapas descritas acima) e, em seguida, criando um novo envio para o aplicativo. 
 
 Você deve atualizar os pacotes do aplicativo para substituir o nome antigo pelo novo e carregar os pacotes atualizados para seu envio.
-- Primeiro, atualize o arquivo de storeassociation para usar o novo nome, ou manualmente usando o Visual Studio (**projeto > loja > associar aplicativo à loja...**). Para obter mais informações, consulte o [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md).
+- Primeiro, atualize o arquivo storeassociation para usar o novo nome, seja manualmente ou usando o Visual Studio (**projeto > loja > associar aplicativo à loja...**). Para obter mais informações, consulte o [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md).
 - Também é necessário atualizar o elemento [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) no manifesto do aplicativo e atualize elementos gráficos ou texto que inclua o nome do aplicativo. 
   > [!IMPORTANT]
   > Certifique-se de atualizar o arquivo Package.StoreAssociation.xml antes de alterar **Pacote/Propriedades/DisplayName** no aplicativo do manifesto ou você poderá receber um erro.
@@ -59,7 +59,7 @@ Para atualizar uma listagem da loja para que ele usa o novo nome, vá para a [p�
 Quando seu aplicativo tiver sido publicado com o novo nome, você pode excluir todos os nomes mais antigos que você não precisa mais usar.
 
 > [!TIP]
-> Cada aplicativo aparece no painel usando o nome que você reservou para ele. Se você tiver seguido as etapas acima para renomear um aplicativo, e você quiser que ele seja exibido no painel usando o novo nome, você deve excluir o nome original (clicando em **Excluir** na página **Gerenciar nomes de aplicativo** ). 
+> Cada aplicativo é exibido em seu painel usando o nome que você reservou para ele. Se você tiver seguido as etapas acima para renomear um aplicativo, e você quiser que ele seja exibido em seu painel usando o novo nome, você deve excluir o nome original (clicando em **Excluir** na página **Gerenciar nomes de aplicativo** ). 
 
  
 

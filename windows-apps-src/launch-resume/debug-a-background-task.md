@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128723"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152943"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -83,7 +83,7 @@ A ativação da tarefa em segundo plano depende de três coisas:
 
     1.  Abra o visualizador de eventos acessando a tela inicial e procurando eventvwr.exe.
     2.  Vá para o **aplicativo e Logs de serviços**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** no Visualizador de eventos.
-    3.  No painel de ações, selecione o **modo de exibição**  - &gt; **Mostrar depurar Logs analíticos e** para habilitar o log de diagnóstico.
+    3.  No painel de ações, selecione o **modo de exibição**  - &gt; **Mostrar depurar Logs analíticos e** habilitar o log de diagnóstico.
     4.  Selecione o **Log de diagnósticos** e clique em **Habilitar Log**.
     5.  Agora, tente usar seu aplicativo para registrar e ativar a tarefa em segundo plano de novo.
     6.  Examine os logs de diagnósticos para obter detalhes dos erros. Essas informações incluirão o ponto de entrada registrada para a tarefa em segundo plano.
@@ -105,7 +105,7 @@ Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visua
 -   Se a tarefa em segundo plano exigir acesso à tela de bloqueio, coloque o aplicativo na tela de bloqueio antes de tentar depurar essa tarefa. Para obter informações sobre como especificar opções de manifesto para aplicativos compatíveis com a tela de bloqueio, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
 -   Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [como disparar de suspensão, retomada e eventos em aplicativos UWP de plano de fundo](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [como disparar a suspensão, retomada e segundo plano eventos em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -114,7 +114,7 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Como disparar de suspensão, retomada e eventos em aplicativos UWP de plano de fundo](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
+* [Como disparar a suspensão, retomada e segundo plano eventos em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Analisando a qualidade do código de aplicativos UWP com análise de código do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  
