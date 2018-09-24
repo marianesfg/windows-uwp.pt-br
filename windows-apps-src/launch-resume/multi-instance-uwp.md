@@ -4,17 +4,17 @@ title: Crie um aplicativo universal do Windows de várias instâncias
 description: Este tópico descreve como escrever aplicativos UWP que dão suporte a várias instâncias.
 keywords: uwp de várias instâncias
 ms.author: twhitney
-ms.date: 09/19/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9302ed0375739153eb95ac2b54c1ed396b14daee
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4126991"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4156091"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
@@ -22,13 +22,16 @@ Este tópico descreve como criar aplicativos da Plataforma Universal do Windows 
 
 Do Windows 10, versão 1803 (10.0; Build 17134), seu aplicativo UWP pode aceitar para dar suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
 
+> [!IMPORTANT]
+> Várias instâncias é compatível para aplicativos de JavaScript, mas não é de redirecionamento de várias instâncias. Como não há suporte para o redirecionamento de várias instâncias para aplicativos de JavaScript, a classe [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) não é útil para esses aplicativos.
+
 ## <a name="opt-in-to-multi-instance-behavior"></a>Aceitar o comportamento de várias instâncias
 
 Se você estiver criando um novo aplicativo de várias instâncias, você pode instalar o **Templates.VSIX de projeto de aplicativo de várias instâncias**, disponível no [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Depois de instalar os modelos, eles estarão disponíveis na caixa de diálogo **Novo Projeto** em **Visual C# > Universal do Windows** (ou **Outras linguagens > Visual C++ > Universal do Windows**).
 
 Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você deseja apenas depois que a instância de cada vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
 
-Ambos os modelos adicionam `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo do namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
+Ambos os modelos adicionam `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo de namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
 
 ```xml
 <Package
@@ -59,7 +62,7 @@ Para vê-lo em ação, assista a este vídeo sobre como criar aplicativos UWP de
 
 O modelo de **aplicativo UWP de redirecionamento de várias instâncias** adiciona `SupportsMultipleInstances` ao arquivo package.appxmanifest, como mostrado acima, e também adiciona um **Program.cs** (ou **Program.cpp**, se você estiver usando a versão C++ do modelo) ao seu projeto que contém uma função `Main()`. Vai para a lógica para redirecionar a ativação da função `Main` . O modelo para **Program.cs** é mostrado abaixo.
 
-A propriedade [AppInstance.RecommendedInstance](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa a instância fornecida pelo shell preferencial para essa solicitação de ativação, se houver uma (ou `null` se houver um). Se o shell fornece uma preferência, em seguida, você pode pode redirecionar ativação para essa instância ou você pode ignorá-lo se você escolher.
+A propriedade [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa a instância fornecida pelo shell preferencial para essa solicitação de ativação, se houver uma (ou `null` se houver um). Se o shell fornece uma preferência, em seguida, você pode pode redirecionar ativação para essa instância ou você pode ignorá-lo se você escolher.
 
 ``` csharp
 public static class Program
@@ -109,7 +112,7 @@ public static class Program
 }
 ```
 
-`Main()` é a primeira coisa que é executado. Ele é executado antes de [OnLaunched ()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) e [OnActivated ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
+`Main()` é a primeira coisa que é executado. Ele é executado antes de [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) e [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Isso permite que você determinar se deve ativar isso ou outra instância, antes de qualquer outro código de inicialização em seu aplicativo é executado.
 
 O código acima determina se um existente ou nova instância do seu aplicativo for ativada. Uma chave é usada para determinar se há uma instância existente que você deseja ativar. Por exemplo, se seu aplicativo pode ser iniciado em [manipular a ativação de arquivo](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), você pode usar o nome do arquivo como uma chave. Em seguida, você pode verificar se uma instância do seu aplicativo já está registrada com essa chave e ativá-lo em vez de abrir uma nova instância. Esta é a ideia por detrás do código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
@@ -129,7 +132,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 - Para evitar condições de corrida e problemas de contenção, os aplicativos de várias instâncias precisam tomar medidas para particionar/sincronizar o acesso às configurações, armazenamento local do aplicativo e qualquer outro recurso (como arquivos do usuário, um repositório de dados e assim por diante) que pode ser compartilhado entre várias instâncias. Mecanismos de sincronização padrão, como exclusões mútuas, semáforos, eventos e assim por diante, estão disponíveis.
 - Se o aplicativo tiver `SupportsMultipleInstances`em seu arquivo Package. appxmanifest, em seguida, suas extensões não precisa declarar `SupportsMultipleInstances`. 
 - Se você adicionar `SupportsMultipleInstances`para qualquer outra extensão, além de plano de fundo tarefas ou serviços de aplicativo e o aplicativo que hospeda a extensão não também declara `SupportsMultipleInstances`em seu arquivo Package. appxmanifest, um erro de esquema é gerado.
-- Os aplicativos podem usar a declaração [ResourceGroup](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) em seu manifesto para agrupar várias tarefas em segundo plano para o mesmo host. Entra em conflito com várias instâncias, onde cada ativação entra em um host separado. Portanto, um aplicativo não pode declarar as duas `SupportsMultipleInstances`e `ResourceGroup` em seu manifesto.
+- Aplicativos podem usar a declaração [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) em seu manifesto para agrupar várias tarefas em segundo plano para o mesmo host. Entra em conflito com várias instâncias, onde cada ativação entra em um host separado. Portanto, um aplicativo não pode declarar as duas `SupportsMultipleInstances`e `ResourceGroup` em seu manifesto.
 
 ## <a name="sample"></a>Exemplo
 

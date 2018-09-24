@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 85071fb28cb87c991e2f5ba7f64b681c6850c819
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: fab1e83f212675b2c0bb28e0b1ae449f271edec7
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4127701"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154631"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Simultaneidade e operações assíncronas com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -69,7 +69,7 @@ Chamar **get** é conveniente para a codificação e é ideal para aplicativos d
 C++/WinRT integra rotinas concomitantes de C++ no modelo de programação para fornecer uma maneira natural de esperar cooperativamente por um resultado. Você pode produzir sua própria operação assíncrona do Windows Runtime criando uma rotina concomitante. No exemplo de código abaixo, **ProcessFeedAsync** é a rotina concomitante.
 
 > [!NOTE]
-> A função de **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ projeto WinRT. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar porque não é parte da superfície da interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction** **obter** .
+> A função **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ projeto WinRT. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar porque não é parte da superfície da interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction** **obter** .
 
 ```cppwinrt
 // main.cpp
@@ -320,9 +320,86 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 }
 ```
 
-## <a name="important-apis"></a>APIs Importantes
+## <a name="reporting-progress"></a>Relatório de progresso
+
+Se sua rotina concomitante retorna [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), em seguida, você pode recuperar o objeto retornado pela função **winrt::get_progress_token** e usá-lo para relatar o progresso volta para um progresso manipulador. A seguir está um exemplo de código.
+
+```cppwinrt
+// main.cpp : Defines the entry point for the console application.
+//
+
+#include "pch.h"
+#include <iostream>
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace std::chrono_literals;
+
+IAsyncOperationWithProgress<double, double> CalcPiTo5DPs()
+{
+    auto progress{ co_await winrt::get_progress_token() };
+
+    co_await 1s;
+    double pi_so_far{ 3.1 };
+    progress(0.2);
+
+    co_await 1s;
+    pi_so_far += 4.e-2;
+    progress(0.4);
+
+    co_await 1s;
+    pi_so_far += 1.e-3;
+    progress(0.6);
+
+    co_await 1s;
+    pi_so_far += 5.e-4;
+    progress(0.8);
+
+    co_await 1s;
+    pi_so_far += 9.e-5;
+    progress(1.0);
+    co_return pi_so_far;
+}
+
+IAsyncAction DoMath()
+{
+    auto async_op_with_progress{ CalcPiTo5DPs() };
+    async_op_with_progress.Progress([](auto const& /* sender */, double progress)
+    {
+        std::wcout << L"CalcPiTo5DPs() reports progress: " << progress << std::endl;
+    });
+    double pi{ co_await async_op_with_progress };
+    std::wcout << L"CalcPiTo5DPs() is complete !" << std::endl;
+    std::wcout << L"Pi is approx.: " << pi << std::endl;
+}
+
+int main()
+{
+    init_apartment();
+    DoMath().get();
+}
+```
+
+> [!NOTE]
+> Ele não estiver correto implementar mais de um *manipulador de conclusão* para uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará. Qualquer um dos seguintes dois tipos de manipuladores de conclusão é apropriado; Não, ambos para o mesmo objeto assíncrono.
+
+```cppwinrt
+auto async_op_with_progress{ CalcPiTo5DPs() };
+async_op_with_progress.Completed([](auto const& sender, AsyncStatus /* status */)
+{
+    double pi{ sender.GetResults() };
+});
+```
+
+```cppwinrt
+auto async_op_with_progress{ CalcPiTo5DPs() };
+double pi{ co_await async_op_with_progress };
+```
+
+Para obter mais informações sobre os manipuladores de conclusão, consulte [tipos de delegado para ações e operações assíncronas](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
+
+## <a name="important-apis"></a>APIs importantes
 * [classe Concurrency:: Task](/cpp/parallel/concrt/reference/task-class)
-* [Interface IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
+* [Interface de IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
 * [IAsyncActionWithProgress&lt;TProgress&gt; interface](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
 * [IAsyncOperation&lt;TResult&gt; interface](/uwp/api/windows.foundation.iasyncoperation_tresult_)
 * [IAsyncOperationWithProgress&lt;TResult, TProgress&gt; interface](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)

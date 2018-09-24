@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4130067"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154641"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Enumerar dispositivos de Ponto de Serviço
 Nesta seção, você aprenderá como [definir um seletor de dispositivo](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector) usado para consultar os dispositivos disponíveis para o sistema e usar esse seletor para enumerar dispositivos de Ponto de Serviço usando um dos seguintes métodos:
@@ -25,9 +25,9 @@ Exibir um seletor de dispositivo da interface do usuário e fazer com que o usu�
 
 **Método 2:** [Obter o primeiro dispositivo disponível](#Method-1:-get-first-available-device)<br />Use [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) para acessar o primeiro dispositivo disponível em uma classe de dispositivo de ponto de serviço específica.
 
-**Método 3:** [Instantâneo de dispositivos](#Method-2:-Snapshot-of-devices)<br />Enumere um instantâneo dos dispositivos de ponto de serviço que estão presentes no sistema em um determinado momento. Isso é útil que você precisa criar sua própria interface do usuário ou enumerar dispositivos sem exibir uma interface para o usuário. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) manterá resultados até que toda a enumeração seja concluída.
+**Método 3:** [Instantâneo de dispositivos](#Method-2:-Snapshot-of-devices)<br />Enumere um instantâneo dos dispositivos de ponto de serviço que estão presentes no sistema em um determinado momento. Isso é útil que você precisa criar sua própria interface do usuário ou enumerar dispositivos sem exibir uma interface para o usuário. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) manterá os resultados até que toda a enumeração seja concluída.
 
-**Método 4:** [Enumerar e inspecionar](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) é um modelo de enumeração mais avançado e flexível que permite enumerar dispositivos que estão presentes no momento e também recebem notificações quando dispositivos são adicionados ou removidos do sistema.  Isso é útil quando você quiser manter uma lista atual de dispositivos em segundo plano para exibir na interface do usuário em vez de aguardar um instantâneo.
+**Método 4:** [Enumerar e inspecionar](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) é um modelo de enumeração mais avançado e flexível que permite enumerar dispositivos que estão presentes no momento e também receber notificações quando dispositivos são adicionados ou removidos do sistema.  Isso é útil quando você quiser manter uma lista atual de dispositivos em segundo plano para exibir na interface do usuário em vez de aguardar um instantâneo.
 
 ## <a name="define-a-device-selector"></a>Definir um seletor de dispositivo
 Um seletor de dispositivo permitirá que você limite os dispositivos que está pesquisando ao enumerar dispositivos.  Isso permitirá que você apenas obter resultados relevantes e reduza o tempo que leva para enumerar os dispositivos desejados.
@@ -48,7 +48,7 @@ Os métodos de **GetDeviceSelector** para os tipos de dispositivo diferentes sã
 * [MagneticStripeReader.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.getdeviceselector)
 * [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector)
 
-Usando um método **GetDeviceSelector** que leva um valor de [PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) como um parâmetro, você pode restringir o seletor para enumerar local, rede ou dispositivos de POS Bluetooth conectadas, reduzindo o tempo que leva para a conclusão da consulta.  O exemplo a seguir mostra um uso desse método para definir um seletor que oferece suporte apenas localmente anexados impressoras POS.
+Usando um método **GetDeviceSelector** que leva um valor de [PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) como um parâmetro, você pode restringir o seletor para enumerar local, rede ou dispositivos de POS Bluetooth conectadas, reduzindo o tempo necessário para a conclusão da consulta.  O exemplo a seguir mostra um uso desse método para definir um seletor que oferece suporte a apenas localmente anexados impressoras POS.
 
  ```Csharp
 using Windows.Devices.PointOfService;
@@ -64,7 +64,7 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 > [!NOTE]
 > Esse método requer o [SDK do Windows Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)mais recente.
 
-A classe [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) permite que você exiba um submenu do seletor que contém uma lista de dispositivos para o usuário escolher. Você pode usar a propriedade de [filtro](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) para escolher quais tipos de dispositivos para mostrar o seletor. Essa propriedade é do tipo [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Você pode adicionar os tipos de dispositivos para o filtro usando a propriedade [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) ou [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) .
+A classe [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) permite que você exiba um submenu do seletor que contém uma lista de dispositivos para o usuário escolher. Você pode usar a propriedade de [filtro](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) para escolher quais tipos de dispositivos para mostrar o seletor. Essa propriedade é do tipo [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Você pode adicionar os tipos de dispositivo para o filtro usando a propriedade [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) ou [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) .
 
 Quando você estiver pronto para mostrar o seletor de dispositivo, você pode chamar o método [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) , que mostrará o seletor de interface do usuário e retornar o dispositivo selecionado. Você precisará especificar um [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) que determinará onde o submenu aparece. Esse método retornará um objeto [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) , portanto, para usá-lo com o ponto de serviço de APIs, você precisará usar o método **FromIdAsync** para a classe de dispositivo específico que você deseja. Você passe a propriedade [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) como o parâmetro do método *deviceId* e obter uma instância da classe de dispositivo, como o valor de retorno.
 
@@ -113,7 +113,7 @@ Em alguns cenários, talvez seja preciso criar sua própria interface do usuári
 > É recomendável usar o método **GetDeviceSelector** com o parâmetro **PosConnectionTypes** ao usar **FindAllAsync** para limitar sua consulta ao tipo de conexão desejado.  Conexões de rede e Bluetooth podem atrasar os resultados, pois as enumerações devem ser concluída antes de resultados de **FindAllAsync** são retornados.
 
 > [!CAUTION] 
-> **FindAllAsync** retorna uma matriz de dispositivos.  A ordem dessa matriz pode alterar a cada sessão, portanto, não é recomendado depender em uma ordem específica usando um índice codificada na matriz.  Use as propriedades de [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) para filtrar os resultados ou fornecer uma interface do usuário para o usuário escolher.
+> **FindAllAsync** retorna uma matriz de dispositivos.  A ordem dessa matriz pode alterar a cada sessão, portanto, não é recomendado depender em uma ordem específica usando um índice codificada na matriz.  Use propriedades de [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) para filtrar os resultados ou fornecer uma interface do usuário para o usuário escolher.
 
 Este exemplo usa o seletor definido acima para tirar um instantâneo de dispositivos usando **FindAllAsync** e enumera por meio de cada um dos itens retornados pela coleção e grava o nome do dispositivo e a identificação na saída de depuração. 
 
@@ -133,9 +133,9 @@ foreach (DeviceInformation devInfo in deviceCollection)
 
 ## <a name="method-4-enumerate-and-watch"></a>Método 4: Enumerar e inspecionar
 
-Um método mais avançado e flexível de enumeração de dispositivos é criar um [DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher).  Um inspetor de dispositivos enumera dispositivos dinamicamente, portanto, o aplicativo recebe notificações se dispositivos são adicionados, removidos ou modificados após a conclusão da enumeração inicial.  Um **DeviceWatcher** permitirá que você detecte quando um dispositivo conectado à rede fica online, um dispositivo Bluetooth estiver no intervalo, bem como se um dispositivo conectado localmente é desconectado para você poder tomar a ação apropriada no seu aplicativo.
+Um método mais avançado e flexível de enumeração de dispositivos é criar um [DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher).  Um inspetor de dispositivos enumera dispositivos dinamicamente, portanto, o aplicativo recebe notificações se dispositivos são adicionados, removidos ou modificados após a conclusão da enumeração inicial.  Um **DeviceWatcher** permitirá que você detecte quando um dispositivo conectado à rede fica online, um dispositivo Bluetooth estiver no intervalo, bem como se um dispositivo conectado localmente é desconectado para que você pode tomar a ação apropriada no aplicativo.
 
-Este exemplo usa o seletor definido acima para criar um **DeviceWatcher** , bem como define manipuladores de eventos para as notificações [adicionados](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [removidos](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)e [atualizado](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) . É necessário preencher os detalhes das ações que você deseja implementar a cada notificação.
+Este exemplo usa o seletor definido acima para criar um **DeviceWatcher** , bem como define manipuladores de eventos para as notificações [adicionado](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [removido](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)e [atualizado](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) . É necessário preencher os detalhes das ações que você deseja implementar a cada notificação.
 
 ```Csharp
 using Windows.Devices.Enumeration;

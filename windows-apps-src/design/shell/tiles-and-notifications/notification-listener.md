@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4129325"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155153"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
@@ -283,7 +283,7 @@ foreach (uint id in toBeRemoved)
 > [!IMPORTANT] 
 > Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para Windows, podemos irá corrigir isso.
 
-Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receba eventos notificações de alteração de ambos os enquanto seu aplicativo está em execução ou fechada.
+Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receber eventos notificações de alteração ambos os enquanto seu aplicativo está em execução ou fechada.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)

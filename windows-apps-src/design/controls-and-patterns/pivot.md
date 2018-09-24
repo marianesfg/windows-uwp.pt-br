@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4124931"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4154411"
 ---
 # <a name="pivot"></a>Pivot
 
-Permite que o controle [Pivot segundo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) toque dedo entre um pequeno conjunto de seções de conteúdo.
+Permite que o controle [Pivot segundo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) toque-passar o dedo entre um pequeno conjunto de seções de conteúdo.
 
 > **APIs importantes**: [classe Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [classe NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -56,7 +56,7 @@ No entanto, se sua navegação requer o dedo por toque, recomendamos usar o piv�
 Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
 - Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários podem ver todos os itens de pivô.
-- Pivot manipula a navegação entre as seções de conteúdo, enquanto o NavigationView permite mais controle sobre o comportamento de navegação.
+- Pivot manipula a navegação entre seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos da pilha.
+Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
 
 ## <a name="create-a-pivot-control"></a>Criar um controle de pivô
 
