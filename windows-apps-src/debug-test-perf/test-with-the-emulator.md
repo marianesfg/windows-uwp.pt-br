@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151187"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180681"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -49,13 +49,13 @@ Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emu
 
 Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança**e, em seguida, selecione **Sistema**.
 
-Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; ele não é compatível com versões anteriores do Visual Studio.
+Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; não é compatível com versões anteriores do Visual Studio.
 
 O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos direcionados à versão de sistema operacional do Windows Phone que seja anterior ao Windows Phone 7.1.
 
 ## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalação, desinstalação e executar o emulador
 
-### <a name="installing"></a>Instalar
+### <a name="installing"></a>Instalando
 O Emulador da Microsoft para Windows 10 Mobile é fornecido como parte do SDK do Windows 10. O SDK do Windows 10 e o emulador podem ser instalados como parte da instalação do Visual Studio. Confira a [Página de transferência do Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
 Você também pode instalar o Emulador Microsoft para Windows 10 Mobile usando a [Instalação do Emulador da Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122705"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177029"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -28,7 +28,7 @@ Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e
 
 Para exibir as configurações de conta, clique no ícone de engrenagem no canto superior direito do painel e, em seguida, selecione **as configurações do desenvolvedor**. Aqui você encontrará detalhes sobre sua conta e links para outras páginas onde você pode exibir informações e executar diversas tarefas relacionadas à conta.
 
-Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editadas.
+Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editados.
 
 > [!NOTE]
 > Os detalhes de identidade para seus aplicativos individuais podem ser encontrados na página [Identidade do Aplicativo](view-app-identity-details.md) de cada aplicativo.
@@ -49,7 +49,7 @@ A alteração de seu nome para exibição de editor fará com que verifiquemos s
 Abaixo estão alguns dos outros itens que você encontrará na seção **Configurações da conta**.
 
 - **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualizar significativamente as informações de contato), você pode analisar o status da verificação aqui.
-- **Programa de Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) na página principal do página de **configurações da conta** .
+- **Programa de Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) da principal página de **configurações da conta** .
 - **Conta de pagamento** e **Perfil fiscal**: aqui é onde você pode [configurar a conta de pagamento e os formulários fiscais](setting-up-your-payout-account-and-tax-forms.md). Você precisará fazer isso antes de cobrar pelos aplicativos ou complementos.
 - **Associações empresariais**: aceite convites de empresas as quais desejam que você publique aplicativos para uso exclusivo. Para saber mais, consulte [Distribuir aplicativos de linha de negócios para empresas](distribute-lob-apps-to-enterprises.md) a fim de obter mais informações.
 - **Usuários**: adicione usuários à sua conta do Centro de Desenvolvimento e atribua a eles funções e permissões. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).

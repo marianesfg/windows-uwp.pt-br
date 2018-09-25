@@ -1,7 +1,7 @@
 ---
 author: daneuber
 title: Sombras de composição
-description: A sombra APIs permitem que você adicionar sombras dinâmicas personalizáveis ao conteúdo de interface do usuário.
+description: A sombra APIs permitem que você adicionar sombras personalizáveis dinâmicas ao conteúdo de interface do usuário.
 ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 84e12d6c3e25a18902aaa55011949dd5b5ff97ca
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150999"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4181311"
 ---
 # <a name="shadows-in-windows-ui"></a>Sombras na interface do usuário do Windows
 
@@ -41,7 +41,7 @@ basicRectVisual.Shadow = basicShadow;
 
 ## <a name="shaping-the-shadow"></a>Modelar a sombra
 
-Existem algumas maneiras de definir a forma de seu DropShadow:
+Existem algumas maneiras de definir a forma para seu DropShadow:
 
 - **Use o padrão** , por padrão a forma de DropShadow é definido pelo modo 'Padrão' em CompositionDropShadowSourcePolicy. Para SpriteVisual, o padrão é Rectangular, a menos que uma máscara é fornecida. Para LayerVisual, o padrão é herdar uma máscara usando o alfa do pincel do elemento visual.
 - **Definir uma máscara** – você pode definir a propriedade [máscara](/uwp/api/windows.ui.composition.dropshadow.mask) para definir uma máscara de opacidade da sombra.
@@ -49,7 +49,7 @@ Existem algumas maneiras de definir a forma de seu DropShadow:
 
 ## <a name="masking-to-match-your-content"></a>Mascaramento para corresponder ao seu conteúdo
 
-Se você quiser que a sombra para corresponder ao conteúdo do elemento Visual, você pode usar o pincel do elemento Visual para sua propriedade de máscara de sombra ou definir a sombra automaticamente herdar máscara de conteúdo. Se estiver usando um LayerVisual, a sombra herdará a máscara por padrão.
+Se você quiser que a sombra para corresponder ao conteúdo do elemento Visual, você pode usar o pincel do elemento Visual para sua propriedade de máscara de sombra ou definir a sombra automaticamente herdem máscara do conteúdo. Se usar um LayerVisual, a sombra herdará a máscara por padrão.
 
 ```cs
 var imageSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/myImage.png"));
@@ -73,7 +73,7 @@ imageSpriteVisual.Shadow = shadow;
 
 ## <a name="using-an-alternative-mask"></a>Usando uma máscara alternativa
 
-Em alguns casos, convém forma a sombra, de forma que ele não coincidir com o conteúdo do elemento Visual. Para obter esse efeito, você precisará definir explicitamente a propriedade máscara usando um pincel com alfa.
+Em alguns casos, convém sombra de forma que ele não coincidir com o conteúdo do elemento Visual. Para obter esse efeito, você precisará definir explicitamente a propriedade máscara usando um pincel com alfa.
 
 No exemplo abaixo, carregamos duas superfícies - uma para o conteúdo Visual e outra para a máscara de sombra:
 
@@ -101,7 +101,7 @@ imageSpriteVisual.Shadow = shadow;
 
 ## <a name="animating"></a>Animando
 
-Como é um padrão na camada Visual, DropShadow propriedades podem ser animadas usando animações de composição. Abaixo, podemos modificar o código de exemplo pitadas acima para animar o raio de desfoque da sombra.
+Como é padrão na camada Visual, DropShadow propriedades podem ser animadas usando animações de composição. Abaixo, podemos modificar o código de exemplo pitadas acima para animar o raio de desfoque da sombra.
 
 ```cs
 ScalarKeyFrameAnimation blurAnimation = _compositor.CreateScalarKeyFrameAnimation();
@@ -115,11 +115,11 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 
 ## <a name="shadows-in-xaml"></a>Sombras em XAML
 
-Se você deseja adicionar uma sombra a elementos de estrutura mais complexos, existem algumas maneiras de interoperabilidade com sombras entre XAML e composição:
+Se você deseja adicionar uma sombra a elementos de estrutura mais complexos, há algumas maneiras de interoperabilidade com sombras entre XAML e composição:
 
 1. Use o [DropShadowPanel](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) disponíveis no Kit de ferramentas de comunidade Windows. Consulte a [documentação de DropShadowPanel](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) para obter detalhes sobre como usá-lo.
 1. Crie um elemento Visual para usar como o host de sombra e vinculá-lo ao "Handout" XAML Visual.
-1. Use controle de CompositionShadow da Galeria de exemplos de composição [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) personalizado. Consulte o exemplo a seguir para uso.
+1. Use controle de CompositionShadow da Galeria de exemplos de composição [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) personalizado. Consulte o exemplo aqui para uso.
 
 ## <a name="performance"></a>Desempenho
 

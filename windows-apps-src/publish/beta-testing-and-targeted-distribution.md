@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148111"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177735"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
@@ -35,7 +35,7 @@ Seja qual for o método escolhido, aqui estão algumas coisas para ter em mente 
 
 Se você quiser permitir que os testadores usem seu aplicativo antes que ele esteja disponível para outras pessoas e certificar-se que ninguém mais possa ver sua listagem, use a opção **Audiência particular** em [Visibilidade](choose-visibility-options.md) (na página **Preço e disponibilidade** do seu envio). Esse é o único método que permite que você distribua seu app para os testadores enquanto impede totalmente que qualquer outra pessoa veja a listagem da Store do app, mesmo se eles forem capazes de digitar o link direto. 
 
-A opção de **audiência** pode pode apenas ser usada quando você não tiver publicado já seu aplicativo para uma audiência pública. Você pode usar essa opção com aplicativos destinados a qualquer versão do sistema operacional, mas seus testadores devem estar executando o Windows 10, versão 1607 ou posterior (incluindo o Xbox One) e devem estar conectados com a conta da Microsoft associada ao endereço de email que você fornecer.
+A opção de **audiência particular** pode pode apenas ser usada quando você não tiver publicado já seu aplicativo para uma audiência pública. Você pode usar essa opção com aplicativos destinados a qualquer versão do sistema operacional, mas seus testadores devem estar executando o Windows 10, versão 1607 ou posterior (incluindo o Xbox One) e devem estar conectados com a conta da Microsoft associada ao endereço de email que você fornecer.
 
 Para saber mais, consulte a [Audiência particular](choose-visibility-options.md#audience).
 

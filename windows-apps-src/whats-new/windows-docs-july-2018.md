@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Novidades do Windows Docs em julho de 2018 - desenvolver aplicativos UWP
-description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 de julho de 2018.
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a julho de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, julho
 ms.author: quradic
 ms.date: 7/11/2018
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151505"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176325"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -38,17 +38,17 @@ Confira nossos guias PWA para:
 
 ### <a name="notepad"></a>Bloco de notas
 
-Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e o Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
+Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
 ### <a name="design-landing-page"></a>Página de aterrissagem de design
 
-Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de uma visão geral de áreas de design da UWP e informações sobre as últimas atualizações ao Design Fluent.
+Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
-Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Check-out aqui.](../design/downloads/index.md)
+Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Confira aqui.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -70,7 +70,7 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 * [Guia do desenvolvedor WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
-* [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows Update de 10 de abril de 2018.
+* [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows 10 de abril de 2018 atualizar.
 
 ## <a name="videos"></a>Vídeos
 
@@ -80,11 +80,11 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Aprimorar seu Bot com bate-papo de personalidade do projeto
 
-Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementar e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
+Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno curto uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-Série de vídeos a uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 
@@ -99,6 +99,6 @@ Larry Osterman:
 
 ### <a name="photo-editor-cwinrt"></a>Editor de fotos C + c++ WinRT
 
-O aplicativo de exemplo do Editor de fotos mostra o desenvolvimento com o [C++ c++ WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) projeção de linguagem. O aplicativo permite que você recupere fotos a partir da biblioteca **imagens** e, em seguida, edite uma imagem lecionada com efeitos de fotografia associado. [Clonar ou baixar o exemplo aqui.](https://github.com/Microsoft/Windows-appsample-photo-editor)
+O aplicativo de exemplo do Editor de fotos mostra o desenvolvimento com o [C++ c++ WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) projeção de linguagem. O aplicativo permite que você recupere fotos a partir da biblioteca **imagens** e, em seguida, edite uma imagem lecionada com efeitos de fotos associado. [Clonar ou baixar o exemplo aqui.](https://github.com/Microsoft/Windows-appsample-photo-editor)
 
 ![Um exemplo de exemplo em ação](images/photo-editor-banner.png)

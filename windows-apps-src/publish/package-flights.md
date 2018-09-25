@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148869"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180811"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
-Você pode usar pacotes de pré-lançamento para distribuir pacotes específicos para um grupo de testadores limitado. Os pacotes que você já publicou para a loja serão usados para seus clientes, para que sua experiência não será afetada.
+Você pode usar pacotes de pré-lançamento para distribuir pacotes específicos para um grupo de testadores limitado. Os pacotes que você já tiver publicado na Store serão usados para seus clientes, para que sua experiência não será afetada.
 
 Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam recebendo seus pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
 
@@ -55,7 +55,7 @@ Na página de criação do pacote de pré-lançamento, é necessário inserir um
 
 Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento. É possível incluir pacotes que segmentem qualquer versão do sistema operacional, inclusive Windows 10, Windows 8.x e Windows Phone 8.x ou anteriores.
 
-Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Se você precisar carregar novos pacotes para usar para esse pacote de pré-lançamento, você pode carregá-los aqui (usando o [mesmo processo de quando carrega pacotes de aplicativo para um envio de versão completa comum](upload-app-packages.md)). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
+Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Se você precisar carregar novos pacotes para usar para esse pacote de pré-lançamento, você pode carregá-los aqui (usando o [mesmo processo de quando você carrega pacotes do aplicativo para um envio de versão completa comum](upload-app-packages.md)). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
 
 Se seu aplicativo der suporte a várias famílias de dispositivos, verifique se que você incluiu pacotes para dar suporte ao mesmo conjunto de famílias de dispositivos na sua versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento **só** poderão obter pacotes dessa versão. Elas não poderão acessar nenhum pacote de outras versões de pré-lançamento nem de seu envio de versão completa. 
 

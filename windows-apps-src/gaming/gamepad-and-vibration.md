@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, jogos, gamepad, vibração
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151943"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4175207"
 ---
 # <a name="gamepad-and-vibration"></a>Gamepad e vibração
 
@@ -33,7 +33,7 @@ Ao ler esta página, você saberá como:
 
 Gamepads como o Controle sem Fio Xbox e o Controle sem Fio Xbox S são dispositivos de entrada de jogos de finalidade geral. Eles são o dispositivo de entrada padrão no Xbox One e uma opção comum para jogadores do Windows quando eles não gostam de usar teclado e mouse. Gamepads têm suporte em aplicativos UWP do Windows 10 e Xbox pelo namespace [Windows.Gaming.Input][].
 
-Gamepads do Xbox One são equipados com um teclado direcional (ou D-pad); **A**, **B**, **X**, **Y**, **modo de exibição**e botões de **Menu** ; thumbsticks esquerdo e direito, botões superiores e gatilhos; e um total de quatro motores de vibração. Os dois botões direcionais fornecem leituras duplamente analógicas nos eixos X e Y e também funcionam como um botão comum quando pressionados para dentro. Cada gatilho fornece uma leitura analógica que representa a distância é extraída novamente.
+Gamepads do Xbox One são equipados com um teclado direcional (ou D-pad); **A**, **B**, **X**, **Y**, **Exibir**e botões de **Menu** ; thumbsticks esquerdo e direito, botões superiores e gatilhos; e um total de quatro motores de vibração. Os dois botões direcionais fornecem leituras duplamente analógicas nos eixos X e Y e também funcionam como um botão comum quando pressionados para dentro. Cada gatilho fornece uma leitura analógica que representa a distância é extraída novamente.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
@@ -100,7 +100,7 @@ Os gamepads são gerenciados pelo sistema. Portanto, você não precisa criá-lo
 
 A classe [Gamepad][] fornece uma propriedade estática, [Gamepads][], que é uma lista somente leitura de gamepads que estão conectados no momento. Como você pode estar interessado apenas em alguns dos gamepads conectados, é recomendável manter sua própria coleção em vez de acessá-los por meio do `Gamepads` propriedade.
 
-O exemplo a seguir copia todos os gamepads conectados para uma nova coleção. Observe que, como outros threads em segundo plano acessarão essa coleção (nos eventos [GamepadAdded][] e [GamepadRemoved][] ), você precisa colocar um bloqueio em torno de qualquer código que lê ou atualiza a coleção.
+O exemplo a seguir copia todos os gamepads conectados para uma nova coleção. Observe que, como outros threads em segundo plano serão acessar essa coleção (nos eventos [GamepadAdded][] e [GamepadRemoved][] ), você precisa colocar um bloqueio em torno de qualquer código que lê ou atualiza a coleção.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -183,7 +183,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-O exemplo a seguir interrompe o rastreamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-a como `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta de entrada do quando controladores são conectados e desconectados de atualização.
+O exemplo a seguir para o acompanhamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-o `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta entradas de quando controladores são conectados e desconectados de atualização.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -223,7 +223,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 };
 ```
 
-Consulte [as práticas de entrada para jogos](input-practices-for-games.md) para obter mais informações.
+Consulte [práticas de entrada para jogos](input-practices-for-games.md) para obter mais informações.
 
 ### <a name="users-and-headsets"></a>Usuários e headsets
 
@@ -335,7 +335,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lendo os botões
 
-Cada um dos botões de gamepad&mdash;as quatro direções do direcional, botões superiores esquerdos e direito, pressionar o botão esquerdo e direito, **A**, **B**, **X**, **Y**, **exibição**e **Menu**&mdash;fornece um digital ler Indica se ele foi pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [GamepadButtons][] .
+Cada um dos botões de gamepad&mdash;as quatro direções do direcional, botões superiores esquerdos e direito, pressionar o botão esquerdo e direito, **A**, **B**, **X**, **Y**, **modo de exibição**e **Menu**&mdash;fornece um digital leitura que Indica se ele for pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [GamepadButtons][] .
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->

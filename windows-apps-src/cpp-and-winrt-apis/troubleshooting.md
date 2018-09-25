@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
 ms.openlocfilehash: cccc58c0b9dd5f922c87d3e6860bb2f2045ea767
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148431"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176119"
 ---
 # <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Solucionando problemas de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -48,9 +48,9 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | O app falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Consulte [Usando *este* objeto em um manipulador de eventos](handle-events.md#using-the-this-object-in-an-event-handler).|
 | O compilador C++ gera "*error C2338: This is only for weak ref support*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Consulte [Recusando o suporte de referência fraca](weak-references.md#opting-out-of-weak-reference-support)|
 | O vinculador C++ produz "*error LNK2019: símbolo externo*"|Consulte [por que é o vinculador me dar um "LNK2019: símbolo externo" Erro?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)|
-| A cadeia de ferramentas LLVM e Clang produz erros quando usados com C++ c++ WinRT.|Não oferecemos suporte a cadeia de ferramentas LLVM e Clang para C++ c++ WinRT, mas se você quisesse emular como podemos usá-lo internamente, em seguida, você poderia tentar um experimento, como o descrito no [pode usar LLVM/Clang para compilar com C++ c++ WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
+| A cadeia de ferramentas LLVM e Clang produz erros quando usados com C + c++ WinRT.|Não oferecemos suporte a cadeia de ferramentas LLVM e Clang para C++ c++ WinRT, mas se você quisesse emular como podemos usá-lo internamente, em seguida, você poderia tentar um experimento, como o descrito em [pode usar LLVM/Clang para compilar com C++ c++ WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
 | O compilador C++ gera "*Nenhum construtor padrão apropriado disponível*" para um tipo projetado. | Se você está tentando para atrasar a inicialização de um objeto de classe de tempo de execução, ou consumir e implementar uma classe de tempo de execução no mesmo projeto e, em seguida, você precisará chamar o `nullptr_t` construtor. Para obter mais informações, consulte [Consumir APIs com C++/WinRT](consume-apis.md). |
-| O compilador C++ gera "*erro C3861: 'from_abi': identificador não encontrado*" e outros erros que se originam no *base.h*. Você pode ver esse erro, se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e visando o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803). | O destino uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade do projeto **C/C++**  >  **Idioma** > **linha de comando** em **Opções adicionais**, exclua-o). |
+| O compilador C++ gera "*erro C3861: 'from_abi': identificador não encontrado*" e outros erros que se originam no *base.h*. Você poderá ver esse erro, se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803) de direcionamento. | Um destino uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade do projeto **C/C++**  >  **Idioma** > **linha de comando** em **Opções adicionais**, exclua-o). |
 
 > [!NOTE]
 > Se este tópico não responder à sua pergunta, você pode encontrar ajuda usando a [`c++-winrt`marca no Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

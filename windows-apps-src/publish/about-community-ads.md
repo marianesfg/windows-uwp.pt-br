@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149909"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178535"
 ---
 # <a name="about-community-ads"></a>Sobre anúncios de comunidade
 
@@ -23,7 +23,7 @@ Se seu aplicativo [exibe anúncios em faixa ou anúncios intersticiais em faixa]
 
 Veja como este programa funciona:
 
-* Depois que você optar por em anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
+* Depois que você aceitação anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
 * Ganhe créditos para o espaço de anúncio promocional em outros aplicativos, mostrando anúncios de comunidade em seu aplicativo. Os créditos são calculados de acordo com o seguinte processo:
   * Para cada país ou região em que um aplicativo que serve anúncios da comunidade está disponível, o valor de eCPM (custo efetivo por mil impressões) da taxa do mercado atual para o país ou a região é multiplicado pelo número de solicitações de anúncios da comunidade feitas pelo seu aplicativo nesse país ou região. Esse valor corresponde aos créditos que você ganhou para o seu aplicativo nesse país ou nessa região.
   * Seus créditos totais acumulados por um determinado tempo são iguais à soma de todos os créditos obtidos em cada país ou região para cada um dos seus aplicativos que está servindo anúncios da comunidade.
@@ -42,7 +42,7 @@ Para aceitar anúncios da comunidade para um aplicativo UWP:
     > [!NOTE]
     > Você pode usar os campos de **Peso** para especificar a proporção de anúncios que você deseja mostrar de redes pagas e de outras redes de anúncios, incluindo anúncios de comunidade.
 
-Para aceitar anúncios da comunidade para que o Windows 8 ou o aplicativo do Windows Phone 8.x,
+Para aceitar anúncios da comunidade para um Windows 8. x ou Windows Phone 8. x aplicativo,
 
 1. Na página de **anúncios no app** , marque a caixa **Mostrar anúncios da comunidade em meu aplicativo** .
 

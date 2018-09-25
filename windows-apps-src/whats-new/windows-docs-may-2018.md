@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Novidades do Windows Docs em maio de 2018 - desenvolver aplicativos UWP
+title: Novidades dos documentos do Windows em maio de 2018 - desenvolver aplicativos UWP
 description: Novos recursos, vídeos e diretrizes para desenvolvedores foram adicionados à documentação do desenvolvedor do Windows 10 de maio de 2018 e conferência Microsoft Build.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, maio, compilação
 ms.author: quradic
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151061"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4174109"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades dos documentos de desenvolvedor do Windows em maio de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build) .
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de maio para coincidir com a conferência de desenvolvedores [Microsoft Build 2018](https://www.microsoft.com/build) .
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -26,9 +26,9 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 ### <a name="motion-in-fluent-design"></a>Movimento em Design fluente
 
-O usuário de movimento em um sistema de Design Fluent está evoluindo, construído sobre os conceitos básicos do tempo, suavização, direção e gravidade. Aplicar esses conceitos básicos ajuda a orientar o usuário por meio de seu aplicativo e os conecta com sua experiência digital refletindo mundo natural. Saiba mais neste artigo:
+O usuário de movimento no sistema de Design Fluent está evoluindo, construído sobre os conceitos básicos do tempo, suavização, direção e gravidade. Aplicar esses conceitos básicos ajudará a orientar o usuário por meio do seu aplicativo e os conecta com sua experiência digital refletindo mundo natural. Saiba mais neste artigo:
 
-* [Visão geral sobre o movimento](../design/motion/index.md) foi atualizado para refletir esses conceitos básicos.
+* [Visão geral do movimento o](../design/motion/index.md) foi atualizado para refletir esses conceitos básicos.
 * [Movimento na prática](../design/motion/motion-in-practice.md) fornece exemplos de como aplicar esses conceitos básicos de dentro de seu aplicativo.
 * [Direção e gravidade](../design/motion/directionality-and-gravity.md) solidifica o modelo mental do usuário do seu aplicativo.
 * [Tempo e suavização](../design/motion/timing-and-easing.md) adiciona realismo para o movimento em seu aplicativo.
@@ -39,7 +39,7 @@ O usuário de movimento em um sistema de Design Fluent está evoluindo, constru�
 
 As atualizações visuais e pequenas alterações foram feitas para as páginas de Design fluente a seguir:
 
-* [Alinhamento, margens, preenchimento](../design/layout/alignment-margin-padding.md)
+* [Alinhamento, preenchimento, margens](../design/layout/alignment-margin-padding.md)
 * [Cor](../design/style/color.md)
 * [Noções básicas de comandos](../design/basics/commanding-basics.md)
 * [Design fluente para aplicativos do Windows](../design/fluent-design-system/index.md)
@@ -59,31 +59,31 @@ Além disso, estamos tiver reescrito páginas a seguir com todas as novas inform
 
 ### <a name="app-installer-files-in-visual-studio"></a>Arquivos do instalador de aplicativo no Visual Studio
 
-Arquivos do instalador de aplicativo agora podem ser criados com o Visual Studio 2017, atualização 15.7. [Saiba como usar o Visual Studio para criar um arquivo do instalador de aplicativo](../packaging/create-appinstallerfile-vs.md) e ativar atualizações automáticas aos seus aplicativos. Se você estiver encontrando problemas, consulte a [solução de problemas de instalação com o arquivo do instalador de aplicativo](../packaging/troubleshoot-appinstaller-issues.md) para exibir os problemas e soluções comuns.
+Arquivos do instalador de aplicativo agora podem ser criados com o Visual Studio 2017, atualização 15.7. [Saiba como usar o Visual Studio para criar um arquivo do instalador de aplicativo](../packaging/create-appinstallerfile-vs.md) e ativar atualizações automáticas aos seus aplicativos. Se você estiver encontrando problemas, consulte a [solução de problemas de instalação com o arquivo do instalador de aplicativo](../packaging/troubleshoot-appinstaller-issues.md) para exibir problemas e soluções comuns.
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Borda controle WebView para aplicativos Windows Forms e WPF
 
-Mostre o conteúdo da web em seu aplicativo da área de trabalho usando o controle WebView, anteriormente disponível somente para aplicativos UWP. Esse controle usa o Microsoft Edge conteúdo de um servidor web remoto, código gerado dinamicamente ou arquivos de conteúdo do mecanismo para incorporar um modo de exibição que renderiza sofisticadamente formatado HTML de processamento. Localize o controle WebView na versão mais recente do [Kit de ferramentas de comunidade Windows.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
+Mostre o conteúdo da web em seu aplicativo da área de trabalho usando o controle WebView, anteriormente disponível somente para aplicativos UWP. Esse controle usa o Microsoft Edge conteúdo de um servidor web remoto, código gerado dinamicamente ou arquivos de conteúdo do mecanismo para incorporar um modo de exibição que processa sofisticadamente formatado HTML de processamento. Localize o controle WebView na versão mais recente do [Kit de ferramentas de comunidade Windows.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
 
-Procure por outros controles, como WebView em versões futuras do Kit de ferramentas da comunidade Windows. Para obter mais informações, consulte [UWP Host controles em aplicativos WPF e Windows Forms.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+Procure por outros controles como WebView em versões futuras do Kit de ferramentas da comunidade Windows. Para obter mais informações, consulte [UWP Host controles em aplicativos WPF e Windows Forms.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="gaze-input-and-interactions"></a>Foco de entrada e interações
 
 [Acompanhe o foco, a atenção e a presença do usuário com base na localização e na movimentação de seus olhos.](../design/input/gaze-interactions.md) Essa nova maneira eficiente de usar e interagir com seus aplicativos UWP é útil como uma tecnologia assistencial. Entrada com foco também oferece oportunidades atraentes para jogos (incluindo a aquisição do alvo e acompanhamento) e outros cenários interativos onde os dispositivos de entrada tradicionais (teclado, mouse, toque) não estão disponíveis.
 
-### <a name="msix-packaging-format"></a>Formato de empacotamento MSIX
+### <a name="msix-packaging-format"></a>Formato de empacotamento de MSIX
 
 Anunciado na conferência Microsoft Build 2018, MSIX é um novo formato de pacote enormemente que se aplica a todos os aplicativos do Windows, incluindo Win32, Windows Forms, WPF e UWP. Esse novo formato herda excelentes recursos do UWP:
 
 * Instalação robusta e a atualização. 
 * Gerenciado modelo de segurança com um sistema de funcionalidade flexível.
-* Suporte para a Microsoft Store, gerenciamento corporativo e vários modelos de distribuição personalizado.
+* Suporte para a Microsoft Store, gerenciamento empresarial e vários modelos de distribuição personalizado.
 
 Ferramentas para criar esses pacotes estarão disponíveis em uma versão futura do Visual Studio e SDK do Windows.
 
 O formato de empacotamento MSIX é um formato de código-fonte aberto que torna mais fácil para os nossos parceiros dar suporte o ecossistema MSIX com suas ferramentas e soluções. Para saber mais sobre o formato de empacotamento MSIX, consulte [MSIX SDK](https://github.com/Microsoft/msix-packaging). 
 
-![Imagem de empacotamento MSIX](images/msix.png)
+![Imagem de empacotamento de MSIX](images/msix.png)
 
 ### <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
 
@@ -95,7 +95,7 @@ Pacotes opcionais em seu aplicativo agora podem conter código executável em c#
 
 ### <a name="project-rome"></a>Project Rome
 
-A equipe de projeto Roma reformulado seus iOS e Android SDKs, adicionando novos recursos como atividades do usuário e refatoração grande parte do seu código para fornecer uma experiência de programação consistente entre os SDKs diferentes. [Todos os nova referência de API e documentos instruções](https://docs.microsoft.com/windows/project-rome/) passará ao vivo durante a conferência de desenvolvedores Build 2018.
+A equipe de projeto Roma reformulado seus iOS e Android SDKs, adicionando novos recursos como atividades do usuário e refatoração grande parte do seu código para fornecer uma experiência de programação consistente entre os SDKs diferentes. [Todos os novos referência de API e documentos instruções](https://docs.microsoft.com/windows/project-rome/) passará ao vivo durante a conferência de desenvolvedores de Build 2018.
 
 ### <a name="sets"></a>Conjuntos
 
@@ -105,7 +105,7 @@ O recurso de conjuntos está disponível no Windows compilações do Insider pre
 
 ### <a name="get-started"></a>Introdução
 
-Nós já revitalized nosso Get iniciado conteúdo com novo acompanhamentos de aprendizagem. Esses novos tópicos objetivam é fornecer informações sobre algumas tarefas comuns que eles podem querer fazer novos desenvolvedores do Windows 10. Eles não são tutoriais e não fornecerem um passo a passo de mão, mas em vez disso, destacar onde existe documentação existente e como usá-lo. Confira o remodelado [começar a codificar](../get-started/create-uwp-apps.md) página ou explore a cada faixa de aprendizagem individuais:
+Nós já revitalized nosso Get iniciado conteúdo com novos acompanhamentos de aprendizagem. Esses novos tópicos objetivam é fornecer novos desenvolvedores do Windows 10 com informações sobre algumas tarefas comuns que eles podem querer fazer. Eles não estiver tutoriais e não fornecerem um bolso passo a passo, mas em vez disso, destacar onde existe documentação existente e como usá-lo. Confira o remodelado [começar a codificar](../get-started/create-uwp-apps.md) página ou explore a cada faixa de aprendizagem individuais:
 
 * [Construir um formulário](../get-started/construct-form-learning-track.md)
 * [Exibir clientes em uma lista](../get-started/display-customers-in-list-learning-track.md)
@@ -130,7 +130,7 @@ C++ c++ /WinRT é uma nova maneira de criação e consumo de APIs do Windows Run
 
 ### <a name="multi-instance-uwp-apps"></a>Aplicativos UWP de várias instâncias
 
-Windows agora permite que você execute várias instâncias do seu aplicativo UWP, com cada em seu próprio processo separado. [Assista ao vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para saber como criar um novo aplicativo que dá suporte a esse recurso, em seguida, [Leia os documentos de desenvolvedor](../launch-resume/multi-instance-uwp.md) para obter mais orientações sobre como e por que usar esse recurso.
+Windows agora permite que você execute várias instâncias do aplicativo UWP, com cada em seu próprio processo separado. [Assista ao vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para saber como criar um novo aplicativo que dá suporte a esse recurso, em seguida, [Leia os documentos de desenvolvedor](../launch-resume/multi-instance-uwp.md) para obter mais orientações sobre como e por que usar esse recurso.
 
 ## <a name="samples"></a>Exemplos
 

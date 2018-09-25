@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
-description: Use este método na API de análise da Microsoft Store para obter dados de ideias de seu aplicativo.
-title: Obter dados de percepções
+description: Use este método na API de análise da Microsoft Store para obter dados de insights para seu aplicativo.
+title: Obter dados de insights
 ms.author: mcleans
 ms.date: 07/31/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4156459"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176549"
 ---
-# <a name="get-insights-data"></a>Obter dados de percepções
+# <a name="get-insights-data"></a>Obter dados de insights
 
 Use este método na API de análise da Microsoft Store para obter dados de ideias relacionado ao aquisições, integridade e métricas de uso de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de ideias](../publish/insights-report.md) no painel do Centro de desenvolvimento do Windows.
 
@@ -69,18 +69,18 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de ideias para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [Insight valores](#insight-values) abaixo.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [Insight valores](#insight-values) abaixo.                                                                                                                      |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                 |
 
 
-### <a name="insight-values"></a>Valores de informação
+### <a name="insight-values"></a>Valores de Insight
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de percepções.     |
-| insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
+| insightDate                | string | A data em que identificamos a alteração em uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma das seguintes cadeias de caracteres que especifica a área de análise gerais que descreve essa informação:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul>   |
 | insightDetail          | array | Um ou mais [valores InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
 
@@ -91,9 +91,9 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Um dos seguintes valores que indica a métrica que descreve o insight atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a visão.   |
-| PercentChange            | string |  Porcentagem a métrica alterada em sua base de clientes inteiro.  |
+| PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** e **sexo**.   |
-| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
+| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType** **DimensionValue** pode ser **travamento** ou **congelamento**.   |
 | FactValue     | string | O valor absoluto da métrica na data que o insight foi detectado.  |
 | Direção | string |  A direção da alteração (**positivo** ou **negativo**).   |
 | Data              | string |  A data em que identificamos a alteração relacionada a visão atual ou a dimensão atual.   |

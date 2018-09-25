@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151987"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4181345"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
@@ -27,7 +27,7 @@ Para saber mais sobre a configuração de idiomas em seus aplicativos, consulte 
 ## <a name="supported-languages"></a>Idiomas compatíveis
 
 
-Estes são os idiomas aceitos pela Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas, e ele não deve especificar nenhum outro códigos de idioma que não esteja incluído aqui.
+Estes são os idiomas aceitos na Microsoft Store. Seu aplicativo deve dar suporte a pelo menos um desses idiomas, e ele não deve especificar nenhum outro códigos de idioma que não esteja incluído aqui.
 
 | Nome do idioma         | Códigos dos idiomas permitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

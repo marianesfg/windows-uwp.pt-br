@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148281"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4175119"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -111,7 +111,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![Páginas dispostas em uma estrutura simples](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":
+    ::: extensão da coluna = "2":::
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
@@ -130,7 +130,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![Páginas dispostas em uma hierarquia](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":
+    ::: extensão da coluna = "2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -150,7 +150,7 @@ Agora que você está familiarizado com os princípios gerais de navegação, co
     :::column:::
         ![um aplicativo com uma estrutura híbrida](images/nav/combining-structures.svg)
     :::column-end:::
-    ::: extensão da coluna = "2":
+    ::: extensão da coluna = "2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -200,7 +200,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
     :::column:::
         ![imagem de navview](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: [ **de navegação à esquerda**](../controls-and-patterns/navigationview.md)
+    ::: extensão da coluna = "2"::: [ **navegação à esquerda**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         

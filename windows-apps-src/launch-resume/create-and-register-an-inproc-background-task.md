@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, tarefa em segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150951"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4181717"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
 
@@ -72,7 +72,7 @@ O código de exemplo abaixo atribui uma condição que exige que o usuário este
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Coloque seu código de atividade em segundo plano em OnBackgroundActivated()
 
-Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder ao seu gatilho em segundo plano quando ele é acionado. **OnBackgroundActivated** pode ser tratado como [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que contém tudo o que fornece o método **Run** . Por exemplo, em App.xaml.cs:
+Coloque o código de atividade em segundo plano em [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) para responder ao seu gatilho em segundo plano quando ele for acionado. **OnBackgroundActivated** pode ser tratado como [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). O método tem um parâmetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) , que contém tudo o que fornece o método **Run** . Por exemplo, em App.xaml.cs:
 
 ``` cs
 using Windows.ApplicationModel.Background;

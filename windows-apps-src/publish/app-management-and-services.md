@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4151701"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177659"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
@@ -31,7 +31,7 @@ A seção **Serviços** permite que você gerencie vários serviços diferentes 
 
 Se você estiver publicando um jogo, você pode habilitar o [Programa de criadores do Xbox Live](http://xbox.com/developers/creators-program) nesta página. Isso permite que você inicie o testes e configurar recursos do Xbox Live e eventualmente publicar seu jogo do programa de criadores do Xbox Live.
 
-Para obter mais informações, consulte [Introdução ao programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) e [criar um novo título de programa de criadores do Xbox Live e publicar o ambiente de teste](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Para obter mais informações, consulte [Introdução ao programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) e [criar um novo título de programa de criadores do Xbox Live e publicar no ambiente de teste](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentação
 
@@ -56,7 +56,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ## <a name="administrator-consent"></a>Consentimento do administrador
 
-f seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para seu consentimento de concessão de organização para seu produto a agir em nome de todos os usuários no locatário.
+f seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização grant consentimento para seu produto a agir em nome de todos os usuários no locatário.
 
 Para obter mais informações, consulte [solicitando consentimento para um locatário inteiro](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
