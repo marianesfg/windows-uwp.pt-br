@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 595b4ab47e3c6c833a4b8f2e692a0cc0c8ffcaa4
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4179691"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4206208"
 ---
 # <a name="create-random-numbers"></a>Criar números aleatórios
 
