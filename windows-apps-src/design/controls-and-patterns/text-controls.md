@@ -15,24 +15,21 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d68d0a5e6f2a22bc0012b3245ba050df271f7f92
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fc18db25e6404e5236038badd8169ef7bcfc4817
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817404"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4210988"
 ---
 # <a name="text-controls"></a>Controles de texto
-
- 
 
 Controles de texto consistem em caixas de entrada de texto, caixas de senha, caixas de sugestão automática e blocos de texto. A estrutura do XAML fornece vários controles para renderizar, inserir e editar texto, com um conjunto de propriedades para formatar o texto.
 
 - Os controles para exibir texto somente leitura são [TextBlock](text-block.md) e [RichTextBlock](rich-text-block.md).
-- Os controles de entrada e edição de texto são: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) e [RichEditBox](rich-edit-box.md).
+- Os controles de entrada e edição de texto são: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)e [PasswordBox](password-box.md).
 
-> **APIs importantes**: [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
-
+> **APIs importantes**: [classe TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [classe RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [classe TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [classe RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [classe AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [classe PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
@@ -124,28 +121,13 @@ Consulte estes artigos para obter diretrizes de fonte:
 
 ## <a name="pen-input"></a>Entrada à caneta
 
-> O recurso de entrada de caneta está disponível somente no Windows Insider Preview. Os nomes, a terminologia e a funcionalidade dos recursos não são finais.
-
 **Aplica-se a:** TextBox, RichEditBox, AutoSuggestBox
 
 A partir do Windows 10, versão 1803, caixas de entrada de texto XAML têm suporte incorporado para caneta de entrada usando [Windows Ink](../input/pen-and-stylus-interactions.md). Quando um usuário toca em um texto de entrada de caixa usando uma caneta do Windows, as transformações de caixa de texto para permitir que o usuário escrever diretamente nele com uma caneta, em vez de abrir um painel de entrada separado.
 
 ![Caixa de texto se expande quando tocado com caneta](images/pen-input-expand.gif)
 
-Texto é reconhecido como o usuário escreve em qualquer lugar na caixa de texto e um candidato windows mostra os resultados do reconhecimento. O usuário pode tocar um resultado para escolhê-lo ou continuar escrevendo aceitar o candidato proposto. Os resultados do reconhecimento de (letra pela letra) literal estão incluídos na janela de candidatos, para que o reconhecimento não está restrito a palavras em um dicionário. Conforme o usuário escreve, a entrada de texto aceita é convertida em um script que mantém a sensação de escrita.
-
-![Caixa de texto com entrada à caneta](images/pen-input-1.png)
-
-Um usuário pode editar o texto usando gestos padrão e ações, como estes:
-
-- _tachado_ ou _transitório out_ -desenhar por meio de excluir uma palavra ou parte de uma palavra
-- _ingresso_ -desenhar um arco entre as palavras para excluir o espaço entre eles
-- _Inserir_ -desenhar um símbolo de sinal de interpolação para inserir um espaço
-- _substituir_ -substituir texto existente para substituí-lo
-
-![Substituir a entrada à caneta](images/pen-input-2.png)
-
-Entrada de texto inserido é habilitada por padrão quando seu aplicativo direcionado e está em execução no Windows 10, versão 1803 ou posterior. Você pode recusar em uma base de caixa de texto por desabilitar o recurso e reverter para um painel de entrada de texto. Para desabilitar a entrada de texto inserido, defina a propriedade do controle de texto **IsHandwritingViewEnabled** como **false**.
+Para obter mais informações, consulte a [entrada de texto com o modo de exibição de manuscrito](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolher o teclado correto para seu controle de texto
 
