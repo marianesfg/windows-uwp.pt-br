@@ -3,18 +3,18 @@ author: laurenhughes
 title: Introdução aos pacotes de ativo
 description: Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando a necessidade de arquivos duplicados nos pacotes de arquitetura.
 ms.author: lahugh
-ms.date: 04/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb006e0575d025d9d823981e32b6d0749de0996
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818205"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267985"
 ---
 # <a name="introduction-to-asset-packages"></a>Introdução aos pacotes de ativo
 
@@ -30,7 +30,7 @@ Como os pacotes de ativo contêm todos os arquivos independentes de arquitetura,
 ### <a name="how-do-asset-packages-affect-publishing"></a>Como os pacotes de ativo afetam a publicação?
 A vantagem mais óbvia de pacotes de ativo é o tamanho reduzido de aplicativos empacotados. Pacotes de aplicativo menores aceleram o processo de publicação do aplicativo, permitindo que a Store processe menos arquivos. No entanto, isso não é o benefício mais importante dos pacotes de ativo.
 
-Quando um pacote de ativo é criado, você pode especificar se o pacote deve ter permissão para ser executado. Como os pacotes de ativo devem conter apenas arquivos independentes da arquitetura, eles geralmente não contêm todos os arquivos .dll ou .exe. Assim, os pacotes de ativo normalmente não precisam ser executados. A importância dessa distinção é que, durante o processo de publicação, todos os pacotes executáveis devem ser examinados para garantir que não contenham malware, e esse processo de verificação leva mais tempo para pacotes maiores. No entanto, se um pacote for designado como não executável, a instalação do aplicativo garantirá que os arquivos contidos nesse pacote não possam ser executados. Essa garantia elimina a necessidade de um exame completo do pacote e reduzirá consideravelmente o tempo de varredura de malware durante a publicação do aplicativo (e nas atualizações também). Isso agiliza muito a publicação de aplicativos que usam pacotes de ativo. Observe que [pacotes de aplicativo simples](flat-bundles.md) também devem ser usados para obter esse benefício de publicação, pois isso permite que a Store processe cada arquivo .appx do pacote em paralelo. 
+Quando um pacote de ativo é criado, você pode especificar se o pacote deve ter permissão para ser executado. Como os pacotes de ativo devem conter apenas arquivos independentes da arquitetura, eles geralmente não contêm todos os arquivos .dll ou .exe. Assim, os pacotes de ativo normalmente não precisam ser executados. A importância dessa distinção é que, durante o processo de publicação, todos os pacotes executáveis devem ser examinados para garantir que não contenham malware, e esse processo de verificação leva mais tempo para pacotes maiores. No entanto, se um pacote for designado como não executável, a instalação do aplicativo garantirá que os arquivos contidos nesse pacote não possam ser executados. Essa garantia elimina a necessidade de um exame completo do pacote e reduzirá consideravelmente o tempo de varredura de malware durante a publicação do aplicativo (e nas atualizações também). Isso agiliza muito a publicação de aplicativos que usam pacotes de ativo. Observe que [pacotes simples do aplicativo](flat-bundles.md) também deve ser usado para obter esse benefício de publicação, pois isso permite que a Store processe cada arquivo do pacote. AppX ou .msix em paralelo. 
 
 
 ### <a name="should-i-use-asset-packages"></a>Devo usar pacotes de ativo?
@@ -54,6 +54,11 @@ Use este comando para criar o pacote de ativo usando MakeAppx.exe:
 
 ```syntax 
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
+
+...
+
+MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.msix
+
 ```
 Deve-se notar aqui que todos os arquivos referenciados no AppxManifest (os arquivos de logotipo) não podem ser movidos para pacotes de ativo – esses arquivos devem ser duplicados em todos os pacotes de arquitetura. Os pacotes de ativo também não devem conter um resources.pri; MRT não pode ser usado para acessar arquivos do pacote de ativo. Para saber mais sobre como acessar arquivos do pacote de ativo e por que os pacotes de ativo requerem que seu aplicativo seja instalado em uma unidade NTFS, consulte [Desenvolvendo com pacotes de ativo e dobra de pacote](Package-Folding.md).
 

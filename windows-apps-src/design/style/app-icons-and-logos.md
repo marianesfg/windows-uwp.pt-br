@@ -13,11 +13,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e947b00c3a070a8d95a21e38c56bda07cd45d3c4
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205282"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268161"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e ícones de aplicativos 
 
@@ -25,9 +25,15 @@ Todo aplicativo tem um ícone/logotipo que representa, e esse ícone é exibido 
 
 :::row:::
     :::column:::
-        * A barra de título da janela do aplicativo * a lista de aplicativo no menu Iniciar * o Gerenciador de barra de tarefas e tarefa * blocos do seu aplicativo * tela inicial do aplicativo * na loja Microsoft :::column-end:::
+        * Barra de título da janela do aplicativo
+        * A lista de aplicativo no menu Iniciar
+        * O Gerenciador de barra de tarefas e tarefas
+        * Blocos do seu aplicativo
+        * Tela inicial do aplicativo
+        * Na Microsoft Store
+    :::column-end:::
     :::column:::
-        ![início e blocos do windows 10](images/assetguidance01.jpg)
+        ![windows 10 start and tiles](images/assetguidance01.jpg)
     :::column-end:::
 :::row-end:::
 
@@ -45,12 +51,12 @@ Por padrão, o Visual Studio armazena os ativos de ícone em um subdiretório de
 | Bloco médio |Menu Iniciar, Microsoft Store listing\ *  |  Square150x150Logo.PNG |
 | Bloco largo  | Menu Iniciar   | Wide310x150Logo.PNG |
 | Bloco grande   | Menu Iniciar, Microsoft Store listing\ * |  LargeTile.png  |
-| Ícone de aplicativo | Lista de aplicativos no menu Iniciar, barra de tarefas, Gerenciador de tarefas | Square44x44Logo.PNG |
+| Ícone de aplicativo | Lista de aplicativos no menu Iniciar, a barra de tarefas, Gerenciador de tarefas | Square44x44Logo.PNG |
 | Tela inicial | Tela inicial do aplicativo | SplashScreen  |
 | Logotipo do selo | Blocos do seu aplicativo | BadgeLogo.png  |
 | Logotipo do logotipo/armazenamento de pacote | Instalador de aplicativo, centro de desenvolvimento, a opção "Relatar um aplicativo" na loja, a opção "Escrever uma análise" na loja | StoreLogo.png  |
 
-\ * Usado, a menos que você optar por [Exibir carregados apenas imagens na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
+\ * Usado, a menos que você escolha a [exibição carregados somente imagens na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
 
 Para garantir que esses ícones nítidos em cada tela, você pode criar várias versões do mesmo ícone de fatores de escala de exibição diferentes. 
 
@@ -58,7 +64,7 @@ O fator de escala determina o tamanho dos elementos de interface do usuário, co
 
 :::row:::
     :::column:::
-        Windows define automaticamente o fator de escala para cada monitor com base em seu DPI (pontos por polegada) e a distância de exibição do dispositivo. 
+        Windows automatically sets the scale factor for each display based on its DPI (dots-per-inch) and the viewing distance of the device. 
 
         (Users can override the default value by going to the **Settings &gt; Display &gt; Scale and layout** page.)
     :::column-end:::
@@ -72,15 +78,15 @@ Como ativos de ícone do aplicativo são bitmaps e bitmaps corrigidos sem escala
 
 ## <a name="microsoft-store-listing-image"></a>Imagem de listagem da Microsoft Store
 
-"Como especificar imagens para a listagem do meu aplicativo na Microsoft Store?"
+"Como especificar imagens de listagem do meu aplicativo na Microsoft Store?"
 
-Por padrão, usamos algumas das imagens de seus pacotes na loja, conforme descrito na tabela na parte superior desta página (juntamente com outras [imagens que você forneça durante o processo de envio](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). No entanto, você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e em vez disso, que a Store use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a loja. (Observe que, se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usar essa opção). Você pode fazer isso na seção **logotipos da loja** da **listagem da Store** etapa do processo de envio.
+Por padrão, usamos algumas das imagens de seus pacotes na loja, conforme descrito na tabela na parte superior desta página (juntamente com outras [imagens que você forneça durante o processo de envio](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). No entanto, você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e, em vez disso, que a loja use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a loja. (Observe que, se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usar essa opção). Você pode fazer isso na seção **logotipos da loja** da **listagem da Store** etapa do processo de envio.
 
 ![Especificando os logotipos da loja durante o processo de envio de aplicativo](images/app-icons/storelogodisplay.png)
 
-Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 tamanhos de imagem que usará o armazenamento no lugar de imagens de logotipo dos pacotes do aplicativo: 300 x 300, 150 x 150 e 71 x 71 pixels. Somente o tamanho de 300 x 300 é necessário, embora seja recomendável fornecer os tamanhos de 3.
+Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 tamanhos de imagem que a loja usará no lugar de imagens de logotipo dos pacotes do aplicativo: 300 x 300, 150 x 150 e 71 x 71 pixels. Somente o tamanho de 300 x 300 é necessário, embora seja recomendável fornecer os tamanhos de 3.
 
-Para obter mais informações, consulte a [exibição carregados somente imagens de logotipo na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
+Para obter mais informações, consulte [exibição carregados somente imagens de logotipo na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
 
 <!-- ### Fallback images for the Store
 
@@ -121,7 +127,7 @@ Para iniciar o Designer de manifesto:
 
 :::row:::
     :::column:::
-        1. use o Visual Studio para abrir um projeto UWP.
+        1. Use o Visual Studio para abrir um projeto UWP.
     :::column-end:::
     :::column:::
         
@@ -129,25 +135,26 @@ Para iniciar o Designer de manifesto:
 :::row-end:::
 :::row:::
     :::column:::
-        2. no **Gerenciador de soluções**, clique duas vezes no arquivo Package.appmxanifest.
+        2. No **Gerenciador de soluções**, clique duas vezes no arquivo Package.appmxanifest.
     :::column-end:::
     :::column:::
-        ![O Designer de manifesto do Visual Studio 2017](images/icons/vs-solution-explorer.png)
+        ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-            Visual Studio exibe o Designer de manifesto.
+            Visual Studio displays the Manifest Designer.
     :::column-end:::
     :::column:::
-            ![Na guia ativos visuais](images/icons/vs-manfiest-designer.png)
+            ![The Visual Assets tab](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
     :::column:::
-        3. Clique na guia **Ativos visuais** . :::column-end:::
+        3. Clique na guia **Ativos visuais** .
+    :::column-end:::
     :::column:::
-        ![Na guia ativos visuais](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 
@@ -157,13 +164,13 @@ O primeiro item de menu na guia **Ativos visuais** , **Todos os ativos visuais**
 
 ![Gerar todos os ativos visuais no Visaul Studio](images/app-icons/all-visual-assets.png)
 
-Tudo o que você precisa fazer é a fonte de uma única imagem e Visaul Studio irá gerar o bloco pequeno, bloco médio, grande bloco, bloco largo, bloco grande, ícone do aplicativo, tela inicial e ativos de logotipo para cada fator de escala do pacote.
+Tudo o que você precisa fazer é forneça uma única imagem e Visaul Studio irá gerar o bloco pequeno, bloco médio, grande bloco, bloco largo, bloco grande, ícone do aplicativo, tela inicial e ativos de logotipo para cada fator de escala do pacote.
 
 Para gerar todos os ativos ao mesmo tempo:
-1. Clique o Stores **** ao lado do campo de **origem** e selecione a imagem que você deseja usar. Se você estiver usando uma imagem de bitmap, verifique se é pelo menos 400 por 400 pixels para que você obterá resultados nítidos. Imagens com base em vetor funcionam melhor; O Visual Studio permite que você use AI (Adobe Illustrator) e arquivos PDF. 
-2. (Opcional). Na seção **Configurações de exibição** , configure essas opções:
+1. Clique o Stores **** ao lado do campo de **origem** e selecione a imagem que você deseja usar. Se você estiver usando uma imagem de bitmap, verifique se que ele é pelo menos 400 por 400 pixels para que você obterá resultados afiados. Imagens com base em vetor funcionam melhor; O Visual Studio permite que você use AI (Adobe Illustrator) e arquivos PDF. 
+2. (Opcional). Na seção **Configurações de exibição** , configure estas opções:
 
-    a.  **Nome curto**: especificar um nome curto para o seu aplicativo.
+    a.  **Nome curto**: Especifique um nome curto para seu aplicativo.
 
     b.  **Mostrar o nome**: indicar se você deseja exibir o nome curto em blocos de médio, largo ou grande. 
 
@@ -183,11 +190,11 @@ Por exemplo,
 
 Square150x150Logo. Scale-escala-100.png, Square150x150Logo de escala de 200.png, Square150x150Logo de escala de 400.png
 
-Observe que o Visual Studio não gera um logotipo de selo por padrão. Isso ocorre porque o logotipo de selo é exclusivo e provavelmente não deve coincidir com os outros ícones de aplicativo. Para obter mais informações, consulte as [notificações de selo para o artigo de aplicativos UWP](/windows/uwp/design/shell/tiles-and-notifications/badges). 
+Observe que o Visual Studio não gera um logotipo de selo por padrão. Isso ocorre porque o logotipo de selo é exclusivo e provavelmente não deve coincidir com seus outros ícones de aplicativo. Para obter mais informações, consulte as [notificações de selo para o artigo de aplicativos UWP](/windows/uwp/design/shell/tiles-and-notifications/badges). 
 
 
 ## <a name="more-about-app-icon-assets"></a>Mais informações sobre os ativos de ícone de aplicativo
-Visual Studio gerará todos os ativos de ícone de aplicativo exigidos pelo seu projeto, mas se você gostaria de personalizá-las, ele ajuda a entender como eles são diferentes dos outros ativos de aplicativo. 
+Visual Studio gerará todos os ativos de ícone de aplicativo exigidos pelo seu projeto, mas se você quiser personalizá-las, ele ajuda a entender como eles são diferentes dos outros ativos de aplicativo. 
 
 O ativo de ícone do aplicativo aparece em muitos lugares: na barra de tarefas do Windows, o modo de exibição de tarefa, ALT + TAB e o canto inferior direito dos blocos em Iniciar. Como os ativos de ícone do aplicativo aparece em tantos locais, ele tem alguns dimensionamento adicional e plating opções os outros ativos não tem: ativos "tamanho" e "sem fundo" ativos. 
 
@@ -269,7 +276,7 @@ Cada ativo de bloco tem o mesmo tamanho do bloco no qual ele é colocado.
 
 ![Sangramento completo do bloco mostrando](images/app-icons/tile-assets1.png)
 
-Se você não quiser seu ícone para se estender até a borda do bloco, você pode usar pixels transparentes em seu ativo para criar o preenchimento. 
+Se você não quiser seu ícone para se estender até a borda do bloco, você pode usar pixels transparentes em seus ativos para criar o preenchimento. 
 
 ![bloco e fundo](images/assetguidance05.png)
 

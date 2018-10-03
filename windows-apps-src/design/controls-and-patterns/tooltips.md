@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd702f9ba6e28e1902ea8e595287ba10b46f4bb
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: 5a61b8bdcfcfad490528cdceed5e732a6f5f3a89
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895278"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267367"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
 
@@ -116,16 +116,29 @@ Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.cont
 
 Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a dica de ferramenta seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
 
-Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o posicionamento. Use a propriedade [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou a propriedade **ToolTipService.Placement** associada para posicionar a dica de ferramenta acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) e [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta.
+– Grande parte dos ajustes, use a propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou **Placement** anexado para especificar se a dica de ferramenta deve desenhar acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta. Apenas um dos dois valores deslocamento afetará a posição final - VerticalOffset quando posicionamento for superior ou inferior, HorizontalOffset quando posicionamento é à esquerda ou direita.
 
 ```xaml
-<!-- A TextBlock with an offset ToolTip. -->
-<TextBlock Text="TextBlock with an offset ToolTip.">
+<!-- An Image with an offset ToolTip. -->
+<Image Source="Assets/StoreLogo.png">
     <ToolTipService.ToolTip>
         <ToolTip Content="Offset ToolTip."
-                 HorizontalOffset="20" VerticalOffset="30"/>
+                 Placement="Right"
+                 HorizontalOffset="20"/>
     </ToolTipService.ToolTip>
-</TextBlock>
+</Image>
+```
+
+Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o posicionamento com precisão usando a nova propriedade **PlacementRect** . PlacementRect ancora posição da dica de ferramenta e também serve como uma área que não será ocultar a dica de ferramenta, desde que haja espaço suficiente na tela para desenhar a dica de ferramenta fora dessa área. Você pode especificar a origem do retângulo em relação ao proprietário da dica de ferramenta e a altura e largura da área de exclusão. A propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se dica de ferramenta deve desenhar acima, abaixo, à esquerda ou direita do PlacementRect. 
+
+```xaml
+<!-- An Image with a non-occluding ToolTip. -->
+<Image Source="Assets/StoreLogo.png" Height="64" Width="96">
+    <ToolTipService.ToolTip>
+        <ToolTip Content="Non-occluding ToolTip."
+                 PlacementRect="0,0,96,64"/>
+    </ToolTipService.ToolTip>
+</Image>
 ```
 
 ## <a name="recommendations"></a>Recomendações
@@ -140,7 +153,7 @@ Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o p
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
+- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

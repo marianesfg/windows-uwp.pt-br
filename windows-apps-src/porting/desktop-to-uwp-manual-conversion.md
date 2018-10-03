@@ -2,7 +2,7 @@
 author: normesta
 Description: Shows how to manually package a Windows desktop application (like Win32, WPF, and Windows Forms) for Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: Empacotar um app manualmente (Ponte de Desktop)
+title: Empacotar um aplicativo manualmente (ponte de Desktop)
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -11,29 +11,29 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a9c413b8f0b79f9e6a331145d086e3e563bd989
-ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "2410833"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268104"
 ---
-# <a name="package-an-app-manually-desktop-bridge"></a>Empacotar um app manualmente (Ponte de Desktop)
+# <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
-Este tópico mostra como empacotar seu app sem usar ferramentas como o Visual Studio ou o Desktop App Converter (DAC).
+Este tópico mostra como empacotar seu aplicativo sem usar ferramentas como o Visual Studio ou o Desktop App Converter (DAC).
 
 Para empacotar seu aplicativo manualmente, crie um arquivo de manifesto do pacote e, em seguida, execute uma ferramenta de linha de comando para gerar um pacote de aplicativos do Windows.
 
-Considere o empacotamento manual se instalar o aplicativo usando o comando xcopy ou se você estiver familiarizado com as alterações que o instalador do seu aplicativo faz no sistema e quiser um controle mais granular sobre o processo.
+Considere o empacotamento manual se instalar seu aplicativo usando o comando xcopy ou se você estiver familiarizado com as alterações que o instalador do seu aplicativo faz no sistema e quiser um controle mais granular sobre o processo.
 
 Se não tiver certeza sobre quais alterações seu instalador faz no sistema, ou se você preferir usar ferramentas automatizadas para geral seu manifesto do pacote, considere qualquer uma [dessas](desktop-to-uwp-root.md#convert) opções.
 
 >[!IMPORTANT]
->A Ponte de Desktop foi introduzida na versão 1607 do Windows 10 e pode ser usada somente em projetos para a Atualização de Aniversário do Windows 10 (10.0; compilação 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Consulte este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo (Ponte de Desktop)](desktop-to-uwp-prepare.md).
+Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Criar um manifesto do pacote
 
@@ -87,11 +87,11 @@ Aqui está um exemplo de elemento **Identidade** com texto de espaço reservado 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Se você tiver reservado o nome do seu aplicativo na Windows store, você pode obter o nome e o Fornecedor usando o painel do Centro de Desenvolvimento do Windows. Se você pretende fazer o sideload do aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome de fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
+> Se você já reservou o nome do seu aplicativo na Windows store, você pode obter o nome e o fornecedor usando o painel do Centro de desenvolvimento do Windows. Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
 
 ### <a name="properties"></a>Propriedades
 
-O elemento [Propriedades](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) possui 3 elementos filho necessários. Aqui está um nó exemplo **Propriedades** com texto de espaço reservado para os elementos. O **DisplayName** é o nome do seu aplicativo reservado na loja, para aplicativos que são carregados para a loja.
+O elemento [Propriedades](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) possui 3 elementos filho necessários. Aqui está um nó exemplo **Propriedades** com texto de espaço reservado para os elementos. **DisplayName** é o nome do seu aplicativo reservado na loja, para aplicativos que são carregados para a loja.
 
 ```XML
 <Properties>
@@ -112,7 +112,7 @@ Aqui está um nó exemplo [Recursos](https://docs.microsoft.com/uwp/schemas/appx
 ```
 ### <a name="dependencies"></a>Dependências
 
-Para aplicativos da área de trabalho empacotados usando a ponte da desktop, sempre defina o atributo ``Name`` como ``Windows.Desktop``.
+Para aplicativos da área de trabalho que você cria um pacote para, sempre defina o ``Name`` atributo ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -121,7 +121,7 @@ Para aplicativos da área de trabalho empacotados usando a ponte da desktop, sem
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para aplicativos da área de trabalho empacotados usando a ponte da desktop, adicione a funcionalidade ``runFullTrust``.
+Para aplicativos da área de trabalho que você cria um pacote para, você terá de adicionar o ``runFullTrust`` funcionalidade.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ Preencha este modelo com informações que descrevem o seu aplicativo.
 
 ### <a name="application-element"></a>Elemento do aplicativo
 
-Para aplicativos da área de trabalho empacotados usando a ponte da desktop, o atributo ``EntryPoint`` do elemento Application é sempre ``Windows.FullTrustApplication``.
+Para aplicativos da área de trabalho que você criar um pacote, o ``EntryPoint`` atributo do elemento Application é sempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -177,7 +177,7 @@ Os ativos baseados no destino são para ícones e blocos que aparecem na barra d
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>Gerar um arquivo PRI (Índice de Recurso do Pacote)
 
-Se você criar recursos com base no destino, como descrito na seção acima ou se modificar qualquer um dos recursos visuais do aplicativo depois de criar o pacote, é necessário gerar um novo arquivo PRI.
+Se você cria ativos baseados no destino, conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
 
 1.  Abra um **Prompt de comando de desenvolvedor para o VS 2017**.
 
@@ -187,7 +187,7 @@ Se você criar recursos com base no destino, como descrito na seção acima ou s
 
 5.  Crie o(s) arquivo(s) resources.pri usando o comando ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
 
-    Por exemplo, o comando para o seu aplicativo pode se parecer com isso: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+    Por exemplo, o comando para o seu aplicativo pode parecer com isso: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
 
 6.  Empacote seu pacote do aplicativo do Windows usando as instruções da próxima etapa.
 
@@ -208,7 +208,7 @@ Você pode executar seu aplicativo para testá-lo localmente sem precisar obter 
 Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade na qual você instale seu aplicativo empacotado deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -222,8 +222,8 @@ Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 **Percorrer o código / encontrar e corrigir problemas**
 
-Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-debug.md)
+Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
 
-**Assine seu aplicativo e, em seguida, distribua-o**
+**Assine seu aplicativo e, em seguida, distribua-**
 
-Consulte [Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-distribute.md)
+Consulte [distribuir um aplicativo da área de trabalho empacotado](desktop-to-uwp-distribute.md)

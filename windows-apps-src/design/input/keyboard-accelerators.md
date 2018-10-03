@@ -14,12 +14,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208656"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267131"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -250,6 +250,10 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 }
 ```
 
+## <a name="override-default-keyboard-behavior"></a>Substituir o comportamento de teclado padrão
+
+Em alguns casos, você precisará substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
+
 ## <a name="disable-a-keyboard-accelerator"></a>Desativar um acelerador de teclado 
 
 Se um controle estiver desabilitado, o acelerador associado também está desabilitado. No exemplo a seguir, como a propriedade IsEnabled do ListView é definida como false, acelerador Control +A associado não pode ser invocado.
@@ -366,7 +370,7 @@ Por padrão, quando são declarados aceleradores de teclado, todos os controles 
 
 *Combinação de teclas aceleradoras em dica de ferramenta*
 
-Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta do controle padrão. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
+Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta de padrão do controle. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
 
 > [!NOTE]
 > Especificando uma dica de ferramenta (consulte Button1 no exemplo a seguir) substitui esse comportamento.
@@ -438,7 +442,7 @@ Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.butt
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*Combinação de teclas aceleradoras acrescentada ao texto da MenuFlyoutItem*
+*Combinação de teclas aceleradoras acrescentada ao texto do MenuFlyoutItem*
 
 Controle o comportamento de apresentação usando a propriedade [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode), que aceita dois valores: [Automático](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) ou [Oculto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode).    
 

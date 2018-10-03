@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266651"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. Visões gerais de recurso, diretrizes para desenvolvedores e vídeos a seguir foram disponibilizados no mês de setembro.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de setembro.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -30,13 +30,13 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 [Referência de API do Windows.AI.MachineLearning da](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) foi atualizado para o SDK mais recente do Windows Insider.
 
-[O Windows-Machine-Learning GitHub repo](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizado com novas amostras que funcionam com o SDK mais recente.
+[Repositório do GitHub de aprendizado de máquina Windows](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizado com novas amostras que funcionam com o SDK mais recente.
 
 ![Gráfico do Windows Machine Learning](images/winml-graphic.png)
 
 ### <a name="windows-ui-library"></a>Biblioteca de interface do usuário do Windows
 
-[A biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não tenham a versão mais recente do sistema operacional.
+[A biblioteca de interface do usuário do Windows](https://aka.ms/winui-docs) é um conjunto de pacotes NuGet que fornecem controles e outros elementos de interface do usuário para aplicativos UWP. Esses pacotes também são compatíveis com versões anteriores do Windows 10, para que seu aplicativo funcione mesmo se os usuários não tiverem a versão mais recente do sistema operacional.
 
 Para obter mais informações sobre a biblioteca de interface do usuário do Windows, consulte [essa lista de namespaces de API incluídos no pacote NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
@@ -44,13 +44,13 @@ Para obter mais informações sobre a biblioteca de interface do usuário do Win
 
 ### <a name="how-blur-effects-work"></a>Como o trabalho de efeitos de desfoque
 
-Um dos nossos criadores, o Mike Jacobs esteemed, começou uma série de artigos sobre Desfoque de visão e fotografia ao design de aplicativos e jogos médio. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Um dos nossos criadores, o Mike Jacobs esteemed, iniciou uma série de artigos médio sobre Desfoque de visão e fotografia ao design de aplicativos e jogos. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
-![Desfoque em ação](images/blur-example.jpg)
+![Desfocar em ação](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Diretrizes de contribuição
 
-Atualizamos [nossas diretrizes contribui](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para a nossa documentação da UWP. Essa nova orientação esclarece o fluxo de trabalho e as expectativas por contribuições externas para nossos documentos.
+Atualizamos [nossas diretrizes contribui](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para nossa documentação UWP. Essa nova orientação esclarece o fluxo de trabalho e as expectativas por contribuições externas para nossos documentos.
 
 ## <a name="videos"></a>Vídeos
 
@@ -64,7 +64,7 @@ Aaron Gustafson:
 
 Chris Heilmann
 
-* [4 vídeos na ferramenta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 vídeos sobre a ferramenta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

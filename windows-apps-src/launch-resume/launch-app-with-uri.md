@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ba630de58e544a9bb84640ab743d1cf67b2fe74
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "299952"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267933"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar um app com um URI
 
@@ -28,10 +28,11 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 | [Iniciar um app para obter resultados](how-to-launch-an-app-for-results.md) | Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um app para obter resultados. |
 | [Escolher e salvar tons usando o esquema de URI ms-tonepicker](launch-ringtone-picker.md) | Este tópico descreve o esquema de URI ms-tonepicker e como usá-lo para exibir um seletor de tom para selecionar e salvar um tom e obter o nome amigável para ele. |
 | [Iniciar o app Configurações do Windows](launch-settings-app.md) | Saiba como iniciar o app Configurações do Windows a partir de seu app. Este tópico descreve o esquema de URI ms-settings. Use esse esquema de URI para iniciar o app Configurações do Windows para páginas de configurações específicas. |
-| [Inicie o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
+| [Iniciar o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
 | [Iniciar o app Mapas do Windows](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
 | [Iniciar o app Pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
-| [Habilitar aplicativos para sites que usam os manipuladores URI de aplicativo](web-to-app-linking.md) | Unidade de compromisso do usuário com o seu aplicativo, oferecendo suporte a aplicativos para o recurso de sites. |
+| [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
+| [Habilitar aplicativos para sites usando manipuladores de URI do aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Iniciar um app em um dispositivo remoto](launch-a-remote-app.md)

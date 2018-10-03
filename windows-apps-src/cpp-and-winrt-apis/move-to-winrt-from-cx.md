@@ -10,22 +10,22 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213366"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267111"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Mover do C++/CX para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como transferir o código do [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) para seu equivalente no C++/WinRT.
 
 > [!IMPORTANT]
-> Se você quiser fazer a portabilidade gradualmente seus [C++ c++ CX](/cpp/cppcx/visual-c-language-reference-c-cx) código c++ c++ WinRT, é possível. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows. Para essas exceções, será necessário direcionar o C + c++ /CX ou C++ c++ WinRT dentro do mesmo projeto. Mas você pode usar um componente do tempo de execução do Windows para código de fator fora de seu aplicativo XAML conforme você portá-lo. Mova máximo C + c++ CX código como você pode em um componente e, em seguida, altere o projeto XAML para C++ c++ WinRT. Ou outro deixar o projeto XAML como C++ c++ CX, crie um novo C + c++ componente WinRT e começar a compatibilizar C++ c++ código CX fora do projeto XAML e no componente. Você também poderia ter C++ c++ projeto de componente CX junto com C++ c++ projeto de componente WinRT dentro da mesma solução, faça referência ambos do seu projeto de aplicativo e gradualmente portabilidade de um para o outro.
+> Se você quiser fazer a portabilidade gradualmente seu [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) código c++ c++ WinRT, em seguida, você pode. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows. Para essas exceções, será necessário direcionar o C + c++ /CX ou C++ c++ WinRT dentro do mesmo projeto. Mas você pode usar um componente do tempo de execução do Windows para código de fator fora de seu aplicativo XAML conforme você portá-lo. Mova máximo C + c++ CX código como você pode em um componente e, em seguida, altere o projeto XAML para C++ c++ WinRT. Ou outro deixar o projeto XAML como C++ c++ CX, crie um novo C + c++ componente WinRT e começar a compatibilizar C++ c++ código CX fora do projeto XAML e no componente. Você também poderia ter C++ c++ projeto de componente CX junto com C++ c++ projeto de componente WinRT dentro da mesma solução, faça referência ambos do seu projeto de aplicativo e gradualmente portabilidade de um para o outro.
 
 > [!NOTE]
 > O [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) e o SDK do Windows declaram tipos no namespace raiz **Windows**. Um tipo do Windows projetado no C++/WinRT tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt**. Esses namespaces distintos permitem que você faça a transferência do C++/CX para o C++/WinRT em seu próprio ritmo.
 
-Que ostentam em mente as exceções mencionadas acima, a primeira etapa na portabilidade de um projeto c++ c++ WinRT é adicionar manualmente C++ c++ WinRT suporte (consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É recomendável deixar o suporte desativado para que as mensagens de compilação ajudam você a localizar (e porta) todas as dependência no C++ c++ /CX ou você pode ativar o suporte (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consume Windows Runtime Extensão** \> **Sim (/ZW)**) e transferir gradualmente.
+Que ostentam em mente as exceções mencionadas acima, a primeira etapa na portabilidade de um projeto c++ c++ WinRT é adicionar manualmente C++ c++ WinRT suporte (consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para C++/CX é desativado no projeto. É recomendável deixar o suporte desativado para que as mensagens de compilação ajudam você a localização (e porta) todas as dependência no C++ c++ /CX ou você pode ativar o suporte (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consume Windows Runtime Extensão** \> **Sim (/ZW)**) e transferir gradualmente.
 
 Defina a propriedade do projeto **Geral** \> **Versão da plataforma de destino** como 10.0.17134.0 (Windows 10, versão 1803) ou posterior.
 
@@ -67,7 +67,7 @@ if (userList != nullptr)
     ...
 ```
 
-Ao fazer a portabilidade para o C++ equivalente c++ código WinRT, você basicamente remove os circunflexos e altera a operador de seta (-&gt;) para o operador ponto (.), porque C++ c++ WinRT projetado tipos são valores e não ponteiros.
+Ao fazer a portabilidade para o C++ equivalente c++ WinRT código, você basicamente remove os circunflexos e altera a operador de seta (-&gt;) para o operador ponto (.), porque C++ c++ WinRT projetado tipos são valores e não ponteiros.
 
 ```cppwinrt
 IVectorView<User> userList = User::Users();
@@ -183,8 +183,8 @@ private:
 };
 ```
 
-## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Conversão de uma classe de base de tempo de execução em um derivadas
-É comum ter uma referência para a base que você sabe que se refere a um objeto de um tipo derivado. No C++ c++ /CX, você usa `dynamic_cast` à *conversão* a referência para a base para uma referência-para-derivado. O `dynamic_cast` é apenas uma chamada oculta para [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Aqui está um exemplo típico&mdash;você está manipulando um evento de alteração de propriedade de dependência, e você deseja converter de **DependencyObject** volta para o tipo real que possui a propriedade de dependência.
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Conversão de uma classe de tempo de execução de base para um derivadas
+É comum ter uma referência para a base que você sabe que se refere a um objeto de um tipo derivado. No C++ c++ /CX, use `dynamic_cast` à *conversão* a referência para a base para uma referência-para-derivada. O `dynamic_cast` é apenas uma chamada oculta a [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Aqui está um exemplo típico&mdash;você está manipulando um evento de alteração de propriedade de dependência, e você deseja converter de **DependencyObject** volta para o tipo real que possui a propriedade de dependência.
 
 ```cpp
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)

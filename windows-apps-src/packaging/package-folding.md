@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
-ms.openlocfilehash: ecbba774dd4d22dcfbe3ac33e943bb68b6c727f8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818206"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268083"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desenvolvendo com os pacotes de ativo e dobramento de pacote 
 
@@ -29,14 +29,14 @@ Se você estiver pensando em usar pacotes de ativo para o seu aplicativo ou já 
 
 Para entender como o dobramento de pacote não afeta seu processo de desenvolvimento, vamos voltar ao inicio para entender o que acontece quando você separa seu aplicativo em vários pacotes (com pacotes de ativo ou pacotes de recursos). 
 
-Em geral, ao separar alguns dos arquivos do seu aplicativo em outros pacotes (que não são pacotes de arquitetura), você não conseguirá acessar esses arquivos diretamente em relação ao local onde seu código é executado. Isso ocorre porque esses pacotes são instalados em diretórios diferentes de onde o pacote de arquitetura está instalado. Por exemplo, se você estiver criando um jogo e ele for traduzido para francês e alemão e você o desenvolveu para máquinas x86 e x64, então você deve ter esses arquivos de pacote .appx dentro do lote de aplicativo do seu jogo:
+Em geral, ao separar alguns dos arquivos do seu aplicativo em outros pacotes (que não são pacotes de arquitetura), você não conseguirá acessar esses arquivos diretamente em relação ao local onde seu código é executado. Isso ocorre porque esses pacotes são instalados em diretórios diferentes de onde o pacote de arquitetura está instalado. Por exemplo, se você estiver criando um jogo e seu jogo for traduzido para francês e alemão e você criados para x86 e x64 máquinas, então você deve ter esses arquivos de pacote de aplicativo dentro do lote de aplicativo do seu jogo:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx
 -   MyGame_1.0_language-fr.appx
 -   MyGame_1.0_language-de.appx
 
-Quando o jogo é instalado no computador do usuário, cada arquivo .appx terá sua própria pasta no diretório **WindowsApps**. Portanto, para um usuário em francês executando o Windows de 64 bits, seu jogo terá a seguinte aparência:
+Quando o jogo é instalado no computador do usuário, cada arquivo de pacote do aplicativo terá sua própria pasta no diretório **WindowsApps** . Portanto, para um usuário em francês executando o Windows de 64 bits, seu jogo terá a seguinte aparência:
 
 ```example
 C:\Program Files\WindowsApps\
@@ -47,9 +47,9 @@ C:\Program Files\WindowsApps\
 `-- …(other apps)
 ```
 
-Observe que o arquivo do pacote .appx que não é aplicável para o usuário não será instalado (x86 e pacotes de alemão). 
+Observe que o pacote do aplicativo arquivos que não são aplicáveis para o usuário não será instalado (x86 e pacotes de alemão). 
 
-Para este usuário, o executável principal do jogo estará dentro da pasta **MyGame_1.0_x64** e será executado a partir daí e ele terá acesso, normalmente, apenas aos arquivos dentro dessa pasta. Para acessar os arquivos na pasta **MyGame_1.0_language-fr**, você precisaria usar as APIs de MRT ou as APIs PackageManager. As APIs de MRT podem selecionar automaticamente o arquivo mais apropriado dos idiomas instalados, você pode saber mais sobre APIs de MRT em [Windows.ApplicationModel.Resources.Core]https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, você pode encontrar o local de instalação do pacote de idiomas francês usando a [Classe PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Você nunca deve assumir o local de instalação dos pacotes do seu aplicativo, pois isso pode mudar e pode variar entre os usuários. 
+Para este usuário, o executável principal do jogo estará dentro da pasta **MyGame_1.0_x64** e será executado a partir daí e ele terá acesso, normalmente, apenas aos arquivos dentro dessa pasta. Para acessar os arquivos na pasta **MyGame_1.0_language-fr**, você precisaria usar as APIs de MRT ou as APIs PackageManager. As APIs de MRT podem selecionar automaticamente o arquivo mais apropriado dos idiomas instalados, você pode encontrar mais informações sobre APIs de MRT em [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Como alternativa, você pode encontrar o local de instalação do pacote de idiomas francês usando a [Classe PackageManager](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Você nunca deve assumir o local de instalação dos pacotes do seu aplicativo, pois isso pode mudar e pode variar entre os usuários. 
 
 ## <a name="asset-package-folding"></a>Dobramento do pacote de ativo
 

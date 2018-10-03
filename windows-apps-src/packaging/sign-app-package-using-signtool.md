@@ -3,19 +3,19 @@ author: laurenhughes
 title: Assinar um pacote de aplicativos usando a SignTool
 description: Use SignTool para assinar um pacote de aplicativos com um certificado manualmente.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: b0aab34b187e06ba2b87a1537d6e30df09b35d7e
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: c238855f4f018e8e3142509842221c6b9d97fae3
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663006"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267847"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Assinar um pacote de aplicativos usando a SignTool
 
@@ -79,16 +79,25 @@ Para assinar o pacote de aplicativos com um certificado de um arquivo .pfx, use 
 ```
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
+```
 Observe que a opção `/a` permite que o **SignTool** escolha o melhor certificado automaticamente.
 
 Se o certificado não for um arquivo .pfx, use a seguinte sintaxe:
 ```
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
+```
 
 Como alternativa, você pode especificar o hash SHA1 do certificado desejado, em vez do &lt;Nome do Certificado&gt; usando esta sintaxe:
 ```
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
+```
+```
+SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
 Observe que alguns certificados não usam uma senha. Se o certificado não tiver uma senha, omita "/p &lt;Sua Senha&gt;" dos comandos de amostra.

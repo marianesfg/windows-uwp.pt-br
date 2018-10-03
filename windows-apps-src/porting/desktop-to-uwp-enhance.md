@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Enhance your desktop app for Windows 10 users by using Universal Windows Platform (UWP) APIs.
+Description: Enhance your desktop application for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Aprimorar seu aplicativo da área de trabalho para Windows 10
 ms.author: normesta
@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976504"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267761"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -78,11 +78,11 @@ Agora você está pronto para adicionar experiências modernas que acendem quand
 
 :white_check_mark: **Primeiro, decida quais experiências você deseja adicionar**
 
-Há muitas opções. Por exemplo, você pode simplificar o fluxo de ordem de compra usando APIs de monetização ou atenção direta ao seu app quando você tiver algo interessante para compartilhar, como uma nova foto que outro usuário postou.
+Há muitas opções. Por exemplo, você pode simplificar o fluxo de ordem de compra usando APIs de monetização ou atenção direta ao seu aplicativo quando você tiver algo interessante para compartilhar, como uma nova foto que outro usuário postou.
 
 ![Notificação do sistema](images/desktop-to-uwp/toast.png)
 
-Mesmo que os usuários ignorem a mensagem, eles poderão vê-la novamente na central de ações e então clicar na mensagem para abrir seu app. Isso aumenta o envolvimento com seu app e tem o bônus agregado de fazer seu app aparecer profundamente integrado com o sistema operacional. Mostraremos o código para essa experiência um pouco mais tarde.
+Mesmo que os usuários ignorem a mensagem, eles poderão vê-la novamente na central de ações e então clicar na mensagem para abrir seu app. Isso aumenta o envolvimento com seu aplicativo e tem o bônus agregado de fazer seu aplicativo a aparecer profundamente integrado com o sistema operacional. Mostraremos o código para essa experiência um pouco mais tarde.
 
 Visite a nossa [central de desenvolvedores](https://developer.microsoft.com/windows) para ter ideias.
 
@@ -173,7 +173,7 @@ Para saber mais sobre notificações, consulte [Notificações do sistema intera
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Dar suporte às bases de instalação do Windows XP, do Windows Vista e do Windows 7/8
 
-Você pode modernizar seu app para Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
+Você pode modernizar seu aplicativo para Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
 
 Se você quiser compilar binários separados para usuários do Windows 10, use a compilação condicional. Se você preferir criar um conjunto de binários implantado para todos os usuários do Windows, use as verificações de tempo de execução.
 
@@ -224,7 +224,7 @@ O compilador só cria esse código se essa constante for definida em sua configu
 
 ### <a name="runtime-checks"></a>Verificações de tempo de execução
 
-Você pode compilar um conjunto de binários para todos os usuários do Windows, independentemente da versão do Windows executada. Seu app só chama APIs UWP se o usuário executa seu app como um app empacotado no Windows 10.
+Você pode compilar um conjunto de binários para todos os usuários do Windows, independentemente da versão do Windows executada. Seu aplicativo chama APIs UWP somente se o usuário executa seu aplicativo como um aplicativo empacotado no Windows 10.
 
 A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar esse pacote Nuget: [Auxiliares de Ponte de Desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e então use o método ``IsRunningAsUWP()`` como uma ponte de todo o código UWP. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
@@ -237,7 +237,7 @@ A maneira mais fácil de adicionar verificações de tempo de execução ao seu 
 * [Exemplo do Hello World](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [Bloco Secundário](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [Exemplo de API da Store](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
-* [App WinForms que implementa uma UpdateTask UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
+* [Aplicativo WinForms que implementa uma UpdateTask UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Exemplos de ponte de aplicativo de desktop para UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 

@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266697"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. A seguir visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -44,7 +44,7 @@ Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas f
 
 ### <a name="design-landing-page"></a>Página de aterrissagem de design
 
-Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
+Confira o [atualizado Design página inicial](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
@@ -52,7 +52,7 @@ Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os nov
 
 ### <a name="webvr"></a>WebVR
 
-Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microsoft.com/microsoft-edge/webvr/
+Adicionamos alguns novos tópicos a [WebVR documentação](https://docs.microsoft.com/microsoft-edge/webvr/
 ):
 
 * [O que é WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
@@ -62,13 +62,13 @@ Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microso
 
 * [WebVR no WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Saiba como adicionar WebVR a um controle de exibição da Web em um aplicativo do Windows 10.
 
-* [Demonstrações de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Confira algumas demonstrações WebVR usando o Microsoft Edge e um headset imersivo do Windows Mixed Reality.
+* [Demonstrações de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Confira algumas demonstrações de WebVR usando o Microsoft Edge e um headset imersivo do Windows Mixed Reality.
 
 Além disso, fizemos algumas atualizações para páginas existentes:
 
-* Sumário agora é melhor organizado em quatro buckets distintos de nível superior: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
+* Sumário agora é melhor organizado em quatro buckets de nível superior distintos: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
 
-* [Guia do desenvolvedor WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
+* [Guia do desenvolvedor do WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
 * [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows 10 de abril de 2018 atualizar.
 
@@ -99,6 +99,6 @@ Larry Osterman:
 
 ### <a name="photo-editor-cwinrt"></a>Editor de fotos C + c++ WinRT
 
-O aplicativo de exemplo do Editor de fotos mostra o desenvolvimento com o [C++ c++ WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) projeção de linguagem. O aplicativo permite que você recupere fotos a partir da biblioteca **imagens** e, em seguida, edite uma imagem lecionada com efeitos de fotos associado. [Clonar ou baixar o exemplo aqui.](https://github.com/Microsoft/Windows-appsample-photo-editor)
+O aplicativo de exemplo do Editor de fotos mostra o desenvolvimento com o [C++ c++ WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) projeção de linguagem. O aplicativo permite que você recupere fotos a partir da biblioteca **imagens** e, em seguida, edite uma imagem lecionada com efeitos de fotografia associado. [Clonar ou baixar o exemplo aqui.](https://github.com/Microsoft/Windows-appsample-photo-editor)
 
 ![Um exemplo de exemplo em ação](images/photo-editor-banner.png)
