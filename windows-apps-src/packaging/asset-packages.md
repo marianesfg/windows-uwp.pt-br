@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267985"
+ms.locfileid: "4308780"
 ---
 # <a name="introduction-to-asset-packages"></a>Introdução aos pacotes de ativo
 
