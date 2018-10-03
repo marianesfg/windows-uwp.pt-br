@@ -9,36 +9,22 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: eb4b7b78bf3ef0a561d102804a245c59b6519796
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 4f1d2bdfe5ce88ed4e3f5f3e618fb7034f4eb0bb
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264351"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4313880"
 ---
-# <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Perguntas frequentes sobre [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Respostas às perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com C++/WinRT.
+# <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
+Respostas para perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!NOTE]
 > Caso sua pergunta seja sobre uma mensagem de erro já vista, consulte também o tópico de [Solução de problemas de C++/WinRT](troubleshooting.md).
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Como redirecionar C + c++ WinRT projeto para uma versão posterior do SDK do Windows?
 
-A versão mais recente disponível em geral do SDK do Windows é 10.0.17763.0 (Windows 10, versão 1809). O método redirecionamento seu projeto que é provavelmente resultará na edição de compilador e vinculador menor também é o mais trabalhoso. Esse método envolve a criação de um novo projeto (visando a versão do SDK do Windows de sua escolha) e, em seguida, copiar arquivos para seu novo projeto da sua antiga. Haverá seções de sua antigo `.vcxproj` e `.vcxproj.filters` arquivos que você pode simplesmente copiar mais salvar você adicionar arquivos no Visual Studio.
-
-No entanto, há duas outras maneiras de redirecionar seu projeto no Visual Studio.
-
-- Vá para projeto propriedade **Geral** \> **Versão do SDK do Windows**e selecione **Todas as configurações** e **Todas as plataformas**. Defina a **Versão do SDK do Windows** para a versão que você deseja destinar.
-- No **Gerenciador de soluções**, clique com botão direito no nó do projeto, clique em **Projetos redirecionar**, escolher as versões que você deseja direcionar e clique em **Okey**.
-
-Se você encontrar qualquer compilador ou erros de vinculador depois usando um destes dois métodos, você pode tentar limpar a solução (**compilação** > **Limpar solução** e/ou excluir manualmente todos os arquivos e pastas temporárias) antes de tentar compilar novamente.
-
-Se o compilador C++ gera "*erro C2039: 'IUnknown': não é um membro da ' \'global namespace '*", em seguida, adicione `#include <unknwn.h>` na parte superior da sua `pch.h` arquivo.
-
-Você também precisará adicionar `#include <hstring.h>` depois disso.
-
-Se o vinculador C++ produz "*error LNK2019: símbolo externo _WINRT_CanUnloadNow@0 referenciados na função _VSDesignerCanUnloadNow@0 *", em seguida, você pode resolver que adicionando `#define _VSDESIGNER_DONT_LOAD_AS_DLL` para sua `pch.h` arquivo.
-
+Consulte [como redirecionar C++ c++ WinRT projeto para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>Por que meu novo projeto não será compilado? Usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK versão 17134
 
@@ -84,7 +70,7 @@ C:\ExperimentWithLLVMClang>type main.cpp
 #pragma comment(lib, "windowsapp")
 #pragma comment(lib, "ole32")
 
-#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Foundation.h>
 #include <stdio.h>
 #include <iostream>
 
@@ -167,4 +153,4 @@ a.f();
 O padrão recomendado mostrado acima se aplica não apenas a C++ c++ WinRT, mas para todas as projeções de linguagem de tempo de execução do Windows.
 
 > [!NOTE]
-> Se este tópico não responder à sua pergunta, você pode encontrar ajuda usando a [`c++-winrt`marca no Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Se este tópico não responder à sua pergunta, você pode encontrar ajuda por meio da visita a [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), ou usando o [ `c++-winrt` marca no Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

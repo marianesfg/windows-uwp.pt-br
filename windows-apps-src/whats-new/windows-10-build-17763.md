@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0f67562699e437be83cd6a7251efdb93f9e034
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: c354d9ed4bae4cd8b484fcc3281dc5ac753dab1e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4268877"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312882"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novidades no Windows 10 para desenvolvedores, compilação 17763
 
@@ -69,7 +69,7 @@ Ativação por toque | [Ativação por toque](https://docs.microsoft.com/windows
 
 ## <a name="web-development"></a>Desenvolvimento para a Web
 
-Recurso | Descrição:--| :---18 EdgeHTML | O 2018 do Windows 10 Fall atualizar vem com [18 EdgeHTML](https://aka.ms/devguide_edgehtml_18), a atualização mais recente para o navegador Microsoft Edge e o mecanismo de JavaScript para aplicativos UWP. 18 EdgeHTML dá suporte a modernizada e expandido para a API de autenticação da Web, novos recursos de controle de exibição da Web e muito mais! No lado ferramentas, EdgeHTML 18 traz novos recursos WebDriver e as atualizações automáticas e aprimoramentos para o Edge ferramentas e o protocolo de ferramentas de borda. Confira [o que há de novo no EdgeHTML 18](https://aka.ms/devguide_edgehtml_18) e [Ferramentas no Windows 10 mais recente atualizar (EdgeHTML 18)](https://docs.microsoft.com/microsoft-edge/devtools-guide/whats-new) para todos os detalhes.
+Recurso | Descrição:--| :---18 EdgeHTML | O Windows 10 de outubro de 2018 atualizar vem com [18 EdgeHTML](https://docs.microsoft.com/microsoft-edge/dev-guide), a atualização mais recente para o navegador Microsoft Edge e o mecanismo de JavaScript para aplicativos UWP. 18 EdgeHTML dá suporte a modernizada e expandido para a API de autenticação da Web, novos recursos de controle de exibição da Web e muito mais! No lado ferramentas, EdgeHTML 18 traz novos recursos WebDriver e as atualizações automáticas e aprimoramentos para o Edge ferramentas e o protocolo de ferramentas de borda. Confira [o que há de novo no EdgeHTML 18](https://docs.microsoft.com/microsoft-edge/dev-guide) e [Ferramentas no Windows 10 mais recente atualizar (EdgeHTML 18)](https://docs.microsoft.com/microsoft-edge/devtools-guide/whats-new) para todos os detalhes.
 Aplicativos Web progressivos | Desenvolvendo PWAs para o Windows? Confira os seguintes guias: </br> * [Criar um aplicativo web simples como um PWA](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) </br> * [Aprimorar seu PWA com o tempo de execução do Windows](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features) </br> * [Publicar seu PWA na Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store) Web extensões API | Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar web rica informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 WebVR | Tornamos atualizações importantes para a [Guia do desenvolvedor do WebVR](https://docs.microsoft.com/microsoft-edge/webvr/), incluindo uma reformulação completa da home page e reorganização da tabela de conteúdo. Também podemos ter escrito vários novos tópicos, incluindo: </br> * [O que é WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) Explica o que é WebVR, por que você deve usá-lo e como começar a desenvolver para ele. </br> * [WebVR em aplicativos Web progressivos](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): Saiba como adicionar WebVR para um aplicativo de Web progressivos (PWA). </br> * [WebVR no WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Saiba como adicionar WebVR a um controle de exibição da Web em um aplicativo do Windows 10. </br> * [Demonstrações de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Confira algumas demonstrações de WebVR usando o Microsoft Edge e um headset imersivo do Windows Mixed Reality.
 

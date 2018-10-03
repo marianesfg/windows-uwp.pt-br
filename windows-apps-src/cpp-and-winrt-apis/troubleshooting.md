@@ -9,16 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: bc2e7a8f28de4b43a42ff180fe0b12493c398dd0
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 05542a42e362f024e92547d9eb496b936b85236c
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4259581"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4314660"
 ---
-# <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Solucionando problemas de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="troubleshooting-cwinrt-issues"></a>Solucionando problemas de C++/WinRT
+
 > [!NOTE]
-> Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Para obter informações sobre como instalar e usar o [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (que oferece suporte ao modelo de projeto, bem como C++ c++ WinRT MSBuild propriedades e destinos) consulte [suporte do Visual Studio para C++ c++ /WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 Este tópico é fornecido como precaução para que você fique atento a ele imediatamente, mesmo que você ainda não esteja precisando dessas informações. A tabela de sintomas de solução de problemas e soluções a seguir pode ser útil se você estiver recortando um novo código ou fazendo a portabilidade de um app existente. Se você estiver fazendo a portabilidade e estiver ansioso para avançar e chegar ao estágio de compilação e execução do projeto, poderá fazer um progresso temporário comentando ou eliminando qualquer código não essencial que esteja causando problemas e retornando para resolver esse problema mais tarde.
 
@@ -45,15 +46,14 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de delegação de EventHandler ou TypedEventHandler.|Em vez disso, é recomendável o uso de **winrt::delegate&lt;...T&gt;**. Consulte [Criar eventos em C++/WinRT](author-events.md).|
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de operação assíncrona do Windows Runtime.|É recomendável retornar uma [**tarefa**](https://msdn.microsoft.com/library/hh750113) PPL (Parallel Patterns Library). Consulte [Simultaneidade e operações assíncronas](concurrency.md).|
 | O compilador C++ gera "*error C2220: warning treated as error - no 'object' file generated*".|Corrija o aviso ou defina **C/C++** > **Geral** > **Tratar Avisos como Erros** para **Não (/WX-)**.|
-| O app falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Consulte [Usando *este* objeto em um manipulador de eventos](handle-events.md#using-the-this-object-in-an-event-handler).|
-| O compilador C++ gera "*error C2338: This is only for weak ref support*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Consulte [Recusando o suporte de referência fraca](weak-references.md#opting-out-of-weak-reference-support)|
-| O vinculador C++ produz "*error LNK2019: símbolo externo*"|Consulte [por que é o vinculador me dar um "LNK2019: símbolo externo" Erro?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)|
+| O app falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Consulte [com segurança acessando o *esse* ponteiro com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).|
+| O compilador C++ gera "*error C2338: This is only for weak ref support*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Consulte [recusando o suporte a referência fraca](weak-references.md#opting-out-of-weak-reference-support).|
+| O vinculador C++ produz "*error LNK2019: símbolo externo*"|Consulte [por que é o vinculador me dar um "LNK2019: símbolo externo" Erro?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error).|
 | A cadeia de ferramentas LLVM e Clang produz erros quando usados com C++ c++ WinRT.|Não oferecemos suporte a cadeia de ferramentas LLVM e Clang para C++ c++ WinRT, mas se você quisesse emular como podemos usá-lo internamente, em seguida, você poderia tentar um experimento, como o descrito em [pode usar LLVM/Clang para compilar com C++ c++ WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
 | O compilador C++ gera "*Nenhum construtor padrão apropriado disponível*" para um tipo projetado. | Se você está tentando para atrasar a inicialização de um objeto de classe de tempo de execução, ou consumir e implementar uma classe de tempo de execução no mesmo projeto e, em seguida, você precisará chamar o `nullptr_t` construtor. Para obter mais informações, consulte [Consumir APIs com C++/WinRT](consume-apis.md). |
 | O compilador C++ gera "*erro C3861: 'from_abi': identificador não encontrado*" e outros erros que se originam no *base.h*. Você poderá ver esse erro, se você estiver usando o Visual Studio 2017 (versão 15.8.0 ou superior) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803) de direcionamento. | Um direcionar uma posterior (mais compatível) versão do SDK do Windows, ou conjunto de propriedade do projeto **C/C++** > **idioma** > **modo de conformidade: não** (Além disso, se **/ permissivo-** aparece na propriedade do projeto **C/C++**  >  **Idioma** > **linha de comando** em **Opções adicionais**, exclua-o). |
-| O compilador C++ gera "*erro C2039: 'IUnknown': não é um membro de ' \'global namespace '*". | Consulte [como redirecionar C + c++ WinRT projeto para uma versão posterior do SDK do Windows?](faq.md#how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
-| O vinculador C++ produz "*error LNK2019: símbolo externo _WINRT_CanUnloadNow@0 referenciados na função _VSDesignerCanUnloadNow@0 *" | Consulte [como redirecionar C + c++ WinRT projeto para uma versão posterior do SDK do Windows?](faq.md#how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
-
+| O compilador C++ gera "*erro C2039: 'IUnknown': não é um membro de ' \'global namespace '*". | Consulte [como redirecionar C++ c++ WinRT projeto para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
+| O vinculador C++ produz "*error LNK2019: símbolo externo _WINRT_CanUnloadNow@0 referenciados na função _VSDesignerCanUnloadNow@0 *" | Consulte [como redirecionar C++ c++ WinRT projeto para uma versão posterior do SDK do Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 
 > [!NOTE]
-> Se este tópico não responder à sua pergunta, você pode encontrar ajuda usando a [`c++-winrt`marca no Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Se este tópico não responder à sua pergunta, você pode encontrar ajuda por meio da visita a [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html), ou usando o [ `c++-winrt` marca no Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
