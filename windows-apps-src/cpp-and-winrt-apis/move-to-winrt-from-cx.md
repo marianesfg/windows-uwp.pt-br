@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 68a631153c104f14f22839077c4c62d34626ed2a
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267111"
+ms.locfileid: "4318058"
 ---
-# <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Mover do C++/CX para [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Este tópico mostra como transferir o código do [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) para seu equivalente no C++/WinRT.
+# <a name="move-to-cwinrt-from-ccx"></a>Mudar do C++/CX para C++/WinRT
+
+Este tópico mostra como fazer a portabilidade [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) código para seu equivalente no [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!IMPORTANT]
 > Se você quiser fazer a portabilidade gradualmente seu [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) código c++ c++ WinRT, em seguida, você pode. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows. Para essas exceções, será necessário direcionar o C + c++ /CX ou C++ c++ WinRT dentro do mesmo projeto. Mas você pode usar um componente do tempo de execução do Windows para código de fator fora de seu aplicativo XAML conforme você portá-lo. Mova máximo C + c++ CX código como você pode em um componente e, em seguida, altere o projeto XAML para C++ c++ WinRT. Ou outro deixar o projeto XAML como C++ c++ CX, crie um novo C + c++ componente WinRT e começar a compatibilizar C++ c++ código CX fora do projeto XAML e no componente. Você também poderia ter C++ c++ projeto de componente CX junto com C++ c++ projeto de componente WinRT dentro da mesma solução, faça referência ambos do seu projeto de aplicativo e gradualmente portabilidade de um para o outro.
