@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263843"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -97,7 +97,7 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 | Cenário       | Métodos      |
 |---------------|--------------------|
 | Instalações |  <ul><li>[Obter instalações de aplicativo da área de trabalho](get-desktop-app-installs.md)</li></ul> |
-| Blocos |  <ul><li>[Obter a atualização de blocos para seu aplicativo da área de trabalho](get-desktop-block-data.md)</li><li>[Obter detalhes de bloqueio de atualização de seu aplicativo da área de trabalho](get-desktop-block-data-details.md)</li></ul> |
+| Blocos |  <ul><li>[Obter blocos de atualização para o seu aplicativo da área de trabalho](get-desktop-block-data.md)</li><li>[Obter detalhes de bloqueio de atualização de seu aplicativo da área de trabalho](get-desktop-block-data-details.md)</li></ul> |
 | Erros de aplicativo |  <ul><li>[Obter dados de relatório de erros do seu aplicativo da área de trabalho](get-desktop-application-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 | Insights | <ul><li>[Obter dados de insights para seu aplicativo da área de trabalho](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 

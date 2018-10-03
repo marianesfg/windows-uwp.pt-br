@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7ef1d1a9eb3e268e642cf9b0889df71a59fb44
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 965ef217fa00131504841ef2209dbe6aa54f50af
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917611"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265985"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Instalar um conjunto relacionado usando um arquivo do Instalador de Aplicativo
 
@@ -91,7 +91,7 @@ O modelo básico inclui as informações de arquivo do Instalador de Aplicativo.
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>Etapa 3: Adicionar as informações de pacote principal 
-Se o conjunto de aplicativo principal for um arquivo. appxbundle, então use o `<MainBundle>` mostrado abaixo. Se o conjunto de aplicativo principal for um arquivo. appx, então use `<MainPackage>` em vez de `<MainBundle>` no trecho. 
+Se o pacote do aplicativo principal for um arquivo. appxbundle ou .msixbundle, em seguida, use o `<MainBundle>` mostrado abaixo. Se o pacote do aplicativo principal for um arquivo. AppX ou .msix, use `<MainPackage>` em vez de `<MainBundle>` no trecho. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263011"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -49,7 +49,7 @@ A alteração de seu nome para exibição de editor fará com que verifiquemos s
 Abaixo estão alguns dos outros itens que você encontrará na seção **Configurações da conta**.
 
 - **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualizar significativamente as informações de contato), você pode analisar o status da verificação aqui.
-- **Programa de Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) da principal página de **configurações da conta** .
+- **Programa de Insider do Centro de desenvolvimento**: você pode ativar ou desativar o [Programa de Insider do Centro de desenvolvimento](dev-center-insider-program.md) na página principal página de **configurações da conta** .
 - **Conta de pagamento** e **Perfil fiscal**: aqui é onde você pode [configurar a conta de pagamento e os formulários fiscais](setting-up-your-payout-account-and-tax-forms.md). Você precisará fazer isso antes de cobrar pelos aplicativos ou complementos.
 - **Associações empresariais**: aceite convites de empresas as quais desejam que você publique aplicativos para uso exclusivo. Para saber mais, consulte [Distribuir aplicativos de linha de negócios para empresas](distribute-lob-apps-to-enterprises.md) a fim de obter mais informações.
 - **Usuários**: adicione usuários à sua conta do Centro de Desenvolvimento e atribua a eles funções e permissões. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).

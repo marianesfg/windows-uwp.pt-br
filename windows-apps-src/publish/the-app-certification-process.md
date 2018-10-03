@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendentes, enviar, publicar, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263747"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
@@ -49,9 +49,9 @@ Quando seu aplicativo for aprovado na certificação, ele estará pronto para mo
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para atualizações somente alterar as opções, como detalhes de listagem da loja, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
+Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para atualizações que apenas alterar as opções, como detalhes de listagem da loja, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
 
-Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e detalhes de listagem da loja estão disponíveis para clientes em cada uma das suas versões do sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até a conclusão do processo, isso significa que os novos pacotes e/ou listagem detalhes está disponível para todos os clientes em potencial do seu aplicativo.
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e detalhes de listagem da loja estão disponíveis para clientes em cada uma das suas versões do sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até a conclusão do processo, isso significa que os novos pacotes e/ou detalhes estão disponíveis para todos os clientes em potencial do seu aplicativo.
 
 ## <a name="in-the-store"></a>Na Store 
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 136abd5e3312b7a387ccc3b7c993d4e70d8ef0d4
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258981"
 ---
 # <a name="consume-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Este tópico mostra como consumir as APIs do C++/WinRT, sejam elas parte do Windows implementadas por um fornecedor de componentes de terceiros, ou implementada por você mesmo.
@@ -245,7 +245,7 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Interface QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [Interface de QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [Função RoActivateInstance](https://msdn.microsoft.com/library/br224646)
 * [Classe Foundation](/uwp/api/windows.foundation.uri)
 * [modelo de função winrt::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)

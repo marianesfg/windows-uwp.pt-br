@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266144"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -54,7 +54,7 @@ Essa caixa de lista suspensa permite que você especifique qual nome deve ser us
 
 Se você tiver carregado pacotes no mesmo idioma da listagem da loja que você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
 
-Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, já que não existe um pacote associado nesse idioma no qual obter o nome.
+Se você ainda não tiver carregado pacotes para o idioma você está trabalhando e você já reservou mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, já que não existe um pacote associado nesse idioma no qual obter o nome.
 
 > [!NOTE]
 > O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
@@ -134,7 +134,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Para obter melhores resultados, manter sua descrição curta em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, apenas os primeiro 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição breve).
+Para obter melhores resultados, manter sua descrição curta em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, apenas os primeiro 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição curta).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema

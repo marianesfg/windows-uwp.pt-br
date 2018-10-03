@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207876"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263081"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -134,7 +134,7 @@ Você pode adicionar o Revelação a controles personalizados. Antes de fazer is
 
 
 Esses efeitos são definidos por dois pincéis: 
-* Revelação borda é definido por **RevealBorderBrush**
+* Revelação borda é definido pela **RevealBorderBrush**
 * Revelação hover é definido por **RevealBackgroundBrush**
 
 ```xaml
@@ -259,7 +259,7 @@ Veja a seguir um modelo completo da aparência de um botão do Revelação:
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustando o efeito do Revelação em um controle personalizado 
 
-Quando você habilitar o revelação em um controle personalizado ou remodelado ou um superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
+Ao habilitar o revelação em um controle personalizado ou remodelado ou um superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
  
 * Nos itens adjacentes com tamanhos que não estão alinhados em altura ou largura (particularmente em listas): remova o comportamento de abordagem da borda e mantenha as bordas mostradas somente no foco.
 * Para itens de comando que entram e saem do estado desabilitado com frequência: coloque o pincel de abordagem da borda nos backplates dos elementos, bem como em suas bordas para enfatizar seu estado.

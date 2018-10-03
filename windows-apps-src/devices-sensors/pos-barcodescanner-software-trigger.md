@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ddd8ec979cb6d5a72b48b9b8b6a60adb73c35657
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262675"
 ---
 # <a name="use-a-software-trigger"></a>Usar um gatilho de software
 
@@ -33,7 +33,7 @@ Defina o valor desejado de [IsDisabledOnDataReceived](https://docs.microsoft.com
 > [!Important]
 > Certifique-se de que o scanner de código de barras permite o uso de gatilho de software verificando primeiro a propriedade [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported).
 
-O exemplo a seguir mostra como iniciar verificação usando um gatilho de software, que interromperá a varredura depois que ele verifica um código de barras:
+O exemplo a seguir mostra como iniciar verificação usando um gatilho de software, que interromperá a verificação depois que ele verifica um código de barras:
 
 ```cs
 private void SoftwareTrigger(BarcodeScanner barcodeScanner, ClaimedBarcodeScanner claimedBarcodeScanner) 

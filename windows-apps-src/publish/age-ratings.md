@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265015"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
@@ -30,7 +30,7 @@ Na primeira vez que você enviar um aplicativo (ou na primeira vez que você atu
 
 É necessário que você responda às perguntas de forma precisa. Para saber mais sobre qualquer pergunta, clique no ícone de informações que aparece ao lado dela. Como parte desse processo, podemos compartilhar seu nome para exibição de editor e endereço de email com o IARC. Depois de preencher o questionário, o sistema de classificação IARC fornecerá as informações de classificação etária e de conteúdo com base em suas respostas. Vamos usar essas informações de classificações ao exibir seu aplicativo aos clientes em diferentes mercados. Você também receberá um email do IARC com uma confirmação de classificação do aplicativo quando seu aplicativo tiver sido publicado.
 
-A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Para obter mais detalhes que podem ajudar você a entender como responder a qualquer pergunta, clique no ícone de informações ao lado dessa pergunta. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
+A primeira pergunta solicita que você escolha a categoria que melhor descreve seu aplicativo (e seus metadados). Depois que fizer uma seleção, você verá perguntas adicionais. As perguntas específicas exibidas variarão de acordo com suas respostas anteriores. Para obter mais detalhes que podem ajudá-lo a entender como responder a qualquer pergunta, clique no ícone de informações ao lado dessa pergunta. Se você cometer um erro, poderá voltar ou iniciar o questionário novamente para fornecer as respostas certas.
 
 Quando tiver terminado de responder às perguntas, clique em **Salvar e gerar**. Você verá todas as classificações atribuídas do aplicativo e poderá continuar com o envio. Você também pode clicar em **Editar** para corrigir qualquer uma das suas respostas ao questionário.
 

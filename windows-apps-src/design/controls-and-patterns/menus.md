@@ -5,7 +5,7 @@ title: Menus e menus de contexto
 label: Menus and context menus
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 07/19/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -16,17 +16,14 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 703667bf22ce11c119463008e868a943d447c7ff
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264295"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
-
-> [!IMPORTANT]
-> Este artigo descreve uma funcionalidade que ainda não foi lançada e pode ser modificada substancialmente antes de ser lançada comercialmente. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui. Recursos de visualização exigem a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Menus e menus de contexto exibem uma lista de comandos ou opções quando o usuário os solicita. Use um submenu de menu para mostrar um único, menu embutido. Use uma barra de menu para mostrar um conjunto de menus em uma linha horizontal, geralmente na parte superior de uma janela de aplicativo. Cada menu pode ter itens de menu e submenus.
 
@@ -34,7 +31,7 @@ Menus e menus de contexto exibem uma lista de comandos ou opções quando o usu�
 
 | **Baixar a biblioteca de interface do usuário do Windows** |
 | - |
-| Esse controle é incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Esse controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
 | - | - |
@@ -48,13 +45,13 @@ Menus e menus de contexto servem para organizar comandos; Para exibir conteúdo 
 
 ### <a name="menubar-vs-menuflyout"></a>Barra de menus versus MenuFlyout
 
-Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um único menu de nível superior (e submenus opcionais).
+Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um menu de nível superior único (e submenus opcionais).
 
 Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posicionar a barra de menu na parte superior da janela do aplicativo.
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menus versus CommandBar
 
-Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para os usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais organização ou agrupamento e permite que um CommandBar.
+Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para seus usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais de organização ou agrupamento que permite que um CommandBar.
 
 Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a barra de menus para fornecer a maior parte dos comandos e o CommandBar para realçar os comandos mais usados.
 
@@ -224,7 +221,7 @@ Os controles light dismiss, como menus, menus de contexto e outros submenus, pre
 
 > **Visualização**: barra de menus requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Você pode usar os mesmos elementos para criar menus em uma barra de menu como em um submenu de menu. No entanto, em vez de agrupar objetos da MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como um menu de nível superior.
+Você pode usar os mesmos elementos para criar menus em uma barra de menu como um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como um menu de nível superior.
 
 ![Exemplo de uma barra de menu](images/menu-bar-submenu.png)
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: d613cb87297cdc810e4d8e16dfeb36d4804678d1
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261155"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Criar APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -37,7 +37,7 @@ O cenário mais simples é onde você está implementando uma interface do Windo
 > [!NOTE]
 > Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C + c++ WinRT)** modelo de projeto ilustra o padrão de **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C++ c++ WinRT)** modelo de projeto ilustra o padrão de **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -265,7 +265,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > No entanto, se você estiver fazendo referência a seu tipo de sua interface de usuário do XAML, então haverá um tipo de implementação e um tipo projetado no mesmo projeto. Nesse caso, **faça** retorna uma instância do tipo projetado. Para obter um exemplo de código desse cenário, consulte [Controles XAML; associar a uma propriedade C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Portanto, você pode chamar [**IUnknown:: as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) nele de consulta de outros tipos projetados ou interfaces, que você pode também usar ou retornar.
+Nós só podemos usar `istringable` (no exemplo de código acima) para chamar membros da interface **IStringable**. Mas uma interface C++/WinRT (que é uma interface projetada) deriva de [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown). Assim, você pode chamar [**IUnknown:: as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (ou [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) nele de consulta de outros tipos projetados ou interfaces, que você pode também usar ou retornar.
 
 ```cppwinrt
 istringable.ToString();
@@ -290,7 +290,7 @@ No caso em que você tiver um objeto de interface e souber que é uma interface 
 > [!NOTE]
 > Se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)ou posterior, em seguida, você pode chamar [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) em vez de [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi).
 
-Veja um exemplo. [Implemente a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
+Veja um exemplo. Há outro exemplo no [implementar a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -318,7 +318,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado pelo `cppwinrt.exe` ferramenta) que torna isso possível.
+Se você tiver uma instância do seu tipo de implementação e precisar passá-la para uma função que espera o tipo projetado correspondente, então você pode fazer isso. Existe um operador de conversão em seu tipo de implementação (desde que o tipo de implementação foi gerado o `cppwinrt.exe` ferramenta) que torna isso possível.
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Derivando de um tipo que tem um construtor não padrão
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) é um exemplo de um construtor não padrão. Não há nenhum padrão construtor; então, para construir um **ToggleButtonAutomationPeer**, você precisa passar um *proprietário*. Consequentemente, se você derivar de **ToggleButtonAutomationPeer**, então você precisa fornecer um construtor que leva um *proprietário* e passá-lo para a base. Vamos ver um exemplo disso na prática.

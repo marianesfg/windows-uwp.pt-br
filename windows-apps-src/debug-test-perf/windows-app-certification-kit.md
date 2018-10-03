@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259409"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
@@ -90,9 +90,9 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 O limites do teste de desempenho do Kit de Certificação de Aplicativos Windows são baseados no desempenho de um computador com baixo consumo de energia.
 
-As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), recomendamos que você teste seu aplicativo em um computador de baixo consumo de energia, como um computador Intel Atom baseado no processador com uma resolução de tela de 1366 x 768 (ou superior) e uma rotação disco rígido unidade (em oposição a uma unidade de disco rígido de estado sólida).
+As características do computador em que o teste é realizado podem afetar os resultados do teste. Para determinar se o desempenho do seu aplicativo atende às [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), recomendamos que você teste seu aplicativo em um computador de baixo consumo de energia, como um computador Intel Atom baseado no processador com uma resolução de tela de 1366 x 768 (ou superior) e uma rotação disco rígido unidade (em vez de um disco rígido de estado sólido).
 
-As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) mais atual e testar seu aplicativo com a versão mais atual do Kit de certificação de aplicativo do Windows para certificar-se de que seu aplicativo esteja em conformidade com os requisitos de desempenho mais recentes.
+As características de desempenho podem mudar ao longo do tempo para acompanhar a evolução dos computadores com baixo consumo de energia. Consulte as mais recentes [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) e testar seu aplicativo com a versão mais recente do Kit de certificação de aplicativo do Windows para certificar-se de que seu aplicativo esteja em conformidade com os requisitos de desempenho mais recentes.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

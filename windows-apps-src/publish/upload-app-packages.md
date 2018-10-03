@@ -4,31 +4,31 @@ Description: The Packages page is where you upload all of the package files (.ap
 title: Carregue os pacotes do aplicativo
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.author: wdg-dev-content
-ms.date: 5/10/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263025"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
-A página **Pacotes** é onde você carrega todos os arquivos de pacote (.appx, .appxupload, .appxbundle e/ou .xap) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa. Quando um cliente baixar o aplicativo, a Loja fornecerá automaticamente para cada cliente o pacote que funciona melhor para os dispositivos. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
+A página **pacotes** é onde você carrega todos os arquivos de pacote (.msix, .msixupload, .msixbundle,. AppX,. appxupload,. appxbundle e/ou. xap) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa. Quando um cliente baixar o aplicativo, a Loja fornecerá automaticamente para cada cliente o pacote que funciona melhor para os dispositivos. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
 
-Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão podem afetar quais pacotes são entregues a clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
+Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão podem afetar quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Carregando pacotes para seu envio
 
-Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. A página **Pacotes** permitirá que você carregue arquivos .xap, .appx, .appxupload e/ou .appxbundle.
+Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. A página **pacotes** permitem que você carregue arquivos .msix, .msixupload, .msixbundle,. AppX,. appxupload,. appxbundle e/ou. xap.
 
 > [!IMPORTANT]
-> Para o Windows 10, recomendamos que você envie o arquivo .appxupload em vez de um .appX ou .appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para Windows 10, recomendamos que você envie o arquivo .msixupload ou. appxupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 

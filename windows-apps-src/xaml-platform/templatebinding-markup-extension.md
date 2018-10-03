@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ca551ff53a0a91b5bc60263b6e282b95c32bf976
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259795"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensão de marcação {TemplateBinding}
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. **TemplateBinding** só pode ser usado dentro de uma definição [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) em XAML.
 
@@ -57,6 +58,24 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 **TemplateBinding** é uma extensão de marcação. As extensões de marcação geralmente são implementadas quando é necessário efetuar um escape de valores de atributo para que sejam diferentes de valores literais ou nomes de manipulador e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres "{" e "}" na sintaxe de atributo, sendo esta a convenção pela qual um processador XAML reconhece que uma extensão de marcação deve processar o atributo.
 
 **Observação**  Na implementação do processador XAML do Windows Runtime, não há uma representação de classe de suporte para **TemplateBinding**. **TemplateBinding** é de uso exclusivo na marcação XAML. Não existe uma maneira simples de reproduzir o comportamento em código.
+
+### <a name="xbind-in-controltemplate"></a>x: Bind em ControlTemplate
+
+Começando com a próxima atualização principal para o Windows 10, você pode usar a extensão de marcação **X:Bind** em qualquer lugar você usou **TemplateBinding** em [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
+
+A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necessário (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **x: Bind**.
+
+Com o suporte de **x: Bind** , agora você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
+
+No exemplo a seguir, o Text será avaliada como Button.Content.ToString(). O TargetType em ControlTemplate age como a fonte de dados e realize o mesmo resultado como um TemplateBinding para pai.
+
+```xaml
+<ControlTemplate TargetType="Button">
+    <Grid>
+        <TextBlock Text="{x:Bind Content}" />
+    </Grid>
+</ControlTemplate>
+```
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

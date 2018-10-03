@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258387"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -24,7 +24,7 @@ Algumas experiências do Windows 10 (por exemplo, uma página da interface do us
 Em muitos casos, você pode chamar APIs UWP diretamente do seu aplicativo da área de trabalho, então antes de examinar este guia, consulte [Aprimorar para o Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Este guia pressupõe que você tenha criado um pacote de aplicativo do Windows para seu aplicativo da área de trabalho usando a Ponte de Desktop. Se você ainda não tenha feito isso, consulte [Ponte de Desktop](desktop-to-uwp-root.md).
+>Este guia considera que você tenha criado um pacote de aplicativo do Windows para seu aplicativo da área de trabalho. Se você ainda não tiver feito isso, consulte [aplicativos da área de trabalho do pacote](desktop-to-uwp-root.md).
 
 Se você estiver pronto, vamos começar.
 
@@ -40,7 +40,7 @@ Esta imagem mostra um exemplo de solução.
 
 ![Estender projeto inicial](images/desktop-to-uwp/extend-start-project.png)
 
-Se sua solução não contiver um projeto de empacotamento, consulte [Empacotar seu aplicativo usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Se sua solução não contiver um projeto de empacotamento, consulte o [pacote do seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Adicionar um projeto UWP
 
@@ -83,6 +83,9 @@ Por exemplo, com uma pequena quantidade de marcação XAML, você pode oferecer 
 Esta imagem mostra um aplicativo Windows Forms que abre uma interface do usuário moderna baseada em XAML, a qual contém um controle de mapa.
 
 ![adaptive-design](images/desktop-to-uwp/extend-xaml-ui.png)
+
+>[!NOTE]
+>Este exemplo mostra uma UI XAML adicionando um projeto UWP à solução. Que é a abordagem com suporte estável mostrando interfaces do usuário XAML em um aplicativo da área de trabalho. A alternativa para essa abordagem é adicionar controles UWP XAML diretamente para seu aplicativo da área de trabalho usando uma ilha de XAML. Ilhas XAML está atualmente disponíveis como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a se desenvolver e estabilizar em futuras versões do Windows. Para saber mais sobre ilhas de XAML, consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>O padrão de design
 
@@ -245,7 +248,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## <a name="provide-services-to-other-apps"></a>Fornecer serviços a outros apps
 
-Você adiciona um serviço que outros apps podem consumir. Por exemplo, você pode adicionar um serviço que ofereça aos outros apps acesso controlado ao banco de dados por trás de seu aplicativo. Ao implementar uma tarefa em segundo plano, os apps podem acessar o serviço mesmo se seu aplicativo da área de trabalho não estiver em execução.
+Você adiciona um serviço que outros apps podem consumir. Por exemplo, você pode adicionar um serviço que ofereça aos outros apps acesso controlado ao banco de dados por trás de seu aplicativo. Implementando uma tarefa em segundo plano, os aplicativos podem acessar o serviço mesmo se seu aplicativo da área de trabalho não está em execução.
 
 Aqui está um exemplo que faz isso.
 
@@ -311,7 +314,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicione uma extensão de serviço de aplicativo para o projeto de empacotamento
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicionar uma extensão de serviço de aplicativo para o projeto de empacotamento
 
 Abra o arquivo **Package. appxmanifest** do projeto de empacotamento e adicione uma extensão de serviço de aplicativo para o ``<Application>`` elemento.
 
@@ -330,7 +333,7 @@ Dê ao serviço de aplicativo um nome e forneça o nome da classe de ponto de en
 
 ### <a name="test-the-app-service"></a>Testar o serviço de aplicativo
 
-Teste seu serviço chamando-o de outro app. Esse código pode ser um aplicativo da área de trabalho como um aplicativo de formulários do Windows ou outro aplicativo UWP.
+Teste seu serviço chamando-o de outro app. Esse código pode ser um aplicativo da área de trabalho como um aplicativo Windows forms ou outro aplicativo UWP.
 
 > [!NOTE]
 > Este código funciona apenas se você definir corretamente a propriedade ``PackageFamilyName`` da classe ``AppServiceConnection``. Você pode obter esse nome chamando ``Windows.ApplicationModel.Package.Current.Id.FamilyName`` no contexto do projeto UWP. Consulte [Criar e consumir um serviço de app](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service).
@@ -376,7 +379,7 @@ Saiba mais sobre os serviços de aplicativo aqui: [Criar e consumir um serviço 
 
 Você pode tornar seu aplicativo da área de trabalho um destino de compartilhamento para que os usuários possam compartilhar com facilidade dados como imagens de outros aplicativos que dão suporte a compartilhamento.
 
-Por exemplo, os usuários podem escolher seu app para compartilhar fotos do Microsoft Edge, o app Fotos. Veja um aplicativo WPF de exemplo que tem esse recurso.
+Por exemplo, os usuários podem escolher seu aplicativo para compartilhar fotos do Microsoft Edge, o aplicativo de fotos. Aqui está um aplicativo de exemplo do WPF que tem esse recurso.
 
 ![compartilhar destino](images/desktop-to-uwp/share-target.png)
 
@@ -447,7 +450,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 Adicione uma tarefa em segundo plano para executar o código, mesmo quando o aplicativo está suspenso. Tarefas em segundo plano são ótimas para tarefas pequenas que não exigem a interação do usuário. Por exemplo, sua tarefa pode baixar emails, mostrar uma notificação do sistema sobre uma mensagem de bate-papo recebida ou reagir a uma alteração em uma condição de sistema.
 
-Este é um aplicativo de exemplo do WPF que registra uma tarefa em segundo plano.
+Aqui está um aplicativo de exemplo do WPF que registra uma tarefa em segundo plano.
 
 ![tarefa em segundo plano](images/desktop-to-uwp/sample-background-task.png)
 

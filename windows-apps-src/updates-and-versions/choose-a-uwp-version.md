@@ -3,19 +3,19 @@ author: QuinnRadich
 title: Escolher uma versão do UWP
 description: Ao escrever um aplicativo UWP no Microsoft Visual Studio, você pode escolher para qual versão você o escreverá. Saiba mais sobre a diferença entre as diferentes versões de UWP e como configurar suas escolhas em projetos novos e existentes.
 ms.author: quradic
-ms.date: 4/10/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualizar, atualizações
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
-ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266281"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
@@ -28,14 +28,15 @@ A tabela a seguir descreve as versões disponíveis do Windows 10. Observe que e
 
 | Versão | Descrição |
 | --- | --- |
-| Build 17134 (versão 1803) | Esta é a versão mais recente do Windows 10, lançada em abril de 2018. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows.** Alguns recursos em destaque desta versão incluem: </br> \* **Windows Machine Learning:** o Windows Machine Learning permite que você crie apps que avaliam previamente modelos treinados localmente em seus dispositivos Windows 10. Para saber mais sobre a plataforma, consulte [Windows Machine Learning](https://docs.microsoft.com/windows/ai/). </br> \* **Design Fluente:** novos recursos, como a exibição em árvore, deslizar para atualizar e a exibição de navegação foram adicionados ao Windows 10. Veja as últimas novidades na [Visão geral do design fluente](../design/fluent-design-system/index.md). </br> \* **Aplicativos UWP do console:** agora você pode escrever apps de console UWP C++ /WinRT ou /CX que são executados em uma janela de console, como a janela de console do DOS ou do PowerShell. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-17134.md)
+| Compilação 17763 (versão 1809) | Esta é a versão mais recente do Windows 10, lançada em outubro de 2018. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows.** Alguns recursos em destaque desta versão incluem: </br> \* **Windows Machine Learning:** Windows Machine Learning tem agora oficialmente iniciado, fornecendo recursos como a avaliação mais rápida e suporte para modelos de aprendizado de máquina de última geração. Para saber mais sobre a plataforma, consulte [Windows Machine Learning](https://docs.microsoft.com/windows/ai/). </br> \* **Design fluente:** Novos recursos, como a barra de menus, submenu de barra de comando e animações de propriedade XAML foram adicionados ao Windows 10. Veja as últimas novidades na [Visão geral do design fluente](../design/fluent-design-system/index.md). </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [O Centro de desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [quais são as novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-17763.md)
+| Build 17134 (versão 1803) | Isso é a versão do Windows 10 foi lançada em abril de 2018. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows.** Alguns recursos em destaque desta versão incluem: </br> \* **Design Fluente:** novos recursos, como a exibição em árvore, deslizar para atualizar e a exibição de navegação foram adicionados ao Windows 10. Veja as últimas novidades na [Visão geral do design fluente](../design/fluent-design-system/index.md). </br> \* **Aplicativos UWP do console:** agora você pode escrever apps de console UWP C++ /WinRT ou /CX que são executados em uma janela de console, como a janela de console do DOS ou do PowerShell. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-17134.md)
 | Build 16299 (Fall Creators Update, versão 1709) | Esta versão do Windows 10 foi lançada em outubro de 2017. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows.** Alguns recursos em destaque desta versão incluem: </br> \* **.NET Standard 2.0:** Aproveite um grande aumento no número de APIs .NET e incorpore seus pacotes NuGet favoritos e bibliotecas de terceiros ao .NET Standard. Veja mais detalhes e explore a documentação [aqui](https://docs.microsoft.com/dotnet/standard/net-standard). Observe que você deve definir sua **versão mínima** como Build 16299 para acessar essas novas APIs. </br> \* **Design Fluente:** Use luz, profundidade, perspectiva e movimento para aprimorar seu app e ajudar os usuários a se concentrarem nos elementos importantes da interface de usuário. </br> \* **XAML condicional:** defina com facilidade propriedades e instancie objetos com base na presença de uma API em tempo de execução, permitindo que seus aplicativos sejam executados perfeitamente em todos os dispositivos e versões. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-16299.md)
 | Build 15063 (Creators Update, versão 1703) | Esta versão do Windows 10 foi lançada em março de 2017. **Observe que você _deve_ usar o Visual Studio 2017 para segmentar essa versão do Windows**. Alguns recursos em destaque desta versão incluem:  </br> \* **Análise do Ink:** O Windows Ink agora pode categorizar traços de tinta dentro dos traços de escrita ou desenho, e reconhecer texto, formas e estruturas básicas de layout. </br> \* **Windows.Ui.Composition APIs:** Combine e aplique com facilidade animações em seu aplicativo. </br> \* **Edição ao Vivo:** Edite XAML enquanto seu aplicativo está em execução, e visualize as mudanças aplicadas em tempo real. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-15063.md)  |
 | Build 14393 (Atualização de Aniversário, versão 1607) | Esta versão do Windows 10 foi lançada em julho de 2016. Alguns recursos em destaque desta versão incluem: </br> \* **Windows Ink:** Novos controles InkCanvas e InkToolbar. </br> \* **APIs da Cortana:** Use as novas ações da Cortana para integrar o suporte da Cortana com funções específicas do seu aplicativo. </br> \* **Windows Hello:** O Microsoft Edge agora oferece suporte ao Windows Hello, dando aos desenvolvedores da Web acesso à autenticação biométrica. </br> Para obter informações sobre estes e muitos outros recursos adicionados nesta versão do Windows, visite [o Centro de Desenvolvimento](https://developer.microsoft.com/windows/windows-10-for-developers) ou a página mais detalhada sobre [Novidades no Windows 10 para desenvolvedores](../whats-new/windows-10-build-14393.md)  |
 | Build 10586 (Atualização de novembro, versão 1511) | Esta versão do Windows 10 foi lançada em novembro de 2015. Os recursos destacados incluem a introdução das APIs de ORTC (comunicações em tempo real do objeto) para a comunicação de vídeo no Microsoft Edge e as APIs de provedores para permitir que os aplicativos usem a autenticação de rosto do Windows Hello. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10586.md) |
 | Build 10240 (Windows 10, versão 1507) | Esta é a versão de lançamento inicial do Windows 10, em julho de 2015. [Mais informações sobre os recursos introduzidos nesta compilação.](../whats-new/windows-10-build-10240.md) |
 
-É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (17134). Os desenvolvedores que escrevem apps Corporativos devem considerar o suporte a uma **Versão Mínima** mais antiga.
+É altamente recomendável que os novos desenvolvedores e aqueles que escrevem o código para o público em geral sempre usem a compilação mais recente do Windows (17763). Os desenvolvedores que escrevem apps Corporativos devem considerar o suporte a uma **Versão Mínima** mais antiga.
 
 ## <a name="whats-different-in-each-uwp-version"></a>O que está diferente em cada versão do UWP?
 
@@ -43,7 +44,7 @@ APIs novas e alteradas para UWP estão disponíveis em todas as versões sucessi
 
 Para tópicos de referência que enumeram todas as famílias de dispositivos e suas versões e todos os contratos de API e suas versões, consulte [Famílias de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) e [Contratos de API](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
 
-## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET em versões UWP
+## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET nas versões UWP
 
 UWP dá suporte a um subconjunto limitado de APIs .NET, que estão disponíveis, independentemente do **Versão de destino** ou uma **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 

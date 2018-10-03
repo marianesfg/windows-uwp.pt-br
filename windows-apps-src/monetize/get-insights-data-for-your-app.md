@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-description: Use este método na API de análise da Microsoft Store para obter dados de insights para seu aplicativo.
+description: Use este método na API de análise da Microsoft Store para obter dados de ideias de seu aplicativo.
 title: Obter dados de insights
 ms.author: mcleans
 ms.date: 07/31/2018
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258117"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 
@@ -50,8 +50,8 @@ Para usar este método, primeiro você precisa do seguinte:
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
 | applicationId | string | A [ID da loja](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar dados de percepções. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
-| startDate | date | A data de início no intervalo de datas dos dados insights a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
-| endDate | date | A data final no intervalo de datas dos dados insights a serem recuperados. O padrão é a data atual. |  Não  |
+| startDate | date | A data de início no intervalo de datas dos dados de percepções a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
+| endDate | date | A data final no intervalo de datas dos dados de percepções a serem recuperados. O padrão é a data atual. |  Não  |
 | filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>Você pode especificar os campos de filtro a seguir:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul> | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
@@ -82,7 +82,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de percepções.     |
 | insightDate                | string | A data em que identificamos a alteração em uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma das seguintes cadeias de caracteres que especifica a área de análise gerais que descreve essa informação:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | array | Um ou mais [valores InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
+| insightDetail          | array | Um ou mais [valores de InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
@@ -93,8 +93,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a visão.   |
 | PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** e **sexo**.   |
-| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType** **DimensionValue** pode ser **travamento** ou **congelamento**.   |
-| FactValue     | string | O valor absoluto da métrica na data que o insight foi detectado.  |
+| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
+| FactValue     | string | O valor absoluto da métrica na data que a visão foi detectada.  |
 | Direção | string |  A direção da alteração (**positivo** ou **negativo**).   |
 | Data              | string |  A data em que identificamos a alteração relacionada a visão atual ou a dimensão atual.   |
 

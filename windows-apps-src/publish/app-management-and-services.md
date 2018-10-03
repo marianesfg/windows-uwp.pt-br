@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260065"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
@@ -92,7 +92,7 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 A seção **WNS/MPNS** fornece opções para ajudá-lo a criar e enviar notificações para clientes do seu aplicativo. 
 
 > [!TIP]
-> Para aplicativos UWP, sugerimos usando a opção de **notificações** no painel. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto de destino de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
+> Para aplicativos UWP, sugerimos usando a opção de **notificações** no painel. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo ou a um subconjunto de destino de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
 Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você também pode usar uma das seguintes opções: 
 

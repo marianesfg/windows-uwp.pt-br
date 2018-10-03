@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 title: Obter e compreender os dados de código de barras
-description: Saiba como obter e interpretar os dados de código de barras que você digitalizar.
+description: Saiba como obter e interpretar os dados de código de barras digitalização.
 ms.author: elcowle
 ms.date: 08/29/2018
 ms.topic: article
@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258361"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Obter e compreender os dados de código de barras
 
-Depois que você configurou o scanner de código de barras, você precisa obviamente uma maneira de entender os dados que você digitalizar. Quando você verifica um código de barras, o evento [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) é acionado. O [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) deve assinar esse evento. O evento **DataReceived** passa um objeto [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) , que você pode usar para acessar os dados de código de barras.
+Depois que você configurou o scanner de código de barras, você precisa obviamente uma maneira de entender os dados que você digitaliza. Quando você verifica um código de barras, o evento [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) é acionado. O [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) deve assinar esse evento. O evento **DataReceived** passa um objeto [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) , que você pode usar para acessar os dados de código de barras.
 
 ## <a name="subscribe-to-the-datareceived-event"></a>Assinar o evento DataReceived
 
@@ -42,10 +42,10 @@ private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner send
 Quando você tiver o **BarcodeScannerReport**, você pode acessar e analisar os dados de código de barras. **BarcodeScannerReport** tem três propriedades:
 
 * [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): os dados de código de barras completo, bruto.
-* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): O rótulo de código de barras decodificada, que não inclui o cabeçalho, soma de verificação e outras informações de diversas.
+* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): O rótulo de código de barras decodificada, que não inclui o cabeçalho, soma de verificação e outras informações diversas.
 * [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): O tipo de rótulo de código de barras decodificada. Os valores possíveis são definidos na classe [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) .
 
-Se você quiser acessar **ScanDataLabel** ou **ScanDataType**, primeiro você deve definir [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) como **true**.
+Se você deseja acessar **ScanDataLabel** ou **ScanDataType**, primeiro você deve definir [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) como **true**.
 
 ```cs
 claimedBarcodeScanner.IsDecodeDataEnabled = true;
@@ -104,7 +104,7 @@ private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
 
 ### <a name="get-the-raw-scan-data"></a>Obter os dados brutos de verificação
 
-Para obter completo, dados brutos do código de barras, podemos simplesmente converter o buffer que obtemos de **ScanData** em uma cadeia de caracteres.
+Para obter completo, dados brutos do código de barras, nós simplesmente convertemos o buffer que obtemos de **ScanData** em uma cadeia de caracteres.
 
 ```cs
 private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
@@ -123,15 +123,15 @@ private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-Esses dados são, em geral, no formato conforme entregue do scanner. Informações de cabeçalho e trailer de mensagem é removido, no entanto, pois eles não contêm informações úteis para um aplicativo e têm probabilidade de ser específica do scanner.
+Esses dados são, em geral, no formato conforme entregue do scanner. Informações de cabeçalho e trailer de mensagem é removido, no entanto, pois eles não contêm informações úteis para um aplicativo e devem ser específicas do scanner.
 
 Informações de cabeçalho comum são um caractere de prefixo (por exemplo, um caractere STX). Informações comuns de trailer são um caractere terminador (por exemplo, um caractere ETX ou CR) e um caractere de seleção de bloco se um é gerado pelo scanner.
 
-Essa propriedade deve incluir um caractere de Simbologia caso um seja retornado pelo scanner ( **por exemplo, de um para** A UPC). Ele também deve incluir dígitos de verificação se eles estiverem presentes no rótulo e retornados pelo scanner. (Observe que caracteres Simbologia e dígitos de verificação podem ou não ser presentes, dependendo da configuração de scanner. O scanner retornará-los a se apresentar, mas não gerar ou calcule se eles estiverem ausentes.)
+Essa propriedade deve incluir um caractere de Simbologia caso um seja retornado pelo scanner ( **por exemplo, de um para** um UPC). Ele também deve incluir dígitos de verificação se eles estiverem presentes no rótulo e retornados pelo scanner. (Observe que caracteres de Simbologia e dígitos de verificação podem ou não ser presentes, dependendo da configuração de scanner. O scanner retornará-los a se apresentar, mas não gerar ou calcule se eles estiverem ausentes.)
 
 Alguns mercadoria pode ser marcada com um código de barras complementar. Esse código de barras é geralmente colocado à direita do código de barras principal e consiste em um caracteres dois ou cinco adicionais de informações. Se o scanner lê mercadoria que contém códigos de barras principais e complementares, os caracteres complementares são acrescentados aos caracteres principais, e o resultado é entregue ao aplicativo como um rótulo. (Observe que um scanner pode oferecer suporte a uma configuração que habilita ou desabilita a leitura de códigos complementares).
 
-Alguns mercadoria pode ser marcada com vários rótulos, às vezes chamados de *rótulos multisymbol* ou *rótulos hierárquicos*. Esses códigos de barras geralmente são organizados verticalmente e podem ser de Simbologia a mesmas ou diferente. Se o scanner lê mercadoria que contém vários rótulos, cada código de barras é entregue ao aplicativo como um rótulo separado. Isso é necessário devido à falta de padronização desses tipos de código de barras atual. Um não é capaz de determinar todas as variações com base nos dados do código de barras individuais. Portanto, o aplicativo precisará determinar quando um código de barras de rótulo vários foi lido com base nos dados retornados. (Observe que um scanner pode ou pode não oferecer suporte a leitura dos rótulos vários).
+Alguns mercadoria pode ser marcada com vários rótulos, às vezes chamados de *rótulos multisymbol* ou *rótulos hierárquicos*. Esses códigos de barras geralmente são organizados verticalmente e podem ser de Simbologia a mesmas ou diferente. Se o scanner lê mercadoria que contém vários rótulos, cada código de barras é entregue ao aplicativo como um rótulo separado. Isso é necessário devido à falta de padronização desses tipos de código de barras atual. Um não é capaz de determinar todas as variações com base nos dados do código de barras individuais. Portanto, o aplicativo será necessário determinar quando um código de barras de rótulo vários foi lido com base nos dados retornados. (Observe que um scanner pode ou pode não oferecer suporte a leitura dos rótulos vários).
 
 Esse valor é definido antes de um evento **DataReceived** sendo gerado para o aplicativo.
 

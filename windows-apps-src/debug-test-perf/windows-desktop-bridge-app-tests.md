@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266315"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes do app de Ponte de Desktop do Windows
 
@@ -221,7 +221,7 @@ Esse teste verifica todos os componentes da UWP no app:
 Isso pode ser corrigido, garantindo que o app foi compilado como um build de versão e não como um build de depuração. 
 
 > [!NOTE]
-> A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Examine as mensagens de erro para identificar a API presente que não é uma API permitida para aplicativos UWP. 
+> A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Consulte as mensagens de erro para identificar a API presente que não é uma API permitida para aplicativos UWP. 
 
 > [!NOTE]
 > Aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte [alternativas às APIs do Windows em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para obter mais informações.

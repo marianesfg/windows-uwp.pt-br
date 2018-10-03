@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265897"
 ---
 # <a name="custom-attached-properties"></a>Propriedades anexadas personalizadas
 
@@ -46,7 +46,7 @@ Defina sua propriedade anexada como uma propriedade de dependência declarando u
 A diferença da área principal para definição de uma propriedade anexada personalizada em relação à propriedade de dependência personalizada está na forma como você define acessadores ou wrappers. Em vez de usar a técnica de wrapper descrita em [Propriedades de dependência personalizadas](custom-dependency-properties.md), você também deve fornecer estático **obter * * * PropertyName* e **Definir * * * PropertyName* métodos como acessadores para a propriedade anexada. Os acessadores são usados principalmente pelo analisador XAML, embora qualquer outro chamador também possa usá-los para definir cenários não XAML.
 
 > [!IMPORTANT]
-> Se você não definir os acessadores corretamente, o processador XAML não pode acessar a propriedade anexada e qualquer pessoa que tenta usá-lo provavelmente receberá um erro do analisador XAML. Além disso, as ferramentas de design e codificação normalmente dependem das convenções "\*Property" para nomeação de identificadores, quando elas encontram um propriedade de dependência personalizada em um assembly referenciado.
+> Se você não definir os acessadores corretamente, o processador XAML não pode acessar a propriedade anexada e qualquer pessoa que tenta usá-lo, provavelmente receberá um erro do analisador XAML. Além disso, as ferramentas de design e codificação normalmente dependem das convenções "\*Property" para nomeação de identificadores, quando elas encontram um propriedade de dependência personalizada em um assembly referenciado.
 
 ## <a name="accessors"></a>Acessadores
 

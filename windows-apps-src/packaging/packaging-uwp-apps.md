@@ -4,7 +4,7 @@ ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empacotando aplicativos UWP
 description: Para distribuir ou vender seu aplicativo UWP (Plataforma Universal do Windows), será necessário criar um pacote de apps para ele.
 ms.author: lahugh
-ms.date: 06/10/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -13,25 +13,25 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: eb930c5e6b2c1c1f864f2e63fbce97c89bb89e1f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258457"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>União de um aplicativo UWP com o Visual Studio
 
 Para vender seu aplicativo UWP (Plataforma Universal do Windows) ou distribuí-lo para outros usuários, você precisa empacotá-lo. Se você não quiser distribuir seu app por meio da Microsoft Store, poderá fazer o sideload do pacote do app diretamente para um dispositivo ou distribuí-lo através de [Instalação Web](installing-UWP-apps-web.md). Este artigo descreve o processo de configuração, criação e teste de um pacote do aplicativo UWP usando o Visual Studio. Para obter mais informações sobre como gerenciar e implantar aplicativos da linha de negócios (LOB), consulte [Gerenciamento de aplicativos corporativos](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-No Windows 10, você pode enviar um pacote do app (.appx), um lote de aplicativo (. appxbundle) ou um arquivo de upload do pacote do aplicativo completo (.appxupload) para o Centro de Desenvolvimento do Windows. Destas opções, enviar um arquivo de upload do pacote fornecerá a melhor experiência. 
+No Windows 10, você pode enviar um pacote do aplicativo, lote de aplicativo ou um arquivo de upload de pacote do aplicativo completo para o Centro de desenvolvimento do Windows. Destas opções, enviar um arquivo de upload do pacote fornecerá a melhor experiência. 
 
 ## <a name="types-of-app-packages"></a>Tipos de pacotes de aplicativo
 
-- **App Package (.appx)**  
-    Um arquivo que contém seu aplicativo em um formato que pode ser adicionado por sideload em um dispositivo. Qualquer arquivo do pacote .appX único criado pelo Visual Studio **não** é a intenção de ser enviado ao Centro de Desenvolvimento e deve ser usado para sideload e apenas para fins de teste. Se você quiser enviar seu aplicativo no Centro de Desenvolvimento, use o arquivo de upload do pacote do aplicativo.  
+- **Pacote do aplicativo (. AppX ou .msix)**  
+    Um arquivo que contém seu aplicativo em um formato que pode ser adicionado por sideload em um dispositivo. Qualquer arquivo do pacote de aplicativo único criado pelo Visual Studio é **não** se destina a ser enviado ao centro de desenvolvimento e deve ser usado para sideload e testes. Se você quiser enviar seu aplicativo no Centro de Desenvolvimento, use o arquivo de upload do pacote do aplicativo.  
 
-- **App Bundle (.appxbundle)**  
+- **Lote de aplicativo (. appxbundle ou .msixbundle)**  
     Um lote de aplicativo é um tipo de pacote que pode conter vários pacotes de aplicativos, cada um deles é criado para dar suporte a uma arquitetura de dispositivo específico. Por exemplo, um lote de aplicativo pode conter três pacotes de aplicativo separado para configurações x86, x64 e ARM. Lotes de aplicativo devem ser gerados sempre que possível, pois eles permitem que seu aplicativo esteja disponível na maior variedade possível de dispositivos.  
 
 - **App Package Upload File (.appxupload)**  
@@ -80,7 +80,7 @@ Se você está distribuindo seu aplicativo por meio da Microsoft Store, o Visual
 
 ## <a name="create-an-app-package-upload-file"></a>Crie um arquivo de upload de pacote do aplicativo
 
-Para distribuir um app por meio da Microsoft Store, você deve criar um pacote do app (.appx), um lote de aplicativo (.appxbundle) ou um pacote de upload (. appxupload) e [enviar o aplicativo empacotado para o Centro de Desenvolvimento](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Embora seja possível enviar um pacote do aplicativo ou lote de aplicativo para o Centro de Desenvolvimento sozinho, você é incentivado a enviar um pacote de upload.
+Para distribuir um aplicativo por meio da Microsoft Store, você deve criar um pacote do aplicativo (. AppX ou .msix), lote de aplicativo (. appxbundle ou .msixbundle), ou um pacote de upload (. appxupload) e [enviar o aplicativo empacotado no Centro de desenvolvimento](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Embora seja possível enviar um pacote do aplicativo ou lote de aplicativo para o Centro de Desenvolvimento sozinho, você é incentivado a enviar um pacote de upload.
 
 >[!NOTE]
 > O arquivo de upload do pacote do aplicativo (.appxupload) é o **único** tipo de pacote do aplicativo válido para o Centro de Desenvolvimento que pode ser criado usando o Visual Studio. Outros [pacotes do aplicativo válidos podem ser criados manualmente](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), sem o Visual Studio. 
@@ -102,7 +102,7 @@ Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga 
 4.  Entre usando a conta de desenvolvedor no Centro de Desenvolvimento do Windows. Se ainda não tiver uma conta de desenvolvedor, o assistente ajudará você a criar uma.
 5.  Selecione o nome do aplicativo para o pacote ou reserve um novo caso você ainda não tenha reservado um com o portal do Centro de Desenvolvimento do Windows.  
     ![Janela Criar Pacotes de Aplicativos com a seleção do nome do aplicativo mostrada](images/packaging-screen4.jpg)
-6.  Certifique-se de que selecionou todas as três configurações de arquitetura (x86, x64 e ARM) na caixa de diálogo **Selecionar e Configurar Pacotes** para garantir que seu aplicativo possa ser implantado para a mais ampla variedade de dispositivos. Na caixa de listagem **Gerar lote de aplicativo**, selecione **Sempre**. Um lote de aplicativo (.appxbundle) tem preferência sobre um único pacote de aplicativo (.appx), pois ele contém uma coleção de pacotes de aplicativos configurados para cada tipo de arquitetura do processador. Ao escolher gerar o lote de aplicativo, o lote de aplicativo será incluído no arquivo de upload (. appxupload) do pacote do aplicativo final junto com informações de depuração e análise de falha. Se você não tiver certeza de quais arquiteturas escolher ou deseja saber mais sobre quais arquiteturas são usadas por vários dispositivos, consulte [Arquiteturas de pacote do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
+6.  Certifique-se de que selecionou todas as três configurações de arquitetura (x86, x64 e ARM) na caixa de diálogo **Selecionar e Configurar Pacotes** para garantir que seu aplicativo possa ser implantado para a mais ampla variedade de dispositivos. Na caixa de listagem **Gerar lote de aplicativo**, selecione **Sempre**. Um lote de aplicativo (. appxbundle) tem preferência sobre um arquivo de pacote de aplicativo único, pois ele contém uma coleção de pacotes de aplicativos configurados para cada tipo de arquitetura do processador. Ao escolher gerar o lote de aplicativo, o lote de aplicativo será incluído no arquivo de upload (. appxupload) do pacote do aplicativo final junto com informações de depuração e análise de falha. Se você não tiver certeza de quais arquiteturas escolher ou deseja saber mais sobre quais arquiteturas são usadas por vários dispositivos, consulte [Arquiteturas de pacote do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Janela Criar Pacotes de Aplicativos com a configuração do pacote mostrada](images/packaging-screen5.jpg)
 
 
@@ -137,7 +137,7 @@ Para obter mais informações sobre como enviar seu aplicativo para o Centro de 
 
 ## <a name="sideload-your-app-package"></a>Fazer o sideload do pacote do aplicativo
 
-Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser instalados simplesmente clicando duas vezes no arquivo de pacote do app. Para usar isso, simplesmente navegue até o pacote do app (.appx) ou o lote de aplicativo (.appxbundle) e clique duas vezes nele. O Instalador de App é iniciado e fornece as informações básicas sobre o app, bem como um botão de instalação, a barra de progresso da instalação e as mensagens de erro relevantes. 
+Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser instalados simplesmente clicando duas vezes no arquivo de pacote do app. Para usá-la, navegue até o pacote de aplicativo ou um arquivo de lote de aplicativo e clique duas vezes nele. O Instalador de App é iniciado e fornece as informações básicas sobre o app, bem como um botão de instalação, a barra de progresso da instalação e as mensagens de erro relevantes. 
 
 ![O Instalador de App é exibido para a instalação de um app de exemplo chamado Contoso](images/appinstaller-screen.png)
 
@@ -145,7 +145,7 @@ Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser insta
 > O Instalador de App presume que o app seja confiável para o dispositivo. Se você estiver fazendo sideload de um app de desenvolvedor ou corporativo, será necessário instalar o certificado de autenticação no repositório Autoridades Certificação de Fornecedores ou Pessoas Confiáveis no dispositivo. Se você não tiver certeza de como fazer isso, consulte [Instalação de certificados de teste](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>Sideload de seu app em versões anteriores do Windows
-Com pacotes de aplicativos UWP, os apps não são instalados em um dispositivo como acontece nos apps para a área de trabalho. Normalmente, você baixa os aplicativos UWP da Microsoft Store, que também instala o app em seu dispositivo para você. Os apps podem ser instalados sem ser publicados à Store (sideload). Isso permite instalar e testar apps usando o pacote do app (.appx) que você criou. Caso tenha um aplicativo que não queira vender na Loja, como um aplicativo de linha de negócios (LOB), você pode fazer o sideload desse aplicativo de maneira que outros usuários na empresa possam usá-lo.
+Com pacotes de aplicativos UWP, os apps não são instalados em um dispositivo como acontece nos apps para a área de trabalho. Normalmente, você baixa os aplicativos UWP da Microsoft Store, que também instala o app em seu dispositivo para você. Os apps podem ser instalados sem ser publicados à Store (sideload). Isso permite instalar e aplicativos de teste usando o pacote de aplicativo do arquivo que você criou. Caso tenha um aplicativo que não queira vender na Loja, como um aplicativo de linha de negócios (LOB), você pode fazer o sideload desse aplicativo de maneira que outros usuários na empresa possam usá-lo.
 
 A lista a seguir apresenta requisitos para o sideload do aplicativo.
 

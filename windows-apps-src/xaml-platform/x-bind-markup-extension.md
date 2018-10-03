@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: A extensão de marcação xBind é uma alternativa a Binding. xBind não tem alguns dos recursos de Binding, mas ele é executado em menos tempo e usando menos memória do que Binding e suporta melhor a depuração.
+description: A marcação xbind é uma alternativa de alto desempenho para associação. xBind - nova para Windows 10 - é executado em menos tempo e menos memória do que a associação e suporta melhor de depuração.
 title: Extensão de marcação xBind
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 340f8e72c5015fad341810ef335dea73f77fc82f
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1672883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261483"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
 **Observação** Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-A extensão de marcação **{x: Bind}** — nova no Windows 10 — é uma alternativa ao **{Binding}**. **{x:Bind}** não tem alguns dos recursos de **{Binding}**, mas ele é executado em menos tempo e usando menos memória do que **{Binding}** e suporta melhor a depuração.
+A extensão de marcação **{x: Bind}** — nova no Windows 10 — é uma alternativa ao **{Binding}**. **{x: Bind}** é executado em menos tempo e menos memória do que **{Binding}** e suporta melhor a depuração.
 
 Em tempo de compilação XAML, **{x: Bind}** é convertido em código que irá obter um valor de uma propriedade em uma fonte de dados e defini-lo na propriedade especificada na marcação. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações (`Mode="OneWay"`). Ele também pode ser configurado opcionalmente para enviar as alterações em seu próprio valor de volta para a propriedade de origem (`Mode="TwoWay"`).
 
@@ -46,6 +46,8 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 <object property="{x:Bind bindingProperties}" .../>
 -or-
 <object property="{x:Bind propertyPath, bindingProperties}" .../>
+-or-
+<object property="{x:Bind pathToFunction.functionName(functionParameter1, functionParameter2, ...), bindingProperties}" .../>
 ```
 
 | Termo | Descrição |
@@ -55,6 +57,25 @@ Os objetos de associação criados por **{x:Bind}** e **{Binding}** são em gran
 | _propName_=_value_\[, _propName_=_value_\]* | Uma ou mais propriedades de associação que são especificadas usando uma sintaxe de par nome/valor. |
 | _propName_ | O nome da cadeia de caracteres da propriedade a ser definida no objeto Binding. Por exemplo, "Converter". |
 | _value_ | O valor a se definir a propriedade. A sintaxe do argumento depende da propriedade que está sendo definida. Veja um exemplo de uso de _propName_=_value_ em que o valor é uma extensão de marcação: `Converter={StaticResource myConverterClass}`. Para obter mais informações, consulte a seção [Propriedades que você pode definir com {x: Bind}](#properties-you-can-set) a seguir. |
+
+## <a name="examples"></a>Exemplos
+
+```XAML
+<Page x:Class="QuizGame.View.HostView" ... >
+    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
+</Page>
+```
+
+Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate**. Observe a declaração de um valor **x: DataType**.
+
+```XAML
+  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
+    <StackPanel Orientation="Vertical" Height="50">
+      <TextBlock Text="{x:Bind Title}"/>
+      <TextBlock Text="{x:Bind Description}"/>
+    </StackPanel>
+  </DataTemplate>
+```
 
 ## <a name="property-path"></a>Caminho de propriedade
 
@@ -68,7 +89,8 @@ Por exemplo: em uma página, **Text="{x:Bind Employee.FirstName}"** procurará p
 
 Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propriedades no modelo de página ou dados – você precisará ter uma propriedade pública para que seja associável. A área de superfície para associação precisa ser exposta como classes/interfaces CX para que possamos obter os metadados relevantes. O atributo **\[Bindable\]** não deve ser necessário.
 
-Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Com **x:Bind**, você pode usar o nome do elemento como a primeira parte do caminho para a associação, porque elementos nomeados tornam-se campos dentro do controle de página ou de usuário que representa a origem da associação raiz
+Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação, porque elementos nomeados tornam-se campos dentro do controle de página ou do usuário que representa a origem da associação raiz. 
+
 
 ### <a name="collections"></a>Coleções
 
@@ -93,78 +115,7 @@ _Observação: A sintaxe de conversão em estilo C# é mais flexível do que a s
 
 ## <a name="functions-in-binding-paths"></a>Funções em caminhos de associação
 
-Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Assim, é possível
-
-- Uma maneira mais simples de conseguir a conversão de valor
-- Uma maneira para associações dependerem de mais de um parâmetro
-
-> [!NOTE]
-> Para usar funções com **{x:Bind}**, a versão do SDK de alvo mínima do aplicativo deve ser 14393 ou posterior. Você não poderá usar funções quando o aplicativo se destinar a versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
-
-No exemplo a seguir, o primeiro e o segundo planos do item estão associados a funções para fazer uma conversão com base no parâmetro de cor
-
-```xaml
-<DataTemplate x:DataType="local:ColorEntry">
-    <Grid Background="{x:Bind local:ColorEntry.Brushify(Color)}" Width="240">
-        <TextBlock Text="{x:Bind ColorName}" Foreground="{x:Bind TextColor(Color)}" Margin="10,5" />
-    </Grid>
-</DataTemplate>
-```
-
-```csharp
-class ColorEntry
-{
-    public string ColorName { get; set; }
-    public Color Color { get; set; }
-
-    public static SolidColorBrush Brushify(Color c)
-    {
-        return new SolidColorBrush(c);
-    }
-
-    public SolidColorBrush TextColor(Color c)
-    {
-        return new SolidColorBrush(((c.R * 0.299 + c.G * 0.587 + c.B * 0.114) > 150) ? Colors.Black : Colors.White);
-    }
-}
-
-```
-
-### <a name="function-syntax"></a>Sintaxe da função
-
-``` Syntax
-Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
-             |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
-```
-
-### <a name="path-to-the-function"></a>Caminho para a função
-
-O caminho para a função é especificado como outros caminhos de propriedade e pode incluir pontos (.), indexadores ou conversões para localizar a função.
-
-As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** será mapeado para a função DateTime.Parse, pressupondo-se que **xmlns:sys="using:System"** esteja especificado na parte superior da página.
-
-Se o modo for OneWay/TwoWay, o caminho da função terá detecção de alteração realizada nele, e a associação será reavaliada se houver alterações nesses objetos.
-
-A função associada precisa:
-
-- Estar acessível para o código e os metadados – assim, internal / private funcionam em C#, mas C++/CX precisarão de métodos que sejam métodos WinRT públicos
-- A sobrecarga se baseia no número de argumentos, e não no tipo, e ela tentará se comparar com a primeira sobrecarga com muitos argumentos
-- Os tipos de argumento precisam corresponder aos dados passados – não fazemos conversões de restrição
-- O tipo de retorno da função precisa corresponder ao tipo da propriedade que está usando a associação
-
-### <a name="function-arguments"></a>Argumentos de função
-
-Vários argumentos de função podem ser especificados, separados por vírgula (,)
-
-- Caminho de associação – a mesma sintaxe como se você estivesse associando diretamente esse objeto.
-  - Se o modo for OneWay/TwoWay, a detecção de alteração será realizada, e a associação será reavaliada mediante a alteração do objeto
-- Cadeia de caracteres constante entre aspas – aspas são necessárias para designá-la como uma cadeia de caracteres. O acento circunflexo (^) pode ser usado no escape de citações em cadeias de caracteres
-- Número da constante - por exemplo -123,456
-- Booliano – especificado como "x:True" ou "x:False"
-
-### <a name="two-way-function-bindings"></a>Associações de função bidirecional
-
-Em um cenário de associação bidirecional, uma segunda função deve ser especificada para a direção inversa da associação. Isso é feito usando-se a propriedade de associação **BindBack**, por exemplo **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. A função deve utilizar um argumento que é o valor que precisa ser reenviado para o modelo.
+Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Esse é um recurso poderoso para vinculação de dados que permite que vários cenários na marcação. Consulte [associações de função](../data-binding/function-bindings.md) para obter detalhes.
 
 ## <a name="event-binding"></a>Associação de evento
 
@@ -226,21 +177,3 @@ Páginas e controles de usuário que incluem associações compiladas terão uma
 
 **{x:Bind}** é apenas uma extensão de marcação, sem nenhuma maneira de criar ou manipular essas associações de forma programática. Para saber mais sobre extensões de marcação, veja [Visão geral do XAML](xaml-overview.md).
 
-## <a name="examples"></a>Exemplos
-
-```XML
-<Page x:Class="QuizGame.View.HostView" ... >
-    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
-</Page>
-```
-
-Este exemplo usa XAML **{x: Bind}** com uma propriedade **ListView.ItemTemplate**. Observe a declaração de um valor **x: DataType**.
-
-```XML
-  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
-    <StackPanel Orientation="Vertical" Height="50">
-      <TextBlock Text="{x:Bind Title}"/>
-      <TextBlock Text="{x:Bind Description}"/>
-    </StackPanel>
-  </DataTemplate>
-```

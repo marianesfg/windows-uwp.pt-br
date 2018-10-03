@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258427"
 ---
 # <a name="get-monthly-app-usage"></a>Obter mensal uso do aplicativo
 
@@ -89,15 +89,15 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationId             | string  | A ID da loja do aplicativo para o qual você está recuperando dados de uso.                            |
 | applicationName           | string  | O nome de exibição do app.                                                                |
 | market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou seu aplicativo.                   |
-| packageVersion            | string  | A versão do pacote onde ocorreu o uso.                                            |
+| packageVersion            | string  | A versão do pacote em que ocorreu o uso.                                            |
 | deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                                           |
 | subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                                              |
 | monthlySessionCount       | comprimento    | O número de sessões de usuário durante o mês.                                              |
-| engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando seu aplicativo medido por um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                               |
-| monthlyActiveUsers        | comprimento    | O número de clientes que estão usando o aplicativo nesse mês.                                           |
-| monthlyActiveDevices      | comprimento    | O número de dispositivos executando o aplicativo para um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                                                        |
+| engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando o aplicativo medido por um período distinto, iniciar quando o aplicativo for iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                               |
+| monthlyActiveUsers        | comprimento    | O número de clientes que estão usando o aplicativo dito mês.                                           |
+| monthlyActiveDevices      | comprimento    | O número de dispositivos executando o aplicativo para um período distinto, iniciar quando o aplicativo for iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                                                        |
 | monthlyNewUsers           | comprimento    | O número de clientes que usaram seu aplicativo pela primeira vez nesse mês.                    |
-| averageDailyActiveUsers   | double  | O número médio de clientes usando o aplicativo diariamente.                             |
+| averageDailyActiveUsers   | double  | O número médio de clientes que estão usando o aplicativo diariamente.                             |
 | averageDailyActiveDevices | double  | O número médio de dispositivos usados para interagir com seu aplicativo por todos os usuários diariamente. |
 
 

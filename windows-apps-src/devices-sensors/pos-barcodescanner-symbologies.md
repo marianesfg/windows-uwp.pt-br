@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bd1dffe4da7b3725ef7716fe9cf28bdf8eaf34f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260978"
 ---
 # <a name="working-with-symbologies"></a>Trabalhando com simbologias
 Uma [simbologia de código de barras](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) é o mapeamento de dados para um formato específico de código de barras. Algumas simbologias comuns incluem UPC, código 128, código QR e assim por diante.  O scanner de código de barras da plataforma universal do Windows APIs permitem que um aplicativo controle como o scanner processará essas simbologias sem configurar manualmente o scanner. 
@@ -64,7 +64,7 @@ private async void SetSymbologies(ClaimedBarcodeScanner claimedBarcodeScanner)
 ```
 
 ## <a name="barcode-symbology-attributes"></a>Atributos de Simbologia de código de barras
-Simbologias do código de barras diferentes podem ter atributos diferentes, como suporte múltiplo decodificar comprimentos, transmitindo o dígito de verificação para o host como parte dos dados brutos e verifique a validação de dígito. Com a classe [BarcodeSymbologyAttributes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes) , você pode obter e definir esses atributos para um determinado Simbologia [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) e código de barras.
+Simbologias do código de barras diferentes podem ter atributos diferentes, como suporte vários decodificar comprimentos, transmitindo o dígito de verificação para o host como parte dos dados brutos e verifique a validação de dígito. Com a classe [BarcodeSymbologyAttributes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes) , você pode obter e definir esses atributos para um determinado Simbologia [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) e código de barras.
 
 Você pode obter os atributos de um determinado Simbologia com [GetSymbologyAttributesAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.getsymbologyattributesasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_GetSymbologyAttributesAsync_System_UInt32_). O trecho de código a seguir obtém os atributos de Simbologia o Upca para um **ClaimedBarcodeScanner**.
 
@@ -86,10 +86,10 @@ Algumas simbologias possuem tamanho variável, como código 39 ou código 128.  
 Antes de definir o tamanho de decodificação, verifique se o Simbologia de código de barras dá suporte a vários tamanhos com [IsDecodeLengthSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.isdecodelengthsupported#Windows_Devices_PointOfService_BarcodeSymbologyAttributes_IsDecodeLengthSupported). Depois que você sabe que ele é compatível, você pode definir o [DecodeLengthKind](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelengthkind#Windows_Devices_PointOfService_BarcodeSymbologyAttributes_DecodeLengthKind), que é do tipo [BarcodeSymbologyDecodeLengthKind](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologydecodelengthkind). Essa propriedade pode ser qualquer um dos seguintes valores:
 
 * **AnyLength**: tamanhos de qualquer número de decodificação.
-* **Discreto**: decodificar comprimentos de caracteres de byte único [DecodeLength1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength1) ou [DecodeLength2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength2) .
-* **Intervalo**: decodificar comprimentos entre **DecodeLength1** e **DecodeLength2** caracteres de byte único. A ordem de **DecodeLength1** e **DecodeLength2** importa (qualquer um pode ser maior ou menor que o outro).
+* **Discrete**: decodificar tamanhos de caracteres de byte único [DecodeLength1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength1) ou [DecodeLength2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.decodelength2) .
+* **Intervalo**: decodificar tamanhos entre **DecodeLength1** e **DecodeLength2** caracteres de byte único. A ordem de **DecodeLength1** e o **DecodeLength2** importa (qualquer um pode ser maior ou menor que o outro).
 
-Por fim, você pode definir os valores de **DecodeLength1** e **DecodeLength2** para controlar o tamanho de dados de que você precisa.
+Por fim, você pode definir os valores de **DecodeLength1** e **DecodeLength2** para controlar o tamanho dos dados de que você precisa.
 
 O trecho de código a seguir demonstra como definir o tamanho de decodificação:
 
@@ -118,7 +118,7 @@ private async Task<bool> SetDecodeLength(
 
 ### <a name="check-digit-transmission"></a>Transmissão de dígito de verificação
 
-Você pode definir em uma Simbologia de outro atributo é se o dígito de verificação será transmitido para o host como parte dos dados brutos. Antes de configurar isso, certifique-se de que o Simbologia dá suporte à seleção transmissão de dígitos com [IsCheckDigitTransmissionSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.ischeckdigittransmissionsupported). Em seguida, defina se a transmissão de dígito de verificação está habilitada com [IsCheckDigitTransmissionEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.ischeckdigittransmissionenabled).
+Outro atributo que você pode definir em uma Simbologia é se o dígito de verificação será transmitido para o host como parte dos dados brutos. Antes de configurar isso, certifique-se de que o Simbologia dá suporte à seleção transmissão de dígitos com [IsCheckDigitTransmissionSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.ischeckdigittransmissionsupported). Em seguida, defina se a transmissão de dígito de verificação está habilitada com [IsCheckDigitTransmissionEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologyattributes.ischeckdigittransmissionenabled).
 
 O trecho de código a seguir demonstra a transmissão de dígito de verificação de configuração:
 

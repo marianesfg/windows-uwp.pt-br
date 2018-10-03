@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: Distribute a packaged desktop app (Desktop Bridge)
+Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos.
+title: Publicar seu aplicativo da área de trabalho empacotado em uma Windows store ou carregue-o em um ou mais dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -11,55 +11,55 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263791"
 ---
-# <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)
+# <a name="distribute-a-packaged-desktop-application"></a>Distribuir um aplicativo da área de trabalho empacotado
 
-Publique seu aplicativo da área de trabalho empacotado em uma Windows Store ou carregue-o em um ou mais dispositivos.  
+Publicar seu aplicativo da área de trabalho empacotado em uma Windows store ou carregue-o em um ou mais dispositivos.  
 
 > [!NOTE]
 > Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo empacotado](#transition-users) deste guia para obter algumas ideias.
 
-## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Distribuir seu aplicativo publicando-o na Microsoft Store
+## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Distribuir seu aplicativo publicando-o na Microsoft Store
 
 A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-Publique seu aplicativo na loja para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através da [Microsoft Store para Empresas](https://www.microsoft.com/business-store).
+Publica seu aplicativo para esse repositório para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações por meio da [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
 Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 
 >[!IMPORTANT]
-> Se você planeja publicar seu aplicativo na Microsoft Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executem o Windows 10 S. Esse é um requisito da loja. Consulte [Testar seu aplicativo do Windows para o Windows 10 S](desktop-to-uwp-test-windows-s.md).
+> Se você planeja publicar seu aplicativo na Microsoft Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executam o Windows 10 S. Isso é um requisito da loja. Consulte [Testar seu aplicativo do Windows para o Windows 10 S](desktop-to-uwp-test-windows-s.md).
 
 <a id="side-load" />
 
-## <a name="distribute-your-app-without-placing-it-onto-the-microsoft-store"></a>Distribuir seu aplicativo sem colocá-lo na Microsoft Store
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Distribuir seu aplicativo sem colocá-lo na Microsoft Store
 
-Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode distribuir seus aplicativos manualmente para um ou mais dispositivos.
+Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode distribuir aplicativos para um ou mais dispositivos manualmente.
 
 Isso pode fazer sentido se você deseja ter mais controle sobre a experiência de distribuição ou se você não quiser se envolver com o processo de certificação da Microsoft Store.
 
-Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na loja, você precisa obter um certificado, assinar seu aplicativo usando esse certificado e fazer o sideload do aplicativo para esses dispositivos.
+Para distribuir seu aplicativo para outros dispositivos sem colocá-lo na loja, você precisa obter um certificado, assinar seu aplicativo usando esse certificado e, em seguida, fazer o sideload seu aplicativo para esses dispositivos.
 
 Você pode [criar um certificado](../packaging/create-certificate-package-signing.md) ou obtê-lo de um fornecedor popular, como o [Verisign](https://www.verisign.com/).
 
-Se você pretende distribuir seu aplicativo para dispositivos com o Windows 10 S, seu aplicativo deve ser assinado pela Microsoft Store e você terá que passar pelo processo de envio da Store antes de distribuir seu aplicativo para esses dispositivos.
+Se você pretende distribuir seu aplicativo em dispositivos que executam o Windows 10 S, seu aplicativo deve ser assinado pela Microsoft Store e você terá que passar pelo processo de envio da loja antes de distribuir seu aplicativo para esses dispositivos.
 
 Se você criar um certificado, você precisa instalá-lo na loja de certificados **Trusted Root** ou **Trusted People** em cada dispositivo que executa seu aplicativo. Se você receber um certificado de um fornecedor popular, você não precisa instalar nada em outros sistemas além de seu aplicativo.  
 
 > [!IMPORTANT]
 > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.
 
-Para assinar seu aplicativo usando um certificado, consulte [Assinar um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
+Para assinar seu aplicativo usando um certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
 
-Para fazer o sideload do aplicativo em outros dispositivos, consulte [Fazer o sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
+Para fazer o sideload seu aplicativo em outros dispositivos, consulte o [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
 **Vídeos**
 
@@ -74,14 +74,14 @@ Para fazer o sideload do aplicativo em outros dispositivos, consulte [Fazer o si
 Antes de distribuir o seu aplicativo, considere adicionar algumas extensões ao manifesto do pacote para ajudar os usuários a terem o hábito de usar seu aplicativo empacotado. Aqui estão algumas coisas que você pode fazer.
 
 * Aponte os blocos Iniciar e os botões da barra de tarefas existentes para o seu aplicativo empacotado.
-* Associe seu aplicativo empacotado a um conjunto de tipos de arquivos.
+* Associe seu aplicativo empacotado com um conjunto de tipos de arquivo.
 * Faça com que seu aplicativo empacotado abra certos tipos de arquivos por padrão.
 
 Para obter a lista completa das extensões e as orientações de como usá-las, consulte [Transição de usuários para seu aplicativo](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
 Além disso, considere adicionar código ao seu aplicativo empacotado que realize estas tarefas:
 
-* Migra os dados do usuário associados ao seu aplicativo desktop para as localizações de pastas apropriadas do seu aplicativo empacotado.
+* Migra os dados do usuário associados ao seu aplicativo da área de trabalho para as localizações de pastas apropriadas do seu aplicativo empacotado.
 * Ofereça aos usuários a opção de desinstalar a versão desktop do seu aplicativo.
 
 Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de dados do usuário.
@@ -127,7 +127,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar a versão desktop do seu aplicativo
 
-É melhor não desinstalar o aplicativo desktop dos usuários sem antes solicitar a permissão deles. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo desktop ou oferecer suporte ao uso simultâneo de ambos os aplicativos.
+É melhor não desinstalar o aplicativo da área de trabalho de usuários sem antes solicitar deles permissão. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo da área de trabalho ou suporte ao uso de ambos os aplicativos lado a lado.
 
 Veja um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 
@@ -141,7 +141,7 @@ private void RemoveDesktopApp()
         (@"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion" +
          @"\Uninstall\{7AD02FB8-B85E-44BC-8998-F4803BA5A0E3}\", "UninstallString", null);
 
-    //Detect if the previous version of the Desktop App is installed.
+    //Detect if the previous version of the Desktop application is installed.
     if (uninstallString != null)
     {
         DialogResult uninstallResult = MessageBox.Show
@@ -163,7 +163,7 @@ private void RemoveDesktopApp()
 
             if (process.ExitCode != 0)
             {
-                //Uninstallation was unsuccessful - You can choose to block the app here.
+                //Uninstallation was unsuccessful - You can choose to block the application here.
             }
         }
     }

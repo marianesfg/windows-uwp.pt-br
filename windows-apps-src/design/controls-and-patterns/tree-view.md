@@ -5,6 +5,7 @@ title: Exibição em árvore
 label: Tree view
 template: detail.hbs
 ms.author: jimwalk
+ms.date: 10/02/2018
 ms.localizationpriority: medium
 pm-contact: predavid
 design-contact: ksulliv
@@ -13,17 +14,14 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 20de58d13c4ace6b71ec952dc88cd59d1ab6114f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 36b81cf07b92760235a18f4474a14b7b55e0a7be
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259859"
 ---
 # <a name="treeview"></a>TreeView
-
-> [!IMPORTANT]
-> Este artigo descreve uma funcionalidade que ainda não foi lançada e pode ser modificada substancialmente antes de ser lançada comercialmente. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui. Recursos de visualização exigem a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 O controle XAML TreeView habilita uma lista hierárquica com nós em expansão e em colapso que contêm itens aninhados. Ele pode ser usado para ilustrar uma estrutura de pastas ou relacionamentos aninhados em sua interface do usuário.
 
@@ -38,7 +36,7 @@ As APIs TreeView oferecem suporte aos seguintes recursos:
 
 | **Baixar a biblioteca de interface do usuário do Windows** |
 | - |
-| Esse controle é incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Esse controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
 | - | - |
@@ -80,12 +78,12 @@ Você pode incluir um ícone no modelo de dados do item de modo de exibição á
 
 Você pode criar um modo de exibição de árvore associando o [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) a uma fonte de dados hierárquicos, ou você pode criar e gerenciar objetos TreeViewNode por conta própria.
 
-Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Você pode criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
+Para criar um modo de exibição de árvore, use um [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) controle e uma hierarquia de objetos [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode). Criar a hierarquia de nó adicionando um ou mais nós raiz [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) coleção do controle TreeView. Cada TreeViewNode, em seguida, pode ter mais nós adicionados à sua coleção de filhos. Você pode aninhar nós de exibição de árvore para qualquer profundidade exige que você.
 
 A partir do Windows Insider Preview, você pode associar uma fonte de dados hierárquicos à propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) para fornecer o conteúdo de modo de exibição de árvore, como faria com ItemsSource do ListView. Da mesma forma, use [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (e o opcional [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) para fornecer um DataTemplate que renderiza o item.
 
 > [!IMPORTANT]
-> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa ItemsSource, nós criados para você, e você possa acessá-los da propriedade TreeView.RootNodes.
+> ItemsSource é um mecanismo alternativo para TreeView.RootNodes para colocar o conteúdo no controle TreeView. Você não pode definir ItemsSource e RootNodes ao mesmo tempo. Quando você usa ItemsSource, nós criados para você e você possa acessá-los da propriedade TreeView.RootNodes.
 
 Aqui está um exemplo de uma exibição de árvore simples declarada em XAML. Você normalmente adiciona os nós no código, mas mostraremos a hierarquia XAML aqui porque ele pode ser útil para visualizar como a hierarquia de nós é criada.
 
@@ -213,7 +211,7 @@ Se você usa o ItemsSource ou RootNodes, os elementos reais usados para exibir c
 
 ### <a name="item-template-selectors"></a>Seletores de modelo de item
 
-Você pode optar por definir um DataTemplate para os itens de modo de exibição de árvore com base no tipo de item diferente. Por exemplo, em um aplicativo do Explorador de arquivos, você pode usar um modelo de dados de pastas e outro para arquivos.
+Você pode optar por definir um DataTemplate diferente para os itens de exibição de árvore com base no tipo de item. Por exemplo, em um aplicativo do Explorador de arquivos, você pode usar um modelo de dados de pastas e outro para arquivos.
 
 ![Usando modelos de dados diferentes de arquivos e pastas](images/treeview-icons.png)
 
@@ -341,9 +339,9 @@ Um usuário pode invocar uma ação (tratando o item como um botão) em vez de s
 
 **Classe [TreeViewItemInvokedEventArgs](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs)**
 
-Argumentos de evento ItemInvoked dá acesso ao item invocado. A propriedade [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) tem o nó que foi invocado. Você pode convertê-lo para TreeViewNode e obter o item de dados da propriedade TreeViewNode.Content.
+Argumentos de evento ItemInvoked fornecem acesso ao item invocado. A propriedade [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem) tem o nó que foi invocado. Você pode convertê-lo para TreeViewNode e obter o item de dados da propriedade TreeViewNode.Content.
 
-Aqui, um exemplo de um manipulador de evento ItemInvoked. O item de dados é uma [IStorageItem](/uwp/api/windows.storage.istorageitem), e este exemplo mostra apenas algumas informações sobre o arquivo e a árvore. Além disso, se o nó for um nó de pasta, ele expande ou collpases o nó ao mesmo tempo. Caso contrário, o nó expande ou recolhe somente quando você clica na divisa.
+Aqui, um exemplo de um manipulador de evento ItemInvoked. O item de dados é uma [IStorageItem](/uwp/api/windows.storage.istorageitem), e este exemplo mostra apenas algumas informações sobre o arquivo e a árvore. Além disso, se o nó for um nó de pasta, ele expande ou recolhe o nó ao mesmo tempo. Caso contrário, o nó expande ou recolhe somente quando você clica na divisa.
 
 ```csharp
 private void SampleTreeView_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
@@ -382,7 +380,13 @@ End Sub
 
 O controle TreeView é compatível com a seleção única e múltipla. Por padrão, seleção de nós estiver desativada, mas você pode definir a propriedade [TreeView.SelectionMode](/uwp/api/windows.ui.xaml.controls.treeview.selectionmode) para permitir a seleção de nós. Os valores [TreeViewSelectionMode](/uwp/api/windows.ui.xaml.controls.treeviewselectionmode) são **None**, **único**, e **vários**.
 
-Quando a seleção é habilitada, uma caixa de seleção é mostrada ao lado de cada nó de modo de exibição de árvore e os itens selecionados aparecem realçados. Um usuário pode selecionar ou desmarcar um item usando a caixa de seleção; clicando no item ainda faz com que ele seja invocado.
+#### <a name="multiple-selection"></a>Seleção múltipla
+
+Quando a seleção múltipla está habilitada, uma caixa de seleção é mostrada ao lado de cada nó de modo de exibição de árvore e itens selecionados aparecem realçados. Um usuário pode selecionar ou desmarcar um item usando a caixa de seleção; clicando no item ainda faz com que ele seja invocado.
+
+Selecionar ou desmarcar um nó pai será selecionar ou desmarcar todos os filhos sob esse nó. Se alguns, mas não a todos os filhos em um nó pai são selecionados, a caixa de seleção para o nó pai é mostrada como indeterminada (preenchido com uma caixa preta).
+
+![Seleção múltipla em um modo de exibição de árvore](images/treeview-selection.png)
 
 Selecionar ou desmarcar um nó pai será selecionar ou desmarcar todos os filhos sob esse nó. Se alguns, mas não a todos os filhos em um nó pai são selecionados, a caixa de seleção para o nó pai é mostrada como indeterminada (preenchido com uma caixa preta).
 

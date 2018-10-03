@@ -5,7 +5,7 @@ title: Botões
 label: Buttons
 template: detail.hbs
 ms.author: quradic
-ms.date: 05/19/2017
+ms.date: 10/2/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -16,23 +16,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b52f61a4bb54c3432c3e1544bb690df08c3b891
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263499"
 ---
 # <a name="buttons"></a>Botões
 
-> [!IMPORTANT]
-> Este artigo descreve uma funcionalidade que ainda não foi lançada e pode ser modificada substancialmente antes de ser lançada comercialmente. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui. Recursos de visualização exigem a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
-
-Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botões são especializados para tarefas específicas, como navegação, ações repetidas ou apresentar menus.
+Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botões são especializados em tarefas específicas, como navegação, ações repetidas ou apresentar menus.
 
 ![Exemplo de botões](images/controls/button.png)
 
-A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializado.
+A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializados.
 
 Controle | Descrição
 ------- | -----------
@@ -277,7 +274,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão padrão e invoca uma ação imediata. A outra parte invoca um submenu que contém as opções adicionais que o usuário pode escolher.
 
 > [!NOTE]
-> Quando invocado com toque, o botão de divisão se comporta como um botão; suspenso as duas metades do botão invocar o submenu. Com outros métodos de entrada, um usuário pode invocar metade do botão separadamente.
+> Quando invocado com toque, o botão de divisão se comporta como um botão; suspenso as duas metades do botão invocar o submenu. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente.
 
 O comportamento típico para um botão de divisão é:
 
@@ -383,10 +380,10 @@ public sealed partial class MainPage : Page
 
 Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém as opções adicionais que o usuário pode escolher.
 
-Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ele pode ser usado para ativar listas ou desativar, enquanto o menu suspenso é usado para escolher o estilo de lista.
+Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ele pode ser usado para ativar ou desativar, a listas enquanto suspenso é usado para escolher o estilo da lista.
 
 > [!NOTE]
-> Quando invocado com toque, o botão de divisão se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode invocar metade do botão separadamente. Com o toque, as duas metades do botão invocar o submenu. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativado ou desativado.
+> Quando invocado com toque, o botão de divisão se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente. Com o toque, as duas metades do botão invocar o submenu. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativado ou desativado.
 
 ### <a name="differences-with-togglebutton"></a>Diferenças com ToggleButton
 
@@ -396,7 +393,7 @@ Ao contrário de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.tog
 - A propriedade [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) é apenas um **bool**, não um **bool anulável**.
 - ToggleSplitButton tem apenas o evento [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) ; ele não tem eventos **Checked** e **Unchecked** separados.
 
-### <a name="example---toggle-split-button"></a>Exemplo - botão de alternância de divisão
+### <a name="example---toggle-split-button"></a>Exemplo - botão de alternância divisão
 
 O exemplo a seguir mostra como uma botão de divisão de alternância pode ser usado para ativar ou desativar a formatação de lista e alterar o estilo da lista, em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 

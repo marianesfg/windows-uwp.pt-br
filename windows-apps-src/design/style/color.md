@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: ca59855456abe366ec681404b3bf6253bc182f79
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258685"
 ---
 # <a name="color"></a>Cor
 
@@ -29,23 +29,23 @@ Nos aplicativos UWP, as cores são determinadas principalmente por cor de destaq
 
 :::row:::
     :::column:::
-        **Use a cor de forma significativa.**
-Quando a cor é usada com moderação para realçar os elementos importantes, ela pode ajudar a criar uma interface do usuário flexível e intuitiva.
+        **Use color meaningfully.**
+        When color is used sparingly to highlight important elements, it can help create a user interface that is fluid and intuitive.
     :::column-end:::
     :::column:::
-        **Use a cor para indicar interatividade.**
-É uma boa ideia escolher uma cor para indicar elementos interativos do aplicativo. Por exemplo, muitas páginas da Web usam texto em azul para indicar um hiperlink.
+        **Use color to indicate interactivity.**
+        It's a good idea to choose one color to indicate elements of your application that are interactive. For example, many web pages use blue text to denote a hyperlink.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        **Cor é pessoal.**
-No Windows, os usuário pode escolher uma cor de destaque e um tema claro ou escuro, que são refletidos durante sua experiência. Você pode escolher como incorporar a cor de destaque e o tema do usuário no aplicativo, personalizando a experiência.
+        **Color is personal.**
+        In Windows, users can choose an accent color and a light or dark theme, which are reflected throughout their experience. You can choose how to incorporate the user's accent color and theme into your application, personalizing their experience.
     :::column-end:::
     :::column:::
-        **A cor é cultural.**
-Considere como as cores que você usa serão interpretadas por pessoas de culturas diferentes. Por exemplo, em algumas culturas, a cor azul está associada à virtude e à proteção, enquanto em outras representa tristeza.
+        **Color is cultural.**
+        Consider how the colors you use will be interpreted by people from different cultures. For example, in some cultures the color blue is associated with virtue and protection, while in others it represents mourning.
     :::column-end:::
 :::row-end:::
 
@@ -108,7 +108,7 @@ Os pincéis de tema são usados para:
 
 :::row:::
     :::column:::
-        Ao criar modelos para controles personalizados, use os pincéis de tema em vez de valores de cores embutidos no código. Assim, seu aplicativo pode adaptar-se a qualquer tema.
+        When creating templates for custom controls, use theme brushes rather than hard code color values. This way, your app can easily adapt to any theme.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::
@@ -147,10 +147,12 @@ Os controles comuns usam uma cor de destaque para transmitir informações de es
 
 :::row:::
     :::column:::
-        ![cabeçalho de destaque selecionado pelo usuário](images/color/user-accent.svg) ![cor de destaque selecionado pelo usuário](images/color/user-selected-accent.svg)
+        ![user-selected accent header](images/color/user-accent.svg)
+        ![user-selected accent color](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
-        ![cabeçalho de destaque personalizada](images/color/custom-accent.svg) ![cor de destaque da marca personalizada](images/color/brand-color.svg)
+        ![custom accent header](images/color/custom-accent.svg)
+        ![custom brand accent color](images/color/brand-color.svg)
     :::column-end:::
 :::row-end:::
 
@@ -254,13 +256,160 @@ O uso mais comum para uma **Cor** é como um argumento para [**SolidColorBrush**
 
 Para obter mais informações sobre como usar pincéis, consulte [Pincéis XAML](brushes.md).
 
+## <a name="scoping-system-colors"></a>Escopo de cores do sistema
+
+Além de definir suas próprias cores em seu aplicativo, você também pode abranger nossas cores systematized para regiões desejados em todo o aplicativo usando a marca **ColorSchemeResources** . Essa API permite que você não apenas colorização e grupos grandes de tema de controles ao mesmo tempo ao definir algumas propriedades, mas também permite que você outro sistema muitos benefícios que você normalmente não obtém com definindo suas próprias cores personalizadas manualmente:
+
+- Qualquer cor definida usando **ColorSchemeResources** não terão efeito alto contraste
+  * Ou seja, seu aplicativo estarão acessível a mais pessoas sem adicionais de design ou desenvolvimento custo
+- Pode facilmente definir cores generalizada, escuro ou claro para ambos os temas, definindo uma propriedade sobre a API
+- Cores definida em **ColorSchemeResources** serão transmitida para todos os controles semelhantes que também usam essa cor do sistema
+  * Isso garante que você terá uma história de cores consistente em seu aplicativo, mantendo a aparência de sua marca
+- Todos os estados visuais, animações e variações de opacidade de efeitos sem a necessidade de novo modelo
+
+### <a name="how-to-use-colorschemeresources"></a>Como usar ColorSchemeResources
+
+ColorSchemeResources é uma API que informa o sistema quais recursos estão sendo escopo onde. ColorSchemeResources deve realizar uma [X:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), que pode ser uma das três opções:
+- Padrão
+  * Mostrará as alterações de cor no tema [claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) e [escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
+- Luz
+  * Mostrará as alterações de cor somente no [tema claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 
+- Dark
+  * Mostrará as alterações de cor somente no [tema escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
+
+Definir esse X:Key garantirá que suas cores alterar adequadamente para o tema do sistema ou aplicativo, caso você queira uma aparência personalizada diferente quando no tema.
+
+### <a name="how-to-apply-scoped-colors"></a>Como aplicar cores analisadas
+
+Escopo de recursos por meio do **ColorSchemeResources** API em XAML permite que você se qualquer cor do sistema ou pincel que está em nossa biblioteca de [recursos de tema](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) e redefini-los no escopo de uma página ou um contêiner.
+
+Por exemplo, se você definido duas cores do sistema - **SystemBaseLowColor** e **SystemBaseMediumLowColor** dentro de uma grade e, em seguida, colocado dois botões na sua página: um dentro dessa grade e fora de um:
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+        <ColorSchemeResources x:Key="Default" 
+        SystemBaseLowColor="LightGreen" 
+        SystemBaseMediumLowColor="DarkCyan"/>
+    </Grid.Resources>
+
+    <Buton Content="Button_A"/>
+</Grid>
+<Buton Content="Button_B"/>
+```
+
+Você obteria **Button_A** com as novas cores aplicadas e **Button_B** permaneceriam aparência como nosso botão padrão do sistema:
+
+![cores do sistema analisados no botão](images/color/scopedcolors_cyan_button.png)
+
+No entanto, desde que todos os nossos cores do sistema também cascata para outros controles, definir **SystemBaseLowColor** e **SystemBaseMediumLowColor** afetará mais do que apenas os botões. Nesse caso, os controles como **ToggleButton**, **RadioButton** e **Slider** também serão afetados por essas alterações de cor do sistema, esses controles seja colocados acima escopo da grade de exemplo.
+Se você deseja analisar um sistema cor alterar *a um único controles só* é possível fazer isso definindo **ColorSchemeResources** dentro de recursos do controle:
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Button Content="Button_A">
+        <Button.Resources>
+            <ColorSchemeResources x:Key="Default" 
+                SystemBaseLowColor="LightGreen" 
+                SystemBaseMediumLowColor="DarkCyan"/>
+        </Button.Resources>
+    </Button>
+</Grid>
+<Button Content="Button_B"/>
+```
+Você essencialmente têm exatamente a mesma coisa como antes, mas agora quaisquer outros controles adicionados à grade não obterão as alterações de cor. Isso ocorre porque essas cores de sistema passam para **Button_A** somente.
+
+### <a name="nesting-scoped-resources"></a>Recursos de aninhamento escopo
+
+Aninhamento de cores do sistema também é possível e isso é feito colocando **ColorSchemeResources** em recursos dos elementos aninhados na marcação do layout do aplicativo:
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+        <ColorSchemeResources x:Key="Default"
+            SystemBaseLowColor="LightGreen"
+            SystemBaseMediumLowColor="DarkCyan"/>
+    </Grid.Resources>
+
+    <Button Content="Button_A"/>
+    <Grid x:Name="Grid_B">
+        <Grid.Resources>
+            <ColorSchemeResources x:Key="Default"
+                SystemBaseLowColor="Goldenrod"
+                SystemBaseMediumLowColor="DarkGoldenrod"/>
+        </Grid.Resources>
+
+        <Button Content="Nested Button"/>
+    </Grid>
+</Grid>
+```
+
+Neste exemplo, **Button_A** é Herdar cores definem em recursos de **Grid_A**do e **Botão aninhado** é Herdar cores de recursos de **Grid_B**do. Por extensão, isso significa que todos os outros controles colocados dentro **Grid_B** verificar ou aplicar recursos de **Grid_B**do primeiro, antes de verificar ou aplicar **Grid_A**do recursos, e finalmente aplicar nossas cores padrão se nada é definido no nível de página ou do aplicativo.
+
+Isso funciona para qualquer número de elementos aninhados cujos recursos têm definições de cores.
+
+### <a name="scoping-with-a-resourcedictionary"></a>Escopo com um ResourceDictionary
+
+Você não está limitado a um contêiner ou recursos da página e também pode definir essas cores do sistema em um ResourceDictionary que pode, em seguida, ser mesclado em qualquer escopo a maneira como você normalmente faria mesclar um dicionário.
+
+#### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
+
+Primeiro, você criaria um ResourceDictionary. Em seguida, coloque o **ColorSchemeResources** dentro do ThemeDictionaries e substituir as cores do sistema desejado:
+
+```xaml
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestApp">
+
+    <ResourceDictionary.ThemeDictionaries>
+
+        <ColorSchemeResources x:Key="Default"
+            SystemBaseLowColor="LightGreen"
+            SystemBaseMediumLowColor="DarkCyan"/>
+        
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>
+```
+
+#### <a name="mainpagexaml"></a>MainPage.xaml
+
+Na página que contém o layout, simplesmente mescle esse dicionário no escopo desejado:
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="MyCustomTheme.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+    </Grid.Resources>
+             
+    <Button Content="Button_A"/>
+</Grid>
+```
+
+Agora, todos os recursos, temas e cores personalizadas podem ser colocadas em um dicionário de recursos **MyCustomTheme** único e escopo onde necessário sem precisar se preocupar sobre extra desorganização em sua marcação de layout.
+
+### <a name="other-ways-to-define-color-resources"></a>Outras maneiras de definir recursos de cor
+
+Também permite ColorSchemeResources de cores do sistema deve ser colocado e definindo diretamente nele como um wrapper, em vez de linha:
+
+``` xaml
+<ColorSchemeResources x:Key="Dark">
+    <Color x:Key="SystemBaseLowColor">Goldenrod</Color>
+</ColorSchemeResources>
+```
+
 ## <a name="usability"></a>Usabilidade
 
 :::row:::
     :::column:::
-        ![Ilustração de contraste](images/color/illo-contrast.svg)
+        ![contrast illustration](images/color/illo-contrast.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: **contraste**
+    :::column span="2":::
+        **Contrast**
 
         Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
 
@@ -270,9 +419,10 @@ Para obter mais informações sobre como usar pincéis, consulte [Pincéis XAML]
 
 :::row:::
     :::column:::
-        ![Ilustração de contraste](images/color/illo-lighting.svg)
+        ![contrast illustration](images/color/illo-lighting.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: **iluminação**
+    :::column span="2":::
+        **Lighting**
 
         Be aware that variation in ambient lighting can affect the useability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
     :::column-end:::
@@ -280,9 +430,10 @@ Para obter mais informações sobre como usar pincéis, consulte [Pincéis XAML]
 
 :::row:::
     :::column:::
-        ![Ilustração de contraste](images/color/illo-colorblindness.svg)
+        ![contrast illustration](images/color/illo-colorblindness.svg)
     :::column-end:::
-    ::: extensão da coluna = "2"::: **daltonismo**
+    :::column span="2":::
+        **Colorblindness**
 
         Be aware of how colorblindness could affect the useability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
     :::column-end:::

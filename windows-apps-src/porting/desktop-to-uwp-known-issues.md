@@ -4,23 +4,23 @@ Description: This article contains known issues with the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
 title: Problemas conhecidos (Ponte de Desktop)
 ms.author: normesta
-ms.date: 05/18/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 76ff4fb4b7933c54e5137507e7996eefa7b46d5a
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263873"
 ---
-# <a name="known-issues-desktop-bridge"></a>Problemas conhecidos (Ponte de Desktop)
+# <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
-Este artigo contém problemas conhecidos com a Ponte de Desktop.
+Este artigo contém problemas conhecidos que podem ocorrer quando você cria um pacote de aplicativo do Windows para seu aplicativo da área de trabalho.
 
 <a id="app-converter" />
 
@@ -38,7 +38,7 @@ Você pode receber esse erro ao configurar uma nova imagem base. Isso pode acont
 
 Para resolver este problema, tente executar o comando `Netsh int ipv4 reset` a partir de um prompt de comando elevado e reinicie sua máquina.
 
-### <a name="your-net-app-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Seu aplicativo .NET é compilado com a opção de compilação "AnyCPU" e falha durante a instalação.
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>Seu aplicativo .NET é compilado com a opção de compilação "AnyCPU" e não conseguir instalar
 
 Isso pode acontecer se o executável principal ou qualquer uma das dependências foram colocadas em qualquer lugar na hierarquia de pastas **Arquivos de Programas** ou **Windows\System32**.
 
@@ -54,9 +54,9 @@ Essa é uma limitação conhecida e não há atualmente nenhuma solução altern
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Erro encontrado no XML. O atributo 'Executável' é inválido - O valor 'MyApp.EXE' é inválido de acordo com seu tipo de dados
 
-Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. Embora, o invólucro desta extensão não afete se o seu aplicativo for executado, isso pode fazer com que o DAC gere esse erro.
+Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. Embora, o invólucro desta extensão não afete se o seu aplicativo for executado, isso pode causar o DAC gere esse erro.
 
-Para resolver esse problema, tente especificar o sinalizador **-AppExecutable** quando você empacota e use ".exe" em minúsculo como a extensão do seu executável principal (por exemplo: MYAPP.exe).    Como alternativa, você pode alterar o invólucro de todos os executáveis ​​em seu aplicativo de minúsculas para maiúsculas (por exemplo: de .EXE para .exe).
+Para resolver esse problema, tente especificar o sinalizador **-AppExecutable** quando você empacota e use ".exe" em minúsculo como a extensão do seu executável principal (por exemplo: MYAPP.exe).    Como alternativa, você pode alterar o invólucro de todos os executáveis em seu aplicativo de minúsculas para maiusculas (por exemplo: de. EXE .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Assinaturas Authenticode corrompidas ou malformadas
 
@@ -95,7 +95,7 @@ Uma [atualização do Windows (versão 14393.351 - KB3197954)](https://support.m
 
 Se a atualização não corrigir o problema ou se você não souber como recuperar o computador, entre em contato com o [Suporte da Microsoft](https://support.microsoft.com/contactus/).
 
-Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Com isso o aplicativo não estará disponível para os usuários que ainda não tenham instalado a atualização. Para limitar a disponibilidade do aplicativo para usuários que tenham instalado essa atualização, modifique o arquivo AppxManifest.xml da seguinte maneira:
+Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Observe que, por isso seu aplicativo não estará disponível para os usuários que ainda não tenham instalado a atualização. Para limitar a disponibilidade de seu aplicativo para os usuários que tenham instalado essa atualização, modifique o arquivo Appxmanifest XML da seguinte maneira:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -129,6 +129,41 @@ Execute o **certutil** na linha de comando no arquivo PFX e copie o campo *Assun
 certutil -dump <cert_file.pfx>
 ```
 
+<a id="bad-pe-cert" />
+
+### <a name="bad-pe-certificate-0x800700c1"></a>Certificado de PE incorreto (0x800700C1)
+
+Isso pode acontecer quando o pacote contém um binário que tenha um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
+
+* O início do certificado não estiver no final de uma imagem.  
+
+* O tamanho do certificado não é positivo.
+
+* O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
+
+* O ponteiro de certificado não é alinhado corretamente para uma estrutura WIN_CERTIFICATE.
+
+Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
+
+```
+set APPXSIP_LOG=1
+```
+
+Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemplo:
+
+```
+signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
+```
+
+Informações sobre arquivos que contêm um certificado PE incorreto serão exibido na **Janela do Console**. Por exemplo:
+
+```
+...
+
+ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.exe
+
+...   
+```
 ## <a name="next-steps"></a>Próximas etapas
 
 **Encontrar respostas para suas dúvidas**

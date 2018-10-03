@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258705"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -60,7 +60,7 @@ Verifica se o aplicativo do Windows pode ser executado em uma versão futura do 
 
 ### <a name="background"></a>Histórico
 
-Informações de versão de sistema operacional têm uso restrito para a Microsoft Store. Elas têm sido usadas incorretamente com frequência pelos aplicativos para verificar a versão do sistema operacional, de forma que o aplicativo possa fornecer aos usuários as funcionalidades específicas de uma versão do sistema operacional.
+Informações de versão do sistema operacional têm uso restrito para a Microsoft Store. Elas têm sido usadas incorretamente com frequência pelos aplicativos para verificar a versão do sistema operacional, de forma que o aplicativo possa fornecer aos usuários as funcionalidades específicas de uma versão do sistema operacional.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -321,7 +321,7 @@ Verifique se o aplicativo foi compilado como uma compilação de versão e não 
 
 > **Observação**  A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Examine as mensagens de erro para identificar a API usa o aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+Examine as mensagens de erro para identificar a API os usos de aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 > **Observação**  Aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
@@ -485,7 +485,7 @@ Use a tabela a seguir como guia.
 
 ### <a name="branding-validation"></a>Validação de marca
 
-Os aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
+Aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 ### <a name="test-details"></a>Detalhes do teste
 

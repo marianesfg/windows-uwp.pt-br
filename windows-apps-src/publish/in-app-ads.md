@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259315"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -71,7 +71,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e eventualmente removê-lo do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será rotule-o como **inativo**e eventualmente removê-lo do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -88,7 +88,7 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
     * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garantirá que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
-    * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
+    * Se você quiser escolher sua próprias ad configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
     > As demais etapas nesta seção somente são aplicáveis se você escolher **as configurações padrão de modificar**.

@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Share code between a desktop app and a UWP app
+Description: Share code between a desktop application and a UWP app
 Search.Product: eADQiWindows 10XVcnh
 title: Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 ms.author: normesta
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: ca5b722ea97202d57f05613bec88ae6bee1db5f2
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260105"
 ---
-# <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
+# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Compartilhar código entre um aplicativo da área de trabalho e um aplicativo UWP
 
 Você pode mover o código para bibliotecas .NET Standard e, em seguida, criar um aplicativo da Plataforma Universal do Windows (UWP) para alcançar todos os dispositivos Windows 10. Embora não haja nenhuma ferramenta que possa converter um aplicativo da área de trabalho para um aplicativo UWP, você pode reutilizar bastante de seu código existente, o que reduz o custo de criação de um novo. Este guia mostra para você como fazer isso.
 
@@ -67,7 +67,7 @@ Parte de seu código será específica de plataforma e precisará permanecer em 
 
 ### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Exemplo: Migrando o código de acesso de dados a uma biblioteca .NET Standard 2.0
 
-Vamos supor que temos um aplicativo Windows Forms muito básico que mostra os clientes de nosso banco de dados de amostra Northwind.
+Vamos supor que temos um aplicativo Windows Forms muito básico que mostra os clientes de nosso banco de dados Northwind.
 
 ![Aplicativo de formulário do Windows](images/desktop-to-uwp/win-forms-app.png)
 

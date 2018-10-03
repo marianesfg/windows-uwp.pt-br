@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de coleção da Microsoft Store, API de compra da Microsoft Store, exibir produtos, conceder produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a0766830bc2110dffcf5baf886e8ccb98ac6446
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261409"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Gerenciar direitos a produtos de um serviço
 
@@ -41,7 +41,7 @@ As etapas a seguir descrevem o processo de ponta a ponta para usar a API de cole
 
 Esse processo de ponta a ponta envolve dois componentes de software que realizar tarefas diferentes:
 
-* **Seu serviço**. Isso é um aplicativo que é executado com segurança no contexto de seu ambiente de negócios, e ele pode ser implementado usando qualquer plataforma de desenvolvimento que você escolher. O serviço é responsável por criar os tokens de acesso do Azure AD necessário para o cenário e chamar os URIs de REST de coleção da Microsoft Store, API e a API de compra.
+* **Seu serviço**. Isso é um aplicativo executado com segurança no contexto de seu ambiente de negócios e podem ser implementado usando qualquer plataforma de desenvolvimento que você escolher. O serviço é responsável por criar os tokens de acesso do Azure AD necessário para o cenário e chamar os URIs de REST de coleção da Microsoft Store, API e a API de compra.
 * **Seu aplicativo do Windows cliente**. Este é o aplicativo para o qual você deseja acessar e gerenciar informações de direitos de cliente (incluindo complementos para o aplicativo). Esse aplicativo é responsável por criar as chaves de ID da Microsoft Store, que você precisará chamar a API de coleção da Microsoft Store e a API de compra de seu serviço.
 
 <span id="step-1"/>
@@ -53,13 +53,13 @@ Antes de poder usar a API de coleção da Microsoft Store ou API de compra, voc�
 > [!NOTE]
 > Você precisa executar somente as tarefas nesta seção uma vez. Depois que você atualizar o manifesto de aplicativo do Azure AD e ter seu ID de locatário, segredo do cliente e a ID do aplicativo, você pode reutilizar esses valores sempre que precisar criar um novo token de acesso do Azure AD.
 
-1.  Se você ainda não fez isso, siga as instruções na [Integração de aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) para registrar um **aplicativo Web / API** aplicativo com o Azure AD.
+1.  Se você ainda não fez isso, siga as instruções [Integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) para registrar um **aplicativo Web / API** aplicativo com o Azure AD.
     > [!NOTE]
-    > Quando você registra seu aplicativo, você deve escolher **aplicativo Web / API** que o aplicativo digita para que você possa recuperar uma chave (também chamada de um *segredo do cliente*) para seu aplicativo. Para chamar a API de coleção ou a API de compra da Microsoft Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
+    > Quando você registra seu aplicativo, você deve escolher **aplicativo Web / API** que o aplicativo digita para que você possa recuperar uma chave (também chamada de um *segredo do cliente*) para o seu aplicativo. Para chamar a API de coleção ou a API de compra da Microsoft Store, você deverá fornecer o segredo do cliente quando solicitar um token de acesso do Azure AD em uma etapa posterior.
 
 2.  No [Portal de gerenciamento do Azure](https://portal.azure.com/), navegue até o **Azure Active Directory**. Selecione seu diretório, clique em **registros de aplicativo** no painel de navegação esquerdo e, em seguida, selecione seu aplicativo.
-3.  Você for levado à página de registro principal do aplicativo. Nessa página, copie o valor da **ID do aplicativo** para uso posterior.
-4.  Criar uma chave que será necessário mais tarde (Isso é tudo chamado um *segredo do cliente*). No painel esquerdo, clique em **configurações** e, em seguida, **as chaves**. Nessa página, conclua as etapas para [criar uma chave](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis). Copie essa chave para uso posterior.
+3.  Você for levado à página de registro principal do aplicativo. Nessa página, copie o valor de **ID do aplicativo** para uso posterior.
+4.  Criar uma chave que será necessário mais tarde (Isso é tudo chamado um *segredo do cliente*). No painel esquerdo, clique em **configurações** e, em seguida, **chaves**. Nessa página, conclua as etapas para [criar uma chave](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis). Copie essa chave para uso posterior.
 5.  Adicione vários URIs de público necessária ao seu [manifesto do aplicativo](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest). No painel esquerdo, clique no **manifesto**. Clique em **Editar**, substitua o `"identifierUris"` seção com o seguinte texto e, em seguida, clique em **Salvar**.
 
     ```json
@@ -76,7 +76,7 @@ Antes de poder usar a API de coleção da Microsoft Store ou API de compra, voc�
 
 ## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>Etapa 2: Associe sua ID de aplicativo do Azure AD ao seu aplicativo cliente no Centro de desenvolvimento do Windows
 
-Antes de poder usar a API de coleção da Microsoft Store ou API para configurar a propriedade e compras para seu aplicativo ou complemento de compra, você deve associar sua ID de aplicativo do Azure AD com o aplicativo (ou o aplicativo que contém o complemento) no painel do Centro de desenvolvimento.
+Antes de poder usar a API de coleção da Microsoft Store ou API para configurar a propriedade e compras para seu aplicativo ou complemento de compra, você deve associar sua ID de aplicativo do Azure AD ao aplicativo (ou o aplicativo que contém o complemento) no painel do Centro de desenvolvimento.
 
 > [!NOTE]
 > Você só precisa executar essa tarefa uma vez.

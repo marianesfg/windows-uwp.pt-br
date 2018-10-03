@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop app for the Desktop Bridge.
+Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: empacotar um app usando o Visual Studio (Ponte de Desktop)
+title: Empacotar um aplicativo da área de trabalho usando o Visual Studio
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -11,25 +11,25 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 75f7ff53aeffced746e78d8b27243469dc547097
-ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "2410703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259805"
 ---
-# <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>empacotar um app usando o Visual Studio (Ponte de Desktop)
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Empacotar um aplicativo da área de trabalho usando o Visual Studio
 
 Você pode usar o Visual Studio para gerar um pacote para seu aplicativo da área de trabalho. Em seguida, você pode publicar esse pacote na Windows Store ou fazer o sideload dele em um ou mais computadores.
 
 A versão mais recente do Visual Studio fornece uma nova versão do projeto empacotamento que elimina todas as etapas manuais que costumavam ser necessárias para empacotar seu aplicativo. Basta adicionar um projeto de empacotamento, referenciar seu projeto de desktop e depois pressionar F5 para depurar seu aplicativo. Sem ajustes manuais. Essa nova experiência simplificada é uma grande melhoria em relação à experiência disponível na versão anterior do Visual Studio.
 
 >[!IMPORTANT]
->A Ponte de Desktop foi introduzida na versão 1607 do Windows 10 e pode ser usada somente em projetos para a Atualização de Aniversário do Windows 10 (10.0; compilação 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Consulte este guia antes de começar a criar um pacote para seu aplicativo: [Preparar para empacotar um aplicativo (Ponte de Desktop)](desktop-to-uwp-prepare.md).
+Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -83,9 +83,9 @@ Tem dúvidas? Pergunte-nos sobre o Stack Overflow. Nossa equipe monitora estas [
 
 Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Executar, depurar ou testar seu aplicativo**
+**Executar, depurar ou testar seu aplicativo da área de trabalho**
 
-Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-debug.md)
+Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
 
 **Aprimorar seu aplicativo da área de trabalho ao adicionar APIs UWP**
 
@@ -97,4 +97,4 @@ Consulte [Estender seu aplicativo da área de trabalho com componentes UWP moder
 
 **Distribua seu aplicativo**
 
-Consulte [Distribuir um aplicativo da área de trabalho empacotado (Ponte de Desktop)](desktop-to-uwp-distribute.md)
+Consulte [distribuir um aplicativo da área de trabalho empacotado](desktop-to-uwp-distribute.md)

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
 ms.openlocfilehash: fab1e83f212675b2c0bb28e0b1ae449f271edec7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206456"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266303"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Simultaneidade e operações assíncronas com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 > [!NOTE]
@@ -69,7 +69,7 @@ Chamar **get** é conveniente para a codificação e é ideal para aplicativos d
 C++/WinRT integra rotinas concomitantes de C++ no modelo de programação para fornecer uma maneira natural de esperar cooperativamente por um resultado. Você pode produzir sua própria operação assíncrona do Windows Runtime criando uma rotina concomitante. No exemplo de código abaixo, **ProcessFeedAsync** é a rotina concomitante.
 
 > [!NOTE]
-> A função **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ projeto WinRT. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar porque não é parte da superfície da interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction** **obter** .
+> A função **obter** existe em C++ c++ WinRT projeção digite **winrt::Windows::Foundation::IAsyncAction**, portanto, você pode chamar a função de dentro de qualquer C + c++ WinRT projeto. A função listada como um membro da interface [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) , não será possível encontrar porque não é parte da superfície de interface binária (ABI) do aplicativo do tipo real do Windows Runtime **IAsyncAction** **obter** .
 
 ```cppwinrt
 // main.cpp
@@ -322,7 +322,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 
 ## <a name="reporting-progress"></a>Relatório de progresso
 
-Se sua rotina concomitante retorna [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), em seguida, você pode recuperar o objeto retornado pela função **winrt::get_progress_token** e usá-lo para relatar o progresso volta para um progresso manipulador. A seguir está um exemplo de código.
+Se a corrotina retorna [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), em seguida, você pode recuperar o objeto retornado pela função **winrt::get_progress_token** e usá-lo para relatar o progresso volta para um progresso manipulador. A seguir está um exemplo de código.
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.

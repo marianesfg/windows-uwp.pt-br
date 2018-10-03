@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
 ms.openlocfilehash: 598d0e7b4a374c18ece48f52947cec64a0f79dab
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258147"
 ---
 # <a name="consume-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir componentes COM [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
-Você pode usar os recursos do C++ c++ biblioteca do WinRT para consumir componentes COM, como os gráficos 2D e 3D de alto desempenho as APIs do DirectX. C++ c++ WinRT é a maneira mais simples de usar o DirectX sem comprometer o desempenho. Este tópico usa um exemplo de código Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. Você pode, obviamente, misturar programação COM e do Windows Runtime dentro do mesmo C + c++ projeto WinRT.
+Você pode usar os recursos do C++ c++ biblioteca do WinRT para consumir componentes COM, como os gráficos 2D e 3D de alto desempenho as APIs do DirectX. C++ c++ /WinRT é a maneira mais simples de usar o DirectX sem comprometer o desempenho. Este tópico usa um exemplo de código Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. Você pode, obviamente, misturar programação COM e do Windows Runtime dentro do mesmo C + c++ WinRT projeto.
 
 No final deste tópico, você encontrará uma listagem de código de origem completa de um aplicativo de Direct2D mínimo. Vamos Levante trechos de código e usá-los para ilustrar como consumir componentes COM usando C++ c++ WinRT usando vários recursos de C++ c++ biblioteca do WinRT.
 
@@ -26,13 +26,13 @@ No final deste tópico, você encontrará uma listagem de código de origem comp
 
 Quando você programa com, você deve trabalhar diretamente com interfaces em vez de com objetos (Isso também true nos bastidores para APIs do Windows Runtime, que são uma evolução do COM). Para chamar uma função em uma classe COM, por exemplo, ativar a classe, uma interface novamente e, em seguida, chamamos funções nessa interface. Para acessar o estado de um objeto, você não acessar seus membros de dados diretamente. em vez disso, você deve chamar funções acessadores e modificadores em uma interface.
 
-Para ser mais específico, estamos falando sobre a interação com *ponteiros*de interface. E para isso, podemos beneficiar a existência do tipo em C++ ponteiro inteligente COM c++ WinRT&mdash;o tipo [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) .
+Para ser mais específico, estamos falando sobre a interação com interface *ponteiros*. E para isso, podemos beneficiar a existência do tipo em C++ ponteiro inteligente COM c++ /WinRT&mdash;o tipo [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) .
 
 ```cppwinrt
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-O código acima mostra como declarar um ponteiro inteligente não inicializado para uma interface de COM [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) . O ponteiro inteligente foi iniciado, portanto, ele ainda não está apontando para uma interface **ID2D1Factory1** pertencentes a qualquer objeto real (ele não está apontando para uma interface em todos os). Mas ele tem o potencial de fazer isso; e (sendo um ponteiro inteligente) tem a capacidade de via COM de contagem de referência para gerenciar a vida útil do objeto proprietário da interface que aponta para e para ser o meio pelo qual você chamar funções na interface.
+O código acima mostra como declarar um ponteiro inteligente não inicializado para uma interface de COM [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) . Ponteiro inteligente é não inicializado, portanto, ele ainda não está apontando para uma interface **ID2D1Factory1** que pertencem a qualquer objeto real (ele não está apontando para uma interface em todos os). Mas ele tem o potencial de fazê-lo; e (sendo um ponteiro inteligente) tem a capacidade de via COM de contagem de referência para gerenciar a vida útil do objeto proprietário da interface que aponta para e para ser o meio pelo qual você chamar funções na interface.
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>Funções COM que retornam um ponteiro de interface como **void\ * \ ***
 
@@ -51,7 +51,7 @@ O código acima chama a função [**D2D1CreateFactory**](/windows/desktop/api/d2
 
 ## <a name="com-functions-that-return-a-specific-interface-pointer"></a>Funções COM que retornam um ponteiro de interface específica
 
-A função [**D3D11CreateDevice**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) retorna um ponteiro de interface [**ID3D11Device**](https://msdn.microsoft.com/library/Hh404596) por meio de seu parâmetro antepenultimate, que tem **ID3D11Device\ * \ *** tipo. Para funções que retornam como um ponteiro de interface específica, use [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
+A função [**D3D11CreateDevice**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) retorna um ponteiro de interface [**ID3D11Device**](https://msdn.microsoft.com/library/Hh404596) por meio de seu parâmetro antepenultimate, que tem **ID3D11Device\ * \ *** tipo. Para funções que retornam um ponteiro de interface específica como esse, use [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
 
 ```cppwinrt
 winrt::com_ptr<ID3D11Device> device;
@@ -61,7 +61,7 @@ D3D11CreateDevice(
     ...);
 ```
 
-O exemplo de código na seção anterior mostra como chamar a função **D2D1CreateFactory** bruta. Mas, na verdade, quando o exemplo de código para este tópico chama **D2D1CreateFactory**, ele usa um modelo de função auxiliar que encapsula a API bruta e então o exemplo de código, na verdade, usa [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
+O exemplo de código na seção anterior mostra como chamar a função **D2D1CreateFactory** bruta. Mas, na verdade, quando o exemplo de código para este tópico chama **D2D1CreateFactory**, ele usa um modelo de função de auxiliar que encapsula a API bruta e então o exemplo de código, na verdade, usa [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function).
 
 ```cppwinrt
 winrt::com_ptr<ID2D1Factory1> factory;
@@ -85,7 +85,7 @@ DWriteCreateFactory(
 ## <a name="re-seat-a-winrtcomptr"></a>Reconecte um **WinRT:: com_ptr**
 
 > [!IMPORTANT]
-> Se você tiver um [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que já esteja encaixado (o ponteiro bruto interno já tem um destino) e você deseja reconecte-lo para apontar para um objeto diferente, primeiro você precisa atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se não, em seguida, um já fixada **com_ptr** desenhará o problema sua atenção (quando você chamar [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) declarando que seu ponteiro interno não é nulo.
+> Se você tiver um [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que já esteja encaixado (o ponteiro bruto interno já tem um destino) e você deseja novamente fixá-lo para apontar para um objeto diferente, primeiro você precisa atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se não fizer isso, em seguida, um já fixada **com_ptr** desenhará o problema sua atenção (quando você chamar [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) declarando que seu ponteiro interno não é nulo.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1SolidColorBrush> brush;
@@ -170,7 +170,7 @@ Como alternativa, usar [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#comp
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>Listagem de código de origem completa de um aplicativo de Direct2D mínimo
 
-Se você deseja compilar e executar esse exemplo de código de origem e o primeiro, no Visual Studio, crie um novo **aplicativo principal (C + c++ WinRT)**. `Direct2D` é um nome razoável para o projeto, mas você pode atribuir o nome que desejar. Abra `App.cpp`, excluir todo o seu conteúdo e cole na lista abaixo.
+Se você deseja compilar e executar esse exemplo de código de origem e o primeiro, no Visual Studio, crie um novo **aplicativo principal (C++ c++ WinRT)**. `Direct2D` é um nome razoável para o projeto, mas você pode atribuir o nome que desejar. Abra `App.cpp`, excluir todo o seu conteúdo e cole na lista abaixo.
 
 ```cppwinrt
 #include "pch.h"

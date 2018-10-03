@@ -5,7 +5,7 @@ title: Direção e gravidade - animação em aplicativos UWP
 label: Directionality and gravity
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,17 +14,14 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a5216e81bc556a2e761e88b071e988bf6e4f457e
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843710"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265805"
 ---
 # <a name="directionality-and-gravity"></a>Direção e gravidade
-
-> [!IMPORTANT]
-> Este artigo descreve uma funcionalidade que ainda não foi lançada e pode ser modificada substancialmente antes de ser lançada comercialmente. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
 
 Os sinais de direção ajudam a solidificar o modelo mental da jornada do usuário nas experiências. É importante que a direção de qualquer movimento ofereça suporte à continuidade do espaço, bem como à integridade dos objetos no espaço.
 
@@ -32,14 +29,16 @@ O movimento direcional está sujeito às forças como a gravidade. A aplicação
 
 ## <a name="direction-of-movement"></a>Direção do movimento
 
-:::linha::: :::coluna::: A direção do movimento corresponde ao movimento físico. Assim como na natureza, os objetos podem ser mover em qualquer eixo: X,Y e Z. Isso é como consideramos o movimento dos objetos na tela.
+:::row:::
+    :::column:::
+        Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
 
         When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
     :::column-end:::
     :::column:::
         ![direction backward in](images/Direction.gif)
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="direction-of-navigation"></a>Direção da navegação
 
@@ -63,35 +62,46 @@ Isso tem vários benefícios:
 
 Existem quatro direções discretas de navegação para considerar.
 
-:::linha::: :::coluna::: **Para frente-para dentro**
+:::row:::
+    :::column:::
+        **Forward-In**
 
         Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
     :::column-end:::
     :::column:::
         ![direction forward in](images/forwardIN.gif)
     :::column-end:::
-:::fim da linha::: :::linha::: :::coluna::: **Para frente-para fora**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Forward-Out**
 
         Content exits quickly. Objects accelerate off screen.
     :::column-end:::
     :::column:::
         ![direction forward out](images/forwardOUT.gif)
     :::column-end:::
-:::fim da linha::: :::linha::: :::coluna::: **Para trás-para dentro**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-In**
 
         Same as Forward-In, but reversed.
     :::column-end:::
     :::column:::
         ![direction backward in](images/backwardIN.gif)
     :::column-end:::
-:::fim da linha::: :::linha::: :::coluna::: **Para trás-para fora**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-Out**
 
         Same as Forward-Out, but reversed.
     :::column-end:::
     :::column:::
         ![direction backward out](images/backwardOUT.gif)
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="gravity"></a>Gravidade
 

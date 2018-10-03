@@ -4,18 +4,18 @@ Description: If you encounter errors after submitting your app to the Store, you
 title: Resolver erros de envio
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 09/13/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 2aa30af537874f3c3f4845706de6f6788c7b08fb
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260771"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -23,15 +23,15 @@ Se você encontrar erros depois de enviar seu aplicativo para a Loja, deverá re
 
 ## <a name="uwp-apps"></a>Aplicativos UWP
 
-Se estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não for um arquivo .appxupload gerado pelo Visual Studio para a Loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo. appxupload na página [pacotes](upload-app-packages.md) do envio, e não um appx ou. appxbundle.
+Se você estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não é um arquivo .msixupload ou. appxupload gerado pelo Visual Studio para a loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx/.msix ou .msixbundle/appxbundle .
 
 Caso um erro de compilação seja exibido, certifique-se de que você consiga compilar o seu aplicativo no modo Versão com êxito. Para obter mais informações, consulte [Erros do compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você criar esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-## <a name="windows-phone-apps"></a>Aplicativos do Windows Phone
+## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x e versões anteriores
 
 Você poderá ver **erro 2001** quando os problemas com pacotes do Windows Phone forem detectados durante o pré-processamento. Na maioria dos casos, você precisará recompilar o pacote do aplicativo para corrigir o erro. Depois de terminar, substitua o pacote anterior pelo novo na página [Pacotes](upload-app-packages.md) do envio antes de clicar em **Enviar à Loja** novamente.
 

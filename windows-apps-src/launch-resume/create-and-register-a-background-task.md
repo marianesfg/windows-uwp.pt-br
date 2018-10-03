@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: a599fdef47bb681ef4909fe5bba2a01a1687ba66
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209431"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265373"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo
 
@@ -41,7 +41,7 @@ Você pode executar código em segundo plano criando classes que implementam a i
 As seguintes etapas mostram como escrever uma nova classe que implementa a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
 1.  Crie um novo projeto para tarefas em segundo plano e adicione-o à sua solução. Para fazer isso, clique com botão direito no nó da solução no **Gerenciador de soluções** e selecione **Add** \> **Novo projeto**. Em seguida, selecione o tipo de projeto de **Componente do tempo de execução do Windows** , o nome do projeto e clique em Okey.
-2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP). Para um c# ou C++ aplicativo, no seu projeto de aplicativo, clique com botão direito em **referências** e selecione **Adicionar nova referência**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
+2.  Referencie o projeto das tarefa em segundo plano no projeto de aplicativo da Plataforma Universal do Windows (UWP). Para um em c# ou C++ aplicativo, no seu projeto de aplicativo, clique com botão direito em **referências** e selecione **Adicionar nova referência**. Em **Solução**, selecione **Projetos** e clique para selecionar o nome do seu projeto de tarefa em segundo plano e clique em **Ok**.
 3.  Para o projeto de tarefas em segundo plano, adicione uma nova classe que implementa a interface [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . O método [**ibackgroundtask. Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) é um ponto de entrada obrigatório que será chamado quando o evento especificado é disparado; Esse método é obrigatório em todas as tarefas em segundo plano.
 
 > [!NOTE]

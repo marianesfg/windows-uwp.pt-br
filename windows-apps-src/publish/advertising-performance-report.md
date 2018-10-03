@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261075"
 ---
 # <a name="advertising-performance-report"></a>Relatório de desempenho de anúncios
 
@@ -62,7 +62,7 @@ O relatório de **Desempenho de anúncios** inclui dados para as seguintes métr
 | Taxa de preenchimento  | A porcentagem de solicitações de anúncio enviadas do aplicativo em que um anúncio foi exibido.  |
 | Cliques  |  O número de vezes que uma pessoa clicou em um anúncio no seu aplicativo. |
 | CTR  |  Taxa de cliques, que significa o número de vezes que um anúncio foi clicado, dividido pelo número de impressões. |
-| Visualização | A porcentagem de impressões de anúncios que são visíveis no seu aplicativo. Para obter mais detalhes sobre como esse valor é calculado, consulte [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md). |
+| Visualização | A porcentagem de impressões de anúncios que podem ser exibidas em seu aplicativo. Para obter mais detalhes sobre como esse valor é calculado, consulte [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos obtidos  | Se estiver executando uma campanha de [anúncio de comunidade](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), isso indica o número de créditos que você ganhou para espaço publicitário promocional, mostrando anúncios de comunidade em seu aplicativo.  |
 | Créditos gastos  | Se estiver executando uma campanha de [anúncio de comunidade](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), isso indica o número de créditos gastos em anúncios para seu aplicativo.  |
 

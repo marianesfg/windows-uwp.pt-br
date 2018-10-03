@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ed24cb1ed0c4b4c15e6c96cf029c8f3841d8aac
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262453"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Criação do pacote com o layout de empacotamento  
 
@@ -55,7 +55,7 @@ Aqui está um exemplo da aparência de um layout de empacotamento simples:
 Vamos dividir este exemplo para entender como ele funciona.
 
 ### <a name="packagefamily"></a>PackageFamily
-Esse layout de empacotamento criará um arquivo .appxbundle único e simples com um pacote de arquitetura x64 e um pacote de ativo de "Mídia". 
+Esse layout de empacotamento criará um arquivo de lote de aplicativo único simples com x64 pacote de arquitetura e um pacote de ativo de "Mídia". 
 
 O elemento **PackageFamily** é usado para definir um lote de aplicativo. Você deve usar o atributo **ManifestPath** para fornecer um **AppxManifest** para o pacote, o **AppxManifest** deve corresponder ao **AppxManifest** para o pacote de arquitetura do pacote. O atributo **ID** também deve ser fornecido. Isso é usado com MakeAppx.exe durante a criação de pacote para que você possa criar apenas esse pacote se quiser, e isso será o nome do arquivo do pacote criado. O atributo **FlatBundle** é usado para descrever o tipo de pacote que você deseja criar, **true** para um pacote simples (que você pode ler mais sobre aqui), e **false** para um pacote clássico. O atributo **ResourceManager** é usado para especificar se os pacotes de recursos dentro esse pacote usarão MRT para acessar os arquivos. Por padrão, é **true**, mas a partir do Windows 10, versão 1803, isso ainda não está definido, portanto, esse atributo deve ser definido como **false**.
 
@@ -147,7 +147,7 @@ Pacotes de recursos podem ser especificados com o elemento **ResourcePackage**. 
 
 Cada pacote opcional tem seu próprio nome de família do pacote distinto e deve ser definido com elementos **PackageFamily**, ao especificar o atributo **Optional** para **true**. O atributo **RelatedSet** é usado para especificar se o pacote opcional está dentro do conjunto relacionado (por padrão isso é verdadeiro), e se o pacote opcional deve ser atualizado com o pacote principal.
 
-O elemento **PrebuiltPackage** é usado para adicionar pacotes que não são definidos no layout de empacotamento para ser incluído ou referenciado no(s) arquivo(s) .appxbundle para ser compilado. Neste caso, outro pacote opcional DLC está sendo incluído aqui para que o arquivo .appxbundle principal possa referenciá-lo e tenha-o como parte do conjunto relacionado.
+O elemento **PrebuiltPackage** é usado para adicionar pacotes que não são definidos no layout de empacotamento para ser incluído ou referenciado nos arquivos de lote de aplicativo para ser compilado. Nesse caso, outro pacote opcional DLC está sendo incluído aqui para que o arquivo de lote de aplicativo principal possa referenciá-lo e tenha-o como parte do conjunto relacionado.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Criar pacotes de aplicativos com um layout de empacotamento e MakeAppx.exe
@@ -163,7 +163,7 @@ No entanto, se você estiver atualizando seu aplicativo e alguns pacotes não co
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
-O sinalizador `/id` pode ser usado para selecionar os pacotes a serem construídos com o layout de empacotamento, correspondente ao atributo do **ID** no layout. O `/ip` é usado para indicar onde a versão anterior dos pacotes estão neste caso. A versão anterior deve ser fornecida porque o arquivo .appxbundle ainda precisa fazer referência a versão anterior do pacote **Mídia**. O sinalizador `/iv` é usado para incrementar a versão dos pacotes que está sendo criado automaticamente (ao invés de alterar a versão no **AppxManifest**). Como alternativa, os switches `/pv` e `/bv` podem ser usados para fornecer diretamente uma versão do pacote (para todos os pacotes a serem criados) e uma versão do lote (para todos os lotes a serem criados), respectivamente.
+O sinalizador `/id` pode ser usado para selecionar os pacotes a serem construídos com o layout de empacotamento, correspondente ao atributo do **ID** no layout. O `/ip` é usado para indicar onde a versão anterior dos pacotes estão neste caso. A versão anterior deve ser fornecida porque o arquivo de lote de aplicativo ainda precisa fazer referência a versão anterior do pacote de **mídia** . O sinalizador `/iv` é usado para incrementar a versão dos pacotes que está sendo criado automaticamente (ao invés de alterar a versão no **AppxManifest**). Como alternativa, os switches `/pv` e `/bv` podem ser usados para fornecer diretamente uma versão do pacote (para todos os pacotes a serem criados) e uma versão do lote (para todos os lotes a serem criados), respectivamente.
 Usando o exemplo de layout de empacotamento avançado nesta página, se você quiser criar somente o lote opcional **Themes** e o pacote do aplicativo **Themes.main** que faz referência a ele, você usaria esse comando:
 
 ``` example 

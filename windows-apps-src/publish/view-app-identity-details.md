@@ -4,30 +4,30 @@ Description: View details related to the unique identity assigned to your app by
 title: Exibir detalhes de identidade do aplicativo
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.author: wdg-dev-content
-ms.date: 12/21/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf2c10fd8fa581e29fe20c5bdcb2683c5246af1d
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 4b04033fb53a90015427feb820c91d0f4a1de7d5
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259825"
 ---
 # <a name="view-app-identity-details"></a>Exibir detalhes de identidade do aplicativo
 
 
-Ao trabalhar com um aplicativo no painel do Centro de desenvolvimento do Windows, você pode exibir detalhes relacionados à identidade exclusiva atribuída a ele pela Microsoft Store. Você também pode obter um link para a listagem do aplicativo na Loja.
+Você pode exibir detalhes relacionados à identidade exclusiva atribuída ao aplicativo pela Microsoft Store em suas páginas de **identidade do aplicativo** . Você também pode obter um link para da loja do aplicativo listagem nesta página.
 
 Para encontrar essas informações, navegue para um dos seus aplicativos, depois expanda **Gerenciamento de aplicativo** no menu de navegação esquerdo. Selecione a **Identidade do aplicativo** para exibir esses detalhes.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>Valores a serem incluídos no manifesto do pacote do aplicativo
 
-Os seguintes valores devem ser incluídos no manifesto do pacote .appx. Se você [usar o Microsoft Visual Studio para criar seus pacotes](../packaging/packaging-uwp-apps.md), e estiver conectado à mesma conta da Microsoft que você associou com sua conta de desenvolvedor, esses detalhes serão incluídos automaticamente. Se você estiver criando o pacote manualmente, é necessário adicionar estes itens.
+Os seguintes valores devem ser incluídos no manifesto do pacote. Se você [usar o Microsoft Visual Studio para criar seus pacotes](../packaging/packaging-uwp-apps.md), e estiver conectado à mesma conta da Microsoft que você associou com sua conta de desenvolvedor, esses detalhes serão incluídos automaticamente. Se você estiver criando o pacote manualmente, é necessário adicionar estes itens.
 
 -   **Pacote/identidade/nome**
 -   **Pacote/identidade/editor**

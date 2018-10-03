@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266134"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
@@ -59,7 +59,7 @@ Você pode selecionar os usuários que já existem no locatário da sua organiza
 Se você estiver conectado com uma conta de gerenciador que também tem permissões de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para o locatário do Azure AD em que você está trabalhando, terá outras opções para adicionar usuários à sua conta do Centro de Desenvolvimento. Selecione uma das seguintes opções:
 
 -   **Adicionar usuários existentes**: escolha os usuários que já existem no diretório da organização e conceda a eles acesso à sua conta do Centro de desenvolvimento, usando o método descrito acima.
--   **Criar novos usuários**: criar novas contas de usuário para adicionar ao diretório da organização tanto e sua conta do Centro de desenvolvimento
+-   **Criar novos usuários**: Crie novas contas de usuário para adicionar ao diretório da organização tanto e à conta do Centro de desenvolvimento
 -   **Convidar usuários externos**: envie convites por email aos usuários que não estão no diretório da organização atualmente. Eles serão convidados a acessar sua conta do Centro de Desenvolvimento, e uma nova conta de [usuário convidado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) será criada para eles no seu locatário do Azure AD.
 
 <span id="new-user" />
@@ -119,7 +119,7 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Cen
 ### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
 
 1.  Selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações da conta**. No menu **configurações** , selecione **os usuários**.
-2. Selecione a página de **usuários** , **grupos de adicionar**.
+2. Na página de **usuários** , selecione **Adicionar grupos**.
 2.  Selecione um ou mais grupos na lista exibida. Você pode usar a caixa de pesquisa para procurar grupos específicos.
     > [!TIP]
     > Se você selecionar mais de um grupo para adicionar à sua conta do Centro de Desenvolvimento, você deve atribuir a eles a mesma função ou conjunto de permissões personalizados. Para adicionar vários grupos com permissões/funções diferentes, repita as etapas abaixo para cada função ou um conjunto de permissões personalizados.

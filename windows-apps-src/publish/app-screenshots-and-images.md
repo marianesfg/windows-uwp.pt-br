@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263903"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -87,11 +87,11 @@ Essa imagem é necessária para a exibição correta no Windows Phone 8.1 e vers
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados somente imagens de logotipo na loja
 
-Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e em vez disso, que a Store use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se o seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usar essa opção.)
+Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e, em vez disso, que a loja use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usar essa opção.)
 
-Para ter a Store use apenas as imagens carregadas (para clientes no Windows 10, incluindo o Xbox), e não use as imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir imagens de logotipo em vez das imagens dos meus pacotes enviadas **.
+Tenha a Store use apenas as imagens carregadas (para clientes no Windows 10, incluindo o Xbox), e não use as imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir imagens de logotipo em vez das imagens dos meus pacotes enviadas **.
 
-Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 imagens, incluindo o tamanho do **Bloco de aplicativo 1:1 ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem se moverá para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
+Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 imagens, incluindo o tamanho do **Bloco de aplicativo de 1:1 ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem se moverá para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
 
 
 <span id="promotional-images" />

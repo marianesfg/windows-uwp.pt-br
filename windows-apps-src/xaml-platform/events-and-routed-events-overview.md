@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263447"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
@@ -153,7 +153,7 @@ End Sub
 
 **Observação**  O Visual Studio e a sua superfície de design em XAML costumam promover a técnica de manipulação de instâncias em vez da palavra-chave **Handles**. Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
 
-Em C++ c++ /CX, também usar o **+=** sintaxe, mas há diferenças no formulário c# básico:
+No C++ c++ /CX, também usar o **+=** sintaxe, mas há diferenças no formulário c# básico:
 
 -   Não há inferência de delegado, portanto, você deve usar **ref new** para a instância do delegado.
 -   O construtor do delegado possui dois parâmetros e requer o objeto de destino como o primeiro parâmetro. Tipicamente, você especifica **this**.

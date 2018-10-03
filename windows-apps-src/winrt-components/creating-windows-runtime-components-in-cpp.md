@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258559"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Criando componentes do Windows Runtime em C++/CX
 > [!NOTE]
@@ -77,7 +77,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++ c++ /CX tipos internos, tipos de biblioteca e tipos de tempo de execução do Windows
 Uma classe ativável (também conhecida como uma classe ref) é aquela cuja instância é criada com base em outra linguagem, como JavaScript, C# ou Visual Basic. Para ser consumível em outra linguagem, um componente deve conter pelo menos uma classe ativável.
 
-Um componente do Tempo de Execução do Windows pode conter várias classes ativáveis públicas, bem como classes adicionais que são conhecidas apenas internamente para o componente. Aplique o atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) C + c++ tipos CX que pretendem não ficará visível para JavaScript.
+Um componente do Tempo de Execução do Windows pode conter várias classes ativáveis públicas, bem como classes adicionais que são conhecidas apenas internamente para o componente. Aplique o atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) C + c++ tipos CX que não devem estar visível para JavaScript.
 
 Todas as classes públicas devem residir no mesmo namespace raiz com o mesmo nome do arquivo de metadados do componente. Por exemplo, uma classe chamada A.B.C.MyClass só poderá ter uma instância criada se estiver definida em um arquivo de metadados chamado A.winmd ou A.B.winmd ou A.B.C.winmd. O nome da DLL não precisa corresponder ao nome do arquivo .winmd.
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Para passar estruturas de valor definido pelo usuário na ABI, defina um objeto JavaScript que tem os mesmos membros como a estrutura de valor que é definido no C++ c++ /CX. Em seguida, você pode passar esse objeto como um argumento para C++ c++ método CX para que o objeto é convertido implicitamente em C++ c++ tipo CX.
+Para passar estruturas de valor definido pelo usuário na ABI, defina um objeto JavaScript que tem os mesmos membros como a estrutura de valor que é definido em C++ c++ /CX. Em seguida, você pode passar esse objeto como um argumento para C++ c++ método CX para que o objeto é convertido implicitamente em C++ c++ tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -206,7 +206,7 @@ document.getElementById('P4').innerHTML = num;
 ```
 
 ## <a name="net"></a>.NET
-As linguagens .NET reconhecem sobrecargas em C++ c++ classe ref CX assim como em qualquer classe do .NET Framework.
+As linguagens .NET reconhecem sobrecargas em C++ c++ classe de ref CX assim como em qualquer classe do .NET Framework.
 
 ## <a name="datetime"></a>DateTime
 No Windows Runtime, um objeto [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx) é apenas um inteiro assinado de 64 bits que representa o número de intervalos de 100 nanossegundos antes ou depois de 1° de janeiro de 1601. Não há método em um objeto Windows:Foundation::DateTime. Em vez disso, cada linguagem projeta o DateTime da maneira nativa para essa linguagem: o objeto Date em JavaScript e os tipos System.DateTime e System.DateTimeOffset no .NET Framework.
@@ -349,7 +349,7 @@ private void GetDictionary()
 ```
 
 ## <a name="properties"></a>Propriedades
-Uma classe ref pública em C++ c++ extensões de componente CX expõe membros de dados públicos como propriedades, usando a palavra-chave de propriedade. O conceito é idêntico a propriedades do .NET Framework. Uma propriedade trivial se parece com um membro de dados porque a funcionalidade é implícita. Uma propriedade não trivial tem acessadores get e set explícitos e uma variável privada nomeada que é o "armazenamento de backup" para o valor. Neste exemplo, a variável de membro privado \_propertyAValue é o repositório de suporte de PropertyA. Uma propriedade pode acionar um evento quando o valor é alterado e um aplicativo cliente pode se registrar para receber esse evento.
+Uma classe ref pública em C++ c++ extensões de componente CX expõe membros de dados públicos como propriedades usando a palavra-chave de propriedade. O conceito é idêntico a propriedades do .NET Framework. Uma propriedade trivial se parece com um membro de dados porque a funcionalidade é implícita. Uma propriedade não trivial tem acessadores get e set explícitos e uma variável privada nomeada que é o "armazenamento de backup" para o valor. Neste exemplo, a variável de membro privado \_propertyAValue é o repositório de suporte de PropertyA. Uma propriedade pode acionar um evento quando o valor é alterado e um aplicativo cliente pode se registrar para receber esse evento.
 
 ```cpp
 //Properties
@@ -511,7 +511,7 @@ nativeObject.fireEvent("The answer is ");
 Em C#, qualquer número de manipuladores de eventos pode se inscrever no evento usando o operador += conforme mostrado no exemplo anterior.
 
 ## <a name="enums"></a>Enumerações
-Uma enumeração em tempo de execução do Windows em C++ c++ /CX é declarada usando a enumeração de classe pública; ele é semelhante a uma enumeração em escopo em C++ padrão.
+Uma enumeração de tempo de execução do Windows em C++ c++ /CX é declarada usando a enumeração de classe pública; ele é semelhante a uma enumeração em escopo em C++ padrão.
 
 ```cpp
 public enum class Direction {North, South, East, West};
@@ -558,7 +558,7 @@ Não se esqueça de selecionar os recursos apropriados no designer do pacote. Po
 
 Caso o código JavaScript aparentemente não reconheça as propriedades públicas ou os métodos no componente, assegure-se de que, no JavaScript, você esteja seguindo o uso de maiúsculas camel. Por exemplo, o c++ LogCalc c++ /CX método deve ser referenciado como logCalc em JavaScript.
 
-Se você remover C++ c++ projeto de componente do tempo de execução do CX Windows de uma solução, você deve remover manualmente a referência de projeto do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
+Se você remover C++ c++ /CX Windows Runtime projeto de componente de uma solução, você deve remover manualmente a referência de projeto do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Passo a passo: Criando um componente de tempo de execução do Windows básico em C++ c++ /CX e chamando-o em JavaScript ou c#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)

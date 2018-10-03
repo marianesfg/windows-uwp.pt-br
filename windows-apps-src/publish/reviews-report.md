@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261495"
 ---
 # <a name="reviews-report"></a>Relatório de avaliações
 
@@ -37,7 +37,7 @@ Na parte superior da página, você pode selecionar o período para o qual você
 É possível expandir os **Filtros** para filtrar as análises mostradas nessa página pelas seguintes opções. Esses filtros não serão aplicado aos gráficos de **Análise de classificações** e **Média de classificação ao longo do tempo**.
 
 -   **Classificação**: por padrão, as análises com classificação por estrelas estão marcadas, mas você pode marcar e desmarcar as classificações (de 1 a 5 estrelas) se quiser ver apenas as análises associadas a uma classificação por estrelas específica.
-- **Examine o conteúdo**: A configuração padrão é **classificações com conteúdo de crítica**, o que significa que somente classificações com conteúdo de crítica serão mostradas. Você pode selecionar **todos os** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto de crítica escrito. Observe que o gráfico de **análise de classificações** sempre mostrará todas as análises, independentemente de sua seleção.
+- **Revisar o conteúdo**: A configuração padrão é **classificações com conteúdo de crítica**, o que significa que somente classificações com conteúdo de crítica serão mostradas. Você pode selecionar **todos os** para mostrar todas as classificações, mesmo aqueles que não incluem qualquer texto de crítica escrito. Observe que o gráfico de **análise de classificações** sempre mostrará todas as análises, independentemente de sua seleção.
 -   **Versão do sistema operacional**: a configuração padrão é **Todos**. Você poderá escolher a versão específica do sistema operacional se quiser que essa página mostre somente análises deixadas por clientes nessa versão do sistema operacional.
 -   **Versão do pacote**: a configuração padrão é **Tudo**. Se o aplicativo incluir mais de um pacote, é possível selecionar um específico aqui para mostrar somente análises deixadas pelos clientes com esse pacote quando analisaram seu aplicativo.
 -   **Respostas**: a configuração padrão é **Todos**. Você pode optar por filtrar as análises para mostrar apenas as críticas em que você [respondeu aos clientes](respond-to-customer-reviews.md), ou apenas aquelas em que você ainda não respondeu.
@@ -52,7 +52,7 @@ Na parte superior da página, você pode selecionar o período para o qual você
 
 ## <a name="ratings-breakdown"></a>Detalhamento das classificações
 
-O gráfico de **análise de classificações** aparece na parte superior desse relatório para que você pode obter uma rápida olhada o seguinte: 
+O gráfico de **análise de classificações** aparece na parte superior desse relatório para que você pode obter uma visão geral a seguir: 
 - A classificação média por estrela do aplicativo.
 - O total de classificações do aplicativo nos últimos 12 meses.
 - O total de classificações de cada classificação por estrelas.
@@ -65,7 +65,7 @@ O gráfico de **análise de classificações** aparece na parte superior desse r
 
 Observe que este gráfico sempre inclui todas as análises, mesmo se você selecionou **que classificações com conteúdo de crítica** no filtro de página **revisar o conteúdo** .
 
-Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre as classificações do seu aplicativo.
+Este gráfico também pode ser visto no [relatório de classificações](ratings-report.md), juntamente com mais detalhes sobre a classificação do seu aplicativo.
 
 
 <span id = "review-insight-categories" />
@@ -99,7 +99,7 @@ Observe que os clientes podem deixar uma classificação para o seu aplicativo s
 
 Você pode classificar as criticas na página por data e/ou por classificação, em ordem crescente ou decrescente. Clique no link **Classificar por** para exibir opções de classificação por **Data** e/ou **classificação**.
 
-Você também pode usar a caixa de pesquisa para procurar palavras ou frases em críticas do seu aplicativo específicas. Observe que apenas o texto revisão original escrito pelo cliente é pesquisado, mesmo se a crítica foi escrita em um idioma diferente. Texto de crítica traduzido não é pesquisado.
+Você também pode usar a caixa de pesquisa para procurar palavras ou frases em críticas do seu aplicativo específicas. Observe que apenas o texto revisão original gravado pelo cliente é pesquisado, mesmo se a crítica foi escrita em um idioma diferente. Texto de crítica traduzido não é pesquisado.
 
 > [!NOTE]
 > Às vezes, você pode observar que as avaliações desaparecem desse relatório. Isso pode acontecer porque a Microsoft remove revisões da Loja escritas por clientes que executam determinadas compilações do Insider e pré-lançamento do Windows 10. Fazemos isso para reduzir a possibilidade de uma análise negativa causada por um problema em uma compilação de versão de pré-lançamento do Windows. Também podemos remover avaliações da Loja que foram identificadas como spam, inadequadas, ofensivas ou que tenham outras violações de política. Esperamos que essa ação resulte em uma melhor experiência para o cliente.
@@ -111,7 +111,7 @@ Por padrão, críticas que não foram escritas em seu idioma preferencial são t
 
 Observe que críticas são traduzidas por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido caso deseje compará-lo à tradução ou traduzi-lo por meio de algum outro meio.
 
-Como observado acima, quando pesquisar as críticas, somente o texto original deixados por cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver a caixa **Traduzir análises** marcada.
+Como observado acima, quando pesquisar as críticas, somente o texto original deixadas por cliente é pesquisado (e não qualquer texto traduzido), mesmo se você tiver a caixa **Traduzir análises** marcada.
 
 
 ## <a name="responding-to-customer-reviews"></a>Respondendo às análises dos clientes

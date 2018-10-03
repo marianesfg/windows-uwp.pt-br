@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3480288035d98ab3f68da33f9121e7daaf86180f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264381"
 ---
 # <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
@@ -61,7 +61,7 @@ Se você deseja usar um glifo da fonte **Ativos Segoe MDL2** que não está incl
 
 ## <a name="how-do-i-get-this-font"></a>Como obtenho essa fonte?
 * No Windows 10: Não que é necessário fazer nada, a fonte vem com o Windows.
-* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">obter a Segoe UI e fontes de ícones MDL2</a>
+* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">Obtenha a Segoe UI e fontes de ícones MDL2</a>
 
 ## <a name="icon-list"></a>Lista de ícones
 Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que podemos mostrar aqui. Muitos ícones são destinados a finalidades específicas e não são normalmente usados em qualquer outro lugar.
@@ -3600,7 +3600,7 @@ Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do qu
  </tr>
 <tr><td><img src="images/segoe-mdl/ED35.png" width="32" height="32" alt="Apps" /></td>
   <td>ED35</td>
-  <td>Aplicativos</td>
+  <td>Apps</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED39.png" width="32" height="32" alt="KeyboardBrightness" /></td>
   <td>ED39</td>

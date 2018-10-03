@@ -4,18 +4,18 @@ ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: Empacotando apps
 description: Esta seção contém links ou se vincula a artigos sobre empacotamento de aplicativos da Plataforma Universal do Windows (UWP).
 ms.author: lahugh
-ms.date: 10/10/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, empacotamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 263a0b7ce4eaeb3bac132789d4970fbf2c7ccc1f
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: ce77391fc189ef33aba3002685b0662d7cab1953
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262019"
 ---
 # <a name="packaging-apps"></a>Empacotando aplicativos
 
@@ -33,7 +33,7 @@ Esta seção contém links ou se vincula a artigos sobre empacotamento de aplica
 | [Pacotes opcionais e conjunto de criação relacionado](optional-packages.md) | Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Estes são úteis para o conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original. |
 | [Pacotes opcionais com código executável](optional-packages-with-executable-code.md) | Saiba como usar o Visual Studio para criar um pacote opcional com código executável. |
 | [Instalar aplicativos UWP com o Instalador de Aplicativo](appinstaller-root.md) | Instalador de Aplicativo permite que os aplicativos UWP sejam instalados clicando duas vezes no conjunto de aplicativo. |
-| [Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo UWP de um computador Windows 10 em qualquer dispositivo Windows 10 Mobile. É possível usar essa ferramenta para implantar um pacote .appx quando o dispositivo com o Windows 10 Mobile está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta. |
+| [Instalar aplicativos usando a ferramenta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo UWP de um computador Windows 10 em qualquer dispositivo Windows 10 Mobile. Você pode usar essa ferramenta para implantar um pacote do aplicativo quando o dispositivo Windows 10 Mobile está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta. |
 | [Configurar compilações automáticas para seu aplicativo UWP](auto-build-package-uwp-apps.md) | Se você quiser empacotar seu aplicativo como parte de um processo de compilação automática, este tópico mostra como usar o Visual Studio Team Services (VSTS) para fazer isso. |
 | [Declarações de funcionalidades do app](app-capability-declarations.md) | As funcionalidades devem ser declaradas no [manifesto do pacote](https://msdn.microsoft.com/library/windows/apps/BR211474) do aplicativo UWP para acessar determinada API ou recursos, como imagens, músicas ou dispositivos, como câmera ou microfone. |
 | [Baixar e instalar atualizações de pacote a partir da Store](self-install-package-updates.md) | Seu aplicativo UWP pode verificar programaticamente se há atualizações de pacote e instalar as atualizações. Seu aplicativo também pode consultar os pacotes que foram marcados como obrigatórios no painel do Centro de Desenvolvimento do Windows e desabilitar a funcionalidade até que a atualização obrigatória seja instalada.  |

@@ -14,12 +14,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258479"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -31,10 +31,12 @@ Acrílico é um tipo de [Pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 
 :::row:::
     :::column:::
-        Acrílico em tema claro ![acrílico em tema claro](images/Acrylic_LightTheme_Base.png)
+        Acrylic in light theme
+        ![Acrylic in light theme](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        Acrílico em tema escuro ![acrílico em tema escuro](images/Acrylic_DarkTheme_Base.png)
+        Acrylic in dark theme
+        ![Acrylic in dark theme](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -49,68 +51,20 @@ Acrílico é um tipo de [Pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 ## <a name="examples"></a>Exemplos
 
 :::row:::
-    ::: extensão da coluna::: ![alguns imagem](images/XAML-controls-gallery-app-icon.png)
+    :::column span:::
+        ![Some image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: extensão da coluna = "2"::: **XAML Controls Gallery**<br>
-        Se você tiver o aplicativo XAML Controls Gallery instalado, clique <a href="xamlcontrolsgallery:/item/Acrylic">aqui</a> para abrir o aplicativo e ver o acrílico em ação.
+    :::column span="2":::
+        **XAML Controls Gallery**<br>
+        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
     :::column-end:::
 :::row-end:::
 
-## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
-
-Recomendamos que você coloque interface de usuário de suporte, como a navegação dentro do aplicativo ou elementos de comando, em uma superfície acrílica. Esse material também é útil para elementos de interface de usuário transientes, como diálogos e submenus, pois ele ajuda a manter uma relação visual com o conteúdo que acionou a UI transiente. Desenvolvemos o acrílico para ser usado como um material de fundo e mostra em painéis visualmente discretos, portanto não aplique o acrílico em elementos detalhados em primeiro plano.
-
-As superfícies atrás do conteúdo primário do aplicativo devem usar fundos sólidos e opacos.
-
-Considere a possibilidade de estender o acrílico à uma ou mais bordas do seu aplicativo, incluindo a barra de título da janela, para melhorar o fluxo visual. Evite criar um efeito de tiragem empilhando acrílicos de diferentes tipos de mistura adjacentes um ao outro. O acrílico é uma ferramenta para trazer harmonia visual aos seus designs, no entanto, quando usado incorretamente, pode resultar em ruído visual.
-
-Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar o acrílico em seu aplicativo.
-
-### <a name="vertical-acrylic-pane"></a>Painel acrílico vertical
-
-Para aplicativos com navegação vertical, recomendamos aplicar o acrílico ao painel secundário contendo elementos de navegação.
-
-![Padrão de aplicativo usando um único painel acrílico vertical](images/acrylic_app-pattern_vertical.png)
-
-[NavigationView](../controls-and-patterns/navigationview.md) é um novo controle comum para adicionar navegação ao seu aplicativo e inclui acrílico em seu design visual. O painel do NavigationView exibe acrílico ao fundo quando o painel é aberto lado a lado com um conteúdo primário, e muda automaticamente para o acrílico do aplicativo quando o painel é aberto como uma sobreposição.
-
-Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
- - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
- - Quando o painel é aberto lado a lado com conteúdo principal do aplicativo, isso deve ser [60% de acrílico de fundo](#acrylic-theme-resources)
-
-### <a name="multiple-acrylic-panes"></a>Múltiplos painéis acrílicos
-
-Para aplicativos com três painéis verticais distintos, recomendamos adicionar acrílico em conteúdo não principal.
- - Para o painel secundário mais próximo ao conteúdo primário, utilize [80% de acrílico de fundo](#acrylic-theme-resources)
- - Para o painel terciário mais distante do conteúdo primário, utilize [60% de acrílico de fundo](#acrylic-theme-resources)
-
-![Padrão do aplicativo utilizando painel acrílico vertical duplo](images/acrylic_app-pattern_double-vertical.png)
-
-### <a name="horizontal-acrylic-pane"></a>Painel acrílico horizontal
-
-Para aplicativos com navegação horizontal, comando ou outros fortes elementos horizontais na parte superior do aplicativo, recomendamos aplicar [70% de acrílico](#acrylic-theme-resources) nesse elemento visual.
-
-![Padrão do aplicativo utilizando um painel acrílico horizontal](images/acrylic_app-pattern_horizontal.png)
-
-Aplicativos de tela com ênfase em conteúdo contínuo passível de zoom devem utilizar acrílico de aplicativo na barra superior para permitir que os usuários se conectem com esse conteúdo. Exemplos de aplicativos de tela incluem mapas, pintura e desenho.
-
-Para aplicativos sem uma única tela contínua, recomendamos usar acrílico de fundo para conectar usuários aos seus ambientes gerais de trabalho.
-
-### <a name="acrylic-in-utility-apps"></a>Acrílico em aplicativos de utilidade
-
-Widgets ou aplicativos leves podem reforçar seu uso como aplicativos de utilidade aplicando o acrílico a toda a janela do aplicativo. Aplicativos que pertencem a essa categoria costumam apresentar momentos breves de envolvimento do usuário e provavelmente ocuparão toda a tela da área de trabalho do usuário. Os exemplos incluem calculadora e central de ações.
-
-![O aplicativo de utilidade Calculadora com acrílico com seu contexto completo.](images/acrylic_app-pattern_full.png)
-
-> [!Note]
-> Renderização de superfícies consome GPU, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
-
-
 ## <a name="acrylic-blend-types"></a>Tipos de mistura de acrílico
-A característica mais notável do acrílico é sua translucency. Existem dois tipos de mistura de acrílico que alteram o que é visível através do material:
+A característica mais notável do acrílico é sua transparência. Existem dois tipos de mistura de acrílico que alteram o que é visível através do material:
  - O **Acrílico de fundo** revela o papel de parede da área de trabalho e outras janelas que estão atrás do aplicativo ativo no momento, adicionando profundidade entre janelas de aplicações, ao mesmo tempo que celebra as preferências de personalização do usuário.
  - O **acrílico de aplicativo** adiciona uma sensação de profundidade dentro do quadro do aplicativo, oferecendo foco e hierarquia.
 
@@ -118,8 +72,41 @@ A característica mais notável do acrílico é sua translucency. Existem dois t
 
  ![Acrílico de aplicativo](images/AppAcrylic_DarkTheme.png)
 
- Coloque diversas superfícies de acrílico com cuidado. O acrílico de fundo, como seu nome sugere, não deve ser o mais próximo do usuário na ordem z. Múltiplas camadas de acrílico de fundo costumam resultar em ilusões ópticas não desejadas e devem também ser evitadas. Se optar por sobrepor acrílicos, utilize o acrílico de aplicativo e considere usar um tom de acrílico mais claro para ajudar a apresentar as camadas ao visualizador.
+ Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar uma decisão traiçoeira ópticas.
 
+## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
+
+* Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha. 
+* Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
+
+Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico de borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
+
+Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar o acrílico em seu aplicativo:
+
+### <a name="horizontal-navigation-or-commanding"></a>Navegação horizontal ou comandos
+
+Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
+ - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
+ - Quando o painel é aberto lado a lado com conteúdo principal do aplicativo, isso deve ser [60% de acrílico de fundo](#acrylic-theme-resources)
+
+![Aplicativo de mapas usando o comando horizontal no aplicativo](images/Maps_In_App_Acrylic_1.png)
+
+Além disso, a ter seu conteúdo estender ou rolagem sob o acrílico na parte superior lhe dará seu aplicativo uma experiência mais imersiva e perfeita.
+
+### <a name="vertical-panes"></a>Painéis verticais
+
+Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em do NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+
+### <a name="transient-surfaces"></a>Superfícies transitórios
+
+Para aplicativos com menu submenus, pop-ups não modal, ou ignorar painéis, é recomendável usar acrílico de fundo.
+
+![Usando um submenu informativo padrão do aplicativo de email](images/Mail_TransientContextMenu.png)
+
+Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usará o acrílico transitório quando eles são invocados.
+
+> [!Note]
+> Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
 
 ## <a name="usability-and-adaptability"></a>Usabilidade e adaptabilidade
 O acrílico adapta automaticamente sua aparência para uma variedade de dispositivos e contextos.
@@ -212,7 +199,6 @@ Você pode optar por adicionar uma tonalidade de cor ao acrílico do seu aplicat
  - **TintOpacity**: a opacidade da camada de tonalidade. É recomendável 80% de opacidade como ponto de partida, embora cores diferentes possam parecer mais atraentes em outras translucencies.
  - **BackgroundSource**: o marcador para especificar se você deseja acrílico de fundo ou de aplicativo.
  - **FallbackColor**: a cor sólida que substitui o acrílico em economia de bateria. Para acrílico de fundo, a cor de retorno também substitui o acrílico quando seu aplicativo não está na janela da área de trabalho ativa ou quando o aplicativo está sendo executado no telefone ou no Xbox.
-
 
 ![Amostras de acrílico de tema claro](images/CustomAcrylic_Swatches_LightTheme.png)
 
@@ -332,6 +318,7 @@ Além disso, você precisará desenhar o título do seu aplicativo, que normalme
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 * Use acrílico como material de fundo em superfícies não primárias do aplicativo, como painéis de navegação.
 * Estenda o acrílico para pelo menos uma borda do seu aplicativo para criar uma experiência perfeita, combinando de maneira sutil com os entornos do aplicativo.
+* Não coloque arylic da área de trabalho em superfícies de grandes em segundo plano do seu aplicativo - Isso interrompe o modelo mental da acrílico sendo usado principalmente para superfícies transitórios.
 * Não coloque acrílicos de aplicativo e de fundo de forma diretamente adjacente para evitar a tensão visual nas junções.
 * Não coloque vários painéis acrílicos com o mesmo tom e opacidade próximos uns aos outros, pois isso gera uma emenda visível não desejada.
 * Não coloque texto de cores destacadas sobre superfícies acrílicas.

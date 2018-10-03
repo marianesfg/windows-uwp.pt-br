@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260469"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -99,7 +99,7 @@ Você pode revelar ou ocultar um elemento definindo sua propriedade [**Visibilit
 Você pode alterar a propriedade Visibility de um elemento no código ou em um estado visual. Quando o Visibility de um elemento é alterado, todos os seus elementos filho também são alterados. Você pode substituir seções de sua interface do usuário, revelando um painel e recolhendo outro.
 
 > [!Tip]
-> Quando você tiver elementos da interface do usuário que são **recolhido** por padrão, os objetos ainda são criados na inicialização, mesmo que eles não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Quando você tiver elementos da interface do usuário que são **Collapsed** por padrão, os objetos ainda são criados na inicialização, mesmo que eles não estiverem visíveis. Você pode adiar o carregamento desses elementos até que eles sejam mostrados definindo o **atributo x:DeferLoadStrategy** como "Lazy". Isso pode melhorar o desempenho da inicialização. Para obter mais informações, consulte [Atributo x:DeferLoadStrategy](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Recursos de estilo
 
@@ -236,7 +236,7 @@ Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplif
 ```
 
 > [!Important]
-> No exemplo anterior, a propriedade anexada VisualStateManager. Visualstategroups é definida no elemento de **grade** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
+> No exemplo anterior, a propriedade anexada VisualStateManager. Visualstategroups é definida no elemento **Grid** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
 ### <a name="attached-property-syntax"></a>Sintaxe da propriedade anexada
 

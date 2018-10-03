@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258519"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -36,7 +36,7 @@ Depois que o aplicativo for publicado, você poderá publicar uma versão atuali
 
 Aqui estão os detalhes que você pode fornecer quando for criar um envio de aplicativo, com links para mais informações.
 
-Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não precisa trabalhar com essas seções na ordem listada aqui.
+Os itens que você será solicitado a fornecer ou especificar são indicados abaixo. Algumas áreas são opcionais ou têm valores padrão fornecidos que podem ser alterados conforme desejar. Você não precisa trabalhar com essas seções na ordem listadas aqui.
 
 ### <a name="pricing-and-availability-page"></a>Página de preços e disponibilidade
 | Nome do campo                    | Observações                                       | Para obter mais informações                                                             |

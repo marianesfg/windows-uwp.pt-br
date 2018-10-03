@@ -11,15 +11,15 @@ keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207948"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4257933"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
 
-A maneira mais simples de portar sua atividade de segundo plano fora do processo (OOP) atividade no processo é trazer seu código de método [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) dentro de seu aplicativo e iniciá-lo de [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). A técnica que está sendo descrita aqui não é sobre a criação de uma correção de uma tarefa de plano de fundo OOP em uma tarefa em segundo plano no processo; seu reconfiguração sobre (ou fazendo a portabilidade) uma versão OOP para uma versão em processo.
+A maneira mais simples de portar sua atividade de segundo plano fora do processo (OOP) atividade no processo é trazer seu código de método [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) dentro de seu aplicativo e iniciá-lo de [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). A técnica que está sendo descrita aqui não é sobre a criação de uma correção de uma tarefa de plano de fundo OOP em uma tarefa em segundo plano no processo; seu reescrever sobre (ou fazendo a portabilidade) uma versão OOP para uma versão em processo.
 
 Se seu aplicativo tem várias tarefas em segundo plano, o [Exemplo de ativação em segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) mostra como usar `BackgroundActivatedEventArgs.TaskInstance.Task.Name` para identificar qual tarefa está sendo iniciada.
 

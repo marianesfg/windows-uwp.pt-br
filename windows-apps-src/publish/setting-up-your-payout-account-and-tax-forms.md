@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261471"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
 
-Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários.
+Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários fiscais necessários.
 
 Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que deseja vender aplicativos (ou complementos), você pode configurar sua conta de pagamento e preencher os formulários de imposto naquele momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
@@ -148,7 +148,7 @@ Você pode preencher e enviar os formulários de imposto eletronicamente no pain
 4.  Responda às perguntas sobre cidadania e residência nos Estados Unidos, em seguida, clique em **Avançar**.
 5.  Se seu nome e seu endereço forem exibidos, confirme-os para fins de arquivamento de impostos.
 
-Em seguida, você verá versões eletrônicas dos formulários fiscais que deve preencher. Independentemente do seu país de residência ou de sua cidadania, você deve preencher os formulários de imposto dos Estados Unidos para vender aplicativos ou complementos por meio da Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
+Em seguida, você verá versões eletrônicas dos formulários fiscais que deve preencher. Independentemente do seu país/região de residência ou de sua cidadania, você deve preencher os formulários de imposto dos Estados Unidos para vender aplicativos ou complementos por meio da Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
 
 Não é necessário ter um ITIN (Número de Identificação de Contribuinte Individual) dos Estados Unidos para receber pagamentos da Microsoft ou reivindicar benefícios de tratados fiscais.
 
@@ -158,7 +158,7 @@ As informações que você envia em seus formulários fiscais determinam a taxa 
 
 ### <a name="tax-treaty-benefits"></a>Benefícios de tratados fiscais
 
-Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam de país e podem permitir que você reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
+Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam país e podem permitir que você reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
 
  
 

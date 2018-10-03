@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261517"
 ---
 # <a name="barcode-scanner"></a>Scanner de código de barras
 
@@ -27,7 +27,7 @@ Esta seção fornece diretrizes para criar aplicativos UWP (Plataforma Universal
 | [Configurar um scanner de código de barras](../devices-sensors/pos-barcodescanner-configure.md)  | Saiba como configurar um scanner de código de barras para o aplicativo desejado. |
 | [Usar um gatilho de software](../devices-sensors/pos-barcodescanner-software-trigger.md) | Saiba como controlar o ato de verificação de software. |
 | [Trabalhando com simbologias](pos-barcodescanner-symbologies.md) | Saiba como determinar os tipos de código de barras que oferecem suporte a um scanner de código de barras e controlar quais tipos são reconhecidos pelo scanner de código de barras do aplicativo. |
-| [Obter e compreender os dados de código de barras](pos-barcodescanner-scan-data.md) | Saiba como obter e interpretar os dados de código de barras que você digitalizar. |
+| [Obter e compreender os dados de código de barras](pos-barcodescanner-scan-data.md) | Saiba como obter e interpretar os dados de código de barras digitalização. |
 | [Scanner de código de barras da câmera](pos-camerabarcode.md) | Leia códigos de barras por meio de uma lente de câmera padrão de um aplicativo da Plataforma Universal do Windows. Requer a Atualização de abril de 2018 para o Windows 10 (build 17134 ou posterior). |
 |
  
