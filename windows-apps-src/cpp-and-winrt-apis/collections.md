@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: C++ c++ WinRT fornece funções e classes base que economizar muito tempo e esforço quando você deseja implementar e/ou passe coleções.
-title: Coleções com C++ c++ WinRT
+title: Coleções com C++/WinRT
 ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, coleção
 ms.localizationpriority: medium
 ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312310"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361115"
 ---
-# <a name="collections-with-cwinrt"></a>Coleções com C++ c++ WinRT
+# <a name="collections-with-cwinrt"></a>Coleções com C++/WinRT
 
 Internamente, uma coleção do Windows Runtime tem muitas das partes móveis complicados. Mas quando você deseja passar um objeto de coleção para uma função de tempo de execução do Windows, ou para implementar seus próprios tipos de coleção e propriedades de coleção, há classes base e funções [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para dar suporte a você. Esses recursos eliminam a complexidade do seu laboratório e economizar muita sobrecarga de tempo e esforço.
 
@@ -346,4 +346,4 @@ private:
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Categorias de valor e referências a eles](cpp-value-categories.md)
-* [Controles de itens XAML; vincular a uma coleção C++/WinRT](binding-collection.md)
+* [Controles de itens XAML; associar a uma coleção C++/WinRT](binding-collection.md)

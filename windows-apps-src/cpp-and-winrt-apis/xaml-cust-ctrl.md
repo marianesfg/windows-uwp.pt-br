@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis.
-title: Controles personalizados (modelos) de XAML com C++ c++ WinRT
+title: Controles personalizados (modelos) XAML com C++/WinRT
 ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle personalizado, modelo,
 ms.localizationpriority: medium
 ms.openlocfilehash: 539876113ce2aba563cfa65b13571cbf3998cc2d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313870"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351728"
 ---
-# <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles personalizados (modelos) de XAML com C++ c++ WinRT
+# <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles personalizados (modelos) XAML com C++/WinRT
 
 > [!IMPORTANT]
 > Para conceitos e termos que dão suporte ao entendimento de como consumir e criar classes de tempo de execução com essenciais [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulte [consumir APIs com C++ c++ WinRT](consume-apis.md) e [criar APIs com C++ c++ WinRT](author-apis.md).

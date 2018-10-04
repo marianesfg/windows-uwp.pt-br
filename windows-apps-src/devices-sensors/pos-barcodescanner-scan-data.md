@@ -1,6 +1,6 @@
 ---
 author: eliotcowley
-title: Obter e compreender os dados de código de barras
+title: Obter e entender os dados de código de barras
 description: Saiba como obter e interpretar os dados de código de barras digitalização.
 ms.author: elcowle
 ms.date: 08/29/2018
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318610"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352456"
 ---
-# <a name="obtain-and-understand-barcode-data"></a>Obter e compreender os dados de código de barras
+# <a name="obtain-and-understand-barcode-data"></a>Obter e entender os dados de código de barras
 
 Depois que você configurou o scanner de código de barras, você precisa obviamente uma maneira de entender os dados que você digitaliza. Quando você verifica um código de barras, o evento [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) é acionado. O [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) deve assinar esse evento. O evento **DataReceived** passa um objeto [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) , que você pode usar para acessar os dados de código de barras.
 

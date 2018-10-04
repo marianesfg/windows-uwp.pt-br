@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318302"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352120"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -201,4 +201,4 @@ Verifica o registro de tarefa em segundo plano durante a inicialização do apli
 * [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Disparar uma tarefa em segundo plano do aplicativo](trigger-background-task-from-app.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
+* [Usar um ativador de manutenção](use-a-maintenance-trigger.md)

@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-title: Práticas recomendadas de atividades de usuário
+title: Práticas recomendadas de atividades de usuários
 description: Este guia descreve as práticas recomendadas para criar e atualizar as atividades do usuário.
 keywords: atividade do usuário, atividades do usuário, linha do tempo, cortana retorma de onde você parou, cortana retoma de onde eu parei, project rome
 ms.author: pafarley
@@ -10,13 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b11151df981a4b5ce233458581d21e405be9844c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310442"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351784"
 ---
-# <a name="user-activities-best-practices"></a>Práticas recomendadas de atividades de usuário
+# <a name="user-activities-best-practices"></a>Práticas recomendadas de atividades de usuários
 
 Este guia descreve as práticas recomendadas para criar e atualizar as atividades do usuário. Para obter uma visão geral do recurso atividades do usuário no Windows, consulte [continuar atividade do usuário, mesmo entre dispositivos](https://docs.microsoft.com/windows/uwp/launch-resume/useractivities). Ou, consulte a [seção de atividades do usuário](https://docs.microsoft.com/windows/project-rome/user-activities/) do projeto Roma para as implementações de atividades em outras plataformas de desenvolvimento.
 

@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: Use este método na API de análise da Microsoft Store para obter dados de insights para seu aplicativo da área de trabalho.
-title: Obter dados de insights para seu aplicativo da área de trabalho
+title: Obter dados de insights do seu aplicativo da área de trabalho
 ms.author: mcleans
 ms.date: 07/31/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316900"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355121"
 ---
-# <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights para seu aplicativo da área de trabalho
+# <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights do seu aplicativo da área de trabalho
 
 Use este método na API de análise da Microsoft Store para obter insights dados relacionados à avaliação de integridade de um aplicativo da área de trabalho que você adicionou para o [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esses dados também estão disponíveis no [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicativos da área de trabalho no painel do Centro de desenvolvimento do Windows.
 

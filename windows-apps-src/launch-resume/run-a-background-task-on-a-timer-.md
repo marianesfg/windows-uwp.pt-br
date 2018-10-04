@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 25e3c76ae09ed6835f89f0d98c308f11c7a99624
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318088"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350722"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>Executar uma tarefa em segundo plano em um temporizador
 
@@ -149,4 +149,4 @@ Uma tarefa em segundo plano só será executado usando um **TimeTrigger** se voc
 * [Responder a eventos do sistema com tarefas em segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md)
 * [Atualizar um bloco dinâmico de uma tarefa em segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar um gatilho de manutenção](use-a-maintenance-trigger.md)
+* [Usar um ativador de manutenção](use-a-maintenance-trigger.md)

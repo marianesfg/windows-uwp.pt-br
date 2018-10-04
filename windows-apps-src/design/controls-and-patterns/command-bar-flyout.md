@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 Description: Command bar flyouts give users inline access to your app's most common tasks.
-title: Submenu de barra de comando
+title: Submenu da barra de comandos
 label: Command bar flyout
 template: detail.hbs
 ms.author: jimwalk
@@ -16,13 +16,13 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318939"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355108"
 ---
-# <a name="command-bar-flyout"></a>Submenu de barra de comando
+# <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
 O submenu de barra de comando permite que você fornecer aos usuários acesso fácil às tarefas comuns, mostrando comandos em uma barra de ferramentas flutuante relacionada a um elemento na sua tela de interface do usuário.
 

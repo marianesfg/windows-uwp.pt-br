@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: f0a657ada755b77abe8ffef6a38bfa1f9ece8fcd
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313598"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353393"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
@@ -49,20 +49,21 @@ Este JSON pode ser usado para remover todos os rótulos e pontos de um mapa.
     }
 ```
 
-Este tópico mostra as entradas JSON e as [propriedades](#properties) que você pode usar para personalizar a aparência dos seus mapas.
+Este tópico mostra as entradas JSON e as [propriedades](#properties) que você pode usar para personalizar a aparência dos seus mapas.  Essas propriedades também podem ser aplicadas aos elementos de mapa do usuário por meio da propriedade [MapStyleSheetEntry](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement.mapstylesheetentry) .
 
 <a id="entries" />
 
 ## <a name="entries"></a>Entradas
 Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da entrada.  Ele também mostra quais versões do Windows oferecem suporte a cada entrada e que ignorá-la.
 
-| Compilação | Nome de versão do Windows |
-|-------|----------------------|
-| 1506  | Atualização dos criadores      |
-| 1629  | Atualização dos criadores do segundo semestre |
-| 1713  | Atualização de abril de 2018    |
+| Version | Nome de versão do Windows |
+|---------|----------------------|
+|  1703   | Atualização dos criadores      |
+|  1709   | Atualização dos criadores do segundo semestre |
+|  1803   | Atualização de abril de 2018    |
+|  1809   | Atualização de outubro de 2018  |
 
-| Nome                         | Grupo de propriedades            | 1506 | 1629 | 1713 | Próxima | Descrição    |
+| Nome                         | Grupo de propriedades            | 1703 | 1709 | 1803 | 1809 | Descrição    |
 |------------------------------|---------------------------|------|------|------|------|----------------|
 | version                      | [Version](#version)       |  ✔   |  ✔   |  ✔   |  ✔   | A versão de folha de estilos que você deseja usar. |
 | settings                     | [Settings](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | As configurações que se aplicam à folha de estilos inteira. |
@@ -171,7 +172,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 ### <a name="settings-properties"></a>Propriedades de configurações
 
-| Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
 | atmosphereVisible            | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se o atmosfera aparece no controle 3D. |
 | buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   | Um sinalizador que indica se deseja ou não mostrar texturas em construções 3D simbólicas com texturas. |
@@ -193,7 +194,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 ### <a name="mapelement-properties"></a>Propriedades de MapElement
 
-| Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
 | backgroundScale              | Float   |  ✔   |  ✔   |  ✔   |  ✔   | Quantidade pela qual o elemento de fundo de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | fillColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor que é usada para polígonos de preenchimento, a tela de fundo de ícones de ponto e para o centro de linhas se elas tiverem se dividido. |
@@ -216,7 +217,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
 | borderOutlineColor           | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor secundária a linha de revestimento da borda de um polígono preenchido. |
 | borderStrokeColor            | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor da linha principal da borda de um polígono preenchido. |
@@ -229,7 +230,7 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
 | plano de fundo de forma             | Float   |      |      |      |  ✔️   | Forma a ser usada como o plano de fundo do ícone – substituindo qualquer forma que existe. |
 | stemAnchorRadiusScale        | Float   |      |      |  ✔   |  ✔   | Quantidade pela qual o ponto de ancoramento de um tronco do ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
@@ -244,6 +245,6 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapelement).
 
-| Propriedade                     | Tipo    | 1506 | 1629 | 1713 | Próxima | Descrição |
+| Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|------------|
 | renderAsSurface              | Bool    |      |      |  ✔   |  ✔   | Um sinalizador indica que um modelo 3D deve ser renderizado como uma construção, sem esmaecimento de profundidade em relação ao piso. |

@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317430"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355844"
 ---
 # <a name="directionality-and-gravity"></a>Direção e gravidade
 

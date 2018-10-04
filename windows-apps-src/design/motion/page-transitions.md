@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316332"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356781"
 ---
 # <a name="page-transitions"></a>Transições de página
 
@@ -57,11 +57,11 @@ A animação de análise detalhada é representada pela classe [**DrillInNavigat
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 ```
 
-## <a name="horizontal-slide"></a>Deslizar horizontal
+## <a name="horizontal-slide"></a>Slide horizontal
 
-Use slide horizontal para mostrar que as páginas irmãs aparecem próximos um do outro. O controle [NavigationView](../controls-and-patterns/navigationview.md) usa automaticamente essa animação para navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
+Use o slide horizontal para mostrar que páginas irmãs aparecem próximas umas das outras. O controle de [NavigationView](../controls-and-patterns/navigationview.md) automaticamente usa essa animação para navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
 
-A sensação desejada é que o usuário está navegando entre as páginas que estão próximos um do outro. 
+O clima desejado é que o usuário está navegando entre páginas que estejam próximas umas das outras. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319406"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357001"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -84,9 +84,9 @@ Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Cen
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
-| Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li><li>[Obter uso diário do aplicativo](get-app-usage-daily.md)</li><li>[Obter mensal uso do aplicativo](get-app-usage-monthly.md)</li></ul> |
+| Aquisições, conversões, instalações e uso |  <ul><li>[Obter aquisições de app](get-app-acquisitions.md)</li><li>[Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)</li><li>[Obter conversões de app por canal](get-app-conversions-by-channel.md)</li><li>[Obter aquisições de complemento](get-in-app-acquisitions.md)</li><li>[Obter aquisições de complemento de assinatura](get-subscription-acquisitions.md)</li><li>[Obter conversões de complemento por canal](get-add-on-conversions-by-channel.md)</li><li>[Obter as instalações do app](get-app-installs.md)</li><li>[Obter uso do app diariamente](get-app-usage-daily.md)</li><li>[Obter uso do app mensalmente](get-app-usage-monthly.md)</li></ul> |
 | Erros de app | <ul><li>[Obter dados de relatórios de erros](get-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md)</li><li>[Obter o rastreamento de pilha de um erro em seu aplicativo](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Insights | <ul><li>[Obter dados de insights para seu aplicativo](get-insights-data-for-your-app.md)</li></ul>  |
+| Insights | <ul><li>[Obter dados de insights do seu app](get-insights-data-for-your-app.md)</li></ul>  |
 | Classificações e opiniões | <ul><li>[Obter classificações de app](get-app-ratings.md)</li><li>[Obter avaliações de app](get-app-reviews.md)</li></ul> |
 | Anúncios no app e campanhas publicitárias | <ul><li>[Obter dados de desempenho de anúncios](get-ad-performance-data.md)</li><li>[Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -97,9 +97,9 @@ Os métodos de análise a seguir estão disponíveis para uso por contas de dese
 | Cenário       | Métodos      |
 |---------------|--------------------|
 | Instalações |  <ul><li>[Obter instalações de aplicativo da área de trabalho](get-desktop-app-installs.md)</li></ul> |
-| Blocos |  <ul><li>[Obter blocos de atualização para o seu aplicativo da área de trabalho](get-desktop-block-data.md)</li><li>[Obter detalhes de bloqueio de atualização de seu aplicativo da área de trabalho](get-desktop-block-data-details.md)</li></ul> |
+| Blocos |  <ul><li>[Obter bloqueios de upgrade para seu aplicativo da área de trabalho](get-desktop-block-data.md)</li><li>[Obter detalhes do bloqueio de upgrade para seu aplicativo da área de trabalho](get-desktop-block-data-details.md)</li></ul> |
 | Erros de aplicativo |  <ul><li>[Obter dados de relatório de erros do seu aplicativo da área de trabalho](get-desktop-application-error-reporting-data.md)</li><li>[Obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Insights | <ul><li>[Obter dados de insights para seu aplicativo da área de trabalho](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Insights | <ul><li>[Obter dados de insights do seu aplicativo da área de trabalho](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para serviços Xbox Live
 

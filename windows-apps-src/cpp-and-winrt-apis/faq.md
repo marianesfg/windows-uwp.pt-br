@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f1d2bdfe5ce88ed4e3f5f3e618fb7034f4eb0bb
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: e00f387c3dd78353158d93d3b4749345936396f5
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313880"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352191"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 Respostas para perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -47,11 +47,13 @@ Somente se a classe de tempo de execução for projetada para ser consumida fora
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>Por que é o vinculador apresenta o erro "LNK2019: símbolo externo não resolvido"?
 Se o símbolo não resolvido for uma API dos cabeçalhos de namespace do Windows da projeção do C++/WinRT (no namespace **winrt**), a declaração da API é adiada em um cabeçalho que você incluiu, mas sua definição está em um cabeçalho ainda não incluído. Inclua o cabeçalho nomeado para o namespace da API e compile-o novamente. Para obter mais informações, consulte [Cabeçalhos de projeção do C++/WinRT](consume-apis.md#cwinrt-projection-headers).
 
-Se o símbolo não resolvido for uma função livre do Windows Runtime, como [RoInitialize](https://msdn.microsoft.com/library/br224650), você precisará incluir explicitamente a biblioteca [WindowsApp.lib](/uwp/win32-and-com/win32-apis) em seu projeto. A projeção de C++/WinRT depende de algumas dessas funções (não membro) livres e pontos de entrada. Se você usar um dos modelos de projeto da [Extensão do Visual Studio (VSIX) do C++/WinRT](https://aka.ms/cppwinrt/vsix) para seu aplicativo, `WindowsApp.lib` é associado automaticamente para você. Caso contrário, você pode usar as configurações de associação do projeto para inclui-lo ou fazer isso no código-fonte.
+Se o símbolo não resolvido for uma função livre do Windows Runtime, como [RoInitialize](https://msdn.microsoft.com/library/br224650), em seguida, você precisará explicitamente vincular a biblioteca de lib [Windowsapp](/uwp/win32-and-com/win32-apis) em seu projeto. A projeção de C++/WinRT depende de algumas dessas funções (não membro) livres e pontos de entrada. Se você usar um dos modelos de projeto da [Extensão do Visual Studio (VSIX) do C++/WinRT](https://aka.ms/cppwinrt/vsix) para seu aplicativo, `WindowsApp.lib` é associado automaticamente para você. Caso contrário, você pode usar as configurações de associação do projeto para inclui-lo ou fazer isso no código-fonte.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
 ```
+
+É recomendável que você resolva quaisquer erros de vinculador que você pode vinculando **Windowsapp**. Mas, se você não precisa seu aplicativo para passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (isto é, consequentemente, não será possível que o aplicativo seja com êxito inserido na Microsoft Store), em seguida, você pode vincular uma biblioteca de link estático alternativa em vez disso. Por exemplo, se o erro de vinculador refere-se a **CoIncrementMTAUsage** (ou **WINRT_CoIncrementMTAUsage**), em seguida, você pode resolver que vinculando Ole32.lib se absolutamente necessário (por exemplo, se sua versão do **Windowsapp** não Exporte a função).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado a consumo geral pelos aplicativos de cliente do Windows Runtime), então, recomendamos que você também implemente **IClosable** para dar suporte ao consumo de sua classe de tempo de execução para idiomas que não têm finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close), ou ambos são chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.

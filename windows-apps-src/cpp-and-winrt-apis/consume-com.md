@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces.
-title: Consumir componentes COM C++ c++ WinRT
+title: Consumir componentes COM com C++/WinRT
 ms.author: stwhi
 ms.date: 07/23/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af5a8149faab3bece62e4da5d41138aaede16e7
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310698"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355207"
 ---
-# <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM C++ c++ WinRT
+# <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
 Você pode usar os recursos da [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) biblioteca de consumir componentes COM, como os gráficos 2D e 3D de alto desempenho as APIs do DirectX. C++ c++ /WinRT é a maneira mais simples de usar o DirectX sem comprometer o desempenho. Este tópico usa um exemplo de código Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. Você pode, obviamente, misturar programação COM e do Windows Runtime dentro do mesmo C + c++ WinRT projeto.
 

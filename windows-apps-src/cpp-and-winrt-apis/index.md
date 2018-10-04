@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315974"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352430"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -54,13 +54,13 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Processamento de erros com C++/WinRT](error-handling.md) | Este tópico aborda as estratégias para processar erros ao programar com C++/WinRT. |
 | [Manejar eventos usando delegados](handle-events.md) | Este tópico mostra como registrar e revogar delegados lidando com eventos usando C++/WinRT. |
 | [Criar eventos](author-events.md) | Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos. |
-| [Coleções com C++ c++ WinRT](collections.md) | C++ c++ WinRT fornece funções e classes base que economizar muito tempo e esforço quando você deseja implementar e/ou passe coleções. |
+| [Coleções com C++/WinRT](collections.md) | C++ c++ WinRT fornece funções e classes base que economizar muito tempo e esforço quando você deseja implementar e/ou passe coleções. |
 | [Simultaneidade e operações assíncronas](concurrency.md) | Este tópico mostra as maneiras nas quais você pode criar e consumir objetos assíncronos do Windows Runtime com C++/WinRT. |
 | [Controles XAML; vincular a uma propriedade C++/WinRT](binding-property.md) | Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Este tópico mostra como implementar e consumir uma propriedade observável e como associar um controle XAML a ela. |
 | [Controles de itens XAML; vincular a uma coleção C++/WinRT](binding-collection.md) | Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela. |
-| [Controles personalizados (modelos) de XAML com C++ c++ WinRT](xaml-cust-ctrl.md) | Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis. |
-| [Consumir componentes COM C++ c++ WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. |
-| [Criar componentes COM C++ c++ WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda a criar classes de tempo de execução do Windows. |
+| [Controles personalizados (modelos) XAML com C++/WinRT](xaml-cust-ctrl.md) | Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis. |
+| [Consumir componentes COM com C++/WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. |
+| [Criar componentes COM com C++/WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda a criar classes de tempo de execução do Windows. |
 | [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. |
 | [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT. |
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |

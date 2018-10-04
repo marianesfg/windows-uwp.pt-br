@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
+title: Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo
 description: Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo que é executada em seu processo de aplicativo em primeiro plano.
 ms.author: twhitney
 ms.date: 09/19/2018
@@ -11,13 +11,13 @@ keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311224"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350890"
 ---
-# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Portabilidade de uma tarefa em segundo plano fora do processo em uma tarefa em segundo plano no processo
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo
 
 A maneira mais simples de portar sua atividade de segundo plano fora do processo (OOP) atividade no processo é trazer seu código de método [ibackgroundtask. Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) dentro de seu aplicativo e iniciá-lo de [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). A técnica que está sendo descrita aqui não é sobre a criação de uma correção de uma tarefa de plano de fundo OOP em uma tarefa em segundo plano no processo; seu reescrever sobre (ou fazendo a portabilidade) uma versão OOP para uma versão em processo.
 

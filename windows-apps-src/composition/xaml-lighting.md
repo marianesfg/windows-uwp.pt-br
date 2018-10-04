@@ -1,6 +1,6 @@
 ---
 author: daneuber
-title: Iluminação de XAML
+title: Iluminação XAML
 description: Os objetos de luz são usados em conjunto com SceneLightingEffect para simular iluminação e refletividade dinâmicas.
 ms.author: jimwalk
 ms.date: 06/28/2018
@@ -15,13 +15,13 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: b4e3678e17e7545dfe9cb4049ace7ff864198156
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319468"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355568"
 ---
-# <a name="xaml-lighting"></a>Iluminação de XAML
+# <a name="xaml-lighting"></a>Iluminação XAML
 
 Os objetos [**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) são usados em conjunto com [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) para simular iluminação e refletividade dinâmicas.
 

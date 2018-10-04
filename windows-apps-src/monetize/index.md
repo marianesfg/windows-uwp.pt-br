@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da loja
 ms.localizationpriority: medium
-ms.openlocfilehash: 58993f3a62f6fd85589aeac931e3abbb42a6cda6
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689042"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352505"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Loja
 
@@ -36,7 +36,7 @@ Para saber os detalhes de tarifas cobradas pela Microsoft Store e como receber o
 | [Registre eventos personalizados para o Centro de Desenvolvimento](log-custom-events-for-dev-center.md)  | Registre eventos personalizados do seu aplicativo UWP e revise os eventos no [Relatório de uso](../publish/usage-report.md) no painel do Centro de Desenvolvimento. Esse recurso requer o Microsoft Store Services SDK. |
 | [Solicitar classificações e opiniões](request-ratings-and-reviews.md) |  Incentivar os clientes a classificar ou analisar seu app mostrando programaticamente uma classificação e uma interface do usuário de análise.  |
 | [Serviços da Microsoft Store](using-windows-store-services.md)    |  Saiba como usar APIs RESTful para automatizar envios para a Loja, acessar dados de análise dos aplicativos e automatizar outras tarefas relacionadas à Loja.    |
-| [Criar um aplicativo de experiência de demonstração de revenda (RDX)](retail-demo-experience.md)        |  Saiba como criar um aplicativo de experiência de demonstração de revenda que possa ser instalado em computadores e dispositivos de demonstração móveis em uma loja de varejo.  |
+| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que os clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
