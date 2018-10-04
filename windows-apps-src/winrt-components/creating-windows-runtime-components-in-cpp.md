@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313786"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358375"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Criando componentes do Windows Runtime em C++/CX
 > [!NOTE]
@@ -561,4 +561,4 @@ Caso o código JavaScript aparentemente não reconheça as propriedades pública
 Se você remover C++ c++ /CX Windows Runtime projeto de componente de uma solução, você deve remover manualmente a referência de projeto do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Passo a passo: Criando um componente de tempo de execução do Windows básico em C++ c++ /CX e chamando-o em JavaScript ou c#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
+* [Passo a passo: Como criar um componente do Tempo de Execução do Windows básico em C++/CX e chamá-lo do JavaScript ou C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)

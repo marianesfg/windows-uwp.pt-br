@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, notícias, o que do, o novo
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cc28092020639d108ec35898ad1d6bddcd055f5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: bc6be28e112dfdd14b3585bd88ba066fbeae382d
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317456"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357768"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novidades no C++ c++ WinRT
 
@@ -45,6 +45,12 @@ Outras alterações.
 - Aprimorada a geração de código: várias melhorias para reduzir o tamanho do código, melhorar inlining e otimizar o armazenamento em cache de fábrica.
 - Removido recursão desnecessária. Quando a linha de comando se refere a uma pasta, em vez de em um determinado `.winmd`, o `cppwinrt.exe` ferramenta não pesquisa recursivamente para `.winmd` arquivos. O `cppwinrt.exe` ferramenta agora também manipula duplicatas mais inteligente, tornando mais resistente a erro de usuário e a mal formado `.winmd` arquivos.
 - Proteção avançados ponteiros inteligentes. Anteriormente, os revokers evento Falha ao revogar quando mover atribuído um novo valor. Isso ajuda a descobrir um problema em que classes de ponteiro inteligente não foram manipular confiavelmente Self atribuição; enraizada no [**modelo de struct WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **WinRT:: com_ptr** foi corrigido e revokers o evento fixados para manipular mover semântica corretamente para que eles revogar após a atribuição.
+
+> [!NOTE]
+> Com a versão 1.0.181002.2 (ou posterior) do [C++ c++ WinRT Visual Studio Extension (VSIX)](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix) instalado, criando um novo C + c++ WinRT projeto automaticamente instala o [pacote Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para o projeto. O pacote Microsoft.Windows.CppWinRT NuGet fornece melhor C + c++ suporte de compilação do projeto WinRT, tornando seu projeto portátil entre uma máquina de desenvolvimento e um agente de compilação (no qual somente o pacote NuGet e não o VSIX, está instalado).
+>
+> Para um projeto existente&mdash;depois de instalar a versão 1.0.181002.2 (ou posterior) do VSIX&mdash;, recomendamos que você abra o projeto no Visual Studio, clique **no projeto** \> **Manage NuGet Packages...**  \>  **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e, em seguida, clique em **instalar** para instalar o pacote para o projeto.
+
 
 ## <a name="isolation-from-windows-sdk-header-files"></a>Isolamento de arquivos de cabeçalho do SDK do Windows
 

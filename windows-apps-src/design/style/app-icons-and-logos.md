@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 Description: How to create app icons/logos that represent your app in the Start menu, app tiles, the taskbar, the Microsoft Store, and more.
-title: Logotipos e ícones de aplicativos
+title: Ícones e logotipos de apps
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 04/17/2018
@@ -13,13 +13,13 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312424"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359790"
 ---
-# <a name="app-icons-and-logos"></a>Logotipos e ícones de aplicativos 
+# <a name="app-icons-and-logos"></a>Ícones e logotipos de apps 
 
 Todo aplicativo tem um ícone/logotipo que representa, e esse ícone é exibido em vários locais no shell do Windows: 
 

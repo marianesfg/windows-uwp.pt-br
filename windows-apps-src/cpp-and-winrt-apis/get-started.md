@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto, de partida
 ms.localizationpriority: medium
 ms.openlocfilehash: b5954aa8236a9abeee6e5c74a200f77fcccf97e3
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318134"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359559"
 ---
 # <a name="get-started-with-cwinrt"></a>Introdução ao C++/WinRT
 Para você se familiarizar com o uso de [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), este tópico explica como um exemplo de código simples.

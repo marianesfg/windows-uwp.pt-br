@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
 ms.openlocfilehash: b3c9994d2738dbcd283ac7458fdde6979d43ee2f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311196"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360100"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>Obter detalhes de um erro em seu aplicativo
 
@@ -144,6 +144,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 * [Relatório de integridade](../publish/health-report.md)
 * [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obter dados de relatório de erros](get-error-reporting-data.md)
+* [Obter dados de relatórios de erros](get-error-reporting-data.md)
 * [Obter o rastreamento de pilha de um erro em seu app](get-the-stack-trace-for-an-error-in-your-app.md)
 * [Baixar o arquivo CAB de um erro em seu aplicativo](download-the-cab-file-for-an-error-in-your-app.md)

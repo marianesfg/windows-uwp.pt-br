@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316800"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359908"
 ---
-# <a name="windows-desktop-bridge-app-tests"></a>Testes do app de Ponte de Desktop do Windows
+# <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 
 [Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são convertidos em aplicativos Universal Windows Platform (UWP) usando a [Ponte da área de trabalho](https://developer.microsoft.com/en-us/windows/bridges/desktop)de aplicativos da área de trabalho do Windows. Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 

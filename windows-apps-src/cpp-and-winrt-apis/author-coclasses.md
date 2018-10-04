@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda a criar classes de tempo de execução do Windows.
-title: Criar componentes COM C++ c++ WinRT
+title: Criar componentes COM com C++/WinRT
 ms.author: stwhi
 ms.date: 09/06/2018
 ms.topic: article
@@ -9,14 +9,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, autor, COM, componente
 ms.localizationpriority: medium
-ms.openlocfilehash: 2886d2b42d4c192a3f6924a41a4c4dd1483db471
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313826"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358414"
 ---
-# <a name="author-com-components-with-cwinrt"></a>Criar componentes COM C++ c++ WinRT
+# <a name="author-com-components-with-cwinrt"></a>Criar componentes COM com C++/WinRT
 
 [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) podem ajudar você a criar clássico modelo COM (Component Object) componentes (ou coclasses), assim como ele ajuda a criar classes de tempo de execução do Windows. Aqui está uma ilustração simples, você pode testar se você colar o código para o `pch.h` e `main.cpp` de um novo **aplicativo de Console do Windows (C++ c++ WinRT)** projeto.
 
@@ -415,9 +415,9 @@ Criar o aplicativo e, em seguida, executá-lo a pelo menos uma vez como administ
 
 ## <a name="in-process-com-server"></a>Servidor COM no processo
 
-O aplicativo de exemplo *ToastAndCallback* acima funciona como um servidor COM local (ou fora do processo). Isso é indicado pela chave de registro do Windows [LocalServer32](/windows/desktop/com/localserver32) que você use registrá-lo. Um servidor COM local hospeda seu coclass(es) dentro de um binário executável (um `.exe`).
+O aplicativo de exemplo *ToastAndCallback* acima funciona como um servidor COM local (ou fora do processo). Isso é indicado pela chave do registro do Windows [LocalServer32](/windows/desktop/com/localserver32) que você use para registrar o CLSID do seu coclass. Um servidor COM local hospeda seu coclass(es) dentro de um binário executável (um `.exe`).
 
-Como alternativa (e possivelmente mais provável), você pode optar por hospedar seu coclass(es) dentro de uma biblioteca de vínculo dinâmico (um `.dll`). Um servidor COM na forma de uma DLL é conhecido como um servidor de COM no processo, e ele é indicado pelo que está sendo registrado usando a chave do registro do Windows [InprocServer32](/windows/desktop/com/inprocserver32) .
+Como alternativa (e possivelmente mais provável), você pode optar por hospedar seu coclass(es) dentro de uma biblioteca de vínculo dinâmico (um `.dll`). Um servidor COM na forma de uma DLL é conhecido como um servidor de COM no processo, e ele é indicado pelo CLSIDs que está sendo registrados usando a chave do registro do Windows [InprocServer32](/windows/desktop/com/inprocserver32) .
 
 ### <a name="create-a-dynamic-link-library-dll-project"></a>Criar um projeto de biblioteca de vínculo dinâmico (DLL)
 
@@ -556,5 +556,5 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar APIs com C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes COM C++ c++ WinRT](consume-com.md)
+* [Consumir componentes COM com C++/WinRT](consume-com.md)
 * [Enviar uma notificação do sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

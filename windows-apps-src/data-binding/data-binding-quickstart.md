@@ -14,17 +14,14 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: ff104bfb5114cd51eb04d75af3c096f47a7d286d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: c088aa6a2a8b1922eb93ec758dcda8c9a5ec8965
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318068"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357658"
 ---
 # <a name="data-binding-overview"></a>Visão geral da associação de dados
-
-> [!NOTE]
-> **Algumas informações estão relacionadas a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.**
 
 Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo UWP (Plataforma Universal do Windows). Este tópico também mostra como controlar a renderização de itens, implementar uma exibição de detalhes com base em uma seleção e converter dados para exibição. Para saber mais detalhes, consulte [Vinculação de dados em detalhes](data-binding-in-depth.md).
 
@@ -505,7 +502,7 @@ Há duas maneiras de lidar com isso. Você pode associar o modo de exibição de
 > Até agora neste tópico só usamos a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), mas ambas as técnicas mostradas abaixo requerem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mais flexível (mas menos eficiente).
 
 > [!IMPORTANT]
-> Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) (mencionado abaixo) está disponível somente se você instalou o [Windows 10 SDK versão prévia 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para ser capaz de usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
+> Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) (mencionado abaixo) está disponível se você instalou o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809), ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para ser capaz de usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
 
 Se você estiver usando C++ c++ extensões de componente WinRT ou Visual C++ (C++ c++ /CX) em seguida, como vamos usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) para a classe de **gravação** .
 

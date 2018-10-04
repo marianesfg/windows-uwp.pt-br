@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319458"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357554"
 ---
 # <a name="usage-report"></a>Relatório de uso
 

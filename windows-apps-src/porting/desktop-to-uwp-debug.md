@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315162"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358920"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
