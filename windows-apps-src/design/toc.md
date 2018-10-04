@@ -38,7 +38,8 @@
 ## [Caixa de sugestão automática](controls-and-patterns/auto-suggest-box.md)
 ## [Botões](controls-and-patterns/buttons.md)
 ## [Caixa de seleção](controls-and-patterns/checkbox.md)
-## [Seletor de cores](controls-and-patterns/color-picker.md)
+## [Seletor de cor](controls-and-patterns/color-picker.md)
+## [Submenu da barra de comandos](controls-and-patterns/command-bar-flyout.md)
 ## [Cartão de visita](controls-and-patterns/contact-card.md)
 ## [Data e hora](controls-and-patterns/date-and-time.md)
 ### [Seletor de data do calendário](controls-and-patterns/calendar-date-picker.md)
@@ -56,6 +57,7 @@
 ## [Imagens e pincéis de imagem](controls-and-patterns/images-imagebrushes.md)
 ## [Controles de escrita à tinta](controls-and-patterns/inking-controls.md)
 ## [Listas](controls-and-patterns/lists.md)
+### [Caixa de combinação](controls-and-patterns/combo-box.md)
 ### [Exibição de lista e exibição de grade](controls-and-patterns/listview-and-gridview.md)
 ### [Contêineres e modelos de itens](controls-and-patterns/item-containers-templates.md)
 ### [Modelos de item para visualização de lista](controls-and-patterns/item-templates-listview.md)
@@ -100,6 +102,7 @@
 ## [Tipografia](style/typography.md)
 ## Ícones
 ### [Visão geral](style/icons.md)
+### [Ícones e logotipos de apps](style/app-icons-and-logos.md)
 ### [Ícones Segoe MDL2](style/segoe-ui-symbol-font.md)
 ## [Acrílico](style/acrylic.md)
 ## [Realce de revelação](style/reveal.md)
@@ -126,7 +129,6 @@
 
 # Shell
 ## [Blocos](shell/tiles-and-notifications/creating-tiles.md)
-### [Diretrizes de ativos de blocos e ícones](shell/tiles-and-notifications/app-assets.md)
 ### [Blocos secundários](shell/tiles-and-notifications/secondary-tiles.md)
 #### [Diretrizes](shell/tiles-and-notifications/secondary-tiles-guidance.md)
 #### [Fixar blocos secundários](shell/tiles-and-notifications/secondary-tiles-pinning.md)
@@ -235,7 +237,7 @@
 ### [Criando software inclusivo](accessibility/designing-inclusive-software.md)
 ### [Desenvolvendo aplicativos inclusivos do Windows](accessibility/developing-inclusive-windows-apps.md)
 ### [Testes de acessibilidade](accessibility/accessibility-testing.md)
-### [Acessibilidade na Loja](accessibility/accessibility-in-the-store.md)
+### [Acessibilidade na Store](accessibility/accessibility-in-the-store.md)
 ### [Lista de verificação de acessibilidade](accessibility/accessibility-checklist.md)
 ### [Expor informações básicas de acessibilidade](accessibility/basic-accessibility-information.md)
 ### [Acessibilidade do teclado](accessibility/keyboard-accessibility.md)
