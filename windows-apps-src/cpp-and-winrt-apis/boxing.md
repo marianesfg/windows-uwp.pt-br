@@ -9,19 +9,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, boxing, escalar, valor
 ms.localizationpriority: medium
-ms.openlocfilehash: 9548776fe1be06c9b622870c4d3331b04a943789
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 7496725d84339de5e318ee6c00aebefb204af751
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935784"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4320253"
 ---
-# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Valores de conversão de boxing e unboxing para IInspectable com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 
-A [**interface IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821) é a interface raiz de cada classe de tempo de execução no Windows Runtime (WinRT). Isso é uma ideia análoga [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) estando na raiz de cada interface e classe COM; e **System.Object** estando na raiz de cada classe [Sistema de tipo comum](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
+# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT
+ 
+A [**interface IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) é a interface raiz de cada classe de tempo de execução no Windows Runtime (WinRT). Isso é uma ideia análoga [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) estando na raiz de cada interface e classe COM; e **System.Object** estando na raiz de cada classe [Sistema de tipo comum](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
 
 Em outras palavras, uma função que espera **IInspectable** pode ser passada como uma instância de qualquer classe de tempo de execução. Mas você não pode passar diretamente um valor escalar, como um valor numérico ou de texto, para uma função. Em vez disso, um valor escalar precisa ser encapsulado dentro de um objeto de classe de referência. Esse processo de encapsulamento é conhecido como *conversão* do valor.
 
-C++/WinRT fornece a função [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value), que leva um valor escalar e retorna o valor contido em um **IInspectable**. Para deixar um **IInspectable** de volta ao valor escalar, há as funções [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) e [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
+[C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) fornece a função [**WinRT:: box_value**](/uwp/cpp-ref-for-winrt/box-value) , que leva um valor escalar e retorna o valor contido em um **IInspectable**. Para deixar um **IInspectable** de volta ao valor escalar, há as funções [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) e [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
 
 ## <a name="examples-of-boxing-a-value"></a>Exemplos de contensão de um valor
 A função de acessador [**LaunchActivatedEventArgs::Arguments**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.Arguments) retorna um [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), que é um valor escalar. Podemos conter o valor **hstring** e passá-lo para uma função que espera **IInspectable** da seguinte maneira.
@@ -66,7 +67,7 @@ WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType:
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Interface IInspectable](https://msdn.microsoft.com/library/windows/desktop/br205821)
+* [Interface IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [Modelo de função winrt::box_value](/uwp/cpp-ref-for-winrt/box-value)
 * [Struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
 * [Modelo de função winrt::unbox_value](/uwp/cpp-ref-for-winrt/unbox-value)

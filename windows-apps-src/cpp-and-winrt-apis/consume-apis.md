@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 136abd5e3312b7a387ccc3b7c993d4e70d8ef0d4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4258981"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4320420"
 ---
-# <a name="consume-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Consumir APIs com [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Este tópico mostra como consumir as APIs do C++/WinRT, sejam elas parte do Windows implementadas por um fornecedor de componentes de terceiros, ou implementada por você mesmo.
+# <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
+
+Este tópico mostra como consumir [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, sejam elas parte do Windows implementadas por um fornecedor de componentes de terceiros ou implementada por conta própria.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Se a API estiver em um namespace do Windows
 Esse é o caso mais comum em que você consumirá uma API do Windows Runtime. Para cada tipo em um namespace do Windows definido nos metadados, C ++/WinRT define um equivalente C++ amigável (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt** usando a sintaxe do C++. Por exemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) é projetado no C++/WinRT como **winrt::Windows::Foundation::Uri**.
