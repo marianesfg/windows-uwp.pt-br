@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 559bbbc3421151a9055b89c94bc1293a950ccb5b
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351447"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388817"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 

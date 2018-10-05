@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da Plataforma Universal do Windows (UWP).
-title: Corporativo
+title: Enterprise
 author: awkoren
 ms.author: alkoren
 ms.date: 08/30/2018
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351180"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388035"
 ---
-# <a name="enterprise"></a>Corporativo
+# <a name="enterprise"></a>Enterprise
 
 Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da Plataforma Universal do Windows (UWP).
 
@@ -120,7 +120,7 @@ Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
 
 <a id="distribution" />
 
-## <a name="security"></a>Segurança
+## <a name="security"></a>Security
 
 O Windows 10 oferece um pacote de recursos de segurança para que os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e todos os dados de negócios armazenados nos dispositivos. Uma novidade no Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implementar com acesso por PIN ou pelo Windows Hello, que fornece segurança de nível empresarial e permite o reconhecimento por impressão digital, rosto e íris.
 
@@ -180,7 +180,7 @@ Você tem opções para distribuir aplicativos aos usuários da sua organizaçã
 | Tópico | Descrição |
 |-------|-------------|
 | [Distribuir os aplicativos LOB para empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Você pode publicar aplicativos de linha de negócios diretamente para empresas para aquisição de grande volume pela Microsoft Store para empresas, sem tornar os aplicativos amplamente disponíveis ao público. |
-| [Fazer o sideload de aplicativos](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
+| [Fazer sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
 | [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publicar e gerenciar todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
 
 ## <a name="enterprise-uwp-samples"></a>Exemplos de UWP empresariais
