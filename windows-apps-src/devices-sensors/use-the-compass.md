@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 069f13926fda125ebb383f16bf96eab333a28523
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f2bddb9ae3adf8ef6cfdf1b6c078db5eb026c93d
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958651"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4420295"
 ---
 # <a name="use-the-compass"></a>Usar a bússola
 
@@ -28,8 +28,6 @@ ms.locfileid: "958651"
 **Exemplo**
 
 -   Para obter uma implementação completa, consulte o [exemplo de bússola](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Saiba como usar a bússola para determinar a direção atual.
 

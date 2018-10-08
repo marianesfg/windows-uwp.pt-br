@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais, servidor Web do Azure
 ms.localizationpriority: medium
 ms.openlocfilehash: b98ca6316f733210dbdbc5201178b3a89a2b5982
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392355"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4431240"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
 

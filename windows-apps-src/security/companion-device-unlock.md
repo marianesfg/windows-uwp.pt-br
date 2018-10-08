@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, segurança
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
 ms.openlocfilehash: ac2e29d5219809058edee2d7a92c2e2475d9752e
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387242"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4421278"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueio do Windows com dispositivos complementares (IoT) do Windows Hello
 
