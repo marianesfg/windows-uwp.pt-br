@@ -10,16 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fdc9073da5db0607f57b52ce9d9f3be1c0f2959
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 2c69edc018ae01beba50b93b7dd9f4125544a001
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394397"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429059"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Criar um serviço de logon do Windows Hello
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não fornece nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Esta é a Parte 2 de um guia passo a passo completo sobre como usar o Windows Hello como uma alternativa para sistemas tradicionais de autenticação de nome de usuário e senha em apps UWP (Plataforma Universal do Windows) do Windows 10. Este artigo continua de onde a Parte 1, [Aplicativo de logon do Windows Hello](microsoft-passport-login.md), parou e amplia a funcionalidade para demonstrar como você pode integrar o Windows Hello ao seu app atual.
 

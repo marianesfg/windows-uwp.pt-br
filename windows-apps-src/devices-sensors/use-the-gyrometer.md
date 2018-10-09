@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42b0d2ccb2eb00c9b4ca1e69d15ce12ca08d9f89
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 25be2cfab15378f14aed61dcaae1e7e85159f36e
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958681"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423230"
 ---
 # <a name="use-the-gyrometer"></a>Usar o girômetro
 
@@ -28,8 +28,6 @@ ms.locfileid: "958681"
 **Exemplo**
 
 -   Para obter uma implementação completa, consulte o [exemplo de girômetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).
-
-\[Algumas informações dizem respeito a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não dá nenhuma garantia, expressa ou implícita, com relação às informações fornecidas aqui.\]
 
 Saiba como usar o girômetro para detectar mudanças no movimento do usuário.
 
