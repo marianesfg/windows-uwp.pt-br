@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426053"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4463632"
 ---
 # <a name="get-monthly-app-usage"></a>Obter uso do app mensalmente
 
@@ -60,7 +60,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de dados mensal de uso de aplicativo. Substitua o valor de *applicationId* pela ID da Store de seu app.
+O exemplo a seguir demonstra uma solicitação de obtenção de dados mensal de uso de aplicativo. Substitua o valor de *applicationId* pela ID da Loja do seu app.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagemonthly?applicationId=XXXXXXXXXXXX&startDate=2018-06-01&endDate=2018-07-01 HTTP/1.1  
@@ -90,7 +90,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationName           | string  | O nome de exibição do app.                                                                |
 | market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou seu aplicativo.                   |
 | packageVersion            | string  | A versão do pacote em que ocorreu o uso.                                            |
-| deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                                           |
+| deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                                           |
 | subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                                              |
 | monthlySessionCount       | comprimento    | O número de sessões de usuário durante o mês.                                              |
 | engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando o aplicativo medido por um período distinto, iniciar quando o aplicativo for iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                               |

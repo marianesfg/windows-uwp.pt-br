@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, coleção
 ms.localizationpriority: medium
 ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4416606"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4466486"
 ---
 # <a name="collections-with-cwinrt"></a>Coleções com C++/WinRT
 
@@ -329,7 +329,7 @@ private:
 };
 ```
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [Propriedade ItemsControl](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
 * [Interface de IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)
 * [Interface de IVector](/uwp/api/windows.foundation.collections.ivector_t_)

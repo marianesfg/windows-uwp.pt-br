@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, tipos de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: f9763e7f69b143dffe8fea611f25ae75284929cb
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4419309"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470085"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de dados C++ padrão e C++/WinRT
 
@@ -156,7 +156,7 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 ## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>Rotinas concomitantes de C++ com APIs assíncronas do Windows Runtime
 Você pode continuar a usar a [Biblioteca de padrões paralelos (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl) ao chamar APIs assíncronas do Windows Runtime. No entanto, em muitos casos, rotinas concomitantes de C++ fornecem um idioma eficiente e mais facilmente codificado para interagir com objetos assíncronos. Para obter mais informações e exemplos de código, consulte [simultaneidade e operações assíncronas com C++ c++ WinRT](concurrency.md).
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [IVector&lt;T&gt; interface](/uwp/api/windows.foundation.collections.ivector_t_)
 * [Modelo de struct winrt::array_view](/uwp/cpp-ref-for-winrt/array-view)
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: c64b4a23e3b63c939d192e828e890a9ceb92e5ab
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426461"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4465420"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manejar eventos usando delegados em C++/WinRT
 
@@ -234,7 +234,7 @@ winrt::hstring f(ListView listview)
 
 Se você manipula um evento com função de membro de um objeto ou de dentro de uma função lambda dentro da função de membro de um objeto, em seguida, você precisa pensar sobre os tempos de vida relativos do destinatário do evento (o objeto manipulando o evento) e a origem do evento (o objeto acionamento do evento). Para obter mais informações e exemplos de código, consulte [referências fortes e fracas no C++ c++ WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [struct de marcador WinRT:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [Função winrt::implements::get_weak](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [Função winrt::implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)

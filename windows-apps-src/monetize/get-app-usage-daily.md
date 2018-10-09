@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426011"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4467941"
 ---
 # <a name="get-daily-app-usage"></a>Obter uso do app diariamente
 
@@ -60,7 +60,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de dados de uso diário do aplicativo. Substitua o valor de *applicationId* pela ID da Store de seu app.
+O exemplo a seguir demonstra uma solicitação de obtenção de dados de uso diário do aplicativo. Substitua o valor de *applicationId* pela ID da Loja do seu app.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagedaily?applicationId=XXXXXXXXXXXX&startDate=2018-08-10&endDate=2018-08-14 HTTP/1.1
@@ -89,7 +89,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | date                      | string  | A primeira data no intervalo de datas para os dados de uso. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas.        |
 | applicationId             | string  | A ID da loja do aplicativo para o qual você está recuperando dados de uso.          |
 | applicationName           | string  | O nome de exibição do app.                                              |
-| deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**Computador**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                         |
+| deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo em que ocorreu o uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                         |
 | packageVersion            | string  | A versão do pacote em que ocorreu o uso.                          |
 | market                    | string  | O código de país ISO 3166 do mercado em que o cliente usou seu aplicativo. |
 | subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                            |

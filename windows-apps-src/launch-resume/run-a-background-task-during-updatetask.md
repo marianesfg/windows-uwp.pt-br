@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, atualização, tarefa em segundo plano, updatetask, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: fcba2cb736f86cebc6d2664e2ec3b557d47c86d7
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426877"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4464218"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Executar uma tarefa em segundo plano quando o aplicativo UWP é atualizado
 
@@ -97,6 +97,6 @@ Quando a tarefa em segundo plano for concluída, você pode iniciar o aplicativo
 > [!NOTE]
 > Usuários do Visual Studio 2015: as etapas acima se aplicam ao Visual Studio 2017. Se você estiver usando o Visual Studio 2015, você pode usar as mesmas técnicas gatilho e teste o UpdateTask, exceto o Visual Studio não será anexado a ele. Um procedimento alternativo no VS 2015 é um [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) que define o UpdateTask como seu ponto de entrada de instalação e acionar a execução diretamente do aplicativo em primeiro plano.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Criar e registrar uma tarefa em segundo plano fora do processo](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

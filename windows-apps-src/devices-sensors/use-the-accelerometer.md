@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4428877"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468725"
 ---
 # <a name="use-the-accelerometer"></a>Usar o acelerômetro
 
 
-**APIs importantes**
+**APIs Importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Acelerômetro**](https://msdn.microsoft.com/library/windows/apps/BR225687)
