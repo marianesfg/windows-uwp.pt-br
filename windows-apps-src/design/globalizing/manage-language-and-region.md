@@ -13,7 +13,7 @@ keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 9431e1572f0b0790347a59bf76b4f4a4e672ec03
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1690882"

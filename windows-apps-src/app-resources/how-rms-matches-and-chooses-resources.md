@@ -12,7 +12,7 @@ keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1690422"

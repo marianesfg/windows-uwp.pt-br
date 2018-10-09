@@ -12,7 +12,7 @@ keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 601cdd696290a1b22d7ed38d968a32db53b78ea1
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1691405"

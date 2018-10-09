@@ -12,7 +12,7 @@ keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
 ms.openlocfilehash: 41966827b02f95b8c34b4c13158c542e04b0c09f
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1690222"

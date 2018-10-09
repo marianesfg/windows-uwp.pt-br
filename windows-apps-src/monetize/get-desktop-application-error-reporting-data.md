@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, aplicativo da área de trabalho
 ms.localizationpriority: medium
 ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4414949"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4462181"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obter dados de relatório de erros do seu aplicativo da área de trabalho
 
@@ -104,7 +104,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.   |
 | deviceType      | cadeia  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo no qual ocorreu o erro:<p/><ul><li><strong>Computador</strong></li><li><strong>Servidor</strong></li><li><strong>Tablet</strong></li><li><strong>Desconhecido</strong></li></ul>    |
 | applicationVersion     | string  |   A versão do executável do aplicativo em que ocorreu o erro.    |
-| eventCount      | number | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
+| eventCount      | número | O número de eventos que são atribuídos a esse erro para o nível de agregação especificado.      |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

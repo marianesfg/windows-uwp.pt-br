@@ -12,7 +12,7 @@ keywords: windows 10, uwp, anúncios, publicidade, AdControl, controle de anúnc
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c6b924072c9a55bf0610883252b511f612dff1
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1690132"

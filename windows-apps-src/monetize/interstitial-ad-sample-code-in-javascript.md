@@ -12,7 +12,7 @@ keywords: windows 10, uwp, anúncios, publicidade, intersticial, javascript, có
 ms.localizationpriority: medium
 ms.openlocfilehash: f0cd50a8d3a08053f04dd0e6e8afbfafc8ef34dd
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1690342"

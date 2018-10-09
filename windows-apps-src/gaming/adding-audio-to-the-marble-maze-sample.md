@@ -12,7 +12,7 @@ keywords: windows 10, uwp, áudio, jogos, amostra
 ms.localizationpriority: medium
 ms.openlocfilehash: 4534675395f415ccd742dff646bc6c498aa7faa6
 ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/03/2018
 ms.locfileid: "1700902"

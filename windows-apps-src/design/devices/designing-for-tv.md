@@ -19,7 +19,7 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c9751ef316dbec7334fc12242d71dd58ae2cb262
 ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/03/2018
 ms.locfileid: "1700962"

@@ -12,7 +12,7 @@ keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, soluç�
 ms.localizationpriority: medium
 ms.openlocfilehash: aaf2db68df9de3f397a0cbc677e18f4ed544cf4b
 ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/30/2018
 ms.locfileid: "1817527"
