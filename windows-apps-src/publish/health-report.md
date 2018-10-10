@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, integridade, falhas, eventos sem resposta, integridade de aplicativo, dados de integridade, rastreamento de pilha, arquivo cab, falha, falhas, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467330"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502303"
 ---
 # <a name="health-report"></a>Relatório de integridade
 
@@ -49,7 +49,7 @@ O gráfico **Ocorrências de falhas** mostra a quantidade de falhas e eventos di
 Quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="failure-hits-by-market"></a>Ocorrências de falha por mercado
 
@@ -76,16 +76,16 @@ Para exibir o relatório **Detalhes da falha** de uma falha específica, selecio
 > [!TIP]
 > Arquivos CAB estarão disponíveis somente quando a falha ocorrer em um computador usando uma compilação do Windows Insider, portanto, nem todas as falhas incluem a opção de baixar o CAB. Para mostrar apenas as falhas que têm arquivos CAB, selecione **falhas com downloads** no filtro de seção. Você também pode clicar no cabeçalho **Links** o **log de falhas** para classificar os resultados para que as falhas que incluem arquivos CAB apareçam na parte superior da lista.
 
-Na página de **detalhes da falha** , você também verá o gráfico de **prevalência de pilha** , que mostra a parte superior de pilhas que contribuíram para a falha, ordenados por percentual e o gráfico de **configuração do dispositivo (30d)** , que fornece detalhes sobre o configuração dos dispositivos que ocorreu a falha. 
+Na página de **detalhes da falha** , você também verá o gráfico de **prevalência de pilha** , que mostra o topo pilhas que contribuíram para a falha, ordenados por percentual e o gráfico de **configuração do dispositivo (30d)** , que fornece detalhes sobre o configuração dos dispositivos que ocorreu a falha. 
 
 
 ## <a name="crash-free-sessions-and-devices-30d"></a>Sessões livre de falhas e dispositivos (30d)
 
-O gráfico de **dispositivos e sessões livre de pane** mostra a porcentagem de dispositivos ou sessões de usuário que não teve uma falha nos últimos 30 dias. Essa informação ajuda você a entender a amplitude seus falhas estão afetando seus usuários. Por exemplo, um aplicativo poderia ter 10.000 falhas em um dia. Se 90% dos dispositivos forem afetados, em seguida, você seria provavelmente classificar que como crítica e agir para corrigi-lo imediatamente. No entanto, se que representa apenas 5% dos dispositivos usando seu aplicativo, a prioridade pode ser menor.
+O gráfico de **dispositivos e sessões livre de pane** mostra a porcentagem de dispositivos ou sessões de usuário que não tenham uma falha nos últimos 30 dias. Essas informações ajudam você a entender a amplitude seus falhas estão afetando seus usuários. Por exemplo, um aplicativo poderia ter 10.000 falhas em um dia. Se 90% dos dispositivos forem afetados, em seguida, você seria provavelmente classificar que como crítica e agir para corrigi-lo imediatamente. No entanto, se que representa apenas 5% dos dispositivos usando seu aplicativo, a prioridade pode ser menor.
 
 Este gráfico tem duas guias:
-- **Dispositivos livre de falha**: mostra o percentual de dispositivos exclusivos que não teve uma falha em cada dia (durante os últimos 30 dias).
-- **Sessões livre de falha**: mostra a porcentagem de sessões de usuário exclusivo que não teve uma falha em cada dia (durante os últimos 30 dias).
+- **Dispositivos de pane livre**: mostra o percentual de dispositivos exclusivos que não teve uma falha em cada dia (durante os últimos 30 dias).
+- **Sessões livre de falha**: mostra a porcentagem de sessões de usuário exclusivos que não teve uma falha em cada dia (durante os últimos 30 dias).
 
 
  

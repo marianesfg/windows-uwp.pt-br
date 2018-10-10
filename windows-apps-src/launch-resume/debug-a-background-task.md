@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471018"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499982"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -83,7 +83,7 @@ A ativação da tarefa em segundo plano depende de três coisas:
 
     1.  Abra o visualizador de eventos acessando a tela inicial e procurando eventvwr.exe.
     2.  Vá para o **aplicativo e Logs de serviços**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** no Visualizador de eventos.
-    3.  No painel de ações, selecione o **modo de exibição**  - &gt; **Mostrar depurar Logs analíticos e** para habilitar o log de diagnóstico.
+    3.  No painel de ações, selecione o **modo de exibição**  - &gt; **Mostrar depurar Logs analíticos e** habilitar o log de diagnóstico.
     4.  Selecione o **Log de diagnósticos** e clique em **Habilitar Log**.
     5.  Agora, tente usar seu aplicativo para registrar e ativar a tarefa em segundo plano de novo.
     6.  Examine os logs de diagnósticos para obter detalhes dos erros. Essas informações incluirão o ponto de entrada registrada para a tarefa em segundo plano.

@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471339"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503691"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -175,7 +175,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Se você pretendia mover o recurso "AppDisplayName" de `Resources.resw` para `ManifestResources.resw`, no manifesto do pacote de aplicativos, altere `ms-resource:AppDisplayName` para `ms-resource:/ManifestResources/AppDisplayName`.
 
-Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), deixe os pontos no nome quando você faz referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
+Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), em seguida, deixe os pontos no nome quando você faz referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -274,7 +274,7 @@ Para uma biblioteca de tempo de execução do Windows (universal do Windows), se
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-Você não precisará fazer isso para uma biblioteca de classes (Universal Windows). Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o componente ou do arquivo PRI da biblioteca. Cada recurso `uri` é mostrada no arquivo despejado.
+Você não precisa fazer isso para uma biblioteca de classes (Universal Windows). Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o componente ou do arquivo PRI da biblioteca. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

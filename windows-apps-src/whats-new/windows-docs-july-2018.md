@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Novidades do Windows Docs em julho de 2018 - desenvolver aplicativos UWP
-description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a julho de 2018.
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 de julho de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, julho
 ms.author: quradic
 ms.date: 7/11/2018
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460977"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501344"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. A seguir visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -44,19 +44,19 @@ Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas f
 
 ### <a name="design-landing-page"></a>Página de aterrissagem de design
 
-Confira o [atualizado Design página inicial](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
+Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
-Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Confira aqui.](../design/downloads/index.md)
+Os kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Check-out aqui.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
-Adicionamos alguns novos tópicos a [WebVR documentação](https://docs.microsoft.com/microsoft-edge/webvr/
+Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microsoft.com/microsoft-edge/webvr/
 ):
 
 * [O que é WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) Explica o que é WebVR, por que você deve usá-lo e como começar a desenvolver para ele.
+) Explica o que é a WebVR, por que você deve usá-lo e como começar a desenvolver para ele.
 
 * [WebVR em aplicativos Web progressivos](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): Saiba como adicionar WebVR para um aplicativo de Web progressivos (PWA).
 
@@ -66,11 +66,11 @@ Adicionamos alguns novos tópicos a [WebVR documentação](https://docs.microsof
 
 Além disso, fizemos algumas atualizações para páginas existentes:
 
-* Sumário agora é melhor organizado em quatro buckets de nível superior distintos: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
+* A tabela de conteúdo melhor agora é organizada em quatro buckets distintos de nível superior: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
 
 * [Guia do desenvolvedor do WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
-* [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows 10 de abril de 2018 atualizar.
+* [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows Update de 10 de abril de 2018.
 
 ## <a name="videos"></a>Vídeos
 
@@ -80,11 +80,11 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Aprimorar seu Bot com bate-papo de personalidade do projeto
 
-Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno curto uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
+Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno curto uma maneira mais conversa de interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 
@@ -93,7 +93,7 @@ Raymond Chen:
 Larry Osterman:
 
 * [Por que não permitimos que os desenvolvedores alterar o dispositivo de áudio padrão?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
-* [Por que são tantas UWP funções async?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
+* [Por que são tantas assíncrona de funções UWP?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
 ## <a name="samples"></a>Exemplos
 

@@ -15,17 +15,17 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 99982e54bd9eebd6d6c34fa08c9f1c480b626a15
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471083"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501530"
 ---
 # <a name="navigation-view-preview-version"></a>Modo de exibição de navegação (versão prévia)
 
 > **Esta é uma versão de visualização**: Este artigo descreve uma nova versão do controle NavigationView que ainda está em desenvolvimento. Para usá-lo agora, você precisa a [compilação do Windows Insider e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-O controle NavigationView fornece navegação de nível superior para seu aplicativo. Ele se adapta a uma variedade de dá suporte a tamanhos de tela vários estilos de navegação.
+O controle NavigationView fornece navegação de nível superior do aplicativo. Ele se adapta a uma variedade de dá suporte a tamanhos de tela vários estilos de navegação.
 
 > **APIs de biblioteca de interface do usuário do Windows**: [Microsoft.UI.Xaml.Controls.NavigationView classe](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 
@@ -37,7 +37,7 @@ Esse controle está incluído como parte da biblioteca de interface do usuário 
 
 ## <a name="navigation-styles"></a>Estilos de navegação
 
-NavigationView é compatível com:
+NavigationView dá suporte a:
 
 **Painel de navegação esquerdo ou menu**
 
@@ -53,7 +53,7 @@ NavigationView é um controle de navegação adaptável que funciona bem para:
 
 - Fornecendo uma experiência de navegação consistente em todo o aplicativo.
 - Preservando o estado real da tela em janelas menores.
-- Organização de acesso para várias categorias de navegação.
+- Organização acesso a várias categorias de navegação.
 
 Para outros controles de navegação, consulte [Noções básicas de design de navegação](../basics/navigation-basics.md).
 
@@ -72,14 +72,14 @@ Se sua navegação requer um comportamento mais complexo que não é suportado p
     :::column-end:::
 :::row-end:::
 
-## <a name="display-modes"></a>Os modos de exibição
+## <a name="display-modes"></a>Modos de exibição
 
 NavigationView pode ser definido como modos de exibição diferentes, por meio do `PaneDisplayMode` propriedade:
 
 :::row:::
     :::column:::
     ### <a name="left"></a>Esquerda
-    Exibe um painel posicionado à esquerda expandido.
+    Exibe um expandida painel posicionado à esquerda.
     :::column-end:::
     :::column span="2":::
     ![Painel de navegação esquerdo expandido](images/displaymode-left.png)
@@ -88,7 +88,7 @@ NavigationView pode ser definido como modos de exibição diferentes, por meio d
 
 É recomendável navegação à esquerda quando:
 
-- Você tem um número de médio a alto (de 5 a 10) de categorias de navegação de nível superior igualmente importantes.
+- Você tem um número de médio a alto (de 5 a 10) de categorias de navegação de nível superior igualmente importante.
 - Desejar categorias de navegação muito proeminente com menos espaço para outros conteúdos do aplicativo.
 
 :::row:::
@@ -105,13 +105,13 @@ NavigationView pode ser definido como modos de exibição diferentes, por meio d
 
 - Você tem 5 ou menos categorias de navegação de nível superior igualmente importante, que as categorias de navegação de nível superior adicionais que acabam na lista suspensa de estouro menu são considerados menos importantes.
 - Você precisa mostrar todas as opções de navegação na tela.
-- Desejam mais espaço para conteúdo do aplicativo.
+- Desejar mais espaço para conteúdo do aplicativo.
 - Ícones não descrevem claramente categorias de navegação do seu aplicativo.
 
 :::row:::
     :::column:::
     ### <a name="leftcompact"></a>LeftCompact
-    Exibe um fragmento fino com ícones no lado esquerdo.
+    Exibe um fragmento fino com ícones à esquerda.
     :::column-end:::
     :::column span="2":::
     ![Painel de navegação compacto](images/displaymode-leftcompact.png)
@@ -142,7 +142,7 @@ Se adapta entre LeftMinimal em telas pequenas, LeftCompact telas médias, e à e
 
 <b>Navegação superior</b><br>
 
-![principais seções do NavigationView](images/topnav-anatomy.png)
+![seções do NavigationView superior](images/topnav-anatomy.png)
 
 ## <a name="pane"></a>Painel
 
@@ -171,12 +171,12 @@ Aqui está a anatomia de painel detalhadas para as posições do painel esquerdo
 1. AutoSuggestBox (opcional)
 1. Botão de configurações (opcional)
 
-O botão Voltar é exibido no canto superior esquerdo do painel, mas NavigationView não automaticamente adicionar conteúdo a pilha voltar. Para habilitar a navegação regressiva, consulte o [para trás navegação](#backwards-navigation) seção.
+O botão Voltar é exibido no canto superior esquerdo do painel, mas NavigationView não automaticamente adicionar conteúdo à pilha de volta. Para habilitar a navegação regressiva, consulte o [para trás navegação](#backwards-navigation) seção.
 
 O painel NavigationView pode conter:
 
 1. Itens de navegação, na forma de [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), para navegar até páginas específicas.
-2. Separadores, na forma de [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), para agrupar itens de navegação. Defina a propriedade de [opacidade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) como 0 para renderizar o separador como espaço.
+2. Separadores, na forma de [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), para agrupar itens de navegação. Defina a propriedade de [opacidade](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) como 0 para renderizar o separador de espaço.
 3. Cabeçalhos, na forma de [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), para rotular grupos de itens.
 4. Uma opcional [AutoSuggestBox](auto-suggest-box.md) para permitir a pesquisa de nível do aplicativo.
 5. Um ponto de entrada opcional para [configurações do aplicativo](../app-settings/app-settings-and-data.md). Para ocultar o item de configurações, use a propriedade [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) .
@@ -192,7 +192,7 @@ Conteúdo de forma livre no rodapé do painel, quando adicionado à propriedade 
 :::row:::
     :::column:::
     <b>Navegação à esquerda</b><br>
-    ![Navegação esquerda do painel rodapé](images/navview-freeform-footer-left.png)<br>
+    ![Navegação esquerdo do painel rodapé](images/navview-freeform-footer-left.png)<br>
     :::column-end:::
     :::column:::
      <b>Navegação superior</b><br>
@@ -207,7 +207,7 @@ Conteúdo de forma livre no cabeçalho do painel, quando adicionado à proprieda
 :::row:::
     :::column:::
     <b>Navegação à esquerda</b><br>
-    ![Navegação esquerda do painel cabeçalho](images/navview-freeform-header-left.png)<br>
+    ![Navegação esquerdo do painel cabeçalho](images/navview-freeform-header-left.png)<br>
     :::column-end:::
     :::column:::
      <b>Navegação superior</b><br>
@@ -222,7 +222,7 @@ Conteúdo de forma livre no painel, quando adicionado à propriedade [PaneCustom
 :::row:::
     :::column:::
     <b>Navegação à esquerda</b><br>
-    ![Navegação do painel contentleft personalizado](images/navview-freeform-pane-left.png)<br>
+    ![Navegação do painel personalizado contentleft](images/navview-freeform-pane-left.png)<br>
     :::column-end:::
     :::column:::
      <b>Navegação superior</b><br>
@@ -232,7 +232,7 @@ Conteúdo de forma livre no painel, quando adicionado à propriedade [PaneCustom
 
 ### <a name="visual-style"></a>Estilo visual
 
-Quando os requisitos de hardware e software são atendidos, o NavigationView usa automaticamente o [material acrílico](../style/acrylic.md) no seu painel e [Realce do revelação](../style/reveal.md) apenas em seu painel esquerdo.
+Quando os requisitos de hardware e software são atendidos, o NavigationView usa automaticamente o [material acrílico](../style/acrylic.md) no seu painel e o [Realce do revelação](../style/reveal.md) apenas em seu painel esquerdo.
 
 ## <a name="header"></a>Cabeçalho
 
@@ -240,7 +240,7 @@ Quando os requisitos de hardware e software são atendidos, o NavigationView usa
 
 A área de cabeçalho está verticalmente alinhada ao botão de navegação na posição painel esquerdo e fica abaixo do painel na posição painel superior. Ele tem uma altura de 52 px. Sua finalidade é conter o título da página de categoria de navegação selecionada. O cabeçalho é ancorado à parte superior da página e atua como um ponto de corte de rolagem para a área de conteúdo.
 
-O cabeçalho deve estar visível quando NavigationView está no modo de exibição mínima. Você pode optar por ocultar o cabeçalho em outros modos, que são usados em larguras de janela maiores. Para fazer isso, defina a propriedade [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) como **false**.
+O cabeçalho deve estar visível quando NavigationView está no modo de exibição mínimo. Você pode optar por ocultar o cabeçalho em outros modos, que são usados em larguras de janela maiores. Para fazer isso, defina a propriedade [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) como **false**.
 
 ## <a name="content"></a>Conteúdo
 
@@ -256,7 +256,7 @@ O modo de exibição NavigationView muda automaticamente o modo de exibição co
 
 ### <a name="default"></a>Padrão
 
-Comportamento adaptável padrão do NavigationView é mostrar um painel esquerdo expandido em larguras de janela grande, um painel de navegação esquerdo do somente ícone em larguras de janela média e um botão de menu hambúrguer em larguras de janela pequena. Para obter mais informações sobre tamanhos de janela para comportamento adaptável, consulte [pontos de interrupção e tamanhos de tela](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
+O comportamento adaptável padrão de NavigationView é mostrar um painel esquerdo expandido em larguras de janela grande, um painel de navegação esquerdo somente ícone em larguras de janela média e um botão de menu hambúrguer em larguras de janela pequena. Para obter mais informações sobre tamanhos de janela para comportamento adaptável, consulte [tamanhos de tela e pontos de interrupção](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
 ![comportamento adaptável do GIF leftnav padrão](images/displaymode-auto.png)
 
@@ -274,14 +274,14 @@ Um segundo padrão adaptável comum é usar um painel esquerdo expandido em larg
 <NavigationView CompactModeThresholdWidth="1008" ExpandedModeThresholdWidth="1007" />
 ```
 
-Recomendamos isso quando:
+É recomendável quando:
 
-- Desejam mais espaço para conteúdo de aplicativo em larguras de janela menores.
+- Desejar mais espaço para conteúdo do aplicativo em larguras de janela menores.
 - As categorias de navegação não podem ser representadas claramente com ícones.
 
 ### <a name="compact"></a>Compacto
 
-Um terceiro padrão adaptável comum é usar um painel esquerdo expandido em larguras de janela grande e um painel de navegação esquerdo do somente ícone em ambas as larguras de janela de pequenas e médias. Um bom exemplo disso é o aplicativo de email.
+Um terceiro padrão adaptável comum é usar um painel esquerdo expandido em larguras de janela grande e um painel de navegação esquerdo somente ícone em ambas as larguras de janela de pequenas e médias. Um bom exemplo disso é o aplicativo de email.
 
 ![comportamento adaptável GIF leftnav 3](images/adaptive-behavior-compact.png)
 
@@ -289,7 +289,7 @@ Um terceiro padrão adaptável comum é usar um painel esquerdo expandido em lar
 <NavigationView CompactModeThresholdWidth="0" ExpandedModeThresholdWidth="1007" />
 ```
 
-Recomendamos isso quando:
+É recomendável quando:
 
 - É importante para sempre mostrar todas as opções de navegação na tela.
 - as categorias de navegação podem ser representadas claramente com ícones.
@@ -304,9 +304,9 @@ Recomendamos isso quando:
 <NavigationView PaneDisplayMode="LeftMinimal" />
 ```
 
-### <a name="top-to-left-navigation"></a>Cima para navegação à esquerda
+### <a name="top-to-left-navigation"></a>Superior para navegação à esquerda
 
-É recomendável usar navegação superior nos tamanhos de janela grande e navegação à esquerda em pequenas a tamanhos de janela quando:
+Recomendamos o uso de navegação superior na navegação esquerda em pequenas e tamanhos de janela grande tamanhos de janela quando:
 
 - Você tem um conjunto de igualmente categorias de navegação de nível superior importantes a serem exibidos juntos, que se uma categoria neste conjunto não se enquadra na tela, você recolhe para navegação à esquerda para lhes dar importância igual.
 - Você deseja preservar o conteúdo muito espaço possível em tamanhos de janela pequena.
@@ -444,7 +444,7 @@ O aplicativo é responsável por atualizar o Cabeçalho e o Conteúdo com as inf
 
 ### <a name="tabs"></a>Guias
 
-No modelo de guias, seleção e foco são vinculados. Uma ação que normalmente desloca o foco também mudará seleção. No exemplo abaixo, seta direita moveria o indicador de seleção da exibição Lupa. Você pode conseguir isso definindo a propriedade [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) como ativado.
+No modelo de guias, seleção e foco são vinculados. Uma ação que normalmente desloca o foco também mudará seleção. No exemplo abaixo, seta direita moveria o indicador de seleção da exibição Lupa. Você pode obter isso definindo a propriedade [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) como ativado.
 
 ![captura de tela de somente texto navview superior](images/nav-tabs.png)
 
@@ -463,7 +463,7 @@ Aqui está o XAML de exemplo para isso:
 
 Para trocar o conteúdo ao alterar a seleção da guia, você pode usar o método de [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) do quadro com FrameNavigationOptions.IsNavigationStackEnabled definido como False e NavigateOptions.TransitionInfoOverride definido no lado a lado apropriado Deslize a animação. Por exemplo, veja o [exemplo de código](#code-example) abaixo.
 
-Se você quiser alterar o estilo padrão, você pode substituir a propriedade de [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) do NavigationView. Você também pode definir a propriedade [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) para especificar um modelo de dados diferentes.
+Se você quiser alterar o estilo padrão, você pode substituir a propriedade de [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) do NavigationView. Você também pode definir a propriedade [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) para especificar um modelo de dados diferente.
 
 ## <a name="backwards-navigation"></a>Navegação para trás
 
@@ -733,15 +733,15 @@ O fundo do painel mostra o acrílico no aplicativo quando NavigationView está n
 
 Para uma aparência perfeita à + sensação, se seu aplicativo tem páginas que usam um ScrollViewer e o painel de navegação é superior posicionado, é recomendável ter a rolagem de conteúdo sob o painel de navegação superior. Isso proporciona um tipo de cabeçalho fixo de comportamento para o aplicativo.
 
-Isso pode ser obtido, definindo a propriedade [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) no ScrollViewer relevante como "true".
+Isso pode ser obtido, definindo a propriedade [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) no ScrollViewer relevante como true.
 
 ![Painel de navegação de rolagem navview](images/nav-scroll-content.png)
 
-Se seu aplicativo tiver conteúdo de rolagem muito longa, convém considerar a incorporação cabeçalhos fixos que se conectam ao painel de navegação superior e uma superfície suave de formulário. 
+Se seu aplicativo tem conteúdo de rolagem muito longa, convém considerar a incorporação cabeçalhos fixos que se conectam ao painel de navegação superior e uma superfície suave de formulário. 
 
 ![cabeçalho fixo de rolagem navview](images/nav-scroll-stickyheader.png)
 
-Você pode conseguir isso definindo a propriedade [ContentOverlay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) no NavigationView. 
+Você pode obter isso definindo a propriedade [ContentOverlay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) no NavigationView. 
 
 Às vezes, se o usuário é rolar para baixo, convém ocultar o painel de navegação, obtido, definindo a propriedade [IsPaneVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) no NavigationView para false.
 

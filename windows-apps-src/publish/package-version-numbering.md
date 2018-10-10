@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cf93cf06b273605b91c31da5b6a6b8cef8dae39
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468413"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498746"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -36,7 +36,7 @@ Você pode fornecer vários pacotes UWP com o mesmo número de versão. Contudo,
 
 Quando você fornece vários pacotes UWP que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
-Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
+Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou você pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
 
 O exemplo a seguir ilustra como a numeração de versão pode ser gerenciada para a entrega dos pacotes pretendidos para seus clientes em vários envios.
 

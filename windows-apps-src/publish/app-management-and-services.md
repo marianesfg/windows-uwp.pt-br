@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471997"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509323"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
@@ -56,7 +56,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ## <a name="administrator-consent"></a>Consentimento do administrador
 
-f seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização grant consentimento para seu produto a agir em nome de todos os usuários no locatário.
+f seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para seu consentimento de concessão de organização para seu produto a agir em nome de todos os usuários no locatário.
 
 Para obter mais informações, consulte [solicitando consentimento para um locatário inteiro](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
@@ -92,7 +92,7 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 A seção **WNS/MPNS** fornece opções para ajudá-lo a criar e enviar notificações para clientes do seu aplicativo. 
 
 > [!TIP]
-> Para aplicativos UWP, sugerimos usando a opção de **notificações** no painel. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo ou a um subconjunto de destino de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
+> Para aplicativos UWP, sugerimos usando a opção de **notificações** no painel. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto de destino de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
 Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você também pode usar uma das seguintes opções: 
 

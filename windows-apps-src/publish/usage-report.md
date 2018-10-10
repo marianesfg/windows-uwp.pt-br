@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471791"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509583"
 ---
 # <a name="usage-report"></a>Relatório de uso
 
@@ -53,7 +53,7 @@ Este gráfico tem quatro guias separadas que você pode exibir, mostrando o uso 
 Quando o **30d** período é selecionado, você poderá ver marcadores em círculo ao exibir as guias de **usuários**, **dispositivos**ou **duração** . Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sessões de usuário

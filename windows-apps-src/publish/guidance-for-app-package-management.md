@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469642"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498176"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientação para gerenciamento do pacote de aplicativo
 
@@ -32,7 +32,7 @@ Saiba como os pacotes do aplicativo são disponibilizados para seus clientes e c
 
 Diferentes sistemas operacionais podem executar diferentes tipos de pacotes. Se mais de um dos seus pacotes puder ser executado no dispositivo do cliente, a Microsoft Store fornecerá a melhor correspondência disponível.
 
-De modo geral, as versões posteriores do sistema operacional podem executar pacotes para versões anteriores do sistema operacional para a mesma família de dispositivos. No entanto, os clientes só obterão esses pacotes se o aplicativo não incluir um pacote destinado à sua versão do sistema operacional atual.
+De modo geral, as versões posteriores do sistema operacional podem executar pacotes para versões anteriores do sistema operacional para a mesma família de dispositivos. No entanto, os clientes só obterão esses pacotes se o aplicativo não incluir um pacote direcionado a versão do sistema operacional atual.
 
 Por exemplo, os dispositivos Windows 10 podem executar todas as versões anteriores suportadas do sistema operacional (por família de dispositivos). Os dispositivos de desktop Windows 10 podem executar aplicativos criados para o Windows 8.1 ou Windows 8; os dispositivos móveis Windows 10 podem executar aplicativos criados para Windows Phone 8.1, Windows Phone 8 e até mesmo Windows Phone 7.x. 
 
@@ -99,7 +99,7 @@ Depois de tornar o aplicativo indisponível, você continuará a vê-lo em seu p
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Removendo pacotes para uma família de dispositivos com suporte anterior
 
-Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo anteriormente compatível, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página de **pacotes** .
+Se você remover todos os pacotes para uma determinada [família de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) de que seu aplicativo anteriormente com suporte, você será solicitado a confirmar que isso é sua intenção para poder salvar suas alterações na página de **pacotes** .
 
 Quando você publica um envio que remove todos os pacotes que podem ser executado em uma família de dispositivos que seu aplicativo suporte anteriormente, novos clientes não poderão adquirir o aplicativo nessa família. Você sempre pode publicar outra atualização posteriormente para fornecer pacotes para essa família de dispositivos novamente.
 
@@ -110,11 +110,11 @@ Lembre-se de que mesmo se você remover todos os pacotes que dão suporte a uma 
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Adicionando pacotes para Windows 10 a um aplicativo publicado anteriormente
 
-Se você tiver um aplicativo na loja que só incluídos pacotes para o Windows 8.x e/ou Windows Phone 8. x e você desejar atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes de .msixupload ou. appxupload UWP durante a etapa de [pacotes](upload-app-packages.md) . Depois que seu aplicativo passa pelo processo de certificação, o pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
+Se você tiver um aplicativo na loja que incluído apenas os pacotes para Windows 8.x e/ou Windows Phone 8. x e você desejar atualizar seu aplicativo para Windows 10, crie um novo envio e adicione seus pacotes de .msixupload ou. appxupload UWP durante a etapa de [pacotes](upload-app-packages.md) . Depois que seu aplicativo passa pelo processo de certificação, o pacote UWP também estará disponível para novas aquisições pelos clientes no Windows 10.
 
 > [!NOTE]
 > Depois que um cliente no Windows 10 obtiver o pacote UWP, não é possível reverter esse cliente para usar um pacote de qualquer versão anterior do sistema operacional. 
 
-Observe que o número de versão de pacotes do Windows 10 deve ser maior do que aqueles para pacotes qualquer Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você usou. Para saber mais, veja [Numeração de versão do pacote](package-version-numbering.md).
+Observe que o número de pacotes do Windows 10 versão deve ser maior do que aqueles para pacotes qualquer Windows 8, Windows 8.1 e/ou Windows Phone 8.1 que você usou. Para saber mais, veja [Numeração de versão do pacote](package-version-numbering.md).
 
 Para obter mais informações sobre como empacotar aplicativos UWP para a Microsoft Store, consulte [Empacotando aplicativos](../packaging/index.md).

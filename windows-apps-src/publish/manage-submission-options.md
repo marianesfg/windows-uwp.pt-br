@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, suspensão de publicação, data de publicação, enviar para publicar, aprovação de funcionalidade restrita
 ms.localizationpriority: medium
 ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465512"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500065"
 ---
 # <a name="manage-submission-options"></a>Gerenciar opções de envio
 
@@ -42,7 +42,7 @@ Se você ainda não quiser definir uma data de lançamento e preferir que o envi
 
 Escolha **Iniciar a publicação deste envio em** para garantir que o envio não seja publicado até uma data específica. Com esta opção, seu envio será lançado assim que possível na data especificada ou depois dela A data deve ser pelo menos 24 horas no futuro. Com a data, você também pode especificar a hora em que o envio deve começar a ser publicado. 
 
-Você pode alterar essa data de lançamento após enviar seu produto, desde que ele ainda não tenha entrado na etapa publicação ainda. 
+Você pode alterar essa data de lançamento após enviar seu produto, desde que ele ainda não tenha entrado na etapa publicação. 
  
 Conforme observado anteriormente, se você quiser especificar determinadas datas de publicação para seu envio, use **Publicar este envio assim que ele for aprovado na certificação (ou de acordo com as datas selecionadas por você na seção Agendar)** e deixe **Opções de suspensão de publicação** definido como a seleção padrão. Usando a opção **Iniciar a publicação deste envio em** significa que seu envio não iniciará o processo de publicação até essa data, mas atrasos durante a certificação ou publicação podem fazer com a data real de lançamento seja posterior à data selecionada. 
 

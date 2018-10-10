@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461311"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501026"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 
@@ -49,14 +49,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A [ID da loja](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar dados de percepções. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
+| applicationId | string | A [ID da loja](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar dados de ideias. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
 | startDate | date | A data de início no intervalo de datas dos dados de percepções a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas dos dados de percepções a serem recuperados. O padrão é a data atual. |  Não  |
 | filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>Você pode especificar os campos de filtro a seguir:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul> | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de percepções dados. Substitua o valor de *applicationId* pela ID da Store de seu app.
+O exemplo a seguir demonstra uma solicitação de obtenção de dados de ideias. Substitua o valor de *applicationId* pela ID da Loja do seu app.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/insights?applicationId=9NBLGGGZ5QDR&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'acquisition' or dataType eq 'health' HTTP/1.1
@@ -69,18 +69,18 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [Insight valores](#insight-values) abaixo.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de ideias para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [informação valores](#insight-values) abaixo.                                                                                                                      |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                 |
 
 
-### <a name="insight-values"></a>Valores de Insight
+### <a name="insight-values"></a>Valores de informação
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de percepções.     |
-| insightDate                | string | A data em que identificamos a alteração em uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
+| applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de ideias.     |
+| insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma das seguintes cadeias de caracteres que especifica a área de análise gerais que descreve essa informação:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul>   |
 | insightDetail          | array | Um ou mais [valores de InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
 
@@ -89,12 +89,12 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Um dos seguintes valores que indica a métrica que descreve o insight atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
-| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a visão.   |
-| PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
+| FactName           | string | Um dos seguintes valores que indica a métrica que descreve a informação atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a informação.   |
+| PercentChange            | string |  Porcentagem a métrica alterada em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** e **sexo**.   |
 | DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
-| FactValue     | string | O valor absoluto da métrica na data que a visão foi detectada.  |
+| FactValue     | string | O valor absoluto da métrica na data que a informação foi detectada.  |
 | Direção | string |  A direção da alteração (**positivo** ou **negativo**).   |
 | Data              | string |  A data em que identificamos a alteração relacionada a visão atual ou a dimensão atual.   |
 

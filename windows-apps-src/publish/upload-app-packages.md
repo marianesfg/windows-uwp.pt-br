@@ -11,28 +11,28 @@ ms.technology: uwp
 keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472446"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499857"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
 A página **pacotes** é onde você carrega todos os arquivos de pacote (.msix, .msixupload, .msixbundle,. AppX,. appxupload,. appxbundle e/ou. xap) para o aplicativo que você está enviando. Você pode carregar pacotes para qualquer sistema operacional visado por seu aplicativo nesta etapa. Quando um cliente baixar o aplicativo, a Loja fornecerá automaticamente para cada cliente o pacote que funciona melhor para os dispositivos. Depois de carregar os pacotes, você verá uma tabela indicando [quais pacotes serão oferecidos para famílias de dispositivos Windows 10 específicas](#device-family-availability) (e versões anteriores do sistema operacional, se aplicável) na ordem de classificação.
 
-Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão podem afetar quais pacotes são entregues aos clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
+Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado, veja [Requisitos do pacote do aplicativo](app-package-requirements.md). Você também vai querer saber mais sobre [como os números de versão podem afetar quais pacotes são entregues a clientes específicos](package-version-numbering.md) e [como os pacotes são distribuídos para diferentes sistemas operacionais](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Carregando pacotes para seu envio
 
 Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. A página **pacotes** permitem que você carregue arquivos .msix, .msixupload, .msixbundle,. AppX,. appxupload,. appxbundle e/ou. xap.
 
 > [!IMPORTANT]
-> Para Windows 10, recomendamos que você envie o arquivo .msixupload ou. appxupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+> Para o Windows 10, recomendamos que você envie o arquivo .msixupload ou. appxupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para informar o que está errado. Você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
+Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para que você saiba o que está errado. Você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
 
 
 ## <a name="device-family-availability"></a>Disponibilidade da família de dispositivos

@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461448"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502092"
 ---
 # <a name="buttons"></a>Botões
 
@@ -34,8 +34,8 @@ A estrutura XAML fornece um controle de botão padrão, bem como vários control
 Controle | Descrição
 ------- | -----------
 [Botão](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou o evento Click.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento Click continuamente enquanto pressionado.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que tem o estilo como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que gera um evento de clique continuamente enquanto pressionado.
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que foi criado como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Visualização) Um botão com uma divisa para abrir um submenu anexado.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Visualização) Um botão com dois lados. Um lado inicia uma ação, e o outro lado abre um menu.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Visualização) Um botão de alternância com dois lados. Um lado alterna ativar/desativar, e o outro lado abre um menu.
@@ -55,11 +55,11 @@ Use um **botão** para permitir que o usuário inicie uma ação imediata, como 
 Não use um botão quando a ação é navegar para outra página; Use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) em vez disso. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 > Exceção: na navegação do assistente, use botões rotulados como "Voltar" e "Próximo". Para outros tipos de navegação regressiva ou para um nível superior, use um [botão Voltar](../basics/navigation-history-and-backwards-navigation.md).
 
-Use um **RepeatButton** quando o usuário talvez queira acionar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou diminuir um valor em um contador.
+Use um **RepeatButton** quando o usuário pode disparar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou diminuir um valor em um contador.
 
 Use um **DropDownButton** quando o botão tem um submenu que contém mais opções. Na divisa padrão fornece uma indicação visual de que o botão inclui um submenu.
 
-Use um **SplitButton** quando você deseja que o usuário seja capaz de iniciar uma ação imediata ou escolher dentre opções adicionais de forma independente.
+Use um **SplitButton** quando você deseja que o usuário seja capaz de iniciar uma ação imediata ou escolher opções adicionais de forma independente.
 
 ## <a name="examples"></a>Exemplos
 
@@ -221,7 +221,7 @@ Botão suspenso herda o evento Click, mas você normalmente não usá-lo. Em vez
 
 ### <a name="example---drop-down-button"></a>Exemplo - botão suspenso
 
-Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para alinhamento de parágrafo em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
+Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para o alinhamento de parágrafo em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 
 ![Um botão com comandos de alinhamento suspenso](images/drop-down-button-align.png)
 
@@ -279,10 +279,10 @@ Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes 
 O comportamento típico para um botão de divisão é:
 
 - Quando o usuário clica a parte do botão, manipule o evento Click para invocar a opção que está atualmente selecionada no menu suspenso.
-- Quando a lista suspensa estiver aberta, invocação de identificador dos itens a lista suspensa para ambas as alteração qual opção é selecionado e, em seguida, invocá-la. É importante invocar o item de submenu porque o evento Click não ocorre usando o recurso touch do botão.
+- Quando a lista suspensa estiver aberta, invocação de identificador dos itens na lista para ambos os alteração qual opção é selecionado e, em seguida, chamá-lo. É importante invocar o item de submenu porque o evento Click não ocorre usando o recurso touch do botão.
 
 > [!TIP]
-> Há muitas maneiras de colocar itens na lista para baixo e manipular sua chamada. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
+> Há muitas maneiras de colocar itens na lista para baixo e manipular a chamada. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
 
 ### <a name="example---split-button"></a>Exemplo - botão de divisão
 
@@ -380,7 +380,7 @@ public sealed partial class MainPage : Page
 
 Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém as opções adicionais que o usuário pode escolher.
 
-Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ele pode ser usado para ativar ou desativar, a listas enquanto suspenso é usado para escolher o estilo da lista.
+Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ele pode ser usado para ativar ou desativar, a listas enquanto suspenso é usado para escolher o estilo de lista.
 
 > [!NOTE]
 > Quando invocado com toque, o botão de divisão se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente. Com o toque, as duas metades do botão invocar o submenu. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativado ou desativado.
@@ -389,11 +389,11 @@ Um botão de alternância de divisão normalmente é usado para habilitar ou des
 
 Ao contrário de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton), ToggleSplitButton não tem um estado indeterminado. Como resultado, você deve ter em mente essas diferenças:
 
-- ToggleSplitButton não tem uma propriedade **IsThreeState** ou o evento **indeterminado** .
+- ToggleSplitButton não tem uma propriedade **IsThreeState** ou evento **indeterminado** .
 - A propriedade [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) é apenas um **bool**, não um **bool anulável**.
 - ToggleSplitButton tem apenas o evento [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) ; ele não tem eventos **Checked** e **Unchecked** separados.
 
-### <a name="example---toggle-split-button"></a>Exemplo - botão de alternância divisão
+### <a name="example---toggle-split-button"></a>Exemplo - botão de alternância de divisão
 
 O exemplo a seguir mostra como uma botão de divisão de alternância pode ser usado para ativar ou desativar a formatação de lista e alterar o estilo da lista, em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 
@@ -532,7 +532,7 @@ O botão Voltar é um elemento de interface do usuário fornecida pelo sistema q
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 
-- [Exemplo do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - veja todos os controles XAML em um formato interativo.
+- [Amostra do XAML Controls Gallery](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - Veja todos os controles XAML em um formato interativo.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469844"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501550"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
-A seção de **declarações de produto** da página [Propriedades](enter-app-properties.md) do [processo de envio](app-submissions.md) de ajuda certificar-se de que seu aplicativo é exibido adequadamente e oferecido ao conjunto certo de clientes e ajudando-os a entender como eles podem usar seu aplicativo.
+A seção de **declarações de produto** da página [Propriedades](enter-app-properties.md) do [processo de envio](app-submissions.md) de ajuda certificar-se de que seu aplicativo é exibido corretamente e oferecido ao conjunto correto do clientes, ajudando-os a entender como eles podem usar seu aplicativo.
 
-As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que dois dessas declarações são verificadas por padrão (conforme descrito abaixo.) Dependendo da categoria do produto, você também pode ver declarações adicionais. Certifique-se de revisar todas as declarações e garantir que eles refletem com precisão seu envio.
+As seções a seguir descrevem algumas das declarações e o que você precisa considerar ao determinar se cada declaração se aplica ao seu aplicativo. Observe que dois essas declarações são marcada por padrão (conforme descrito abaixo.) Dependendo de categoria do produto, você também pode ver declarações adicionais. Certifique-se de revisar todas as declarações e garantir que eles refletem com precisão seu envio.
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Este aplicativo permite que os usuários façam compras, mas não usa o sistema de comércio da Microsoft Store.
 
@@ -52,7 +52,7 @@ Essa caixa é marcada por padrão, para permitir que os clientes instalem seu ap
 
 Se você deseja impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitem apenas a instalação na unidade de disco rígido interno em seus dispositivos, desmarque essa caixa.
 
-Observe que não há nenhuma opção para restringir a instalação para que um aplicativo *só* pode ser instalado em mídia de armazenamento removível.
+Observe que não há nenhuma opção de restringir a instalação para que um aplicativo *só* pode ser instalado em mídia de armazenamento removível.
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.

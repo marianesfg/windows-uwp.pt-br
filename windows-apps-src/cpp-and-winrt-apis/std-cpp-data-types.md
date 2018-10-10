@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, tipos de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: f9763e7f69b143dffe8fea611f25ae75284929cb
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470085"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503635"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de dados C++ padrão e C++/WinRT
 
@@ -93,7 +93,7 @@ std::array<byte, 3> theArray{ 99, 98, 97 };
 dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
 ```
 
-O C++/WinRT associa **std::vector** como um parâmetro de coleção do Windows Runtime. Assim, você pode passar um **std::vector&lt;winrt::hstring&gt;**, e ele será convertido na coleção do Windows Runtime apropriada do **winrt::hstring**. Há um detalhe adicional deve ter em mente se o computador chamado for assíncrono. Devido aos detalhes de implementação de caso, você precisará fornecer um rvalue, portanto, você deve fornecer uma cópia ou uma movimentação do vetor. No exemplo de código abaixo, movemos a propriedade do vetor para o objeto do tipo de parâmetro aceito pelo computador chamado assíncrono (e, em seguida, estamos cuidadosos para não acessar `vecH` novamente após movê-lo). Se você quiser saber mais sobre rvalues, consulte [categorias de valor e referências a elas](cpp-value-categories.md).
+O C++/WinRT associa **std::vector** como um parâmetro de coleção do Windows Runtime. Assim, você pode passar um **std::vector&lt;winrt::hstring&gt;**, e ele será convertido na coleção do Windows Runtime apropriada do **winrt::hstring**. Há um detalhe adicional deve ter em mente se o computador chamado é assíncrono. Devido aos detalhes de implementação de nesse caso, você precisará fornecer um rvalue, portanto, você deve fornecer uma cópia ou uma movimentação do vetor. No exemplo de código abaixo, movemos a propriedade do vetor para o objeto do tipo de parâmetro aceito pelo computador chamado assíncrono (e, em seguida, estamos cuidadosos para não acessar `vecH` novamente após movê-lo). Se você quiser saber mais sobre rvalues, consulte [categorias de valor e referências a elas](cpp-value-categories.md).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vector<winrt::hstring> vecH)
@@ -102,7 +102,7 @@ IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vecto
 }
 ```
 
-Mas, você não pode passar um **std::vector&lt;std::wstring&gt;** em que uma coleção do Windows Runtime é esperada. Isso acontece porque, tendo feito a conversão na coleção do Windows Runtime apropriada de **std::wstring**, a linguagem C++ não forçará os parâmetros de tipo dessa coleção. Consequentemente, o exemplo de código a seguir não será compilado (e a solução é passar um **std:: Vector&lt;WinRT:: hstring&gt; ** em vez disso, conforme mostrado acima).
+Mas, você não pode passar um **std::vector&lt;std::wstring&gt;** em que uma coleção do Windows Runtime é esperada. Isso acontece porque, tendo feito a conversão na coleção do Windows Runtime apropriada de **std::wstring**, a linguagem C++ não forçará os parâmetros de tipo dessa coleção. Consequentemente, o exemplo de código a seguir não será compilado (e a solução é passar um **std:: Vector&lt;WinRT:: hstring&gt; ** em vez disso, como mostrado acima).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vector<std::wstring> const& vecW)

@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468452"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501560"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
 
-Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários fiscais necessários.
+Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários.
 
 Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que deseja vender aplicativos (ou complementos), você pode configurar sua conta de pagamento e preencher os formulários de imposto naquele momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
@@ -133,7 +133,7 @@ Depois que você tiver [registrado para uma conta de desenvolvedor](opening-a-de
 Você pode preencher e enviar os formulários de imposto eletronicamente no painel; na maioria dos casos, não é necessário imprimir e enviar formulários por correio.
 
 > [!IMPORTANT]
-> Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. Recomendamos que você entrar em contato com a autoridade relevante para seu país ou região que pode ajudar a melhor determinar as informações de impostos corretas para suas atividades de desenvolvedor da Microsoft Store.
+> Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. Recomendamos que você entrar em contato com a autoridade relevante de seu país ou região que pode ajudar a melhor determinar as informações de impostos corretas para suas atividades de desenvolvedor da Microsoft Store.
 
  
 **Para preencher seu perfil fiscal**
@@ -148,7 +148,7 @@ Você pode preencher e enviar os formulários de imposto eletronicamente no pain
 4.  Responda às perguntas sobre cidadania e residência nos Estados Unidos, em seguida, clique em **Avançar**.
 5.  Se seu nome e seu endereço forem exibidos, confirme-os para fins de arquivamento de impostos.
 
-Em seguida, você verá versões eletrônicas dos formulários fiscais que deve preencher. Independentemente do seu país/região de residência ou de sua cidadania, você deve preencher os formulários de imposto dos Estados Unidos para vender aplicativos ou complementos por meio da Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
+Em seguida, você verá versões eletrônicas dos formulários fiscais que deve preencher. Independentemente do seu país de residência ou de sua cidadania, você deve preencher os formulários de imposto dos Estados Unidos para vender aplicativos ou complementos por meio da Microsoft Store. Os desenvolvedores que atendem a determinados requisitos de residência nos Estados Unidos precisam preencher um formulário IRS W-9. Outros desenvolvedores fora dos Estados Unidos precisam preencher um formulário IRS W-8. Você pode preencher esses formulários online enquanto preenche seu perfil fiscal.
 
 Não é necessário ter um ITIN (Número de Identificação de Contribuinte Individual) dos Estados Unidos para receber pagamentos da Microsoft ou reivindicar benefícios de tratados fiscais.
 
@@ -158,7 +158,7 @@ As informações que você envia em seus formulários fiscais determinam a taxa 
 
 ### <a name="tax-treaty-benefits"></a>Benefícios de tratados fiscais
 
-Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam país e podem permitir que você reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
+Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam de país e podem permitir que você reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
 
  
 

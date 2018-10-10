@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 88a07db357125d3f9cb35a5e133e9b0add350069
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468970"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502737"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
@@ -96,7 +96,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para o Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada, produtiva para gerenciar e adquirir dispositivos IoT (nesse caso, lâmpadas).<br>
+O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos avançados de base da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada, produtiva para gerenciar e adquirir dispositivos IoT (nesse caso, lâmpadas).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra de VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)

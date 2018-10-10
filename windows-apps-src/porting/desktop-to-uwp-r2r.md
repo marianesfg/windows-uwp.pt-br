@@ -11,25 +11,25 @@ ms.technology: uwp
 keywords: Windows 10, imagem nativa compilador
 ms.localizationpriority: medium
 ms.openlocfilehash: d98b576fb51a8f9507802796ab359d0d00d21998
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463563"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499847"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>Otimizar seus aplicativos de área de trabalho .NET com imagens nativas
 
 > [!NOTE]
 > Algumas informações estão relacionadas a produtos de pré-lançamento que poderão ser substancialmente modificados antes do lançamento comercial. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
 
-Você pode melhorar o tempo de inicialização do seu aplicativo .NET Framework compilando previamente os binários. Você pode usar essa tecnologia em grandes aplicativos que você empacotar e distribuir por meio da Windows Store. Em alguns casos, você observamos uma melhoria no desempenho de 20%. Você pode saber mais sobre essa tecnologia na [Visão geral técnica](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
+Você pode melhorar o tempo de inicialização do seu aplicativo .NET Framework, pré-compilando os binários. Você pode usar essa tecnologia em grandes aplicativos que você empacota e distribuir por meio da Windows Store. Em alguns casos, você observamos uma melhoria no desempenho de 20%. Você pode saber mais sobre essa tecnologia na [Visão geral técnica](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 
 Já lançamos uma versão de visualização do compilador imagem nativa como um [pacote NuGet](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). Você pode aplicar esse pacote para qualquer aplicativo do .NET Framework que direciona o .NET Framework versão 4.6.2 ou posterior. Esse pacote adiciona uma etapa de compilação de post que inclui uma carga nativa para todos os binários usados pelo seu aplicativo. Essa carga otimizada será carregada quando o aplicativo é executado em .NET 4.7.2 e acima enquanto versões anteriores ainda carregará o código MSIL.
 
 O [.NET framework 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) está incluído na [atualização do Windows 10 de abril de 2018](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/). Você também pode instalar esta versão do .NET Framework no computador que executam o Windows 7 + e Windows Server 2008 R2 +.
 
 > [!IMPORTANT]
-> Se você deseja produzir imagens nativas para seu aplicativo empacotado pelo projeto de empacotamento de aplicativo do Windows, certifique-se de definir a versão mínima da plataforma de destino do projeto para a atualização de aniversário do Windows.
+> Se você deseja gerar imagens nativas para seu aplicativo empacotado pelo projeto de empacotamento de aplicativo do Windows, certifique-se de definir a versão mínima da plataforma de destino do projeto para a atualização de aniversário do Windows.
 
 ## <a name="how-to-produce-native-images"></a>Como produzir imagens nativas
 
@@ -81,12 +81,12 @@ PM> Install-Package Microsoft.DotNet.Framework.NativeImageCompiler -Version 0.0.
 ```
 
 > [!NOTE]
-> Os pacotes de visualização são publicados em NuGet.org como não listado. Você não encontrá-los NuGet.org navegação ou usando o Gerenciador de pacotes UI no Visual Studio. No entanto, você pode instalá-los no Console do Gerenciador de pacotes e quando você restaurando a partir de um computador diferente. Faremos os pacotes totalmente acessíveis quando publicamos a primeira versão de visualização não.
+> Os pacotes de visualização são publicados em NuGet.org como não listado. Você não encontrá-los por NuGet.org navegação ou usando o Gerenciador de pacotes UI no Visual Studio. No entanto, você pode instalá-los no Console do Gerenciador de pacotes e quando você restauração de um computador diferente. Faremos os pacotes totalmente acessíveis quando publicamos a primeira versão de visualização não.
 
 ## <a name="create-a-release-build"></a>Criar uma compilação de versão
 
 O pacote NuGet configura o projeto para executar uma ferramenta adicional para compilações de lançamento. Essa ferramenta adiciona o código nativo para os mesmos binários.
-Para verificar que a ferramenta processou os binários, você pode revisar a compilação de saída para garantir que ele inclui uma mensagem como esta:
+Para verificar que a ferramenta processou os binários, você pode revisar a compilação de saída para garantir que ele inclui uma mensagem como este:
 
 ```
 Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
@@ -96,11 +96,11 @@ Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 
 **Q. Os novos binários funcionam em computadores sem o .NET Framework 4.7.2?**
 
-A. Binários otimizados se beneficiará as melhorias ao executar com o .NET Framework 4.7.2. Os clientes que executam versões anteriores do .NET framework carregará o código MSIL não otimizados do binário.
+A. Binários otimizados se beneficiará os aperfeiçoamentos ao executar com o .NET Framework 4.7.2. Os clientes que executam versões anteriores do .NET framework carregará o código MSIL não otimizados do binário.
 
-**Q. Como fornecer comentários ou relatar problemas?**
+**Q. Como posso fornecer comentários ou relatar problemas?**
 
-A. Relate um problema com a ferramenta de comentários no Visual Studio 2017. [Obter mais informações](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
+A. Relate um problema usando a ferramenta de comentários no Visual Studio 2017. [Obter mais informações](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 **Q. Qual é o impacto de adição da imagem nativa binários existentes?**
 

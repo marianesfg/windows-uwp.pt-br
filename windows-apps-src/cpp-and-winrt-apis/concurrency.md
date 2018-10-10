@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f29828a800795aba70c17bcab19b56b85d56382
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466476"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499650"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -354,11 +354,11 @@ int main()
 }
 ```
 
-Se você executar o exemplo acima, verá **ImplicitCancellationAsync** impressão uma mensagem por segundo para três segundos, após o qual vez em que ele automaticamente encerra como resultado do cancelamento. Isso funciona porque, em encontrar um `co_await` expressão, uma rotina concomitante verifica se ele foi cancelado. Caso afirmativo, em seguida, ele reduz e se não tiver sido, em seguida, suspende como normal.
+Se você executar o exemplo acima, verá **ImplicitCancellationAsync** impressão uma mensagem por segundo para três segundos, após o qual vez em que ele automaticamente encerra como resultado do cancelamento. Isso funciona porque, em encontrar um `co_await` expressão, uma rotina concomitante verifica se ele foi cancelado. Em caso afirmativo, em seguida, ele reduz e, caso contrário, em seguida, suspende como normal.
 
-Cancelamento pode, obviamente, acontecer enquanto a rotina concomitante é suspenso. Somente quando a corrotina é retomada, ou pressiona outro `co_await`, ele verificará cancelamento. O problema é uma das potencialmente muito grande-mais refinado latência reagir ao cancelamento.
+Cancelamento pode, obviamente, acontecer enquanto a rotina concomitante é suspenso. Somente quando a corrotina é retomada, ou pressiona outro `co_await`, ele verificará cancelamento. O problema é uma das potencialmente muito grande-mais refinado latência responder ao cancelamento.
 
-Portanto, outra opção é explicitamente sondar cancelamento de dentro de seu corrotina. Atualize o exemplo acima com o código na lista abaixo. Neste exemplo de novo, **ExplicitCancellationAsync** recupera o objeto retornado pela função [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) e utiliza para verificar periodicamente se a rotina concomitante foi cancelada. Desde que não seja cancelado, a rotina concomitante permanece em loop indefinidamente; Depois que ele for cancelado, o loop e a função sair normalmente. O resultado é o mesmo, como o exemplo anterior, mas aqui saindo acontece explicitamente e sob o controle.
+Portanto, outra opção é explicitamente sondar cancelamento de dentro de seu corrotina. Atualize o exemplo acima com o código na lista abaixo. Neste exemplo novo, **ExplicitCancellationAsync** recupera o objeto retornado pela função [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) e usa-o para verificar periodicamente se a rotina concomitante foi cancelada. Desde que ele não foi cancelado, a rotina concomitante permanece em loop indefinidamente; Depois que ele for cancelado, o loop e a função sair normalmente. O resultado é o mesmo, como o exemplo anterior, mas aqui sair acontece explicitamente e sob o controle.
 
 ```cppwinrt
 ...
@@ -382,12 +382,12 @@ IAsyncAction MainCoroutineAsync()
 ...
 ```
 
-Aguardando **winrt::get_cancellation_token** recupera um token de cancelamento conhecimento das **IAsyncAction** que a rotina concomitante é produzindo em seu nome. Você pode usar o operador de chamada de função nesse token para consultar o estado de cancelamento&mdash;essencialmente sondando cancelamento. Se você estiver realizando algumas operações associadas à computação ou iterar por meio de uma grande coleção, isso é uma técnica razoável.
+Aguardando **winrt::get_cancellation_token** recupera um token de cancelamento conhecimento das **IAsyncAction** que a rotina concomitante é produzindo em seu nome. Você pode usar o operador de chamada de função nesse token para consultar o estado de cancelamento&mdash;essencialmente sondando cancelamento. Se você estiver realizando algumas operações associadas à computação ou Iterando através de uma grande coleção, em seguida, essa é uma técnica razoável.
 
 ### <a name="register-a-cancellation-callback"></a>Registrar um retorno de chamada de cancelamento
 Cancelamento do Windows Runtime automaticamente não flui para outros objetos assíncronos. Mas&mdash;introduzido na versão 10.0.17763.0 (Windows 10, versão 1809) do SDK do Windows&mdash;você pode registrar um retorno de chamada de cancelamento. Este é um gancho preventivo pelo qual o cancelamento pode ser propagado e torna possível integrar bibliotecas de simultaneidade existentes.
 
-Neste exemplo de código Avançar, **NestedCoroutineAsync** faz o trabalho, mas ele tem nenhuma lógica especial cancelamento nele. **CancellationPropagatorAsync** é essencialmente um wrapper sobre a rotina concomitante aninhada; o wrapper encaminha preventivamente cancelamento.
+Neste próximo exemplo de código, **NestedCoroutineAsync** faz o trabalho, mas ele tem nenhuma lógica especial cancelamento nele. **CancellationPropagatorAsync** é essencialmente um wrapper na rotina concomitante aninhado; o wrapper encaminha preventivamente cancelamento.
 
 ```cppwinrt
 // pch.h
@@ -437,11 +437,11 @@ int main()
 }
 ```
 
-**CancellationPropagatorAsync** registra uma função lambda para seu próprio retorno de chamada de cancelamento e, em seguida, ele aguarda (ele suspende) até que o trabalho aninhado é concluída. Quando ou se **CancellationPropagatorAsync** for cancelado, ele propaga o cancelamento para a rotina concomitante aninhado. Não é necessário para pesquisar cancelamento; nem é cancelamento bloqueado indefinidamente. Esse mecanismo é flexível o suficiente para que você possa usá-lo para interoperabilidade com uma rotina concomitante ou simultaneidade biblioteca que sabe nada do C++ c++ WinRT.
+**CancellationPropagatorAsync** registra uma função lambda para seu próprio retorno de chamada de cancelamento e, em seguida, ele aguarda (ele suspende) até que o trabalho aninhado seja concluída. Quando ou se **CancellationPropagatorAsync** for cancelado, ele propaga o cancelamento para a rotina concomitante aninhado. Não é necessário para pesquisar cancelamento; nem é cancelamento bloqueado indefinidamente. Esse mecanismo é flexível o suficiente para que você possa usá-lo para interoperabilidade com uma rotina concomitante ou simultaneidade biblioteca que sabe nada do C++ c++ WinRT.
 
 ## <a name="reporting-progress"></a>Relatório de progresso
 
-Se a corrotina retorna [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), em seguida, você pode recuperar o objeto retornado pela função [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) e usá-lo para relatar o progresso volta para um progresso manipulador. A seguir está um exemplo de código.
+Se a corrotina retorna [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)ou [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), em seguida, você pode recuperar o objeto retornado pela função [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) e usá-lo para relatar o progresso para um progresso manipulador. A seguir está um exemplo de código.
 
 ```cppwinrt
 // pch.h
@@ -501,7 +501,7 @@ int main()
 ```
 
 > [!NOTE]
-> Ele não estiver correto implementar mais de um *manipulador de conclusão* para uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará. Qualquer um dos seguintes dois tipos de manipuladores de conclusão é apropriado; Não, ambos para o mesmo objeto assíncrono.
+> Ele não estiver correto implementar mais de um *manipulador de conclusão* de uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará. Qualquer um dos seguintes dois tipos de manipuladores de conclusão é apropriado; Não, ambos para o mesmo objeto assíncrono.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };
@@ -520,7 +520,7 @@ Para obter mais informações sobre os manipuladores de conclusão, consulte [ti
 
 ## <a name="fire-and-forget"></a>Disparar e esquecer
 
-Às vezes, você tem uma tarefa que pode ser feita concomitantemente com outros trabalhos, e você não precisará aguardar a conclusão da tarefa (nenhum outro trabalho depende dela), nem tampouco é necessário para retornar um valor. Nesse caso, você pode disparar a tarefa e esquecer. Você pode fazer isso criando uma rotina concomitante cujo tipo de retorno é [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (em vez de um dos tipos de operação assíncrona do Windows Runtime, ou **Concurrency:: Task**).
+Às vezes, você tem uma tarefa que pode ser feita simultaneamente com outros trabalhos, e você não precisa esperar para essa tarefa concluir (nenhum outro trabalho depende dela), nem tampouco é necessário para retornar um valor. Nesse caso, você pode disparar a tarefa e esquecer. Você pode fazer isso criando uma rotina concomitante cujo tipo de retorno é [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (em vez de um dos tipos de operação assíncrona do Windows Runtime, ou **Concurrency:: Task**).
 
 ```cppwinrt
 // pch.h

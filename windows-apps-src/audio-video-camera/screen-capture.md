@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464476"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500924"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -24,7 +24,7 @@ A partir do Windows 10, versão 1803, o namespace [Windows.Graphics.Capture](htt
 Com a captura de tela, os desenvolvedores chamam a interface do usuário do sistema para que os usuários finais selecionem a tela ou a janela do aplicativo para captura, e uma borda de notificação amarela é desenhada pelo sistema ao redor do item capturado ativamente. No caso de várias sessões de captura simultânea, uma borda amarela é desenhada em volta de cada item sendo capturado.
 
 > [!NOTE]
-> A captura de tela APIs são suportadas apenas em desktops e fones de ouvido imersivos do Windows Mixed Reality.
+> A captura de tela APIs são suportadas apenas na área de trabalho e fones de ouvido imersivos do Windows Mixed Reality.
 
 ## <a name="add-the-screen-capture-capability"></a>Adicionar a funcionalidade de captura de tela
 
@@ -170,7 +170,7 @@ Quando **Recreate** é chamado, todos os quadros existentes são descartados. Is
 O trecho de código a seguir está um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos um botão no front-end que, quando clicado, chama o método **Button_ClickAsync** .
 
 > [!NOTE]
-> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como configurá-lo para seu projeto.
+> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca de processamento de elementos gráficos 2D. Consulte a documentação para obter informações sobre como configurá-lo para seu projeto.
 
 ```cs
 using Microsoft.Graphics.Canvas;

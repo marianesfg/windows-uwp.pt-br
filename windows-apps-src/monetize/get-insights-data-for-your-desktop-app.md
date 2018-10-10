@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-description: Use este método na API de análise da Microsoft Store para obter dados de insights para seu aplicativo da área de trabalho.
+description: Use este método na API de análise da Microsoft Store para obter dados de ideias de seu aplicativo da área de trabalho.
 title: Obter dados de insights do seu aplicativo da área de trabalho
 ms.author: mcleans
 ms.date: 07/31/2018
@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468426"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498156"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights do seu aplicativo da área de trabalho
 
-Use este método na API de análise da Microsoft Store para obter insights dados relacionados à avaliação de integridade de um aplicativo da área de trabalho que você adicionou para o [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esses dados também estão disponíveis no [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicativos da área de trabalho no painel do Centro de desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter insights dados relacionados à avaliação de integridade para um aplicativo da área de trabalho que você adicionou para o [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esses dados também estão disponíveis no [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicativos da área de trabalho no painel do Centro de desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -48,14 +48,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter dados de percepções. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
+| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter dados de ideias. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
 | startDate | date | A data de início no intervalo de datas dos dados de percepções a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas dos dados de percepções a serem recuperados. O padrão é a data atual. |  Não  |
-| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>Atualmente esse método só dá suporte a **integridade**do filtro.  | Não   |
+| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>No momento este método só oferece suporte a **integridade**do filtro.  | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de percepções dados. Substitua o valor *applicationId* com o valor apropriado para seu aplicativo da área de trabalho.
+O exemplo a seguir demonstra uma solicitação de obtenção de dados de ideias. Substitua o valor *applicationId* com o valor apropriado para seu aplicativo da área de trabalho.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights?applicationId=10238467886765136388&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'health' HTTP/1.1
@@ -68,18 +68,18 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [Insight valores](#insight-values) abaixo.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de ideias para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [informação valores](#insight-values) abaixo.                                                                                                                      |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                 |
 
 
-### <a name="insight-values"></a>Valores de Insight
+### <a name="insight-values"></a>Valores de informação
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | A ID do produto do aplicativo da área de trabalho para o qual você recuperou dados de percepções.     |
-| insightDate                | string | A data em que identificamos a alteração em uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
+| applicationId       | string | A ID do produto do aplicativo da área de trabalho para o qual você recuperou dados de ideias.     |
+| insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma cadeia de caracteres que especifica a área de análise gerais que informa essa informação. No momento, este método só oferece suporte a **integridade**.    |
 | insightDetail          | array | Um ou mais [valores de InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
 
@@ -88,12 +88,12 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Uma cadeia de caracteres que indica a métrica que descreve o insight atual ou a dimensão atual. Atualmente, esse método suporta apenas o valor de **contagem de ocorrências**.  |
-| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a visão.   |
-| PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
+| FactName           | string | Uma cadeia de caracteres que indica a métrica que descreve a informação atual ou a dimensão atual. Atualmente, esse método suporta apenas o valor de **contagem de ocorrências**.  |
+| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a informação.   |
+| PercentChange            | string |  Porcentagem a métrica alterada em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**e **PackageVersion**.   |
 | DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
-| FactValue     | string | O valor absoluto da métrica na data que a visão foi detectada.  |
+| FactValue     | string | O valor absoluto da métrica na data que a informação foi detectada.  |
 | Direção | string |  A direção da alteração (**positivo** ou **negativo**).   |
 | Data              | string |  A data em que identificamos a alteração relacionada a visão atual ou a dimensão atual.   |
 
@@ -154,6 +154,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
+* [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
 * [Relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report)
 * [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)

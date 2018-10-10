@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463991"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504236"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -85,7 +85,7 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 > **Visualização**: animação implícita requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/).
 
-Animações implícitas são uma maneira simples de alcançar o movimento fluente automaticamente interpolando entre os valores novos e antigos durante uma alteração de parâmetro.
+Animações implícitas são uma maneira simples de alcançar o movimento fluente por automaticamente interpolando entre os valores novos e antigos durante uma alteração de parâmetro.
 
 Você pode animar implicitamente alterações para as seguintes propriedades:
 

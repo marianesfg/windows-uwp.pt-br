@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463553"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498633"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e compreender os dados de tarja magnética
 
@@ -22,9 +22,9 @@ Depois que você configurou o leitor de tarja magnética em seu aplicativo usand
 
 ## <a name="subscribe-to-datareceived-events"></a>Inscrever-se * DataReceived eventos
 
-Sempre que o leitor reconhece um dedo nelas cartão, ele acionará um dos três eventos:
+Sempre que o leitor reconhece um cartão nesse, ele acionará um dos três eventos:
 
-* [Evento AamvaCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): ocorre quando um cartão de motor veículo é arrastado.
+* [Evento AamvaCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): ocorre quando um cartão de veículo a motor é arrastado.
 * [Evento BankCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): ocorre quando um cartão bancário é arrastado.
 * [Evento VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): ocorre quando um cartão específico do fornecedor é arrastado.
 
@@ -62,7 +62,7 @@ O manipulador de eventos será passado para o [ClaimedMagneticStripeReader](http
 
 ## <a name="get-the-data"></a>Obter os dados
 
-Para os eventos **AamvaCardDataReceived** e **BankCardDataReceived** , você pode obter alguns dos dados diretamente do objeto *args* . O exemplo a seguir demonstra obter algumas propriedades e atribuí-las a variáveis de membro:
+Para os eventos **AamvaCardDataReceived** e **BankCardDataReceived** , você pode obter alguns dos dados diretamente do objeto de *argumentos* . O exemplo a seguir demonstra obter algumas propriedades e atribuir a eles a variáveis de membro:
 
 ```cs
 private string _accountNumber;

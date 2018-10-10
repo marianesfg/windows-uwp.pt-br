@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462801"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498018"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
@@ -31,7 +31,7 @@ Se você estiver criando um novo aplicativo de várias instâncias, você pode i
 
 Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você deseja apenas depois que a instância de cada vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
 
-Ambos os modelos adicionam `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo de namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
+Adicionar `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo do namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
 
 ```xml
 <Package

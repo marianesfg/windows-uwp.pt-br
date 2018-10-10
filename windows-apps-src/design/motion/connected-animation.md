@@ -14,11 +14,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 31e940c87626a05ee6911d3ffda36ab8dfd3fad0
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461735"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509518"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animação conectada para aplicativos UWP
 
@@ -68,7 +68,7 @@ Esta tabela descreve as configurações disponíveis. Para obter mais informaç�
 | [GravityConnectedAnimationConfiguration]() |
 | - |
 | Isso é a configuração padrão e é recomendado para navegação para frente. |
-Conforme o usuário avança no aplicativo (A para B), o elemento conectado aparece fisicamente "puxe fora da página". Ao fazer isso, o elemento aparecerá em frente no espaço de z e cair um pouco como um efeito de gravidade levando espera. Para superar os efeitos de gravidade, o elemento ganha velocidade e acelera para sua posição final. O resultado é uma animação de "escala e dip". |
+Conforme o usuário navega para frente no aplicativo (A para B), o elemento conectado aparece fisicamente "receber fora da página". Ao fazer isso, o elemento aparecerá em frente em espaço de z e cair um pouco como um efeito de gravidade levando espera. Para superar os efeitos de gravidade, o elemento ganha velocidade e acelera para sua posição final. O resultado é uma animação de "escala e dip". |
 
 | [DirectConnectedAnimationConfiguration]() |
 | - |
@@ -120,7 +120,7 @@ if (animation != null)
 
 ### <a name="forward-navigation"></a>Navegação para frente
 
-Este exemplo mostra como usar ConnectedAnimationService para criar uma transição para encaminhar navegação entre duas páginas (Page_A para Page_B).
+Este exemplo mostra como usar ConnectedAnimationService para criar uma transição para frente navegação entre duas páginas (Page_A para Page_B).
 
 A configuração de animação recomendada para navegação direta é [GravityConnectedAnimationConfiguration](). Este é o padrão, portanto, você não precisa definir a propriedade de [configuração](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.configuration) , a menos que você deseja especificar uma configuração diferente.
 
@@ -189,7 +189,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Para navegação regressiva (Page_B para Page_A), que você siga as mesmas etapas, mas as páginas de origem e destino são revertidas.
 
-Quando o usuário navega de volta, eles esperam que o aplicativo seja retornado para o estado anterior assim que possível. Portanto, a configuração recomendada é [DirectConnectedAnimationConfiguration](). Esta animação é mais rápido, mais direto e usa a suavização por desaceleração.
+Quando o usuário navega de volta, eles esperam que o aplicativo a ser retornado para o estado anterior assim que possível. Portanto, a configuração recomendada é [DirectConnectedAnimationConfiguration](). Esta animação é mais rápido, mais direto e usa a suavização por desaceleração.
 
 Configure a animação na página de origem.
 

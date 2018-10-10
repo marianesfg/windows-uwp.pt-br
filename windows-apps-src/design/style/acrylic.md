@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469066"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500824"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -72,7 +72,7 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
  ![Acrílico de aplicativo](images/AppAcrylic_DarkTheme.png)
 
- Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar uma decisão traiçoeira ópticas.
+ Coloque diversas superfícies de acrílico com cuidado: várias camadas de acrílico de fundo podem criar ópticas distração.
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
@@ -95,7 +95,7 @@ Além disso, a ter seu conteúdo estender ou rolagem sob o acrílico na parte su
 
 ### <a name="vertical-panes"></a>Painéis verticais
 
-Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em do NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir sobre conteúdo, como em NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
 
 ### <a name="transient-surfaces"></a>Superfícies transitórios
 
@@ -106,7 +106,7 @@ Para aplicativos com menu submenus, pop-ups não modal, ou ignorar painéis, é 
 Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usará o acrílico transitório quando eles são invocados.
 
 > [!Note]
-> Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
+> Renderização de superfícies consome GPU, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
 
 ## <a name="usability-and-adaptability"></a>Usabilidade e adaptabilidade
 O acrílico adapta automaticamente sua aparência para uma variedade de dispositivos e contextos.

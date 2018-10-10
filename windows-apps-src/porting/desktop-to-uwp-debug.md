@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463507"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501462"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
@@ -44,7 +44,7 @@ Para iniciar seu aplicativo, encontre-o no menu Iniciar do Windows.
 ![Aplicativo empacotado no menu Iniciar](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="debug-your-app"></a>Depurar seu aplicativo
 
@@ -72,15 +72,15 @@ Se você fizer alterações ao seu aplicativo para corrigir bugs, reempacote-o u
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar o ciclo de vida inteiro do aplicativo
 
-Em alguns casos, convém controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de iniciar.
+Em alguns casos, convém controle refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de começar.
 
-Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento do aplicativo.
+Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento.
 
 O [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) está incluso no SDK do Windows.
 
 ## <a name="test-your-app"></a>Testar o app
 
-Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e, em seguida, instalá-lo.
+Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e instalá-lo.
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testar um aplicativo que você empacotou usando o Visual Studio
 
@@ -99,7 +99,7 @@ Você também pode assinar seu aplicativo manualmente. Veja como
 
 2. Instale esse certificado para no repositório de certificados **Trusted Root** ou **Trusted People** em seu sistema.
 
-3. Assine seu aplicativo usando esse certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Assinar seu aplicativo usando esse certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.

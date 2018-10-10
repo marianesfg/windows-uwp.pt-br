@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465890"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499401"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -40,7 +40,7 @@ Esta imagem mostra um exemplo de solução.
 
 ![Estender projeto inicial](images/desktop-to-uwp/extend-start-project.png)
 
-Se sua solução não contiver um projeto de empacotamento, consulte o [pacote do seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Se sua solução não contiver um projeto de empacotamento, consulte o [pacote de seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Adicionar um projeto UWP
 
@@ -401,7 +401,7 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 ### <a name="add-a-share-target-extension"></a>Adicionar uma extensão de destino de compartilhamento
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto de empacotamento em sua solução e adicione a extensão.
 
 ```xml
 <Extensions>

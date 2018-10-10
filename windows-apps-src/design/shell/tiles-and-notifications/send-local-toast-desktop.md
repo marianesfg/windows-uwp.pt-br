@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C#, c sharp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463386"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504518"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C# da área de trabalho
 
@@ -70,7 +70,7 @@ Copie o [arquivo DesktopNotificationManagerCompat.cs do GitHub](https://raw.gith
 
 ## <a name="step-4-implement-the-activator"></a>Etapa 4: implementar o ativador
 
-Você deve implementar um manipulador de ativação de notificação do sistema, de modo que quando o usuário clica em sua notificação do sistema, seu aplicativo pode fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
+Você deve implementar um manipulador de ativação de notificação do sistema, de modo que quando o usuário clica na notificação do sistema, seu aplicativo pode fazer algo. Isso é necessário para a notificação do sistema persistir na Central de Ações (pois a notificação do sistema pode ser clicada dias depois quando o aplicativo é fechado). Essa classe pode ser colocada em qualquer lugar do projeto.
 
 Estenda a classe **NotificationActivator** e adicione os três atributos listados abaixo e crie uma CLSID de GUID exclusiva para o aplicativo usando um dos muitos geradores de GUID online. Essa CLSID (identificador de classe) é como a Central de Ações sabe qual classe ativar para COM.
 

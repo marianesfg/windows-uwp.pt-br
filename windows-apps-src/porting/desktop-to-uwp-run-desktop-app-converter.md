@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: bde2e58934e24df7db2cb77fb793106aa65e3834
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470640"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499251"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empacotar um aplicativo da área de trabalho usando o Desktop App Converter
 
@@ -33,7 +33,7 @@ Você pode instalar esse pacote usando o cmdlet Add-AppxPackage PowerShell em su
 O conversor executa o instalador da área de trabalho em um ambiente Windows isolado usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer registro e E/S do sistema de arquivos feito pelo instalador da área de trabalho e os pacotes como parte da saída.
 
 >[!IMPORTANT]
->A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecido como a ponte de Desktop, foi introduzido no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 > [!NOTE]
 > Confira <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">essa série</a> de vídeos de curta duração publicados na Microsoft Virtual Academy. Esses vídeos o orientam através de algumas maneiras comuns de usar o Desktop App Converter.
@@ -62,7 +62,7 @@ Se você estiver pronto para criar seu pacote, vamos começar.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
+Examinar este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 ## <a name="make-sure-that-your-system-can-run-the-converter"></a>Certifique-se de que seu sistema possa executar o conversor
 
@@ -121,7 +121,7 @@ Você pode pular para a próxima seção se seu aplicativo não tiver um instala
 
 Para empacotar seu aplicativo, execute o comando ``DesktopAppConverter.exe`` na janela do console que abriu quando você iniciou o Desktop App Converter.  
 
-Você especificará o número de nome, fornecedor e versão do pacote do aplicativo usando os parâmetros.
+Você especificará o número de fornecedor, nome e a versão do pacote do aplicativo usando os parâmetros.
 
 > [!NOTE]
 > Se você reservou o nome do seu aplicativo na loja do Windows, você pode obter o pacote e os nomes dos editores usando o Centro de Desenvolvimento do Windows. Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
@@ -271,7 +271,7 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 |-InstallerArguments &lt;Cadeia de Caracteres&gt; |Opcional |Uma lista separada por vírgulas ou uma série de argumentos para forçar o instalador a executar sem supervisão/silenciosamente. Este parâmetro é opcional se o instalador for um msi. Para obter um registro do seu instalador, forneça o argumento de registro para o instalador aqui e use o caminho &lt;log_folder&gt;, que é um token que o conversor substitui com o caminho apropriado. <br><br>**OBSERVAÇÃO**: Os sinalizadores sem supervisão/silenciosos e os argumentos de registro variarão entre as tecnologias instaladoras. <br><br>Um exemplo de uso para este parâmetro: -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log" Outro exemplo que não gera um arquivo de registro pode ser ```-InstallerArguments "/quiet", "/norestart"``` Mais uma vez, você deve literalmente dirigir todos os registros para o caminho do token &lt;log_folder&gt; se quiser que o conversor capture e coloque na pasta de registro final.|
 |-InstallerValidExitCodes &lt;Int32&gt; |Opcional |Uma lista separada por vírgulas de códigos de saída que indicam o seu instalador executado com sucesso (por exemplo: 0, 1234, 5678).  Por padrão, isso é 0 para non-msi e 0, 1641, 3010 para msi.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Opcional |Um interruptor que, quando presente, informa esse script para chamar MakeAppx na saída. |
-|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um interruptor que, quando presente, informa a este script para empacotar a saída como um pacote de MSIX. |
+|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um botão que, quando presente, informa este script para a saída como um pacote de MSIX do pacote. |
 |<a id="identity-params" /><strong>Parâmetros de identidade do pacote</strong>||
 |-PackageName &lt;Cadeia de Caracteres&gt; |Necessário |O nome do seu pacote de aplicativos Universais do Windows. Se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
 |-Publisher &lt;Cadeia de Caracteres&gt; |Necessário |O editor do pacote da sua aplicativo Universal Windows |
@@ -305,7 +305,7 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 
 Há dois meios de executar seu aplicativo.
 
-Uma maneira é abrir um prompt de comando do PowerShell e, em seguida, digitar este comando ```Add-AppxPackage –Register AppxManifest.xml```. Provavelmente é a maneira mais fácil para executar seu aplicativo porque você não precisará assiná-lo.
+Uma maneira é abrir um prompt de comando do PowerShell e, em seguida, digitar este comando ```Add-AppxPackage –Register AppxManifest.xml```. Provavelmente é a maneira mais fácil para executar seu aplicativo porque você não precisa assinar.
 
 Outra maneira é assinar seu aplicativo com um certificado. Se você usar o ```sign``` parâmetro, o Desktop App Converter irá gerar um para você e, em seguida, assinar seu aplicativo com ele. O arquivo recebe o nome de **auto-generated.cer**, e você pode encontrá-lo na pasta raiz do seu app empacotado.
 

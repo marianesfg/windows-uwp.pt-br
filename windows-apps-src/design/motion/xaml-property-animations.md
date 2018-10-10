@@ -12,13 +12,13 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466416"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500574"
 ---
-# <a name="animating-xaml-elements-with-composition-animations"></a>Animando elementos XAML com animações de composição
+# <a name="animating-xaml-elements-with-composition-animations"></a>Animação de elementos XAML com animações de composição
 
 Este artigo apresenta novas propriedades que permitem que você animar um UIElement XAML com o desempenho de animações de composição e a facilidade de definindo propriedades do XAML.
 
@@ -27,9 +27,9 @@ Antes do Windows 10, versão 1809, você tinha 2 opções para criar animações
 - usar XAML construções como [animações com storyboard](storyboarded-animations.md), ou o _* ThemeTransition_ e _* ThemeAnimation_ classes no namespace [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) .
 - Use animações de composição, conforme descrito em [usando a camada Visual com XAML](../../composition/using-the-visual-layer-with-xaml.md).
 
-Usando a camada visual fornece melhor desempenho que constrói usar XAML. Mas usando [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) para obter o objeto subjacente de [Visual](/uwp/api/windows.ui.composition.visual) de composição do elemento e, em seguida, animando o elemento Visual com animações de composição, são mais complexo para usar.
+Usando a camada visual fornece melhor desempenho de constrói usar XAML. Mas usando [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) para obter o objeto subjacente de [Visual](/uwp/api/windows.ui.composition.visual) de composição do elemento e, em seguida, animando o elemento Visual com animações de composição, são mais complexo para usar.
 
-A partir do Windows 10, versão 1809, você pode animar propriedades em um UIElement diretamente usando animações de composição sem a exigência para obter a composição subjacente Visual.
+A partir do Windows 10, versão 1809, você pode animar propriedades em um UIElement diretamente usando animações de composição sem a exigência de obter a Visual de composição subjacente.
 
 > [!NOTE]
 > Para usar essas propriedades em UIElement, sua versão de destino do projeto UWP deve ser 1809 ou posterior. Para obter mais informações sobre como configurar sua versão do projeto, consulte [aplicativos adaptáveis de versão](../../debug-test-perf/version-adaptive-apps.md).
@@ -42,9 +42,9 @@ Esta tabela mostra as propriedades que você pode usar para modificar a renderiz
 | -- | -- | -- |
 | [Opacidade](/uwp/api/windows.ui.xaml.uielement.opacity) | Double | O grau de opacidade do objeto |
 | [Translation](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | Deslocar a posição X/Y/Z do elemento |
-| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação para aplicar ao elemento |
+| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação se aplicam ao elemento |
 | [Scale](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Dimensionar o elemento, centralizado sobre o ponto central |
-| [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento em torno da RotationAxis e o ponto central |
+| [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento RotationAxis e ponto central |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | O eixo de rotação |
 | [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | O ponto central de dimensionamento e rotação |
 
@@ -52,7 +52,7 @@ O valor da propriedade TransformMatrix é combinado com as propriedades de escal
 
 Essas propriedades não afetam o layout do elemento, portanto, modificar essas propriedades não faz com que uma nova [medição](/uwp/api/windows.ui.xaml.uielement.measure)/[cálculo](/uwp/api/windows.ui.xaml.uielement.arrange) .
 
-Essas propriedades têm a mesma finalidade e o comportamento que as propriedades de nome na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto conversão, que não é em Visual).
+Essas propriedades tem a mesma finalidade e o comportamento que as propriedades de nome na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto conversão, que não é em Visual).
 
 ### <a name="example-setting-the-scale-property"></a>Exemplo: Definindo a propriedade de escala
 
@@ -90,7 +90,7 @@ Você também não pode usar as novas propriedades se você usar ElementComposit
 > [!IMPORTANT]
 > A tentativa de combinar o uso de dois conjuntos de propriedades fará com que a chamada de API falhar e produzir uma mensagem de erro.
 
-É possível alternar de um conjunto de propriedades, desmarcando-los, mas para simplificar não é recomendado. Se a propriedade é feita por uma DependencyProperty (por exemplo, Projection é sustentado por UIElement.ProjectionProperty), em seguida, chame ClearValue para restaurá-lo para seu estado "não utilizado". Caso contrário, (por exemplo, a propriedade Scale), defina a propriedade para o valor padrão.
+É possível alternar de um conjunto de propriedades, desmarcando-los, mas para simplificar não é recomendado. Se a propriedade é feita por uma DependencyProperty (por exemplo, Projection é feito por UIElement.ProjectionProperty), em seguida, chame ClearValue para restaurá-lo para seu estado "não utilizado". Caso contrário, (por exemplo, a propriedade Scale), defina a propriedade para o valor padrão.
 
 ## <a name="animating-uielement-properties-with-compositionanimation"></a>Animar propriedades de UIElement com CompositionAnimation
 

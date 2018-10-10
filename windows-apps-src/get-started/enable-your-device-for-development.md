@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465265"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498778"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 
@@ -150,7 +150,7 @@ Há várias ferramentas que você pode usar para implantar um app de um computad
 Consulte o fórum [Problemas conhecidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para encontrar soluções alternativas para esses problemas e muito mais. 
 
 > [!NOTE]
-> Se o modo de desenvolvedor não for instalado corretamente, Encorajamos você a enviar uma solicitação de comentários. No aplicativo de **Hub de Feedback** , selecione **Adicionar novos comentários**e escolha a categoria de **Plataforma do desenvolvedor** e a subcategoria de **Modo de desenvolvedor** . Enviar comentários ajuda a Microsoft resolver o problema que é encontrado.
+> Se o modo de desenvolvedor não for instalado corretamente, Encorajamos você a uma solicitação de comentários. No aplicativo de **Hub de Feedback** , selecione **Adicionar novos comentários**e escolha a categoria de **Plataforma do desenvolvedor** e a subcategoria de **Modo de desenvolvedor** . Enviar comentários ajuda a Microsoft resolver o problema que é encontrado.
 
 ### <a name="failed-to-locate-the-package"></a>Falha ao localizar o pacote
 

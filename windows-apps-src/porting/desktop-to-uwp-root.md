@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: e11bae84c7cb88ef89f8b627cc2109fc56e43163
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462355"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503063"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empacotar aplicativos da área de trabalho (ponte de Desktop)
 
@@ -24,15 +24,15 @@ Pegue seu aplicativo da área de trabalho existente e adicione experiências mod
 
 ![Ponte de Desktop](images/desktop-to-uwp/desktop-bridge-4.png)
 
-Quando você cria um pacote para seu aplicativo da área de trabalho, seu aplicativo receberá uma identidade e com essa identidade, seu aplicativo da área de trabalho tem acesso ao Universal plataforma APIs Windows (UWP). Você pode usá-las para facilitar experiências envolventes e modernas, como blocos dinâmicos e notificações.  Use a compilação condicional simples e verificações de tempo de execução para executar código UWP somente quando seu aplicativo é executado no Windows 10.
+Quando você cria um pacote para seu aplicativo da área de trabalho, seu aplicativo receberá uma identidade e com essa identidade, seu aplicativo da área de trabalho tem acesso para Universal plataforma APIs Windows (UWP). Você pode usá-las para facilitar experiências envolventes e modernas, como blocos dinâmicos e notificações.  Use a compilação condicional simples e verificações de tempo de execução para executar código UWP somente quando seu aplicativo é executado no Windows 10.
 
-Além de código que você use que destacam experiências do Windows 10, seu aplicativo permanece inalterado e você pode continuar a distribuí-lo para seu existentes do Windows 7, Windows Vista ou base de usuários do Windows XP. No Windows 10, o aplicativo continua sendo executado em confiança total modo de usuário assim como acontece atualmente.
+Além de código que você usa para experiências do Windows 10, seu aplicativo permanece inalterado e você pode continuar a distribuí-lo para seu existentes do Windows 7, Windows Vista ou base de usuários do Windows XP. No Windows 10, o aplicativo continua a ser executado em confiança total modo de usuário assim como acontece atualmente.
 
 >[!IMPORTANT]
->A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecido como a ponte de Desktop, foi introduzido no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 > [!NOTE]
-> Confira <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta série</a> de vídeos curtos publicados pela Microsoft Virtual Academy. Esses vídeos o acompanham durante todo o processo de trazer seu aplicativo da área de trabalho para Universal Windows Platform (UWP).
+> Confira <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">esta série</a> de vídeos curtos publicados pela Microsoft Virtual Academy. Esses vídeos o acompanham durante todo o processo de trazer seu aplicativo da área de trabalho para o Universal Windows Platform (UWP).
 
 ## <a name="benefits"></a>Benefícios
 
@@ -62,7 +62,7 @@ Aqui estão algumas ferramentas que você pode usar para criar um pacote de apli
 
 ### <a name="desktop-app-converter"></a>Desktop App Converter
 
-Embora o termo "Converter" apareça no nome dessa ferramenta, na verdade ela não converte seu app. Seu aplicativo permanece inalterado. No entanto, essa ferramenta gera um pacote de aplicativo do Windows para você. Ele pode ser muito conveniente nos casos onde seu aplicativo faz várias modificações no sistema, ou se você tem alguma dúvida sobre o que o instalador faz.
+Embora o termo "Converter" apareça no nome dessa ferramenta, na verdade ela não converte seu app. Seu aplicativo permanece inalterado. No entanto, essa ferramenta gera um pacote de aplicativo do Windows para você. Ele pode ser muito conveniente nos casos onde seu aplicativo faz várias modificações no sistema, ou se você tiver dúvidas sobre o que o instalador faz.
 
 O Desktop App Converter traduz as ações do seu instalador para o arquivo virtual e o sistema de registro que usará a versão empacotada do seu aplicativo. O Desktop App Converter também faz algumas coisas extras para você. Aqui está uma lista desses valores.
 
@@ -74,7 +74,7 @@ O Desktop App Converter traduz as ações do seu instalador para o arquivo virtu
 
 : heavy_check_mark: gera um certificado que você pode usar para executar seu aplicativo.
 
-: heavy_check_mark: valida seu aplicativo com aplicativos da área de trabalho empacotado e exigências de Microsoft Store.
+: heavy_check_mark: valida seu aplicativo em relação a aplicativos da área de trabalho empacotado e requisitos de Microsoft Store.
 
 Outro ótimo motivo para usar o Desktop App Converter é se você mantém seu aplicativo usando um ambiente de desenvolvimento diferente do Visual Studio. Você pode usar o Desktop App Converter mesmo se seu aplicativo não tiver um instalador.
 
@@ -186,7 +186,7 @@ Consulte [RAD Studio da Embarcadero](https://www.embarcadero.com/products/rad-st
 
 #### <a name="raypack-studio"></a>RayPack Studio
 
-Solução de empacotamento da Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), dá suporte a criação de pacotes para aplicativos da área de trabalho como um dos vários resultados possíveis de conversão eficiente e fácil de configurar e estrutura remontagem.
+Solução de empacotamento da Raynet, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), oferece suporte à criação de pacotes para aplicativos da área de trabalho como um dos vários resultados possíveis de conversão eficiente e fácil de configurar e remontagem framework.
 
 <img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
 
@@ -216,7 +216,7 @@ Consulte [empacotar manualmente um aplicativo da área de trabalho](desktop-to-u
 
 ## <a name="integrate"></a>Integrar
 
-Se seu aplicativo precisa para integrar-se com o sistema (por exemplo: estabelecer regras de firewall), descrevem esses elementos no manifesto do pacote do seu aplicativo e o sistema fará o restante. Para a maioria dessas tarefas, você não precisará escrever qualquer código. Com um pouco de XML no manifesto, você pode fazer coisas como iniciar um processo quando o usuário faz logon, integrar seu aplicativo Explorador de arquivos e adicionar seu aplicativo uma lista de destinos de impressão que aparecem em outros aplicativos.
+Se seu aplicativo precisa para ser integrado com o sistema (por exemplo: estabelecer regras de firewall), descrevem esses elementos no manifesto do pacote do seu aplicativo e o sistema fará o restante. Para a maioria dessas tarefas, você não precisará escrever qualquer código. Com um pouco de XML no manifesto, você pode fazer coisas como iniciar um processo quando o usuário faz logon, integrar seu aplicativo Explorador de arquivos e adicionar seu aplicativo uma lista de destinos de impressão que aparecem em outros aplicativos.
 
 Consulte [integrar seu aplicativo da área de trabalho empacotado com o Windows 10](desktop-to-uwp-extensions.md).
 
@@ -245,7 +245,7 @@ Consulte [Compartilhar código entre um aplicativo da área de trabalho e um apl
 
 ## <a name="test"></a>Testar
 
-Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e, em seguida, instalá-lo. Consulte [Testar seu app](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app).
+Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e instalá-lo. Consulte [Testar seu app](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app).
 
 >[!IMPORTANT]
 > Se você planeja publicar seu aplicativo na Microsoft Store, certifique-se de que seu aplicativo funcione corretamente em dispositivos que executam o Windows 10 no modo S. Isso não é um requisito da Store. Veja [Testar seu aplicativo do Windows para o Windows 10 no modo S](desktop-to-uwp-test-windows-s.md).
@@ -291,5 +291,5 @@ Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 | [APIs UWP disponíveis para um aplicativo da área de trabalho empacotado](desktop-to-uwp-supported-api.md) | Ver quais estão disponíveis para seu aplicativo da área de trabalho empacotado para usar APIs UWP. |
 | [Estender seu aplicativo da área de trabalho com componentes UWP modernos](desktop-to-uwp-extend.md)| Adicione experiências avançadas que devem ser executadas dentro de um contêiner de aplicativo UWP. Conecte seu aplicativo da área de trabalho com o processo UWP usando serviços de aplicativo.|
 | [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md) | Explica as opções para depurar seu app empacotado. |
-| [Distribuir um aplicativo da área de trabalho empacotado ](desktop-to-uwp-distribute.md) | Veja como é possível distribuir seu aplicativo convertido para os usuários.  |
+| [Distribuir um aplicativo da área de trabalho empacotado ](desktop-to-uwp-distribute.md) | Veja como você pode distribuir seu aplicativo convertido para os usuários.  |
 | [Issues(desktop-to-uwp-known-issues.md) conhecidos | Listas problemas conhecidos com empacotar aplicativos da área de trabalho. |

@@ -16,11 +16,11 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471277"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502614"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
@@ -30,11 +30,11 @@ O submenu de barra de comando permite que você fornecer aos usuários acesso f�
 
 > Para obter informações relacionadas, consulte [submenus](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menus e menus de contexto](menus.md)e [barras de comandos](app-bars.md).
 
-Como o [CommandBar](app-bars.md), CommandBarFlyout tem propriedades **PrimaryCommands** e **SecondaryCommands** , que você pode usar para adicionar comandos. Você pode colocar comandos na coleção ou ambos. Quando e como os comandos principais e secundários são exibidos dependem do modo de exibição.
+Como o [CommandBar](app-bars.md), CommandBarFlyout tem propriedades **PrimaryCommands** e **SecondaryCommands** , que você pode usar para adicionar comandos. Você pode colocar comandos na coleção, ou ambos. Quando e como os comandos principais e secundários são exibidos dependem do modo de exibição.
 
-O submenu de barra de comando tem dois modos de exibição: *expandida*e *recolhida* .
+O submenu de barra de comando tem dois modos de exibição: *recolhido* e *expandido*.
 
-- O modo recolhido, somente os comandos principais são mostrados. Se o submenu de barra de comando tem principais e secundárias comandos, um botão "Veja mais", que é representado por um sinal de reticências \ [• • • \], é exibida. Isso permite que o usuário obtenha acesso aos comandos secundários fazendo a transição para o modo expandido.
+- O modo recolhido, somente os comandos principais são mostrados. Se o submenu de barra de comando tem principais e secundárias comandos, um botão "Veja mais", que é representado por um sinal de reticências \ [• • • \], é exibida. Isso permite que o usuário obtenha acesso aos comandos secundários fazendo a transição para o modo de expandido.
 - No modo expandido, os comandos principais e secundários são mostrados. (Se o controle tiver apenas os itens secundários, eles serão mostrados de forma semelhante ao controle MenuFlyout).
 
 | **Baixar a biblioteca de interface do usuário do Windows** |
@@ -55,7 +55,7 @@ Para mostrar contextuais comandos em itens de lista sigam as diretrizes [context
 
 ### <a name="commandbarflyout-vs-menuflyout"></a>CommandBarFlyout vs MenuFlyout
 
-Para mostrar comandos em um menu de contexto, você pode usar CommandBarFlyout ou MenuFlyout. É recomendável CommandBarFlyout porque ele fornece mais funcionalidades que MenuFlyout. Você pode usar CommandBarFlyout com apenas os comandos secundários para obter o comportamento e aparência de um MenuFlyout ou usar o submenu de barra de comando completo com comandos principais e secundários.
+Para mostrar comandos em um menu de contexto, você pode usar CommandBarFlyout ou MenuFlyout. É recomendável CommandBarFlyout porque ele fornece mais funcionalidades que MenuFlyout. Você pode usar CommandBarFlyout com apenas os comandos secundários para obter o comportamento e aparência de um MenuFlyout ou usar o submenu de barra de comando completo com comandos primários e secundários.
 
 ## <a name="examples"></a>Exemplos
 
@@ -75,11 +75,11 @@ Para mostrar comandos em um menu de contexto, você pode usar CommandBarFlyout o
 
 ## <a name="proactive-vs-reactive-invocation"></a>Proativa versus reativa invocação
 
-Normalmente, existem duas maneiras invocar um submenu ou um menu que está associado a um elemento na sua tela de interface do usuário: _invocação proativa_ e _reativa invocação_.
+Normalmente, existem duas maneiras invocar um submenu ou um menu que está associado a um elemento na sua tela de interface do usuário: _invocação proativa_ e _invocação reativa_.
 
 Em invocação proativa comandos são exibidos automaticamente quando o usuário interage com o item que os comandos estão associados. Por exemplo, comandos de formatação do texto podem pop-up quando o usuário seleciona o texto em uma caixa de texto. Nesse caso, o submenu de barra de comando não tem foco. Em vez disso, ele apresenta os comandos relevantes perto do item que o usuário está interagindo com. Se o usuário não interagir com os comandos, eles são ignorados.
 
-Na chamada de reativa, os comandos são mostrados em resposta a uma ação explícita do usuário para solicitar os comandos; Por exemplo, um botão direito do mouse. Isso corresponde ao conceito de tradicional de um [menu de contexto](menus.md).
+Na chamada reativa, os comandos são mostrados em resposta a uma ação explícita do usuário para solicitar os comandos; Por exemplo, um botão direito do mouse. Isso corresponde ao conceito de tradicional de um [menu de contexto](menus.md).
 
 Você pode usar o CommandBarFlyout de forma ou até mesmo uma mistura dos dois.
 
@@ -137,11 +137,11 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 ### <a name="show-commands-proactively"></a>Mostrar comandos de forma proativa
 
-Quando você mostra os comandos contextuais proativamente, somente os comandos principais devem ser exibidos por padrão (o submenu de barra de comando deve ser recolhido). Coloque os comandos mais importantes no conjunto de comandos principais e comandos adicionais que tradicionalmente faria em um menu de contexto para a coleção de comandos secundários.
+Quando você mostra os comandos contextuais proativamente, somente os comandos principais devem ser exibidos por padrão (o submenu de barra de comando deve ser recolhido). Coloque os comandos mais importantes no conjunto de comandos principais e comandos adicionais que tradicionalmente fica em um menu de contexto para a coleção de comandos secundários.
 
-Para mostrar proativamente os comandos, você normalmente manipule o evento de [clique](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) ou [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) para mostrar o submenu de barra de comando. Defina do submenu [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **transitório** ou **TransientWithDismissOnPointerMoveAway** para abrir o submenu no modo recolhido sem colocar o foco.
+Para mostrar proativamente os comandos, você normalmente manipular o evento de [clique](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) ou [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) para mostrar o submenu de barra de comando. Defina do submenu [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **transitório** ou **TransientWithDismissOnPointerMoveAway** para abrir o submenu no modo recolhido sem colocar o foco.
 
-A partir do Windows 10 Insider Preview, controles de texto têm uma propriedade **SelectionFlyout** . Quando você atribuir um submenu para essa propriedade, ela será mostrada automaticamente quando o texto estiver selecionado.
+A partir do Windows 10 Insider Preview, controles de texto têm uma propriedade **SelectionFlyout** . Quando você atribuir um submenu para essa propriedade, ela será mostrada automaticamente quando o texto é selecionado.
 
 ### <a name="show-commands-reactively"></a>Mostrar comandos reativamente
 
@@ -158,7 +158,7 @@ Se você manipular mostrando o submenu (por exemplo, em um evento [RightTapped](
 
 O controle CommandBarFlyout tem 2 propriedades que você pode usar para adicionar comandos e conteúdo: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.primarycommands) e [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.secondarycommands).
 
-Por padrão, os itens da barra de comandos são adicionados à coleção **PrimaryCommands**. Esses comandos são mostrados na barra de comandos e ficam visíveis em ambos os modos expandidos e recolhidos. Ao contrário de CommandBar, comandos principais não fará automaticamente estouro aos comandos secundários e podem ser truncados.
+Por padrão, os itens da barra de comandos são adicionados à coleção **PrimaryCommands**. Esses comandos são mostrados na barra de comandos e ficam visíveis em ambos os modos expandidos e recolhidos. Ao contrário de CommandBar, comandos principais não automaticamente estouro aos comandos secundários e podem ser truncados.
 
 Você também pode adicionar comandos à coleção **SecondaryCommands** . Comandos secundários são mostrados na parte do menu do controle e ficam visíveis somente no modo expandido.
 
@@ -179,7 +179,7 @@ Os controles de botão da barra de aplicativos são caracterizados por um ícone
 Você pode adicionar outros controles a um submenu de barra de comando encapsulá-los em um AppBarElementContainer. Isso permite que você adicionar controles como [DropDownButton]() ou [SplitButton]()ou adicionar contêineres como [StackPanel]() para criar a interface do usuário mais complexo.
 
 > [!NOTE]
-> Para ser adicionado às coleções de comando principal ou secundária de um submenu de barra de comando, um elemento deve implementar a interface [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer é um wrapper que implementa essa interface para que você pode adicionar um elemento para uma barra de comandos mesmo se ele não implementa a interface em si.
+> Para ser adicionado a coleções comando principal ou secundária de um submenu de barra de comando, um elemento deve implementar a interface [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer é um wrapper que implementa essa interface para que você pode adicionar um elemento para uma barra de comandos, mesmo se ele não implementa a interface em si.
 
 Aqui, um AppBarElementContainer é usado para adicionar elementos extras para um submenu de barra de comando. Um SplitButton é adicionado aos comandos principais para permitir a seleção de cores. Um StackPanel é adicionado aos comandos secundários para permitir que um layout mais complexo para controles de zoom.
 
@@ -310,7 +310,7 @@ Você também pode usar um CommandBarFlyout com um DropDownButton para criar um 
 
 ## <a name="command-bar-flyouts-for-text-controls"></a>Submenus da barra de comandos para controles de texto
 
-O [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) é um submenu de barra de comandos especializados que contém comandos para edição de texto. Cada controle de texto mostra o TextCommandBarFlyout automaticamente como um menu de contexto (botão direito do mouse), ou quando o texto estiver selecionado. O submenu de barra de comando de texto se adapte a seleção de texto para mostrar somente os comandos relevantes.
+O [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) é um submenu de barra de comandos especializados que contém comandos para edição de texto. Cada controle de texto mostra o TextCommandBarFlyout automaticamente como um menu de contexto (botão direito do mouse), ou quando o texto é selecionado. O submenu de barra de comando de texto se adapte a seleção de texto para mostrar somente os comandos relevantes.
 
 :::row:::
     :::column:::
@@ -341,10 +341,10 @@ Esta tabela mostra os comandos que estão incluídos em um TextCommandBarFlyout 
 
 ### <a name="custom-text-command-bar-flyouts"></a>Submenus de barra de comandos de texto personalizado
 
-TextCommandBarFlyout não pode ser personalizada e é gerenciado automaticamente por cada controle de texto. No entanto, você pode substituir o padrão TextCommandBarFlyout com comandos personalizados.
+TextCommandBarFlyout não pode ser personalizado e é gerenciada automaticamente por cada controle de texto. No entanto, você pode substituir o padrão TextCommandBarFlyout com comandos personalizados.
 
 - Para substituir o padrão TextCommandBarFlyout que é mostrada na seleção de texto, você pode criar um CommandBarFlyout personalizado (ou outro tipo de submenu) e atribuí-lo à propriedade **SelectionFlyout** . Se você definir SelectionFlyout como **nula**, nenhuma comandos são mostrados na seleção.
-- Para substituir o padrão TextCommandBarFlyout que é mostrado como menu de contexto, atribua um CommandBarFlyout personalizado (ou outro tipo de submenu) para a propriedade **ContextFlyout** em um controle de texto. Se você definir ContextFlyout como **Nulo**, o submenu de menu mostrado em versões anteriores do controle de texto é mostrado em vez do TextCommandBarFlyout.
+- Para substituir o padrão TextCommandBarFlyout que é mostrado como menu de contexto, atribua um CommandBarFlyout personalizado (ou outro tipo de submenu) para a propriedade **ContextFlyout** em um controle de texto. Se você definir ContextFlyout como **Nulo**, o submenu de menu mostrado nas versões anteriores do controle de texto é mostrado em vez do TextCommandBarFlyout.
 
 ## <a name="get-the-sample-code"></a>Obter o código de exemplo
 

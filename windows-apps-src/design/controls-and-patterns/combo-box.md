@@ -15,17 +15,17 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462234"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501849"
 ---
 # <a name="combo-box"></a>Caixa de combinação
 
 Use uma caixa de combinação (também conhecido como uma lista suspensa) para apresentar uma lista de itens que um usuário pode selecionar. Uma caixa de combinação começa em um estado compacto e se expande para mostrar uma lista de itens selecionáveis.
 
-Quando a caixa de combinação é fechada, ele exibe a seleção atual ou estiver vazio se não houver nenhum item selecionado. Quando o usuário expande a caixa de combinação, ele exibe a lista de itens selecionáveis.
+Quando a caixa de combinação é fechada, ele exibe a seleção atual ou está vazio se nenhum item selecionado. Quando o usuário expande a caixa de combinação, ele exibe a lista de itens selecionáveis.
 
 > **APIs importantes**: [classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [IsEditable propriedade](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -70,7 +70,7 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 ## <a name="create-a-combo-box"></a>Criar uma caixa de combinação
 
-Você preencher a caixa de combinação, adicionando objetos diretamente à coleção [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou associando a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. Os itens adicionados à ComboBox são encapsulados em contêineres [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) .
+Você preencher a caixa de combinação, adicionando objetos diretamente à coleção [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou associando a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. Itens adicionados à ComboBox são encapsulados em contêineres [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) .
 
 Aqui está uma caixa de combinação simples com itens adicionados em XAML.
 
@@ -165,15 +165,15 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 
 #### <a name="selectionchanged-and-keyboard-navigation"></a>Navegação de teclado e SelectionChanged
 
-Por padrão, o evento SelectionChanged ocorre quando um usuário clica, toca ou pressiona Enter em um item na lista para confirmar sua seleção e fecha a caixa de combinação. Seleção não é alterada quando o usuário navega listagem aberta com as teclas de seta do teclado.
+Por padrão, o evento SelectionChanged ocorre quando um usuário clica, toca ou pressiona Enter em um item na lista para confirmar sua seleção e fecha a caixa de combinação. Seleção não muda quando o usuário navega listagem aberto com as teclas de seta do teclado.
 
-Para fazer uma combinação caixa "atualizações ao vivo" enquanto o usuário está navegando a lista Abrir com as teclas de seta (como uma fonte suspenso de seleção), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) como [sempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged ocorre quando o foco muda para outro item na lista de abrir.
+Para fazer uma combinação caixa "atualizações ao vivo" enquanto o usuário está navegando a lista Abrir com as teclas de seta (como uma fonte suspenso de seleção), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) como [sempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged quando o foco muda para outro item na lista de abrir.
 
 #### <a name="selected-item-behavior-change"></a>Mudança de comportamento do item selecionado
 
 No RS5 (SDK do Windows versão 10.0.NNNNN.0 (Windows 10, versão MMAA), o comportamento dos itens selecionados é atualizado para dar suporte a caixas de combinação editável.
 
-Antes de RS5, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) foi precisam estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+Antes de RS5, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) foi necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
 
 - SelectedItem = null
 - SelectedValue = null
@@ -200,7 +200,7 @@ Por padrão, uma caixa de combinação permite que o usuário selecione em uma l
 
 Para tornar uma caixa de combinação editável, defina a propriedade [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) como **true**. Em seguida, manipule o evento [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para trabalhar com o valor inserido pelo usuário.
 
-Por padrão, o valor de SelectedItem é atualizado quando o usuário confirma texto personalizado. Você pode substituir esse comportamento por definir a **propriedade Handled** como **true** em argumentos de evento TextSubmitted. Quando o evento é marcado como manipulado, a caixa de combinação não levará nenhuma outra ação após o evento e permanecerá no estado de edição. SelectedItem não será atualizado.
+Por padrão, o valor de SelectedItem é atualizado quando o usuário confirma texto personalizado. Você pode substituir esse comportamento por definir a **propriedade Handled** como **true** em argumentos de evento TextSubmitted. Quando o evento é marcado como manipulado, a caixa de combinação não levará nenhuma outra ação após o evento e fique no estado de edição. SelectedItem não será atualizado.
 
 Este exemplo mostra uma caixa de combinação editável simples. A lista contém cadeias de caracteres simples, e qualquer valor inserido pelo usuário é usado como digitado.
 
@@ -219,7 +219,7 @@ Você pode manipular o evento [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.
 O evento TextSubmitted ocorre quando essas condições forem atendidas:
 
 - A propriedade IsEditable for **true**
-- O usuário insere texto que não corresponda a uma entrada existente na lista de caixa de combinação
+- O usuário insere texto que não corresponda a uma entrada existente na lista da caixa de combinação
 - O usuário pressiona Enter ou move o foco da caixa de combinação.
 
 O evento TextSubmitted não ocorrerá se o usuário insere texto e, em seguida, navega para cima ou para baixo na lista.
@@ -259,7 +259,7 @@ private void FontSizeComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSubmitt
 
 ### <a name="sample---validate-input-and-add-to-list"></a>Exemplo - validar a entrada e adicionar à lista
 
-Aqui, um seletor de cor favorita"" contém as cores favoritas mais comuns (vermelho, azul, verde, laranja), mas o usuário poderá digitar uma cor favorita que não esteja na lista. Quando o usuário adiciona uma cor válida (como rosa), a cor recentemente digitada é adicionada à lista e definir como o ativo "cor favorita".
+Aqui, um seletor de cor favorita"" contém as cores favoritas mais comuns (vermelho, azul, verde, laranja), mas o usuário poderá digitar uma cor favorita que não esteja na lista. Quando o usuário adiciona uma cor válida (como rosa), a cor recentemente inserida é adicionada à lista e definir como o ativo "cor favorita".
 
 ```xaml
 <ComboBox x:Name="favoriteColorComboBox"

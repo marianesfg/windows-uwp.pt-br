@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462250"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500499"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 
@@ -29,14 +29,14 @@ Para ver as análises do seu aplicativo e fornecer respostas, encontre o aplicat
 
 Por padrão, sua resposta será lançada na loja, logo abaixo da revisão de cliente original. Essas respostas ficarão visíveis para os clientes que acessarem a loja em um dispositivo Windows 10. Se o cliente que fez a crítica está usando um dispositivo executando o Windows 10, versão 1803 ou posterior, e eles não tiver optado por não receber respostas de email, uma cópia de sua resposta também será enviada para o cliente por email.  Você precisará fornecer um endereço de email válido para enviar sua resposta, que serão incluídos no email para o cliente. Em seguida, eles podem usar este endereço de email para contatá-lo diretamente.
 
-Se você não quiser sua resposta apareça na loja e, em vez disso, deseja responder apenas por email para o cliente, desmarque a caixa **tornar esta resposta pública** . Observe que você não poderá desmarcar essa caixa se o cliente tiver optado por não receber respostas de email e/ou se eles estiverem usando um dispositivo que não está executando o Windows 10, versão 1803 ou superior.
+Se você não quiser que sua resposta aparecem na loja e, em vez disso, quiser responder somente por email para o cliente, desmarque a caixa **tornar esta resposta pública** . Observe que você não poderá desmarcar essa caixa se o cliente tiver optado por não receber respostas de email e/ou se eles estiverem usando um dispositivo que não está executando o Windows 10, versão 1803 ou superior.
 
 ## <a name="guidelines-for-responses"></a>Diretrizes para respostas
 
 Ao responder à crítica de um cliente, você deve seguir estas diretrizes. Eles se aplicam a todas as respostas, sejam públicas ou não.
 
 > [!IMPORTANT]
-> Você não poderá alterar as respostas que postar para a loja (a menos que o cliente revise sua opinião original), portanto, revise sua resposta cuidadosamente. Se um cliente revisar a análise original, sua resposta será removida da página de listagem da loja do aplicativo. Em seguida, você tem a opção de enviar uma nova resposta à análise revisada ao selecionar **atualizar sua resposta**.
+> Você não poderá alterar as respostas que POST para a loja (a menos que o cliente revise sua opinião original), portanto, revise sua resposta cuidadosamente. Se um cliente revisar a análise original, sua resposta será removida da página de listagem da loja do aplicativo. Em seguida, você tem a opção de enviar uma nova resposta à análise revisada ao selecionar **atualizar sua resposta**.
 
 -   As respostas devem ter, no máximo, 1000 caracteres.
 -   Você não deve oferecer qualquer tipo de compensação, incluindo itens de aplicativos digitais, aos usuários para que eles alterem a classificação do aplicativo. Lembre-se de que não é permitido manipular classificações, de acordo com o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).

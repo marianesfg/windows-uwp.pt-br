@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, vínculo, propriedade
 ms.localizationpriority: medium
 ms.openlocfilehash: 2caec1c245514f7c1596d2a40749e974998fadcd
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472168"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509438"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles XAML; vincular a uma propriedade C++/WinRT
 Uma propriedade que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma propriedade *observável*. Essa ideia é baseada no padrão de design do software conhecido como o *padrão do observador*. Este tópico mostra como implementar propriedades observáveis em [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)e como vincular controles XAML a elas.
@@ -51,9 +51,9 @@ namespace Bookstore
 > [!NOTE]
 > Suas classes de modelo de exibição&mdash;na verdade, qualquer classe de tempo de execução que você declarar em seu aplicativo&mdash;não precisa derivar de uma classe base. A classe **BookSku** declarada acima é um exemplo disso. Ele implementa uma interface, mas ele não deriva de qualquer classe base.
 >
-> Qualquer classe de tempo de execução que você declara no aplicativo que *faz* derivar de uma base de classe é conhecida como um *composable* classe. E há restrições ao redor composable classes. Para um aplicativo passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (e, portanto, para o aplicativo ser inserido com êxito na Microsoft Store), uma classe composable deve Por fim derive de uma classe base do Windows. Isso significa que a classe na raiz muito da hierarquia de herança deve ser um tipo originando do namespace. Se você precisar derivar uma classe de tempo de execução de uma classe base&mdash;por exemplo, para implementar uma classe **BindableBase** para todos os seus modelos de exibição derivar de&mdash;, em seguida, você pode derivar de [**DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
+> Qualquer classe de tempo de execução que você declara no aplicativo que *faz* derivar de uma base de classe é conhecido como um *composable* classe. E há restrições ao redor composable classes. Para um aplicativo passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (e, portanto, para o aplicativo ser inserido com êxito na Microsoft Store), uma classe composable deve Por fim derive de uma classe base do Windows. Isso significa que a classe na raiz muito da hierarquia de herança deve ser um tipo originando do namespace. Se você precisar derivar uma classe de tempo de execução de uma classe base&mdash;por exemplo, para implementar uma classe **BindableBase** para todos os seus modelos de exibição derivar de&mdash;, em seguida, você pode derivar de [**DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 >
-> Um modelo de exibição é uma abstração de um modo de exibição e, portanto, ele é vinculado diretamente para o modo de exibição (a marcação XAML). Um modelo de dados é uma abstração de dados, e ele tem consumido somente de seus modelos de exibição e não vinculado diretamente ao XAML. Portanto, você pode declarar seus modelos de dados não como classes de tempo de execução, mas como classes ou estruturas de C++. Eles não precisam ser declaradas no MIDL, e você pode usar qualquer hierarquia que desejar.
+> Um modelo de exibição é uma abstração de um modo de exibição e, portanto, ele é vinculado diretamente para o modo de exibição (a marcação XAML). Um modelo de dados é uma abstração de dados, e ele tem consumido somente de seus modelos de exibição e não vinculado diretamente em XAML. Portanto, você pode declarar seus modelos de dados não como classes de tempo de execução, mas como classes ou estruturas de C++. Eles não precisam ser declaradas no MIDL, e você pode usar qualquer hierarquia que desejar.
 
 Salve o arquivo e compile o projeto. Durante o processo de compilação, a ferramenta `midl.exe` é executada para criar um arquivo de metadados do componente do Tempo de Execução do Windows (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`), descrevendo a classe de tempo de execução. Em seguida, a ferramenta `cppwinrt.exe` é executada para gerar arquivos de código fonte para dar suporte a você na criação e no consumo da classe de tempo de execução. Esses arquivos incluem stubs para ajudar você a começar a implementar a classe de tempo de execução **BookSku** que foi declarada em sua IDL. Esses stubs são `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` e `BookSku.cpp`.
 
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files` para a pasta de projeto e os inclua no projeto. Abra os arquivos e implemente a classe de tempo de execução, como mostrado a seguir. Observe como, na `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookSku**). E podemos está restaurando o construtor padrão removendo `= delete`.
+Salvar e compilar. Copie `BookstoreViewModel.h` e `BookstoreViewModel.cpp` da pasta `Generated Files` para a pasta de projeto e os inclua no projeto. Abra os arquivos e implemente a classe de tempo de execução, como mostrado a seguir. Observe como, no `BookstoreViewModel.h`, estamos incluindo `BookSku.h`, que declara o tipo de implementação (**winrt::Bookstore::implementation::BookSku**). E podemos está restaurando o construtor padrão removendo `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -210,7 +210,7 @@ namespace Bookstore
 
 Salve o arquivo. O projeto não será compilado para a conclusão no momento, mas criando agora é algo útil porque ele gera os arquivos de código de origem no qual a classe de tempo de execução **MainPage** é implementada (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`). Portanto, vá em frente e crie agora. O erro de compilação que você pode esperar ver neste estágio é **'MainViewModel': não é um membro de 'winrt::Bookstore::implementation::MainPage'**.
 
-Se você omitir a inclusão de `BookstoreViewModel.idl` (consulte a listagem de `MainPage.idl` acima), em seguida, você verá o erro **esperando \ < próximo "MainViewModel"**. Outra dica é certificar-se de que você deixe todos os tipos no mesmo namespace: o namespace é mostrado nas listagens de código.
+Se você omitir a inclusão de `BookstoreViewModel.idl` (consulte a listagem de `MainPage.idl` acima), em seguida, você verá o erro **esperando \ < próximo "MainViewModel"**. Outra dica é certificar-se de que você deixe todos os tipos no mesmo namespace: o namespace que é mostrado nas listagens de código.
 
 Para resolver o erro que esperamos que, agora será necessário copiar os stubs de acessador para a propriedade **MainViewModel** fora dos arquivos gerados (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` e `MainPage.cpp`) e em `\Bookstore\Bookstore\MainPage.h` e `MainPage.cpp`.
 
@@ -278,7 +278,7 @@ Abra `MainPage.xaml`, que contém a marcação XAML para nossa página da interf
 Agora compile e execute o projeto. Clique no botão para executar o manipulador de eventos de **Clique**. Esse manipulador chama a função de modificador de título do livro; Esse modificador aciona um evento para informar a interface do usuário que a propriedade de **Título** foi alterada; e o botão consulta novamente o valor dessa propriedade para atualizar seu próprio valor de **Conteúdo**.
 
 ## <a name="using-the-binding-markup-extension-with-cwinrt"></a>Usando a extensão de marcação {Binding} com C++ c++ WinRT
-Para a versão lançada do C++ c++ /WinRT, para ser capaz de usar a extensão de marcação {Binding} você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) .
+Para a versão lançada do C + + WinRT, para ser capaz de usar a extensão de marcação {Binding} você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) .
 
 ## <a name="important-apis"></a>APIs Importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)

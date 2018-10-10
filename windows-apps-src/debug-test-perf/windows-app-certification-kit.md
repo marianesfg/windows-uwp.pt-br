@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Kit de Certificação de Aplicativos Windows
-description: Para seu aplicativo as chances de serem publicados na Microsoft Store, ou se tornando certificados do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
+description: Para seu aplicativo as chances de serem publicados na Microsoft Store, ou se tornar certificados do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466509"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499541"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
 
 
-Para obter o aplicativo [Windows certificados](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação na Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e testá-lo localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativo do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo é seguro e eficiente.
+Para obter seu aplicativo [Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) ou prepará-lo para [publicação na Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), você deve validar e teste-o localmente primeiro. Este tópico mostra como instalar e executar o [Kit de certificação de aplicativo do Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) para garantir que seu aplicativo é seguro e eficiente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

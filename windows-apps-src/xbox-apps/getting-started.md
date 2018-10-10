@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: da260b4f9f5f50d97d39af883217dfbae91a566e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472589"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504498"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 
@@ -35,7 +35,7 @@ Antes de começar, você precisará fazer o seguinte:
 
 1.  Instale o Visual Studio 2015 atualização 3 ou o Visual Studio 2017.
 
-    Se estiver instalando o Visual Studio 2015 atualização 3, certifique-se de que você escolha a instalação **personalizada** e marque a caixa de seleção de **Ferramentas de desenvolvimento de aplicativos Windows Universal** , ela não é parte da instalação padrão. Se você for um desenvolvedor de C++, escolha **Instalação personalizada** e selecione **C++**.
+    Se você estiver instalando o Visual Studio 2015 atualização 3, certifique-se de que você escolha a instalação **personalizada** e marque a caixa de seleção de **Ferramentas de desenvolvimento de aplicativos Windows Universal** , ela não é parte da instalação padrão. Se você for um desenvolvedor de C++, escolha **Instalação personalizada** e selecione **C++**.
 
     Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, no painel de **Resumo** à direita, em **desenvolvimento da plataforma universal do Windows**, certifique-se de que você selecione a caixa de seleção de **Ferramentas de C++ Universal Windows Platform** . Não é parte da instalação padrão.
 

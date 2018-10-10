@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465763"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500937"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
@@ -59,7 +59,7 @@ Você deve selecionar um preço base para seu complemento (a menos que você tiv
 Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do complemento deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 
 > [!TIP]
-> Para complementos de assinatura, você não pode elevar o preço depois de publicar o complemento, selecionando um preço base maior em um envio posterior ou ao agendar uma alteração de preço que aumenta o preço. Você pode selecionar um preço mais baixo usando qualquer um desses métodos, mas depois que o preço é reduzido não será capaz de fazê-lo maior que esse novo preço. Por isso, é especialmente importante que se você selecionar a faixa de preço apropriada para complementos de assinatura. 
+> Para complementos de assinatura, você não pode elevar o preço depois de publicar o complemento, selecionando um preço base maior em um envio posterior ou ao agendar uma alteração de preço que aumenta o preço. Você pode selecionar um preço mais baixo usando qualquer um desses métodos, mas depois que o preço é reduzido não será capaz de fazê-lo maior que esse novo preço. Por isso, é importante ter certeza de que você selecionar a faixa de preço apropriada para complementos de assinatura. 
 
 Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
 
