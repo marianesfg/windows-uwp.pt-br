@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4423811"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471339"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).

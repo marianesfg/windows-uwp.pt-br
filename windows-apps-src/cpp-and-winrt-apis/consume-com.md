@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af5a8149faab3bece62e4da5d41138aaede16e7
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4415663"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471202"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 
@@ -484,7 +484,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 Como você pode ver, C + c++ WinRT fornece suporte para implementar e chamar interfaces COM. Para usar tipos de COM, como BSTR e VARIANTE, há sempre a opção de usá-los em sua forma bruta (juntamente com as APIs apropriadas). Como alternativa, você pode usar wrappers fornecidos por uma estrutura, como a [Biblioteca ATL (Active Template)](/cpp/atl/active-template-library-atl-concepts), ou do compilador Visual C++ [COM suporte](/cpp/cpp/compiler-com-support)ou até mesmo por seus próprios wrappers.
 
-## <a name="important-apis"></a>APIs importantes
+## <a name="important-apis"></a>APIs Importantes
 * [winrt::check_hresult function](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)
 * [Modelo de struct winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [Struct winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
