@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: serviço de aplicativo do Windows 10, uwp,
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.openlocfilehash: d259df2a65046acb1c34dd2958ab4513bc31f43b
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4425408"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471362"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Converter um serviço de app para ser executado no mesmo processo de seu app host
 
@@ -47,6 +47,8 @@ Remover o `EntryPoint` atributo do `<Extension>` elemento porque agora [onbackgr
 A segunda alteração é mover a lógica de serviço do seu projeto de tarefa em segundo plano separado para métodos que podem ser chamados de **OnBackgroundActivated()**.
 
 Agora seu aplicativo pode executar diretamente o serviço de aplicativo. Por exemplo, em App.xaml.cs:
+
+[!NOTE] O código a seguir é diferente daquele fornecido por exemplo 1 (serviço de fora do processo). O código a seguir é fornecido apenas para fins de ilustração e não deve ser usado como parte do exemplo 2 (processo serviço).  Para continuar a transição do artigo do exemplo 1 (serviço de fora do processo) no exemplo 2 (processo serviço) continuar a usar o código fornecido por exemplo 1 em vez de código de caráter abaixo.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

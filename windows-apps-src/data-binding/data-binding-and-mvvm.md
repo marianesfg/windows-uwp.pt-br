@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eda370db8b68232066052cca3d0abfa6e3876167
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4431215"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4472625"
 ---
 # <a name="data-binding-and-mvvm"></a>Vinculação de dados e MVVM
 
@@ -53,7 +53,7 @@ Em particular, você pode obter muitos benefícios bastando compreensão e aplic
 Para obter diretrizes adicionais sobre como usar o MVVM básico, out-of-a-box, confira a [amostra do banco de dados de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) no GitHub. Muitas das outras [amostras de aplicativos UWP](https://github.com/Microsoft?q=windows-appsample
 ) também usam uma arquitetura MVVM básica e o [exemplo de aplicativo de tráfego](https://github.com/Microsoft/Windows-appsample-trafficapp) inclui code-behind e versões MVVM, com as anotações que descrevem a [conversão MVVM](https://github.com/Microsoft/Windows-appsample-trafficapp/blob/MVVM/MVVM.md). 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 ### <a name="topics"></a>Tópicos
 
