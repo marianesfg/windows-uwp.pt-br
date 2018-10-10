@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465072"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505202"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar um app com um URI
 
@@ -31,7 +31,7 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 | [Iniciar o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
 | [Iniciar o app Mapas do Windows](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
 | [Iniciar o app Pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
-| [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
+| [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar os esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
 | [Habilitar aplicativos para sites usando manipuladores de URI do aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
 
 ## <a name="related-topics"></a>Tópicos relacionados

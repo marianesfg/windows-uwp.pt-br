@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, pacotes opcionais, conjunto relacionado, extensão de pacote, o visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: 4864bdaa1f32b980c5c8b159ca71bb6a56da4ec5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461803"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504564"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Pacotes opcionais e conjunto de criação relacionado
 Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Eles são úteis para conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho, ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original.
@@ -34,11 +34,11 @@ Para obter todas as ferramentas de desenvolvimento mais recentes, consulte [Down
 > Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados à Microsoft Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para Linha de Negócios (LOB) ou aplicativos empresariais sem permissão do Centro de Desenvolvimento se não forem enviados para a Store. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
 
 ### <a name="code-sample"></a>Exemplo de código
-Enquanto você está lendo neste artigo, é recomendável que você siga com o [exemplo de código do pacote opcional](https://github.com/AppInstaller/OptionalPackageSample) no GitHub para um conhecimento prático de pacotes opcionais como e relacionados conjuntos de trabalho no Visual Studio.
+Enquanto você estiver lendo este artigo, é recomendável que você siga com o [exemplo de código do pacote opcional](https://github.com/AppInstaller/OptionalPackageSample) no GitHub para um conhecimento prático de pacotes opcionais como e relacionados conjuntos de trabalho no Visual Studio.
 
 ## <a name="optional-packages"></a>Pacotes opcionais
 Para criar um pacote opcional no Visual Studio, você precisará:
-1. Certifique-se do seu aplicativo **Min versão da plataforma de destino** é definido como: 10.0.15063.0.
+1. Verifique se seu aplicativo **Versão mínima do destino da plataforma** é definida como: 10.0.15063.0.
 2. No seu projeto do **pacote principal** , abra o `Package.appxmanifest` arquivo. Navegue até a guia "Packaging" e anote o **nome da família**, que é tudo antes do caractere "_".
 3. No seu projeto do **pacote opcional** , clique com botão direito do `Package.appxmanifest` e selecione **Abrir com > Editor XML (texto)**.
 4. Localize o `<Dependencies>` elemento no arquivo. Adicione o seguinte:
@@ -49,9 +49,9 @@ Para criar um pacote opcional no Visual Studio, você precisará:
 
 Substitua `[MainPackageDependency]` com o **nome da família** da etapa 2. Isso deve especificar que o **pacote opcional** depende do **pacote principal**.
 
-Quando você tiver dependências do seu pacote configurar de etapas 1 a 4, você pode continuar a desenvolver como faria normalmente. Se você quiser carregar o código do pacote opcional no pacote principal, você precisará criar um conjunto relacionado. Consulte a seção [define relacionados](#related_sets) para obter mais detalhes.
+Quando você tiver suas dependências do pacote configurar de etapas 1 a 4, você pode continuar a desenvolver como faria normalmente. Se você quiser carregar o código do pacote opcional no pacote principal, você precisará criar um conjunto relacionado. Consulte a seção [define relacionados](#related_sets) para obter mais detalhes.
 
-O Visual Studio pode ser configurado para implantar seu pacote principal novamente sempre que você implanta um pacote opcional. Para definir a dependência de compilação no Visual Studio, você deve:
+O Visual Studio pode ser configurado para implantar o pacote principal novamente sempre que você implanta um pacote opcional. Para definir a dependência de compilação no Visual Studio, você deve:
 
 - Clique direito do mouse no projeto do pacote opcional e selecione **dependências de compilação > dependências do projeto...**
 - Verifique se o projeto do pacote principal e selecione "Okey". 
@@ -60,7 +60,7 @@ Agora, sempre que você inserir F5 ou criar um projeto do pacote opcional, Visua
 
 ## Conjuntos relacionados<a name="related_sets"></a>
 
-Se você deseja carregar o código de um pacote opcional para o pacote principal, você precisará criar um conjunto relacionado. Para criar um conjunto relacionado, seu pacote principal e pacote opcional devem ser intimamente ligadas. Os metadados de conjuntos relacionados é especificado no arquivo. appxbundle ou .msixbundle do pacote principal. Visual Studio ajuda você a obter os metadados correto em seus arquivos. Para configurar a solução do seu aplicativo para conjuntos relacionados, use as seguintes etapas:
+Se você deseja carregar o código de um pacote opcional no pacote principal, você precisará criar um conjunto relacionado. Para criar um conjunto relacionado, o pacote principal e o pacote opcional devem ser intimamente ligadas. Os metadados de conjuntos relacionados é especificado no arquivo. appxbundle ou .msixbundle do pacote principal. Visual Studio ajuda você a obter os metadados correto em seus arquivos. Para configurar a solução do seu aplicativo para conjuntos relacionados, use as seguintes etapas:
 
 1. Clique direito do mouse no projeto do pacote principal, selecione **Adicionar > Novo Item...**
 2. Na janela, pesquisar os modelos instalados para ". txt" e adicione um novo arquivo de texto.
@@ -77,7 +77,7 @@ Se você deseja carregar o código de um pacote opcional para o pacote principal
 "..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
 ```
 
-Quando sua solução é configurada dessa forma, o Visual Studio criará um manifesto de pacote para o pacote principal com todos os metadados necessários para conjuntos relacionados. 
+Quando a solução é configurada dessa forma, o Visual Studio criará um manifesto de pacote para o pacote principal com todos os metadados necessários para conjuntos relacionados. 
 
 Observe que como pacotes opcionais, um `Bundle.Mapping.txt` arquivo para conjuntos relacionados só funcionará no Windows 10, versão 1703. Além disso, a versão de mínima da plataforma de destino do seu aplicativo deve ser definida como 10.0.15063.0.
 

@@ -15,11 +15,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 672efaa0899fa8b63b5ec0fda09a20f4f0ab7d67
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466314"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505308"
 ---
 # <a name="xaml-lighting"></a>Iluminação XAML
 
@@ -461,7 +461,7 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-Em seguida, você pode aplicar esta luz para qualquer UIElement XAML ou o pincel de luz-los. Este exemplo mostra diferentes usos potenciais.
+Em seguida, você pode aplicar esta luz para qualquer UIElement XAML ou Pincel para eles. Este exemplo mostra diferentes usos potenciais.
 
 > [!Important]
 > Para [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), remova as duas ocorrências de `local:OrangeSpotLight.IsTarget="True"` da marcação abaixo. As propriedades anexadas já são definidas no code-behind.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, empacotamento
 ms.localizationpriority: medium
 ms.openlocfilehash: fcd6d937c7261b5cfa8af954eb5d2ec2869d8afd
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471248"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505178"
 ---
 # <a name="manual-app-packaging"></a>Empacotamento manual de app
 
@@ -46,5 +46,5 @@ Esta seção contém tópicos mais avançados para inserir componentes em um apl
 |-------|-------------|
 | [Introdução aos pacotes de ativo](asset-packages.md) | Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando efetivamente a necessidade de arquivos duplicados através de seus pacotes de arquitetura. |
 | [Desenvolvendo com os pacotes de ativo e dobramento de pacote](package-folding.md) | Saiba como organizar de forma eficiente seu aplicativo com pacotes de ativo e dobramento de pacote. |
-| [Pacotes do lote simples de aplicativo](flat-bundles.md) | Descreve como criar um lote simples para os arquivos do pacote do seu aplicativo. |
+| [Pacotes do lote simples de aplicativo](flat-bundles.md) | Descreve como criar um lote simples para os arquivos do pacote do aplicativo. |
 | [Criação do pacote com o layout de empacotamento](packaging-layout.md) | O layout de empacotamento é um documento único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os pacotes de um aplicativo (principal e opcional), os pacotes no lote e os arquivos nos pacotes. |

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da loja
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460760"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505898"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Loja
 
@@ -36,7 +36,7 @@ Para saber os detalhes de tarifas cobradas pela Microsoft Store e como receber o
 | [Registre eventos personalizados para o Centro de Desenvolvimento](log-custom-events-for-dev-center.md)  | Registre eventos personalizados do seu aplicativo UWP e revise os eventos no [Relatório de uso](../publish/usage-report.md) no painel do Centro de Desenvolvimento. Esse recurso requer o Microsoft Store Services SDK. |
 | [Solicitar classificações e opiniões](request-ratings-and-reviews.md) |  Incentivar os clientes a classificar ou analisar seu app mostrando programaticamente uma classificação e uma interface do usuário de análise.  |
 | [Serviços da Microsoft Store](using-windows-store-services.md)    |  Saiba como usar APIs RESTful para automatizar envios para a Loja, acessar dados de análise dos aplicativos e automatizar outras tarefas relacionadas à Loja.    |
-| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que os clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
+| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

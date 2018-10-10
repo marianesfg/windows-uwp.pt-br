@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461101"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504937"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir um aplicativo da área de trabalho empacotado
 
@@ -42,7 +42,7 @@ Você não precisa assinar seu aplicativo antes de enviá-lo para a loja.
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Distribuir seu aplicativo sem colocá-lo na Microsoft Store
 
-Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode distribuir aplicativos para um ou mais dispositivos manualmente.
+Se você preferir distribuir seu aplicativo sem utilizar a loja, você pode distribuir aplicativos a um ou mais dispositivos manualmente.
 
 Isso pode fazer sentido se você deseja ter mais controle sobre a experiência de distribuição ou se você não quiser se envolver com o processo de certificação da Microsoft Store.
 
