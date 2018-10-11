@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4498499"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4533710"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
