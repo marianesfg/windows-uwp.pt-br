@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466906"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508876"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de agosto.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de agosto.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -48,11 +48,11 @@ Para saber mais, consulte [correções de tempo de execução de aplicar um paco
 
 ### <a name="web-api-extensions"></a>Extensões de API da Web
 
-Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar web rica informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar rich web informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ c++ exemplos de código do WinRT
 
-Adicionamos 250 [C++ c++ WinRT](../cpp-and-winrt-apis/index.md) listagens para todos os tópicos documentos que acompanha C + existente de código c++ exemplos de código CX.
+Adicionamos 250 [C++ c++ WinRT](../cpp-and-winrt-apis/index.md) listagens para todos os tópicos documentos que acompanha C existentes + de código c++ exemplos de código CX.
 
 ### <a name="project-rome"></a>Project Rome
 
@@ -66,7 +66,7 @@ O plug-in do Xbox Live para o Unity contém suporte para adicionar a assinatura 
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 

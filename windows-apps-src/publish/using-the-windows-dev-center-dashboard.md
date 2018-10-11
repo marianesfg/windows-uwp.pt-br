@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, painel, centro de des, centro de desenvolvimento
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472416"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508419"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usando o painel do Centro de Desenvolvimento do Windows
 
@@ -33,7 +33,7 @@ Alguns destaques da experiência do painel são:
 - Um único local no canto superior direito para acessar detalhes relevantes do perfil e da conta, demonstrativos de pagamento, suporte e notificações.
 - Acesso instantâneo a todos os programas de desenvolvedor sem precisar entrar e sair de cada um deles. Também sugeriremos novos programas que possam ser de seu interesse quando forem disponibilizados.
 
-Quando você [criar um envio para seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer versão do sistema operacional com suporte, e a loja automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles.
+Quando você [criar um envio para seu aplicativo](app-submissions.md) (pela primeira vez ou como uma atualização), você pode [carregar pacotes do aplicativo](upload-app-packages.md) para qualquer versão do sistema operacional com suporte, e a Store automaticamente oferecerá aos clientes o pacote que funcionará melhor para eles.
 
 [Complementos (produtos no aplicativo)](add-on-submissions.md) são gerenciados independentemente do envio do seu aplicativo. Isso proporciona a você maior flexibilidade e a capacidade de fazer alterações de forma independente.
 

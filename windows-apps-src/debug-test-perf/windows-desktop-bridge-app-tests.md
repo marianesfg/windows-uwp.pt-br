@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Testes do app de Ponte de Desktop do Windows
-description: Use testes internos da ponte de Desktop para garantir que seu aplicativo da área de trabalho é otimizado para a sua conversão em um aplicativo UWP.
+description: Use testes internos da ponte da área de trabalho para garantir que seu aplicativo da área de trabalho é otimizado para a sua conversão em um aplicativo UWP.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461523"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506774"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 
-[Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são convertidos em aplicativos Universal Windows Platform (UWP) usando a [Ponte da área de trabalho](https://developer.microsoft.com/en-us/windows/bridges/desktop)de aplicativos da área de trabalho do Windows. Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
+[Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são convertidos em aplicativos da plataforma Universal do Windows (UWP) usando a [Ponte da área de trabalho](https://developer.microsoft.com/en-us/windows/bridges/desktop)de aplicativos da área de trabalho do Windows. Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Testes obrigatórios versus opcionais
-Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante o carregamento da Microsoft Store. É recomendável investigando esses resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
+Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante o carregamento da Microsoft Store. É recomendável investigar os resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
 
 ## <a name="current-optional-tests"></a>Testes opcionais atuais
 
@@ -214,7 +214,7 @@ Os apps de Ponte de Desktop podem aproveitar algumas APIs Win32 herdadas juntame
  
 **Detalhes do teste**  
 Esse teste verifica todos os componentes da UWP no app:
-* Verifica se cada binário gerenciado no pacote do aplicativo não têm uma dependência em uma API do Win32 que não há suporte para desenvolvimento de aplicativos UWP, verificando a tabela de endereço de importação do binário.
+* Verifica se cada binário gerenciado no pacote do aplicativo não tem uma dependência em uma API do Win32 que não há suporte para desenvolvimento de aplicativos UWP, verificando a tabela de endereço de importação do binário.
 * Verifica se cada binário gerenciado no pacote do app não depende de uma função fora do perfil aprovado. 
 
 **Ações corretivas**  

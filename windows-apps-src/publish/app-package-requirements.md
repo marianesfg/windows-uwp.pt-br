@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468775"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506425"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 
@@ -34,7 +34,7 @@ Se estiver usando o Microsoft Visual Studio como seu ambiente de desenvolvimento
 
 Quando for criar seu pacote no Visual Studio, certifique-se de estar conectado com a mesma conta associada a sua conta de desenvolvedor. Algumas partes do manifesto do pacote têm detalhes específicos relacionados à sua conta. Essas informações são detectadas e adicionadas automaticamente. Sem as informações adicionais adicionadas ao manifesto, é possível encontrar falhas de carregamento de pacote. 
 
-Quando você compila os pacotes do aplicativo UWP, o Visual Studio pode criar um .msix ou arquivo appx ou um arquivo .msixupload ou. appxupload. Para aplicativos UWP, é recomendável que você sempre carregue o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) . Para obter mais informações sobre como empacotar aplicativos UWP para a Store, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+Quando você cria os pacotes do aplicativo UWP, o Visual Studio pode criar um .msix ou arquivo appx ou um arquivo .msixupload ou. appxupload. Para aplicativos UWP, é recomendável que você sempre carregue o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) . Para obter mais informações sobre como empacotar aplicativos UWP para a Store, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Os pacotes do seu aplicativo não precisam ser assinados com um certificado proveniente de uma autoridade de certificação confiável.
 

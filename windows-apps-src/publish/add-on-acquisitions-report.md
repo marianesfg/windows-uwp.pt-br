@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, vendas de complementos, aquisições de complementos, vendas de iap, produtos no aplicativo, iaps, complementos
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470187"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509240"
 ---
 # <a name="add-on-acquisitions-report"></a>Relatório de aquisições de complementos
 
 
-O relatório de **aquisições de complemento** no painel do Centro de desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além demográficos e detalhes da plataforma e mostra informações de conversão para clientes no Windows 10 (incluindo o Xbox). Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas.
+O relatório de **aquisições de complemento** no painel do Centro de desenvolvimento do Windows permite que você veja quantos complementos você vendeu, além demográficos e os detalhes de plataforma e mostra informações de conversão de clientes no Windows 10 (incluindo o Xbox). Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas.
 
 Você pode visualizar esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizá-lo offline. Como alternativa, você pode recuperar de forma programática esses dados usando o método [obter aquisições de complementos](../monetize/get-in-app-acquisitions.md) na [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 

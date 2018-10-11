@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: fadd9c2b6a35a1418a782ab0a6ef419e3f127f42
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470261"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506842"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar seu aplicativo da área de trabalho empacotado com o Windows 10
 
@@ -156,7 +156,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Associe seu aplicativo empacotado um conjunto de tipos de arquivo
 
-Você pode associou seu aplicativo empacotado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, selecionar a opção **Abrir com** , seu aplicativo aparecerá na lista de sugestões.
+Você pode associou seu aplicativo empacotado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, selecionar a opção **Abrir com** , seu aplicativo aparece na lista de sugestões.
 
 #### <a name="xml-namespace"></a>Namespace XML
 
@@ -1086,9 +1086,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Reinicie automaticamente depois de receber uma atualização da Microsoft Store
 
-Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização para ele, o aplicativo será fechado.
+Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização para ele, o aplicativo é fechado.
 
-Se quiser que o aplicativo ser reiniciado após a atualização é concluída, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
+Se quiser que o aplicativo ser reiniciado após a atualização, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
 
 Cada janela ativa em seu aplicativo recebe uma mensagem [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . Neste ponto, seu aplicativo pode chamar a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) novamente para atualizar a linha de comando, se necessário.
 
@@ -1105,15 +1105,15 @@ Depois que a atualização for concluída, seu aplicativo for reiniciado.
 
 Integre-se com outros aplicativos, inicie outros processos ou compartilhe informações.
 
-* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão](#printing)
+* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão](#printing)
 * [Compartilhe fontes com outros aplicativos do Windows](#fonts)
 * [Inicie um processo Win32 a partir de um aplicativo Universal Windows Platform (UWP)](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão
 
-Os usuários desejarem imprimir dados de outro aplicativo, como o bloco de notas, você pode fazer com que seu aplicativo apareça como um alvo de impressão na lista de destinos de impressão disponíveis do aplicativo.
+Quando os usuários desejarem imprimir dados de outro aplicativo, como o bloco de notas, você pode fazer com que seu aplicativo apareça como um alvo de impressão na lista de destinos de impressão disponíveis do aplicativo.
 
 Você precisará modificar seu aplicativo para que ele receba dados de impressão no formato XML Paper Specification (XPS).
 
@@ -1260,7 +1260,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
-Essa extensão pode ser útil se você quiser criar uma interface do usuário de plataforma universal do Windows que é executado em todos os dispositivos, mas desejar componentes do seu aplicativo Win32 continuem funcionando com confiança total.
+Esta extensão pode ser útil se você quiser criar uma interface do usuário de plataforma universal do Windows que é executado em todos os dispositivos, mas deseja componentes do seu aplicativo Win32 continuem funcionando com confiança total.
 
 Basta crie um pacote de aplicativo do Windows para seu aplicativo Win32. Em seguida, adicione esta extensão ao arquivo de pacote do seu aplicativo UWP. Essas extensões indicam que você deseja iniciar um arquivo executável no pacote de aplicativo do Windows.  Se você quiser se comunicar entre seu aplicativo UWP e seu aplicativo Win32, você pode configurar um ou mais [serviços de aplicativo](../launch-resume/app-services.md) para fazer isso. Você pode ler mais sobre esse cenário [aqui ](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

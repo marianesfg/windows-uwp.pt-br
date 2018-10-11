@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472569"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507864"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
@@ -66,7 +66,7 @@ class ColorEntry
 
 O caminho para a função é especificado como outros caminhos de propriedade e pode incluir pontos (.), indexadores ou conversões para localizar a função.
 
-As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use o abaixo sintaxe para associação para funções estáticas no code-behind.
+As funções estáticas podem ser especificadas usando-se a sintaxe XMLNamespace:ClassName.MethodName. Por exemplo, use o abaixo sintaxe para associação funções estáticas no code-behind.
 
 ```xaml
 <Page 
@@ -163,7 +163,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Você pode usar funções no x: Bind para alcançar os mesmos cenários como o que foi suportado por meio de conversores e MultiBinding no WPF.
+> Você pode usar funções no x: Bind para alcançar os mesmos cenários como o que foi com suporte por meio de conversores e MultiBinding no WPF.
 
 ## <a name="function-arguments"></a>Argumentos de função
 

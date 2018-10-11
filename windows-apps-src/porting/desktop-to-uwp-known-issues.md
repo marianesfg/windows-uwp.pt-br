@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471192"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508501"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
@@ -135,13 +135,13 @@ certutil -dump <cert_file.pfx>
 
 Isso pode acontecer quando o pacote contém um binário que tenha um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
 
-* O início do certificado não estiver no final de uma imagem.  
+* O início do certificado não está no final de uma imagem.  
 
 * O tamanho do certificado não é positivo.
 
-* O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
+* O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura de um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
 
-* O ponteiro de certificado não é alinhado corretamente para uma estrutura WIN_CERTIFICATE.
+* O ponteiro de certificado não alinhado corretamente para uma estrutura WIN_CERTIFICATE.
 
 Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
 
@@ -149,13 +149,13 @@ Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Promp
 set APPXSIP_LOG=1
 ```
 
-Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemplo:
+Em seguida, no **Prompt de comando**, assine o aplicativo novamente. Por exemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informações sobre arquivos que contêm um certificado PE incorreto serão exibido na **Janela do Console**. Por exemplo:
+Informações sobre arquivos que contêm um certificado PE incorreto aparecerão na **Janela do Console**. Por exemplo:
 
 ```
 ...

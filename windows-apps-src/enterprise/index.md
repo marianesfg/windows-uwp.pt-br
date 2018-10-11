@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462647"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506340"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -25,11 +25,11 @@ Este mapa fornece uma visão geral dos recursos empresariais principais para apl
 
 Existe uma versão do aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
-Coisas vale destacar frente:
+Coisas vale destacar na frente:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novidades para aplicativos corporativos
 
-Veja a seguir algumas ferramentas, bibliotecas e recursos que foram criados bastante recentemente.
+Veja algumas ferramentas, bibliotecas e recursos que foram criados bastante recentemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
@@ -55,9 +55,9 @@ Consulte [Windows Template Studio](https://marketplace.visualstudio.com/items?it
 
 ### <a name="controls-to-create-desktop-style-uis"></a>Controles para criar interfaces do usuário estilo de área de trabalho
 
-Lançamos novos controles XAML da UWP que preencher a lacuna entre um aplicativo da área de trabalho tradicional da interface do usuário e uma UI UWP.
+Lançamos novos controles XAML da UWP que preenchem a lacuna entre um aplicativo da área de trabalho tradicional da interface do usuário e uma UI de UWP.
 
-Por exemplo, os novos controles de [barra de menus](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listados em uma lista predefinida de opções.
+Por exemplo, os novos controles de [barra de menus](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listadas em uma lista predefinida de opções.
 
 ![Barra de menus](images/menu-bar.png)
 
@@ -84,7 +84,7 @@ Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](ht
 
 ### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
-Windows 10 agora permite que você use controles UWP em C++ Win32, WPF e Windows Forms aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP, como Windows Ink e controles que dão suporte ao sistema de Design Fluent. Esse recurso é chamado Ilhas XAML.
+Windows 10 agora permite que você use controles UWP em C++ Win32, WPF e Windows Forms aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles UWP, como Windows Ink e controles que dão suporte ao sistema de Design Fluent. Esse recurso é chamado Ilhas XAML.
 
 Consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -110,9 +110,9 @@ Consulte [Usar um banco de dados do SQL Server em um aplicativo UWP](https://doc
 
 ### <a name="msix-deployment"></a>Implantação de MSIX
 
-MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes de aplicativo existente e instalem arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
+MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes de aplicativo existente e instale arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
 
-MSIX é um formato de empacotamento criado para ser seguro, segura e confiável, com base em uma combinação das tecnologias de instalação do App-V e ClickOnce,. AppX,. msi.
+MSIX é um formato de empacotamento criado para ser seguro, segura e confiável, com base em uma combinação de. msi, AppX, tecnologias de instalação do App-V e ClickOnce.
 
 ![Ícone MSIX](images/WinUI_MSIX_2col_740x417.png)
 
@@ -175,7 +175,7 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 
 ## <a name="deployment"></a>Implantação
 
-Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública publicando na Microsoft Store.
+Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
 
 | Tópico | Descrição |
 |-------|-------------|

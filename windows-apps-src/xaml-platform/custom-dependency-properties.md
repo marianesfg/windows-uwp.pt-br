@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468814"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506366"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
@@ -170,7 +170,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Para C++ c++ /CX codificar, o motivo por que você tem um campo privado e uma propriedade pública de somente leitura que revela o [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) é para que outros chamadores que usam sua propriedade de dependência também podem usar o utilitário do sistema de propriedades APIs que exigem a identificador seja público. Se você mantiver o identificador como particular, as pessoas não poderão usar essas APIs de utilitários. Exemplos dessas APIs e cenários incluem [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) ou [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) por opção, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358),  [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) e [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Você não pode usar um campo público para isso porque as regras de metadados do Windows Runtime não permitem campos públicos.
+> Para C++ c++ /CX de código, o motivo por que você tem um campo privado e uma propriedade pública de somente leitura que revela o [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) é que outros chamadores que usam sua propriedade de dependência também podem usar o utilitário do sistema de propriedades APIs que exigem a identificador seja público. Se você mantiver o identificador como particular, as pessoas não poderão usar essas APIs de utilitários. Exemplos dessas APIs e cenários incluem [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) ou [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) por opção, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358),  [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) e [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Você não pode usar um campo público para isso porque as regras de metadados do Windows Runtime não permitem campos públicos.
 
 ## <a name="dependency-property-name-conventions"></a>Convenções de nomes de propriedade de dependência
 

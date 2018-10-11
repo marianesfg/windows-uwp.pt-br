@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463494"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506415"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -188,7 +188,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
         Use top navigation when:
 
         - Você deseja mostrar todas as opções de navegação na tela.
-        - Desejam mais espaço para conteúdo do seu aplicativo.
+        - Desejar mais espaço para conteúdo do seu aplicativo.
         - Ícones não descrevem claramente as categorias de navegação.
         
         Use guias quando:

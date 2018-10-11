@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 178bee54296c355a17a78cb63d17986f51132893
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472809"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507186"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Novas APIs no Windows 10 build 17763
 
-Namespaces de API novos e atualizados foram disponibilizados para desenvolvedores no Windows 10 build 17763 (também conhecido como o de 2018 outubro Update ou versão 1809). Veja abaixo uma lista completa de documentação publicada para namespaces adicionados ou modificados nesta versão.
+Namespaces de API novos e atualizados foram disponibilizados para desenvolvedores no Windows 10 build 17763 (também conhecido como o de 2018 outubro atualização ou versão 1809). Veja abaixo uma lista completa de documentação publicada para namespaces adicionados ou modificados nesta versão.
 
 Para obter informações sobre as API adicionada na versão anterior, consulte [As novas APIs na atualização de abril do Windows 10](windows-10-build-17134-api-diff.md).
 

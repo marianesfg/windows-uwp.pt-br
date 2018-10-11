@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469672"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505745"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
@@ -40,7 +40,7 @@ Lembre-se das seguintes políticas para códigos promocionais:
 -   Você deve seguir os requisitos definidos no [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluindo a seção **3k. Códigos promocionais**.
 
 > [!NOTE]
-> Você pode usar códigos promocionais mesmo se seu aplicativo não está disponível para os clientes (ou seja, se você selecionou **disponibilizar este produto mas não detectável na loja** com a aquisição de parada **: os clientes com um link direto poderão ver da loja do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** opção na seção de [Descoberta](choose-visibility-options.md#discoverability) do seu envio). Com essa opção, os clientes devem estar na Windows 10 (incluindo o Xbox) para adquirir seu produto com um código promocional.
+> Você pode usar códigos promocionais mesmo se seu aplicativo não está disponível para os clientes (isto é, se você selecionou **disponibilizar este produto mas não detectável na loja** com a aquisição de parada **: qualquer cliente com um link direto pode ver da Store do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10** opção na seção de [Descoberta](choose-visibility-options.md#discoverability) do seu envio). Com essa opção, os clientes devem estar na Windows 10 (incluindo o Xbox) para adquirir o produto com um código promocional.
 
 
 ## <a name="order-promotional-codes"></a>Solicitar códigos promocionais
@@ -100,7 +100,7 @@ Após distribuir um código promocional (ou sua URL resgatável) a um cliente, e
 Depois que o cliente clicar em **Resgatar**, a Microsoft Store abrirá a página de visão geral do app (se ele estiver em um dispositivo Windows 10 ou Windows 8.1), onde ele poderá clicar em **Instalar** para baixar e instalar o aplicativo gratuitamente. Se o cliente estiver em um computador ou dispositivo que não tenha a Microsoft Store instalada, o link iniciará a página da Web da Microsoft Store do app. O código será aplicado à conta da Microsoft do cliente, para que ele possa baixar o aplicativo em um dispositivo Windows (que é associado à mesma conta da Microsoft) gratuitamente mais tarde.
 
 > [!NOTE]
-> Em alguns casos, um cliente pode ver um botão **comprar** em vez de **instalar**, mesmo que o aplicativo tenha sido resgatado com êxito o código promocional. O cliente pode clicar em **Comprar** para instalar o aplicativo gratuitamente.
+> Em alguns casos, um cliente pode ver um botão **comprar** , em vez de **instalar**, mesmo que o aplicativo tenha sido resgatado com êxito o código promocional. O cliente pode clicar em **Comprar** para instalar o aplicativo gratuitamente.
 
 
 ## <a name="review-your-promotional-codes"></a>Analisar os códigos promocionais

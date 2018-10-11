@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466660"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508221"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de setembro.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de setembro.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -26,7 +26,7 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[O Windows Machine Learning documentos](https://docs.microsoft.com/windows/ai/) agora residem em seu próprio site e são atualizados para o SDK mais recente do Windows Insider. Há desktop e tutoriais UWP em C++ e c# para ajudar você a começar a adicionar WinML ao seu aplicativo.
+[O Windows Machine Learning documentos](https://docs.microsoft.com/windows/ai/) agora residem em seu próprio site e são atualizados para o SDK mais recente do Windows Insider. Há área de trabalho e tutoriais UWP em C++ e c# para ajudar você a começar a adicionar WinML ao seu aplicativo.
 
 [Referência de API do Windows.AI.MachineLearning da](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) foi atualizado para o SDK mais recente do Windows Insider.
 
@@ -44,9 +44,9 @@ Para obter mais informações sobre a biblioteca de interface do usuário do Win
 
 ### <a name="how-blur-effects-work"></a>Como o trabalho de efeitos de desfoque
 
-Um dos nossos criadores, o Mike Jacobs esteemed, iniciou uma série de artigos médio sobre Desfoque de visão e fotografia ao design de aplicativos e jogos. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Um dos nossos criadores, o Mike Jacobs esteemed, começou a uma série de artigos médio sobre desfoque, de visão e fotografia ao design de aplicativos e jogos. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
-![Desfocar em ação](images/blur-example.jpg)
+![Desfoque em ação](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Diretrizes de contribuição
 
@@ -56,7 +56,7 @@ Atualizamos [nossas diretrizes contribui](https://github.com/MicrosoftDocs/windo
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Aaron Gustafson:
 
