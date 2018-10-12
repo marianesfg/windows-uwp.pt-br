@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: f5660649b6f82135cdb45a8678a3f871a0f5e61d
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4540064"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4566526"
 ---
 # <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
  

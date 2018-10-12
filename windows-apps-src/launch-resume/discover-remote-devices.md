@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
 ms.localizationpriority: medium
 ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4532720"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4565938"
 ---
 # <a name="discover-remote-devices"></a>Descobrir dispositivos remotos
 O aplicativo pode usar a rede sem fio, Bluetooth e uma conexão na nuvem para descobrir dispositivos Windows conectados com a mesma conta da Microsoft que o dispositivo de descoberta. Os dispositivos remotos não precisam ter nenhum software especial instalado para ser descoberto.

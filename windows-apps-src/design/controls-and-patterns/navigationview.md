@@ -15,11 +15,11 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c9f44f13df05aa408757a0766b2a652037707d1
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4535783"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4567896"
 ---
 # <a name="navigation-view-preview-version"></a>Modo de exibição de navegação (versão prévia)
 
