@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: Saiba como usar o namespace Windows.Services.Store para implementar uma versão de avaliação do seu aplicativo.
 title: Implementar uma versão de avaliação do aplicativo
 keywords: windows 10, uwp, avaliação, compras no aplicativo, Windows.Services.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 402d2c584732611d79a74fbc24e11f590e029171
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 50eced0042cf9c166a7c0c8f73305dec3c1df12d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690092"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613357"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar uma versão de avaliação do aplicativo
 
@@ -65,7 +65,7 @@ Lembre-se de explicar como o app se comportará durante e após o período de av
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows que está configurado como uma [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem tempo limite e esse aplicativo foi publicado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Microsoft Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você criou um aplicativo no painel do Centro de Desenvolvimento do Windows que está configurado como uma [avaliação gratuita](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) sem tempo limite e esse aplicativo foi publicado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.

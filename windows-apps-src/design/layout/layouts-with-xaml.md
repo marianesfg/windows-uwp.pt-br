@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567566"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616425"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Layouts dinâmicos com o XAML
 
@@ -236,7 +236,7 @@ Este exemplo faz a mesma coisa que o exemplo anterior, mas usa a sintaxe simplif
 ```
 
 > [!Important]
-> No exemplo anterior, a propriedade anexada VisualStateManager. Visualstategroups é definida no elemento de **grade** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
+> No exemplo anterior, a propriedade anexada VisualStateManager. Visualstategroups é definida no elemento **Grid** . Ao usar StateTriggers, certifique-se sempre de que VisualStateGroups esteja anexado ao primeiro filho da raiz para que os gatilhos entrem em vigor automaticamente. (Aqui, **Grid** é o primeiro filho do elemento **Page** raiz.)
 
 ### <a name="attached-property-syntax"></a>Sintaxe da propriedade anexada
 

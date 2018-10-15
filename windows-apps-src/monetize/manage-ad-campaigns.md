@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7b07a6ca-4be1-497c-a901-0a2da3762555
 description: Use este método nas promoções da API da Microsoft Store para criar, editar e obter campanhas publicitárias promocionais.
 title: Gerenciar campanhas publicitárias
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 125e67e7b56ac4f8d7d15a36ceca3922ea58ac82
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: f707c252e404da3aaf6e82317c80a266f4d91d26
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664226"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611261"
 ---
 # <a name="manage-ad-campaigns"></a>Gerenciar campanhas publicitárias
 

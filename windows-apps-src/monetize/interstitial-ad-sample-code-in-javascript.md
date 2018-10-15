@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: Saiba como iniciar um anúncio intersticial em HTML/JavaScript.
 title: Código de exemplo de anúncio intersticial em JavaScript
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, intersticial, javascript, código de exemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: f0cd50a8d3a08053f04dd0e6e8afbfafc8ef34dd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: Auto
+ms.openlocfilehash: 894053298428818c2f3304220f14afb6c44ba2af
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690342"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611926"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de exemplo de anúncio intersticial em JavaScript
 
@@ -30,7 +30,7 @@ Este aplicativo de exemplo usa dois botões para solicitar e, em seguida, inicia
 Substitua os valores das variáveis ```applicationId``` e ```adUnitId``` por valores ativos do Centro de Desenvolvimento do Windows antes de enviar o aplicativo para a Microsoft Store. Para obter mais informações, consulte [Configurar unidades publicitárias no app](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
-> Para alterar este exemplo e mostrar um anúncio intersticial de banner em vez de um anúncio intersticial em vídeo, passe o valor **InterstitialAdType.display** para o primeiro parâmetro do método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) em vez de **InterstitialAdType.video**. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).
+> Para alterar este exemplo e mostrar um anúncio intersticial de banner em vez de um anúncio intersticial em vídeo, passe o valor **InterstitialAdType.display** para o primeiro parâmetro do método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) em vez de **InterstitialAdType.video**. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).
 
 ### <a name="indexhtml"></a>index.html
 

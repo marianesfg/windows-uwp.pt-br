@@ -13,15 +13,15 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563662"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615134"
 ---
 # <a name="app-icons-and-logos"></a>Ícones e logotipos de apps 
 
-Todo aplicativo tem um ícone/o logotipo que representa, e esse ícone é exibido em vários locais no shell do Windows: 
+Todo aplicativo tem um ícone/logotipo que representa a ele e esse ícone é exibido em vários locais no shell do Windows: 
 
 :::row:::
     :::column:::
@@ -39,19 +39,19 @@ Todo aplicativo tem um ícone/o logotipo que representa, e esse ícone é exibid
 
 Este artigo aborda as Noções básicas de criação de ícones de aplicativos, como usar o Visual Studio para gerenciá-los e como gerenciá-las manualmente, caso seja necessário.
  
-(Este artigo é especificamente para ícones que representam o próprio aplicativo; para obter diretrizes gerais de ícone, consulte o artigo de [ícones](icons.md) ).
+(Este artigo é especificamente para ícones que representam o próprio aplicativo; para obter orientações gerais do ícone, consulte o artigo de [ícones](icons.md) ).
 
 ## <a name="icon-types-locations-and-scale-factors"></a>Tipos de ícone, locais e fatores de escala
 
-Por padrão, o Visual Studio armazena os ativos de ícone em um subdiretório de ativos. Aqui está uma lista dos diferentes tipos de ícones, onde eles são exibidos, e o que são chamados. 
+Por padrão, o Visual Studio armazena seus ativos de ícone em um subdiretório de ativos. Aqui está uma lista dos diferentes tipos de ícones, onde eles são exibidos, e o que são chamados. 
 
-| Nome do ícone | Aparece na | Nome do arquivo de ativo |
+| Nome do ícone | Aparece em | Nome do arquivo de ativo |
 | ---      | ---        | --- |
 | Bloco pequeno | Menu Iniciar |  SmallTile.png  |
 | Bloco médio |Menu Iniciar, Microsoft Store listing\ *  |  Square150x150Logo.PNG |
 | Bloco largo  | Menu Iniciar   | Wide310x150Logo.PNG |
 | Bloco grande   | Menu Iniciar, Microsoft Store listing\ * |  LargeTile.png  |
-| Ícone de aplicativo | Lista de aplicativos no menu Iniciar, barra de tarefas, Gerenciador de tarefas | Square44x44Logo.PNG |
+| Ícone de aplicativo | Lista de aplicativos no menu Iniciar, a barra de tarefas, Gerenciador de tarefas | Square44x44Logo.PNG |
 | Tela inicial | Tela inicial do aplicativo | SplashScreen  |
 | Logotipo do selo | Blocos do seu aplicativo | BadgeLogo.png  |
 | Logotipo do logotipo/armazenamento de pacote | Instalador de aplicativo, centro de desenvolvimento, a opção "Relatar um aplicativo" na loja, a opção "Escrever uma análise" na loja | StoreLogo.png  |
@@ -74,7 +74,7 @@ O fator de escala determina o tamanho dos elementos de interface do usuário, co
 :::row-end:::  
 
 
-Como ativos de ícone do aplicativo são bitmaps e bitmaps corrigidos sem escala bem, é recomendável fornecer cada ativo de ícone de uma versão para cada fator de escala: 100%, 125%, 150%, 200% e 400%. Há muitos dos ícones! Fortunatly, Visual Studio fornece uma ferramenta que facilita a gerar e atualizar esses ícones. 
+Como ativos de ícone do aplicativo são bitmaps e bitmaps corrigidos sem escala bem, é recomendável fornecer uma versão de cada ativo de ícone para cada fator de escala: 100%, 125%, 150%, 200% e 400%. Há muitos dos ícones! Fortunatly, Visual Studio fornece uma ferramenta que facilita a gerar e atualizar esses ícones. 
 
 ## <a name="microsoft-store-listing-image"></a>Imagem de listagem da Microsoft Store
 
@@ -84,9 +84,9 @@ Por padrão, usamos algumas das imagens de seus pacotes na loja, conforme descri
 
 ![Especificando os logotipos da loja durante o processo de envio de aplicativo](images/app-icons/storelogodisplay.png)
 
-Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 tamanhos de imagem que usará o armazenamento no lugar de imagens de logotipo dos pacotes do aplicativo: 300 x 300, 150 x 150 e 71 x 71 pixels. Somente o tamanho de 300 x 300 é necessário, embora seja recomendável fornecer os tamanhos de 3.
+Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 tamanhos de imagem que a loja usará no lugar de imagens de logotipo dos pacotes do aplicativo: 300 x 300, 150 x 150 e 71 x 71 pixels. Somente o tamanho de 300 x 300 é necessário, embora seja recomendável fornecer os tamanhos de 3.
 
-Para obter mais informações, consulte a [exibição carregados somente imagens de logotipo na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
+Para obter mais informações, consulte [exibição carregados apenas imagens de logotipo na loja](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
 
 <!-- ### Fallback images for the Store
 
@@ -158,25 +158,25 @@ Para iniciar o Designer de manifesto:
     :::column-end:::
 :::row-end:::        
 
-## <a name="generating-all-assets-at-once"></a>Geração de todos os ativos ao mesmo tempo
+## <a name="generating-all-assets-at-once"></a>Gerando todos os ativos ao mesmo tempo
 
 O primeiro item de menu na guia **Ativos visuais** , **Todos os ativos visuais**, faz exatamente o que seu nome sugere: gera cada ativo visual que seu aplicativo precisa com o pressionamento de um botão.
 
 ![Gerar todos os ativos visuais no Visual Studio](images/app-icons/all-visual-assets.png)
 
-Tudo o que você precisa fazer é fornecer uma única imagem, e o Visual Studio irá gerar o bloco pequeno, bloco médio, grande bloco, bloco largo, bloco grande, ícone do aplicativo, tela inicial e ativos de logotipo para cada fator de escala do pacote.
+Tudo que você precisa fazer é fornecer uma única imagem, e o Visual Studio irá gerar o bloco pequeno, bloco médio, grande bloco, bloco largo, bloco grande, ícone do aplicativo, tela inicial e ativos de logotipo para cada fator de escala do pacote.
 
 Para gerar todos os ativos ao mesmo tempo:
-1. Clique o Stores **** ao lado do campo de **origem** e selecione a imagem que você deseja usar. Se você estiver usando uma imagem de bitmap, verifique se é pelo menos 400 por 400 pixels para que você obterá resultados nítidos. Imagens com base em vetor funcionam melhor; O Visual Studio permite que você use AI (Adobe Illustrator) e arquivos PDF. 
-2. (Opcional). Na seção **Configurações de exibição** , configure essas opções:
+1. Clique o Stores **** ao lado do campo de **origem** e selecione a imagem que você deseja usar. Se você estiver usando uma imagem de bitmap, verifique se é pelo menos 400 por 400 pixels para que você obterá resultados nítidos. Imagens vetoriais funcionam melhor; O Visual Studio permite que você use AI (Adobe Illustrator) e arquivos PDF. 
+2. (Opcional). Na seção **Configurações de exibição** , configure estas opções:
 
-    a.  **Nome curto**: especificar um nome curto para o seu aplicativo.
+    a.  **Nome curto**: Especifique um nome curto para o seu aplicativo.
 
-    b.  **Mostrar o nome**: indicar se você deseja exibir o nome curto em blocos de largura, e o tamanho médio. 
+    b.  **Mostrar o nome**: indicar se você deseja exibir o nome curto em blocos de médio, largo ou grande. 
 
-    c. **Bloco em segundo plano**: especificar o valor hexadecimal ou um nome de cor para a cor de plano de fundo lado a lado. Por exemplo, `#464646`. O valor padrão é `transparent`.
+    c. **Plano de fundo do bloco**: especificar o valor hex ou um nome de cor para a cor de fundo do bloco. Por exemplo, `#464646`. O valor padrão é `transparent`.
 
-    d. **Plano de fundo de tela Spash**: especificar o nome de cor ou valor hexadecimal para o plano de fundo de tela spash. 
+    d. **Plano de fundo de tela Spash**: especificar o nome de cor ou valor hexadecimal para o plano de fundo de tela de spash. 
 
 3. Clique em **Gerar**. 
 
@@ -196,17 +196,17 @@ Observe que o Visual Studio não gera um logotipo de selo por padrão. Isso ocor
 ## <a name="more-about-app-icon-assets"></a>Mais informações sobre os ativos de ícone de aplicativo
 Visual Studio gerará todos os ativos de ícone de aplicativo exigidos pelo seu projeto, mas se você quiser personalizá-las, ele ajuda a entender como eles são diferentes dos outros ativos de aplicativo. 
 
-O ativo de ícone do aplicativo aparece em muitos lugares: na barra de tarefas do Windows, o modo de exibição de tarefa, ALT + TAB e o canto inferior direito dos blocos em Iniciar. Como os ativos de ícone do aplicativo aparece em tantos locais, ele tem alguns dimensionamento adicional e plating opções os outros ativos não tem: ativos "tamanho" e "sem fundo" ativos. 
+O ativo de ícone do aplicativo aparece em muitos lugares: na barra de tarefas do Windows, o modo de exibição de tarefa, ALT + TAB e o canto inferior direito dos blocos em Iniciar. Como os ativos de ícone do aplicativo aparece em tantos locais, ele tem algum dimensionamento adicional e plating opções os outros ativos não têm: ativos "tamanho" e "sem fundo" ativos. 
 
-### <a name="target-size-app-icon-assets"></a>Ativos de ícone do aplicativo de tamanho
-Além dos tamanhos de fator de escala padrão ("Square44x44Logo.scale-400.png"), também recomendamos criar ativos "tamanho de destino". Chamamos tamanho esses ativos como alvo tamanhos específicos, como 16 pixels, em vez de fatores de escala específica, como 400. Ativos de tamanho de destino são para superfícies que não usam o sistema escala de 1X:
+### <a name="target-size-app-icon-assets"></a>Ativos de ícone de aplicativo do tamanho do alvo
+Além dos tamanhos de fator de escala padrão ("Square44x44Logo.scale-400.png"), também recomendamos criar ativos "tamanho". Chamamos tamanho esses ativos porque eles direcionar tamanhos específicos, como 16 pixels, em vez de fatores de escala específica, como 400. Ativos de tamanho de destino são para superfícies que não usam o sistema de 1X dimensionamento:
 
 * Iniciar a lista de atalhos (desktop)
 * Iniciar o canto inferior do bloco (desktop)
 * Atalhos (desktop)
 * Painel de Controle (desktop)
 
-Aqui está a lista de ativos de tamanho de destino:
+Aqui está a lista de ativos de tamanho:
 
 
 | Tamanho do ativo | Exemplo de nome de arquivo                  |
@@ -246,7 +246,7 @@ Aqui estão as superfícies que usar ativos de ícone do aplicativo sem fundo:
 * ALT+TAB
 
 
-### <a name="target-and-unplated-sizing"></a>Destino e dimensionamento sem fundo
+### <a name="target-and-unplated-sizing"></a>Dimensionamento sem fundo e destino
 
 Aqui estão as recomendações de tamanho para ativos baseados no destino, em escala de 100%:
 
@@ -258,25 +258,25 @@ Para obter mais informações sobre telas iniciais, consulte o [artigo de telas 
 
 ## <a name="more-about-badge-logo-assets"></a>Mais sobre os ativos de logotipo do selo
 
-Quando você usa o gerador de ativo para gerar todos os ativos que você precisa, há um motivo por que ela não gerar o selo logotipos por padrão: eles são muito diferentes dos outros ativos de aplicativo. O logotipo de selo é uma imagem de status que aparece em notificações e blocos do aplicativo. 
+Quando você usa o gerador de ativo para gerar todos os ativos que você precisa, há um motivo por que ela não gerar o selo logotipos por padrão: eles são muito diferentes dos outros ativos de aplicativo. O logotipo de selo é uma imagem de status exibido nas notificações e blocos do aplicativo. 
 
 Para obter mais informações, consulte as [notificações de selo para o artigo de aplicativos UWP](/windows/uwp/design/shell/tiles-and-notifications/badges).
 
 
 ## <a name="customizing-asset-padding"></a>Personalizando o preenchimento de ativo
 
-Por padrão, o gerador de ativo Visual Studio aplica preenchimento recomendado para qualquer imagem. Se as imagens já contêm preenchimento ou se desejar imagens sangramento completo que se estender até o final do bloco, você pode desativar esse recurso desmarcando a caixa de seleção **Aplicar recomendado preenchimento** . 
+Por padrão, o gerador de ativo Visual Studio aplica preenchimento recomendado para qualquer imagem. Se suas imagens já contêm preenchimento ou se quiser imagens sangramento completo que se estender até o final do bloco, você pode desativar esse recurso desmarcando a caixa de seleção **Aplicar recomendado preenchimento** . 
 
 ### <a name="tile-padding-recommendations"></a>Recomendações de preenchimento de bloco
 Se você quiser fornecer sua própria preenchimento, aqui estão nossas recomendações de blocos. 
 
-Há 4 tamanhos de bloco: pequeno (71 x 71), médio (150 x 150), todo (310 x 150) e grande (310 x 310). 
+Há 4 tamanhos de bloco: pequeno (71 x 71), médio (150 x 150), todo o (310 x 150) e grandes (310 x 310). 
 
 Cada ativo de bloco tem o mesmo tamanho do bloco no qual ele é colocado.
 
 ![Sangramento completo do bloco mostrando](images/app-icons/tile-assets1.png)
 
-Se você não quiser que o ícone para se estender até a borda do bloco, você pode usar pixels transparentes em seus ativos para criar o preenchimento. 
+Se você não quiser seu ícone para se estender até a borda do bloco, você pode usar pixels transparentes em seu ativo para criar o preenchimento. 
 
 ![bloco e fundo](images/assetguidance05.png)
 

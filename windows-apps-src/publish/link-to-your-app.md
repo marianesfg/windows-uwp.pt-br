@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567936"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612084"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -31,7 +31,7 @@ Quando um cliente clicar nesse link, ele abre a página de listagem baseada na W
 
 ## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Vinculação da listagem da Store do seu aplicativo com o selo da Microsoft Store
 
-Você pode vincular diretamente aos detalhes do seu aplicativo com um selo personalizado para permitir que os clientes saibam que seu aplicativo está na Microsoft Store.
+Você pode vincular diretamente aos detalhes do seu aplicativo com um selo personalizado para que os clientes saibam que seu aplicativo está na Microsoft Store.
 
 Para criar o selo, visite a página de [selos da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Você precisará ter a **ID da Loja** de 12 caracteres do aplicativo para usar esse formulário, além de gerar o selo e o link. Você pode encontrar a **ID da Loja** do aplicativo na página [Identidade do aplicativo](view-app-identity-details.md) na seção **Gerenciamento do aplicativo**.
 

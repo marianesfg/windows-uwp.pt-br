@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: O SDK do Microsoft Advertising oferece várias maneiras de monetizar seu aplicativo com anúncios.
 title: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
-ms.author: mcleans
-ms.date: 05/02/2018
+ms.author: mhopkins
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843016"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613557"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
-Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de tipos de anúncio e dá suporte ao controle com várias redes de anúncios conhecidas.
+Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e dá suporte com várias redes de anúncios conhecidas. Nossa plataforma está em conformidade com o OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
 
 <br/>
 
@@ -121,7 +121,7 @@ Para obter ajuda adicional usando o SDK do Microsoft Advertising, use os recurso
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Aplicativos para Windows 8.1 e Windows Phone 8.x
 
-Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://msdn.microsoft.com/library/windows/apps/xaml/dn792120.aspx).
+Para os aplicativos do Windows 8.1 e Windows Phone 8. x, fornecedos [SDK do Microsoft Advertising para Windows e Windows Phone 8.x](http://aka.ms/store-8-sdk). Para obter mais informações sobre como usar este SDK para mostrar anúncio em aplicativos para Windows 8.1 ou Windows Phone 8.x, consulte [este artigo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

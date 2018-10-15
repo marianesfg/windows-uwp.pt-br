@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: Use este método na API de envio da Microsoft Store para atualizar um envio de complemento existente.
 title: Atualizar um envio de complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de complemento, atualizar, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 14a648bc19ef90f91313177f883bb5f4daaea47d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9126bae03644fb22f773cbd69cc397456a4cd48f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817374"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611760"
 ---
 # <a name="update-an-add-on-submission"></a>Atualizar um envio de complemento
 

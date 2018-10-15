@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575115"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614971"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
 
-O relatório de **aquisições** no painel do Centro de desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e os detalhes de plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram do seu aplicativo listagem. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
+O relatório de **aquisições** no painel do Centro de desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram do seu aplicativo listagem. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
 
 Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
@@ -34,7 +34,7 @@ Neste relatório, uma **aquisição** significa que um novo cliente obteve uma l
 
 ## <a name="apply-filters"></a>Aplicar filtros
 
-Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto em dados **cumulativo do aplicativo** ). O tempo de **1 H** e **72h** períodos só se aplicam à guia **aplicativo diariamente** do gráfico **aquisições** e para a guia de **aquisições** do gráfico **mercados** . 
+Na parte superior da página, você pode selecionar o período para o qual você deseja mostrar os dados. A seleção padrão é **30D** (30 dias), mas você pode optar por mostrar dados para 3, 6 ou 12 meses, ou para um intervalo de datas personalizado que você especificar. Quase em tempo real dados serão mostrados para todas as opções (exceto em dados **cumulativo do aplicativo** ). O tempo de **1 H** e **72h** períodos só se aplicam à guia **aplicativo diariamente** do gráfico de **aquisições** e para a guia de **aquisições** do gráfico de **mercados** . 
 
 Você também pode expandir **Filtros** para filtrar os dados dessa página por mercado e/ou por tipo de dispositivo.
 
@@ -50,7 +50,7 @@ O gráfico **Aquisições** mostra a quantidade de aquisições diárias ou sema
 
 Por padrão, mostramos a exibição do **aplicativo diariamente** , que inclui dados em tempo real aproximado. Você também pode ver a quantidade de aquisições do tempo de vida do aplicativo ao selecionar **Cumulativo do aplicativo**. Isso mostra o total cumulativo de todas as aquisições, desde quando o seu aplicativo foi publicado pela primeira vez.
 
-**Venda bruta** para seu aplicativo (de outubro de 2016 - presente) também estão disponíveis neste gráfico, mostrando a quantidade total ganho de vendas do aplicativo (em USD). Observe que esse valor não leva em consideração para qualquer reembolsos, reversões, estorno etc.
+**Venda bruta** para seu aplicativo (de outubro de 2016 - presente) também estão disponíveis nesse gráfico, mostrando a quantidade total ganho de vendas do aplicativo (em USD). Observe que esse valor não leva em consideração para qualquer reembolsos, reversões, estorno etc.
 
 Você pode filtrar os resultados se a aquisição foi originada do cliente ou da loja Web e/ou por versão do sistema operacional.
 
@@ -60,7 +60,7 @@ Você pode filtrar os resultados se a aquisição foi originada do cliente ou da
 Na exibição de **aplicativo diariamente** , quando o **30d** período é selecionado, você poderá ver marcadores em círculo. Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 ## <a name="installs"></a>Instalações
 

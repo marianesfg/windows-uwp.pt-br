@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, jogos, gamepad, vibração
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563937"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611293"
 ---
 # <a name="gamepad-and-vibration"></a>Gamepad e vibração
 
@@ -39,7 +39,7 @@ Gamepads do Xbox One são equipados com um teclado direcional (ou D-pad); **A**,
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
 
 > [!NOTE]
-> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads do Xbox 360, que têm o mesmo layout de controle padrão gamepads do Xbox One.
+> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads do Xbox 360, que têm o mesmo layout de controle dos gamepads padrão Xbox One.
 
 ### <a name="vibration-and-impulse-triggers"></a>Gatilhos de vibração e impulso
 
@@ -62,7 +62,7 @@ Para obter mais informações, consulte [Lendo os botões de controle](#reading-
 
 Para aliviar a sobrecarga do suporte para diferentes dispositivos de entrada para a navegação de interface do usuário e para incentivar a consistência entre dispositivos e jogos, os dispositivos de entrada mais _físicos_ atuam simultaneamente como um dispositivo de entrada _lógico_ separado chamado de [controlador de navegação da interface do usuário](ui-navigation-controller.md). O controlador de navegação da interface do usuário fornece um vocabulário comum para comandos de navegação da interface do usuário em dispositivos de entrada.
 
-Como um controlador de navegação da interface do usuário, o Gamepad mapeia o [conjunto obrigatório](ui-navigation-controller.md#required-set) de comandos de navegação para o botão esquerdo, direcional, **Exibir**, **Menu**, **A**e **B** botões.
+Como um controlador de navegação da interface do usuário, o Gamepad mapeia o [conjunto necessário](ui-navigation-controller.md#required-set) de comandos de navegação para o botão esquerdo, direcional, **Exibir**, **Menu**, **A**e **B** botões.
 
 | Comando de navegação | Entrada do gamepad                       |
 | ------------------:| ----------------------------------- |
@@ -183,7 +183,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-O exemplo a seguir para o acompanhamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-a como `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta de entrada do quando controladores são conectados e desconectados de atualização.
+O exemplo a seguir interrompe o rastreamento um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-a como `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta entradas de quando controladores são conectados e desconectados de atualização.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -374,7 +374,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-Às vezes, convém determinar quando um botão passa de pressionado para liberado ou vice-versa, se vários botões foram pressionados ou liberados ou se um conjunto de botões está organizado de determinada maneira&mdash;alguns pressionados, outros não. Para obter informações sobre como detectar cada uma dessas condições, consulte [Detectando transições do botão](input-practices-for-games.md#detecting-button-transitions) e [Detectando organizações complexas de botão](input-practices-for-games.md#detecting-complex-button-arrangements).
+Às vezes, convém determinar quando um botão passa de pressionado para liberado ou vice-versa, se vários botões estão pressionados ou liberados, ou se um conjunto de botões está organizado de determinada maneira&mdash;alguns pressionados, outros não. Para obter informações sobre como detectar cada uma dessas condições, consulte [Detectando transições do botão](input-practices-for-games.md#detecting-button-transitions) e [Detectando organizações complexas de botão](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ## <a name="run-the-gamepad-input-sample"></a>Executar a amostra de entrada de gamepad
 
@@ -390,7 +390,7 @@ Os gamepads do Xbox One são equipados com um total de quatro motores de vibraç
 
 A vibração do gamepad é controlada por meio da propriedade [Vibration][] da classe [Gamepad][]. `Vibration` é uma instância da estrutura [GamepadVibration][] que é composta de quatro valores de ponto flutuante; cada valor representa a intensidade de um dos motores.
 
-Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializa um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copie-o para o `Gamepad.Vibration` propriedade para alterar as intensidades reais do motoras de uma vez.
+Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializa um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copie-o para o `Gamepad.Vibration` propriedade alterar as intensidades reais do motoras de uma vez.
 
 O exemplo a seguir demonstra como alterar as intensidades do motor de uma vez.
 
@@ -440,7 +440,7 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 mainGamepad.Vibration = vibration;
 ```
 
-Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor do que o direito de r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e com maior frequência. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
+Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor que direita r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e com maior frequência. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
 
 ### <a name="using-the-impulse-triggers"></a>Usando os gatilhos de impulso
 

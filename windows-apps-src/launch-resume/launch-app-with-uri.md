@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568028"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612336"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar um app com um URI
 
@@ -32,7 +32,7 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 | [Iniciar o app Mapas do Windows](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
 | [Iniciar o app Pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
 | [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar os esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
-| [Habilitar aplicativos para sites usando manipuladores de URI do aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
+| [Habilitar aplicativos para sites usando manipuladores de URI de aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Iniciar um app em um dispositivo remoto](launch-a-remote-app.md)

@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu aplicativo da área de trabalho.
 title: Obter detalhes de um erro em seu aplicativo da área de trabalho
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 31b7684878eb0f8921d81c8fda9d262a21e12132
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: b6e8a19b665c5e01ef227e7d5f643a311efa5c58
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565184"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616126"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obter detalhes de um erro em seu aplicativo da área de trabalho
 

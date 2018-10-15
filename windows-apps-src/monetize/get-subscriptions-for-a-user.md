@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 94B5B2E9-BAEE-4B7F-BAF1-DA4D491427D7
 description: Use este método na API de compra da Microsoft Store para obter as assinaturas que um determinado usuário tem direitos de usar.
 title: Obter assinaturas para um usuário
-ms.author: mcleans
-ms.date: 03/16/2018
+ms.author: mhopkins
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
-ms.openlocfilehash: cebf4105d5e8b08f9b750f2a4938117dcd6fc084
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: c08964b991b0cecaef6d994d399ce97301a7e8e7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664982"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612899"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obter assinaturas para um usuário
 
@@ -118,6 +118,7 @@ Cada objeto na matriz *itens* contém os seguintes valores.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
+| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura depois que a assinatura não pôde ser renovada automaticamente.    |
 | id | cadeia |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |

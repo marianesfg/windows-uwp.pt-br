@@ -10,22 +10,22 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564797"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615023"
 ---
 # <a name="magnetic-stripe-reader"></a>Leitor de tarjas magnéticas
 
-Um leitor de tarja magnética pode verificar determinados tipos de cartões têm uma tarja magnética, como cartões de crédito, licenças do driver, e armazenar os cartões de fidelidade. Você provavelmente encontrou um ao comprar algo em uma loja.
+Um leitor de tarja magnética pode examinar certos tipos de cartões têm uma tarja magnética neles, como cartões de crédito, licenças do driver, e armazenar os cartões de fidelidade. Você provavelmente encontraram uma ao comprar algo em uma loja.
 
-Usando um leitor de tarja magnética em seu aplicativo Universal Windows Platform (UWP) é semelhante ao uso de qualquer outro dispositivo de ponto de serviço, que você precisa enumerar os dispositivos disponíveis, crie o objeto de dispositivo e declarar o dispositivo antes de você pode usá-lo. Siga a documentação em [Introdução ao ponto de serviço](pos-basics.md) para obter mais informações.
+Usar um leitor de tarja magnética em seu aplicativo da plataforma Universal do Windows (UWP) é semelhante ao uso de qualquer outro dispositivo de ponto de serviço, que você precisa enumerar os dispositivos disponíveis, crie o objeto de dispositivo e declarar o dispositivo antes de você pode usá-lo. Siga a documentação em [guia de Introdução do ponto de serviço](pos-basics.md) para obter mais informações.
 
-Os tópicos a seguir fornecem mais informações sobre usando um leitor de tarja magnética em seu aplicativo.
+Os tópicos a seguir fornecem ainda mais informações sobre como usar um leitor de tarja magnética em seu aplicativo.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Obter e compreender os dados de tarja magnética](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Saiba como obter e interpretar os dados de um tarja magnética. |
+| [Obter e entender os dados de tarja magnética](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Saiba como obter e interpretar os dados de um tarja magnética. |

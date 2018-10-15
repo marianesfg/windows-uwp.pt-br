@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572128"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615633"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -40,7 +40,7 @@ Esta imagem mostra um exemplo de solução.
 
 ![Estender projeto inicial](images/desktop-to-uwp/extend-start-project.png)
 
-Se sua solução não contiver um projeto de empacotamento, consulte o [pacote de seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Se sua solução não contiver um projeto de empacotamento, consulte o [pacote do seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Adicionar um projeto UWP
 
@@ -314,7 +314,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicionar uma extensão de serviço de aplicativo para o projeto de empacotamento
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicione uma extensão de serviço de aplicativo ao projeto de empacotamento
 
 Abra o arquivo **Package. appxmanifest** do projeto de empacotamento e adicione uma extensão de serviço de aplicativo para o ``<Application>`` elemento.
 
@@ -379,7 +379,7 @@ Saiba mais sobre os serviços de aplicativo aqui: [Criar e consumir um serviço 
 
 Você pode tornar seu aplicativo da área de trabalho um destino de compartilhamento para que os usuários possam compartilhar com facilidade dados como imagens de outros aplicativos que dão suporte a compartilhamento.
 
-Por exemplo, os usuários podem escolher seu aplicativo para compartilhar fotos do Microsoft Edge, o aplicativo de fotos. Aqui está um aplicativo de exemplo do WPF que tem esse recurso.
+Por exemplo, os usuários podem escolher seu aplicativo para compartilhar fotos do Microsoft Edge, o aplicativo de fotos. Aqui está um exemplo do WPF que tem esse recurso.
 
 ![compartilhar destino](images/desktop-to-uwp/share-target.png)
 
@@ -401,7 +401,7 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 ### <a name="add-a-share-target-extension"></a>Adicionar uma extensão de destino de compartilhamento
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto de empacotamento em sua solução e adicione a extensão.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão.
 
 ```xml
 <Extensions>
@@ -450,7 +450,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 Adicione uma tarefa em segundo plano para executar o código, mesmo quando o aplicativo está suspenso. Tarefas em segundo plano são ótimas para tarefas pequenas que não exigem a interação do usuário. Por exemplo, sua tarefa pode baixar emails, mostrar uma notificação do sistema sobre uma mensagem de bate-papo recebida ou reagir a uma alteração em uma condição de sistema.
 
-Aqui está um aplicativo de exemplo do WPF que registra uma tarefa em segundo plano.
+Aqui está um exemplo do WPF que registra uma tarefa em segundo plano.
 
 ![tarefa em segundo plano](images/desktop-to-uwp/sample-background-task.png)
 

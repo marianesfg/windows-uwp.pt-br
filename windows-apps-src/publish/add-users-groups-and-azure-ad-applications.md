@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567836"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610721"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
@@ -59,7 +59,7 @@ Você pode selecionar os usuários que já existem no locatário da sua organiza
 Se você estiver conectado com uma conta de gerenciador que também tem permissões de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para o locatário do Azure AD em que você está trabalhando, terá outras opções para adicionar usuários à sua conta do Centro de Desenvolvimento. Selecione uma das seguintes opções:
 
 -   **Adicionar usuários existentes**: escolha os usuários que já existem no diretório da organização e conceda a eles acesso à sua conta do Centro de desenvolvimento, usando o método descrito acima.
--   **Criar novos usuários**: Crie novas contas de usuário para adicionar ao diretório da organização tanto e à conta do Centro de desenvolvimento
+-   **Criar novos usuários**: criar novas contas de usuário para adicionar ao diretório da organização tanto e sua conta do Centro de desenvolvimento
 -   **Convidar usuários externos**: envie convites por email aos usuários que não estão no diretório da organização atualmente. Eles serão convidados a acessar sua conta do Centro de Desenvolvimento, e uma nova conta de [usuário convidado](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) será criada para eles no seu locatário do Azure AD.
 
 <span id="new-user" />
@@ -207,7 +207,7 @@ Depois de adicionar usuários, grupos e/ou aplicativos Azure AD à conta do Cent
 > [!IMPORTANT]
 > As alterações feitas às [funções ou permissões](set-custom-permissions-for-account-users.md) afetarão somente o acesso ao Centro de Desenvolvimento. Todas as outras alterações (por exemplo, alterar o nome do usuário ou associação de grupo, ou a URL de resposta e URI da ID do aplicativo para um aplicativo Azure AD) serão refletidas no locatário do Azure AD da sua organização, bem como em sua conta do Centro de Desenvolvimento. 
 
-1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do usuário, grupo ou conta de aplicativo do Azure AD que você deseja editar.
+1.  Na página de **usuários** (em **configurações da conta**), selecione o nome de usuário, grupo ou conta de aplicativo do Azure AD que você deseja editar.
 2.  Faça as alterações desejadas. Os itens que você pode editar são:
     -   Para um **usuário**, você pode editar o nome, o sobrenome ou o nome de usuário do usuário. Você também pode selecionar ou desmarcar grupos na seção **Associação de grupo** para atualizar a participação no grupo.
     -   Para um **grupo**, você pode editar o nome do grupo. (para atualizar a associação de grupo, os usuários que você deseja adicionar ou remover do grupo e fazer alterações para editar a seção **Membros do grupo**.)
@@ -221,7 +221,7 @@ Depois de adicionar usuários, grupos e/ou aplicativos Azure AD à conta do Cent
 
 Como proprietário da conta, você pode exibir o histórico de navegação detalhado de qualquer usuário que você adicionou à conta.
 
-Na página **usuários** (em **configurações da conta**), selecione o link mostrado em **última atividade** do usuário cujo histórico de navegação você deseja revisar. Você poderá exibir os URLs de todas as páginas que o usuário visitou nos últimos 30 dias.
+Na página de **usuários** (em **configurações da conta**), selecione o link mostrado em **última atividade** do usuário cujo histórico de navegação você deseja revisar. Você poderá exibir os URLs de todas as páginas que o usuário visitou nos últimos 30 dias.
 
 <span id="remove" />
 

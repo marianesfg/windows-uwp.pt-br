@@ -7,15 +7,15 @@ ms.date: 02/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567696"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615164"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar um app em um dispositivo remoto
 

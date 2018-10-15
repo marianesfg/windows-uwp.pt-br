@@ -1,27 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
-description: Use os exemplos de código nesta seção para saber mais sobre como usar a API de envio da Windows Store.
+description: Use os exemplos de código nesta seção para saber mais sobre como usar a API de envio da Microsoft Store.
 title: Exemplos de código para a API de envio
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, API de envio da Windows Store, exemplos de código
-ms.openlocfilehash: c5344667922a7445ad7694f36a542b3ff35c4bdb
-ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código
+ms.localizationpriority: medium
+ms.openlocfilehash: f728a17d98d53cf1783452ddfd543c1062156200
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2017
-ms.locfileid: "772301"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615494"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Exemplos de código para a API de envio
 
-Esta seção fornece exemplos de código para usar a [API de envio da Windows Store](create-and-manage-submissions-using-windows-store-services.md) em vários idiomas diferentes de programação.
+Esta seção fornece exemplos de código para usar a [API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) em várias linguagens de programação diferentes.
 
 > [!NOTE]
-> Além dos exemplos de código abaixo, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre API de envio da Windows Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente o envio da Windows Store API, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja. Para obter mais informações, consulte nosso [StoreBroker página no GitHub](https://aka.ms/storebroker).
+> Além dos exemplos de código abaixo, também fornecemos um módulo de PowerShell de código-fonte aberto que implementa uma interface de linha de comando sobre API de envio da Microsoft Store. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store. Para obter mais informações, consulte nosso [StoreBroker página no GitHub](https://aka.ms/storebroker).
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>Envios de aplicativo, envios de complemento e envios de versão de pré-lançamento do pacote
 
@@ -41,4 +42,4 @@ Os artigos a seguir fornecem exemplos de código para usar a API de envio para d
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar e gerenciar envios usando serviços da Windows Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)

@@ -2,7 +2,7 @@
 author: QuinnRadich
 title: Alterações API do Windows 10 Build 17763
 description: Os desenvolvedores podem usar a lista a seguir para identificar namespaces novos ou alterados no Windows 10 build 17763
-keywords: Novidades, novidades, atualizações, Windows 10, mais recente, apis, 17763, outubro
+keywords: Novidades, novidades, atualizações, Windows 10, último, apis, 17763, outubro
 ms.author: quradic
 ms.date: 10/02/2018
 ms.topic: article
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa3e586e82fc5c2da78cc201f772112699a9035
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567976"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611913"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Novas APIs no Windows 10 build 17763
 
-Namespaces de API novos e atualizados foram disponibilizados para desenvolvedores no Windows 10 build 17763 (também conhecido como o de 2018 outubro atualização ou versão 1809). Veja abaixo uma lista completa de documentação publicada para namespaces adicionados ou modificados nesta versão.
+Namespaces de API novos e atualizados foram disponibilizados para desenvolvedores no Windows 10 build 17763 (também conhecido como o de 2018 outubro Update ou versão 1809). Veja abaixo uma lista completa de documentação publicada para namespaces adicionados ou modificados nesta versão.
 
 Para obter informações sobre as API adicionada na versão anterior, consulte [As novas APIs na atualização de abril do Windows 10](windows-10-build-17134-api-diff.md).
 

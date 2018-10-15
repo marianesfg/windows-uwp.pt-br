@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Use este método na API de análise da Microsoft Store para obter os dados de aquisição agregados de um jogo Xbox One durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter aquisições de jogo Xbox One
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de jogo Xbox One
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b0caceae9f5b1e2fabb1b55de33d47e5980e2b5
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: a175096860fe2d2e73259ab9e82cbd5c33b8b889
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691565"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614100"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obter aquisições de jogo Xbox One
 

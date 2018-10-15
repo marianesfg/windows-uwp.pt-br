@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use os exemplos de código Python nesta seção para saber mais sobre como enviar opções de jogo e trailers usando a API de envio da Microsoft Store.
 title: Exemplo de Python - envio de aplicativo com opções de jogo e trailers
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, python
 ms.localizationpriority: medium
-ms.openlocfilehash: ea7d28cd495a512573f8d0f7c067cf35f696db3b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d3617e7868f62c5d8e430deb4be295bc552dff18
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653555"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613270"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Python: envio de aplicativo com opções e trailers de jogos
 

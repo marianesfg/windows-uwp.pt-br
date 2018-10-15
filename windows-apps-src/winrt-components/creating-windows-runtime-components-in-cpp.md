@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Criando componentes do Windows Runtime em C++
-description: Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
+description: Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo Universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.author: misatran
 ms.date: 05/14/2018
@@ -11,25 +11,25 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573095"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610989"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Criando componentes do Windows Runtime em C++/CX
 > [!NOTE]
 > Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows. Para saber como criar um componente do Windows Runtime usando C++ c++ WinRT, consulte [criar eventos em C++ com c++ WinRT](../cpp-and-winrt-apis/author-events.md).
 
-Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
+Este tópico mostra como usar C++ c++ /CX para criar um componente de tempo de execução do Windows, que é um componente que pode ser chamada em um aplicativo Universal do Windows criado em c#, Visual Basic, C++ ou Javascript.
 
-Há vários motivos para a criação de um componente do tempo de execução do Windows.
+Há vários motivos para a criação de um componente de tempo de execução do Windows.
 - Obter a vantagem em termos de desempenho do C++ em operações complexas ou intensivas.
 - Reutilizar um código que já tenha sido escrito e testado.
 
 Quando você compila uma solução que contém um projeto JavaScript ou .NET e um projeto de componente do Tempo de Execução do Windows, os arquivos de projeto JavaScript e a DLL compilada são mesclados em um único pacote, que é possível depurar localmente no simulador ou remotamente em um dispositivo vinculado. Também é possível distribuir apenas o projeto de componente como um SDK de extensão. Para obter mais informações, consulte [Criação de um Software Development Kit](https://msdn.microsoft.com/library/hh768146.aspx).
 
-Em geral, quando você o código C++ c++ componente CX, use a biblioteca C++ regular e os tipos internos, exceto no limite interface binária abstrata (ABI) onde você passa dados para e de código em outro pacote. winmd. Lá, use tipos do Windows Runtime e a sintaxe especial que C + c++ /CX oferece suporte para criar e manipular esses tipos. Além disso, no seu C + c++ /CX de código, use tipos como representantes e eventos para implementar eventos que possam ser disparados no componente e manipulados em JavaScript, Visual Basic, C++ ou c#. Para obter mais informações sobre C++ c++ sintaxe CX, consulte [referência da linguagem Visual C++ (C++ c++ /CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+Em geral, quando você o código C++ c++ componente CX, use a biblioteca C++ regular e os tipos internos, exceto no limite interface binária abstrata (ABI) onde você passa dados para e de código em outro pacote. winmd. Lá, use tipos do Windows Runtime e a sintaxe especial que C + c++ /CX oferece suporte para criar e manipular esses tipos. Além disso, no seu C + c++ /CX codificar, use tipos como representantes e eventos para implementar eventos que podem ser disparados no componente e manipulados em JavaScript, Visual Basic, C++ ou c#. Para obter mais informações sobre C++ c++ sintaxe CX, consulte [referência da linguagem Visual C++ (C++ c++ /CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Uso de maiúsculas e regras de nomenclatura
 
@@ -77,7 +77,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++ c++ /CX tipos internos, tipos de biblioteca e tipos de tempo de execução do Windows
 Uma classe ativável (também conhecida como uma classe ref) é aquela cuja instância é criada com base em outra linguagem, como JavaScript, C# ou Visual Basic. Para ser consumível em outra linguagem, um componente deve conter pelo menos uma classe ativável.
 
-Um componente do Tempo de Execução do Windows pode conter várias classes ativáveis públicas, bem como classes adicionais que são conhecidas apenas internamente para o componente. Aplique o atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) C + c++ tipos CX que não devem estar visível para JavaScript.
+Um componente do Tempo de Execução do Windows pode conter várias classes ativáveis públicas, bem como classes adicionais que são conhecidas apenas internamente para o componente. Aplique o atributo [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) c++ c++ tipos CX que não devem estar visível para JavaScript.
 
 Todas as classes públicas devem residir no mesmo namespace raiz com o mesmo nome do arquivo de metadados do componente. Por exemplo, uma classe chamada A.B.C.MyClass só poderá ter uma instância criada se estiver definida em um arquivo de metadados chamado A.winmd ou A.B.winmd ou A.B.C.winmd. O nome da DLL não precisa corresponder ao nome do arquivo .winmd.
 
@@ -85,7 +85,7 @@ O código do cliente cria uma instância do componente usando a palavra-chave **
 
 Uma classe ativável deve ser declarada como **classe ref pública selado**. A palavra-chave **ref class** informa ao compilador para criar a classe como um tipo compatível do Windows Runtime e a palavra-chave sealed especifica que a classe não pode ser herdada. O Windows Runtime não dá suporte no momento a um modelo de herança generalizado; um modelo de herança limitado dá suporte à criação de controles XAML personalizados. Para obter mais informações, consulte [Classes e estruturas de referência (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699870.aspx).
 
-Para C++ c++ /CX, todas as primitivas numéricas são definidas no namespace padrão. O namespace de [plataforma](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) contém C++ c++ classes CX que são específicas para o Windows Runtime tipo de sistema. Isso inclui as classes [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) e [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx). Os tipos de coleção concretos como as classes [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) e [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) são definidos no namespace [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx). As interfaces públicas que esses tipos implementam são definidas no [Namespace Windows::Foundation::Collections (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx). São esses tipos de interface consumidos por JavaScript, C# e Visual Basic. Para obter mais informações, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
+Para C++ c++ /CX, todas as primitivas numéricas são definidas no namespace padrão. O namespace de [plataforma](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) contém C++ c++ classes CX que são específicas para o Windows Runtime tipos system. Isso inclui as classes [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) e [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx). Os tipos de coleção concretos como as classes [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) e [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) são definidos no namespace [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx). As interfaces públicas que esses tipos implementam são definidas no [Namespace Windows::Foundation::Collections (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx). São esses tipos de interface consumidos por JavaScript, C# e Visual Basic. Para obter mais informações, consulte [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
 ## <a name="method-that-returns-a-value-of-built-in-type"></a>Método que retorna um valor de tipo interno
 ```cpp
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Para passar estruturas de valor definido pelo usuário na ABI, defina um objeto JavaScript que tem os mesmos membros como a estrutura de valor que é definido em C++ c++ /CX. Em seguida, você pode passar esse objeto como um argumento para C++ c++ método CX para que o objeto é convertido implicitamente em C++ c++ tipo CX.
+Para passar estruturas de valor definido pelo usuário na ABI, defina um objeto JavaScript que tem os mesmos membros como a estrutura de valor que é definido em C++ c++ /CX. Em seguida, você pode passar esse objeto como um argumento para C++ c++ método CX para que o objeto seja implicitamente convertido para C++ c++ tipo CX.
 
 ```javascript
 // Get and set the value struct
@@ -529,7 +529,7 @@ private:
 };
 ```
 
-Valores de enumeração são passados entre C++ c++ /CX e JavaScript como inteiros. Opcionalmente, você pode declarar um objeto JavaScript que contém os mesmos valores nomeados como C++ c++ CX enum e use-o como segue.
+Valores de enumeração são passados entre C++ c++ /CX e JavaScript como inteiros. Opcionalmente, você pode declarar um objeto JavaScript que contém os mesmos valores nomeados C++ c++ CX enum e use-o como segue.
 
 ```javascript
 var Direction = { 0: "North", 1: "South", 2: "East", 3: "West" };
@@ -546,7 +546,7 @@ C# e Visual Basic têm suporte de linguagem para enumerações. Essas linguagens
 ## <a name="asynchronous-methods"></a>Métodos assíncronos
 Para consumir métodos assíncronos expostos por outros objetos do Windows Runtime, use a [Classe task (Tempo de Execução de Simultaneidade)](https://msdn.microsoft.com/library/hh750113.aspx). Para obter mais informações, consulte [Paralelismo de tarefas (Tempo de Execução de Simultaneidade)](https://msdn.microsoft.com/library/dd492427.aspx).
 
-Para implementar métodos assíncronos em C++ c++ /CX, use a função [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) definida em ppltasks. h. Para obter mais informações, consulte [Criando operações assíncronas em C++ c++ /CX para aplicativos UWP](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Por exemplo, consulte [passo a passo: Criando um componente de tempo de execução do Windows básico em C++ c++ /CX e chamando-o em JavaScript ou c#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). As linguagens .NET consomem C++ c++ exatamente como fariam com qualquer método assíncrono que é definido no .NET Framework de métodos assíncronos CX.
+Para implementar métodos assíncronos em C++ c++ /CX, use a função [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) definida em ppltasks. Para obter mais informações, consulte [Criando operações assíncronas em C++ c++ /CX para aplicativos UWP](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Por exemplo, consulte [passo a passo: Criando um componente de tempo de execução do Windows básico em C++ c++ /CX e chamando-o em JavaScript ou c#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). As linguagens .NET consomem C++ c++ exatamente como fariam com qualquer método assíncrono que é definido no .NET Framework de métodos assíncronos CX.
 
 ## <a name="exceptions"></a>Exceções
 É possível acionar qualquer tipo de exceção definido pelo Windows Runtime. Não é possível derivar tipos personalizados de qualquer tipo de exceção do Windows Runtime. No entanto, é possível acionar COMException e fornecer um HRESULT personalizado que pode ser acessado pelo código que captura a exceção. Não existe uma maneira de especificar uma mensagem personalizada em um COMException.
@@ -558,7 +558,7 @@ Não se esqueça de selecionar os recursos apropriados no designer do pacote. Po
 
 Caso o código JavaScript aparentemente não reconheça as propriedades públicas ou os métodos no componente, assegure-se de que, no JavaScript, você esteja seguindo o uso de maiúsculas camel. Por exemplo, o c++ LogCalc c++ /CX método deve ser referenciado como logCalc em JavaScript.
 
-Se você remover C++ c++ projeto de componente do tempo de execução do CX Windows de uma solução, você deve remover manualmente a referência de projeto do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
+Se você remover C++ c++ /CX Windows Runtime projeto do componente de uma solução, você deve remover manualmente a referência de projeto do projeto JavaScript. Deixar de fazer isso impede operações de depuração ou compilação subsequentes. Caso necessário, é possível adicionar uma referência de assembly à DLL.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Passo a passo: Como criar um componente do Tempo de Execução do Windows básico em C++/CX e chamá-lo do JavaScript ou C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
 description: Use este método na API de envio da Microsoft Store para recuperar informações de pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
 title: Obter pacotes de pré-lançamento de um aplicativo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: aa9bbac25316fcebc630edd55aabd333e43e3e49
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: d6349e5c597b923ba05abe5ed74492409350e36e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661976"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613637"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um aplicativo
 
@@ -123,6 +123,6 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Obter todos os apps](get-all-apps.md)
+* [Obter todos os aplicativos](get-all-apps.md)
 * [Obter um aplicativo](get-an-app.md)
 * [Obter complementos para um aplicativo](get-add-ons-for-an-app.md)

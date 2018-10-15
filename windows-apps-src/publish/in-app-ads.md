@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574852"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613686"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
@@ -71,7 +71,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade de anúncio não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do painel. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -87,11 +87,11 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 1. [Criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade de anúncio existente](#available-ad-units).
 2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
-    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garante que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
-    * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
+    * Por padrão, a caixa de seleção **Permitir que a Microsoft escolha as melhores configurações de controle para seu app** é marcada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Ao usar essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garante que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
+    * Se você quiser escolher seu próprio anúncio configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
-    > As etapas restantes nesta seção só são aplicáveis se você escolher **as configurações padrão de modificar**.
+    > As etapas restantes nesta seção só são aplicáveis se você optar por **Modificar definições padrão**.
 
 4. Na lista suspensa **Destino**, escolha **Linha de Base** para definir as configurações padrão do controle de anúncios. Essa configuração padrão será aplicada a todos os mercados, exceto para mercados em que você pode definir configurações específicas de mercado.
 6. Em seguida, especifique a proporção de anúncios que você deseja mostrar no controle de redes pagas (que pagarão a receita das impressões) e outras redes de anúncios (que não pagarão a receita das impressões). Para fazer isso, insira um valor entre 0 e 100 nos campos **Peso** de **Redes de publicidade pagas** e **Outras redes de publicidade**.  
@@ -112,7 +112,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 |  Rede de publicidade  |  Descrição  |  Tipos de anúncio com suporte  |
 |--------------|---------------|---------------------|
 | Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e ele não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
-| AppNexus (direto) | Selecione esta opção para veicular anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
+| AppNexus (direto) | Selecione esta opção para veicular anúncios da [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
 | Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |
 | Outbrain |  Selecione esta opção para veicular anúncios da [Outbrain](https://www.outbrain.com/). |  Faixa, faixa intersticial  |
@@ -121,7 +121,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 | smartclip |  Selecione esta opção para veicular anúncios da [smartclip](http://www.smartclip.com/). |  Intersticial em vídeo  |
 | SpotX |  Selecione esta opção para veicular anúncios da [SpotX](https://www.spotx.tv/). |  Intersticial em vídeo  |
 | Taboola |  Selecione esta opção para veicular anúncios da [Taboola](https://www.taboola.com/). |  Faixa  |
-| Undertone | Selecione esta opção para veicular anúncios de [Undertone](https://www.undertone.com/). | Faixa intersticial |
+| Undertone | Selecione esta opção para veicular anúncios da [Undertone](https://www.undertone.com/). | Faixa intersticial |
 
 
 <span id="other-networks" />

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 84466f907bad7e38506e1bf81b89eb631675093c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563878"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624384"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 

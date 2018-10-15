@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572862"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611596"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -94,9 +94,9 @@ Para obter uma lista completa, consulte [Controles e elementos de interface do u
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 
-Você pode colocar elementos de comando em várias superfícies no seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, o submenu de barra de comando, a barra de menus e a caixa de diálogo.
+Você pode colocar elementos de comando em várias superfícies no seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menus e caixa de diálogo.
 
-Observe que, sempre que possível, você deve permitir que os usuários manipular diretamente o conteúdo em vez de usar comandos que atuam no conteúdo. Por exemplo, permita que os usuários reorganizem listas arrastando e soltando itens da lista, em vez de usar botões de comando para cima e para baixo.
+Observe que, sempre que possível, você deve permitir que os usuários manipular o conteúdo diretamente em vez de usar comandos que atuam no conteúdo. Por exemplo, permita que os usuários reorganizem listas arrastando e soltando itens da lista, em vez de usar botões de comando para cima e para baixo.
 
 Caso contrário, se os usuários não puderem manipular o conteúdo diretamente, coloque os elementos de comando em uma superfície de comando no seu aplicativo. Veja uma lista de algumas das superfícies de comando mais comuns.
 

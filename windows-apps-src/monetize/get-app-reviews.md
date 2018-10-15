@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: Use este método na API de análise da Microsoft Store para obter dados de opinião para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter avaliações de aplicativo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análises
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f1e71fc0fb96344ab73c503de6fcc741673d8d9
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663846"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613570"
 ---
 # <a name="get-app-reviews"></a>Obter avaliações de aplicativo
 

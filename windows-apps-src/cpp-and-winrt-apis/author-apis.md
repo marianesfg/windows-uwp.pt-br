@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575275"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610960"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -34,7 +34,7 @@ O cenário mais simples é onde você está implementando uma interface do Windo
 > [!NOTE]
 > Para obter informações sobre como instalar e usar a Extensão do Visual Studio (VSIX) C++/WinRT (que oferece suporte ao modelo de projeto, bem como propriedades e destinos de MSBuild para C++/WinRT), consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C + c++ WinRT)** modelo de projeto ilustra o padrão de **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
+No Visual Studio, o **Visual C++** > **Universal do Windows** > **aplicativo principal (C++ c++ WinRT)** modelo de projeto ilustra o padrão de **CoreApplication** . O padrão começa com a passagem de uma implementação de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) para [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -253,7 +253,7 @@ namespace MyProject
 }
 ```
 
-Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **fazer** retorna a interface padrão do tipo de implementação.
+Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **tornar** retorna a interface padrão do tipo de implementação.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -287,7 +287,7 @@ No caso em que você tiver um objeto de interface e souber que é uma interface 
 > [!NOTE]
 > Se você ainda não tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior, em seguida, você precisará chamar [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) em vez de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-Veja um exemplo. [Implemente a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
+Veja um exemplo. [Implemente a classe de controle personalizado de **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)

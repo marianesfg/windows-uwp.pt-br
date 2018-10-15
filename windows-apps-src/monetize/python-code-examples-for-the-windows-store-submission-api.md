@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: Use os exemplos de código Python nesta seção para saber mais sobre como usar a API de envio da Microsoft Store.
 title: Exemplo de Python - envios para apps, complementos e versões de pré-lançamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, python
 ms.localizationpriority: medium
-ms.openlocfilehash: d15c121747f3c2fb9da46df403cd971ba5038ddf
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 0dc6f9854ed3fabeb788b99297cd2b33cdc1b79b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654425"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615114"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de Python: envios para apps, complementos e versões de pré-lançamento
 

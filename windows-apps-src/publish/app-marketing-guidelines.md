@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570732"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613971"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Diretrizes para aplicativos de marketing do Microsoft Store
 
@@ -51,7 +51,7 @@ Para promover o seu aplicativo, convém mostrar sua aparência quando executado 
 
 -   Se você estiver registrado no Centro de Desenvolvimento, consinta com a seção [“Licença de Marcas da Microsoft”](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) do Contrato de Desenvolvedor de Aplicativos.
 
--   Se você não estiver registrado no Centro de desenvolvimento do Windows, Microsoft concede a você uma licença mundial não exclusiva, intransferível, royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
+-   Se você não estiver registrado no Centro de desenvolvimento do Windows, Microsoft concede a você uma licença mundial, não exclusiva, intransferível e sem royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
 
 -   Siga as especificações de uso do logotipo descritas nas [Diretrizes de selo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 

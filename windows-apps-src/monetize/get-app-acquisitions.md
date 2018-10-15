@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Use este método na API de análise da Microsoft Store para obter os dados de aquisição agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter aquisições de aplicativo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: d108d66ff8f7533056b8a5eeb1955e54ef006a38
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691345"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613586"
 ---
 # <a name="get-app-acquisitions"></a>Obter aquisições de aplicativo
 

@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567746"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610764"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Tratar uma tarefa em segundo plano cancelada
 
@@ -89,7 +89,7 @@ private:
 
 No método **OnCanceled** que você criou na etapa 1, defina a variável de sinalizador **\_CancelRequested** como **true**.
 
-[Amostra de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
+[Exemplo de tarefa em segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509) completo método **OnCanceled** define **\_CancelRequested** como **true** e grava uma saída de depuração potencialmente útil.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -265,7 +265,7 @@ Por questões ilustrativas, o código de exemplo mostra apenas partes do método
 
 ## <a name="run-method-example"></a>Exemplo do método Run
 
-A concluir o método **Run** e o código de retorno de chamada do temporizador, da [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados abaixo para o contexto.
+A concluir o método **Run** e o código de retorno de chamada do temporizador, da [amostra de tarefa em segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) são mostrados abaixo de contexto.
 
 ```csharp
 // The Run method is the entry point of a background task.

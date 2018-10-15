@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572173"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613929"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -30,12 +30,12 @@ O MonoGame é uma estrutura leve de desenvolvimento de jogos. Este tutorial vai 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 +   Windows 10 e Microsoft Visual Studio 2017.  [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ A estrutura de desenvolvimento da área de trabalho do .NET. Se você ainda não tiver instalado, você pode obtê-lo, executando o instalador do Visual Studio novamente e modificar a instalação do Visual Studio 2017.
++ A estrutura de desenvolvimento da área de trabalho do .NET. Se você ainda não tiver instalado, você pode obtê-lo novamente executando o instalador do Visual Studio e modificar a instalação do Visual Studio 2017.
 +   Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. [Clique aqui para acessar uma introdução a C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   É útil ter familiaridade com conceitos de ciências básicas de computação, como classes, métodos e variáveis.
 
 ## <a name="why-monogame"></a>Por que o MonoGame?
-Não faltam opções quando se trata de ambientes de desenvolvimento de jogos. Pode ser difícil saber onde começar quando se tem desde mecanismos repletos de recursos, como Unity, até APIs de multimídia abrangentes e complexas, como DirectX. O MonoGame é um conjunto de ferramentas, com um nível de complexidade que se situa entre um mecanismo de jogo e uma API mais robusta como DirectX. Ele fornece um pipeline de conteúdo fácil de usar, e todas as funcionalidades necessárias para criar jogos leves que são executados em uma ampla variedade de plataformas. Melhor de tudo, apps MonoGame são escritos em c# pura, e você pode distribuí-los rapidamente por meio da Microsoft Store ou outras plataformas de distribuição semelhantes.
+Não faltam opções quando se trata de ambientes de desenvolvimento de jogos. Pode ser difícil saber onde começar quando se tem desde mecanismos repletos de recursos, como Unity, até APIs de multimídia abrangentes e complexas, como DirectX. O MonoGame é um conjunto de ferramentas, com um nível de complexidade que se situa entre um mecanismo de jogo e uma API mais robusta como DirectX. Ele fornece um pipeline de conteúdo fácil de usar, e todas as funcionalidades necessárias para criar jogos leves que são executados em uma ampla variedade de plataformas. O melhor de tudo, apps MonoGame são escritos em c# pura, e você pode distribuí-los rapidamente por meio da Microsoft Store ou outras plataformas de distribuição semelhantes.
 
 ## <a name="get-the-code"></a>Obter o código
 Se você estiver com vontade de seguir as etapas do tutorial passo a passo e quiser apenas ver o MonoGame em ação, [clique aqui para baixar o app finalizado](https://github.com/Microsoft/Windows-appsample-get-started-mg2d).

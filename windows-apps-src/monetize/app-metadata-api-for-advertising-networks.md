@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Saiba como usar a API REST de metadados de aplicativo para acessar determinados metadados de tipos de aplicativo. Essa API destina-se a ser usada por redes de publicidade para recuperar informações sobre os aplicativos da Microsoft Store para que elas possam aprimorar a venda do espaço de anúncio para anunciantes.
 title: API de metadados de app para redes de publicidade
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, rede de publicidade, metadados do app
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5cb5bed964528b34339742e34b5d2761de2b95
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 16603bfe8c3fe0bfeaef1e19018798d0c6477b85
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654735"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613537"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadados de app para redes de publicidade
 

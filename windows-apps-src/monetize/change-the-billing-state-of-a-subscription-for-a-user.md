@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Use este método na API de compra da Microsoft Store para alterar o estado de cobrança de uma assinatura para um usuário.
 title: Alterar o estado de cobrança de uma assinatura para um usuário
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
-ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 7e6a654897efba1fa66350abaddbacf9791bbbcc
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564943"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615343"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Alterar o estado de cobrança de uma assinatura para um usuário
 
@@ -120,7 +120,7 @@ O corpo de resposta contém os seguintes dados.
 | Renovar automaticamente | Booliano |  Indica se a assinatura está configurada para renovar automaticamente no final do período de inscrição atual.   |
 | beneficiário | cadeia |  A ID do beneficiário do direito associado a esta subscrição.   |
 | expirationTime | cadeia | A data e a hora em que a assinatura expirará, no formato ISO 8601. Este campo só está disponível quando a assinatura está em certos estados. O tempo de expiração geralmente indica quando o estado atual expira. Por exemplo, para uma assinatura ativa, a data de validade indica quando ocorrerá a próxima renovação automática.    |
-| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura após a assinatura não pôde ser renovada automaticamente.    |
+| expirationTimeWithGrace | string | A data e hora que a assinatura expirará incluindo o período de cortesia, no formato ISO 8601. Esse valor indica quando o usuário perde o acesso à assinatura depois que a assinatura não pôde ser renovada automaticamente.    |
 | id | cadeia |  A ID da assinatura. Use esse valor para indicar qual delas você deseja modificar ao chamar o método [alterar o estado de cobrança de uma assinatura para um usuário](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booliano |  Indica se a assinatura é uma versão de avaliação.     |
 | lastModified | cadeia |  A data e hora em que a assinatura foi modificada pela última vez, no formato ISO 8601.      |

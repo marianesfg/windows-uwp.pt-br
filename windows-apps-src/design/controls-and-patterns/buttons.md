@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564326"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612064"
 ---
 # <a name="buttons"></a>Botões
 
@@ -29,7 +29,7 @@ Um botão dá ao usuário uma forma de acionar uma ação imediata. Alguns botõ
 
 ![Exemplo de botões](images/controls/button.png)
 
-A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializados.
+A estrutura XAML fornece um controle de botão padrão, bem como vários controles de botão especializado.
 
 Controle | Descrição
 ------- | -----------
@@ -52,7 +52,7 @@ Controle | Descrição
 
 Use um **botão** para permitir que o usuário inicie uma ação imediata, como enviar um formulário.
 
-Não use um botão quando a ação é navegar para outra página; Use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) em vez disso. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
+Não use um botão quando a ação é navegar para outra página; Use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) . Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 > Exceção: na navegação do assistente, use botões rotulados como "Voltar" e "Próximo". Para outros tipos de navegação regressiva ou para um nível superior, use um [botão Voltar](../basics/navigation-history-and-backwards-navigation.md).
 
 Use um **RepeatButton** quando o usuário pode disparar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou diminuir um valor em um contador.
@@ -221,7 +221,7 @@ Botão suspenso herda o evento Click, mas você normalmente não usá-lo. Em vez
 
 ### <a name="example---drop-down-button"></a>Exemplo - botão suspenso
 
-Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para o alinhamento de parágrafo em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
+Este exemplo mostra como criar um botão suspenso com um submenu que contém comandos para alinhamento de parágrafo em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 
 ![Um botão com comandos de alinhamento suspenso](images/drop-down-button-align.png)
 
@@ -279,10 +279,10 @@ Um [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tem duas partes 
 O comportamento típico para um botão de divisão é:
 
 - Quando o usuário clica a parte do botão, manipule o evento Click para invocar a opção que está atualmente selecionada no menu suspenso.
-- Quando a lista suspensa estiver aberta, invocação de identificador dos itens na lista para ambos os alteração qual opção é selecionado e, em seguida, chamá-lo. É importante invocar o item de submenu porque o evento Click não ocorre usando o recurso touch do botão.
+- Quando a lista suspensa estiver aberta, invocação de identificador dos itens a lista suspensa para ambas as alteração qual opção é selecionado e chamá-lo, em seguida. É importante invocar o item de submenu porque o evento Click não ocorre usando o recurso touch do botão.
 
 > [!TIP]
-> Há muitas maneiras de colocar itens na lista para baixo e manipular a chamada. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
+> Há muitas maneiras de colocar itens na lista para baixo e manipular a invocação. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
 
 ### <a name="example---split-button"></a>Exemplo - botão de divisão
 
@@ -380,7 +380,7 @@ public sealed partial class MainPage : Page
 
 Um [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tem duas partes que podem ser invocados separadamente. Uma parte se comporta como um botão de alternância que pode ser ativado ou desativado. A outra parte invoca um submenu que contém as opções adicionais que o usuário pode escolher.
 
-Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ele pode ser usado para ativar ou desativar, a listas enquanto suspenso é usado para escolher o estilo de lista.
+Um botão de alternância de divisão normalmente é usado para habilitar ou desabilitar um recurso quando o recurso tem várias opções que o usuário pode escolher. Por exemplo, em um editor de documento, ela pode ser usada para ativar ou desativar, a listas enquanto suspenso é usado para escolher o estilo da lista.
 
 > [!NOTE]
 > Quando invocado com toque, o botão de divisão se comporta como um botão suspenso. Com outros métodos de entrada, um usuário pode invocar qualquer parte do botão separadamente. Com o toque, as duas metades do botão invocar o submenu. Portanto, você deve incluir uma opção em seu conteúdo de submenu para o botão de alternância ativado ou desativado.

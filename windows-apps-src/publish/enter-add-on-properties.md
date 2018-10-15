@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574816"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614150"
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
@@ -44,7 +44,7 @@ Se você selecionou **Consumível gerenciado pela Store** como o tipo de produto
 
 ## <a name="subscription-period"></a>Período de assinatura
 
-Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Selecione uma opção para especificar a frequência com a qual o cliente será cobrado pela assinatura. A opção padrão é **mensal**, mas você também pode selecionar **3 meses**, **6 meses**, **anualmente**ou **24 meses**.
+Se você selecionou **Assinatura** como o tipo de produto, o **Período de assinatura** será mostrado aqui. Selecione uma opção para especificar a frequência com a qual o cliente será cobrado pela assinatura. A opção padrão é **mensal**, mas você também pode selecionar **3**, **6 meses**, **anualmente**ou **24 meses**.
 
 > [!IMPORTANT]
 > Depois que o complemento é publicado, você não pode alterar a seleção **Período de assinatura**.

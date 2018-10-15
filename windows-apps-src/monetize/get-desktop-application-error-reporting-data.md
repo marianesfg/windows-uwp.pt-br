@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados de um aplicativo da área de trabalho por um determinado intervalo de datas e outros filtros opcionais.
 title: Obter dados de relatório de erros do seu aplicativo da área de trabalho
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: d3f966d2026d32276fee2ed43a353c4a2898d6a1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573820"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613441"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obter dados de relatório de erros do seu aplicativo da área de trabalho
 

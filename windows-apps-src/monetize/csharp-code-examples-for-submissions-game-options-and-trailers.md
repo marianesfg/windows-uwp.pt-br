@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use os exemplos de código C# nesta seção para saber mais sobre como enviar opções de jogo e trailers usando a API de envio da Microsoft Store.
 title: Exemplo de C# - envio de aplicativo com opções de jogo e trailers
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c13b8f0e65d7ca6715acc5ebcee5ca70605a668
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e22081435bea8c73f509719aec1ce31d9157a315
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653125"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614774"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de C#: envio de aplicativo com opções de jogo e trailers
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: Saiba como usar o namespace Windows.Services.Store para obter informações de produto relacionados à Loja para o aplicativo atual ou um de seus complementos.
 title: Obter informações do produto para apps e complementos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd8ab9cb86bfeb645f8d46e313c78c681901508
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 417478df3b82967656d2210b3b532c5341f1fb2e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689282"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612427"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obter informações do produto para apps e complementos
 
@@ -30,7 +30,7 @@ Para obter um aplicativo de exemplo completo, consulte o [exemplo da Microsoft S
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Microsoft Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Microsoft Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
 * Se você quiser obter informações de produto para um complemento para o aplicativo, também deverá [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
 
 O código nestes exemplos pressupõe que:
