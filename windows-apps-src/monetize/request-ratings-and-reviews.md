@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: Learn about several ways you can programmatically enable customers to rate and review your app.
 title: Solicite classificações e opiniões para seu aplicativo
-ms.author: mcleans
-ms.date: 03/22/2018
+ms.author: mhopkins
+ms.date: 06/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, classificações, opiniões
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f897eeaee835c1c1bcd96e9bd843ed8f6a85612
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690372"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610122"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicite classificações e opiniões para seu aplicativo
 
@@ -23,6 +23,9 @@ Você pode adicionar código ao seu aplicativo da Plataforma Universal do Window
 * Programaticamente, você pode abrir a página de classificação e opinião do seu app na Microsoft Store.
 
 Quando você estiver pronto para analisar seus dados de classificações e opiniões, poderá exibir os dados no painel do Centro de Desenvolvimento do Windows ou usar a API de análise de Microsoft Store para recuperar esses dados programaticamente.
+
+> [!IMPORTANT]
+> Ao adicionar uma função de classificação dentro de seu aplicativo, todas as análises devem enviar o usuário para mecanismos de classificação da loja, independentemente de estrela escolhida. Se você coletar comentários ou comentários dos usuários, ele deve ser claro que ele não está relacionado a classificação do aplicativo ou críticas na loja, mas é enviado diretamente para o desenvolvedor do aplicativo. Consulte o código de desenvolvedor de conduta para obter mais informações relacionadas à [Fraudulent ou atividades desonestos](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar um diálogo de classificação e opinião em seu app
 

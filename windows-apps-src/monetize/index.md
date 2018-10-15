@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: O SDK do Windows, SDK do Microsoft Advertising, Microsoft Store Services SDK e a Microsoft Store oferecem muitos recursos que permitem que você ganhe mais dinheiro com seus aplicativos e obtenha clientes a partir do envolvimento com seus usuários.
 title: Monetização, envolvimento e serviços da Loja
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da loja
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573727"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610484"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Loja
 
@@ -36,7 +36,7 @@ Para saber os detalhes de tarifas cobradas pela Microsoft Store e como receber o
 | [Registre eventos personalizados para o Centro de Desenvolvimento](log-custom-events-for-dev-center.md)  | Registre eventos personalizados do seu aplicativo UWP e revise os eventos no [Relatório de uso](../publish/usage-report.md) no painel do Centro de Desenvolvimento. Esse recurso requer o Microsoft Store Services SDK. |
 | [Solicitar classificações e opiniões](request-ratings-and-reviews.md) |  Incentivar os clientes a classificar ou analisar seu app mostrando programaticamente uma classificação e uma interface do usuário de análise.  |
 | [Serviços da Microsoft Store](using-windows-store-services.md)    |  Saiba como usar APIs RESTful para automatizar envios para a Loja, acessar dados de análise dos aplicativos e automatizar outras tarefas relacionadas à Loja.    |
-| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
+| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que os clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

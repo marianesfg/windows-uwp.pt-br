@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Use esse método na API de compra da Microsoft Store para conceder um aplicativo ou complemento gratuito a um determinado usuário.
 title: Conceder produtos gratuitos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de compra da Microsoft Store, conceder produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: c1ecb1f7db755fd21014ebc7edf979e7a25e7c7f
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: Auto
+ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1665022"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610592"
 ---
 # <a name="grant-free-products"></a>Conceder produtos gratuitos
 

@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, tipos de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: f9763e7f69b143dffe8fea611f25ae75284929cb
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565711"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610204"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de dados C++ padrão e C++/WinRT
 
-Com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), você pode chamar APIs do Windows Runtime usando tipos de dados C++ padrão, incluindo alguns tipos de dados da biblioteca padrão C++. Você pode passar cadeias de caracteres padrão para APIs (consulte [cadeia de caracteres de manipulação no C++ c++ WinRT](strings.md)), e você pode passar inicializador listas e contêineres padrão para APIs que espera uma coleção semanticamente equivalente.
+Com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), você pode chamar APIs do Windows Runtime usando tipos de dados C++ padrão, incluindo alguns tipos de dados da biblioteca padrão C++. Você pode passar cadeias de caracteres padrão para APIs (consulte [cadeia de caracteres de manipulação no C++ c++ WinRT](strings.md)), e você pode passar o inicializador de listas e contêineres padrão para APIs que espera uma coleção semanticamente equivalente.
 
 ## <a name="standard-initializer-lists"></a>Listas de inicializadores padrão
 Uma lista de inicializadores (**std:: initializer_list**) é um constructo da Biblioteca Padrão C++. Você pode usar listas de inicializadores ao chamar determinados construtores e métodos do Windows Runtime. Por exemplo, você pode chamar [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes) com um.
@@ -93,7 +93,7 @@ std::array<byte, 3> theArray{ 99, 98, 97 };
 dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
 ```
 
-O C++/WinRT associa **std::vector** como um parâmetro de coleção do Windows Runtime. Assim, você pode passar um **std::vector&lt;winrt::hstring&gt;**, e ele será convertido na coleção do Windows Runtime apropriada do **winrt::hstring**. Há um detalhe adicional deve ter em mente se o computador chamado é assíncrono. Devido aos detalhes de implementação de nesse caso, você precisará fornecer um rvalue, portanto, você deve fornecer uma cópia ou uma movimentação do vetor. No exemplo de código abaixo, movemos a propriedade do vetor para o objeto do tipo de parâmetro aceito pelo computador chamado assíncrono (e, em seguida, estamos cuidadosos para não acessar `vecH` novamente após movê-lo). Se você quiser saber mais sobre rvalues, consulte [categorias de valor e referências a elas](cpp-value-categories.md).
+O C++/WinRT associa **std::vector** como um parâmetro de coleção do Windows Runtime. Assim, você pode passar um **std::vector&lt;winrt::hstring&gt;**, e ele será convertido na coleção do Windows Runtime apropriada do **winrt::hstring**. Há um detalhe adicional deve ter em mente se o computador chamado for assíncrono. Devido aos detalhes da implementação de nesse caso, você precisará fornecer um rvalue, portanto, você deve fornecer uma cópia ou uma movimentação do vetor. No exemplo de código abaixo, movemos a propriedade do vetor para o objeto do tipo de parâmetro aceito pelo computador chamado assíncrono (e, em seguida, estamos cuidadosos para não acessar `vecH` novamente após movê-lo). Se você quiser saber mais sobre rvalues, consulte [categorias de valor e referências a elas](cpp-value-categories.md).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vector<winrt::hstring> vecH)
@@ -102,7 +102,7 @@ IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vecto
 }
 ```
 
-Mas, você não pode passar um **std::vector&lt;std::wstring&gt;** em que uma coleção do Windows Runtime é esperada. Isso acontece porque, tendo feito a conversão na coleção do Windows Runtime apropriada de **std::wstring**, a linguagem C++ não forçará os parâmetros de tipo dessa coleção. Consequentemente, o exemplo de código a seguir não será compilado (e a solução é passar um **std:: Vector&lt;WinRT:: hstring&gt; ** em vez disso, como mostrado acima).
+Mas, você não pode passar um **std::vector&lt;std::wstring&gt;** em que uma coleção do Windows Runtime é esperada. Isso acontece porque, tendo feito a conversão na coleção do Windows Runtime apropriada de **std::wstring**, a linguagem C++ não forçará os parâmetros de tipo dessa coleção. Consequentemente, o exemplo de código a seguir não será compilado (e a solução é passar um **std:: Vector&lt;WinRT:: hstring&gt; ** em vez disso, conforme mostrado acima).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vector<std::wstring> const& vecW)
