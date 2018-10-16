@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617946"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680117"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
@@ -149,7 +149,7 @@ Quando você mostra os comandos contextuais reativamente, como um menu de contex
 
 Para mostrar comandos em um menu de contexto, você normalmente atribui o submenu à propriedade [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) de um elemento de interface do usuário. Dessa forma, abrir o submenu é manipulada pelo elemento, e você não precisa fazer nada mais.
 
-Se você manipular mostrando o submenu (por exemplo, em um evento [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ), defina o do submenu [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) no **padrão** para abrir o submenu no modo expandido e dar a ele foco.
+Se você manipular mostrando o submenu (por exemplo, em um evento [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ), defina do submenu [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) no **padrão** para abrir o submenu no modo expandido e dar a ele foco.
 
 > [!TIP]
 > Para obter mais informações sobre as opções ao mostrar um submenu e como controlar o posicionamento do submenu, consulte [submenus](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).

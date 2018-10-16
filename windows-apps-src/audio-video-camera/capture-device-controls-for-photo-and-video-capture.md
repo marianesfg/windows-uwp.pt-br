@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bed72b17ea59494a7eee6850d1ff4be2172c694
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "201402"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4681757"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuais da câmera para a captura de fotos e vídeos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar controles de dispositivo manuais para habilitar cenários de captura de fotos e vídeos avançados, incluindo estabilização de imagem óptica e zoom suave.
@@ -102,7 +103,7 @@ No manipulador da caixa de seleção de redução de olhos vermelhos, defina a p
 
 Por fim, no manipulador da caixa de seleção da lanterna de vídeo, defina a propriedade [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) como o valor apropriado.
 
-[!code-cs[Lanterna](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
+[!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
 > [!NOTE] 
 >  Em alguns dispositivos, o lanterna não emitirá luz, mesmo se [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) for definido como true, a menos que o dispositivo tenha um fluxo de visualização em execução e esteja ativamente capturando vídeo. A ordem recomendada das operações é ativar a visualização de vídeo, ativar a lanterna definindo **Enabled** como true e depois iniciar a captura de vídeo. Em alguns dispositivos, a lanterna acende depois que a visualização é iniciada. Em outros dispositivos, o lanterna não pode acender até que captura de vídeo seja iniciada.
@@ -205,7 +206,7 @@ O valor do foco deve estar dentro do intervalo aceito pelo dispositivo e deve se
 
 Defina o valor do controle deslizante como o valor atual de **FocusControl** depois de cancelar o registro do manipulador de eventos [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737) para que o evento não seja disparado quando o valor for definido.
 
-[!code-cs[Foco](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
+[!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
 No manipulador de eventos **Checked** para o botão de opção de foco manual, obtenha o objeto **FocusControl** e chame [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) caso seu aplicativo tenha desbloqueado anteriormente o foco com uma chamada para [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081).
 
@@ -268,7 +269,7 @@ Habilite ou desabilite a OIS definindo o [**OpticalImageStabilizationControl.Mod
 ## <a name="powerline-frequency"></a>Frequência de Powerline
 Alguns dispositivos de câmera oferecem suporte ao processamento anticintilação que depende de saber a frequência de CA de powerlines no ambiente atual. Alguns dispositivos oferecem suporte à determinação automática da frequência de powerline, enquanto outras exigem que a frequência seja definida manualmente. O exemplo de código a seguir mostra como determinar o suporte à frequência de powerline no dispositivo e, se necessário, como definir a frequência manualmente. 
 
-Primeiro, chame o método **VideoDeviceController** [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), passando um parâmetro de saída do tipo [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency); se essa chamada falhar, o controle de frequência de powerline não terá suporte no dispositivo atual. Se houver suporte para o recurso, você poderá determinar se o modo automático está disponível no dispositivo tentando definir o modo automático. Faça isso chamando [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) e passando o valor **Automático**. Se a chamada tiver êxito, significa que sua frequência de powerline automática é compatível. Se o controlador de frequência de powerline for compatível com o dispositivo, mas a detecção automática de frequência não for, você ainda poderá definir a frequência manualmente usando **TrySetPowerlineFrequency**. Neste exemplo, **MyCustomFrequencyLookup** é um método personalizado que você implementa para determinar a frequência correta para o local atual do dispositivo. 
+Primeiro, chame o método **VideoDeviceController** [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), passando um parâmetro de saída do tipo [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency); se essa chamada falhar, o controle de frequência de powerline não terá suporte no dispositivo atual. Se houver suporte para o recurso, você poderá determinar se o modo automático está disponível no dispositivo tentando definir o modo automático. Faça isso chamando [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) e passando o valor **automaticamente**. Se a chamada tiver êxito, significa que sua frequência de powerline automática é compatível. Se o controlador de frequência de powerline for compatível com o dispositivo, mas a detecção automática de frequência não for, você ainda poderá definir a frequência manualmente usando **TrySetPowerlineFrequency**. Neste exemplo, **MyCustomFrequencyLookup** é um método personalizado que você implementa para determinar a frequência correta para o local atual do dispositivo. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
@@ -338,7 +339,7 @@ Em um dispositivo habilitado para multitoque, um cenário típico é ajustar o f
 
 No manipulador para o evento **ManipulationDelta**, atualize o fator de zoom com base na alteração do gesto de pinçagem do usuário. O valor [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) representa a mudança de escala do gesto de pinçagem, de forma que um pequeno aumento no tamanho da pinçagem seja um número um pouco maior que 1,0 e uma pequena queda no tamanho seja um número um pouco menor que 1,0. Neste exemplo, o valor atual do controle de zoom é multiplicado pelo delta da escala.
 
-Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150). Por fim, você deve certificar-se de que o fator de zoom seja um múltiplo do tamanho da etapa de zoom compatível com o dispositivo, conforme indicado pela propriedade [**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818). Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
+Antes de configurar o fator de zoom, certifique-se de que o valor não seja menor que o valor mínimo compatível com o dispositivo, conforme indicado pela propriedade [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817). Além disso, certifique-se de que o valor seja menor que ou igual ao valor [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150). Por fim, você deve garantir que o fator de zoom é um múltiplo do tamanho da etapa de zoom compatível com o dispositivo, conforme indicado pela propriedade [**etapa**](https://msdn.microsoft.com/library/windows/apps/dn633818) . Se o fator de zoom não atender a esses requisitos, uma exceção será lançada quando você tentar definir o nível de zoom no dispositivo de captura.
 
 Defina o nível de zoom no dispositivo de captura criando um novo objeto [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722). Defina a propriedade [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) como [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726) e a propriedade [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) como o fator de zoom desejado. Por fim, chame [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719) para definir o novo valor de zoom no dispositivo. O dispositivo fará a transição suavemente para o novo valor de zoom.
 

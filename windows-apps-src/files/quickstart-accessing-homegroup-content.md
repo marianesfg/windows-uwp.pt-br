@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09dcf1ace7c5d00509e54cd6fa936a2aa5ef7820
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 79873d014c5ee735a509328d4a123f839831325b
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653875"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4682518"
 ---
 # <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
 
@@ -197,7 +197,7 @@ Siga essas etapas para transmitir o conteúdo do vídeo a partir do Grupo Domés
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra a seleção de arquivos do usuário para obter acesso à leitura e defina o fluxo do arquivo como a origem do ** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) e reproduza o arquivo.
+3.  **Abra a seleção de arquivos do usuário para acesso de leitura e defina o fluxo do arquivo como a origem para o** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)e, em seguida, executar o arquivo.
     ```cs
     if (file != null)
     {

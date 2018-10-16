@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, classificações
 ms.localizationpriority: medium
-ms.openlocfilehash: d3d09aa395f9c0924951a44f5b0abaf9c99cb32e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 0671015ead96b57515b4b451a06ff3c9cf1a94cb
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620838"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694623"
 ---
 # <a name="get-app-ratings"></a>Obter classificações de aplicativo
 
@@ -106,20 +106,20 @@ Authorization: Bearer <your access token>
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
-| Valor           | Tipo    | Descrição                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Valor           | Tipo    | Descrição       |
+|-----------------|---------|-------------------|
 | date            | string  | A primeira data no intervalo de datas dos dados de classificações. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
-| applicationId   | string  | A ID da Loja do aplicativo do qual você está recuperando dados de classificações.                                                                                                                                                                 |
-| applicationName | string  | O nome de exibição do app.                                                                                                                                                                                                         |
-| market          | string  | O código do país ISO 3166 do mercado em que a classificação foi enviada.                                                                                                                                                              |
-| osVersion       | string  | A versão do sistema operacional no qual a classificação foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                               |
-| deviceType      | string  | O tipo de dispositivo no qual a classificação foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                                                                                           |
-| isRevised       | booliano | O valor **true** indica que a classificação foi revisada; caso contrário, **false**.                                                                                                                                                       |
-| oneStar         | number  | O número de classificações de uma estrela.                                                                                                                                                                                                      |
-| twoStars        | number  | O número de classificações de duas estrelas.                                                                                                                                                                                                      |
-| threeStars      | number  | O número de classificações de três estrelas.                                                                                                                                                                                                    |
-| fourStars       | number  | O número de classificações de quatro estrelas.                                                                                                                                                                                                     |
-| fiveStars       | number  | O número de classificações de cinco estrelas.            |
+| applicationId   | string  | A ID da Loja do aplicativo do qual você está recuperando dados de classificações.         |
+| applicationName | string  | O nome de exibição do app.    |
+| market          | string  | O código do país ISO 3166 do mercado em que a classificação foi enviada.        |
+| osVersion       | string  | A versão do sistema operacional no qual a classificação foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.            |
+| deviceType      | string  | O tipo de dispositivo no qual a classificação foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.            |
+| isRevised       | booliano | O valor **true** indica que a classificação foi revisada; caso contrário, **false**.   |
+| oneStar         | number  | O número de classificações de uma estrela.        |
+| twoStars        | number  | O número de classificações de duas estrelas.    |
+| threeStars      | number  | O número de classificações de três estrelas.   |
+| fourStars       | number  | O número de classificações de quatro estrelas.    |
+| fiveStars       | number  | O número de classificações de cinco estrelas.    |
 
 
 ### <a name="response-example"></a>Exemplo de resposta

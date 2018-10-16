@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 84230759f03cb60b5b776d3407ac0f96e090d495
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 563ca17864f95cfa98313608f5a5c32e64f44a16
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675293"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680194"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
@@ -99,7 +99,7 @@ Estado | Descrição
 O jogo insere o estado **WaitForInput** quando foi pausado. Isso ocorre quando o jogador move o ponteiro para fora da janela principal do jogo ou pressiona o botão de pausa (a tecla P ou o botão **Iniciar** do gamepad). O **MoveLookController** registra o pressionamento desse botão e informa o loop do jogo quando chama o método [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127). Nesse ponto, se **IsPauseRequested** retorna **verdadeiro**, o loop do jogo chama **WaitForPress** em **MoveLookController** para mover o controlador para o estado **WaitForInput**. 
 
 
-Uma vez no estado **WaitForInput**, o jogo interrompe o processamento de quase todos os eventos de entrada do jogo até retornar ao estado **Ativo**. A exceção é o botão de pausa, que ao ser pressionado faz com que o jogo volte ao estado ativo. Diferentemente do botão de pausa, para que o jogo volte ao estado **Ativo**, o player precisa selecionar um item de menu. 
+Uma vez no estado **WaitForInput**, o jogo interrompe o processamento de quase todos os eventos de entrada do jogo até retornar ao estado **Ativo**. A exceção é o botão de pausa, que ao ser pressionado faz com que o jogo volte ao estado ativo. Diferentemente do botão de pausa, para que o jogo volte ao estado **ativo** o player precisa selecionar um item de menu. 
 
 
 
