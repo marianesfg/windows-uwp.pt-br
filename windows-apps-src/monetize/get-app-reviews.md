@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análises
 ms.localizationpriority: medium
-ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4613570"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4686210"
 ---
 # <a name="get-app-reviews"></a>Obter avaliações de aplicativo
 
@@ -109,43 +109,43 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>Corpo da resposta
 
-| Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                            |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de opinião. Para saber mais sobre os dados em cada objeto, consulte a seção de [valores de opinião](#review-values) a seguir.                                                                                                                                      |
+| Valor      | Tipo   | Descrição      |
+|------------|--------|------------------|
+| Valor      | array  | Uma matriz de objetos que contêm dados de opinião. Para saber mais sobre os dados em cada objeto, consulte a seção de [valores de opinião](#review-values) a seguir.       |
 | @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de análise para a consulta. |
-| TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                    |
+| TotalCount | int    | O número total de linhas no resultado dos dados da consulta.  |
 
  
 ### <a name="review-values"></a>Valores de opinião
 
 Os elementos na matriz *Value* contêm os valores a seguir.
 
-| Valor                  | Tipo    | Descrição                                                                                                                                                                                                                          |
-|------------------------|---------|---------------------|
-| date                   | string  | A primeira data no intervalo de datas dos dados de análise. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas.  |
-| applicationId          | string  | A ID da Loja do app para o qual você está recuperando dados de análise.        |
-| applicationName        | string  | O nome de exibição do app.   |
-| market                 | string  | O código do país ISO 3166 do mercado em que a análise foi enviada.       |
-| osVersion              | string  | A versão do sistema operacional no qual a análise foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.         |
-| deviceType             | string  | O tipo de dispositivo no qual a análise foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.      |
-| isRevised              | booliano | O valor **true** indica que a opinião foi revisada; caso contrário, **false**.         |
-| packageVersion         | string  | A versão do pacote do aplicativo que foi revisado.   |
-| deviceModel            | string  | O tipo de dispositivo no qual o aplicativo foi avaliado.      |
-| productFamily          | string  | O nome da família de dispositivos. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.  |
-| deviceRAM              | number  | A RAM física, em MB.        |
-| deviceScreenResolution | string  | A resolução de tela do dispositivo no formato "*largura* x *altura*".        |
-| deviceStorageCapacity  | number  | A capacidade do disco do armazenamento principal, em GB.   |
-| isTouchEnabled         | booliano | O valor **true** indica que é habilitado para toque; caso contrário, **false**.      |
-| reviewerName           | string  | O nome do revisor.      |
-| rating                 | number  | A classificação do app, em estrelas.         |
-| reviewTitle            | string  | O título da análise.       |
-| reviewText             | string  | O conteúdo de texto da análise.     |
-| helpfulCount           | number  | O número de vezes que a análise foi marcada como útil.     |
-| notHelpfulCount        | number  | O número de vezes que a análise foi marcada como não útil.               |
-| responseDate           | string  | A data em que uma resposta foi enviada.                 |
-| responseText           | string  | O conteúdo de texto da resposta.        |
-| id                     | string  | A ID da revisão (este é um GUID). Você pode usar essa ID nos métodos [obter as informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md) e [enviar respostas às críticas do aplicativo](submit-responses-to-app-reviews.md).       |
- 
+| Valor           | Tipo    | Descrição       |
+|-----------------|---------|-------------------|
+| date            | string  | A primeira data no intervalo de datas dos dados de análise. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
+| applicationId   | string  | A ID da Loja do app para o qual você está recuperando dados de análise.         |
+| applicationName | string  | O nome de exibição do app.    |
+| market          | string  | O código do país ISO 3166 do mercado em que a análise foi enviada.        |
+| osVersion       | string  | A versão do sistema operacional no qual a análise foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.            |
+| deviceType      | string  | O tipo de dispositivo no qual a análise foi enviada. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.            |
+| isRevised       | booliano | O valor **true** indica que a opinião foi revisada; caso contrário, **false**.   |
+| packageVersion  | string  | A versão do pacote do aplicativo que foi revisado.        |
+| deviceModel        | string  |O tipo de dispositivo no qual o aplicativo foi avaliado.     |
+| productFamily      | string  | O nome da família de dispositivos. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [Campos de filtro](#filter-fields) acima.   |
+| deviceRAM       | number  | A RAM física, em MB.    |
+| deviceScreenResolution       | string  | A resolução de tela do dispositivo no formato "*largura* x *altura*".    |
+| deviceStorageCapacity | number | A capacidade do disco do armazenamento principal, em GB. |
+| isTouchEnabled | booliano | O valor **true** indica que é habilitado para toque; caso contrário, **false**. |
+| reviewerName | string | O nome do revisor. |
+| rating | number | A classificação do app, em estrelas. |
+| reviewTitle | string | O título da análise. |
+| reviewText | string | O conteúdo de texto da análise. |
+| helpfulCount | number | O número de vezes que a análise foi marcada como útil. |
+| notHelpfulCount | number | O número de vezes que a análise foi marcada como não útil. |
+| responseDate | string | A data em que uma resposta foi enviada. |
+| responseText | string | O conteúdo de texto da resposta. |
+| id | string | A ID da revisão (este é um GUID). Você pode usar essa ID nos métodos [obter as informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md) e [enviar respostas às críticas do aplicativo](submit-responses-to-app-reviews.md). |
+
 
 ### <a name="response-example"></a>Exemplo de resposta
 

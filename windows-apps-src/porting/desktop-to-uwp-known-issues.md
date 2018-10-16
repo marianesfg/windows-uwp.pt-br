@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4622257"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4688677"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
@@ -123,7 +123,7 @@ Clique duas vezes no certificado no Explorador de Arquivos, selecione a guia *De
 
 **Opção 3: CertUtil**
 
-Execute o **certutil** na linha de comando no arquivo PFX e copie o campo *Assunto* da saída.
+Execute o **certutil** na linha de comando no arquivo PFX e copie o campo de *assunto* da saída.
 
 ```cmd
 certutil -dump <cert_file.pfx>

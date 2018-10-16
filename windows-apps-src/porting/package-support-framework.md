@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b4cae2e135f7a66cd68192faabeffdb309a909
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 1c8e4649fad0e467e0656415e2fd49a9fea05109
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620977"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4689867"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
@@ -269,7 +269,7 @@ Vamos examinar cada projeto neste exemplo.
 
 | Projeto | Finalidade |
 |-------|-----------|
-| DesktopApplicationPackage | Este projeto é baseado no [projeto de empacotamento de aplicativo do Windows](desktop-to-uwp-packaging-dot-net.md) , e ele gera o pacote MSIX. |
+| DesktopApplicationPackage | Este projeto é baseado no [projeto de empacotamento de aplicativo do Windows](desktop-to-uwp-packaging-dot-net.md) e ele produz o pacote MSIX. |
 | Runtimefix | Este é um projeto C++ Dynamic-Linked biblioteca que contém uma ou mais funções de substituição que servem como a correção de tempo de execução. |
 | PSFLauncher | Isso é o projeto vazio de C++. Este projeto é um lugar para coletar os arquivos de tempo de execução distribuível da estrutura de suporte ao pacote. Ele gera um arquivo executável. Esse executável é a primeira coisa que é executado quando você inicia a solução. |
 | WinFormsDesktopApplication | Este projeto contém o código-fonte de um aplicativo da área de trabalho. |

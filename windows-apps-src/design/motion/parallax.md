@@ -16,12 +16,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b144c7e790d0462688795d9e1a6c4f076b569eb3
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 32fa7d5931a0d80ee98fc41a14018b00e7c1438f
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4613883"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4684399"
 ---
 # <a name="parallax"></a>Paralaxe
 
@@ -110,8 +110,8 @@ O ParallaxView ajusta automaticamente o tamanho da imagem para que ela funcione 
 
 As propriedades VerticalShift e HorizontalShift permitem controlar o nível do efeito paralaxe.
 
-* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. O valor 0 significa que o plano de fundo não se move.
-* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. O valor 0 significa que o plano de fundo não se move.
+* A propriedade VerticalShift especifica o quanto queremos que a tela de fundo se desloque verticalmente durante toda a operação de paralaxe. Um valor 0 significa que o plano de fundo não se move.
+* A propriedade HorizontalShift especifica o quanto queremos que a tela de fundo se desloque horizontalmente durante toda a operação de paralaxe. Um valor 0 significa que o plano de fundo não se move.
 
 Valores maiores criam um efeito mais dramático. 
 
