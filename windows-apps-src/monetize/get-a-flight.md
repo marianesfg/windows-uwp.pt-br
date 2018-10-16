@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: Use este método na API de envio da Microsoft Store para obter dados para um pacote de pré-lançamento de um app que está registrado na sua conta do Centro de Desenvolvimento do Windows.
 title: Obter um pacote de pré-lançamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, versão de pré-lançamento, pacote de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 16cf019509f7c6b85008fddde79116ea92c37b9c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 53d6117355b431fd142b8e2749dacd9a88024297
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816051"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624194"
 ---
 # <a name="get-a-package-flight"></a>Obter um pacote de pré-lançamento
 
