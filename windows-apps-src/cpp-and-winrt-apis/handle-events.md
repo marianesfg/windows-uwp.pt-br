@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: c64b4a23e3b63c939d192e828e890a9ceb92e5ab
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575175"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622473"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manejar eventos usando delegados em C++/WinRT
 
@@ -53,7 +53,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Quando registrado o representante, o exemplo de código acima passa um bruto *esse* ponteiro (apontando para o objeto atual). Para saber como estabelecer uma referência forte ou fraca ao objeto atual, consulte a seção subpropriedade **se você usar uma função de membro como um delegado** na seção [com segurança acessando o *esse* ponteiro com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Quando registrado o representante, o exemplo de código acima passa um bruto *esse* ponteiro (apontando para o objeto atual). Para saber como estabelecer uma referência forte ou fraca para o objeto atual, consulte a seção subpropriedade **se você usar uma função de membro como um delegado** na seção [com segurança acessando o *esse* ponteiro com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 Há outras formas para construir um **RoutedEventHandler**. A seguir está o bloco de sintaxe tirado do tópico documentação para [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (escolha *C++/WinRT* a partir da lista suspensa **Idioma** na página). Observe os vários construtores: um deles leva um lambda; outro uma função livre; e outro (aquele que usamos acima) usa um objeto e um ponteiro para função de membro.
 
@@ -202,9 +202,9 @@ void ProcessFeedAsync()
 Como sugere o comentário da "corrotina", em vez de usar um delegado com os eventos concluídos de ações assíncronas e operações, você provavelmente achará mais natural para usar rotinas concomitantes. Para obter detalhes e exemplos de código, consulte [Operações de concorrência e assíncrona com C++/WinRT](concurrency.md).
 
 > [!NOTE]
-> Ele não estiver correto implementar mais de um *manipulador de conclusão* de uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará.
+> Ele não estiver correto implementar mais de um *manipulador de conclusão* para uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará.
 
-Se você com delegados em vez de uma corrotina, em seguida, você pode optar por uma sintaxe mais simples.
+Se você com delegados em vez de uma corrotina, você pode optar por uma sintaxe mais simples.
 
 ```cppwinrt
 async_op_with_progress.Completed(
@@ -230,7 +230,7 @@ winrt::hstring f(ListView listview)
 }
 ```
 
-## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessar com segurança o *esse* ponteiro com um representante do manipulador de eventos
+## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessando com segurança o *esse* ponteiro com um representante do manipulador de eventos
 
 Se você manipula um evento com função de membro de um objeto ou de dentro de uma função lambda dentro da função de membro de um objeto, em seguida, você precisa pensar sobre os tempos de vida relativos do destinatário do evento (o objeto manipulando o evento) e a origem do evento (o objeto acionamento do evento). Para obter mais informações e exemplos de código, consulte [referências fortes e fracas no C++ c++ WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
@@ -242,4 +242,4 @@ Se você manipula um evento com função de membro de um objeto ou de dentro de 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar eventos com C++/WinRT](author-events.md)
 * [Simultaneidade e operações assíncronas com C++/WinRT](concurrency.md)
-* [Referências fracas e fortes em C++ c++ WinRT](weak-references.md)
+* [Referências fortes e fracas no C++ c++ WinRT](weak-references.md)

@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no passo a passo do XAML/C#
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bb793e5ca9bb44e888581f1d5dd3142d0b09ee8
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: e4387ccb8ef7eb02cb0043530a4e683f7917f421
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1880787"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621064"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tratamento de erros no passo a passo do XAML/C#
 
-Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo. O passo a passo usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
+Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo. O passo a passo usa um [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
 
 Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md). 
 
@@ -35,7 +35,7 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
       Width="300" />
     ```
 
-2.   Após a propriedade **Width**, mas antes da marca de fechamento, atribua o nome de um manipulador de eventos de erro ao evento [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.erroroccurred.aspx). Neste guia passo a passo, o nome do manipulador de eventos de erro é **OnAdError**.
+2.   Após a propriedade **Width**, mas antes da marca de fechamento, atribua o nome de um manipulador de eventos de erro ao evento [ErrorOccurred](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.erroroccurred). Neste guia passo a passo, o nome do manipulador de eventos de erro é **OnAdError**.
     ``` xml
     <UI:AdControl
       ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
@@ -50,7 +50,7 @@ Estes exemplos pressupõem que você tenha um aplicativo XAML/C# que contém um 
 
 3.  Para gerar um erro em tempo de execução, crie um segundo **AdControl** com uma ID de aplicativo diferente. Como todos os objetos **AdControl** em um aplicativo devem usar a mesma ID de aplicativo, criar um **AdControl** adicional com uma id de aplicativo diferente causará um erro.
 
-    Defina um segundo **AdControl** no MainPage.xaml logo após o primeiro **AdControl**, e defina a propriedade [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) como zero (“0”).
+    Defina um segundo **AdControl** no MainPage.xaml logo após o primeiro **AdControl**, e defina a propriedade [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) como zero (“0”).
     ``` xml
     <UI:AdControl
         ApplicationId="0"

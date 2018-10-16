@@ -12,19 +12,19 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: f0a657ada755b77abe8ffef6a38bfa1f9ece8fcd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570189"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623482"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 
-Tecnologias de mapeamento da Microsoft usam _folhas de estilos de mapa_ para definir a aparência de mapas.  Uma folha de estilos de mapa é definida usando JavaScript Object Notation (JSON) e pode ser usada em várias maneiras incluindo em de um aplicativo Windows Store [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) por meio do método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
+Tecnologias de mapeamento da Microsoft usam _folhas de estilo de mapa_ para definir a aparência de mapas.  Uma folha de estilos de mapa é definida usando JavaScript Object Notation (JSON) e pode ser usada várias maneiras, incluindo em de um aplicativo Windows Store [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) por meio do método [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) .
 
-Folhas de estilos podem ser criadas interativamente usando o aplicativo [Editor de folha de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+Folhas de estilos podem ser criadas interativamente usando o aplicativo de [Editor de folha de estilos de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
 
-O JSON a seguir pode ser usado para tornar áreas de água aparecem em vermelho, rótulos de água aparecem em verde e áreas de terra aparecem em azul:
+O JSON a seguir pode ser usado para tornar áreas de água aparecem em vermelho, os rótulos de água aparecem em verde e áreas de terra aparecem em azul:
 
 ```json
     {"version":"1.*",
@@ -81,7 +81,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins médicos (por exemplo: um campus de hospital). |
 | >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem bases militares ou têm usos militares. |
 | >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que são usadas para fins náuticos relacionados. |
-| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área de ambiente. |
+| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Rótulos de área do bairro. |
 | >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que é usado como uma pista avião. |
 | >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas arenosas, como praias. |
 | >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas de chão alocadas para shopping centers ou outros centros comerciais. |
@@ -92,7 +92,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem Golfe cursos. |
 | >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem parques. |
 | >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Campos extraídos, como um campo de baseball ou uma quadra de tênis. |
-| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem a natureza reserva. |
+| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Áreas que abrangem natureza reserva. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Todos os recursos que são desenhados com um ícone de algum tipo de ponto. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Rótulos de números de endereço. |
 | >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam recursos naturais. |
@@ -103,10 +103,10 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam qualquer locaiton de negócios. |
 | >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam atrações turísticas como museus, zoos, etc. |
 | >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam os locais de uso geral para a comunidade. |
-| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam escolas e outro education relacionados locais. |
+| >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam escolas e outra educação relacionado locais. |
 | >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam entretenimento como teatros, cinemas, etc. |
-| >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam serviços essenciais, como vaga, bancos, pedal, etc. |
-| >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam restaurantes, cafés etc. |
+| >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam serviços essenciais como vaga, bancos, pedal, etc. |
+| >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Ícones que representam restaurantes, cafés, etc. |
 | >>>>> lodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam hotéis e outras empresas de hospedagem. |
 | >>>>> realEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam as empresas imóveis. |
 | >>>>> shoppingPoint          | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Ícones que representam hotéis e outras empresas de hospedagem. |
@@ -128,7 +128,7 @@ Esta tabela usa os caracteres ">" para representar os níveis na hierarquia da e
 | >>>> transitBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Edifícios usados para trânsito, como aeroportos. |
 | >> transportation            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que fazem parte da rede de transporte (por exemplo: rodovias, trens e barcas). |
 | >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam todas as estradas. |
-| >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam grandes, controlado rodovias de acesso. |
+| >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam grandes, controlada rodovias de acesso. |
 | >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam vias de acesso de alta velocidade que normalmente se conectam à controlada rodovias de acesso. |
 | >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam rodovias. |
 | >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Linhas que representam estradas principais. |
@@ -186,7 +186,7 @@ Esta seção descreve as propriedades que você pode usar para cada entrada.
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se é possível ou não desenhar o sombreamento de elevações no mapa. |
 | shadedReliefDarkColor        | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado escuro do baixo relevo sombreado.  O canal alfa representa o valor máximo alfa. |
 | shadedReliefLightColor       | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do lado claro do baixo relevo sombreado.  O canal alfa representa o valor máximo alfa. |
-| shadowColor                  | Cor   |      |      |      |  ✔️   | A cor da sombra por trás de ícones que usam sombras. |
+| shadowColor                  | Cor   |      |      |      |  ✔️   | A cor da sombra atrás de ícones que usam sombras. |
 | spaceColor                   | Color   |  ✔   |  ✔   |  ✔   |  ✔   | O valor de cor ARGB para a área ao redor do mapa. |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Um sinalizador que indica se as cores originais no SVG devem ser usados em vez de com a entrada de paleta de cores em uma imagem. |
 
@@ -232,7 +232,7 @@ Esse grupo de propriedades herda do grupo de propriedades [MapElement](#mapeleme
 
 | Propriedade                     | Tipo    | 1703 | 1709 | 1803 | 1809 | Descrição |
 |------------------------------|---------|------|------|------|------|-------------|
-| plano de fundo de forma             | Float   |      |      |      |  ✔️   | Forma a ser usada como plano de fundo do ícone, substituindo qualquer forma que existe. |
+| plano de fundo de forma             | Float   |      |      |      |  ✔️   | Forma a ser usada como o plano de fundo do ícone – substituindo qualquer forma que existe. |
 | stemAnchorRadiusScale        | Float   |      |      |  ✔   |  ✔   | Quantidade pela qual o ponto de ancoramento de um tronco do ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |
 | stemColor                    | Color   |  ✔   |  ✔   |  ✔   |  ✔   | A cor do tronco oriundo da parte inferior do ícone no modo de 3D. |
 | stemHeightScale              | Float   |      |      |  ✔   |  ✔   | Quantidade pela qual o tamanho do tronco de um ícone deve ser dimensionado.  Por exemplo, use *1* para padrão e *2* para o dobro do tamanho. |

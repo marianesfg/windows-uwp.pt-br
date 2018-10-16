@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios de pacote de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Gerenciar envios de pacote de pré-lançamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a9cba76b693a871d10ee1f14fd9023bd166b0de
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: df685e0886b1db59e5868717a425b95e40217bdf
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817334"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617724"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
@@ -151,7 +151,7 @@ Os artigos a seguir dão exemplos de código detalhados que demonstram como cria
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
 Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
 

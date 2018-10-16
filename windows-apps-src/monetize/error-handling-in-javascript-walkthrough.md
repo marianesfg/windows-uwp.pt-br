@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Saiba como detectar erros de AdControl em seu aplicativo.
 title: Tratamento de erros no Guia passo a passo do JavaScript
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, java script
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b6d8e2b9e4d2e61901bd7de304134e5236af672
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: 5e25de40c7fd28cb43c308bd0361b400e7bf6909
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1880927"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619828"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Processamento de erros no guia passo a passo do JavaScript
 
-Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo JavaScript. O passo a passo usa um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
+Este guia passo a passo demonstra como detectar erros relacionados a anúncios em seu aplicativo JavaScript. O passo a passo usa um [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir um anúncio em faixa, mas os conceitos gerais nele também se aplicam a anúncios intersticiais e anúncios nativos.
 
 Estes exemplos pressupõem que você tenha um aplicativo JavaScript que contém um **AdControl**. Para obter instruções passo a passo que demonstram como adicionar um **AdControl** ao seu aplicativo, consulte [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md). Para um projeto de exemplo completo que demonstra como adicionar anúncios em faixa a um aplicativo JavaScript/HTML, consulte os [Exemplos de publicidade no GitHub](http://aka.ms/githubads).
 

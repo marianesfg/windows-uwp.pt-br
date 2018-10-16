@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567986"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618931"
 ---
 # <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
@@ -4746,7 +4746,7 @@ Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do qu
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>Segurança</td>
+  <td>Seguras</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>
@@ -5018,7 +5018,7 @@ Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do qu
  </tr>
 <tr><td><img src="images/segoe-mdl/F5ED.png" width="32" height="32" alt="Set" /></td>
   <td>F5ED</td>
-  <td>Definir</td>
+  <td>Defina</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F5EE.png" width="32" height="32" alt="SetSolid" /></td>
   <td>F5EE</td>

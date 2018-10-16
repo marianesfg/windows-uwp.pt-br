@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notificação do sistema, cabeçalho, cabeçalhos de notificação do sistema, notificação, notificações de grupo, central de ações
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b3c92a41832729b5a60411308d010c3cbb4470a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575125"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620848"
 ---
 # <a name="toast-headers"></a>Cabeçalhos de notificação do sistema
 

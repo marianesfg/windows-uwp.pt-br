@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
 description: Use estes métodos na API de envio da Microsoft Store para gerenciar pacotes de pré-lançamento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Gerenciar pacotes de pré-lançamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b5e3c100ece6ec79abad0efbf4797b0102959cb
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 6a761edf50888fb7f3130886a2c7e6e65b7c0a1d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661866"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621133"
 ---
 # <a name="manage-package-flights"></a>Gerenciar pacotes de pré-lançamento
 

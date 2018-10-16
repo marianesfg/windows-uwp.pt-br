@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573528"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619138"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 
@@ -28,11 +28,11 @@ Para obter detalhes sobre o que um pacote inclui e como ele deve ser estruturado
 Para carregar os pacotes, arraste-os para o campo de carregamento ou clique em para procurar os arquivos. A página **pacotes** permitem que você carregue arquivos .msix, .msixupload, .msixbundle,. AppX,. appxupload,. appxbundle e/ou. xap.
 
 > [!IMPORTANT]
-> Para o Windows 10, recomendamos que você envie o arquivo .msixupload ou. appxupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
+> Windows 10, recomendamos que você envie o arquivo .msixupload ou. appxupload aqui em vez de .msix,. AppX, .msixbundle ou. appxbundle.  Para obter mais informações sobre como empacotar aplicativos UWP para a Loja, consulte [Empacotar um aplicativo UWP com o Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Caso tenha criado [pacotes de pré-lançamento](package-flights.md) para seu aplicativo, você verá uma lista suspensa com a opção para copiar pacotes de um dos pacotes de pré-lançamento. Selecione o pacote de pré-lançamento que tiver os pacotes que você deseja puxar. Em seguida, você pode selecionar qualquer um ou todos os seus pacotes para incluir nesse envio.
 
-Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para que você saiba o que está errado. Você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
+Se detectarmos erros com um pacote ao validá-lo, exibiremos uma mensagem para informar o que está errado. Você precisará remover o pacote, corrigir o problema e tentar carregá-lo novamente. Você também pode ver avisos para que saiba quais questões podem causar problemas, mas não impedem que você continue o seu envio.
 
 
 ## <a name="device-family-availability"></a>Disponibilidade da família de dispositivos

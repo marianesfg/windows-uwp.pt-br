@@ -1,24 +1,24 @@
 ---
-author: mcleanbyron
-description: Use este método na API de análise da Microsoft Store para obter dados de ideias de seu aplicativo.
+author: Xansky
+description: Use este método na API de análise da Microsoft Store para obter dados de insights do seu aplicativo.
 title: Obter dados de insights
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/31/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 30b9303fc44f557210c9ba80a2a135f77909dc10
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574763"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617559"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 
-Use este método na API de análise da Microsoft Store para obter dados de ideias relacionado ao aquisições, integridade e métricas de uso de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de ideias](../publish/insights-report.md) no painel do Centro de desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de insights relacionado ao aquisições, integridade e métricas de uso de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de ideias](../publish/insights-report.md) no painel do Centro de desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -49,14 +49,14 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A [ID da loja](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar dados de ideias. Se você não especificar esse parâmetro, o corpo da resposta conterá dados insights para todos os aplicativos registrados em sua conta.  |  Não  |
-| startDate | date | A data de início no intervalo de datas dos dados de percepções a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
-| endDate | date | A data final no intervalo de datas dos dados de percepções a serem recuperados. O padrão é a data atual. |  Não  |
+| applicationId | string | A [ID da loja](in-app-purchases-and-trials.md#store-ids) do aplicativo para o qual você deseja recuperar dados de insights. Se você não especificar esse parâmetro, o corpo da resposta conterá dados de insights para todos os aplicativos registrados em sua conta.  |  Não  |
+| startDate | date | A data de início no intervalo de datas dos dados de insights a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
+| endDate | date | A data final no intervalo de datas dos dados de insights a serem recuperados. O padrão é a data atual. |  Não  |
 | filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>Você pode especificar os campos de filtro a seguir:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul> | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-O exemplo a seguir demonstra uma solicitação de obtenção de dados de ideias. Substitua o valor de *applicationId* pela ID da Loja do seu app.
+O exemplo a seguir demonstra uma solicitação de obtenção de dados de insights. Substitua o valor de *applicationId* pela ID da Loja do seu app.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/insights?applicationId=9NBLGGGZ5QDR&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'acquisition' or dataType eq 'health' HTTP/1.1
@@ -69,7 +69,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de ideias para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [informação valores](#insight-values) abaixo.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [informação valores](#insight-values) abaixo.                                                                                                                      |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                 |
 
 
@@ -79,7 +79,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de ideias.     |
+| applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de insights.     |
 | insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma das seguintes cadeias de caracteres que especifica a área de análise gerais que descreve essa informação:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul>   |
 | insightDetail          | array | Um ou mais [valores de InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
@@ -89,7 +89,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Um dos seguintes valores que indica a métrica que descreve a informação atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | string | Um dos seguintes valores que indica a métrica que descreve o insight atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a informação.   |
 | PercentChange            | string |  Porcentagem a métrica alterada em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** e **sexo**.   |

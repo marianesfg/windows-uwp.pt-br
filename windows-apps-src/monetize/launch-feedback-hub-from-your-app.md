@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
 title: Iniciar o Hub de Feedback do seu app
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Hub de Feedback, iniciar
 ms.localizationpriority: medium
-ms.openlocfilehash: f4a5c6dab627a2022b36a4afee3dc155b345f855
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6617c3d5901fbb1a1e9a7f271f4c80d4f38e41f6
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689212"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623525"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar o Hub de Feedback do seu app
 
@@ -48,7 +48,7 @@ Para iniciar o Hub de Feedback do seu aplicativo:
     <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
     ```
 
-7. Em seu código de inicialização para a página do aplicativo que hospeda o controle de feedback, use o método estático [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) da classe [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) para determinar se o Hub de Feedback está disponível no dispositivo do usuário. O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families).
+7. Em seu código de inicialização para a página do aplicativo que hospeda o controle de feedback, use o método estático [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) da classe [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) para determinar se o Hub de Feedback está disponível no dispositivo do usuário. O Hub de Feedback está disponível apenas em dispositivos que executam a versão 10.0.14271 ou posterior de um SO Windows 10 que se baseia em [famílias de dispositivos móveis e computadores](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families).
 
     Se essa propriedade retornar **true**, deixe o controle visível. O código a seguir demonstra como fazer isso para um [Botão](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
@@ -56,7 +56,7 @@ Para iniciar o Hub de Feedback do seu aplicativo:
       > [!NOTE]
       > Embora o Hub de Feedback não seja compatível com dispositivos Xbox no momento, a propriedade **IsSupported** atualmente retorna **true** em dispositivos Xbox que executam a versão 10.0.14271 ou posterior do Windows 10. Isso é um problema conhecido que será corrigido em uma versão futura do Microsoft Store Services SDK.  
 
-8. No manipulador de eventos que é executado quando o usuário clica no controle, obtenha um objeto [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) e chame o método [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) para iniciar o aplicativo do Hub de Feedback. Há duas sobrecargas para esse método: uma sem parâmetros e outra que aceita um dicionário de pares de chave e valor que contém os metadados que você deseja associar ao feedback. O exemplo a seguir demonstra como iniciar o Hub de Feedback no manipulador de eventos [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) para um [Botão](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
+8. No manipulador de eventos que é executado quando o usuário clica no controle, obtenha um objeto [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) e chame o método [LaunchAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync) para iniciar o aplicativo do Hub de Feedback. Há duas sobrecargas para esse método: uma sem parâmetros e outra que aceita um dicionário de pares de chave e valor que contém os metadados que você deseja associar ao feedback. O exemplo a seguir demonstra como iniciar o Hub de Feedback no manipulador de eventos [Clique](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) para um [Botão](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
 
     [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 

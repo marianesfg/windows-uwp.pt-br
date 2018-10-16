@@ -1,28 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Saiba mais sobre como instalar as bibliotecas do SDK do Microsoft Advertising.
 title: Instalar o SDK do Microsoft Advertising
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, instalação, SDK, biblioteca do publicidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 17c12d09fdc7643a2d2ac1c13fa2a4e6c92cad03
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e65b26006cbeb7f7fbd9bf95f83051873e6f1140
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654875"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620190"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instalar o SDK do Microsoft Advertising
 
 Para exibir anúncio em aplicativos UWP para Windows 10, instale o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp). Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores.
 
 > [!NOTE]
-> Se você estiver desenvolvendo um aplicativo UWP em JavaScript/HTML, se tiver instalado o SDK do Windows 10 versão 10.0.14393 (Atualização de Aniversário) ou posterior, também deverá instalar a biblioteca WinJS. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> Se você estiver desenvolvendo um aplicativo UWP JavaScript/HTML tiver instalado o SDK do Windows 10 versão 10.0.14393 (atualização de aniversário) ou posterior, você também deve instalar a biblioteca [WinJS](https://github.com/winjs/winjs) . Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente.
 
 <span id="install-msi" />
 
@@ -33,11 +33,11 @@ Para instalar o SDK do Microsoft Advertising por meio do instalador MSI:
 1.  Feche todas as instâncias do Visual Studio.
 
 2. Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  Baixe e instale o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp). A instalação pode demorar alguns minutos. Aguarde até o processo terminar.
 
@@ -56,11 +56,11 @@ Para instalar o SDK do Microsoft Advertising em um projeto UWP específico por m
 1.  Feche todas as instâncias do Visual Studio.
 
 2.  Se você já instalou qualquer versão anterior do SDK do Microsoft Advertising, do SDK do Universal AD Client, da extensão Ad Mediator ou do SDK do Microsoft Store Engagement and Monetization, desinstale essas versões do SDK agora. Opcionalmente, abra uma janela do **Prompt de Comando** e execute esses comandos para limpar quaisquer versões mais antigas do SDK do Advertising que possam ter sido instaladas com o Visual Studio, mas que podem não aparecer na lista de programas instalados em seu computador:
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  Inicie o Visual Studio e abra o projeto no qual você deseja usar o SDK do Microsoft Advertising.
     > [!NOTE]
@@ -105,7 +105,7 @@ Para orientações passo a passo que mostram como começar a usar as APIs de pub
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Noções básicas sobre pacotes de estrutura no SDK do Microsoft Advertising
 
-A biblioteca Microsoft.Advertising.dll no [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicativos UWP) está configurada como um *pacote de estrutura*. Essa biblioteca contém as APIs de publicidade nos namespaces [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx) e [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx).
+A biblioteca Microsoft.Advertising.dll no [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) (para aplicativos UWP) está configurada como um *pacote de estrutura*. Essa biblioteca contém as APIs de publicidade nos namespaces [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) e [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
 
 Como esta biblioteca é um pacote de estrutura, isso significa que depois que um usuário instala uma versão do seu aplicativo que usa esta biblioteca, esta biblioteca é atualizada automaticamente em seu dispositivo através do Windows Update sempre que publicamos uma nova versão da biblioteca com correções e melhorias de desempenho. Isso ajuda a garantir que seus clientes sempre terão a versão mais recente da biblioteca instalada nos dispositivos deles.
 

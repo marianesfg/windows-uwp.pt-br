@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: e829883ec33b5e221d0947b6f39cf6ac091a0b4a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564963"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619062"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
@@ -100,7 +100,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para o Adobe Photoshop** Este conjunto de ações para o Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -109,15 +109,15 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos avançados de base da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada, produtiva para gerenciar e adquirir dispositivos IoT (nesse caso, lâmpadas).<br>
-<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra de VanArsdel no GitHub</a>
+O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
+<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)
 **BuildCast**<br>
 O BuildCast é uma amostra de ponta a ponta criada para demonstrar o sistema de Design fluente e UWP. Ele permite navegar, baixar e executar podcasts em vídeo seletos, incluindo uma amostra dos mais populares do Channel 9 e alguns feeds populares de entusiasta da tecnologia do Windows. Ele também apresenta anotações à tinta, indicadores e execução remota. Essa amostra foi inicialmente mostrada na conferência Build de 2017 durante a palestra <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crie aplicativos incríveis com o Design Fluent</a>. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Baixe a amostra do BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Confira a amostra do BuildCast no GitHub</a>
 
-![Almoço Agendador](images/lunchscheduler.png)
+![Agendador de almoço](images/lunchscheduler.png)
 **Lunch Scheduler**<br>
 Uma amostra da plataforma UWP que agenda almoços com amigos e colegas de trabalho. Marque um almoço, convide amigos para um restaurante de interesse e deixe que o aplicativo cuide da organização desse almoço para todas as pessoas envolvidas. Esse aplicativo incorpora elementos do Sistema Design Fluente em um aplicativo UWP, incluindo acrílico, revelação e animações conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Baixar a amostra do Lunch Scheduler</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Confira a amostra do Lunch Scheduler no GitHub</a></p>  
 

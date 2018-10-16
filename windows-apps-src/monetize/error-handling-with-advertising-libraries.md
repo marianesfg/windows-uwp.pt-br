@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Saiba como manipular erros gerados pela classe AdControl nas bibliotecas do Microsoft Advertising.
 title: Processamento de erros de anúncio
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, tratamento de erros, java script, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: fb60f870aa220a123bab185ef98ccca1f6a8881a
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: 49748a616654ae69c496dca74b25fd5e925e80ee
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1880967"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620736"
 ---
 # <a name="handle-ad-errors"></a>Processamento de erros de anúncio
 
-As classes [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e **NativeAdsManagerV2** têm um evento **ErrorOccurred** acionado quando ocorre um erro relacionados ao anúncio. O código do aplicativo pode manipular esse evento e examinar as propriedades [ErrorCode](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errorcode.aspx) e [ErrorMessage](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errormessage.aspx) do objeto de argumentos de evento para ajudar a determinar a causa do erro.
+As classes [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol), [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) têm um evento **ErrorOccurred** acionado quando ocorre um erro relacionados ao anúncio. O código do aplicativo pode manipular esse evento e examinar as propriedades [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) e [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) do objeto de argumentos de evento para ajudar a determinar a causa do erro.
 
 <span id="bkmk-dotnet"/>
 
@@ -29,7 +29,7 @@ Para processar erros relacionados ao anúncio em um aplicativo XAML:
 
 1. Atribua o evento **ErrorOccurred** do objeto **AdControl**, **InterstitialAd** ou **NativeAdsManagerV2** ao nome de um representante do manipulador de eventos.
 
-2. Codifique o representante de tratamento de eventos de erro para que ele use dois parâmetros: **Object** para o remetente e um objeto [AdErrorEventArgs](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.aspx).
+2. Codifique o representante de tratamento de eventos de erro para que ele use dois parâmetros: **Object** para o remetente e um objeto [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs).
 
 Aqui está um exemplo que atribui um representante chamado **OnAdError** ao evento **ErrorOccurred** de um objeto **AdControl** chamado *myBannerAdControl*.
 

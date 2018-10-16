@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: Saiba como usar a classe AdControl para exibir anúncios em faixa em um aplicativo JavaScript/HTML para Windows 10 (UWP).
 title: AdControl em HTML 5 e JavaScript
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, controle de anúncios, javascript, HTML
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c6b924072c9a55bf0610883252b511f612dff1
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: Auto
+ms.openlocfilehash: 37f7754e8f88e61df571fe561ae94dc4b71468ed
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690132"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618364"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl em HTML 5 e JavaScript
 
-Este guia passo a passo mostra como usar a classe [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) para exibir anúncios em faixa em um aplicativo JavaScript/HTML da Plataforma Universal do Windows (UWP) para Windows 10.
+Este guia passo a passo mostra como usar a classe [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para exibir anúncios em faixa em um aplicativo JavaScript/HTML da Plataforma Universal do Windows (UWP) para Windows 10.
 
 Para um projeto de exemplo completo que demonstra como adicionar anúncios em um aplicativo JavaScript/HTML, consulte os [exemplos de publicidade no GitHub](http://aka.ms/githubads).
 
@@ -28,7 +28,7 @@ Para um projeto de exemplo completo que demonstra como adicionar anúncios em um
 * Instale o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) com o Visual Studio 2015 ou uma versão posterior do Visual Studio. Para obter instruções de instalação, consulte [este artigo](install-the-microsoft-advertising-libraries.md).
 
 > [!NOTE]
-> Se tiver instalado o SDK do Windows 10 versão 10.0.14393 (Atualização de Aniversário) ou uma versão mais recente do SDK do Windows, também é necessário instalar a biblioteca WinJS. Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente. Para instalar o WinJS, consulte [Baixar o WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> Se você instalou o Windows 10 SDK versão 10.0.14393 (atualização de aniversário) ou uma versão posterior do SDK do Windows, você também deve instalar a biblioteca [WinJS](https://github.com/winjs/winjs) . Essa biblioteca costumava ser incluída em versões anteriores do SDK do Windows para Windows 10, mas a partir da versão 10.0.14393 do SDK do Windows 10 (Atualização de Aniversário), ela deve ser instalada separadamente. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>Integrar um anúncio em faixa ao seu aplicativo
 

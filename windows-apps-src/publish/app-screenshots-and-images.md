@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567796"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617276"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -85,7 +85,7 @@ Essa imagem pode aparecer em várias páginas da Store para Windows 10 (incluind
 
 Essa imagem é necessária para a exibição correta no Windows Phone 8.1 e versões anteriores. Se o seu app for compatível com o Windows Phone 8.1 ou versões anteriores e você não fornecer essa imagem, os clientes verão um ícone em branco com a listagem do seu app. (isso também se aplica aos clientes no Windows 10, se o aplicativo tiver apenas pacotes direcionados para o Windows Phone 8.1 ou anterior.) Se o envio incluir *apenas* pacotes UWP, não será necessário fornecer essa imagem. Observe que se o envio incluir pacotes do Windows Phone 8.x e pacotes UWP, e você fornecer essa imagem, ele poderá ser usado no Windows 10 em determinados layouts da Store. Se quiser evitar isso, crie [listagens específicas de plataforma](create-platform-specific-store-listings.md) para as versões do Windows Phone compatível com seu app e só inclua o ícone do bloco de aplicativo nesse local).
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados somente imagens de logotipo na loja
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados apenas imagens de logotipo na loja
 
 Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e, em vez disso, que a loja use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se seu produto oferece suporte a versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes, mesmo se você usa essa opção.)
 

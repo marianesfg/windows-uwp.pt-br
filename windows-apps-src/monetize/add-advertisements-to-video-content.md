@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: Saiba como usar a classe AdScheduler para mostrar anúncios no conteúdo de vídeo.
 title: Mostrar anúncios em conteúdo de vídeo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 9142770c6063aba34977c20309bcaeb6ac46450e
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: cc5dd40ca3d9fe6e20f5e79c95b59cef3bea9a34
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690642"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623145"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anúncios em conteúdo de vídeo
 
@@ -166,7 +166,7 @@ Esse evento é gerado quando o conteúdo principal atinge o final e algum anúnc
 
 ### <a name="onerroroccurred"></a>onErrorOccurred  
 
-Esse evento é gerado quando o **AdScheduler** encontra um erro. Para obter mais informações sobre os valores de código de erro, consulte [ErrorCode](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.errorcode.aspx).
+Esse evento é gerado quando o **AdScheduler** encontra um erro. Para obter mais informações sobre os valores de código de erro, consulte [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.errorcode).
 
 ### <a name="onpodcountdown"></a>onPodCountdown
 

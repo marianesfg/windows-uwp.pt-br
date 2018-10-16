@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575255"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617675"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -252,7 +252,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>Substituir o comportamento padrão do teclado
 
-Em alguns casos, você precisará substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
+Em alguns casos, talvez seja necessário substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
 
 ## <a name="disable-a-keyboard-accelerator"></a>Desativar um acelerador de teclado 
 
@@ -361,7 +361,7 @@ Como aceleradores de teclado normalmente não são descritos diretamente na inte
 
 **Windows 10, versão 1803 (atualização de abril de 2018) e mais recente**
 
-Por padrão, quando são declarados aceleradores de teclado, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
+Por padrão, quando os aceleradores de teclado são declarados, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
 
 > [!NOTE] 
 > Se um controle tiver mais de um acelerador definido, apenas o primeiro será apresentado.
@@ -370,7 +370,7 @@ Por padrão, quando são declarados aceleradores de teclado, todos os controles 
 
 *Combinação de teclas aceleradoras em dica de ferramenta*
 
-Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta de padrão do controle. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
+Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)e [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) objetos, o Acelerador de teclado é anexado a dica de ferramenta do controle padrão. Para [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) objetos, o Acelerador de teclado é exibido com o texto do submenu.
 
 > [!NOTE]
 > Especificando uma dica de ferramenta (consulte Button1 no exemplo a seguir) substitui esse comportamento.

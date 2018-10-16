@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Use este método na API de promoções da Microsoft Store para gerenciar perfis de direcionamento de campanhas publicitárias promocionais.
 title: Gerenciar perfis de direcionamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 692da5c2cc45e64d3feeab6136c1e50c72a7b0b0
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fa142f1df672703d2f14dc185481bb248efe07b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664186"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619148"
 ---
 # <a name="manage-targeting-profiles"></a>Gerenciar perfis de direcionamento
 

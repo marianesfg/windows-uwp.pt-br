@@ -10,20 +10,20 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563422"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620602"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
 Este tópico descreve como criar aplicativos da Plataforma Universal do Windows (UWP) de várias instâncias.
 
-Do Windows 10, versão 1803 (10.0; Build 17134), seu aplicativo UWP pode aceitar para dar suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
+Do Windows 10, versão 1803 (10.0; Build 17134) em diante, seu aplicativo UWP pode aceitar o suporte a várias instâncias. Se uma instância de um aplicativo UWP de várias instâncias estiver em execução, e uma solicitação de ativação subsequente chegar, a plataforma não ativará a instância existente. Em vez disso, ela criará uma nova instância, executada em um processo separado.
 
 > [!IMPORTANT]
-> Várias instâncias é compatível para aplicativos de JavaScript, mas não é de redirecionamento de várias instâncias. Como não há suporte para o redirecionamento de várias instâncias para aplicativos de JavaScript, a classe [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) não é útil para esses aplicativos.
+> Várias instâncias é compatível para aplicativos JavaScript, mas não é de redirecionamento de várias instâncias. Como não há suporte para o redirecionamento de várias instâncias para aplicativos de JavaScript, a classe [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) não é útil para esses aplicativos.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Aceitar o comportamento de várias instâncias
 
@@ -31,7 +31,7 @@ Se você estiver criando um novo aplicativo de várias instâncias, você pode i
 
 Dois modelos instalados: **aplicativo UWP de várias instâncias**, que fornece o modelo para a criação de um aplicativo de várias instâncias, e **aplicativo UWP de redirecionamento de várias instâncias**, que fornece a lógica adicional na qual você pode se basear para iniciar uma nova instância ou seletivamente ativar uma instância que já foi iniciada. Por exemplo, talvez você deseja apenas depois que a instância de cada vez editando o mesmo documento, para que você colocar a instância que tiver esse arquivo abrir em primeiro plano em vez de iniciar uma nova instância.
 
-Adicionar `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo do namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam várias instâncias.
+Adicionam ambos os modelos `SupportsMultipleInstances` para o `package.appxmanifest` arquivo. Observe o prefixo do namespace `desktop4` e `iot2`: apenas os projetos direcionados a área de trabalho ou projetos de Internet das coisas (IoT), suportam a várias instâncias.
 
 ```xml
 <Package
@@ -136,7 +136,7 @@ Se uma instância registrada com a chave for encontrada, essa instância é ativ
 
 ## <a name="sample"></a>Exemplo
 
-Veja um exemplo de redirecionamento de ativação de várias instâncias de [exemplo de várias instâncias](https://aka.ms/Kcrqst) .
+Veja um exemplo de redirecionamento de ativação de várias instâncias de [amostra de várias instâncias](https://aka.ms/Kcrqst) .
 
 ## <a name="see-also"></a>Veja também
 

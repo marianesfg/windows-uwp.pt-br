@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571318"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617828"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
 
@@ -246,7 +246,7 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Interface QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [Interface de QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [Função RoActivateInstance](https://msdn.microsoft.com/library/br224646)
 * [Classe Foundation](/uwp/api/windows.foundation.uri)
 * [modelo de função winrt::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)

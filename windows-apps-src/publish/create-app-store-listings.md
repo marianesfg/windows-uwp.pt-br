@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567886"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623374"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -52,12 +52,12 @@ Na parte superior da página **Listagem da Loja**, estão os campos associados �
 
 Essa caixa de lista suspensa permite que você especifique qual nome deve ser usado na listagem da loja (se você tiver reservado mais de um nome para o aplicativo).
 
-Se você tiver carregado pacotes no mesmo idioma da listagem da loja que você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um outro nome reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
+Se você tiver carregado pacotes no mesmo idioma da listagem da loja que você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio com pacotes que usam o novo nome.
 
 Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, pois não há um pacote associado nesse idioma no qual obter o nome.
 
 > [!NOTE]
-> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
+> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome vem de manifesto do pacote que é instalado. Para evitar confusão, recomendamos que o pacote (s) e a listagem da loja de cada idioma usam o mesmo nome.
 
 ## <a name="description"></a>Descrição
 
@@ -134,7 +134,7 @@ Uma descrição mais curta e interessante que pode ser usada na parte superior d
 
 Para jogos, a descrição curta também pode aparecer na seção Informações do Hub de jogos no Xbox One.
 
-Para obter melhores resultados, manter sua descrição curta em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, apenas os primeiro 270 caracteres serão mostrados (com um link para exibir o restante da descrição curta).
+Para obter melhores resultados, manter sua descrição curta em 270 caracteres. O campo tem um limite de 500 caracteres, mas em alguns modos de exibição, apenas os primeiro 270 caracteres serão mostrados (com um link disponível para exibir o restante da descrição breve).
 
 
 ### <a name="additional-system-requirements"></a>Requisitos adicionais do sistema

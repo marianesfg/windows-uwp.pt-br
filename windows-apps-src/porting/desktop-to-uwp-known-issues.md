@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563599"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622257"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
@@ -54,7 +54,7 @@ Essa é uma limitação conhecida e não há atualmente nenhuma solução altern
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Erro encontrado no XML. O atributo 'Executável' é inválido - O valor 'MyApp.EXE' é inválido de acordo com seu tipo de dados
 
-Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. Embora, o invólucro desta extensão não afete se o seu aplicativo for executado, isso pode causar o DAC gere esse erro.
+Isso pode acontecer se os executáveis ​​em seu aplicativo tiverem uma extensão **.EXE** maiúscula. Embora, o invólucro desta extensão não afete se seu aplicativo é executado, isso pode causar o DAC gere esse erro.
 
 Para resolver esse problema, tente especificar o sinalizador **-AppExecutable** quando você empacota e use ".exe" em minúsculo como a extensão do seu executável principal (por exemplo: MYAPP.exe).    Como alternativa, você pode alterar o invólucro de todos os executáveis em seu aplicativo de minúsculas para maiusculas (por exemplo: de. EXE .exe).
 
@@ -95,7 +95,7 @@ Uma [atualização do Windows (versão 14393.351 - KB3197954)](https://support.m
 
 Se a atualização não corrigir o problema ou se você não souber como recuperar o computador, entre em contato com o [Suporte da Microsoft](https://support.microsoft.com/contactus/).
 
-Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Observe que, por isso seu aplicativo não estará disponível para os usuários que ainda não tenham instalado a atualização. Para limitar a disponibilidade de seu aplicativo para os usuários que tenham instalado essa atualização, modifique o arquivo Appxmanifest XML da seguinte maneira:
+Se for um desenvolvedor, você desejará impedir a instalação do aplicativo empacotado em versões do Windows que não incluam essa atualização. Observe que, ao fazer isso em seu aplicativo não estará disponível para os usuários que ainda não tenham instalado a atualização. Para limitar a disponibilidade de seu aplicativo para os usuários que tenham instalado essa atualização, modifique o arquivo Appxmanifest XML da seguinte maneira:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -141,7 +141,7 @@ Isso pode acontecer quando o pacote contém um binário que tenha um certificado
 
 * O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura de um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
 
-* O ponteiro de certificado não alinhado corretamente para uma estrutura WIN_CERTIFICATE.
+* O ponteiro de certificado não é alinhado corretamente para uma estrutura WIN_CERTIFICATE.
 
 Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
 
@@ -149,13 +149,13 @@ Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Promp
 set APPXSIP_LOG=1
 ```
 
-Em seguida, no **Prompt de comando**, assine o aplicativo novamente. Por exemplo:
+Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informações sobre arquivos que contêm um certificado PE incorreto aparecerão na **Janela do Console**. Por exemplo:
+Informações sobre arquivos que contêm um certificado PE incorreto serão exibido na **Janela do Console**. Por exemplo:
 
 ```
 ...

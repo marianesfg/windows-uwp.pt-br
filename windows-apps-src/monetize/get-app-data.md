@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: Use estes métodos na API de envio da Microsoft Store para recuperar dados dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Obter dados de app
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c8029ca9481761ac4313b24607567f20b3a301c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 6940c1079c7973bc4fd639345c5d5e3f33b0221f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663306"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618580"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 

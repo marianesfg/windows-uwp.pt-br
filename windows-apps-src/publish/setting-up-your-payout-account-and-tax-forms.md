@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569511"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616435"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
 
 Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários.
 
-Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que deseja vender aplicativos (ou complementos), você pode configurar sua conta de pagamento e preencher os formulários de imposto naquele momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
+Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que deseja vender aplicativos (ou complementos), você pode configurar sua conta de pagamento e preencher os formulários naquele momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
 > [!NOTE]
 > Em [alguns mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), os desenvolvedores podem enviar somente aplicativos gratuitos. Sua conta precisa estar registrada em um desses mercados para que você tenha a opção de configurar uma conta de pagamento.
@@ -158,7 +158,7 @@ As informações que você envia em seus formulários fiscais determinam a taxa 
 
 ### <a name="tax-treaty-benefits"></a>Benefícios de tratados fiscais
 
-Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam de país e podem permitir que você reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
+Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam de país e podem permitir a reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
 
  
 

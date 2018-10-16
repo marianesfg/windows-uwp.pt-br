@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566042"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618184"
 ---
 # <a name="pivot"></a>Pivot
 
-O controle de [pivô](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite toque dedo entre um pequeno conjunto de seções de conteúdo.
+O controle de [pivô](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite dedo toque entre um pequeno conjunto de seções de conteúdo.
 
 > **APIs importantes**: [classe Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [classe NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -49,7 +49,7 @@ O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
+Para alcançar comuns de navegação superior e padrões de guias, é recomendável usar [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
 No entanto, se sua navegação requer dedo toque, recomendamos usar o pivô.
 
@@ -60,7 +60,7 @@ Principais diferenças entre os controles NavigationView e pivô são o comporta
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
-Se a interface do usuário do seu aplicativo usa o controle de pivô, em seguida, você pode converter pivô em NavigationView com o código a seguir.
+Se a interface do usuário do seu aplicativo usa o controle de pivô, em seguida, você pode converter pivô para NavigationView com o código a seguir.
 
 Este XAML cria um NavigationView com 3 seções de conteúdo, como o exemplo de pivô em [criar um controle de pivô](#create-a-pivot-control).
 
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
+Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
 
 ## <a name="create-a-pivot-control"></a>Criar um controle de pivô
 

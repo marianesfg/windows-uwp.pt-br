@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aa30af537874f3c3f4845706de6f6788c7b08fb
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565334"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622506"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -29,9 +29,9 @@ Caso um erro de compilação seja exibido, certifique-se de que você consiga co
 
 ## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote na Store ou fazer o sideload dele em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x e versões anteriores
+## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8 e versões anteriores
 
 Você poderá ver **erro 2001** quando os problemas com pacotes do Windows Phone forem detectados durante o pré-processamento. Na maioria dos casos, você precisará recompilar o pacote do aplicativo para corrigir o erro. Depois de terminar, substitua o pacote anterior pelo novo na página [Pacotes](upload-app-packages.md) do envio antes de clicar em **Enviar à Loja** novamente.
 
@@ -53,7 +53,7 @@ Se você vir um erro que diz **The name found in the package is not one of your 
 - Se o seu aplicativo já tiver uma identidade, você talvez ainda precise reservar o nome que você deseja usar no seu pacote. Em **Gerenciamento de Aplicativos**, clique em [Gerenciar nomes de aplicativos](manage-app-names.md). Digite o nome que você gostaria de usar e clique em **Reservar o nome do aplicativo**.
 
 > [!IMPORTANT]
->  Se o nome que você deseja usar não estiver disponível, outro aplicativo talvez já tenha reservado esse nome. Se seu aplicativo já tiver sido publicado sob esse nome, ou se você acha que tem o direito de usá-lo, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+>  Se o nome que você deseja usar não estiver disponível, outro aplicativo talvez já tenha reservado esse nome. Se seu aplicativo já tiver sido publicado sob esse nome ou se você acha que tem o direito de usá-lo, [contate o suporte](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 

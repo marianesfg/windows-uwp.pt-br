@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendentes, enviar, publicar, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574167"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621577"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
-Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio for aprovado na certificação, pode levar até 24 horas para que os clientes vejam os detalhes do aplicativo para um novo envio, ou para um envio atualizado com as alterações em pacotes. Se a atualização é alterado apenas detalhes de listagem da loja, o processo de publicação será concluído em menos de uma hora.  Você será notificado quando o envio for publicado, e o status do aplicativo no painel será **Na loja**.
+Quando você terminar de criar o envio do seu aplicativo, clique em **Enviar à Store**, o envio entrará na etapa de certificação. Esse processo geralmente é concluído dentro de algumas horas, mas em alguns casos pode demorar até três dias úteis. Depois que seu envio for aprovado na certificação, pode levar até 24 horas para que os clientes vejam os detalhes do aplicativo para um novo envio ou para um envio atualizado com as alterações em pacotes. Se a atualização mudar de listagem detalhes da loja, o processo de publicação será concluído em menos de uma hora.  Você será notificado quando o envio for publicado, e o status do aplicativo no painel será **Na loja**.
 
 ## <a name="preprocessing"></a>Pré-processamento
 
@@ -49,9 +49,9 @@ Quando seu aplicativo for aprovado na certificação, ele estará pronto para mo
 
 Os pacotes do aplicativo são assinados digitalmente para ficarem protegidos contra falsificação após serem lançados. Após o início dessa fase, você não pode mais cancelar o envio nem alterar a data de lançamento do aplicativo.
 
-Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para atualizações somente alterar as opções, como detalhes de listagem da loja, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
+Para novos aplicativos e atualizações que incluem as alterações dos pacotes do aplicativo, o processo de publicação será concluído dentro de 24 horas. Para obter atualizações que apenas alterar as opções, como detalhes de listagem da loja, mas não alteram os pacotes do aplicativo, o processo de publicação levará menos de uma hora.
 
-Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e detalhes de listagem da loja estão disponíveis para clientes em cada uma das suas versões do sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até a conclusão do processo, isso significa que os novos pacotes e/ou detalhes estão disponíveis para todos os clientes em potencial do seu aplicativo.
+Enquanto seu aplicativo está na fase de publicação, o link **Mostrar detalhes** na coluna Status de envio do seu aplicativo permite que você saiba quando seus novos pacotes e detalhes de listagem da loja estão disponíveis para clientes em cada uma das suas versões de sistema operacional com suporte. As etapas que ainda não foram concluídas mostrarão **Pendente** . Seu aplicativo permanecerá na fase de publicação até a conclusão do processo, isso significa que os novos pacotes e/ou detalhes estão disponíveis para todos os clientes em potencial do seu aplicativo.
 
 ## <a name="in-the-store"></a>Na Store 
 

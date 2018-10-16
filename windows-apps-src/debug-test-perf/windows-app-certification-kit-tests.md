@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Testes do Kit de Certificação de Aplicativos Windows
-description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo está pronto para ser publicado na Microsoft Store.
+description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Microsoft Store.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572186"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623574"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -433,7 +433,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>O arquivo "resources.pri" não deve ter o AutoMerge habilitado.</p>
 </td><td>
-<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo.</p>
+<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store devem estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo.</p>
 </td></tr>
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
@@ -537,7 +537,7 @@ Testa aplicativos Microsoft Direct3D para garantir que funcionam em todos os dis
 
 ### <a name="background"></a>Histórico
 
-Microsoft Store exige todos os aplicativos que usam Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráficos de recurso.
+Microsoft Store exige todos os aplicativos que usam Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
 
 Como os usuários podem alterar o hardware gráfico de seus dispositivos depois que o aplicativo for instalado, se você escolher um nível mínimo de recursos maior que 9\-1, o aplicativo deverá detectar durante a inicialização se o hardware atual atende ou não aos requisitos mínimos. Se os requisitos mínimos não forem atendidos, o aplicativo deverá exibir uma mensagem para o usuário detalhando os requisitos do Direct3D. Além disso, se um aplicativo for baixado em um dispositivo com o qual ele não é compatível, ele deverá detectar isso na inicialização e exibir uma mensagem para o cliente detalhando os requisitos.
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Gerenciar envios de complemento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e784a82bdfc29661c8a146e90f5f7d45fd81a28
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 78c4f1603b921320009305e9646a7227ff47e8e3
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817111"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620566"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -151,7 +151,7 @@ Os artigos a seguir apresentam exemplos detalhados de código que demonstram com
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
 Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
 
@@ -246,7 +246,7 @@ Esse recurso tem os valores a seguir.
 | visibilidade  | string  |  A visibilidade do complemento. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | objeto  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
-| fileUploadUrl           | cadeia  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
+| fileUploadUrl           | string  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
 | friendlyName  | cadeia  |  O nome amigável do envio, conforme mostrado no painel do Centro de Desenvolvimento. Esse valor é gerado para você ao criar o envio.  |
 
 <span id="listing-object" />

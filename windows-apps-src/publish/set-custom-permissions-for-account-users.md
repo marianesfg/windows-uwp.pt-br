@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566784"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618429"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
@@ -194,7 +194,7 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     <tbody>
     <tr><td align="left">    <b>Códigos promocionais</b>     </td><td>    Pode exibir pedidos de <a href="generate-promotional-codes.md">código promocional</a> e informações de uso para o produto e seus complementos, e pode exibir informações de uso.         </td><td>    Pode exibir, gerenciar e criar pedidos de <a href="generate-promotional-codes.md">código promocional</a> para o produto e seus complementos, e pode exibir informações de uso.          </td><td>    N/D (configurações do produto pai se aplicam a todos os complementos)     </td><td>    N/D (configurações do produto pai se aplicam a todos os complementos)     </td></tr>
     <tr><td align="left">    <b>Ofertas direcionadas</b>     </td><td>    Pode exibir <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">ofertas direcionadas</a> do produto.         </td><td>    Pode exibir, gerenciar e criar <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">ofertas direcionadas</a> para o produto.          </td><td>    N/D     </td><td>    N/D      </td></tr>
-    <tr><td align="left">    <b>Contato com cliente</b>  </td><td>    Pode exibir <a href="respond-to-customer-feedback.md">respostas aos comentários dos clientes</a> e <a href="respond-to-customer-reviews.md">respostas às críticas dos clientes</a>, desde que a permissão de <b>Comentários dos clientes</b> também tenha sido concedida. Também pode exibir <a href="send-push-notifications-to-your-apps-customers.md">notificações direcionadas</a> que foram criadas para o produto.    </td><td>    Pode <a href="respond-to-customer-feedback.md">responder aos comentários dos clientes</a> e <a href="respond-to-customer-reviews.md">responder às críticas dos clientes</a>, desde que a permissão de <b>comentários dos clientes</b> tem sido concedida. Também pode <a href="send-push-notifications-to-your-apps-customers.md">criar e enviar notificações direcionadas</a> para o produto.                   </td><td>    N/D         </td><td>    N/D                          </td></tr>
+    <tr><td align="left">    <b>Contato com cliente</b>  </td><td>    Pode exibir <a href="respond-to-customer-feedback.md">respostas aos comentários dos clientes</a> e <a href="respond-to-customer-reviews.md">respostas às críticas dos clientes</a>, desde que a permissão de <b>Comentários dos clientes</b> também tenha sido concedida. Também pode exibir <a href="send-push-notifications-to-your-apps-customers.md">notificações direcionadas</a> que foram criadas para o produto.    </td><td>    Pode <a href="respond-to-customer-feedback.md">responder aos comentários dos clientes</a> e <a href="respond-to-customer-reviews.md">responder às críticas dos clientes</a>, desde que a permissão de <b>comentários do cliente</b> tenha sido concedida. Também pode <a href="send-push-notifications-to-your-apps-customers.md">criar e enviar notificações direcionadas</a> para o produto.                   </td><td>    N/D         </td><td>    N/D                          </td></tr>
     <tr><td align="left">    <b>Experimentação</b></td><td>    Pode exibir <a href="../monetize/run-app-experiments-with-a-b-testing.md">experimentos (testes A/B)</a> e exibir dados de experimentação do produto.   </td><td>    Pode criar, gerenciar e exibir <a href="../monetize/run-app-experiments-with-a-b-testing.md">experimentos (testes A/B)</a> para o produto, e exibir os dados de experimentação.     </td><td>    N/D  </td><td>    N/D                 </td></tr>
     <tr><td align="left">    <b>Eventos de venda da Store</b>&nbsp;*</td><td>    Pode exibir o status de evento de venda do produto.   </td><td>    Pode adicionar o produto a eventos de venda e configurar descontos.      </td><td>    Pode exibir o status de evento de venda do produto.   </td><td>    Pode adicionar o produto a eventos de venda e configurar descontos.      </td></tr>
     </tbody>

@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use este método na API de análise da Microsoft Store para obter os dados de funil de aquisição de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter dados de funil de aquisição do app
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisição, funil
 ms.localizationpriority: medium
-ms.openlocfilehash: 85ffe2219ce7bc1dc47ff92240eeeff1374b5f43
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: Auto
+ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663576"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616077"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obter dados de funil de aquisição do app
 

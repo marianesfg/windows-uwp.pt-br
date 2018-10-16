@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: Whether your app is free or not, you can sell content, other apps, or new app functionality (such as unlocking the next level of a game) from right within the app. Here we show you how to enable these products in your app.
 title: Habilitar compras de produtos no aplicativo
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: uwp, complementos, compras no aplicativo, IAPs, Windows.ApplicationModel.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fd54d469898007f4a0435313a64629360816287
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: dcdedda655011cf700df2548140b312f4b0f817d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958459"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618145"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no aplicativo
 

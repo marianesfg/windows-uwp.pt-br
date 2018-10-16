@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574945"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616678"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -27,7 +27,7 @@ Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para 
 > [!NOTE]
 > Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) e enviar aplicativos na Microsoft Store.
 
-Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo. Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, torná-lo disponível novamente mais tarde, se você quiser).
+Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo. Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
 > [!NOTE]
 > Esta seção da documentação descreve como criar um envio de aplicativo no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.

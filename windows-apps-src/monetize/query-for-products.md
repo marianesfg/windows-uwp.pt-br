@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Use esse método na API da coleção da Microsoft Store para obter todos os produtos que pertence a um cliente em relação a aplicativos que estejam associados com sua ID de cliente do Azure AD. Você pode analisar sua consulta para um determinado produto ou usar outros filtros.
 title: Consulta por produtos
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de coleção da Microsoft Store, exibir produtos
 ms.localizationpriority: medium
-ms.openlocfilehash: 696d2c0ca4f8d0d92bef66efb9d551a2f19d2aa3
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 066660c307be9f3592aa38cb21a6e00cd960aa73
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664962"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618831"
 ---
 # <a name="query-for-products"></a>Consulta por produtos
 
@@ -143,12 +143,12 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | orderId              | string             | Se presente, a ID do pedido do qual este item foi obtido.              | Não       |
 | orderLineItemId      | string             | Se presente, o item de linha da ordem específica para a qual o item foi obtido.              | Não       |
 | ownershipType        | cadeia de caracteres             | A cadeia de caracteres *OwnedByBeneficiary*.   | Sim      |
-| productId            | cadeia de caracteres             | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da loja para um produto é 9NBLGGH42CFD.          | Sim      |
+| productId            | string             | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [produto](in-app-purchases-and-trials.md#products-skus-and-availabilities) no catálogo da Microsoft Store. Um exemplo de ID da Store para um produto é 9NBLGGH42CFD.          | Sim      |
 | productType          | string             | Um dos seguintes tipos de produto: **Application**, **Durable** e **UnmanagedConsumable**.        | Sim      |
 | purchasedCountry     | string             | N/D   | Não       |
 | comprador            | IdentityContractV6 | Se presente, representa a identidade do comprador do item. Veja os detalhes para esse objeto abaixo.        | Não       |
 | quantity             | número             | A quantidade do item. Atualmente, sempre será 1.      | Não       |
-| skuId                | cadeia de caracteres             | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do produto no catálogo da Microsoft Store. Um exemplo de ID da loja para SKU é 0010.     | Sim      |
+| skuId                | string             | A [ID da Store](in-app-purchases-and-trials.md#store-ids) para o [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) do produto no catálogo da Microsoft Store. Um exemplo de ID da Store para uma SKU é 0010.     | Sim      |
 | skuType              | string             | O tipo de SKU. Os valores possíveis incluem **Trial**, **Full** e **Rental**.        | Sim      |
 | startDate            | datetime           | A data em que a validade do item é iniciada.       | Sim      |
 | status               | string             | O status do item. Os valores possíveis incluem **Active**, **Expired**, **Revoked** e **Banned**.    | Sim      |

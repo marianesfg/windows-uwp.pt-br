@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: bde2e58934e24df7db2cb77fb793106aa65e3834
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564004"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619889"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empacotar um aplicativo da área de trabalho usando o Desktop App Converter
 
@@ -33,7 +33,7 @@ Você pode instalar esse pacote usando o cmdlet Add-AppxPackage PowerShell em su
 O conversor executa o instalador da área de trabalho em um ambiente Windows isolado usando uma imagem de base limpa fornecida como parte do download do conversor. Ele captura qualquer registro e E/S do sistema de arquivos feito pelo instalador da área de trabalho e os pacotes como parte da saída.
 
 >[!IMPORTANT]
->A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecido como a ponte de Desktop, foi introduzido no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop, foi introduzido no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 > [!NOTE]
 > Confira <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">essa série</a> de vídeos de curta duração publicados na Microsoft Virtual Academy. Esses vídeos o orientam através de algumas maneiras comuns de usar o Desktop App Converter.
@@ -62,7 +62,7 @@ Se você estiver pronto para criar seu pacote, vamos começar.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Examinar este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
+Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 ## <a name="make-sure-that-your-system-can-run-the-converter"></a>Certifique-se de que seu sistema possa executar o conversor
 
@@ -121,7 +121,7 @@ Você pode pular para a próxima seção se seu aplicativo não tiver um instala
 
 Para empacotar seu aplicativo, execute o comando ``DesktopAppConverter.exe`` na janela do console que abriu quando você iniciou o Desktop App Converter.  
 
-Você especificará o número de fornecedor, nome e a versão do pacote do aplicativo usando os parâmetros.
+Você especificará o número de nome, fornecedor e versão do pacote do aplicativo usando os parâmetros.
 
 > [!NOTE]
 > Se você reservou o nome do seu aplicativo na loja do Windows, você pode obter o pacote e os nomes dos editores usando o Centro de Desenvolvimento do Windows. Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
@@ -144,14 +144,14 @@ Você pode ler sobre cada um [aqui](#command-reference).
 
 Aqui estão algumas maneiras comuns de empacotar seu aplicativo.
 
-* [Empacotar um aplicativo que tenha um arquivo instalador (. msi)](#installer-conversion)
+* [Empacotar um aplicativo que tem um arquivo do instalador (. msi)](#installer-conversion)
 * [Empacotar um aplicativo que tem um arquivo executável de instalação](#setup-conversion)
 * [Empacotar um aplicativo que não tenha um instalador](#no-installer-conversion)
 * [Empacotar um app, assinar o app e prepará-lo para o envio à loja](#optional-parameters)
 
 <a id="installer-conversion" />
 
-#### <a name="package-an-application-that-has-an-installer-msi-file"></a>Empacotar um aplicativo que tenha um arquivo instalador (. msi)
+#### <a name="package-an-application-that-has-an-installer-msi-file"></a>Empacotar um aplicativo que tem um arquivo do instalador (. msi)
 
 Aponte para o arquivo instalador usando o parâmetro ``Installer``.
 
@@ -305,7 +305,7 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 
 Há dois meios de executar seu aplicativo.
 
-Uma maneira é abrir um prompt de comando do PowerShell e, em seguida, digitar este comando ```Add-AppxPackage –Register AppxManifest.xml```. Provavelmente é a maneira mais fácil para executar seu aplicativo porque você não precisa assinar.
+Uma maneira é abrir um prompt de comando do PowerShell e, em seguida, digitar este comando ```Add-AppxPackage –Register AppxManifest.xml```. Provavelmente é a maneira mais fácil de executar seu aplicativo porque você não precisa assiná-lo.
 
 Outra maneira é assinar seu aplicativo com um certificado. Se você usar o ```sign``` parâmetro, o Desktop App Converter irá gerar um para você e, em seguida, assinar seu aplicativo com ele. O arquivo recebe o nome de **auto-generated.cer**, e você pode encontrá-lo na pasta raiz do seu app empacotado.
 
@@ -334,7 +334,7 @@ Siga estas etapas para instalar o certificado gerado e, em seguida, execute seu 
 
 ## <a name="modify-the-packaged-app"></a>Modificar o app empacotado
 
-Você provavelmente precisará fazer alterações ao seu aplicativo empacotado para corrigir bugs, adicionar recursos visuais ou aprimorar seu aplicativo com experiências modernas como blocos dinâmicos.
+Você provavelmente precisará fazer alterações ao seu aplicativo empacotado para resolver bugs, adicionar recursos visuais ou aprimorar seu aplicativo com experiências modernas como blocos dinâmicos.
 
 Depois de fazer suas alterações, você não precisa executar o conversor novamente. Na maioria dos casos, você pode reempacotar seu aplicativo usando a ferramenta MakeAppx e o arquivo appxmanifest XML o DAC gera para o seu aplicativo. Consulte [Gerar um pacote de aplicativo do Windows](desktop-to-uwp-manual-conversion.md#make-appx).
 
@@ -400,7 +400,7 @@ Você também pode consultar [esta](desktop-to-uwp-known-issues.md#app-converter
 
 Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Executar o aplicativo / encontrar e corrigir problemas**
+**Execute seu aplicativo / encontrar e corrigir problemas**
 
 Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570232"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619912"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
@@ -136,7 +136,7 @@ Desinstala o pacote especificado (com base no nome completo) de um dispositivo c
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Atualiza o aplicativo que já está instalado no dispositivo Windows 10 com um endereço IP 192.168.0.1 usando o pacote do aplicativo especificado.
+Atualizações de aplicativo que já esteja instalado no dispositivo Windows 10 com um endereço IP 192.168.0.1 usando o pacote do aplicativo especificado.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1

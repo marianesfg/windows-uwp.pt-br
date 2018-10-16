@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Saiba como incluir anúncios intersticiais em um aplicativo UWP para Windows 10 usando o SDK do Microsoft Advertising.
 title: Anúncios intersticiais
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 0915d1be4ea3de89265815d299ed7e60ead528ff
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: Auto
+ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690862"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617311"
 ---
 # <a name="interstitial-ads"></a>Anúncios intersticiais
 
@@ -72,7 +72,7 @@ Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
 
-4.  Em um local indicado no aplicativo (por exemplo, em ```MainPage``` ou em alguma outra página), declare um objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e diversos campos da cadeia de caracteres que representam a ID do aplicativo e a ID da unidade de anúncio para o anúncio intersticial. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
+4.  Em um local indicado no aplicativo (por exemplo, em ```MainPage``` ou em alguma outra página), declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e diversos campos da cadeia de caracteres que representam a ID do aplicativo e a ID da unidade de anúncio para o anúncio intersticial. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
     > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Loja, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
@@ -83,17 +83,17 @@ Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
-6.  Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Video** para o tipo de anúncio.
+6.  Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Video** para o tipo de anúncio.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
-    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Display** para o tipo de anúncio.
+    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType.Display** para o tipo de anúncio.
 
     ```csharp
     myInterstitialAd.RequestAd(AdType.Display, myAppId, myAdUnitId);
     ```
 
-6.  No momento em que você deseja mostrar o vídeo intersticial ou anúncio em faixa intersticial, confirme que o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
+6.  No momento em que você deseja mostrar o vídeo intersticial ou anúncio em faixa intersticial, confirme que o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
 
@@ -125,7 +125,7 @@ As instruções a seguir pressupõem que você tenha criado um projeto Universal
     <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
     ```
 
-4.  Em um arquivo .js no projeto, declare um objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e vários campos que contenham a ID do aplicativo e a ID da unidade do anúncio intersticial. O exemplo de código a seguir atribui os campos `applicationId` e `adUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
+4.  Em um arquivo .js no projeto, declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e vários campos que contenham a ID do aplicativo e a ID da unidade do anúncio intersticial. O exemplo de código a seguir atribui os campos `applicationId` e `adUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
     > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Store, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
@@ -136,11 +136,11 @@ As instruções a seguir pressupõem que você tenha criado um projeto Universal
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
 
-5. Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **InterstitialAdType.video** para o tipo de anúncio.
+5. Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **InterstitialAdType.video** para o tipo de anúncio.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
 
-    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **InterstitialAdType.display** para o tipo de anúncio.
+    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **InterstitialAdType.display** para o tipo de anúncio.
 
     ```js
     if (interstitialAd) {
@@ -148,7 +148,7 @@ As instruções a seguir pressupõem que você tenha criado um projeto Universal
     }
     ```
 
-6.  No ponto no código em que você deseja mostrar o anúncio, confirme se o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Mostrar](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
+6.  No ponto no código em que você deseja mostrar o anúncio, confirme se o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Mostrar](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
 
@@ -172,7 +172,7 @@ Este exemplo pressupõe que você tenha criado um projeto **DirectX and XAML App
     2.  No **Gerenciador de Referências**, expanda **Universal do Windows**, clique em **Extensões** e marque a caixa de seleção ao lado de **SDK do Microsoft Advertising para XAML** (versão 10.0).
     3.  No **Gerenciador de Referências**, clique em OK.
 
-2.  Em um arquivo de cabeçalho indicado para o aplicativo (por exemplo, DirectXPage.xaml. h), declare um objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) e os métodos do manipulador de eventos relacionados.  
+2.  Em um arquivo de cabeçalho indicado para o aplicativo (por exemplo, DirectXPage.xaml. h), declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e os métodos do manipulador de eventos relacionados.  
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
 
@@ -191,17 +191,17 @@ Este exemplo pressupõe que você tenha criado um projeto **DirectX and XAML App
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
 
-7. Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio intersticial, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType::Video** para o tipo de anúncio.
+7. Se você deseja mostrar um anúncio de *vídeo intersticial*: Aproximadamente de 30 a 60 segundos antes de precisar do anúncio intersticial, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType::Video** para o tipo de anúncio.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
 
-    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType::Display** para o tipo de anúncio.
+    Se você deseja mostrar um anúncio de *faixa intersticial*: aproximadamente de 5 a 8 segundos antes de precisar do anúncio, use o método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para pré-buscar o anúncio. Isso dá tempo suficiente para solicitar e preparar o anúncio antes de precisar ser mostrado. Certifique-se de especificar **AdType::Display** para o tipo de anúncio.
 
     ```cpp
     m_interstitialAd->RequestAd(AdType::Display, myAppId, myAdUnitId);
     ```
 
-7.  No ponto no código em que você deseja mostrar o anúncio, confirme se o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Mostrar](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
+7.  No ponto no código em que você deseja mostrar o anúncio, confirme se o **InterstitialAd** está pronto para ser mostrado e mostre-o usando o método [Mostrar](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
 

@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571588"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619738"
 ---
 # <a name="data-binding-overview"></a>Visão geral da associação de dados
 
@@ -37,7 +37,7 @@ Crie um novo projeto **Aplicativo em branco (universal do Windows)**. Nomeie-o c
 
 Cada associação consiste em um destino da associação e uma origem de associação. Normalmente, o destino é uma propriedade de um controle ou outro elemento de interface do usuário, e a origem é uma propriedade de uma instância de classe (um modelo de dados ou um modelo de exibição). Este exemplo mostra como associar um controle a um único item. O destino é a propriedade **Text** de um **TextBlock**. A origem é uma instância de uma classe simples denominada **Recording** que representa uma gravação de áudio. Primeiro, vamos examinar a classe.
 
-Se você estiver usando c# ou C++ c++ /CX, em seguida, adicione uma nova classe ao seu projeto e nomeie a classe **gravação**.
+Se você estiver usando c# ou C++ c++ /CX, em seguida, adicione uma nova classe ao seu projeto e nomeie a classe de **gravação**.
 
 Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, adicionar novos itens de **Midl File (. idl)** para o projeto, chamado conforme mostrado no C++ c++ WinRT abaixo de listagem de exemplo de código. Substitua o conteúdo desses novos arquivos com o código de [MIDL 3.0](/uwp/midl-3/intro) mostrada na listagem, compile o projeto para gerar `Recording.h` e `.cpp` e `RecordingViewModel.h` e `.cpp`e, em seguida, adicione o código para os arquivos gerados para corresponder a listagem. Para obter mais informações sobre esses arquivos gerados e como copiá-los em seu projeto, consulte [controles XAML; associar a C++ c++ WinRT propriedade](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
@@ -227,7 +227,7 @@ namespace Quickstart
 
 Em seguida, exponha a classe de origem de associação na classe que representa a página de marcação. Fazemos isso adicionando uma propriedade do tipo **RecordingViewModel** a **MainPage**.
 
-Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, primeira atualização `MainPage.idl`. Compile o projeto para gerar `MainPage.h` e `.cpp`e mesclar as alterações nesses arquivos gerados aqueles em seu projeto.
+Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, primeira atualização `MainPage.idl`. Compile o projeto para gerar `MainPage.h` e `.cpp`e mesclar as alterações nesses arquivos gerados com aqueles do seu projeto.
 
 ```csharp
 namespace Quickstart
@@ -330,7 +330,7 @@ Consulte o resultado.
 
 Um cenário comum é associar a uma coleção de objetos comerciais. No C# e no Visual Basic, a classe genérica [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) é uma boa escolha de coleção para a vinculação de dados, porque ela implementa as interfaces [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) e [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Essas interfaces fornecem notificação de alteração para associações quando itens são adicionados ou removidos ou uma propriedade da lista muda. Se você quiser que os controles associados sejam atualizados com alterações em propriedades de objetos na coleção, o objeto comercial também deve implementar **INotifyPropertyChanged**. Para obter mais informações, consulte [Vinculação de dados em detalhes](data-binding-in-depth.md).
 
-Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode saber mais sobre a associação a uma coleção observável no [controles de itens XAML; vincular a C++ c++ WinRT coleção](/windows/uwp/cpp-and-winrt-apis/binding-collection). Se você ler esse tópico primeiro, em seguida, a intenção do C++ c++ WinRT listagem de código abaixo será mais clara.
+Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode saber mais sobre a associação a uma coleção observável no [controles de itens XAML; associar a C++ c++ WinRT coleção](/windows/uwp/cpp-and-winrt-apis/binding-collection). Se você ler esse tópico em primeiro lugar, em seguida, a intenção do C++ c++ listagem de códigos do WinRT mostrada abaixo será mais clara.
 
 O exemplo seguinte associa [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a uma coleção de objetos `Recording`. Vamos começar adicionando a coleção ao nosso modelo de exibição. Basta adicionar esses novos membros à classe **RecordingViewModel**.
 
@@ -456,7 +456,7 @@ Ainda não fornecemos um modelo de dados para a classe **Recording**, portanto o
 
 ![Associando um modo de exibição de lista](images/xaml-databinding1.png)
 
-Para corrigir isso, ou substituímos [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para retornar o valor de **OneLineSummary**, ou podemos fornecer um modelo de dados. A opção de modelo de dados é uma solução mais comum e uma mais flexível. Você especifica um modelo de dados usando a propriedade [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) de um controle de conteúdo ou a propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) de um controle de itens. Aqui estão duas maneiras de criar um modelo de dados para **Recording** com uma ilustração do resultado.
+Para corrigir isso, ou substituímos [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para retornar o valor de **OneLineSummary**, ou podemos fornecer um modelo de dados. A opção de modelo de dados é uma solução mais comuns e um mais flexível. Você especifica um modelo de dados usando a propriedade [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) de um controle de conteúdo ou a propriedade [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) de um controle de itens. Aqui estão duas maneiras de criar um modelo de dados para **Recording** com uma ilustração do resultado.
 
 ```xml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -496,7 +496,7 @@ Para obter mais informações sobre a sintaxe XAML, consulte [Criar uma interfac
 
 Você pode optar por exibir todos os detalhes dos objetos **Recording** nos itens [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). Mas isso ocupa muito espaço. Em vez disso, você pode mostrar apenas dados suficientes no item para identificá-lo e, em seguida, quando o usuário fizer uma seleção, pode exibir todos os detalhes do item selecionado em um componente separado da interface do usuário conhecido como o modo de exibição de detalhes. Além disso, esse esquema também é conhecido como um modo de exibição mestre/detalhado, ou um modo de exibição de lista/detalhes.
 
-Há duas maneiras de lidar com isso. Você pode associar o modo de exibição de detalhes à propriedade [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) do [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). Ou você pode usar um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), nesse caso, você pode associar o **ListView** e o modo de exibição de detalhes ao **CollectionViewSource** (fazendo assim cuida do item atualmente selecionado para você). Ambas as técnicas são mostradas abaixo, e ambas geram os mesmos resultados (mostrados na ilustração).
+Há duas maneiras de lidar com isso. Você pode associar o modo de exibição de detalhes à propriedade [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) do [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). Ou você pode usar um [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), nesse caso, você associar **ListView** e o modo de exibição de detalhes para o **CollectionViewSource** (fazendo assim cuida do item atualmente selecionado para você). Ambas as técnicas são mostradas abaixo, e ambas geram os mesmos resultados (mostrados na ilustração).
 
 > [!NOTE]
 > Até agora neste tópico só usamos a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), mas ambas as técnicas mostradas abaixo requerem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mais flexível (mas menos eficiente).
@@ -718,7 +718,7 @@ Agora podemos adicionar uma instância de **StringFormatter** como um recurso de
 ...
 ```
 
-Como você pode ver acima, para formatar flexibilidade usamos a marcação para passar uma cadeia de caracteres de formato para o conversor por meio do parâmetro do conversor. Nos exemplos de código mostrados neste tópico, somente o c# conversor de valor faz usar desse parâmetro. Mas você pode facilmente passar uma cadeia de caracteres de formato de estilo C++ como o parâmetro do conversor e usá-lo em seu conversor de valor com uma função de formatação, como **wprintf** ou **swprintf**.
+Como você pode ver acima, para flexibilidade de formatação usamos a marcação para passar uma cadeia de caracteres de formato para o conversor por meio do parâmetro do conversor. Nos exemplos de código mostrados neste tópico, somente o c# conversor de valor faz usar desse parâmetro. Mas você pode facilmente passar uma cadeia de caracteres de formato de estilo C++ como o parâmetro de conversor e usá-lo em seu conversor de valor com uma função de formatação, como **wprintf** ou **swprintf**.
 
 Consulte o resultado.
 

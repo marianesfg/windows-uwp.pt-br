@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
 description: Use esse método na API de análise da Microsoft Store para obter os dados de desempenho do anúncio agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais.
 title: Obter dados de desempenho de anúncios
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, anúncios, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e7439b8602f8b6900b747d26add2914f8685526
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: e4800a0021288f4d0081946c1fad20099aa4cd77
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663596"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622951"
 ---
 # <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 

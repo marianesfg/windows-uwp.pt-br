@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567926"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616445"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -179,7 +179,7 @@ Neste exemplo, passamos a cadeia de caracteres ""wl.basic" para o parâmetro de 
 * Para escopos do OneDrive, consulte [Autenticação e credenciais no OneDrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]
-> Como alternativa, se seu aplicativo usa uma dica de logon (para preencher o campo de usuário com um endereço de email padrão) ou outra propriedade especial relacionados à experiência entrar, listá-lo na propriedade **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Isso fará com que o sistema ignorar a propriedade ao cache de conta da web, o que impede que as diferenças de conta no cache.
+> Opcionalmente, se seu aplicativo usa uma dica de logon (para preencher o campo de usuário com um endereço de email padrão) ou outra propriedade especial relacionados à experiência entrar, listá-lo na propriedade **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Isso fará com que o sistema ignorar a propriedade ao cache de conta da web, o que impede que as diferenças de conta no cache.
 
 Se estiver desenvolvendo um aplicativo empresarial, você provavelmente desejará se conectar a uma instância do Azure Active Directory (AAD) e usar a API do Microsoft Graph em vez de serviços MSA normais. Nesse cenário, use o código a seguir: 
 

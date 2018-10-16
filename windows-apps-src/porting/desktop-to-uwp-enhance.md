@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572017"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620762"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -173,7 +173,7 @@ Para saber mais sobre notificações, consulte [Notificações do sistema intera
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Dar suporte às bases de instalação do Windows XP, do Windows Vista e do Windows 7/8
 
-Você pode modernizar seu aplicativo para o Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
+Você pode modernizar seu aplicativo para Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
 
 Se você quiser compilar binários separados para usuários do Windows 10, use a compilação condicional. Se você preferir criar um conjunto de binários implantado para todos os usuários do Windows, use as verificações de tempo de execução.
 

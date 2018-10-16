@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, cra, compra realizada em aplicativo, produto no aplicativo, envio de cra
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573850"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621889"
 ---
 # <a name="add-on-submissions"></a>Envios de complemento
 
@@ -85,11 +85,11 @@ Quando você terminar de inserir essas informações, clique em **Enviar para a 
 
 ## <a name="updating-an-add-on-after-publication"></a>Atualizando um complemento após a publicação
 
-Você pode fazer alterações em um complemento publicado a qualquer momento. As alterações de complemento são enviadas e publicadas independentemente do seu aplicativo, portanto, você geralmente não precisa atualizar o aplicativo inteiro para fazer alterações em um complemento, como atualizar o preço ou a descrição.
+Você pode fazer alterações em um complemento publicado a qualquer momento. Alterações de complemento são enviadas e publicadas independentemente do seu aplicativo, portanto, você geralmente não precisa atualizar o aplicativo inteiro para fazer alterações em um complemento, como atualizar o preço ou a descrição.
 
 > [!IMPORTANT]
 > Se o aplicativo estiver disponível para clientes no Windows 8.x, você deverá criar e publicar um novo envio de aplicativo para que as atualizações de complemento fiquem visíveis para os clientes. Da mesma forma, se você adicionar novos complementos a um aplicativo destinado ao Windows 8.x depois que o aplicativo for publicado, deverá atualizar o código do seu aplicativo para fazer referência a esses complementos e, em seguida, reenviar o aplicativo. Caso contrário, os novos complementos não serão visíveis aos clientes no Windows 8.x.
 
-Para enviar atualizações, acesse a página do complemento no seu painel e clique em **Atualizar**. Isso criará um novo envio para o complemento, usando as informações do seu envio anterior como um ponto de partida. Faça as alterações que você deseja como e clique em **Enviar à loja**.
+Para enviar atualizações, acesse a página do complemento no seu painel e clique em **Atualizar**. Isso criará um novo envio para o complemento, usando as informações do seu envio anterior como um ponto de partida. Faça as alterações que você deseja, como e clique em **Enviar à loja**.
 
 Se quiser remover um complemento oferecido anteriormente, você poderá fazer isso criando um novo envio e alterando a opção [Distribuição e visibilidade](set-add-on-pricing-and-availability.md) para **Oculto na Microsoft Store** com a opção **Interromper aquisição**. Certifique-se de atualizar o código do aplicativo conforme necessário para também remover referências ao complemento (especificamente se o aplicativo for compatível com a versão anterior do Windows 8.1; essa configuração de visibilidade não se aplica a esses clientes).

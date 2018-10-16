@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: Use este método na API de envio da Microsoft Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows.
 title: Obter um aplicativo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, app
 ms.localizationpriority: medium
-ms.openlocfilehash: 87995e0ee50b762f4b626be0b3796cc10390a02d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce52e2d3b844052103f1055674869c19850ef59f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661946"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622050"
 ---
 # <a name="get-an-app"></a>Obter um aplicativo
 

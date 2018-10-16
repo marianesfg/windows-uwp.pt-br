@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574328"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623554"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Criação do pacote com o layout de empacotamento  
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios dos apps que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
 title: Gerenciar envios de aplicativo
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: db74614c9455bfeffb9cfa286e84f4de6d97f52d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: f0edcde4916311a629d248b800320f6e1c596600
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832427"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617916"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -210,7 +210,7 @@ Os artigos a seguir apresentam exemplos detalhados de código que demonstram com
 
 ## <a name="storebroker-powershell-module"></a>Módulo StoreBroker do PowerShell
 
-Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Loja.
+Como uma alternativa à chamada direta à API de envio da Microsoft Store, nós também fornecemos um módulo do PowerShell de software livre que implementa uma interface de linha de comando sobre API. Esse módulo é chamado [StoreBroker](https://aka.ms/storebroker). Você pode usar esse módulo para gerenciar seu app, versão de pré-lançamento e envios de complemento na linha de comando em vez de chamar diretamente a API de envio da Microsoft Store, ou você pode simplesmente procurar a fonte para ver mais exemplos de como chamar essa API. O módulo StoreBroker ativamente é usado dentro da Microsoft como a principal forma de muitos apps de terceiros serem enviados para a Store.
 
 Para obter mais informações, consulte nossa [Página do StoreBroker no GitHub](https://aka.ms/storebroker).
 
@@ -353,7 +353,7 @@ Esse recurso tem os valores a seguir.
 | canInstallOnRemovableMedia           |  booliano  |   Indica se os clientes podem instalar o aplicativo em armazenamento removível. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  booliano |   Indica se o DVR de jogos está habilitado para o aplicativo.    |   
 | gamingOptions           |  array |   Uma matriz que contém um [recurso de opções de jogos](#gaming-options-object) que define as configurações relacionadas a jogos para o app.     |   
-| hasExternalInAppProducts           |     booliano          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
 | status           |   string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
@@ -435,7 +435,7 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 |  releaseNotes               |  string       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
 |  images               |   matriz      |  Uma matriz de recursos de [imagem e ícone](#image-object) para a listagem do aplicativo.  |
 |  recommendedHardware               |   matriz      |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware recomendadas](../publish/create-app-store-listings.md#additional-information) para o aplicativo.     |
-|  minimumHardware               |     cadeia de caracteres    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
+|  minimumHardware               |     string    |  Uma matriz de até 11 cadeias de caracteres que lista as [configurações de hardware mínimas](../publish/create-app-store-listings.md#additional-information) para o app.    |  
 |  title               |     string    |   O título da listagem do aplicativo.   |  
 |  shortDescription               |     string    |  Usado somente para jogos. Essa descrição é exibida na seção **Informações** do Hub de Jogos no Xbox One e ajuda os clientes a entender mais sobre o seu jogo.   |  
 |  shortTitle               |     string    |  Uma versão mais curta do nome do seu produto. Se fornecido, esse nome mais curto pode aparecer em vários lugares no Xbox One (durante a instalação, em Conquistas etc.) no lugar do título completo do seu produto.    |  

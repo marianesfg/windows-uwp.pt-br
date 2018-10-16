@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571406"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622699"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -35,7 +35,7 @@ Há duas abordagens para implementar tarefas em segundo plano:
 
 O suporte em segundo plano dentro do processo foi introduzido no Windows 10, versão 1607, para simplificar a gravação de tarefas em segundo plano. Mas você ainda pode desenvolver tarefas em segundo plano fora do processo. Consulte [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md) para obter recomendações sobre quando gravar uma tarefa em segundo plano dentro versus fora do processo.
 
-Tarefas em segundo plano fora do processo são mais resilientes porque o processo em segundo plano não pode derrubar o processo de aplicativo se algo der errado. Mas a resiliência vem ao custo de uma complexidade maior para gerenciar a comunicação entre processos entre o aplicativo e a tarefa em segundo plano.
+Tarefas em segundo plano fora do processo são mais resilientes porque o processo em segundo plano não pode derrubar o processo de aplicativo se algo der errado. Porém, a resiliência vem ao custo de complexidade maior para gerenciar a comunicação entre processos entre o aplicativo e a tarefa em segundo plano.
 
 Tarefas em segundo plano fora do processo são implementadas como classes leves que implementam a interface [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que o sistema operacional é executado em um processo separado (backgroundtaskhost.exe). Registre uma tarefa em segundo plano usando a classe [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) . O nome de classe é usado para especificar o ponto de entrada quando você registra a tarefa em segundo plano.
 
@@ -77,7 +77,7 @@ Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois
 
 Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Essa condição economiza energia, pois a tarefa em segundo plano não é executada até que a rede está disponível. Essa condição não fornece ativação em tempo real.
 
-Se sua tarefa em segundo plano requer conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano seja executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa em segundo plano não definido **IsNetworkRequested**, em seguida, sua tarefa em segundo plano não poderá acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada.)
+Se sua tarefa em segundo plano exige conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano seja executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa em segundo plano não define **IsNetworkRequested**, em seguida, sua tarefa em segundo plano não será capaz de acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada).
  
 Para obter mais informações sobre as condições de tarefa em segundo plano, consulte [definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
@@ -171,7 +171,7 @@ Tarefas em segundo plano podem indicar o progresso, a conclusão e o cancelament
 [Manipular uma tarefa em segundo plano cancelada](handle-a-cancelled-background-task.md)  
 [Monitorar o progresso e a conclusão de tarefas em segundo plano](monitor-background-task-progress-and-completion.md)
 
-Verifica o registro de tarefa em segundo plano durante a inicialização do aplicativo. Certifique-se de que as tarefas de plano de fundo desagrupada do seu aplicativo estão presentes no BackgroundTaskBuilder.AllTasks. Registre novamente os que não estão presentes. Cancelar o registro de qualquer tarefa que não é mais necessários. Isso garante que todos os registros de tarefas em segundo plano sejam atualizados sempre que o aplicativo é iniciado.
+Verifique o registro de tarefa em segundo plano durante a inicialização do aplicativo. Certifique-se de que as tarefas de segundo plano desagrupada do seu aplicativo estão presentes no BackgroundTaskBuilder.AllTasks. Registre novamente aqueles que não estão presentes. Cancelar o registro de qualquer tarefa que não é mais necessários. Isso garante que todos os registros de tarefas em segundo plano sejam atualizados sempre que o aplicativo é iniciado.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: Use este método na API de análises da Microsoft Store para determinar se você pode responder a uma análise específica, ou se você pode responder a qualquer revisão para um determinado aplicativo.
 title: Obter informações de resposta para análises
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, informações de resposta
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc3bae99aebaf26074ba4f8b8a38e1a6e0ac428
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701082"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621107"
 ---
 # <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 

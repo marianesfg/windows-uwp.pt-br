@@ -5,7 +5,7 @@ title: Entrada de texto com o modo de exibição de manuscrito
 label: Text input with the handwriting view
 template: detail.hbs
 ms.author: kbridge
-ms.date: 09/10/18
+ms.date: 10/13/18
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,30 +14,29 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3aeb400da4b3abe61e086732eaceb0e53fd1b005
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 3117cde7b8b00973c135fbc759fa99b6a48ec6ac
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569122"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620808"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com o modo de exibição de manuscrito
 
-![Caixa de texto se expande quando tocado com caneta](images/pen-input-expand-cropped.gif)
+![Caixa de texto se expande quando tocado com caneta](images/handwritingview/handwritingview2.gif)
 
-Personalize o modo de exibição de manuscrito interno para tinta para entrada de texto que seja compatível com controles de texto UWP como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)e outros controles que fornecem uma experiência de entrada de texto semelhantes (como o [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)).
+Personalize o modo de exibição de manuscrito interno para tinta para entrada de texto que seja compatível com controles de texto UWP como [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)e outros controles que fornecem uma experiência de entrada de texto semelhantes (como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)).
 
 ## <a name="overview"></a>Visão geral
 
-Caixas de entrada de texto XAML têm suporte incorporado para caneta de entrada usando o [Windows Ink](../input/pen-and-stylus-interactions.md). Quando um usuário toca em uma caixa de entrada de texto com uma caneta do Windows, a caixa de texto transforma em uma superfície de manuscrito, em vez de abrir um painel de entrada separado.
+Caixas de entrada de texto XAML têm suporte incorporado para caneta de entrada usando o [Windows Ink](../input/pen-and-stylus-interactions.md). Quando um usuário toca em uma caixa de entrada de texto usando uma caneta do Windows, a caixa de texto transforma em uma superfície de manuscrito, em vez de abrir um painel de entrada separado.
 
 Texto é reconhecido como o usuário escreve em qualquer lugar na caixa de texto e um candidato a janela mostra os resultados do reconhecimento. O usuário pode tocar um resultado para escolhê-lo ou continuar escrevendo aceitar o candidato proposto. Os resultados do reconhecimento de (letra pela letra) literal estão incluídos na janela de candidatos, para que o reconhecimento não está restrito a palavras em um dicionário. Conforme o usuário escreve, a entrada de texto aceita é convertida em um script que mantém a sensação de escrita.
 
 > [!NOTE]
-> O modo de exibição de manuscrito é habilitado por padrão, mas você pode desabilitá-lo em uma base por controle e reverter para o painel de entrada de texto em vez disso.
+> O modo de exibição de manuscrito está habilitado por padrão, mas você pode desabilitá-lo em uma base por controle e reverter para o painel de entrada de texto em vez disso.
 
-
-![Caixa de texto com entrada à caneta](images/pen-input-1.png)
+![Caixa de texto com tinta e sugestões](images/handwritingview/handwritingview-inksuggestion1.gif)
 
 Um usuário pode editar o texto usando gestos padrão e ações, como estes:
 
@@ -46,13 +45,13 @@ Um usuário pode editar o texto usando gestos padrão e ações, como estes:
 - _Inserir_ -desenhar um símbolo de sinal de interpolação para inserir um espaço
 - _substituir_ -substituir texto existente para substituí-lo
 
-![Substituir a entrada à caneta](images/pen-input-2.png)
+![Caixa de texto com correção de tinta](images/handwritingview/handwritingview-inkcorrection1.gif)
 
 ## <a name="disable-the-handwriting-view"></a>Desabilitar o modo de exibição de manuscrito
 
 O modo de exibição de manuscrito interno é habilitado por padrão.
 
-Convém desativar o modo de exibição de manuscrito se você já fornece funcionalidade de tinta em texto equivalente em seu aplicativo, ou sua experiência de entrada de texto depende de algum tipo de formatação ou caractere especial (como uma guia) não está disponível por meio de manuscrito.
+Convém desabilitar o modo de exibição de manuscrito se você já fornece funcionalidade de tinta em texto equivalente em seu aplicativo, ou sua experiência de entrada de texto depende de algum tipo de formatação ou caractere especial (como uma guia) não está disponível por meio de manuscrito.
 
 Neste exemplo, podemos desabilitar o modo de exibição de manuscrito, definindo a propriedade [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) do controle [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) como false. Todos os controles de texto que dão suporte a exibição de manuscrito dar suporte a uma propriedade semelhante.
 
@@ -67,9 +66,9 @@ Neste exemplo, podemos desabilitar o modo de exibição de manuscrito, definindo
 
 ## <a name="specify-the-alignment-of-the-handwriting-view"></a>Especificar o alinhamento do modo de exibição de manuscrito
 
-O modo de exibição de manuscrito está localizado acima do controle de texto subjacente e dimensionado para acomodar as preferências do usuário manuscrito (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> tamanho da fonte ao escrever diretamente no campo de texto **). O modo de exibição é alinhado automaticamente em relação ao controle de texto e seu local dentro do aplicativo.
+O modo de exibição de manuscrito está localizado acima do controle de texto subjacente e dimensionado para acomodar as preferências do usuário manuscrito (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> tamanho de fonte ao escrever diretamente no campo de texto **). O modo de exibição é alinhado também automaticamente em relação ao controle de texto e seu local dentro do aplicativo.
 
-O interface do usuário do aplicativo não flui novamente para acomodar o maior controle, para que o sistema pode fazer com que o modo de exibição ocultar importante da interface do usuário.
+O aplicativo da interface do usuário não reorganiza para acomodar o maior controle, para que o sistema pode fazer com que o modo de exibição ocultar o importante da interface do usuário.
 
 Aqui, mostramos como usar a propriedade [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) de uma [caixa de texto](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar quais âncora no controle de texto subjacente é usada para alinhar o modo de exibição de manuscrito.
 
@@ -103,7 +102,7 @@ Se seu aplicativo já fornece robusta, funcionalidade de reconhecimento personal
 
 ## <a name="use-handwriting-font-preferences"></a>Use as preferências de fonte de manuscrito
 
-Um usuário pode escolher entre uma coleção predefinida de fontes com base em texto manuscrito usar quando renderizar texto com base no reconhecimento de tinta (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> fonte ao usar manuscrito**).
+Um usuário pode escolher entre uma coleção predefinida de fontes baseadas em texto manuscrito usar quando renderizar texto com base no reconhecimento de tinta (consulte **Configurações -> dispositivos -> caneta e Windows Ink -> manuscrito -> fonte ao usar manuscrito**).
 
 > [!NOTE]
 > Os usuários ainda podem criar uma fonte com base em sua próprias manuscrito.
@@ -111,7 +110,7 @@ Um usuário pode escolher entre uma coleção predefinida de fontes com base em 
 
 Seu aplicativo pode acessar essa configuração e usar a fonte selecionada para o texto reconhecido no controle de texto.
 
-Neste exemplo, estamos escutar o evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) de uma [caixa de texto](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) e aplicar fonte selecionada do usuário se a alteração de texto foi originada do HandwritingView (ou uma fonte padrão, se não).
+Neste exemplo, estamos escutar o evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) de um [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) e aplicar fonte selecionada do usuário se a alteração de texto foi originada do HandwritingView (ou uma fonte padrão, se não).
 
 ```csharp
 private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -194,17 +193,17 @@ No code-behind correspondente, mostramos como desabilitar o [HandwritingView](ht
 
 ## <a name="reposition-the-handwritingview"></a>Reposicionar o HandwritingView
 
-Em alguns casos, você precisará garantir que o [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) aborda os elementos de interface do usuário que caso contrário, pode não ser.
+Em alguns casos, talvez seja necessário garantir que o [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) aborda os elementos de interface do usuário que caso contrário, pode não ser.
 
-Aqui, vamos criar uma caixa de texto que dá suporte a ditado (implementado colocando uma caixa de texto e um botão de ditado em um StackPanel).
+Aqui, vamos criar uma caixa de texto que dá suporte a ditado (implementado colocando um TextBox e um botão de ditado em um StackPanel).
 
 ![TextBox com ditado](images/handwritingview/textbox-with-dictation.png)
 
-Como StackPanel agora é maior do que a caixa de texto, o [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) não pode ocultar todas a cotnrol composto.
+Como StackPanel agora está maior do que a caixa de texto, o [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) não pode ocultar todas a cotnrol composto.
 
 ![TextBox com ditado](images/handwritingview/textbox-with-dictation-handwritingview.png)
 
-Para resolver isso, defina a propriedade PlacementTarget do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para o elemento de interface do usuário para que ele deve ser alinhado.
+Para resolver isso, defina a propriedade PlacementTarget do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para o elemento de interface do usuário ao qual ele deve ser alinhado.
 
 ```xaml
 <StackPanel Name="DictationBox" 
@@ -231,9 +230,9 @@ Para resolver isso, defina a propriedade PlacementTarget do [HandwritingView](ht
 
 ## <a name="resize-the-handwritingview"></a>Redimensionar o HandwritingView
 
-Você também pode definir o tamanho do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), que pode ser útil quando você precisa garantir que o modo de exibição não ocultar importante da interface do usuário.
+Você também pode definir o tamanho do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), que pode ser útil quando você precisa garantir que o modo de exibição não ocultar o importante da interface do usuário.
 
-Como o exemplo anterior, criamos um TextBox que dá suporte a ditado (implementado colocando uma caixa de texto e um botão de ditado em um StackPanel).
+Como o exemplo anterior, criamos um TextBox que dá suporte a ditado (implementado colocando um TextBox e um botão de ditado em um StackPanel).
 
 ![TextBox com ditado](images/handwritingview/textbox-with-dictation.png)
 
@@ -241,7 +240,7 @@ Nesse caso, queremos garantir que o botão de ditado está sempre visível.
 
 ![TextBox com ditado](images/handwritingview/textbox-with-dictation-handwritingview-resize.png)
 
-Para fazer isso, podemos vincular a propriedade MaxWidth do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para a largura do elemento de interface do usuário que ele deve ocultar.
+Para fazer isso, podemos vincular a propriedade MaxWidth do [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para a largura do elemento da interface do usuário que ele deve ocultar.
 
 ```xaml
 <StackPanel Name="DictationBox" 

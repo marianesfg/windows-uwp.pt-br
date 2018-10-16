@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564071"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622300"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -76,10 +76,10 @@ A característica mais notável do acrílico é sua transparência. Existem dois
 
 ## <a name="when-to-use-acrylic"></a>Quando usar o acrílico
 
-* Use acrílico no aplicativo para dar suporte a interface do usuário, como NavigationView ou elementos de comando em linha. 
+* Use acrílico no aplicativo para oferecer suporte a interface do usuário, como NavigationView ou elementos de comando em linha. 
 * Use acrílico de fundo para elementos de interface do usuário transitórios, como luz dimsissable da interface do usuário, submenus e menus de contexto.<br />Usar acrílico em cenários transitórios ajuda a manter uma relação visual com o conteúdo que acionou a UI Transiente.
 
-Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico de borda - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
+Se você estiver usando no aplicativo acrílico em superfícies de navegação, considere a possibilidade de estender o conteúdo sob o painel acrílico para melhorar o fluxo em seu aplicativo. Usar o NavigationView fará isso para você automaticamente. No entanto, para evitar a criação de um efeito de tiragem, não tente colocar várias partes de acrílico edge-to-edge - isso pode criar uma fenda indesejada entre as duas superfícies desfocadas. Acrílico é uma ferramenta para trazer harmonia visual aos seus designs, mas quando usado incorretamente, pode resultar em ruído visual.
 
 Considere os seguintes padrões de uso para decidir a melhor maneira de incorporar o acrílico em seu aplicativo:
 
@@ -89,13 +89,13 @@ Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende 
  - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
  - Quando o painel é aberto lado a lado com conteúdo principal do aplicativo, isso deve ser [60% de acrílico de fundo](#acrylic-theme-resources)
 
-![Aplicativo de mapas usando o comando horizontal no aplicativo](images/Maps_In_App_Acrylic_1.png)
+![Aplicativo de mapas usando o comando horizontais no aplicativo](images/Maps_In_App_Acrylic_1.png)
 
-Além disso, a ter seu conteúdo estender ou rolagem sob o acrílico na parte superior lhe dará seu aplicativo uma experiência mais imersiva e perfeita.
+Além disso, ter seu conteúdo estender ou rolagem sob o acrílico na parte superior dará seu aplicativo uma experiência mais imersiva e perfeita.
 
 ### <a name="vertical-panes"></a>Painéis verticais
 
-Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir sobre conteúdo, como em NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+Para painéis verticais ou superfícies que ajudam a seção desativar conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
 
 ### <a name="transient-surfaces"></a>Superfícies transitórios
 
@@ -103,10 +103,10 @@ Para aplicativos com menu submenus, pop-ups não modal, ou ignorar painéis, é 
 
 ![Usando um submenu informativo padrão do aplicativo de email](images/Mail_TransientContextMenu.png)
 
-Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usará o acrílico transitório quando eles são invocados.
+Muitos dos nossos controles usará o acrílico por padrão. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) e controles semelhantes com luz dimiss pop-ups todos usarão o acrílico transitório quando eles são invocados.
 
 > [!Note]
-> Renderização de superfícies consome GPU, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria, e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
+> Renderização de superfícies é GPU intensivo, que pode aumentar o consumo de energia do dispositivo e reduzir a duração da bateria. Os efeitos acrílicos são automaticamente desativados quando dispositivos entram no modo de economia de bateria e os usuários podem desativar os efeitos acrílicos para todos os aplicativos, se preferirem.
 
 ## <a name="usability-and-adaptability"></a>Usabilidade e adaptabilidade
 O acrílico adapta automaticamente sua aparência para uma variedade de dispositivos e contextos.

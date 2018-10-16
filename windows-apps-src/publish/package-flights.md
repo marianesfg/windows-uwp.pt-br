@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575085"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619603"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
 Você pode usar pacotes de pré-lançamento para distribuir pacotes específicos para um grupo de testadores limitado. Os pacotes que você já tiver publicado na Store serão usados para seus clientes, para que sua experiência não será afetada.
 
-Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam a receber os pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
+Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam recebendo seus pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
 
 Ao configurar pacotes de pré-lançamento, você pode especificar as pessoas que devem receber pacotes específicos, adicionando-as para um **grupo de usuários conhecido** (às vezes chamado de grupo de versão de pré-lançamento). Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. (Os pacotes de pré-lançamento podem incluir pacotes que segmentem qualquer versão de sistema operacional, inclusive Windows 8.1/Windows Phone 8.1 ou anteriores). Qualquer pessoa que não tiver sido adicionada a um dos grupos de versão de pré-lançamento ou que esteja usando um dispositivo não compatível com pacotes de pré-lançamento receberá pacotes do envio de versão completa.
 
@@ -55,11 +55,11 @@ Na página de criação do pacote de pré-lançamento, é necessário inserir um
 
 Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento. É possível incluir pacotes que segmentem qualquer versão do sistema operacional, inclusive Windows 10, Windows 8.x e Windows Phone 8.x ou anteriores.
 
-Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Se você precisar carregar novos pacotes para usar para esse pacote de pré-lançamento, você pode carregá-los aqui (usando o [mesmo processo de quando você carrega pacotes do aplicativo para um envio de versão completa comum](upload-app-packages.md)). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
+Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Se você precisar carregar novos pacotes para usar para esse pacote de pré-lançamento, você pode carregá-los aqui (usando o [mesmo processo de quando carrega pacotes de aplicativo para um envio de versão completa comum](upload-app-packages.md)). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
 
 Se seu aplicativo der suporte a várias famílias de dispositivos, verifique se que você incluiu pacotes para dar suporte ao mesmo conjunto de famílias de dispositivos na sua versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento **só** poderão obter pacotes dessa versão. Elas não poderão acessar nenhum pacote de outras versões de pré-lançamento nem de seu envio de versão completa. 
 
-Também Lembre-se de que suas informações de listagem da loja e disponibilidade da família do dispositivo é baseada em seu envio de versão completa. Os clientes nos grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com o envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
+Também Lembre-se de que suas informações de listagem da loja e disponibilidade da família do dispositivo se baseia no seu envio de versão completa. Os clientes nos grupos de versão de pré-lançamento só poderão baixar o aplicativo em uma família de dispositivos que seja compatível com o envio de versão completa. Para obter mais informações, consulte [Suporte à família de dispositivos](#device-family-support). 
 
 
 ## <a name="gradual-package-rollout"></a>Distribuição gradual de pacote
@@ -101,7 +101,7 @@ Na maioria dos casos, convém incluir pacotes que dão suporte ao mesmo conjunto
 
 ## <a name="update-or-modify-your-package-flight"></a>Atualizar ou modificar seu pacote de pré-lançamento
 
-Para criar um novo envio para um pacote de pré-lançamento que você já publicou, clique em **Atualizar** ao lado do nome da versão de pré-lançamento na página de visão geral do aplicativo. Em seguida, você pode carregar novos pacotes (e remover os desnecessários), assim como faria com um envio de versão completa. Faça as alterações necessárias e, depois, clique em **Enviar para a Loja**, para enviar o pacote de pré-lançamento atualizado para o [processo de certificação de aplicativo](the-app-certification-process.md).
+Para criar um novo envio para um pacote de pré-lançamento que você já publicou, clique em **Atualizar** perto do nome da versão de pré-lançamento na página de visão geral do aplicativo. Em seguida, você pode carregar novos pacotes (e remover os desnecessários), assim como faria com um envio de versão completa. Faça as alterações necessárias e, depois, clique em **Enviar para a Loja**, para enviar o pacote de pré-lançamento atualizado para o [processo de certificação de aplicativo](the-app-certification-process.md).
 
 Para modificar uma versão de pré-lançamento existente sem criar e enviar uma nova atualização, clique em **Modificar**, perto do nome da versão de pré-lançamento. Isso permite que você altere detalhes como os grupos, o nome e a classificação da versão de pré-lançamento, sem precisar que o pacote de pré-lançamento passe pelo processo de certificação novamente. Observe que, se você tiver uma atualização em andamento ou se seu pacote de pré-lançamento ainda não foi publicado, você não verá a opção de **Modificar** . 
 
@@ -110,7 +110,7 @@ Para modificar uma versão de pré-lançamento existente sem criar e enviar uma 
 
 Você pode criar diversos pacotes de pré-lançamento para o mesmo aplicativo, a fim de distribuir vários pacotes diferentes para grupos de clientes diversificados. 
 
-Assim que tiver criado seu primeiro pacote de pré-lançamento, você cria outro seguindo o processo descrito acima. A única diferença é que, se você já criou um pacote de pré-lançamento, precisará especificar a ordem de prioridade de todos os pacotes de pré-lançamento na seção **Classificação**. Isso permite que a loja determine qual pacote entregar a qualquer cliente individual que eles estejam em mais de um de seus grupos de versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento sempre receberão o pacote de pré-lançamento mais bem classificado disponível para elas, mesmo que um pacote de pré-lançamento com classificação inferior contenha pacotes com um número de versão maior.
+Assim que tiver criado seu primeiro pacote de pré-lançamento, você cria outro seguindo o processo descrito acima. A única diferença é que, se você já criou um pacote de pré-lançamento, precisará especificar a ordem de prioridade de todos os pacotes de pré-lançamento na seção **Classificação**. Isso permite que a loja determine qual pacote entregar a qualquer cliente individual que estejam em mais de um de seus grupos de versão de pré-lançamento. As pessoas em seus grupos de versão de pré-lançamento sempre receberão o pacote de pré-lançamento mais bem classificado disponível para elas, mesmo que um pacote de pré-lançamento com classificação inferior contenha pacotes com um número de versão maior.
 
 Por padrão, seu novo pacote de pré-lançamento será melhor classificado. Se você quiser alterar sua classificação, mova-o para baixo (ou faça backup) para colocá-lo no local correto entre seus outros pacotes de pré-lançamento.
 

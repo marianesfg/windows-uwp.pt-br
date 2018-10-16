@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571913"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616960"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>União de um aplicativo UWP com o Visual Studio
 
@@ -137,7 +137,7 @@ Para obter mais informações sobre como enviar seu aplicativo para o Centro de 
 
 ## <a name="sideload-your-app-package"></a>Fazer o sideload do pacote do aplicativo
 
-Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser instalados simplesmente clicando duas vezes no arquivo de pacote do app. Para usar isso, navegue até o pacote do aplicativo ou o arquivo de lote de aplicativo e clique duas vezes nele. O Instalador de App é iniciado e fornece as informações básicas sobre o app, bem como um botão de instalação, a barra de progresso da instalação e as mensagens de erro relevantes. 
+Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser instalados simplesmente clicando duas vezes no arquivo de pacote do app. Para usá-la, navegue até o pacote do aplicativo ou o arquivo de lote de aplicativo e clique duas vezes nele. O Instalador de App é iniciado e fornece as informações básicas sobre o app, bem como um botão de instalação, a barra de progresso da instalação e as mensagens de erro relevantes. 
 
 ![O Instalador de App é exibido para a instalação de um app de exemplo chamado Contoso](images/appinstaller-screen.png)
 
@@ -145,7 +145,7 @@ Introduzidos no Windows 10 Anniversary Update, os pacotes do app podem ser insta
 > O Instalador de App presume que o app seja confiável para o dispositivo. Se você estiver fazendo sideload de um app de desenvolvedor ou corporativo, será necessário instalar o certificado de autenticação no repositório Autoridades Certificação de Fornecedores ou Pessoas Confiáveis no dispositivo. Se você não tiver certeza de como fazer isso, consulte [Instalação de certificados de teste](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>Sideload de seu app em versões anteriores do Windows
-Com pacotes de aplicativos UWP, os apps não são instalados em um dispositivo como acontece nos apps para a área de trabalho. Normalmente, você baixa os aplicativos UWP da Microsoft Store, que também instala o app em seu dispositivo para você. Os apps podem ser instalados sem ser publicados à Store (sideload). Isso permite instalar e aplicativos de teste usando o pacote do aplicativo do arquivo que você criou. Caso tenha um aplicativo que não queira vender na Loja, como um aplicativo de linha de negócios (LOB), você pode fazer o sideload desse aplicativo de maneira que outros usuários na empresa possam usá-lo.
+Com pacotes de aplicativos UWP, os apps não são instalados em um dispositivo como acontece nos apps para a área de trabalho. Normalmente, você baixa os aplicativos UWP da Microsoft Store, que também instala o app em seu dispositivo para você. Os apps podem ser instalados sem ser publicados à Store (sideload). Isso permite instalar e aplicativos de teste usando o pacote de aplicativo do arquivo que você criou. Caso tenha um aplicativo que não queira vender na Loja, como um aplicativo de linha de negócios (LOB), você pode fazer o sideload desse aplicativo de maneira que outros usuários na empresa possam usá-lo.
 
 A lista a seguir apresenta requisitos para o sideload do aplicativo.
 

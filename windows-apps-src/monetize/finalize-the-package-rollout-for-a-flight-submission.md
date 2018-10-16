@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Use esse método na API de envio da Microsoft Store a fim de finalizar a distribuição de pacote para o envio de um pacote de pré-lançamento.
 title: Finalizar a distribuição para um envio de versão de pré-lançamento
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio de versão de pré-lançamento, finalizar
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fe00d07773d52c5a80161ec8c9620c12f5b4b0e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e87ff797a0c9e753726f32fac117c55c70b9b36c
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815801"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620018"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a>Finalizar a distribuição para um envio de versão de pré-lançamento
 

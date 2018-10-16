@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: Saiba mais sobre os tamanhos de anúncios em barra de notificação com suporte.
 title: Tamanhos de anúncios de banner compatíveis
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, tamanhos, barra de notificação
 ms.localizationpriority: medium
-ms.openlocfilehash: baeed2fd1bce779a2d7bb08d808e868eb3ababed
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a438f6df66b064004ad9664ce46280475dad83c6
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "927413"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616058"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamanhos de anúncios de banner compatíveis
 
-Os seguintes tamanhos da ad banner são suportados para aplicativos de plataforma de Windows Universal (UWP). Quando você instanciar seu objeto **AdControl** em seu aplicativo, certifique-se de que você definir as propriedades de altura e largura para coincidir com um desses tamanhos suportados.
+Tamanhos de anúncio em faixa são compatíveis com aplicativos da plataforma Universal do Windows (UWP). Quando você instancia o objeto de **AdControl** em seu aplicativo, verifique se que você definir as propriedades de altura e largura para corresponder a um destes tamanhos com suporte.
 
 * 160 x 600
 * 300 x 50
@@ -30,9 +30,9 @@ Os seguintes tamanhos da ad banner são suportados para aplicativos de plataform
 * 728 x 90
 
 > [!NOTE]
-> Para obter a melhor experiência, é recomendável usar os seguintes tamanhos nos dispositivos Windows Mobile de 10: 300 x 50, 320 x 50 e 640 x 100.
+> Para obter a melhor experiência, é recomendável usar os seguintes tamanhos em dispositivos Windows 10 Mobile: 300 x 50, 50 x 320 e 640 x 100.
 
-A tabela a seguir fornece exemplos que ilustram cada tamanho da ad banner.
+A tabela a seguir fornece exemplos que ilustram cada tamanho de anúncio em faixa.
 
 <table>
 <colgroup>
@@ -41,7 +41,7 @@ A tabela a seguir fornece exemplos que ilustram cada tamanho da ad banner.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Tamanho do AD</th>
+<th align="left">Tamanho do anúncio</th>
 <th align="left">Exemplo</th>
 </tr>
 </thead>

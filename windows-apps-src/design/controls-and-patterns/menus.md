@@ -17,11 +17,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574400"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617243"
 ---
 # <a name="menus-and-context-menus"></a>Menus e menus de contexto
 
@@ -45,13 +45,13 @@ Menus e menus de contexto servem para organizar comandos; Para exibir conteúdo 
 
 ### <a name="menubar-vs-menuflyout"></a>Barra de menus versus MenuFlyout
 
-Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu normal ou como um menu de contexto. Um submenu de menu hospeda um único menu de nível superior (e submenus opcionais).
+Para mostrar um menu em um submenu anexado a um elemento de interface do usuário na tela, use o controle MenuFlyout para hospedar seus itens de menu. Você pode chamar um submenu de menu como um menu regular ou como um menu de contexto. Um submenu de menu hospeda um menu de nível superior único (e submenus opcionais).
 
 Para mostrar um conjunto de vários menus de nível superior em uma linha horizontal, use uma barra de menu. Você normalmente posicionar a barra de menu na parte superior da janela do aplicativo.
 
 ### <a name="menubar-vs-commandbar"></a>Barra de menus versus CommandBar
 
-Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para os usuários. Barra de menu fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais de organização ou agrupamento de um CommandBar permite.
+Barra de menus e CommandBar ambos representam superfícies que você pode usar para expor comandos para seus usuários. A barra de menus fornece uma maneira rápida e simple para expor um conjunto de comandos para aplicativos que podem precisar de mais de organização ou agrupamento que permite que um CommandBar.
 
 Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a barra de menus para fornecer a maior parte dos comandos e o CommandBar para realçar os comandos mais usados.
 
@@ -73,7 +73,7 @@ Você também pode usar uma barra de menus em conjunto com um CommandBar. Use a 
 
 ## <a name="menus-vs-context-menus"></a>Menus x menus de contexto
 
-Menus e menus de contexto são semelhantes a aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
+Menus e menus de contexto são semelhantes em termos de aparência e o que eles podem conter. Na verdade, você pode usar o mesmo controle, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para criá-los. A diferença é como você permitir que o usuário acessá-lo.
 
 Quando você deve usar um menu ou um menu de contexto?
 
@@ -209,7 +209,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-### <a name="light-dismiss"></a>Ignorar
+### <a name="light-dismiss"></a>Ignorar rapidamente
 
 Os controles light dismiss, como menus, menus de contexto e outros submenus, prendem o foco do teclado ou gamepad dentro da interface do usuário transitória até serem ignorados. Para fornecer uma indicação visual para esse comportamento, os controles light dismiss no Xbox desenharão uma sobreposição que esmaece a visibilidade da interface do usuário fora do escopo. Esse comportamento pode ser modificado com a propriedade [LightDismissOverlayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). Por padrão, as interfaces do usuário transitórias desenham a sobreposição de ignorar no Xbox (**Automático**), mas não em outras famílias de dispositivos, mas os aplicativos podem optar por forçar a sobreposição como sempre **Ativada** ou **Desativada**.
 
@@ -221,7 +221,7 @@ Os controles light dismiss, como menus, menus de contexto e outros submenus, pre
 
 > **Visualização**: barra de menus requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Você pode usar os mesmos elementos para criar menus em uma barra de menu como um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como um menu de nível superior.
+Você pode usar os mesmos elementos para criar menus em uma barra de menu como em um submenu de menu. No entanto, em vez de agrupar objetos MenuFlyoutItem em um MenuFlyout, você agrupá-los em um elemento MenuBarItem. Cada MenuBarItem é adicionado à barra de menu como menu de nível superior.
 
 ![Exemplo de uma barra de menu](images/menu-bar-submenu.png)
 

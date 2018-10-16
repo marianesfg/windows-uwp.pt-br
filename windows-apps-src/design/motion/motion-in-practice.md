@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566301"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622916"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -95,12 +95,12 @@ Você pode animar implicitamente alterações para as seguintes propriedades:
   - **Escala**
   - **Translation**
 
-- [Borda](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)ou [painel](/uwp/api/windows.ui.xaml.controls.panel)
+- [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)ou [painel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Tela de fundo**
 
 Cada propriedade que pode ter alterações implicitamente animadas tem uma propriedade de _transição_ correspondente. Para animar a propriedade, você pode atribuir um tipo de transição para a propriedade de _transição_ correspondente. Esta tabela mostra as propriedades de _transição_ e o tipo de transição a ser usado para cada um deles.
 
-| Propriedade animada | Propriedade de transição | Tipo de transição implícita |
+| Propriedade animada | Propriedade de transição | Tipo de transição implícito |
 | -- | -- | -- |
 | [UIElement. Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
