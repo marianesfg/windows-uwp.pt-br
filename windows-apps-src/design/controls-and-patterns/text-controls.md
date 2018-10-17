@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 2cd5f7e7022f246fce3d08286fe77c74503ddc5d
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691516"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744871"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -125,7 +125,7 @@ Consulte estes artigos para obter diretrizes de fonte:
 
 A partir do Windows 10, versão 1803, caixas de entrada de texto XAML têm suporte incorporado para caneta de entrada usando [Windows Ink](../input/pen-and-stylus-interactions.md). Quando um usuário toca em um texto de entrada de caixa usando uma caneta do Windows, as transformações de caixa de texto para permitir que o usuário escrever diretamente nele com uma caneta, em vez de abrir um painel de entrada separado.
 
-![Caixa de texto se expande quando tocado com caneta](images/pen-input-expand.gif)
+![Caixa de texto se expande quando tocado com caneta](images/handwritingview/handwritingview2.gif)
 
 Para obter mais informações, consulte [a entrada de texto com o modo de exibição de manuscrito](text-handwriting-view.md).
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, excluir versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 436a28cc1be0c106928784086731fe078d789527
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686233"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4746277"
 ---
 # <a name="delete-a-package-flight"></a>Excluir um pacote de pré-lançamento
 

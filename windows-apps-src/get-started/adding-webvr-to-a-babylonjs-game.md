@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: webvr, edge, desenvolvimento da web, babylon, babylonjs, Babylon. js, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ef659a178a4c3f40d464fd958e5493454afef7
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691614"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4746971"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Adicionando suporte a WebVR a um jogo de Babylon. js 3D
 

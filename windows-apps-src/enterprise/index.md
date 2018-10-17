@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680509"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745069"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -120,7 +120,7 @@ Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
 
 <a id="distribution" />
 
-## <a name="security"></a>Security
+## <a name="security"></a>Segurança
 
 O Windows 10 oferece um pacote de recursos de segurança para que os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e todos os dados de negócios armazenados nos dispositivos. Uma novidade no Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implementar com acesso por PIN ou pelo Windows Hello, que fornece segurança de nível empresarial e permite o reconhecimento por impressão digital, rosto e íris.
 
