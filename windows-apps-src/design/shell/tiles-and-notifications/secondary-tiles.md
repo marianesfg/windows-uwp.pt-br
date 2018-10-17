@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, blocos secundários
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f11ca4d29f22daf953ce03436c3b786c70a9e04
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: d8d6a79ddd497bc3ada777af25791e9938355c79
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4622872"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692872"
 ---
 # <a name="secondary-tiles"></a>Blocos secundários
 
@@ -70,7 +70,7 @@ No entanto, os blocos secundários são diferentes dos blocos primários de algu
 * Os usuários podem excluir os blocos secundários a qualquer momento sem excluir o aplicativo pai.
 * Os blocos secundários podem ser criados no tempo de execução. Os blocos de aplicativos só podem ser criados durante a instalação.
 * Um submenu solicita a confirmação do usuário antes de adicionar um bloco secundário.
-* Eles não podem ser selecionados de forma programada para a tela de bloqueio por meio de uma solicitação ao usuário. O usuário deve adicionar manualmente o bloco secundário por meio da página Personalizar em Configurações do PC.
+* Eles não podem ser selecionados de forma programada para a tela de bloqueio por meio de uma solicitação ao usuário. O usuário deve adicionar manualmente o bloco secundário por meio da página Personalizar nas configurações do computador.
 
 Para enviar notificações, métodos específicos são fornecidos para atualizadores de blocos e notificações e canais de notificação por push são usados com blocos secundários. Eles fazem paralelo com as versões usadas com blocos primários. Por exemplo, CreateBadgeUpdaterForApplication x CreateBadgeUpdaterForSecondaryTile.
 

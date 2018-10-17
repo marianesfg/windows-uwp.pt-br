@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 8f3aa529e1c292bcea816e21222ca2a5e07f4319
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700792"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692311"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
@@ -48,7 +48,7 @@ Este é um exemplo do uso de qualificadores para nomear pastas que contêm arqui
 \Assets\Images\contrast-white\<logo.png, and other image files>
 ```
 
-Se você nomear as pastas como no exemplo acima, o app usará a configuração de alto contraste para carregar arquivos de recurso na pasta nomeada para o qualificador apropriado. Portanto, se a configuração for Preto em Alto Contraste, os arquivos de recurso na pasta `\Assets\Images\contrast-black` serão carregados. Se a configuração for Nenhum (ou seja, se o computador não estiver no modo de alto contraste), os arquivos de recurso na pasta `\Assets\Images\standard` serão carregados.
+Se você nomear as pastas como no exemplo acima, o app usará a configuração de alto contraste para carregar arquivos de recurso na pasta nomeada para o qualificador apropriado. Portanto, se a configuração for Preto em Alto Contraste, os arquivos de recurso na pasta `\Assets\Images\contrast-black` serão carregados. Se a configuração for Nenhum (ou seja, se o computador não estiver no modo de alto contraste), os arquivos de recurso na pasta `\Assets\Images\contrast-standard` serão carregados.
 
 ## <a name="use-qualifiers-in-file-names"></a>Usar qualificadores em nomes de arquivo
 

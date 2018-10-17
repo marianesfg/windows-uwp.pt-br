@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: 3004b7041838656890b3a967e858dddc64c29ee5
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 656e6123db1fc9ea0f3d8c6b6fb106864200e431
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4612391"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4691566"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -88,7 +88,7 @@ No Windows 10, o conteúdo da notificação do sistema é descrito usando uma li
 
 Vamos começar construindo a parte visual do conteúdo, que inclui o conteúdo de texto e imagens que você deseja exibir para o usuário.
 
-A geração de o conteúdo XML é simplificada devido à biblioteca de Notificações. Se você não instalar a biblioteca de Notificações do NuGet, é necessário construir o XML manualmente, o que deixa espaço para erros.
+Graças a biblioteca de notificações, gerar o conteúdo XML é simples. Se você não instalar a biblioteca de Notificações do NuGet, é necessário construir o XML manualmente, o que deixa espaço para erros.
 
 > [!NOTE]
 > As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
