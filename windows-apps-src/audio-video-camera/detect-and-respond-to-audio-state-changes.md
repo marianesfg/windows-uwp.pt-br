@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 166b015b4605c10f8c778c7e9aa24cc4993d3472
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: c60fcd705acf2d0d1e3162e80bc1d85095aa0fb4
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818200"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694248"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Detectar e responder a alterações de estado de áudio
 A partir do Windows 10, versão 1803, seu aplicativo pode detectar quando o sistema reduz o nível ou silencia o nível de áudio de um stream de áudio usado pelo aplicativo. Você pode receber notificações de captura e renderizar fluxos para um dispositivo de áudio e categoria de áudio específico ou para um objeto [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) que o aplicativo está usando para reprodução de mídia. Por exemplo, o sistema pode reduzir ou "ignorar", o nível de reprodução de áudio quando um alarme está tocando. O sistema ativa o mudo do aplicativo quando entra em segundo plano caso não tenha declarado a funcionalidade *backgroundMediaPlayback* no manifesto. 
@@ -26,7 +26,7 @@ O padrão para processar alterações de estado de áudio é o mesmo para todos 
 
 [!code-cs[SoundLevelDeviceIdCategory](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSoundLevelDeviceIdCategory)]
 
-No manipulador de evento **SoundLevelChanged**, verifique se a propriedade [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) do remetente de **AudioStateMonitor** passou o manipulador para determinar o novo nível de áudio do fluxo. Neste exemplo, o aplicativo para de capturar áudio quando o nível de som é desligado e retoma a captura quando o nível de áudio retorna ao volume completo.
+No manipulador de eventos **SoundLevelChanged** , verifique a propriedade [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) do remetente **AudioStateMonitor** passado para o manipulador para determinar qual é o novo nível de fluxo de áudio. Neste exemplo, o aplicativo para de capturar áudio quando o nível de som é desligado e retoma a captura quando o nível de áudio retorna ao volume completo.
 
 [!code-cs[GameChatSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetGameChatSoundLevelChanged)]
 

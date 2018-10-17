@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: medium
+ms.openlocfilehash: a92be54e55e06b4e7ffd61b1526425920ea80f96
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2017
-ms.locfileid: "852872"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694169"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Observação**  Até que ponto você precisa de dados de amostra, e que quantidade pode ser útil, depende de as suas associações usarem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) ou a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e, portanto, apenas são apropriadas para **{Binding}**. Porém, se você estiver usando **{x:Bind}**, suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
@@ -143,7 +143,7 @@ Até agora, usamos **d:DesignData** para carregar dados de amostra em tempo de d
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-A propriedade **IsDesignTimeCreatable** indica que a ferramenta de design deve, na verdade, criar uma instância da classe, o que sugere que a classe tem um construtor público padrão e que é populada com dados (reais ou de exemplo). Se você não definir **IsDesignTimeCreatable** (ou se definir como **False**), os dados de exemplo não serão exibidos na superfície de design. Nesse caso, a ferramenta de design analisa a classe para suas propriedades associáveis e exibe-as no painel **Dados** e na caixa de diálogo **Criar Associação de Dados**.
+A propriedade **IsDesignTimeCreatable** indica que a ferramenta de design deve, na verdade, criar uma instância da classe, o que sugere que a classe tem um construtor público padrão e que é populada com dados (reais ou de exemplo). Se você não definir **IsDesignTimeCreatable** (ou se definir como **False**), os dados de exemplo não serão exibidos na superfície de design. Tudo o que a ferramenta de design faz nesse caso, é a classe para suas propriedades associáveis e exibi-los no painel de **dados** e na caixa de diálogo **Criar associação de dados** .
 
 <a name="sample-data-for-prototyping"></a>Dados de exemplo para criação de protótipo
 --------------------------------------------------------

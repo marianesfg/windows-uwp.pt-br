@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48462623d17c612d716300acc3a64057738e72c9
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: a4685a891facab39cb984f0b2d5f697e22477233
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707609"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694663"
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
 
@@ -102,7 +102,7 @@ O sistema irá exibir automaticamente as animações apropriadas para soltar em 
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementar o recurso arrastar e soltar personalizado
 
-A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) faz a maior parte do trabalho de implementação do recurso arrastar e soltar para você. Mas se quiser, você pode implementar sua própria versão usando as APIs no [namespace Windows.ApplicationModel.DataTransfer.DragDrop.Core](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+A classe [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) faz a maior parte do trabalho de implementação do recurso arrastar e soltar para você. Mas se você quiser, você pode implementar sua própria versão usando as APIs no [namespace DragDrop](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funcionalidade | API do WinRT |
 | --- | --- |

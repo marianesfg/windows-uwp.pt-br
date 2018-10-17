@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos, io de arquivo, ler arquivo, gravar arquivo, criar arquivo, escrever texto, ler texto
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a6400a265cdf0bfe78a6982874dcc6747d662b
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: ae89b5c0e072eceec155009c07b3b3a7cf563a20
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895258"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4693311"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 
@@ -64,7 +64,7 @@ A classe **FileIO** fornece uma maneira conveniente de gravar texto no arquivo. 
 
 ## <a name="read-text-from-a-file"></a>Ler texto de um arquivo
 
-Assim como acontece na gravação, a leitura começa ao especificar onde o arquivo está localizado. Vamos usar o mesmo local como no exemplo acima. Em seguida, vamos usar a classe **FileIO** para ler o conteúdo.
+Assim como acontece na gravação, a leitura começa ao especificar onde o arquivo está localizado. Vamos usar o mesmo local como no exemplo acima. Em seguida, usaremos a classe **FileIO** para ler o conteúdo.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
