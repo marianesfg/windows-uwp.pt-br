@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 997f4e088edfced94189c2c0977bcfff60166059
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690065"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753701"
 ---
 # <a name="get-app-acquisitions"></a>Obter aquisições de aplicativo
 
@@ -101,7 +101,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | market              | string | O código de país ISO 3166 do mercado onde ocorreu a aquisição.  |
 | gender              | string | Uma das sequências a seguir que especifica o gênero do usuário que fez a aquisição:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Desconhecido</strong></li></ul>    |
 | ageGroup            | string | Uma das sequências a seguir que especifica a faixa etária do usuário que fez a aquisição:<ul><li><strong>less than 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Desconhecido</strong></li></ul>  |
-| acquisitionType     | string | Uma das sequências a seguir que indica o tipo de aquisição:<ul><li><strong>Grátis</strong></li><li><strong>Avaliação</strong></li><li><strong>Pagos</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li></ul>   |
+| acquisitionType     | string | Uma das sequências a seguir que indica o tipo de aquisição:<ul><li><strong>Grátis</strong></li><li><strong>Avaliação</strong></li><li><strong>Pagos</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li><li><strong>Assinatura Iap</strong></li><li><strong>Audiência particular</strong></li><li><strong>Ordem de versões anteriores</strong></li><li><strong>Xbox Game Pass</strong> (ou <strong>Game Pass</strong> se estiver consultando dados anteriores a 23 de março de 2018)</li><li><strong>Disco</strong></li><li><strong>Código pré-pago</strong></li></ul>   |
 | acquisitionQuantity | number | O número de aquisições que ocorreram durante o nível de agregação especificado.    |
 
 
