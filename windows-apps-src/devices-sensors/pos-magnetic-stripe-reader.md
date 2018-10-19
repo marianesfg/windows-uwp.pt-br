@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4741993"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4955112"
 ---
 # <a name="magnetic-stripe-reader"></a>Leitor de tarjas magnéticas
 
@@ -28,4 +28,4 @@ Os tópicos a seguir fornecem ainda mais informações sobre como usar um leitor
 
 | Tópico | Descrição |
 |-------|-------------|
-| [Obter e entender os dados de tarja magnética](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Saiba como obter e interpretar os dados de um tarja magnética. |
+| [Obter e compreender os dados de tarja magnética](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Saiba como obter e interpretar os dados de um tarja magnética. |
