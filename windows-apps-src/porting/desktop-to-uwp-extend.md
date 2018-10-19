@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: be4338c7b7e7b3861c206a6d7d63e9e417e6cd0d
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953416"
+ms.locfileid: "5157868"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -41,6 +41,12 @@ Esta imagem mostra um exemplo de solução.
 ![Estender projeto inicial](images/desktop-to-uwp/extend-start-project.png)
 
 Se sua solução não contiver um projeto de empacotamento, consulte o [pacote do seu aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+
+### <a name="configure-the-desktop-application"></a>Configurar o aplicativo da área de trabalho
+
+Certifique-se de que seu aplicativo da área de trabalho tem referências aos arquivos que você precisa chamar APIs do Windows Runtime.
+
+Para fazer isso, consulte a seção [primeiro, configure seu projeto](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) do tópico [aprimorar seu aplicativo da área de trabalho para Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project).
 
 ### <a name="add-a-uwp-project"></a>Adicionar um projeto UWP
 
@@ -71,6 +77,12 @@ Para realizar alguns cenários, você precisará adicionar código a um componen
 Em seguida, no projeto UWP, adicione uma referência ao componente de tempo de execução. A solução terá a aparência a seguir:
 
 ![Referência do componente de tempo de execução](images/desktop-to-uwp/runtime-component-reference.png)
+
+### <a name="build-your-solution"></a>Desenvolver sua solução
+
+Crie uma solução para garantir que nenhum erro apareça. Se você receber erros, abra o **Gerenciador de configuração** e certifique-se de que seus projetos direcionados à mesma plataforma.
+
+![Gerenciador de configuração](images/desktop-to-uwp/config-manager.png)
 
 Vamos dar uma olhada em algumas coisas que você pode fazer com seus projetos UWP e os componentes de tempo de execução.
 
@@ -211,7 +223,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-Substitua o método ``OnNavigatedTo`` para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
+No code-behind da página XAML, substitua o ``OnNavigatedTo`` método para usar os parâmetros passados para a página. Nesse caso, usaremos a latitude e longitude passado para essa página a fim de mostrar uma localização em um mapa.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -238,156 +250,15 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
  }
 ```
 
-### <a name="similar-samples"></a>Exemplos semelhantes
-
-[Adicionar uma experiência do usuário XAML da UWP ao aplicativo VB6](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/VB6withXaml)
-
-[Exemplo da Northwind: exemplo completo de código herdado Win32 e IU UWA](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/NorthwindSample)
-
-[Exemplo da Northwind: aplicativo UWP conectando-se ao SQL Server](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SQLServer)
-
-## <a name="provide-services-to-other-apps"></a>Fornecer serviços a outros apps
-
-Você adiciona um serviço que outros apps podem consumir. Por exemplo, você pode adicionar um serviço que ofereça aos outros apps acesso controlado ao banco de dados por trás de seu aplicativo. Implementando uma tarefa em segundo plano, os aplicativos podem acessar o serviço mesmo se seu aplicativo da área de trabalho não está em execução.
-
-Aqui está um exemplo que faz isso.
-
-![adaptive-design](images/desktop-to-uwp/winforms-app-service.png)
-
-### <a name="have-a-closer-look-at-this-app"></a>Examine este app mais de perto
-
-:heavy_check_mark: [Obter o app](https://www.microsoft.com/en-us/store/p/winforms-appservice/9p7d9b6nk5tn)
-
-:heavy_check_mark: [Procurar o código](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinformsAppService)
-
-### <a name="the-design-pattern"></a>O padrão de design
-
-Para fornecer um serviço, faça o seguinte:
-
-:one: [Implemente o serviço de aplicativo](#appservice)
-
-:two: [Adicione uma extensão de serviço de aplicativo](#extension)
-
-:three: [Teste o serviço de aplicativo](#test)
-
-<a id="appservice" />
-
-### <a name="implement-the-app-service"></a>Implementar o serviço de aplicativo
-
-Veja onde você validará e lidará com solicitações de outros apps. Adicione esse código a um Componente do Tempo de Execução do Windows em sua solução.
-
-```csharp
-public sealed class AppServiceTask : IBackgroundTask
-{
-    private BackgroundTaskDeferral backgroundTaskDeferral;
- 
-    public void Run(IBackgroundTaskInstance taskInstance)
-    {
-        this.backgroundTaskDeferral = taskInstance.GetDeferral();
-        taskInstance.Canceled += OnTaskCanceled;
-        var details = taskInstance.TriggerDetails as AppServiceTriggerDetails;
-        details.AppServiceConnection.RequestReceived += OnRequestReceived;
-    }
- 
-    private async void OnRequestReceived(AppServiceConnection sender,
-                                         AppServiceRequestReceivedEventArgs args)
-    {
-        var messageDeferral = args.GetDeferral();
-        ValueSet message = args.Request.Message;
-        string id = message["ID"] as string;
-        ValueSet returnData = DataBase.GetData(id);
-        await args.Request.SendResponseAsync(returnData);
-        messageDeferral.Complete();
-    }
- 
- 
-    private void OnTaskCanceled(IBackgroundTaskInstance sender,
-                                BackgroundTaskCancellationReason reason)
-    {
-        if (this.backgroundTaskDeferral != null)
-        {
-            this.backgroundTaskDeferral.Complete();
-        }
-    }
-}
-```
-
-<a id="extension" />
-
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Adicione uma extensão de serviço de aplicativo ao projeto de empacotamento
-
-Abra o arquivo **Package. appxmanifest** do projeto de empacotamento e adicione uma extensão de serviço de aplicativo para o ``<Application>`` elemento.
-
-```xml
-<Extensions>
-      <uap:Extension
-          Category="windows.appService"
-          EntryPoint="AppServiceComponent.AppServiceTask">
-        <uap:AppService Name="com.microsoft.samples.winforms" />
-      </uap:Extension>
-    </Extensions>    
-```
-Dê ao serviço de aplicativo um nome e forneça o nome da classe de ponto de entrada. Esta é a classe em que você implementou o serviço.
-
-<a id="test" />
-
-### <a name="test-the-app-service"></a>Testar o serviço de aplicativo
-
-Teste seu serviço chamando-o de outro app. Esse código pode ser um aplicativo da área de trabalho como um aplicativo Windows forms ou outro aplicativo UWP.
-
-> [!NOTE]
-> Este código funciona apenas se você definir corretamente a propriedade ``PackageFamilyName`` da classe ``AppServiceConnection``. Você pode obter esse nome chamando ``Windows.ApplicationModel.Package.Current.Id.FamilyName`` no contexto do projeto UWP. Consulte [Criar e consumir um serviço de app](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service).
-
-```csharp
-private async void button_Click(object sender, RoutedEventArgs e)
-{
-    AppServiceConnection dataService = new AppServiceConnection();
-    dataService.AppServiceName = "com.microsoft.samples.winforms";
-    dataService.PackageFamilyName = "Microsoft.SDKSamples.WinformWithAppService";
- 
-    var status = await dataService.OpenAsync();
-    if (status == AppServiceConnectionStatus.Success)
-    {
-        string id = int.Parse(textBox.Text);
-        var message = new ValueSet();
-        message.Add("ID", id);
-        AppServiceResponse response = await dataService.SendMessageAsync(message);
- 
-        if (response.Status == AppServiceResponseStatus.Success)
-        {
-            if (response.Message["Status"] as string == "OK")
-            {
-                DisplayResult(response.Message["Result"]);
-            }
-        }
-    }
-}
-```
-
-Saiba mais sobre os serviços de aplicativo aqui: [Criar e consumir um serviço de aplicativo](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service).
-
-### <a name="similar-samples"></a>Exemplos semelhantes
-
-[Exemplo de ponte de serviço de aplicativo](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/AppServiceBridgeSample)
-
-[Exemplo de ponte de serviço de aplicativo com um app win32 em C++](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/AppServiceBridgeSample_C%2B%2B)
-
-[Aplicativo MFC que recebe notificações por push](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/MFCwithPush)
-
-
 ## <a name="making-your-desktop-application-a-share-target"></a>Tornando seu aplicativo da área de trabalho um destino de compartilhamento
 
 Você pode tornar seu aplicativo da área de trabalho um destino de compartilhamento para que os usuários possam compartilhar com facilidade dados como imagens de outros aplicativos que dão suporte a compartilhamento.
 
 Por exemplo, os usuários podem escolher seu aplicativo para compartilhar fotos do Microsoft Edge, o aplicativo de fotos. Aqui está um exemplo do WPF que tem esse recurso.
 
-![compartilhar destino](images/desktop-to-uwp/share-target.png)
+![compartilhar destino](images/desktop-to-uwp/share-target.png).
 
-### <a name="have-a-closer-look-at-this-app"></a>Examine este app mais de perto
-
-:heavy_check_mark: [Obter o app](https://www.microsoft.com/en-us/store/p/wpf-app-as-sharetarget/9pjcjljlck37)
-
-:heavy_check_mark: [Procurar o código](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WPFasShareTarget)
+Veja o exemplo completo [aqui](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
 
 ### <a name="the-design-pattern"></a>O padrão de design
 
@@ -395,20 +266,28 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 :one: [Adicione uma extensão de destino de compartilhamento](#share-extension)
 
-:two: [Substituir o manipulador de eventos OnNavigatedTo](#override)
+: two: [Substituir o manipulador de eventos OnShareTargetActivated](#override)
+
+: three: [Adicionar extensões de área de trabalho ao projeto UWP](#desktop-extensions)
+
+: four: [Adicionar a extensão do processo de confiança total](#full-trust)
+
+: five: [modificar o aplicativo da área de trabalho para obter o arquivo compartilhado](#modify-desktop)
 
 <a id="share-extension" />
 
+As etapas a seguir  
+
 ### <a name="add-a-share-target-extension"></a>Adicionar uma extensão de destino de compartilhamento
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e adicione a extensão de destino de compartilhamento.
 
 ```xml
 <Extensions>
       <uap:Extension
           Category="windows.shareTarget"
           Executable="ShareTarget.exe"
-          EntryPoint="ShareTarget.App">
+          EntryPoint="App">
         <uap:ShareTarget>
           <uap:SupportedFileTypes>
             <uap:SupportsAnyFileType />
@@ -419,31 +298,99 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
 </Extensions>  
 ```
 
-Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app.
+Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Essa marcação pressupõe que o nome do executável de seu aplicativo UWP é `ShareTarget.exe`.
+
+Você também precisará especificar os tipos de arquivos que poderão ser compartilhados com seu app. Neste exemplo, estamos fazendo o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) um destino de compartilhamento para imagens de bitmap, portanto, podemos especificar `Bitmap` para o tipo de arquivo com suporte.
 
 <a id="override" />
 
-### <a name="override-the-onnavigatedto-event-handler"></a>Substituir o manipulador de eventos OnNavigatedTo
+### <a name="override-the-onsharetargetactivated-event-handler"></a>Substitua o manipulador de eventos OnShareTargetActivated
 
-Substitua o manipulador de eventos **OnNavigatedTo** na classe **App** do seu projeto UWP.
+Substitua o manipulador de eventos **OnShareTargetActivated** na classe de **aplicativo** do seu projeto UWP.
 
 Esse manipulador de eventos é chamado quando os usuários escolhem seu app para compartilhar seus arquivos.
 
 ```csharp
-protected override async void OnNavigatedTo(NavigationEventArgs e)
+
+protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
 {
-  this.shareOperation = (ShareOperation)e.Parameter;
-  if (this.shareOperation.Data.Contains(StandardDataFormats.StorageItems))
-  {
-      this.sharedStorageItems =
-        await this.shareOperation.Data.GetStorageItemsAsync();
-       
-      foreach (StorageFile item in this.sharedStorageItems)
-      {
-          ProcessSharedFile(item);
-      }
-  }
+    shareWithDesktopApplication(args.ShareOperation);
 }
+
+private async void shareWithDesktopApplication(ShareOperation shareOperation)
+{
+    if (shareOperation.Data.Contains(StandardDataFormats.StorageItems))
+    {
+        var items = await shareOperation.Data.GetStorageItemsAsync();
+        StorageFile file = items[0] as StorageFile;
+        IRandomAccessStreamWithContentType stream = await file.OpenReadAsync();
+
+        await file.CopyAsync(ApplicationData.Current.LocalFolder);
+            shareOperation.ReportCompleted();
+
+        await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync();
+    }
+}
+```
+Nesse código, podemos salvar a imagem que está sendo compartilhada pelo usuário em uma pasta de armazenamento local de aplicativos. Mais tarde, podemos modificará o aplicativo da área de trabalho para imagens de recepção na mesma pasta. O aplicativo da área de trabalho pode fazer isso porque ele está incluído no mesmo pacote em que o aplicativo UWP.
+
+<a id="desktop-extensions" />
+
+### <a name="add-desktop-extensions-to-the-uwp-project"></a>Adicionar extensões de área de trabalho ao projeto UWP
+
+Adicione a extensão de **Extensões de área de trabalho do Windows para a UWP** ao projeto de aplicativo UWP.
+
+![extensão da área de trabalho](images/desktop-to-uwp/desktop-extensions.png)
+
+<a id="full-trust" />
+
+### <a name="add-the-full-trust-process-extension"></a>Adicione a extensão do processo de confiança total
+
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e, em seguida, adicione a extensão do processo de confiança total ao lado a extensão de destino de compartilhamento que você adicionar esse arquivo anteriormente.
+
+```xml
+<Extensions>
+  ...
+      <desktop:Extension Category="windows.fullTrustProcess" Executable="PhotoStoreDemo\PhotoStoreDemo.exe" />
+  ...
+</Extensions>  
+```
+
+Essa extensão permitem que o aplicativo UWP iniciar o aplicativo da área de trabalho para o qual você gostaria de compartilhamento de um arquivo. No exemplo, nos referimos para o executável do aplicativo da área de trabalho [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .
+
+<a id="modify-desktop" />
+
+### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado
+
+Modificar seu aplicativo da área de trabalho para encontrar e processar o arquivo compartilhado. Neste exemplo, o aplicativo UWP armazenou o arquivo compartilhado na pasta de dados de aplicativo local. Portanto, podemos seria modificar o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para fotos de recepção dessa pasta.
+
+```csharp
+Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+```
+Para abrir instâncias do aplicativo da área de trabalho que já estão pelo usuário, também pode manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) e passar o caminho para o local do arquivo. Dessa forma, todas as instâncias do aplicativo da área de trabalho mostrará a foto compartilhada.
+
+```csharp
+...
+
+   FileSystemWatcher watcher = new FileSystemWatcher(Photos.Path);
+
+...
+
+private void Watcher_Created(object sender, FileSystemEventArgs e)
+{
+    // new file got created, adding it to the list
+    Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() =>
+    {
+        if (File.Exists(e.FullPath))
+        {
+            ImageFile item = new ImageFile(e.FullPath);
+            Photos.Insert(0, item);
+            PhotoListBox.SelectedIndex = 0;
+            CurrentPhoto.Source = (BitmapSource)item.Image;
+        }
+    }));
+}
+
 ```
 
 ## <a name="create-a-background-task"></a>Criar uma tarefa em segundo plano
@@ -456,9 +403,7 @@ Aqui está um exemplo do WPF que registra uma tarefa em segundo plano.
 
 A tarefa faz uma solicitação http e mede o tempo que leva para a solicitação retornar uma resposta. As tarefas provavelmente serão muito mais interessantes, mas este exemplo é ótimo para aprender a mecânica básica de uma tarefa em segundo plano.
 
-### <a name="have-a-closer-look-at-this-app"></a>Examine este app mais de perto
-
-:heavy_check_mark: [Procurar o código](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask)
+Veja o exemplo completo [aqui](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
 
 ### <a name="the-design-pattern"></a>O padrão de design
 

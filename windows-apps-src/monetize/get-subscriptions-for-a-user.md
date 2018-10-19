@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
 ms.openlocfilehash: c08964b991b0cecaef6d994d399ce97301a7e8e7
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4966855"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "5133768"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obter assinaturas para um usuário
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4956354"
+ms.locfileid: "5133982"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 

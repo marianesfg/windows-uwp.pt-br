@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, conquistas
 ms.localizationpriority: medium
 ms.openlocfilehash: f4f60cc8ecbdd3d6d05312238166bd666e238e37
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4966532"
+ms.locfileid: "5131620"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Obter dados de conquistas do Xbox Live
 

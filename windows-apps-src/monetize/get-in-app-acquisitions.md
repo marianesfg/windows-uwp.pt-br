@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
 ms.openlocfilehash: a09bb4ded7325cd1c5f5091be133ded889322bd9
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4960768"
+ms.locfileid: "5159764"
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
