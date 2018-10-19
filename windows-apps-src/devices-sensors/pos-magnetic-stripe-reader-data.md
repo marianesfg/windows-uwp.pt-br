@@ -1,6 +1,6 @@
 ---
 author: eliotcowley
-title: Obter e entender os dados de tarja magnética
+title: Obter e compreender os dados de tarja magnética
 description: Saiba como obter e interpretar os dados de um tarja magnética.
 ms.author: elcowle
 ms.date: 10/04/2018
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4749897"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4960331"
 ---
-# <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e entender os dados de tarja magnética
+# <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e compreender os dados de tarja magnética
 
 Depois que você configurou o leitor de tarja magnética em seu aplicativo usando as etapas descritas no [guia de Introdução do ponto de serviço](pos-basics.md), você está pronto para começar a receber dados dele.
 

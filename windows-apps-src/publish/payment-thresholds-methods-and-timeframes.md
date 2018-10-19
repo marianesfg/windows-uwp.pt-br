@@ -3,19 +3,19 @@ author: jnHs
 Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
 title: Limites, formas e períodos de pagamento
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a7428b9278e4fc3264f652030f0409cab056d31
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: d8793f36459feb45f327b21941ea86965b905116
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4745592"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4962417"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Limites, formas e períodos de pagamento
 
@@ -1048,8 +1048,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
@@ -2111,7 +2111,7 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   <tr>
     <td>Emirados Árabes Unidos</td>
     <td>50 USD</td>
-    <td>ACH/SEPA</td>
+    <td>Transferência eletrônica</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
@@ -3158,8 +3158,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
@@ -4121,8 +4121,8 @@ Para ver os países/regiões em que essas formas de pagamento são usadas em cad
   </tr>
   <tr>
     <td>Emirados Árabes Unidos</td>
-    <td>25 USD</td>
-    <td>ACH/SEPA</td>
+    <td>200 USD</td>
+    <td>Transferência eletrônica</td>
     <td>25 USD</td>
     <td>PayPal</td>
   </tr>
