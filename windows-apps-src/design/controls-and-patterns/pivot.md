@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 Description: The Pivot control enables touch-swiping between a small set of content sections.
-title: Pivot
+title: Pivô
 template: detail.hbs
 ms.author: quradic
 ms.date: 06/19/2018
@@ -15,13 +15,13 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4752292"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4964615"
 ---
-# <a name="pivot"></a>Pivot
+# <a name="pivot"></a>Pivô
 
 O controle de [pivô](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite dedo toque entre um pequeno conjunto de seções de conteúdo.
 
