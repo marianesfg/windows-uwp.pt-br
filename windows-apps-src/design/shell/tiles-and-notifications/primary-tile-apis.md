@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, StartScreenManager, fixar bloco primário, apis de bloco primário, verificar se o bloco está fixado, bloco dinâmico
 ms.localizationpriority: medium
 ms.openlocfilehash: 42b4c014dfd49c42497b8846e37e37af53cc3885
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4753939"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4953745"
 ---
 # <a name="primary-tile-apis"></a>APIs de bloco primário
  

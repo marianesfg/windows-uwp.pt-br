@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4743573"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4947571"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades dos documentos de desenvolvedor do Windows em maio de 2018
 
@@ -103,7 +103,7 @@ O recurso de conjuntos está disponível no Windows compilações do Insider pre
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
-### <a name="get-started"></a>Comece agora
+### <a name="get-started"></a>Introdução
 
 Nós já revitalized nosso Get iniciado conteúdo com novos acompanhamentos de aprendizagem. Esses novos tópicos objetivam é fornecer novos desenvolvedores do Windows 10 com informações sobre algumas tarefas comuns que eles podem querer fazer. Eles não estiver tutoriais e não fornecerem um passo a passo portátil, mas em vez disso, destacar onde existe documentação existente e como usá-lo. Confira o remodelado [começar a codificar](../get-started/create-uwp-apps.md) página ou explore a cada faixa de aprendizado de individuais:
 

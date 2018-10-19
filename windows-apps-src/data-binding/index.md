@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: edc3dc53a7cf536bbabce108647cf54693c3ab05
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4755309"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4950109"
 ---
 # <a name="data-binding"></a>Associação de dados
 
@@ -26,5 +26,5 @@ A vinculação de dados é uma maneira de a interface do usuário do seu aplicat
 | [Visão geral da vinculação de dados](data-binding-quickstart.md) | Este tópico mostra como associar um controle (ou outro elemento da interface do usuário) a um único item ou um controle de itens a uma coleção de itens em um aplicativo UWP (Plataforma Universal do Windows). Este tópico também mostra como controlar a renderização de itens, implementar uma exibição de detalhes com base em uma seleção e converter dados para exibição. Para obter mais informações detalhadas, consulte [Vinculação de dados em detalhes](data-binding-in-depth.md). | 
 | [Vinculação de dados em detalhes](data-binding-in-depth.md) | Este tópico descreve detalhadamente os recursos de vinculação de dados. |
 | [Dados de amostra na superfície de design e para a criação de protótipo](displaying-data-in-the-designer.md) | Para que seus controles sejam populados com dados no designer do Visual Studio (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos. |
-| [Associar dados hierárquicos e criar um modo de exibição mestre/detalhes](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. |
+| [Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. |
 | [Vinculação de dados e MVVM](data-binding-and-mvvm.md) | Este tópico descreve o padrão de design de arquitetura Model-View-ViewModel (MVVM) da interface do usuário. Vinculação de dados é o núcleo do MVVM e habilita acoplamento entre o código de interface do usuário e não da interface do usuário. |

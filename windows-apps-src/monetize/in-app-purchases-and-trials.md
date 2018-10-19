@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
-ms.openlocfilehash: d35e2469fa303a40967cf4c15800786eb2d17aca
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: b116e4794f024ecc5cf44d73e22c09ab8ee33ff4
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750188"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4953164"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
@@ -162,7 +162,7 @@ Para excluir ou limitar recursos em uma versão de avaliação do seu aplicativo
 
 Se seu app usa APIs no namespace **Windows.Services.Store** para implementar compras no aplicativo ou a funcionalidade de avaliação, você deve publicar seu aplicativo na Microsoft Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste. Siga este processo para testar seu código:
 
-1. Se seu aplicativo ainda não estiver publicado e disponibilizado na Microsoft Store, verifique se ele atende aos requisitos mínimos do [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envie seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) para o painel do Centro de Desenvolvimento do Windows e verifique se o aplicativo passou no processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes.
+1. Se seu aplicativo ainda não estiver publicado e disponibilizado na Microsoft Store, verifique se ele atende aos requisitos mínimos do [Kit de Certificação de Aplicativos Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envie seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) para o painel do Centro de Desenvolvimento do Windows e verifique se o aplicativo passou no processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe a configuração adequada de [pacotes de pré-lançamento](../publish/package-flights.md). Incorretamente configurado pacote de pré-lançamento pode não estar poderá ser baixado.
 
 2. Em seguida, certifique-se de que você tenha concluído o seguinte:
 
@@ -289,6 +289,6 @@ Se seu app usar o namespace**Windows.ApplicationModel.Store**, você precisará 
 * [Habilitar compras nos aplicativos e complementos no aplicativo](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumíveis](enable-consumable-add-on-purchases.md)
 * [Habilitar complementos de assinatura para o app](enable-subscription-add-ons-for-your-app.md)
-* [Implementar uma versão de avaliação do app](implement-a-trial-version-of-your-app.md)
+* [Implementar uma versão de avaliação do aplicativo](implement-a-trial-version-of-your-app.md)
 * [Códigos de erro para operações da Microsoft Store](error-codes-for-store-operations.md)
 * [Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)

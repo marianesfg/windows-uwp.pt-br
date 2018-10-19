@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4743693"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4956201"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
