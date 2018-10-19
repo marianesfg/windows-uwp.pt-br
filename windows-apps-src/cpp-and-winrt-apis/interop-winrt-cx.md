@@ -3,21 +3,24 @@ author: stevewhims
 description: Este tópico mostra duas funções auxiliares que podem ser usada para realizar a conversão entre os objetos C++/CX e C++/WinRT.
 title: Interoperabilidade entre C++/WinRT e C++/CX
 ms.author: stwhi
-ms.date: 05/21/2018
+ms.date: 10/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, interoperabilidade, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: b60b0d7c201f172261de1546fc250e40b8cd670f
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: a21255299207bf6de06661e63936e6715c1f41c9
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4950584"
+ms.locfileid: "5125974"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilidade entre C++/WinRT e C++/CX
-Este tópico mostra duas funções auxiliares que podem ser usadas para converter entre [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) objetos. Você pode usá-los para interoperabilidade entre o código que usa as duas projeções de linguagem, ou você pode usar as funções gradativamente o código do C++ c++ /CX para C++ c++ WinRT (consulte [Mover para C++ c++ WinRT do C++ c++ /CX](move-to-winrt-from-cx.md)).
+
+Estratégias para a portabilidade gradualmente o código em seu [C++ c++ CX](/cpp/cppcx/visual-c-language-reference-c-cx) quiserem [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) são abordados [Mover para C++ c++ WinRT do C++ c++ CX](move-to-winrt-from-cx.md).
+
+Este tópico mostra duas funções auxiliares que você pode usar para converter entre C++ c++ /CX e C++ c++ WinRT objetos dentro do mesmo projeto. Você pode usá-los para interoperabilidade entre o código que usa as duas projeções de linguagem, ou você pode usar as funções conforme você porta seu código do C++ c++ /CX para C++ c++ WinRT.
 
 ## <a name="fromcx-and-tocx-functions"></a>Funções from_cx e to_cx
 A função auxiliar a seguir converte um objeto C++/CX em um objeto C++/WinRT equivalente. A função converte um objeto C++/CX em seu ponteiro de interface [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) subjacente. Em seguida, ele chama a [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) nesse ponteiro para consulta a interface padrão do objeto C++/WinRT. A **QueryInterface** é o equivalente da interface binária de aplicativo (ABI) do Windows Runtime da extensão safe_cast do C++/CX. A função [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) recupera o endereço do ponteiro de interface **IUnknown** subjacente do objeto C++/WinRT para que ele possa ser definido para outro valor.
@@ -46,18 +49,20 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 }
 ```
 
-## <a name="code-example"></a>Exemplo de código
-Este é um exemplo de código (baseado no modelo de projeto **Aplicativo em Branco** do C++/CX) que mostra as duas funções auxiliares em uso. Também ilustra como você pode usar aliases de namespace para as ilhas diferentes a fim de lidar com outros possíveis conflitos de namespace entre as projeções do C++/WinRT e do C++/CX.
+## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Projeto de exemplo mostra as duas funções auxiliares em uso
+
+Para reproduzir, de forma simple, o cenário de portabilidade gradualmente o código C++ c++ projeto CX para C++ c++ WinRT, você pode começar criando um novo projeto no Visual Studio usando um dos C++ c++ modelos de projeto do WinRT (consulte [suporte do Visual Studio para C++ c++ WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
+
+Este projeto de exemplo também ilustra como você pode usar aliases de namespace para as Ilhas diferentes do código, para lidar com outros possíveis conflitos de namespace entre C++ c++ WinRT projeção e C++ c++ projeção CX.
+
+- Criar um **Visual C++** \> **Universal do Windows** > **aplicativo principal (C++ c++ WinRT)** projeto.
+- Nas propriedades do projeto, **C/C++** \> **Geral** \> **Consume Windows Runtime Extension** \> **Sim (/ZW)**. Isso ativa o suporte de projeto para C++ c++ /CX.
+- Substitua o conteúdo do `App.cpp` com a listagem de código abaixo.
 
 ```cppwinrt
-// MainPage.xaml.cpp
-
+// App.cpp
 #include "pch.h"
-#include "MainPage.xaml.h"
-#include <winrt/Windows.Foundation.h>
 #include <sstream>
-
-using namespace InteropExample;
 
 namespace cx
 {
@@ -66,7 +71,13 @@ namespace cx
 
 namespace winrt
 {
+    using namespace Windows;
+    using namespace Windows::ApplicationModel::Core;
     using namespace Windows::Foundation;
+    using namespace Windows::Foundation::Numerics;
+    using namespace Windows::UI;
+    using namespace Windows::UI::Core;
+    using namespace Windows::UI::Composition;
 }
 
 template <typename T>
@@ -87,11 +98,145 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
     return safe_cast<T^>(reinterpret_cast<Platform::Object^>(winrt::get_abi(from)));
 }
 
-MainPage::MainPage()
+struct App : winrt::implements<App, winrt::IFrameworkViewSource, winrt::IFrameworkView>
 {
-    InitializeComponent();
+    winrt::CompositionTarget m_target{ nullptr };
+    winrt::VisualCollection m_visuals{ nullptr };
+    winrt::Visual m_selected{ nullptr };
+    winrt::float2 m_offset{};
 
-    winrt::init_apartment(winrt::apartment_type::single_threaded);
+    winrt::IFrameworkView CreateView()
+    {
+        return *this;
+    }
+
+    void Initialize(winrt::CoreApplicationView const &)
+    {
+    }
+
+    void Load(winrt::hstring const&)
+    {
+    }
+
+    void Uninitialize()
+    {
+    }
+
+    void Run()
+    {
+        winrt::CoreWindow window = winrt::CoreWindow::GetForCurrentThread();
+        window.Activate();
+
+        winrt::CoreDispatcher dispatcher = window.Dispatcher();
+        dispatcher.ProcessEvents(winrt::CoreProcessEventsOption::ProcessUntilQuit);
+    }
+
+    void SetWindow(winrt::CoreWindow const & window)
+    {
+        winrt::Compositor compositor;
+        winrt::ContainerVisual root = compositor.CreateContainerVisual();
+        m_target = compositor.CreateTargetForCurrentView();
+        m_target.Root(root);
+        m_visuals = root.Children();
+
+        window.PointerPressed({ this, &App::OnPointerPressed });
+        window.PointerMoved({ this, &App::OnPointerMoved });
+
+        window.PointerReleased([&](auto && ...)
+        {
+            m_selected = nullptr;
+        });
+    }
+
+    void OnPointerPressed(IInspectable const &, winrt::PointerEventArgs const & args)
+    {
+        winrt::float2 const point = args.CurrentPoint().Position();
+
+        for (winrt::Visual visual : m_visuals)
+        {
+            winrt::float3 const offset = visual.Offset();
+            winrt::float2 const size = visual.Size();
+
+            if (point.x >= offset.x &&
+                point.x < offset.x + size.x &&
+                point.y >= offset.y &&
+                point.y < offset.y + size.y)
+            {
+                m_selected = visual;
+                m_offset.x = offset.x - point.x;
+                m_offset.y = offset.y - point.y;
+            }
+        }
+
+        if (m_selected)
+        {
+            m_visuals.Remove(m_selected);
+            m_visuals.InsertAtTop(m_selected);
+        }
+        else
+        {
+            AddVisual(point);
+        }
+    }
+
+    void OnPointerMoved(IInspectable const &, winrt::PointerEventArgs const & args)
+    {
+        if (m_selected)
+        {
+            winrt::float2 const point = args.CurrentPoint().Position();
+
+            m_selected.Offset(
+            {
+                point.x + m_offset.x,
+                point.y + m_offset.y,
+                0.0f
+            });
+        }
+    }
+
+    void AddVisual(winrt::float2 const point)
+    {
+        winrt::Compositor compositor = m_visuals.Compositor();
+        winrt::SpriteVisual visual = compositor.CreateSpriteVisual();
+
+        static winrt::Color colors[] =
+        {
+            { 0xDC, 0x5B, 0x9B, 0xD5 },
+            { 0xDC, 0xED, 0x7D, 0x31 },
+            { 0xDC, 0x70, 0xAD, 0x47 },
+            { 0xDC, 0xFF, 0xC0, 0x00 }
+        };
+
+        static unsigned last = 0;
+        unsigned const next = ++last % _countof(colors);
+        visual.Brush(compositor.CreateColorBrush(colors[next]));
+
+        float const BlockSize = 100.0f;
+
+        visual.Size(
+        {
+            BlockSize,
+            BlockSize
+        });
+
+        visual.Offset(
+        {
+            point.x - BlockSize / 2.0f,
+            point.y - BlockSize / 2.0f,
+            0.0f,
+        });
+
+        m_visuals.InsertAtTop(visual);
+
+        m_selected = visual;
+        m_offset.x = -BlockSize / 2.0f;
+        m_offset.y = -BlockSize / 2.0f;
+    }
+};
+
+int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
+{
+    winrt::init_apartment();
 
     winrt::Uri uri(L"http://aka.ms/cppwinrt");
     std::wstringstream wstringstream;
@@ -106,6 +251,8 @@ MainPage::MainPage()
     winrt::Uri uri_from_cx = from_cx<winrt::Uri>(cx);
     WINRT_ASSERT(uri.Domain() == uri_from_cx.Domain());
     WINRT_ASSERT(uri == uri_from_cx);
+
+    winrt::CoreApplication::Run(winrt::make<App>());
 }
 ```
 
@@ -117,3 +264,4 @@ MainPage::MainPage()
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
+* [Mudar de C++/CX para C++/WinRT](move-to-winrt-from-cx.md)
