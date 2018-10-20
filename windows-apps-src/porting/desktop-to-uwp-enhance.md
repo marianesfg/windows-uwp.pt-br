@@ -4,18 +4,18 @@ Description: Enhance your desktop application for Windows 10 users by using Univ
 Search.Product: eADQiWindows 10XVcnh
 title: Aprimorar seu aplicativo da área de trabalho para Windows 10
 ms.author: normesta
-ms.date: 08/12/2017
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: ffe3f2a93642911da57d3dd94c09206dc7f5dc94
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4948715"
+ms.locfileid: "5160677"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -58,10 +58,10 @@ Nas configurações **Geral** do grupo de configurações **C/C++**, defina o ca
 
 Abra a caixa de diálogo **Diretórios #using adicionais** e adicione esses diretórios.
 
-* %VSInstallDir%\Common7\IDE\VC\vcpackages
-* C:\Arquivos de Programas (x86)\Windows Kits\10\UnionMetadata
-* C:\Arquivos de Programas (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\<*última versão*>
-* C:\Arquivos de Programas (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\<*latest version*>
+* Common7\IDE\VC\vcpackages $(VSInstallDir)
+* C:\Program arquivos (x86) \Windows Kits\10\UnionMetadata\ <*SDK versão*> \Facade
+* C:\Program arquivos (x86) \Windows Kits\10\References\ <*SDK versão*> \Windows.Foundation.UniversalApiContract\ <*versão mais recente*>
+* C:\Program arquivos (x86) \Windows Kits\10\References\ <*SDK versão*> \Windows.Foundation.FoundationContract\ <*versão mais recente*>
 
 Abra a caixa de diálogo **Diretórios Include Adicionais** e adicione este diretório: C:\Arquivos de Programas (x86)\Windows Kits\10\Include\<*última versão*>\um
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, promocional, promoção, em destaque, demonstração, store
 ms.localizationpriority: medium
 ms.openlocfilehash: 18b2212a0b063611a546c3f627016fc7d3179071
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5128692"
+ms.locfileid: "5161664"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Facilitar a promoção do seu app
 

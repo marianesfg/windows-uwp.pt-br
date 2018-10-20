@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: b5603063f8038b5617f8a1c2dd7d77d90c702901
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953030"
+ms.locfileid: "5161287"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -61,10 +61,10 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Controles personalizados (modelos) XAML com C++/WinRT](xaml-cust-ctrl.md) | Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis. |
 | [Consumir componentes COM com C++/WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir classes e interfaces COM. |
 | [Criar componentes COM com C++/WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda você a criar classes de tempo de execução do Windows. |
-| [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. |
 | [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT. |
-| [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
+| [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. |
 | [Mudar do WRL para C++/WinRT](move-to-winrt-from-wrl.md) | Este tópico mostra como fazer a portabilidade do código da [Biblioteca de Modelos C++ do Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) para seu equivalente no C++/WinRT. |
+| [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
 | [Referências fortes e fracas no C++ c++ WinRT](weak-references.md) | O tempo de execução do Windows é um sistema de contagem de referência. e em um sistema desse tipo, é importante saber sobre o significado do e distinção entre, referências fracas e fortes. |
 | [Objetos ágeis](agile-objects.md) | Um objeto ágil é aquele que pode ser acessado de qualquer conversa. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los. |
 

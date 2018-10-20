@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: f0e99d23e54bd096a9dd7fa8d878929086711c81
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: dbd657c966cac2310a1078c889ff31b8147c3a59
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "4955733"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5166971"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
 
@@ -172,7 +172,7 @@ struct MainPage : MainPageT<MainPage>
 
 MainPage::MainPage()
 {
-    m_mainViewModel = make<Bookstore::implementation::BookstoreViewModel>();
+    m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();
     ...
 }
 ```
@@ -180,7 +180,7 @@ MainPage::MainPage()
 Para obter mais detalhes, código e um passo a passo sobre consumo de uma classe de tempo de execução implementada no projeto do consumo, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Criação de instância e retorno de tipos projetados e interfaces
-Veja um exemplo de como os tipos e interfaces projetados podem parecer em seu projeto de consumo.
+Veja um exemplo de como os tipos e interfaces projetados podem parecer em seu projeto de consumo. Lembre-se de que um tipo projetado (, como o mostrado neste exemplo), é gerado ferramenta e não é algo que você poderia criar por conta própria.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,

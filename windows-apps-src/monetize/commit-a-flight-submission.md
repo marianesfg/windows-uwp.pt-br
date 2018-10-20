@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: e3a52bc3a7a815bfde8a4fa8c12b73ab8932e2df
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5133811"
+ms.locfileid: "5165543"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar um envio de pacote de pré-lançamento
 

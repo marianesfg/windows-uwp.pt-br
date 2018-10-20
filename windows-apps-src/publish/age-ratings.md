@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, classificação etária, classificação de jogos, iarc, classificação, questionário, conselho de classificação, classificação de conteúdo
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5126390"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5169992"
 ---
 # <a name="age-ratings"></a>Classificações etárias
 
