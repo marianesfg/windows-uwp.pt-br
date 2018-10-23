@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/22/2018
-ms.locfileid: "5167969"
+ms.locfileid: "5405067"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Acionando eventos em componentes do Tempo de Execução do Windows
 > [!NOTE]
@@ -233,7 +233,7 @@ Se você compilar o projeto agora, ele deve criar corretamente.
 
 ## <a name="to-program-the-javascript-app"></a>Programa de aplicativo JavaScript
 
-Agora podemos adicionar um botão para o aplicativo de JavaScript para fazer com que ele use a classe que são definidas apenas para tornar a notificação do sistema. Antes de fazer isso, podemos deve adicionar uma referência ao projeto ToasterComponent que acabamos de criar. No Gerenciador de soluções, abra o menu de atalho para o projeto ToasterApplication, escolha **Adicionar &gt; referências**e, em seguida, escolha o botão **Adicionar nova referência** . Na caixa de diálogo Adicionar referência, no painel à esquerda na solução, selecione o projeto de componente e, em seguida, no painel central, selecione ToasterComponent. Escolha o botão **OK**.
+Agora podemos adicionar um botão para o aplicativo de JavaScript para fazer com que ele use a classe que são definidas apenas para tornar a notificação do sistema. Antes de fazer isso, podemos deve adicionar uma referência ao projeto ToasterComponent que acabamos de criar. No Gerenciador de soluções, abra o menu de atalho para o projeto ToasterApplication, escolha **Adicionar &gt; referências**e, em seguida, escolha o botão **Adicionar nova referência** . Na caixa de diálogo Adicionar referência, no painel esquerdo na solução, selecione o projeto de componente e, em seguida, no painel central, selecione ToasterComponent. Escolha o botão **OK**.
 
 No Gerenciador de soluções, abra o menu de atalho para o projeto ToasterApplication e escolha **Definir como projeto de inicialização**.
 
@@ -273,7 +273,7 @@ A função makeToast deve ser conectada a um botão. Atualize default para inclu
     </body>
 ```
 
-Se nós não estavam usando um TypedEventHandler, podemos agora será capazes de executar o aplicativo no computador local e clique no botão para fazer a notificação do sistema. Mas, em nosso aplicativo, nada acontece. Para descobrir o motivo, vamos depurar o código gerenciado que dispara o ToastCompletedEvent. Pare o projeto e, em seguida, na barra de menus, escolha **Depurar &gt; propriedades do aplicativo Notificador**. Alterar o **tipo de depurador** para **só gerenciado**. Novamente na barra de menus, escolha **Depurar &gt; exceções**e, em seguida, selecione **Common Language Runtime Exceptions**.
+Se nós não estavam usando um TypedEventHandler, podemos agora será capazes de executar o aplicativo no computador local e clique no botão para fazer a notificação do sistema. Mas, em nosso aplicativo, nada acontece. Para descobrir o motivo, vamos depurar o código gerenciado que dispara o ToastCompletedEvent. Parar o projeto e, em seguida, na barra de menus, escolha **Depurar &gt; propriedades do Application Notificador**. Alterar o **tipo de depurador** para **só gerenciado**. Novamente na barra de menus, escolha **Depurar &gt; exceções**e, em seguida, selecione **Common Language Runtime Exceptions**.
 
 Agora execute o aplicativo e clique no botão de notificação do sistema verifique. O depurador detecta uma exceção de conversão inválida. Embora não seja óbvio a partir de sua mensagem, essa exceção está ocorrendo porque proxies estão ausentes para essa interface.
 
@@ -322,7 +322,7 @@ Agora que as interfaces tem IDs exclusivas, podemos criar um arquivo IDL ao alim
 
 ## <a name="to-generate-the-proxy-and-stub-source-code"></a>Para gerar o proxy e stub de código-fonte
 
-Para adicionar um evento de pós-compilação personalizado, no Gerenciador de soluções, abra o menu de atalho para o projeto ToasterComponent e escolha Propriedades. No painel esquerdo de páginas de propriedades, selecione compilar eventos e, em seguida, escolha o botão de pós-compilação editar. Adicione os seguintes comandos para a linha de comando de pós-compilação. (O arquivo em lotes deve ser chamado pela primeira vez para definir as variáveis de ambiente para encontrar a ferramenta winmdidl.)
+Para adicionar um evento de pós-compilação personalizado, no Gerenciador de soluções, abra o menu de atalho para o projeto ToasterComponent e, em seguida, escolha Propriedades. No painel esquerdo as páginas de propriedades, selecione compilar eventos e, em seguida, escolha o botão de pós-compilação editar. Adicione os seguintes comandos para a linha de comando de pós-compilação. (O arquivo em lotes deve ser chamado pela primeira vez para definir as variáveis de ambiente para encontrar a ferramenta winmdidl.)
 
 ```cpp
 call "$(DevEnvDir)..\..\vc\vcvarsall.bat" $(PlatformName)
@@ -341,9 +341,9 @@ Você pode verificar que MIDL compilado corretamente a solução procurando por 
 
 ## <a name="to-compile-the-proxy-and-stub-code-into-a-dll"></a>Para compilar o proxy e stub de código em uma DLL
 
-Agora que você tem os arquivos necessários, você pode compilá-los para produzir uma DLL, que é um arquivo em C++. Para torná-lo tão fácil quanto possível, adicione um novo projeto para dar suporte ao compilar os proxies. Abra o menu de atalho da solução ToasterApplication e escolha **Adicionar > Novo projeto**. No painel esquerdo da caixa de diálogo **Novo projeto** , expanda **Visual C++ &gt; Windows &gt; Windows universal**e, em seguida, no painel central, selecione **DLL (aplicativos UWP)**. (Observe que isso não é um projeto de componente de tempo de execução do Windows C++). Nomeie o projeto Proxies e, em seguida, escolha o botão **Okey** . Esses arquivos serão atualizados pelos eventos de pós-compilação quando algo for alterado na classe c#.
+Agora que você tem os arquivos necessários, você pode compilá-los para produzir uma DLL, que é um arquivo em C++. Para torná-lo tão fácil quanto possível, adicione um novo projeto para dar suporte à criação dos proxies. Abra o menu de atalho da solução ToasterApplication e escolha **Adicionar > Novo projeto**. No painel esquerdo da caixa de diálogo **Novo projeto** , expanda **Visual C++ &gt; Windows &gt; Windows universal**e, em seguida, no painel central, selecione **DLL (aplicativos UWP)**. (Observe que isso não é um projeto de componente de tempo de execução do Windows C++). Nomeie o projeto Proxies e, em seguida, escolha o botão de **Okey** . Esses arquivos serão atualizados pelos eventos de pós-compilação quando algo for alterado na classe c#.
 
-Por padrão, o projeto de Proxies gera arquivos. h do cabeçalho e C++. cpp. Como a DLL baseia-se dos arquivos produzidos a partir MIDL, os arquivos. h e. cpp não são necessários. No Gerenciador de soluções, abra o menu de atalho para eles, escolha **Remover**e, em seguida, confirmar a exclusão.
+Por padrão, o projeto de Proxies gera arquivos de cabeçalho do. h e arquivos. cpp de C++. Como a DLL é compilada dos arquivos produzidos a partir MIDL, os arquivos. h e. cpp não são necessários. No Gerenciador de soluções, abra o menu de atalho para eles, escolha **Remover**e, em seguida, confirmar a exclusão.
 
 Agora que o projeto estiver vazio, você pode adicionar novamente os arquivos gerados pelo MIDL. Abra o menu de atalho para o projeto de Proxies e, em seguida, escolha **Adicionar > Item existente.** Na caixa de diálogo, navegue até o diretório do projeto ToasterComponent e selecione esses arquivos: arquivos ToasterComponent.h, ToasterComponent_i.c, ToasterComponent_p.c e DLLDATA. c. Escolha o botão **Adicionar** .
 
@@ -362,9 +362,9 @@ No painel esquerdo, selecione **C/C++ > pré-processador**e, em seguida, no pain
 ```cpp
 WIN32;_WINDOWS
 ```
-Sob **C/C++ > cabeçalhos pré-compilados**, altere o **Cabeçalho pré-compilado** para **Não usando pré-compilados cabeçalhos**e, em seguida, escolha o botão **Aplicar** .
+Sob **C/C++ > cabeçalhos pré-compilados**, altere o **Cabeçalho pré-compilado** para **Não usando pré-compilado cabeçalhos**e, em seguida, escolha o botão de **Aplicar** .
 
-Sob **vinculador > geral**, altere **Ignorar biblioteca de importação** para **Ye**s e, em seguida, escolha o botão **Aplicar** .
+Sob **vinculador > geral**, altere **Ignorar biblioteca de importação** para **Ye**s e, em seguida, escolha o botão de **Aplicar** .
 
 Sob **vinculador > entrada**, selecione **Dependências adicionais**, escolha o botão de seta para baixo e, em seguida, selecione **Editar**. Adicione este texto na caixa:
 
@@ -383,9 +383,9 @@ Abra o menu de atalho para o projeto de Proxies e, em seguida, escolha dependên
 Verifique se que a solução compilações corretamente, escolhendo **Build > solução recompile** na barra de menus do Visual Studio.
 
 
-## <a name="to-register-the-proxy-and-stub"></a>Para registrar o proxy e stub
+## <a name="to-register-the-proxy-and-stub"></a>Registrar o proxy e stub
 
-No projeto ToasterApplication, abra o menu de atalho de Package. appxmanifest e, em seguida, escolha **Abrir com**. Na caixa de diálogo Abrir com, selecione **Editor de texto de XML** e, em seguida, escolha o botão **Okey** . Vamos colar em alguns XML que fornece que um registro de extensão windows.activatableClass.proxyStub e que se baseiam os GUIDs no proxy. Para localizar os GUIDs para usar no arquivo .appxmanifest, abra ToasterComponent_i.c. Encontre as entradas que reproduzem aqueles no exemplo a seguir. Observe também que as definições para IToast, IToaster e um terceiro interface — um manipulador de eventos tipados que tem dois parâmetros: um Notificador e notificações do sistema. Isso corresponde ao evento que é definido na classe Notificador. Observe que os GUIDs para IToast e IToaster correspondem os GUIDs definidos nas interfaces no arquivo c#. Como a interface do manipulador de evento tipado é gerada automaticamente, o GUID para essa interface também é gerado automaticamente.
+No projeto ToasterApplication, abra o menu de atalho de Package. appxmanifest e, em seguida, escolha **Abrir com**. Na caixa de diálogo Abrir com, selecione **Editor de texto de XML** e, em seguida, escolha o botão **Okey** . Vamos colar em alguns XML que fornece que um registro de extensão windows.activatableClass.proxyStub e que se baseiam os GUIDs no proxy. Para localizar os GUIDs para usar no arquivo .appxmanifest, abra ToasterComponent_i.c. Localize entradas que reproduzem aqueles no exemplo a seguir. Observe também que as definições para IToast, IToaster e um terceiro interface — um manipulador de eventos tipados que tem dois parâmetros: um Notificador e notificações do sistema. Isso corresponde ao evento que é definido na classe Notificador. Observe que os GUIDs para IToast e IToaster correspondem os GUIDs que são definidos nas interfaces no arquivo c#. Como a interface do manipulador de evento tipado é gerada automaticamente, o GUID para essa interface também é gerado automaticamente.
 
 ```cpp
 MIDL_DEFINE_GUID(IID, IID___FITypedEventHandler_2_ToasterComponent__CToaster_ToasterComponent__CToast,0x1ecafeff,0x1ee1,0x504a,0x9a,0xf5,0xa6,0x8c,0x6f,0xb2,0xb4,0x7d);
@@ -415,10 +415,10 @@ Cole o nó Extensões XML como um filho direto do nó do pacote e um par de, por
 Antes de passar, é importante garantir que:
 
 -   ProxyStub ClassId é definido como o primeiro GUID no arquivo ToasterComponent\_i.c. Use o primeiro GUID que é definido nesse arquivo para a identificação de classe. (Isso pode ser o mesmo que o GUID para ITypedEventHandler2.)
--   O caminho é o caminho relativo do pacote do proxy do binário. (Este passo a passo, proxies.dll é na mesma pasta como ToasterApplication.winmd).
+-   O caminho é o caminho relativo do pacote do proxy binário. (Este passo a passo, proxies.dll é na mesma pasta como ToasterApplication.winmd).
 -   Os GUIDs estão no formato correto. (Isso é propensa a erros).
 -   A interface IDs no manifesto corresponder as IIDs no arquivo ToasterComponent\_i.c.
--   Os nomes da interface são exclusivos no manifesto. Porque eles não são usados pelo sistema, você pode escolher os valores. É uma boa prática para escolher nomes de interface que correspondem claramente interfaces que você definiu. Interfaces gerado, os nomes devem ser indicativas das interfaces geradas. Você pode usar o arquivo ToasterComponent\_i.c para ajudar você a gerar nomes de interface.
+-   Os nomes da interface são exclusivos no manifesto. Porque eles não são usados pelo sistema, você pode escolher os valores. É uma boa prática para escolher nomes de interface que correspondem claramente interfaces que você definiu. Para interfaces gerados, os nomes devem ser indicativas das interfaces geradas. Você pode usar o arquivo ToasterComponent\_i.c para ajudar você a gerar nomes de interface.
 
 Se você tentar executar a solução agora, você receberá um erro que proxies.dll não é parte da carga. Abra o menu de atalho para a pasta de **referências** do projeto ToasterApplication e escolha **Adicionar referência**. Marque a caixa de seleção ao lado do projeto de Proxies. Além disso, certifique-se de que a caixa de seleção ao lado de ToasterComponent também está selecionada. Escolha o botão **OK**.
 

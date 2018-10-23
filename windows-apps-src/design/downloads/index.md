@@ -11,16 +11,16 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: e829883ec33b5e221d0947b6f39cf6ac091a0b4a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5158132"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408135"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
 
-Design e downloads relacionados à interface do usuário para aplicativos UWP/Design fluente. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Design e downloads relacionados à interface do usuário para aplicativos de Design fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -100,7 +100,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Gerador de bloco e ícone para o Adobe Photoshop** Este conjunto de ações para o Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
+      **Gerador de bloco e ícone para Adobe Photoshop** Este conjunto de ações para Adobe Photoshop gera os 68 ativos recomendados de bloco e ícone em apenas 7 arquivos. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Baixar o gerador de bloco e ícone</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -109,7 +109,7 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
+O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso dos novos controles e densidade aprimorada na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência rica e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)

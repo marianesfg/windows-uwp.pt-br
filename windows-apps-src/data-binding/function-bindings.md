@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: A marcação xbind permite funções para ser usado na marcação.
+description: A marcação xbind permite funções para ser usada na marcação.
 title: 'Funções em x: Bind'
 ms.author: jimwalk
 ms.date: 04/26/2018
@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5156975"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408617"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
 **Observação** Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso permite:
+Desde o Windows 10, versão 1607, **{x: Bind}** dá suporte ao uso de uma função como a etapa de folha do caminho de associação. Isso permite que:
 
 - Uma maneira mais simples de conseguir a conversão de valor
 - Uma maneira para associações dependerem de mais de um parâmetro

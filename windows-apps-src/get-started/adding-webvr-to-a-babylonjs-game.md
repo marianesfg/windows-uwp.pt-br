@@ -10,23 +10,23 @@ ms.technology: uwp
 keywords: webvr, edge, desenvolvimento da web, babylon, babylonjs, Babylon. js, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ef659a178a4c3f40d464fd958e5493454afef7
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168985"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405753"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Adicionando suporte a WebVR a um jogo de Babylon. js 3D
 
 Se você criou um jogo 3D com Babylon. js e pensado que talvez aparência ótima em realidade virtual (VR), siga as etapas simples neste tutorial para garantir que uma realidade.
 
-Vamos adicionar suporte a WebVR para o jogo mostrado aqui. Vá em frente e conectar um controlador Xbox para testá-lo!
+Vamos adicionar suporte a WebVR para o jogo mostrado aqui. Vá em frente e conectar um controlador do Xbox para testá-lo!
 
 
 <iframe height='300' scrolling='no' title='Jogo de dinossauro Babylon. js usando Babylon.GUI' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/wrOvoj/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/wrOvoj/'>Babylon. js dino jogo usando Babylon.GUI</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Isso é um jogo 3D que funcione bem em uma tela simples, mas que sobre em VR?
+Isso é um jogo 3D que funcione bem em uma tela simples, mas o que sobre em VR?
 Neste tutorial, nós o guiaremos pelas etapas alguns ele leva para obter esse e em execução com a WebVR. Vamos usar um fone de ouvido de [Realidade do Windows](https://developer.microsoft.com/en-us/windows/mixed-reality) que pode aproveitar o suporte adicionado para WebVR no Microsoft Edge. Após aplicarmos essas alterações para o jogo, você pode esperar que ele também funcionam em outras combinações de navegador/fone de ouvido que dão suporte a WebVR.
 
 
@@ -48,12 +48,12 @@ A maneira mais simples de começar é visitar o [repositório do GitHub tutoriai
 ![botão clone ou botão baixar](images/3dclone.png)
 
 Se não quiser clonar o projeto, você pode baixá-lo como um arquivo zip.
-Em seguida, você terá duas pastas, [antes](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/before) e [depois](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/after). A pasta "antes" é nosso jogo antes de quaisquer recursos VR são adicionados e a pasta "após" é o jogo concluído com suporte VR.
+Em seguida, você terá duas pastas, [antes](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/before) e [depois](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/after). A pasta "antes" é nosso jogo antes de quaisquer recursos VR são adicionados, e a pasta "após" é o jogo concluído com suporte VR.
 
 O antes e depois de pastas contêm esses arquivos:
 -   **texturas /** - uma pasta que contém as imagens usadas no jogo.
 -   **css /** - uma pasta que contém o CSS para o jogo.
--   **js /** - uma pasta que contém os arquivos JavaScript. O arquivo main js é nosso jogo, e os outros arquivos são as bibliotecas usadas.
+-   **js /** - uma pasta que contém os arquivos JavaScript. O arquivo main. js é nosso jogo, e os outros arquivos são as bibliotecas usadas.
 -   **modelos /** - uma pasta que contém os modelos 3D. Para esse jogo, temos apenas um modelo, para o dinossauro.
 -   **index. HTML** - a página da Web que hospeda o renderizador do jogo. Abrir esta página no Microsoft Edge inicia o jogo.
 
@@ -85,7 +85,7 @@ Uma extensão Babylon. js, o `GUI` biblioteca é usado throuhout a amostra para 
 
 Um texto 2D `GUI` elemento pode ser criado com algumas linhas dependendo de quantos atributos você querer ajustar.
 O trecho de código a seguir já está em nosso exemplo de [**antes**](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/before) , mas vamos passo a passo que está acontecendo.
-Fazemos primeiro um [`AdvancedDynamicTexture`](https://doc.babylonjs.com/how_to/gui#advanceddynamictexture) objeto para estabelecer a GUI que abrangerá. O exemplo define como sendo `CreateFullScreenUI()`, que significa que nossa interface do usuário abordará a tela inteira. Com `AdvancedDynamicTexture` criado, podemos fazer em seguida, uma caixa de texto 2D que aparece ao iniciar o jogo usando `GUI.Rectanlge()` e `GUI.TextBlock()`.
+Fazemos primeiro um [`AdvancedDynamicTexture`](https://doc.babylonjs.com/how_to/gui#advanceddynamictexture) objeto para estabelecer a GUI que abrangerá. O exemplo define como sendo `CreateFullScreenUI()`, que significa nossa interface do usuário abordará a tela inteira. Com `AdvancedDynamicTexture` criado, podemos fazer em seguida, uma caixa de texto 2D que aparece ao iniciar o jogo usando `GUI.Rectanlge()` e `GUI.TextBlock()`.
 
 
 Esse código é adicionado em [**Main. js**](https://github.com/Microsoft/Windows-tutorials-web/blob/master/BabylonJS-game-with-WebVR/before/js/main.js#L157-L168).
@@ -175,7 +175,7 @@ Um clique no jogo agora criará um prompt com a seguinte ou exibe o jogo no fone
 
 ![prompt imersivo](images/immersiveview.png)
 
-Também adicionamos um trecho de código que exibirá a `UniversalCamera` exibir antes de que trocamos para nosso `WebVRFreeCamera`, permitindo que o usuário examinar o jogo em vez de uma janela azul. 
+Também adicionamos um trecho de código que exibirá a `UniversalCamera` exibir antes de podemos alternar para nosso `WebVRFreeCamera`, permitindo que o usuário examinar o jogo em vez de uma janela azul. 
 
 Adicione o seguinte após `engine.runRenderLoop(function () {`.
 ```javascript
@@ -215,4 +215,4 @@ Vamos abrir **index. HTML** com nosso fone de ouvido e controlador de jogo conec
 
 ## <a name="conclusion"></a>Conclusão
 
-Parabéns! Agora você tem um jogo completo de Babylon. js com o suporte a WebVR. A partir daqui, você pode tirar o que aprendeu para criar um jogo ainda melhor ou compilar desativar esta.
+Parabéns! Agora você tem um jogo de Babylon. js completo com suporte a WebVR. A partir daqui, você pode tirar o que aprendeu para criar um jogo ainda melhor ou compilar desativar esta.

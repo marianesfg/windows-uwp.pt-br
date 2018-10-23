@@ -1,6 +1,6 @@
 ---
 author: Xansky
-description: Use este método na API de análise da Microsoft Store para obter dados de insights do seu aplicativo da área de trabalho.
+description: Use este método na API de análise da Microsoft Store para obter dados de insights para seu aplicativo da área de trabalho.
 title: Obter dados de insights do seu aplicativo da área de trabalho
 ms.author: mhopkins
 ms.date: 07/31/2018
@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b4390fba26922372a74de76d09844a7243bce73
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167999"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407610"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Obter dados de insights do seu aplicativo da área de trabalho
 
-Use este método na API de análise da Microsoft Store para obter insights dados relacionados à avaliação de integridade para um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esses dados também estão disponíveis no [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicativos da área de trabalho no painel do Centro de desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter insights dados relacionados à avaliação de integridade para um aplicativo da área de trabalho que você adicionou para o [programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Esses dados também estão disponíveis no [relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicativos da área de trabalho no painel do Centro de desenvolvimento do Windows.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -51,7 +51,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter dados de insights. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. Se você não especificar esse parâmetro, o corpo da resposta conterá dados de insights para todos os aplicativos registrados em sua conta.  |  Não  |
 | startDate | date | A data de início no intervalo de datas dos dados de insights a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas dos dados de insights a serem recuperados. O padrão é a data atual. |  Não  |
-| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filter = dataType eq 'aquisição'*. <p/><p/>No momento este método só oferece suporte a **integridade**do filtro.  | Não   |
+| filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Cada instrução contém um nome de campo do corpo de resposta e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**. Valores de cadeia de caracteres devem estar entre aspas simples no parâmetro *filter*. Por exemplo, *filtro = dataType eq 'aquisição'*. <p/><p/>No momento este método só oferece suporte a **integridade**do filtro.  | Não   |
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
@@ -68,7 +68,7 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descrição                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [informação valores](#insight-values) abaixo.                                                                                                                      |
+| Valor      | array  | Uma matriz de objetos que contêm dados de insights para o aplicativo. Para obter mais informações sobre os dados em cada objeto, consulte a seção de [valores Insight](#insight-values) abaixo.                                                                                                                      |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                 |
 
 
@@ -80,8 +80,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | A ID do produto do aplicativo da área de trabalho para o qual você recuperou dados de insights.     |
 | insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
-| tipo de dados     | string | Uma cadeia de caracteres que especifica a área de análise gerais que informa essa informação. No momento, este método só oferece suporte a **integridade**.    |
-| insightDetail          | array | Um ou mais [valores de InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
+| tipo de dados     | string | Uma cadeia de caracteres que especifica a área de análise gerais que informa essa informação. Atualmente, esse método suporta apenas **integridade**.    |
+| insightDetail          | array | Um ou mais [valores InsightDetail](#insightdetail-values) que representam os detalhes de insight atual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
@@ -89,11 +89,11 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Uma cadeia de caracteres que indica a métrica que descreve o insight atual ou a dimensão atual. Atualmente, esse método suporta apenas o valor de **contagem de ocorrências**.  |
-| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a informação.   |
-| PercentChange            | string |  Porcentagem a métrica alterada em sua base de clientes inteiro.  |
+| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para o insight.   |
+| PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**e **PackageVersion**.   |
-| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
-| FactValue     | string | O valor absoluto da métrica na data que a informação foi detectada.  |
+| DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** for **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
+| FactValue     | string | O valor absoluto da métrica na data que o insight foi detectado.  |
 | Direção | string |  A direção da alteração (**positivo** ou **negativo**).   |
 | Data              | string |  A data em que identificamos a alteração relacionada a visão atual ou a dimensão atual.   |
 
@@ -154,6 +154,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
+* [Programa do aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
 * [Relatório de integridade](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report)
 * [Acessar dados analíticos usando serviços da Microsoft Store](access-analytics-data-using-windows-store-services.md)

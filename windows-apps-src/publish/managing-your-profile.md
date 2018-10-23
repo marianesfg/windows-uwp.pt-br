@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167830"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408794"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
@@ -28,7 +28,7 @@ Você pode exibir e atualizar as configurações da sua conta de desenvolvedor e
 
 Para exibir suas configurações de conta, clique no ícone de engrenagem no canto superior direito do painel e, em seguida, selecione **as configurações do desenvolvedor**. Aqui você encontrará detalhes sobre sua conta e links para outras páginas onde você pode exibir informações e executar diversas tarefas relacionadas à conta.
 
-Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editados.
+Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editadas.
 
 > [!NOTE]
 > Os detalhes de identidade para seus aplicativos individuais podem ser encontrados na página [Identidade do Aplicativo](view-app-identity-details.md) de cada aplicativo.

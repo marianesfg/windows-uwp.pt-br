@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5158535"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404081"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
@@ -54,7 +54,7 @@ Para obter mais informações, consulte [Configurar agendamento preciso do lanç
 
 ## <a name="pricing"></a>Preço
 
-Você deve selecionar um preço base para seu complemento (a menos que você tenha selecionado a opção **Parar aquisição** na seção **visibilidade** ). A seleção padrão é **grátis**, então, se você deseja cobrar para o complemento, escolha uma das faixas de preço disponível (começando em USD.99).
+Você deve selecionar um preço base para seu complemento (a menos que você tiver selecionado a opção **Parar aquisição** na seção **visibilidade** ). A seleção padrão é **grátis**, então, se você deseja cobrar para o complemento, escolha uma das faixas de preço disponível (começando em USD.99).
 
 Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do complemento deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 

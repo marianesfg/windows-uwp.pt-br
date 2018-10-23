@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5166663"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5410784"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensão de marcação {TemplateBinding}
 
@@ -63,11 +63,11 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 
 Começando com a próxima atualização principal para o Windows 10, você pode usar a extensão de marcação **X:Bind** em qualquer lugar você usou **TemplateBinding** em [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necessário (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **X:Bind**.
+A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necessário (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **x: Bind**.
 
 Com o suporte de **x: Bind** , agora você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
 
-No exemplo a seguir, o Text avalia Button.Content.ToString(). O TargetType em ControlTemplate atua como a fonte de dados e realize o mesmo resultado como um TemplateBinding pai.
+No exemplo a seguir, o Text será avaliada como Button.Content.ToString(). O TargetType em ControlTemplate age como a fonte de dados e realize o mesmo resultado que um TemplateBinding para pai.
 
 ```xaml
 <ControlTemplate TargetType="Button">

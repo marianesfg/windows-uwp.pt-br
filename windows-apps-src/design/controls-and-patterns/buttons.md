@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5171958"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406131"
 ---
 # <a name="buttons"></a>Botões
 
@@ -34,7 +34,7 @@ A estrutura XAML fornece um controle de botão padrão, bem como vários control
 Controle | Descrição
 ------- | -----------
 [Botão](/uwp/api/windows.ui.xaml.controls.button) | Inicia uma ação imediata. Pode ser usado com uma associação de comando ou o evento Click.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que gera um evento de clique continuamente enquanto pressionado.
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Um botão que aciona um evento Click continuamente enquanto pressionado.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Um botão que foi criado como um hiperlink, usado para navegação. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Visualização) Um botão com uma divisa para abrir um submenu anexado.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Visualização) Um botão com dois lados. Um lado inicia uma ação, e o outro lado abre um menu.
@@ -42,7 +42,7 @@ Controle | Descrição
 
 | **Baixar a biblioteca de interface do usuário do Windows** |
 | - |
-| DropDownButton, divisão e ToggleSplitButton são incluídas como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| DropDownButton, divisão e ToggleSplitButton estão incluídos como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
 | - | - |
@@ -52,7 +52,7 @@ Controle | Descrição
 
 Use um **botão** para permitir que o usuário inicie uma ação imediata, como enviar um formulário.
 
-Não use um botão quando a ação é navegar para outra página; Use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) . Para saber mais, consulte [Hiperlinks](hyperlinks.md).
+Não use um botão quando a ação é navegar para outra página; Use um [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) em vez disso. Para saber mais, consulte [Hiperlinks](hyperlinks.md).
 > Exceção: na navegação do assistente, use botões rotulados como "Voltar" e "Próximo". Para outros tipos de navegação regressiva ou para um nível superior, use um [botão Voltar](../basics/navigation-history-and-backwards-navigation.md).
 
 Use um **RepeatButton** quando o usuário pode disparar uma ação repetidamente. Por exemplo, use um RepeatButton para incrementar ou diminuir um valor em um contador.
@@ -282,13 +282,13 @@ O comportamento típico para um botão de divisão é:
 - Quando a lista suspensa estiver aberta, invocação de identificador dos itens a lista suspensa para ambas as alteração qual opção é selecionado e chamá-lo, em seguida. É importante invocar o item de submenu porque o evento Click não ocorre usando o recurso touch do botão.
 
 > [!TIP]
-> Há muitas maneiras de colocar itens na lista para baixo e manipular a invocação. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
+> Há muitas maneiras para colocar itens na lista para baixo e manipular a invocação. Se você usar um ListView ou GridView, uma maneira é manipular o evento SelectionChanged. Se você fizer isso, defina [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) como **false**. Isso permite aos usuários navegar as opções usando um teclado sem chamar o item em cada alteração.
 
 ### <a name="example---split-button"></a>Exemplo - botão de divisão
 
 Este exemplo mostra como criar um botão de divisão que é usado para alterar a cor de primeiro plano do texto selecionado em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 
-![Um botão de divisão para a seleção de cor de primeiro plano](images/split-button-rtb.png)
+![Um botão de divisão para selecionar a cor de primeiro plano](images/split-button-rtb.png)
 
 ```xaml
 <SplitButton ToolTipService.ToolTip="Foreground color"
@@ -395,7 +395,7 @@ Ao contrário de [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.tog
 
 ### <a name="example---toggle-split-button"></a>Exemplo - botão de alternância de divisão
 
-O exemplo a seguir mostra como uma botão de divisão de alternância pode ser usado para ativar ou desativar a formatação de lista e alterar o estilo da lista, em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
+O exemplo a seguir mostra como uma botão de divisão de alternância podem ser usados para ativar ou desativar a formatação de lista e alterar o estilo da lista, em uma RichEditBox. (Para obter mais informações e código, consulte a [caixa de edição com formato](rich-edit-box.md)).
 
 ![Um botão de divisão de alternância para selecionar estilos de lista](images/toggle-split-button-open.png)
 

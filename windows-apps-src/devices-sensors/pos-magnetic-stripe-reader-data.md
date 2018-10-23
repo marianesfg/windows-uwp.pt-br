@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168865"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404143"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e compreender os dados de tarja magnética
 
@@ -28,7 +28,7 @@ Sempre que o leitor reconhece um dedo nelas cartão, ele acionará um dos três 
 * [Evento BankCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): ocorre quando um cartão bancário é arrastado.
 * [Evento VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): ocorre quando um cartão específico do fornecedor é arrastado.
 
-Seu aplicativo só precisa assinar os eventos que são suportados pelo leitor de tarja magnética. Você pode ver quais tipos de cartões são compatíveis com [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
+Seu aplicativo só precisa assinar os eventos que são compatíveis com o leitor de tarja magnética. Você pode ver quais tipos de cartões são compatíveis com [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
 ).
 
 O código a seguir demonstra assinando os três ***DataReceived** eventos:
@@ -84,7 +84,7 @@ No entanto, alguns dados, incluindo todos os dados do evento **VendorSpecificDat
 
 Você pode usar a propriedade [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) para descobrir qual tipo de cartão foi arrastado e usá-lo para informar ao como interpretar os dados de [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)e [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4).
 
-Os dados de cada uma das faixas são representados como objetos [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) . A partir dessa classe, você pode obter os seguintes tipos de dados:
+Os dados em cada uma das faixas são representados como objetos [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) . A partir dessa classe, você pode obter os seguintes tipos de dados:
 
 * [Dados](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): os dados brutos ou decodificados.
 * [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): os dados condicionais. 

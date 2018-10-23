@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5161466"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407436"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
@@ -133,15 +133,15 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>Certificado de PE incorreto (0x800700C1)
 
-Isso pode acontecer quando o pacote contém um binário que tenha um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
+Isso pode acontecer quando o pacote contém um binário que possui um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
 
-* O início do certificado não está no final de uma imagem.  
+* O início do certificado não estiver no final de uma imagem.  
 
 * O tamanho do certificado não é positivo.
 
-* O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura de um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
+* O início do certificado não for após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
 
-* O ponteiro de certificado não é alinhado corretamente para uma estrutura WIN_CERTIFICATE.
+* O ponteiro de certificado não está alinhado corretamente para uma estrutura WIN_CERTIFICATE.
 
 Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
 
@@ -155,7 +155,7 @@ Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemp
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informações sobre arquivos que contêm um certificado PE incorreto serão exibido na **Janela do Console**. Por exemplo:
+Informações sobre arquivos que contêm um certificado PE incorreto aparecerão na **Janela do Console**. Por exemplo:
 
 ```
 ...

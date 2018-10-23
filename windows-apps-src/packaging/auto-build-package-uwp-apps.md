@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5164818"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405270"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -316,7 +316,7 @@ Você precisa ativar manualmente essa compilação. Você pode usá-la para atua
 
 Se você quiser distribuir seu app sem publicá-lo na Loja, faça o sideload do seu aplicativo diretamente em dispositivos, contanto que os dispositivos confiem no certificado que foi usado para assinar o pacote do aplicativo. 
 
-Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script será adicionar o certificado à seção certificação confiável para o computador local e, em seguida, irá instalar ou atualizar o arquivo de pacote do aplicativo.
+Use o script do PowerShell `Add-AppDevPackage.ps1` para instalar aplicativos. Esse script será adicionar o certificado à seção certificação confiável para a máquina local e, em seguida, irá instalar ou atualizar o arquivo de pacote do aplicativo.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Sideload de seu aplicativo com a Atualização de Aniversário do Windows 10
 Na atualização de aniversário do Windows 10, você pode duas vezes no arquivo de pacote do aplicativo e instalar seu aplicativo escolhendo o botão instalar em uma caixa de diálogo. 
@@ -326,7 +326,7 @@ Na atualização de aniversário do Windows 10, você pode duas vezes no arquivo
 >[!NOTE]
 > Esse método não instala o certificado nem as dependências associadas.
 
-Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar esse site à lista de sites confiáveis no navegador. Caso contrário, o Windows marca o arquivo como bloqueado. 
+Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar esse site à lista de sites confiáveis no seu navegador. Caso contrário, o Windows marca o arquivo como bloqueado. 
 
 <span id="certificates-best-practices"/>
 

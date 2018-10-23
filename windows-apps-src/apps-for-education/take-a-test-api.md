@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5162952"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405086"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 
-[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP com base em navegador que renderiza avaliações online bloqueado para testes de alto risco, permitindo que os educadores concentre-se a avaliação de conteúdo em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
+[Fazer um teste](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) é um aplicativo UWP com base em navegador que renderiza avaliações online bloqueado para testes de alto risco, permitindo que os educadores concentrar na avaliação conteúdo em vez de como fornecer um ambiente de teste seguro. Para conseguir isso, ele usa uma API JavaScript que qualquer aplicativo Web pode utilizar. A API Fazer um Teste oferece suporte ao [padrão da API do navegador SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para testes decisivos comuns importantes.
 
 Consulte a [Referência técnica do app Fazer um Teste](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) para obter mais informações sobre o próprio app. Para obter ajuda de solução de problemas, consulte [Solução de problemas com Fazer um Teste da Microsoft usando o visualizador de eventos](troubleshooting.md).
 

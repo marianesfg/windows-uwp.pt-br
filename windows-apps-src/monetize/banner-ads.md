@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
 ms.openlocfilehash: fc47c8d40d10eef3e6d92f2d47485d8cf265172d
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5163366"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5410834"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 
@@ -30,7 +30,7 @@ Anúncios em faixa são anúncios estáticos que utilizam uma parte retangular d
 |----------|-------|
 | [AdControl em XAML e .NET](adcontrol-in-xaml-and--net.md)     | Adicione um anúncio em faixa ao seu aplicativo XAML/.NET.        |
 | [AdControl em HTML 5 e Javascript](adcontrol-in-html-5-and-javascript.md)     | Adicione um anúncio em faixa ao seu aplicativo HTML5/JavaScript.        |
-| [Tamanhos de anúncios de banner compatíveis](supported-ad-sizes-for-banner-ads.md)    |  Examine os tamanhos aceitos de anúncios em faixa em aplicativos UWP.        |
+| [Tamanhos de anúncios de banner compatíveis](supported-ad-sizes-for-banner-ads.md)    |  Examine os tamanhos aceitos para anúncios em faixa em aplicativos UWP.        |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

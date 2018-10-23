@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, Xbox One aquisições de complemento de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 931cd7b351a122c22a59a3a0bc2975c61dc38aaa
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5173486"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404877"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Obter aquisições de complemento Xbox One
 
@@ -64,7 +64,7 @@ O parâmetro *applicationId* ou *addonProductId* é necessário. Para recuperar 
 
 ### <a name="request-example"></a>Exemplo de solicitação
 
-Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição do complemento. Substitua os valores *addonProductId* e *applicationId* com a ID da loja apropriada para seu complemento ou aplicativo.
+Os exemplos a seguir demonstram várias solicitações de obtenção de dados de aquisição do complemento. Substitua os valores *addonProductId* e *applicationId* com a ID da loja apropriado para seu complemento ou aplicativo.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/addonacquisitions?addonProductId=BRRT4NJ9B3D2&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -103,12 +103,12 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | applicationId       | string  | *ProductId* do aplicativo para o qual você deseja recuperar dados de aquisição de complemento.                                                                                                                                                           |
 | applicationName     | string  | O nome de exibição do jogo.                                                                                                                                                                                                             |
 | deviceType          | string  | <p>Uma das sequências a seguir que especifica o tipo de dispositivo que concluiu a aquisição:</p> <ul><li>"PC"</li><li>"Phone"</li><li>"Console"</li><li>"IoT"</li><li>"Servidor"</li><li>"Tablet"</li><li>"Holográfico"</li><li>"Unknown"</li></ul>                                                                                                  |
-| storeClient         | string  | <p>Uma das sequências a seguir que indica a versão da Store onde ocorreu a aquisição:</p> <ul><li>"Windows Phone Store (cliente)"</li><li>"Microsoft Store (cliente)" (ou "Da Windows Store (cliente)" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Microsoft Store (web)" (ou "Da Windows Store (web)" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Volume purchase by organizations"</li><li>"Outros"</li></ul>                                                                                            |
+| storeClient         | string  | <p>Uma das sequências a seguir que indica a versão da Store onde ocorreu a aquisição:</p> <ul><li>"Windows Phone Store (cliente)"</li><li>"Microsoft Store (cliente)" (ou "Da Windows Store (cliente)" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Microsoft Store (web)" (ou "Windows Store (web)" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Volume purchase by organizations"</li><li>"Outros"</li></ul>                                                                                            |
 | osVersion           | string  | A versão do sistema operacional no qual ocorreu a aquisição. Para este método, esse valor é sempre "Windows 10".                                                                                                   |
 | market              | string  | O código de país ISO 3166 do mercado onde ocorreu a aquisição.                                                                                                                                                                  |
 | gender              | string  | <p>Uma das sequências a seguir que especifica o gênero do usuário que fez a aquisição:</p> <ul><li>"m"</li><li>"f"</li><li>"Unknown"</li></ul>                                                                                                    |
-| idade            | string  | <p>Uma das sequências a seguir que indica a faixa etária do usuário que fez a aquisição:</p> <ul><li>"menos de 13"</li><li>"13-17"</li><li>"18 a 24"</li><li>"25-34"</li><li>"44 35"</li><li>"44-55"</li><li>"greater than 55"</li><li>"Unknown"</li></ul>                                                                                                 |
-| acquisitionType     | string  | <p>Uma das sequências a seguir que indica o tipo de aquisição:</p> <ul><li>"Gratuito"</li><li>"Avaliação"</li><li>"Pago"</li><li>"Código promocional"</li><li>"Iap"</li><li>"Assinatura CRA"</li><li>"Audiência privada"</li><li>"Pre ordem"</li><li>"Xbox Game Pass" (ou "Game Pass" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Disco"</li><li>"Código pré-pago"</li><li>"Cobrado pré ordem"</li><li>"Cancelada pré ordem"</li><li>"Falha na ordem de pré"</li></ul>                                                                                                    |
+| idade            | string  | <p>Uma das sequências a seguir que indica a faixa etária do usuário que fez a aquisição:</p> <ul><li>"menos de 13"</li><li>"13-17"</li><li>"18 a 24"</li><li>"25-34"</li><li>"35-44"</li><li>"44-55"</li><li>"greater than 55"</li><li>"Unknown"</li></ul>                                                                                                 |
+| acquisitionType     | string  | <p>Uma das sequências a seguir que indica o tipo de aquisição:</p> <ul><li>"Gratuito"</li><li>"Avaliação"</li><li>"Pago"</li><li>"O código promocional"</li><li>"Iap"</li><li>"Assinatura CRA"</li><li>"Audiência privada"</li><li>"Pre ordem"</li><li>"Xbox Game Pass" (ou "Game Pass" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Disco"</li><li>"Código pré-pago"</li><li>"Cobrado pré ordem"</li><li>"Cancelada pré ordem"</li><li>"Falha na ordem de pré"</li></ul>                                                                                                    |
 | acquisitionQuantity | número inteiro | O número de aquisições que ocorreram.                        |
 
 

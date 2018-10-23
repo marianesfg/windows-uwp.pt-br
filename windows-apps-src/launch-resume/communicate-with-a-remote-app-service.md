@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma, tarefa em segundo plano, serviço de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 72a8a02d14a4fa9287c987150a526745b294b65f
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5165086"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408474"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicar-se com um serviço de app remoto
 
@@ -24,7 +24,7 @@ Além de iniciar um app em um dispositivo remoto usando um URI, você também po
 ## <a name="set-up-the-app-service-on-the-host-device"></a>Configurar o serviço de app no dispositivo host
 Para executar um serviço de app em um dispositivo remoto, você já deve ter um provedor desse serviço de app instalado no dispositivo. Este guia usará a versão CSharp do [exemplo do serviço de aplicativo Gerador de Número Aleatório](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices), disponível no [repositório de exemplos universais do Windows](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). Para obter instruções sobre como criar seu próprio serviço de app, consulte [Criar e consumir um serviço de app](how-to-create-and-consume-an-app-service.md).
 
-Se você estiver usando um serviço de aplicativo já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço (chamado de "AppServicesProvider" no exemplo) e selecione seu arquivo _Package.appxmanifest_. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Crie um elemento **Extensions** dentro do elemento do **aplicativo** principal (ou encontrá-lo se ele já existir). Em seguida, crie uma **extensão** para definir o projeto como um serviço de aplicativo e fazer referência a seu projeto pai.
+Se você estiver usando um serviço de aplicativo já criado ou estiver criando seu próprio serviço, precisará fazer algumas edições para tornar o serviço compatível com sistemas remotos. No Visual Studio, vá para o projeto do provedor de serviço (chamado de "AppServicesProvider" no exemplo) e selecione seu arquivo _Package.appxmanifest_. Clique com botão direito e selecione **Exibir Código** para exibir todo o conteúdo do arquivo. Crie um elemento **Extensions** dentro o elemento do **aplicativo** principal (ou encontrá-lo se ele já existir). Em seguida, crie uma **extensão** para definir o projeto como um serviço de aplicativo e fazer referência a seu projeto pai.
 
 ``` xml
 ...
@@ -44,7 +44,7 @@ Ao lado do elemento **AppService** , adicione o atributo **SupportsRemoteSystems
 ...
 ```
 
-Para usar elementos nesse namespace **uap3** , você deve adicionar a definição de namespace à parte superior do arquivo de manifesto, se ainda não estiver lá.
+Para usar elementos nesse namespace **uap3** , você deve adicionar a definição de namespace na parte superior do arquivo de manifesto se ainda não estiver lá.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

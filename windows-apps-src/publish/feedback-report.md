@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167795"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405254"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -26,7 +26,7 @@ O **relatório de comentários** no painel do Centro de Desenvolvimento do Windo
 
 Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ótima maneira de aprender sobre os problemas e recursos que são mais importantes para eles. Quando seus clientes sabem que podem enviar comentários diretamente, eles têm menos probabilidade de deixar esses comentários como uma análise negativa na Loja.
 
-Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
+Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários dos clientes nesse relatório, mesmo que não tenha especificamente solicitado comentários dentro de seu aplicativo.
 
 O feedback também pode ser importante ao usar o [pacote de liberação de versões de pré-lançamento](package-flights.md), pois o relatório de comentários mostra o pacote específico que cada cliente tinha instalado em seu dispositivo ao deixar os comentários.
 
@@ -65,7 +65,7 @@ Você também verá uma opção para [responder aos comentários](respond-to-cus
 
 ## <a name="translating-feedback"></a>Tradução de comentários
 
-Por padrão, os comentários que não foram escritos no idioma preferencial são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
+Por padrão, os comentários que não foram escritos em seu idioma preferencial são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
 
 Observe que os comentários são traduzidos por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido, se você quiser compará-lo com a tradução, ou traduzi-lo por meio de algum outro meio.
 

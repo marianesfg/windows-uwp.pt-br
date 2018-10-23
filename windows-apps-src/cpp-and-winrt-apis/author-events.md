@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
 ms.openlocfilehash: 82239436acfe82bf99cd1e665cca14592bbcef74
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5166106"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405280"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos com C++/WinRT
 
@@ -97,7 +97,7 @@ Se não precisar implementar a sobrecarga do revogador do evento (para obter mai
 
 Você também pode ver acima que essa implementação da função **AdjustBalance** gera o evento **AccountIsInDebit** se o saldo ficar negativo.
 
-Se quaisquer avisos impedirem-lo de construção, resolvê-los ou definir a propriedade de projeto **C/C++** > **Geral** > **Tratar avisos como erros** **não (/ /WX-)** e compile o projeto novamente.
+Se quaisquer avisos impedirem-lo de construção, resolvê-los ou defina a propriedade do projeto **C/C++** > **Geral** > **Tratar avisos como erros** para **não (/ /WX-)** e compile o projeto novamente.
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>Criar um aplicativo principal (BankAccountCoreApp) para testar o componente do Tempo de Execução do Windows
 
@@ -154,7 +154,7 @@ Se o evento deve ser acessível em uma interface binária do aplicativo (ABI)&md
 
 Os parâmetros de tipo para esses tipos de dois delegado têm cruzar a ABI, portanto, os parâmetros de tipo devem ser tipos de tempo de execução do Windows, também. Isso inclui as classes de tempo de execução de primeiro e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador ajuda você com um erro "*deve ser tipo WinRT*" Se você esquecer essa restrição.
 
-Se você não precisará passar os parâmetros ou argumentos com seu evento, você pode definir seu próprio tipo de representante de tempo de execução do Windows simples. O exemplo a seguir mostra uma versão mais simples da classe de tempo de execução **BankAccount** . Ele declara um tipo de representante chamado **SignalDelegate** e, em seguida, ele usa isso para disparar um evento de tipo de sinal em vez de um evento com um parâmetro.
+Se você não precisar passar qualquer parâmetros ou argumentos com seu evento, você pode definir seu próprio tipo de representante de tempo de execução do Windows simples. O exemplo a seguir mostra uma versão mais simples da classe de tempo de execução **BankAccount** . Ele declara um tipo de representante chamado **SignalDelegate** e, em seguida, ele usa isso para disparar um evento de tipo de sinal em vez de um evento com um parâmetro.
 
 ```idl
 // BankAccountWRC.idl
@@ -280,7 +280,7 @@ Se você estiver fazendo a portabilidade do C++ c++ /CX codebase onde eventos e 
 
 ## <a name="design-guidelines"></a>Diretrizes de design
 
-É recomendável que você passe eventos e delegados não, como parâmetros de função. A função **Adicionar** [**winrt::event**](/uwp/cpp-ref-for-winrt/event) é a única exceção, porque você deve passar um delegado nesse caso. O motivo para essa diretriz é como representantes podem levar formas diferentes em diferentes idiomas de tempo de execução do Windows (em termos de se eles oferece suporte para registro de um cliente ou vários). Eventos, com o modelo de vários assinante, constituem uma opção muito mais consistente e previsível.
+É recomendável que você passe eventos e delegados não, como parâmetros de função. A função **Adicionar** [**winrt::event**](/uwp/cpp-ref-for-winrt/event) é a única exceção, porque você deve passar um delegado nesse caso. O motivo para essa diretriz é como representantes podem levar formas diferentes em diferentes idiomas de tempo de execução do Windows (em termos se eles oferecem suporte de registro de um cliente, ou vários). Eventos, com o modelo de vários assinante, constituem uma opção muito mais consistente e previsível.
 
 A assinatura de um representante do manipulador de eventos deve consistem em dois parâmetros: o *remetente* (**IInspectable**) e *argumentos* (alguns eventos tipo de argumento, por exemplo [**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)).
 

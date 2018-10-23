@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5164965"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407770"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -23,7 +23,7 @@ Este mapa fornece uma visão geral dos recursos empresariais principais para apl
 
 **Observação**  Este artigo é voltado para desenvolvedores de aplicativos UWP empresariais. Para saber sobre o desenvolvimento para a UWP geral, consulte os [Guias de instruções para aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para saber sobre o desenvolvimento para WPF, Windows Forms ou Win32, visite o [centro de desenvolvimento da área de trabalho](https://dev.windows.com/desktop). Para saber sobre recursos para profissionais de TI, como a implantação no Windows 10 ou gerenciamento de recursos de segurança empresarial, consulte [Windows 10 no TechNet](https://msdn.microsoft.com/library/dn986868).
 
-Existe uma versão do aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
+Existe uma versão deste aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
 Coisas vale destacar na frente:
 
@@ -45,7 +45,7 @@ Veja a seguir algumas ferramentas, bibliotecas e recursos que foram criados bast
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao implementar comprovadas padrões e práticas recomendadas.
+Windows Template Studio é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao mesmo tempo em que implementação comprovadas padrões e práticas recomendadas.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -57,7 +57,7 @@ Consulte [Windows Template Studio](https://marketplace.visualstudio.com/items?it
 
 Lançamos novos controles XAML da UWP que preencher a lacuna entre um aplicativo da área de trabalho tradicional da interface do usuário e uma UI UWP.
 
-Por exemplo, os novos controles de [barra de menus](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listados em uma lista predefinida de opções.
+Por exemplo, os novos controles de [barra de menus](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [divisão](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)e [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) oferecem formas mais flexíveis para expor comandos, e o [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) vamos o usuário inserir valores que não estejam listadas em uma lista predefinida de opções.
 
 ![Barra de menus](images/menu-bar.png)
 
@@ -84,7 +84,7 @@ Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](ht
 
 ### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
-Windows 10 agora permite que você use controles UWP em C++ Win32, Windows Forms e WPF aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP, como controles que dão suporte ao sistema de Design Fluent e Windows Ink. Esse recurso é chamado Ilhas XAML.
+Windows 10 agora permite que você use controles UWP em C++ Win32, Windows Forms e WPF aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles UWP, como o Windows Ink e controles que dão suporte ao sistema de Design Fluent. Esse recurso é chamado Ilhas XAML.
 
 Consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -92,7 +92,7 @@ Consulte [controles UWP em aplicativos da área de trabalho](https://docs.micros
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET Standard inclui mais de 20.000 mais APIs que .NET Standard 1. x. Isso torna muito mais fácil migrar bibliotecas existentes do .NET Framework e, em seguida, usá-los em todos os aplicativos .NET diferentes, incluindo seu aplicativo UWP.
+.NET Standard inclui mais de 20.000 APIs mais que o .NET Standard 1. x. Isso torna muito mais fácil migrar bibliotecas existentes do .NET Framework e, em seguida, usá-los em todos os aplicativos .NET diferentes, incluindo seu aplicativo UWP.
 
 ![NET standard](images/dot-net-standard-project-template.png)
 
@@ -110,9 +110,9 @@ Consulte [Usar um banco de dados do SQL Server em um aplicativo UWP](https://doc
 
 ### <a name="msix-deployment"></a>Implantação de MSIX
 
-MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes de aplicativo existente e instale arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
+MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade dos pacotes de aplicativo existente e instalar arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
 
-MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi, AppX, tecnologias de instalação do App-V e ClickOnce.
+MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi,. AppX, tecnologias de instalação do App-V e ClickOnce.
 
 ![Ícone MSIX](images/WinUI_MSIX_2col_740x417.png)
 
@@ -171,19 +171,19 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 |-------|-------------|
 | [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631) | Neste guia introdutório, você vai se familiarizar com a Plataforma Universal do Windows 10. Entre outras coisas, ele define família de dispositivos e orienta como decidir para qual direcionar, apresenta novos painéis e controles de interface do usuário, que permitem que você adapte a sua interface do usuário a diferentes fatores forma de dispositivo diferentes, e explica como entender e controlar a superfície de API que está disponível para seu aplicativo. |
 | [Amostra de código de interface do usuário XAML adaptável](http://go.microsoft.com/fwlink/p/?LinkId=619992) | Essa amostra de código mostra todas as opções de layout e controles para seu aplicativo possíveis, independentemente do tipo de dispositivo, e permite que você interaja com os painéis para mostrar como obter qualquer layout que estiver procurando. Além de mostrar como cada controle responde a diferentes fatores forma, o próprio aplicativo é dinâmico e mostra vários métodos para alcançar a interface do usuário adaptável. |
-| [Tópico Xamarin]() | Xamarin para direcionamento de telefone |
+| [Tópico Xamarin]() | Xamarin para o direcionamento de telefone |
 
 ## <a name="deployment"></a>Implantação
 
-Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
+Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente, ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
 
 | Tópico | Descrição |
 |-------|-------------|
 | [Distribuir os aplicativos LOB para empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Você pode publicar aplicativos de linha de negócios diretamente para empresas para aquisição de grande volume pela Microsoft Store para empresas, sem tornar os aplicativos amplamente disponíveis ao público. |
 | [Fazer sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
-| [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publicar e gerenciar todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
+| [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos do Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
 
-## <a name="enterprise-uwp-samples"></a>Amostras de UWP empresariais
+## <a name="enterprise-uwp-samples"></a>Exemplos de UWP empresariais
 
 Texto de introdução aqui.
 
@@ -191,8 +191,8 @@ Ação - falar Josh e/ou Karl para obter mais exemplos de voltados para enterpri
 
 | Tópico |  Descrição |
 |------ |--------------|
-| [Amostra de inventário de VanArsdel](https://github.com/Microsoft/InventorySample) | Se um aplicativo do Windows 10 de exemplo (usando a plataforma Universal do Windows) em cenários de linha de negócios, mostrando como usar os recursos mais recentes do Windows em aplicativos da área de trabalho. O exemplo baseia-se em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel.
-Destaca o MVVM, banco de dados SQL, Entity Framework. Lista de outras pessoas.|
+| [Amostra de estoque VanArsdel](https://github.com/Microsoft/InventorySample) | Se um aplicativo do Windows 10 de exemplo (usando a plataforma Universal do Windows) em cenários de linha de negócios, mostrando como usar os recursos mais recentes do Windows em aplicativos da área de trabalho. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel.
+Destaca o MVVM, banco de dados SQL, Entity Framework. Liste outras pessoas.|
 
 ## <a name="patterns-and-practices"></a>Padrões e práticas
 

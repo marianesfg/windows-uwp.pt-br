@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168571"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407184"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Nos bastidores do seu aplicativo da área de trabalho empacotado
 
@@ -33,9 +33,9 @@ Depois da implantação, os arquivos do pacote serão marcados como somente leit
 
 ## <a name="file-system"></a>Sistema de arquivos
 
-Para conter o estado do aplicativo, as alterações que o aplicativo faz em AppData são capturadas. Todas as gravações feitas na pasta AppData do usuário (por exemplo, *C:\Users\user_name\AppData*), inclusive criar, excluir e atualizar, são copiadas na gravação para um local privado por usuário e por aplicativo. Isso cria a ilusão de que o aplicativo empacotado está editando a AppData real quando está, na verdade, modificando uma cópia particular. Redirecionando gravações dessa maneira, o sistema pode acompanhar todas as modificações de arquivo feitas pelo aplicativo. Isso permite que o sistema Limpe esses arquivos quando o aplicativo é desinstalado, o que reduz o "rot" do sistema e fornecendo uma remoção de aplicativo a melhor experiência para o usuário.
+Para conter o estado do aplicativo, as alterações que o aplicativo faz em AppData são capturadas. Todas as gravações feitas na pasta AppData do usuário (por exemplo, *C:\Users\user_name\AppData*), inclusive criar, excluir e atualizar, são copiadas na gravação para um local privado por usuário e por aplicativo. Isso cria a ilusão de que o aplicativo empacotado está editando a AppData real quando está, na verdade, modificando uma cópia particular. Redirecionando gravações dessa maneira, o sistema pode acompanhar todas as modificações de arquivo feitas pelo aplicativo. Isso permite que o sistema Limpe esses arquivos quando o aplicativo é desinstalado, o que reduz o "rot" do sistema e proporciona uma remoção de aplicativo melhor experiência para o usuário.
 
-Além de redirecionar AppData, pastas conhecidas do Windows (System32, arquivos de programas (x86) etc.) são mescladas dinamicamente a diretórios correspondentes no pacote do aplicativo. Cada pacote contém uma pasta chamada "VFS" na raiz. Todas as leituras de diretório ou arquivo no diretório VFS são mescladas em tempo de execução às respectivas contrapartes nativas. Por exemplo, um aplicativo pode conter *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte do pacote do aplicativo, mas o arquivo apareceria seja instalado em *C:\Windows\System32\vc10.dll*.  Isso mantém a compatibilidade com aplicativos da área de trabalho, que podem esperar que arquivos estejam em locais sem pacote.
+Além de redirecionar AppData, pastas conhecidas do Windows (System32, arquivos de programas (x86), etc.) são mescladas dinamicamente a diretórios correspondentes no pacote do aplicativo. Cada pacote contém uma pasta chamada "VFS" na raiz. Todas as leituras de diretório ou arquivo no diretório VFS são mescladas em tempo de execução às respectivas contrapartes nativas. Por exemplo, um aplicativo pode conter *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* como parte do pacote do aplicativo, mas o arquivo apareceria aparentemente instalado em *C:\Windows\System32\vc10.dll*.  Isso mantém a compatibilidade com aplicativos da área de trabalho, que podem esperar que arquivos estejam em locais sem pacote.
 
 As gravações em arquivos/pastas no pacote de apps não são permitidas. As gravações em arquivos e pastas que não fazem parte do pacote são ignoradas pela ponte e são permitidas desde que o usuário tenha permissão.
 
@@ -79,7 +79,7 @@ Somente as chaves em *HKLM\Software* fazem parte do pacote; as chaves em *HKCU* 
 
 Todas as gravações em HKCU são cópias em gravações para um local particular por usuário e por aplicativo. Tradicionalmente, os desinstaladores são conseguem limpar *HKEY_CURRENT_USER* porque os dados do Registro para usuários desconectados estão desmontados e não estão disponíveis.
 
-Todas as gravações são mantidas durante a atualização de pacote e só são excluídas quando o aplicativo é totalmente removido.
+Todas as gravações são mantidas durante a atualização do pacote e só são excluídas quando o aplicativo é totalmente removido.
 
 ### <a name="common-operations"></a>Operações comuns
 

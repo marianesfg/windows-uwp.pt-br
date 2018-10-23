@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167916"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408693"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -308,7 +308,7 @@ Teste o aplicativo em relação ao uso de quaisquer APIs não compatíveis.
 
 ### <a name="background"></a>Histórico
 
-Os aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou APIs do Win32 com suporte) para ser certificados para a Microsoft Store. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
+Aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Windows ou APIs do Win32 com suporte) para ser certificados para a Microsoft Store. Esse teste também identifica as situações em que um binário gerenciado depende de uma função fora do perfil aprovado.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -433,7 +433,7 @@ Use a tabela a seguir como guia.
 <tr><td>
 <p>O arquivo "resources.pri" não deve ter o AutoMerge habilitado.</p>
 </td><td>
-<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store devem estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo.</p>
+<p>O MakePRI.exe oferece suporte a uma opção denominada <strong>AutoMerge</strong>. O valor padrão de <strong>AutoMerge</strong> é <strong>desativar</strong>. Quando está habilitado, o <strong>AutoMerge</strong> mescla os recursos de pacote de idiomas do aplicativo em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo.</p>
 </td></tr>
 <tr><td>
 <p>A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.</p>
@@ -485,7 +485,7 @@ Use a tabela a seguir como guia.
 
 ### <a name="branding-validation"></a>Validação de marca
 
-Aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
+Aplicativos UWP devem ser completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 ### <a name="test-details"></a>Detalhes do teste
 
@@ -537,7 +537,7 @@ Testa aplicativos Microsoft Direct3D para garantir que funcionam em todos os dis
 
 ### <a name="background"></a>Histórico
 
-Microsoft Store exige todos os aplicativos que usam Direct3D sejam renderizados apropriadamente ou não funcionem em placas de nível 9 \-1 gráfico do recurso.
+Microsoft Store exige todos os aplicativos que usam Direct3D sejam renderizados apropriadamente ou não funcionem em placas de recurso de elemento gráfico de nível 9 \-1.
 
 Como os usuários podem alterar o hardware gráfico de seus dispositivos depois que o aplicativo for instalado, se você escolher um nível mínimo de recursos maior que 9\-1, o aplicativo deverá detectar durante a inicialização se o hardware atual atende ou não aos requisitos mínimos. Se os requisitos mínimos não forem atendidos, o aplicativo deverá exibir uma mensagem para o usuário detalhando os requisitos do Direct3D. Além disso, se um aplicativo for baixado em um dispositivo com o qual ele não é compatível, ele deverá detectar isso na inicialização e exibir uma mensagem para o cliente detalhando os requisitos.
 

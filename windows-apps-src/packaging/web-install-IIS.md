@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, relacionados pacotes opcionais, definidos, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168925"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405454"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instale um aplicativo UWP a partir de um servidor IIS
 
@@ -39,7 +39,7 @@ Opcional: [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) no G
 Localizar e selecionar os **Serviços de informações da Internet** para instalar o IIS.
 
 > [!NOTE]
-> Você não precisa selecionar todas as caixas de seleção em serviços de informações da Internet. Apenas aqueles selecionado quando você verificar **Internet Information Services** são suficientes.
+> Você não precisa selecionar todas as caixas de seleção em serviços de informações da Internet. Somente aqueles selecionado quando você verificar **Internet Information Services** são suficientes.
 
 Você também precisará instalar o ASP.NET 4.5 ou maior. Para instalá-lo, localize **Internet Information Services -> World Wide Web Services -> recursos de desenvolvimento de aplicativo**. Selecione uma versão do ASP.NET que seja maior ou igual a ASP.NET 4.5.
 
@@ -71,7 +71,7 @@ Nas propriedades do aplicativo da web, selecione a guia **Web** . Na seção **s
 
 Adicione o pacote do aplicativo que você pretende distribuir no aplicativo da web. Você pode usar o pacote do aplicativo que faz parte dos [pacotes do projeto starter](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) fornecido no GitHub se você não tiver um pacote do aplicativo disponível. O certificado (MySampleApp.cer) que o pacote usou também faz parte da amostra no GitHub. Você deve ter o certificado instalado em seu dispositivo antes de instalar o aplicativo (etapa 9).
 
-No aplicativo da web de projeto inicial, uma nova pasta foi adicionada ao aplicativo web chamado `packages` que contém os pacotes de aplicativo para ser distribuído. Para criar a pasta no Visual Studio, clique com o botão direito do mouse na raiz do Gerenciador de soluções, selecione **Add** -> **Nova pasta** e nomeie-o `packages`. Para adicionar pacotes de aplicativos para a pasta, clique com botão direito do `packages` pasta e selecione **Add** -> local do pacote de**Item existente...** e navegue até o aplicativo. 
+No aplicativo da web de projeto inicial, uma nova pasta foi adicionada ao aplicativo web chamado `packages` que contém os pacotes de aplicativo para ser distribuído. Para criar a pasta no Visual Studio, clique com o botão direito do mouse na raiz do Gerenciador de soluções, selecione **Add** -> **Nova pasta** e nomeie- `packages`. Para adicionar pacotes de aplicativos para a pasta, clique com botão direito do `packages` pasta e selecione **Add** -> local do pacote de**Item existente...** e navegue até o aplicativo. 
 
 ![Adicionar pacote](images/add-package.png)
 

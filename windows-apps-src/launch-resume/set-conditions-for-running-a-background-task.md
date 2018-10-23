@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5156868"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408873"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Definir condições para executar uma tarefa em segundo plano
 
@@ -111,7 +111,7 @@ Para adicionar várias condições, seu aplicativo faz várias chamadas ao méto
 > [!NOTE]
 > Tome cuidado para não adicionar condições conflitantes a uma tarefa em segundo plano.
 
-O trecho a seguir mostra várias condições no contexto de criar e registrar uma tarefa em segundo plano.
+O trecho a seguir mostra várias condições no contexto de criação e registro de uma tarefa em segundo plano.
 
 ```csharp
 // Set up the background task.
@@ -182,7 +182,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Escolha as condições certas para a sua tarefa em segundo plano para que ela seja executada somente quando for necessária e não é executado quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
+> Escolha as condições certas para a sua tarefa em segundo plano para que seja executada somente quando for necessária e não é executado quando não deveria. Confira [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para ver descrições das diferentes condições de tarefas em tela de fundo.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

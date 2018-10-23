@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5158070"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5410664"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -89,7 +89,7 @@ Por exemplo: em uma página, **Text="{x:Bind Employee.FirstName}"** procurará p
 
 Para C++/CX, **{x:Bind}** não é possível associar campos particulares e propriedades no modelo de página ou dados – você precisará ter uma propriedade pública para que seja associável. A área de superfície para associação precisa ser exposta como classes/interfaces CX para que possamos obter os metadados relevantes. O atributo **\[Bindable\]** não deve ser necessário.
 
-Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação, porque elementos nomeados tornam-se campos dentro do controle de página ou do usuário que representa a origem da associação raiz. 
+Com **x:Bind**, você não precisa usar **ElementName=xxx** como parte da expressão de associação. Em vez disso, você pode usar o nome do elemento como a primeira parte do caminho para a associação, porque elementos nomeados tornam-se campos dentro do controle de página ou o usuário que representa a origem da associação raiz. 
 
 
 ### <a name="collections"></a>Coleções

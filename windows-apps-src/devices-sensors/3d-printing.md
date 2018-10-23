@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5171405"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406151"
 ---
 # <a name="3d-printing"></a>Impressão 3D
 
@@ -32,7 +32,7 @@ Para obter mais informações sobre a impressão 3D com o Windows 10, incluindo 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Impressão 3D com o Windows 10 (Centro de Desenvolvimento de Hardware)](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10)
-* [Namespace Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
+* [Namespace printing3d](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
 * [Exemplo de impressão 3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
 * [Impressão 3D do exemplo do Unity](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
 
