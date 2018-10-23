@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403390"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433039"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
 
@@ -101,7 +101,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 | Converse com a Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 
-> Esta seção configurações na área de trabalho será chamada pesquisa quando o computador estiver configurado para regiões onde a Cortana não está disponível no momento ou a Cortana foi desabilitada. Páginas específicas da Cortana (da Cortana em todos os meus dispositivos) e conversar com a Cortana não serão listadas neste caso. 
+> Esta seção configurações na área de trabalho será chamada pesquisa quando o computador estiver configurado para regiões onde a Cortana não está disponível no momento ou a Cortana foi desabilitada. Páginas específicas da Cortana (a Cortana em todos os meus dispositivos) e falar à Cortana não serão listadas neste caso. 
 
 ## <a name="devices"></a>Dispositivos
 

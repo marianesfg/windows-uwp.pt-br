@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431008"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
@@ -54,12 +54,12 @@ Para obter mais informações, consulte [Configurar agendamento preciso do lanç
 
 ## <a name="pricing"></a>Preço
 
-Você deve selecionar um preço base para seu complemento (a menos que você tiver selecionado a opção **Parar aquisição** na seção **visibilidade** ). A seleção padrão é **grátis**, então, se você deseja cobrar para o complemento, escolha uma das faixas de preço disponível (começando em USD.99).
+Você deve selecionar um preço base para seu complemento (a menos que você tiver selecionado a opção **Parar aquisição** na seção **visibilidade** ). A seleção padrão é **grátis**, portanto, se você deseja cobrar para o complemento, não se esqueça de escolher uma das faixas de preço disponíveis (começando em USD.99).
 
 Você também pode agendar alterações de preço para indicar a data e a hora em que o preço do complemento deve ser alterado. Além disso, você tem a opção de personalizar essas alterações para mercados específicos. 
 
 > [!TIP]
-> Para complementos de assinatura, você não pode elevar o preço depois de publicar o complemento, selecionando um preço base maior em um envio posterior ou por uma alteração de preço que aumenta o preço de agendamento. Você pode selecionar um preço mais baixo usando qualquer um desses métodos, mas depois que o preço é reduzido não será capaz de fazê-lo maior que esse novo preço. Por isso, é especialmente importante ter certeza de que você selecionar a faixa de preço apropriada para complementos de assinatura. 
+> Para complementos de assinatura, você não pode elevar o preço depois de publicar o complemento, selecionando um preço base maior em um envio posterior ou ao agendar uma alteração de preço que aumenta o preço. Você pode selecionar um preço mais baixo usando qualquer um desses métodos, mas depois que o preço é reduzido não será possível para fazê-lo maior que esse novo preço. Por isso, é especialmente importante ter certeza de que você selecionar a faixa de preço apropriada para complementos de assinatura. 
 
 Para obter mais informações, consulte [Definir e agendar preço do aplicativo](set-and-schedule-app-pricing.md).
 

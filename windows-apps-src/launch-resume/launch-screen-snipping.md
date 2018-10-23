@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Iniciar a captura de tela
-description: Este tópico descreve os esquemas de URI ms-screenclip e ms-screensketch. Seu aplicativo pode usar esses esquemas de URI para iniciar o aplicativo de recorte e esboço ou abrir uma nova captura.
+description: Este tópico descreve os esquemas de URI ms-screenclip e ms-screensketch. Seu aplicativo pode usar esses esquemas de URI para iniciar o aplicativo de recorte & esboço ou abrir um novo recorte.
 ms.author: quradic
 ms.date: 8/1/2017
 ms.topic: article
@@ -10,19 +10,19 @@ ms.technology: uwp
 keywords: Windows 10, uwp, uri, recorte, esboço
 ms.localizationpriority: medium
 ms.openlocfilehash: e18662125ef72051a289b3f1d0f3dc09b452d256
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396768"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5430627"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar a captura de tela
 
-O **ms-screenclip:** e **ms-screensketch:** esquemas URI permite que você inicie o recorte ou capturas de tela de edição.
+O **ms-screenclip:** e **ms-screensketch:** esquemas URI permite que você inicie o recorte ou editar capturas de tela.
 
 ## <a name="open-a-new-snip-from-your-app"></a>Abra um novo recorte do seu aplicativo
 
-O **ms-screenclip:** URI permite que seu aplicativo abrir e iniciar uma nova captura automaticamente. O recorte resultante é copiado para área de transferência do usuário, mas não é passado automaticamente ao aplicativo sendo aberto.
+O **ms-screenclip:** URI permite que seu aplicativo abrir automaticamente e iniciar um novo recorte. O recorte resultante é copiado para a área de transferência do usuário, mas não é passado automaticamente ao aplicativo sendo aberto.
 
 **ms-screenclip:** usa os seguintes parâmetros:
 
@@ -33,7 +33,7 @@ O **ms-screenclip:** URI permite que seu aplicativo abrir e iniciar uma nova cap
 
 ## <a name="launching-the-snip--sketch-app"></a>Iniciar o aplicativo de esboço & recorte
 
-O **ms-screensketch:** URI permite que você programaticamente iniciar o aplicativo de recorte e esboço e abrir uma imagem específica no aplicativo para anotação.
+O **ms-screensketch:** URI permite que você iniciar o aplicativo de recorte & esboço programaticamente e abrir uma imagem específica no aplicativo para anotação.
 
 **ms-screensketch:** usa os seguintes parâmetros:
 

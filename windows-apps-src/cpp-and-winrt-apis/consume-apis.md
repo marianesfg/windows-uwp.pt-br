@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: dbd657c966cac2310a1078c889ff31b8147c3a59
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397844"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439968"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumir APIs com C++/WinRT
 
-Este tópico mostra como consumir [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, sejam elas parte do Windows implementadas por um fornecedor de componentes de terceiros ou implementada por conta própria.
+Este tópico mostra como consumir [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, sejam elas parte do Windows, implementada por um fornecedor de componentes de terceiros ou implementar por conta própria.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Se a API estiver em um namespace do Windows
 Esse é o caso mais comum em que você consumirá uma API do Windows Runtime. Para cada tipo em um namespace do Windows definido nos metadados, C ++/WinRT define um equivalente C++ amigável (chamado de *tipo projetado*). Um tipo projetado tem o mesmo nome totalmente qualificado do tipo do Windows, mas ele é colocado no namespace C++ **winrt** usando a sintaxe do C++. Por exemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) é projetado no C++/WinRT como **winrt::Windows::Foundation::Uri**.
@@ -46,7 +46,7 @@ O cabeçalho `winrt/Windows.Foundation.h` incluído faz parte do SDK, encontrado
 
 No exemplo de código acima, após inicializar C++/WinRT, alocamos em pilhas um valor do tipo projetado **winrt::Windows::Foundation::Uri** por meio de um de seus construtores documentados publicamente ([**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_), neste exemplo). Para isso, o caso de uso mais comum, que normalmente é tudo o que você precisa fazer. Quando você tiver um valor de tipo projetado do C++/WinRT, é possível tratá-lo como se fosse uma instância do tipo real do Windows Runtime, pois já tem todos os mesmos membros.
 
-Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Conforme ilustrado abaixo, suas chamadas para membros do valor projetada delegam, por meio do ponteiro inteligente, para o objeto de suporte; o que é onde ocorrem alterações de estado.
+Na verdade, esse valor projetada é um proxy; essencialmente, é apenas um ponteiro inteligente de um objeto subjacente. A chamada de construtores do valor projetado [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) para criar uma instância da classe de suporte do Windows Runtime (**Windows.Foundation.Uri**, neste caso) e armazenar a interface padrão do objeto no novo valor projetado. Como ilustrado abaixo, suas chamadas para membros do valor projetada delegam, por meio do ponteiro inteligente, para o objeto de suporte; que é onde ocorrem alterações de estado.
 
 ![O tipo Windows::Foundation::Uri projetado](images/uri.png)
 
@@ -180,7 +180,7 @@ MainPage::MainPage()
 Para obter mais detalhes, código e um passo a passo sobre consumo de uma classe de tempo de execução implementada no projeto do consumo, consulte [Controles XAML; associar a uma propriedade de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Criação de instância e retorno de tipos projetados e interfaces
-Veja um exemplo de como os tipos e interfaces projetados podem parecer em seu projeto de consumo. Lembre-se de que um tipo projetado (, como o mostrado neste exemplo), é gerado ferramenta e não é algo que você poderia criar por conta própria.
+Veja um exemplo de como os tipos e interfaces projetados podem parecer em seu projeto de consumo. Lembre-se de que um tipo projetado (, como o mostrado neste exemplo), é gerado ferramenta e não é algo que você pode criar por conta própria.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,
@@ -246,7 +246,7 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>APIs Importantes
-* [Interface de QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [Interface QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [Função RoActivateInstance](https://msdn.microsoft.com/library/br224646)
 * [Classe Foundation](/uwp/api/windows.foundation.uri)
 * [modelo de função winrt::get_activation_factory](/uwp/cpp-ref-for-winrt/get-activation-factory)

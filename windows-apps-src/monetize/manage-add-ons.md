@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: be0d383fc271084fe20a958d20f6fa3a340da187
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433069"
 ---
 # <a name="manage-add-ons"></a>Gerenciar complementos
 

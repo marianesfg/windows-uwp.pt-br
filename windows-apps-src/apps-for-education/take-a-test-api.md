@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405086"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441778"
 ---
 # <a name="take-a-test-javascript-api"></a>API JavaScript Fazer um Teste
 

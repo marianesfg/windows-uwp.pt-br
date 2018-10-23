@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 20abf751a7d2f483826e54809f2417c90d0aecb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395828"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5429689"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
@@ -226,7 +226,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 Você pode também usar o JSON para definir estilos personalizados e então usar o JSON para criar um objeto [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet).
 
-Folha de estilos JSON pode ser criada interativamente usando o aplicativo de [Editor de folha de estilos de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
+Folha de estilos JSON pode ser criada interativamente usando o aplicativo do [Editor de folha de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes, aplicativo da área de trabalho
 ms.localizationpriority: medium
 ms.openlocfilehash: b6e8a19b665c5e01ef227e7d5f643a311efa5c58
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5401964"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433026"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obter detalhes de um erro em seu aplicativo da área de trabalho
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, classificações, opiniões
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397978"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431405"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicite classificações e opiniões para seu aplicativo
 
@@ -25,7 +25,7 @@ Você pode adicionar código ao seu aplicativo da Plataforma Universal do Window
 Quando você estiver pronto para analisar seus dados de classificações e opiniões, poderá exibir os dados no painel do Centro de Desenvolvimento do Windows ou usar a API de análise de Microsoft Store para recuperar esses dados programaticamente.
 
 > [!IMPORTANT]
-> Ao adicionar uma função de classificação dentro de seu aplicativo, todas as análises devem enviar o usuário para mecanismos de classificação da loja, independentemente de estrela escolhida. Se você coletar comentários ou comentários dos usuários, ele deve ser claro que ele não está relacionado a classificação do aplicativo ou críticas na loja, mas é enviado diretamente para o desenvolvedor do aplicativo. Consulte o código de desenvolvedor de conduta para obter mais informações relacionadas à [Fraudulent ou atividades desonestos](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Ao adicionar uma função de classificação dentro de seu aplicativo, todas as análises devem enviar o usuário para mecanismos de classificação da loja, independentemente de estrela escolhida. Se você coletar comentários ou comentários dos usuários, ele deve ser claro que ele não está relacionado à classificação do aplicativo ou críticas na loja, mas é enviado diretamente para o desenvolvedor do aplicativo. Consulte o código desenvolvedor de conduta para obter mais informações relacionadas à [Fraudulent ou atividades desonestos](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar um diálogo de classificação e opinião em seu app
 
