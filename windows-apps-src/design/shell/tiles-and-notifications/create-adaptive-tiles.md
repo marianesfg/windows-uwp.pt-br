@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
 title: Criar blocos adaptáveis
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -13,17 +13,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 761d87654ef340f4b539dbefa0950c58f627d310
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444206"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468759"
 ---
 # <a name="create-adaptive-tiles"></a>Criar blocos adaptáveis
 
 Modelos de blocos adaptáveis são um novo recurso no Windows 10, permitindo que você elabore seu próprio conteúdo de notificação de bloco usando uma linguagem de marcação simples e flexível que se adapte a densidades de tela diferentes. Este artigo explica como criar blocos dinâmicos adaptáveis para seu aplicativo da Plataforma Universal do Windows (UWP). Para obter a lista completa de elementos e atributos adaptáveis, consulte o [Esquema de blocos adaptáveis](../tiles-and-notifications/tile-schema.md).
 
-(Se quiser, você ainda pode usar os modelos predefinidos do [Catálogo de modelos de blocos do Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para o Windows10.)
+(Se você quiser, você pode ainda usar os modelos predefinidos do [Catálogo de modelos de bloco Windows8](https://msdn.microsoft.com/library/windows/apps/hh761491) durante a criação de notificações para Windows 10.)
 
 
 ## <a name="getting-started"></a>Introdução
@@ -75,39 +75,39 @@ Este exemplo demonstra o que os modelos de blocos adaptáveis podem produzir.
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        TileMedium = ...
-  
-        TileWide = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = "Jennifer Parker",
-                        HintStyle = AdaptiveTextStyle.Subtitle
-                    },
-  
-                    new AdaptiveText()
-                    {
-                        Text = "Photos from our trip",
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    },
-  
-                    new AdaptiveText()
-                    {
-                        Text = "Check out these awesome photos I took while in New Zealand!",
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    }
-                }
-            }
-        },
-  
-        TileLarge = ...
-    }
+    Visual = new TileVisual()
+    {
+        TileMedium = ...
+  
+        TileWide = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText()
+                    {
+                        Text = "Jennifer Parker",
+                        HintStyle = AdaptiveTextStyle.Subtitle
+                    },
+  
+                    new AdaptiveText()
+                    {
+                        Text = "Photos from our trip",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    },
+  
+                    new AdaptiveText()
+                    {
+                        Text = "Check out these awesome photos I took while in New Zealand!",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    }
+                }
+            }
+        },
+  
+        TileLarge = ...
+    }
 };
 ```
 
@@ -154,52 +154,52 @@ Para o conteúdo XML de notificação de um único bloco, forneça elementos &lt
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        TileSmall = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Small" }
-                }
-            }
-        },
-  
-        TileMedium = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Medium" }
-                }
-            }
-        },
-  
-        TileWide = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Wide" }
-                }
-            }
-        },
-  
-        TileLarge = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Large" }
-                }
-            }
-        }
-    }
+    Visual = new TileVisual()
+    {
+        TileSmall = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Small" }
+                }
+            }
+        },
+  
+        TileMedium = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Medium" }
+                }
+            }
+        },
+  
+        TileWide = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Wide" }
+                }
+            }
+        },
+  
+        TileLarge = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Large" }
+                }
+            }
+        }
+    }
 };
 ```
 
@@ -212,9 +212,9 @@ TileContent content = new TileContent()
 
 Você pode controlar a identidade visual na parte inferior de um bloco dinâmico (o nome de exibição e o logotipo de canto) usando o atributo branding no conteúdo da notificação. Você pode optar por exibir "none", somente "name", somente "logo", ou ambos, com "nameAndLogo".
 
-**Observação**  O Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" são definidos como o padrão "name" no Mobile.
+**Observação**Windows Mobile não aceita o logotipo de canto, então "logo" e "nameAndLogo" padrão "Name" no Mobile.
 
- 
+ 
 
 ```xml
 <visual branding="logo">
@@ -225,8 +225,8 @@ Você pode controlar a identidade visual na parte inferior de um bloco dinâmico
 ```csharp
 new TileVisual()
 {
-    Branding = TileBranding.Logo,
-    ...
+    Branding = TileBranding.Logo,
+    ...
 }
 ```
 
@@ -259,22 +259,22 @@ A identidade visual pode ser aplicada para tamanhos de bloco específicos de uma
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        Branding = TileBranding.NameAndLogo,
+    Visual = new TileVisual()
+    {
+        Branding = TileBranding.NameAndLogo,
 
-        TileMedium = new TileBinding()
-        {
-            Branding = TileBranding.Logo,
-            ...
-        },
+        TileMedium = new TileBinding()
+        {
+            Branding = TileBranding.Logo,
+            ...
+        },
 
-        // Inherits branding from Visual
-        TileWide = new TileBinding()
-        {
-            ...
-        }
-    }
+        // Inherits branding from Visual
+        TileWide = new TileBinding()
+        {
+            ...
+        }
+    }
 };
 ```
 
@@ -284,9 +284,9 @@ TileContent content = new TileContent()
 
 Se você não especificar a identidade visual no conteúdo da notificação, as propriedades do bloco base determinarão a identidade visual. Se o bloco base mostrar o nome de exibição, a identidade visual padrão será "name". Caso contrário, a identidade visual padrão será "none" se o nome de exibição não for mostrado.
 
-**Observação**   Isso é uma mudança do Windows 8.x, no qual a identidade visual padrão era "logo".
+**Observação**  isso é uma alteração do Windows8.x, no qual a identidade visual padrão era "logo".
 
- 
+ 
 
 ## <a name="display-name"></a>Nome de exibição
 
@@ -315,23 +315,23 @@ Você pode substituir o nome de exibição de uma notificação digitando a cade
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        Branding = TileBranding.NameAndLogo,
-        DisplayName = "Wednesday 22",
+    Visual = new TileVisual()
+    {
+        Branding = TileBranding.NameAndLogo,
+        DisplayName = "Wednesday 22",
 
-        TileMedium = new TileBinding()
-        {
-            DisplayName = "Wed. 22",
-            ...
-        },
+        TileMedium = new TileBinding()
+        {
+            DisplayName = "Wed. 22",
+            ...
+        },
 
-        // Inherits DisplayName from Visual
-        TileWide = new TileBinding()
-        {
-            ...
-        }
-    }
+        // Inherits DisplayName from Visual
+        TileWide = new TileBinding()
+        {
+            ...
+        }
+    }
 };
 ```
 
@@ -352,7 +352,7 @@ O elemento [AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext
 ```csharp
 new AdaptiveText()
 {
-    Text = "This is a line of text"
+    Text = "This is a line of text"
 };
 ```
 
@@ -373,8 +373,8 @@ Por padrão, o texto não é encapsulado e ultrapassa a borda do bloco. Use o at
 ```csharp
 new AdaptiveText()
 {
-    Text = "This is a line of wrapping text",
-    HintWrap = true
+    Text = "This is a line of wrapping text",
+    HintWrap = true
 };
 ```
 
@@ -395,14 +395,14 @@ Os estilos controlam o tamanho, a cor e a espessura da fonte dos elementos de te
 ```csharp
 new AdaptiveText()
 {
-    Text = "Header content",
-    HintStyle = AdaptiveTextStyle.Base
+    Text = "Header content",
+    HintStyle = AdaptiveTextStyle.Base
 },
 
 new AdaptiveText()
 {
-    Text = "Subheader content",
-    HintStyle = AdaptiveTextStyle.CaptionSubtle
+    Text = "Subheader content",
+    HintStyle = AdaptiveTextStyle.CaptionSubtle
 }
 ```
 
@@ -410,9 +410,9 @@ new AdaptiveText()
 
 ![estilos de texto de blocos adaptáveis](images/adaptive-tiles-textstyles.png)
 
-**Observação**  O estilo padrão é caption quando hint-style é especificado.
+**Observação**o estilo padrão é caption quando hint-style é especificado.
 
- 
+ 
 
 **Estilos de texto básicos**
 
@@ -427,7 +427,7 @@ new AdaptiveText()
 | subheader                      | 34 epx                    | Light       |
 | header                         | 46 epx                    | Light       |
 
- 
+ 
 
 **Variações numéricas de estilo de texto**
 
@@ -439,7 +439,7 @@ Essas variações reduzem a altura da linha para que o conteúdo acima e abaixo 
 | subheaderNumeral |
 | headerNumeral    |
 
- 
+ 
 
 **Variações sutis de estilo de texto**
 
@@ -458,7 +458,7 @@ Cada estilo tem uma variação sutil que oferece ao texto uma opacidade de 60%, 
 | headerSubtle           |
 | headerNumeralSubtle    |
 
- 
+ 
 
 ## <a name="text-alignment"></a>Alinhamento do texto
 
@@ -473,8 +473,8 @@ O texto pode ser alinhamento horizontalmente à esquerda, ao centro ou à direit
 ```csharp
 new AdaptiveText()
 {
-    Text = "Hello",
-    HintAlign = AdaptiveTextAlign.Center
+    Text = "Hello",
+    HintAlign = AdaptiveTextAlign.Center
 };
 ```
 
@@ -489,9 +489,9 @@ Os grupos permitem declarar semanticamente que o conteúdo dentro do grupo está
 
 Para proporcionar a melhor experiência em dispositivos e telas, forneça vários grupos. Ter vários grupos permite que seu bloco se adapte a telas maiores.
 
-**Observação**  O único filho válido de um grupo é somente um subgrupo.
+**Observação**o único filho válido de um grupo é um subgrupo.
 
- 
+ 
 
 ```xml
 <binding template="TileWide" branding="nameAndLogo">
@@ -518,58 +518,58 @@ Para proporcionar a melhor experiência em dispositivos e telas, forneça vário
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.NameAndLogo,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            CreateGroup(
-                from: "Jennifer Parker",
-                subject: "Photos from our trip",
-                body: "Check out these awesome photos I took while in New Zealand!"),
+    Branding = TileBranding.NameAndLogo,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            CreateGroup(
+                from: "Jennifer Parker",
+                subject: "Photos from our trip",
+                body: "Check out these awesome photos I took while in New Zealand!"),
 
-            // For spacing
-            new AdaptiveText(),
+            // For spacing
+            new AdaptiveText(),
 
-            CreateGroup(
-                from: "Steve Bosniak",
-                subject: "Build 2015 Dinner",
-                body: "Want to go out for dinner after Build tonight?")
-        }
-    }
+            CreateGroup(
+                from: "Steve Bosniak",
+                subject: "Build 2015 Dinner",
+                body: "Want to go out for dinner after Build tonight?")
+        }
+    }
 }
 
 ...
 
 private static AdaptiveGroup CreateGroup(string from, string subject, string body)
 {
-    return new AdaptiveGroup()
-    {
-        Children =
-        {
-            new AdaptiveSubgroup()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = from,
-                        HintStyle = AdaptiveTextStyle.Subtitle
-                    },
-                    new AdaptiveText()
-                    {
-                        Text = subject,
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    },
-                    new AdaptiveText()
-                    {
-                        Text = body,
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    }
-                }
-            }
-        }
-    };
+    return new AdaptiveGroup()
+    {
+        Children =
+        {
+            new AdaptiveSubgroup()
+            {
+                Children =
+                {
+                    new AdaptiveText()
+                    {
+                        Text = from,
+                        HintStyle = AdaptiveTextStyle.Subtitle
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = subject,
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = body,
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    }
+                }
+            }
+        }
+    };
 }
 ```
 
@@ -617,7 +617,7 @@ O atributo **hint-weight** permite que você controle as larguras das colunas. O
 </tbody>
 </table>
 
- 
+ 
 
 ![subgrupos, colunas uniformes](images/adaptive-tiles-subgroups01.png)
 
@@ -648,7 +648,7 @@ Para tornar uma coluna duas vezes maior que outra coluna, atribua à coluna meno
 </tbody>
 </table>
 
- 
+ 
 
 ![subgrupos, uma coluna duas vezes o tamanho da outra](images/adaptive-tiles-subgroups02.png)
 
@@ -679,13 +679,13 @@ Se quiser que sua primeira coluna ocupe 20% da largura total e sua segunda colun
 </tbody>
 </table>
 
- 
+ 
 
 ![subgrupos, com espessuras totalizando 100](images/adaptive-tiles-subgroups03.png)
 
-**Observação**  Uma margem de 8 pixels é automaticamente adicionada entre as colunas.
+**Observação**uma margem de 8 pixels é automaticamente adicionada entre as colunas.
 
- 
+ 
 
 Quando houver mais de dois subgrupos, você deverá especificar **hint-weight**, que aceita somente números inteiros positivos. Se você não especificar hint-weight para o primeiro subgrupo, ele será atribuído a uma espessura de 50. O próximo subgrupo que não tiver um atributo hint-weight especificado será atribuído a uma espessura igual a 100 menos a soma das espessuras anteriores, ou a 1 se o resultado for zero. Os subgrupos restantes que não tiverem atributos hint-weights especificados serão atribuídos a uma espessura de 1.
 
@@ -731,59 +731,59 @@ Este é um código de exemplo para um bloco de previsão do tempo que mostra com
 ```csharp
 TileWide = new TileBinding()
 {
-    DisplayName = "Seattle",
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
-                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
-                    CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
-                    CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
-                    CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
-                }
-            }
-        }
-    }
+    DisplayName = "Seattle",
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
+                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
+                    CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
+                    CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
+                    CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -799,7 +799,7 @@ O elemento &lt;image&gt; é usado para exibir imagens na notificação do bloco.
 > [!NOTE]
 > As imagens podem ser usadas do pacote do aplicativo, do armazenamento local do aplicativo ou da Web. Na Fall Creators Update, as imagens da Web podem ter até 3 MB em conexões normais e 1 MB em conexões limitadas. Em dispositivos que ainda não executam a Fall Creators Update, as imagens da Web devem ser maiores do que 200 KB.
 
- 
+ 
 
 Com nenhum comportamento extra especificado, as imagens se encolherão ou expandirão uniformemente para preencher a largura disponível. Esse exemplo mostra um bloco com duas colunas e imagens embutidas. As imagens embutidas se ampliam para preencher a largura da coluna.
 
@@ -825,53 +825,53 @@ Com nenhum comportamento extra especificado, as imagens se encolherão ou expand
 ```csharp
 TileMedium = new TileBinding()
 {
-    DisplayName = "Seattle",
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
-                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
-                }
-            }
-        }
-    }
+    DisplayName = "Seattle",
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
+                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
+                }
+            }
+        }
+    }
 }
 ...
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -894,17 +894,17 @@ As imagens podem ser definidas para alinhamento à esquerda, ao centro ou à dir
 ```csharp
 TileLarge = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveImage()
-            {
-                Source = "Assets/fable.jpg",
-                HintAlign = AdaptiveImageAlign.Center
-            }
-        }
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveImage()
+            {
+                Source = "Assets/fable.jpg",
+                HintAlign = AdaptiveImageAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -938,55 +938,55 @@ Por padrão, as imagens embutidas têm uma margem de 8 pixels entre qualquer con
 ```csharp
 TileMedium = new TileBinding()
 {
-    Branding = TileBranding.None,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
-                    CreateSubgroup("Tue", "3.jpg", "57°", "38°")
-                }
-            }
-        }
-    }
+    Branding = TileBranding.None,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
+                    CreateSubgroup("Tue", "3.jpg", "57°", "38°")
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Numbers/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Numbers/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -1014,45 +1014,45 @@ As imagens podem ser cortadas em círculo usando o atributo **hint-crop**, que a
 ```csharp
 TileLarge = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        TextStacking = TileTextStacking.Center,
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    new AdaptiveSubgroup() { HintWeight = 1 },
-                    new AdaptiveSubgroup()
-                    {
-                        HintWeight = 2,
-                        Children =
-                        {
-                            new AdaptiveImage()
-                            {
-                                Source = "Assets/Apps/Hipstame/hipster.jpg",
-                                HintCrop = AdaptiveImageCrop.Circle
-                            }
-                        }
-                    },
-                    new AdaptiveSubgroup() { HintWeight = 1 }
-                }
-            },
-            new AdaptiveText()
-            {
-                Text = "Hi,",
-                HintStyle = AdaptiveTextStyle.Title,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = "MasterHip",
-                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
-                HintAlign = AdaptiveTextAlign.Center
-            }
-        }
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        TextStacking = TileTextStacking.Center,
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    new AdaptiveSubgroup() { HintWeight = 1 },
+                    new AdaptiveSubgroup()
+                    {
+                        HintWeight = 2,
+                        Children =
+                        {
+                            new AdaptiveImage()
+                            {
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
+                            }
+                        }
+                    },
+                    new AdaptiveSubgroup() { HintWeight = 1 }
+                }
+            },
+            new AdaptiveText()
+            {
+                Text = "Hi,",
+                HintStyle = AdaptiveTextStyle.Title,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = "MasterHip",
+                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
+                HintAlign = AdaptiveTextAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -1082,59 +1082,59 @@ Para definir uma imagem de plano de fundo, coloque um elemento de imagem na raiz
 ```csharp
 TileWide = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        BackgroundImage = new TileBackgroundImage()
-        {
-            Source = "Assets/Mostly Cloudy-Background.jpg"
-        },
+    Content = new TileBindingContentAdaptive()
+    {
+        BackgroundImage = new TileBackgroundImage()
+        {
+            Source = "Assets/Mostly Cloudy-Background.jpg"
+        },
 
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°")
-                    ...
-                }
-            }
-        }
-    }
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°")
+                    ...
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -1157,27 +1157,27 @@ Você pode especificar uma imagem que "espie" a parte superior do bloco. A image
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        PeekImage = new TilePeekImage()
-        {
-            Source = "Assets/Apps/Hipstame/hipster.jpg"
-        },
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = "New Message"
-            },
-            new AdaptiveText()
-            {
-                Text = "Hey, have you tried Windows 10 yet?",
-                HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                HintWrap = true
-            }
-        }
-    }
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Apps/Hipstame/hipster.jpg"
+        },
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = "New Message"
+            },
+            new AdaptiveText()
+            {
+                Text = "Hey, have you tried Windows 10 yet?",
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintWrap = true
+            }
+        }
+    }
 }
 ```
 
@@ -1230,16 +1230,16 @@ Sua imagem de plano de fundo será padronizada com uma sobreposição de 20% des
 ```csharp
 TileWide = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        BackgroundImage = new TileBackgroundImage()
-        {
-            Source = "Assets/Mostly Cloudy-Background.jpg",
-            HintOverlay = 60
-        },
+    Content = new TileBindingContentAdaptive()
+    {
+        BackgroundImage = new TileBackgroundImage()
+        {
+            Source = "Assets/Mostly Cloudy-Background.jpg",
+            HintOverlay = 60
+        },
 
-        ...
-    }
+        ...
+    }
 }
 ```
 
@@ -1253,23 +1253,23 @@ Na versão 1511 do Windows 10, também oferecemos suporte a uma sobreposição p
 
 ```xml
 <binding template="TileMedium">
-  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
-  ...
+  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
+  ...
 </binding>
 ```
 
 ```csharp
 TileMedium = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        PeekImage = new TilePeekImage()
-        {
-            Source = "Assets/Map.jpg",
-            HintOverlay = 20
-        },
-        ...
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Map.jpg",
+            HintOverlay = 20
+        },
+        ...
+    }
 }
 ```
 
@@ -1296,27 +1296,27 @@ Quando aplicado no nível [TileBinding](../tiles-and-notifications/tile-schema.m
 ```csharp
 TileMedium = new TileBinding()
 {
-    Branding = TileBranding.Logo,
-    Content = new TileBindingContentAdaptive()
-    {
-        TextStacking = TileTextStacking.Center,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = "Hi,",
-                HintStyle = AdaptiveTextStyle.Base,
-                HintAlign = AdaptiveTextAlign.Center
-            },
+    Branding = TileBranding.Logo,
+    Content = new TileBindingContentAdaptive()
+    {
+        TextStacking = TileTextStacking.Center,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = "Hi,",
+                HintStyle = AdaptiveTextStyle.Base,
+                HintAlign = AdaptiveTextAlign.Center
+            },
 
-            new AdaptiveText()
-            {
-                Text = "MasterHip",
-                HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                HintAlign = AdaptiveTextAlign.Center
-            }
-        }
-    }
+            new AdaptiveText()
+            {
+                Text = "MasterHip",
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintAlign = AdaptiveTextAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -1343,53 +1343,53 @@ Quando aplicado no nível [AdaptiveSubgroup;](../tiles-and-notifications/tile-sc
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.NameAndLogo,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    // Image column
-                    new AdaptiveSubgroup()
-                    {
-                        HintWeight = 33,
-                        Children =
-                        {
-                            new AdaptiveImage()
-                            {
-                                Source = "Assets/Apps/Hipstame/hipster.jpg",
-                                HintCrop = AdaptiveImageCrop.Circle
-                            }
-                        }
-                    },
+    Branding = TileBranding.NameAndLogo,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    // Image column
+                    new AdaptiveSubgroup()
+                    {
+                        HintWeight = 33,
+                        Children =
+                        {
+                            new AdaptiveImage()
+                            {
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
+                            }
+                        }
+                    },
 
-                    // Text column
-                    new AdaptiveSubgroup()
-                    {
-                        // Vertical align its contents
-                        TextStacking = TileTextStacking.Center,
-                        Children =
-                        {
-                            new AdaptiveText()
-                            {
-                                Text = "Hi,",
-                                HintStyle = AdaptiveTextStyle.Subtitle
-                            },
+                    // Text column
+                    new AdaptiveSubgroup()
+                    {
+                        // Vertical align its contents
+                        TextStacking = TileTextStacking.Center,
+                        Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = "Hi,",
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            },
 
-                            new AdaptiveText()
-                            {
-                                Text = "MasterHip",
-                                HintStyle = AdaptiveTextStyle.BodySubtle
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                            new AdaptiveText()
+                            {
+                                Text = "MasterHip",
+                                HintStyle = AdaptiveTextStyle.BodySubtle
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -1400,9 +1400,9 @@ TileWide = new TileBinding()
 * [Kit de ferramentas de comunidade UWP - Notificações](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [Notificações do Windows no GitHub](https://github.com/WindowsNotifications)
 
- 
+ 
 
- 
+ 
 
 
 

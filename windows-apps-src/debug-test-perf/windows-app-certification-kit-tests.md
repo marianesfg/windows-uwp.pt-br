@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434689"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483876"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -319,11 +319,11 @@ Aplicativos devem usar as APIs para aplicativos UWP (tempo de execução do Wind
 
 Verifique se o aplicativo foi compilado como uma compilação de versão e não como uma compilação de depuração.
 
-> **Observação**  A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
+> **Observação**a compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
 Examine as mensagens de erro para identificar a API os usos de aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Observação**  Aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
+> **Observação**aplicativos C++ integrados em uma configuração de depuração passará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
 ## <a name="performance-tests"></a>Testes de desempenho
 
@@ -481,7 +481,7 @@ Use a tabela a seguir como guia.
 
 
 
- 
+ 
 
 ### <a name="branding-validation"></a>Validação de marca
 
@@ -551,7 +551,7 @@ Verifique se o aplicativo renderiza corretamente no recurso nível 9\-1 do Direc
 
 ### <a name="direct3d-trim-after-suspend"></a>Corte Direct3D após a suspensão
 
-> **Observação**  Esse teste só se aplica a aplicativos UWP desenvolvidos para Windows 8.1 e versões posteriores.
+> **Observação**esse teste só se aplica a aplicativos UWP desenvolvidos para Windows 8.1 e posteriores.
 
 ### <a name="background"></a>Histórico
 
@@ -673,4 +673,4 @@ Atualize o código JavaScript em segundo plano para chamar Close() corretamente.
 
 * [Testes de app de Ponte de Desktop do Windows](windows-desktop-bridge-app-tests.md)
 * [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
- 
+ 

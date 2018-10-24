@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: o Windows 10, uwp, nomes de aplicativo, alterar o nome do aplicativo, atualização de nome do aplicativo, jogo, nome do produto
 ms.localizationpriority: medium
 ms.openlocfilehash: 878b105541691834dbbe35b5210f33045afdc47b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438204"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468624"
 ---
 # <a name="manage-app-names"></a>Gerenciar nomes de aplicativo
 
@@ -64,9 +64,9 @@ Quando seu aplicativo tiver sido publicado com o novo nome, você pode excluir t
 > [!TIP]
 > Cada aplicativo é exibido em seu painel usando o nome que você reservou para ele. Se você tiver seguido as etapas acima para renomear um aplicativo, e você quiser que ele seja exibido em seu painel usando o novo nome, você deve excluir o nome original (clicando em **Excluir** na página **Gerenciar nomes de aplicativo** ). 
 
- 
+ 
 
- 
+ 
 
 
 

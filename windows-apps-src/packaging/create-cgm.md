@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapa de grupo de conteúdo, instalação de streaming, instalação de streaming de aplicativos uwp, mapa de grupo de conteúdo de origem
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442169"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468858"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crie e converta um mapa de grupo de conteúdo de origem
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de coleção da Microsoft Store, exibir produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 066660c307be9f3592aa38cb21a6e00cd960aa73
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432923"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468726"
 ---
 # <a name="query-for-products"></a>Consulta por produtos
 

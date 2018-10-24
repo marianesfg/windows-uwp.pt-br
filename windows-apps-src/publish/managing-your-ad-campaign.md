@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e0d63cac488e294629d430c7470dc58ad64059f9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438543"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468372"
 ---
 # <a name="manage-your-ad-campaign"></a>Gerenciar sua campanha publicitária
 
@@ -50,9 +50,9 @@ Para fazer alterações em uma campanha publicitária, clique no nome dela para 
 * [Sobre anúncios domésticos](about-house-ads.md)
 * [Relatório de anúncios de instalação de aplicativos](app-install-ads-reports.md)
 * [Perguntas comuns](common-questions.md)
- 
+ 
 
- 
+ 
 
 
 

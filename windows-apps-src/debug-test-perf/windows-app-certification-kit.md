@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443540"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468933"
 ---
 # <a name="windows-app-certification-kit"></a>Kit de Certificação de Aplicativos Windows
 
@@ -28,7 +28,7 @@ Para certificar seu aplicativo [Windows](https://msdn.microsoft.com/windows/desk
 Pré-requisitos para testar um Aplicativo Universal do Windows:
 
 -   Você deve instalar e executar o Windows 10.
--   Você deve instalar o [Kit de Certificação de Aplicativos Windows versão 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), incluído no Software Development Kit do Windows (SDK do Windows) para Windows 10.
+-   Você deve instalar a [versão do Kit de certificação de aplicativo do Windows 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), que está incluído no Kit de desenvolvimento de Software do Windows (SDK) para Windows 10.
 -   Você deve [habilitar o dispositivo para desenvolvimento](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Você deve implantar o aplicativo do Windows que deseja testar no seu computador.
 
@@ -56,17 +56,17 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 6.  Abra o arquivo de relatório e examine os resultados do teste.
 
-**Observação**  Se você usa o Visual Studio, execute o Kit de Certificação de Aplicativos Windows ao criar o pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para saber como.
+**Observação**se você estiver usando o Visual Studio, você pode executar o Kit de certificação de aplicativo do Windows ao criar o pacote do aplicativo. Consulte [Empacotando aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para saber como.
 
- 
+ 
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Validar seu aplicativo do Windows usando o Kit de Certificação de Aplicativos Windows a partir de uma linha de comando
 
-**Importante**  O Kit de Certificação de Aplicativos Windows deve executar no contexto de uma sessão de usuário ativa.
+**Importante**o Kit de certificação de aplicativo Windows devem ser executado no contexto de uma sessão de usuário ativa.
 
 1.  Na janela de comando, navegue até o diretório que contém o Kit de Certificação de Aplicativos Windows.
 
-    **Observação**   O caminho padrão é C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\.
+    **Observação**  o caminho padrão é C:\\Program Files\\Windows Kits\\10\\App Certification kit\\..
 
 2.  Insira os seguintes comandos nesta ordem para testar um aplicativo que já está instalado no computador de teste:
 
@@ -82,9 +82,9 @@ A instalação de um [Kit de Certificação de Aplicativos Windows]( http://go.m
 
 3.  Quando o teste for concluído, abra o arquivo de relatório denominado `[report file name]` e examine os resultados.
 
-**Observação**  O Kit de Certificação de Aplicativos Windows pode ser executado em um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado em Session0.
+**Observação**o Kit de certificação de aplicativo Windows pode ser executado de um serviço, mas o serviço deve iniciar o processo do kit dentro de uma sessão de usuário ativa e não pode ser executado em Session0.
 
-**Observação**   Para saber mais sobre a linha de comando do Kit de Certificação de Aplicativos Windows, insira o comando `appcert.exe /?`
+**Observação**  para obter mais informações sobre a linha de comando do Kit de certificação de aplicativo do Windows, digite o comando `appcert.exe /?`
 
 ## <a name="testing-with-a-low-power-computer"></a>Testando com um computador com baixo consumo de energia
 
@@ -98,9 +98,9 @@ As características de desempenho podem mudar ao longo do tempo para acompanhar 
 
 * [Testes do Kit de Certificação de Aplicativos Windows](windows-app-certification-kit-tests.md)
 * [Políticas da Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
- 
+ 
 
- 
+ 
 
 
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, StartScreenManager, fixar bloco primário, apis de bloco primário, verificar se o bloco está fixado, bloco dinâmico
 ms.localizationpriority: medium
 ms.openlocfilehash: 42b4c014dfd49c42497b8846e37e37af53cc3885
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445136"
+ms.locfileid: "5468346"
 ---
 # <a name="primary-tile-apis"></a>APIs de bloco primário
  
@@ -88,7 +88,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 Se o bloco primário atualmente não estiver fixado e o bloco for compatível com Iniciar, convém mostrar uma dica para que os usuários possam fixar o bloco primário.
 
 > [!NOTE]
-> Você deve chamar essa API de um thread da interface do usuário enquanto o aplicativo está em primeiro plano, e você deve chamar essa API somente depois que o usuário tiver solicitado intencionalmente a fixação do bloco primário (por exemplo, depois que o usuário tiver clicado em sim na dica sobre como fixar o bloco).
+> Você deve chamar essa API de um thread de interface do usuário enquanto o aplicativo está em primeiro plano, e você só deve chamar essa APIafterthe usuário tiver solicitado intencionalmente bepinned o bloco primário (por exemplo, depois que o usuário tiver clicado em Sim na dica sobre como fixar o bloco).
 
 Se o usuário clica no botão para fixar o bloco primário, você poderia chamar o método [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que o bloco seja fixado em Iniciar. Isso exibirá uma caixa de diálogo solicitando ao usuário para confirmar se eles querem seu bloco fixado em Iniciar.
 

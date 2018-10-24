@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438115"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468594"
 ---
 # <a name="intro-to-certificates"></a>Introdução a certificados
 
@@ -26,7 +26,7 @@ Este artigo discute o uso de certificados em aplicativos da Plataforma Universal
 
 ### <a name="shared-certificate-stores"></a>Repositórios de certificados compartilhados
 
-Os aplicativos UWP usam o novo modelo de aplicativo isolationist introduzido no Windows 8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
+Aplicativos UWP usam o novo aplicativo isolationist introduzido no Windows8. Nesse modelo, os aplicativos são executados em uma construção do sistema operacional de baixo nível, chamada de contêiner de aplicativo, que proíbe o aplicativo de acessar recursos ou arquivos fora de si mesmo, a menos que haja permissão explícita para fazer isso. As seções a seguir descrevem as implicações que isso tem na infraestrutura de chave pública (PKI).
 
 ### <a name="certificate-storage-per-app-container"></a>Repositório de certificados por contêiner de aplicativo
 

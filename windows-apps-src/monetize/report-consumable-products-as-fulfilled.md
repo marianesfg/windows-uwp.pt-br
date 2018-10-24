@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de coleção da Microsoft Store, providenciado, consumível
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cbacd35a25e8eaf9673d118fcbece835572e289
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440371"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468398"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Declarar produtos consumíveis como providenciados
 
@@ -144,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | Não autorizado | PartnerAadTicketRequired   | Um token de acesso do Azure AD não foi passado para o serviço no cabeçalho de autorização.                                                                                                   |
 | 401  | Não autorizado | InconsistentClientId       | A declaração *clientId* na chave de ID da Microsoft Store no corpo da solicitação e a declaração *appid* no token de acesso do Azure AD no cabeçalho de autorização não coincidem.                     |
 
-<span/> 
+<span/> 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
