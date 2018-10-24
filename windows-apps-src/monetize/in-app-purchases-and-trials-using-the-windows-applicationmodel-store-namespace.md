@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: bb2c242ea4b7e3881751874c096165279854aa5e
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444401"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 

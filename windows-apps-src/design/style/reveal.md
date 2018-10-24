@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395530"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443591"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -134,7 +134,7 @@ Você pode adicionar o Revelação a controles personalizados. Antes de fazer is
 
 
 Esses efeitos são definidos por dois pincéis: 
-* Revelação borda é definido pela **RevealBorderBrush**
+* Revelação borda é definido por **RevealBorderBrush**
 * Revelação hover é definido por **RevealBackgroundBrush**
 
 ```xaml

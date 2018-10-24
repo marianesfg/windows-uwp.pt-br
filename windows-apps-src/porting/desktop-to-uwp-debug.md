@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397418"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443171"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
@@ -24,7 +24,7 @@ Execute seu aplicativo empacotado e ver sua aparência sem ter que assiná-lo. E
 
 <a id="run-app" />
 
-## <a name="run-your-application"></a>Executar seu aplicativo
+## <a name="run-your-application"></a>Executar o aplicativo
 
 Você pode executar seu aplicativo para testá-lo localmente sem precisar obter um certificado e assiná-lo. Como executar o aplicativo depende de qual ferramenta você usou para criar o pacote.
 
@@ -44,7 +44,7 @@ Para iniciar seu aplicativo, encontre-o no menu Iniciar do Windows.
 ![Aplicativo empacotado no menu Iniciar](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve ser formatada para o formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="debug-your-app"></a>Depurar seu aplicativo
 
@@ -72,7 +72,7 @@ Se você fizer alterações ao seu aplicativo para corrigir bugs, reempacote-o u
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar o ciclo de vida inteiro do aplicativo
 
-Em alguns casos, convém controle refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes que ele inicie.
+Em alguns casos, convém controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes que ele inicie.
 
 Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento.
 
@@ -80,11 +80,11 @@ O [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.8
 
 ## <a name="test-your-app"></a>Testar o app
 
-Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e instalá-lo.
+Para testar seu aplicativo em uma configuração realista enquanto você se prepara para distribuição, é melhor assinar seu aplicativo e, em seguida, instalá-lo.
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testar um aplicativo que você empacotou usando o Visual Studio
 
-O Visual Studio assina seu aplicativo usando um certificado de teste. Você encontrará esse certificado na pasta de saída gerada pelo assistente **Criar pacotes de aplicativo**. O arquivo de certificado tem a extensão *. cer* e você precisará instalar esse certificado no repositório **Autoridades de certificação raiz confiáveis** no computador em que você deseja testar seu aplicativo em. Consulte [Fazer o sideload do pacote](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+O Visual Studio assina seu aplicativo usando um certificado de teste. Você encontrará esse certificado na pasta de saída gerada pelo assistente **Criar pacotes de aplicativo**. O arquivo de certificado tem a extensão *. cer* e você precisará instalar esse certificado no armazenamento de **Autoridades de certificação raiz confiáveis** no computador que você deseja testar seu aplicativo em. Consulte [Fazer o sideload do pacote](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Testar um aplicativo que você empacotou usando o Desktop App Converter (DAC)
 

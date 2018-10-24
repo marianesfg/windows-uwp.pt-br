@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5401118"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445434"
 ---
 # <a name="segoe-mdl2-icons"></a>Ícones Segoe MDL2
 
@@ -47,7 +47,7 @@ Todos os glifos na fonte **Segoe MDL2 Assets** têm a mesma largura fixa com uma
 Vários ícones também têm formulários espelhados disponíveis para uso em idiomas que usam a direção de texto da direita para esquerda como árabe, farsi e hebraico.
 
 ## <a name="using-the-icons"></a>Usando os ícones
-Se você estiver desenvolvendo um aplicativo em c# /VB/c + + e XAML, você pode usar os glifos específicos de Segoe MDL2 Assets com a [enumeração de símbolo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Se você estiver desenvolvendo um aplicativo em c#/VB/C++ e XAML, você pode usar os glifos específicos de Segoe MDL2 Assets com a [enumeração de símbolo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -66,8 +66,8 @@ Você também pode usar o recurso estático `SymbolThemeFontFamily` acessar **Se
 
 
 ## <a name="how-do-i-get-this-font"></a>Como obtenho essa fonte?
-* No Windows 10: Não que é necessário fazer nada, a fonte vem com o Windows.
-* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">obter a Segoe UI e fontes de ícones MDL2</a>
+* No Windows 10: Não que precisa fazer nada, a fonte vem com o Windows.
+* Em um Mac, você precisará baixar e instalar a fonte: <a href="https://aka.ms/SegoeFonts">Obtenha a Segoe UI e fontes de ícones MDL2</a>
 
 ## <a name="icon-list"></a>Lista de ícones
 Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do que podemos mostrar aqui. Muitos ícones são destinados a finalidades específicas e não são normalmente usados em qualquer outro lugar.
@@ -3214,7 +3214,7 @@ Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do qu
  </tr>
 <tr><td><img src="images/segoe-mdl/EC32.png" width="32" height="32" alt="Cafe" /></td>
   <td>EC32</td>
-  <td>Cafeterias</td>
+  <td>Em cafeterias</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EC37.png" width="32" height="32" alt="MobSignal1" /></td>
   <td>EC37</td>
@@ -5018,7 +5018,7 @@ Tenha em mente que a fonte **Segoe MDL2 Assets** inclui muito mais ícones do qu
  </tr>
 <tr><td><img src="images/segoe-mdl/F5ED.png" width="32" height="32" alt="Set" /></td>
   <td>F5ED</td>
-  <td>Defina</td>
+  <td>Definir</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F5EE.png" width="32" height="32" alt="SetSolid" /></td>
   <td>F5EE</td>

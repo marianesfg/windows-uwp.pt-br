@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisição, funil
 ms.localizationpriority: medium
 ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397590"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443132"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obter dados de funil de aquisição do app
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma, tarefa em segundo plano, serviço de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 72a8a02d14a4fa9287c987150a526745b294b65f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5408474"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443941"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicar-se com um serviço de app remoto
 

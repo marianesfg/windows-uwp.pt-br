@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5402697"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445773"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novidades no Windows 10 para desenvolvedores, compilação 17134
 
@@ -73,7 +73,7 @@ Captura de tela | O [namespace Windows.Graphics.Capture](https://docs.microsoft.
 Gatilhos do sistema | O [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) permite que você defina um gatilho do sistema quando o sistema operacional não fornece um gatilho do sistema necessário. Por exemplo, quando um driver de hardware e o aplicativo UWP pertencerem a terceiros, e o driver de hardware precisar gerar um evento personalizado que seu app possa manipular Por exemplo, uma placa de áudio que precisa notificar um usuário quando uma tomada de áudio está conectada.
 Atividades do usuário | A nova [documentação da UserActivity](../launch-resume/useractivities.md) explica como ajudar os usuários a retomar o que eles estavam fazendo no seu aplicativo, mesmo em vários dispositivos.</br>A classe **UserActivitySessionHistoryItem** tem novos métodos que recuperam as atividades recentes do usuário. Consulte [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) e sua sobrecarga para obter detalhes.
 APIs do Windows Mixed Reality | Para dar suporte à crescente plataforma Windows Mixed Reality, novas APIs foram adicionadas aos namespaces [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) e [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial).
-Documentos do Windows Mixed Reality | Diretrizes para desenvolvedores do Windows Mixed Reality são [agora hospedadas em docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Assim como nestes documentos UWP, você pode agora arquivar comentários nos problemas do GitHub ou enviar suas próprias contribuições por meio de uma solicitação pull.
+Documentos do Windows Mixed Reality | As diretrizes de desenvolvedor do Windows Mixed Reality são [agora hospedadas em docs.microsoft.com.](https://docs.microsoft.com/windows/mixed-reality/) Assim como nestes documentos UWP, você pode agora arquivar comentários nos problemas do GitHub ou enviar suas próprias contribuições por meio de uma solicitação pull.
 
 ## <a name="publish--monetize-windows-apps"></a>Publique e monetize aplicativos do Windows
 

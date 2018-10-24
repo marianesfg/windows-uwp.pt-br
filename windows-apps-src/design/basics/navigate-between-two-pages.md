@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398962"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443367"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
@@ -320,7 +320,7 @@ Por fim, sempre que uma página é carregada no quadro, ela é adicionada como u
 
 Nosso aplicativo navega entre duas páginas, mas ainda não faz nada de interessante. Geralmente, quando um aplicativo tem várias páginas, as páginas precisam compartilhar informações. Vamos passar algumas informações da primeira para a segunda página.
 
-Em Page1.xaml, substitua o **HyperlinkButton** que você adicionou anteriormente com o seguinte [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+Em Page1. XAML, substitua o **HyperlinkButton** que você adicionou anteriormente com o seguinte [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
 Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) e um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (`name`) para inserir uma sequência de texto.
 

@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862415"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445573"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -126,11 +126,11 @@ O significado dos atributos `<uap3:AppExtension>` é o seguinte:
 
 |Atributo|Descrição|Necessário|
 |---------|-----------|:------:|
-|**Nome**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.|:heavy_check_mark:|
-|**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.|:heavy_check_mark:|
+|**Nome**|Este é o nome do contrato de extensão. Quando ele corresponde ao **Nome** declarado em um host, esse host será capaz de encontrar essa extensão.| :heavy_check_mark: |
+|**ID**| Identifica esse aplicativo como uma extensão. Como pode haver várias extensões que usam o mesmo nome de contrato de extensão (imagine um aplicativo de pintura que dá suporte a várias extensões), você pode usar a ID para diferenciá-los. Os hosts de extensão do aplicativo podem usar a ID para inferir algo sobre o tipo de extensão. Por exemplo, você pode ter uma extensão projetada para a área de trabalho e outra para dispositivos móveis, com a ID sendo o diferencial. Para isso, você também pode usar o elemento **Propriedades**, discutido abaixo.| :heavy_check_mark: |
 |**DisplayName**| Pode ser usado em seu próprio aplicativo host para identificar a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
 |**Descrição** | Pode ser usado em seu próprio aplicativo host para descrever a extensão para o usuário. Ele é consultável, e pode usar o [novo sistema de gerenciamento de recurso](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para localização. O conteúdo localizado é carregado do pacote de extensão do aplicativo, não do aplicativo host. | |
-|**PublicFolder**|O nome de uma pasta, relativo à raiz do pacote, onde você pode compartilhar conteúdo com o host de extensão. Por convenção, o nome é "Public", mas você pode usar qualquer nome que corresponde a uma pasta na sua extensão.|:heavy_check_mark:|
+|**PublicFolder**|O nome de uma pasta, relativo à raiz do pacote, onde você pode compartilhar conteúdo com o host de extensão. Por convenção, o nome é "Public", mas você pode usar qualquer nome que corresponde a uma pasta na sua extensão.| :heavy_check_mark: |
 
 `<uap3:Properties>` é um elemento opcional que contém metadados personalizadas onde os hosts podem ler no tempo de execução. No exemplo de código, a extensão é implementada como um serviço de aplicativo, assim o host precisa de uma maneira de obter o nome desse serviço de aplicativo para que ele possa chamá-lo. O nome do serviço de aplicativo é definido no elemento <Service>, que definimos (nós poderíamos ter chamado de qualquer nome que gostaríamos). O host no exemplo de código procura por essa propriedade em tempo de execução para saber o nome do serviço de aplicativo.
 

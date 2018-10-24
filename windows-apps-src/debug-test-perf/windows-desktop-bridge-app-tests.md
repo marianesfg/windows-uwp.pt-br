@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Testes do app de Ponte de Desktop do Windows
-description: Use testes internos da ponte de Desktop para garantir que seu aplicativo da área de trabalho é otimizado para a sua conversão em um aplicativo UWP.
+description: Use testes internos da ponte da área de trabalho para garantir que seu aplicativo da área de trabalho é otimizado para a sua conversão em um aplicativo UWP.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404867"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443581"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 
 [Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são convertidos em aplicativos da plataforma Universal do Windows (UWP) usando a [Ponte da área de trabalho](https://developer.microsoft.com/en-us/windows/bridges/desktop)de aplicativos da área de trabalho do Windows. Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Testes obrigatórios versus opcionais
-Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante o carregamento da Microsoft Store. É recomendável investigando os resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
+Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante o carregamento da Microsoft Store. É recomendável investigando esses resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
 
 ## <a name="current-optional-tests"></a>Testes opcionais atuais
 
@@ -125,7 +125,7 @@ A imagem "BadgeLogo" tem um valor ABGR {value} na posição (x, y) que não é v
 A imagem deve definir pelo menos uma variante, sem um qualificador TargetSize. Ela deve definir um qualificador Scale ou deixar Scale e TargetSize não especificados, que tem o padrão Scale-100.  | Para saber mais, veja os guias sobre [design responsivo](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) e [recursos do app](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 O pacote tem um arquivo "resources.pri" ausente.  | Se você tiver conteúdo localizável no manifesto do aplicativo, verifique se o pacote do aplicativo inclui um arquivo resources.pri válido. 
 O arquivo "resources.pri" deve conter um mapa de recursos com um nome que corresponda ao nome do pacote {package full name}  | Você pode obter esse erro quando o manifesto é alterado e o nome do mapa de recursos no resources.pri não corresponde mais ao nome do pacote no manifesto. Na mensagem real, {package full name} contém o nome do pacote que resources.pri deve conter. Para corrigir isso, você precisa recompilar o resources.pri e a maneira mais fácil de fazer isso é recompilando o pacote do app. 
-O arquivo "resources.pri" não deve ter o AutoMerge habilitado.  | O MakePRI.exe oferece suporte a uma opção denominada AutoMerge. O valor padrão de AutoMerge é desativar. Quando está habilitado, o AutoMerge mescla os recursos de pacote de idiomas do app em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store devem estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo. 
+O arquivo "resources.pri" não deve ter o AutoMerge habilitado.  | O MakePRI.exe oferece suporte a uma opção denominada AutoMerge. O valor padrão de AutoMerge é desativar. Quando está habilitado, o AutoMerge mescla os recursos de pacote de idiomas do app em um único resources.pri no tempo de execução. Não recomendamos isso para aplicativos que você pretende distribuir por meio da Microsoft Store. O Resources. PRI de um aplicativo que é distribuído pela Microsoft Store deve estar na raiz do pacote do aplicativo e conter todas as referências de idiomas compatíveis com o aplicativo. 
 A cadeia de caracteres {string} falhou na restrição de comprimento máximo de {number} caracteres.  | Consulte os [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro e {number} contém o comprimento máximo. 
 A cadeia de caracteres {string} não pode ser espaço inicial/final.  | O esquema dos elementos no manifesto do aplicativo não permite caracteres de espaço iniciais ou finais. Na mensagem real, {string} é substituído pela cadeia de caracteres com o erro. Verifique se algum dos valores localizados nos campos do manifesto no resources.pri contém caracteres de espaço iniciais ou finais. 
 A cadeia de caracteres não pode estar vazia (o comprimento deve ser maior que zero)  | Para obter mais informações, consulte [Requisitos do pacote do aplicativo](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). 
@@ -221,7 +221,7 @@ Esse teste verifica todos os componentes da UWP no app:
 Isso pode ser corrigido, garantindo que o app foi compilado como um build de versão e não como um build de depuração. 
 
 > [!NOTE]
-> A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Examine as mensagens de erro para identificar a API presente que não é uma API permitida para aplicativos UWP. 
+> A compilação de depuração de um aplicativo falhará nesse teste mesmo se o aplicativo usa [APIs para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Consulte as mensagens de erro para identificar a API presente que não é uma API permitida para aplicativos UWP. 
 
 > [!NOTE]
 > Aplicativos C++ integrados em uma configuração de depuração falhará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte [alternativas às APIs do Windows em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para obter mais informações.

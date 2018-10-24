@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444072"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -32,7 +32,7 @@ As APIs encontradas no namespace **Graphics** exigem uma funcionalidade geral pa
     
 1. Abra **Package. appxmanifest** no **Gerenciador de soluções**.
 2. Selecione a guia **Recursos**.
-3. Verifique o **gráfico de captura**.
+3. Verifique a **captura de elementos gráficos**.
 
 ![Captura de elementos gráficos](images/screen-capture-1.png)
 
@@ -72,7 +72,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a ser executado no thread da interface do usuário com o código a seguir:
+Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a executado no thread da interface do usuário com o código a seguir:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403730"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442782"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
@@ -37,7 +37,7 @@ Aqui estão as principais diferenças entre os dois tipos de conta.
 |--------------------|-----------------|
 | <ul><li>Custa aproximadamente US$ 19 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Menor processo de verificação de conta</li></ul> | <ul><li>Custa aproximadamente US$ 99 (taxa de registro única; o valor exato varia dependendo da moeda do seu país ou região)</li><li>Requer mais verificação de conta</li><li>Requer que sua empresa seja reconhecida como tal no país ou região onde está localizada</li><li>Capaz de enviar aplicativos com a funcionalidade restrita (conforme descrito nas [políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
 
-As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Pelas [Políticas da Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), aplicativos com determinadas funcionalidades, como aqueles que acessar a conta financeira informações ou que requerem autenticação para acessar a funcionalidade principal (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas de empresa.
+As contas empresariais são um pouco mais caras, principalmente porque exigem algumas etapas adicionais para garantir que você esteja autorizado a representar sua empresa e configurar a conta. Por que as [Políticas da Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), aplicativos com determinadas funcionalidades, como aqueles que acessar a conta financeira informações ou que requerem autenticação para acessar a funcionalidade principal (sem usar um provedor de autenticação de terceiros dedicado seguro), só podem ser publicados por contas de empresa.
 
 ## <a name="account-verification"></a>Verificação da conta
 

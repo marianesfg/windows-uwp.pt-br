@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
 ms.openlocfilehash: e94eb0e819796dda456899bb877057e4532f5ce9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396060"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442304"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Solucionar problemas de instalação com o arquivo do Instalador de Aplicativo
 
@@ -74,7 +74,7 @@ Ao instalar em um ponto de extremidade HTTP, é importante verificar que todos o
 
 Se o aplicativo do Instalador de Aplicativo não puder instalá-lo, essas etapas ajudarão a identificar o problema de instalação.
 
-### <a name="verify-app-package-file-installation"></a>Verificar a instalação do arquivo de pacote de aplicativo
+### <a name="verify-app-package-file-installation"></a>Verifique se a instalação do arquivo de pacote de aplicativo
 
 - Baixe o arquivo de pacote do aplicativo para uma pasta local e tentar instalá-lo usando o comando do PowerShell [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) .
 

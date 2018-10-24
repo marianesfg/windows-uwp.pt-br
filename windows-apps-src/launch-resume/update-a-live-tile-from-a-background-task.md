@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410615"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443429"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 

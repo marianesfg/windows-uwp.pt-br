@@ -17,11 +17,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403790"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445394"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -329,7 +329,7 @@ Uma limitação geral dessa técnica é que a API **AddHandler** obtém um parâ
 
 Você pode substituir eventos-chave para controles específicos (como [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) para fornecer navegação de foco consistente para vários dispositivos de entrada, incluindo teclado e gamepad.
 
-No exemplo a seguir, vamos subclasse o controle e substituímos o comportamento de KeyDown para mover o foco para o GridView conteúdo quando qualquer tecla de seta é pressionada.
+No exemplo a seguir, vamos subclasse o controle e substituímos o comportamento de KeyDown para mover o foco para o GridView de conteúdo quando qualquer tecla de seta é pressionada.
 
 ```csharp
 public class CustomGridView : GridView

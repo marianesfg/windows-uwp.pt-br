@@ -10,24 +10,24 @@ ms.technology: uwp
 keywords: webvr, edge, desenvolvimento da web, babylon, babylonjs, Babylon. js, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ef659a178a4c3f40d464fd958e5493454afef7
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405753"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444887"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Adicionando suporte a WebVR a um jogo de Babylon. js 3D
 
-Se você criou um jogo 3D com Babylon. js e pensado que talvez aparência ótima em realidade virtual (VR), siga as etapas simples neste tutorial para garantir que uma realidade.
+Se você criou um jogo 3D com Babylon. js e pensado que pode parecer ótima em realidade virtual (VR), siga as etapas simples para garantir que uma realidade neste tutorial.
 
-Vamos adicionar suporte a WebVR para o jogo mostrado aqui. Vá em frente e conectar um controlador do Xbox para testá-lo!
+Vamos adicionar suporte a WebVR ao jogo mostrado aqui. Vá em frente e conectar um controlador do Xbox para testá-lo!
 
 
-<iframe height='300' scrolling='no' title='Jogo de dinossauro Babylon. js usando Babylon.GUI' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/wrOvoj/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/wrOvoj/'>Babylon. js dino jogo usando Babylon.GUI</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Jogo de dino Babylon. js usando Babylon.GUI' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/wrOvoj/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/wrOvoj/'>Babylon. js dino jogo usando Babylon.GUI</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 Isso é um jogo 3D que funcione bem em uma tela simples, mas o que sobre em VR?
-Neste tutorial, nós o guiaremos pelas etapas alguns ele leva para obter esse e em execução com a WebVR. Vamos usar um fone de ouvido de [Realidade do Windows](https://developer.microsoft.com/en-us/windows/mixed-reality) que pode aproveitar o suporte adicionado para WebVR no Microsoft Edge. Após aplicarmos essas alterações para o jogo, você pode esperar que ele também funcionam em outras combinações de navegador/fone de ouvido que dão suporte a WebVR.
+Neste tutorial, nós o guiaremos pelas etapas alguns ele leva para obter esse e em execução com a WebVR. Vamos usar um fone de ouvido de [Windows Mixed Reality](https://developer.microsoft.com/en-us/windows/mixed-reality) pode aproveitar o suporte adicionado para WebVR no Microsoft Edge. Após aplicarmos essas alterações para o jogo, você pode esperar que ele também funcionam em outras combinações de navegador/fone de ouvido que dão suporte a WebVR.
 
 
 
@@ -43,7 +43,7 @@ Neste tutorial, nós o guiaremos pelas etapas alguns ele leva para obter esse e 
 
 ## <a name="getting-started"></a>Introdução
 
-A maneira mais simples de começar é visitar o [repositório do GitHub tutoriais-Windows-web](https://github.com/Microsoft/Windows-tutorials-web), pressione a verde **Clone ou baixar** botão e selecione **Open in Visual Studio**.
+A maneira mais simples de começar é visitar o [repositório do GitHub tutoriais-Windows-web](https://github.com/Microsoft/Windows-tutorials-web), pressione a verde **Clone ou baixar** botão e selecione **aberto no Visual Studio**.
 
 ![botão clone ou botão baixar](images/3dclone.png)
 
@@ -63,7 +63,7 @@ Você pode testar as duas versões do jogo, abrindo arquivos seus respectivos in
 
 ## <a name="the-mixed-reality-portal"></a>O Portal de realidade misturada
 
-Se você não estiver familiarizado com o Windows Mixed Reality e têm o Windows 10 para criadores instalada em um computador com uma placa gráfica compatível, tente abrir o aplicativo do **Portal de realidade misturada** do menu Iniciar no Windows 10.
+Se você não estiver familiarizado com o Windows Mixed Reality e tiver o Windows 10 para criadores instalada em um computador com uma placa gráfica compatível, tente abrir o aplicativo do **Portal de realidade misturada** do menu Iniciar no Windows 10.
 
 ![Pesquisa de Portal de realidade mista](images/mixed-reality-portal.png)
 
@@ -85,7 +85,7 @@ Uma extensão Babylon. js, o `GUI` biblioteca é usado throuhout a amostra para 
 
 Um texto 2D `GUI` elemento pode ser criado com algumas linhas dependendo de quantos atributos você querer ajustar.
 O trecho de código a seguir já está em nosso exemplo de [**antes**](https://github.com/Microsoft/Windows-tutorials-web/tree/master/BabylonJS-game-with-WebVR/before) , mas vamos passo a passo que está acontecendo.
-Fazemos primeiro um [`AdvancedDynamicTexture`](https://doc.babylonjs.com/how_to/gui#advanceddynamictexture) objeto para estabelecer a GUI que abrangerá. O exemplo define como sendo `CreateFullScreenUI()`, que significa nossa interface do usuário abordará a tela inteira. Com `AdvancedDynamicTexture` criado, podemos fazer em seguida, uma caixa de texto 2D que aparece ao iniciar o jogo usando `GUI.Rectanlge()` e `GUI.TextBlock()`.
+Fazemos primeiro um [`AdvancedDynamicTexture`](https://doc.babylonjs.com/how_to/gui#advanceddynamictexture) objeto para estabelecer a GUI que abordará. O exemplo define como sendo `CreateFullScreenUI()`, que significa nossa interface do usuário abordará a tela inteira. Com `AdvancedDynamicTexture` criado, podemos fazer em seguida, uma caixa de texto 2D que aparece ao iniciar o jogo usando `GUI.Rectanlge()` e `GUI.TextBlock()`.
 
 
 Esse código é adicionado em [**Main. js**](https://github.com/Microsoft/Windows-tutorials-web/blob/master/BabylonJS-game-with-WebVR/before/js/main.js#L157-L168).
@@ -131,7 +131,7 @@ navigator.getVRDisplays().then(function (displays) {
 });
 ```
 
-Com as informações armazenadas no `headset` variável, podemos agora poderá escolher a câmera é ideal para o usuário.
+Com as informações armazenadas no `headset` variável, agora poderemos escolher a câmera que seja ideal para o usuário.
 
 
 ## <a name="creating-and-selecting-the-initial-camera"></a>Criando e selecionando a câmera inicial
@@ -141,7 +141,7 @@ Com Babylon. js, a WebVR pode ser adicionada rapidamente usando o [`WebVRFreeCam
 
 ### <a name="step-1-checking-for-headsets"></a>Etapa 1: Verificar se há fones de ouvido
 
-Para nossa câmera fallback, vamos usar o [`UniversalCamera`](https://doc.babylonjs.com/classes/3.1/universalcamera) que está sendo usado no jogo original.
+Para nossa câmera fallback, vamos usar o [`UniversalCamera`](https://doc.babylonjs.com/classes/3.1/universalcamera) que atualmente é usado no jogo original.
 
 Vamos verificar nosso `headset` variável para determinar se podemos usar o `WebVRFreeCamera` câmera.
 
@@ -171,7 +171,7 @@ Cole o código dentro de `createScene()` funcionam após `camera.applyGravity = 
         }
 ```
 
-Um clique no jogo agora criará um prompt com a seguinte ou exibe o jogo no fone de ouvido imediatamente se o usuário aceitou o prompt antes.
+Um clique no jogo agora criará um prompt com o seguinte, ou exibe o jogo no fone de ouvido imediatamente se o usuário aceitou o prompt antes.
 
 ![prompt imersivo](images/immersiveview.png)
 
@@ -194,7 +194,7 @@ Adicione o seguinte após `engine.runRenderLoop(function () {`.
 Desde que o `WebVRFreeCamera` inicialmente não dá suporte a gamepads, nós vai mapear os botões de gamepad para as teclas de seta do teclado. Faremos isso por aprofundarmos o `inputs` propriedade da câmera. Adicionando os códigos correspondentes para o joystick analógico esquerdo para cima, para baixo, esquerda e direita fazer a correspondência com as teclas de seta, nosso gamepad é novamente em ação.
 
 
-Adicione este código a seguir a `scene.onPointerDown = function() {...}` chamar.
+Adicione este código abaixo do `scene.onPointerDown = function() {...}` chamar.
 ``` javascript
     // Custom input, adding Xbox controller support for left analog stick to map to keyboard arrows
     camera.inputs.attached.keyboard.keysUp.push(211);    // Left analog up
@@ -206,10 +206,10 @@ Adicione este código a seguir a `scene.onPointerDown = function() {...}` chamar
 
 ### <a name="step-4-give-it-a-try"></a>Etapa 4: Experimentá-lo!
 
-Vamos abrir **index. HTML** com nosso fone de ouvido e controlador de jogo conectado, um clique esquerdo da janela do jogo azul migrarão nosso jogo para o modo VR! Vá em frente e colocar em seu fone de ouvido conferir os resultados. 
+Se abrimos **index. HTML** com nosso fone de ouvido e controlador de jogo conectado, um clique esquerdo da janela do jogo azul alternará nosso jogo para o modo VR! Vá em frente e colocar em seu fone de ouvido conferir os resultados. 
 
 
-<iframe height='300' scrolling='no' title='Jogo de dinossauro Babylon. js usando Babylon.GUI - WebVR' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/RjgpJd/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RjgpJd/'>Babylon. js dino jogo usando Babylon.GUI - WebVR</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Jogo de dino Babylon. js usando Babylon.GUI - WebVR' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/RjgpJd/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RjgpJd/'>Babylon. js dino jogo usando Babylon.GUI - WebVR</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 

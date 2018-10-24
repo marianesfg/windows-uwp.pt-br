@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 78c4f1603b921320009305e9646a7227ff47e8e3
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405395"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442756"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 

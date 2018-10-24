@@ -10,16 +10,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, porta, migrar, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 44a41e42477de9d29f1d0443324fa83590c37caf
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403536"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445633"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>Mudar de WRL para C++/WinRT
 Este tópico mostra como fazer a portabilidade do código da [Biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) para seu equivalente no [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
-A primeira etapa da transferência para o C++/WinRT é adicionar automaticamente o suporte para C++/WinRT ao seu projeto (consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) está desativado no projeto. Se estiver usando o C++/CX no projeto, você pode deixar o suporte desativado e atualizar o código do C++/CX para C++/WinRT (consulte [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)). Ou você pode ativar o suporte novamente (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consumir extensão do Windows Runtime** \> **Sim (/ZW)**) e focar primeiro na transferência do código WRL. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows (consulte [Mover para C++ c++ WinRT do C++ c++ /CX](move-to-winrt-from-cx.md)).
+A primeira etapa da transferência para o C++/WinRT é adicionar automaticamente o suporte para C++/WinRT ao seu projeto (consulte [Suporte do Visual Studio para C++/WinRT e o VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Para fazer isso, edite o arquivo `.vcxproj`, encontre `<PropertyGroup Label="Globals">` e, no grupo de propriedades, defina a propriedade `<CppWinRTEnabled>true</CppWinRTEnabled>`. Um efeito dessa alteração é que o suporte para [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx) estiver desativado no projeto. Se estiver usando o C++/CX no projeto, você pode deixar o suporte desativado e atualizar o código do C++/CX para C++/WinRT (consulte [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md)). Ou você pode ativar o suporte novamente (nas propriedades do projeto, **C/C++** \> **Geral** \> **Consumir extensão do Windows Runtime** \> **Sim (/ZW)**) e focar primeiro na transferência do código WRL. C++ c++ /CX e C++ c++ WinRT código pode coexistir no mesmo projeto, com exceção do suporte ao compilador XAML e componentes de tempo de execução do Windows (consulte [Mover para C++ c++ WinRT do C++ c++ /CX](move-to-winrt-from-cx.md)).
 
 Defina a propriedade do projeto **Geral** \> **Versão da plataforma de destino** como 10.0.17134.0 (Windows 10, versão 1803) ou posterior.
 
@@ -45,7 +45,7 @@ winrt::check_hresult(m_dxgiFactory->EnumAdapters1(0, previousDefaultAdapter.put(
 ```
 
 > [!IMPORTANT]
-> Se você tiver um [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que já esteja encaixado (o ponteiro bruto interno já tem um destino) e você queira novamente fixá-lo para apontar para um objeto diferente, primeiro você precisa atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se você não fizer isso, em seguida, um já fixada **com_ptr** desenhará o problema sua atenção (quando você chamar [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) declarando que seu ponteiro interno não é nulo.
+> Se você tiver um [**WinRT:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que já esteja encaixado (o ponteiro bruto interno já tem um destino) e você queira novamente fixá-lo para apontar para um objeto diferente, primeiro você precisa atribuir `nullptr` a ele&mdash;conforme mostrado no exemplo de código abaixo. Se não fizer isso, em seguida, um fixada já **com_ptr** desenhará o problema à sua atenção (quando você chamar [**com_ptr:: Put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) ou [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)) declarando que seu ponteiro interno não é nulo.
 
 ```cppwinrt
 winrt::com_ptr<IDXGISwapChain1> m_pDXGISwapChain1;

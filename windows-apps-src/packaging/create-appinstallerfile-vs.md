@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
 ms.openlocfilehash: 6158b804e1d4ece3c76099a3f8d33d5fa562078d
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396649"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444056"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Criar um arquivo do Instalador de Aplicativo com o Visual Studio
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: edc3dc53a7cf536bbabce108647cf54693c3ab05
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398777"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445464"
 ---
 # <a name="data-binding"></a>Associação de dados
 
@@ -27,4 +27,4 @@ A vinculação de dados é uma maneira de a interface do usuário do seu aplicat
 | [Vinculação de dados em detalhes](data-binding-in-depth.md) | Este tópico descreve detalhadamente os recursos de vinculação de dados. |
 | [Dados de amostra na superfície de design e para a criação de protótipo](displaying-data-in-the-designer.md) | Para que seus controles sejam populados com dados no designer do Visual Studio (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos. |
 | [Vincular dados hierárquicos e criar um modo de exibição mestre/detalhes](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. |
-| [Vinculação de dados e MVVM](data-binding-and-mvvm.md) | Este tópico descreve o padrão de design de arquitetura Model-View-ViewModel (MVVM) da interface do usuário. Vinculação de dados é o núcleo do MVVM e habilita acoplamento entre o código de interface do usuário e não da interface do usuário. |
+| [Vinculação de dados e MVVM](data-binding-and-mvvm.md) | Este tópico descreve o padrão de design de arquitetura de interface do usuário Model-View-ViewModel (MVVM). Vinculação de dados é o núcleo do MVVM e permite que o acoplamento entre o código de interface do usuário e não da interface do usuário. |

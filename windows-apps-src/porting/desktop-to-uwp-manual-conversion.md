@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5402420"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440989"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -33,7 +33,7 @@ Se não tiver certeza sobre quais alterações seu instalador faz no sistema, ou
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
+Consulte este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Criar um manifesto do pacote
 
@@ -177,7 +177,7 @@ Os ativos baseados no destino são para ícones e blocos que aparecem na barra d
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>Gerar um arquivo PRI (Índice de Recurso do Pacote)
 
-Se você cria ativos baseados no destino conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
+Se você cria ativos baseados no destino, conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
 
 1.  Abra um **Prompt de comando de desenvolvedor para o VS 2017**.
 
@@ -208,7 +208,7 @@ Você pode executar seu aplicativo para testá-lo localmente sem precisar obter 
 Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve ser formatada para o formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -224,6 +224,6 @@ Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows
 
 Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
 
-**Assinar seu aplicativo e, em seguida, distribua-o**
+**Assine seu aplicativo e, em seguida, distribua-**
 
 Consulte [distribuir um aplicativo da área de trabalho empacotado](desktop-to-uwp-distribute.md)

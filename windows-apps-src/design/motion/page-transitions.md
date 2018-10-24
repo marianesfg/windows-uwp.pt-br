@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f4fc4cd9701778b3919896cf90929272e6b0923
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398975"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442838"
 ---
 # <a name="page-transitions"></a>Transições de página
 
@@ -57,7 +57,7 @@ A animação de análise detalhada é representada pela classe [**DrillInNavigat
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 ```
 
-## <a name="horizontal-slide"></a>Deslizar horizontal
+## <a name="horizontal-slide"></a>Slide horizontal
 
 Use slide horizontal para mostrar que as páginas irmãs aparecem próximos um do outro. O controle [NavigationView](../controls-and-patterns/navigationview.md) usa automaticamente essa animação para navegação superior, mas se você estiver criando sua própria experiência de navegação horizontal, em seguida, você pode implementar slide horizontal com SlideNavigationTransitionInfo.
 
