@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405254"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5434679"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -58,7 +58,7 @@ Nesse relatório, você encontrará os comentários individuais deixados por seu
 - **Mais populares**: mostra os comentários que tiveram votos a favor por outros clientes nos últimos sete dias, começando com os comentários que obtiveram a atividade mais recente.
 - **Mais recentes**: mostra todos os comentários, começando com os comentários deixados mais recentemente.
 
-Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que estavam usando quando deixou os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente enviou os comentários for um membro do Windows Insider programa.
+Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente enviou os comentários for um membro de no Windows Insider programa.
 
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 

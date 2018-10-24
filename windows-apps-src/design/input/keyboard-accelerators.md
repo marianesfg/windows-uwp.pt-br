@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397739"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435983"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -361,7 +361,7 @@ Como aceleradores de teclado normalmente não são descritos diretamente na inte
 
 **Windows 10, versão 1803 (atualização de abril de 2018) e mais recente**
 
-Por padrão, quando os aceleradores de teclado são declarados, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
+Por padrão, quando são declarados aceleradores de teclado, todos os controles (exceto [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) e [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) apresentam as combinações de teclas correspondentes em uma dica de ferramenta.
 
 > [!NOTE] 
 > Se um controle tiver mais de um acelerador definido, apenas o primeiro será apresentado.
@@ -404,7 +404,7 @@ Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.butt
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-button-small.png)
 
-*Combinação de teclas aceleradoras anexada a dica de ferramenta do botão padrão*
+*Combinação de teclas aceleradoras acrescentada a dica de ferramenta do botão padrão*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">
@@ -416,7 +416,7 @@ Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.butt
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbarbutton-small.png)
 
-*Combinação de teclas aceleradoras anexada a dica de ferramenta do AppBarButton padrão*
+*Combinação de teclas aceleradoras acrescentada a dica de ferramenta do AppBarButton padrão*
 
 ```xaml
 <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">

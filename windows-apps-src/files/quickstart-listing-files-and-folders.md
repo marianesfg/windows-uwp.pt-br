@@ -16,11 +16,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 312e351a39bf291e1fcd21921230a73ed10cfd17
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399294"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435499"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar e consultar arquivos e pastas
 
@@ -46,7 +46,7 @@ Para obter orientações detalhadas sobre como armazenar os dados do app da Plat
 > [!NOTE]
 > Lembre-se de declarar a funcionalidade **picturesLibrary**.
 
-Neste exemplo primeiro usamos o método [**storagefolder. Getfilesasync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obter todos os arquivos na pasta raiz do [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (não em subpastas) e listar o nome de cada arquivo. Em seguida, usamos o método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obter todas as subpastas na **PicturesLibrary** e listar o nome de cada subpasta.
+Neste exemplo primeiro usamos o método [**storagefolder. Getfilesasync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para obter todos os arquivos na pasta raiz do [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (não em subpastas) e listar o nome de cada arquivo. Em seguida, usamos o método [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) para obter todas as subpastas no **PicturesLibrary** e listar o nome de cada subpasta.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;

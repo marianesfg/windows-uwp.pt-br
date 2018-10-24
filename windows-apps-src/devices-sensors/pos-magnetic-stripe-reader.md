@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395592"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5436233"
 ---
 # <a name="magnetic-stripe-reader"></a>Leitor de tarjas magnéticas
 
-Um leitor de tarja magnética pode examinar certos tipos de cartões têm uma tarja magnética neles, como cartões de crédito, licenças do driver, e armazenar os cartões de fidelidade. Você provavelmente encontraram uma ao comprar algo em uma loja.
+Um leitor de tarja magnética pode verificar determinados tipos de cartões têm uma tarja magnética neles, como cartões de crédito, licenças do driver, e armazenar os cartões de fidelidade. Você provavelmente encontrou um ao comprar algo em um repositório.
 
-Usar um leitor de tarja magnética em seu aplicativo da plataforma Universal do Windows (UWP) é semelhante ao uso de qualquer outro dispositivo de ponto de serviço, que você precisa enumerar os dispositivos disponíveis, crie o objeto de dispositivo e declarar o dispositivo antes de você pode usá-lo. Siga a documentação em [guia de Introdução do ponto de serviço](pos-basics.md) para obter mais informações.
+Usando um leitor de tarja magnética em seu aplicativo da plataforma Universal do Windows (UWP) é semelhante ao uso de qualquer outro dispositivo de ponto de serviço, que você precisa enumerar os dispositivos disponíveis, crie o objeto de dispositivo e declarar o dispositivo antes de você pode usá-lo. Siga a documentação em [guia de Introdução do ponto de serviço](pos-basics.md) para obter mais informações.
 
 Os tópicos a seguir fornecem ainda mais informações sobre como usar um leitor de tarja magnética em seu aplicativo.
 

@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-description: A Microsoft Store oferece vários serviços que você pode chamar por meio das APIs REST para acessar programaticamente certos tipos de dados de aplicativos que estão registrados em sua organização ' s conta do Centro de desenvolvimento do Windows.
+description: A Microsoft Store oferece vários serviços que você pode chamar por meio das APIs REST para acessar programaticamente certos tipos de dados para aplicativos que estão registrados em sua organização ' s conta do Centro de desenvolvimento do Windows.
 title: Serviços da Microsoft Store
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Loja
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404051"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439386"
 ---
 # <a name="microsoft-store-services"></a>Serviços da Microsoft Store
 
-A Microsoft Store oferece vários serviços que você pode chamar por meio das APIs REST para acessar programaticamente certos tipos de dados de aplicativos que estão registrados em Centro de desenvolvimento do Windows conta do sua organização.
+A Microsoft Store oferece vários serviços que você pode chamar por meio das APIs REST para acessar programaticamente certos tipos de dados para aplicativos que estão registrados em Centro de desenvolvimento do Windows conta do sua organização.
 
 ## <a name="in-this-section"></a>Nesta seção
 

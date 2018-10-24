@@ -17,11 +17,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a61b8bdcfcfad490528cdceed5e732a6f5f3a89
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400460"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433874"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
 
@@ -116,7 +116,7 @@ Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.cont
 
 Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a dica de ferramenta seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
 
-– Grande parte dos ajustes, use a propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou **Placement** anexado para especificar se a dica de ferramenta deve desenhar acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta. Apenas um dos dois valores de deslocamento afetará a posição final - VerticalOffset quando posicionamento for superior ou inferior, HorizontalOffset quando posicionamento é à esquerda ou direita.
+– Grande parte dos ajustes, use a propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou **Placement** anexado para especificar se a dica de ferramenta deve desenhar acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta. Apenas um dos dois valores de deslocamento afetará a posição final - VerticalOffset quando posicionamento for superior ou inferior, HorizontalOffset quando posicionamento é deixado ou à direita.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -129,7 +129,7 @@ Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O
 </Image>
 ```
 
-Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o posicionamento com precisão usando a nova propriedade **PlacementRect** . PlacementRect ancora posição da dica de ferramenta e também serve como uma área que não serão ocultar a dica de ferramenta, desde que haja espaço suficiente na tela para desenhar ToolTip fora dessa área. Você pode especificar a origem do retângulo em relação ao proprietário da dica de ferramenta e a altura e largura da área de exclusão. A propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se dica de ferramenta deve desenhar acima, abaixo, à esquerda ou direita da PlacementRect. 
+Se uma dica de ferramenta obscurece o conteúdo referido, você pode ajustar o posicionamento com precisão usando a nova propriedade **PlacementRect** . PlacementRect Ancora a posição da dica de ferramenta e também serve como uma área que não será ocultar a dica de ferramenta, desde que haja espaço suficiente na tela para desenhar a dica de ferramenta fora dessa área. Você pode especificar a origem do retângulo em relação ao proprietário da dica de ferramenta e a altura e largura da área de exclusão. A propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá se deve desenhar da dica de ferramenta acima, abaixo, à esquerda ou direita do PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->

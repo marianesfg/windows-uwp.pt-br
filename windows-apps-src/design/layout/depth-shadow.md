@@ -13,11 +13,11 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400706"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439614"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidade Z e sombra
 
@@ -33,19 +33,19 @@ Profundidade Z é a distância entre duas superfícies ao longo do eixo z, e ilu
 
 ### <a name="why-use-z-depth"></a>Por que usar profundidade z?
 
-No mundo físico, podemos tende a se concentrar em objetos que estão mais próximos para nós. Podemos aplicar esse instinto espacial para digital da interface do usuário, também. Por exemplo, se você colocar um elemento mais próximo ao usuário, em seguida, o usuário instintivamente concentrará no elemento. Por se movendo da interface do usuário elementos para mais perto no eixo z, você pode estabelecer hierarquia visual entre objetos, ajudando os usuários a completar tarefas Naturalidade e eficiência em seu aplicativo. 
+No mundo físico, podemos tende a se concentrar em objetos que estão mais próximos para nós. Podemos aplicar esse instinto espacial para digital da interface do usuário, também. Por exemplo, se você colocar um elemento mais próximo ao usuário, em seguida, o usuário instintivamente se concentrará no elemento. Colocação de elementos de interface do usuário se movendo mais perto no eixo z, você pode estabelecer uma hierarquia visual entre objetos, ajudando os usuários a completar tarefas Naturalidade e eficiência em seu aplicativo. 
 
 ![profundidade z no menu de conteúdo](images/elevation-shadow/whyelevation.svg)
 
-Além fornecer significativa hierarquia visual, profundidade z também permite que você crie experiências que fluam perfeitamente de 2D para ambientes 3D, dimensionamento de seu aplicativo em todos os dispositivos e fatores forma. 
+Além fornecer significativa hierarquia visual, profundidade z também permite que você crie experiências que fluam perfeitamente de 2D em ambientes 3D, dimensionamento seu aplicativo em todos os dispositivos e fatores forma. 
 
 ![profundidade z em 2d a 3d](images/elevation-shadow/elevation-2d3d.svg)
 
 ### <a name="how-is-z-depth-perceived"></a>Como profundidade z é percebida?
 
-Com base em como percebemos profundidade do mundo físico, aqui estão várias técnicas que podem ser usadas para mostrar proximidade na interface do usuário digital.
+Com base em como percebemos profundidade do mundo físico, aqui estão várias técnicas que podem ser usadas para mostrar a proximidade na interface do usuário digital.
 
-- **Escala** Objetos futuramente parecem menores que os objetos mais próximos do mesmo tamanho. Este é o método é difícil demonstrar efetivamente no espaço 2D, portanto, ele geralmente não é recomendado. No entanto, você pode usar o dimensionamento e [sombra](#what-is-shadow) para criar uma simulação efetiva de objetos juntar ao usuário em 2D.
+- **Escala** Objetos futuramente parecem menores que os objetos mais próximos do mesmo tamanho. Este é o método é difícil demonstrar efetivamente no espaço 2D, portanto, geralmente não é recomendado. No entanto, você pode usar o dimensionamento e [sombra](#what-is-shadow) para criar uma simulação efetiva de objetos juntar ao usuário em 2D.
 
     ![proximidade com escala](images/elevation-shadow/elevation-scale.svg)
 
@@ -57,7 +57,7 @@ Com base em como percebemos profundidade do mundo físico, aqui estão várias t
 
     ![proximidade com movimento](images/elevation-shadow/elevation-motion.svg)
 
-### <a name="recommendations-for-z-depth"></a>Recomendações de profundidade z
+### <a name="recommendations-for-z-depth"></a>Recomendações para profundidade z
 
 Reduza o número de planos com privilégios elevados para fornecer o foco visual. Para a maioria dos cenários, dois planos é suficiente: um para itens de primeiro plano (alta proximidade) e outro para itens de plano de fundo (proximidade baixa). Se você tiver vários itens com privilégios elevados que não se sobrepuserem, agrupá-los mesmo plano (isto é, em primeiro plano) para reduzir o número de planos.
 
@@ -67,9 +67,9 @@ Reduza o número de planos com privilégios elevados para fornecer o foco visual
 
 ![shadow](images/elevation-shadow/shadow.svg)
 
-Sombra é uma maneira de perceber elevação. Quando há luz acima de um objeto com privilégios elevados, há uma sombra na superfície abaixo. Quanto maior o objeto, a maior e mais suave se torna a sombra. Observe que não é necessário ter sombras objetos com privilégios elevados, mas sombras indicar a elevação.
+Sombra é uma maneira de perceber elevação. Quando há luz acima de um objeto com privilégios elevados, há uma sombra na superfície abaixo. Quanto maior o objeto, o maior e mais suave se torna a sombra. Observe que não precisam ter sombras objetos com privilégios elevados, mas sombras indicar a elevação.
 
-Em aplicativos UWP, sombras devem ser desenvolvidas, não estética. Se sombras prejudicam foco e a produtividade, em seguida, limite o uso de sombra.
+Em aplicativos UWP, sombras devem ser proposital, não estética. Se sombras prejudicam foco e a produtividade, em seguida, limite o uso de sombra.
 
 Você pode usar sombras com as APIs de DropShadow ou ThemeShadow.
 
@@ -79,7 +79,7 @@ O ThemeShadow tipo pode ser aplicado a qualquer elemento XAML para desenhar somb
 
 - Se adapte a alterações na iluminação, tema do usuário, o ambiente de aplicativo e shell.
 - Sombras elementos automaticamente com base em sua elevação.
-- Mantém os elementos em sincronia conforme eles moverem e alterar a elevação.
+- Mantém os elementos em sincronia conforme eles mover e alterar a elevação.
 - Sombras mantém consistente em todo e em todos os aplicativos.
 
 Aqui estão exemplos de ThemeShadow em diferentes elevações com os temas claros e escuros:
@@ -128,7 +128,7 @@ PopupRectangle.Translation += new Vector3(0, 0, 32);
 
 ### <a name="themeshadow-in-other-elements"></a>ThemeShadow em outros elementos
 
-Para fazer isso de um elemento XAML que não estiver em um pop-up, você deve especificar explicitamente os outros elementos que podem receber a sombra no `ThemeShadow.Receivers` coleção.
+Para fazer isso de um elemento XAML que não estiver em um pop-up, você deve especificar explicitamente os elementos que podem receber a sombra no `ThemeShadow.Receivers` coleção.
 
 Este exemplo mostra dois botões que projetar sombras em uma grade por trás deles:
 
@@ -156,13 +156,13 @@ Button2.Translation += new Vector3(0, 0, 32);
 
 1. Limite o número de elementos de receptor personalizado para o mínimo necessário. 
 
-2. Se vários elementos de receptor correm a mesmo elevação, em seguida, tente combiná-los ao direcionar um elemento pai única em vez disso.
+2. Se vários elementos do receptor correm a elevação mesma, em seguida, tente combiná-los ao direcionar um elemento pai único em vez disso.
 
-3. Se vários elementos converta o mesmo tipo de sombra para os mesmos elementos receptor, em seguida, adicione a sombra como um recurso compartilhado e reutilizá-lo.
+3. Se vários elementos converta o mesmo tipo de sombra nos mesmos elementos receptor, em seguida, adicione a sombra como um recurso compartilhado e reutilizá-lo.
 
 ## <a name="drop-shadow"></a>Sombra
 
-DropShadow não está respondendo automaticamente para seu ambiente e não use fontes de luz. Por exemplo implementações, consulte a [Classe DropShadow](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow).
+DropShadow não está respondendo automaticamente para seu ambiente e não usa fontes de luz. Por exemplo implementações, consulte a [Classe DropShadow](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow).
 
 ## <a name="which-shadow-should-i-use"></a>Quais sombra devo usar?
 
@@ -172,10 +172,10 @@ DropShadow não está respondendo automaticamente para seu ambiente e não use f
 | **Capacidade de adaptação** | Sim | Não |
 | **Personalização** | Não | Sim |
 | **Fonte de luz** | Automática (global por padrão, mas pode substituir por aplicativo) | Nenhum(a) |
-| **Suporte em ambientes 3D** | Sim | Não |
+| **Com suporte em ambientes 3D** | Sim | Não |
 
 - Em geral, é recomendável usar ThemeShadow, que se adapta automaticamente ao seu ambiente.
-- Se você tiver mais cenários avançados de para sombras personalizadas, use DropShadow, que permite a personalização maior.
+- Se você ter mais avançados cenários para sombras personalizadas, use DropShadow, que permite a personalização maior.
 - Para trás compatibilidade, use DropShadow.
-- Para questões sobre desempenho, limitar o número de sombras, ou usar DropShadow.
-- Em HMDs em 3D true, use ThemeShadow. Desde que DropShadow desenha em um deslocamento especificado do elemento visual que ele é pai, do lado do vai parecer que está flutuando no espaço. Por outro lado, ThemeShadow é renderizada sobre os elementos visuais definidos como receptores.
+- Para questões sobre desempenho, limitar o número de sombras ou usar DropShadow.
+- Na HMDs em 3D true, use ThemeShadow. Desde que DropShadow desenha em um deslocamento especificado de ele é pai, do lado do elemento visual vai parecer que está flutuando no espaço. Por outro lado, ThemeShadow é renderizada sobre os elementos visuais definidos como receptores.

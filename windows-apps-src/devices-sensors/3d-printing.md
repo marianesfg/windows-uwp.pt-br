@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5406151"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440027"
 ---
 # <a name="3d-printing"></a>Impressão 3D
 
 
-Esta seção descreve como utilizar o [namespace Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para adicionar funcionalidade de impressão 3D ao seu aplicativo Universal do Windows.  
+Esta seção descreve como utilizar o [namespace printing3d](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) para adicionar funcionalidade de impressão 3D ao seu aplicativo Universal do Windows.  
 
 Para obter mais informações sobre a impressão 3D com o Windows 10, incluindo recursos para parceiros de hardware, fóruns de discussão da comunidade e informações gerais sobre funcionalidades de impressão 3D, consulte o site de [impressão 3D com o Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) no Centro de desenvolvimento do Hardware.
 

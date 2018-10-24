@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 796ee4ffaa551c23286110ec7164f511655d6017
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399383"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438481"
 ---
 # <a name="toggle-switches"></a>Switches de alternância
 
@@ -71,7 +71,7 @@ Para algumas ações, uma caixa de seleção ou um switch de alternância pode f
 - Use uma caixa de seleção quando o usuário precisar executar etapas extras para que as alterações sejam efetivadas. Por exemplo, se o usuário precisar clicar no botão "enviar" ou "avançar" para aplicar as alterações, use uma caixa de seleção.
 - Use caixas de seleção quando o usuário pode selecionar vários itens que estão relacionados a uma única configuração ou recurso.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Switches de alternância da interface do usuário do Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Botões de alternância da interface do usuário do Windows
 
 Essas imagens mostram como a interface do usuário do Windows usa os botões de alternância. Aqui está como a tela de Configurações de armazenamento inteligente usam os botões de alternância:
 

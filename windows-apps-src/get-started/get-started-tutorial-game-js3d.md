@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: fa3722c5b011d16ca793b3541efe124b7c255dfd
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405310"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432380"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Criar um jogo 3D em JavaScript usando three.js
 
@@ -32,7 +32,7 @@ Quer ter uma prévia do app que faremos antes de continuar a ler? Confira em Cod
 </iframe>
 
 > [!NOTE] 
-> Isso não é um jogo completo; ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
+> Este não é um um jogo completo; ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -1085,7 +1085,7 @@ Volte para o topo da página para ver o [CodePen final](#introduction)!
 
 
 ## <a name="publishing-to-the-microsoft-store"></a>Publicação na Microsoft Store
-Agora você tem um aplicativo UWP, é possível publicá-lo na Microsoft Store (supondo que você tenha aperfeiçoado primeiro!) Há algumas etapas para o processo.
+Agora você tem um aplicativo UWP, é possível publicá-lo na Microsoft Store (supondo que você o tenha aperfeiçoado primeiro!) Há algumas etapas para o processo.
 
 1.  Você precisa estar [registrado](https://developer.microsoft.com/store/register) como desenvolvedor no Windows.
 2.  Você deve usar a [lista de verificação](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) do envio de aplicativo.

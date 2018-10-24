@@ -15,17 +15,17 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404232"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439781"
 ---
 # <a name="combo-box"></a>Caixa de combinação
 
-Use uma caixa de combinação (também conhecido como uma lista suspensa) para apresentar uma lista de itens que um usuário pode selecionar. Uma caixa de combinação é iniciado em um estado compacto e se expande para mostrar uma lista de itens selecionáveis.
+Use uma caixa de combinação (também conhecido como uma lista suspensa) para apresentar uma lista de itens que um usuário pode selecionar. Uma caixa de combinação começa em um estado compacto e se expande para mostrar uma lista de itens selecionáveis.
 
-Quando a caixa de combinação é fechada, ele exibe a seleção atual ou estiver vazio se não houver nenhum item selecionado. Quando o usuário expande a caixa de combinação, ele exibe a lista de itens selecionáveis.
+Quando a caixa de combinação é fechada, ele exibe a seleção atual ou está vazio se não houver nenhum item selecionado. Quando o usuário expande a caixa de combinação, ele exibe a lista de itens selecionáveis.
 
 > **APIs importantes**: [classe ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [IsEditable propriedade](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propriedade Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -70,7 +70,7 @@ Se a coleção em uma caixa de combinação for grande o suficiente, será exibi
 
 ## <a name="create-a-combo-box"></a>Criar uma caixa de combinação
 
-Você preencher a caixa de combinação, adicionando objetos diretamente à coleção [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou associando a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. Os itens adicionados à ComboBox são encapsulados em contêineres [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) .
+Você preencher a caixa de combinação, adicionando objetos diretamente à coleção [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) ou associando a propriedade [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) como uma fonte de dados. Itens adicionados à ComboBox são encapsulados em contêineres [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) .
 
 Aqui está uma caixa de combinação simples com itens adicionados em XAML.
 
@@ -115,7 +115,7 @@ Para obter o valor de uma propriedade específica do item de dados selecionados,
 
 Você pode associar a essas propriedades em XAML ou manipular o evento [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) para responder às alterações de seleção.
 
-No caso de código do manipulador, você pode obter o item selecionado da propriedade [Selectionchangedeventargs](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) . Você pode obter o item selecionado anteriormente (se houver) da propriedade [Selectionchangedeventargs](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) . Cada coleções AddedItems e RemovedItems contêm apenas 1 item porque a caixa de combinação não oferece suporte a seleção múltipla.
+No caso de código do manipulador, você pode obter o item selecionado da propriedade [Selectionchangedeventargs](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) . Você pode obter o item selecionado anteriormente (se houver) a partir da propriedade [Selectionchangedeventargs](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) . Cada coleções AddedItems e RemovedItems contêm apenas 1 item porque a caixa de combinação não oferece suporte a seleção múltipla.
 
 Este exemplo mostra como manipular o evento SelectionChanged e também como associar ao item selecionado.
 
@@ -165,9 +165,9 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 
 #### <a name="selectionchanged-and-keyboard-navigation"></a>Navegação de teclado e SelectionChanged
 
-Por padrão, o evento SelectionChanged ocorre quando um usuário clica em, tocar ou pressionar Enter em um item na lista para confirmar sua seleção e fecha a caixa de combinação. Seleção não é alterado quando o usuário navega listagem aberto com as teclas de seta do teclado.
+Por padrão, o evento SelectionChanged ocorre quando um usuário clica em, tocar ou pressionar Enter em um item na lista para confirmar sua seleção e fecha a caixa de combinação. Seleção não é alterada quando o usuário navega listagem aberta com as teclas de seta do teclado.
 
-Para fazer uma combinação caixa com "atualizações ao vivo" enquanto o usuário está navegando a lista Abrir com as teclas de seta (como uma fonte suspenso de seleção), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) como [sempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged ocorrer quando o foco muda para outro item na lista de abrir.
+Para fazer uma combinação caixa com "atualizações ao vivo" enquanto o usuário está navegando a lista Abrir com as teclas de seta (como uma fonte suspenso de seleção), defina [SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) como [sempre](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger). Isso faz com que o evento SelectionChanged ocorrer quando o foco muda para outro item na lista aberto.
 
 #### <a name="selected-item-behavior-change"></a>Mudança de comportamento do item selecionado
 
@@ -179,7 +179,7 @@ Antes de RS5, o valor da propriedade SelectedItem (e, portanto, SelectedValue e 
 - SelectedValue = null
 - SelectedIndex = -1
 
-No RS5 e posteriores, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não é necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+No RS5 e posterior, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não é necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -226,11 +226,11 @@ O evento TextSubmitted não ocorrerá se o usuário insere texto e, em seguida, 
 
 ### <a name="sample---validate-input-and-use-locally"></a>Exemplo - validar a entrada e usar localmente
 
-Este examle, um seletor de tamanho de fonte contém um conjunto de valores correspondentes da rampa de tamanho de fonte, mas o usuário pode inserir tamanhos de fonte que não estão na lista.
+Este examle, um seletor de tamanho de fonte contém um conjunto de valores correspondentes da rampa de tamanho de fonte, mas o usuário poderá digitar tamanhos de fonte que não estão na lista.
 
 Quando o usuário adiciona um valor que não esteja na lista, as atualizações de tamanho de fonte, mas o valor não é adicionado à lista de tamanhos de fonte.
 
-Se o valor inserido recentemente não for válido, que você usar SelectedValue para reverter a propriedade Text para o último conhecido bom valor.
+Se o valor inserido recentemente não é válido, que você usar SelectedValue para reverter a propriedade Text para a última conhecido bom valor.
 
 ```xaml
 <ComboBox x:Name="fontSizeComboBox"

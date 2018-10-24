@@ -12,11 +12,11 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398559"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5434533"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animando elementos XAML com animações de composição
 
@@ -24,7 +24,7 @@ Este artigo apresenta novas propriedades que permitem que você animar um UIElem
 
 Antes do Windows 10, versão 1809, você tinha 2 opções para criar animações nos aplicativos UWP:
 
-- Use XAML construções como [animações com storyboard](storyboarded-animations.md), ou o _* ThemeTransition_ e _* ThemeAnimation_ classes no namespace [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) .
+- usar XAML construções como [animações com storyboard](storyboarded-animations.md), ou o _* ThemeTransition_ e _* ThemeAnimation_ classes no namespace [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) .
 - Use animações de composição, conforme descrito em [usando a camada Visual com XAML](../../composition/using-the-visual-layer-with-xaml.md).
 
 Usando a camada visual fornece melhor desempenho que constrói usar XAML. Mas usando [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) para obter o objeto subjacente de [Visual](/uwp/api/windows.ui.composition.visual) de composição do elemento e, em seguida, animando o elemento Visual com animações de composição, são mais complexo para usar.
@@ -32,7 +32,7 @@ Usando a camada visual fornece melhor desempenho que constrói usar XAML. Mas us
 A partir do Windows 10, versão 1809, você pode animar propriedades em um UIElement diretamente usando animações de composição sem a exigência de obter a Visual de composição subjacente.
 
 > [!NOTE]
-> Para usar essas propriedades em UIElement, sua versão de destino do projeto UWP deve ser 1809 ou posterior. Para obter mais informações sobre como configurar a versão do seu projeto, consulte [aplicativos adaptáveis de versão](../../debug-test-perf/version-adaptive-apps.md).
+> Para usar essas propriedades em UIElement, sua versão de destino do projeto UWP deve ser 1809 ou posterior. Para obter mais informações sobre como configurar sua versão do projeto, consulte [aplicativos adaptáveis de versão](../../debug-test-perf/version-adaptive-apps.md).
 
 ## <a name="new-rendering-properties-replace-old-rendering-properties"></a>Novas propriedades de renderização substituir antigo propriedades de renderização
 
@@ -42,7 +42,7 @@ Esta tabela mostra as propriedades que você pode usar para modificar a renderiz
 | -- | -- | -- |
 | [Opacidade](/uwp/api/windows.ui.xaml.uielement.opacity) | Double | O grau de opacidade do objeto |
 | [Translation](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | Deslocar a posição X/Y/Z do elemento |
-| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação se aplicam ao elemento |
+| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação para aplicar ao elemento |
 | [Scale](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Dimensionar o elemento, centralizado sobre o ponto central |
 | [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento em torno da RotationAxis e o ponto central |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | O eixo de rotação |
@@ -52,7 +52,7 @@ O valor da propriedade TransformMatrix é combinado com as propriedades de escal
 
 Essas propriedades não afetam o layout do elemento, portanto, modificar essas propriedades não faz com que uma nova [medição](/uwp/api/windows.ui.xaml.uielement.measure)/[cálculo](/uwp/api/windows.ui.xaml.uielement.arrange) .
 
-Essas propriedades têm a mesma finalidade e o comportamento que as propriedades de nome semelhante na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto tradução, que não está em Visual).
+Essas propriedades têm a mesma finalidade e o comportamento que as propriedades de nome semelhante na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto a conversão não está em Visual).
 
 ### <a name="example-setting-the-scale-property"></a>Exemplo: Definindo a propriedade de escala
 
@@ -71,7 +71,7 @@ button.Scale = new Vector3(2.0f,2.0f,1.0f);
 ### <a name="mutual-exclusivity-between-new-and-old-properties"></a>Exclusividade mútua entre as propriedades de novas e antigas
 
 > [!NOTE]
-> A propriedade de **opacidade** não impõe a exclusividade mútua descrita nesta seção. Use a mesma propriedade de opacidade se você usar animações XAML ou composição.
+> A propriedade de **opacidade** não impõe a exclusividade mútua descrita nesta seção. Use a mesma propriedade de opacidade se você usa animações de composição ou de XAML.
 
 As propriedades que podem ser animadas com um CompositionAnimation são substituições para várias propriedades de UIElement existentes:
 
@@ -80,7 +80,7 @@ As propriedades que podem ser animadas com um CompositionAnimation são substitu
 - [Projeção](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
-Quando você define (ou anima) qualquer uma das novas propriedades, você não pode usar as propriedades antigas. Por outro lado, se você definir (ou anima) qualquer uma das propriedades antigas, você não pode usar as novas propriedades.
+Quando você define (ou animar) qualquer uma das novas propriedades, você não pode usar as propriedades antigas. Por outro lado, se você definir (ou animar) qualquer uma das propriedades antigas, você não pode usar as novas propriedades.
 
 Você também não pode usar as novas propriedades se você usar ElementCompositionPreview para obter e gerenciar o Visual por conta própria usando estes métodos:
 
@@ -90,9 +90,9 @@ Você também não pode usar as novas propriedades se você usar ElementComposit
 > [!IMPORTANT]
 > A tentativa de combinar o uso de dois conjuntos de propriedades fará com que a chamada de API falhar e produzir uma mensagem de erro.
 
-É possível alternar de um conjunto de propriedades, desmarcando-los, mas para simplificar não é recomendado. Se a propriedade é feita por um DependencyProperty (por exemplo, Projection é sustentado por UIElement.ProjectionProperty), em seguida, chame ClearValue para restaurá-lo para seu estado "não utilizado". Caso contrário, (por exemplo, a propriedade Scale), defina a propriedade para o valor padrão.
+É possível alternar de um conjunto de propriedades, desmarcando-los, mas para simplificar não é recomendado. Se a propriedade é feita por uma DependencyProperty (por exemplo, Projection é sustentado por UIElement.ProjectionProperty), em seguida, chame ClearValue para restaurá-lo para seu estado "não utilizado". Caso contrário, (por exemplo, a propriedade Scale), defina a propriedade para o valor padrão.
 
-## <a name="animating-uielement-properties-with-compositionanimation"></a>Animar propriedades de UIElement com CompositionAnimation
+## <a name="animating-uielement-properties-with-compositionanimation"></a>Animar propriedades UIElement com CompositionAnimation
 
 Você pode animar as propriedades de renderização listadas na tabela com um CompositionAnimation. Essas propriedades também podem ser referenciadas por um [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation).
 
@@ -115,7 +115,7 @@ button.StartAnimation(animation);
 
 ### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>Exemplo: Como animar a propriedade de escala com um ExpressionAnimation
 
-Uma página tem dois botões. O segundo botão anima para duas vezes ser tão grande (por meio de escala) como o primeiro botão.
+Uma página tem dois botões. O segundo botão anima para duas vezes ser tão grande (via scale) como o primeiro botão.
 
 ```xaml
 <Button x:Name="sourceButton" Content="Source"/>

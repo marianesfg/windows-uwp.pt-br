@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
 ms.localizationpriority: medium
 ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404913"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433271"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 
 A seção **Preço** da página [Preço e disponibilidade](set-app-pricing-and-availability.md) permite que você selecione o preço base de um aplicativo. Você também pode [agendar alterações de preço](#schedule-price-changes) para indicar a data e a hora em que o preço do app deve ser alterado. Além disso, você tem a opção de [substituir o preço base para mercados específicos](#override-base-price-for-specific-markets), selecionando uma nova faixa de preço ou inserindo um preço livre na moeda local do mercado.
 
 > [!NOTE]
-> Embora este tópico refira-se a apps, a seleção de preço para envios de complementos usa o mesmo processo. Observe que para [complementos de assinatura](../monetize/enable-subscription-add-ons-for-your-app.md), o preço base que você selecionar não pode nunca ser aumentado (se alterando o preço base ou agendar uma alteração de preço), embora ele pode ser reduzido.
+> Embora este tópico refira-se a apps, a seleção de preço para envios de complementos usa o mesmo processo. Observe que para [complementos de assinatura](../monetize/enable-subscription-add-ons-for-your-app.md), o preço base que você selecionar não pode nunca ser aumentado (se alterando o preço base ou agendar uma alteração de preço), embora ele pode diminuir.
 
 ## <a name="base-price"></a>Preço de base
 

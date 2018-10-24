@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398985"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432047"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Diretrizes para aplicativos de marketing do Microsoft Store
 
@@ -47,13 +47,13 @@ Para promover o seu aplicativo, convém mostrar sua aparência quando executado 
 
 *Marcas da Microsoft* significa o *selo da Microsoft* descritos na página de [gerador de selos](http://go.microsoft.com/fwlink/p/?LinkID=534236) . Para usar esses selos, você deve:
 
--   Ter seu aplicativo ou outro conteúdo disponível na Microsoft Store ou fazer parte do [Programa de afiliados da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
+-   Ter seu aplicativo ou outro conteúdo disponível na Microsoft Store, ou fazer parte do [Programa de afiliados da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
 -   Se você estiver registrado no Centro de Desenvolvimento, consinta com a seção [“Licença de Marcas da Microsoft”](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) do Contrato de Desenvolvedor de Aplicativos.
 
 -   Se você não estiver registrado no Centro de desenvolvimento do Windows, Microsoft concede a você uma licença mundial, não exclusiva, intransferível e sem royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
 
--   Siga as especificações de uso do logotipo descritas nas [Diretrizes de selo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
+-   Siga as especificações de uso do logotipo descritas nas [Diretrizes selo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
 A Microsoft é a única proprietária das Marcas da Microsoft e da respectiva reputação da empresa, e é a única beneficiária da reputação associada ao seu uso das Marcas da Microsoft. A Microsoft pode revogar esta licença a qualquer momento e a seu exclusivo critério.
 

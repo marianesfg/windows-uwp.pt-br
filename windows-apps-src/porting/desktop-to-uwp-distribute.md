@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar seu aplicativo da área de trabalho empacotado em uma Windows store ou carregue-o em um ou mais dispositivos.
+title: Publicar seu aplicativo da área de trabalho empacotado em da Windows store ou carregue-o em um ou mais dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403760"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5436709"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir um aplicativo da área de trabalho empacotado
 
-Publicar seu aplicativo da área de trabalho empacotado em uma Windows store ou carregue-o em um ou mais dispositivos.  
+Publicar seu aplicativo da área de trabalho empacotado em da Windows store ou carregue-o em um ou mais dispositivos.  
 
 > [!NOTE]
 > Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo empacotado](#transition-users) deste guia para obter algumas ideias.
@@ -29,7 +29,7 @@ Publicar seu aplicativo da área de trabalho empacotado em uma Windows store ou 
 
 A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-Publica seu aplicativo para esse repositório para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações através de [Da Microsoft Store para empresas](https://www.microsoft.com/business-store).
+Publica seu aplicativo para esse repositório para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações por meio da [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
 Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
@@ -57,7 +57,7 @@ Se você criar um certificado, você precisa instalá-lo na loja de certificados
 > [!IMPORTANT]
 > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.
 
-Para assinar seu aplicativo usando um certificado, consulte [assinar um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
+Para assinar seu aplicativo usando um certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
 
 Para fazer o sideload seu aplicativo em outros dispositivos, consulte o [Sideload de aplicativos LOB no Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
@@ -88,7 +88,7 @@ Vamos falar sobre cada uma dessas tarefas. Vamos começar com a migração de da
 
 ### <a name="migrate-user-data"></a>Migrar dados do usuário
 
-Se você vai adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
+Caso você queira adicionar código que migra os dados do usuário, é melhor executar esse código somente quando o aplicativo é iniciado pela primeira vez. Antes de migrar os dados dos usuários, exiba uma caixa de diálogo para o usuário explicando o que está acontecendo, por que é recomendável e o que vai acontecer com seus dados existentes.
 
 Aqui está um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 
@@ -127,7 +127,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Desinstalar a versão desktop do seu aplicativo
 
-É melhor não desinstalar o aplicativo de área de trabalho de usuários sem antes solicitar deles permissão. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo da área de trabalho ou suporte ao uso de ambos os aplicativos lado a lado.
+É melhor não desinstalar o aplicativo da área de trabalho de usuários sem antes solicitar deles permissão. Exiba uma caixa de diálogo que solicita essa permissão ao usuário. Os usuários podem decidir não desinstalar a versão desktop do seu aplicativo. Se isso acontecer, você precisará decidir se deseja bloquear o uso do aplicativo da área de trabalho ou suporte ao uso de ambos os aplicativos lado a lado.
 
 Veja um exemplo de como você pode fazer isso em um aplicativo empacotado com base em .NET.
 

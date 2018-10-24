@@ -15,11 +15,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 57856872fc664670756c310410223acaf9708bc5
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398922"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435406"
 ---
 # <a name="icons-for-uwp-apps"></a>Ícones para aplicativos UWP
 
@@ -139,7 +139,7 @@ Há muitas maneiras de criar um ícone. Você pode usar uma fonte de símbolo co
 
 ## <a name="make-the-icon-do-something"></a>Faça o ícone fazer algo
 
-Depois que você tiver um ícone, a próxima etapa é fazê-lo realizar algo, associando-o a uma ação de comando ou navegação. A melhor maneira de fazer isso é adicionar o ícone de um botão ou uma barra de comandos. 
+Depois que você tiver um ícone, a próxima etapa é fazê-lo realizar algo, associando-o a uma ação de comando ou navegação. A melhor maneira de fazer isso é adicionar o ícone a um botão ou uma barra de comandos. 
 
 ![Imagem da barra de comandos](images/icons/app-bar-desktop.svg)
 

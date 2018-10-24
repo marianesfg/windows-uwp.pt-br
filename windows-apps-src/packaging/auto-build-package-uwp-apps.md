@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405270"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431901"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -258,7 +258,7 @@ Em seguida, configure a conexão do HockeyApp usando este guia: [Como usar o Hoc
 
 Em seguida, você pode criar um aplicativo HockeyApp manualmente, ou carregar um arquivo de pacote de aplicativo existente. Para saber mais, consulte [Como criar um novo aplicativo](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
 
-Para usar um arquivo de pacote de aplicativo existente, adicionar uma etapa de compilação e defina o parâmetro de caminho do arquivo binário da etapa de compilação. 
+Para usar um arquivo de pacote de aplicativo existente, adicione uma etapa de compilação e defina o parâmetro de caminho do arquivo binário da etapa de compilação. 
 
 ![configurar o hockey app](images/building-screen15.png) 
 

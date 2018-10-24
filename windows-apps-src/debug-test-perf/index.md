@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2a919af3cb532ce19427967f305cb03adc149a1
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397873"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431826"
 ---
 # <a name="debugging-testing-and-performance"></a>Depuração, teste e desempenho
 
 
-Esta seção mostra como usar o Microsoft Visual Studio para depurar, testar e otimizar seu aplicativo. Ele também inclui ferramentas como o Windows Device Portal (para monitoramento de dispositivos e configurações) e o Kit de certificação de aplicativo do Windows (para preparar seu aplicativo para a Microsoft Store).
+Esta seção mostra como usar o Microsoft Visual Studio para depurar, testar e otimizar seu aplicativo. Ele também inclui ferramentas como o Windows Device Portal (para monitoramento de dispositivos e configuração) e o Kit de certificação de aplicativo do Windows (para preparar seu aplicativo para a Microsoft Store).
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -31,6 +31,6 @@ Esta seção mostra como usar o Microsoft Visual Studio para depurar, testar e o
 | [Implantar um aplicativo por meio do registro de arquivo flexível](loose-file-registration.md) | Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las. |
 | [Teste beta](beta-testing.md) | O **teste beta** oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos. |
 | [Windows Device Portal](device-portal.md) | O Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB. |
-| [Kit de Certificação de Aplicativos Windows](windows-app-certification-kit.md) | Seu aplicativo as chances de serem publicados na Microsoft Store, ou se tornando certificados do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows. |
+| [Kit de Certificação de Aplicativos Windows](windows-app-certification-kit.md) | Para seu aplicativo as chances de ser publicado na Microsoft Store, ou se tornando certificados do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows. |
 | [Desempenho](performance-and-xaml-ui.md) | Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não usem muito a bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. |
 | [Aplicativos adaptáveis de versão](version-adaptive-apps.md) | Aproveite as APIs e os recursos mais recentes atingindo o público-alvo mais amplo possível. Use verificações de API de tempo de execução para adaptar seu código e XAML no momento da execução aos recursos disponíveis na versão do Windows 10 em que seu aplicativo está sendo executado. |

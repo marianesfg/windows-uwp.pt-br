@@ -11,11 +11,11 @@ keywords: windows 10, uwp, versão, build, versões, windows, escolher, atualiza
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398083"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438303"
 ---
 # <a name="choose-a-uwp-version"></a>Escolher uma versão do UWP
 
@@ -46,9 +46,9 @@ Para tópicos de referência que enumeram todas as famílias de dispositivos e s
 
 ## <a name="net-api-availability-in-uwp-versions"></a>Disponibilidade de API .NET nas versões UWP
 
-UWP dá suporte a um subconjunto limitado de APIs .NET, que estão disponíveis, independentemente da **Versão de destino** ou uma **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
+UWP dá suporte a um subconjunto limitado de APIs .NET, que estão disponíveis, independentemente do **Versão de destino** ou uma **Versão mínima** do seu projeto. [Esta página fornece mais informações sobre os tipos disponíveis](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Se você quiser criar bibliotecas de plataforma cruzada reutilizáveis, .NET Standard é compatível com UWP. A [documentação do .NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) fornece informações sobre qual .NET Standard é compatível com quais versões UWP.
+Se você quiser criar bibliotecas de plataforma cruzada reutilizáveis, .NET Standard é compatível com UWP. A [documentação do .NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) fornece informações no qual .NET Standard é compatível com quais versões UWP.
 
 Se você estiver desenvolvendo um aplicativo da área de trabalho, consulte em vez disso, [as dependências e versões do .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) para obter informações detalhadas sobre a disponibilidade do .NET framework.
 

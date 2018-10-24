@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ec6661ec0ef65174b6218957450540edceaa5a0
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403248"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438234"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respostas às críticas
 
@@ -73,7 +73,7 @@ Cada objeto na matriz *Respostas* contém os seguintes valores.
 | ReviewId | cadeia |  A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de app](get-app-reviews.md) na API de análise da Microsoft Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md).   |  Sim  |
 | ResponseText | cadeia | A resposta que você deseja enviar. Sua resposta deve seguir [estas diretrizes](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sim  |
 | SupportEmail | cadeia | Endereço de email de suporte do seu aplicativo, que o cliente pode usar para contatá-lo diretamente. Este deve ser um endereço de email válido.     |  Sim  |
-| IsPublic | Booliano |  Se você especificar **true**, sua resposta será exibida na listagem, logo abaixo da crítica do cliente, da loja do seu aplicativo e estará visível para todos os clientes. Se você especificar **false** e o usuário não tiver optado por não receber respostas de email, sua resposta será enviada para o cliente por email e não ficará visível para outros clientes na listagem da loja do seu aplicativo. Se você especificar **false** e o usuário tiver optado por não receber respostas de email, um erro será retornado.   |  Sim  |
+| IsPublic | Booliano |  Se você especificar **true**, sua resposta será exibida na listagem, logo abaixo da crítica do cliente, da loja do seu aplicativo e estará visível para todos os clientes. Se você especificar **false** e o usuário não tiver optado por não receber respostas de email, sua resposta será enviada para o cliente por email, e não ficará visível para outros clientes na listagem da loja do seu aplicativo. Se você especificar **false** e o usuário tiver optado por não receber respostas de email, um erro será retornado.   |  Sim  |
 
 
 ### <a name="request-example"></a>Exemplo de solicitação
