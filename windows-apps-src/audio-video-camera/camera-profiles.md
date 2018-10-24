@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ead9efdd0a1d37a051f24e94b40a7c61212f6b19
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444802"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472544"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Descobrir e selecionar as funcionalidades da câmera com perfis de câmera
 
@@ -26,7 +26,7 @@ Este artigo discute como usar perfis de câmera para descobrir e gerenciar as fu
 > [!NOTE] 
 > Este artigo se baseia em conceitos e códigos discutidos em [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), que descreve as etapas para implementar uma captura básica de fotos e vídeos. É recomendável que você se familiarize com o padrão de captura de mídia básica neste artigo antes de passar para cenários de captura mais avançados. O código neste artigo presume que seu aplicativo já tenha uma instância de MediaCapture inicializada corretamente.
 
- 
+ 
 
 ## <a name="about-camera-profiles"></a>Sobre perfis de câmera
 
@@ -103,9 +103,9 @@ Você pode refinar essa consulta para procurar perfis com suporte a resoluções
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
+ 
 
- 
+ 
 
 
 

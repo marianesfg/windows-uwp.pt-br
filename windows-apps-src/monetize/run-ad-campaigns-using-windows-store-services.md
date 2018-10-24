@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a1f08dbd70904284179c90fa00d2abd9acf4b97
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430807"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472061"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Veicular campanhas publicitárias usando os serviços da Store
 
@@ -117,4 +117,4 @@ O exemplo de código a seguir demonstra como obter um token de acesso do Azure A
 * [Obter dados de desempenho da campanha publicitária](get-ad-campaign-performance-data.md)
 
 
- 
+ 

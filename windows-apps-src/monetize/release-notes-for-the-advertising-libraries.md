@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
 ms.openlocfilehash: 37a5cafcc5f768e90d4ee3997f92a62a9903fc9a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435622"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480555"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de versão para as bibliotecas de anúncio
 
 
 
 
-Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas dão suporte a aplicativos XAML e JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 e Windows Phone 8.
+Esta seção fornece notas de versão para a versão atual das bibliotecas do Microsoft Advertising. Essas bibliotecas dão suporte a aplicativos XAML e JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 e WindowsPhone8.
 
 ## <a name="installation"></a>Instalação
 
@@ -50,6 +50,6 @@ A versão atual das bibliotecas do Microsoft Advertising no [SDK do Microsoft Ad
 A classe **AdControl** não tem as propriedades **Latitude** e **Longitude** para aplicativos UWP. Em vez disso, o código integrado no controle de anúncios detectará e enviará esses valores aos servidores de anúncios em nome do aplicativo.
 
 
- 
+ 
 
- 
+ 

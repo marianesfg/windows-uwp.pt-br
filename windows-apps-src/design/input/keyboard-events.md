@@ -17,11 +17,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445394"
+ms.locfileid: "5473831"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -116,7 +116,7 @@ As teclas modificadoras são teclas como Ctrl ou Shift que os usuários normalme
 > [!NOTE]
 > A tecla Alt é representada pelo valor **VirtualKey.Menu**.
 
- 
+ 
 
 ### <a name="shortcut-keys-example"></a>Amostra de teclas de atalho
 
@@ -283,7 +283,7 @@ End Sub
 >
 > A configuração de **AutomationProperties.AcceleratorKey** ou de **AutomationProperties.AccessKey** não tem qualquer ação por conta própria. Você ainda precisa anexar manipuladores para eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) ou [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para realmente implementar o comportamento de atalho de teclado em seu aplicativo. Além disso, a decoração de texto sublinhado para uma tecla de acesso não é fornecida automaticamente. Você deve sublinhar explicitamente o texto para a tecla específica em seu mnemônico como formatação [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) embutida se desejar mostrar texto sublinhado na interface do usuário.
 
- 
+ 
 
 ## <a name="keyboard-routed-events"></a>Eventos de teclado roteados
 
@@ -405,6 +405,6 @@ Você pode tornar a entrada de dados muito mais rápida e fácil para os usuári
 * [Entrada: amostra de teclado virtual](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Respondendo ao aparecimento da amostra de teclado na tela](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+ 
 
- 
+ 

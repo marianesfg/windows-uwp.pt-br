@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
+Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
 title: Visualizador de notificações
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -12,18 +12,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af8b2489346e1ef81c5cae304802814b79b8b950
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432524"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473994"
 ---
 # <a name="notifications-visualizer"></a>Visualizador de notificações
 
  
 
 
-O Visualizador de notificações é um novo aplicativo UWP (Plataforma Universal do Windows) na [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design de Blocos Dinâmicos adaptáveis e notificações do sistema interativas para Windows 10.
+Visualizador de notificações é um novo aplicativo da plataforma Universal do Windows (UWP) [na loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores a projetar blocos dinâmicos adaptáveis e notificações do sistema interativas para Windows 10.
 
 
 ## <a name="overview"></a>Visão geral
@@ -34,13 +34,13 @@ Esta captura de tela do aplicativo mostra a carga XML e como tamanhos de bloco s
 
 ![captura de tela do aplicativo Visualizador de Notificações com código e blocos](images/notif-visualizer-001.png)
 
- 
+ 
 
 Com o Visualizador de notificações, é possível criar e testar o conteúdo de bloco adaptável e notificações do sistema sem que seja necessário editar e implantar o aplicativo. Depois que tiver criado uma carga com resultados visuais ideais, você pode integrá-la ao aplicativo. Consulte [Enviar uma notificação de bloco local](sending-a-local-tile-notification.md) e [Enviar uma notificação de sistema local](send-local-toast.md) para saber mais.
 
-**Observação**   A simulação do Visualizador de notificações do menu Iniciar do Windows e as notificações do sistema nem sempre são notifications precisas e não oferecem suporte a algumas propriedades avançadas de carga. Quando tiver o bloco ou da notificação do sistema que você deseja, teste fixando o bloco ou usando a notificação no menu Iniciar real para verificar se ele é exibido como você deseja.
+**Observação**  simulação do Visualizador de notificações das notificações do sistema e de menu Iniciar do Windows nem sempre são Notifications precisa e não dá suporte a algumas propriedades avançadas de carga. Quando tiver o bloco ou da notificação do sistema que você deseja, teste fixando o bloco ou usando a notificação no menu Iniciar real para verificar se ele é exibido como você deseja.
 
- 
+ 
 
 ## <a name="features"></a>Recursos
 
@@ -54,7 +54,7 @@ Esta captura de tela do aplicativo mostra o editor de blocos:
 
 ![captura de tela do editor do Visualizador de Notificações com blocos](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

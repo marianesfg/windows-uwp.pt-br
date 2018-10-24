@@ -14,11 +14,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 906fb2d0d5d466f4fd691afd35ed96198929225c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444250"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469662"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -40,7 +40,7 @@ Você pode usar a vinculação de dados simplesmente para exibir os valores de u
 -   Você pode usar o modo unidirecional para associar um [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a uma coleção de artigos de notícias em tempo real agrupados pela seção de jornal.
 -   Você pode usar o modo bidirecional para associar um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) ao nome do cliente em um formulário.
 
-Independentemente do modo, existem dois tipos de associação, e ambos normalmente são declarados na marcação da interface do usuário. Você pode optar por usar a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ou a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). E você ainda pode usar uma combinação das duas no mesmo aplicativo, inclusive no mesmo elemento de interface do usuário. A {x:Bind} é nova para Windows 10 e tem um desempenho melhor. Todos os detalhes descritos neste tópico se aplicam a ambos os tipos de associação, a menos que explicitamente declarado o contrário.
+Independentemente do modo, existem dois tipos de associação, e ambos normalmente são declarados na marcação da interface do usuário. Você pode optar por usar a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ou a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). E você ainda pode usar uma combinação das duas no mesmo aplicativo, inclusive no mesmo elemento de interface do usuário. {x: Bind} é novo no Windows 10 e tem um desempenho melhor. Todos os detalhes descritos neste tópico se aplicam a ambos os tipos de associação, a menos que explicitamente declarado o contrário.
 
 **Aplicativos de amostra que demonstram {x:Bind}**
 
@@ -256,7 +256,7 @@ Nos dois exemplos a seguir, a propriedade **Button. Content** é o destino da as
 <Button Content="{Binding ...}" ... />
 ```
 
-Se você estiver usando C++ c++ extensões de componente WinRT ou Visual C++ (C++ c++ /CX), você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja usar com a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
+Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX), você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja usar com a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
 
 > [!IMPORTANT]
 > Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) estará disponível se você instalou o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809), ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para ser capaz de usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
@@ -381,7 +381,7 @@ O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas
 
 ### <a name="binding-object-declared-using-binding"></a>Objeto de associação declarado usando {Binding}
 
-Se você estiver usando C++ c++ extensões de componente WinRT ou Visual C++ (C++ c++ /CX) em seguida, para usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja associar a. Para usar [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), você não precisará desse atributo.
+Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX) em seguida, para usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja associar a. Para usar [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), você não precisará desse atributo.
 
 ```cppwinrt
 // HostViewModel.idl
@@ -746,7 +746,7 @@ Os objetos de associação criados por [{x:Bind}](https://msdn.microsoft.com/lib
 
 ## <a name="creating-bindings-in-code"></a>Criando associações em código
 
-**Observação**  Esta seção só se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), pois você não pode criar associações [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) no código. No entanto, alguns dos mesmos benefícios de {x:Bind} podem ser obtidos com [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), o que permite que você se registre para receber notificações de alteração em qualquer propriedade de dependência.
+**Observação**esta seção só se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), pois você não pode criar associações [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) no código. No entanto, alguns dos mesmos benefícios de {x:Bind} podem ser obtidos com [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), o que permite que você se registre para receber notificações de alteração em qualquer propriedade de dependência.
 
 Você também pode conectar elementos da interface de usuário aos dados usando código de procedimentos em vez de XAML. Para fazer isso, crie um novo objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820), defina as propriedades apropriadas, depois chame [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) ou [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx). A criação de associações de forma programática é útil quando você deseja escolher os valores da propriedade de associação no tempo de execução ou compartilhar uma única associação entre vários controles. Observe, porém, que você não pode alterar os valores da propriedade de associação depois que chamar **SetBinding**.
 

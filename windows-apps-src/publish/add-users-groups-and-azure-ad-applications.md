@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438458"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473929"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Centro de Desenvolvimento
 
@@ -23,7 +23,7 @@ A seção de **usuários** do Centro de desenvolvimento do Windows (em **configu
 Depois que os usuários são adicionados à conta, você pode [editar detalhes da conta](#edit), alterar [funções e permissões](set-custom-permissions-for-account-users.md) ou [remover usuários](#remove).
 
 > [!IMPORTANT]
-> Para adicionar usuários à sua conta, você deve primeiro [associar a conta do Centro de Desenvolvimento ao locatário do Azure Active Directory da sua organização](associate-azure-ad-with-dev-center.md). 
+> Para adicionar usuários à sua conta, você deve primeiro [associar a conta do Centro de Desenvolvimento ao locatário do Azure Active Directory da sua organização](associate-azure-ad-with-dev-center.md). 
 
 Ao adicionar usuários, você precisará especificar o acesso à conta do seu Centro de Desenvolvimento, atribuindo a eles uma [função ou um conjunto de permissões personalizados](set-custom-permissions-for-account-users.md). 
 
@@ -108,7 +108,7 @@ Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se voc
 3.  Uma página de confirmação será exibida mostrando as informações de logon do usuário, incluindo uma senha temporária.
 
     > [!IMPORTANT]
-    >  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois que sair dessa página.
+    >  Certifique-se de imprimir ou copiar essas informações e fornecê-las ao usuário, já que você não conseguirá acessar a senha temporária depois que sair dessa página.
 
 <span id="groups" />
 
@@ -189,12 +189,12 @@ Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisar�
 
 1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do aplicativo do Azure AD.
     > [!TIP]
-    > Ao clicar no nome do aplicativo Azure AD, você verá todas as suas chaves ativas, incluindo a data de criação e de expiração da chave. Para remover uma chave que não é mais necessária, clique em **Remover**.
+    > Ao clicar no nome do aplicativo Azure AD, você verá todas as suas chaves ativas, incluindo a data de criação e de expiração da chave. Para remover uma chave que não é mais necessária, clique em **Remover**.
 
 2.  Para adicionar uma nova chave, selecione **Adicionar nova chave**.
 3.  Você verá uma tela mostrando os valores **ID do Cliente** e **Chave**.
     > [!IMPORTANT]
-    > Certifique-se de imprimir ou copiar essas informações, já que você não conseguirá acessá-la novamente depois que sair dessa página.
+    > Certifique-se de imprimir ou copiar essas informações, já que você não conseguirá acessá-la novamente depois que sair dessa página.
 
 4.  Se você quiser criar mais chaves, selecione **Adicionar outra chave**.
 
@@ -232,5 +232,5 @@ Para remover um usuário, grupo ou aplicativo Azure AD de sua conta do Centro de
 > [!IMPORTANT]
 > Remover um usuário, um grupo ou um aplicativo Azure AD significa que ele não terá mais acesso à sua conta do Centro de Desenvolvimento. Isso **não** exclui o usuário, grupo ou aplicativo Azure AD do diretório da organização.
 
- 
+ 
 

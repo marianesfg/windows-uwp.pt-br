@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443367"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472667"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementar a navegação entre duas páginas
 
@@ -91,7 +91,7 @@ Em Page1.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**grade**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -128,7 +128,7 @@ Em Page2.xaml, adicione o seguinte conteúdo:
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento filho do elemento raiz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Um elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como um elemento filho da raiz [**grade**](https://msdn.microsoft.com/library/windows/apps/br242704) e depois o `pageTitle`elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) .
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -309,7 +309,7 @@ Agora, crie e execute o aplicativo. Clique no link que diz "Clique para ir à p�
 Antes de adicionarmos mais funcionalidades ao nosso aplicativo, vejamos como as páginas que adicionamos oferecem navegação dentro de nosso aplicativo.
 
 Primeiro, um [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) chamado `rootFrame`é criado para o aplicativo no método `App.OnLaunched` no arquivo de code-behind App.xaml. A classe **Frame** dá suporte a vários métodos de navegação, como [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), e [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), e propriedades como [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) e [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995).
- 
+ 
 O método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) é usado para exibir conteúdo nesse **Frame**. Por padrão, esse método carrega MainPage.xaml. No nosso exemplo, `Page1` é passada para o método **Navigate**, então o método carrega `Page1` no **Quadro **. 
 
 `Page1` é uma subclasse da classe [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503). A classe **Page** tem uma propriedade **Frame** somente leitura que obtém o **Frame** que contém a **Page**. Quando o manipulador de eventos **Click** do **HyperlinkButton** na `Page1` chama `this.Frame.Navigate(typeof(Page2))`, o **Frame** exibe o conteúdo de Page2.xaml.
@@ -334,7 +334,7 @@ Aqui, adicionamos um rótulo [**TextBlock**](https://msdn.microsoft.com/library/
 </StackPanel>
 ```
 
-No manipulador de eventos `HyperlinkButton_Click` do arquivo code-behind Page1.xaml, adicione um parâmetro que faça referência à propriedade `Text`  do  `name` **TextBox** para o método `Navigate`.
+No `HyperlinkButton_Click` manipulador de eventos de arquivo code-behind Page1. XAML, adicione um parâmetro referenciando o `Text` propriedade do `name` **TextBox** para o `Navigate` método.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: be4338c7b7e7b3861c206a6d7d63e9e417e6cd0d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 3a516fea67239a737c1f8a05ef17fbc1d9203030
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438877"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476814"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
 Algumas experiências do Windows 10 (por exemplo, uma página da interface do usuário habilitada para toque) devem ser executadas dentro de um contêiner de app moderno. Se você quiser adicionar essas experiências, estenda seu aplicativo da área de trabalho com projetos UWP e componentes do Tempo de Execução do Windows.
 
-Em muitos casos, você pode chamar APIs UWP diretamente do seu aplicativo da área de trabalho, então antes de examinar este guia, consulte [Aprimorar para o Windows 10](desktop-to-uwp-enhance.md).
+Em muitos casos, você pode chamar APIs do Windows Runtime diretamente do seu aplicativo da área de trabalho, portanto, antes de examinar este guia, consulte [aprimorar para o Windows 10](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
 >Este guia considera que você tenha criado um pacote de aplicativo do Windows para seu aplicativo da área de trabalho. Se você ainda não tiver feito isso, consulte [aplicativos da área de trabalho do pacote](desktop-to-uwp-root.md).
@@ -162,7 +162,7 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
   <uap:Extension Category="windows.protocol" Executable="MapUI.exe" EntryPoint="MapUI.App">
     <uap:Protocol Name="xamluidemo" />
   </uap:Extension>
-</Extensions>    
+</Extensions>    
 ```
 
 Dê um nome ao protocolo, forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada.
@@ -284,18 +284,18 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
 
 ```xml
 <Extensions>
-      <uap:Extension
-          Category="windows.shareTarget"
-          Executable="ShareTarget.exe"
-          EntryPoint="App">
-        <uap:ShareTarget>
-          <uap:SupportedFileTypes>
-            <uap:SupportsAnyFileType />
-          </uap:SupportedFileTypes>
-          <uap:DataFormat>Bitmap</uap:DataFormat>
-        </uap:ShareTarget>
-      </uap:Extension>
-</Extensions>  
+      <uap:Extension
+          Category="windows.shareTarget"
+          Executable="ShareTarget.exe"
+          EntryPoint="App">
+        <uap:ShareTarget>
+          <uap:SupportedFileTypes>
+            <uap:SupportsAnyFileType />
+          </uap:SupportedFileTypes>
+          <uap:DataFormat>Bitmap</uap:DataFormat>
+        </uap:ShareTarget>
+      </uap:Extension>
+</Extensions>  
 ```
 
 Forneça o nome do executável produzido pelo projeto UWP e o nome da classe de ponto de entrada. Essa marcação pressupõe que o nome do executável para seu aplicativo UWP é `ShareTarget.exe`.
@@ -353,7 +353,7 @@ No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do pr
   ...
       <desktop:Extension Category="windows.fullTrustProcess" Executable="PhotoStoreDemo\PhotoStoreDemo.exe" />
   ...
-</Extensions>  
+</Extensions>  
 ```
 
 Essa extensão permitem que o aplicativo UWP iniciar o aplicativo da área de trabalho ao qual você gostaria de compartilhamento de um arquivo. No exemplo, nos referimos para o executável do aplicativo da área de trabalho [PhotoStoreDemo WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .

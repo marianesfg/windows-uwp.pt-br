@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB
 ms.localizationpriority: medium
 ms.openlocfilehash: 671c5c1b187ac48c12988a00d66acb366cae72f1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438406"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470341"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Baixar o arquivo CAB de um erro em seu aplicativo
 
@@ -56,7 +56,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | applicationId | string | A ID da Loja do aplicativo para o qual você deseja baixar um arquivo CAB. A ID da Loja está disponível na [página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | cabId | string | A ID exclusiva do arquivo CAB que você deseja baixar. Para obter essa ID, use o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar os detalhes de um erro específico em seu app, e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
 
- 
+ 
 ### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como obter baixar um arquivo CAB usando esse método. Substitua os parâmetros *applicationId* e *cabId* pelos valores apropriados para seu aplicativo.

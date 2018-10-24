@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, anúncios, publicidade, passo a passo
 ms.localizationpriority: medium
 ms.openlocfilehash: d54a70b01f0885ccabfe90c78330a63dc98a4d23
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434474"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470705"
 ---
 # <a name="implement-ads-in-your-app"></a>Implementa anúncios no aplicativo
 
@@ -32,6 +32,6 @@ Os artigos desta seção para mostram como adicionar anúncios em faixa, anúnci
 
 
 
- 
+ 
 
- 
+ 

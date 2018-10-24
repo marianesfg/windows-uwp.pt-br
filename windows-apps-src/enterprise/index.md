@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da Plataforma Universal do Windows (UWP).
+description: Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da plataforma Universal do Windows (UWP).
 title: Enterprise
 author: awkoren
 ms.author: alkoren
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437503"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476608"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da Plataforma Universal do Windows (UWP).
+Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos da plataforma Windows10Universal do Windows (UWP).
 
-**Observação**  Este artigo é voltado para desenvolvedores de aplicativos UWP empresariais. Para saber sobre o desenvolvimento para a UWP geral, consulte os [Guias de instruções para aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para saber sobre o desenvolvimento para WPF, Windows Forms ou Win32, visite o [centro de desenvolvimento da área de trabalho](https://dev.windows.com/desktop). Para saber sobre recursos para profissionais de TI, como a implantação no Windows 10 ou gerenciamento de recursos de segurança empresarial, consulte [Windows 10 no TechNet](https://msdn.microsoft.com/library/dn986868).
+**Observação**este artigo é voltado para aqueles que escrevem aplicativos UWP de empresa. Para saber sobre o desenvolvimento para a UWP geral, consulte os [Guias de instruções para aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para saber sobre o desenvolvimento para WPF, Windows Forms ou Win32, visite o [centro de desenvolvimento da área de trabalho](https://dev.windows.com/desktop). Para saber sobre recursos para profissionais de TI, como a implantação no Windows 10 ou gerenciamento de recursos de segurança empresarial, consulte [Windows 10 no TechNet](https://msdn.microsoft.com/library/dn986868).
 
 Existe uma versão deste aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
@@ -122,7 +122,7 @@ Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
 
 ## <a name="security"></a>Segurança
 
-O Windows 10 oferece um pacote de recursos de segurança para que os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e todos os dados de negócios armazenados nos dispositivos. Uma novidade no Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implementar com acesso por PIN ou pelo Windows Hello, que fornece segurança de nível empresarial e permite o reconhecimento por impressão digital, rosto e íris.
+Windows 10 oferece um conjunto de recursos de segurança para os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e os dados de negócios armazenados em dispositivos. Novos para Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implantar que seja acessível por meio de um PIN ou Windows Hello, que fornece segurança de nível empresarial e dá suporte à impressão digital, rosto e íris com base em reconhecimento.
 
 | Tópico | Descrição |
 |-------|-------------|
@@ -196,10 +196,10 @@ Destaca o MVVM, banco de dados SQL, Entity Framework. Liste outras pessoas.|
 
 ## <a name="patterns-and-practices"></a>Padrões e práticas
 
-Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos XAML com acoplamento flexível e que possam ser mantidos e testados no WPF, na UWP do Windows 10 e no Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
+Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos de XAML flexível, sustentável e testáveis no WPF, Windows 10 UWP e no Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
 
 Para obter mais informações sobre o Prism, consulte [GitHub repo](https://github.com/PrismLibrary/Prism).
 
- 
+ 
 
- 
+ 

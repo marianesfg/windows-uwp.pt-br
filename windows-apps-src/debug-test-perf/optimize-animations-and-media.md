@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eebb967a7bf11163dc2e0ba502b40495901b39b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432984"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476446"
 ---
 # <a name="optimize-animations-media-and-images"></a>Otimizar animações, mídia e imagens
 
@@ -58,7 +58,7 @@ O conteúdo Web dentro de um controle [**WebView**](https://msdn.microsoft.com/l
 
 Animar um [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) também é má ideia. Além do detrimento de desempenho, isso pode causar ruptura ou outros artefatos no conteúdo de vídeo sendo reproduzido.
 
-> **Observação**   As recomendações neste artigo para **MediaPlayerElement** também se aplicam ao [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
+> **Observação**  as recomendações neste artigo para **MediaPlayerElement** também se aplicam a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** só está disponível no Windows 10, versão 1607, portanto se você está criando um aplicativo para uma versão anterior do Windows, precisará usar o **MediaElement**.
 
 ### <a name="use-infinite-animations-sparingly"></a>Use animações infinitas com moderação
 
@@ -70,7 +70,7 @@ Adicionar um manipulador para [**CompositionTarget.Rendering**](https://msdn.mic
 
 O namespace [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) inclui uma biblioteca de animações suaves de alto desempenho que têm aspecto consistente com outras animações do Windows. As classes relevantes têm "Theme" no nome e estão descritas em [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/Mt187350). Esta biblioteca é compatível com vários cenários de animação comuns, como a animação da primeira exibição do aplicativo e a criação de transições de estado e conteúdo. É recomendável usar essa biblioteca de animação sempre que possível, para aumentar o desempenho e a consistência para a interface do usuário do UWP.
 
-> **Observação**   A Biblioteca de Animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Observação**  a biblioteca de animação não pode animar todas as propriedades possíveis. Para todos os cenários XAML onde a biblioteca de animação não se aplica, consulte [Animações com storyboard](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Animar propriedades CompositeTransform3D independentemente

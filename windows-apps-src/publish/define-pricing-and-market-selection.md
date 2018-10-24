@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435703"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470877"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
@@ -43,10 +43,10 @@ Observe que as seleções feitas aqui se aplicam apenas a novas aquisições; se
 Tenha em mente que mesmo se você selecionar todos os mercados, leis locais e restrições ou outros fatores podem impedir que certos aplicativos sejam listados em alguns países e regiões. Além disso, alguns mercados podem ter requisitos específicos relacionados às classificações etárias. Se o seu aplicativo não cumprir esses requisitos, não poderemos oferecer o seu aplicativo nesse mercado. Veja [Classificações etárias](age-ratings.md) para saber mais.
 
 > [!NOTE]
-> Para aplicativos destinados ao Windows 8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para obter mais informações, consulte [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Para aplicativos destinados ao Windows8 ou Windows 8.1, alguns mercados individuais são tratados como um único mercado "Resto do mundo". Para obter mais informações, consulte [Mercados "Resto do mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 Você também verá uma caixa de seleção que permitirá a você informar se deseja oferecer seu aplicativo em qualquer mercado que a Loja possa adicionar no futuro. Se você deixar essa caixa marcada e posteriormente adicionamos novos mercados, o preço base e a data de disponibilidade geral do seu envio serão usados para o aplicativo nesses mercados. Se você não quiser que isso aconteça, desmarque essa caixa; nesse caso, não listaremos seu aplicativo em nenhum mercado futuro (porém, você sempre poderá adicioná-lo posteriormente).
- 
+ 
 
 ## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor da Microsoft Store
 
@@ -476,13 +476,13 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 | Reino Unido       | Cartão-presente       | 2,24%                         | Março de 2016     |
 | Estados Unidos        | Cartão-presente       | 2,24%                         | Março de 2016     |
 
- 
+ 
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto do mundo" para Windows 8.x
 
 Se seu aplicativo inclui pacotes para Windows 8. x, é importante estar ciente de que um número de mercados é tratado como um mercado único "de resto do mundo" para os clientes que usam o armazenamento no Windows 8. x, mesmo que eles são mostrados como mercados individuais no Centro de desenvolvimento do Windows painel (em vez do painel da Store anterior, onde havia uma opção de mercado "Resto do mundo" para agrupar todos esses mercados).
 
-Se você deixar a seleção padrão ao enviar seu aplicativo, não precisará se preocupar com isso, e seu aplicativo estará disponível para todos os mercados possíveis. No entanto, se você deseja excluir determinados mercados, lembre-se de que excluir até mesmo um desses mercados "Resto do mundo" significa que seu aplicativo não estará disponível em nenhum dos mercados "Resto do mundo" para clientes no Windows 8 ou Windows 8.1.
+Se você deixar a seleção padrão ao enviar seu aplicativo, não precisará se preocupar com isso, e seu aplicativo estará disponível para todos os mercados possíveis. No entanto, se você deseja excluir determinados mercados, tenha em mente que excluir até mesmo um desses mercados "Resto do mundo" significa que seu aplicativo não estará disponível em nenhum dos mercados "Resto do mundo" para clientes no Windows8 ou Windows 8.1.
 
 Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 
@@ -743,4 +743,4 @@ Os mercados incluídos em "Resto do mundo" para o Windows 8.x são os seguintes:
 </table>
 
 > [!NOTE]
-> Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, veja [Tipos de conta, locais e tarifas](account-types-locations-and-fees.md).
+> Para uma lista de países e regiões em que você pode registrar uma conta de desenvolvedor, veja [Tipos de conta, locais e tarifas](account-types-locations-and-fees.md).

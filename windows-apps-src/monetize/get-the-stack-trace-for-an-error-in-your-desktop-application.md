@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro, aplicativo da área de trabalho
 ms.localizationpriority: medium
 ms.openlocfilehash: 60f4ed7251fa934190a96e8c7d6f0edd21520980
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440132"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472159"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
 
@@ -46,7 +46,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | Cabeçalho        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorização | string | Obrigatório. O token de acesso do Azure AD no formulário **Bearer** &lt;*token*&gt;. |
- 
+ 
 
 ### <a name="request-parameters"></a>Parâmetros solicitados
 
@@ -55,7 +55,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter um rastreamento de pilha. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | cabIdHash | string | O hash da ID exclusiva do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha. Para obter esse valor, use o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar os detalhes de um erro específico em seu aplicativo, e use o valor de **cabIdHash** no corpo da resposta desse método. |  Sim  |
 
- 
+ 
 ### <a name="request-example"></a>Exemplo de solicitação
 
 O exemplo a seguir demonstra como obter um rastreamento de pilha usando esse método. Substitua os parâmetros *applicationId* e *cabIdHash* pelos valores apropriados para seu aplicativo da área de trabalho.

@@ -15,20 +15,23 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 9650a60dd7e653ee7021603328a3cf6de0c13926
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445474"
+ms.locfileid: "5469712"
 ---
 # <a name="command-bar-flyout"></a>Submenu da barra de comandos
 
 O submenu de barra de comando permite que você fornecer aos usuários acesso fácil às tarefas comuns, mostrando comandos em uma barra de ferramentas flutuante relacionada a um elemento na sua tela de interface do usuário.
 
-![Um submenu de barra de comando de texto expandida](images/command-bar-flyout-text-full.png)
+![Um submenu de barra de comando de texto expandida](images/command-bar-flyout-header.png)
 
-> Para obter informações relacionadas, consulte [submenus](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menus e menus de contexto](menus.md)e [barras de comandos](app-bars.md).
+> CommandBarFlyout requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+
+> - **APIs da plataforma**: [classe CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [classe AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>- **APIs de biblioteca de interface do usuário do Windows**: [CommandBarFlyout classe](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 
 Como o [CommandBar](app-bars.md), CommandBarFlyout tem propriedades **PrimaryCommands** e **SecondaryCommands** , que você pode usar para adicionar comandos. Você pode colocar comandos na coleção ou ambos. Quando e como os comandos principais e secundários são exibidos dependem do modo de exibição.
 
@@ -36,14 +39,6 @@ O submenu de barra de comando tem dois modos de exibição: *expandida*e *recolh
 
 - O modo recolhido, somente os comandos principais são mostrados. Se o submenu de barra de comando tem principais e secundárias comandos, um botão "Veja mais", que é representado por um sinal de reticências \ [• • • \], é exibida. Isso permite que o usuário obtenha acesso aos comandos secundários fazendo a transição para o modo expandido.
 - No modo expandido, os comandos principais e secundários são mostrados. (Se o controle tiver apenas os itens secundários, eles serão mostrados de forma semelhante ao controle MenuFlyout).
-
-| **Baixar a biblioteca de interface do usuário do Windows** |
-| - |
-| Esse controle está incluído como parte da biblioteca de interface do usuário do Windows, um pacote NuGet que contém novos controles e recursos de interface do usuário para aplicativos UWP. Para obter mais informações, incluindo instruções de instalação, consulte a [Visão geral da biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
-
-| **APIs da plataforma** | **APIs de biblioteca de interface do usuário do Windows** |
-| - | - |
-| [Classe CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [classe AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [classe AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [classe AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator) | [Classe CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [classe TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) |
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
@@ -56,6 +51,8 @@ Para mostrar contextuais comandos em itens de lista sigam as diretrizes [context
 ### <a name="commandbarflyout-vs-menuflyout"></a>CommandBarFlyout vs MenuFlyout
 
 Para mostrar os comandos em um menu de contexto, você pode usar CommandBarFlyout ou MenuFlyout. É recomendável CommandBarFlyout porque ele fornece mais funcionalidade do que MenuFlyout. Você pode usar CommandBarFlyout com apenas os comandos secundários para obter o comportamento e a aparência de um MenuFlyout ou usar o submenu de barra de comando completo com comandos principais e secundários.
+
+> Para obter informações relacionadas, consulte [submenus](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menus e menus de contexto](menus.md)e [barras de comandos](app-bars.md).
 
 ## <a name="examples"></a>Exemplos
 
@@ -85,20 +82,15 @@ Você pode usar o CommandBarFlyout de forma ou até mesmo uma mistura dos dois.
 
 ## <a name="create-a-command-bar-flyout"></a>Criar um submenu de barra de comando
 
-> **Visualização**: CommandBarFlyout requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/) ou a [Biblioteca de interface do usuário do Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
-
 Este exemplo mostra como criar um submenu de barra de comando e usá-la de forma proativa e reativa. Quando a imagem é tocada, o submenu é mostrado em seu modo recolhido. Quando mostrada como um menu de contexto, o submenu é mostrado no modo expandido. Em ambos os casos, o usuário pode expandir ou recolher o submenu depois que ele for aberto.
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout<br/>
-        ![Example of a collapsed command bar flyout](images/command-bar-flyout-img-collapsed.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout<br/>
-        ![Example of an expanded command bar flyout](images/command-bar-flyout-img-expanded.png)
-    :::column-end:::
-:::row-end:::
+![Exemplo de um submenu de barra de comando recolhida](images/command-bar-flyout-img-collapsed.png)
+
+> _Um submenu de barra de comando recolhida_
+
+![Exemplo de um submenu de barra de comandos expandido](images/command-bar-flyout-img-expanded.png)
+
+> _Um submenu de barra de comandos expandido_
 
 ```xaml
 <Grid>
@@ -108,13 +100,13 @@ Este exemplo mostra como criar um submenu de barra de comando e usá-la de forma
             <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
             <AppBarButton Icon="Share" ToolTipService.ToolTip="Share"/>
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Rotate" Icon="Rotate"/>
+                <AppBarButton Label="Select all"/>
                 <AppBarButton Label="Delete" Icon="Delete"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            Tapped="Image_Tapped" FlyoutBase.AttachedFlyout="{x:Bind ImageCommandsFlyout}"
            ContextFlyout="{x:Bind ImageCommandsFlyout}"/>
 </Grid>
@@ -178,79 +170,118 @@ Os controles de botão da barra de aplicativos são caracterizados por um ícone
 
 Você pode adicionar outros controles a um submenu de barra de comando encapsulá-los em um AppBarElementContainer. Isso permite que você adicionar controles, como [DropDownButton]() ou [SplitButton]()ou adicionar contêineres como [StackPanel]() para criar a interface do usuário mais complexo.
 
-> [!NOTE]
-> Para ser adicionado a coleções comando principal ou secundária de um submenu de barra de comando, um elemento deve implementar a interface [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer é um wrapper que implementa essa interface, portanto, você pode adicionar um elemento para uma barra de comandos, mesmo se ele não implementa a interface em si.
+Para ser adicionado a coleções comando principal ou secundária de um submenu de barra de comando, um elemento deve implementar a interface [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) . AppBarElementContainer é um wrapper que implementa essa interface, portanto, você pode adicionar um elemento para uma barra de comandos, mesmo se ele não implementa a interface em si.
 
 Aqui, um AppBarElementContainer é usado para adicionar elementos extras para um submenu de barra de comando. Um SplitButton é adicionado aos comandos principais para permitir a seleção de cores. Um StackPanel é adicionado aos comandos secundários para permitir que um layout mais complexo para controles de zoom.
+
+> [!TIP]
+> Por padrão, elementos projetados para tela do aplicativo não podem parecer direita em uma barra de comandos. Quando você adiciona um elemento usando AppBarElementContainer, há algumas etapas que você deve seguir para fazer com que o elemento coincidir com outros elementos da barra de comando:
+>
+> - Substitua os pincéis de padrão com [estilo leve](/design/controls-and-patterns/xaml-styles#lightweight-styling) para tornar o elemento em segundo plano e borda coincidir com os botões da barra de aplicativo.
+> - Ajuste o tamanho e a posição do elemento.
+> - Encapsule ícones em uma Viewbox com uma largura e altura de 16 px.
 
 > [!NOTE]
 > Este exemplo mostra apenas o comando submenu da barra de interface do usuário, que ele não implementa qualquer um dos comandos que são mostrados. Para obter mais informações sobre como implementar os comandos, consulte [botões](buttons.md) e [Noções básicas de design de comando](../basics/commanding-basics.md).
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout with an open SplitButton<br/>
-        ![A command bar flyout with a split button](images/command-bar-flyout-split-button.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout with custom zoom UI in the menu<br/>
-        ![A command bar flyout with complex UI](images/command-bar-flyout-complex-ui.png)
-    :::column-end:::
-:::row-end:::
+![Um submenu de barra de comando com um botão de divisão](images/command-bar-flyout-split-button.png)
+
+> _Um submenu de barra de comando recolhida com um SplitButton aberto_
+
+![Um submenu de barra de comando com a interface do usuário complexa](images/command-bar-flyout-custom-ui.png)
+
+> _Um submenu com zoom personalizado da interface do usuário no menu da barra de comando expandido_
+
 
 ```xaml
 <CommandBarFlyout>
     <AppBarButton Icon="Cut" ToolTipService.ToolTip="Cut"/>
     <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
     <AppBarButton Icon="Paste" ToolTipService.ToolTip="Paste"/>
-    <!-- Color controls -->
+    <!-- Alignment controls -->
     <AppBarElementContainer>
-        <SplitButton Height="Auto" Margin="0,4,0,0"
-                     ToolTipService.ToolTip="Colors"
-                     Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
+        <SplitButton ToolTipService.ToolTip="Alignment">
+            <SplitButton.Resources>
+                <!-- Override default brushes to make the SplitButton 
+                     match other command bar elements. -->
+                <Style TargetType="SplitButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="SplitButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrush" Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </SplitButton.Resources>
             <SplitButton.Content>
-                <Rectangle Width="20" Height="20">
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="Red"/>
-                    </Rectangle.Fill>
-                </Rectangle>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="AlignLeft"/>
+                </Viewbox>
             </SplitButton.Content>
             <SplitButton.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem Text="Red"/>
-                    <MenuFlyoutItem Text="Yellow"/>
-                    <MenuFlyoutItem Text="Green"/>
-                    <MenuFlyoutItem Text="Blue"/>
+                    <MenuFlyoutItem Icon="AlignLeft" Text="Align left"/>
+                    <MenuFlyoutItem Icon="AlignCenter" Text="Center"/>
+                    <MenuFlyoutItem Icon="AlignRight" Text="Align right"/>
                 </MenuFlyout>
             </SplitButton.Flyout>
         </SplitButton>
     </AppBarElementContainer>
-    <!-- end Color controls -->
+    <!-- end Alignment controls -->
     <CommandBarFlyout.SecondaryCommands>
         <!-- Zoom controls -->
         <AppBarElementContainer>
             <AppBarElementContainer.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Background"
-                            Value="{ThemeResource AppBarItemBackgroundThemeBrush}"/>
-                </Style>
+                <!-- Override default brushes to make the Buttons 
+                     match other command bar elements. -->
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
                 <Style TargetType="TextBlock">
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Width" Value="40"/>
+                </Style>
             </AppBarElementContainer.Resources>
-            <Grid Margin="12,0">
+            <Grid Margin="12,-4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="86"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="76"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Zoom"/>
-                <StackPanel Orientation="Horizontal" Grid.Column="1">
-                    <Button>
-                        <SymbolIcon Symbol="Remove"/>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="Zoom"/>
+                </Viewbox>
+                <TextBlock Text="Zoom" Margin="10,0,0,0" Grid.Column="1"/>
+                <StackPanel Orientation="Horizontal" Grid.Column="2">
+                    <Button ToolTipService.ToolTip="Zoom out">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomOut"/>
+                        </Viewbox>
                     </Button>
                     <TextBlock Text="50%" Width="40"
                                HorizontalTextAlignment="Center"/>
-                    <Button>
-                        <SymbolIcon Symbol="Add"/>
+                    <Button ToolTipService.ToolTip="Zoom in">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomIn"/>
+                        </Viewbox>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -259,7 +290,7 @@ Aqui, um AppBarElementContainer é usado para adicionar elementos extras para um
         <AppBarSeparator/>
         <AppBarButton Label="Undo" Icon="Undo"/>
         <AppBarButton Label="Redo" Icon="Redo"/>
-        <AppBarButton Label="Select all"/>
+        <AppBarButton Label="Select all" Icon="SelectAll"/>
     </CommandBarFlyout.SecondaryCommands>
 </CommandBarFlyout>
 ```
@@ -270,58 +301,87 @@ Você pode usar um CommandBarFlyout com apenas os comandos secundários como um 
 
 ![Um submenu de barra de comando com apenas os comandos secundários](images/command-bar-flyout-context-menu.png)
 
+> _Submenu da barra de comando como um menu de contexto_
+
 ```xaml
 <Grid>
     <Grid.Resources>
         <!-- A command bar flyout with only secondary commands. -->
         <CommandBarFlyout x:Name="ContextMenu">
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Pin" Icon="Pin"/>
-                <AppBarButton Label="Unpin" Icon="UnPin"/>
                 <AppBarButton Label="Copy" Icon="Copy"/>
+                <AppBarButton Label="Save" Icon="Save"/>
+                <AppBarButton Label="Print" Icon="Print"/>
                 <AppBarSeparator />
                 <AppBarButton Label="Properties"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            ContextFlyout="{x:Bind ContextMenu}"/>
 </Grid>
 ```
 
 Você também pode usar um CommandBarFlyout com um DropDownButton para criar um menu padrão.
 
-![Um submenu de barra de comando com como um botão de menu suspenso](images/command-bar-flyout-button-menu.png)
+![Um submenu de barra de comando com como um botão de menu suspenso](images/command-bar-flyout-dropdown.png)
+
+> _Um botão de menu em um submenu de barra de comando suspenso_
 
 ```xaml
-<DropDownButton Content="Mail">
-    <DropDownButton.Flyout>
-        <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
-            <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Icon="MailForward" Label="Forward"/>
-                <AppBarButton Icon="MailReply" Label="Reply"/>
-                <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
-            </CommandBarFlyout.SecondaryCommands>
-        </CommandBarFlyout>
-    </DropDownButton.Flyout>
-</DropDownButton>
+<CommandBarFlyout>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarElementContainer>
+        <DropDownButton Content="Mail">
+            <DropDownButton.Resources>
+                <!-- Override default brushes to make the DropDownButton 
+                     match other command bar elements. -->
+                <Style TargetType="DropDownButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </DropDownButton.Resources>
+            <DropDownButton.Flyout>
+                <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
+                    <CommandBarFlyout.SecondaryCommands>
+                        <AppBarButton Icon="MailReply" Label="Reply"/>
+                        <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
+                        <AppBarButton Icon="MailForward" Label="Forward"/>
+                    </CommandBarFlyout.SecondaryCommands>
+                </CommandBarFlyout>
+            </DropDownButton.Flyout>
+        </DropDownButton>
+    </AppBarElementContainer>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarButton Icon="Placeholder"/>
+</CommandBarFlyout>
 ```
 
 ## <a name="command-bar-flyouts-for-text-controls"></a>Submenus da barra de comando para controles de texto
 
 O [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) é um submenu de barra de comandos especializados que contém comandos para edição de texto. Cada controle de texto mostra o TextCommandBarFlyout automaticamente como um menu de contexto (botão direito do mouse), ou quando o texto estiver selecionado. O submenu de barra de comando de texto se adapte a seleção de texto para mostrar somente os comandos relevantes.
 
-:::row:::
-    :::column:::
-        A text command bar flyout on text selection<br/>
-        ![A collapsed text command bar flyout](images/command-bar-flyout-text-selection.png)
-    :::column-end:::
-    :::column:::
-        An expanded text command bar flyout<br/>
-        ![An expanded text command bar flyout](images/command-bar-flyout-text-full.png)
-    :::column-end:::
-:::row-end:::
+![Um submenu de barra de comando de texto recolhido](images/command-bar-flyout-text-selection.png)
+
+> _Um submenu de barra de comando de texto na seleção de texto_
+
+![Um submenu de barra de comando de texto expandida](images/command-bar-flyout-text-full.png)
+
+> _Um submenu de barra de comando de texto expandida_
+
 
 ### <a name="available-commands"></a>Comandos disponíveis
 

@@ -11,20 +11,20 @@ ms.technology: uwp
 keywords: windows 10, uwp, personalizado, app, promoção, campanha
 ms.localizationpriority: medium
 ms.openlocfilehash: 13ee8d7482a2ce0716d4e133af329cd0ea42c184
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435261"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478779"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Criar uma campanha personalizada de promoção de app
 
 Além de criar uma [campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md) que será executada em aplicativos do Windows, você também pode promover seu aplicativo usando outros canais. Por exemplo, você pode promover o aplicativo usando um provedor de marketing de aplicativos terceirizado, ou pode postar links para seu aplicativo em redes sociais. Essas atividades são chamadas *campanhas personalizadas*.
 
-Se você veicular campanhas personalizadas para seu aplicativo, é possível acompanhar o desempenho relativo de cada uma criando uma URL para cada campanha personalizada, na qual cada URL contém uma *ID de campanha* diferente. Quando um cliente executando o Windows 10 clica em uma URL que contém uma ID de campanha, a Microsoft associa o clique à campanha personalizada correspondente e disponibiliza esses dados para você.
+Se você veicular campanhas personalizadas para seu aplicativo, é possível acompanhar o desempenho relativo de cada uma criando uma URL para cada campanha personalizada, na qual cada URL contém uma *ID de campanha* diferente. Quando um cliente que executam o Windows 10 clica em uma URL que contém uma ID de campanha, a Microsoft associa o clique campanha personalizada correspondente e disponibiliza esses dados para você.
 
 > [!IMPORTANT]
-> Esses dados serão acompanhados somente para clientes no Windows 10. Os clientes que usam outros sistemas operacionais ainda podem seguir o link até a listagem do seu aplicativo, mas dados sobre as atividades esses clientes não serão incluídos.
+> Esses dados acompanhados somente para clientes no Windows 10. Os clientes que usam outros sistemas operacionais ainda podem seguir o link até a listagem do seu aplicativo, mas dados sobre as atividades esses clientes não serão incluídos.
 
 Existem dois tipos principais de dados associados a campanhas personalizadas: *visualizações de página* da listagem da Store do aplicativo e *conversões*. Uma conversão é uma aquisição do aplicativo resultante da visualização por um cliente na página de listagem da Loja da Windows Store a partir de uma URL que inclui uma ID de campanha personalizada. Para obter mais detalhes sobre conversões, confira [Noções básicas sobre como aquisições do app se qualificam como conversões](#understanding-how-acquisitions-qualify-as-conversions) neste tópico.
 

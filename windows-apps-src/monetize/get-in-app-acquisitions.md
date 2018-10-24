@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
 ms.openlocfilehash: a09bb4ded7325cd1c5f5091be133ded889322bd9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434154"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473323"
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
@@ -173,6 +173,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 * [Obter dados de funil de aquisição do app](get-acquisition-funnel-data.md)
 * [Obter conversões de app por canal](get-app-conversions-by-channel.md)
 
- 
+ 
 
- 
+ 

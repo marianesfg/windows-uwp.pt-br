@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 7adfecbe216dce25d0f80eb3ef1f528196299db4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440790"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470630"
 ---
 # <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 
@@ -63,7 +63,7 @@ As tarefas em segundo plano que são executadas no mesmo processo do aplicativo 
 
 **Solicitar a execução de tarefas em segundo plano:**
 
-> **Importante**  A partir do Windows 10, os aplicativos não precisam mais estar na tela de bloqueio como um pré-requisito para executar tarefas em segundo plano.
+> **Importante**a partir do Windows 10, aplicativos são não precisam mais estar na tela de bloqueio como um pré-requisito para executar tarefas em segundo plano.
 
 Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tipos de tarefas com suporte sem serem fixados na tela de bloqueio. No entanto, os aplicativos devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de tarefa em segundo plano. Esse método retornará [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439) se o usuário tiver explicitamente negado permissões de tarefas em segundo plano para seu aplicativo nas configurações do dispositivo. Para obter mais informações sobre a escolha do usuário em relação à atividade em segundo plano e economia de bateria, consulte [Otimizar a atividade em segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity). 
 ## <a name="background-task-checklist"></a>Lista de verificação da tarefa em segundo plano
@@ -109,6 +109,6 @@ Os aplicativos UWP (Plataforma Universal do Windows) podem executar todos os tip
 * [Depurar uma tarefa em segundo plano](debug-a-background-task.md)
 * [Como disparar eventos de suspensão, retomada e segundo plano em aplicativos UWP (durante a depuração)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
+ 
 
- 
+ 

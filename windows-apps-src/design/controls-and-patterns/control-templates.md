@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433495"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478072"
 ---
 # <a name="control-templates"></a>Modelos de controle
 
@@ -112,7 +112,7 @@ Esta tabela lista os possíveis valores do [**IsChecked**](https://msdn.microsof
 | **false**           | `Unchecked`        | Vazio.                  |
 | **null**            | `Indeterminate`    | Contém um círculo.      |
 
- 
+ 
 
 Você especifica a aparência de um controle quando ele está em um determinado estado usando os objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Um **VisualState** contém um [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que muda a aparência dos elementos no [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Quando o controle entra no estado que a propriedade [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) especifica, as alterações de propriedade no **Setter** ou [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) são aplicadas. Quando o controle sai do estado, as alterações são removidas. Adicione objetos **VisualState** aos objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Adicione objetos **VisualStateGroup** à propriedade [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) anexada, a qual você definiu na raiz do [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) do **ControlTemplate**.
 
@@ -188,7 +188,7 @@ Para entender melhor como os objetos [**VisualState**](https://msdn.microsoft.co
 | De `Checked` a `Indeterminate`.   | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é aplicado, então o [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` é 1. O valor **Setter** do `Checked` **VisualState** é removido, então o [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078) de `CheckGlyph` é 0. | Um círculo é exibido.                            |
 | De `Indeterminate` a `Unchecked`. | O valor [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) do `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) é removido, então o [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` é 0.                                                                                                                                           | Nada é exibido.                             |
 
- 
+ 
 Para saber mais sobre como criar estados visuais para controles e, em especial, como usar a classe [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) e os tipos de animação, consulte [Animações de storyboard para estados visuais](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
 
 ## <a name="use-tools-to-work-with-themes-easily"></a>Use as ferramentas para trabalhar com os temas facilmente
@@ -211,11 +211,11 @@ Os tópicos que documentam os estilos e modelos dos controles de XAML mostram tr
 
 Para alguns dos atributos nos exemplos de XAML, você pode ter percebido referências de recursos que usam a [extensão de marcação {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md). Essa é uma técnica que permite que um único modelo de controle use recursos que podem ser valores diferentes dependendo de qual tema está ativo no momento. Isso é particularmente importante para pincéis e cores, porque a finalidade principal dos temas é permitir que os usuários escolham se querem um tema de contraste escuro, claro ou alto aplicado ao sistema como um todo. Os aplicativos que usam o sistema de recursos de XAML podem usar um conjunto de recursos apropriado para esse tema, de maneira que as escolhas de tema na interface do usuário de um aplicativo reflitam a escolha de tema em todo o sistema feita pelo usuário.
 
- ## <a name="get-the-sample-code"></a>Obter o código de exemplo
+ # # Obter o código de exemplo
 * [Amostra de noções básicas de interface do usuário XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Exemplo de controle de edição de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
- 
+ 
 
 
 

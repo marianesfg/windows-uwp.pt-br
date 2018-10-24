@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, código promocional, códigos promocionais, token, tokens
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440522"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472459"
 ---
 # <a name="generate-promotional-codes"></a>Gerar códigos promocionais
 
 
-Você pode gerar códigos promocionais para um app ou complemento que você tenha publicado na Microsoft Store. Códigos promocionais são um modo fácil de conceder a usuários influentes acesso gratuito ao seu app ou complemento. Você também pode usar códigos promocionais em situações de atendimento ao cliente oferecendo aos usuários acesso gratuito ao seu aplicativo ou complemento, ou para [testes beta](beta-testing-and-targeted-distribution.md) com o Windows 10. 
+Você pode gerar códigos promocionais para um app ou complemento que você tenha publicado na Microsoft Store. Códigos promocionais são um modo fácil de conceder a usuários influentes acesso gratuito ao seu app ou complemento. Você também pode usar códigos promocionais em situações de atendimento ao cliente, oferecendo aos usuários acesso gratuito ao seu aplicativo ou complemento, ou para o [teste beta](beta-testing-and-targeted-distribution.md) com Windows 10. 
 
 Cada código promocional tem uma URL resgatável exclusiva correspondente que um cliente pode clicar para resgatar o código e instalar seu aplicativo ou complemento da Microsoft Store.  Observe que o aplicativo deve passar na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md) para que os usuários possam resgatar um código promocional para instalá-lo.
 
@@ -115,4 +115,4 @@ Para analisar um resumo detalhado de pedidos de códigos promocionais de seus ap
 
 Você também pode [baixar](#download-and-distribute-promotional-codes) um pedido desta tabela.
 
- 
+ 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434458"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476555"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 
@@ -153,7 +153,7 @@ Defina a localização a ser exibida no mapa especificando a propriedade [**Cent
 > [!NOTE]
 > Como uma cadeia de caracteres não pode ser convertida em um [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), você não pode especificar um valor para a propriedade [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) na marcação XAML, a menos que use a vinculação de dados. (Essa limitação também se aplica à propriedade anexada [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264)).
 
- 
+ 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
@@ -327,9 +327,9 @@ Para mostrar um modo de exibição Streetside
 
 Este exemplo mostra como apresentar um modo de exibição Streetside semelhante à imagem anterior.
 
-**Observação**  O mapa de visão geral não será exibido se o controle de mapa for muito pequeno.
+**Observação**o mapa de visão geral não será exibido se o controle de mapa for muito pequeno.
 
- 
+ 
 
 ```csharp
 private async void showStreetsideView()

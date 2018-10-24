@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f1236c2ade0423f6e092024e786741f3f3bf6d11
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443181"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470084"
 ---
 # <a name="masterdetails-pattern"></a>Padrão mestre/detalhes
 
@@ -46,7 +46,7 @@ Ao implementar o padrão mestre/detalhes, recomendamos usar o estilo empilhado o
 | 320 epx-640 epx        | Empilhado           |
 | 641 epx ou mais larga       | Lado a lado      |
 
- 
+ 
 ## <a name="stacked-style"></a>Estilo empilhado
 
 No estilo empilhado, apenas um painel fica visível por vez: o mestre ou os detalhes.

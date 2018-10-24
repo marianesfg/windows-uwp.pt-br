@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, uwp, formulários do windows, win32, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 59072374e19da1c5c7e6e6a5e6a7b8c172d74052
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 5803646c3b613a5a57992a9791215138cf996966
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435469"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474020"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
 
@@ -89,7 +89,7 @@ Aqui estão as etapas principais para usar o XAML da UWP que hospeda a API para 
 
     * Se seu aplicativo cria o objeto **DesktopWindowXamlSource** antes que ele crie nenhum dos objetos **Windows.UI.Xaml.UIElement** , essa estrutura será inicializada para você quando você instancia o objeto **DesktopWindowXamlSource** . Nesse cenário, você não precisa adicionar nenhum código de sua preferência para inicializar a estrutura.
 
-    * No entanto, se seu aplicativo cria os objetos **Windows.UI.Xaml.UIElement** antes que ele crie o objeto **DesktopWindowXamlSource** que hospedará-los, seu aplicativo deve chamar estática [** WindowsXamlManager.InitializeForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) método para inicializar explicitamente a estrutura UWP XAML antes dos objetos **Windows.UI.Xaml.UIElement** são instanciados. Seu aplicativo deve normalmente deve chamar esse método quando o elemento de interface do usuário pai que hospeda o **DesktopWindowXamlSource** é instanciado.
+    * No entanto, se seu aplicativo cria os objetos **Windows.UI.Xaml.UIElement** antes que ele crie o objeto **DesktopWindowXamlSource** que hospedará-los, seu aplicativo deve chamar estática [** WindowsXamlManager.InitializeForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) método para inicializar explicitamente a estrutura UWP XAML antes dos objetos **Windows.UI.Xaml.UIElement** são instanciados. Seu aplicativo normalmente deve chamar esse método quando o elemento de interface do usuário pai que hospeda o **DesktopWindowXamlSource** é instanciado.
 
     ```cppwinrt
     Windows::UI::Xaml::Hosting::WindowsXamlManager windowsXamlManager =

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432475"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478435"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
@@ -33,8 +33,8 @@ Depois que você tiver [configurado a sua conta de desenvolvedor](opening-a-deve
 -   [Preencher os formulários de imposto](#tax-forms)
 
 > [!NOTE]
-> Para saber detalhes de como e quando você receberá o dinheiro obtido com os aplicativos, veja [Sendo pago](getting-paid-apps.md).
- 
+> Para saber detalhes de como e quando você receberá o dinheiro obtido com os aplicativos, veja [Sendo pago](getting-paid-apps.md).
+ 
 
 ## <a name="payout-account"></a>Conta de pagamento
 
@@ -43,7 +43,7 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
 > [!NOTE]
 > Em alguns mercados, o PayPal pode ser usado para sua conta de pagamento. Consulte [Tipos de conta, locais e taxas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para descobrir se há suporte a PayPal em um mercado específico, e leia as [Informações sobre PayPal](#paypal-info) para obter mais detalhes.
 
- 
+ 
 **Para configurar sua conta de pagamento**
 
 1.  No painel do Centro de Desenvolvimento do Windows, acesse **Configurações da conta** ao selecionar o ícone no canto superior direito.
@@ -63,7 +63,7 @@ Caso precise atualizar ou mudar a conta de pagamento, siga as etapas acima, subs
 
 > [!IMPORTANT]
 > A modificação dessa conta pode atrasar seus pagamentos em até um ciclo. Esse atraso ocorre porque nós temos que verificar a mudança na conta, da mesma forma que fazemos quando você configura a conta de pagamento pela primeira vez. Você receberá o valor total após a verificação da conta; todos os pagamentos vencidos no ciclo de pagamento atual serão adicionados ao próximo ciclo. Consulte [Obtendo pagamento](getting-paid-apps.md) para saber mais.
- 
+ 
 
 ### <a name="paypal-info"></a>Informações do PayPal
 
@@ -135,7 +135,7 @@ Você pode preencher e enviar os formulários de imposto eletronicamente no pain
 > [!IMPORTANT]
 > Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. Recomendamos enfaticamente que você entrar em contato com a autoridade relevante para seu país ou região que pode ajudar a melhor determinar as informações de impostos corretas para suas atividades de desenvolvedor da Microsoft Store.
 
- 
+ 
 **Para preencher seu perfil fiscal**
 
 1.  No painel do Centro de Desenvolvimento do Windows, clique no ícone **Configurações da conta** no canto superior direito.
@@ -160,9 +160,9 @@ As informações que você envia em seus formulários fiscais determinam a taxa 
 
 Se você está fora dos Estados Unidos, talvez possa tirar proveito de benefícios de tratados fiscais. Entre esses benefícios variam de país e podem permitir a reduzir a quantidade de impostos retidos pela Microsoft Store. Você pode reivindicar benefícios de tratados fiscais preenchendo a Parte II do formulário W-8BEN. Recomendamos que você entre em contato com os recursos apropriados em seu país ou sua região para determinar se esses benefícios se aplicam a você.
 
- 
+ 
 
- 
+ 
 
 
 

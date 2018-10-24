@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisição, funil
 ms.localizationpriority: medium
 ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443132"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479649"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obter dados de funil de aquisição do app
 
@@ -54,7 +54,7 @@ Para usar este método, primeiro você precisa do seguinte:
 | endDate | date | A data final no intervalo de datas de dados de funil de aquisição a serem recuperados. O padrão é a data atual. |  Não  |
 | filter | string  | Uma ou mais instruções que filtram as linhas na resposta. Para saber mais, consulte a seção [campos de filtro](#filter-fields) a seguir. | Não   |
 
- 
+ 
 ### <a name="filter-fields"></a>Campos de filtro
 
 O parâmetro *filter* da solicitação contém uma ou mais instruções que filtram as linhas da resposta. Cada instrução contém um campo e um valor que estão associados aos operadores **eq** ou **ne**, e as instruções podem ser combinadas usando-se **and** ou **or**.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: b81bf3c55b493d8e36f186ec56b68367c6245cc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434055"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478183"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -451,7 +451,7 @@ Missão cumprida! Você acabou de tornar a Internet um lugar seguro!
 | TPM                 | O trusted platform module (TPM) pode ser usado para criar pares de chaves pública/privada criptográficas de maneira que a chave privada jamais possa ser revelada ou usada fora do TPM (ou seja, a chave é não migrável).                                                                                                                                                                                                                                                                                                               |
 | Atestado de chave do TPM | Um protocolo que prova criptograficamente que uma tecla está associada ao TPM. Esse tipo de atestado pode ser usado para garantir que uma determinada operação criptográfica ocorreu no TPM de um computador específico.                                                                                                                                                                                                                                                                                                                       |
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

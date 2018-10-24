@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435579"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475063"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar erros comuns de certificação
 
@@ -46,9 +46,9 @@ Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem a
 -   Se seu aplicativo usa APIs de comércio do namespace [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), certifique-se de testar o aplicativo e verificar se ele manipula exceções típicas. Além disso, certifique-se de que seu aplicativo usa a classe [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) e não [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator), que é usada somente para testes. (observe que se o aplicativo for destinado ao Windows 10, versão 1607 ou posterior, recomendamos que você use membros do namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) em vez do namespace Windows.ApplicationModel.Store).
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 79873d014c5ee735a509328d4a123f839831325b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440122"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476050"
 ---
 # <a name="accessing-homegroup-content"></a>Acessando o conteúdo do Grupo Doméstico
 
@@ -38,7 +38,7 @@ Acesse o conteúdo armazenado na pasta Grupo Doméstico do usuário, incluindo i
     Para acessar o conteúdo do Grupo Doméstico, a máquina do usuário deverá ter um Grupo Doméstico configurado e seu aplicativo deve ter pelo menos um dos seguintes recursos: **picturesLibrary**, **musicLibrary** ou **videosLibrary**. Quando seu aplicativo acessar a pasta Grupo Doméstico, ele verá somente as bibliotecas correspondentes aos recursos declarados em seu manifesto do aplicativo. Para saber mais, consulte [Permissões de acesso a arquivo](file-access-permissions.md).
 
     > [!NOTE]
-    >  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.     
+    >  O conteúdo na biblioteca Documentos de um Grupo Doméstico não fica visível para seu aplicativo independentemente dos recursos declarados em seu manifesto do aplicativo e independente das configurações de compartilhamento do usuário.     
 
 -   **Noções básicas para usar seletores de arquivos**
 

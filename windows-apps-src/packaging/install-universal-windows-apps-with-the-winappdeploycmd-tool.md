@@ -2,7 +2,7 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar apps usando a ferramenta WinAppDeployCmd.exe
-description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10.
+description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo de plataforma Universal do Windows (UWP) de um computador Windows 10 em qualquer dispositivo Windows 10.
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
@@ -11,26 +11,26 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433421"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472985"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
 
-O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode ser usada para implantar um aplicativo da Plataforma Universal do Windows (UWP) de um computador com o Windows 10 em qualquer dispositivo com o Windows 10. Você pode usar essa ferramenta para implantar um pacote do aplicativo quando o dispositivo Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
+O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo de plataforma Universal do Windows (UWP) de um computador Windows 10 em qualquer dispositivo Windows 10. Você pode usar essa ferramenta para implantar um pacote do aplicativo quando o dispositivo Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
 
-Basta o SDK do Windows 10 instalado para executar a ferramenta WinAppDeployCmd em um prompt de comando ou em um arquivo de script. Quando você instala um aplicativo com WinAppDeployCmd.exe, isso utiliza o arquivo.appx/.msix ou AppxManifest (para arquivos soltos) para carregar no lado do seu aplicativo em um dispositivo Windows 10. Esse comando não instala o certificado necessário para o aplicativo. Para executar o aplicativo, o dispositivo com o Windows 10 deve estar no modo de desenvolvedor ou já ter o certificado instalado.
+Basta o SDK do Windows 10 instalado para executar a ferramenta WinAppDeployCmd em um prompt de comando ou um arquivo de script. Quando você instala um aplicativo com WinAppDeployCmd.exe, isso utiliza o arquivo.appx/.msix ou AppxManifest (para arquivos soltos) para carregar no lado do seu aplicativo em um dispositivo Windows 10. Esse comando não instala o certificado necessário para o aplicativo. Para executar o aplicativo, o dispositivo Windows 10 deve estar no modo de desenvolvedor ou já ter o certificado instalado.
 
 Para implementar em dispositivos móveis, você deve primeiro criar um pacote. Para obter mais informações, veja [aqui](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-A ferramenta **WinAppDeployCmd.exe** se localiza aqui no computador com o Windows 10: **C:\\Program Files (x86)\\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (com base no caminho de instalação do SDK). 
+A ferramenta **WinAppDeployCmd.exe** está localizada aqui em seu computador Windows 10: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (com base no seu caminho de instalação do SDK). 
 > [!NOTE]
 > Na versão 15063 e posterior do SDK, ele está instalado lado a lado em pastas específicas à versão.  SDKs anteriores (14393 e anteriores) são gravados diretamente na pasta pai.
 
-Primeiro, conecte o dispositivo com o Windows 10 à mesma sub-rede ou conecte-o diretamente ao computador com o Windows 10 usando uma conexão USB. Em seguida, use a sintaxe e os exemplos a seguir desse comando neste artigo para implementar o aplicativo UWP:
+Primeiro, conecte o dispositivo Windows 10 à mesma sub-rede ou conecte-o diretamente ao seu computador Windows 10 com uma conexão USB. Em seguida, use a sintaxe e os exemplos a seguir desse comando neste artigo para implementar o aplicativo UWP:
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>Sintaxe e opções de WinAppDeployCmd
 
@@ -113,7 +113,7 @@ A tabela a seguir descreve as opções de **WinAppDeployCmd.exe**.
 | &lt;password&gt;       | Senha para as credenciais com acesso ao servidor da rede dos arquivos. |
 | &lt;remotedeploydir&gt;| Diretório no dispositivo em relação à localização de implementação                      |
 
- 
+ 
 ## <a name="winappdeploycmdexe-examples"></a>Exemplos de WinAppDeployCmd.exe
 
 Aqui estão alguns exemplos de como fazer a implantação usando a linha de comando com a sintaxe para **WinAppDeployCmd.exe**.
@@ -124,7 +124,7 @@ Mostra os dispositivos disponíveis para implantação. O comando atinge o tempo
 WinAppDeployCmd devices 3
 ```
 
-Instala o aplicativo do pacote MyApp.appx que está no diretório Downloads do computador para um dispositivo com o Windows 10 usando um endereço IP 192.168.0.1 com um PIN A1B2C3 para estabelecer uma conexão com o dispositivo
+Instala o aplicativo do pacote MyApp. AppX que está no diretório de Downloads do computador para um dispositivo Windows 10 com um endereço IP 192.168.0.1 com um PIN de A1B2C3 para estabelecer uma conexão com o dispositivo
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3

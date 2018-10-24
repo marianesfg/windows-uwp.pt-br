@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, painel, centro de des, centro de desenvolvimento
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440512"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479234"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Usando o painel do Centro de Desenvolvimento do Windows
 
@@ -42,9 +42,9 @@ Centro de desenvolvimento do Windows também oferece recursos para [Adicionar v�
 Seus comentários nos ajudam a criar os melhores recursos e experiências possíveis. Enquanto você trabalha no painel, use o link **comentários** no canto superior direito do painel para compartilhar suas ideias e sugestões.
 
 
- 
+ 
 
- 
+ 
 
 
 

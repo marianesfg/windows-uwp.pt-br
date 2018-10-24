@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fb273b6a37cb2f6322b0c9e3842b69676f82c616
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433558"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473984"
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede. A API de transferência em segundo plano fornece recursos avançados de carregamento e download que são executados em segundo plano durante a suspensão do aplicativo e persistirão após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
@@ -44,7 +44,7 @@ Por exemplo, a política de custo definida para uma operação pode indicar que 
 
 Embora o recurso de transferência em segundo plano tenha seus próprios mecanismos para manipular alterações no status de rede, existem outras considerações gerais de conectividade para aplicativos conectados a rede. Leia sobre o [aproveitamento de informações de conexão de rede disponíveis](https://msdn.microsoft.com/library/windows/apps/hh452983) para saber mais.
 
-> **Observação**  Para aplicativos executados em dispositivos móveis, existem recursos que permitem ao usuário monitorar e restringir a quantidade de dados que é transferida com base no tipo de conexão, no status de roaming e no plano de dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
+> **Observação**para aplicativos executados em dispositivos móveis, há recursos que permitem ao usuário monitorar e restringir a quantidade de dados que são transferidos com base no tipo de conexão, status, de roaming e planejar os dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
 
 A tabela a seguir indica quando as transferências em segundo plano são permitidas no telefone para cada valor da [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138), levando em consideração o status atual do telefone. Você pode usar a classe [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) para determinar o status atual do telefone.
 
@@ -203,7 +203,7 @@ Quaisquer recursos de sistema associados são liberados na conclusão ou no canc
 1.  Agora você pode usar a lista preenchida para reiniciar operações pendentes.
 
 ## <a name="post-processing"></a>Pós-processamento
-Um novo recurso no Windows 10 é a capacidade de executar códigos de aplicativo na conclusão de uma transferência em segundo plano, mesmo quando o aplicativo não estiver sendo executado. Por exemplo, seu aplicativo pode atualizar uma lista de filmes disponíveis após o download de um filme, em vez de fazer seu aplicativo procurar novos filmes sempre que ele é iniciado. Ou, seu aplicativo pode manipular uma transferência de arquivo com falha por tentar novamente usar um servidor ou porta diferente. O pós-processamento é invocado para transferências com êxito e falhas, de modo que pode usá-lo para implementar manipulação de erro personalizada e lógica de repetição.
+Um novo recurso no Windows 10 é a capacidade de executar o código do aplicativo na conclusão de uma transferência em segundo plano, mesmo quando o aplicativo não está em execução. Por exemplo, seu aplicativo pode atualizar uma lista de filmes disponíveis após o download de um filme, em vez de fazer seu aplicativo procurar novos filmes sempre que ele é iniciado. Ou, seu aplicativo pode manipular uma transferência de arquivo com falha por tentar novamente usar um servidor ou porta diferente. O pós-processamento é invocado para transferências com êxito e falhas, de modo que pode usá-lo para implementar manipulação de erro personalizada e lógica de repetição.
 
 O pós-processamento usa a infraestrutura da tarefa em segundo plano existente. Crie uma tarefa em segundo plano e associe-a a suas transferências antes de iniciar as transferências. As transferências são executadas em segundo plano e, quando são concluídas, sua tarefa em segundo plano é chamada para ser executada pós-processamento.
 
@@ -264,7 +264,7 @@ Existem dois cenários principais de tempo limite de conexão para levar em cons
 
 -   Depois de uma conexão ser estabelecida, uma mensagem de solicitação de HTTP que não tenha recebido uma resposta em dois minutos será anulada.
 
-> **Observação**  Em qualquer um desses cenários, supondo que haja conectividade com a Internet, a Transferência em Segundo Plano repetirá automaticamente a solicitação no máximo três vezes. Caso a conectividade com a Internet não seja detectada, outras solicitações esperarão até que a conexão seja estabelecida.
+> **Observação**em qualquer um desses cenários, supondo que haja conectividade com a Internet, transferência em segundo plano repetirá uma solicitação de até três vezes automaticamente. Caso a conectividade com a Internet não seja detectada, outras solicitações esperarão até que a conexão seja estabelecida.
 
 ## <a name="debugging-guidance"></a>Instrução de depuração
 Parar uma sessão de depuração no Microsoft Visual Studio é comparável a fechar seu aplicativo; uploads PUT são pausados e uploads POST são finalizados. Mesmo durante a depuração, seu aplicativo deve enumerar e então reiniciar ou cancelar quaisquer uploads que persistam. Por exemplo, você pode fazer com que seu aplicativo cancele as operações de upload enumeradas e existentes na inicialização do aplicativo se não houver interesse nas operações anteriores para essa sessão de depuração.

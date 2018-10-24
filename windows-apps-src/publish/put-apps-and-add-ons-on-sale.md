@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434300"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472557"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Colocar apps e complementos à venda
 
@@ -29,7 +29,7 @@ Ao usar a seção **Preço de venda** da página **Preço e disponibilidade** de
 Durante o período em que o produto estiver em promoção, os clientes poderão comprá-lo a um preço menor durante o período de tempo selecionado. Se você baixar o preço para **Grátis**, eles poderão baixá-lo sem pagar durante o período de venda.
 
 > [!IMPORTANT]
-> O preço de venda é mostrado somente para os clientes em dispositivos Windows 10, incluindo o Xbox One. As promoções oferecidas para proprietários de um dos seus outros produtos são mostradas apenas para os clientes no Windows 10, versão 1607 ou posterior.
+> Preço de venda é mostrado somente para os clientes em dispositivos Windows 10, incluindo o Xbox One. As promoções oferecidas para proprietários de um dos seus outros produtos são mostradas apenas para os clientes no Windows 10, versão 1607 ou posterior.
 > 
 > Em outros sistemas operacionais, os clientes verão o preço normal do aplicativo ou complemento e não poderão adquiri-los com o preço promocional. Você pode sempre alterar um preço escolhendo uma faixa de preço diferente em um novo envio, mas ele não será exibido como uma venda de tempo limitado.
 
@@ -83,7 +83,7 @@ Depois que seu envio passar pelo processo de certificação, as alterações ent
 > [!IMPORTANT]
 > Se a venda já tiver iniciado, você não poderá editar a data de início. Embora você possa editar a data de término, é recomendável editar uma venda para ser finalizada mais cedo do que a data de término original. Seus clientes potenciais podem ficar frustrados se você encerrar uma venda antes da data em que foi originalmente publicada (já que os clientes veem a data de término agendada ao visualizarem a listagem da Loja do seu aplicativo).
 
- **Para cancelar uma venda que ainda não foi iniciada**
+ **Para cancelar uma venda que ainda não foi iniciada**
 
 1.  Na página **Preço e disponibilidade** de um envio de aplicativo ou complemento em andamento, vá para a seção **Preço de venda**.
 2.  Localize a venda que você deseja cancelar e clique em **Remover**.

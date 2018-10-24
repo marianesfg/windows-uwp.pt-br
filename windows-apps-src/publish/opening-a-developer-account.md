@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444706"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478304"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
@@ -36,7 +36,7 @@ Esta visão geral sobre como registrar-se para uma conta de desenvolvedor para a
 5.  Informe o **nome de exibição do editor** que você deseja usar (50 caracteres ou menos). Selecione isso com cuidado, pois os clientes verão esse nome quando navegarem e reconhecerão seus aplicativos por esse nome. Para contas de empresa, certifique-se de usar o nome comercial ou registrado da sua organização. Observe que, se você inserir um nome já selecionado por outra pessoa ou se aparentemente alguém já tiver os direitos de usar esse nome, nós não permitiremos que você use esse nome. 
 
    > [!NOTE]
-   > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+   > Certifique-se de ter os direitos de uso do nome inserido aqui. Se outra pessoa tiver registrado a marca ou detiver os direitos autorais sobre o nome escolhido, sua conta poderá ser fechada. Consulte o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber mais. Se alguém estiver usando um nome de exibição do editor do qual você detenha a marca ou outros direitos jurídicos, [contate a Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Insira as informações de contato que deseja usar para sua conta de desenvolvedor.
 

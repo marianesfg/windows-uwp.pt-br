@@ -12,23 +12,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e91d4bd481188f4d29af68af2c4572b26d446ae
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432607"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478516"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar uma notificação de bloco local
  
 
-Os blocos dos aplicativos primários no Windows 10 são definidos no manifesto do aplicativo, e os blocos secundários são criados e definidos programaticamente pelo código do aplicativo. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do app, e não uma enviada por push ou obtida em um servidor Web.)
+Blocos de aplicativo principal no Windows 10 são definidos no manifesto do aplicativo, enquanto os blocos secundários são criados e definidos pelo código do aplicativo por meio de programação. Este artigo descreve como enviar uma notificação de bloco local para um bloco primário e um bloco secundário usando modelos de bloco adaptável. (Notificação local é aquela que é enviada pelo código do app, e não uma enviada por push ou obtida em um servidor Web.)
 
 ![bloco padrão e bloco com notificação](images/sending-local-tile-01.png)
 
 > [!NOTE] 
 >Saiba mais sobre [como criar blocos adaptáveis](create-adaptive-tiles.md) e [esquema de conteúdo de bloco](../tiles-and-notifications/tile-schema.md).
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>Instalar o pacote NuGet
 
@@ -50,7 +50,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Criar o conteúdo da notificação
 
 
-No Windows 10, as cargas de bloco são definidas usando-se modelos de bloco adaptável, que permitem criar layouts visuais personalizados para as notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
+No Windows 10, cargas de bloco são definidas usando modelos de bloco adaptável, que permitem que você crie layouts personalizados visual suas notificações. (Para saber o que é possível com blocos adaptáveis, consulte [Criar blocos adaptáveis](create-adaptive-tiles.md).)
 
 Este exemplo de código cria conteúdo de bloco adaptável para blocos médios e largos.
 
@@ -297,9 +297,9 @@ var notification = new TileNotification(doc);
 * [**Namespace Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
 * [Como usar a fila de notificações (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [Entrega de notificações](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 
 
 
 

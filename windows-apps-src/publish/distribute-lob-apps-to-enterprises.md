@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
 ms.openlocfilehash: 9149533a12263e105356a1683257c4d9172eefb5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433606"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471507"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
 
@@ -23,7 +23,7 @@ ms.locfileid: "5433606"
 Você pode publicar aplicativos LOB (linha de negócios) diretamente para empresas para aquisição de grande volume pela Microsoft Store para Empresas ou Microsoft Store para Educação, sem tornar os aplicativos amplamente disponíveis na Store.
 
 > [!NOTE]
-> No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente para empresas por meio da Microsoft Store para Empresas ou da Microsoft Store para Educação. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa. 
+> No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente para empresas por meio da Microsoft Store para Empresas ou da Microsoft Store para Educação. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa. 
 
 > [!IMPORTANT]
 > Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios de aplicativos LOB devem ser feitos por meio do painel do Centro de Desenvolvimento do Windows.
@@ -100,9 +100,9 @@ Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam en
 
 Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
- 
+ 
 
- 
+ 
 
 
 

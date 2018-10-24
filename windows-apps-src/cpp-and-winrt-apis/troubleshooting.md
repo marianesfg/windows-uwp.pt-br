@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
 ms.openlocfilehash: 05542a42e362f024e92547d9eb496b936b85236c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434065"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472404"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solucionando problemas de C++/WinRT
 
@@ -45,7 +45,7 @@ Se o app for encerrado e tudo o que você sabe é que uma exceção sem tratamen
 | Os testes do Kit de Certificação de Aplicativos Windows produzem um erro informando que uma das suas classes de tempo de execução "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*".|Qualquer classe de tempo de execução (que você declara em seu aplicativo) que deriva de uma classe base é conhecido como um *composable* classe. A classe base definitiva de uma classe composable deve ser um tipo originando do namespace; Por exemplo, [**DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Consulte [controles XAML; associar a C++ c++ WinRT propriedade](binding-property.md) para obter mais detalhes.|
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de delegação de EventHandler ou TypedEventHandler.|Em vez disso, é recomendável o uso de **winrt::delegate&lt;...T&gt;**. Consulte [Criar eventos em C++/WinRT](author-events.md).|
 | O compilador C++ gera o erro "*must be WinRT type*" para uma especialização de operação assíncrona do Windows Runtime.|É recomendável retornar uma [**tarefa**](https://msdn.microsoft.com/library/hh750113) PPL (Parallel Patterns Library). Consulte [Simultaneidade e operações assíncronas](concurrency.md).|
-| O compilador C++ gera "*error C2220: warning treated as error - no 'object' file generated*".|Corrija o aviso ou defina **C/C++** > **Geral** > **Tratar Avisos como Erros** para **Não (/WX-)**.|
+| O compilador C++ gera "*error C2220: warning treated as error - no 'object' file generated*".|Corrija o aviso ou defina **C/C++**>**Geral**>**Tratar avisos como erros** **não (/ /WX-)**.|
 | O app falha porque um manipulador de eventos no objeto C++/WinRT é chamado depois que o objeto é destruído.|Consulte [com segurança acessando o ponteiro *this* com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).|
 | O compilador C++ gera "*error C2338: This is only for weak ref support*".|Você está solicitando uma referência fraca para um tipo que passou o struct de marcador **winrt::no_weak_ref** como um argumento de modelo para sua classe base. Consulte [recusando o suporte a referência fraca](weak-references.md#opting-out-of-weak-reference-support).|
 | O vinculador C++ produz "*error LNK2019: símbolo externo*"|Consulte [por que é o vinculador me dar um "LNK2019: símbolo externo" Erro?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error).|

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f99396b117efcf7c3bed3cb64f24b519734cc858
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441194"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471565"
 ---
 # <a name="trademark-and-copyright-protection"></a>Proteção de marcas comerciais e direitos autorais
 
@@ -67,9 +67,9 @@ Não, não sem permissão. Embora o direito autoral não proteja a ideia do jogo
 
 Leia o aviso da Microsoft com cuidado e siga as instruções. O aviso da Microsoft poderá incluir etapas específicas que você poderá seguir para nos informar o que fez para corrigir o problema, que discorda com o reclamante e/ou que deseja reenviar seu aplicativo à Loja.
 
- 
+ 
 
- 
+ 
 
 
 

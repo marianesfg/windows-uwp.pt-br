@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443472"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470851"
 ---
 # <a name="share-certificates-between-apps"></a>Compartilhar certificados entre aplicativos
 
@@ -78,9 +78,9 @@ Agora que você já tem um ou mais serviços Web seguros, seus aplicativos podem
 
 Se não houver certificados cliente disponíveis, então o usuário precisará adicionar um certificado ao repositório de certificados. Você pode incluir código em seu aplicativo que permite que um usuário selecione um arquivo PFX que contenha um certificado cliente e, em seguida, importe esse certificado para o repositório de certificados cliente.
 
-**Dica**  Você pode usar makecert.exe para criar um arquivo PFX para usar com esse guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+**Dica**você pode usar makecert.exe para criar um arquivo PFX a ser usado com este guia de início rápido. Para obter informações sobre como usar makecert.exe, consulte [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
- 
+ 
 
 1.  Abra o Visual Studio e crie um novo projeto na página inicial. Nomeie o novo projeto "FirstContosoBankApp". Clique em **OK** para criar o novo projeto.
 2.  No arquivo MainPage.xaml, adicione o seguinte XAML ao elemento padrão **Grid**. Esse XAML inclui um botão para navegar para um arquivo PFX a ser importado, uma caixa de texto para inserir uma senha para um arquivo PFX protegido por senha, um botão para importar um arquivo PFX selecionado, um botão para fazer logon no serviço Web seguro e um bloco de texto para exibir o status da ação atual.

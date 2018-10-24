@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
 ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437430"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472787"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo
 
@@ -257,14 +257,14 @@ Cenários onde uma lógica de limpeza personalizada é necessária estão a exec
 
 Etapa 1: Declare o serviço _Microsoft-RetailDemo-Cleanup_ no manifesto do aplicativo.
 ``` CSharp
-  <Applications>
-      <Extensions>
-        <uap:Extension Category="windows.appService" EntryPoint="MyCompany.MyApp.RDXCustomCleanupTask">
-          <uap:AppService Name="Microsoft-RetailDemo-Cleanup" />
-        </uap:Extension>
-      </Extensions>
-   </Application>
-  </Applications>
+  <Applications>
+      <Extensions>
+        <uap:Extension Category="windows.appService" EntryPoint="MyCompany.MyApp.RDXCustomCleanupTask">
+          <uap:AppService Name="Microsoft-RetailDemo-Cleanup" />
+        </uap:Extension>
+      </Extensions>
+   </Application>
+  </Applications>
 
 ```
 

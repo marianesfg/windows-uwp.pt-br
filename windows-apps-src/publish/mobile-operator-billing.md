@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, operadoras móveis, cobrança de celular, cobrança da operadora móvel
 ms.localizationpriority: medium
 ms.openlocfilehash: da08e63cc42987f1a3876e13a713d670a80cf9ba
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432640"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471848"
 ---
 # <a name="mobile-operator-billing"></a>Cobrança da operadora móvel
 
@@ -23,7 +23,7 @@ ms.locfileid: "5432640"
 A Microsoft Store oferece a Cobrança da Operadora Móvel como um método de pagamento para dispositivos que executam o Windows 10, telefones que executam o Windows 10 Mobile e consoles Xbox One. Se a operadora móvel de um cliente oferecer suporte a essa funcionalidade, o cliente pode adicionar a Cobrança da Operadora Móvel como método de pagamento e usá-la para fazer compras na Store usando a conta do celular.
 
 > [!TIP]
->  Se a operadora móvel de um cliente oferece a Cobrança da Operadora Móvel, mas o cliente não encontra essa opção em seu dispositivo, veja estas [etapas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+>  Se a operadora móvel de um cliente oferece a Cobrança da Operadora Móvel, mas o cliente não encontra essa opção em seu dispositivo, veja estas [etapas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
 Estamos trabalhando regularmente com as operadoras para expandir a disponibilidade desse método de pagamento. Se você gostaria de sugerir o suporte a uma operadora de telefonia celular que não estiver nas listas abaixo, entre em contato essa operadora e solicite que adicionem esse método de pagamento.
 
@@ -57,16 +57,16 @@ No momento, a Cobrança da Operadora Móvel tem o suporte destas operadoras de c
 | Estados Unidos   | Sprint, Verizon                  |
 | Reino Unido  | O2, 3 UK, EE                     |
 
- 
+ 
 
 
 
- 
+ 
 
 
- 
+ 
 
- 
+ 
 
 
 

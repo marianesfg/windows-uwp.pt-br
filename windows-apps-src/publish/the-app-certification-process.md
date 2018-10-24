@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, publicação, pré-processamento, certificação, lançamento, pendentes, enviar, publicar, status, tempo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442562"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475001"
 ---
 # <a name="the-app-certification-process"></a>O processo de certificação de aplicativos
 
@@ -60,11 +60,11 @@ Depois de passar pelas etapas acima com êxito, o status do envio será alterado
 > [!NOTE]
 > Nós também fazemos verificações específicas nos aplicativos após eles serem publicados, para que possamos identificar problemas potenciais e garantir que seu aplicativo esteja em conformidade com todas as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Se encontrarmos quaisquer problemas, você será notificado sobre o erro e como corrigi-lo, se aplicável, ou se ele foi removido da loja.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

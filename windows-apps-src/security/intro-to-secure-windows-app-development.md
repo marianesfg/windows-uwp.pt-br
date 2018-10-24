@@ -1,6 +1,6 @@
 ---
 title: Introdução ao desenvolvimento de aplicativos seguros do Windows
-description: Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros.
+description: Este artigo introdutório ajuda arquitetos e desenvolvedores compreendam melhor os vários recursos de plataforma do Windows 10 que aceleram a criação de aplicativos da plataforma Universal do Windows (UWP) seguros.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: msatranjr
 ms.author: misatran
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e48d0b21d588ef7b4913e16b75f9d21c5d5209f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440358"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470414"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 
 
 
 
-Este artigo introdutório ajuda arquitetos e desenvolvedores de aplicativos a compreender melhor os vários recursos da plataforma Windows 10 que aceleram a criação de aplicativos UWP (Plataforma Universal do Windows) seguros. Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
+Este artigo introdutório ajuda arquitetos e desenvolvedores compreendam melhor os vários recursos de plataforma do Windows 10 que aceleram a criação de aplicativos da plataforma Universal do Windows (UWP) seguros. Ele fornece detalhes sobre como usar os recursos de segurança do Windows disponíveis em cada um dos seguintes estágios: autenticação, dados em voo (data-in-flight) e dados em repouso (data-at-rest). Você pode encontrar informações mais detalhadas sobre cada tópico revisando os recursos adicionais incluídos em cada capítulo.
 
 ## <a name="1-introduction"></a>1 Introdução
 
@@ -290,7 +290,7 @@ Quando os dados chegam em um dispositivo, nos referimos a eles como "dados em re
 
 Tradicionalmente, o Windows jamais teve uma definição de um aplicativo. Ele era mais conhecido como um executável (.exe), e isso nunca incluiu a instalação, o armazenamento do estado, a duração da execução, o controle de versão, a integração com o SO ou a comunicação de aplicativo para aplicativo. O modelo Plataforma Universal do Windows define um modelo de aplicativo que abrange instalação, ambiente de tempo de execução, gerenciamento de recursos, atualizações, modelo de dados e desinstalação.
 
-Os aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
+Aplicativos do Windows 10 são executados em um contêiner, o que significa que eles têm privilégios limitados por padrão (privilégios adicionais podem ser solicitados e concedidos pelo usuário). Por exemplo, se um aplicativo quiser acessar arquivos no sistema, um seletor de arquivos do namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) tem de ser usado para permitir que o usuário selecione um arquivo (sem acesso direto aos arquivos habilitado). Outro exemplo é que se um aplicativo quiser acessar os dados de local do usuário, ele terá que permitir a declaração da capacidade do dispositivo de local, solicitando ao usuário no momento do download que esse aplicativo solicite acesso ao local do usuário. Além disso, na primeira vez que o aplicativo quiser acessar o local do usuário, um prompt de consentimento adicional será mostrado ao usuário, solicitando permissão para acessar os dados.
 
 Observe que esse modelo de aplicativo atua como uma "jaula" para aplicativos, o que significa que eles não podem sair, mas não e um “castelo” que não possa ser acessado do lado de fora (obviamente, os aplicativos com privilégios de administrador ainda podem acessá-los). O Device Guard no Windows 10, que permite que as organizações/TI especifiquem quais aplicativos (Win32) podem ser executados, podem ajudar a limitar esse acesso ainda mais.
 

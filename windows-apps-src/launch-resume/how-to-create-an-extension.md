@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445573"
+ms.locfileid: "5473890"
 ---
 # <a name="create-and-host-an-app-extension"></a>Criar e armazenar uma extensão de app
 
@@ -411,7 +411,7 @@ O diferencial entre [pacotes opcionais](https://docs.microsoft.com/windows/uwp/p
 
 Extensões de aplicativo participam de um ecossistema aberto. Se seu aplicativo puder hospedar extensões de aplicativo, qualquer pessoa pode gravar uma extensão para seu host, desde que elas cumpram seu método de passar/receber informações da extensão. Isso difere pacotes opcionais, que participam de um ecossistema fechado, onde o fornecedor decide quem tem permissão para fazer um pacote opcional que pode ser usado com o aplicativo.
 
-Extensões de aplicativos são pacotes independentes e podem ser aplicativos autônomos. Elas não têm uma dependência de implantação em outro aplicativo. Pacotes opcionais exigem o pacote principal e não podem ser executados sem ele.
+Extensões de aplicativos são pacotes independentes e podem ser aplicativos autônomos. Elas não têm uma dependência de implantação em outro aplicativo.Pacotes opcionais exigem o pacote principal e não podem ser executados sem ele.
 
 Um pacote de expansão para um jogo seria um bom candidato para um pacote opcional, pois ele está estreitamente ligado ao jogo, ele não será executado independentemente do jogo e talvez não queira que os pacotes de expansão sejam criados por qualquer desenvolvedor no ecossistema.
 

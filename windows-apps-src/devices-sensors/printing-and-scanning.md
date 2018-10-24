@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, impressão, 3dprinting, impressão 3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c4ada5d58743bf19ed27dfbdd2676f2a267129f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445653"
+ms.locfileid: "5473808"
 ---
 # <a name="printing-and-scanning"></a>Impressão e digitalização
 
@@ -34,5 +34,5 @@ Esta seção descreve como imprimir e digitalizar em seu aplicativo Universal do
 * [Diretrizes de design para impressão](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Vídeo da Compilação 2015: Desenvolvendo aplicativos que imprimem no Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Exemplo de impressão via UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
- 
+ 
 

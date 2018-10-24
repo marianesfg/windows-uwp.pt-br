@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, preço, disponível, detectável, avaliação gratuita, avaliações, avaliação, apps, data de lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433728"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478458"
 ---
 # <a name="set-app-pricing-and-availability"></a>Definir a disponibilidade e o preço do aplicativo
 
@@ -61,7 +61,7 @@ Existem dois tipos de versão de avaliação que você pode escolher, e você te
 
 Escolha **Limitada ao tempo** para permitir que os clientes testem o aplicativo gratuitamente por um determinado número de dias: **1 dia**, **7 dias**, **15 dias** ou **30 dias**. Você pode limitar os recursos adicionando código a [excluir ou limitar recursos na versão de avaliação](../monetize/in-app-purchases-and-trials.md), ou pode permitir que os clientes acessem a funcionalidade completa durante esse período. 
 > [!NOTE]
-> As versões de avaliação por tempo limitado não são mostradas para os clientes no Windows 10 build 10.0.10586 ou versões anteriores nem para os clientes no Windows Phone 8.1 e versões anteriores.
+> As versões de avaliação por tempo limitado não são mostradas para os clientes no Windows 10 build 10.0.10586 ou versões anteriores nem para os clientes no Windows Phone 8.1 e versões anteriores.
 
 ### <a name="unlimited"></a>Ilimitado
 

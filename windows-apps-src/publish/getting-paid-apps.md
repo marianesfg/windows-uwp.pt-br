@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c128bedd1c889f4c2dcf0565c7c10575eb75013
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438190"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478697"
 ---
 # <a name="getting-paid"></a>Recebimento de pagamentos
 Veja a seguir algumas informações importantes que serão necessárias para que você garanta o recebimento de pagamentos de ganhos com seus apps, complementos e anúncios.
@@ -70,9 +70,9 @@ Depois de definir o status de espera de pagamento para **Ativado**, todos os pag
 > A seleção de **Status de pagamento em espera** se aplica a **todas** as fontes de receita pagas por meio do Centro de Desenvolvimento do Windows (Microsoft Store, anúncios, Azure Marketplace etc.) Você não pode selecionar um status de pagamento em espera diferente para cada fonte de receita.
 
 
- 
+ 
 
- 
+ 
 
 
 

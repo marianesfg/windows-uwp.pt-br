@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, descrição, descrever, listagem da Store, marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442222"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472240"
 ---
 # <a name="write-a-great-app-description"></a>Escrever uma ótima descrição do app
 
@@ -30,7 +30,7 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 -   **Use listas e parágrafos curtos.** Clientes potenciais podem dar apenas uma rápida olhada na descrição do seu aplicativo. Se o conteúdo for dividido usando parágrafos curtos e listas, a avaliação fica mais fácil.
 
     > [!NOTE]
-    > Adicionar uma lista de [recursos do aplicativo](create-app-store-listings.md#app-features) também pode ajudar a mostrar rapidamente o que ele faz. A lista aparece logo abaixo da descrição do aplicativo.
+    > Adicionar uma lista de [recursos do aplicativo](create-app-store-listings.md#app-features) também pode ajudar a mostrar rapidamente o que ele faz. A lista aparece logo abaixo da descrição do aplicativo.
 
 -   **Evite linguagem seca.** Escreva sua descrição com linguagem envolvente. Faça com que o texto descreva claramente a função do aplicativo, mas diga isso de um modo que não pareça tedioso. Para muitos aplicativos, um tom casual e amigável funciona bem.
 -   **Use um tamanho adequado.** Uma boa descrição pode ser lida rapidamente, mas também inclui informações suficientes para manter o usuário interessado e explicar o que o aplicativo faz. A descrição de um aplicativo complexo precisa de mais sentenças; já um aplicativo simples precisa de apenas algumas. Na maioria dos casos, o tamanho ideal é algo em torno de 200 palavras, mas bem abaixo de 3000.
@@ -41,9 +41,9 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 -   **Não use marcas HTML.** HTML ou outro código não será renderizado. A descrição precisa ser apenas em texto sem formatação.
 -   **Obtenha ideias lendo descrições de aplicativos semelhantes na Loja.** Dê uma olhada em como outros desenvolvedores descrevem seus aplicativos. Isso também o ajudará a descobrir quais elementos diferentes do seu aplicativo podem ser enfatizados.
 
- 
+ 
 
- 
+ 
 
 
 

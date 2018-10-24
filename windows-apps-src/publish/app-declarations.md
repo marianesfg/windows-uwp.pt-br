@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430722"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469307"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
@@ -44,7 +44,7 @@ Ao declarar seu aplicativo como acessível, você concorda que o aplicativo é a
 Para obter mais informações, consulte [acessibilidade](../design/accessibility/accessibility.md), [testes de acessibilidade](../design/accessibility/accessibility-testing.md)e a [acessibilidade na loja](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> Não lista seu aplicativo como acessível, a menos que você tenha especificamente a engenharia e para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
+> Não lista seu aplicativo como acessível, a menos que você tenha especificamente a engenharia e para essa finalidade. Se seu aplicativo for declarado como acessível, mas não der suporte real à acessibilidade, você provavelmente receberá comentários negativos da comunidade.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
@@ -68,11 +68,11 @@ Se seu aplicativo usa dados do Kinect e envia para qualquer serviço externo, vo
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

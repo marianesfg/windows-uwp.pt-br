@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443046"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473434"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticação da Web
 
@@ -27,7 +27,7 @@ Este artigo explica como conectar seu aplicativo da Plataforma Universal do Wind
 >[!NOTE]
 >Para obter uma amostra de código funcional completa, clone o [Repo WebAuthenticationBroker em GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
- 
+ 
 
 ## <a name="register-your-app-with-your-online-provider"></a>Registrar o aplicativo junto ao provedor online
 

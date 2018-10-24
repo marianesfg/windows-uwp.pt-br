@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: f707c252e404da3aaf6e82317c80a266f4d91d26
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438356"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470692"
 ---
 # <a name="manage-ad-campaigns"></a>Gerenciar campanhas publicitárias
 
@@ -60,7 +60,7 @@ Esses métodos têm os seguintes URIs.
 | ID de rastreamento   | GUID   | Opcional. Uma ID que rastreia o fluxo de chamada.                                  |
 
 
-<span id="parameters"/> 
+<span id="parameters"/> 
 
 ### <a name="parameters"></a>Parâmetros
 

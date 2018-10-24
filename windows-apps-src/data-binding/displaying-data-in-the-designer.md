@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a92be54e55e06b4e7ffd61b1526425920ea80f96
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433469"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470741"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Dados de exemplo na superfície de design e para a criação de protótipo
 =============================================================================================
 
 
 
-**Observação**  Até que ponto você precisa de dados de amostra, e que quantidade pode ser útil, depende de as suas associações usarem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) ou a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e, portanto, apenas são apropriadas para **{Binding}**. Porém, se você estiver usando **{x:Bind}**, suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
+**Observação**o grau ao qual você precisa de dados de exemplo — e quanto ele ajude você — depende de suas associações usarem a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) ou a [extensão de marcação {x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). As técnicas descritas neste tópico se baseiam no uso de um [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) e, portanto, apenas são apropriadas para **{Binding}**. Porém, se você estiver usando **{x:Bind}**, suas associações mostrarão pelo menos valores de espaço reservado na superfície de design (até mesmo para controles de itens) e, portanto, a necessidade de usar dados de amostra não é tão grande.
 
 Pode ser impossível ou indesejado (talvez por motivos de privacidade ou desempenho) que seu aplicativo exiba dados dinâmicos na superfície de design no Microsoft Visual Studio ou no Blend for Visual Studio. Para que seus controles sejam populados com dados (e você possa trabalhar no layout, nos modelos e em outras propriedades visuais do seu aplicativo), há várias maneiras de usar dados de amostra de tempo de design. Os dados de exemplo também podem ser muito úteis e economizar tempo se você estiver criando um aplicativo de esboço (ou protótipo). Você pode usar dados de exemplo em seu esboço ou protótipo em tempo de execução para ilustrar suas ideias sem a necessidade de conexão com dados reais e dinâmicos.
 

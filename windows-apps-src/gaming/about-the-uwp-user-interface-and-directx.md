@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, directx, objeto de app
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444292"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475050"
 ---
 # <a name="the-app-object-and-directx"></a>Objeto de aplicativo e DirectX
 
@@ -36,9 +36,9 @@ Primeiramente, vejamos os namespaces do Windows Runtime que você deve incluir (
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Observação**   Se você não estiver desenvolvendo um aplicativo UWP, use os componentes da interface do usuário fornecidos nas bibliotecas específicas de JavaScript ou XAML e os namespaces em vez dos tipos fornecidos nesses namespaces.
+> **Observação**  se você não estiver desenvolvendo um aplicativo UWP, use os componentes de interface do usuário fornecidos nas bibliotecas específicas de JavaScript ou XAML e namespaces em vez dos tipos fornecidos nesses namespaces.
 
- 
+ 
 
 ## <a name="the-windows-runtime-app-object"></a>Objeto de aplicativo do Windows Runtime
 
@@ -114,7 +114,7 @@ Você pode determinar o comportamento de threading de despache de eventos para u
 | [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | Aguarde novos eventos e despache todos os eventos disponíveis. Siga esse comportamento até a janela fechar ou o aplicativo chamar o método [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260) na instância [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). |
 | [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | Despache todos os eventos disponíveis atualmente na fila. Se não houver eventos pendentes, retorne imediatamente.                                                                                                                                          |
 
- 
+ 
 
 UWP com uso do DirectX deve usar a opção [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) para evitar comportamentos de bloqueio que possam interromper atualizações dos elementos gráficos.
 
@@ -155,9 +155,9 @@ Se você estiver fazendo a portabilidade de um código existente para ser execut
 
 De forma geral, quando for projetar o seu aplicativo UWP, use o [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) para o [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) do seu aplicativo e o [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) para manipular todos os threads de interface do usuário em vez de tentar criar e gerenciar os threads do MTA por si só. Quando precisar de um thread separado que não puder manipular como o **CoreDispatcher**, use padrões assíncronos e siga as orientações mencionadas para evitar problemas de reentrância.
 
- 
+ 
 
- 
+ 
 
 
 

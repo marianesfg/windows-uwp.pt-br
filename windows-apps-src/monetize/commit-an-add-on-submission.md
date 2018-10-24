@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d20bffe2be163db568af0b16bdfef8cd600271
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430817"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473031"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 

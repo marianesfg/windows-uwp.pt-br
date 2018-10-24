@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445903"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477362"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
-**Observação** Para obter informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{x:Bind}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**para obter informações gerais sobre como usar dados de associação em seu aplicativo com **{x: Bind}** (e para uma todas as comparações entre **{x: Bind}** e **{Binding}**), consulte a [vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-A extensão de marcação **{x: Bind}** — nova no Windows 10 — é uma alternativa ao **{Binding}**. **{x: Bind}** é executado em menos tempo e menos memória do que **{Binding}** e suporta melhor a depuração.
+A extensão de marcação **{x: Bind}** — nova para Windows 10 — é uma alternativa para **{Binding}**. **{x: Bind}** é executado em menos tempo e menos memória do que **{Binding}** e suporta melhor a depuração.
 
 Em tempo de compilação XAML, **{x: Bind}** é convertido em código que irá obter um valor de uma propriedade em uma fonte de dados e defini-lo na propriedade especificada na marcação. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações (`Mode="OneWay"`). Ele também pode ser configurado opcionalmente para enviar as alterações em seu próprio valor de volta para a propriedade de origem (`Mode="TwoWay"`).
 
@@ -151,7 +151,7 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 
 > [!NOTE]
 > Se você estiver convertendo a marcação de **{Binding}** em **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
- 
+ 
 > [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) pode ser usado para alterar o modo padrão para x:Bind de um segmento específico da árvore de marcação. O modo selecionado aplicará qualquer expressão x:Bind nesse elemento e seus filhos, que não especificam explicitamente um modo como parte da vinculação. OneTime é mais eficiente do que OneWay, uma vez que usar OneWay fará com que mais código seja gerado para conectar e manipular a detecção de alteração.
 
 ## <a name="remarks"></a>Comentários
@@ -171,7 +171,7 @@ Páginas e controles de usuário que incluem associações compiladas terão uma
 > [!NOTE]
 > A partir do Windows 10, versão 1607, a estrutura XAML fornece um Booliano integrado para conversor de Visibilidade. O conversor mapeia **true** para o valor de enumeração **Visible** e **falso** para **Collapsed** para que você possa associar uma propriedade de Visibilidade a um Boolenao sem criar um conversor. Observe que isso não é um recurso de associação de função e sim de associação de propriedade. Para usar o conversor integrado, a versão do SDK de destino mínimo do seu aplicativo deve ser 14393 ou posterior. Você não poderá usá-lo se seu aplicativo for voltado para versões anteriores do Windows 10. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-**Dica** Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
+**Dica**  se você precisar especificar uma única chave para um valor, como em um [**caminho**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** estão todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 

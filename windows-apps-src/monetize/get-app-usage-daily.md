@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443961"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469732"
 ---
 # <a name="get-daily-app-usage"></a>Obter uso do app diariamente
 
@@ -79,7 +79,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadeia | Se houver páginas adicionais de dados, essa cadeia de caracteres conterá um URI que você poderá usar para solicitar a próxima página de dados. Por exemplo, esse valor será retornado se o parâmetro **top** da solicitação estiver definido como 10.000, mas houver mais de 10.000 linhas de dados de análise para a consulta.                 |
 | TotalCount | int    | O número total de linhas no resultado dos dados da consulta.                                                                          |
 
- 
+ 
 ### <a name="usage-values"></a>Valores de uso
 
 Os elementos na matriz *Value* contêm os valores a seguir.

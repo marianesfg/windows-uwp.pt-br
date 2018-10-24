@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431924"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476917"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -117,6 +117,6 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 * [Como disparar a suspensão, retomada e eventos em aplicativos UWP de plano de fundo](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Analisando a qualidade do código de aplicativos UWP com análise de código do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
- 
+ 
 
- 
+ 

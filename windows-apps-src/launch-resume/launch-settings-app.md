@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 00baa088f0cb01068f1d1d78d101e6cd294c77f7
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433039"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476410"
 ---
 # <a name="launch-the-windows-settings-app"></a>Iniciar o app Configurações do Windows
 
@@ -127,6 +127,7 @@ Use os seguintes URIs para abrir várias páginas do aplicativo Configurações.
 |-------------|-----|
 | Áudio | ms-settings:easeofaccess-audio |
 | Legendas ocultas | ms-settings:easeofaccess-closedcaptioning |
+| Filtros de cores | MS-configurações: easeofaccess-colorfilter |
 | Tela | ms-settings:easeofaccess-display |
 | Controle com os olhos | ms-settings:easeofaccess-eyecontrol |
 | Fontes | ms-settings:fonts |

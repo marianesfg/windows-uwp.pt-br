@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440382"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473798"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
@@ -79,4 +79,4 @@ Para usar esta opção:
 > [!IMPORTANT]
 > Essa opção não está disponível para novos envios. Se anteriormente você tiver selecionado essa opção para um app destinado ao Windows Phone 8.1 ou versões anteriores, você poderá continuar a usá-la para o app. Você pode fazer alterações na lista de testadores (até 10.000) ao criar um novo envio. 
 
-Com essa opção, as pessoas com os endereços de email que você especificou podem baixar seu app (somente em um dispositivo com Windows Phone 8.1 ou versões anteriores) usando o link direto para a listagem. Outro clientes não poderão baixar o app, mesmo que tenham o link, e eles não poderão encontrar o app na Store pesquisando ou navegando. Para que os testadores baixem o aplicativo, você precisará dar a eles o link (a **URL** na [Página de identidade do app](view-app-identity-details.md)), e eles devem estar conectados com uma conta da Microsoft associada a um endereço de email fornecido. Você também pode tornar o app disponível para os testadores em dispositivos Windows 10 por meio da [geração de códigos promocionais](generate-promotional-codes.md); qualquer pessoa com um dos códigos promocionais do seu app poderá baixá-lo em um dispositivo Windows 10, mesmo que você não tenha inserido o email deles aqui.
+Com essa opção, as pessoas com os endereços de email que você especificou podem baixar seu app (somente em um dispositivo com Windows Phone 8.1 ou versões anteriores) usando o link direto para a listagem. Outro clientes não poderão baixar o app, mesmo que tenham o link, e eles não poderão encontrar o app na Store pesquisando ou navegando. Para que os testadores baixem o aplicativo, você precisará dar a eles o link (a **URL** na [Página de identidade do app](view-app-identity-details.md)), e eles devem estar conectados com uma conta da Microsoft associada a um endereço de email fornecido. Você também pode tornar o aplicativo disponível para os testadores em dispositivos Windows 10 [Gerando códigos promocionais](generate-promotional-codes.md); qualquer pessoa com um dos códigos promocionais do seu aplicativo pode baixá-lo em um dispositivo Windows 10, mesmo se você não tenha inserido o email deles aqui.

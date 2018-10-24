@@ -2,7 +2,7 @@
 author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Prepare-se para começar
-description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da plataforma Universal do Windows (UWP) para Windows 10.
 ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445613"
+ms.locfileid: "5474755"
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
 
 ![Prepare-se para usar o Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-É mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da Plataforma Universal do Windows (UWP) para Windows 10.
+É mais fácil do que você pensa. Siga estas instruções e comece a criar aplicativos da plataforma Universal do Windows (UWP) para Windows 10.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Baixe ou atualize o Visual Studio
 
-O Microsoft Visual Studio 2017 ajuda a projetar, codificar, testar e depurar seus aplicativos.
+Microsoft Visual Studio2017 ajuda a projetar, codificar, testar e depurar seus aplicativos.
 
-Se ainda não tem o Visual Studio 2017, você pode instalar o Microsoft Visual Studio Community 2017 gratuitamente. Este download inclui simuladores de dispositivos para testar seus apps:
+Se você ainda não tiver Studio2017 Visual, você pode instalar o livre Community2017 Microsoft Visual Studio. Este download inclui simuladores de dispositivos para testar seus apps:
 
 -   [Baixar ferramentas de desenvolvedor do Windows 10](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 

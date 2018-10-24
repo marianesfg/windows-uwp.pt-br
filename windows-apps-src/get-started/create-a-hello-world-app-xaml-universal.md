@@ -2,7 +2,7 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Saiba como criar um app "Olá, mundo" (XAML)
-description: Use o XAML (Extensible Application Markup Language) com C# para criar um aplicativo Hello, world simples destinado à UWP (Plataforma Universal do Windows) no Windows 10.
+description: Use Extensible Application Markup Language (XAML) com c# para criar um, aplicativo Hello world simples destinado a plataforma Universal do Windows (UWP) no Windows 10.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434851"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479155"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um app "Hello, world" (XAML)
 
-Este tutorial ensina a usar XAML e C# para criar um aplicativo "Hello, world" simples para a Plataforma Universal do Windows (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode compilar um aplicativo que seja executado em qualquer dispositivo do Windows 10.
+Este tutorial ensina a usar XAML e c# para criar um simples "Hello, world" aplicativo para plataforma Universal do Windows (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode criar um aplicativo que é executado em qualquer dispositivo Windows 10.
 
 Aqui, você aprenderá a:
 
--   Criar um novo projeto do **Visual Studio 2017** direcionado ao **Windows 10** e à **UWP**.
+-   Crie um novo projeto do **Visual Studio 2017** direcionado ao **Windows 10** e a **UWP**.
 -   Escrever XAML para alterar a interface do usuário em sua página inicial.
 -   Executar o projeto na área de trabalho local no Visual Studio.
 -   Usar um SpeechSynthesizer para fazer o app falar quando você pressiona um botão.
@@ -235,7 +235,7 @@ Quando você executar o aplicativo e clicar no botão, seu computador (ou telefo
 
 ## <a name="summary"></a>Resumo
 
-Parabéns, você criou seu primeiro app para o Windows 10 e a UWP!
+Parabéns, você criou seu primeiro aplicativo para Windows 10 e a UWP!
 
 Para saber como usar XAML para dispor os controles que seu app usará, experimente o ([tutorial de grade](../design/layout/grid-tutorial.md) ou passe diretamente para as [Próximas Etapas](learn-more.md)?
 
