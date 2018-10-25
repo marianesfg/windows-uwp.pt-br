@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431599"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483826"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -181,7 +181,7 @@ Em todos os modos, a janela do emulador tem três áreas de interesse.
 -   A parte superior direita lista os logs. Quando você toca um dispositivo no outro (ou toca em um terminal de PDV), o evento de toque é registrado; quando os dispositivos são separados, o evento de cancelamento de toque é registrado. Esta seção também registra se seu aplicativo respondeu antes de a conexão ser interrompida, ou qualquer outra ação que você tenha executado na interface do usuário do emulador com carimbos de data/hora. Os logs são persistentes entre as alternâncias de modos, e você pode limpá-los a qualquer momento clicando no botão **Limpar** situado acima da tela de **Logs**.
 -   A metade inferior da tela é o log de mensagens e mostra a transcrição de todas as mensagens enviadas ou recebidas pela conexão selecionada no momento, dependendo do modo selecionado.
 
-> **Importante**  Ao iniciar a ferramenta de toque pela primeira vez, você receberá uma solicitação do Firewall do Windows. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
+> **Importante**ao iniciar a ferramenta de toque pela primeira vez, você receberá um Firewall do Windows solicitação. Você deve selecionar todas as três caixas de seleção e permitir que a ferramenta atravesse o firewall, ou a ferramenta silenciosamente deixará de funcionar.
 
 Depois de iniciar o instalador de início rápido, certifique-se de seguir as instruções acima e marque todas as três caixas de seleção na solicitação do firewall. Além disso, a ferramenta de toque deve ser instalada e usada no mesmo computador host físico que o Emulador da Microsoft.
 
@@ -369,7 +369,7 @@ No modo **Rota** você pode selecionar um dos seguintes perfis de velocidade na 
 | Limite de velocidade | Limite de velocidade da rota | Não aplicável   | Atravessa a rota no limite de velocidade postado. |
 | Caminhada     | 5 km/h                   | 1,39 m           | Atravessa a rota em um passo de caminhada natural de 5 km/h. |
 | Pedalando      | 25 km/h                  | 6,94 m           | Atravessa a rota em uma pedalada natural de 25 km/h. |
-| Rápido        |                          |                  |Atravessa a rota mais rápido do que o limite de velocidade postado. | 
+| Rápido        |                          |                  |Atravessa a rota mais rápido do que o limite de velocidade postado. | 
 
 **Modo de rota**
 
@@ -456,7 +456,7 @@ A aba **cartão SD** utiliza uma pasta no computador de desenvolvimento para sim
         -   Se você clicar em **Cancelar sincronização** enquanto a operação de sincronização está em progresso, o cartão é ejetado e os resultados da operação de sincronização são incompletas.
     -   O botão **Ejetar cartão SD** altera para **Inserir cartão SD**.
 
-> **Observação**  Como um cartão SD usado pelo telefone é formatado com um sistema de arquivos FAT32, 32 GB é o tamanho máximo.
+> **Observação**cartão SD uma pois usado pelo telefone é formatado com o sistema de arquivos FAT32, 32GB é o tamanho máximo.
 
 A velocidade de leitura e escrita para o cartão SD simulado é projetada para imitar as velocidades do mundo real. Acessar o cartão SD é mais lento do que acessar o disco rígido do computador.
 
@@ -625,17 +625,17 @@ A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas 
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
 
-Em determinadas situações, inclusive depois de atualizar para uma nova versão de pré-lançamento do Windows 10, um comutador de rede virtual associado ao emulador pode entrar em um estado no qual ele não pode ser excluído pela interface do usuário.
+Em determinadas situações, inclusive depois de atualizar para uma versão de pré-lançamento do Windows 10 novo, um comutador de rede virtual associado ao emulador pode entrem em um estado onde ele não pode ser excluído pela interface do usuário.
 
 Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação.
 
-**Observação**  Esse comando excluirá todos os dispositivos em rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
- 
+**Observação**esse comando excluirá todos os dispositivos de rede, não apenas aqueles associados ao emulador. Quando o computador for reiniciado, todos os dispositivos de hardware em rede serão descobertos automaticamente.
+ 
 ### <a name="unable-to-launch-the-emulators"></a>Não é possível iniciar os emuladores
 
 O Emulador Microsoft inclui o arquivo XDECleanup.exe, uma ferramenta que exclui todas as VMs, discos diff e comutadores de rede específicos ao emulador, e já inclui os binários do emulador (XDE). Você deve usar essa ferramenta para limpar VMs do emulador caso elas entrem em um estado inválido. Execute a ferramenta em um prompt de comando de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Observação**  XDECleanup.exe exclui todas as VMs do Hyper-V específicas ao emulador e também exclui todos os pontos de verificação de VM ou estados salvos.
+> **Observação**XDECleanup.exe exclui emulador todas as VMs Hyper-V específicas e também exclui quaisquer pontos de verificação VM ou estados salvos.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Desinstalar a imagem do Windows 10 para dispositivos móveis
 
@@ -666,5 +666,5 @@ Para encontrar respostas e resolver problemas ao começar a trabalhar com as fer
 
 * [Executar aplicativos do Windows Phone no emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Arquivo morto do SDK do Windows e do Windows Phone](https://dev.windows.com/downloads/sdk-archive)
- 
+ 
 

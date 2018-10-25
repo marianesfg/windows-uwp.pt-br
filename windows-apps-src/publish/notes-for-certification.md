@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, notas para testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441984"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482238"
 ---
 # <a name="notes-for-certification"></a>Notas para certificação
 
@@ -44,9 +44,9 @@ Ao considerar o que escrever, lembre-se:
 -   **Seja sucinto e crie instruções simples.** Se você realmente precisar explicar algo em detalhes, poderá incluir a URL a uma página com mais informações. No entanto, tenha em mente que os clientes do seu app não verão essas notas. Se você achar que precisa fornecer instruções complicadas para testar seu app, considere simplificá-lo para que os clientes (e os testadores) saibam como usá-lo.
 -   **Serviços e componentes externos devem estar online e disponíveis.** Se o app precisar se conectar a um serviço para funcionar, verifique se o serviço estará online e disponível. Inclua qualquer informação sobre o serviço que sejam necessárias aos testadores, como as informações de logon. Se o aplicativo não puder se conectar a um serviço necessário para o teste, ele poderá ser reprovado na certificação.
 
- 
+ 
 
- 
+ 
 
 
 

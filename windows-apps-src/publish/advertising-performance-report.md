@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435011"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483488"
 ---
 # <a name="advertising-performance-report"></a>Relatório de desempenho de anúncios
 
@@ -73,4 +73,4 @@ O relatório de **Desempenho de anúncios** inclui dados para as seguintes métr
 * [Otimizar a visualização das unidades de anúncio](../monetize/optimize-ad-unit-viewability.md)
 
 
- 
+ 

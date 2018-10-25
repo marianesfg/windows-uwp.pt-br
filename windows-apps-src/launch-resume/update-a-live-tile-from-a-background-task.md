@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443429"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482318"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Atualizar um bloco dinâmico de uma tarefa em segundo plano
 
@@ -156,7 +156,7 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 6.  Clique ou toque na guia **Interface de Usuário do Aplicativo**.
 7.  Defina **Notificações de tela de bloqueio** como **Notificação e Texto de Bloco**.
 8.  Defina um caminho como um ícone de 24 x 24 pixels no campo **Logotipo de notificação** .
-    **Importante** O ícone deve usar apenas pixels monocromáticos e transparentes.
+    **Importante**este ícone deve usar apenas pixels monocromáticos e transparentes.
 9.  No campo **Logotipo pequeno**, defina um caminho como um ícone de 30 x 30 pixels.
 10. No campo **Logotipo largo** , defina um caminho como um ícone de 310 x 150 pixels.
 
@@ -165,8 +165,8 @@ Para configurar o manifesto do pacote, abra-o e adicione uma nova declaração d
 
 Crie um [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar a tarefa.
 
-> **Observação** A partir do Windows 8.1, os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
- 
+> **Observação**a partir do Windows 8.1, parâmetros de registro de tarefa em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Seu aplicativo deve ser capaz de manipular cenários em que o registro de tarefas em segundo plano apresenta falha, por exemplo, use uma instrução condicional para verificar se há erros de registro e tente novamente o registro com falha usando valores de parâmetros diferentes.
+ 
 
 Na página principal de seu aplicativo, adicione o método **RegisterBackgroundTask** e chame-o no manipulador de eventos **OnNavigatedTo**.
 
@@ -266,6 +266,6 @@ Para depurar a tarefa em segundo plano, defina um ponto de interrupção no mét
 * [Torne seu aplicativo compatível com tarefas em segundo plano](support-your-app-with-background-tasks.md)
 * [Diretrizes e lista de verificação de blocos e notificações](https://msdn.microsoft.com/library/windows/apps/hh465403)
 
- 
+ 
 
- 
+ 

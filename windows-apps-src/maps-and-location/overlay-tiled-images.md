@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, mapa, local, imagens, sobreposição
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433894"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481788"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Sobrepor imagens lado a lado em um mapa
 
@@ -29,8 +29,7 @@ Sobreponha imagens em blocos de terceiros ou personalizados em um mapa usando fo
 
 Serviços de mapa como Nokia Maps e Bing Mapas cortam mapas em blocos quadrados para recuperação e exibição rápidas. Esses blocos têm 256 pixels por 256 pixels de tamanho e são previamente renderizados em vários níveis de detalhes. Vários serviços de terceiros também oferecem dados baseados em mapa cortados em blocos. Use fontes de blocos para recuperar blocos de terceiros ou criar seus próprios blocos personalizados e os sobreponha no mapa exibido no [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-**Importante**  
-Quando você usa fontes de blocos, não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
+**Importante**  quando você usa fontes de blocos, você não precisa escrever código para solicitar ou posicionar blocos individuais. O [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) solicita blocos conforme a necessidade. Cada solicitação especifica as coordenadas X e Y e o nível de zoom para o bloco individual. Você simplesmente especifica o formado do Uri ou do nome de arquivo para usar para recuperar os blocos na propriedade **UriFormatString**. Ou seja, você deve inserir parâmetros substituíveis no Uri ou nome de arquivo de base para indicar para onde passar as coordenadas X e Y e o nível de zoom para cada bloco.
 
 Aqui está um exemplo da propriedade [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) para um [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) que mostra os parâmetros substituíveis para as coordenadas X e Y e o nível de zoom.
 
@@ -196,7 +195,7 @@ Você pode usar os seguintes protocolos e locais para carregar blocos do armazen
 | ms-appdata:///temp | Aponta para a pasta temporária do aplicativo. |
 |  | Este é o local referenciado pela propriedade [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
- 
+ 
 
 O exemplo a seguir carrega blocos que são armazenados como arquivos na pasta de instalação do aplicativo usando o protocolo `ms-appx:///`. O valor da [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) é especificado no construtor do [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Neste exemplo, os blocos são exibidos apenas quando o nível de zoom do mapa está dentro da margem especificada pela propriedade [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171) opcional.
 

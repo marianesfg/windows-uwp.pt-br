@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, jogos, interface do usuário, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a82958f01530b84276823ea8d025d292bd664ac
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442792"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483536"
 ---
 # <a name="add-a-user-interface"></a>Adicionar uma interface do usuário
 
@@ -225,7 +225,7 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
  Obter o tamanho da janela do jogo é essencial para programação de interface do usuário. O tamanho da janela é fornecido uma medida chamada DIPs (pixels independentes de dispositivo), onde um DIP é definido como 1/96 de uma polegada. Direct2D redimensiona as unidades do desenho para pixels reais quando o desenho ocorre, ao fazer isso usando os Windows configuração pontos por polegada (DPI). Da mesma forma, ao desenhar texto usando [**DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038), você especifica DIPs em vez de pontos para o tamanho da fonte. Os DIPs são expressos como números de ponto flutuante.
 
- 
+ 
 
 ### <a name="displaying-game-state-info"></a>Exibir informações de estado do jogo
 
@@ -479,7 +479,7 @@ No próximo tópico, [Adicionando controles](tutorial--adding-controls.md), exam
 
 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário.
+description: Descrevemos o conceito de programação de eventos em um aplicativo de tempo de execução do Windows, ao usar c#, Visual Basic ou VisualC + + extensões de componente (C++ c++ /CX) como a linguagem de programação e XAML para a definição de interface do usuário.
 title: Visão geral de eventos e eventos roteados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444766"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480439"
 ---
 # <a name="events-and-routed-events-overview"></a>Visão geral de eventos e eventos roteados
 
@@ -23,7 +23,7 @@ ms.locfileid: "5444766"
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
 -   [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
-Descrevemos o conceito de programação de eventos em um aplicativo do Windows Runtime quando você usa as extensões de componente (C++/CX) C#, Visual Basic ou Visual C++ como linguagem de programação e XAML para a definição da interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêiners de layout.
+Descrevemos o conceito de programação de eventos em um aplicativo de tempo de execução do Windows, ao usar c#, Visual Basic ou VisualC + + extensões de componente (C++ c++ /CX) como a linguagem de programação e XAML para a definição de interface do usuário. Você pode atribuir manipuladores de eventos como parte das declarações para elementos da interface do usuário em XAML ou pode adicionar manipuladores no código. O Windows Runtime dá suporte a *eventos roteados*: determinados eventos de entrada e eventos de dados podem ser manipulados por outros objetos além do objeto que acionou o evento. Eventos roteados são úteis quando você define modelos de controle ou usa páginas ou contêiners de layout.
 
 ## <a name="events-as-a-programming-concept"></a>Eventos como um conceito de programação
 
@@ -31,7 +31,7 @@ De um modo geral, os conceitos de eventos na programação de um aplicativo do W
 
 Quando você usa C#, Visual Basic ou C++/CX como linguagem de programação, a interface do usuário é definida na marcação (XAML). Na sintaxe de marcação XAML, alguns dos princípios de conexão de eventos entre elementos de marcação e entidades de código em tempo de execução são similares a outras tecnologias da Web, tais como ASP.NET ou HTML5.
 
-**Observação**  O código que fornece a lógica do tempo de execução para uma interface do usuário definida em XAML costuma ser chamado de *code-behind* ou arquivo code-behind. Nas visualizações de soluções do Microsoft Visual Studio, essa relação é mostrada graficamente, com o arquivo code-behind sendo um arquivo dependente e aninhado em contraposição à página XAML à qual ele se refere.
+**Observação**o código que fornece a lógica de tempo de execução para uma interface do usuário definidos por XAML é geralmente conhecido como *code-behind* ou o arquivo de code-behind. Nas visualizações de soluções do Microsoft Visual Studio, essa relação é mostrada graficamente, com o arquivo code-behind sendo um arquivo dependente e aninhado em contraposição à página XAML à qual ele se refere.
 
 ## <a name="buttonclick-an-introduction-to-events-and-xaml"></a>Button.Click: uma introdução a eventos e XAML
 
@@ -47,7 +47,7 @@ Para conectar os eventos em XAML, você pode especificar o nome em forma de cade
   Click="ShowUpdatesButton_Click"/>
 ```
 
-**Dica**  *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
+**Dica** *Conexão de eventos* é um termo de programação. Refere-se ao processo ou código por meio do qual você indica que as ocorrências de um evento devem chamar um método do manipulador nomeado. Na maioria dos modelos de código de procedimento, a conexão de eventos é um código "AddHandler" implícito ou explícito que nomeia ambos, o evento e o método, e geralmente envolve uma instância de objeto de destino. Em XAML, o "AddHandler" é implícito, e a conexão de eventos consiste inteiramente em nomear o evento com o nome do atributo de um elemento de objeto, e nomear o manipulador com o valor desse atributo.
 
 Você escreve o manipulador real na linguagem de programação que está usando para todo o código do aplicativo e code-behind. Com o atributo `Click="ShowUpdatesButton_Click"`, você criou um contrato em que, quando a marcação XAML é compilada e analisada, a etapa de compilação de IDE na ação de compilação do ambiente de desenvolvimento e a eventual análise XAML quando as cargas de aplicativo podem encontrar um método chamado `ShowUpdatesButton_Click` como parte do código do aplicativo. `ShowUpdatesButton_Click` deve ser um método que implementa uma assinatura de método compatível (com base em um delegado) para qualquer manipulador do evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por exemplo, este código define o manipulador `ShowUpdatesButton_Click`.
 
@@ -84,13 +84,13 @@ void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, W
 
 Neste exemplo, o método `ShowUpdatesButton_Click` baseia-se no delegado de [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Você saberia que esse é o delegado a ser usado, porque você verá esse delegado nomeado na sintaxe para o método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) na página de referência do MSDN.
 
-**Dica**  O Visual Studio fornece um jeito bem conveniente de nomear o manipulador de eventos e definir o método do manipulador enquanto você está editando o XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em **&lt;Novo Manipulador de Eventos&gt;** na lista, o Microsoft Visual Studio sugerirá um nome de método com base no **x:Name** do elemento (ou nome do tipo), no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá no menu suspenso de preenchimento automático com a opção **&lt;Novo Manipulador de Eventos&gt;**. Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
+**Dica**Visual Studio oferece uma maneira conveniente de nomear o manipulador de eventos e definir o método do manipulador enquanto você estiver editando o XAML. Ao fornecer o nome de atributo do evento no editor de texto XAML, aguarde um pouco até que uma lista do Microsoft IntelliSense seja exibida. Se você clicar em **&lt;Novo Manipulador de Eventos&gt;** na lista, o Microsoft Visual Studio sugerirá um nome de método com base no **x:Name** do elemento (ou nome do tipo), no nome do evento e em um sufixo numérico. Você poderá então clicar com o botão direito do mouse no nome do manipulador de eventos selecionado e clicar em **Navegar até Manipulador de Eventos**. A navegação irá diretamente para a definição recém-inserida do manipulador de eventos, como visualizada na exibição do arquivo de code-behind para a página XAML. O manipulador de eventos já tem a assinatura correta, incluindo o parâmetro *sender* e a classe de dados de evento usada pelo evento. Além disso, se um método de manipulador com a assinatura correta já existir no seu code-behind, o nome desse método aparecerá no menu suspenso de preenchimento automático com a opção **&lt;Novo Manipulador de Eventos&gt;**. Também é possível pressionar a tecla Tab como um atalho, em vez de clicar nos itens da lista do IntelliSense.
 
 ## <a name="defining-an-event-handler"></a>Definindo um manipulador de eventos
 
 Para objetos que são elementos da interface do usuário e foram declarados em XAML, o código de manipulador de eventos é definido na classe parcial que opera como o code-behind de uma página XAML. Manipuladores de eventos são métodos que você escreve como parte da classe parcial associada ao XAML. Esses manipuladores de eventos se baseiam nos delegados utilizados por um determinado evento. Os métodos de manipulador de eventos podem ser públicos ou particulares. O acesso particular funciona porque o manipulador e a instância criada no XAML são finalmente unidos pela geração de código. Em geral, recomendamos que você torne particulares os métodos de manipulador de eventos, na classe.
 
-**Observação**  Manipuladores de eventos para C++ não são definidos em classes parciais, mas declarados no cabeçalho como membros de uma classe particular. As ações de compilação para um projeto em C++ cuidam da geração do código que dá suporte ao sistema de tipos XAML e do modelo code-behind para C++.
+**Observação**manipuladores de eventos para C++ não são definidos em classes parciais, eles são declarados no cabeçalho como um membro de classe particular. As ações de compilação para um projeto em C++ cuidam da geração do código que dá suporte ao sistema de tipos XAML e do modelo code-behind para C++.
 
 ### <a name="the-sender-parameter-and-event-data"></a>O parâmetro *sender* e dados do evento
 
@@ -131,7 +131,7 @@ void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  Há uma sintaxe mais detalhada. Em 2005, a linguagem C# adicionou um recurso chamado inferência de delegado, o qual permite que um compilador infira a nova instância do delegado e habilita a sintaxe anterior, mais simples. A sintaxe detalhada é funcionalmente idêntica ao exemplo anterior, mas cria explicitamente uma nova instância do delegado antes de registrá-la, assim, não tirando proveito da inferência do delegado. Essa sintaxe explícita é menos comum, mas você ainda pode vê-la em alguns exemplos de código.
+**Observação**uma sintaxe mais detalhada. Em 2005, a linguagem C# adicionou um recurso chamado inferência de delegado, o qual permite que um compilador infira a nova instância do delegado e habilita a sintaxe anterior, mais simples. A sintaxe detalhada é funcionalmente idêntica ao exemplo anterior, mas cria explicitamente uma nova instância do delegado antes de registrá-la, assim, não tirando proveito da inferência do delegado. Essa sintaxe explícita é menos comum, mas você ainda pode vê-la em alguns exemplos de código.
 
 ```csharp
 void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -151,7 +151,7 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**Observação**  O Visual Studio e a sua superfície de design em XAML costumam promover a técnica de manipulação de instâncias em vez da palavra-chave **Handles**. Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
+**Observação**Visual Studio e sua superfície de design XAML costumam promovem a técnica de manipulação de instâncias em vez da palavra-chave **Handles** . Isso é porque estabelecer as ligações dos manipuladores de eventos em XAML é parte do típico fluxo de trabalho entre designer e desenvolvedor, e a técnica da palavra-chave **Handles** é incompatível com o estabelecimento de ligações com os manipuladores de eventos em XAML.
 
 No C++ c++ /CX, também usar o **+=** sintaxe, mas há diferenças no formulário c# básico:
 
@@ -238,7 +238,7 @@ Quando um evento se propaga uma rota de eventos acima, *sender* não é mais o m
 
 Em alguns casos, *sender* não é o objeto de interesse e, em vez disso, você está interessado em informações como, por exemplo, em quais dos possíveis objetos filho o ponteiro está focalizado quando um evento de ponteiro é disparado ou qual objeto em uma interface do usuário maior tinha o foco quando um usuário pressionou uma tecla do teclado. Nesses casos, você pode usar o valor da propriedade [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Em todos os pontos da rota, a **OriginalSource** relata o objeto original que acionou o evento, e não o local onde o manipulador foi conectado. Contudo, para eventos de entrada de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), esse objeto original costuma ser um objeto não imediatamente visível na XAML de definição de interface do usuário em nível de página. Em vez disso, o objeto original pode ser uma parte modelo de um controle. Por exemplo, se o usuário passa com o ponteiro sobre a borda de um [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), para a maioria dos eventos de ponteiro, **OriginalSource** é uma parte modelo [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) em [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465), e não o **Button** propriamente dito.
 
-**Dica**  A propagação de eventos de entrada é especialmente útil na criação de um controle modelo. Qualquer controle que tenha um modelo pode ter um novo modelo aplicado pelo seu consumidor. O consumidor que está tentando recriar um modelo de trabalho pode eliminar inadvertidamente uma parte da manipulação de eventos declarada no modelo padrão. Você ainda pode fornecer manipulação de eventos em nível de controle anexando manipuladores como parte da substituição de [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) na definição de classe. Em seguida, pode apanhar os eventos de entrada propagados rumo à raiz do controle na instanciação.
+**Dica**propagação de eventos de entrada é especialmente útil se você estiver criando um controle modelo. Qualquer controle que tenha um modelo pode ter um novo modelo aplicado pelo seu consumidor. O consumidor que está tentando recriar um modelo de trabalho pode eliminar inadvertidamente uma parte da manipulação de eventos declarada no modelo padrão. Você ainda pode fornecer manipulação de eventos em nível de controle anexando manipuladores como parte da substituição de [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) na definição de classe. Em seguida, pode apanhar os eventos de entrada propagados rumo à raiz do controle na instanciação.
 
 ### <a name="the-handled-property"></a>A propriedade **Handled**
 
@@ -269,7 +269,7 @@ Determinar se um elemento está visível para a entrada por mouse, toque e de ca
 -   O valor de propriedade [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) do elemento é [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
 -   O valor da propriedade **Background** ou **Fill** do elemento não é **null**. Um valor **null** [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) resulta em transparência e invisibilidade do teste de clique. (Para tornar um elemento transparente, mas também visível para teste de clique, use um pincel [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) em vez de **null**.)
 
-**Observação**  **Background** e **Fill** não são definidos por [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) e, em vez disso, são definidos por diferentes classes derivadas, como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) e [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
+**Observação** **Em segundo plano** e **Preencher** não são definidos por [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)e, em vez disso, são definidos por diferentes classes derivadas, como [**controle**](https://msdn.microsoft.com/library/windows/apps/br209390) e [**forma**](/uwp/api/Windows.UI.Xaml.Shapes.Shape). As implicações dos pincéis usados para as propriedades primeiro plano e tela de fundo são as mesmas para teste de clique e eventos de entrada, independentemente da subclasse que implementa as propriedades.
 
 -   Se o elemento for um controle, o valor da sua propriedade [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) deverá ser **true**.
 -   É preciso que o elemento tenha dimensões reais em layout. Um elemento em que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) e [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) são iguais a 0 não acionará eventos.

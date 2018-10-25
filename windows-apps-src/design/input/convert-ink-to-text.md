@@ -13,11 +13,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de14d35b7a39776f43feeefc94ebe77af0c97373
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442621"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481365"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconhecer traços do Windows Ink como texto e formas
 
@@ -477,8 +477,7 @@ Consulte o tópico da propriedade [**InkRecognizer.Name**](https://msdn.microsof
 
 Seu aplicativo pode consultar o conjunto de mecanismos de reconhecimento de manuscrito instalados e usar um deles ou permitir que o usuário selecione o idioma que preferir.
 
-**Observação**  
-Os usuários podem ver uma lista de idiomas instalados em **Configurações -&gt; Hora e Idioma**. Os idiomas instalados estão listados em **Idiomas**.
+**Observação**  os usuários podem ver uma lista de idiomas instalados acessando **configurações -&gt; hora e idioma**. Os idiomas instalados estão listados em **Idiomas**.
 
 Para instalar novos pacotes de idiomas e habilitar o reconhecimento de manuscrito para o idioma:
 
@@ -488,7 +487,7 @@ Para instalar novos pacotes de idiomas e habilitar o reconhecimento de manuscrit
 4.  Clique no idioma e selecione **Opções**.
 5.  Na página **Opções de Idioma**, baixe o **Handwriting recognition engine** (também é possível baixar o pacote de idiomas completo, o mecanismo de reconhecimento de fala e o layout do teclado aqui).
 
- 
+ 
 
 Aqui, demonstramos como usar o mecanismo de reconhecimento de manuscrito para interpretar um conjunto de traços em [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) com base no reconhecedor selecionado.
 
@@ -873,4 +872,4 @@ Para este exemplo, usaremos as mesmas configurações de traço e interface do u
 * [Exemplo de anotações da família](https://aka.ms/cpubsample-familynotessample)
 
 
- 
+ 

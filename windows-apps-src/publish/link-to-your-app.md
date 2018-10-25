@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445663"
+ms.locfileid: "5482545"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -51,9 +51,9 @@ Para usar esse esquema de URI para vincular diretamente à listagem da loja do s
 
 Para obter mais informações sobre como usar o protocolo de Microsoft Store, consulte [Iniciar o aplicativo da Microsoft](../launch-resume/launch-store-app.md).
 
- 
+ 
 
- 
+ 
 
 
 

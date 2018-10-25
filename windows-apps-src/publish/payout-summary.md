@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445275"
+ms.locfileid: "5481661"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
@@ -72,7 +72,7 @@ As seções mencionadas acima mostram apenas informações sobre sua receita (e 
 | Saldo histórico        | Saldos de pagamento de um sistema de pagamento histórico                                                             |
 | Transferência de impostos              | Ajuste de imposto relacionado a vendas na Coreia                                                                   |
 
- 
+ 
 
 ## <a name="downloading-payment-transactions"></a>Baixando transações de pagamento
 
@@ -112,11 +112,11 @@ A tabela a seguir descreve os campos que aparecem no arquivo .csv. Observe que o
 | Data e hora da qualificação   | A data e a hora quando a receita da transação se qualificou para pagamento (UTC). Quando criado, um pagamento inclui a receita da transação com uma data e hora de qualificação anterior à data de criação do pagamento. (Incluído apenas no arquivo .csv **Reservado**.)                                                                     |
 | Encargos                 | Mostra uma divisão de todos os detalhes de cobrança agregados na coluna Valor da Transação. (Incluído apenas para Azure Marketplace; não incluído no arquivo .csv **Reservado**.)          |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

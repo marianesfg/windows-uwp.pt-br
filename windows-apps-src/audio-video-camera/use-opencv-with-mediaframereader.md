@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432449"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481310"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Use a Biblioteca de visão do computador do código-fonte aberto (OpenCV) com MediaFrameReader
 
@@ -74,9 +74,9 @@ O evento **FrameArrived** é acionado sempre que um novo quadro está disponíve
 * [Processar bitmaps de software com OpenCV](process-software-bitmaps-with-opencv.md)
 * [Quadros da câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [Quadros da câmera + exemplo de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003)
- 
+ 
 
- 
+ 
 
 
 

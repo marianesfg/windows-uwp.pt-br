@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, localização, mapa, localização geográfica
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439981"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480869"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Diretrizes de aplicativos com reconhecimento de local
 
@@ -79,7 +79,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
 
         Dispositivos que fornecem dados de localização podem monitorar o intervalo de relatórios solicitado por diferentes aplicativos e fornecer relatórios de dados no menor intervalo solicitado. Dessa forma, o aplicativo com a maior necessidade de precisão recebe os dados necessários. Portanto, é possível que o provedor de localização gere atualizações com uma frequência mais alta do que a solicitada pelo aplicativo, caso outro aplicativo solicite atualizações mais frequentes.
 
-        **Observação**  Não há nenhuma garantia de que a origem da localização responda à solicitação de intervalo de relatório. Nem todos os dispositivos de provedores de localização rastreiam o intervalo de relatório, mas você deve fornecê-lo para os que o fazem.
+        **Observação**não há nenhuma garantia que a origem da localização responda à solicitação de intervalo de relatório. Nem todos os dispositivos de provedores de localização rastreiam o intervalo de relatório, mas você deve fornecê-lo para os que o fazem.
 
     -   Para ajudar a economizar energia, defina a propriedade [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a plataforma de localização, independentemente de seu aplicativo precisar ou não de dados da maior exatidão possível. Quando nenhum aplicativo exige dados de alta precisão, o sistema pode economizar energia não habilitando os provedores de GPS.
 
@@ -105,7 +105,7 @@ Este tópico descreve as diretrizes de desempenho para aplicativos que exigem ac
     -   Os sensores raw incluem o acelerômetro, o girômetro e o magnetômetro.
     -   Os sensores fusion incluem o de orientação, o inclinômetro e a bússola. Os sensores fusion obtêm seus dados de combinações dos sensores brutos.
 
-    As APIs do Windows Runtime podem acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
+    O Windows RuntimeAPIs pode acessar todos esses sensores, com exceção do magnetômetro. Os sensores fusion são mais precisos e estáveis do que os sensores raw, mas usam mais energia. Você deve usar os sensores corretos para cada finalidade. Para saber mais, consulte [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
 **Modo de espera conectado**
 - Quando o computador está conectado no modo de espera, objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) sempre podem ser instanciados. No entanto, o objeto **Geolocator** não encontrará nenhum sensor a ser agregado e, portanto, as chamadas para [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) atingirão seu tempo limite após sete segundos, os ouvintes do evento [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) nunca serão chamados, e os ouvintes do evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) serão chamados uma vez com o status **NoData**.
@@ -170,6 +170,6 @@ A localização geográfica do usuário faz parte das PII (informações de iden
 * [Exibir mapas com modos de exibição 2D, 3D e Streetside](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [Amostra de localização UWP (geolocalização)](http://go.microsoft.com/fwlink/p/?linkid=533278)
- 
+ 
 
- 
+ 

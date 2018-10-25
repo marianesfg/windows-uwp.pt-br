@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, integridade, falhas, eventos sem resposta, integridade de aplicativo, dados de integridade, rastreamento de pilha, arquivo cab, falha, falhas, pdb, símbolos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442285"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482893"
 ---
 # <a name="health-report"></a>Relatório de integridade
 
@@ -88,6 +88,6 @@ Este gráfico tem duas guias:
 - **Sessões livre de falha**: mostra a porcentagem de sessões de usuário exclusivo que não teve uma falha em cada dia (durante os últimos 30 dias).
 
 
- 
+ 
 
- 
+ 

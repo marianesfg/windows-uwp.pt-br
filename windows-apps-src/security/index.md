@@ -1,6 +1,6 @@
 ---
 title: Segurança
-description: Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
+description: Esta seção contém artigos sobre como compilar aplicativos seguros do plataforma Universal do Windows (UWP) para Windows 10.
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: msatranjr
 ms.author: misatran
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: b9858be036732c2894ff3c009233e021b37da040
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438366"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481205"
 ---
 # <a name="security"></a>Segurança
 
 
 
-Esta seção contém artigos sobre como compilar aplicativos seguros da Plataforma Universal do Windows (UWP) para o Windows 10.
+Esta seção contém artigos sobre como compilar aplicativos seguros do plataforma Universal do Windows (UWP) para Windows 10.
 
 ## <a name="introduction"></a>Introdução 
 

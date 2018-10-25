@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, classificações, opiniões
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431405"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483686"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicite classificações e opiniões para seu aplicativo
 
@@ -65,8 +65,8 @@ Depois de enviar essa solicitação para exibir o diálogo de classificação e 
 O exemplo a seguir demonstra o valor de retorno para essa solicitação depois que o cliente envia com êxito uma classificação ou opinião.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -77,8 +77,8 @@ O exemplo a seguir demonstra o valor de retorno para essa solicitação depois q
 O exemplo a seguir demonstra o valor de retorno para essa solicitação depois que o cliente opta por não enviar uma classificação ou opinião.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```

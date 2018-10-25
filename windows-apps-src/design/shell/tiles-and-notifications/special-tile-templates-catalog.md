@@ -12,27 +12,27 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e408509f4cebbc89587237c6e0dc67bc88b1558
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430932"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481329"
 ---
 # <a name="special-tile-templates"></a>Modelos de blocos especiais
  
 
-Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para o Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para o Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
+Modelos de blocos especiais são modelos exclusivos que são animados ou apenas permitem fazer coisas que não são possíveis com blocos adaptáveis. Cada modelo de bloco especial foi compilado especificamente para Windows 10, exceto para o modelo de bloco icônico, um modelo especial clássico que foi atualizado para Windows 10. Este artigo aborda três modelos de blocos especiais: Icônico, Fotos e Pessoas.
 
 ## <a name="iconic-tile-template"></a>Modelo de bloco icônico
 
 
-O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. O Windows 10 dá suporte ao modelo em telefone e tablet/desktop.
+O modelo icônico (também conhecido como o modelo "IconWithBadge") permite exibir uma imagem pequena no centro do bloco. Windows 10 é compatível com o modelo em telefone e tablet/desktop.
 
 ![blocos de email pequenos e médios](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>Como criar um bloco icônico
 
-As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco icônico para o Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
+As etapas a seguir abrangem tudo o que você precisa saber para criar um bloco icônico para Windows 10. Em um nível alto, você precisa do ativo de imagem icônico e, em seguida, envia uma notificação para o bloco usando o modelo icônico e, por fim, uma notificação de selo que fornece o número a ser exibido no bloco.
 
 ![fluxo de desenvolvedor de bloco icônico](images/iconic-template-dev-flow.png)
 
@@ -188,7 +188,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Modelo de bloco Pessoas
 
 
-O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 compilação 10572, e qualquer pessoa pode usá-lo no aplicativo.
+O aplicativo Pessoas no Windows 10 usa um modelo de bloco especial que exibe uma coleção de imagens em círculos que deslizam vertical ou horizontalmente no bloco. Esse modelo de bloco está disponível desde o Windows 10 compilação 10572, e qualquer pessoa é bem-vindo ao usá-lo em seu aplicativo.
 
 O modelo de bloco Pessoas funciona em blocos destes tamanhos:
 
@@ -196,19 +196,19 @@ O modelo de bloco Pessoas funciona em blocos destes tamanhos:
 
 ![bloco Pessoas médio](images/people-tile-medium.png)
 
- 
+ 
 
 **Bloco largo** (TileWide)
 
 ![bloco Pessoas largo](images/people-tile-wide.png)
 
- 
+ 
 
 **Bloco grande (somente desktop)** (TileLarge)
 
 ![bloco grande Pessoas](images/people-tile-large.png)
 
- 
+ 
 
 Caso esteja usando a [Biblioteca de notificações](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), tudo o que você precisa fazer para usar o modelo do bloco Pessoas é criar um novo objeto *TileBindingContentPeople* para o conteúdo *TileBinding*. A classe *TileBindingContentPeople* tem uma propriedade Images em que você adicionar as imagens.
 
@@ -281,9 +281,9 @@ Para enviar a notificação, consulte [Escolher um método de entrega de notific
 * [Blocos, selos e notificações](index.md)
 * [Criar blocos adaptáveis](create-adaptive-tiles.md)
 * [Esquema de conteúdo do bloco](../tiles-and-notifications/tile-schema.md)
- 
+ 
 
- 
+ 
 
 
 

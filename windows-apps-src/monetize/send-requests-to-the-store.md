@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: 6463f6eee6d3f5ec82122cef532db8d0e9a26dc6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435416"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480399"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitações para Microsoft Store
 
@@ -38,7 +38,7 @@ public async Task<bool> AddUserToFlightGroup()
 {
     StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
         StoreContext.GetDefault(), 8,
-        "{ \"type\": \"AddToFlightGroup\", \"parameters\": \"{ \"flightGroupId\": \"your group ID\" }\" }");
+        "{ \"type\": \"AddToFlightGroup\", \"parameters\": \"{ \"flightGroupId\": \"your group ID\" }\" }");
 
     if (result.ExtendedError == null)
     {
@@ -84,9 +84,9 @@ Essa solicitação recupera as variáveis do grupo de versão de pré-lançament
 O exemplo a seguir mostra o formato dos dados JSON para passar a *parametersAsJson*. O campo *type* deve ser atribuído à cadeia de caracteres *GetRemoteVariables*. Atribuir o campo *projectId* à ID do projeto no qual você definiu as variáveis remotas no painel do Centro de Desenvolvimento do Windows.
 
 ```json
-{ 
-    "type": "GetRemoteVariables", 
-    "parameters": "{ \"projectId\": \"your project ID\" }" 
+{ 
+    "type": "GetRemoteVariables", 
+    "parameters": "{ \"projectId\": \"your project ID\" }" 
 }
 ```
 
@@ -101,8 +101,8 @@ Depois de enviar essa solicitação, a propriedade [Response](https://docs.micro
 O exemplo a seguir demonstra um valor de retorno para essa solicitação.
 
 ```json
-{ 
-  "anonymous": false, 
+{ 
+  "anonymous": false, 
   "name": "Insider Slow",
   "settings":
   {
@@ -127,9 +127,9 @@ Para enviar essa solicitação, passe as seguintes informações para os parâme
 O exemplo a seguir mostra o formato dos dados JSON para passar a *parametersAsJson*. O campo *type* deve ser atribuído à cadeia de caracteres *AddToFlightGroup*. Atribua o campo *flightGroupId* à ID do grupo de versão de pré-lançamento à qual você deseja adicionar o dispositivo ou usuário.
 
 ```json
-{ 
-    "type": "AddToFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "AddToFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 
@@ -150,9 +150,9 @@ Para enviar essa solicitação, passe as seguintes informações para os parâme
 O exemplo a seguir mostra o formato dos dados JSON para passar a *parametersAsJson*. O campo *type* deve ser atribuído à cadeia de caracteres *RemoveFromFlightGroup*. Atribua o campo *flightGroupId* à ID do grupo de versão de pré-lançamento a partir da qual você deseja remover o dispositivo ou usuário.
 
 ```json
-{ 
-    "type": "RemoveFromFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "RemoveFromFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 

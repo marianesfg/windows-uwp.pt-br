@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, informações de resposta
 ms.localizationpriority: medium
 ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437834"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483272"
 ---
 # <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 | CanRespond      | Booliano  | O valor **true** indica que você pode responder à análise especificado, ou que você tem permissões para responder a qualquer análise do aplicativo especificado. Caso contrário, esse valor é **false**.       |
 | DefaultSupportEmail  | cadeia |  O [endereço de email de suporte](../publish/enter-app-properties.md#support-contact-info) do seu aplicativo, conforme especificado na listagem da Loja do seu aplicativo. Se você não especificar um endereço de email de suporte, esse campo ficará vazio.    |
 
- 
+ 
 ### <a name="response-example"></a>Exemplo de resposta
 
 O código a seguir demonstra um exemplo de corpo de resposta JSON para essa solicitação.

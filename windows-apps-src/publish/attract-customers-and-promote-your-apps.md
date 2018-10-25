@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445723"
+ms.locfileid: "5482308"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraia clientes e promova seus aplicativos
 
@@ -28,6 +28,6 @@ Quando seu aplicativo estiver na Microsoft Store, é hora de aparecer tantos cli
 -   [Link para seu aplicativo](link-to-your-app.md)
 -   [Facilite a promoção do seu aplicativo](make-your-app-easier-to-promote.md)
 
- 
+ 
 
- 
+ 

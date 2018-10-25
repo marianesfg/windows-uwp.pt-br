@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445252"
+ms.locfileid: "5480780"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 
@@ -46,7 +46,7 @@ Para começar rapidamente tarefas em segundo plano dentro do processo, consulte 
 Para começar rapidamente tarefas em segundo plano fora do processo, consulte [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
 > [!TIP]
-> Desde o Windows 10, você não precisa mais colocar um aplicativo na tela de bloqueio como pré-requisito para registrar uma tarefa em segundo plano para ela.
+> Começando com Windows 10, você não precisa colocar um aplicativo na tela de bloqueio como pré-requisito para registrar uma tarefa em segundo plano para ela.
 
 ## <a name="background-tasks-for-system-events"></a>Tarefas em segundo plano de eventos do sistema
 
@@ -78,7 +78,7 @@ Você pode controlar quando a tarefa em segundo plano é executada, mesmo depois
 Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Essa condição economiza energia, pois a tarefa em segundo plano não é executada até que a rede está disponível. Essa condição não fornece ativação em tempo real.
 
 Se sua tarefa em segundo plano requer conectividade de rede, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano seja executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa em segundo plano não define **IsNetworkRequested**, em seguida, sua tarefa em segundo plano não poderão acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada.)
- 
+ 
 Para obter mais informações sobre condições de tarefa em segundo plano, consulte [definir condições para executar uma tarefa em segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>Requisitos do manifesto do aplicativo
@@ -95,7 +95,7 @@ Os gatilhos em tempo real a seguir podem ser usados para executar código person
 | **Temporizador** | É possível executar tarefas em segundo plano a cada 15 minutos, e elas podem ser configuradas para execução em um horário específico com [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obter mais informações, consulte [Executar uma tarefa em segundo plano em um temporizador](run-a-background-task-on-a-timer-.md). |
 | **Notificação por push** | As tarefas em segundo plano respondem ao [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para receber notificações por push brutas. |
 
-**Observação**  
+**Observação**  
 
 Os aplicativos Universais do Windows devem chamar [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar qualquer tipo de gatilho em segundo plano.
 
@@ -114,7 +114,7 @@ A enumeração [**SystemTriggerType**](https://msdn.microsoft.com/library/window
 | **ControlChannelReset** | A tarefa em segundo plano é disparada quando um canal de controle é redefinido. |
 | **SessionConnected**    | A tarefa em segundo plano é disparada quando a sessão é conectada.   |
 
-   
+   
 Os gatilhos de eventos do sistema a seguir quando o usuário moveu um aplicativo de ou para a tela de bloqueio.
 
 | Nome do gatilho                     | Descrição                                  |
@@ -122,7 +122,7 @@ Os gatilhos de eventos do sistema a seguir quando o usuário moveu um aplicativo
 | **LockScreenApplicationAdded**   | Um bloco de aplicativos é adicionado à tela de bloqueio.     |
 | **LockScreenApplicationRemoved** | Um bloco de aplicativos é removido da tela de bloqueio. |
 
- 
+ 
 ## <a name="background-task-resource-constraints"></a>Restrições de recursos de tarefas em segundo plano
 
 As tarefas em segundo plano são leves. Manter a execução em segundo plano em um nível mínimo garante a melhor experiência do usuário com aplicativos em primeiro plano e para a vida da bateria. Isso é reforçado pela aplicação de restrições de recursos a tarefas em segundo plano.

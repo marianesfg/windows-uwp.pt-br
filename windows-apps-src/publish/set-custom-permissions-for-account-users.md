@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434425"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480214"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
@@ -171,11 +171,11 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </thead>
     <tbody>
     <tr><td align="left">    <b>Aquisições</b>     </td><td>    Pode exibir os relatórios <a href="acquisitions-report.md">Aquisições</a> e <a href="add-on-acquisitions-report.md">Aquisições de complemento</a> do produto.        </td><td>    N/D    </td><td>    N/d (configurações do produto pai incluem o relatório de **aquisições de complemento** )        </td><td>    N/D                         </td></tr>
-    <tr><td align="left">    <b>Uso</b> </td><td>    Pode exibir o <a href="usage-report.md">Relatório de uso</a> do produto.     </td><td>    N/D       </td><td>    N/A     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Uso</b> </td><td>    Pode exibir o <a href="usage-report.md">Relatório de uso</a> do produto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentários do cliente</b>    </td><td>    Pode exibir os relatórios <a href="reviews-report.md">análises</a> e <a href="feedback-report.md">Comentários</a> do produto.       </td><td>    N/D (para responder a comentários ou análises, a permissão <b>Contato com cliente</b> deve ser concedida)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
-    <tr><td align="left">    <b>Tempo real</b>   </td><td>    Pode exibir o relatório em tempo real para o produto. (observação: este relatório está disponível no momento pelo <a href="dev-center-insider-program.md">Programa Insider do Centro de Desenvolvimento</a>.)      </td><td>    N/D   </td><td>    N/A     </td><td>    N/D                 </td></tr>
+    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Tempo real</b>   </td><td>    Pode exibir o relatório em tempo real para o produto. (observação: este relatório está disponível no momento pelo <a href="dev-center-insider-program.md">Programa Insider do Centro de Desenvolvimento</a>.)      </td><td>    N/D   </td><td>    N/D     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>
 

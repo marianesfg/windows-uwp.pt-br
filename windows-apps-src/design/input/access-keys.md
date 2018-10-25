@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435509"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481115"
 ---
 # <a name="access-keys"></a>Teclas de acesso
 
@@ -263,16 +263,16 @@ No entanto, caso precise de um controle maior sobre o posicionamento da Dica de 
 
     a.  A Dica de Tecla deve estar **próxima** ao elemento que possui a tecla de acesso (o proprietário).  
     b.  A Dica de Tecla deve **evitar cobrir elementos habilitados** que possuam teclas de acesso.   
-    c.  Se uma Dica de Tecla não puder ser colocada perto do seu proprietário, ela deve sobrepô-lo. 
+    c.  Se uma Dica de Tecla não puder ser colocada perto do seu proprietário, ela deve sobrepô-lo. 
 
 2.  **Detectabilidade**: O usuário pode descobrir o controle rapidamente com a Dica de Tecla.
 
-    a.  A Dica de Tecla nunca **sobrepõe** outras Dicas de Tecla.  
+    a.  A Dica de Tecla nunca **sobrepõe** outras Dicas de Tecla.  
 
 3.  **Verificação fácil:** O usuário pode ler as Dicas de Tecla facilmente.
 
     a.  As Dicas de Tecla devem estar **alinhadas** entre si e com o elemento de interface do usuário.
-    b.  As Dicas de Tecla devem ser **agrupadas** o máximo possível. 
+    b.  As Dicas de Tecla devem ser **agrupadas** o máximo possível. 
 
 ### <a name="relative-position"></a>Posição relativa
 

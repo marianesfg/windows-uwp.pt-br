@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439508"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480790"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
@@ -113,11 +113,11 @@ O gráfico **Customer demographic** mostra informações demográficas sobre as 
 > [!NOTE]
 > Alguns clientes optaram por não para compartilhar essa informação. Se não for possível determinar a faixa etária ou o sexo, a aquisição será categorizada como **Desconhecida**.
 
- 
+ 
 
 ## <a name="app-page-views-and-conversions-by-channel"></a>Exibições e conversões de página de aplicativo por canal
 
-O gráfico de **Visualizações de página e conversões por canal do aplicativo** permite saber como os clientes no Windows 10 chegaram à listagem do aplicativo em um período específico.
+O gráfico de **exibições de página do aplicativo e conversões por canal** permite que você veja como os clientes no Windows 10 chegaram à listagem do seu aplicativo durante o período de tempo selecionado.
 
 Nesse gráfico, um *canal* se refere ao método em que um cliente chegou à página de listagem do aplicativo (por exemplo, navegação e pesquisa na Loja, um link de um site externo, um link de uma das suas campanhas personalizadas etc.). Os seguintes tipos de canal estão incluídos:
 
@@ -125,7 +125,7 @@ Nesse gráfico, um *canal* se refere ao método em que um cliente chegou à pág
 -   **Campanha personalizada:** o cliente seguiu um link que usava uma [ID da campanha personalizada](create-a-custom-app-promotion-campaign.md).
 -   **Outros:** o cliente seguiu um link externo (sem qualquer ID de campanha personalizada) de um site para a listagem do seu app ou o cliente seguiu um link de um mecanismo de pesquisa para a listagem do seu app.
 
-Uma *exibição de página* significa que um cliente viu a página de listagem da Loja do seu aplicativo, por meio da Loja baseada na Web ou dentro do aplicativo Loja no Windows 10. Isso inclui modos de exibição por pessoas que não estão conectadas com uma conta da Microsoft. Alguns clientes optaram por não fornecer essas informações para a Microsoft.
+Uma *visualização da página* significa que um cliente viu a página de listagem da loja do seu aplicativo, por meio da loja baseada na web ou de dentro do aplicativo loja no Windows 10. Isso inclui modos de exibição por pessoas que não estão conectadas com uma conta da Microsoft. Alguns clientes optaram por não fornecer essas informações para a Microsoft.
 
 Uma *conversão* significa que um cliente (conectado com uma conta da Microsoft) obteve recentemente uma licença para seu aplicativo (seja paga ou gratuita).
 
@@ -149,6 +149,6 @@ O gráfico **Total de conversões da campanha** mostra o total de conversões de
 
 
 
- 
+ 
 
- 
+ 

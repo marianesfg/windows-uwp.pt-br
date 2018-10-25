@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443591"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481964"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -260,7 +260,7 @@ Veja a seguir um modelo completo da aparência de um botão do Revelação:
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Ajustando o efeito do Revelação em um controle personalizado 
 
 Ao habilitar o revelação em um controle personalizado ou remodelado ou um superfície de comando personalizada, estas dicas podem ajudá-lo a otimizar o efeito:
- 
+ 
 * Nos itens adjacentes com tamanhos que não estão alinhados em altura ou largura (particularmente em listas): remova o comportamento de abordagem da borda e mantenha as bordas mostradas somente no foco.
 * Para itens de comando que entram e saem do estado desabilitado com frequência: coloque o pincel de abordagem da borda nos backplates dos elementos, bem como em suas bordas para enfatizar seu estado.
 * Para elementos de comandos adjacentes que estão tão próximos que chegam a se tocar: adicione uma margem de 1px entre os dois elementos. 

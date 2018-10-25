@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438513"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483523"
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
@@ -89,7 +89,7 @@ Você tem a opção de fornecer até dez as palavras-chave de até 30 caracteres
 Para consultar este campo, use a propriedade [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) no [namespace Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (ou, se você estiver usando o [namespace Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), use a propriedade [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords).)
 
 > [!NOTE]
-> As palavras-chave não estão disponíveis para uso em pacotes do Windows 8 e Windows 8.1.
+> Palavras-chave não estão disponíveis para uso em pacotes Windows8 e Windows 8.1.
 
 <span id="custom-developer-data" />
 
@@ -102,10 +102,10 @@ Por exemplo, digamos que você tenha um jogo e esteja vendendo um complemento qu
 Para consultar este campo, use a propriedade [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) no [namespace Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (Ou, se você estiver usando o [namespace Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), use a propriedade [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag).)
 
 > [!NOTE]
-> O campo **Dados de desenvolvedor personalizados** não está disponível para uso em pacotes do Windows 8 e Windows 8.1.
+> O campo de **dados de desenvolvedor personalizados** não está disponível para uso em pacotes Windows8 e Windows 8.1.
 
- 
+ 
 
- 
+ 
 
- 
+ 

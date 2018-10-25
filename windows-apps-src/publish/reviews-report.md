@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434966"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479943"
 ---
 # <a name="reviews-report"></a>Relatório de avaliações
 
@@ -90,9 +90,9 @@ Cada opinião do cliente contém:
 -   A data da revisão.
 -   O nome do revisor como ele aparece na Microsoft Store.
 -   País/região do revisor.
--   A versão do pacote do aplicativo no dispositivo do cliente no momento em que a crítica foi deixada. (Essas informações não estão disponíveis para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores.)
+-   A versão do pacote do aplicativo no dispositivo do cliente no momento em que a crítica foi deixada. (Essas informações não está disponível para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores).
 -   A versão do sistema operacional do dispositivo que o cliente estava usando quando a crítica foi feita.
--   O nome do dispositivo que o cliente estava usando quando a crítica foi feita. (Essas informações não estão disponíveis para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores.)
+-   O nome do dispositivo que o cliente estava usando quando a crítica foi feita. (Essas informações não está disponível para críticas enviadas online ou por clientes no Windows 8.1 e versões anteriores).
 -   A "contagem de utilidade" da crítica, conforme classificada por outros clientes ao ler a crítica. Esses itens são mostrados como uma série de dois números: o primeiro número mostra quantos clientes a classificaram como útil, e o segundo número é o número total de clientes que classificaram a crítica. Por exemplo, uma contagem de utilidade de 4/10 significa que, dos 10 classificadores, 4 consideraram a opinião útil e seis, não. (Se não houver votos de utilidade de uma crítica, nenhuma contagem de utilidade será exibida).
 
 Observe que os clientes podem deixar uma classificação para o seu aplicativo sem adicionar qualquer comentário, para que você veja normalmente menos análises do que classificações.
@@ -124,8 +124,8 @@ Veja algumas ações adicionais que você pode realizar com base nas classifica�
 -   Caso a classificação média seja alta, mas o número de transferências seja baixo, convém procurar formas de [expor seu aplicativo a mais pessoas](attract-customers-and-promote-your-apps.md), já que ele foi é bem-recebido pelos usuários que o testaram.
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
