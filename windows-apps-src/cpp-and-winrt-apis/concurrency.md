@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 0767f8c1ca0fb80ff8c7b033832ffccd61aeabfc
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 96a1a5d4636bc96d774071514b77ad8bde4df6be
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472590"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5521111"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 
@@ -258,7 +258,9 @@ Consulte também [Matrizes e vetores padrão](std-cpp-data-types.md#standard-arr
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Descarregar o trabalho no pool de threads do Windows
 
-Antes de executar tarefas associadas à computação em uma corrotina, é necessário retornar a execução para o autor da chamada para que não seja bloqueado (ou seja, introduzir um ponto de suspensão). Se você não estiver fazendo isso `co-await`- esboços alguma outra operação, é possível `co-await` a função [**WinRT:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) . Isso retorna o controle para o autor da chamada e continua a execução imediatamente em um thread do pool de threads.
+Uma rotina concomitante é uma função como qualquer outro em que um chamador é bloqueado até que uma função retorna a execução para ele. E, na primeira oportunidade para uma rotina concomitante retornar é o primeiro `co_await`, `co_return`, ou `co_yield`.
+
+Portanto, antes de fazer associadas à computação em uma corrotina, é necessário retornar a execução ao chamador (em outras palavras, introduzir um ponto de suspensão) para que o chamador não seja bloqueado. Se você não estiver fazendo isso `co-await`- esboços alguma outra operação, é possível `co-await` a função [**WinRT:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) . Isso retorna o controle para o autor da chamada e continua a execução imediatamente em um thread do pool de threads.
 
 O pool de threads usado na implementação é o [pool de threads do Windows](https://msdn.microsoft.com/library/windows/desktop/ms686766) de nível inferior, portanto, é eficiente.
 
@@ -282,7 +284,7 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 Esse cenário expande o anterior. Você descarrega o trabalho em um pool de threads, mas, em seguida, deseja exibir o progresso na interface do usuário (IU).
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -294,7 +296,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 O código acima gera uma exceção [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread), pois um **TextBlock** deve ser atualizado a partir do thread que o gerou, ou seja, um thread da interface do usuário. Uma solução é capturar o contexto do thread no qual a corrotina foi chamada originalmente. Para fazer isso, instanciar um objeto [**WinRT:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) , de trabalho, em segundo plano e, em seguida, `co_await` o **apartment_context** para voltar ao contexto de chamada.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     winrt::apartment_context ui_thread; // Capture calling context.
 
@@ -312,7 +314,8 @@ Enquanto a corrotina acima for chamada do thread da interface do usuário que cr
 Para uma solução mais geral para atualizar a interface do usuário, que abrange casos em que você tem certeza sobre o thread de chamada, você pode `co-await` a função [**WinRT:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) para alternar para um thread específico em primeiro plano. No exemplo de código abaixo, especificamos o thread de primeiro plano passando o objeto dispatcher associado a **TextBlock** (ao acessar a propriedade [**Dispatcher**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher)). A implementação de **winrt::resume_foreground** chama [**Coredispatcher**](/uwp/api/windows.ui.core.coredispatcher.runasync) nesse objeto dispatcher para executar o trabalho que vem depois na corrotina.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -322,6 +325,140 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
     textblock.Text(L"Done!"); // Guaranteed to work.
 }
 ```
+
+## <a name="execution-contexts-resuming-and-switching-in-a-coroutine"></a>Contextos de execução, retomar e alterná-los em uma corrotina
+
+Em termos gerais, após um ponto de suspensão em uma corrotina, o segmento original de execução pode desaparecer e retomada pode ocorrer em qualquer thread (em outras palavras, qualquer thread pode chamar o método de **Completed** para a operação assíncrona).
+
+Mas se você `co-await` qualquer um dos quatro do Windows Runtime operação assíncrona tipos (**IAsyncXxx**), em seguida, C + c++ WinRT captura o contexto de chamada no ponto você `co-await`. E garante que você esteja ainda esse contexto quando retoma a continuação. C++ c++ WinRT faz isso verificando se você já está no contexto de chamada e, se não, alternando para ele. Se você estava em um thread de single-threaded apartment (STA) antes de `co-await`, em seguida, você vai estar usando o mesmo posteriormente; Se você estava em um thread apartment de vários threads (MTA) antes de `co-await`, em seguida, você estará em um posteriormente.
+
+```cppwinrt
+IAsyncAction ProcessFeedAsync()
+{
+    Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+    SyndicationClient syndicationClient;
+
+    // The thread context at this point is captured...
+    SyndicationFeed syndicationFeed{ co_await syndicationClient.RetrieveFeedAsync(rssFeedUri) };
+    // ...and is restored at this point.
+}
+```
+
+O motivo pelo qual você pode contar com esse comportamento ocorre porque C++ c++ WinRT fornece o código para adaptar esses tipos de operação assíncrona do tempo de execução do Windows para o suporte de linguagem C++ concomitante (essas partes de código são chamados de adaptadores de espera). Os tipos que pode ser aguardados restantes em C++ c++ WinRT são simplesmente wrappers de pool de threads e/ou auxiliares; Portanto, ele concluir o pool de threads.
+
+```cppwinrt
+using namespace std::chrono;
+IAsyncOperation<int> return_123_after_5s()
+{
+    // No matter what the thread context is at this point...
+    co_await 5s;
+    // ...we're on the thread pool at this point.
+    co_return 123;
+}
+```
+
+Se você `co_await` algum outro tipo&mdash;até mesmo em C++ c++ implementação de rotina concomitante WinRT&mdash;outra biblioteca fornece os adaptadores, e você precisará entender que esses adaptadores fazer em termos de retomada e contextos.
+
+Para manter as alternâncias de contexto para mínimo, você pode usar algumas das técnicas que já vimos neste tópico. Vejamos algumas ilustrações de fazer isso. No exemplo a seguir pseudocódigo, mostramos o contorno de um manipulador de eventos que chama uma API de tempo de execução do Windows para carregar uma imagem, cai em um thread em segundo plano para processar essa imagem e, em seguida, retorna ao thread de interface do usuário para exibir a imagem da interface do usuário.
+
+```cppwinrt
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+{
+    // We begin in the UI context.
+
+    // Call StorageFile::OpenAsync to load an image file.
+
+    // The call to OpenAsync occurred on a background thread, but C++/WinRT has restored us to the UI thread by this point.
+
+    co_await winrt::resume_background();
+
+    // We're now on a background thread.
+
+    // Process the image.
+
+    co_await winrt::resume_foreground(this->Dispatcher());
+
+    // We're back on MainPage's UI thread.
+
+    // Display the image in the UI.
+}
+```
+
+Para esse cenário, há um pouco de ineffiency em torno da chamada para **StorageFile::OpenAsync**. Há uma atualização de contexto necessário para um plano de fundo thread (para que o manipulador pode retornar a execução para o chamador), na continuação após a qual C + c++ WinRT restaura o contexto do thread da interface do usuário. Mas, nesse caso, não é necessário ser no thread da interface do usuário até que estamos prestes a atualizar a interface do usuário. As APIs do tempo de execução do Windows mais que chamamos *antes de* nossa chamada para **WinRT:: resume_background**, os switches back bidirecional contexto mais desnecessários tivermos. A solução não é chamar *quaisquer* APIs do Windows Runtime antes disso. Movê-los depois do **WinRT:: resume_background**.
+
+```cppwinrt
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+{
+    // We begin in the UI context.
+
+    co_await winrt::resume_background();
+
+    // We're now on a background thread.
+
+    // Call StorageFile::OpenAsync to load an image file.
+
+    // Process the image.
+
+    co_await winrt::resume_foreground(this->Dispatcher());
+
+    // We're back on MainPage's UI thread.
+
+    // Display the image in the UI.
+}
+```
+
+Se você deseja fazer algo mais avançado, em seguida, você pode escrever seus próprios await adaptadores. Por exemplo, se você quiser um `co_await` para continuar no mesmo thread que a ação assíncrona seja concluída em (portanto, não há nenhum comutador de contexto), em seguida, você pode começar escrevendo await adaptadores semelhantes àquelas mostrado abaixo.
+
+> [!NOTE]
+> O exemplo de código abaixo é fornecido apenas para fins educacionais; é para você começar Noções básicas sobre como await adaptadores de trabalho. Se você deseja usar essa técnica em seu próprio código de base, em seguida, é recomendável que você desenvolver e testar seus próprios await struct(s) adaptador. Por exemplo, você pode escrever **complete_on_any**, **complete_on_current**e **complete_on(dispatcher)**. Além disso, considere torná-los modelos que usam o tipo de **IAsyncXxx** como um parâmetro de modelo.
+
+```cppwinrt
+struct no_switch
+{
+    no_switch(Windows::Foundation::IAsyncAction const& async) : m_async(async)
+    {
+    }
+
+    bool await_ready() const
+    {
+        return m_async.Status() == Windows::Foundation::AsyncStatus::Completed;
+    }
+
+    void await_suspend(std::experimental::coroutine_handle<> handle) const
+    {
+        m_async.Completed([handle](Windows::Foundation::IAsyncAction const& /* asyncInfo */, Windows::Foundation::AsyncStatus const& /* asyncStatus */)
+        {
+            handle();
+        });
+    }
+
+    auto await_resume() const
+    {
+        return m_async.GetResults();
+    }
+
+private:
+    Windows::Foundation::IAsyncAction const& m_async;
+};
+```
+
+Para entender como usar o **sem_mudança** await adaptadores, primeiro você precisará saber que, quando o compilador C++ encontra um `co_await` chamado de expressão, ele procura funções **await_ready**, **await_suspend**e **await_resume**. C++ c++ WinRT biblioteca fornece essas funções para que você obter o comportamento razoável por padrão, desta forma.
+
+```cppwinrt
+IAsyncAction async{ ProcessFeedAsync() };
+co_await async;
+```
+
+Usar o **sem_mudança** await adaptadores, apenas mude o tipo de que `co_await` expressão de **IAsyncXxx** a **sem_mudança**, desta forma.
+
+```cppwinrt
+IAsyncAction async{ ProcessFeedAsync() };
+co_await static_cast<no_switch>(async);
+```
+
+Em seguida, em vez de procurando as três funções **await_xxx** que correspondem ao **IAsyncXxx**, o compilador C++ procura por funções que correspondem ao **sem_mudança**.
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>Cancelar uma operação assíncrona e retornos de chamada de cancelamento
 

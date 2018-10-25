@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e616f5a04e50b400c4bd7a700981396570a6c1d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8ddac5d69ce0c562129255832adfc49380946510
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572375"
 ---
 # <a name="choosing-a-resource"></a>Escolhendo um recurso
 
@@ -40,7 +38,7 @@ Esta tabela lista os tipos de recursos que podem ser associados a cada estágio 
 | Fusão de saída   | Saída    | Modo de exibição de destino de renderização     | Buffer, Texture1D, Texture2D, Texture3D |
 | Fusão de saída   | Saída    | Modo de exibição de estêncil/profundidade     | Texture1D, Texture2D                    |
 
- 
+ 
 
 ## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar como cada recurso será usado
 
@@ -56,7 +54,7 @@ O hardware em que seu app está sendo executado terá um mínimo de pelo menos u
 | Preparando        | GPU                                  | n/a                 |
 | Imutável      | CPU (somente no momento da criação de recursos) | n/a                 |
 
- 
+ 
 
 O uso padrão deve ser usado para um recurso que deve ser atualizado pela CPU com pouca frequência (menor do que uma vez por quadro). Idealmente, a CPU nunca escreveria diretamente em um recurso com o uso padrão para evitar possíveis penalidades de desempenho.
 
@@ -75,7 +73,7 @@ Outra maneira de observar a mesma ideia é pensar o que um app faz com um recurs
 | Renderizar a textura                     | Padrão              |
 | Acesso da CPU aos dados da GPU                | Preparando              |
 
- 
+ 
 
 Se você não tiver certeza de quais usos escolher, comece pelo uso do padrão, pois ele deve ser o caso mais comum. Um buffer constante de sombreador é um tipo de recurso que sempre deve ter o uso padrão.
 
@@ -95,9 +93,9 @@ Essa técnica neste exemplo pode melhorar o desempenho, isolando a gravação de
 
 [Recursos](resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 56ce3520248a0fca25230d7ee2a822d827d842a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572205"
 ---
 # <a name="triangle-interpolation"></a>Interpolação de triângulo
 
@@ -30,7 +28,7 @@ Para alguns dados de vértice, a interpolação é dependente do modo atual de s
 | Plano         | Somente o fator de nevoeiro é interpolado no modo de sombreamento simples. Para todos os outros valores interpolados, a cor do primeiro vértice no triângulo é aplicada em toda a face. |
 | Gouraud      | A interpolação linear é executada entre todos os três vértices.                                                                                                               |
 
- 
+ 
 
 As cores difusas e realces especulares são tratados de forma diferente, dependendo do modelo de cor. No modelo de cor RGB, o sistema usa os componentes de cor vermelha, verde e azul na interpolação.
 
@@ -41,9 +39,9 @@ O componente alfa de uma cor é tratado como um valor interpolado separado porqu
 
 [Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, mapa, localização, cerca geográfica, notificações
 ms.localizationpriority: medium
-ms.openlocfilehash: 02baf078d127f516d57e947145ec639df5ba891b
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
-ms.translationtype: HT
+ms.openlocfilehash: 8e9fa71b3d6ae002aa37e14e23b55793876156c8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
-ms.locfileid: "1594774"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542270"
 ---
 # <a name="set-up-a-geofence"></a>Configurar uma cerca geográfica
 
@@ -479,7 +477,7 @@ O teste e a depuração de aplicativos com localização geográfica podem ser u
 
 Para que o aplicativo possa acessar a localização, é necessário habilitar **Localização** no dispositivo. No aplicativo **Configurações**, verifique se as seguintes **configurações de privacidade de localização** estão ativadas:
 
--   **Localização deste dispositivo...** está **ativada** (não se aplica ao Windows 10 Mobile)
+-   **Localização deste dispositivo...** é **ativado (não se aplica ao Windows 10 Mobile)**
 -   A configuração de serviços de localização, **Localização**, está **ativada**
 -   Em **Escolher aplicativos que podem usar sua localização**, seu aplicativo está definido como **ativado**
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044705"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542290"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturas com canais alfa
 
@@ -30,7 +28,7 @@ O bloco de transparência e o bloco de cores são organizados conforme mostrado 
 | 3:0          | Bloco de transparência                |
 | 7:4          | Bloco de 64 bits descrito anteriormente |
 
- 
+ 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Codificação de textura explícita
 
@@ -41,9 +39,9 @@ O diagrama a seguir mostra um bloco de transparência de 64 bits.
 
 ![diagrama de um bloco de transparência de 64 bits](images/colors4.png)
 
-**Observação**   O método de compactação do Direct3D usa os quatro bits mais significativos.
+**Observação**  o método de compactação do Direct3D usa os quatro bits mais significativos.
 
- 
+ 
 
 As tabelas a seguir ilustram como as informações alfa são dispostas na memória, para cada palavra de 16 bits.
 
@@ -56,7 +54,7 @@ Layout da palavra 0:
 | 11:8          | \[0\]\[2\] |
 | 15:12 (MSB\*) | \[0\]\[3\] |
 
- 
+ 
 
 \*bit menos significativo, bit mais significativo (MSB)
 
@@ -69,7 +67,7 @@ Layout da palavra 1:
 | 11:8        | \[1\]\[2\] |
 | 15:12 (MSB) | \[1\]\[3\] |
 
- 
+ 
 
 Layout da palavra 2:
 
@@ -80,7 +78,7 @@ Layout da palavra 2:
 | 11:8        | \[2\]\[2\] |
 | 15:12 (MSB) | \[2\]\[3\] |
 
- 
+ 
 
 Layout da palavra 3:
 
@@ -91,7 +89,7 @@ Layout da palavra 3:
 | 11:8        | \[3\]\[2\] |
 | 15:12 (MSB) | \[3\]\[3\] |
 
- 
+ 
 
 A comparação de cores usada em BC1 para determinar se o texel é transparente não é usada nesse formato. Presume-se que, sem a comparação de cores, os dados de cor sejam sempre tratados como se estivessem modo de 4 cores.
 
@@ -139,7 +137,7 @@ O layout da memória do bloco de alfa é o seguinte:
 | 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
- 
+ 
 
 A comparação de cores usada em BC1 para determinar se o texel é transparente não é usada com esses formatos. Presume-se que, sem a comparação de cores, os dados de cor sejam sempre tratados como se estivessem modo de 4 cores.
 
@@ -148,9 +146,9 @@ A comparação de cores usada em BC1 para determinar se o texel é transparente 
 
 [Recursos de textura compactada](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

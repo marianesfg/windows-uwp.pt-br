@@ -14,12 +14,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 64cc534391aae694b80b5750d74ccf98bd5cdc6b
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5515694"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -83,7 +83,8 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 ## <a name="implicit-animations"></a>Animações implícitas
 
-> **Visualização**: animação implícita requer a [compilação do Windows 10 Insider Preview e o SDK mais recente](https://insider.windows.com/for-developers/).
+> Animações implícitas requerem o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
+
 
 Animações implícitas são uma maneira simples de alcançar o movimento fluente por automaticamente interpolando entre os valores novos e antigos durante uma alteração de parâmetro.
 

@@ -5,16 +5,14 @@ description: Saiba como salvar e carregar configurações do aplicativo em aplic
 ms.author: twhitney
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, configurações, salvar configurações, carregar configurações
 ms.localizationpriority: medium
-ms.openlocfilehash: e3983fd9eee390f87e728f691b9b9f9808ee308e
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 18b11ea100915f8b6ff52db5223284da6f24a1d4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542134"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Salvar e carregar configurações em um aplicativo UWP
 

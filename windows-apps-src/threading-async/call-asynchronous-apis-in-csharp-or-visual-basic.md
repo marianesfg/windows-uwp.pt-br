@@ -6,19 +6,17 @@ description: A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncr
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, C#, Visual Basic, assíncrona
-ms.openlocfilehash: ad5d3432595761470a679bac690fe14711f9fdba
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542217"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Chamar APIs assíncronas no Visual Basic ou C#
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 A Plataforma Universal do Windows (UWP) inclui muitas APIs assíncronas para garantir que o seu aplicativo permaneça responsivo ao executar trabalhos demorados. Este tópico descreve como usar métodos assíncronos da UWP em C# ou Microsoft Visual Basic.
@@ -37,7 +35,8 @@ Suponha que você tenha um aplicativo que lista os títulos das postagens de um 
 O exemplo a seguir obtém as listas de postagens de um blog chamando o método assíncrono, [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), e aguardando o resultado.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Principal](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)] [!code-vb[Principal](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+[!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Há algumas coisas importantes sobre este exemplo. Primeiro, a linha `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa o operador de **espera** com a chamada para o método assíncrono, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Você pode pensar no operador de **espera** dizendo ao compilador que está chamando um método assíncrono, o que faz com que o compilador realize um trabalho extra para que você não precise fazê-lo. Em seguida, a declaração do manipulador de eventos inclui a palavra-chave **async**. Você deve incluir essa palavra-chave na declaração de método de qualquer método em que usar o operador de **espera**.
 
@@ -71,7 +70,7 @@ A tabela abaixo dá exemplos de métodos assíncronos e lista o tipo de retorno 
 | [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **nulo**                                          |
 | [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), uma classe de resultados personalizada que implementa **IAsyncOperation&lt;UInt32&gt;** | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
- 
+ 
 
 Métodos assíncronos que são definidos em [**.NET para aplicativos UWP**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx) têm o tipo de retorno [**Tarefa**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.aspx) ou [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/dd321424.aspx). Os métodos que retornam **Tarefa** são semelhantes aos métodos assíncronos na UWP que retornam [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx). Em cada caso, o resultado do método assíncrono é **nulo**. O tipo de retorno **Task&lt;TResult&gt;** é semelhante ao [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) no sentido de que o resultado do método assíncrono ao executar a tarefa é do mesmo tipo do parâmetro tipo `TResult`. Para saber mais sobre como usar **.NET para aplicativos UWP** e tarefas, veja [Visão geral do .NET para aplicativos do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx).
 
@@ -82,7 +81,7 @@ Ao usar o operador de **espera** para recuperar seus resultados de um método as
 
 Quando métodos assíncronos chamam outros métodos assíncronos, qualquer método assíncrono que resulta numa exceção será propagado para os métodos externos. Isso significa que você pode colocar um bloco **tentativa/obtenção** no método mais externo para encontrar erros para os métodos assíncronos aninhados. Novamente, isso é semelhante à maneira como você obtém exceções para métodos síncronos. Porém, não é possível usar **espera** no bloco **obtenção**.
 
-**Dica**  A partir de C# no Microsoft Visual Studio 2005, é possível usar **await** no bloco **catch**.
+**Dica**começando com c# no Microsoft Visual Studio2005, você pode usar **await** no bloco **catch** .
 
 ## <a name="summary-and-next-steps"></a>Resumo e próximas etapas
 

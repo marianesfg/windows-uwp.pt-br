@@ -1,31 +1,29 @@
 ---
 author: jwmsft
 title: atributo xLoad
-description: xLoad permite a criação dinâmica e destruição de um elemento e seus filhos, diminuindo o uso de memória e tempo de inicialização.
+description: xLoad permite dinâmica criação e destruição de um elemento e seus filhos, diminuindo o uso de memória e o tempo de inicialização. 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f34ea43b981de65c81e9cce2b8a896c3577e595
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "610781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572415"
 ---
 # <a name="xload-attribute"></a>Atributo x:Load
 
-Você pode usar **X: carregar** para otimizar a inicialização, criação de árvore visual e uso de memória do seu aplicativo XAML. Usar **X: carregar** tem um efeito visual semelhante a **visibilidade**, exceto que quando o elemento não é carregado, sua memória é liberada e um pequeno espaço reservado é usado internamente para marcar seu lugar na árvore visual.
+Você pode usar **X:Load** para otimizar a inicialização, a criação de árvore visual e o uso de memória de seu aplicativo XAML. Usar **X:Load** tem um efeito visual semelhante a **visibilidade**, exceto que quando o elemento não é carregado, sua memória é lançada e internamente um pequeno espaço reservado é usado para marcar seu lugar na árvore visual.
 
-O elemento de interface do usuário atribuído com x: carregar pode ser carregado e descarregado por meio de código ou utilizando uma expressão [X: Vincular](x-bind-markup-extension.md) . Isso é útil para reduzir os custos de elementos que são mostrados de forma pouco frequente ou condicional. Quando você usar x: carregar em um contêiner, como grade ou StackPanel, o contêiner e todos os seus filhos são carregados ou descarregados como um grupo.
+O elemento de interface do usuário atribuído com x: carregar pode ser carregado e descarregado por meio de código, ou usando uma expressão [x: Bind](x-bind-markup-extension.md) . Isso é útil para reduzir os custos de elementos que são mostrados de forma pouco frequente ou condicional. Ao usar X:Load em um contêiner como Grid ou StackPanel, o contêiner e todos os seus filhos são carregados ou descarregados como um grupo.
 
-O controle dos elementos adiados pelo framework XAML adiciona cerca de 600 bytes para o uso de memória para cada elemento atribuído com carga: x, para considerar o espaço reservado. Portanto, é possível uso excessivo este atributo na medida em que realmente diminui o desempenho. É recomendável que você apenas usá-lo em elementos que precisam ser ocultada. Se você usar x: carregar em um contêiner, a sobrecarga é pago apenas para o elemento com o atributo x: carregar.
+O rastreamento de elementos diferidos pela estrutura XAML adiciona cerca de 600 bytes ao uso da memória para cada elemento atribuído com x: carregar, para levar em conta o espaço reservado. Portanto, é possível esse atributo em excesso na medida em que, na verdade, diminui o desempenho. É recomendável que você apenas usá-lo nos elementos que precisam estar oculta. Se você usar X:Load em um contêiner, a sobrecarga é pago apenas para o elemento com o atributo X:Load.
 
 > [!IMPORTANT]
-> O atributo de x: carregar está disponível a partir do Windows 10, versão 1703 (criadores atualização). A versão mínima segmentada pelo seu projeto Visual Studio deve ser *Atualização do Windows 10 para Criadores (10.0, compilação 15063)* para usar x:Load.
+> O atributo X:Load está disponível a partir do Windows 10, versão 1703 (atualização para criadores). A versão mínima segmentada pelo seu projeto Visual Studio deve ser *Atualização do Windows 10 para Criadores (10.0, compilação 15063)* para usar x:Load.
 
 ## <a name="xaml-attribute-usage"></a>Uso do atributo XAML
 
@@ -39,53 +37,53 @@ O controle dos elementos adiados pelo framework XAML adiciona cerca de 600 bytes
 
 Há várias maneiras diferentes para carregar os elementos:
 
-- Use uma expressão [X: ligar](x-bind-markup-extension.md) para especificar o estado de carga. A expressão deve retornar **true** para carregar e **false** para descarregar o elemento.
+- Use uma expressão [x: Bind](x-bind-markup-extension.md) para especificar o estado de carga. A expressão deve retornar **true** para carregar e **false** para descarregar o elemento.
 - Chame [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) com o nome definido no elemento.
 - Chame [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416) com o nome definido no elemento.
-- Em um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), use uma animação [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou **Storyboard** que tem como destino o elemento x: carregar.
-- O elemento descarregado em qualquer **Storyboard**de destino.
+- Em um [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), use uma animação [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) ou **Storyboard** que segmenta o elemento X:Load.
+- Segmente o elemento descarregado em qualquer **Storyboard**.
 
 > OBSERVAÇÃO: Depois que a instanciação de um elemento for iniciada, ele será criado no thread da interface do usuário, de maneira que faça a interface do usuário ser dividida se várias forem criadas de uma só vez.
 
 Depois que um elemento adiado for criado por um dos métodos listados acima, várias coisas acontecerão:
 
 - O evento [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) no elemento será acionado.
-- O campo para x: Name é definido.
-- Qualquer ligações x: vincular no elemento são avaliadas.
+- O campo para X:Name é definido.
+- Todas as associações de x: Bind no elemento serão avaliadas.
 - Se o aplicativo tiver se registrado para receber notificações de alteração feita na propriedade sobre a propriedade que contém os elementos adiados, a notificação será acionada.
 
-## <a name="unloading-elements"></a>Elementos de descarregamento
+## <a name="unloading-elements"></a>Elementos descarregando
 
-Para descarregar um elemento:
+Descarregar um elemento:
 
-- Use uma expressão x: ligar para especificar o estado de carga. A expressão deve retornar **true** para carregar e **false** para descarregar o elemento.
-- Em uma página ou UserControl, chame **UnloadObject** e passe na referência de objeto
-- Chamar **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** e passar na referência de objeto
+- Use uma expressão x: Bind para especificar o estado de carga. A expressão deve retornar **true** para carregar e **false** para descarregar o elemento.
+- Em uma página ou um UserControl, chame **UnloadObject** e passe a referência de objeto
+- Chame **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** e passe a referência de objeto
 
-Quando um objeto é descarregado, ele será substituído na árvore com um espaço reservado. A instância do objeto permanecerá na memória até que todas as referências foram liberadas. A API UnloadObject em um página/UserControl foi projetada para liberar as referências conduzidas por gerador de código: nome de x e x: vincular. Se você mantiver referências adicionais no código de aplicativo, que eles também precisará ser liberada.
+Quando um objeto é descarregado, ele será substituído na árvore com um espaço reservado. A instância do objeto permanecerá na memória até que todas as referências foram lançadas. A API UnloadObject em um página/UserControl foi projetada para liberar as referências mantidas pelo gerador de código para X:Name e x: Bind. Se você mantiver referências adicionais no código de aplicativo, que eles também precisarão ser liberado.
 
-Quando um elemento seja descarregado, todo o estado associado ao elemento serão descartados, portanto se usando x: carregar como uma versão otimizada de visibilidade, em seguida, certifique-se de que todos os de estado é aplicada por meio de vínculos ou novamente é aplicado pelo código quando o evento Loaded for acionado.
+Quando um elemento é descarregado, todo o estado associado ao elemento será descartada, dessa forma, se usar X:Load como uma versão otimizada de visibilidade, em seguida, certifique-se de que todos os estado é aplicado por meio de associações, ou novamente é aplicado pelo código quando o evento Loaded é acionado.
 
 ## <a name="restrictions"></a>Restrições
 
-As restrições de uso **X: carregar** são:
+As restrições para usar **X:Load** são:
 
-- Você deve definir um [X:Names](x-name-attribute.md) para o elemento, uma vez que deve haver uma forma de encontrar o elemento depois.
-- Você só pode usar x: carregar nos tipos de derivam de [**elementos de interface**](https://msdn.microsoft.com/library/windows/apps/br208911) ou [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
-- Você não pode usar x: carregar em elementos de raiz em uma [**página**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), um [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol)ou um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
-- Você não pode usar x: carregar em elementos em um [**dicionário de recurso**](https://msdn.microsoft.com/library/windows/apps/br208794).
-- Você não pode usar x: carregar em XAML livre carregado com [**XamlReader**](https://msdn.microsoft.com/library/windows/apps/br228048).
-- Mover um elemento pai limpará check-out de todos os elementos que não foram carregados.
+- Você deve definir um [X:Name](x-name-attribute.md)para o elemento, como daí precisa ser uma maneira de encontrar o elemento depois.
+- Você pode usar X:Load nos tipos que derivam de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) ou [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
+- Você não pode usar X:Load nos elementos raiz em uma [**página**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), um [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol)ou um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+- Você não pode usar X:Load nos elementos em um [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
+- Você não pode usar X:Load em XAML flexível carregado com [**XamlReader. Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
+- Mover um elemento pai apagará todos os elementos que não tiverem sido carregados.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar x: carregar em elementos aninhados, no entanto, eles precisam ser concretizados do elemento mais externas no.  Se você tentar observar um elemento filho antes que o pai tenha sido percebido, uma exceção será gerada.
+Você pode usar X:Load em elementos aninhados, no entanto eles precisam ser efetivados a partir do elemento mais externo. Se você tentar observar um elemento filho antes que o pai tenha sido percebido, uma exceção será gerada.
 
-Normalmente, recomendamos que você adie elementos que não são visíveis no primeiro quadro. Uma boa orientação para encontrar os candidatos a serem diferidos é procurar elementos que estão sendo criados com [**Visibilidade**](https://msdn.microsoft.com/library/windows/apps/br208992) recolhida. Além disso, a UI que é desencadeada pela interação do usuário é um bom lugar para procurar elementos que você pode adiar.
+Normalmente, recomendamos que você adie elementos que não são visíveis no primeiro quadro.Uma boa orientação para encontrar os candidatos a serem diferidos é procurar elementos que estão sendo criados com [**Visibilidade**](https://msdn.microsoft.com/library/windows/apps/br208992) recolhida. Além disso, a UI que é desencadeada pela interação do usuário é um bom lugar para procurar elementos que você pode adiar.
 
 Seja cauteloso ao adiar elementos em um [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878), pois o tempo de inicialização será menor, mas também o desempenho do movimento panorâmico pode ser reduzido, dependendo do que você está criando. Se você estiver procurando melhorar o desempenho de movimento panorâmico, consulte a documentação sobre [extensão de marcação {x: Bind}](x-bind-markup-extension.md) e [atributo x:Phase](x-phase-attribute.md).
 
-Se o [atributo x: fase](x-phase-attribute.md) for usado em conjunto com **X: carregar** , quando um elemento ou um elemento de árvore é concretizado, as ligações são aplicadas até e incluindo a fase atual. A fase especificada para **X: fase** afetar ou controlar o estado de carregamento do elemento. Quando um item de lista é reciclado como parte de panorâmica, concretizados elementos serão se comportam da mesma maneira como outros elementos ativos e ligações compiladas (**{X: Vincular}** ligações) são processadas usando as mesmas regras, incluindo a introdução gradual.
+Se o [atributo X:Phase](x-phase-attribute.md) é usado em conjunto com **X:Load** em seguida, quando um elemento ou uma árvore de elementos for realizada, as associações serão aplicadas até e incluindo a fase atual. A fase especificada para **X:Phase** afeta ou controla o estado de carregamento do elemento. Quando um item de lista é reciclado como parte de movimento panorâmico, os realizados elementos irá se comportar da mesma maneira como outros elementos ativos e associações compiladas (associações **{x: Bind}** ) serão processadas usando as mesmas regras, incluindo fases.
 
 Uma diretriz geral é avaliar o desempenho do aplicativo antes e depois, para garantir que você obtenha o desempenho que deseja.
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78263272c0a150bf7ccf06aa29cc66f13770ad19
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9506b86fc16861984e539c52bdd92eed544079a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542121"
 ---
 # <a name="texture-views"></a>Exibições de textura
 
@@ -40,9 +38,9 @@ Crie um objeto de exibição para um destino de renderização chamando CreateRe
 
 [Recursos](resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

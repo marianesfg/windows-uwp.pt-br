@@ -6,19 +6,18 @@ ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, escala de sobreposições, sobreposições, directx
-ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5560499"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Dimensionamento e sobreposições de cadeia de troca
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como criar cadeias de troca dimensionadas para permitir renderização mais rápida em dispositivos móveis e usar cadeias de troca sobrepostas (quando disponíveis) para aumentar a qualidade visual.
 
@@ -47,7 +46,7 @@ Quando seu jogo está sendo executado em hardware de nível inferior, ou hardwar
     swapChainDesc.SampleDesc.Quality = 0;
     swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
     swapChainDesc.BufferCount = 2; // Use double-buffering to minimize latency.
-    swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All Windows Store apps must use this SwapEffect.
+    swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All UWP apps must use this SwapEffect.
     swapChainDesc.Flags = 0;
     swapChainDesc.Scaling = DXGI_SCALING_STRETCH;
 
@@ -151,9 +150,9 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Observação**   Se o adaptador DXGI der suporte a sobreposições, vá para a etapa seguinte. Se o dispositivo não ser suporte a sobreposições, a renderização com várias cadeias de troca não será eficiente. Em vez disso, renderize a interface do usuário em uma resolução reduzida na mesma cadeia de troca que o conteúdo do jogo em tempo real.
+    > **Observação**  se o adaptador DXGI dá suporte a sobreposições, continue para a próxima etapa. Se o dispositivo não ser suporte a sobreposições, a renderização com várias cadeias de troca não será eficiente. Em vez disso, renderize a interface do usuário em uma resolução reduzida na mesma cadeia de troca que o conteúdo do jogo em tempo real.
 
-     
+     
 
 2.  Crie uma cadeia de troca de primeiro plano com [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559). As seguintes opções devem ser definidas no [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528) fornecido ao parâmetro *pDesc*:
 
@@ -167,7 +166,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Observação**   Defina o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que a cadeia de troca for redimensionada.
+    > **Observação**  definir o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que esta for redimensionada.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -325,9 +324,9 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
     }
     ```
 
- 
+ 
 
- 
+ 
 
 
 
