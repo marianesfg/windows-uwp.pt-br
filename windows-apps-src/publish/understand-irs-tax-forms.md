@@ -3,19 +3,19 @@ author: jnHs
 Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
 title: Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 ms.author: wdg-dev-content
-ms.date: 03/08/2018
+ms.date: 10/25/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos, imposto, imposto de renda, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: ffefc1d645a79296989e95c2fa033b8848e91c3b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: e7f7560d2f069a36d0f6d5837c3282b84840d927
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5475465"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512526"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -31,7 +31,25 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 |1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Os formulários impressos serão protocolados até **15 de março**, e as cópias em .pdf serão disponibilizados no Centro de Desenvolvimento (**Painel > Configurações da conta > Perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
-> O endereço listado nos formulários fiscais da Receita Federal dos EUA vem do endereço de seu [Perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
+> O endereço que usamos nos formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
+
+Os formulários fiscais serão enviados a você do endereço a seguir:
+
+**Cidadãos dos EUA:**
+<table>
+<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 EUA</td></tr>
+<tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
+<table> 
+
+**Cidadãos fora dos EUA:**
+<table>
+<tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Corporation via Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade *</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Online Inc. via Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
+<tr><td colspan="3">* Cidadãos dos seguintes países lucro receita de publicidade serão pagos por meio do Microsoft Irlanda Operations Limited: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
+</table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos
 
@@ -42,23 +60,15 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
   </tr>
   <tr> 
      <td valign="top">Atingi a marca de <b>mais de 200 vendas de app</b> com um valor total de compra dessas vendas <b>superior a USD 20.000</b> no ano fiscal aplicável (<b>sem</b> contar vendas feitas no Brasil e na China por meio da Microsoft Store no Windows 10).</td>
-    <td valign="top"><b>1099-K</b>:<br>
-Declarante: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Importante:** O formulário 1099-K contém os valores de **compra brutos**, e não os pagamentos feitos a você.</td>
+    <td valign="top"><b>1099-K</b>:<br>Declarante: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: o formulário 1099-K contém valores de <b>compra bruta</b> , não os pagamentos feitos a você.</td>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>pelo menos US$ 10 em pagamentos</b> por (i) vendas de app feitas no Brasil e na China por meio da Microsoft Store no Windows 10 ou (ii) vendas no Minecraft Marketplace.<br>
 <br>
-**OU**<br>
+<b>OU</b><br>
 <br>
 Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Microsoft no ano fiscal aplicável (por exemplo, pagamentos de incentivos ou pagamentos de prêmio de um concurso ou promoção)</td>
-    <td valign="top"><b>1099-MISC</b> :<br>
-Pagador: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Importante:** Certas pessoas jurídicas não receberão formulários 1099-MISC, independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
+    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: determinadas entidades de negócios não receberá formulários 1099-MISC, independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
   </tr>
   <tr>
     <td valign="top">Nenhuma das opções acima.</td>
@@ -69,16 +79,12 @@ EIN: \*\*\*\*\*4442<br>
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
-     <th>Se eu for um desenvolvedor dos Estados Unidos que vende aplicativos pagos e... </th>
+     <th>Se eu for um desenvolvedor de Estados Unidos vender anúncios em aplicativos e... </th>
      <th> Devo receber este formulário</th>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>pelo menos US$ 600 em pagamentos</b> de anúncios em aplicativos no ano fiscal aplicável</td>
-    <td valign="top"><b>1099-MISC</b> :<br>
-Pagador: Microsoft Online Inc<br>
-EIN: \*\*\*\*\*0505<br>
-<br>
-**Importante:** Certas pessoas jurídicas não receberão formulários 1099-MISC, independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.  </td>
+    <td valign="top"><b>1099-MISC</b> :<br>Pagador: Microsoft Online Inc<br>EIN: * * * 0505<br><br><b>Importante</b>: determinadas entidades de negócios não receberá formulários 1099-MISC, independentemente dos valores de pagamento recebidos da Microsoft.  Consulte seu contador para obter mais informações.</td>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>menos de US$ 600 em pagamentos</b> de anúncios em aplicativos no ano fiscal aplicável</td>
@@ -102,11 +108,7 @@ EIN: \*\*\*\*\*0505<br>
     <td valign="top"><b>Por que o imposto foi retido em minhas pagamentos quando preenchi um formulário W8?</b></td>
     <td valign="top">Impostos serão retidos se:<br>
      1. Você não preencher a seção de tratados fiscais do W8 corretamente, ou<br>
-     2. Você residir em um país que não tenha um tratado fiscal com os Estados Unidos.
-
-     You can visit Dev Center at any time to submit an updated W8 form.<br>
-     <br>
-     **Note:** Not all income is subject to tax withholding.</td>
+     2. Você residir em um país que não tenha um tratado fiscal com os Estados Unidos.<br><br>Você pode visitar o Centro de desenvolvimento a qualquer momento para enviar um formulário W8 atualizado.<br><br><b>Observação</b>: nem todos os renda está sujeita à retenção de imposto.</td>
   </tr>
   <tr>
     <td valign="top"><b>Enviei um formulário W8 atualizado com informações de tratado válidas. A Microsoft pode me reembolsar o imposto que foi retido?</b></td>
