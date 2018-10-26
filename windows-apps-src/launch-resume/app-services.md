@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a2fd10df36954b611745135b77872fa3597ac55d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557234"
+ms.locfileid: "5597638"
 ---
 # <a name="use-app-services-and-extensions"></a>Usar serviços e extensões de app
 

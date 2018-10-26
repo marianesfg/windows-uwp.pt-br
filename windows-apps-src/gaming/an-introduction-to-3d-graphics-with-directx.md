@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543676"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5592822"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Elementos gráficos 3D básicos para jogos DirectX
 

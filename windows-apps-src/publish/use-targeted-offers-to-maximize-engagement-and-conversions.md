@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ofertas direcionadas, ofertas, notificações
 ms.localizationpriority: medium
 ms.openlocfilehash: a808f334692d7775a34bc760bcd799cb87d05b6e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561807"
+ms.locfileid: "5611410"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Usar ofertas direcionadas para maximizar o envolvimento e as conversões
 

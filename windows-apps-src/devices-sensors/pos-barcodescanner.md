@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 57d5c174b4519cb60b339a907fe41fb07af5f3ed
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564863"
+ms.locfileid: "5598835"
 ---
 # <a name="barcode-scanner"></a>Scanner de código de barras
 

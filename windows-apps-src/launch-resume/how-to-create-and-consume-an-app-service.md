@@ -8,16 +8,16 @@ ms.author: twhitney
 ms.date: 09/18/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e51bde685e15ab9e24921a495eec18a0df799455
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 1407187f9883f44bb9fdc56fd3ae80820b5920f8
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553341"
+ms.locfileid: "5597608"
 ---
 # <a name="create-and-consume-an-app-service"></a>Criar e consumir um serviço de app
 
-Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da Web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos podem usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.  Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos. 
+Os serviços de aplicativo são aplicativos UWP que fornecem serviços a outros aplicativos UWP. Eles são análogos aos serviços da Web em um dispositivo. Um serviço de aplicativo é executado como uma tarefa em segundo plano no aplicativo host e pode fornecer seu serviço a outros aplicativos. Por exemplo, um serviço de aplicativo pode fornecer um serviço de scanner de código de barras que outros aplicativos podem usar. Ou talvez um conjunto de aplicativos Enterprise tenha um serviço de verificação ortográfica que está disponível para os outros aplicativos no pacote.  Os serviços de aplicativo permitem que você crie serviços sem interface do usuário que os aplicativos podem chamar no mesmo dispositivo e, a partir do Windows 10, versão 1607, nos dispositivos remotos.
 
 A partir do Windows 10, versão 1607, você pode criar serviços de aplicativo que são executados no mesmo processo do aplicativo host. Este artigo se concentra na criação e no consumo de um serviço de aplicativo executado em um processo separado em segundo plano. Consulte [Converter um serviço de aplicativo para ser executado no mesmo processo de seu aplicativo host](convert-app-service-in-process.md) para obter mais detalhes sobre a execução de um serviço de aplicativo no mesmo processo do provedor.
 
@@ -238,6 +238,7 @@ Outra maneira de obter o nome da família de pacotes é implantar a solução (*
            if (status != AppServiceConnectionStatus.Success)
            {
                textBox.Text= "Failed to connect";
+               this.inventoryService = null;
                return;
            }
        }

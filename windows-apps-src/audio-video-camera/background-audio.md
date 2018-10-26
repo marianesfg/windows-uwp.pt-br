@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f2eb12092d27c0033563ebf8cebbe96f949eadf8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558026"
+ms.locfileid: "5618138"
 ---
 # <a name="play-media-in-the-background"></a>Reproduzir mídia em segundo plano
 Este artigo mostra como configurar seu aplicativo para que a mídia continue a ser reproduzida quando o aplicativo for movido do primeiro para o segundo plano. Isso significa que, mesmo depois que o usuário minimizar o aplicativo, retornar à tela inicial ou sair do aplicativo de alguma outra forma, o aplicativo poderá continuar a reproduzir o áudio. 

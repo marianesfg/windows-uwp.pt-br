@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 65afbaa4440a5bce43ca6d48126e6cc2b8316466
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561906"
+ms.locfileid: "5595408"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 

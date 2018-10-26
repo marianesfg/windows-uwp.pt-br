@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 35666f64c88ad56b8f5bd3052ebbee069ccaecfc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5552620"
+ms.locfileid: "5596904"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Habilitar ou desabilitar o decodificador de software que vem com o Windows
 No Windows 10, versão 1803, o decodificador de software está instalado e habilitado por padrão.  Você pode desabilitar o decodificador de software que vem com o Windows se não quiser usar o scanner de código de barras da câmera ou se tiver adquirido um decodificador de terceiros que funciona com as APIs Windows.Devices.PointOfService.BarcodeScanner APIs e não quiser usar os dois.

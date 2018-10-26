@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, serviços da loja, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ff70f38ff636b0b1d885981fb9e353ac9afe69c2
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569969"
+ms.locfileid: "5597006"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 

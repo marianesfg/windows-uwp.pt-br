@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b853a4ac5afa03759094327c2b80d266751b8ec
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5572395"
+ms.locfileid: "5611595"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novidades no Windows 10 para desenvolvedores, compilação 15063
 

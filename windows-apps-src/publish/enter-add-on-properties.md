@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f616e4da96c1a2c59822d1370b49016dbca1bb7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543161"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5617633"
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
 
