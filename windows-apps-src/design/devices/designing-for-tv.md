@@ -10,19 +10,17 @@ keywords: Xbox, TV, experiência de 3 metros, gamepad, controle remoto, interaç
 ms.author: elcowle
 ms.date: 12/5/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c9751ef316dbec7334fc12242d71dd58ae2cb262
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: Auto
+ms.openlocfilehash: 098bc97de27d58fdc1d582e0db264ef04f0d3e61
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700962"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572345"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
@@ -258,19 +256,19 @@ O trecho de código a seguir mostra como você pode substituir o comportamento d
 
 ```xml
 <StackPanel>
-    <Button x:Name="MyBtnLeft"
+    <Button x:Name="MyBtnLeft"
             Content="Search" />
-    <Button x:Name="MyBtnRight"
+    <Button x:Name="MyBtnRight"
             Content="Delete"/>
-    <Button x:Name="MyBtnTop"
+    <Button x:Name="MyBtnTop"
             Content="Update" />
-    <Button x:Name="MyBtnDown"
+    <Button x:Name="MyBtnDown"
             Content="Undo" />
-    <Button Content="Home"  
+    <Button Content="Home"  
             XYFocusLeft="{x:Bind MyBtnLeft}"
-            XYFocusRight="{x:Bind MyBtnRight}"
-            XYFocusDown="{x:Bind MyBtnDown}"
-            XYFocusUp="{x:Bind MyBtnTop}" />
+            XYFocusRight="{x:Bind MyBtnRight}"
+            XYFocusDown="{x:Bind MyBtnDown}"
+            XYFocusUp="{x:Bind MyBtnTop}" />
 </StackPanel>
 ```
 
@@ -279,8 +277,8 @@ Neste caso, quando o foco estiver no botão `Home` e o usuário navegar para a e
 Para impedir que o foco se mova de um controle em uma determinada direção, use a propriedade `XYFocus*` para apontá-lo para o mesmo controle:
 
 ```xml
-<Button Name="HomeButton"  
-        Content="Home"  
+<Button Name="HomeButton"  
+        Content="Home"  
         XYFocusLeft ="{x:Bind HomeButton}" />
 ```
 
@@ -324,7 +322,7 @@ E se você colocar o elemento `CommandBar` *acima* da lista/grade? Embora o usu�
 
 Embora você não possa empilhar itens de uma `CommandBar`verticalmente, colocá-los contra a direção de rolagem (por exemplo, para a esquerda ou direita de uma lista de rolagem vertical, ou para cima ou para baixo de uma lista de rolagem horizontal) é outra opção que você poderá considerar se ela funcionar bem no layout de sua interface do usuário.
 
-Se o seu aplicativo tiver uma `CommandBar` cujos itens precisam ser prontamente acessados pelos usuários, considere colocar esses itens dentro de uma propriedade [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) e remova-os da `CommandBar`. `ContextFlyout` é uma propriedade de [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx) e é o [menu de contexto](../controls-and-patterns/dialogs.md) associado a esse elemento. No computador, quando você clica em um elemento com `ContextFlyout`, esse menu de contexto é aberto. No Xbox One, isso acontecerá quando você pressionar o botão **Menu** enquanto o foco estiver em um elemento.
+Se o seu aplicativo tiver uma `CommandBar` cujos itens precisam ser prontamente acessados pelos usuários, considere colocar esses itens dentro de uma propriedade [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) e remova-os da `CommandBar`. `ContextFlyout` é uma propriedade de [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx) e é o [menu de contexto](../controls-and-patterns/dialogs-and-flyouts/index.md) associado a esse elemento. No computador, quando você clica em um elemento com `ContextFlyout`, esse menu de contexto é aberto. No Xbox One, isso acontecerá quando você pressionar o botão **Menu** enquanto o foco estiver em um elemento.
 
 ### <a name="ui-layout-challenges"></a>Desafios de layout de interface do usuário
 

@@ -9,15 +9,13 @@ keywords: caneta, mouse, touchpad, toque, ponteiro, entrada, interação do usu�
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: ba685f30eb0cf94314996587073a82440cf6c951
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895135"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572605"
 ---
 # <a name="handle-pointer-input"></a>Manusear entrada do ponteiro
 
@@ -37,7 +35,7 @@ A maioria das experiências de interação normalmente envolve a identificação
 
 > [!NOTE]
 > As informações específicas do dispositivo também são promovida dos dados brutos de HID, caso o aplicativo as exija.
- 
+ 
 
 Cada ponto de entrada (ou contato) na pilha de entrada é representado por um objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) exposto por meio do parâmetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) nos vários manipuladores de eventos de ponteiro. No caso de entrada com várias canetas ou de multi-touch, cada contato é tratado como um ponteiro de entrada único.
 
@@ -50,7 +48,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 
 > [!NOTE]
 > Restrinja a entrada de ponteiro a um elemento específico da interface do usuário chamando [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) nesse elemento dentro de um manipulador de eventos de ponteiro. Quando um ponteiro é capturado por um elemento, somente esse objeto recebe os eventos de entrada do ponteiro, mesmo quando o ponteiro é movido para fora da área delimitadora do objeto. O [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (botão do mouse pressionado, toque ou caneta em contato) deve ser true para que **CapturePointer** seja bem-sucedido.
- 
+ 
 
 <table>
 <colgroup>
@@ -79,10 +77,10 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Ocorre quando outro elemento da interface do usuário captura o ponteiro, o ponteiro é liberado ou outro ponteiro é capturado programaticamente.</p>
 <div class="alert">
-<strong>Observação</strong>  Não há evento de captura do ponteiro correspondente.
+<strong>Observação</strong>não há nenhum evento de captura do ponteiro correspondente.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -127,7 +125,7 @@ Os aplicativos UWP podem escutar os seguintes eventos de ponteiro:
 <p>A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, de rolagem ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [PointerMoved](https://msdn.microsoft.com/library/windows/apps/br208970).</p></td>
 </tr>
 </tbody>
-</table> 
+</table> 
 
 ## <a name="pointer-event-example"></a>Exemplo de evento de ponteiro
 
@@ -247,8 +245,7 @@ Em seguida, usamos comentários da interface do usuário para demonstrar manipul
 -   Esse manipulador gerencia o evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Adicionamos o evento ao log de eventos, o ponteiro ao dicionário de ponteiros ativos e exibimos os detalhes do ponteiro.
 
     > [!NOTE]
-    > Os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
-         
+    > Os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) e [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) nem sempre ocorrem em pares. O aplicativo deve escutar e manipular qualquer evento que possa concluir um ponteiro para baixo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) e [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).      
 
 ```csharp
 /// <summary>
@@ -330,7 +327,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Esse manipulador gerencia o evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970). Adicionamos o evento ao log de eventos e atualizamos os detalhes do ponteiro.
 
     > [!Important]
-    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). O evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Devido a essa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).     
+    > A entrada do mouse é associada a um único ponteiro atribuído quando detectada pela primeira vez. Se o usuário clicar em um botão do mouse (esquerdo, roda ou direito), será criada uma associação secundária entre o ponteiro e esse botão por meio do evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). O evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) é disparado somente quando esse mesmo botão do mouse é liberado (nenhum outro botão pode ser associado ao ponteiro até que o evento seja concluído). Devido a essa associação exclusiva, outros cliques em botões do mouse são roteados por meio do evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).     
 
 ```csharp
 /// <summary>
@@ -536,7 +533,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   Esse manipulador gerencia o evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Adicionamos o evento ao log de eventos, removemos o ponteiro da matriz de ponteiros e atualizamos os detalhes do ponteiro.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
+    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) pode ocorrer no lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). A captura do ponteiro pode ser perdida por vários motivos, incluindo interação do usuário, captura programática de outro ponteiro, chamando [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
 
 ```csharp
 /// <summary>

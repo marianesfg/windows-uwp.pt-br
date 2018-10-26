@@ -6,16 +6,14 @@ title: Itens de mídia, playlists e faixas
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 241f3f62f8bf8965f7bc718c2dfe0c7e76866c51
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: Auto
+ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832467"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572525"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Itens de mídia, playlists e faixas
 
@@ -196,7 +194,7 @@ Este exemplo adiciona uma faixa de texto personalizada especificando **TimedMeta
 
 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite criar uma playlist de itens de mídia, que são representados por objetos **MediaPlaybackItem**.
 
-**Observação**  Itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizadas usando-se a reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
+**Observação**itens em uma [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) são renderizados por meio de reprodução sem intervalos. O sistema usará metadados fornecidos em arquivos MP3 ou AAC codificados para determinar o atraso ou a compensação de preenchimento necessária à reprodução sem intervalos. Se os arquivos MP3 ou AAC codificados não fornecerem esses metadados, o sistema determinará o atraso ou o preenchimento heuristicamente. Para os formatos sem perdas, como PCM, FLAC ou ALAC, o sistema não executa nenhuma ação porque esses codificadores não apresentam atraso ou preenchimento.
 
 Para começar, declare uma variável para armazenar seu **MediaPlaybackList**.
 

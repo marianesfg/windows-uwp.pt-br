@@ -9,15 +9,13 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 471f222bb22293ccb3b66f5387d43b74fc53b910
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7e042a9bbedee3ded0601eda06da8e349c4b788c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653865"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572665"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
 
@@ -60,9 +58,9 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
 
-**Observação**  É necessário reinicializar depois da instalação de um novo pacote de idiomas. Uma exceção com o código de erro SPERR\_NOT\_FOUND (0x8004503a) será acionada se o idioma especificado não tiver suporte ou sua instalação não tiver sido concluída.
+**Observação**é necessário reinicializar depois que um novo pacote de idiomas é instalado. Uma exceção com o código de erro SPERR\_NOT\_FOUND (0x8004503a) será acionada se o idioma especificado não tiver suporte ou sua instalação não tiver sido concluída.
 
- 
+ 
 
 Determine os idiomas com suporte em um dispositivo verificando uma das duas propriedades estáticas da classe [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226):
 
@@ -105,9 +103,9 @@ Uma gramática SRGS é um formato XML de padrão aberto representado pela classe
 **Exemplos**
 
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

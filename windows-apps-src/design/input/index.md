@@ -9,16 +9,14 @@ template: detail.hbs
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 1699efed48c4b62a4c7d145bb2f0903cddd5897e
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: a69ebdb983fe8c023f2940a38ea6152d569f987c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "1896916"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572355"
 ---
 # <a name="input-and-interactions"></a>Entrada e interações
 
@@ -88,7 +86,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                         <p style="display: block;"><a  href="/windows/uwp/design/input/identify-input-devices">Identificar dispositivos de entrada</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/handle-pointer-input">Ponteiro</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/pen-and-stylus-interactions">Caneta e Windows Ink</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">Toque</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">Touch</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/mouse-interactions">Mouse</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/keyboard-interactions">Teclado</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/gamepad-and-remote-interactions">Gamepad e controle remoto</a></p>

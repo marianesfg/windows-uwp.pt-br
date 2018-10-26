@@ -6,19 +6,18 @@ ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, várias amostras, direct3d
-ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199366"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572142"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Multisampling nos apps UWP (Plataforma Universal do Windows)
 
 
-\[ Atualizado para apps UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Saiba como utilizar o multisampling em aplicativos da Plataforma Universal do Windows (UWP) desenvolvidos com Direct3D. O multisampling, também conhecido como suavização de múltipla amostra, é uma técnica de elementos gráficos usada para reduzir a aparição de bordas suavizadas. Essa técnica desenha mais pixels do que o que realmente existe no destino de renderização e, depois, faz uma média dos valores para manter a aparência de uma borda "parcial" em determinados pixels. Para uma descrição detalhada sobre como o multisampling funciona no Direct3D, consulte [Regras de rasterização para suavização de várias amostras](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
@@ -33,7 +32,7 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
 
 1.  Chame [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para descobrir quais formatos DXGI podem ser usados com o multisampling. Forneça os formatos de destino de renderização que seu jogo pode usar. O destino de renderização e o destino de resolução devem usar o mesmo formato. Portanto, verifique [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) e **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Nível de recurso 9:  ** Apesar dos dispositivos de nível de recurso 9 [garantirem suporte a formatos de destino de renderização multisample](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), o suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
+    **Nível de recurso 9:** Embora o nível de recurso 9 dispositivos [garantir suporte para formatos de destino de renderização com várias amostras](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), suporte não é garantido para destinos de resolução multisample. Sendo assim, essa verificação é necessária antes de tentar usar a técnica de várias amostras descrita neste tópico.
 
     O código a seguir verifica o suporte a multisampling para todos os valores de DXGI\_FORMAT:
 
@@ -85,9 +84,9 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     }
     ```
 
-    > **Observação**   Use [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) se você precisar verificar o suporte a multisample para buffers de recursos com alocação dinâmica.
+    > **Observação**  de uso [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) em vez disso, se você precisar verificar o suporte de várias amostras para lado a lado buffers de recursos.
 
-     
+     
 
 3.  Crie um buffer e renderize a visualização do destino com a contagem de amostras desejada. Use o mesmo DXGI\_FORMAT, largura e altura com a cadeia de troca, mas especifique uma contagem de amostra maior que 1 e use uma dimensão de textura de várias amostras (**D3D11\_RTV\_DIMENSION\_TEXTURE2DMS**, por exemplo). Se necessário, você pode recriar a cadeia de troca com novas configurações que sejam ideais para o multisampling.
 
@@ -206,9 +205,9 @@ Os níveis de recursos do Direct3D garantem o suporte a funcionalidades específ
     hr = m_swapChain->Present(1, 0);
     ```
 
- 
+ 
 
- 
+ 
 
 
 

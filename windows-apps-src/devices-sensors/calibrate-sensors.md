@@ -6,16 +6,14 @@ description: Sensores em um dispositivo baseado no magnetômetro (bússola, incl
 ms.author: jken
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c02a6ec88bcce2e81637184270b5910af15430de
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 5cd4e1b6d807437adbdd7428ae35d26915c48713
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700542"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572275"
 ---
 # <a name="calibrate-sensors"></a>Calibrar sensores
 
