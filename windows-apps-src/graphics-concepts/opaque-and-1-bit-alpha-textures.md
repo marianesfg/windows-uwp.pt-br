@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b882c70701d2ea2f8abef14a7d3319616696ea4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 672d7b2ddc913ea3a966fbd0a095367521a27d7c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044725"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550188"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas opacas e Alfa de 1 bit
 
@@ -70,7 +68,7 @@ Este é o layout de memória para o bloco de 8 bytes (64 bits):
 | 2            | Palavra de bitmap\_0 |
 | 3            | Palavra de bitmap\_1 |
 
- 
+ 
 
 Cor\_0 e Cor\_1, as cores nos dois extremos, estão dispostas da seguinte maneira:
 
@@ -80,7 +78,7 @@ Cor\_0 e Cor\_1, as cores nos dois extremos, estão dispostas da seguinte maneir
 | 10:5        | Componente de cor verde |
 | 15:11       | Componente de cor vermelha   |
 
- 
+ 
 
 \*bit menos importante
 
@@ -97,7 +95,7 @@ Palavra de bitmap\_0 disposto da seguinte forma:
 | 13:12         | Texel\[1\]\[2\] |
 | 15:14 (MSB\*) | Texel\[1\]\[3\] |
 
- 
+ 
 
 \*bit mais importante (MSB)
 
@@ -114,7 +112,7 @@ Palavra de bitmap\_1 disposto da seguinte forma:
 | 13:12       | Texel\[3\]\[2\] |
 | 15:14 (MSB) | Texel\[3\]\[3\] |
 
- 
+ 
 
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Exemplo de codificação de cor opaca
 
@@ -134,9 +132,9 @@ Em seguida, o bitmap se parece com o diagrama a seguir.
 
 Isso é semelhante à seguinte série ilustrada de cores.
 
-**Observação** Em uma imagem, o pixel (0,0) é exibido na parte superior esquerda.
+**Observação**  em uma imagem, o pixel (0,0) é exibido na parte superior esquerda.
 
- 
+ 
 
 ![ilustração de um gradiente codificado opaco](images/redsquares.png)
 
@@ -169,9 +167,9 @@ Em seguida, o bitmap se parece com o diagrama a seguir.
 
 [Recursos de textura compactada](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

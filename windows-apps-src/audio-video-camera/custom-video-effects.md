@@ -8,17 +8,15 @@ title: Efeitos de vídeo personalizados
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 08d861355a235c9217f51ce6f925224a27a562ef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544752"
 ---
 # <a name="custom-video-effects"></a>Efeitos de vídeo personalizados
 
@@ -99,7 +97,7 @@ O sistema verifica a propriedade [**SupportedEncodingProperties**](https://msdn.
 > [!NOTE] 
 > Se você retornar uma lista vazia de objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) de **SupportedEncodingProperties**, o sistema usará o padrão de codificação ARGB32.
 
- 
+ 
 
 ### <a name="supportedmemorytypes-property"></a>Propriedade SupportedMemoryTypes
 
@@ -111,7 +109,7 @@ O sistema verifica a propriedade [**SupportedMemoryTypes**](https://msdn.microso
 > [!NOTE]
 > Se você especificar [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), o sistema usará a memória do sistema ou a GPU, o que for mais eficiente para o pipeline. Ao usar esse valor, você precisa verificar o método [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) para ver se [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) ou [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) passado para o método contém dados e processar o quadro de acordo.
 
- 
+ 
 
 ### <a name="timeindependent-property"></a>Propriedade TimeIndependent
 
@@ -154,7 +152,7 @@ Adicione o código a seguir ao namespace para que o efeito importe a interface p
 > 2.  Selecione a guia **Compilar**.
 > 3.  Marque a caixa de seleção **Permitir código não seguro**.
 
- 
+ 
 
 Agora você pode adicionar a implementação do método **ProcessFrame**. Primeiro, esse método obtém um objeto [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) a partir dos bitmaps de software de entrada e de saída. Observe que o quadro de saída é aberto para gravação e o de entrada para leitura. Em seguida, um [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) é obtido para cada buffer, chamando-se [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). Em seguida, o buffer de dados real é obtido, transmitindo os objetos **IMemoryBufferReference** como a interface de interoperabilidade COM definida acima, **IMemoryByteAccess**, e chamando **GetBuffer**.
 

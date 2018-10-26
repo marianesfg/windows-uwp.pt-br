@@ -6,21 +6,19 @@ description: Melhore o desempenho e o tempo de inicialização de ListView e Gri
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: eab90ebf2bcb1912292af6503f833e3bfa334d8b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547288"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualização de dados de ListView e GridView
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Observação**  Para obter mais detalhes, consulte a sessão //build/ sobre como [aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Observação**para obter mais detalhes, consulte a sessão //build/ [Aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Melhore o desempenho e o tempo de inicialização de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) por meio da virtualização de dados. Para a virtualização da interface do usuário, redução de elementos e atualização progressiva de itens, consulte [Otimização das interfaces do usuário ListView e GridView](optimize-gridview-and-listview.md).
 
@@ -31,7 +29,7 @@ Um método de virtualização de dados é necessário para um conjunto de dados 
 -   A fonte do conjunto de dados (disco local, rede ou nuvem)
 -   O consumo de memória geral do seu aplicativo
 
-**Observação**  Lembre-se de que um recurso é habilitado por padrão para ListView e GridView que exibe os elementos visuais de espaço reservado temporário enquanto o usuário está aplicando panorâmica/rolando rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
+**Observação**Lembre-se de que um recurso é habilitado por padrão para ListView e GridView que exibe elementos visuais de espaço reservado temporário enquanto o usuário está movimento panorâmico/rolagem rapidamente. Conforme os dados são carregados, esses elementos visuais de espaço reservado são substituídos por seu modelo de item. Você pode desativar o recurso definindo [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) como false. No entanto, se fizer isso, recomendamos que use o atributo x:Phase para renderizar progressivamente os elementos no seu modelo de item. Consulte [Atualizar os itens ListView e GridView progressivamente](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aqui estão mais detalhes sobre as técnicas de virtualização de dados incremental e de acesso aleatório.
 
@@ -45,7 +43,7 @@ A virtualização de dados incremental carrega dados sequencialmente. Um [**List
 
 Uma fonte de dados como essa é uma lista carregada na memória que pode ser estendida continuamente. O controle de itens solicitará itens usando o indexador [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) padrão e as propriedades de contagem. A contagem deve representar o número de itens localmente, não o tamanho real do conjunto de dados.
 
-Quando o controle de itens se aproximar do fim dos dados existentes, ele chamará [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Se você retornar **true**, ele chamará [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passando um número aconselhado de itens para carregar. Dependendo de onde você estiver carregando dados (disco local, rede ou nuvem), você pode optar por carregar um número diferente de itens do que o aconselhado. Por exemplo, se seu serviço aceitar lotes de 50 itens, mas o controle de itens apenas solicitar 10, você poderá carregar 50. Carregue os dados do back-end, adicione-os à sua lista e gere uma notificação de alteração via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) para que o controle de itens saiba sobre os novos itens. Retorne também uma contagem dos itens que você realmente carregou. Se você carregar menos itens do que o aconselhado, ou o controle de itens foi panoramizado/rolado ainda mais nesse ínterim, sua fonte de dados será chamada novamente para mais itens e o ciclo continuará. Você pode saber mais baixando ao [exemplo de associação de dados XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
+Quando o controle de itens se aproximar do fim dos dados existentes, ele chamará [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Se você retornar **true**, ele chamará [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passando um número aconselhado de itens para carregar. Dependendo de onde você estiver carregando dados (disco local, rede ou nuvem), você pode optar por carregar um número diferente de itens do que o aconselhado. Por exemplo, se seu serviço aceitar lotes de 50 itens, mas o controle de itens apenas solicitar 10, você poderá carregar 50. Carregue os dados do back-end, adicione-os à sua lista e gere uma notificação de alteração via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) ou [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) para que o controle de itens saiba sobre os novos itens. Retorne também uma contagem dos itens que você realmente carregou. Se você carregar menos itens do que o aconselhado, ou o controle de itens foi panoramizado/rolado ainda mais nesse ínterim, sua fonte de dados será chamada novamente para mais itens e o ciclo continuará. Você pode saber mais baixando a [amostra de vinculação de dados XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
 ## <a name="random-access-data-virtualization"></a>Virtualização de dados de acesso aleatório
 

@@ -5,17 +5,15 @@ title: Obter as informações de distribuição de pacote para um envio de vers�
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio de versão de pré-lançamento
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dd9a318ffd80d32f6370709c4ca3463ae6d8cc7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 6bba9988f52ee6de4ed8ad8765565faea30b4c82
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512412"
+ms.locfileid: "5545203"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a>Obter as informações de distribuição de pacote para um envio de versão de pré-lançamento
 

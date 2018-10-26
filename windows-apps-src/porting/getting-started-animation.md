@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: Introdução a animações
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: Neste projeto, vamos mover um retângulo, aplicar um efeito de esmaecimento e trazê-lo de volta à visualização.
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200077"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550874"
 ---
 # <a name="getting-started-animation"></a>Introdução: animação
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-animations"></a>Adicionando animações
 
@@ -129,7 +128,7 @@ Se você abrir o arquivo MainPage.xaml, no modo de exibição **XAML**, verá qu
 
 Você pode editar esse XAML manualmente ou retornar ao Blend para continuar a trabalhar com ele lá. O Blend torna divertida a criação de interfaces do usuário interessantes e permite animá-las usando uma ferramenta gráfica pode acelerar drasticamente o tempo de desenvolvimento. Para obter mais informações sobre animações, consulte [Visão geral de animações](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Observação**  Para obter informações sobre animações para aplicativos da Windows Store que usam JavaScript e HTML, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Observação**para obter informações sobre animações para <span class="legacy-term">aplicativos UWP usando JavaScript e HTML</span>, consulte [Animating your UI (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### <a name="next-step"></a>Próxima etapa
 

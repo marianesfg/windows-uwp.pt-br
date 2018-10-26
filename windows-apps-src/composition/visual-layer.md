@@ -6,19 +6,18 @@ description: A API Windows.UI.Composition concede acesso a uma camada de composi
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b292be46ccddd4355f3bef13e37da6b6cec452fa
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2017
-ms.locfileid: "839480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545740"
 ---
 # <a name="visual-layer"></a>Camada Visual
 
-A camada Visual fornece uma API de modo retido para elementos gráficos, efeitos e animações de alto desempenho e é a base para todas as interfaces do usuário em dispositivos Windows. Você define sua interface do usuário de maneira declarativa e a camada Visual depende da aceleração de hardware de elementos gráficos para garantir que seu conteúdo, efeitos e animações sejam renderizados de forma suave e sem falhas, de forma independente do thread de interface do usuário do aplicativo.
+A camada Visual fornece uma API de modo retido para elementos gráficos, efeitos e animações de alto desempenho e é a base para todas as interfaces do usuário em dispositivos Windows.Você define sua interface do usuário de maneira declarativa e a camada Visual depende da aceleração de hardware de elementos gráficos para garantir que seu conteúdo, efeitos e animações sejam renderizados de forma suave e sem falhas, de forma independente do thread de interface do usuário do aplicativo.
 
 Destaques notáveis:
 
@@ -41,7 +40,7 @@ As funções principais de camada Visual são:
 
 ### <a name="content"></a>Conteúdo
 
-O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. As subclasses de Visual incluem [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810), para permitir que os filhos criem árvores de elementos visuais e [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433), que mantém o conteúdo e pode ser pintado com qualquer uma das cores sólidas, efeitos visuais ou conteúdos desenhado personalizado. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
+O conteúdo é hospedado, transformado e disponibilizado para uso pelo sistema de animação e de efeitos usando elementos visuais. Na base da hierarquia de classe, há a classe [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), um proxy de threads leve e ágil no processo do app para o estado visual no compositor. Subclasses de Visual incluem [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir que os filhos criem árvores de elementos visuais e [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contém conteúdo e podem ser pintados com qualquer uma das cores sólidas, efeitos visuais ou conteúdos desenhado personalizado. Juntos, esses tipos de Visual compõem a estrutura de árvore visual para a interface do usuário 2D e contêm os FrameworkElements XAML mais visíveis.
 
 Para saber mais, veja a visão geral de [Composição de Visual](composition-visual-tree.md).
 
@@ -55,7 +54,7 @@ Para obter mais informações, consulte a visão geral de [Efeitos de composiç�
 
 ### <a name="animations"></a>Animações
 
-O sistema de animação na camada Visual permite que você mova elementos visuais, anime efeitos e promova transformações, clipes e outras propriedades.  Ele é um sistema independente de estrutura projetado desde o início com o desempenho em mente.  Ele é executado independentemente do thread da interface do usuário para garantir suavidade e escalabilidade.  Enquanto permite que você use animações de KeyFrame para promover alterações de propriedade ao longo do tempo, ele também permite que você configure relacionamentos matemáticos entre as propriedades diferentes, incluindo entrada do usuário, permitindo que você crie experiências coreografadas contínuas de forma direta.
+O sistema de animação na camada Visual permite que você mova elementos visuais, anime efeitos e promova transformações, clipes e outras propriedades.Ele é um sistema independente de estrutura projetado desde o início com o desempenho em mente.Ele é executado independentemente do thread da interface do usuário para garantir suavidade e escalabilidade.Enquanto permite que você use animações de KeyFrame para promover alterações de propriedade ao longo do tempo, ele também permite que você configure relacionamentos matemáticos entre as propriedades diferentes, incluindo entrada do usuário, permitindo que você crie experiências coreografadas contínuas de forma direta.
 
 Para obter mais informações, consulte a visão geral de [Animações de composição](composition-animation.md).
 

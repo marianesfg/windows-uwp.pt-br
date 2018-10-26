@@ -6,23 +6,22 @@ ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, elementos gráficos, diagnóstico, ferramentas e directx
-ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545223"
 ---
 # <a name="graphics-diagnostics-tools"></a>Ferramentas de diagnóstico de gráficos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis dentro do Windows como recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
+Com o Windows 10, as ferramentas de diagnóstico de gráficos agora estão disponíveis no Windows como um recurso opcional. Para usar os recursos de diagnóstico de gráficos fornecidos em tempo de execução e no Visual Studio para desenvolver jogos ou aplicativos DirectX, instale o recurso opcional Ferramentas Gráficas:
 
-1.  Vá para **Configurações**, selecione **Sistema**, selecione **Aplicativos e Recursos** e clique em **Gerenciar recursos opcionais**.
+1.  Vá para **configurações**, selecionar **aplicativos**e, em seguida, clique em **Gerenciar funcionalidades opcionais**.
 2.  Clique em **Adicionar um recurso**.   
 3.  Na lista **Recursos opcionais**, selecione **Ferramentas de Gráficos** e clique em **Instalar**.
 
@@ -37,9 +36,9 @@ Recursos de diagnóstico de elementos gráficos incluem a capacidade de criar di
 
 [Visão geral do diagnóstico de gráficos no Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
 
- 
+ 
 
- 
+ 
 
 
 

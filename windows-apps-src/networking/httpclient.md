@@ -6,16 +6,14 @@ ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f6b56d9ac156dabc17be3245a77cb6c126317aa9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975758"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551029"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -62,7 +60,7 @@ O namespace [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/wi
 
 ## <a name="send-a-simple-get-request-over-http"></a>Enviar uma solicitação GET simples por HTTP
 
-Conforme mencionado anteriormente neste artigo, o namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que os aplicativos UWP enviem solicitações GET. O trecho de código a seguir demonstra como enviar uma solicitação GET para http://www.contoso.com usando a classe [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e a classe [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para ler a resposta da solicitação GET.
+Conforme mencionado anteriormente neste artigo, o namespace [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que os aplicativos UWP enviem solicitações GET. O trecho de código a seguir demonstra como enviar uma solicitação GET para http://www.contoso.com usando a classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e a classe [**httpresponsemessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para ler a resposta da solicitação GET.
 
 ```csharp
 //Create an HTTP client object
@@ -108,7 +106,7 @@ catch (Exception ex)
 
 Uma exceção é gerada quando uma cadeia de caracteres inválida do URI (Uniform Resource Identifier) é passada para o construtor do objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**.NET:**  O tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) é exibido como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) em C# e VB.
+**.NET:** o tipo de [**Windows. Foundation**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System. URI**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) em c# e VB.
 
 No C# e no Visual Basic, esse erro pode ser evitado usando a classe [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) no .NET 4.5 e um dos métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para testar a cadeia de caracteres recebida de um usuário antes de o URI ser construído.
 
@@ -116,7 +114,7 @@ No C++, não há nenhum método para tentar analisar uma cadeia de caracteres pa
 
 O [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) não tem uma função de praticidade. Portanto, o aplicativo que usa [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) e outras classes nesse namespace precisa usar o valor **HRESULT**.
 
-Nos aplicativos que usam o .NET Framework 4.5 no C#, VB.NET, o [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) retorna a mensagem que descreve a exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
+Em aplicativos usar o Framework4.5 .NET em c#, VB.NET, o [System. Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) retorna a mensagem que descreve a exceção. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 
 Nos aplicativos que usam C++ gerenciado, o [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa um erro durante a execução do aplicativo quando ocorre uma exceção. A propriedade [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) retorna o **HRESULT** atribuído à exceção específica. A propriedade [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) retorna a cadeia de caracteres fornecida pelo sistema que está associada ao valor de **HRESULT**. Os valores possíveis de **HRESULT** estão listados no arquivo de cabeçalho *Winerror.h*. Um aplicativo pode filtrar por valores específicos de **HRESULT** para modificar o comportamento do aplicativo, dependendo da causa da exceção.
 

@@ -6,20 +6,18 @@ ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 83551438a629e39407c24cfd98d4a761ba3c039b
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 80242b95e64f0d642df0284c94455d60825f6daf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "693224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549286"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Exibir uma tela inicial por mais tempo
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -30,13 +28,13 @@ ms.locfileid: "693224"
 
 Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o seu aplicativo. Essa tela estendida imita a tela inicial exibida quando o aplicativo é iniciado, mas pode ser personalizada. Seja para mostrar informações de carregamento em tempo real ou para simplesmente proporcionar ao aplicativo mais tempo para preparar a interface do usuário inicial, uma tela inicial estendida permite definir a experiência de inicialização.
 
-> **Observação**  A expressão "tela inicial estendida" neste tópico refere-se a uma tela inicial que permanece na tela por um período de tempo estendido. Ela não quer dizer uma subclasse que deriva da classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
+> **Observação**a frase "tela inicial estendida" neste tópico refere-se a uma tela inicial que permanece na tela por um período de tempo prolongado. Ela não quer dizer uma subclasse que deriva da classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
 
- 
+ 
 
 Verifique se sua tela inicial estendida imita com precisão a tela inicial padrão seguindo estas recomendações:
 
--   Sua página de tela inicial estendida deve usar uma imagem de 620 x 300 pixels consistente com a imagem especificada para a sua tela inicial no manifesto do aplicativo (imagem da tela inicial do aplicativo). No Microsoft Visual Studio 2015, as configurações de tela inicial são armazenadas na seção **Tela Inicial** da guia **Ativos Visuais** do manifesto do aplicativo (arquivo Package.appxmanifest).
+-   Sua página de tela inicial estendida deve usar uma imagem de 620 x 300 pixels consistente com a imagem especificada para a sua tela inicial no manifesto do aplicativo (imagem da tela inicial do aplicativo). No Microsoft Visual Studio2015, as configurações de tela inicial são armazenadas na seção de **Tela inicial** da guia **Ativos visuais** no manifesto do aplicativo (arquivo Package. appxmanifest).
 -   Sua tela inicial estendida deve usar uma cor de tela de fundo consistente com a cor de tela de fundo especificada para a sua tela inicial no manifesto do aplicativo (tela de fundo da tela inicial do seu aplicativo).
 -   Seu código deve usar a classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para posicionar a imagem da tela inicial do aplicativo nas mesmas coordenadas de tela que a tela inicial padrão.
 -   O código deve responder a eventos de redimensionamento de janelas (por exemplo, quando a tela é girada ou o aplicativo é movido ao lado de outro aplicativo na tela) usando a classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para reposicionar itens em sua tela inicial estendida.
@@ -48,7 +46,7 @@ Use as etapas a seguir para criar uma tela inicial estendida que imita efetivame
 
 Este tópico pressupõe que você deseja adicionar uma tela inicial estendida a um projeto de aplicativo existente da Plataforma Universal do Windows (UWP) em C#, Visual Basic ou C++.
 
--   Abra o aplicativo no Visual Studio 2015.
+-   Abra o aplicativo no Visual Studio2015.
 -   Pressione ou abra **Projeto** na barra de menus e clique em **Adicionar Novo Item**. Uma caixa de diálogo **Adicionar Novo Item** será aberta.
 -   Nessa caixa de diálogo, adicione uma nova **Página em Branco** ao aplicativo. Esse tópico nomeia a página de tela inicial estendida como "ExtendedSplash".
 
@@ -77,9 +75,9 @@ Adicione o seguinte código para definir elementos [**Canvas**](https://msdn.mic
     </Grid>
 ```
 
-**Observação**  Esse código define a largura de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) como 20 pixels. Você pode definir manualmente a largura com um valor que funciona para o seu aplicativo, porém o controle não renderizará em larguras de menos de 20 pixels.
+**Observação**esse código define a largura do [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) a 20 pixels. Você pode definir manualmente a largura com um valor que funciona para o seu aplicativo, porém o controle não renderizará em larguras de menos de 20 pixels.
 
- 
+ 
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>Código essencial para uma classe de tela inicial estendida
 
@@ -221,9 +219,9 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     }
     ```
 
-    **Observação**  Antes de tentar obter a localização da imagem, verifique se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como mostra o exemplo.
+    **Observação**antes de tentar obter a localização da imagem Verifique se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, conforme mostrado no exemplo.
 
-     
+     
 
 8.  **(Opcional) Adicionar um método de classe para restaurar um estado de sessão salvo**
 
@@ -267,7 +265,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ## <a name="complete-code"></a>Código completo
 
 
-> **Observação**  O código a seguir é um pouco diferente dos trechos de código mostrados nas etapas anteriores.
+> **Observação**o código a seguir é um pouco diferente dos trechos de código mostrados nas etapas anteriores.
 -   ExtendedSplash.xaml inclui um botão `DismissSplash`. Quando esse botão é clicado, um manipulador de eventos, `DismissSplashButton_Click`, chama o método `DismissExtendedSplash`. No seu aplicativo, chame `DismissExtendedSplash` quando o aplicativo concluir o carregamento de recursos ou a inicialização da interface do usuário.
 -   Esse aplicativo também usa um modelo de projeto de aplicativo UWP, que usa a navegação [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). Consequentemente, em App.xaml.cs, o manipulador de ativação de inicialização ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) define `rootFrame` e usa-o para definir o conteúdo da janela do aplicativo.
 
@@ -421,7 +419,7 @@ namespace SplashScreenExample
 }
 ```
 
-App.xaml.cs: esse projeto foi criado usando o modelo de projeto **Aplicativo em Branco (XAML)** do aplicativo UWP no Visual Studio 2015. Os manipuladores de eventos `OnNavigationFailed` e `OnSuspending` são gerados automaticamente e não precisam ser modificados para implementar uma tela inicial estendida. Esse tópico só modifica `OnLaunched`.
+App.XAML.cs: Esse projeto foi criado usando o modelo de projeto de **Aplicativo em branco (XAML)** de aplicativo UWP no Visual Studio2015. Os manipuladores de eventos `OnNavigationFailed` e `OnSuspending` são gerados automaticamente e não precisam ser modificados para implementar uma tela inicial estendida. Esse tópico só modifica `OnLaunched`.
 
 Se você não usou um modelo de projeto para o aplicativo, consulte a Etapa 4: [Modificar o manipulador de ativação de inicialização](#modify-the-launch-activation-handler) para obter um exemplo de manipulador `OnLaunched` modificado que não use navegação [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682).
 
@@ -552,6 +550,6 @@ namespace SplashScreenExample
 * [**Propriedade Windows.ApplicationModel.Activation.SplashScreen.ImageLocation**](https://msdn.microsoft.com/library/windows/apps/br224765)
 * [**Evento Windows.ApplicationModel.Core.CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)
 
- 
+ 
 
- 
+ 

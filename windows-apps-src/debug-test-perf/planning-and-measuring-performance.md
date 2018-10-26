@@ -6,19 +6,17 @@ description: Os usuários esperam que seus apps mantenham a capacidade de respos
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547878"
 ---
 # <a name="planning-for-performance"></a>Planejando para o desempenho
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas.
@@ -44,7 +42,7 @@ Pense nos intervalos aceitáveis de tempo decorrido (*classes de interação*) q
 | Contínuo              | Não há mais a percepção de resposta      | 500 milissegundos | 5 segundos        | Baixar um arquivo da Internet                                            |
 | Cativo                 | Longo tempo; o usuário pode alternar para outro aplicativo    | 500 milissegundos | 10 segundos       | Instalar vários aplicativos da Loja                                         |
 
- 
+ 
 
 Agora você pode atribuir classes de interação aos cenários de desempenho de seu aplicativo. Você pode atribuir, por exemplo, a referência pontual do aplicativo, uma parte da experiência do usuário e uma classe de interação a cada cenário. Consulte a seguir algumas sugestões para um aplicativo de exemplo para alimentos e refeições.
 
@@ -175,7 +173,7 @@ Use essas técnicas e ferramentas para testar como seu aplicativo se compara às
     -   Execute o aplicativo várias vezes para ajudar a eliminar variáveis de teste aleatórias e a garantir medições consistentes.
 -   Teste a disponibilidade de redução de energia. O dispositivo de seus usuários pode ter significativamente menos energia de que seu computador de desenvolvimento. O Windows foi projetado para dispositivos de baixo consumo de energia, como dispositivos móveis. Os aplicativos que são executados na plataforma devem garantir um bom desempenho nesses dispositivos. Como aprendizado, espere que um dispositivo de baixa energia execute em cerca de um quarto da velocidade de um computador desktop e defina suas metas de acordo.
 -   Use uma combinação de ferramentas, como o Microsoft Visual Studio e o Windows Performance Analyzer, para medir o desempenho do aplicativo. O Visual Studio foi projetado para fornecer análises centradas no aplicativo, como vinculação de código-fonte. O Windows Performance Analyzer foi projetado para fornecer análises centradas no sistema, como o fornecimento de informações do sistema, informações sobre eventos de manipulação de toque e informações sobre E/S (entrada e saída) de disco e custo da GPU (unidade de processamento gráfico). Ambas as ferramentas oferecem captura e exportação de rastreamento e podem reabrir rastreamentos compartilhados e post-mortem.
--   Antes de enviar seu aplicativo à Loja para certificação, incorpore em seus planos de teste os casos de teste relacionados ao desempenho, conforme descrito na seção "Testes de desempenho" de [Testes do Kit de Certificação de Aplicativos Windows](windows-app-certification-kit-tests.md) e na seção "Desempenho e estabilidade" de [Casos de teste de aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Antes de enviar seu aplicativo para a loja para certificação, certifique-se de incorporar em seus planos de teste os casos de teste relacionados ao desempenho, conforme descrito na seção "Testes de desempenho" dos [testes do Kit de certificação de aplicativo do Windows](windows-app-certification-kit-tests.md) e no "desempenho e seção de estabilidade"de [casos de teste de aplicativo UWP](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Para obter mais informações, consulte esses recursos e ferramentas de criação de perfil.
 

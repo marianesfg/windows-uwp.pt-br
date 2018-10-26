@@ -6,15 +6,13 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e439c0b1c20f03c9519d29a24979e5008f3de94e
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546582"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2017
 
@@ -110,7 +108,7 @@ O artigo [Processar quadros de mídia com o MediaFrameReader](../audio-video-cam
 
 ### <a name="scoped-search"></a>Escopo da pesquisa
 
-Foi adicionado um escopo "UWP" à documentação [UWP conceitual](../get-started/universal-application-platform-guide.md) e [referência de API](https://docs.microsoft.com/en-us/uwp/api/) em docs.microsoft.com. A menos que esse escopo seja desativado, as pesquisas feitas nessas áreas retornarão apenas os documentos UWP.
+Foi adicionado um escopo "UWP" à documentação [Conceitual de UWP](../get-started/universal-application-platform-guide.md) e [Referência de API](https://docs.microsoft.com/en-us/uwp/api/) em docs.microsoft.com. A menos que esse escopo é desativado, pesquisas feitas a partir dessas áreas retornarão apenas os documentos de UWP.
 
 ![Escopo da pesquisa](images/scoped-search.png)
 

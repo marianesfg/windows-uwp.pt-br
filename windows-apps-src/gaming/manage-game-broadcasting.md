@@ -6,16 +6,14 @@ title: Gerenciar transmissão de jogo
 ms.author: drewbat
 ms.date: 09/27/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, jogo, transmissão
 ms.localizationpriority: medium
-ms.openlocfilehash: f231d380af33eae36a6394aa5799b9f75a70471a
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: ae70c29927925abcf948435ed768871ba2427fd9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542741"
 ---
 # <a name="manage-game-broadcasting"></a>Gerenciar transmissão de jogo
 Este artigo mostra como gerenciar a transmissão de jogo de um aplicativo UWP. Os usuários devem iniciar a transmissão usando a interface do usuário do sistema integrada ao Windows, mas, a partir do Windows 10, versão 1709, os apps poderão iniciar a interface do usuário de transmissão do sistema e receber notificações quando a transmissão for iniciada e interrompida.
@@ -25,7 +23,7 @@ As APIs para gerenciamento de transmissão de app, encontradas no namespace **[W
 
 1. No Visual Studio, em **Gerenciador de Soluções**, expanda o projeto UWP, clique com botão direito do mouse em **Referências** e selecione **Adicionar Referência...**. 
 2. Expanda o nó **Universal do Windows** e selecione **Extensões**.
-3. Na lista de extensões, marque a caixa de seleção ao lado da entrada ***Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
+3. Na lista de extensões, marque a caixa de seleção ao lado da entrada **Extensões de Área de Trabalho do Windows para a UWP** que corresponde à compilação de destino do projeto. Para os recursos de transmissão de app, a versão deve ser 1709 ou superior.
 4. Clique em **OK**.
 
 ## <a name="launch-the-system-ui-to-allow-the-user-to-initiate-broadcasting"></a>Iniciar a interface do usuário do sistema para permitir que o usuário inicie a transmissão
@@ -57,9 +55,9 @@ No manipulador do evento **IsCurrentAppBroadcastingChanged**, talvez seja necess
 
 * [Jogos](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a26679bab35590d61f9188f64df977fbaf78d90
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e808bf0fe1f521a60aa347efd148ede96be95964
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548896"
 ---
 # <a name="compressed-texture-resources"></a>Recursos de textura compactada
 
 
-Os mapas de textura são imagens digitalizadas desenhadas em formas tridimensionais para adicionar detalhes visuais. Elas são mapeadas para essas formas durante a rasterização, e o processo pode consumir grandes quantidades de memória e barramento de sistema. Para reduzir a quantidade de memória consumida pelas texturas, o Direct3D dá suporte à compactação de superfícies de textura. Alguns dispositivos Direct3D têm suporte nativo às superfícies de textura compactadas. Em tais dispositivos, quando você cria uma superfície compactada e carrega os dados nela, a superfície pode ser usada no Direct3D como qualquer outra superfície de textura. O Direct3D manipula a descompactação quando a textura é mapeada para um objeto 3D.
+Mapas de texturas são imagens digitalizadas desenhadas em formas tridimensionais para adicionar detalhes visuais. Elas são mapeadas para essas formas durante a rasterização, e o processo pode consumir grandes quantidades de memória e barramento de sistema. Para reduzir a quantidade de memória consumida pelas texturas, o Direct3D dá suporte à compactação de superfícies de textura. Alguns dispositivos Direct3D têm suporte nativo às superfícies de textura compactadas. Em tais dispositivos, quando você cria uma superfície compactada e carrega os dados nela, a superfície pode ser usada no Direct3D como qualquer outra superfície de textura. O Direct3D manipula a descompactação quando a textura é mapeada para um objeto 3D.
 
 ## <a name="span-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanstorage-efficiency-and-texture-compression"></a><span id="Storage-Efficiency-and-Texture-Compression"></span><span id="storage-efficiency-and-texture-compression"></span><span id="STORAGE-EFFICIENCY-AND-TEXTURE-COMPRESSION"></span>Compactação de textura e eficiência de armazenamento
 
@@ -73,16 +71,16 @@ O Direct3D fornece serviços para compactar superfícies que são usadas para a 
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

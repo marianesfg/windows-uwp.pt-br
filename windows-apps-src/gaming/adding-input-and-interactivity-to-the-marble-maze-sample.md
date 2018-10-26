@@ -6,16 +6,14 @@ ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, entrada, amostra
 ms.localizationpriority: medium
-ms.openlocfilehash: 2be43690726112d8597747ee51dd94baf0f40f0e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: Auto
+ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817041"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544467"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Adicionando entrada e interatividade ao exemplo do Marble Maze
 
@@ -27,7 +25,7 @@ Jogos da Plataforma Universal do Windows (UWP) funcionam em uma variedade de dis
 > [!NOTE]
 > O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
- 
+ 
 Seguem alguns dos pontos principais discutidos neste documento para quando você trabalhar com entrada no seu jogo:
 
 -   Quando possível, dê suporte a vários dispositivos de entrada para permitir que o seu jogo acomode uma ampla variedade de preferências e recursos entre seus clientes. Embora o uso do controlador de jogo e do sensor seja opcional, recomendamos-o para melhorar a experiência do jogador. Nós projetamos as APIs do controlador de jogo e do sensor para ajudá-lo a integrar mais facilmente esses dispositivos de entrada.
@@ -50,12 +48,12 @@ O Marble Maze aceita o controlador do Xbox, mouse e toque para selecionar itens 
 > [!NOTE]
 > Este documento usa o toque para se referir à entrada por toque e de mouse e o ponteiro para se referir a qualquer dispositivo que usa eventos de ponteiro. Pelo touch e o mouse usarem eventos de ponteiro padrão, você pode usar qualquer um desses dispositivos para selecionar itens do menu e controlar o jogo.
 
- 
+ 
 
 > [!NOTE]
 > O manifesto do pacote define **Paisagem** como a única rotação suportada para o jogo prevenir a orientação de mudar quando você gira o dispositivo para rolar a bola de gude. Para visualizar o manifesto do pacote, abre o **Package.appxmanifest** no **Gerenciador de soluções** no Visual Studio.
 
- 
+ 
 
 ## <a name="initializing-input-devices"></a>Inicializando dispositivos de entrada
 
@@ -541,7 +539,7 @@ Verificamos se a entrada do direcional analógico esquerdo está fora da zona mo
 > [!IMPORTANT]
 > Quando você trabalhar com o controlador do Xbox, considere sempre a zona morta. A zona morta se refere a variação de sensibilidade ao movimento inicial entre os consoles de jogos. Em alguns controladores, um pequeno movimento pode não gerar nenhuma leitura, mas em outros pode gerar uma leitura mensurável. Para considerar isso em seu jogo, crie uma zona de não movimento para o movimento inicial do thumbstick. Para obter mais informações sobre a zona morta, consulte [Lendo os botões de controle](gamepad-and-vibration.md#reading-the-thumbsticks).
 
- 
+ 
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicando entrada ao estado de jogo
 
@@ -550,7 +548,7 @@ Os dispositivos relatam valores de entrada de diferentes maneiras. Por exemplo, 
 > [!TIP]
 > Mesmo se seu aplicativo usa um método de entrada, recomendamos que você sempre normalize os valores de entrada. Isso pode simplificar como a entrada é interpretada por outros componentes do seu jogo, como a simulação física, e facilita a gravação de jogos que funcionam em resoluções de tela diferentes.
 
- 
+ 
 
 Depois de o método **MarbleMazeMain::Update** processar a entrada, ele cria um vetor que representa o efeito da inclinação do labirinto na bola de gude. O exemplo a seguir mostra como o Marble Maze usa a função [XMVector3Normalize](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.geometric.xmvector3normalize) para criar um vetor de gravidade normalizado. A variável **maxTilt** impulsiona a quantia que faz o labirinto inclinar e evita que ele se incline para o lado.
 
@@ -621,9 +619,9 @@ Leia [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-m
 * [Adicionando conteúdo visual ao exemplo do Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
 * [Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
 
 

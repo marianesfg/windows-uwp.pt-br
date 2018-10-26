@@ -6,16 +6,14 @@ ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, modelos, ferramentas, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f03c2cb7e6755bf3f6a5b96ded4437da359504fd
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: ac33b242e2351c21ea22aa9bbb6bf74693e8d4ef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652725"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545901"
 ---
 # <a name="project-templates-and-tools-for-games"></a>Modelos de projeto e ferramentas para jogos
 
@@ -29,7 +27,7 @@ Primeiro, você precisa do Visual Studio.
 ## <a name="get-visual-studio"></a>Obter Visual Studio
 
 
-[Baixe e instale o Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
+[Baixe e instale o Microsoft Visual Studio2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -58,7 +56,7 @@ Primeiro, você precisa do Visual Studio.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -73,11 +71,11 @@ Caso esteja criando um novo jogo em DirectX, consulte os tópicos a seguir.
 -   [Criar um jogo UWP simples com o DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Desenvolvimento do Marble Maze, um jogo da Plataforma Universal do Windows em C++ e no DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

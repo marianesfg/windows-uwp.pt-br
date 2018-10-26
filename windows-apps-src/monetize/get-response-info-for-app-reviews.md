@@ -6,16 +6,14 @@ title: Obter informações de resposta para análises
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, informações de resposta
 ms.localizationpriority: medium
-ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 71497a858060109eaac0f593ce03f2ba3cbf03cc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521275"
+ms.locfileid: "5572435"
 ---
 # <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 

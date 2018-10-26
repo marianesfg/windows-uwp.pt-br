@@ -1,33 +1,31 @@
 ---
 author: TylerMSFT
-title: Habilitar aplicativos para sites que usam os manipuladores URI de aplicativo
-description: Unidade de compromisso do usuário com o seu aplicativo, oferecendo suporte a aplicativos para o recurso de sites.
+title: Permitem que os aplicativos para sites usando manipuladores URI do aplicativo
+description: Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites.
 keywords: Vinculação profunda do Windows
 ms.author: twhitney
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 8482c3b14a6845dc3bfd5912c8260b5cd3214249
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548820"
 ---
-# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Habilitar aplicativos para sites que usam os manipuladores URI de aplicativo
+# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitem que os aplicativos para sites usando manipuladores URI do aplicativo
 
-Aplicativos para sites associa o seu aplicativo com um site para que, quando alguém abre um link para o site, o seu aplicativo é iniciado em vez de abrir o navegador. Se seu aplicativo não estiver instalado, seu site é aberto no navegador como de costume. Os usuários podem confiar nessa experiência porque apenas proprietários conteúdo verificados podem se registrar para um link. Os usuários poderão verificar todos seus links da web-para-app registrados indo para Configurações > Apps > aplicativos para sites da Web.
+Aplicativos para sites associa seu aplicativo com um site para que quando alguém abre um link para seu site, seu aplicativo é iniciado em vez de abrir o navegador. Se seu aplicativo não estiver instalado, o site é aberto no navegador como de costume. Os usuários podem confiar nessa experiência porque apenas proprietários conteúdo verificados podem se registrar para um link. Os usuários serão capazes de verificar todos os links da web para o aplicativo registrados em Configurações > aplicativos > aplicativos para sites.
 
-Para habilitar a vinculação você web-para-app será necessário:
+Para habilitar web-vinculação ao aplicativo você precisará:
 - Identificar os URIs que seu aplicativo manipulará no arquivo de manifesto
-- Um arquivo JSON que define a associação entre o seu aplicativo e o seu site. com o nome da família de pacote do app na raiz mesmo host como o aplicativo de manifesto de declaração.
+- Um arquivo JSON que define a associação entre seu aplicativo e seu site. declaração de manifesto com o nome da família do aplicativo na mesma raiz host que o aplicativo.
 - Manipule a ativação no aplicativo.
 
 > [!Note]
-> Começando com a atualização do Windows 10 criadores, com suporte links clicados na Microsoft Edge iniciará o aplicativo correspondente. Links com suporte clicada em outros navegadores (por exemplo, Internet Explorer, etc.), manterá na experiência de navegação.
+> A partir do Windows 10 Creators update, com suporte links clicado no Microsoft Edge iniciará o aplicativo correspondente. Links com suporte clicado em outros navegadores (por exemplo, Internet Explorer, etc.), o manterá na experiência de navegação.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registre-se para manipular links http e https no manifesto do aplicativo
 
@@ -80,7 +78,7 @@ O exemplo de arquivo JSON acima demonstra o uso de curingas. Os curingas permite
 | **\***       | Representa qualquer subcadeia de caracteres      |
 | **?**        | Representa um único caractere |
 
-Por exemplo, considerando `"excludePaths" : [ "/news/*", "/blog/*" ]` no exemplo acima, o seu aplicativo dará suporte a todos os caminhos que começam com o endereço do seu site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
+Por exemplo, dado `"excludePaths" : [ "/news/*", "/blog/*" ]` no exemplo acima, seu aplicativo dará suporte a todos os caminhos que começam com o endereço do site (por exemplo, msn.com), **exceto** aqueles em `/news/` e `/blog/`. **msn.com/weather.html** terá suporte, mas não ****msn.com/news/topnews.html****.
 
 ### <a name="multiple-apps"></a>Vários aplicativos
 
@@ -168,14 +166,14 @@ Teste a configuração do seu aplicativo e do site executando essa ferramenta co
 -   Nome da Família de Pacotes (PFN): o PFN do seu aplicativo
 -   Caminho do arquivo: o arquivo JSON para a validação de local (por exemplo, C:\\SomeFolder\\windows-app-web-link)
 
-Se a ferramenta não retornará nada, validação funcionará nesse arquivo quando carregados. Se houver um código de erro, ele não funcionará.
+Se a ferramenta não retorna nada, validação funcionará nesse arquivo quando carregados. Se houver um código de erro, ele não funcionará.
 
-Você pode habilitar a seguinte chave do registro forçar o caminho correspondente para aplicativos lado-carregado como parte da validação de local:
+Você pode habilitar a seguinte chave do registro forçar o caminho correspondência para aplicativos de sideload como parte da validação de local:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-Nome da chave: `ForceValidation` valor: `1`
+Nome de chave: `ForceValidation` valor: `1`
 
 ## <a name="test-it-web-validation"></a>Teste: validação Web
 
@@ -199,7 +197,7 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Projeto de exemplo da Web-para-App](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
-[windows.protocol registro](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-[Lidar com a ativação do URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-[amostra Launching associação](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API LaunchUriAsync().
+[Projeto de exemplo de aplicativo de Web](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[Windows. Protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
+[Manipular ativação de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[Iniciar associação exemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API launchuriasync ().

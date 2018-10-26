@@ -9,15 +9,13 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c82e0d77804e293176c53a9d8079e32054f9cca6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 00923b4448d96943cf00eade46c39c42e87c4f96
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549563"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Definir tempos limite de reconhecimento de fala
 
@@ -35,9 +33,9 @@ Aqui, especificamos vários valores de [**Timeouts**](https://msdn.microsoft.com
 -   BabbleTimeout — o período de tempo que um SpeechRecognizer continua a ouvir sons não reconhecíveis (murmúrios) antes que ele presuma que a entrada de fala terminou e finalize a operação de reconhecimento.
 -   EndSilenceTimeout — o período de tempo que um SpeechRecognizer detecta o silêncio (depois que os resultados de reconhecimento foram gerados) e presume que a entrada de fala terminou.
 
-**Observação**  É possível definir Tempos limite com base no reconhecedor.
+**Observação**tempos limite pode ser definida em uma base do reconhecedor.
 
- 
+ 
 
 ```CSharp
 // Set timeout settings.
@@ -52,9 +50,9 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 * [Interações de fala](speech-interactions.md)
 **Amostras**
 * [Amostra de reconhecimento de fala e sintetização de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

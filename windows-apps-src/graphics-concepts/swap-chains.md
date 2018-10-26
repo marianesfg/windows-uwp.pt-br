@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b24b50c18716f14c58244e52bbb77668760b042
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b38dc50f38276fb367402b230e6199fbabdcef80
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549599"
 ---
 # <a name="swap-chains"></a>Cadeias de troca
 
@@ -34,7 +32,7 @@ O Direct3D implementa duas opções para evitar a divisão:
 
 -   Uma opção para permitir somente as atualizações de monitor na operação de retorno vertical (ou sincronização vertical). Um monitor normalmente atualiza sua imagem, movendo um marcador de luz horizontalmente, fazendo um movimento em zigue-zague na parte superior esquerda do monitor e terminando na parte inferior direita. Quando o marcador de luz atinge a parte inferior, o monitor calibra novamente o marcador de luz, movendo-o novamente para o canto superior esquerdo para que o processo possa iniciar novamente.
 
-    Este recalibragem é chamada uma sincronização vertical. Durante uma sincronização vertical, o monitor é não desenho nada, de forma que qualquer atualização no buffer frontal não será Vista até que o monitor começa a desenhar novamente. A sincronização vertical é relativamente lenta, no entanto, não lenta o suficiente para renderizar uma cena complexa durante o tempo de espera. O que é necessário para evitar o desmembramento e ser capaz de renderizar cenas complexas é um processo chamado de armazenamento em buffer de fundo.
+    Esta recalibragem é chamada uma sincronização vertical. Durante uma sincronização vertical, o monitor é nada desenhado, portanto, qualquer atualização para o buffer frontal não será Vista até o monitor comece a desenhar novamente. A sincronização vertical é relativamente lenta, no entanto, não lenta o suficiente para renderizar uma cena complexa durante o tempo de espera. O que é necessário para evitar o desmembramento e ser capaz de renderizar cenas complexas é um processo chamado de armazenamento em buffer de fundo.
 
 -   Uma opção para usar uma técnica chamada de armazenamento em buffer de fundo. O armazenamento em buffer de trás é o processo de desenhar uma cena em uma superfície fora da tela, chamada de buffer de fundo. Qualquer superfície que não seja o buffer frontal é chamada de superfície fora da tela, porque ela nunca é visualizada diretamente pelo monitor.
 
@@ -54,9 +52,9 @@ A inversão de superfície é fundamental para multimídia, animação e softwar
 
 [Dispositivos](devices.md)
 
- 
+ 
 
- 
+ 
 
 
 

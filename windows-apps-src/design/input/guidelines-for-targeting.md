@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c9feb6460512a7266dfd5d2979b89084f6487f5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 3af31535dcdb1cb5eb8beebbbb91312adafe353a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546948"
 ---
 # <a name="guidelines-for-targeting"></a>Diretrizes de direcionamento
 
@@ -104,7 +102,7 @@ A tabela a seguir lista os tamanhos mínimos e recomendados para os componentes 
 </tbody>
 </table>
 
- 
+ 
 
 Essas recomendações de tamanho de destino podem ser ajustadas de acordo com determinado cenário. Algumas das considerações incluídas nessas recomendações são:
 
@@ -168,9 +166,9 @@ Siga estas diretrizes para criar interações de esfregar:
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

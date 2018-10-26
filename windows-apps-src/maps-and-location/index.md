@@ -6,29 +6,28 @@ ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, mapa, local, serviços de mapa
-ms.openlocfilehash: 9f2c15c8d4bab5a764b8973c4eecb220ed6d8f38
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548218"
 ---
 # <a name="maps-and-location-overview"></a>Visão geral de mapas e local
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 
-> **Dica**  Para saber mais sobre como usar mapas e local no aplicativo, baixe as seguintes amostras do [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+> [!TIP]
+> Para saber mais sobre como usar mapas e localização em seu aplicativo, baixe os exemplos a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
- 
+ 
 
 ## <a name="display-maps"></a>Exibir mapas
 
@@ -46,7 +45,7 @@ Exiba mapas com modos de exibição 2D, 3D ou Streetside no seu aplicativo usand
 
 ## <a name="access-map-services"></a>Serviços de mapa de acesso
 
-Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando APIs do namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Você também pode ajudar o usuário a gerenciar mapas offline iniciando o aplicativo Configurações diretamente na página apropriada.
+Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando APIs do namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979).
 
 | Tópico | Descrição |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +53,7 @@ Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando API
 | [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Exibir rotas e trajeto](routes-and-directions.md) | Solicite rotas e trajeto e os exiba no aplicativo. |
 | [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
-
+| [Localizar e baixar pacotes de mapas para uso offline](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| No passado, o aplicativo tinha que direcionar os usuários para o aplicativo configurações para baixar mapas offline. Agora, você pode usar classes no namespace [offlinemaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar os pacotes baixados em uma determinada área (com base em um [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> Você pode também verificar e escutar o status baixado de pacotes de mapas, bem como iniciar um download sem exigir que o usuário deixar seu aplicativo. <br> Você encontrará exemplos de como fazer isso no conteúdo de referência e a [amostra de mapa da plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 ## <a name="get-the-users-location"></a>Obter a localização do usuário
 
@@ -64,8 +63,9 @@ Obtenha o local atual e seja notificado quando o local mudar no aplicativo usand
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Solicitar uma chave de autenticação de mapas](authentication-key.md) | O aplicativo precisa ser autenticado para poder usar o [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) e os serviços de mapa no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar o aplicativo, você deve especificar uma chave de autenticação de mapas. Este artigo descreve como solicitar uma chave de autenticação de mapas na [central de desenvolvedores do Bing Mapas](https://www.bingmapsportal.com/) e adicioná-la ao aplicativo. |
 | [Diretrizes de design para aplicativos com detecção de localização](guidelines-and-checklist-for-detecting-location.md) | Diretrizes de desempenho para aplicativos que exigirem acesso à localização de um usuário. |
-| [Obter a localização do usuário](get-location.md) | Obtenha acesso à localização do usuário e recupere-o. |
-| [Diretriz de design para cerca geográfica](guidelines-for-geofencing.md) | Diretrizes de desempenho para aplicativos que utilizam o recurso cerca geográfica. |
+| [Obter a localização do usuário](get-location.md) | Obtenha acesso à localização do usuário e recupere-o. | 
+| [Diretrizes para usar o rastreamento de visitas](guidelines-for-visits.md) | Saiba como usar o recurso de rastreamento de visitas potente para rastreamento de localização mais prático. |
+| [Diretrizes de design para delimitação geográfica](guidelines-for-geofencing.md) | Diretrizes de desempenho para aplicativos que utilizam o recurso cerca geográfica. |
 | [Configurar uma cerca geográfica](set-up-a-geofence.md) | Configure uma cerca geográfica no aplicativo e saiba como manipular notificações em primeiro e segundo planos. |
 
 ## <a name="launch-the-windows-maps-app"></a>Iniciar o aplicativo Mapas do Windows

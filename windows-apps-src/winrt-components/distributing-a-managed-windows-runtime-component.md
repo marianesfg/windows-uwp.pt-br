@@ -6,19 +6,18 @@ ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200589"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549017"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuição de um componente do Tempo de Execução do Windows gerenciado
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 É possível distribuir o componente do Tempo de Execução do Windows por cópia de arquivo. No entanto, caso o componente consista em muitos arquivos, a instalação pode ser entediante para os usuários. Além disso, erros na colocação de arquivos ou falha na definição de referências podem causar problemas para eles. É possível empacotar um componente complexo como um SDK de extensão do Visual Studio para facilitar a instalação e o uso. Os usuários só precisam definir uma referência para todo o pacote. Eles podem localizar e instalar facilmente o componente usando a caixa de diálogo **Extensões e Atualizações**, conforme descrito em [Como encontrar e usar extensões do Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx) na Biblioteca MSDN.
 
@@ -42,13 +41,13 @@ Para decidir como distribuir o componente, leve em consideração como ele é co
 
 Um SDK de extensão é especialmente útil caso mais de uma das opções acima seja verdadeira.
 
-> **Observação**  Para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa de software livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
+> **Observação**para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
 
 ## <a name="distribution-by-file-copy"></a>Distribuição por cópia do arquivo
 
 Caso o componente consista em um único arquivo .winmd ou em um arquivo .winmd e um arquivo de índice de recurso (.pri), basta disponibilizar o arquivo .winmd para os usuários copiarem. Os usuários podem colocar o arquivo onde quiserem em um projeto, usar a caixa de diálogo **Adicionar Item Existente** para adicionar o arquivo .winmd ao projeto e usar a caixa de diálogo do Gerenciador de Referências para criar uma referência. Caso você inclua um arquivo .pri ou um arquivo .xml, instrua os usuários a colocarem esses arquivos com o arquivo .winmd.
 
-> **Observação**  O Visual Studio sempre produz um arquivo .pri quando você compila o componente do Tempo de Execução do Windows, mesmo que o projeto não inclua recursos. Caso tenha um aplicativo de teste para o componente, você pode determinar se o arquivo .pri é usado examinando o conteúdo do pacote do aplicativo na pasta bin\\debug\\AppX. Caso o arquivo .pri no componente não seja exibido, você não precisa distribuí-lo. Também é possível usar a ferramenta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para despejar o arquivo de recurso do projeto do componente do Tempo de Execução do Windows. Por exemplo, na janela Prompt de Comando do Visual Studio, digite: makepri dump /if MyComponent.pri /of MyComponent.pri.xml É possível saber mais sobre arquivos .pri em [Sistema de Gerenciamento de Recursos (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Observação**Visual Studio sempre produz um arquivo. PRI quando você compila o componente de tempo de execução do Windows, mesmo se seu projeto não inclua recursos. Caso tenha um aplicativo de teste para o componente, você pode determinar se o arquivo .pri é usado examinando o conteúdo do pacote do aplicativo na pasta bin\\debug\\AppX. Caso o arquivo .pri no componente não seja exibido, você não precisa distribuí-lo. Também é possível usar a ferramenta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para despejar o arquivo de recurso do projeto do componente do Tempo de Execução do Windows. Por exemplo, na janela Prompt de Comando do Visual Studio, digite: makepri dump /if MyComponent.pri /of MyComponent.pri.xml É possível saber mais sobre arquivos .pri em [Sistema de Gerenciamento de Recursos (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## <a name="distribution-by-extension-sdk"></a>Distribuição pelo SDK de extensão
 

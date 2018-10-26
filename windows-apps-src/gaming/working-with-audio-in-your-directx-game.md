@@ -6,16 +6,14 @@ ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, áudio, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 2770e48720f3024908835aa26579ea1b4b3d3903
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a0b0ae219ea7fd014b39eb8eb7a09049f7c632a2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654485"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551039"
 ---
 # <a name="audio-for-games"></a>Áudio para jogos
 
@@ -109,7 +107,7 @@ XAudio2 é uma biblioteca de mixagem de áudio para DirectX e destina-se, princi
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xaudio2-how-to-resources"></a>Recursos orientadores do XAudio2
 
@@ -196,7 +194,7 @@ XAudio2 é uma biblioteca de mixagem de áudio para DirectX e destina-se, princi
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="media-foundation-resources"></a>Recursos Media Foundation
 
@@ -257,7 +255,7 @@ MF (Media Foundation) é uma plataforma de mídia para streaming de reprodução
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="windows-runtime-xaml-media-types"></a>Tipos de mídia XAML do Windows Runtime
 
@@ -298,7 +296,7 @@ Se estiver usando o [Interop DirectX-XAML](https://msdn.microsoft.com/library/wi
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="reference"></a>Referência
 
@@ -307,16 +305,16 @@ Se estiver usando o [Interop DirectX-XAML](https://msdn.microsoft.com/library/wi
 -   [Guia de Programação em XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737)
 -   [Visão geral da Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 
 -   [Guia de Programação em XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737)
 
- 
+ 
 
- 
+ 
 
 
 

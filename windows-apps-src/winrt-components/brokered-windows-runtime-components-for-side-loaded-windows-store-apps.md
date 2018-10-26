@@ -1,31 +1,29 @@
 ---
 author: msatranjr
 title: Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
-description: Este documento discute um recurso direcionado a empresas compatível com o Windows10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para os negócios.
+description: Este documento discute um recurso direcionado a compatíveis com o Windows 10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para.
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 71fd511a109022d265d13b575bd696e8c346567b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 3228cd80e7a9e8efb5dca1ec3a2d469e40a52c8a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543587"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
 
-Este artigo discute um recurso direcionado a empresas compatível com o Windows10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para os negócios.
+Este artigo discute um recurso direcionado a compatíveis com o Windows 10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para.
 
 ## <a name="introduction"></a>Introdução
 
->**Observação**  O código de exemplo que acompanha este documento pode ser baixado para o [Visual Studio 2015 & 2017](https://aka.ms/brokeredsample). O modelo do Microsoft Visual Studio para compilar os Componentes do Tempo de Execução do Windows agenciados pode ser baixado aqui: [Modelo do Visual Studio 2015 segmentado para Aplicativos Universais do Windows para Windows 10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**Observação**o código de exemplo que acompanha este documento pode ser baixado para[Visual Studio 2015 & 2017](https://aka.ms/brokeredsample). O modelo do Microsoft Visual Studio para compilar os Componentes do Tempo de Execução do Windows agenciados pode ser baixado aqui: [Modelo do Visual Studio 2015 segmentado para Aplicativos Universais do Windows para Windows 10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
-O Windows inclui um novo recurso chamado *componentes do Tempo de Execução do Windows intermediado para aplicativos de sideload*. Usamos o termo IPC (comunicação entre processos) para descrever a capacidade de executar ativos de software de desktop existentes em um processo (componente de desktop) ao interagir com esse código em um aplicativo UWP. Este é um modelo familiar aos desenvolvedores corporativos, já que aplicativos de banco de dados e aplicativos que utilizam serviços NT no Windows compartilham uma arquitetura de vários processos semelhante.
+O Windows inclui um novo recurso chamado*Intermediado componentes do tempo de execução do Windows para aplicativos de sideload*. Usamos o termo IPC (comunicação entre processos) para descrever a capacidade de executar ativos de software de desktop existentes em um processo (componente de desktop) ao interagir com esse código em um aplicativo UWP. Este é um modelo familiar aos desenvolvedores corporativos, já que aplicativos de banco de dados e aplicativos que utilizam serviços NT no Windows compartilham uma arquitetura de vários processos semelhante.
 
 O sideload do aplicativo é um componente essencial desse recurso.
 Aplicativos específicos para empresas não têm lugar na Microsoft Store para consumidores em geral e as corporações têm exigências muito específicas em relação à segurança, privacidade, distribuição, instalação e manutenção. Dessa forma, o modelo de sideload é uma exigência daqueles que usariam esse recurso e um detalhe de implementação essencial.
@@ -36,7 +34,7 @@ Por último, dada a grande penetração do tempo de execução do .NET e da ling
 
 ## <a name="application-components"></a>Componentes de aplicativo
 
->**Observação**  Este recurso é exclusivamente para o uso do .NET. O aplicativo cliente e o componente da área de trabalho precisam ser criados usando-se o .NET.
+>**Observação**esse recurso é exclusivamente para o uso do .NET. O aplicativo cliente e o componente da área de trabalho precisam ser criados usando-se o .NET.
 
 **Modelo de aplicativo**
 
@@ -50,13 +48,13 @@ O componente de desktop neste recurso é um novo tipo de aplicativo sendo aprese
 
 O contrato entre o aplicativo de sideload e o componente de desktop é descrito em termos do sistema de tipo de UWP. Isso envolve declarar uma ou mais classes C\# que podem representar uma UWP. Consulte o tópico do MSDN [Criando componentes do Tempo de Execução do Windows em C\# e Visual Basic](https://msdn.microsoft.com/library/br230301.aspx) para requisito específico da criação de classe do Windows Runtime usando C\#.
 
->**Observação**  Enumerações não são compatíveis no contrato de componentes do Tempo de Execução do Windows entre o componente da área de trabalho e o aplicativo de sideload neste momento.
+>**Observação**enumerações não são compatíveis no contrato de componentes de tempo de execução do Windows entre o componente da área de trabalho e o aplicativo de sideload neste momento.
 
 **Aplicativo de sideload**
 
 O aplicativo de sideload é um aplicativo UWP normal em todos os aspectos, exceto um: usa sideload em vez de ser instalado através do aplicativo da Microsoft Store. A maioria dos mecanismos de instalação é idêntica: o manifesto e o empacotamento do aplicativo são semelhantes (uma adição ao manifesto é descrita em detalhes mais tarde). Depois que o sideload estiver habilitado, um script PowerShell simples poderá instalar os certificados necessários e o próprio aplicativo. Uma prática recomendada normal é que o aplicativo de sideload passe no teste de certificação WACK incluído no menu Projeto/Loja do Visual Studio
 
->**Observação** O sideload pode ser ativado em Configurações-&gt; Atualização e segurança -&gt;Para desenvolvedores.
+>**Observação**sideload pode ser ativado em configurações -&gt; atualização e segurança -&gt; para desenvolvedores.
 
 Um ponto importante a salientar é que o mecanismo de Agente de aplicativo enviado como parte do Windows10 é somente de 32 bits. O componente da área de trabalho deve ser 32 bits.
 Aplicativos de sideload podem ser de 64 bits (desde que haja proxies de 64 bits e 32 bits registrados), mas isso será atípico. A criação do aplicativo de sideload em C\# usando a configuração normal "neutra" e o padrão de "preferir 32 bits" naturalmente cria aplicativos de sideload de 32 bits.
@@ -165,7 +163,7 @@ Isso será feito pelos scripts a seguir. Adicione os scripts à linha de comando
     rem erase "$(TargetPath)"
 ```
 
-Depois que a referência **winmd** for criada (na pasta "referência" na pasta de destino do projeto), ela será levada (copiada) para cada projeto de aplicativo de sideload de consumo e referenciada. Isso será descrito ainda na próxima seção. A estrutura de projeto incorporada nas regras de compilação acima garante que a implementação e o **winmd** de referência estejam em diretórios claramente distinguidos na hierarquia de compilação, para evitar confusão.
+Uma vez a referência**winmd**é criada (na pasta "referência" na pasta de destino do projeto), ela será levada (copiada) para cada projeto de aplicativo de sideload de consumo e referenciada. Isso será descrito ainda na próxima seção. A estrutura de projeto incorporada nas regras de compilação acima garante que a implementação e o**winmd**de referênciaestejam em diretórios claramente distinguidos na hierarquia de compilação para evitar confusão.
 
 ## <a name="side-loaded-applications-in-detail"></a>Aplicativos de sideload em detalhes
 Conforme mencionado anteriormente, o aplicativo de sideload é criado como qualquer outro aplicativo UWP, mas com um detalhe adicional: a declaração da disponibilidade da(s) RuntimeClass(es) no manifesto do aplicativo de sideload. Isso permite que o aplicativo simplesmente escreva algo novo para acessar a funcionalidade do componente de desktop. Uma nova entrada de manifesto na seção <Extension> descreve a RuntimeClass implementada no componente de desktop e informações sobre onde ela está localizada. Esse conteúdo da declaração no manifesto do aplicativo é o mesmo para aplicativos que segmentam o Windows 10. Por exemplo:
@@ -181,24 +179,24 @@ Conforme mencionado anteriormente, o aplicativo de sideload é criado como qualq
 </Extension>
 ```
 
-A categoria é inProcessServer porque existem várias entradas na categoria outOfProcessServer que não são aplicáveis a essa configuração de aplicativo. Observe que o componente <Path> deve sempre conter clrhost.dll (no entanto, isso **não** é imposto e especificar um valor diferente resultará em falha de formas indefinidas).
+A categoria é inProcessServer porque existem várias entradas na categoria outOfProcessServer que não são aplicáveis a essa configuração de aplicativo. Observe que o <Path> componente deve sempre conter clrhost. dll (no entanto, isso é**não**imposto e especificar um valor diferente resultará em falha formas indefinidas).
 
 A seção <ActivatableClass> é a mesma de uma RuntimeClass verdadeiramente em processo preferida por um componente do Tempo de Execução do Windows no pacote do aplicativo. <ActivatableClassAttribute> é um novo elemento, e os atributos Name="DesktopApplicationPath" e Type="string" são obrigatórios e invariáveis. O atributo Value aponta para o local onde o winmd de implementação do componente de desktop reside (mais detalhes sobre isso na próxima seção). Cada RuntimeClass preferida pelo componente de desktop deve ter sua própria árvore de elemento <ActivatableClass>. A ActivatableClassId deve coincidir com o nome totalmente qualificado de namespace da RuntimeClass.
 
-Como mencionado na seção "Definição do contrato", uma referência de projeto deve ser feita para o winmd de referência do componente de desktop. Normalmente, o sistema de projeto do Visual Studio cria uma estrutura de diretório de dois níveis com o mesmo nome. No exemplo, ela é EnterpriseIPCApplication\\EnterpriseIPCApplication. O **winmd** de referência é copiado manualmente para esse diretório de segundo nível e, então, a caixa de diálogo Referências de Projeto é usada (clique no botão **Procurar..** ) para localizar e fazer referência a esse **winmd**. Depois disso, o namespace de nível superior do componente de desktop (por exemplo, Fabrikam) deve aparecer como um nó de nível superior na parte de Referências do projeto.
+Como mencionado na seção "Definição do contrato", uma referência de projeto deve ser feita para o winmd de referência do componente de desktop. Normalmente, o sistema de projeto do Visual Studio cria uma estrutura de diretório de dois níveis com o mesmo nome. No exemplo, ela é EnterpriseIPCApplication\\EnterpriseIPCApplication. O **winmd**de referênciaé copiado manualmente para esse diretório de segundo nível e, em seguida, as referências de projeto caixa de diálogo é usada (clique a**Procurar...** botão) para localizar e fazer referência a esse **winmd**. Depois disso, o namespace de nível superior do componente de desktop (por exemplo, Fabrikam) deve aparecer como um nó de nível superior na parte de Referências do projeto.
 
->**Observação** É muito importante usar o **reference winmd** no aplicativo de sideload. Se você transportar acidentalmente o **implementation winmd** ao diretório do aplicativo de sideload e referenciá-lo, provavelmente receberá um erro relacionado a "não foi possível encontrar IStringable". Esse é um sinal claro de que o **winmd** errado foi referenciado. As regras de pós-compilação no aplicativo do servidor de IPC (detalhadas na próxima seção) separam cuidadosamente esses dois **winmd** em diretórios separados.
+>**Observação** É muito importante usar o**winmd de referência**no aplicativo de sideload. Se você transportar acidentalmente o**winmd de implementação**para o diretório do aplicativo de sideload e referenciá-lo, você provavelmente receberá um erro relacionado a "não é possível encontrar IStringable". Esse é um sinal que o errado**winmd**foi referenciado. As regras de pós-compilação no aplicativo servidor de IPC (detalhadas na próxima seção) cuidadosamente separam esses dois**winmd**em diretórios separados.
 
 Variáveis de ambiente (especialmente %ProgramFiles%) podem ser usadas em <ActivatableClassAttribute Value="path">. Como observado anteriormente, o Agente de aplicativo só suporta 32 bits, então %ProgramFiles% será resolvido em C:\\Program Files (x86) se o aplicativo for executado em um sistema operacional de 64 bits.
 
 ## <a name="desktop-ipc-server-detail"></a>Detalhe de servidor de IPC de desktop
 
-As duas seções anteriores descrevem a declaração da classe e a mecânica do transporte do **winmd** de referência para o projeto do aplicativo de sideload. A maior parte do trabalho restante no componente de desktop envolve a implementação. Como o ponto principal do componente de desktop é conseguir chamar o código de desktop (geralmente para reutilizar ativos de código existentes), o projeto deve ser configurado de maneira especial.
+As duas seções anteriores descrevem a declaração da classe e a mecânica do transporte o**winmd**de referênciapara o projeto de aplicativo de sideload. A maior parte do trabalho restante no componente de desktop envolve a implementação. Como o ponto principal do componente de desktop é conseguir chamar o código de desktop (geralmente para reutilizar ativos de código existentes), o projeto deve ser configurado de maneira especial.
 Normalmente, um projeto do Visual Studio usando .NET utiliza um dos dois "perfis".
 Um é para o desktop (".NetFramework") e outro tem como objetivo a porção do aplicativo UWP do CLR (".NetCore"). Um componente de desktop neste recurso é um híbrido entre esses dois. Como resultado, a seção de referências é cuidadosamente construída para misturar esses dois perfis.
 
 Um projeto normal de aplicativo UWP não contém nenhuma referência explícita de projeto, porque toda a superfície da API do Tempo de Execução do Windows está implicitamente incluída.
-Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele nasce como um projeto de "Área de trabalho clássica\\Biblioteca de classe" e, portanto, é um projeto de desktop. Portanto, é preciso fazer referências explícitas à API do Tempo de Execução do Windows (através de referências aos arquivos **winmd**). Adicione referências adequadas conforme mostrado abaixo.
+Normalmente, só outras referências entre projetos são feitas. No entanto, um projeto de componente de desktop tem um conjunto muito especial de referências. Ele nasce como um projeto de "Área de trabalho clássica\\Biblioteca de classe" e, portanto, é um projeto de desktop. Referências explícitas portanto, a API de tempo de execução do Windows (através de referências aos**winmd**arquivos) devem ser feitas. Adicione referências adequadas conforme mostrado abaixo.
 
 ```XML
 <ItemGroup>
@@ -410,7 +408,7 @@ Normalmente, só outras referências entre projetos são feitas. No entanto, um 
 
 As referências acima são uma mistura cuidadosa de referências que são essenciais para o bom funcionamento desse servidor híbrido. O protocolo é abrir o arquivo .csproj (conforme descrito em como editar o projeto OutputType) e adicionar essas referências conforme necessário.
 
-Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN [Práticas recomendadas para interoperabilidade com Componentes do Tempo de Execução do Windows (aplicativos UWP que usam C\#/VB/C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
+Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN[práticas recomendadas para interoperabilidade com componentes de tempo de execução do Windows (aplicativos UWP usando c \ # /VB/c + + e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
 A tarefa é criar uma dll de componente do Tempo de Execução do Windows que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Tempo de Execução do Windows:
 
 -   Chamadas de método
@@ -423,7 +421,7 @@ A tarefa é criar uma dll de componente do Tempo de Execução do Windows que co
 
 **Instalar**
 
-Para instalar o aplicativo, copie o **winmd** de implementação para o diretório correto especificado no manifesto do aplicativo de sideload associado: <ActivatableClassAttribute>'s Value="path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Não copiar o **winmd** de implementação para o local do diretório de servidor fará com que todas as chamadas do aplicativo de sideload para novo na RuntimeClass lancem um erro de "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro **não** é frequentemente associado a exceções visíveis.
+Para instalar o aplicativo, copie a implementação**winmd**para o diretório correto especificado no manifesto do sideload do aplicativo associado: <ActivatableClassAttribute>Value = "path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Falha ao copiar a implementação**winmd**para o servidor local do diretório fará com que o sideload todas as chamadas do aplicativo para novo na RuntimeClass lancem um erro "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro é frequentemente**não**associado a exceções visíveis.
 Se exceções forem observadas devido a esse erro de configuração, elas podem se referir à "conversão inválida".
 
 **Considerações sobre implementação de servidores**
@@ -457,7 +455,7 @@ return Task<int>.Run( () =>
 
 ```
 
->**Observação** É comum aguardar algumas outras operações potencialmente de execução longa durante a escrita da implementação. Se assim for, o código **Task.Run** precisa ser declarado:
+>**Observação** É comum aguardar algumas outras operações potencialmente de execução longa durante a escrita da implementação. Em caso afirmativo, o**Task. Run**código precisa ser declarado:
 
 ```csharp
 return Task<int>.Run(async () =>
@@ -480,18 +478,18 @@ Como a abordagem IPC envolve marshaling de interfaces do Tempo de Execução do 
 
 **Criação do proxy no Visual Studio**
 
-Os processos de criação e registro de proxies e stubs para uso dentro de um pacote de aplicativos UWP comum são descritos no tópico [Acionamento de eventos em componentes do Tempo de Execução do Windows](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx).
+O processo de criação e registro de proxies e stubs para uso dentro de um pacote de aplicativos UWP comum são descritos no tópico[Acionamento de eventos em componentes do Windows Runtime](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx).
 As etapas descritas nesse artigo são mais complicadas do que o processo descrito abaixo porque envolvem o registro do proxy/stub dentro do pacote de aplicativos (em vez de registrá-lo globalmente).
 
 **Etapa 1:** Usando a solução para o projeto do componente de desktop, crie um projeto de Proxy/Stub no Visual Studio:
 
 **Solução > Adicionar > Projeto > Visual C++ > Console Win32 Selecione a opção DLL.**
 
-Para as etapas a seguir, presumimos que o componente do servidor é chamado de **MyWinRTComponent**.
+Para as etapas a seguir, presumimos que o componente de servidor é chamado**MyWinRTComponent**.
 
 **Etapa 3:** Exclua todos os arquivos CPP/H do projeto.
 
-**Etapa 4:** A seção anterior "Definindo o contrato" contém um comando de pós-compilação que executa **winmdidl.exe**, **midl.exe**, **mdmerge.exe** e assim por diante. Uma das saídas da etapa midl deste comando pós-compilação gera quatro saídas importantes:
+**Etapa 4:** A seção anterior "Definindo o contrato" contém um comando de pós-compilação que executa**winmdidl.exe**,**midl.exe**,**mdmerge.exe**e assim por diante. Uma das saídas da etapa midl deste comando pós-compilação gera quatro saídas importantes:
 
 a) Dlldata.c
 
@@ -503,7 +501,7 @@ d) Um arquivo \*\_p.c (por exemplo, MyWinRTComponent\_p.c)
 
 **Etapa 5:** Adicione esses quatro arquivos gerados ao projeto "MyWinRTProxy".
 
-**Etapa 6:** Adicione um arquivo def ao projeto "MyWinRTProxy" **(Projeto > Adicionar novo item > Código > Arquivo de definição de módulo**) e atualize o conteúdo para que seja:
+**Etapa 6:** Adicionar um arquivo def ao projeto "MyWinRTProxy"**(projeto > Adicionar Novo Item > código > arquivo de definição de módulo**) e atualizar o conteúdo para ser:
 
 LIBRARY MyWinRTComponent.Proxies.dll
 
@@ -539,9 +537,9 @@ MyWinRTComponent.Proxies
 
 **Implantação do proxy**
 
-O proxy deve ser registrado globalmente. A maneira mais simples de fazer isso é ter sua chamada de processo de instalação DllRegisterServer na dll do proxy. Observe que, como o recurso só oferece suporte a servidores criados para x86 (ou seja, sem suporte a 64 bits), a configuração mais simples é usar um servidor de 32 bits, um proxy de 32 bits e um aplicativo de sideload de 32 bits. O proxy normalmente fica junto com o **winmd** de implementação do componente de desktop.
+O proxy deve ser registrado globalmente. A maneira mais simples de fazer isso é ter sua chamada de processo de instalação DllRegisterServer na dll do proxy. Observe que, como o recurso só oferece suporte a servidores criados para x86 (ou seja, sem suporte a 64 bits), a configuração mais simples é usar um servidor de 32 bits, um proxy de 32 bits e um aplicativo de sideload de 32 bits. O proxy normalmente fica junto com a implementação**winmd**para o componente da área de trabalho.
 
-Uma etapa de configuração adicional deve ser realizada. Para que o processo de sideload carregue e execute o proxy, o diretório deve ser marcado como "ler/executar" para ALL_APPLICATION_PACKAGES. Isso é feito através da ferramenta de linha de comando **icacls.exe**. Esse comando deve ser executado no diretório em que a dll do proxy/stub e do **winmd** de implementação reside:
+Uma etapa de configuração adicional deve ser realizada. Para que o processo de sideload carregue e execute o proxy, o diretório deve ser marcado como "ler/executar" para ALL_APPLICATION_PACKAGES. Isso é feito por meio do**icacls.exe**ferramenta de linha de comando. Esse comando deve ser executado no diretório onde o**winmd**de implementaçãoe a dll do proxy/stub reside:
 
 *icacls. /T /grant \*S-1-15-2-1:RX*
 
@@ -557,7 +555,7 @@ Aqui está uma lista não exaustiva das coisas a serem consideradas:
 
 -   A transferência em massa dos resultados reduz a quantidade de conversas do processo cruzado. Isso normalmente é realizado pelo uso do constructo de matriz do Windows Runtime.
 
--   Retornar *List<T>*, em que *T* é um objeto de um fetch de propriedade ou operação assíncrona, aumentará a quantidade de conversas do processo cruzado. Por exemplo, suponha que você retorne um objeto *List&lt;People&gt;*. Cada passe de iteração será uma chamada de processo cruzado. Cada objeto *People* retornado é representado por um proxy e cada chamada para um método ou uma propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um objeto *List&lt;People&gt;* "inocente", em que *Count* é grande, causará um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
+-   Retornando*lista<T>* onde*T*é um objeto de um fetch de propriedade ou operação assíncrona, fará com que muitos quantidade de conversas de processo cruzado. Por exemplo, suponha que você retorne um*lista&lt;pessoas&gt;* objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada*pessoas*objeto retornado é representado por um proxy e cada chamada para um método ou propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um "inocente",*lista&lt;pessoas&gt;* objeto onde*contagem*é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
 
 ```csharp
 struct PersonStruct
@@ -569,10 +567,10 @@ struct PersonStruct
 }
 ```
 
-Então retorne* PersonStruct\[\]* em vez de *Lista&lt;PersonObject&gt;*.
+Em seguida, retorne*Personstruct \ [\]* em vez de*lista&lt;PersonObject&gt;*.
 Isso leva todos os dados por um "salto" de processo cruzado
 
-Tal como acontece com todas as considerações de desempenho, medição e testes são fundamentais. O ideal é que uma telemetria seja inserida nas diversas operações para determinar quanto tempo elas levam. É importante fazer a medição através de uma escala: por exemplo, quanto tempo realmente leva para consumir todos os objetos *People* para uma consulta particular no aplicativo de sideload?
+Tal como acontece com todas as considerações de desempenho, medição e testes são fundamentais. O ideal é que uma telemetria seja inserida nas diversas operações para determinar quanto tempo elas levam. É importante medir em uma ampla gama: por exemplo, quanto tempo realmente leva para consumir todas as*pessoas*objetos para uma consulta particular no aplicativo de sideload?
 
 Outra técnica é o teste de carga variável. Isso pode ser feito colocando ganchos de teste de desempenho no aplicativo, que introduzem cargas de atraso variáveis no processamento do servidor. Isso pode simular vários tipos de carga e a reação do aplicativo para diferentes desempenhos do servidor.
 O exemplo ilustra como colocar atrasos no código usando técnicas assíncronas adequadas. A quantidade exata de atraso para injetar e o intervalo aleatório para colocar nessa carga artificial variam de acordo com o projeto do aplicativo e o ambiente esperado no qual o aplicativo será executado.
@@ -581,7 +579,7 @@ O exemplo ilustra como colocar atrasos no código usando técnicas assíncronas 
 
 Quando você faz alterações no servidor, é necessário certificar-se de que todas as instâncias em execução anteriormente já não estejam em execução. O COM eventualmente elimina o processo, mas o temporizador de encerramento leva mais tempo do que é eficaz para o desenvolvimento iterativo. Dessa forma, eliminar uma instância em execução anteriormente é uma etapa normal durante o desenvolvimento. Isso exige que o desenvolvedor mantenha o controle de qual instância dllhost está hospedando o servidor.
 
-O processo do servidor pode ser encontrado e eliminado usando o Gerenciador de Tarefas ou outros aplicativos de terceiros. A ferramenta de linha de comando **TaskList.exe **também está inclusa e possui sintaxe flexível, por exemplo:
+O processo do servidor pode ser encontrado e eliminado usando o Gerenciador de Tarefas ou outros aplicativos de terceiros. A ferramenta de linha de comando**TaskList.exe**também está incluída e tem uma sintaxe flexível, por exemplo:
 
   
  | **Comando** | **Ação** |
@@ -590,7 +588,7 @@ O processo do servidor pode ser encontrado e eliminado usando o Gerenciador de T
  | tasklist /FI "IMAGENAME eq dllhost.exe" /M | Lista as informações sobre todas as instâncias dllhost.exe. A opção /M lista os módulos que elas carregaram. |
  | tasklist /FI "PID eq 12564" /M | Você pode usar esta opção para consultar a dllhost.exe se você sabe o seu PID. |
 
-A lista de módulos para um servidor do agente deve listar *clrhost.dll* em sua lista de módulos carregados.
+Lista de módulos para um servidor do agente deve listar*clrhost. dll*em sua lista de módulos carregados.
 
 ## <a name="resources"></a>Recursos
 

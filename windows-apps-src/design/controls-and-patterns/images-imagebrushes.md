@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee3948fc4c7ab83657e8bca127306bb037d491a8
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494133"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544242"
 ---
 # <a name="images-and-image-brushes"></a>Imagens e pincéis de imagem
 
@@ -60,7 +58,7 @@ Este é o objeto Image renderizado.
 
 ![Exemplo de um elemento de imagem](images/Image_Licorice.jpg)
 
-Neste exemplo, a propriedade [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica o local da imagem que você deseja exibir. Você pode definir Source especificando uma URL absoluta (por exemplo, http://contoso.com/myPicture.jpg) ou especificando uma URL relativa à estrutura de empacotamento de seu aplicativo. Para nosso exemplo, colocamos o arquivo de imagem "licorice.jpg" na pasta raiz do projeto e declaramos as configurações do projeto que incluem o arquivo de imagem como conteúdo.
+Neste exemplo, a propriedade [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica o local da imagem que você deseja exibir. Você pode definir a origem especificando uma URL absoluta (por exemplo, http://contoso.com/myPicture.jpg) ou especificando uma URL que é relativa à sua estrutura de empacotamento do aplicativo. Para nosso exemplo, colocamos o arquivo de imagem "licorice.jpg" na pasta raiz do projeto e declaramos as configurações do projeto que incluem o arquivo de imagem como conteúdo.
 
 ### <a name="imagebrush"></a>ImageBrush
 

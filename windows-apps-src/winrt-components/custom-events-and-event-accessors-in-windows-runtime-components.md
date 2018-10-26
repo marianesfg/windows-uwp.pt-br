@@ -6,19 +6,18 @@ ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8b759684d07c1fa8265ed958ac9c736aa12a488c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549668"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 O suporte do .NET framework para componentes do Tempo de Execução do Windows facilitar declarar componentes de eventos ocultando as diferenças entre o padrão do evento da Plataforma Universal do Windows (UWP) e o padrão de evento do .NET Framework. No entanto, ao declarar acessadores de eventos personalizado em um componente do Tempo de Execução do Windows, você deve seguir o padrão usado na UWP.
 
@@ -34,9 +33,9 @@ Felizmente, os compiladores de Visual Basic e C# simplificam esse processo: quan
 
 O código a seguir do evento NumberChanged mostra o padrão básico de eventos UWP. Neste exemplo, o construtor do objeto de argumento do evento, NumberChangedEventArgs, utiliza um único parâmetro inteiro que representa o valor numérico alterado.
 
-> **Observação**  Esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente do Tempo de Execução do Windows.
+> **Observação**esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente de tempo de execução do Windows.
 
- 
+ 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
@@ -102,7 +101,7 @@ O código a seguir do evento NumberChanged mostra o padrão básico de eventos U
 
 O método estático (compartilhado em Visual Basic) GetOrCreateEventRegistrationTokenTable cria a instância do evento do objeto EventRegistrationTokenTable&lt;T&gt; lentamente. Passe o campo de nível de classe que armazenará a instância da tabela de tokens para esse método. Caso o campo esteja vazio, o método cria a tabela, armazena uma referência à tabela no campo e retorna uma referência para a tabela. Caso o campo já contenha uma referência à tabela de tokens, o método retorna apenas essa referência.
 
-> **Importante**  Para garantir a segurança do thread, o campo que mantém a instância do evento de EventRegistrationTokenTable&lt;T&gt; deve ser um campo de nível de classe. Caso ele seja um campo de nível de classe, o método GetOrCreateEventRegistrationTokenTable garante que, quando vários threads tentam criar a tabela de tokens, todos os threads obtêm a mesma instância da tabela. Para um determinado evento, todas as chamadas para o método GetOrCreateEventRegistrationTokenTable devem usar o mesmo campo de nível de classe.
+> **Importante**para garantir a segurança do thread, o campo que mantém a instância do evento de EventRegistrationTokenTable&lt;T&gt; deve ser um campo de nível de classe. Caso ele seja um campo de nível de classe, o método GetOrCreateEventRegistrationTokenTable garante que, quando vários threads tentam criar a tabela de tokens, todos os threads obtêm a mesma instância da tabela. Para um determinado evento, todas as chamadas para o método GetOrCreateEventRegistrationTokenTable devem usar o mesmo campo de nível de classe.
 
 Chamar o método GetOrCreateEventRegistrationTokenTable no acessador remove e no método [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) (o método OnRaiseEvent em C#) garante que nenhuma exceção ocorra caso esses métodos sejam chamados antes de qualquer representante do manipulador de eventos ter sido adicionado.
 
@@ -111,11 +110,11 @@ Entre os outros membros da classe EventRegistrationTokenTable&lt;T&gt; que são 
 -   O método [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) gera um token para o representante do manipulador de eventos, armazena o representante na tabela, adiciona-o à lista de invocações e devolve o token.
 -   A sobrecarga de método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) remove o representante da tabela e da lista de invocações.
 
-    >**Observação**  Os métodos AddEventHandler e RemoveEventHandler(EventRegistrationToken) bloqueiam a tabela para ajudar a garantir a segurança do thread.
+    >**Observação**os métodos AddEventHandler e removeeventhandler (eventregistrationtoken) bloqueiam a tabela para ajudar a garantir a segurança do thread.
 
 -   A propriedade [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) retorna um representante que inclui todos os manipuladores de eventos registrados no momento para manipular o evento. Use esse representante para acionar o evento ou use os métodos da classe Delegate para invocar os manipuladores individualmente.
 
-    >**Observação**  Recomendamos seguir o padrão mostrado no exemplo fornecido anteriormente neste artigo e copiar o representante para uma variável temporária antes de chamá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante. Como os representantes são imutáveis, a cópia continua sendo válida.
+    >**Observação**, recomendamos que você siga o padrão mostrado no exemplo fornecido anteriormente neste artigo e copia o representante para uma variável temporária antes de chamá-lo. Isso evita uma condição de corrida em que um thread remove o último manipulador, o que reduz o representante para nulo antes de outro thread tentar invocar o representante. Como os representantes são imutáveis, a cópia continua sendo válida.
 
 Coloque o próprio código nos acessadores conforme apropriado. Caso a segurança do thread seja um problema, você deve fornecer o próprio bloqueio para o código.
 
@@ -127,6 +126,6 @@ Usuários do Visual Basic: no .NET Framework, um evento é apenas um representan
 
 * [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Eventos (guia de programação de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para visão geral de aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

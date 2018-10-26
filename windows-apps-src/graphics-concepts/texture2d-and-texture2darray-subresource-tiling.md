@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 292adb2f06022fbb8fc063c49442cd69ccf64534
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 245581e4eb2a8526b242feadb5877590283e24f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044135"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549923"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Sub-recursos lado a lado de Texture2D e Texture2DArray
 
@@ -38,7 +36,7 @@ Esta tabela mostra como os sub-recursos [**Texture2D**](https://msdn.microsoft.c
 | BC1,4                       | 512x256                       |
 | BC2,3,5,6,7                 | 256x256                       |
 
- 
+ 
 
 Contagens de bits de formato sem suporte com recursos de streaming: formatos de 96 bpp, formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM e DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -55,7 +53,7 @@ Esta tabela mostra como os sub-recursos [**Texture2D**](https://msdn.microsoft.c
 | 8                           | 4x2                           |
 | 16                          | 4x4                           |
 
- 
+ 
 
 Somente as contagens de amostra 1 e 4 são necessárias (e permitidas) têm suporte com recursos de streaming. Os recursos de streaming no momento não têm suporte para 2, 8 e 16 mesmo que sejam mostrados.
 
@@ -70,9 +68,9 @@ As restrições de formatos e contagens de amostras com suporte se devem às inc
 
 [Como uma área de recurso de streaming é colocada lado a lado](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

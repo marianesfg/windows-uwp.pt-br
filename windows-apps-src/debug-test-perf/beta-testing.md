@@ -6,19 +6,17 @@ description: O teste beta oferece a você a oportunidade de melhorar seu aplicat
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "692904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544742"
 ---
 # <a name="beta-testing"></a>Teste beta
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 O *teste beta* oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos.
@@ -36,7 +34,7 @@ Com o teste beta, você pode:
 -   Testar seu aplicativo em uma variedade de dispositivos.
 -   Identificar problemas de desempenho e outros bugs que talvez você não encontrasse de outra forma.
 -   Obter informações de uso do mundo real que podem ser usadas para melhorar a experiência do usuário.
--   Receber comentários sem afetar classificações públicas na Windows Store.
+-   Receba comentários sem afetar classificações públicas na Microsoft Store.
 
 ## <a name="when-to-beta-test"></a>Quando fazer o teste beta
 
@@ -48,9 +46,9 @@ No painel unificado do Centro de Desenvolvimento do Windows, você pode limitar 
 
 Consulte [Teste beta e distribuição direcionada](https://msdn.microsoft.com/library/windows/apps/Mt185377) para saber como enviar seu aplicativo para a loja para teste beta.
 
- 
+ 
 
- 
+ 
 
 
 

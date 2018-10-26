@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: c951d8aacef1a327740ca09f19bbc33caa3695df
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395575"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543518"
 ---
 # <a name="make-your-app-localizable"></a>Tornar seu app localizável
 
@@ -54,9 +52,9 @@ Além disso, uma cadeia de caracteres como "text" ou "fax" podem ser usadas tant
 
 Resumindo, decomponha as cadeias de caracteres em partes que funcionam em todos os contextos. Haverá casos em que uma cadeia de caracteres precisará ser uma frase inteira.
 
-Considere a seguinte cadeia de caracteres: "Não foi possível sincronizar o {0}."
+Considere a seguinte cadeia de caracteres: "o {0} não foi possível sincronizar."
 
-Diversas palavras poderiam substituir {0}, como "compromisso", "tarefa", or "documento". Apesar desse exemplo funcionar em português, essa estrutura gramatical pode não funcionar em uma sentença correspondente, por exemplo, em alemão. Perceba que nas frases em alemão a seguir, algumas palavras na cadeia de caracteres de modelo ("Der", "Die", "Das") precisam corresponder à palavra nos parâmetros:
+Diversas palavras poderiam substituir {0}, como "compromisso", "tarefa" ou "documento". Apesar desse exemplo funcionar em português, essa estrutura gramatical pode não funcionar em uma sentença correspondente, por exemplo, em alemão. Perceba que nas frases em alemão a seguir, algumas palavras na cadeia de caracteres de modelo ("Der", "Die", "Das") precisam corresponder à palavra nos parâmetros:
 
 | Português                                    | Alemão                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -64,7 +62,7 @@ Diversas palavras poderiam substituir {0}, como "compromisso", "tarefa", or "doc
 | Não foi possível sincronizar a tarefa.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | Não foi possível sincronizar o documento.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Como outro exemplo, considere a frase "Lembre-me em {0} minuto(s)." Usar "minuto(s)" funciona em português, mas outros idiomas podem usar termos diferentes. Por exemplo, o idioma polonês usa "minuta", "minuty" ou "minut", dependendo do contexto.
+Como outro exemplo, considere a frase "Lembre-me em {0} minuto (s)." Usar "minuto(s)" funciona em português, mas outros idiomas podem usar termos diferentes. Por exemplo, o idioma polonês usa "minuta", "minuty" ou "minut", dependendo do contexto.
 
 Para resolver este problema, localize a frase inteira em vez de apenas uma palavra. Fazer isso pode parecer um trabalho redobrado e uma solução inadequada, mas essa é a melhor solução porque:
 
@@ -100,7 +98,7 @@ Não suponha que todos os idiomas expressam parâmetros na mesma ordem. Por exem
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-A cadeia de caracteres de formato neste exemplo funciona para inglês (Estados Unidos). Entretanto, não é adequado para alemão (Alemanha), por exemplo, onde o dia e mês são exibidos na ordem inversa. Certifique-se de que o tradutor saiba a intenção de cada um dos parâmetros para que ele possa inverter a ordem dos itens de formato na cadeia de caracteres de formato (por exemplo, "{1} {0}") conforme apropriado ao idioma de destino.
+A cadeia de caracteres de formato neste exemplo funciona para inglês (Estados Unidos). Entretanto, não é adequado para alemão (Alemanha), por exemplo, onde o dia e mês são exibidos na ordem inversa. Certifique-se de que o tradutor saiba a intenção de cada um dos parâmetros para que ele possa inverter a ordem dos itens de formato na cadeia de caracteres de formato (por exemplo, "{1} {0}") conforme apropriado para o idioma de destino.
 
 ## <a name="dont-over-localize"></a>Não faça traduções em excesso
 
@@ -174,4 +172,4 @@ A classificação segue o formato do **Painel de Controle Regional**.
 
 ## <a name="samples"></a>Exemplos
 
-* [Amostra de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)
+* [Exemplo de recursos e localização de aplicativos](http://go.microsoft.com/fwlink/p/?linkid=254478)

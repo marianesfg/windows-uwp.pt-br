@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0b87f827e7a878b1952ca1970841c3fd5584db
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 4c959ced5ada9145ca494dd023c9aa802d7dccc2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544579"
 ---
 # <a name="block-compression"></a>Compactação de bloco
 
@@ -105,7 +103,7 @@ O Direct3D implementa vários esquemas de compactação, cada um implementa um e
 | Cor de um componente             | Um componente (8)                     | [BC4](#bc4)                    |
 | Cor de dois componentes             | Dois componentes (8:8)                  | [BC5](#bc5)                    |
 
- 
+ 
 
 -   [BC1](#bc1)
 -   [BC2](#bc2)
@@ -417,7 +415,7 @@ A tabela a seguir lista os formatos de destino e origem permitidos que você pod
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 

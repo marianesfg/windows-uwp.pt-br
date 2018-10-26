@@ -9,15 +9,13 @@ keywords: dispositivo, entrada, interação
 ms.author: mijacobs
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c36e60d0435db6536ea7bb0eee3011937668cb7
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395385"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550831"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 
@@ -133,7 +131,7 @@ Recursos típicos do dispositivo
 
 O mais usado de todos os dispositivos de computação, o telefone pode fazer muito com o tamanho da tela limitado e entradas básicas. Os telefones estão disponíveis em uma variedade de tamanhos; telefones maiores são chamados de phablets. As experiências de aplicativo nos phablets são semelhantes às dos telefones, mas o espaço maior da tela dos phablets permite algumas mudanças importantes no consumo de conteúdo.
 
-Com o Continuum para Telefones, uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e um teclado para fazer seus telefones funcionarem como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431).)
+Com o Continuum para telefones, uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones a um monitor e até mesmo usar um mouse e teclado para fazê-los funcionar como um notebook. (Para saber mais, veja o artigo [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431).)
 
 Tamanhos de tela
 -   De 4 a 5 polegadas para telefone
@@ -166,7 +164,7 @@ Recursos típicos do dispositivo
 -   Sensores de movimento
 -   Sensores de localização
 
- 
+ 
 
 ## <a name="surface-hub-devices"></a>Dispositivos Surface Hub
 
@@ -199,7 +197,7 @@ Recursos típicos do dispositivo
 -   Câmera
 -   Microfone
 
- 
+ 
 
 ## <a name="windows-iot-devices"></a>Dispositivos Windows IoT
 

@@ -6,16 +6,14 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 27b458c7ec5cabdc27ebd90c9eb024df2f35e402
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664949"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549276"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar o app Mapas do Windows
 
@@ -103,7 +101,7 @@ Ao pesquisar por locais usando o parâmetro *q*, recomendamos o uso de termos es
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | Pesquisa por Nova York próximo ao ponto central especificado.                             |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | Pesquisa por pizza na caixa delimitadora especificada (ou seja, na cidade de Nova York).      |
 
- 
+ 
 ## <a name="display-multiple-points"></a>Exibir vários pontos
 
 
@@ -117,7 +115,7 @@ Use o parâmetro *collection* para mostrar um conjunto personalizado de pontos n
 | bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Exibe a cidade de Nova York com um pino denominado Fake\_Business\_with\_Underscore.                                                  |
 | bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Exibe uma lista denominada Lista de Hotéis e dois pinos para Caesars Palace e The Bellagio em Las Vegas, e define o zoom para nível 16. |
 
- 
+ 
 
 ## <a name="display-directions-and-traffic"></a>Exibir trajeto e tráfego
 
@@ -251,10 +249,10 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </ul>
 <p>No Windows 10, os estilos de vista aérea e exibição 3D são os mesmos.</p>
 <div class="alert">
-**Observação**  Omitir o parâmetro **sty** produz os mesmos resultados que sty=r.
+**Observação**omitir o parâmetro **sty** produz os mesmos resultados que sty = r.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -289,10 +287,10 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>ss=1</p></td>
 <td align="left"><p>Indica as imagens em nível de rua que serão mostradas quando <code>ss=1</code>. Omitir o parâmetro <b>ss</b> produz os mesmos resultados que <code>ss=0</code>. Use em conjunto com o parâmetro <b>cp</b> para especificar o local do modo de exibição em nível de rua.</p>
 <div class="alert">
-**Observação**  As imagens em nível de rua não estão disponíveis em todas as regiões.
+**Observação**imagens em nível de rua não está disponível em todas as regiões.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -303,10 +301,10 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Especifica se as informações de trânsito estão incluídas no mapa. Omitir o parâmetro trfc produz os mesmos resultados que <code>trfc=0</code>.</p>
 <div class="alert">
-**Observação**  Observe que os dados sobre o trânsito não estão disponíveis em todas as regiões.
+**Observação**os dados de tráfego não estão disponíveis em todas as regiões.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -332,10 +330,10 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 <p>Nenhuma linha de rota é desenhada quando uma rota incompleta é determinada.</p>
 <p>Use em conjunto com o parâmetro **mode** para especificar o modo de transporte (de carro, transporte público ou a pé). Se **mode** não for especificado, o trajeto será fornecido usando o modo de preferência de transporte do usuário.</p>
 <div class="alert">
-**Observação**  Um título pode ser usado para um local se o local for especificado pelo valor do parâmetro **pos**. Em vez de mostrar a latitude e a longitude, o título será exibido.
+**Observação**um título pode ser usado para um local se o local for especificado pelo valor do parâmetro **pos** . Em vez de mostrar a latitude e a longitude, o título será exibido.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -377,7 +375,7 @@ A sintaxe de cada parâmetro nesta tabela é mostrada com a metalinguagem Augmen
 </tbody>
 </table>
 
-  
+  
 <span id="ms-drive-to-param-reference"/>
 
 ## <a name="ms-drive-to-parameter-reference"></a>Referência de parâmetro ms-drive-to:
@@ -387,7 +385,7 @@ O URI para iniciar uma solicitação de trajetos de automóvel curva a curva nã
 
 > **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#display-directions-and-traffic).
 
- 
+ 
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |------------|-----------|---------|---------|
@@ -395,7 +393,7 @@ O URI para iniciar uma solicitação de trajetos de automóvel curva a curva nã
 | **destination.longitude** | Longitude do destino | Exemplo: destination.longitude=-122.141964733601 | A longitude do destino. Os valores válidos de longitude estão entre -180 e +180, inclusive. |
 | **destination.name** | Nome do destino | Exemplo: destination.name=Redmond, WA | O nome do destino. Você não precisa codificar o valor de **destination.name**. |
 
- 
+ 
 <span id="ms-walk-to-param-reference"/>
 
 ## <a name="ms-walk-to-parameter-reference"></a>Referência de parâmetro ms-walk-to:
@@ -404,7 +402,7 @@ O URI para iniciar uma solicitação de trajetos de automóvel curva a curva nã
 O URI para iniciar uma solicitação de trajetos a pé curva a curva não precisa ser codificado e tem o seguinte formato.
 
 > **Observação**  Você não especifica o ponto de partida nesse esquema de URI. O ponto de partida é sempre presumido como sendo a localização atual. Se você precisa especificar um ponto de partida que não seja a localização atual, consulte [Exibir trajeto e tráfego](#display-directions-and-traffic).
- 
+ 
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |-----------|------------|---------|----------|
@@ -414,7 +412,7 @@ O URI para iniciar uma solicitação de trajetos a pé curva a curva não precis
 
 ## <a name="ms-settings-parameter-reference"></a>Referência de parâmetro ms-settings:
 
-A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline. 
+A sintaxe para parâmetros específicos do aplicativo Mapas para o esquema de URI **ms-settings:** é definida abaixo. **mapas downloadmaps** é especificado junto com a URI **ms-settings:** na forma de **ms-configurações: mapas-downloadmaps?** para indicar a página de configurações de mapas offline. 
 
 | Parâmetro | Definição | Exemplo | Detalhes |
 |-----------|------------|---------|----------|

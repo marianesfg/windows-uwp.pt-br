@@ -6,21 +6,20 @@ title: Transmissão de mídia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: da0bb4d25166dd62372d5902ff89221d20189c22
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199524"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543294"
 ---
 # <a name="media-casting"></a>Transmissão de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo universal do Windows.
+Este artigo mostra como converter mídia em dispositivos remotos de um aplicativo Universal do Windows.
 
 ## <a name="built-in-media-casting-with-mediaplayerelement"></a>Transmissão de mídia integrada com o MediaPlayerElement
 
@@ -156,9 +155,9 @@ Por fim, implemente o manipulador para o botão desconectar. Pare a transmissão
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 
- 
+ 
 
- 
+ 
 
 
 

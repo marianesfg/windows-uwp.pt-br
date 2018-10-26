@@ -6,25 +6,23 @@ description: Aplicativos da Plataforma Universal do Windows (UWP) escritos em C#
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3b7dfb274c5a6d55204a467fc894bac5fd044048
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 31279de84b8f00e4489a7aae962caa231bb16dc1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543221"
 ---
 # <a name="improve-garbage-collection-performance"></a>Melhore o desempenho de coleta de lixo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Os aplicativos UWP (Plataforma Universal do Windows) no C# e no Visual Basic fazem o gerenciamento automático da memória a partir do coletor de lixo do .NET. Esta seção resume as práticas recomendadas de comportamento e desempenho para o coletor de lixo do .NET nos aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
+Aplicativos da Plataforma Universal do Windows (UWP) escritos em C# e Visual Basic obtém gerenciamento de memória automático do coletor de lixo .NET. Esta seção resume as práticas recomendadas de comportamento e desempenho para o coletor de lixo do .NET nos aplicativos UWP. Para obter mais informações sobre o funcionamento do coletor de lixo do .NET e sobre as ferramentas de depuração e análise de desempenho do coletor de lixo, consulte [Coleta de lixo](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Observação**  Precisar intervir no comportamento padrão do coletor de lixo é um forte indicativo de problemas gerais de memória em seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tópico se aplica somente a C# e Visual Basic.
+**Observação**precisar intervir no comportamento padrão do coletor de lixo é indicativo de problemas gerais de memória com seu aplicativo. Para obter mais informações, consulte [Ferramenta de uso de memória durante a depuração no Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tópico se aplica somente a C# e Visual Basic.
 
- 
+ 
 
 O coletor de lixo determina quando deve ser executado, equilibrando o consumo de memória do heap gerenciado e a quantidade de trabalho que uma coleta de lixo precisa executar. Uma das maneiras em que o coletor de lixo faz isso é dividindo o heap em gerações e coletando somente parte do heap na maior parte do tempo. Existem três gerações na pilha gerenciada:
 
@@ -46,8 +44,8 @@ Induza uma coleta de lixo somente depois de medir o desempenho de seu aplicativo
 
 É possível induzir uma coleta de lixo de uma geração chamando [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx), em que n é a geração que você deseja coletar (0, 1 ou 2).
 
-**Observação**  Recomendamos que você não imponha uma coleta de lixo em seu aplicativo porque o coletor de lixo usa várias heurísticas para determinar a melhor ocasião para a execução de uma coleta, e impor uma coleta é, em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
- 
+**Observação**, recomendamos que você não imponha uma coleta de lixo em seu aplicativo porque o coletor de lixo usa várias heurísticas para determinar o melhor momento para executar uma coleta e impor uma coleta é em muitos casos, um uso desnecessário da CPU. Mas se você souber que tem um grande número de objetos em seu aplicativo que não são mais usados e desejar retornar essa memória para o sistema, poderá ser adequado impor uma coleta de lixo. Por exemplo, você pode induzir uma coleta no final de uma sequência de carregamento em um jogo para liberar memória antes de começar a jogar.
+ 
 Para evitar a indução inadvertida de coletas de lixo em excesso, é possível definir [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) como **Optimized**. Esse recurso instrui o coletor de lixo a iniciar a coleta somente se ele determinar que a coleta será produtiva o bastante para ser justificada.
 
 ## <a name="reduce-garbage-collection-time"></a>Reduzir o tempo de coleta de lixo
@@ -82,9 +80,9 @@ O coletor de lixo determina quais objetos estão vivos seguindo referências ent
 
 Substituir referências de objeto por índices pode ser uma alteração prejudicial e complicada para seu aplicativo e é mais eficiente para objetos grandes com um grande número de referências. Faça isso somente se estiver observando tempos muito grandes de coleta de lixo em seu aplicativo com relação a objetos com muitas referências.
 
- 
+ 
 
- 
+ 
 
 
 

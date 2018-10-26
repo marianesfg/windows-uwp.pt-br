@@ -1,30 +1,28 @@
 ---
 author: v-angraf
 ms.assetid: 4c03e06b-c12c-f64f-c53f-b38716101822
-title: Page (Dev Home) do Xbox Live
-description: Fornece informações sobre a página Xbox Live do aplicativo Dev Home para um Xbox.
+title: Página (Dev Home) do Xbox Live
+description: Fornece informações sobre a página do aplicativo Dev Home do Xbox Live para o Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af78e5ecb30dc879bd12f52bfeadde70af18a39
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 96f22cb971f5c8266653a6b3c3f4bcc7dd61546d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546678"
 ---
-# <a name="xbox-live-page-dev-home"></a>Page (Dev Home) do Xbox Live
+# <a name="xbox-live-page-dev-home"></a>Página (Dev Home) do Xbox Live
    
   
-Página de **Xbox Live** Dev Home captura informações com vários participantes e exibe o status atual do serviço Xbox Live.   
- ![Página Xbox Live do Dev Home](images/devhome_live.png)   
+A página de início do desenvolvimento **Do Xbox Live** captura informações multijogador e exibe o status atual do serviço Xbox Live.   
+ ![Página do Xbox Live de Dev Home](images/devhome_live.png)   
   
-A página de **Xbox Live** contém os seguintes painéis:   
+A página **Do Xbox Live** contém os seguintes painéis:   
  
    *  [XBTrace (advancedmp)](#ID4EPB)  
    *  [Status do Xbox Live](#ID4E3B)  
@@ -37,7 +35,7 @@ A página de **Xbox Live** contém os seguintes painéis:
 ## <a name="xbtrace-advancedmp"></a>XBTrace (advancedmp)  
    
   
-A página **XBTrace (advancedmp)** inicia ou interrompe a captura de um rastreamento com vários participantes. Ele também pode capturar um instantâneo do estado atual com vários participantes.   
+A página **XBTrace (advancedmp)** for iniciada ou interrompida captura de um rastreamento de multijogador. Ele também pode capturar um instantâneo do estado atual com vários jogadores.   
   
 <a id="ID4E3B"></a>
 
@@ -46,13 +44,13 @@ A página **XBTrace (advancedmp)** inicia ou interrompe a captura de um rastream
 ## <a name="xbox-live-status"></a>Status do Xbox Live  
    
   
-O painel de **status do Xbox Live** exibe um feed do Xbox Live sobre problemas de serviço ou interrupções de status.   
+O painel de **status do Xbox Live** exibe o status de feed do Xbox Live sobre problemas de serviço ou interrupções.   
   
 <a id="ID4EPC"></a>
 
    
 
-## <a name="see-also"></a>Veja também  
- [Página inicial do desenvolvedor no Console (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte também  
+ [Home de desenvolvedor no Console (Dev Home)](dev-home.md)
 
   

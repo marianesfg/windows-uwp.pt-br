@@ -6,16 +6,14 @@ ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, contatos, calendário, compromissos, mensagens de email
 ms.localizationpriority: medium
-ms.openlocfilehash: 2224ab78d5f3424904dfc2e211d9890648080574
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549318"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contatos, Minhas Pessoas e calendário
 
@@ -35,7 +33,7 @@ Para conhecer alguns métodos diferentes que o seu aplicativo pode usar para ace
 | [Compartilhamento de Minhas Pessoas](my-people-sharing.md) | Mostra como adicionar o suporte ao compartilhamento para Minhas Pessoas, que permite aos usuários compartilhar conteúdo com seus contatos fixados arrastando arquivos do Explorador de Arquivos para o bloco Minhas Pessoas fixado. |
 | [Notificações de Minhas Pessoas](my-people-notifications.md) | Mostra como criar e usar notificações de Minhas Pessoas a um novo tipo de notificação do sistema enviado de um contato fixado. |
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

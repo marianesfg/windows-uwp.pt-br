@@ -6,22 +6,20 @@ ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, compromissos, calendário
-ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548916"
 ---
 # <a name="manage-appointments"></a>Gerenciar compromissos
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Pelo namespace [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), você pode criar e gerenciar compromissos no aplicativo de calendário de um usuário. Aqui, mostraremos como criar um compromisso, adicioná-lo a um aplicativo de calendário, substituí-lo no aplicativo de calendário e depois removê-lo desse aplicativo de calendário. Também mostraremos como exibir um intervalo de tempo para um aplicativo de calendário e criar um objeto de recorrência de compromisso.
+Pelo namespace [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359), você pode criar e gerenciar compromissos no app de calendário de um usuário. Aqui, mostraremos como criar um compromisso, adicioná-lo a um aplicativo de calendário, substituí-lo no aplicativo de calendário e depois removê-lo desse aplicativo de calendário. Também mostraremos como exibir um intervalo de tempo para um aplicativo de calendário e criar um objeto de recorrência de compromisso.
 
 ## <a name="create-an-appointment-and-apply-data-to-it"></a>Criar um compromisso e aplicar dados a ele
 
@@ -286,7 +284,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Observação**  Para os aplicativos da Loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) pelo fato de que a caixa de diálogo exibida para adicionar o compromisso é editável.
+**Observação**para aplicativos da loja do Windows Phone, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona como [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) de que a caixa de diálogo exibida para adicionar o compromisso é editável.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Substituir um compromisso no calendário do usuário
 
@@ -574,6 +572,6 @@ Agora, você já conhece as noções básicas de como gerenciar compromissos. Ba
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Amostra da API de compromissos](http://go.microsoft.com/fwlink/p/?linkid=309836)
- 
+ 
 
- 
+ 

@@ -6,18 +6,17 @@ title: Efeitos para análise de quadros de câmera
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3fc55919942c1edc82f7c2e5da2608b5f1b1445b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547654"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efeitos para análise de quadros de câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo descreve como usar [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) e [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) para analisar o conteúdo do fluxo de visualização de captura de mídia.
@@ -120,9 +119,9 @@ Nem todos os dispositivos têm um mecanismo de captura que possa ajustar o foco 
 
 * [Câmera](camera.md)
 * [Captura básica de fotos, áudio e vídeo com MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
+ 
 
- 
+ 
 
 
 

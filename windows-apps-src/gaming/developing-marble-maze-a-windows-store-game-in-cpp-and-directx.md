@@ -6,16 +6,14 @@ ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
 ms.author: elcowle
 ms.date: 08/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, amostra, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 91b3e37664543b57839387a187d0876f4830222c
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7a808c36ab319d76f16c653c5812ebe4b269ec59
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543620"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Desenvolvendo o Marble Maze, um jogo da UWP em C++ e DirectX
 
@@ -30,7 +28,7 @@ Este tópico descreve como usar o DirectX e o Visual C++ para criar um jogo da U
 > [!IMPORTANT]
 > O Marble Maze ilustra padrões de design que consideramos ser as práticas recomendadas para a criação de jogos UWP. Você pode adaptar muitos dos detalhes de implementação às próprias práticas e aos requisitos específicos do jogo que você está desenvolvendo. Sinta-se à vontade para usar técnicas ou bibliotecas diferentes se estas forem mais adequadas para as suas necessidades. (No entanto, sempre garanta que seu código seja aprovado no [Kit de Certificação de Aplicativos Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).) Quando consideramos que uma implementação usada aqui é essencial para o êxito no desenvolvimento de jogos, enfatizamos isso nesta documentação.
 
- 
+ 
 
 ## <a name="introducing-marble-maze"></a>Apresentando o Marble Maze
 
@@ -46,8 +44,8 @@ O Marble Maze oferece várias maneiras de um usuário interagir com o tabuleiro 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
--   Atualização do Windows 10 para Criadores
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   Windows 10 para criadores
+-   [Microsoft Visual Studio2017](https://www.visualstudio.com/downloads/)
 -   Conhecimento em programação C++
 -   Familiaridade com DirectX e terminologia do DirectX
 -   Conhecimentos básicos de COM
@@ -55,7 +53,7 @@ O Marble Maze oferece várias maneiras de um usuário interagir com o tabuleiro 
 ## <a name="who-should-read-this"></a>Quem deve ler isto?
 
 
-Se você estiver interessado em criar jogos 3D ou outros aplicativos com uso intensivo de elementos gráficos para o Windows 10, este documento é ideal para você. Esperamos que você use os princípios e as práticas descritos nesta documentação para criar seu próprio jogo UWP. Ter conhecimento ou interesse em programação C++ e DirectX irá ajudar você a tirar o máximo proveito desta documentação. Se você não tem experiência com DirectX, ainda poderá se beneficiar se tiver experiência com ambientes semelhantes de programação de elementos gráficos 3D.
+Se você estiver interessado em criar jogos 3D ou outros aplicativos com muitos gráficos para Windows 10, isso é para você. Esperamos que você use os princípios e as práticas descritos nesta documentação para criar seu próprio jogo UWP. Ter conhecimento ou interesse em programação C++ e DirectX irá ajudar você a tirar o máximo proveito desta documentação. Se você não tem experiência com DirectX, ainda poderá se beneficiar se tiver experiência com ambientes semelhantes de programação de elementos gráficos 3D.
 
 O documento [Passo a passo: criar um jogo UWP simples com DirectX](tutorial--create-your-first-uwp-directx-game.md) descreve outra amostra que implementa um jogo básico de tiro em 3D usando DirectX e C++.
 
@@ -101,11 +99,11 @@ Recomendamos que você comece com os [princípios básicos da amostra do Marble 
 | [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) | Descreve como o Marble Maze trabalha com entradas de acelerômetro, toque e controle Xbox One para permitir que os usuários naveguem pelos menus e interajam com o tabuleiro do jogo. Também descreve algumas das práticas recomendadas que você deve ter em mente ao trabalhar com entrada. |
 | [Adicionando áudio ao exemplo do Marble Maze](adding-audio-to-the-marble-maze-sample.md)                                     | Descreve como o Marble Maze trabalha com áudio para adicionar música e efeitos sonoros à experiência do jogo.                                                                                                                                                  |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

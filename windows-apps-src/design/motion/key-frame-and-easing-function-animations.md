@@ -6,16 +6,14 @@ description: Animações de quadro chave lineares, animações de quadro chave c
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f48bdb41859fb5a2ba438d4f74143598b0e1342
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 2076866cc31f50bd7ccfc6730bca5be96ffdc7c3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1665052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547374"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Animações de quadro chave e animações com função de easing
 

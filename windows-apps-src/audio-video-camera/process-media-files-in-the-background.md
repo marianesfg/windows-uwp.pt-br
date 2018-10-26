@@ -6,18 +6,17 @@ title: Processar arquivos de mídia em segundo plano
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548367"
 ---
 # <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar o [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) e uma tarefa em segundo plano para processar arquivo de mídia em segundo plano.
@@ -78,7 +77,7 @@ O método **AsTask** permite que você rastreie o progresso da operação assín
 
 No método que você usou para criar o objeto de Progresso na etapa anterior, **Progress**, defina o progresso da instância da tarefa em segundo plano. Isso irá passar o progresso ao aplicativo em primeiro plano, se ele estiver sendo executado.
 
-[!code-cs[Progresso](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
+[!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
 O método auxiliar **SendToastNotification** cria uma nova notificação do sistema obtendo um documento XML de modelo para uma notificação que tenha apenas conteúdo de texto. O elemento de texto da notificação do sistema é definido e, em seguida, um novo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) é criado a partir do documento XML. Por fim, a notificação é exibida para o usuário chamando [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
 
@@ -127,9 +126,13 @@ Registre a tarefa em segundo plano chamando [**Register**](https://msdn.microsof
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Inicie a tarefa em segundo plano chamando o método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) do objeto **MediaProcessingTrigger**. O objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) devolvido por esse método informa se a tarefa em segundo plano foi iniciada com êxito ou se não foi iniciada.
+Um aplicativo típico registrará na tarefa em segundo plano quando o aplicativo é iniciado inicialmente, como o evento **OnNavigatedTo** .
+
+Inicie a tarefa em segundo plano chamando o método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) do objeto **MediaProcessingTrigger**. O objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) devolvido por esse método informa se a tarefa em segundo plano foi iniciada com êxito ou se não foi iniciada. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
+
+Um aplicativo típico iniciará a tarefa em segundo plano em resposta à interação do usuário, como no evento de **clique** de um controle de interface do usuário.
 
 O manipulador de evento **OnProgress** é chamado quando a tarefa em segundo plano atualiza o progresso da operação. Você pode aproveitar a oportunidade para atualizar sua interface do usuário com informações de progresso.
 
@@ -140,9 +143,9 @@ O manipulador de evento **OnCompleted** é chamado quando a tarefa em segundo pl
 [!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
 
 
- 
+ 
 
- 
+ 
 
 
 

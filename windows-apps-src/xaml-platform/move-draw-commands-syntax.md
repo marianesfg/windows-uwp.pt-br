@@ -6,16 +6,14 @@ ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a66faebf8447253cc158ea8aa2312eb61474bc08
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675253"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550690"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxe de comandos de movimentação e desenho
 
@@ -83,7 +81,7 @@ Especifica o ponto inicial de uma nova figura.
 
 Um **M** maiúsculo indica que *startPoint* é uma coordenada absoluta; um **m** minúsculo indica que *startPoint* é um deslocamento do ponto anterior, ou (0,0) se não há ponto anterior.
 
-**Observação**  É possível especificar vários pontos após o comando de movimentação. Uma linha é desenhada até esses pontos, como se você tivesse especificado o comando de linha. No entanto, este não é um estilo recomendado. Em vez disso, use o comando de linha dedicado.
+**Observação**é possível especificar vários pontos após o comando de movimentação. Uma linha é desenhada até esses pontos, como se você tivesse especificado o comando de linha. No entanto, este não é um estilo recomendado. Em vez disso, use o comando de linha dedicado.
 
 **Comandos de desenho**
 
@@ -141,7 +139,7 @@ Cria uma curva de Bézier cúbica entre o ponto atual e o ponto final especifica
 |------|-------------|
 | *controlPoint1* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O primeiro ponto de controle da curva, que determina a tangente inicial da curva. |
 | *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O segundo ponto de controle da curva, que determina a tangente final da curva. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual a curva é desenhada. | 
+| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual a curva é desenhada. | 
 
 **Comando de curva de Bézier quadrática**
 
@@ -197,7 +195,7 @@ Cria um arco elíptico entre o ponto atual e a ponto final especificado. Define 
 | *isLargeArcFlag* | Defina como 1 se o ângulo do arco deve ser maior ou igual a 180; caso contrário, defina como 0. |
 | *sweepDirectionFlag* | Defina como 1 se o arco estiver desenhado em uma direção de ângulo positivo; caso contrário, defina como 0. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> O ponto no qual o arco é desenhado.|
- 
+ 
 **Comando de fechamento**
 
 Termina a figura atual e cria uma linha que liga o ponto atual ao ponto inicial da figura. Esse comando cria uma junção de linha (canto) entre o último segmento e o primeiro segmento da figura.
@@ -231,11 +229,11 @@ Em vez de usar decimais ou inteiros, você pode usar notação científica. Por 
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Ferramentas de desenho que produzem comandos de movimentação e desenho
 
-O uso da ferramenta **Caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio 2015 geralmente produz um objeto [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path), com comandos de movimentação e desenho.
+Usando a ferramenta de **caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio2015 geralmente produzem um objeto de [**caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , mover e desenhar comandos.
 
 É possível que você veja dados de comandos de movimentação e desenho existentes em algumas partes de controle definidas nos modelos padrão de controles do Windows Runtime XAML. Por exemplo, alguns controles usam um [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tem dados definidos como comandos de movimentação e desenho.
 
-Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses exportadores ou plug-ins foram originalmente escritos para o XAML ou Silverlight do Windows Presentation Foundation (WPF), mas a sintaxe XAML é idêntica ao XAML do Windows Runtime. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
+Há exportadores ou plug-ins disponíveis para outras ferramentas de desenho gráfico vetorial comuns que podem produzir o vetor na forma de XAML. Geralmente elas criam objetos [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) em um contêiner de layout, com comandos de movimentação e desenho para [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Pode haver vários elementos **Path** no XAML, de modo que pincéis diferentes podem ser aplicados. Muitos desses Exportadores ou plug-ins foram originalmente escritos para o Windows Presentation Foundation (WPF) XAML ou Silverlight, mas a sintaxe XAML é idêntica ao XAML do Windows Runtime. Normalmente, você pode usar trechos de XAML de um exportador e colá-los diretamente em uma página XAML do Windows Runtime. (Contudo, você não poderá usar um **RadialGradientBrush**, se ele fazia parte do XAML convertido, porque o XAML do Windows Runtime não dá suporte ao pincel.)
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

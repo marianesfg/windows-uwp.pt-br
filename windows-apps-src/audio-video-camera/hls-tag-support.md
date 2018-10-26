@@ -6,16 +6,14 @@ title: Suporte para marcas HLS (HTTP Live Streaming)
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d47a5f755d9ba18f8e95362d254239499d29b9e5
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 6d8e90f98dd79150cf19727fe31e51278a88a198
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843679"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543211"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Suporte para marcas HLS (HTTP Live Streaming)
 A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
@@ -88,9 +86,9 @@ A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
 
 * [Reprodução de mídia](media-playback.md)
 * [Streaming adaptável](adaptive-streaming.md)
- 
+ 
 
- 
+ 
 
 
 

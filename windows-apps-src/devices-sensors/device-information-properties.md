@@ -6,16 +6,14 @@ description: Cada dispositivo tem propriedades DeviceInformation associadas que 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8fe51fd98f70e6f920a7421a9932e69bba11377
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543363"
 ---
 # <a name="device-information-properties"></a>Propriedades de informações do dispositivo
 
@@ -38,7 +36,7 @@ Um objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/app
 Na solicitação de propriedades, você não é limitado às propriedades comuns com nomes amigáveis. Você pode especificar o GUID e a ID da propriedade (PID) subjacentes para solicitar qualquer propriedade que esteja disponível, mesmo as propriedades personalizadas que são fornecidas por um driver ou dispositivo individual. O formato para especificar uma propriedade personalizada é "`{GUID} PID`". Por exemplo: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
-> Você pode encontrar a lista da propriedade GUIDs no arquivo de cabeçalho de chave de propriedade de dispositivo, do driver do dispositivo.
+> Você pode encontrar a lista de GUIDs de propriedade no arquivo de cabeçalho de chave de propriedade do dispositivo do driver de dispositivo.
 
 Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind), mas a maioria é exclusiva para um tipo específico. As seções a seguir listam algumas propriedades comuns classificadas pelo **DeviceInformationKind**. Para obter mais informações sobre como os diferentes tipos estão relacionados um ao outro, consulte **DeviceInformationKind**.
 
@@ -57,7 +55,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.Icon**               | String  | Caminho do ícone.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | String  | O melhor nome de exibição para o objeto de dispositivo.                                                                                                                                                                                                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="device-properties"></a>Propriedades do dispositivo
 
@@ -75,7 +73,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.Present**            | Booliano    | Indica se o dispositivo ainda está presente e disponível.                                                                                                                                                                                                                         |
 | **System.ItemNameDisplay**            | String     | O melhor nome de exibição para esse objeto de dispositivo. Nesse caso, esse não é necessariamente o melhor nome para usuários. Um candidato mais provável para um nome amigável pode ser encontrado fazendo-se referência ao **System.ItemNameDisplay** do **DeviceContainer** ou **DeviceInterface** associado. |
 
- 
+ 
 
 ## <a name="devicecontainer-properties"></a>Propriedades de DeviceContainer
 
@@ -95,7 +93,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.Paired**         | Booliano    | Indica se os objetos **DeviceInformationKind.Device** filho são dispositivos sem fio ou de rede que atualmente estão emparelhados ao sistema.             |
 | **System.ItemNameDisplay**        | String     | O melhor nome de exibição para esse dispositivo.                                                                                                                             |
 
- 
+ 
 
 ## <a name="deviceinterfaceclass-properties"></a>Propriedades de DeviceInterfaceClass
 
@@ -103,7 +101,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 |----------------------------|--------|----------------------------------------|
 | **System.ItemNameDisplay** | String | O melhor nome de exibição para esse dispositivo. |
 
- 
+ 
 
 ## <a name="associationendpoint-properties"></a>Propriedades de AssociationEndpoint
 
@@ -124,7 +122,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.Aep.SignalStrength** | Int32      | A intensidade do sinal do dispositivo. Essa propriedade só é aplicável para alguns protocolos.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | String     | O melhor nome de exibição para o dispositivo.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="associationendpointcontainer-properties"></a>Propriedades de AssociationEndpointContainer
 
@@ -146,7 +144,7 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.AepContainer.SupportsVideo**       | Booliano    | Indica se esse dispositivo aceita transmissão de vídeo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **System.ItemNameDisplay**                          | String     | O melhor nome de exibição para o dispositivo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
- 
+ 
 
 ## <a name="associationendpointservice-properties"></a>Propriedades de AssociationEndpointService
 
@@ -160,8 +158,8 @@ Algumas propriedades são comuns em todos os objetos [**DeviceInformationKind**]
 | **System.Devices.AeoService.ServiceId**         | String  | Identidade desse serviço. Também é o valor de [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | String  | O melhor nome de exibição para esse serviço.                                                                           |
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -9,15 +9,13 @@ keywords: toque, ponteiro, entrada, interação do usuário
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef67c179e691d14f3636a663a24ebbb862c35f7
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543476"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -78,14 +76,13 @@ A tabela a seguir mostra algumas das diferenças entre os dispositivos de entrad
 
 
 
-**Observação**  
-A entrada indireta conta com os benefícios de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
+**Observação**  entrada indireta recebeu a vantagem de mais de 25 anos de refinamento. Recursos como dicas de ferramentas disparadas por focalização foram projetadas para solucionar a exploração da interface do usuário especificamente para entradas por touchpad, mouse, caneta e teclado. Elementos da interface do usuário como esses foram reprojetados para uma experiência avançada fornecida pela entrada de toque, sem comprometer a experiência do usuário para outros dispositivos.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>Usar comentário por toque
 
-O feedback visual apropriado durante as interações com o aplicativo ajudam os usuários a reconhecer, aprender e adaptar a forma como suas interações são interpretadas pelo aplicativo e pela plataforma Windows. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
+O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e se adaptar a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
 
 A resposta visual é importante quando o usuário recorre à entrada por toque em atividades que exigem exatidão e precisão com base no local. A exibição do feedback sempre que a entrada por toque for detectada ajudará o usuário a entender as regras de direcionamento personalizadas definidas pelo aplicativo e seus respectivos controles.
 
@@ -156,9 +153,9 @@ Além disso, as dicas a seguir são altamente recomendadas:
 -   As interações devem permitir interações combinadas. Por exemplo, pinçar para aplicar zoom e, ao mesmo tempo, arrastar os dedos para fazer movimento panorâmico.
 -   As interações não devem ser diferenciadas por tempo. A mesma interação deve ter o mesmo resultado, independentemente do tempo que leva para realizá-la. Ativações baseadas em tempo geram atrasos obrigatórios para os usuários e fogem de sua natureza imersiva de manipulação direta e percepção da capacidade de resposta do sistema.
 
-    **Observação**  Uma exceção a isso ocorre quando você usa interações com tempo limite específicas para ajudar no aprendizado e na exploração (por exemplo, pressionar e segurar).
+    **Observação**uma exceção a isso ocorre quando você usa as interações específicas para ajudar no aprendizado e na exploração (por exemplo, pressionar e segurar).
 
-     
+     
 
 -   Descrições e indicações visuais adequadas têm um grande efeito sobre o uso das interações avançadas.
 
@@ -207,7 +204,7 @@ Aqui está o conjunto básico de gestos de toque aceitos pela UWP.
 | Pinçar          | Gesto de manipulação | Dois ou mais dedos tocam a tela e aproximam-se.                         |
 | Ampliar        | Gesto de manipulação | Dois ou mais dedos tocam a tela e distanciam-se.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -239,7 +236,7 @@ Aqui está uma lista de eventos de ponteiro e o argumento do evento relacionado.
 | [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)   | Ocorre quando o valor delta de uma roda do mouse é alterado.         |
 | [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) | Fornece dados para todos os eventos de ponteiro.                         |
 
- 
+ 
 
 O exemplo a seguir mostra como usar os eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) e [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) para manipular uma interação por toque em um objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle).
 
@@ -435,15 +432,15 @@ Veja a seguir uma lista de eventos de manipulação e argumentos de eventos rela
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | Descreve a velocidade de ocorrência de manipuladores.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | Fornece dados ao evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945).                                       |
 
- 
+ 
 
 Um gesto consiste em uma série de eventos de manipulação. Cada gesto começa com um evento [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950), como quando um usuário toca a tela.
 
 Em seguida, um ou mais eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) são disparados. Por exemplo, se você toca na tela e, em seguida, arrasta o dedo pela tela. Finalmente, um evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) é gerado quando a interação é concluída.
 
-**Observação**  Se você não tiver um monitor com tela touch, poderá testar seu código de evento de manipulação no simulador usando uma interface com o mouse e a roda do mouse.
+**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e mouse.
 
- 
+ 
 
 O exemplo a seguir mostra como usar os eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) para manipular uma interação de deslizamento em um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) e movê-lo pela tela.
 
@@ -607,9 +604,9 @@ Todos os eventos de ponteiro, gesto e manipulação mencionados aqui são implem
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
- 
+ 
 
 
 

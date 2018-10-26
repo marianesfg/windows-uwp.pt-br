@@ -8,23 +8,21 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fbd6566afeff365a91c5d2ee670c0cafcb3def0
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546238"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
 
 Otimize o design do seu aplicativo UWP (Plataforma Universal do Windows) para entrada touch e obtenha, por padrão, o suporte básico para mouse.
 
- 
+ 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
 
@@ -69,10 +67,10 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
 <td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observações</strong>  Clique com o botão direito do mouse para exibir um menu de contexto, se os comandos de seleção ou da barra de aplicativos não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
+<strong>Observação</strong>botão direito do mouse para exibir um menu de contexto, se os comandos de barra de seleção ou o aplicativo não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -100,10 +98,10 @@ Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos d
 
 Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
 
-**Exemplos:  **Consulte essa funcionalidade em ação nos [exemplos de aplicativos](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Exemplos:** Consulte essa funcionalidade em ação em nossos [exemplos de aplicativos](http://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
-- [Entrada: amostra de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+- [Entrada: exemplo de funcionalidades do dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 
 - [Exemplo de entrada](http://go.microsoft.com/fwlink/p/?linkid=226855)
 
@@ -153,10 +151,10 @@ Se você precisa personalizar o cursor do mouse:
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
- 
+ 
+ 
 
- 
+ 
 
 
 

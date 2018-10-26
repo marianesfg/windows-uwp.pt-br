@@ -6,16 +6,14 @@ title: Processar quadros de áudio com o MediaFrameReader
 ms.author: drewbat
 ms.date: 04/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7606596937c0fa3297c049da1a313c155b1a35b9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: d69e8d8cca3932045d4b43d727210f84e816f30b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833038"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542823"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Processar quadros de áudio com o MediaFrameReader
 
@@ -85,7 +83,7 @@ Você pode usar um objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/wi
 * [Captura básica de fotos, áudio e vídeo com o MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Quadros da câmera de exemplo](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [Gráficos de áudio](audio-graphs.md)
- 
+ 
 
 
 

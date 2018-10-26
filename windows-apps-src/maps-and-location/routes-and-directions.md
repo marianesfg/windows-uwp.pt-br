@@ -6,16 +6,14 @@ ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
 ms.author: normesta
 ms.date: 09/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, rota, mapa, localização, direções
 ms.localizationpriority: medium
-ms.openlocfilehash: c837eac53d7063a4b70bac62b64558e3411c70cd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 69283f6b53f3a8483376e3b8fe77a4491d4b01b1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545077"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Exibir rotas e trajetos em um mapa
 
@@ -27,7 +25,7 @@ Solicite rotas e trajeto e os exiba no aplicativo.
 >Para saber mais sobre como usar mapas em seu app, baixe a [amostra de mapa da Plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
 >Caso o mapeamento não seja um dos principais recursos do app, considere iniciar o app Mapas do Windows em vez disso. Você pode usar os esquemas de URI `bingmaps:`, `ms-drive-to:` e `ms-walk-to:` para iniciar o aplicativo Mapas do Windows para mapas específicos e trajetos curva a curva. Para obter mais informações, consulte [Iniciar o aplicativo Mapas do Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
- 
+ 
 ## <a name="an-intro-to-maproutefinder-results"></a>Uma introdução aos resultados de MapRouteFinder
 
 
@@ -64,7 +62,7 @@ O [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) calcu
 >[!IMPORTANT]
 >Você deve especificar uma chave de autenticação de mapas para poder usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
 
- 
+ 
 
 ```csharp
 using System;
@@ -147,7 +145,7 @@ Para exibir um [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn
 >[!IMPORTANT]
 >Você deve especificar uma chave de autenticação de mapas para usar serviços de mapa ou o controle de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).
 
- 
+ 
 
 ```csharp
 using System;
@@ -218,7 +216,7 @@ private async void ShowRouteOnMap()
   BasicGeoposition point2 = new BasicGeoposition() { Latitude = 47.6205, Longitude = -122.3493 };
   BasicGeoposition point3 = new BasicGeoposition() { Latitude = 48.649693, Longitude = -122.144908 };
 
-  // Get Driving Route from point A  to point B thru point C
+  // Get Driving Route from point A  to point B thru point C
   var path = new List<EnhancedWaypoint>();
 
   path.Add(new EnhancedWaypoint(new Geopoint(point1), WaypointKind.Stop));

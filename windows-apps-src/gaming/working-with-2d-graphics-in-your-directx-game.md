@@ -6,19 +6,18 @@ ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, 2d, elementos gráficos
-ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8628588cdc20179e9505e45694d43788eb1d7cb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543151"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para jogos DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Falaremos sobre o uso de elementos gráficos e efeitos de bitmap 2D e como usá-los em seu jogo.
 
@@ -62,16 +61,3 @@ Com relação ao visual, um trabalho de arte bem feito será seu maior trunfo. E
 -   [Visão geral de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
 -   [Guia de início rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
 -   [Visão geral de interoperabilidade entre Direct2D e Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
-
-> **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
- 
-
- 
-
-
-
-

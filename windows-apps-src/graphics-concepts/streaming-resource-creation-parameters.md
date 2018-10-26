@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2a17f69ae0353bb7682a1dbfa48d5909f48d4aa
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652985"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548926"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parâmetros de criação de recursos de streaming
 
@@ -26,22 +24,22 @@ Há algumas restrições sobre o tipo de recursos do Direct3D que você pode cri
 <span id="Supported-Resource-Type"></span><span id="supported-resource-type"></span><span id="SUPPORTED-RESOURCE-TYPE"></span>**Tipo de recurso com suporte**  
 Texture2D\[Array\] (incluindo TextureCube\[Array\], que é uma variante do Texture2D\[Array\]) ou Buffer.
 
-**NÃO há suporte: **Texture1D\[Array\] .
+**Não tem suporte:** Texture1D\ [array \].
 
 <span id="Supported-Resource-Usage"></span><span id="supported-resource-usage"></span><span id="SUPPORTED-RESOURCE-USAGE"></span>**Uso de recursos com suporte**  
 Uso do padrão.
 
-**NÃO há suporte: **dinâmico, preparação ou imutável.
+**Não tem suporte:** Dinâmico, preparo ou imutável.
 
 <span id="Supported-Resource-Misc-Flags"></span><span id="supported-resource-misc-flags"></span><span id="SUPPORTED-RESOURCE-MISC-FLAGS"></span>**Sinalizadores de diversos recursos com suporte**  
 Lado a lado; ou seja, streaming (por definição), cubo de textura, desenhar argumentos indiretos, buffer permitir modos de exibição brutos, buffer estruturado, vinculação de recurso ou gerar mips.
 
-**NÃO há suporte: **compartilhado, mutex com chave compartilhada, compatível com GDI, identificador NT compartilhado, conteúdo restrito, recurso compartilhado restrito, driver de recurso compartilhado restrito, protegido ou pool de blocos.
+**Não tem suporte:** compartilhado, mutex com chave compartilhada, compatível com GDI, identificador NT compartilhado, conteúdo restrito, recurso compartilhado, restringir o driver de recurso compartilhado, protegidos ou pool de blocos.
 
 <span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Sinalizadores de ligação com suporte**  
 Associar como recurso de sombreador, acesso não ordenado, estêncil de profundidade ou destino de renderização.
 
-**NÃO há suporte: **Associar como buffer constante, buffer de vértice (não há suporte para a vinculação de um buffer em blocos como um SRV/UAV/RTV), buffer de índice, saída de streaming, decodificador ou codificador de vídeo.
+**Não tem suporte:** Associar como buffer constante, buffer de vértice (vincular um Buffer em blocos como um SRV/UAV/RTV é suportado), índice buffer, saída de fluxo, decodificador ou codificador de vídeo.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Formatos com suporte**  
 Todos os formatos que devem estar disponíveis para determinada configuração, independentemente dela ser lado a lado, com algumas exceções.
@@ -76,16 +74,16 @@ O conteúdo inicial da memória do pool de bloco é indefinido.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Criar recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d51d20ddaeca5aa0689104b3dd71e36b1a5d4132
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 17970d509fa2bf6b80431e1c07b5d135c7dcb112
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043985"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544351"
 ---
 # <a name="texture3d-subresource-tiling"></a>Sub-recursos lado a lado de Texture3D
 
@@ -25,9 +23,9 @@ Esta tabela mostra como os sub-recursos de [**Texture3D**](https://msdn.microsof
 
 Esta tabela pega o agrupamento lado a lado do [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) e divide cada uma das dimensões x/y por 4 e adiciona 16 camadas de profundidade. Todos os blocos do primeiro plano (plano 2D de blocos definindo as 16 primeiras camadas de profundidade) aparecem antes dos planos subsequentes.
 
-**Observação**  O suporte para [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) nos recursos de streaming não é exposto na implementação inicial de recursos de streaming, mas as formas de bloco desejadas estão listadas aqui para um possível suporte em uma versão futura.
+**Observação** Suporte de [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) nos recursos de streaming não é exposto na implementação inicial de recursos de streaming, mas as formas de bloco desejadas estão listadas aqui para um possível suporte em uma versão futura.
 
- 
+ 
 
 | Bits/Pixel (1 amostra/pixel) | Dimensões do bloco (Pixels, LxAxP) |
 |-----------------------------|---------------------------------|
@@ -39,7 +37,7 @@ Esta tabela pega o agrupamento lado a lado do [**Texture2D**](https://msdn.micro
 | BC1,4                       | 128x64x16                       |
 | BC2,3,5,6,7                 | 64x64x16                        |
 
- 
+ 
 
 Contagens de bits de formato sem suporte com recursos de streaming: formatos de 96 bpp, formatos de vídeo, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM e DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -48,9 +46,9 @@ Contagens de bits de formato sem suporte com recursos de streaming: formatos de 
 
 [Como uma área de recurso de streaming é colocada lado a lado](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

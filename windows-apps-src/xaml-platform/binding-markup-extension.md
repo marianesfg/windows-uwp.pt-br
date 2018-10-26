@@ -6,23 +6,21 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f90821fdadea0939dbad316ad9be4424b31a926
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.openlocfilehash: 69d316ad48645d8995e602b270a5615322c8b43f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573043"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549173"
 ---
 # <a name="binding-markup-extension"></a>Extensão de marcação {Binding}
 
 
-**Observação**  Um novo mecanismo de associação está disponível para Windows 10, que é otimizado para o desempenho e a produtividade do desenvolvedor. Consulte [extensão de marcação {x: Bind}](x-bind-markup-extension.md).
+**Observação**um novo mecanismo de associação está disponível para Windows 10, que é otimizado para a produtividade do desenvolvedor e de desempenho. Consulte [extensão de marcação {x: Bind}](x-bind-markup-extension.md).
 
-**Observação**  Para informações gerais sobre o uso da vinculação de dados no seu aplicativo com **{Binding}** (e para todas as comparações entre **{x:Bind}** e **{Binding}**), consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**para obter informações gerais sobre como usar dados de associação em seu aplicativo com **{Binding}** (e para uma todas as comparações entre **{x: Bind}** e **{Binding}**), consulte a [vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 A extensão de marcação **{Binding}** é usada para propriedades de associação de dados nos controles para valores provenientes de uma fonte de dados, como o código. A extensão de marcação **{Binding}** é convertida, em um tempo de carregamento XAML, para uma instância da classe [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Esse objeto de associação obtém um valor de uma propriedade em uma fonte de dados e empurra-o para a propriedade no controle. O objeto de associação, opcionalmente, pode ser configurado para observar mudanças no valor da propriedade de origem de dados e atualizar-se com base nessas alterações. Ele também pode ser configurado opcionalmente para enviar as alterações para o valor de controle de volta para a propriedade de origem. A propriedade alvo de uma vinculação de dados deve ser uma propriedade de dependência. Para obter mais informações, consulte [Dependency properties overview](dependency-properties-overview.md).
 
@@ -83,7 +81,7 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Especifica o tempo das atualizações da fonte de associação. Se não estiver especificado, o padrão é **Default**. |
 
-**Observação**  Se você estiver convertendo a marcação de **{x:Bind}** para **{Binding}**, examine as diferenças nos valores padrão da propriedade **Mode**.
+**Observação**se você estiver convertendo a marcação de **{x: Bind}** para **{Binding}**, lembre-se das diferenças em default valores para a propriedade **Mode** .
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) e **ConverterLanguage** estão todos relacionados à situação de conversão de um valor ou tipo de uma fonte de associação a um tipo ou valor que é compatível com a propriedade do destino da associação. Para saber mais, veja a seção "Conversões de dados" em [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -92,7 +90,7 @@ Para saber mais sobre a sintaxe de cadeia de caracteres para um caminho de propr
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) e [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especificam uma fonte de associação, portanto são mutualmente exclusivas.
 
-**Dica**  Se você precisar especificar uma única chave para um valor, como em [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), coloque uma barra invertida antes dela: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
+**Dica**se você precisar especificar uma única chave para um valor, como em um [**caminho**](https://msdn.microsoft.com/library/windows/apps/br209830) ou [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), em seguida, coloque uma barra invertida: `\{`. De forma alternativa, colo a cadeia de caracteres inteira que contém a chave que precisa de escape entre apóstrofos; por exemplo, `ConverterParameter='{Mix}'`.
 
 ## <a name="examples"></a>Exemplos
 
@@ -129,4 +127,4 @@ Observe como o valor da propriedade [**Converter**](https://msdn.microsoft.com/l
 
 O Microsoft IntelliSense no Microsoft Visual Studio exibe as propriedades de contexto dos dados enquanto cria o **{Binding}** no editor de marcações XAML. Assim que você digita "{Binding", propriedades de contexto dos dados associadas ao [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) são exibidas no menu suspenso. IntelliSense também ajuda com as outras propriedades do [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Para que isso funcione, você deve ter o contexto de dados ou o contexto dos dados de tempo de design definido na página de marcação. **Ir para definição** (F12) também funciona com **{Binding}**. Como alternativa, você pode usar a caixa de diálogo de vinculação de dados.
 
- 
+ 

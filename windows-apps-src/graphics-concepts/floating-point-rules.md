@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bcfdb8f6258547ff210d80136a6113e04092aad2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545829"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Regras de ponto flutuante
 
@@ -33,12 +31,10 @@ Existem dois conjuntos de regras: aquele em conformidade com IEEE-754, e aquele 
 Algumas dessas regras são uma única opção onde a IEEE-754 oferece opções.
 
 -   Divisão por 0 produz + /-INF, exceto 0/0, o que resulta em NaN.
--   o log de (+/-) 0 produz -INF.
-     
+-   o log de (+/-) 0 produz -INF.  
 
     o log de um valor negativo (diferente de -0) produz NaN.
--   A raiz quadrada recíproca (rsq) ou raiz quadrada (sqrt) de um número negativo produz NaN.
-     
+-   A raiz quadrada recíproca (rsq) ou raiz quadrada (sqrt) de um número negativo produz NaN.  
 
     A exceção é - 0; sqrt(-0) produz - 0 e rsq(-0) produz -INF.
 -   INF - INF = NaN
@@ -158,9 +154,9 @@ As regras de ponto flutuante de 32 bits também esperam por números de ponto fl
 
 [Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
- 
+ 
 
- 
+ 
 
 
 

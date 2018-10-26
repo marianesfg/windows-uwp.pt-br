@@ -5,16 +5,14 @@ description: Este artigo indica os recursos do scanner de código de barras de c
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: dff05e8909c2afd2bac055eead87f4b66892109b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: c647846aaaf8f7a5cef96e267ad979dc68ee004a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549530"
 ---
 # <a name="camera-barcode-scanner"></a>Scanner de código de barras da câmera
 Um scanner de código de barras da câmera é criado dinamicamente, já que o Windows emparelha a(s) câmera(s) conectada(s) ao computador com um decodificador de software.  Cada câmera - o emparelhamento do decodificador é um scanner de código de barras totalmente funcional.   
