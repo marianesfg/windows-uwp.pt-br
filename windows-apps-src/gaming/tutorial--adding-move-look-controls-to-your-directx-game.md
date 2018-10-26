@@ -6,19 +6,18 @@ ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, move-look, controles
-ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 219d014eb03803ace440dc1c1773043a9ecbc99f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200974"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566137"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles move-look para jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprenda a adicionar controles move-look tradicionais (também conhecidos como controles mouselook) usando o mouse e o teclado ao seu jogo do DirectX.
 
@@ -580,14 +579,11 @@ myFirstPersonCamera->SetViewParameters(
 
 Parabéns! Você implementou controles move-look básicos para telas sensíveis ao toque e controles de toque para entrada via teclado/mouse em seu jogo.
 
-> **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
 
- 
+ 
 
- 
+ 
 
 
 

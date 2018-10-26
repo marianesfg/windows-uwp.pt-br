@@ -6,16 +6,14 @@ ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ms.author: stwhi
 ms.date: 06/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e68d674ecb3ab29170036d1dff6c69ab3ba759c
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 50ac9fcf984fa6c4ebad7e480ebfc2d002256e26
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018552"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569687"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.
@@ -40,7 +38,7 @@ Há outros recursos que podem ser necessários para o seu aplicativo, em determi
 | **sharedUserCertificates** | Esta funcionalidade permite que um aplicativo acesse certificados de software e de hardware, como certificados de cartão inteligente. Quando a funcionalidade é invocada no tempo de execução, o usuário deve agir, por exemplo, inserindo um cartão ou selecionando um certificado. <br/> Com esse recurso, os certificados de software e de hardware ou um cartão inteligente são usados para a identificação no aplicativo. Ele pode ser usado pelo seu empregador, banco ou serviços governamentais para identificação. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Comunicando-se quando seu aplicativo não está em primeiro plano
-[Dar suporte a seu app com tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o aplicativo não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o aplicativo em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de canal de controle com essa finalidade no Windows 8, e ainda há suporte para eles no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://msdn.microsoft.com/library/windows/apps/hh701032). Uma nova tecnologia no Windows 10 oferece uma funcionalidade melhor com menos sobrecarga para alguns cenários, como soquetes de fluxo habilitados por push: os gatilhos de agente de soquete e atividade de soquete.
+[Dar suporte a seu app com tarefas em segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103) contém informações gerais sobre o uso de tarefas em segundo plano para trabalhar quando o aplicativo não está no primeiro plano Mais especificamente, seu código deve seguir etapas especiais para ser notificado quando ele não for o aplicativo em primeiro plano atual e chegarem dados pela rede para ele. Você usou gatilhos de canal de controle para essa finalidade na Windows8, e eles ainda têm suporte no Windows 10. Informações completas sobre o uso de gatilhos de canal de controle estão disponíveis [**aqui**](https://msdn.microsoft.com/library/windows/apps/hh701032). Uma nova tecnologia no Windows 10 oferece uma funcionalidade melhor com menos sobrecarga para alguns cenários, como soquetes de fluxo habilitados por push: o agente de soquete e gatilhos de atividade de soquete.
 
 Se o seu aplicativo usa [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), então ele pode transferir a propriedade de um soquete aberto para um agente de soquete fornecido pelo sistema, e sair do primeiro plano ou, até mesmo, terminar. Quando uma conexão é estabelecida no soquete transferido, ou quando chega tráfego nesse soquete, seu aplicativo ou a tarefa em segundo plano designada é ativada. Se seu aplicativo não estiver em execução, ele será iniciado. Em seguida, usando um [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), o agente de soquete notifica o aplicativo de que novo tráfego chegou. O aplicativo recupera o soquete de agente de soquete e processa o tráfego no soquete. Isso significa que seu aplicativo consome muito menos recursos do sistema quando não está processando ativamente o tráfego de rede.
 
@@ -468,7 +466,7 @@ Caso a solicitação inicial do cliente não contenha esse valor ou forneça um 
 Como fornecer as credenciais de autenticação ao conectar-se pela rede.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Fornecendo um certificado de cliente com a classe StreamSocket
-A classe [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o aplicativo se comunica. Em certos casos, o aplicativo também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado cliente sobre o objeto [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
+A classe [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) dá suporte ao uso de SSL/TLS para autenticar o servidor o qual o aplicativo se comunica. Em certos casos, o aplicativo também precisa autenticar-se ao servidor usando um certificado de cliente TLS. No Windows 10, você pode fornecer um certificado de cliente no objeto [**StreamSocket. Control**](https://msdn.microsoft.com/library/windows/apps/br226893) (isso deve ser definido antes do handshake TLS ser iniciado). Se o servidor solicitar o certificado cliente, o Windows responderá com o certificado fornecido.
 
 Veja a seguir um trecho de código que mostra como implementar isso:
 

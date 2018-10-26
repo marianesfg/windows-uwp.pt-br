@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c3ed335360d7b259c045722b65bb08a71b6e0c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044035"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568839"
 ---
 # <a name="stream-output-so-stage"></a>Estágio de Saída de Fluxo(SO)
 
@@ -47,7 +45,7 @@ Dados de vértice de um estágio de sombreador anterior.
 
 O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio de Sombreador de Geometria (GS) estiver inativo, o estágio de Saída de Fluxo (SO) gera continuamente dados de vértice do estágio de Sombreador de Domínio (DS) para buffers na memória (ou se o DS também estiver inativo, do estágio do Sombreador de Vértice (VS)).
 
-Quando uma faixa de triângulo ou linha estiver ligada para o estágio de entrada Assembler (IA), cada faixa é convertida em uma lista antes que eles são transmitidos check-out. Vértices sempre são gravados como primitivos completos (por exemplo, 3 vértices de uma vez para triângulos); primitivos incompletos nunca são transmitidos check-out. Tipos de primitivos com proximidade descartam os dados de proximidade antes de streaming dados check-out.
+Quando uma faixa de triângulo ou linha for vinculada ao estágio de Assembler de entrada (IA), cada faixa é convertida em uma lista antes que eles são transmitidos. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
 
 O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 
@@ -59,9 +57,9 @@ O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 
 [Pipeline de elementos gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

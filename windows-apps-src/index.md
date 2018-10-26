@@ -3,19 +3,17 @@ author: mijacobs
 layout: LandingPage
 description: A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Store.
 title: Documentação da UWP - desenvolvedor de aplicativo UWP | Documentos da Microsoft
-ms.prod: windows
 ms.topic: landing-page
 ms.author: mijacobs
 ms.date: 08/4/2017
-ms.technology: uwp
 keywords: uwp do windows, plataforma universal do windows, APIs do Windows Runtime, api do windows, ref. de api do windows, api do winrt, referência de api do windows, api uwp, referência de api uwp, desenvolver uwp, criar uwp, publicar uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48c5dc7352a44e3e07b78e78ae0b5e099660ec4f
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: 9e7cd5a012204b5b9ccab4e87993273f65c3849c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893861"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569367"
 ---
 # <a name="universal-windows-platform-documentation"></a>Documentação da Plataforma Universal do Windows
 A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer dispositivo Windows — computadores, telefones, Xbox One, HoloLens e muito mais — e publicá-los na Microsoft Store.
@@ -260,4 +258,29 @@ A Plataforma Universal do Windows (UWP) permite criar aplicativos para qualquer 
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_support.svg" alt=" " />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Comunidade e suporte</h3>
+                        <p>
+                            <a href="https://twitter.com/WindowsDocs">@WindowsDocsno Twitter</a>
+                        </p>
+                        <p>
+                            <a href="http://aka.ms/OneDevMinute">OneDevMinute no YouTube</a>
+                        </p>
+                        <p>
+                            <a href="https://developer.microsoft.com/windows/support">Suporte para desenvolvedores do Windows</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>    
 </ul>

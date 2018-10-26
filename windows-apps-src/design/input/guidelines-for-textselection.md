@@ -9,15 +9,13 @@ keywords: teclado, texto, entrada, interações do usuário
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d90cdac94f4eafa153de161a338b9d4c7bf5e
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564364"
 ---
 # <a name="selecting-text-and-images"></a>Selecionando texto e imagens
 
@@ -51,20 +49,20 @@ A seleção e a manipulação de texto são particularmente suscetíveis aos des
 
 **Considerações e recomendações**
 
-Use os controles internos expostos por meio das estruturas de idioma no Windows para criar aplicativos que proporcionam a experiência de interação do usuário em plataforma inteira, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
+Use os controles internos expostos por meio das estruturas de idioma em aplicativos de compilação Windowsto que proporcionam a experiência de interação do usuário plataforma inteira, incluindo comportamentos de seleção e manipulação. Você achará a funcionalidade de interação dos controles incorporados suficiente para a maioria dos aplicativos UWP.
 
 Ao usar controles de texto da UWP padrão, os comportamentos de seleção e os recursos visuais descritos neste tópico não podem ser personalizados.
 
 **Seleção de texto**
 
-Se o aplicativo exigir uma interface do usuário personalizada com suporte à seleção de texto, recomendamos seguir os comportamentos de seleção do Windows descritos aqui.
+Se seu aplicativo requer uma interface do usuário personalizada que dá suporte à seleção de texto, recomendamos que você siga os comportamentos de Windowsselection descritos aqui.
 
 **Conteúdo editável e não editável**
 
 
-Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como em outras interações por toque do Windows, as interações com tempo limite são limitadas ao gesto de pressionar e manter pressionado para exibir uma interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
+Com o toque, as interações de seleção são realizadas principalmente pelos gestos, como um toque para definir um cursor de inserção ou selecionar uma palavra e um movimento de deslizar para modificar a seleção. Assim como acontece com outras interações Windowstouch, as interações são limitadas à imprensa e mantenha o gesto para exibir a interface do usuário informativa. Para obter mais informações, consulte [Diretrizes de resposta visual](guidelines-for-visualfeedback.md).
 
-O Windows reconhece dois possíveis estados para interações de seleção, editável e não editável, e ajusta a interface de seleção, a resposta e a funcionalidade adequadamente.
+Windowsrecognizes dois possíveis estados para interações de seleção, editáveis e não editável e ajusta a seleção da interface do usuário, comentários e funcionalidade adequadamente.
 
 **Conteúdo editável**
 
@@ -82,9 +80,9 @@ As imagens a seguir demonstram como invocar o menu de contexto tocando na seleç
 
 ![tocar (ou pressionar e segurar) dentro da seleção ou em uma garra para invocar o menu de contexto.](images/textselection-show-context.png)
 
-**Observação**  Essas interações podem variar no caso de uma palavra com erro de ortografia. Tocar uma palavra que está marcada com a ortografia errada ressaltará toda a palavra e invocará o menu de contexto com a sugestão ortográfica.
+**Observação**essas interações podem variar no caso de uma palavra incorreta. Tocar uma palavra que está marcada com a ortografia errada ressaltará toda a palavra e invocará o menu de contexto com a sugestão ortográfica.
 
- 
+ 
 
 **Conteúdo não editável**
 
@@ -130,9 +128,9 @@ Por exemplo, as garras também podem ser usadas em aplicativos de processamento 
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

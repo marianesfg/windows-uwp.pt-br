@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf4cd6ecb325bf0a3ce4a884361c0d098f9e1f05
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 090dcab3b46b031a16be35973e1183220d5b1da0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044875"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567766"
 ---
 # <a name="stencil-buffers"></a>Buffers de estêncil
 
@@ -48,7 +46,7 @@ As etapas acima são mostradas na seguinte linha de código:
 -   StencilBufferValue é o conteúdo do buffer de estêncil do pixel atual.
 -   O símbolo de E comercial (&) representa a operação AND bit a bit.
 
-O pixel atual é escrito na superfície de destino se o teste de estêncil for aprovado, caso contrário, é ignorado. O comportamento padrão de comparação é escrever pixel, não importa como cada operação bit a bit na verdade. Você pode alterar esse comportamento alterando o valor de um tipo enumerado para identificar a função de comparação desejada.
+O pixel atual é escrito na superfície de destino se o teste de estêncil for aprovado, caso contrário, é ignorado. O comportamento padrão de comparação é a gravação do pixel, independentemente de como cada operação bit a bit a bit acontece. Você pode alterar esse comportamento alterando o valor de um tipo enumerado para identificar a função de comparação desejada.
 
 Seu aplicativo pode personalizar a operação do buffer de estêncil. Ele pode definir a função de comparação, a máscara de estêncil e o valor de referência de estêncil. Ele também pode controlar a ação que o Direct3D executa quando o teste de estêncil passa ou falha.
 
@@ -101,7 +99,7 @@ Se a máscara de estêncial tiver o mesmo tamanho e formato da primitiva que est
 
 Os volumes de sombra são usados para desenhar sombras com o buffer de estêncil. O app calcula os volumes de sombra convertidos sobrepondo a geometria, calculando as bordas da silhueta e afastando-as da luz em um conjunto de volumes 3D. Em seguida, esses volumes são renderizados duas vezes no buffer de estêncil.
 
-A primeira renderização desenha polígonos voltados para frente e aumenta os valores de buffer de estêncil. A segunda renderização desenha polígonos voltados para trás do volume de sombra e diminui os valores de buffer de estêncil. Normalmente, todos os valores de incrementada e diminuídos cancelam umas às outras-out. No entanto, a cena já foi processada com geometria normal, causando alguns pixels falha no teste de z-buffer conforme o volume de sombra é processado. Os valores restantes no buffer de estêncil correspondem aos pixels que estão na sombra. Esse conteúdo restante do buffer de estêncil é usado como uma máscara, para fazer a combinação alfa de um quadrupleto preto grande e abrangente na cena. Com o buffer de estêncil atuando como uma máscara, o resultado será o escurecimento dos pixels que estão nas sombras.
+A primeira renderização desenha polígonos voltados para frente e aumenta os valores de buffer de estêncil. A segunda renderização desenha polígonos voltados para trás do volume de sombra e diminui os valores de buffer de estêncil. Normalmente, todos os valores incrementados e diminuídos cancelam uns aos outros. No entanto, a cena já foi renderizada com geometria normal, fazendo com que alguns pixels falhem no teste de buffer z, conforme o volume de sombra é renderizado. Os valores restantes no buffer de estêncil correspondem aos pixels que estão na sombra. Esse conteúdo restante do buffer de estêncil é usado como uma máscara, para fazer a combinação alfa de um quadrupleto preto grande e abrangente na cena. Com o buffer de estêncil atuando como uma máscara, o resultado será o escurecimento dos pixels que estão nas sombras.
 
 Isso significa que a geometria de sombra é desenhada duas vezes por fonte de luz, exercendo assim pressão sobre a taxa de transferência de vértice da GPU. O recurso de estêncil de dois lados foi projetado para atenuar essa situação. Nesta abordagem, existem dois conjuntos de estado de estêncil (nomeados abaixo), um conjunto para os triângulos voltados para a frente e outro para os triângulos voltados para trás. Dessa forma, somente uma única passagem é desenhada por volume de sombra, por luz.
 
@@ -110,9 +108,9 @@ Isso significa que a geometria de sombra é desenhada duas vezes por fonte de lu
 
 [Buffers de profundidade e estêncil](depth-and-stencil-buffers.md)
 
- 
+ 
 
- 
+ 
 
 
 

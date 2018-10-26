@@ -6,16 +6,14 @@ description: Use o FileSavePicker para permitir que os usuários especifiquem o 
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 007030d1449768f484db7902fdd74867ff1f701b
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: Auto
+ms.openlocfilehash: 2a053047324fcb795a30951d70c5e0e78fbb5547
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663736"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564615"
 ---
 # <a name="save-a-file-with-a-picker"></a>Salvar um arquivo com um seletor
 
@@ -27,9 +25,9 @@ ms.locfileid: "1663736"
 Use o [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir que os usuários especifiquem o nome e o local onde desejam que o aplicativo salve um aplicativo.
 
 > [!NOTE]
-> Consulte também o [Exemplo do seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> Consulte também o [Exemplo do seletor de arquivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
- 
+ 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -63,14 +61,14 @@ Defina propriedades no objeto do seletor de arquivos que forem relevantes para s
 Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) e [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
 > [!NOTE]
-> Os objetos [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
-     
+>Os objetos [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) exibem o seletor de arquivos usando [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
+     
 - Como nosso usuário está salvando um documento ou arquivo de texto, a amostra define [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) como a pasta local do aplicativo usando [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Configure [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) para um local apropriado para o tipo de arquivo que será salvo, como Música, Imagens, Vídeos ou Documentos. A partir do local inicial, o usuário pode navegar para outros locais.
 
 - Como desejamos que nosso aplicativo abra o arquivo depois dele ser salvo, usamos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar os tipos de arquivos que a amostra suporta (documentos do Microsoft Word e arquivos de texto). Certifique-se de que todos os tipos de arquivos sejam suportados por seu aplicativo. Os usuários poderão salvar seus arquivos como qualquer tipo de arquivo que você especificar. Eles também podem alterar o tipo de arquivo selecionando outro tipo de arquivo que você especificou. A primeira opção de tipo de arquivo na lista será selecionada por padrão: para controlar isso, configure a propriedade [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
 > [!NOTE]
-> O seletor de arquivos também utiliza o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que os únicos tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos para o usuário.
+> O seletor de arquivos também utiliza o tipo de arquivo atualmente selecionado para filtrar quais arquivos são exibidos, de forma que os únicos tipos de arquivos que correspondem aos tipos de arquivos selecionados são exibidos para o usuário.
 
 - Para poupar o usuário da digitação, o exemplo define um [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Torne seu nome de arquivo sugerido relevante para o arquivo que está sendo salvo. Por exemplo, como no Word, você pode sugerir o nome de arquivo existente se houver um, ou a primeira linha de um documento se o usuário estiver salvando um arquivo que ainda não possui nome.
 
@@ -109,4 +107,4 @@ Este exemplo define três propriedades: [**SuggestedStartLocation**](https://msd
 
 O exemplo verifica se o arquivo é válido e grava seu próprio nome de arquivo nele. Consulte também [Criando, escrevendo e lendo um arquivo](quickstart-reading-and-writing-files.md).
 
-**Dica**  Sempre verifique o arquivo salvo para ter certeza de sua validade antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.
+**Dica**você sempre deve verificar o arquivo salvo para garantir que ele é válido antes de executar qualquer outro processamento. Depois disso, você poderá salvar o conteúdo no arquivo, conforme apropriado ao seu aplicativo, e fornecer o comportamento adequado se o arquivo selecionado não for válido.

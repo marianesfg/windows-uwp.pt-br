@@ -4,23 +4,21 @@ layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Publicar aplicativos do Windows
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, publicação, publicar, venda, vender, distribuir, distribuição, store, painel
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-ms.localizationpriority: high
-ms.openlocfilehash: 37cfce48a60f95109dfff99b45750fa8fbe1f220
-ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 98e47934f936b6995ab37623b610869219254b85
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "1718660"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566117"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicativos e jogos do Windows  
  
-Você pode usar o painel do Centro de Desenvolvimento do Windows para publicar seus aplicativos e jogos na Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje!</a>
+Você pode usar o [painel do Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos na Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -123,8 +121,8 @@ Você pode usar o painel do Centro de Desenvolvimento do Windows para publicar s
                 </div>
                 <div class="cardText">
                     <h3>Promover seus aplicativos</h3>   
-                    <p><a href="generate-promotional-codes.md">Gerar códigos promocionais</a></p>
                     <p><a href="create-an-ad-campaign-for-your-app.md">Criar campanhas publicitárias</a></p>
+                    <p><a href="generate-promotional-codes.md">Gerar códigos promocionais</a></p>
                     <p><a href="put-apps-and-add-ons-on-sale.md">Oferecer preço de venda</a></p>
                 </div>
             </div>

@@ -6,16 +6,14 @@ description: Este tutorial descreve como declarar recursos do dispositivo no Mic
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 693a33bc212f6fe1b35414a20f2a6c44393c0b87
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989440"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566267"
 ---
 # <a name="enable-device-capabilities"></a>Habilitar os recursos do dispositivo
 
@@ -28,8 +26,7 @@ Este tutorial descreve como declarar recursos do dispositivo no Microsoft Visual
 
 Os aplicativos do Windows pedem que você especifique no manifesto do pacote do aplicativo quando vai usar determinados tipos de dispositivos. No Visual Studio, você pode declarar a maioria das funcionalidades usando o [Designer de Manifesto](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx) ou pode adicioná-las manualmente conforme descrito em [Como especificar funcionalidades do dispositivo no manifesto do pacote (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). Este tutorial pressupõe que você esteja usando o Designer de Manifesto.
 
-**Observação**  
-Alguns tipos de dispositivos, como impressoras, scanners e sensores, não precisam ser declarados no manifesto do pacote do aplicativo.
+**Observação**  alguns tipos de dispositivos, como impressoras, scanners e sensores, não precisam ser declaradas no manifesto do pacote do aplicativo.
 
 -   No Gerenciador de Soluções do Visual Studio, clique duas vezes no arquivo de manifesto do pacote **Package.appxmanifest**.
 -   Abra a guia **Recursos**.

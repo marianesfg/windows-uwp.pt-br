@@ -5,17 +5,15 @@ description: Etapas para configurar e testar sua UWP no ambiente de desenvolvime
 ms.author: scotmi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: f2b8792832bd4014732ee0535ccaa74b2a3e00d3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: Auto
+ms.openlocfilehash: 2234b7d39f130da03562176f0df878701d524635
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689862"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568658"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar seu ambiente de desenvolvimento da UWP no Xbox
 
@@ -27,7 +25,7 @@ Este artigo discute as etapas para configurar e testar seu ambiente de desenvolv
 
 ## <a name="visual-studio-setup"></a>Instalação do Visual Studio
 
-1. Instale o Visual Studio 2017 ou o Visual Studio 2015 Atualização 3. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads).
+1. Instale o Visual Studio 2017, Visual Studio 2015 atualização 3 ou a versão mais recente do Visual Studio. Para saber mais e obter informações de instalação, consulte [Downloads e ferramentas para o Windows 10](https://dev.windows.com/downloads). Recomendamos que você use a versão mais recente do Visual Studio para que você possa receber as atualizações mais recentes para desenvolvedores e segurança.
 
 2. Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, marque também a caixa de seleção **Ferramentas C++ da Plataforma Universal do Windows** no painel **Resumo** à direita, em **Desenvolvimento da Plataforma Universal do Windows**. Não faz parte da instalação padrão.
 

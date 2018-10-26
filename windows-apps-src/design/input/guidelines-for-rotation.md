@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cc30dbd9fd501d310bb037726414356354af294
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9bffed44921df05a72025e86917901a65fe7ea82
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653415"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565436"
 ---
 # <a name="rotation"></a>Rotação
 
@@ -48,8 +46,7 @@ Use a rotação para ajudar os usuários a girarem os elementos da interface dir
 
 ![diagrama demonstrando várias posturas de dedos suportadas pela rotação.](images/ux-rotate-positions.png)
 
-**Observação**  
-Intuitivamente, e na maioria dos casos, o ponto de rotação é um de dois pontos de toque a não ser que o usuário possa especificar um ponto de rotação não relacionado aos pontos de contato (por exemplo, em um aplicativo de desenho ou de layout). As imagens a seguir demonstram como a experiência do usuário pode ser reduzida se o ponto de rotação não for restringida dessa forma.
+**Observação**  intuitivamente e na maioria dos casos, o ponto de rotação é um dos pontos de duas toque, a menos que o usuário pode especificar um ponto de rotação não relacionado aos pontos de contato (por exemplo, em um aplicativo de desenho ou layout). As imagens a seguir demonstram como a experiência do usuário pode ser reduzida se o ponto de rotação não for restringida dessa forma.
 
 A primeira foto mostra os pontos inicial (polegar) e secundário (dedo indicador): o dedo indicador está tocando uma árvore e o polegar está tocando uma tora.
 
@@ -64,9 +61,9 @@ Nesta última foto, o centro da rotação foi definido pelo aplicativo (ou defin
 
 ![imagem mostrando uma foto girada com o ponto de rotação restringido ao centro mais à esquerda da foto em vez de a um dos dois pontos de toque iniciais.](images/ux-rotate-points4.png)
 
- 
+ 
 
-O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
+Windows8 dá suporte a três tipos de rotação: livre, restringida e combinada.
 
 <table>
 <colgroup>
@@ -93,16 +90,16 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 <td align="left">Rotação combinada</td>
 <td align="left"><p>A rotação combinada suporta a rotação livre com zonas (parecidas com trilhos em <a href="guidelines-for-panning.md">Diretrizes para movimento panorâmico</a>) em cada ponto de alinhamento de 90 graus imposta pela rotação restringida. Se o usuário soltar o objeto fora de uma das zonas de 90 graus, o objeto permanecerá naquela posição. Caso contrário, o objeto girará automaticamente para um ponto de alinhamento.</p>
 <div class="alert">
-<strong>Observação</strong>  Um trilho da interface do usuário é um recurso no qual uma área ao redor de um alvo restringe o movimento em algum valor específico ou local para influenciar sua seleção.
+<strong>Observação</strong>um trilho da interface do usuário é um recurso no qual uma área ao redor de um alvo restringe o movimento em algum valor específico ou local para influenciar sua seleção.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -122,9 +119,9 @@ O Windows 8 suporta três tipos de rotação: livre, restringida e combinada.
 * [Entrada: gestos e manipulações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

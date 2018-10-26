@@ -6,15 +6,13 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.author: quradic
 ms.date: 08/03/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ff4d66285770c483de6b7be846088135f0c1544
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 6dcb5c9044cd74f26c06253f22b6672bc5e727dd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015106"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567052"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2017
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d78c6e070dd5d29a8e615f70f67507830e5f3938
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a796897aa786283499c25b0f405e302feeb5f938
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653085"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565059"
 ---
 # <a name="creating-streaming-resources"></a>Criar recursos de streaming
 
@@ -48,7 +46,7 @@ Não confunda esse conceito com a noção de mapeamento de um recurso do Direct3
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Os mapeamentos estão em um pool de blocos</a></p></td>
-<td align="left"><p>Quando um recurso é criado como um recurso de streaming, os blocos que compõem o recurso são provenientes do apontamento para locais em um pool de blocos. Um pool de blocos é um pool de memória (sustentado por uma ou mais alocações nos bastidores - nunca vistos pelo app).</p></td>
+<td align="left"><p>Quando um recurso é criado como um recurso de streaming, os blocos que o compõem são provenientes da indicação de locais em um pool de blocos. Um pool de blocos é um pool de memória (sustentado por uma ou mais alocações nos bastidores - nunca vistos pelo app).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-creation-parameters.md">Parâmetros de criação de recursos de streaming</a></p></td>
@@ -77,16 +75,16 @@ Não confunda esse conceito com a noção de mapeamento de um recurso do Direct3
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Recursos de streaming](streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

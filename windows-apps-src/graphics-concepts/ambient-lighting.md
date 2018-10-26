@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044125"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565219"
 ---
 # <a name="ambient-lighting"></a>Iluminação ambiente
 
@@ -37,10 +35,10 @@ Em que:
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Cor ambiente global                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuação de luz da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md). |
 | Ponto<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Fator de destaque da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).  |
-| soma               | N/A           | N/A           | Soma da luz ambiente                                                                                          |
+| soma               | N/D           | N/A           | Soma da luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Cor ambiente da luz da luz ith                                                                              |
 
- 
+ 
 
 O valor de Cₐ é:
 
@@ -48,9 +46,9 @@ O valor de Cₐ é:
 -   vértice color2, se AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2, e a segunda cor do vértice for fornecida na declaração de vértice.
 -   cor ambiente do material.
 
-**Observação** se qualquer uma dessas opções AMBIENTMATERIALSOURCE for usada e a cor do vértice não for fornecida, a cor de ambiente do material é usada.
+**Observação**  se qualquer uma das opções AMBIENTMATERIALSOURCE for usada e a cor do vértice não for fornecida, a cor ambiente do material é usada.
 
- 
+ 
 
 Para usar a cor ambiente do material, use SetMaterial, conforme mostrado no exemplo de código abaixo.
 
@@ -89,9 +87,9 @@ Para dar uma aparência mais realista aos objetos, aplique iluminação especula
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

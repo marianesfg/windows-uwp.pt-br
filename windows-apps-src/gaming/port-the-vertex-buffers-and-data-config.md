@@ -6,19 +6,18 @@ ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, porta, buffers de vértice, dados, direct3d
-ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b32747a4e11d258f71d4e55e41b7f54bb5e99246
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199467"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568435"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>Fazer a portabilidade de dados e buffers de vértice
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -314,9 +313,9 @@ Ao estruturar o seu Direct3D, separe o código que chama métodos em [**ID3D11De
 * [Fazer a portabilidade de dados e buffers de vértices](port-the-vertex-buffers-and-data-config.md)
 * [Fazer a portabilidade do GLSL](port-the-glsl.md)
 
- 
+ 
 
- 
+ 
 
 
 

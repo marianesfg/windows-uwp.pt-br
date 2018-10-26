@@ -6,19 +6,18 @@ ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, texturas, directx
-ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199502"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567327"
 ---
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas a primitivas
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). Também introduzimos um modelo de iluminação de produto escalar simples, em que as superfícies do cubo são mais claras ou escuras de acordo com a distância e o ângulo relativo delas para uma fonte de luz.
 
@@ -523,9 +522,9 @@ Como nos tutoriais anteriores, chamamos [**IDXGISwapChain::Present**](https://ms
 
 Carregamos dados de textura bruta e os aplicamos a um primitivo 3D.
 
- 
+ 
 
- 
+ 
 
 
 

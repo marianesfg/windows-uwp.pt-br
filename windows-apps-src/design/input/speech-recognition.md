@@ -9,15 +9,13 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8abeb4cb690f39a5d9145c3975edbb5a5252765
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7ce8146cc952d22eb0aa365be707cbd2cef7aabf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654515"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567786"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -53,7 +51,7 @@ Você pode usar vários tipos de restrições quando executar reconhecimento de 
 
     A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-    **Observação**  Como as gramáticas de pesquisa na Web e de ditado predefinidas podem ser grandes e online (não no dispositivo), o desempenho pode não ser tão rápido quanto o das gramáticas personalizadas instaladas no dispositivo.     
+    **Observação**gramáticas de pesquisa na web e de ditado predefinidas podem ser grandes e online (não no dispositivo), desempenho pode não ser tão rápido, assim como acontece com uma gramática personalizada instalada no dispositivo.     
 
     Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 
@@ -104,10 +102,10 @@ Você pode usar vários tipos de restrições quando executar reconhecimento de 
 
     Use um arquivo XML de Definição de comando de voz (VCD) para definir os comandos que o usuário pode usar para iniciar ações ao ativar seu aplicativo. Para obter mais detalhes, consulte [Iniciar um aplicativo em primeiro plano com comandos de voz na Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-**Observação**  O tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
+**Observação**o tipo de restrição que você usa depende da complexidade da experiência de reconhecimento que você deseja criar. Qualquer tipo pode ser a melhor escolha para uma tarefa específica de reconhecimento, e você pode encontrar usos para todos os tipos de restrição em seu aplicativo.
 Para começar a usar restrições, consulte [Definir restrições de reconhecimento personalizadas](define-custom-recognition-constraints.md).
 
- 
+ 
 
 A gramática de ditado predefinida do Aplicativo Universal do Windows reconhece a maioria das palavras e frases curtas em um idioma. Ela é ativada por padrão quando um objeto reconhecedor de fala é instanciado sem restrições personalizadas.
 
@@ -201,9 +199,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 * [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

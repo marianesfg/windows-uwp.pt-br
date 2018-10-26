@@ -1,24 +1,23 @@
 ---
 author: TylerMSFT
 title: Iniciar um aplicativo para obter resultados
-description: Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de &quot;iniciar&quot; um aplicativo para obter resultados.
+description: Saiba como iniciar um app a partir de outro app e trocar dados entre os dois. Isso é chamado de "iniciar" um aplicativo para obter resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200949"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564437"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar um aplicativo para obter resultados
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs importantes**
@@ -28,7 +27,7 @@ ms.locfileid: "200949"
 
 Saiba como iniciar um aplicativo a partir de outro aplicativo e trocar dados entre os dois. Isso é chamado de *iniciar um aplicativo para obter resultados*. O exemplo mostra como usar [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) para iniciar um aplicativo para obter resultados.
 
-As novas APIs de comunicação entre aplicativos no Windows 10 permitem que os aplicativos do Windows (e aplicativos Web do Windows) iniciem um aplicativo e troquem dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
+Novas APIs no Windows 10 de comunicação de aplicativo para aplicativo certifique para Windows aplicativos (e aplicativos Web do Windows) iniciar um aplicativo e exchange dados e arquivos. Isso permite que você crie soluções diversas de vários aplicativos. Usando essas novas APIs, tarefas complexas que exigiriam que o usuário usasse vários aplicativos podem agora ser executadas perfeitamente. Por exemplo, seu aplicativo pode iniciar um aplicativo de rede social para selecionar um contato ou iniciar um aplicativo de check-out para concluir um processo de pagamento.
 
 O aplicativo que você iniciará para obter resultados será chamado de aplicativo iniciado. O aplicativo que inicia o aplicativo será referenciado como aplicativo de chamada. Para este exemplo, você escreverá o aplicativo de chamada e o aplicativo iniciado.
 
@@ -204,6 +203,6 @@ Em seguida, passá-lo para o aplicativo iniciado por meio de **LaunchUriForResul
 * [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
 * [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
- 
+ 
 
- 
+ 

@@ -6,16 +6,14 @@ ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, tecnologia, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 496e0f8386b60247090035d4c4d1f7aa986f8560
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690752"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567575"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP
 
@@ -23,12 +21,12 @@ ms.locfileid: "1690752"
 
 Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows).
 
-##  <a name="benefits-of-windows-10-for-game-development"></a>Benefícios do Windows 10 para desenvolvimento de jogos
+##  <a name="benefits-of-windows10-for-game-development"></a>Benefícios do Windows 10 para desenvolvimento de jogos
 
 
-Com a introdução da UWP no Windows 10, os títulos do Windows 10 poderão abranger todas as plataformas da Microsoft. Com a migração gratuita de versões anteriores do Windows, há um número cada vez maior de clientes do Windows 10. A combinação dessas duas coisas significa que seus títulos do Windows 10 serão capazes de chegar a um grande número de clientes por meio da Microsoft Store.
+Com a introdução da UWP no Windows 10, seus títulos do Windows 10 poderão abranger todas as plataformas Microsoft. Com a migração gratuita de versões anteriores do Windows, há um número cada vez maior de clientes do Windows 10. A combinação dessas duas coisas significa que seus títulos do Windows 10 serão capazes de chegar a um grande número de clientes por meio da Microsoft Store.
 
-Além disso, o Windows 10 oferece muitos recursos novos que são particularmente benéficos para jogos:
+Além disso, o Windows 10 oferece novos recursos que são particularmente benéficos para jogos:
 
 -   Paginação de memória reduzida e tamanho de sistema de memória geral reduzido
 -   O gerenciamento de memória de elementos gráficos aprimorado aloca ativamente e protege mais memória para o jogo de primeiro plano
@@ -41,7 +39,7 @@ Os jogos em tempo real que exigem alto desempenho devem usar as APIs do DirectX.
 ## <a name="development-environment"></a>Ambiente de desenvolvimento
 
 
-Para criar jogos para UWP, você precisará configurar o ambiente de desenvolvimento instalando o Visual Studio 2015 ou posterior. O Visual Studio 2015 permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
+Para criar jogos para UWP, você precisará configurar seu ambiente de desenvolvimento instalando o Visual Studio 2015 ou posterior. Recomendamos que você instale a versão mais recente do Visual Studio, fornecendo acesso às últimas atualizações de segurança e desenvolvimento. Visual Studio permite que você crie aplicativos UWP e fornece ferramentas para desenvolvimento de jogos:
 
 -   Ferramentas do Visual Studio para programação de jogos DX - O Visual Studio fornece ferramentas para criar, editar, visualizar e exportar recursos de imagem, modelo e sombreador. Há também ferramentas que você pode usar para converter recursos no momento da compilação e depurar o código gráfico do DirectX. Para obter mais informações, consulte [Usar ferramentas do Visual Studio para programação de jogos](set-up-visual-studio-for-game-development.md).
 -   Recursos de diagnóstico de gráficos do Visual Studio – As ferramentas de diagnóstico de elementos gráficos agora estão disponíveis no Windows como um recurso opcional. As ferramentas de diagnóstico permitem que você faça depuração e análise do quadro de elementos gráficos e monitore o uso da GPU em tempo real. Para obter mais informações, consulte [Usar o tempo de execução do DirectX e recursos de diagnóstico de elementos gráficos do Visual Studio](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
@@ -95,7 +93,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Elementos gráficos 2D e interface do usuário – APIs referentes a elementos gráficos 2D, como texto e interfaces do usuário. Todos os elementos gráficos 2D e APIs de interface do usuário são opcionais.
 
@@ -138,7 +136,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Áudio – APIs referentes à reprodução de áudio e à aplicação de efeitos de áudio. Para saber como usar as APIs de áudio em seu jogo, veja [Áudio para jogos](working-with-audio-in-your-directx-game.md).
 
@@ -173,7 +171,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Entrada – APIs referentes à entrada do teclado, mouse, gamepad e outras origens de entrada do usuário.
 
@@ -224,7 +222,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Matemática – APIs referentes à simplificação das operações matemáticas mais usadas.
 
@@ -251,7 +249,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Rede - APIs referentes a comunicação com outros computadores e dispositivos pela Internet ou redes privadas.
 
@@ -286,7 +284,7 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 -   Utilitários de suporte - Bibliotecas que se baseiam nas APIs do Windows 10.
 
@@ -321,11 +319,11 @@ Há muitas APIs relacionadas ao desenvolvimento de jogos, mas nem todos os jogos
     </tbody>
     </table>
 
-     
+     
 
 ## <a name="xbox-live-services"></a>Serviços Xbox Live
 
-O [Programa de Criadores do Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite que qualquer desenvolvedor integre o Xbox Live ao seu jogo UWP e publique no Xbox One e no Windows 10. Integre as experiências sociais do Xbox Live, como entrada, presença, placares de líderes e muito mais ao seu título, com tempo de desenvolvimento mínimo. Os recursos sociais do Xbox Live foram criados para aumentar seu público de forma orgânica, distribuindo reconhecimento para os mais de 55 milhões de jogadores ativos.
+O [Programa de criadores do Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite que qualquer desenvolvedor integre o Xbox Live ao seu jogo UWP e publique no Xbox One e no Windows 10. Integre as experiências sociais do Xbox Live, como entrada, presença, placares de líderes e muito mais ao seu título, com tempo de desenvolvimento mínimo. Os recursos sociais do Xbox Live foram criados para aumentar seu público de forma orgânica, distribuindo reconhecimento para os mais de 55 milhões de jogadores ativos.
 
 Se você deseja ter acesso a mais recursos do Xbox Live, marketing dedicado e suporte para desenvolvimento e a chance de ganhar destaque na loja principal do Xbox One, inscreva-se no programa [ID@Xbox](http://www.xbox.com/developers/id). Para ver quais recursos estão disponíveis para o Programa de Criadores do Xbox Live e para o programa ID@Xbox, consulte a [Tabela de recursos](../xbox-live/developer-program-overview.md#feature-table).
 
@@ -356,9 +354,9 @@ Depois que você estiver pronto para publicar seu jogo, será necessário criar 
 
 Para obter informações sobre como enviar seu jogo para a Microsoft Store, veja [Enviando e publicando seu jogo](e2e.md#submitting-and-publishing-your-game).
 
- 
+ 
 
- 
+ 
 
 
 

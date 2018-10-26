@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c55f371e97daba5f81945812f8179eb708bbadd6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043085"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567178"
 ---
 # <a name="multipass-texture-blending"></a>Mistura de textura com passagem múltipla
 
 
 Os aplicativos Direct3D podem conseguir vários efeitos especiais aplicando várias texturas a uma primitiva ao longo de várias passagens de renderização. O termo comum para isso é *mesclagem de texturas de passagem múltipla*. Um uso comum de mesclagem de texturas de passagem múltipla é emular os efeitos de iluminação complexa e sombrear modelos aplicando várias cores de várias texturas diferentes. Uma dessas aplicações é o *mapeamento de luz*. Consulte [Mapeamento de luz com texturas](light-mapping-with-textures.md).
 
-**Observação** Alguns dispositivos são capazes de aplicar múltiplas texturas aos primitivos em uma única passagem. Consulte [Mistura de textura](texture-blending.md).
+**Observação**  alguns dispositivos são capazes de aplicar múltiplas texturas aos primitivos em uma única passagem. Consulte [Mistura de textura](texture-blending.md).
 
- 
+ 
 
 Se o hardware do usuário não oferecer suporte à mistura de textura múltipla, o app pode usar a mistura de textura com passagem múltipla para obter os mesmo efeitos visuais. No entanto, o app não pode manter as taxas de quadros que são possíveis ao usar a mistura de textura múltipla.
 
@@ -43,9 +41,9 @@ Para realizar uma mistura de textura com passagem múltipla em um app C/C++:
 
 [Mesclagem de textura](texture-blending.md)
 
- 
+ 
 
- 
+ 
 
 
 

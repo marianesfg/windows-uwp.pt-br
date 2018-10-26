@@ -6,19 +6,18 @@ ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, recursos, imagens
-ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199468"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567701"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>Configurar recursos DirectX e exibir uma imagem
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aqui, mostramos a você como criar um dispositivo Direct3D, a cadeia de troca, a exibição de destino de renderização e como apresentar a imagem renderizada para a exibição.
 
@@ -233,7 +232,7 @@ Neste loop, temos:
 Como definimos anteriormente a latência máxima de quadros como 1, o Windows geralmente retarda o loop de renderização para a taxa de atualização de tela, geralmente em torno de 60 Hz. O Windows retarda o loop de processamento, fazendo o aplicativo entrar no modo de suspensão quando o aplicativo chama [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). O Windows faz o aplicativo entrar no modo de suspensão até que a tela seja atualizada.
 
 ```cpp
-        // Enter the render loop.  Note that Windows Store apps should never exit.
+        // Enter the render loop.  Note that UWP apps should never exit.
         while (true)
         {
             // Process events incoming to the window.
@@ -288,9 +287,9 @@ Também desenhamos um triângulo na tela.
 
 [Criando sombreadores e desenhando primitivas](creating-shaders-and-drawing-primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

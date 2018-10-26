@@ -6,16 +6,14 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ms.author: stwhi
 ms.date: 06/03/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 31d05f57c674b7b882cf3494e8fb29611963f83c
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 9e0e73f4224b1577a5219d239f8c11bf5ecc0b73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983477"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565667"
 ---
 # <a name="sockets"></a>Soquetes
 Soquetes são uma tecnologia de transferência de dados de baixo nível sobre o qual muitos protocolos de rede são implementados. UWP oferece classes de soquete de TCP e UDP para o cliente-servidor ou aplicativos ponto a ponto, se as conexões tiverem vida longa ou se uma conexão estabelecida não for necessária.
@@ -1206,7 +1204,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que envia em lotes juntos. A técnica chama [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) nesse fluxo de saída que, a partir do Windows 10, é garantido que irá retornar somente depois que todas as operações no fluxo de saída forem concluídas.
+O exemplo a seguir é adequado para qualquer linguagem UWP, não apenas para C#. Ele depende do comportamento em [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) e [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream) que envia em lotes juntos. A técnica chama [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) nesse fluxo de saída que, a partir do Windows 10, é garantido que irá retornar somente depois que todas as operações no fluxo de saída são concluídas.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1280,7 +1278,7 @@ Existem algumas limitações importantes impostas por usar envios em lote no seu
 
 -   Você não pode modificar o conteúdo das instâncias **IBuffer** que estão sendo gravadas até que a gravação assíncrona seja concluída.
 -   O padrão **FlushAsync** só funciona em **StreamSocket.OutputStream** e **DatagramSocket.OutputStream**.
--   O padrão **FlushAsync** só funciona no Windows 10 em diante.
+-   O padrão de **FlushAsync** só funciona no Windows 10 em diante.
 -   Em outros casos, use [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___), em vez do padrão **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Compartilhamento de DatagramSocket de porta

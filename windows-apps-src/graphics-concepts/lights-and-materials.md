@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2750de79dbdb01081aa099ff955fcef2999dcbf
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 6f690e08d211692b05f0a80722aa4a3e3a06b39f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652488"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569192"
 ---
 # <a name="lighting"></a>Iluminação
 
 
 As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice de objeto tem por base o mapa de textura atual, as cores do vértice e as fontes de iluminação.
 
-**Observação** Esta seção serve apenas para o pipeline de funções fixas. Os sombreadores programáveis executam toda a iluminação de modo explícito.
+**Observação**  esta seção serve apenas para o pipeline de funções fixas. Os sombreadores programáveis executam toda a iluminação de modo explícito.
 
- 
+ 
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Nesta seção
 
@@ -61,16 +59,16 @@ As luzes são usadas para iluminar objetos em uma cena. A cor de cada vértice d
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Guia de aprendizagem de Gráficos do Direct3D](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

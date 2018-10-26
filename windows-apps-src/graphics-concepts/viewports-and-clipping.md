@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: defea1e9adbb4d0f9edb24c936069191944b94be
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044713"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569212"
 ---
 # <a name="viewports-and-clipping"></a>Visores e recorte
 
@@ -49,9 +47,9 @@ Os valores que você especificar para os membros X, Y, largura, altura são coor
 
 O Direct3D pressupõe que o volume de recorte do visor varia de -1,0 a 1,0 em X e de 1,0 a -1,0 em Y. Essas eram as configurações usadas mais frequentemente por aplicativos no passado. Você pode ajustar a taxa de proporção do visor antes de recortar usando a [transformação da projeção](projection-transform.md).
 
-**Observação** MinZ MaxZ indicam os intervalos de profundidade nos quais a cena será renderizada e não são usados para recorte. A maioria dos aplicativos irá definir esses valores para 0,0 e 1,0 para permitir que o sistema renderize todo o intervalo de valores de profundidade no buffer de profundidade. Em alguns casos, você pode conseguir efeitos especiais usando outros intervalos de profundidade. Por exemplo, para renderizar um painel transparente em um jogo, você pode definir os dois valores como 0,0 para forçar o sistema a renderizar objetos em uma cena em primeiro plano, ou você pode defini-los como 1,0 para renderizar um objeto que sempre deve estar em segundo plano.
+**Observação**  MinZ e MaxZ indicam os intervalos de profundidade nos quais a cena será renderizada e não são usados para recorte. A maioria dos aplicativos irá definir esses valores para 0,0 e 1,0 para permitir que o sistema renderize todo o intervalo de valores de profundidade no buffer de profundidade. Em alguns casos, você pode conseguir efeitos especiais usando outros intervalos de profundidade. Por exemplo, para renderizar um painel transparente em um jogo, você pode definir os dois valores como 0,0 para forçar o sistema a renderizar objetos em uma cena em primeiro plano, ou você pode defini-los como 1,0 para renderizar um objeto que sempre deve estar em segundo plano.
 
- 
+ 
 
 A dimensão usadas nos membros X, Y, largura e altura de uma estrutura de visor definem o local e as dimensões do visor na superfície do destino de renderização. Esses valores são dados em coordenadas de tela, relativas ao canto superior esquerdo da superfície.
 
@@ -61,9 +59,9 @@ O Direct3D usa a localização do visor e as dimensões para dimensionar os vér
 
 Essa matriz dimensiona os vértices de acordo com a dimensão do visor e o intervalo de profundidade desejado, e os move para o local apropriado na superfície do destino de renderização. A matriz também gira a coordenada y para refletir uma origem de tela no canto superior esquerdo com y aumentando para baixo. Depois que essa matriz é aplicada, os vértices continuam homogêneos - ou seja, eles ainda existem como vértices \[x,y,z,w\] - e eles devem ser convertidos em coordenadas não homogêneas antes de serem enviados para o rasterizador.
 
-**Observação** Os aplicativos normalmente definem MinZ e MaxZ para 0,0 e 1,0, respectivamente, para fazer com que o sistema renderize o intervalo de profundidade inteiro. No entanto, você pode usar outros valores para alcançar determinados efeitos. Por exemplo, você pode definir os dois valores como 0,0 para forçar todos os objetos no primeiro plano ou definir ambos como 1,0 para renderizar todos os objetos em segundo plano.
+**Observação**  aplicativos normalmente definem MinZ e MaxZ para 0,0 e 1,0, respectivamente, para fazer com que o sistema renderize o intervalo de profundidade inteiro. No entanto, você pode usar outros valores para alcançar determinados efeitos. Por exemplo, você pode definir os dois valores como 0,0 para forçar todos os objetos no primeiro plano ou definir ambos como 1,0 para renderizar todos os objetos em segundo plano.
 
- 
+ 
 
 ## <a name="span-idclearingaviewportspanspan-idclearingaviewportspanspan-idclearingaviewportspanclearing-a-viewport"></a><span id="Clearing_a_Viewport"></span><span id="clearing_a_viewport"></span><span id="CLEARING_A_VIEWPORT"></span>Limpar um visor
 
@@ -88,9 +86,9 @@ Onde: x, y, z e w representam as coordenadas de vértice depois que a transforma
 
 [Sistemas de coordenadas e geometria](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

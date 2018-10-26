@@ -6,16 +6,14 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, portabilidade, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 97cb8341497ad72ab6b4b4f50a7cfbd7bdb4afb7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569132"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Passo a passo: portabilidade de um aplicativo simples em Direct3D 9 para DirectX 11 e a Plataforma Universal do Windows (UWP)
 
@@ -50,7 +48,7 @@ Este exercício de portabilidade mostra como levar uma estrutura de renderizaç�
 </tbody>
 </table>
 
- 
+ 
 
 Este tópico mostra dois códigos que realizam a mesma tarefa básica relativa a elementos gráficos: exibir um cubo giratório sombreado por vértices. Nos dois casos, o código abrange o seguinte processo:
 
@@ -72,7 +70,7 @@ Observe que este passo a passo usa [**CoreWindow**](https://msdn.microsoft.com/l
 ## <a name="prerequisites"></a>Pré-requisitos
 
 
-Você deve [preparar seu ambiente para o desenvolvimento do jogo da UWP em DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Você ainda não precisa de um modelo, mas é necessário que o Microsoft Visual Studio 2015 carregue os exemplos de códigos neste guia passo a passo.
+Você deve [preparar seu ambiente para o desenvolvimento do jogo da UWP em DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Você ainda não precisa de um modelo, mas você precisará Microsoft Visual Studio2015 carregue os exemplos de código neste passo a passo.
 
 Visite o tópico sobre [conceitos e considerações sobre portabilidade](porting-considerations.md) para conhecer melhor os conceitos de programação do DirectX 11 e da UWP mostrados neste guia.
 

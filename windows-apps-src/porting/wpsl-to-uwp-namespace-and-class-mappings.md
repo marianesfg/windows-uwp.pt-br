@@ -1,35 +1,33 @@
 ---
 author: stevewhims
-description: Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows).
-title: Mapeamentos de namespace e de classe do Windows Phone Silverlight para a UWP
+description: Este tópico fornece um mapeamento abrangente WindowsPhone das APIs do Silverlight para seus equivalentes da plataforma Universal do Windows (UWP).
+title: WindowsPhone Silverlight para mapeamentos de namespace e classe UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f7bd31b8157af00817738cb1d224c827acb6ca6
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 54118b41fc1f3036dddba9a0cfb8ecd860c1e233
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935806"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566157"
 ---
-# <a name="windows-phone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight para mapeamentos de API UWP
+# <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight para mapeamentos de API UWP
 
 
-Este tópico fornece um mapeamento abrangente das APIs do Windows Phone Silverlight para seus equivalentes da UWP (Plataforma Universal do Windows). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
+Este tópico fornece um mapeamento abrangente WindowsPhone das APIs do Silverlight para seus equivalentes da plataforma Universal do Windows (UWP). Geralmente não há um mapeamento de funcionalidade um para um: qualquer plataforma pode ter mais ou menos funcionalidades que suas equivalentes em um namespace ou classe.
 
-A tabela de mapeamento ajudará você quando estiver trabalhando em um projeto da UWP e estiver reutilizando o código-fonte de um projeto do Windows Phone Silverlight. Há diferenças nos nomes de namespaces e classes (inclusive controles de interface do usuário) entre as duas plataformas. Em muitos casos, isso é tão fácil quanto alterar um nome de namespace e, em seguida, o código será compilado. Às vezes, uma classe ou o nome da API mudou, bem como o nome do namespace. Em outras ocasiões, o mapeamento requer um pouco mais de trabalho e, em casos raros, requer uma mudança na abordagem.
+A tabela de mapeamento ajudará você quando você estiver trabalhando em um projeto UWP e estiver reutilizando o código-fonte de um projeto do WindowsPhone Silverlight. Há diferenças nos nomes de namespaces e classes (inclusive controles de interface do usuário) entre as duas plataformas. Em muitos casos, isso é tão fácil quanto alterar um nome de namespace e, em seguida, o código será compilado. Às vezes, uma classe ou o nome da API mudou, bem como o nome do namespace. Em outras ocasiões, o mapeamento requer um pouco mais de trabalho e, em casos raros, requer uma mudança na abordagem.
 
-**Como usar a tabela: ** primeiro, procure o nome da classe que você está usando. As classes estão listadas sempre que o mapeamento é mais complicado do que simplesmente alterar o nome do namespace. Caso a classe não esteja listada, o mapeamento é apenas uma alteração do namespace. Assim, encontre o nome do namespace da classe, e você encontrará o nome do namespace UWP equivalente. A classe estará nesse namespace. Caso o namespace não esteja listado é porque o nome não foi alterado.
+**Como usar a tabela:** Primeiro, procure o nome da classe que você está usando. As classes estão listadas sempre que o mapeamento é mais complicado do que simplesmente alterar o nome do namespace. Caso a classe não esteja listada, o mapeamento é apenas uma alteração do namespace. Assim, encontre o nome do namespace da classe, e você encontrará o nome do namespace UWP equivalente. A classe estará nesse namespace. Caso o namespace não esteja listado é porque o nome não foi alterado.
 
-**Observação**  O Windows 10 oferece mais suporte ao .NET Framework do que um aplicativo da Store do Windows Phone. Por exemplo, o Windows 10 tem diversos namespaces System.ServiceModel.\*, assim como System.Net, System.Net.NetworkInformation e System.Net.Sockets.
-Além disso, em um aplicativo do Windows 10, você aproveitará o .NET Native, uma tecnologia de compilação ahead-of-time que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL.
+**Observação**Windows 10 dá suporte a muito mais do .NET Framework do que um aplicativo da loja do Windows Phone. Por exemplo, o Windows 10 tem diversos namespaces System.ServiceModel.\*, bem como System.Net, System.NET. NetworkInformation e ServiceModel.
+Além disso, em um aplicativo do Windows 10, você aproveitará .NET Native, que uma tecnologia de compilação ahead-of-time que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL.
 
-| Windows Phone Silverlight | Windows Runtime |
+| WindowsPhone Silverlight | Windows Runtime |
 | ------------------------- | --------------- |
 | Publicidade | |
 | Classe **Microsoft.Advertising.Mobile.UI.AdControl** | Classe [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) |

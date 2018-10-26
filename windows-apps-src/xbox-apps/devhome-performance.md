@@ -2,27 +2,25 @@
 author: v-angraf
 ms.assetid: d40056bc-76bc-c123-4d36-973ec46d11fc
 title: Página de desempenho (Dev Home)
-description: Fornece informações sobre a página de desempenho do aplicativo Dev Home para um Xbox.
+description: Fornece informações sobre a página de desempenho do aplicativo Dev Home para o Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
-ms.openlocfilehash: f0bf93c9670e16ec008b55779410a076d89d867c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015291"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565689"
 ---
 # <a name="performance-page-dev-home"></a>Página de desempenho (Dev Home)
    
   
-A página de **desempenho** do Dev Home simula várias atividade de disco e condições de uso de CPU para fins de solução de problemas.   
- ![Página de desempenho do Dev Home](images/devhome_performance.png)   
+A página de **desempenho** de Dev Home simula vários atividade do disco e condições de uso de CPU para fins de solução de problemas.   
+ ![Página de desempenho de Dev Home](images/devhome_performance.png)   
   
 A página de **desempenho** contém os seguintes painéis:   
  
@@ -37,7 +35,7 @@ A página de **desempenho** contém os seguintes painéis:
 ## <a name="disk-simulation"></a>Simulação de disco  
    
   
-Painel de **simulação de disco** simula a atividade de disco do sistema ou outros aplicativos.   
+O painel de **simulação de disco** simula a atividade do disco do sistema ou outros aplicativos.   
   
 <a id="ID4EOB"></a>
 
@@ -46,13 +44,13 @@ Painel de **simulação de disco** simula a atividade de disco do sistema ou out
 ## <a name="cpu-simulation"></a>Simulação de CPU  
    
   
-Painel de **Simulação de CPU** simula atividades CPU6 (o núcleo compartilhado).   
+O painel de **Simulação de CPU** simula a atividade em CPU6 (o núcleo compartilhado).   
   
 <a id="ID4EYB"></a>
 
    
 
-## <a name="see-also"></a>Veja também  
- [Página inicial do desenvolvedor no Console (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte também  
+ [Home de desenvolvedor no Console (Dev Home)](dev-home.md)
 
   

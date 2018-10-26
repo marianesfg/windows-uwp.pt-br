@@ -6,16 +6,14 @@ ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: baf230559ebeb285d5faa3e2de8e38b355638070
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488840"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569416"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 
@@ -37,9 +35,9 @@ Para configurar uma janela da área de trabalho com um visor do Direct3D 9, era 
 
 O ambiente UWP tem um sistema muito mais simples. Em vez de configurar uma janela tradicional, um jogo da Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Essa interface existe para que aplicativos e jogos em DirectX sejam executados diretamente em uma [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), dentro do contêiner de aplicativo.
 
-> **Observação**   O Windows oferece ponteiros gerenciados para recursos como o objeto do aplicativo de origem e a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**Manipular o operador de objeto (^)**] https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Observação**  Windows oferece ponteiros gerenciados para recursos como o objeto de aplicativo de origem e a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulte [**manipular o operador de objeto (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
- 
+ 
 
 Sua classe "principal" precisa ser herdada de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) e implementar os cinco métodos de **IFrameworkView**: [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) e [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523). Além de criar **IFrameworkView**, que é (essencialmente) onde ficará o jogo, você precisa implementar uma classe de fábrica que crie uma instância da **IFrameworkView**. O jogo ainda possui um executável com um método chamado **main()**, mas tudo que ele pode fazer é usar a fábrica para criar a instância de **IFrameworkView**.
 
@@ -141,9 +139,9 @@ Visite os seguintes artigos aprofundados sobre desenvolvimento de jogos da Micro
 -   [Áudio para jogos](working-with-audio-in-your-directx-game.md)
 -   [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
- 
+ 
 
- 
+ 
 
 
 

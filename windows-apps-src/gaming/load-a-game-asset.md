@@ -6,16 +6,14 @@ ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, carregamento de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983549"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565324"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Carregar recursos no jogo em DirectX
 
@@ -73,7 +71,7 @@ O código completo desses exemplos pode ser encontrado nos seguintes links.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="instructions"></a>Instruções
 
@@ -216,7 +214,7 @@ Vamos extrair os dados de bytes do arquivo da malha. O formato do exemplo pressu
 -   Depois disso, os bits subsequentes (numVertices \* sizeof(**BasicVertex**)) contêm os dados de vértice.
 -   Os últimos bits (numIndices \* 16) de dados contêm os dados de índice, representados como uma sequência de valores uint16.
 
-O ponto é este: saber o layout no nível de bit dos dados de malha carregados. Além disso, verifique se há consistência com endian-ness. Todas as plataformas Windows 8 são little-endian.
+O ponto é este: saber o layout no nível de bit dos dados de malha carregados. Além disso, verifique se há consistência com endian-ness. Todas as plataformas Windows8 são little-endian.
 
 No exemplo, você chama um método CreateMesh no método **LoadMeshAsync** para executar essa interpretação no nível do bit.
 
@@ -707,9 +705,9 @@ Nesse ponto, você deverá estar apto a entender e criar ou modificar métodos d
 * [Concluir código para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Concluir código para DDSTextureLoader](complete-code-for-ddstextureloader.md)
 
- 
+ 
 
- 
+ 
 
 
 

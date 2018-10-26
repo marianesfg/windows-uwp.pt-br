@@ -5,16 +5,14 @@ title: Introdução ao C++/WinRT
 ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 8b88eac972cd65b771827d7e3125476265cf671e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474239"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568455"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -90,7 +88,7 @@ Em um arquivo IDL, defina as classes de tempo de execução no componente, na in
 Agrupe o binário interno do componente do Tempo de Execução do Windows e seu `.winmd` com o aplicativo UWP que os utiliza.
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>Tipos personalizados na projeção C++/WinRT
-Na programação do C++/WinRT, você pode usar os recursos de linguagem C++ padrão e [tipos de dados do C++ padrão e do C++/WinRT](std-cpp-data-types.md)&mdash;incluindo alguns tipos de dados da Biblioteca padrão do C++&mdash. Mas, você também ficará a par de alguns tipos de dados personalizados na projeção e poderá optar por usá-los. Por exemplo, usamos [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) no exemplo do código de início rápido em [Introdução com C++/WinRT](get-started.md).
+No C++ c++ WinRT de programação, você pode usar recursos de linguagem C++ padrão e [tipos de dados C++ padrão e C++ c++ WinRT](std-cpp-data-types.md)&mdash;incluindo alguns tipos de dados da biblioteca padrão C++. Mas, você também ficará a par de alguns tipos de dados personalizados na projeção e poderá optar por usá-los. Por exemplo, usamos [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) no exemplo do código de início rápido em [Introdução com C++/WinRT](get-started.md).
 
 [**winrt::com_array**](/uwp/cpp-ref-for-winrt/com-array) é outro tipo que você provavelmente usará em algum momento. Mas a probabilidade de você usar diretamente um tipo como [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) é menor. Ou você pode optar por não usá-lo para que não tenha nenhum código a ser alterado se um tipo equivalente aparecer na Biblioteca Padrão C++.
 

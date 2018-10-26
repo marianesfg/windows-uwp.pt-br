@@ -9,22 +9,20 @@ keywords: touchpad, PTP, toque, ponteiro, entrada, interação do usuário
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 54911cbab3124da30b416f328675353349883175
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 1c77e7a220618273e0fb8fb75cf3de2247534f5b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394365"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565026"
 ---
 # <a name="touchpad-design-guidelines"></a>Diretrizes de design do touchpad
 
 
 Projete seu app de forma que os usuários possam interagir com ele por meio de um touchpad. Um touchpad combina a entrada multi-touch indireta com a entrada de precisão de um dispositivo apontador, como um mouse. Essa combinação torna o touchpad adequado para uma interface do usuário otimizada para touch e destinos menores de aplicativos de produtividade.
 
- 
+ 
 
 ![touchpad](images/input-patterns/input-touchpad.jpg)
 
@@ -118,7 +116,7 @@ Aqui estão alguns exemplos de gestos otimizados de touchpad para realizar taref
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="hardware"></a>Hardware
 
@@ -168,7 +166,7 @@ Se você precisa personalizar o cursor do mouse:
 * [Entrada: amostra de eventos de entrada do usuário XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Amostra de rolagem, movimento panorâmico e aplicação de zoom em XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: gestos e interações com o GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
 
 

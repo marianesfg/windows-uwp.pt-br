@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b49afdd4a9fe1db28c8195bdf166d6a74e153020
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653795"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568262"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico e redimensionamento
 
@@ -41,10 +39,9 @@ Os diagramas a seguir demonstram as diferenças entre redimensionamento e zoom �
 
 ![juntar os dedos reduz um objeto e separá-los o aumenta](images/objectresize.png)
 
-**Observação**  
-O zoom óptico não deve ser confundido com o [Zoom semântico](../controls-and-patterns/semantic-zoom.md). Embora essas interações compartilhem os mesmos gestos, o zoom semântico refere-se à apresentação e à navegação de conteúdo organizado em um único modo de exibição (como a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotografias).
+**Observação**  zoom óptico não deve ser confundido com o [Zoom semântico](../controls-and-patterns/semantic-zoom.md). Embora essas interações compartilhem os mesmos gestos, o zoom semântico refere-se à apresentação e à navegação de conteúdo organizado em um único modo de exibição (como a estrutura de pastas de um computador, uma biblioteca de documentos ou um álbum de fotografias).
 
- 
+ 
 
 ## <a name="dos-and-donts"></a>O que fazer e o que não fazer
 
@@ -70,10 +67,9 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
     -   Aplicativos de desenho em que itens redimensionáveis podem aparecer em uma tela ou quadro redimensionável.
     -   Páginas da Web com um objeto incorporado, como um mapa.
 
-    **Observação**  
-    Em todos os casos, a área de conteúdo será redimensionada, a menos que todos os pontos de toque estejam dentro do objeto redimensionável.
+    **Observação**  em todos os casos, a área de conteúdo será redimensionada, a menos que todos os pontos de toque estejam dentro do objeto redimensionável.
 
-     
+     
 
 ## <a name="related-articles"></a>Artigos relacionados
 
@@ -93,9 +89,9 @@ Use as diretrizes a seguir para aplicativos compatíveis com redimensionamento o
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

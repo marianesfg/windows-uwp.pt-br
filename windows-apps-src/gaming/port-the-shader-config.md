@@ -6,19 +6,18 @@ ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, porta, sombreador, direct3d, opengl
-ms.openlocfilehash: f683e8b6ad04b1350adae1c962da09e2f15f5cec
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199439"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567218"
 ---
 # <a name="port-the-shader-objects"></a>Fazer a portabilidade de objetos de sombreador
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **APIs Importantes**
@@ -28,9 +27,9 @@ ms.locfileid: "199439"
 
 Ao fazer a portabilidade do renderizador simples do OpenGL ES 2.0, a primeira etapa é definir o vértice e os objetos de sombreadores equivalentes no Direct3D 11 e certificar-se de que o programa principal consiga se comunicar com os objetos de sombreador depois de eles serem compilados.
 
-> **Observação**   Você criou um projeto Direct3D novo? Caso não tenha criado, siga as instruções em [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md). Este guia passo a passo parte do pressuposto de que você criou os recursos DXGI e Direct3D para desenhar na tela, os quais são fornecidos no modelo.
+> **Observação**  você já criou um projeto Direct3D novo? Caso não tenha criado, siga as instruções em [Criar um novo projeto DirectX 11 para a Plataforma Universal do Windows (UWP)](user-interface.md). Este guia passo a passo parte do pressuposto de que você criou os recursos DXGI e Direct3D para desenhar na tela, os quais são fornecidos no modelo.
 
- 
+ 
 
 Os sombreadores compilados no Direct3D devem ser associados a um contexto de desenho, de forma muito parecida com o OpenGL ES 2.0. Entretanto, o Direct3D não tem o conceito de um programa sombreador por si. Em vez disso, você deve atribuir os sombreadores diretamente a um [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385). Essa etapa segue o processo de criação e associação de objetos de sombreador do OpenGL ES 2.0 e fornece os comportamentos de API correspondentes no Direct3D.
 
@@ -81,9 +80,9 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 No Direct3D, os sombreadores não são compilados durante o tempo de execução; eles sempre são compilados em arquivos CSO quando o resto do programa é compilado. Quando você compila o seu aplicativo com Microsoft Visual Studio, os arquivos HLSL são compilados a arquivos CSO (.cso) que o seu aplicativo deve carregar. Não se esqueça de incluir esses arquivos CSO ao seu aplicativo em seu pacote!
 
-> **Observação**   O exemplo a seguir executa o carregamento e a compilação do sombreador de forma assíncrona usando a palavra-chave **auto** e a sintaxe lambda. ReadDataAsync() é um método implementado para o modelo que lê em um arquivo CSO como uma matriz de dados em byte (fileData).
+> **Observação**  o exemplo a seguir executa o sombreador Carregando e a compilação de forma assíncrona usando a sintaxe de palavra-chave e lambda **automática** . ReadDataAsync() é um método implementado para o modelo que lê em um arquivo CSO como uma matriz de dados em byte (fileData).
 
- 
+ 
 
 Direct3D 11: compile um sombreador
 
@@ -319,9 +318,9 @@ O buffer de vértices é criado e atualizado de forma semelhante, e é discutido
 
 [Desenhar na tela](draw-to-the-screen.md)
 
- 
+ 
 
- 
+ 
 
 
 

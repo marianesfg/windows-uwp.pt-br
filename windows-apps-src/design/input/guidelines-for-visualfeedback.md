@@ -9,15 +9,13 @@ keywords: feedback visual, feedback de foco, feedback de toque, visualização d
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4653e07d6d81f884ee6519206e75350aa47945f8
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: baf23062595d5d81fc59a2d757dcbada685c0f97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917581"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565981"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Diretrizes de feedback visual
 
@@ -133,6 +131,6 @@ Para alterar as cores em uma base por controle, edite as propriedades dos elemen
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
