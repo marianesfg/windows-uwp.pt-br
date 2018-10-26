@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562008"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
@@ -68,7 +66,7 @@ Com um fator forma com base em uma ação (ou gesto) girar, o Surface Dial desti
 
 ## <a name="cortana"></a>Cortana
 
-No Windows 10, a extensibilidade da **Cortana** permite lidar com comandos de voz de um usuário e iniciar um aplicativo para executar uma única ação.
+No Windows 10, extensibilidade **da Cortana** permite lidar com comandos de voz de um usuário e iniciar seu aplicativo para realizar uma única ação.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -91,7 +89,7 @@ A integração da funcionalidade básica do seu aplicativo e o fornecimento de u
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design da Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
- 
+ 
 
 ## <a name="speech"></a>Controle por voz
 
@@ -140,13 +138,13 @@ O ditado normalmente é usado quando um aplicativo não precisa compreender o si
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de controle por voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
- 
+ 
 
 ## <a name="pen"></a>Caneta
 
 Uma caneta pode servir como um dispositivo apontador com precisão de pixel, como um mouse, e é o dispositivo ideal para entrada de tinta digital.
 
-**Observação**  Existem dois tipos de dispositivos de caneta: ativo e passivo.
+**Observação**existem dois tipos de dispositivos de caneta: ativo e passivo.
   -   As canetas passivas não são eletrônicas, e emulam efetivamente a entrada touch de um dedo. Elas exigem uma exibição básica do dispositivo, que reconhece a entrada com base na pressão do contato. Como os usuários geralmente repousam a mão enquanto escrevem na superfície de entrada, os dados de entrada podem ficar poluídos devido a rejeição da palma da mão bem-sucedida.
   -   As canetas ativas são eletrônicas e podem funcionar com telas de dispositivos complexas para fornecer dados de entrada muito mais extensos (incluindo passagem do mouse ou dados de proximidade) ao sistema e seu aplicativo. A rejeição da palma da mão é muito mais robusta.
 
@@ -173,7 +171,7 @@ Você deve fornecer comandos de interface do usuário específicos à caneta, ou
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de caneta](https://msdn.microsoft.com/library/windows/apps/dn456352)
- 
+ 
 
 ## <a name="touch"></a>Touch
 
@@ -208,7 +206,7 @@ Em geral, o touch é:
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de touch](https://msdn.microsoft.com/library/windows/apps/hh465370)
- 
+ 
 
 ## <a name="touchpad"></a>Touchpad
 
@@ -232,13 +230,13 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do touchpad](https://msdn.microsoft.com/library/windows/apps/dn456353)
- 
+ 
 
 ## <a name="keyboard"></a>Teclado
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
-Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis compatíveis com o Windows 10, os usuários podem conectar seus telefones a um mouse e um teclado para fazê-los funcionar como um notebook.
+Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones com um mouse e teclado para fazê-los funcionar como um notebook.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 
@@ -260,7 +258,7 @@ O OSK é um teclado de software visual que você pode usar em vez do teclado fí
 
 O teclado virtual é um teclado de software visual usado para entrada de texto por toque. O teclado virtual não é uma substituição ao OSK, pois é usado apenas para entrada de texto (ele não emula o teclado de hardware) e só aparece quando um campo de texto ou outro controle de texto editável é focalizado. O teclado virtual não oferece suporte a comandos de aplicativo ou do sistema.
 
-**Observação**  O OSK tem prioridade sobre o teclado virtual, que não será mostrado se o OSK estiver presente.
+**Observação**o OSK tem prioridade sobre o teclado virtual, que não será mostrado se o OSK estiver presente.
 
 Em geral, um teclado é:
 
@@ -272,7 +270,7 @@ Em geral, um teclado é:
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes de design do teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
- 
+ 
 
 ## <a name="mouse"></a>Mouse
 
@@ -299,7 +297,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 ### <a name="more-info"></a>Mais informações
 
 [Diretrizes para design de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
- 
+ 
 
 ## <a name="gesture"></a>Gesto
 
@@ -370,6 +368,6 @@ Assim como as pessoas usam uma combinação de voz e gestos ao se comunicar uns 
 
 
 
- 
+ 
 
- 
+ 

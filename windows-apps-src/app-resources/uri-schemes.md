@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 445f053b0243f1b9c2e54e6e9fcfa332d49cbec5
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 59cd664e268e9e62786728aeb122ec52acd721c0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674513"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559969"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -273,8 +271,8 @@ Os desenvolvedores de componentes específicos dispostos em camadas acima desta 
 
 * [URI (Uniform Resource Identifier): sintaxe genérica](http://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empacotando aplicativos](../packaging/index.md)
-* [Referência a uma imagem ou outros ativos de código e marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
+* [Fazer referência a uma imagem ou outro ativo no código e na marcação XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Armazenar e recuperar configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
-* [Localizar cadeias de caracteres em seu IU e manifesto do conjunto de aplicativo](localize-strings-ui-manifest.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
 * [Sistema de Gerenciamento de Recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [Suporte à notificação de bloco e notificações do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [Suporte a blocos e notificações do sistema para idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

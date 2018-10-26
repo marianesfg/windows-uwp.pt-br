@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 27db679e653873be4aac3ed9298d7d0e59e99d2b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 31725c6cb9a966f02f8d1f8d62ca980e72c95326
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654395"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561034"
 ---
 # <a name="guidelines-for-panning"></a>Diretrizes de movimento panorâmico
 
@@ -36,9 +34,9 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
 -   Exiba indicadores de movimento panorâmico e barras de rolagem para fornecer dicas de localização e tamanho. Oculte-os se o aplicativo fornecer um recurso de navegação personalizado.
 
-    **Observação**  Ao contrário das barras de rolagem, os indicadores de movimento panorâmico são puramente informativos. Eles não são expostos para dispositivos de entrada e não podem ser manipulados de nenhuma maneira.
+    **Observação**ao contrário de rolagem barras, indicadores de movimento panorâmico são puramente informativos. Eles não são expostos para dispositivos de entrada e não podem ser manipulados de nenhuma maneira.
 
-     
+     
 
 **Movimento panorâmico de eixo único (estouro de capacidade unidimensional)**
 
@@ -80,7 +78,7 @@ O movimento panorâmico ou rolagem permite aos usuários navegar dentro de uma �
 
 ## <a name="additional-usage-guidance"></a>Diretrizes de uso adicionais
 
-O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que seja feita uma distinção em uma API ou que haja qualquer exigência em alguma interface do usuário do Windows específica do dispositivo, simplesmente nos referimos às duas interações como movimento panorâmico.
+O movimento horizontal com o uso de toque, com gestos de passar ou deslizar o dedo usando um ou mais dedos, é semelhante à rolagem com o mouse. A interação do deslocamento horizontal é similar ao ato de girar a roda do mouse ou deslizar a barra de rolagem, ao invés de clicar na barra de rolagem. A menos que uma distinção é feita em uma API ou exigida por alguns WindowsUI específicas do dispositivo, simplesmente nos referimos às duas interações como movimento panorâmico.
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update - Mudança de comportamento</strong>
@@ -103,7 +101,7 @@ Deslizar envolve mover os dedos lentamente na direção do movimento panorâmico
 
 **Tipos de movimento panorâmico**
 
-O Windows 8 aceita três tipos de movimento panorâmico:
+Windows8 dá suporte a três tipos de movimento panorâmico:
 
 -   Eixo único: o movimento panorâmico é possível somente em uma direção (horizontal ou vertical).
 -   Trilhos: o movimento panorâmico é possível em todas as direções. No entanto, depois que o usuário cruza um limite de distância em uma direção específica, o movimento panorâmico fica limitado ao eixo em questão.
@@ -120,9 +118,9 @@ Há dois modos de exibição de movimento panorâmico baseados no dispositivo de
 -   Indicadores de movimento panorâmico para toque.
 -   Barras de rolagem para outros dispositivos de entrada, incluindo mouse, touchpad, teclado e caneta.
 
-**Observação**  Os indicadores de movimento panorâmico só ficam visíveis quando o contato por toque é feito na região que permite tal movimento. Da mesma forma, a barra de rolagem só fica visível quando o cursor do mouse, o cursor da caneta ou o foco do teclado está na região rolável.
+**Observação**indicadores de movimento panorâmico ficam visíveis somente quando o contato por toque está dentro da região que permite movimento panorâmico. Da mesma forma, a barra de rolagem só fica visível quando o cursor do mouse, o cursor da caneta ou o foco do teclado está na região rolável.
 
- 
+ 
 
 **Indicadores de movimento panorâmico** Indicadores de movimento panorâmico são semelhantes à caixa de rolagem em uma barra de rolagem. Eles indicam a proporção do conteúdo exibido para a área total que permite movimento panorâmico e a posição relativa do conteúdo exibido na área que permite movimento panorâmico.
 
@@ -149,7 +147,7 @@ Os diagramas a seguir mostram como o movimento panorâmico até um certo ponto e
 | ![imagem mostrando uma área que permite movimento panorâmico.](images/ux-panning-snap1.png) | ![imagem mostrando uma área que permite movimento panorâmico sendo movimentada para a esquerda.](images/ux-panning-snap2.png) | ![imagem mostrando uma área que permite movimento panorâmico que parou em um ponto de alinhamento lógico.](images/ux-panning-snap3.png) |
 | Passe o dedo para realizar o movimento panorâmico                                                  | Retire o contato por toque.                                                                     | A região que permite movimento panorâmico para no ponto de alinhamento, não onde o contato por toque foi retirado.                                |
 
- 
+ 
 
 **Trilhos** O conteúdo pode ser mais largo ou mais longo do que a dimensão e a resolução de um dispositivo de exibição. Por isso, o movimento panorâmico bidimensional (horizontal e vertical) é geralmente necessário. Os trilhos melhoram a experiência do usuário nesses casos enfatizando o movimento panorâmico ao longo do eixo de movimento (vertical ou horizontal).
 
@@ -195,9 +193,9 @@ Essa diretriz também é útil para aplicativos como, por exemplo, álbuns de fo
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

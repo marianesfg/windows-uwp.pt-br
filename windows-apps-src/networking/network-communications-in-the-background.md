@@ -4,31 +4,31 @@ description: Para continuar a comunicação de rede quando não estiver em segun
 title: Comunicações de rede em segundo plano
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 ms.author: stwhi
-ms.date: 3/23/2018
+ms.date: 06/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 442e2f37ab5c7c83f06ecb444e6ae79f9c2a74dd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691175"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561185"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicações de rede em segundo plano
-Para continuar a comunicação de rede quando não estiver em segundo plano, um aplicativo pode usar tarefas em segundo plano e qualquer agente de soquete ou gatilhos de canal de controle. Os aplicativos que usam soquetes para conexões de longa duração podem delegar a propriedade de um soquete para um agente de soquete do sistema ao sair do primeiro plano. O agente ativa o aplicativo quando chega tráfego no soquete, transfere a propriedade de volta para o aplicativo, e o aplicativo processa o tráfego de chegada.
+Para continuar a comunicação de rede quando não estiver em primeiro plano, seu aplicativo pode usar tarefas em segundo plano e uma destas duas opções.
+- Agente de soquete. Se seu aplicativo usa soquetes para conexões de longo prazo em seguida, quando eles saem do primeiro plano, ele pode delegar a propriedade de um soquete para um agente de soquete do sistema. Em seguida, o agente: ativa seu aplicativo quando chega tráfego no soquete; transfere a propriedade de volta para seu aplicativo; e seu aplicativo processa o tráfego de chegada.
+- Gatilhos de canal de controle. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Realizando operações de rede em tarefas em segundo plano
 - Use um [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger) para ativar a tarefa em segundo plano quando um pacote é recebido e você precisa executar uma tarefa de curta duração. Depois de executar a tarefa, é necessário encerrar a tarefa em segundo plano para economizar energia.
-Use um [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) para ativar a tarefa em segundo plano quando um pacote é recebido e você precisa executar uma tarefa de longa duração.
+- Use um [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) para ativar a tarefa em segundo plano quando um pacote é recebido e você precisa executar uma tarefa de longa duração.
 
-**Condições relacionadas de rede e sinalizadores**
+**Condições relacionadas à rede e sinalizadores**
 
 - Adicione a condição **InternetAvailable** à sua tarefa em segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para atrasar o disparo da tarefa em segundo plano até que a pilha de rede esteja em execução. Essa condição economiza energia, pois a tarefa em segundo plano não é executada até a rede funcionar. Essa condição não fornece ativação em tempo real.
 
-Independentemente do gatilho usado, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) na tarefa em segundo plano para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano é executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se a tarefa em segundo plano não usar **IsNetworkRequested**, a tarefa em segundo plano não poderá acessar a rede quando estiver em Modo de espera conectado (por exemplo, quando a tela do telefone está desativada).
+Independentemente do gatilho usado, defina [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) na tarefa em segundo plano para garantir que a rede permaneça ativa enquanto a tarefa em segundo plano é executada. Isso solicita que a infraestrutura de tarefa em segundo plano acompanhe a rede enquanto a tarefa está em execução, mesmo se o dispositivo entrar em Modo de espera conectado. Se sua tarefa em segundo plano não usar **IsNetworkRequested**, sua tarefa em segundo plano não poderão acessar a rede quando estiver em modo de espera conectado (por exemplo, quando a tela do telefone está desativada).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>Agente de soquete e SocketActivityTrigger
 Se o aplicativo usa conexões [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), você deve usar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) e o agente de soquete para ser notificado quando chegar tráfego para seu aplicativo enquanto ele não está no primeiro plano.
@@ -157,9 +157,9 @@ Para obter uma amostra completa demonstrando o uso de [**SocketActivityTrigger**
 Você provavelmente perceberá que a amostra chama **TransferOwnership** assim que cria um novo soquete ou adquire um soquete existente, em vez de usar o manipulador de evento **OnSuspending** para fazer isso, como descrito neste tópico. Isso ocorre porque a amostra se concentra em demonstrar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) e não usa o soquete para outra atividade enquanto está em execução. Seu aplicativo provavelmente será mais complexo e deverá usar **OnSuspending** para determinar quando chamar **TransferOwnership**.
 
 ## <a name="control-channel-triggers"></a>Gatilhos de canal de controle
-Em primeiro lugar, verifique se você está usando gatilhos de canal de controle (CCTs) adequadamente. Se estiver usando conexões [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) ou [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), recomendamos que você use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). É possível usar CCTs para **StreamSocket**, mas eles usam mais recursos e podem não funcionar no modo de espera conectado.
+Em primeiro lugar, verifique se você está usando gatilhos de canal de controle (CCTs) adequadamente. Se você estiver usando conexões [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) , [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)ou [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), é recomendável que você use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). É possível usar CCTs para **StreamSocket**, mas eles usam mais recursos e podem não funcionar no modo de espera conectado.
 
-Se estiver usando WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) ou **Windows.Web.Http.HttpClient**, você deverá usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+Se você estiver usando WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)ou [**HttpClient**](/uwp/api/windows.web.http.httpclient), você deve usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger com WebSockets
 Algumas considerações especiais se aplicam quando usamos [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ou [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um **MessageWebSocket** ou um **StreamWebSocket** com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em **StreamWebSocket**. As solicitações para receber pacotes no **MessageWebSocket** não são afetadas.
@@ -432,8 +432,8 @@ Para obter mais informações sobre o uso de [**MessageWebSocket**](https://msdn
 ## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger com HttpClient
 Algumas considerações especiais se aplicam quando usamos [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Há alguns padrões de uso específicos de transporte e práticas recomendadas que devem ser seguidos ao usar um [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com **ControlChannelTrigger**. Além disso, essas considerações afetam o modo como são manipuladas as solicitações para receber pacotes em [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637).
 
-**Observação**  No momento, não há suporte para [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com SSL usando o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
- 
+**Observação** [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) usando SSL não é atualmente suportado usando o recurso de gatilho de rede e [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+ 
 Os seguintes padrões de uso e práticas recomendadas devem ser seguidos ao usar [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) com [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032):
 
 -   É possível que o aplicativo precise definir várias propriedades e cabeçalhos no objeto [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) ou [HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638) no namespace [System.Net.Http](http://go.microsoft.com/fwlink/p/?linkid=227894) antes de enviar a solicitação para o URI específico.

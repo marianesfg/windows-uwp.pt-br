@@ -6,16 +6,14 @@ description: Construir um seletor de dispositivo permitirá que você limite os 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c80f604e9b8dc31eec1fe684f073bceb2337d91f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 036ea8b7d9797112dca9b6594e9bc1e33e923588
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959161"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563142"
 ---
 # <a name="build-a-device-selector"></a>Criar um seletor de dispositivo
 
@@ -40,9 +38,9 @@ Ao usar as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/lib
 
 As APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) usam sintaxe AQS Canonical, mas nem todos os operadores são suportados. Para obter uma lista de propriedades que estão disponíveis quando você constrói sua cadeia de caracteres de filtro, consulte [Device information properties](device-information-properties.md).
 
-**Cuidado**  As propriedades personalizadas que são definidas usando o formato `{GUID} PID` não podem ser usadas ao construir a sua cadeia de caracteres de filtro AQS. Isso é porque o tipo de propriedade é derivado do nome da propriedade conhecida.
+**Cuidado**as propriedades personalizadas que são definidas usando o `{GUID} PID` formato não pode ser usado ao construir a sua cadeia de caracteres de filtro AQS. Isso é porque o tipo de propriedade é derivado do nome da propriedade conhecida.
 
- 
+ 
 
 A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão suporte.
 
@@ -64,9 +62,9 @@ A tabela a seguir lista os operadores AQS e os tipos de parâmetros a que dão s
 | **COP\_APPLICATION\_SPECIFIC** | Sem suporte                                                               |
 
 
-> **Dica**  Você pode especificar **NULL** para **COP\_EQUAL** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você especifica **NULL** usando colchetes vazios \[\].
+> **Dica**você pode especificar **Nulo** para **COP\_EQUAL** ou **COP\_NOTEQUAL**. Isso se traduz em uma propriedade sem valor ou cujo valor não existe. No AQS, você especifica **NULL** usando colchetes vazios \[\].
 
-> **Importante**  Ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS**, eles se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
+> **Importante**ao usar os operadores **COP\_VALUE\_CONTAINS** e **COP\_VALUE\_NOTCONTAINS** , se comportam de forma diferente com cadeias de caracteres e matrizes de cadeia de caracteres. No caso de uma cadeia de caracteres, o sistema fará uma pesquisa sem diferenciação de maiúsculas de minúsculas para ver se o dispositivo contém a cadeia de caracteres indicada como uma subcadeia de caracteres. No caso de uma matriz de cadeia de caracteres, as subcadeias de caracteres não são pesquisadas. Com a matriz de cadeia de caracteres, a matriz é pesquisada para ver se ela contém a cadeia de caracteres especificada inteira. Não é possível pesquisar uma matriz de cadeia de caracteres para verificar se os elementos na matriz contém uma subcadeia de caracteres.
 
 Se você não puder criar uma cadeia de caracteres de filtro AQS única que analise seus resultados de forma apropriada, poderá filtrar os resultados depois de recebê-los. Entretanto, se você escolher fazer isso, recomendamos que limite os resultados da sua cadeia de caracteres de filtro AQS inicial o quanto puder quando a fornecer para as APIs [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Isso ajudará a melhorar o desempenho do seu aplicativo.
 
@@ -115,6 +113,6 @@ Quando esse filtro é emparelhado com um [**DeviceInformationKind**](https://msd
 System.Devices.IpAddress:=[]
 ```
 
- 
+ 
 
- 
+ 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9f187495568892f5b489f6e109669811f4c45ab1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561522"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Usando valores gerados pelo sistema
 
@@ -68,7 +66,7 @@ As tabelas a seguir mostram os valores gerados pelo sistema para a instância U.
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   |
 
- 
+ 
 
 A instância de faixa de triângulos U tem 3 primitivos de triângulo, com os seguintes valores gerados pelo sistema:
 
@@ -77,7 +75,7 @@ A instância de faixa de triângulos U tem 3 primitivos de triângulo, com os se
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 0   | 0   | 0   |
 
- 
+ 
 
 As tabelas a seguir mostram os valores gerados pelo sistema para a instância V.
 
@@ -86,7 +84,7 @@ As tabelas a seguir mostram os valores gerados pelo sistema para a instância V.
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 
- 
+ 
 
 A instância de faixa de triângulos V tem 3 primitivos de triângulo, com os seguintes valores gerados pelo sistema:
 
@@ -95,7 +93,7 @@ A instância de faixa de triângulos V tem 3 primitivos de triângulo, com os se
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 1   | 1   | 1   |
 
- 
+ 
 
 O [estágio do Assembler de Entrada (IA)](input-assembler-stage--ia-.md) gera as IDs (vértice, primitivo e instância); observe também que cada instância recebe uma ID de instância única. Os dados terminam com o recorte de faixa, que separa cada instância da faixa de triângulos.
 
@@ -104,9 +102,9 @@ O [estágio do Assembler de Entrada (IA)](input-assembler-stage--ia-.md) gera as
 
 [Estágio do assembler de entrada (IA)](input-assembler-stage--ia-.md)
 
- 
+ 
 
- 
+ 
 
 
 

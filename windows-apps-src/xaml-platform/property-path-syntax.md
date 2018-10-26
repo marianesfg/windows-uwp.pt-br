@@ -6,16 +6,14 @@ ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2939150e1ca15dfc910d92ea669e794026ef8685
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674673"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560240"
 ---
 # <a name="property-path-syntax"></a>Sintaxe de caminho de propriedade
 
@@ -58,7 +56,7 @@ Um caminho de propriedade para vinculação de dados pode incluir referências a
 
 Por exemplo, considere um objeto comercial em que haja uma lista de "Times" (lista ordenada), cada uma tendo um dicionário de "Jogadores" onde cada jogador é citado pelo último nome. Um exemplo de caminho de propriedade para um jogador específico no segundo time é: "Times\[1\].Jogadores\[Smith\]". (Você usa 1 para indicar o segundo item em "Times" porque a lista é indexada com zero.)
 
-**Observação**  Indexar suporte para fontes de dados C++ é limitado, consulte [Vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Observação**indexar suporte para fontes de dados C++ é limitado; Consulte a [vinculação de dados em detalhes](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Propriedades anexadas
 
@@ -96,7 +94,7 @@ Por exemplo, para especificar que você deseja animar a primeira cor de interrup
 
 Não é comum, mas é possível animar uma propriedade anexada, desde que ela tenha um valor de propriedade que corresponda a um tipo de animação. Como o nome que identifica uma propriedade anexada já inclui um ponto, todos os nomes de propriedades anexadas devem estar entre parênteses para que o ponto não seja tratado como uma etapa de objeto-propriedade. Por exemplo, a cadeia de caracteres para especificar que você quer animar a propriedade anexada [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) em um objeto, use o caminho de propriedade "(Grid.Row)".
 
-**Observação**  Nesse exemplo, o valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) é um tipo de propriedade **Int32**. então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
+**Observação**neste exemplo, o valor de [**Grid. Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) é um tipo de propriedade **Int32** . então, você não pode animá-lo com uma animação **Double**. Em vez disso, você definiria um [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tem componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132), onde o [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) é definido como um inteiro como "0" ou "1".
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Regras para as propriedades em um caminho de propriedade de direcionamento de animação
 

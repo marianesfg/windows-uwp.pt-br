@@ -6,21 +6,20 @@ description: Você pode criar um modo de exibição mestre/detalhes de vários n
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9f297cdb3fdc90ab7c024bce3aa93db69465c5d3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 60d283f41c495f9612311e4b9b9da3df1a44d498
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199208"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564020"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Associar dados hierárquicos e criar um modo de exibição mestre/detalhes
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-> **Observação**  Consulte também o [Exemplo de mestre/detalhes](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Observação**também veja a [amostra de mestre/detalhes](http://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Você pode criar um modo de exibição mestre/detalhes de vários níveis (também conhecido como lista/detalhes) de dados hierárquicos, associando controles de itens a instâncias [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que são associadas em uma cadeia. Neste tópico, usamos a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) onde possível, e a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mais flexível (mas menos eficiente) onde necessário.
 
@@ -225,7 +224,7 @@ Por fim, substitua o conteúdo do arquivo MainPage.xaml pela marcação a seguir
 
 Observe que ao associar diretamente o [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), você está indicando que deseja associar ao item atual em associações onde o caminho não pode ser encontrado na própria coleção. Não é necessário especificar a propriedade **CurrentItem** como o caminho para a associação, embora você possa fazer isso se houver ambiguidade. Por exemplo, o [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) que representa o modo de exibição do time tem sua propriedade [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) associada ao `Teams`**CollectionViewSource**. No entanto, os controles no [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) associam a propriedades da classe `Team` porque o **CollectionViewSource** fornece automaticamente o time selecionado no momento na lista de times quando necessário.
 
- 
+ 
 
- 
+ 
 

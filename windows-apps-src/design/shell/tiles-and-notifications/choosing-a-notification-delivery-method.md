@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de9b0e5d1e8e461561d228448fc1998ad4ff0fd9
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c01b96f70bd39c43f321935aa47393ada0400319
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393955"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559918"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Escolher um método de entrega de notificação
 
@@ -96,7 +94,7 @@ Esta tabela resume os tipos de entrega de notificação.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="local-notifications"></a>Notificações locais
 
@@ -171,9 +169,9 @@ Para obter mais informações, consulte:
 * [Visão geral de notificações periódicas](periodic-notification-overview.md)
 * [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Exemplos de códigos de notificações da Plataforma Universal do Windows (UWP) no GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
- 
+ 
 
- 
+ 
 
 
 

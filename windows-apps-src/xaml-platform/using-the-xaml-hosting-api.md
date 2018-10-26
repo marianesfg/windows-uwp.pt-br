@@ -5,16 +5,14 @@ title: Usando o XAML da UWP que hospeda a API em um aplicativo da área de traba
 ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, uwp, formulários do windows, win32, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 5803646c3b613a5a57992a9791215138cf996966
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474020"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562237"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
 
@@ -61,7 +59,7 @@ O XAML da UWP que hospeda a API tem esses pré-requisitos.
 
     * **C++ Win32:** Recomendamos que você configure seu projeto para usar [C++ c++ WinRT](../cpp-and-winrt-apis/index.md). Baixe e instale o [C++ c++ WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) do Visual Studio Marketplace e, em seguida, adicione o ```<CppWinRTEnabled>true</CppWinRTEnabled>``` propriedade seu arquivo .vcxproj, conforme descrito [aqui](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-    * **Windows Forms e WPF:** Siga [estas instruções](../porting/desktop-to-uwp-enhance.md#modify-a-net-project-to-use-uwp-apis).
+    * **Windows Forms e WPF:** Siga [estas instruções](../porting/desktop-to-uwp-enhance.md).
 
 ## <a name="architecture-of-xaml-islands"></a>Arquitetura de ilhas XAML
 

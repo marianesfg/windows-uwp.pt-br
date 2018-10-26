@@ -6,20 +6,18 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
-ms.openlocfilehash: 450f95e68c85a325e43127df90ffeddbaa850afa
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488860"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560479"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Estrutura de renderização I: introdução à renderização
 
-Abordamos como estruturar um jogo da Plataforma Universal do Windows (UWP) e como definir uma máquina de estado para lidar com o fluxo do jogo nos tópicos anteriores. Agora está na hora de aprender como montar a estrutura de renderização. Vamos examinar como o jogo de exemplo renderiza a cena de jogo usando o Direct3D 11 (conhecido como DirectX 11).
+Abordamos como estruturar um jogo da Plataforma Universal do Windows (UWP) e como definir uma máquina de estado para lidar com o fluxo do jogo nos tópicos anteriores. Agora está na hora de aprender como montar a estrutura de renderização. Vamos examinar como o jogo de exemplo renderiza a cena de jogo usando Direct3D11 (conhecido como DirectX 11).
 
 >[!Note]
 >Se você ainda não tiver baixado o código de jogo mais recente para este exemplo, acesse [Jogo de exemplo em Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este exemplo faz parte de uma grande coleção de exemplos de recursos UWP. Para obter instruções sobre como baixar o exemplo, consulte [Obtenha os exemplos da Plataforma Universal do Windows (UWP) do GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -620,7 +618,7 @@ Para obter mais informações, consulte [Introdução a buffers no Direct3D 11](
 
 ### <a name="dxgi"></a>DXGI
 
-A DXGI (DirectX Graphic Infrastructure) da Microsoft é um novo subsistema que foi introduzido com o Windows Vista que encapsula algumas das tarefas de baixo nível que são necessárias pelo Direct3D 10, 10.1, 11 e 11.1. Deve-se ter um cuidado especial ao usar a DXGI em um aplicativo multithread para garantir que não ocorram deadlocks. Para obter mais informações, consulte [DirectX Graphics Infrastructure (DXGI): Práticas recomendadas - Multithreading](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Microsoft DirectX Graphics Infrastructure (DXGI) é um novo subsistema que foi introduzido com o Windows Vista que encapsula algumas das tarefas de baixo nível que são necessárias pelo Direct3D 10, 10.1, 11 e 11.1. Deve-se ter um cuidado especial ao usar a DXGI em um aplicativo multithread para garantir que não ocorram deadlocks. Para obter mais informações, consulte [DirectX Graphics Infrastructure (DXGI): Práticas recomendadas - Multithreading](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
 
 ### <a name="feature-level"></a>Nível de recursos
 
@@ -630,7 +628,7 @@ Cada placa de vídeo implementa um certo nível de funcionalidade de DirectX dep
 
 Com o nível de recursos, na criação de um dispositivo, pode-se tentar criá-lo para o nível de recursos que se deseja solicitar. Se for possível criar um dispositivo, isso significa que o nível de recursos existe; caso contrário, o hardware não permite tal nível de recursos. Você pode tentar recriar um dispositivo em um nível de recursos inferior ou optar por sair do aplicativo. Por exemplo, o nível de recursos 12\_0 requer Direct3D 11.3 ou Direct3D 12 e modelo de sombreador 5.1. Para obter mais informações, consulte [Níveis de recursos do Direct3D: visão geral de cada nível de recursos](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Usando os níveis de recursos, é possível desenvolver um aplicativo para Direct3D 9, o Microsoft Direct3D 10 ou o Direct3D 11 e, em seguida, executá-lo no hardware 9, 10 ou 11 (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Usando os níveis de recursos, você pode desenvolver um aplicativo para Direct3D9, Microsoft Direct3D10 ou Direct3D11 e, em seguida, executá-lo em 9, 10 ou 11 hardware (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Renderização estéreo
 

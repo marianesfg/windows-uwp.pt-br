@@ -5,16 +5,14 @@ description: Nesta seção, analisaremos as etapas que você precisa executar pa
 ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
-ms.openlocfilehash: d0368743e3afa6e9cdb5e5ac95672430416fc824
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1434781"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560981"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalando aplicativos UWP a partir de uma página da Web
 
@@ -31,8 +29,11 @@ A instalação do aplicativo direta só está disponível no Windows 10 Fall Cre
 Nesse mecanismo, o Instalador de Aplicativo registra com o sistema operacional para um esquema de ativação de protocolo. Quando o usuário clica em um link da Web, o navegador busca no sistema operacional aplicativos que estão registrados em um link da Web. Se o esquema coincidir com o esquema de ativação de protocolo especificado pelo Instalador de Aplicativo, o instalador é invocado. É importante observar que esse mecanismo é independente do navegador. Isso é benéfico para administradores de sites, por exemplo, que não precisam considerar diferenças entre navegadores da Web ao incorporar isso em uma página da Web. 
 
 ### <a name="requirements-for-protocol-activation-scheme"></a>Requisitos para o esquema de ativação de protocolo
-   - Servidores Web que dão suporte a solicitações de intervalo de bytes (HTTP/1.1)
-   - Pacotes de aplicativos precisam ser hospedados em servidores que dão suporte ao protocolo HTTP/1.1   
+
+1. Servidores Web precisam ter suporte para solicitações de intervalo de bytes (HTTP/1.1)
+    - Servidores que dão suporte ao protocolo HTTP/1.1 devem ter suporte para solicitações de intervalo de bytes 
+2. Servidores Web precisará saber sobre os tipos de conteúdo do pacote de aplicativo Windows 10
+    - Aqui está como declarar os novos tipos de conteúdo como parte do [arquivo de configuração da web](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>Como habilitar isso em uma página da Web 
 Os desenvolvedores de aplicativos que desejam pacotes do aplicativo host em seus sites precisam seguir essa etapa:

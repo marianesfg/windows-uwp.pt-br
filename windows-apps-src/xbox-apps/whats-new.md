@@ -5,47 +5,45 @@ description: Destaca os novos recursos para aplicativos UWP em Xbox One.
 ms.author: v-angraf
 ms.date: 03/29/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: cbabe9d31b5b9762320df8e4a92d19ae4e33497d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: cc2168014e714de0b43b6ffffe84126764f0a4a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "301452"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560961"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Novidades para desenvolvedores na atualização mais recente da UWP em Xbox One
 
-A atualização mais recente do Universal Windows plataforma (UWP) em um Xbox contém os seguintes novos recursos, as atualizações recursos existentes e correções de erros.
+A atualização mais recente da Universal Windows Platform (UWP) no Xbox One contém os seguintes novos recursos, as atualizações de recursos existentes e correções de bugs.
 
-## <a name="x86-apps-and-games-are-no-longer-supported-on-xbox"></a>x86 jogos e aplicativos não são mais suportados no Xbox  
+## <a name="x86-apps-and-games-are-no-longer-supported-on-xbox"></a>x86 não há suporte para aplicativos e jogos no Xbox  
 Xbox não dá mais suporte ao desenvolvimento de aplicativos x86 ou envios de aplicativos x86 para a loja.
 
-## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Aplicativos agora podem suportar naveguem de volta para o aplicativo anterior 
-UWP nos aplicativos um Xbox agora pode suportar naveguem de volta para o aplicativo anterior. Para fazer isso, assinar o evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) e definir a propriedade **Handled** como **Falso** no manipulador de eventos.
+## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Aplicativos podem agora dão suporte à navegação de volta para o aplicativo anterior 
+UWP no Xbox One aplicativos agora pode dar suporte a navegação de volta para o aplicativo anterior. Para fazer isso, assinar o evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) e defina a propriedade **Handled** como **false** em seu manipulador de eventos.
 
 > [!NOTE]
-> Por motivos de compatibilidade, essa funcionalidade está disponível somente para aplicativos que são compilados com a versão mais recente do UWP no Xbox One. 
+> Por motivos de compatibilidade, essa funcionalidade está disponível somente para aplicativos que são criados com a versão mais recente da UWP no Xbox One. 
 
-## <a name="dev-home-is-now-the-default-home-experience-on-development-consoles"></a>Home dev agora é a experiência de residencial padrão em consoles de desenvolvimento
-Consoles de desenvolvimento agora início Dev Home como a experiência de página inicial padrão. Isso permite que você obtenha direita para funcionar sem a necessidade de clicar na tela inicial varejo. Home dev agora inclui uma ação rápida para iniciar a tela inicial de varejo. Além disso, uma nova configuração permite que você verifique varejo residencial a experiência padrão. 
+## <a name="dev-home-is-now-the-default-home-experience-on-development-consoles"></a>A dev Home agora é a experiência inicial padrão em consoles de desenvolvimento
+Consoles de desenvolvimento agora iniciem Dev Home como a experiência inicial padrão. Isso permite que você acertar trabalhar sem a necessidade de clicam na tela inicial do varejo. Dev Home agora inclui uma ação rápida para iniciar a tela inicial de varejo. Além disso, uma nova configuração permite que você faça varejo domésticos a experiência padrão. 
 
 ## <a name="new-dev-home-user-interface"></a>Nova interface do usuário Dev Home
 A interface do usuário Dev Home agora inclui os seguintes aprimoramentos de produtividade:
- - Dados importantes, como endereço IP e a versão de recuperação será agora exibido na parte superior da tela para visibilidade. 
- - Home dev agora tem uma UI com guias que agrupa ferramentas em conjuntos de lógicos, permitindo a navegação rápida.
- - Botões de ação rápida na primeira guia da Home Dev permitem acesso rápido às ações mais comumente usadas. 
+ - Dados importantes, como endereço IP e recuperação versão agora é exibida na parte superior da tela para visibilidade. 
+ - Dev Home agora tem uma IU com guias que agrupa ferramentas em conjuntos lógicos, permitindo que a navegação rápida.
+ - Botões de ação rápida na primeira guia de início do desenvolvimento permitem acesso rápido às ações mais comumente usados. 
 
 ## <a name="wdp-for-xbox-enhancements"></a>WDP para aprimoramentos do Xbox
-O Portal de dispositivo do Windows (WDP) agora inclui suporte adicional para as configurações do console. 
+O Windows Device Portal (WDP) agora inclui suporte adicional para as configurações do console. 
 
 ## <a name="you-can-now-switch-the-type-of-your-uwp-title-between-app-and-game"></a>Agora você pode alternar o tipo de seu título UWP entre "Aplicativo" e "Jogo"
-Alternar o tipo de seu título UWP entre "Aplicativo" e "Jogo" permite que você teste os cenários jogos sem publicação para o repositório. Em casa Dev, selecione o aplicativo no painel **jogos e aplicativos** , pressione o botão Exibir no controlador, selecione **detalhes do aplicativo** e, em seguida, altere o tipo para "Aplicativo" ou "Jogo".
+Alternar o tipo de seu título UWP entre "Aplicativo" e "Jogo" permite que você teste cenários de jogos sem publicação na loja. Na Dev Home, selecione o aplicativo no painel de **jogos e aplicativos** , pressione o botão modo de exibição no controlador, selecionar os **detalhes do aplicativo** e, em seguida, altere o tipo para "Aplicativo" ou "Jogo".
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Problemas conhecidos](known-issues.md)
 - [UWP no Xbox One](index.md)
  - Já é possível fazer uma captura de tela do console. Para obter mais informações sobre fazer uma captura de tela, consulte o tópico de referência [/ext/screenshot](wdp-media-capture-api.md).

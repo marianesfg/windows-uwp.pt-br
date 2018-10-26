@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1014ed205c5cf0eda2c9b71c8406a98394b1463
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d4121bd402b048ee6102ed3be30b94a66e274273
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652895"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562194"
 ---
 # <a name="texture-blending"></a>Mesclagem de texturas
 
@@ -34,9 +32,9 @@ O Direct3D dá suporte para a mesclagem de várias texturas em uma única passag
 
 Como mostra o diagrama anterior, os estágios de textura combinam dois argumentos usando um operador especificado. As operações comuns incluem modulação simples ou adição dos componentes de cor ou alfa dos argumentos, mas há suporte para dezenas de operações. Os argumentos para um estágio podem ser uma textura associada, a cor iterada ou o alfa (iterado durante o sombreamento Gouraud), cor ou alfa arbitrário ou o resultado do estágio de textura anterior.
 
-**Observação**   O Direct3D diferencia a mesclagem de cores da mesclagem alfa. Os aplicativos definem as operações e os argumentos de mesclagem de cor e alfa individualmente, e os resultados dessas configurações são independentes uns dos outros.
+**Observação**  Direct3D diferencia a mesclagem de cores da mesclagem alfa. Os aplicativos definem as operações e os argumentos de mesclagem de cor e alfa individualmente, e os resultados dessas configurações são independentes uns dos outros.
 
- 
+ 
 
 A combinação de argumentos e operações usados por vários estágios da mesclagem definem uma linguagem simples de mesclagem baseada em fluxo. Os resultados de um estágio fluem para outro estágio, e desse estágio para o próximo e assim por diante. O conceito da fluência de resultados de estágio para estágio para, finalmente, serem rasterizados em um polígono geralmente é chamado de mesclagem de texturas em cascata. O diagrama a seguir mostra como estágios de textura individuais compõem a mesclagem de texturas em cascata.
 
@@ -74,16 +72,16 @@ Se seu aplicativo usa um número de estágios variado para diferentes situaçõe
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

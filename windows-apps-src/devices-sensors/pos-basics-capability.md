@@ -5,16 +5,14 @@ description: A funcionalidade de PointOfService é obrigatória para usar o name
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 564c7686cef4815e9ca1bfd0af82c4577852b8a4
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: dbed55af1a9fa3df14f0a7e3e7c6d1f599b40fd3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976705"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560779"
 ---
 # <a name="pointofservice-device-capability"></a>Funcionalidade de dispositivo PointOfService
 Solicite acesso às APIs do PointOfService declarando a funcionalidade no manifesto do pacote do aplicativo]. Você pode declarar a maioria das funcionalidades usando o Designer de manifesto no Microsoft Visual Studio ou você pode adicioná-los manualmente.  

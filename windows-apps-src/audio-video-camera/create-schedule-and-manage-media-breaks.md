@@ -6,16 +6,14 @@ title: Criar, programar e gerenciar pausas de mídia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b8d25047435ece1c55a982e69be45fa0e6efb74
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0feb7f6771254bf500e4b64fd0e632daad9817e4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843659"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560019"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Criar, programar e gerenciar pausas de mídia
 
@@ -88,10 +86,6 @@ O exemplo a seguir usa a propriedade [**Source**](https://msdn.microsoft.com/lib
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## <a name="get-information-about-the-current-media-break"></a>Obter informações sobre a pausa de mídia atual
-Conforme mencionado anteriormente neste artigo, a propriedade [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) pode ser usada para determinar qual item em uma pausa de mídia está sendo reproduzido. É possível verificar periodicamente o item em execução no momento para atualizar sua interface do usuário. Não deixe de verificar se o valor da propriedade [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) é nulo primeiro. Se a propriedade for nula, nenhuma pausa de mídia estará sendo reproduzida.
-
-[!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
 ## <a name="access-the-current-playback-session"></a>Acessar a sessão de reprodução atual
 O objeto [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) usa a classe **MediaPlayer** para fornecer dados e eventos relacionados ao conteúdo de mídia que está em execução no momento. O [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) também tem uma **MediaPlaybackSession** que você pode acessar para obter dados e eventos especificamente relacionados ao conteúdo da pausa de mídia que está em reprodução. As informações que você pode obter da sessão de reprodução incluem o estado atual da reprodução, em reprodução ou pausado, e a posição de reprodução atual no conteúdo. Você pode usar as propriedades [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) e [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) e o [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) para ajustar sua interface do usuário de vídeo se o conteúdo da pausa de mídia tiver uma taxa de proporção diferente de seu conteúdo principal. Você também pode receber eventos como [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) e [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) que podem fornecer dados de telemetria valiosos sobre o desempenho do seu aplicativo.
@@ -107,9 +101,9 @@ O exemplo a seguir registra um manipulador para o **evento BufferingProgressChan
 * [Reproduzir áudio e vídeo com o MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Controle manual dos controles de transporte de mídia do sistema](system-media-transport-controls.md)
 
- 
+ 
 
- 
+ 
 
 
 

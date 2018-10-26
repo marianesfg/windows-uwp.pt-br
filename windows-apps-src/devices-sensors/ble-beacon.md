@@ -5,17 +5,15 @@ description: Esta seção contém artigos sobre como integrar anúncios de Bluet
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be2aad5a6a0fe76caefa4710ebf946e418cf151
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 38f850cfb811260758377d5404e01c8e540e7ec2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300432"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560207"
 ---
 # <a name="bluetooth-le-advertisements"></a>Anúncios de Bluetooth LE
 
@@ -47,7 +45,7 @@ Para usar a funcionalidade Bluetooth LE básica em um aplicativo da Plataforma U
 
 Anúncios de Bluetooth LE permitem que seu dispositivo envie constantemente beacons de uma carga específica, chamada de anúncio. Esse anúncio pode ser visto por qualquer dispositivo compatível com Bluetooth LE nas proximidades, se estiver configurado para escutar esse anúncio específico.
 
-> **Observação**: para privacidade do usuário, o tempo de vida do seu anúncio é vinculado do seu aplicativo. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Observação**: para a privacidade do usuário, o tempo de vida do seu anúncio está vinculado do seu aplicativo. Você pode criar BluetoothLEAdvertisementPublisher e chamar Start em uma tarefa em segundo plano para o anúncio em segundo plano. Para obter mais informações sobre tarefas em segundo plano, consulte [Início, retomada e tarefas em segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicação básica
 
