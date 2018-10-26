@@ -10,15 +10,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9bf664da5223ff62f0e3612587e4572dab58e68
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 49ad096389c27fb65970424569c7c1d2ea0cb097
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653146"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557791"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>Como uma área de recurso de streaming é colocada lado a lado
 
@@ -67,16 +65,16 @@ O layout dos dados dentro de um bloco não depende de onde o bloco é mapeado em
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Criar recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

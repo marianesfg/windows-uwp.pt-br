@@ -6,19 +6,17 @@ description: Saiba como criar um item de trabalho periódico que se repete perio
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, item de trabalho periódico, threading, temporizadores
-ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665272"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558877"
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** APIs importantes **
 
@@ -33,9 +31,9 @@ Use o método [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windo
 
 [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) retorna um objeto [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Armazene esse objeto no caso de o temporizador ter que ser cancelado.
 
-> **Observação**  Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
+> **Observação**Evite especificar um valor igual a zero (ou qualquer valor inferior a um milésimo de segundo) para o intervalo. Isso faz com que o temporizador periódico se comporte como um temporizador de disparo único.
 
-> **Observação**  Você pode usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
+> **Observação**você pode usar o [**Coredispatcher**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acessar a interface do usuário e mostrar o progresso do item de trabalho.
 
 O seguinte exemplo cria um item de trabalho que é executado a cada 60 segundos:
 
@@ -209,4 +207,4 @@ Para obter mais informações sobre temporizadores de uso único, consulte [Usar
 * [Enviar um item de trabalho ao pool de threads](submit-a-work-item-to-the-thread-pool.md)
 * [Práticas recomendadas para usar o pool de threads](best-practices-for-using-the-thread-pool.md)
 * [Usar um temporizador para enviar um item de trabalho](use-a-timer-to-submit-a-work-item.md)
- 
+ 

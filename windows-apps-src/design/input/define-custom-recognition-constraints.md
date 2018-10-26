@@ -9,15 +9,13 @@ keywords: fala, voz, reconhecimento de fala, linguagem natural, ditado, entrada,
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdc38c39591a63800eb5d985022bb7ee569d7203
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 86ed884c3e9811c65d414dce6c0697e20dbd4711
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653475"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559302"
 ---
 # <a name="define-custom-recognition-constraints"></a>Definir restrições de reconhecimento personalizadas
 
@@ -182,7 +180,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. As gramáticas devem estar em conformidade com a especificação de [Interpretação Semântica para Reconhecimento de Fala (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) do World Wide Web Consortium (W3C).
+Esse arquivo SRGS (srgs.grxml) inclui tags de interpretação semântica. Essas tags fornecem um mecanismo para retornar dados correspondentes de gramática para seu aplicativo. Gramáticas devem estar de acordo com a especificação World Wide Web Consortium (W3C)[Interpretação semântica para reconhecimento de fala (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) .
 
 Aqui, escutamos as variantes de "sim" e "não".
 
@@ -241,9 +239,9 @@ Para avisar o usuário sobre o que pode ser falado, use as propriedades [**Speec
 
 **Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

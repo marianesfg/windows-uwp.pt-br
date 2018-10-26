@@ -6,18 +6,17 @@ title: Lanterna independente da câmera
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7777b1b3f72090667f1e75f3c9e23b6adcd9f2d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 913faf70531509a604cde52bb71886c128edae46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199284"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555552"
 ---
 # <a name="camera-independent-flashlight"></a>Lanterna independente da câmera
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como acessar e usar a lâmpada do dispositivo, se houver uma. A funcionalidade da lâmpada é gerenciada separadamente da câmera e do flash da câmera do dispositivo. Além de oferecer uma referência para a lâmpada e o ajuste de suas configurações, este artigo também mostra como liberar o recurso da lâmpada corretamente quando ela não estiver em uso e como detectar quando a disponibilidade da lâmpada muda caso esteja sendo usada por outro aplicativo.
@@ -79,7 +78,7 @@ Quando você não estiver mais usando a lâmpada, deverá desativá-la e chamar 
 ## <a name="related-topics"></a>Tópicos relacionados
 - [Reprodução de mídia](media-playback.md)
 
- 
+ 
 
 
 

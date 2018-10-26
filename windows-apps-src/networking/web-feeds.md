@@ -6,16 +6,14 @@ ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d01ab6fc70397824b4bd6b267dd5e7cdeac0ee
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 309dd2aedb2195362652da93c13648d07e5ea9f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975798"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559688"
 ---
 # <a name="rssatom-feeds"></a>Feeds RSS/Atom
 
@@ -48,7 +46,7 @@ O isolamento de rede permite que um desenvolvedor defina o escopo necessário de
 
 O isolamento de rede afeta todos os elementos de classe nos namespaces [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) e [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) que tentem acessar a rede. O Windows impõe ativamente o isolamento de rede. Uma chamada a um elemento de classe no namespace **Windows.Web.Syndication** ou **Windows.Web.AtomPub** que resulta em acesso à rede pode falhar por causa do isolamento de rede se o recurso de rede adequado não for ativado.
 
-Os recursos de rede para um aplicativo são configurados no manifesto do aplicativo quando o aplicativo é compilado. Geralmente, os recursos de rede são adicionados usando o Microsoft Visual Studio 2015 ao desenvolver o aplicativo. Os recursos de rede também podem ser definidos manualmente no arquivo manifesto do aplicativo usando um editor de texto.
+Os recursos de rede para um aplicativo são configurados no manifesto do aplicativo quando o aplicativo é compilado. Recursos de rede geralmente são adicionados usando o Microsoft Visual Studio2015 ao desenvolver o aplicativo. Os recursos de rede também podem ser definidos manualmente no arquivo manifesto do aplicativo usando um editor de texto.
 
 Para saber mais sobre o isolamento de rede e as funcionalidades de rede, consulte a seção "Funcionalidades" no tópico [Noções básicas de rede](networking-basics.md).
 

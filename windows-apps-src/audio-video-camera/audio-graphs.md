@@ -6,16 +6,14 @@ title: Gráficos de áudio
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26b9f49c8f21c7c60fb99fd8eaf24156a8aed3d9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: cdd1548a4d120027afd06a178cc338c88cb5cc4b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832497"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558267"
 ---
 # <a name="audio-graphs"></a>Gráficos de áudio
 
@@ -47,7 +45,7 @@ As APIs de gráfico de áudio do Windows Runtime:
 -   São significativamente mais fáceis de usar que as do XAudio2.
 -   Podem ser usadas em C#, além de oferecerem suporte a C++.
 -   Podem usar arquivos de áudio, incluindo formatos de arquivo compactado, diretamente. O XAudio2 opera somente em buffers de áudio e não fornece nenhuma funcionalidade de E/S.
--   Podem usar o pipeline de áudio de baixa latência no Windows 10.
+-   Pode usar o pipeline de áudio de baixa latência no Windows 10.
 -   Oferecem suporte à troca automática de ponto de extremidade quando são usados parâmetros de ponto de extremidade padrão. Por exemplo, se o usuário alterna do alto-falante do dispositivo para um fone de ouvido, o áudio é automaticamente redirecionado para a nova entrada.
 
 ## <a name="audiograph-class"></a>Classe AudioGraph
@@ -270,9 +268,9 @@ Por padrão, o áudio espacial é calculado usando o algoritmo de função de tr
 
 ## <a name="see-also"></a>Consulte também
 - [Reprodução de mídia](media-playback.md)
- 
+ 
 
- 
+ 
 
 
 

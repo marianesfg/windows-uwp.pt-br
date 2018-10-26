@@ -1,118 +1,205 @@
 ---
 description: Conheça o Design Fluente e como incorporá-lo nos apps.
-title: Sistema de Design Fluente para aplicativos UWP
+title: Sistema de Design fluente para Windows
 author: mijacobs
 keywords: layout do aplicativo uwp, plataforma universal do Windows, design do app, interface, sistema de design fluent
 ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 5b57dc2ddae4c6e260df663097db5649866b96aa
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2ab8e8c18a0b1db0991bf470f194f8774f2357b4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638784"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554024"
 ---
-# <a name="the-fluent-design-system-for-uwp-apps"></a>O Sistema de Design Fluente para aplicativos UWP
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativo do sistema de Design fluente para Windows
+
+![Cabeçalho de Design fluente](images/fluentdesign-app-header.jpg)
 
 ## <a name="introduction"></a>Introdução
 
-<img src="images/fluentdesign-app-header.jpg" alt=" " />
+O sistema de Design fluente é nosso sistema para criar adaptáveis, abrangentes e interfaces do usuário bonitas.
 
-A interface do usuário está evoluindo. Ele está se expandindo para incluir novas dimensões e interfaces, de 2D a 3D e muito mais, do teclado e mouse ao foco, caneta e toque.  
-
-O Sistema de Design Fluente é um conjunto de recursos UWP inovadores combinado a práticas recomendadas para criação de aplicativos que funcionam perfeitamente em todos os tipos de dispositivos com Windows.
-
-É nosso sistema para a criação de interfaces do usuário adaptáveis, compreensivas e bonitas. 
+## <a name="principles"></a>Princípios
 
 **Adaptável: Experiências de Fluent parecem naturais em cada dispositivo**
 
-Experiências de Fluent se adaptam ao ambiente. Uma experiência de Fluent parece confortável em um tablet, um computador e um Xbox&mdash;, ela também funciona muito bem em um headset de realidade misturada. E quando você adiciona mais hardware, como um monitor adicional para o seu computador, uma experiência de Fluent tira proveito dele. 
+Experiências de Fluent se adaptam ao ambiente. Uma experiência de Fluent parece confortável em um tablet, um computador desktop e um Xbox — também funciona muito bem em um headset de realidade misturada. E quando você adiciona mais hardware, como um monitor adicional para o seu computador, uma experiência de Fluent tira proveito dele.
 
 **Compreensivo: Experiências de Fluent são intuitivas e potentes**
 
-Experiências de Fluent se ajustam ao comportamento e intenção&mdash;elas compreendem e preveem o que é necessário. Elas unem pessoas e ideias, sejam em lados opostos do mundo ou estando um de frente ao outro. 
+Experiências de Fluent se ajustam ao comportamento e intenção&mdash;elas compreendem e preveem o que é necessário. Elas unem pessoas e ideias, sejam em lados opostos do mundo ou estando um de frente ao outro.
 
-Demonstrar empatia tem a ver com fazer a coisa certa no momento certo. 
+**Lindo: Experiências de Fluent são envolventes e imersivas**
 
-Experiências de Fluent usam controles e padrões de forma consistente, para que eles se comportem de maneiras que o usuário aprendeu a esperar. Experiências de Fluent são acessíveis para pessoas com uma ampla variedade de características físicas e incorporam recursos de globalização para que pessoas em todo o mundo possam usá-los. 
+Ao incorporar elementos do mundo físico, uma experiência de Fluent toca em algo fundamental. Ele usa luz, sombra, movimento, profundidade e textura para organizar as informações de maneira que parece intuitiva e instintiva.
 
-**Lindo: Experiências de Fluent são envolventes e imersivas** 
 
-Ao incorporar elementos do mundo físico, uma experiência de Fluent toca em algo fundamental. Ele usa luz, sombra, movimento, profundidade e textura para organizar as informações de maneira que parece intuitiva e instintiva. 
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Aplicação de Design fluente ao seu aplicativo com UWP
 
-Design Fluente não tem a ver com efeitos extravagantes. Ele incorpora efeitos físicos que realmente melhoram a experiência do usuário, porque simulam experiências que nossos cérebros estão programados para processar de maneira eficiente. 
+![Logotipo do design fluente](images/fluentdesign_header.png)
 
-## <a name="applying-fluent-design-to-your-app"></a>Aplicação de Design Fluente ao seu aplicativo
+Nossas diretrizes de design explicam como aplicar os princípios de Design fluente para aplicativos. Que tipo de aplicativos? Embora muitas das nossas diretrizes podem ser aplicadas a qualquer plataforma, criamos UWP (plataforma Universal do Windows) para dar suporte ao Design fluente.
 
-Recursos de Design Fluente estão integrados ao UWP. Alguns desses recursos&mdash;como pixels efetivos e o sistema de entrada universal&mdash;são automáticos. Você não precisa escrever nenhum código extra para utilizá-los. Outras características, como o acrílico, são opcionais; você as inclui em seu aplicativo escrevendo um código para incluí-los. 
+Recursos de Design Fluente estão integrados ao UWP. Alguns desses recursos&mdash;como pixels efetivos e o sistema de entrada universal&mdash;são automáticos. Você não precisa escrever nenhum código extra para utilizá-los. Outras características, como o acrílico, são opcionais; você as inclui em seu aplicativo escrevendo um código para incluí-los.
 
-> Para saber mais sobre os recursos básicos que são incluídos automaticamente em cada aplicativo UWP, consulte [Introdução ao artigo de design do aplicativo UWP](../basics/design-and-ui-intro.md). Se você for iniciante no desenvolvimento de UWP, é aconselhável conferir primeiro nosso [Introdução à página do UWP](https://developer.microsoft.com/windows/apps/getstarted). 
+> Estamos trazendo os controles da UWP até a área de trabalho para que você possa melhorar a aparência e a funcionalidade dos aplicativos atuais do WPF ou do Windows com recursos de Design Fluente. Para saber mais, consulte [controles de Host UWP em aplicativos WPF e Windows Forms](/windows/uwp/xaml-platform/xaml-host-controls).
 
-Para saber mais sobre os novos recursos que incorporam o Design Fluente no aplicativo, continue lendo.
+<!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
+
+Além de diretrizes de design, nossos artigos de Design fluente também mostram como escrever o código que faz com que seus designs de acontecer. UWP usa XAML, um idioma com base em marcação que torna mais fácil criar interfaces do usuário. Veja um exemplo:
+
+```xaml
+<Grid BorderBrush="Blue" BorderThickness="4">
+    <TextBox Text="Design with XAML" Margin="20" Padding="24,16"/>
+</Grid>
+```
+
+![](images/xaml-example.png)
+
+
+> Se você for iniciante no desenvolvimento de UWP, Confira nosso [começar a usar página UWP](https://developer.microsoft.com/windows/apps/getstarted).
 
 ## <a name="find-a-natural-fit"></a>Encontrar uma opção natural
 
-Como fazer com que um aplicativo pareça natural em uma variedade de dispositivos? Ao fazer isso, parece que ele foi projetado com cada dispositivo específico em mente. Um layout de interface do usuário que se adapte a diferentes tamanhos de tela&mdash;para que não haja desperdício de espaço (e também nenhuma lotação)&mdash;torna uma experiência natural, como se ela fosse projetada para esse dispositivo. 
+Como fazer com que um aplicativo pareça natural em uma variedade de dispositivos? Ao fazer isso, parece que ele foi projetado com cada dispositivo específico em mente. Um layout de interface do usuário que se adapte a diferentes tamanhos de tela&mdash;para que não haja desperdício de espaço (e também nenhuma lotação)&mdash;torna uma experiência natural, como se ela fosse projetada para esse dispositivo.
 
-*  **Design para os pontos de interrupção certos**
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-size-classes.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design for the right breakpoints**
 
-    Em vez de criar para cada tamanho de tela individual, focar em algumas larguras chave (também chamadas de "pontos de interrupção") pode simplificar bastante os designs e o código, além de deixar seu aplicativo com uma aparência ótima em telas pequenas a grandes.
+        Instead of designing for every individual screen size, focusing on a few key widths (also called "breakpoints") can greatly simplify your designs and code while still making your app look great on small to large screens.
 
-    [Saiba mais sobre tamanhos de tela e pontos de interrupção](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+        [Learn about screen sizes and breakpoints](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+    :::column-end:::
+:::row-end:::
 
-*  **Criar um layout dinâmico**
+:::row:::
+    :::column:::
+        ![fpo image](images/rspd-resize.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Create a responsive layout**
 
-    Para um aplicativo parecer natural, ele precisa preencher o espaço de exibição disponível sem parecer muito preenchido. UWP fornece painéis que organizam o conteúdo em fluxos, grades e pilhas, e você pode aninhá-los dentro uns dos outros.
+        For an app to feel natural, it should adapt its layout to different screen sizes and devices. You can use automatic sizing, layout panels, visual states, and even separate UI definitions in XAML to create a responsive UI.
 
-    [Saiba mais sobre painéis de layout da UWP](/windows/uwp/design/layout/layout-panels)
+        [Learn about responsive design](/windows/uwp/design/layout/responsive-design)
+    :::column-end:::
+:::row-end:::
 
-* **Design para uma variedade de dispositivos**
+:::row:::
+    :::column:::
+        ![fpo image](images/devices.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design for a spectrum of devices**
 
-    Aplicativos UWP podem ser executados em uma ampla variedade de dispositivos do Windows. É útil entender quais dispositivos estão disponíveis, para o que foram feitos e como os usuários interagem com eles.
+        UWP apps can run on a wide variety of Windows-powered devices. It's helpful to understand which devices are available, what they're made for, and how users interact with them.
 
-    [Saiba mais sobre dispositivos UWP](/windows/uwp/design/devices/)
+        [Learn about UWP devices](/windows/uwp/design/devices/)
+:::row-end:::
 
-* **Otimizar para a entrada certa**
+:::row:::
+    :::column:::
+        ![fpo image](images/keyboard-shortcuts.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Optimize for the right input**
 
-    Aplicativos UWP suportam automaticamente mouse, teclado, caneta e interações comuns por toque&mdash;você não precisa fazer mais nada. Mas você pode aprimorar seu aplicativo com suporte otimizado para entradas específicas, como caneta e Surface Dial.
+        UWP apps automatically support common mouse, keyboard, pen, and touch interactions&mdash;there's nothing extra you have to do. But you can enhance your app with optimized support for specific inputs, like pen and the Surface Dial.
 
-    [Saiba mais sobre entradas e interações](/windows/uwp/design/input/input-primer)
+        [Learn about inputs and interactions](/windows/uwp/design/input/input-primer)
+:::row-end:::
 
+## <a name="make-it-intuitive"></a>Torná-lo intuitiva
 
-## <a name="make-it-intuitive-and-powerful"></a>Torne-o intuitivo e eficiente
+Uma experiência parece intuitiva quando ele se comporta da maneira que o usuário espera. Usando controles estabelecidos e padrões e tirar proveito do suporte da plataforma para globalização e acessibilidade, você cria uma experiência sem esforço que ajuda os usuários a serem mais produtivos.
 
-Uma experiência parece intuitiva quando ela se comporta da forma que o usuário espera. Usando controles estabelecidos e padrões e tirar proveito do suporte da plataforma para globalização e acessibilidade, você cria uma experiência sem esforço que ajuda os usuários a serem mais produtivos. 
+Demonstrar empatia tem a ver com fazer a coisa certa no momento certo.
 
-* **Use o controle correto para o trabalho**
+Experiências de Fluent usam controles e padrões de forma consistente, para que eles se comportem de maneiras que o usuário aprendeu a esperar. Experiências de Fluent são acessíveis para pessoas com uma ampla variedade de características físicas e incorporam recursos de globalização para que pessoas em todo o mundo possam usá-los.
 
-    Controles são os blocos de construção da interface do usuário; usar o controle correto ajuda você a criar uma interface do usuário que se comporta da maneira que os usuários esperam.  A UWP oferece mais de 45 controles, desde botões simples a controles de dados avançados. 
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-navview.png)
+    :::column-end:::
+    :::column span="2":::
+        **Provide the right navigation**
 
-    [Saiba mais sobre os controles do UWP](/windows/uwp/design/controls-and-patterns/)
+        Create an effortless experience by using the right app structure and navigation components.
 
-* **Ser inclusivo** 
+        [Learn about navigation](/windows/uwp/design/basics/navigation-basics/)
+:::row-end:::
 
-    Um aplicativo bem projetado é acessível a todas as pessoas com deficiências. Com codificação extra, você pode compartilhar seu aplicativo com pessoas ao redor do mundo.
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-commanding.png)
+    :::column-end:::
+    :::column span="2":::
+        **Be interactive**
 
-    [Saiba mais sobre Usabilidade](/windows/uwp/design/usability/)
+        Buttons, command bars, keyboard shortcuts, and context menus enable users to interact with your app; they're the tools that change a static experience into something dynamic.
 
+        [Learn about commanding](/windows/uwp/design/basics/commanding-basics/)
+:::row-end:::
 
-## <a name="be-engaging-and-immersive"></a>Seja envolvente e imersivo 
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-controls-2.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Use the right control for the job**
 
-Torne seu aplicativo atraente, incorporando elementos físicos, como luz e movimento. 
+        Controls are the building blocks of the user interface; using the right control helps you create a user interface that behaves the way users expect it to.  UWP provides more than 45 controls,ranging from simple buttons to powerful data controls.
+
+        [Learn about UWP controls](/windows/uwp/design/controls-and-patterns/)
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![inclusive image](images/thumbnail-inclusive.png)
+    :::column-end:::
+    :::column span="2":::
+        **Be inclusive**
+        A well-design app is accessible to people with disabilities. With some extra coding, you can share your app with people around the world.
+
+        [Learn about Usability](/windows/uwp/design/usability/)
+:::row-end:::
+
+## <a name="be-engaging-and-immersive"></a>Seja envolvente e imersivo
+
+Design Fluente não tem a ver com efeitos extravagantes. Ele incorpora efeitos físicos que realmente melhoram a experiência do usuário, porque simulam experiências que nossos cérebros estão programados para processar de maneira eficiente.
 
 ## <a name="use-light"></a>Use luz
 
 A luz atrai nossa atenção. Ela cria atmosfera e um senso de lugar, e é uma ferramenta prática para iluminar a informação.
-        
-Adicione luz a seu aplicativo do UWP:
-        
-* [Revelar destaque](../style/reveal.md) usa a luz para criar elementos interativos. A luz ilumina os elementos com os quais o usuário pode interagir, revelando fronteiras ocultas. Revelação é habilitada automaticamente em alguns controles, como o modo de exibição de lista e exibição de grade. Você pode ativá-lo em outros controles pela aplicação de nossos estilos de realce de revelação predefinidos. 
 
-* [Revelar foco](../style/reveal-focus.md) usa luz para chamar a atenção para o elemento que atualmente está em foco de entrada.  
+Adicione luz a seu aplicativo do UWP:
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/Nav_Reveal_Animation.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Reveal highlight**
+
+        [Reveal highlight](../style/reveal.md) uses light to make interactive elements stand out. Light illuminates the elements the user can interact with, revealing hidden borders. Reveal is automatically enabled on some controls, such as list view and grid view. You can enable it on other controls by applying our predefined Reveal highlight styles.
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/traveling-focus-fullscreen-light-rf.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Reveal focus**
+
+        [Reveal focus](../style/reveal-focus.md) uses light to call attention to the element that currently has input focus.
+:::row-end:::
 
 ## <a name="create-a-sense-of-depth"></a>Criar uma sensação de profundidade
 
@@ -120,9 +207,15 @@ Vivemos em um mundo tridimensional. Ao incorporar intencionalmente a profundidad
 
 Adicione profundidade a seu aplicativo do UWP:
 
-* O recurso [Acrílico](../style/acrylic.md) é um material translúcido que permite ao usuário ver camadas de conteúdo, estabelecendo uma hierarquia de elementos de interface do usuário.
+:::row:::
+    :::column:::
+        ![fpo image](../motion/images/_parallax_v2.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Parallax**
 
-* O recurso [Paralaxe](../motion/parallax.md) cria a ilusão de profundidade, fazendo com que itens em primeiro plano pareçam se mover mais rapidamente do que itens na tela de fundo.
+        [Parallax](../motion/parallax.md) creates the illusion of depth by making items in the foreground appear to move more quickly than items in the background.
+:::row-end:::
 
 ## <a name="incorporate-motion"></a>Incorpore movimento
 
@@ -130,23 +223,46 @@ Pense no design de movimento como um filme. As transições perfeitas mantêm vo
 
 Adicione movimento a seu aplicativo do UWP:
 
-* O recurso [Animações conectadas](../motion/connected-animation.md) ajuda o usuário a manter o contexto pela criação de uma transição suave entre as cenas. 
+:::row:::
+    :::column:::
+        ![continuity gif](images/continuityXbox.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Connected animations**
+
+        [Connected animations](../motion/connected-animation.md) help the user maintain context by creating a seamless transition between scenes.
+:::row-end:::
 
 ## <a name="build-it-with-the-right-material"></a>Crie-o com o material correto
 
 As coisas que nos cercam no mundo real são sensoriais e revigorantes. Elas se curvam, esticam, saltam, destroem e deslizam. Essas qualidades materiais se convertem em ambientes digitais, fazendo com que as pessoas desejem acessar e tocar nossos projetos.
 
-Adicione material a seu aplicativo do UWP: 
-        
-* O recurso [Acrílico](../style/acrylic.md)  é um material translúcido que permite ao usuário ver camadas de conteúdo, estabelecendo uma hierarquia de elementos de interface do usuário. 
+Adicione material a seu aplicativo do UWP:
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/acrylic_lighttheme_base.png)
+    :::column-end:::
+    :::column span="2":::
+        **Acrylic**
+
+        [Acrylic](../style/acrylic.md) is a translucent material that lets the user see layers of content, establishing a hierarchy of UI elements.
+:::row-end:::
 
 ## <a name="design-toolkits-and-code-samples"></a>Kits de ferramentas de design e amostras de código
 
 Quer começar a criar seus próprios aplicativos com Design Fluente? Nossos kits de ferramentas para Adobe XD, Adobe Illustrator, Adobe Photoshop, Framer e esboço ajudarão a impulsionar seus designs e nossas amostras ajudarão a realizar codificação mais rápido.
 
-* Confira nossa [página de exemplos e kits de ferramentas de design](/windows/uwp/design/downloads/)
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-toolkits.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design toolkits and samples page**
 
-<img src="images/fluentdesign_header.png" alt=" " />
+        Check out our [Design toolkits and samples page](/windows/uwp/design/downloads/)
+:::row-end:::
+
 
 
 

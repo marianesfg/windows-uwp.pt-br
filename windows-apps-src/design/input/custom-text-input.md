@@ -9,15 +9,13 @@ keywords: teclado, texto, texto básico, texto personalizado, Estrutura de Servi
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 734d18d7320ecc3157fbc9896db28989e0791e8d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 14a2811f59b8de33db51b255aee8892abf553198
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655558"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555408"
 ---
 # <a name="custom-text-input"></a>Entrada de texto personalizado
 
@@ -63,7 +61,7 @@ Os intervalos de texto e as seleções são representados pela estrutura [**Core
 | **StartCaretPosition** | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | A posição inicial de um intervalo é a ACP pouco antes do primeiro caractere. |
 | **EndCaretPosition**   | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | A posição final de um intervalo é a ACP logo depois do último caractere.     |
 
- 
+ 
 
 Por exemplo, no intervalo de texto mostrado anteriormente, o intervalo \[0, 5\] especifica a palavra "Hello". **StartCaretPosition** sempre deve ser menor ou igual a **EndCaretPosition**. O intervalo \[5, 0\] é inválido.
 
@@ -158,9 +156,8 @@ Haverá vezes em que o [**Range**](https://msdn.microsoft.com/library/windows/ap
 ## <a name="related-articles"></a>Artigos relacionados
 
 **Exemplos**
-* [Exemplo de controle de edição personalizado](https://go.microsoft.com/fwlink/?linkid=831024)
- 
-**Exemplos de arquivo**
+* [Exemplo de controle de edição personalizado](https://go.microsoft.com/fwlink/?linkid=831024) 
+ **Exemplos de arquivo morto**
 * [Amostra de edição de texto XAML](http://go.microsoft.com/fwlink/p/?LinkID=251417)
 
 

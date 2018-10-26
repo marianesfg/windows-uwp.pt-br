@@ -5,16 +5,14 @@ title: Introdução ao C++/WinRT
 ms.author: stwhi
 ms.date: 10/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto, de partida
 ms.localizationpriority: medium
-ms.openlocfilehash: b8f8425fa602c844803cc632f523949b8b04d551
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 6cb8e18904f61976103689c8d83475ec248eb38b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483796"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558016"
 ---
 # <a name="get-started-with-cwinrt"></a>Introdução ao C++/WinRT
 
@@ -146,7 +144,7 @@ Em `pch.h`, inclua `winrt/base.h`.
 #include <winrt/base.h>
 ```
 
-## <a name="linking"></a>Vinculação
+### <a name="linking"></a>Vinculação
 
 C++ c++ projeção de linguagem do WinRT depende de determinados (não membro) do Windows Runtime livres e pontos de entrada, que exigem para a biblioteca de lib [Windowsapp](/uwp/win32-and-com/win32-apis) . Esta seção descreve as três maneiras de satisfaz o vinculador.
 

@@ -5,26 +5,24 @@ description: Saiba como habilitar/desabilitar o rastreamento Fiddler programatic
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 819f039f04d1e0a7fd035b10e3cbe408645e8f4d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "409938"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558652"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referência de API de configurações Fiddler   
 Você pode habilitar e desabilitar o rastreamento de rede Fiddler no seu devkit usando essa API REST.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar se o Fiddler rastreamento está habilitado
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar se o rastreamento de Fiddler está habilitado
 
 **Solicitação**
 
-Você pode verificar se o rastreamento do Fiddler está habilitado no dispositivo usando a seguinte solicitação.
+Você pode verificar se o rastreamento de Fiddler está habilitado no dispositivo usando a solicitação a seguir.
 
 Método      | URI da solicitação
 :------     | :-----
@@ -36,7 +34,7 @@ GET | /ext/fiddler
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**   
 
@@ -44,7 +42,7 @@ GET | /ext/fiddler
 
 **Resposta**   
 
-- Propriedade bool JSON IsProxyEnabled quais especificadores se o proxy está habilitado ou não.
+- Propriedade de bool JSON IsProxyEnabled quais especificadores se o proxy está habilitado ou não.
 
 **Código de status**
 
@@ -79,7 +77,7 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
@@ -115,7 +113,7 @@ DELETE | /ext/fiddler
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**   
 

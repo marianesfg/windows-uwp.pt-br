@@ -6,16 +6,14 @@ ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, opengl, direct3d 11, portabilidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a0baee79873203f9f52fd1e9acae03c7647240
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652805"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556860"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar um renderizador simples do OpenGL ES 2.0 para o Direct3D 11
 
@@ -84,9 +82,9 @@ typedef struct
 
 Essa estrutura tem uma instância e contém todos os componentes necessários para renderizar uma malha de vértice sombreado bem simples.
 
-> **Observação**  Qualquer código OpenGL ES 2.0 neste tópico se baseia na implementação de API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
+> **Observação**código de qualquer OpenGL ES 2.0 neste tópico se baseia na implementação do API do Windows fornecida pelo Khronos Group e usa a sintaxe de programação C do Windows.
 
- 
+ 
 
 ## <a name="what-you-need-to-know"></a>O que você precisa saber
 
@@ -134,7 +132,7 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionais
 
@@ -143,9 +141,9 @@ Essa estrutura tem uma instância e contém todos os componentes necessários pa
 -   [Criar um novo projeto do DirectX 11 para a UWP](user-interface.md)
 -   [Mapear conceitos e infraestrutura do OpenGL ES 2.0 com Direct3D 11](map-concepts-and-infrastructure.md)
 
- 
+ 
 
- 
+ 
 
 
 

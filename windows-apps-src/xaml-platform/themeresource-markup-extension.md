@@ -6,16 +6,14 @@ ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2b292688d05e9886851016f2d3526a1926e418
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675093"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557655"
 ---
 # <a name="themeresource-markup-extension"></a>Extensão de marcação {ThemeResource}
 
@@ -71,7 +69,7 @@ As definições XAML de estados visuais em um modelo de controle devem usar refe
 
 O uso de **ThemeResource** pode ser visto em uma série de valores dependentes. Por exemplo, um valor [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que também é um recurso de chave pode usar uma referência **ThemeResource**. Mas quaisquer propriedades de interface do usuário que usem o recurso de chave **SolidColorBrush** também deverão usar uma referência **ThemeResource**, para que cada propriedade de tipo de [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) que esteja ativando um valor dinâmico mude quando o tema mudar.
 
-**Observação**  `{ThemeResource}` e a avaliação de recurso do tempo de execução durante a alteração de tema têm suporte no Windows 8.1 XAML, mas não no XAML para aplicativos do Windows8.
+**Observação** `{ThemeResource}` e avaliação de recurso de tempo de execução durante a alteração de tema é aceito no Windows 8.1 XAML, mas não tem suporte em XAML para aplicativos destinados ao Windows8.
 
 ### <a name="system-resources"></a>Recursos do sistema
 
@@ -140,13 +138,13 @@ Depois, os pincéis de cada um dos outros dicionários de temas também são def
 
 Aqui o valor [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) é outra referência **ThemeResource** a um recurso do sistema. Se você fizer referência a um recurso do sistema e quiser que ele mude em resposta a uma alteração de tema, você deverá usar **ThemeResource** para fazer a referência.
 
-## <a name="windows-8-behavior"></a>Comportamento do Windows 8
+## <a name="windows8-behavior"></a>Comportamento de Windows8
 
-O Windows8 não dava suporte à extensão de marcação **ThemeResource**, ela está disponível a partir do Windows8.1. Além disso, o Windows8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema de um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Essa não é uma boa experiência de usuário, portanto, os aplicativos devem ser recompilados e visar o Windows8.1 de forma que possam usar estilos com usos **ThemeResource** e possam alternar dinamicamente os temas quando o usuário o faz. Os aplicativos que foram compilados para Windows 8, mas estão sendo executados no Windows 8.1, continuam a adotar o comportamento do Windows 8.
+Windows8 não dava suporte à extensão de marcação **ThemeResource** , ele está disponível a partir do Windows 8.1. Além disso, Windows8 não dava suporte à alternância dinâmica dos recursos relacionados ao tema para um aplicativo do Windows Runtime. O aplicativo tinha que ser reiniciado para selecionar a alteração de tema dos modelos e estilos XAML. Isso não é uma boa experiência do usuário, portanto, os aplicativos devem recompile e Windows 8.1 de destino para que eles possam usar estilos com usos **ThemeResource** e podem alternar dinamicamente os temas quando o usuário o faz. Aplicativos que foram compilados para Windows8, mas em execução no Windows 8.1 continuam a adotar o comportamento Windows8.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>As ferramentas de tempo de design têm suporte para a extensão de marcação **{ThemeResource}**
 
-O Microsoft Visual Studio2013 pode incluir valores-chave possíveis nos menus suspensos do Microsoft IntelliSense quando você usa a extensão de marcação **{ThemeResource}** em uma página XAML. Por exemplo, assim que você digita "{ThemeResource", todas as chaves de recurso dos [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) são exibidas.
+Microsoft Visual Studio2013 pode incluir valores-chave possíveis nos menus suspensos do Microsoft IntelliSense quando você usa a extensão de marcação **{ThemeResource}** em uma página XAML. Por exemplo, assim que você digita "{ThemeResource", todas as chaves de recurso dos [recursos de tema XAML](https://msdn.microsoft.com/library/windows/apps/mt187274) são exibidas.
 
 Quando uma chave de recurso existe como parte de qualquer uso **{ThemeResource}**, o recurso **Ir para Definição** (F12) pode resolver esse recurso e mostrar a você o generic.xaml do tempo de design, em que o recurso do tema é definido. Como os recursos do tema são definidos mais de uma vez (por tema), **Ir para Definição** leva você à primeira definição encontrada no arquivo, que é a definição de **Padrão**. Se você desejar obter as outras definições, poderá procurar o nome da chave no arquivo e localizar as definições dos outros temas.
 
@@ -156,5 +154,5 @@ Quando uma chave de recurso existe como parte de qualquer uso **{ThemeResource}*
 * [Recursos de temas XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [atributo x:Key](x-key-attribute.md)
- 
+ 
 

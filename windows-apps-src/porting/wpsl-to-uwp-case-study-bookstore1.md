@@ -1,45 +1,44 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10.
-title: Estudo de caso Windows Phone Silverlight para UWP, Bookstore1
-ms.author: markl
+description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo WindowsPhone Silverlight muito simples para um aplicativo da plataforma Universal do Windows do Windows 10 (UWP).
+title: WindowsPhone Silverlight para estudo de caso UWP, Bookstore1
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0cd284b2cb0ed4170d587cb3b412bc1954496c93
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: c335f607eb1897f79035850cd6a5af9e7a7a56dc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200696"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557758"
 ---
-# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Estudo de caso Windows Phone Silverlight para UWP: Bookstore1
+# <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight para UWP estudo de caso: Bookstore1
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Windows Phone Silverlight muito simples para um aplicativo Plataforma Universal do Windows (UWP) do Windows 10. Com o Windows 10, é possível criar um único pacote do aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e é isso o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tópico apresenta um estudo de caso de portabilidade de um aplicativo WindowsPhone Silverlight muito simples para um aplicativo de plataforma Windows10Universal do Windows (UWP). Com o Windows 10, você pode criar um único pacote de aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de exibição. O modelo de exibição tem uma lista de livros que mostra o título, o autor e a capa do livro. As imagens da capa do livro têm **Build Action** definida como **Content** e **Copy to Output Directory** definida como **Do not copy**.
 
 Os tópicos anteriores desta seção descrevem as diferenças entre as plataformas, e eles fornecem detalhes e orientações sobre o processo de portabilidade de vários aspectos de um aplicativo de marcação XAML, através da associação a um modelo de exibição, para acessar dados. Um estudo de caso visa complementar essa orientação, mostrando-o em ação em um exemplo real. Os estudos de caso pressupõem que você tenha lido as orientações, já que elas não serão repetidas aqui.
 
-**Observação**   Ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas para selecionar um Controle de Versão de Plataforma de Destino [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
+**Observação**  ao abrir Bookstore1Universal\_10 no Visual Studio, caso você veja a mensagem "Atualização do Visual Studio necessária", siga as etapas para selecionar um controle de versão de plataforma de destino em [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Downloads
 
-[Baixe o app Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
+[Baixe o Bookstore1WPSL8 WindowsPhone Silverlight aplicativo](http://go.microsoft.com/fwlink/?linkid=517053).
 
-[Baixe o aplicativo do Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Baixe o Bookstore1Universal\_10 aplicativo do Windows 10](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## <a name="the-windows-phone-silverlight-app"></a>O aplicativo Windows Phone Silverlight
+## <a name="the-windowsphone-silverlight-app"></a>O aplicativo do WindowsPhone Silverlight
 
 Aqui está a aparência do Bookstore1WPSL8, o aplicativo que vamos portar. Trata-se apenas de uma caixa de listagem de livros com rolagem vertical abaixo do cabeçalho do nome do aplicativo e do título da página.
 
 ![aparência do Bookstore1WPSL8](images/wpsl-to-uwp-case-studies/c01-01-wpsl-how-the-app-looks.png)
 
-## <a name="porting-to-a-windows-10-project"></a>Portando para um projeto do Windows 10
+## <a name="porting-to-a-windows10-project"></a>Portando para um projeto do Windows 10
 
 É uma tarefa muito rápida criar um novo projeto no Visual Studio, copiar arquivos para ele a partir do Bookstore1WPSL8 e incluir os arquivos copiados no novo projeto. Comece criando um novo projeto Aplicativo em Branco (Universal do Windows). Dê a ele o nome de Bookstore1Universal\_10. Esses são os arquivos que devem ser copiados de Bookstore1WPSL8 para Bookstore1Universal\_10.
 
@@ -47,7 +46,7 @@ Aqui está a aparência do Bookstore1WPSL8, o aplicativo que vamos portar. Trata
 -   Copie a pasta que contém o arquivo de origem do modelo de exibição (a pasta é \\ViewModel).
 -   Copie MainPage.xaml e substitua o arquivo no destino.
 
-Podemos manter os arquivos App.xaml e App.xaml.cs que o Visual Studio gerou para nós no projeto do Windows 10.
+Podemos manter o App. XAML e App.xaml.cs que o Visual Studio gerou para nós no projeto do Windows 10.
 
 Edite o código-fonte e os arquivos de marcação que você acabou de copiar e altere as referências ao namespace Bookstore1WPSL8 para Bookstore1Universal\_10. Uma maneira rápida de fazer isso é usar o recurso **Substituir nos Arquivos**. No código imperativo no arquivo de origem do modelo de exibição, são necessárias estas alterações de portabilidade:
 
@@ -79,9 +78,9 @@ O modo de exibição e o modelo de exibição estão funcionando corretamente ju
 
 ## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Saldando os itens de débito e alguns estilos iniciais
 
-Por padrão, todas as orientações têm suporte. No entanto, o aplicativo Windows Phone Silverlight explicitamente restringe-se a somente retrato, portanto, para saldar os itens de débito nº 1 e nº 2, acesse o manifesto do pacote do aplicativo no novo projeto e marque **Retrato** em **Supported orientations**.
+Por padrão, todas as orientações têm suporte. O aplicativo WindowsPhone Silverlight explicitamente restringe somente retrato, porém, portanto, débito itens \#1 e \#2 são pagos, acesse o manifesto do pacote do aplicativo no novo projeto e verificação **Retrato** em **Supported orientações**.
 
-Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (anteriormente chamada de bandeja do sistema) é mostrada por padrão. Para os itens nº 4 e nº 5, precisamos encontrar quatro estilos  **TextBlock** da Plataforma Universal do Windows (UWP) correspondentes aos estilos do Windows Phone Silverlight que estávamos usando. É possível executar o aplicativo do Windows Phone Silverlight no emulador e compará-lo lado a lado com a ilustração na seção [Texto](wpsl-to-uwp-porting-xaml-and-ui.md). Ao fazer isso e examinar as propriedades dos estilos de sistema do Windows Phone Silverlight, podemos criar esta tabela.
+Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (anteriormente chamada de bandeja do sistema) é mostrada por padrão. Para itens \#4 e \#5, precisamos encontrar quatro estilos de plataforma Universal do Windows (UWP) **TextBlock** que correspondam aos estilos do WindowsPhone Silverlight que estávamos usando. Você pode executar o aplicativo WindowsPhone Silverlight no emulador e compará-lo lado a lado com a ilustração na seção de [texto](wpsl-to-uwp-porting-xaml-and-ui.md) . Ao fazer isso e examinar as propriedades dos estilos de sistema do WindowsPhone Silverlight, podemos criar esta tabela.
 
 | Chave de estilo do Windows Phone Silverlight | Chave de estilo da UWP          |
 |-------------------------------------|------------------------|
@@ -89,7 +88,7 @@ Para esse aplicativo, o item nº 3 não é um débito, pois a barra de status (a
 | PhoneTextSubtleStyle                | SubtitleTextBlockStyle |
 | PhoneTextNormalStyle                | CaptionTextBlockStyle  |
 | PhoneTextTitle1Style                | HeaderTextBlockStyle   |
- 
+ 
 Para definir esses estilos, basta digitá-los no editor de marcação ou usar as ferramentas de XAML do Visual Studio e defini-los sem digitar nada. Para fazer isso, clique com o botão direito do mouse em um **TextBlock** e clique em **Editar Estilo** &gt; **Aplicar Recurso**. Para fazer isso com os **TextBlock**s no modelo de item, clique com o botão direito do mouse em **ListBox**, depois clique em **Edit Additional Templates** &gt; **Edit Generated Items (ItemTemplate)**.
 
 Existe uma tela de fundo branca 80% opaca atrás dos itens, pois o estilo padrão do controle **ListBox** define sua tela de fundo como o recurso do sistema `ListBoxBackgroundThemeBrush`. Defina `Background="Transparent"` na **ListBox** para limpar a tela de fundo. Para alinhar à esquerda os **TextBlock**s no modelo de item, edite-o novamente conforme descrito acima e defina uma **Margin** de `"9.6,0"` em ambos os **TextBlock**s.
@@ -128,7 +127,7 @@ Consulte [Alterações de tema](wpsl-to-uwp-porting-xaml-and-ui.md) para ver com
 
 ![o aplicativo do windows 10 portado](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
 
-O aplicativo do Windows 10 portado em execução em um dispositivo móvel
+O aplicativo Windows 10 portado em execução em um dispositivo móvel
 
 ## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>Um ajuste opcional na caixa de listagem de dispositivos móveis
 

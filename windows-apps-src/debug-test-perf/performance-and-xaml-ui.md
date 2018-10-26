@@ -6,23 +6,21 @@ description: Os usuários esperam que seus apps mantenham a capacidade de respos
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 40833b98483dc0197c651e2ab4bea259742c2858
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557224"
 ---
 # <a name="performance"></a>Desempenho
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não consumam muita bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. Esta seção mostra como organizar seu fluxo de trabalho de desempenho, corrigir problemas de taxa de quadros e falhas de animação e ajustar seu tempo de inicialização, tempo de navegação de página e uso de memória.
+Os usuários esperam que seus aplicativos mantenham a capacidade de resposta e naturalidade no uso e não usem muito a bateria. Tecnicamente, o desempenho é um requisito não funcional, mas tratar o desempenho como um recurso ajudará você atender às expectativas dos usuários. Especificar metas e mensurar são fatores importantes. Determine quais são os cenários críticos de desempenho; defina o que significa bom desempenho. Em seguida, faça medições o quanto antes e com frequência suficiente ao longo do ciclo de vida do projeto para cumprir suas metas. Esta seção mostra como organizar seu fluxo de trabalho de desempenho, corrigir problemas de taxa de quadros e falhas de animação e ajustar seu tempo de inicialização, tempo de navegação de página e uso de memória.
 
-Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [Portando apps para o Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [Migrando para a Plataforma Universal do Windows](http://channel9.msdn.com/Events/Build/2015/3-741).
+Se você ainda não fez isso, uma etapa que vimos resultar em melhorias significativas de desempenho é fazer a portabilidade do seu aplicativo para Windows 10. Várias otimizações XAML (por exemplo, [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) só estão disponíveis em aplicativos do Windows 10. Consulte [portar aplicativos para Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) e a sessão //build/ [movimento para a plataforma Universal do Windows](http://channel9.msdn.com/Events/Build/2015/3-741).
 
 | Tópico | Descrição |
 |-------|-------------|

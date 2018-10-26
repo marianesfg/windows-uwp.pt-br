@@ -7,15 +7,13 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.author: twhitney
 ms.date: 01/23/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 53cc58930180f5ae7c3ec661feeb42433486afca
-ms.sourcegitcommit: b0b2fa760f4699b79b02e69061d85d529d90ef0a
-ms.translationtype: HT
+ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2018
-ms.locfileid: "1533761"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554956"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>O ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10
 
@@ -60,7 +58,7 @@ Obtenha o estado anterior do aplicativo a partir de [Launchactivatedeventargs](h
 |**ClosedByUser** | O usuário fechou o aplicativo com o gesto de fechar no modo tablet ou com Alt+F4. Quando o usuário fecha o aplicativo, ele é suspenso primeiro e então é encerrado. | Como o aplicativo basicamente seguiu as mesmas etapas que levam ao estado Encerrado, trate isso da mesma maneira que faria com o estado Encerrado.|
 |**Running** | O aplicativo já foi aberto quando o usuário tentou iniciá-lo novamente. | Nada. Observe que outra instância do aplicativo não é iniciada. A instância em execução é simplesmente ativada. |
 
-**Observação**  *A sessão de usuário atual* se baseia no logon no Windows. Desde que o usuário atual não tenha explicitamente feito logoff, desligado, ou reiniciado o Windows, a sessão do usuário atual persiste nos eventos, como autenticação de tela de bloqueio, troca de usuário, etc. 
+**Observação** *Sessão atual do usuário* se baseia no logon do Windows. Desde que o usuário atual não tenha explicitamente feito logoff, desligado, ou reiniciado o Windows, a sessão do usuário atual persiste nos eventos, como autenticação de tela de bloqueio, troca de usuário, etc. 
 
 Uma circunstância importante da qual você deve estar ciente é que, se o dispositivo tiver recursos suficientes, o sistema operacional fará a pré-inicialização dos aplicativos usados com frequência que aceitaram esse comportamento para otimizar a capacidade de resposta. Aplicativos que são pré-inicializados são iniciados em segundo plano e suspensos rapidamente, para que quando o usuário alterne para eles, eles possam ser retomados, o que é mais rápido do que iniciar o aplicativo.
 
@@ -87,7 +85,7 @@ A classe [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 Os dados de evento para esses métodos incluem a mesma propriedade [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) vista acima, que informa em qual estado o aplicativo estava antes de ser ativado. Interprete o estado e o que você deve fazer da mesma maneira descrita acima na seção [Inicialização do aplicativo](#app-launch).
 
-**Observação** Se você fizer logon usando a conta do administrador do computador, não poderá ativar nenhum aplicativo UWP.
+**Observação**se você fizer logon usando a conta de administrador do computador, você não poderá ativar aplicativos UWP.
 
 ## <a name="running-in-the-background"></a>Executando em segundo plano ##
 
@@ -177,7 +175,7 @@ Se o aplicativo suspenso for encerrado, não haverá nenhum evento **Resuming**.
 
 Enquanto o aplicativo estiver suspenso, ele não receberá nenhum evento de rede que esteja registrado para receber. Esses eventos de rede não são colocados em fila, eles são simplesmente perdidos. Sendo assim, o aplicativo deve testar o status da rede quando for retomado.
 
-**Observação**  Como o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) não é gerado do thread da interface do usuário, um dispatcher deverá ser usado se o código no manipulador de retomada se comunicar com sua interface. Consulte [Atualizar o thread da interface do usuário a partir de um thread em segundo plano](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) para um código de exemplo sobre como fazer isso.
+**Observação**porque o evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) não é gerado do thread da interface do usuário, um dispatcher deverá ser usado se o código no manipulador de retomada se comunicar com sua interface do usuário. Consulte [Atualizar o thread da interface do usuário a partir de um thread em segundo plano](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md) para um código de exemplo sobre como fazer isso.
 
 Para obter diretrizes gerais, consulte [Diretrizes para suspensão e retomada de aplicativos](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
@@ -185,9 +183,9 @@ Para obter diretrizes gerais, consulte [Diretrizes para suspensão e retomada de
 
 Em geral, os usuários não precisam fechar os aplicativos; eles podem deixar que o Windows os gerencie. No entanto, os usuários podem optar por fechar um aplicativo usando o gesto de fechar ou pressionando Alt+F4 ou usando o Alternador de Tarefas no Windows Phone.
 
-Não há um evento para indicar que o usuário fechou o aplicativo. Quando um aplicativo é fechado pelo usuário, ele é primeiramente suspenso para oferecer a você a oportunidade de salvar seu estado. No Windows 8.1 e versões posteriores, depois que um aplicativo é fechado pelo usuário, o aplicativo é removido da tela e da lista de alternância, mas não é explicitamente encerrado.
+Não há um evento para indicar que o usuário fechou o aplicativo. Quando um aplicativo é fechado pelo usuário, ele é primeiramente suspenso para oferecer a você a oportunidade de salvar seu estado. No Windows 8.1 e versões posteriores, depois que um aplicativo é fechado pelo usuário, o aplicativo é removido da tela e lista de alternância, mas não é explicitamente encerrado.
 
-**Fechamento de fechamento pelo usuário:** se o app precisar realizar tarefas diferentes quando é fechado pelo usuário e quando é fechado pelo Windows, use o manipulador de evento para determinar se o app foi encerrado pelo usuário ou pelo Windows. Consulte as descrições dos estados **ClosedByUser** e **Terminated** na referência da enumeração [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
+**Comportamento de fechamento pelo usuário:** se seu aplicativo precisar realizar tarefas diferentes quando é fechado pelo usuário e quando ele é fechado pelo Windows, você pode usar o manipulador de eventos de ativação para determinar se o aplicativo foi encerrado pelo usuário ou pelo Windows. Consulte as descrições dos estados **ClosedByUser** e **Terminated** na referência da enumeração [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
 
 Recomendamos que os aplicativos não sejam fechados programaticamente a menos que isso seja absolutamente necessário. Por exemplo, se um aplicativo detectar um vazamento de memória, ele poderá se fechar para garantir a segurança dos dados pessoais do usuário.
 
@@ -226,6 +224,6 @@ O código básico que é relevante ao ciclo de vida do aplicativo é fornecido n
 * [Atividade em segundo plano com o modelo de processo único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [Reproduzir mídia em segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 
- 
+ 
 
- 
+ 

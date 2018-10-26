@@ -6,19 +6,18 @@ ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, programação
-ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199447"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559448"
 ---
 # <a name="game-programming-resources"></a>Recursos para programação de jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Para saber mais sobre programação de jogos no Windows, confira os recursos a seguir.
@@ -32,7 +31,7 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 ## <a name="game-design-guidance"></a>Orientações sobre design de jogos
 
 
--   [Índice de diretrizes para a experiência do usuário em aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Diretrizes de índice de experiência do usuário para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
@@ -48,7 +47,7 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 -   [Biblioteca de processamento de texturas DirectXTex](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   [Diagnóstico de elementos gráficos](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx) do Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D) - Uma API de Windows Runtime fácil de usar para renderização de gráficos 2D de modo imediato com aceleração da GPU.
--   [ANGLE for Windows Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - Executa conteúdo do OpenGL ES no Windows por meio de conversão de chamadas de API do OpenGL ES em chamadas de API do DirectX 11.
+-   [ANGLE para Microsoft Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - conteúdo execuções OpenGL ES no Windows, o que converte chamadas de API do OpenGL ES para chamadas de API do DirectX 11.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos da sessão de desenvolvimento de jogos GDC 2015
 
@@ -81,9 +80,9 @@ Para saber mais sobre programação de jogos no Windows, confira os recursos a s
 -   [CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=76627)
 -   [GameDev.net](http://go.microsoft.com/fwlink/p/?LinkID=288870)
 
- 
+ 
 
- 
+ 
 
 
 

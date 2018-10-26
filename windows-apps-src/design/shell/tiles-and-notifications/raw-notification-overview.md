@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 887600366fdf1bf3951091df27d10f54516c2bf0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674543"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556046"
 ---
 # <a name="raw-notification-overview"></a>Visão geral de notificações brutas
 
@@ -28,7 +26,7 @@ Você pode usar as notificações brutas para diversas finalidades, inclusive pa
 > [!IMPORTANT]
 > Para entender as notificações brutas, é melhor estar familiarizado com os conceitos abordados na [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md).
 
- 
+ 
 
 Assim como nas notificações por push do sistema e de bloco, a notificação bruta é enviada por push do serviço em nuvem de seu aplicativo através de um URI (Uniform Resource Identifier) de canal atribuído para o WNS. O WNS, por sua vez, entrega a notificação ao dispositivo e à conta de usuário associada a esse canal. Diferentemente das outras notificações por push, as notificações brutas não têm um formato especificado. O conteúdo da carga é totalmente definido pelo aplicativo.
 
@@ -97,7 +95,7 @@ Se o aplicativo não estiver em execução e não usar [tarefas em segundo plano
 > [!IMPORTANT]
 > Antes de usar tarefas em segundo plano de notificação bruta, um app deve ter acesso ao segundo plano via [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
 
- 
+ 
 
 A tarefa em segundo plano tem que ser registrada com um [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger). Se não for registrada, a tarefa não será executada quando a notificação bruta for recebida.
 
@@ -117,7 +115,7 @@ Para cada aplicativo, apenas uma tarefa em segundo plano pode ser executada de c
 ## <a name="other-resources"></a>Outros recursos
 
 
-Você pode saber mais baixando a [Amostra de notificações de dados brutos](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows8.1 e a [Amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows8.1 e reutilizando o código-fonte no aplicativo do Windows10.
+Você pode saber mais baixando a [amostra de notificações brutas](http://go.microsoft.com/fwlink/p/?linkid=241553) para Windows 8.1 e a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?LinkId=231476) para Windows 8.1 e reutilizando o código-fonte em seu aplicativo do Windows 10.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -126,9 +124,9 @@ Você pode saber mais baixando a [Amostra de notificações de dados brutos](htt
 * [Guia de início rápido: interceptando notificações por push nos aplicativos em execução](https://msdn.microsoft.com/library/windows/apps/jj709908)
 * [**Notificação bruta**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
- 
+ 
 
- 
+ 
 
 
 

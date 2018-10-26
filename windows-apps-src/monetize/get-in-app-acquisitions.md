@@ -6,16 +6,14 @@ title: Obter aquisições de complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
-ms.openlocfilehash: a09bb4ded7325cd1c5f5091be133ded889322bd9
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: c1fb44457b8589c9e1525de9c8dca2801c0c47bf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5520782"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552699"
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 

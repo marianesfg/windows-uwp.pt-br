@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18746ef231f7d2b387866fba82e4f12a44476001
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044615"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558175"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Fator de atenuação e destaque
 
@@ -39,7 +37,7 @@ Em que:
 | att2<sub>i</sub> | 0.0           | Ponto flutuante | Fator de atenuação quadrática                    | 0 para + infinito |
 | d.                | N/A           | Ponto flutuante | Distância da posição de vértice até a posição da luz | N/A            |
 
- 
+ 
 
 -   Atten = 1, se a luz é uma luz direcional.
 -   Atten = 0, se a distância entre a luz e o vértice exceder o intervalo da luz.
@@ -54,7 +52,7 @@ Em que:
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
 | L<sub>dir</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
 
- 
+ 
 
 Se d é maior do que o intervalo da luz, o Direct3D não faz nenhum cálculo de atenuação adicional e não aplica nenhum efeito da luz ao vértice.
 
@@ -76,7 +74,7 @@ A seguinte equação especifica o fator de destaque.
 | theta<sub>i</sub> | 0.0           | Ponto flutuante | Ângulo de penumbra de destaque i em radianos    | \[0, pi)                 |
 | queda           | 0.0           | Ponto flutuante | Fator de queda                           | (-infinito + infinito)   |
 
- 
+ 
 
 Em que:
 
@@ -89,7 +87,7 @@ e:
 | L<sub>dcs</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | O negativo da direção da luz no espaço da câmera         |
 | L<sub>dir</sub> | N/A           | Vetor 3D com x, y e valores de ponto flutuante de z | Vetor de direção da posição de vértice para a posição da luz |
 
- 
+ 
 
 Depois de computar a atenuação da luz, para calcular os componentes especulares e difusos do vértice, o Direct3D também considera os efeitos de destaque, se aplicável, o ângulo que reflete a luz de uma superfície e a reflexão do material atual. Em [Tipos de luz](light-types.md), consulte "Em destaque".
 
@@ -98,9 +96,9 @@ Depois de computar a atenuação da luz, para calcular os componentes especulare
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,18 +6,17 @@ title: Composições e edição de mídia
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200980"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557347"
 ---
 # <a name="media-compositions-and-editing"></a>Composições e edição de mídia
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artigo mostra como usar as APIs no namespace [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desenvolver rapidamente aplicativos que permitem que os usuários criem composições de mídia de arquivos de origem de áudio e vídeo. Recursos da estrutura incluem a capacidade acrescentar vários videoclipes juntos, adicionar sobreposições de vídeo e imagem, adicionar áudio em segundo plano e aplicar efeitos de áudio e vídeos de forma programática. Uma vez criadas, composições de mídia podem ser renderizadas em um arquivo de mídia simples para reprodução ou compartilhamento, mas composições também podem ser serializadas para o disco e desserializadas do mesmo, permitindo que o usuário carregue e modifique composições que eles criaram anteriormente. Toda essa funcionalidade é fornecida em uma interface de Windows Runtime fácil de usar que reduz significativamente a quantidade e a complexidade do código necessário para executar essas tarefas quando comparado com a API de nível inferior da [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) .
@@ -152,9 +151,9 @@ Composições de mídia podem ser desserializadas de um arquivo para permitir qu
 
 -   Se o arquivo de mídia na composição não estiver em um local que possa ser acessado por seu aplicativo e não estiver na propriedade [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) da classe [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) para seu aplicativo, será gerado um erro ao carregar a composição.
 
- 
+ 
 
- 
+ 
 
 
 

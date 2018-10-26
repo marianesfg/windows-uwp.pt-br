@@ -6,16 +6,14 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, opengl, direct3d, portabilidade
 ms.localizationpriority: medium
-ms.openlocfilehash: a00a24d2c270e1c4f3aa3b8b716a6637d5da4af1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652205"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555235"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Correlacionar OpenGL ES 2.0 com Direct3D 11
 
@@ -54,16 +52,16 @@ Ao iniciar o processo de portabilidade da arquitetura gráfica do OpenGL ES 2.0 
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="notes-on-specific-opengl-es-20-providers"></a>Observações sobre provedores específicos do OpenGL ES 2.0
 
 
 Estes tópicos usam a especificação Khronos OpenGL ES 2.0 com C sem plataforma. O iOS e o Android utilizam a mesma especificação, e o código OpenGL ES 2.0 desenvolvido para essas plataformas é muito semelhante aos trechos de código mostrados aqui, embora sejam normalmente expostos como APIs orientadas a objetos. Além disso, em função das complexidades e diferenças de linguagem de cada plataforma, pode haver pequenas diferenças, especialmente em tipos de parâmetros de métodos ou na sintaxe geral da linguagem. O iOS, por exemplo, usa Objective-C. O Android pode usar o C++, mas alguns desenvolvedores podem usar uma implementação Java pura. Com isso em mente, estes tópicos devem continuar sendo úteis, pois os conceitos, estrutura e usos gerais das APIs do OpenGL ES não são diferentes.
 
- 
+ 
 
- 
+ 
 
 
 

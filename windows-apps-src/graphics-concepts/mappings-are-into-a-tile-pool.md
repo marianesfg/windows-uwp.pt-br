@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45062f82955b1e353def2eadbeae36d1c9e81ce6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652655"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558854"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapeamentos estão em um pool de blocos
 
@@ -35,7 +33,7 @@ Vamos explorar qual armazenamento a tabela de página pode exigir na pior das hi
 
 Considere que cada entrada da tabela de página é de 64 bits.
 
-Para o pior caso de ocorrência de tamanho de tabela de página de uma única superfície, considerando os limites de recursos no Direct3D 11, suponha que um recurso de streaming é criado com um formato de 128 bits por elemento (por exemplo, um flutuante RGBA), então um bloco de 64 KB contém apenas 4096 pixels. O tamanho máximo suportado [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (mas com apenas um mipmap) exigiria aproximadamente 1 GB de armazenamento na tabela de página quando preenchido por completo (sem incluir mipmaps) usando entradas de tabela de 64 bits. A adição de mipmaps implica no crescimento do armazenamento de tabela de página totalmente mapeada (pior hipótese) em aproximadamente um terço, cerca de 1,3 GB.
+Para a tabela de página pior caso a ocorrência de uma única superfície, considerando os limites de recursos em Direct3D11, suponha que um recurso de streaming é criado com um formato de 128 bits por elemento (por exemplo, um flutuante RGBA), então um bloco de 64KB de tamanho contém apenas 4096 pixels. O tamanho máximo suportado [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (mas com apenas um mipmap) exigiria aproximadamente 1 GB de armazenamento na tabela de página quando preenchido por completo (sem incluir mipmaps) usando entradas de tabela de 64 bits. A adição de mipmaps implica no crescimento do armazenamento de tabela de página totalmente mapeada (pior hipótese) em aproximadamente um terço, cerca de 1,3 GB.
 
 Nesse caso, seria equivalente a fornecer acesso a aproximadamente 10,6 terabytes de memória endereçável. Pode haver um limite na quantidade de memória endereçável. Porém, isso reduziria esses valores, talvez próximos do intervalo de terabytes.
 
@@ -64,7 +62,7 @@ O conteúdo inicial da tabela da página é **NULO** para todas as entradas. Os 
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tile-pool-creation.md">Criação de pool de blocos</a></p></td>
-<td align="left"><p>Os apps podem criar um ou mais pools de blocos por dispositivo Direct3D. O tamanho total de cada pool de blocos está restrito ao limite de tamanho dos recursos do Direct3D 11, que é de aproximadamente 1/4 de RAM da GPU.</p></td>
+<td align="left"><p>Os apps podem criar um ou mais pools de blocos por dispositivo Direct3D. O tamanho total de cada pool de blocos é restrito ao limite de tamanho de recursos do Direct3D11, que é aproximadamente 1/4 da RAM da GPU.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="tile-pool-resizing.md">Redimensionamento de pool de blocos</a></p></td>
@@ -77,16 +75,16 @@ O conteúdo inicial da tabela da página é **NULO** para todas as entradas. Os 
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Criar recursos de streaming](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

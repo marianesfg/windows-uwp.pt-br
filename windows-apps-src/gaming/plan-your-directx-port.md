@@ -6,19 +6,18 @@ ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, directx, compatibilização
-ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199308"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559533"
 ---
 # <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -38,9 +37,9 @@ A atualização do Direct3D 9 para o Direct3D 11 é mais do que uma alteração 
 
 Você deve substituir as livrarias auxiliares D3DX e DXUT pelas suas ou por ferramentas da comunidade. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
-> **Observação**   Você pode usar o [Kit de ferramentas do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir uma funcionalidade que antes era fornecida pelo D3DX e DXUT.
+> **Observação**  você pode usar o [Kit de ferramentas do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=248929) ou [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) para substituir uma funcionalidade que antes era fornecida pelo D3DX e DXUT.
 
- 
+ 
 
 Os sombreadores escritos em linguagem de assembly devem ser atualizados para HLSL usando a funcionalidade nível 9\_1 ou 9\_3 do modelo 4 de sombreador e os sombreadores escritos para a biblioteca de efeitos terão que ser atualizados para uma versão mais recente de sintaxe HLSL. Veja a seção [Mapeamento de recursos](feature-mapping.md) para saber mais.
 
@@ -64,9 +63,9 @@ Há dois conceitos que você usará com frequência:
 -   Referências gerenciadas ([**^ operator**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) and [**managed classes**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (ref classes) são partes fundamentais do Windows Runtime. Você precisará usar classes de referência para interagir com componentes do Tempo de Execução do Windows, por exemplo [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) (você verá mais sobre isso no passo a passo).
 -   Ao trabalhar com interfaces do Direct3D 11 COM, use o tipo de modelo [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) para deixar ponteiros COM mais fáceis de usar.
 
- 
+ 
 
- 
+ 
 
 
 

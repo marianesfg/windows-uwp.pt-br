@@ -5,16 +5,14 @@ title: Processamento de erros com C++/WinRT
 ms.author: stwhi
 ms.date: 05/21/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a4cf60fea70722e66eb44d52542be248e9ad01c
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 36f6248452d97d10b6004067b6c0a973973443db
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555844"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
 

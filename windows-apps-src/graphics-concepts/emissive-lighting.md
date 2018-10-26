@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2717a482e0ea1ad80f0f13dc09bb6789863ef7e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9ce2082479261cd96fb1c5bafd5f2df06bf6f239
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044265"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558682"
 ---
 # <a name="emissive-lighting"></a>Iluminação emissiva
 
@@ -33,7 +31,7 @@ onde:
 |-----------|---------------|----------------------------------------------------------------------|-----------------|
 | Cₑ        | (0,0,0,0)     | Transparência de vermelho, verde, azul e alfa (todos os valores de ponto flutuante) | Cor emissiva. |
 
- 
+ 
 
 O valor de Cₑ é cor 1 ou cor 2. Se a cor do vértice não for fornecida, a cor emissiva do material é usada.
 
@@ -57,9 +55,9 @@ A ilustração a seguir mostra como a luz emissiva combina com os outros três t
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

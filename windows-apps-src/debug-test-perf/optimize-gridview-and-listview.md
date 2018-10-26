@@ -6,22 +6,19 @@ description: Melhore o desempenho e o tempo de inicialização em ListView e Gri
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cff6e2785434eb4fdb922d8b89b55aca242655f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816901"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553641"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Otimização das interfaces do usuário ListView e GridView
 
 
-**Observação**  
-Para obter mais detalhes, consulte a sessão //build/ em [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/events/build/2013/3-158).
+**Observação**  para obter mais detalhes, consulte a sessão //build/ [Aumentar drasticamente o desempenho quando os usuários interagem com grandes quantidades de dados em GridView e ListView](https://channel9.msdn.com/events/build/2013/3-158).
 
 Melhore o desempenho e o tempo de inicialização em [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) e [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) por meio de virtualização da interface do usuário, redução de elementos e atualização progressiva de itens. Para técnicas de virtualização de dados, consulte [Virtualização de dados de ListView e GridView](listview-and-gridview-data-optimization.md).
 
@@ -325,5 +322,5 @@ Quando um item é reciclado (**ListViewItem**/**GridViewItem**), a estrutura dev
 
 Quando há uma distribuição desigual de itens que usam modelos de item diferentes, novos modelos de item provavelmente precisarão ser criados durante o movimento panorâmico e isso elimina muitos dos ganhos obtidos com a virtualização. Além disso, um seletor de modelo de item considera apenas cinco possíveis candidatos ao avaliar se um determinado contêiner pode ser reutilizado para o item de dados atual. Então, você deve considerar criteriosamente se seus dados são apropriados para uso com um seletor de modelo de item antes de usar um em seu aplicativo. Se a maior parte de coleção for homogênea, o seletor está retornando o mesmo tipo na maioria (possivelmente todas) das vezes. Apenas tenha cuidado com o preço que está pagando pelas raras exceções a essa homogeneidade e pondere se usar [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (ou dois controles de item) não é preferível.
 
- 
+ 
 

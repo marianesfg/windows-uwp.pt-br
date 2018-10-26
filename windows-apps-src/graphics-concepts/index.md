@@ -1,27 +1,25 @@
 ---
-title: Conceitos de elementos gráficos do Direct3D
-description: Descreve os conceitos de gráficos sobre os quais o Microsoft Direct3D foi construído.
+title: Glossário de elementos gráficos do Direct3D
+description: Define os termos de elementos gráficos usados pelo Microsoft Direct3D.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
 keywords:
-- Guia de aprendizagem de Gráficos do Direct3D
+- Glossário de elementos gráficos do Direct3D
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e1fed9eaf3003bc67a86a5282fccbb923019a36
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 0e325494cefeab4cf3ed40939f5b24de5e921b68
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653015"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555572"
 ---
-# <a name="direct3d-graphics-concepts"></a>Conceitos de elementos gráficos do Direct3D
+# <a name="direct3d-graphics-glossary"></a>Glossário de elementos gráficos do Direct3D
 
 
-Descreve conceitos de elementos gráficos do Microsoft Direct3D. Este guia explica os conceitos gerais de elementos gráficos 3D no computador que são usados no desenvolvimento de jogos e aplicativos Direct3D.
+Define os termos de elementos gráficos do Microsoft Direct3D. Este glossário define, um termos de gráficos de alto nível, geral computador 3D que são usados no desenvolvimento de aplicativos e jogos do Direct3D.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Nesta seção
 
@@ -89,8 +87,8 @@ Descreve conceitos de elementos gráficos do Microsoft Direct3D. Este guia expli
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 
