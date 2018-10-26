@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c90d3d32876bdfd6b91f597ad94eba33907e90
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 6b39211c4b21a68fc0e563f73805805dcf1f4641
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675193"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570362"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código gerado pelo assistente de notificação por push
  
@@ -211,9 +209,9 @@ function sendNotifications(request) {
 
 A função sendNotifications envia uma única notificação como notificação do sistema. Você também pode usar outros tipos de notificações por push.
 
-**Dica**  Para saber como obter ajuda ao editar scripts, consulte [Habilitando o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Dica**para obter informações sobre como obter ajuda durante a edição de scripts, consulte [Habilitar o IntelliSense para JavaScript do lado do servidor](http://go.microsoft.com/fwlink/p/?LinkId=309275).
 
- 
+ 
 
 ## <a name="push-notification-types"></a>Tipos de notificação por push
 
@@ -237,9 +235,9 @@ Você poderá chamar os Serviços de Notificação por Push do Windows (WNS) dir
 
 Você também pode enviar notificações por push executando uma tarefa agendada em seu serviço móvel. Consulte [Agendar trabalhos recorrentes em Serviços Móveis](http://go.microsoft.com/fwlink/p/?linkid=301694).
 
-**Aviso**  Depois que você executar o assistente de notificação por push uma vez, não execute o assistente uma segunda vez para adicionar o código de registro para outro serviço móvel. Executar o assistente mais de uma vez por projeto gera código que resulta na sobreposição de chamadas para o método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), o que leva a uma exceção de tempo de execução. Se você quiser se registrar para notificações por push em mais de um serviço móvel, execute o assistente uma vez e, em seguida, reescreva o código de registro para garantir que as chamadas para **CreatePushNotificationChannelForApplicationAsync** não sejam executadas ao mesmo tempo. Por exemplo, você pode fazer isso movendo o código gerado pelo assistente em push.register.\* (incluindo a chamada para **CreatePushNotificationChannelForApplicationAsync**) para fora do evento OnLaunched, mas os aspectos específicos disso dependerão da arquitetura do aplicativo.
+**Aviso**depois que você executar o Assistente de notificação por push uma vez, não executar o Assistente uma segunda vez para adicionar o código de registro para outro serviço móvel. Executar o assistente mais de uma vez por projeto gera código que resulta na sobreposição de chamadas para o método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), o que leva a uma exceção de tempo de execução. Se você quiser se registrar para notificações por push em mais de um serviço móvel, execute o assistente uma vez e, em seguida, reescreva o código de registro para garantir que as chamadas para **CreatePushNotificationChannelForApplicationAsync** não sejam executadas ao mesmo tempo. Por exemplo, você pode fazer isso movendo o código gerado pelo assistente em push.register.\* (incluindo a chamada para **CreatePushNotificationChannelForApplicationAsync**) para fora do evento OnLaunched, mas os aspectos específicos disso dependerão da arquitetura do aplicativo.
 
- 
+ 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -249,9 +247,9 @@ Você também pode enviar notificações por push executando uma tarefa agendada
 * [Conectando-se aos Serviços Móveis do Microsoft Azure (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
 * [Conectando-se aos Serviços Móveis do Microsoft Azure (C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
 * [Guia de início rápido: adicionando notificações por push para um serviço móvel (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
- 
+ 
 
- 
+ 
 
 
 

@@ -6,15 +6,13 @@ keywords: novidade, novidades, atualizações, Windows 10, último, apis, 17134
 ms.author: quradic
 ms.date: 4/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42078d36fbd97101488bfa58e3a8fe383b15d91c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 40a5621dbd5729d31e2b288b912b10c638ca4f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818232"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569956"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Novas APIs no Windows 10 build 17134
 

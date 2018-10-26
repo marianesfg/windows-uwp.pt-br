@@ -6,19 +6,18 @@ ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, suspensão, directx
-ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199305"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569647"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>Como suspender um aplicativo (DirectX e C++)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como salvar dados importantes do aplicativo e do estado do sistema quando o sistema suspende o aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
@@ -100,7 +99,7 @@ void App::Run()
 ## <a name="call-trim"></a>Chamar Trim()
 
 
-A partir do Windows 8.1, todos os aplicativos DirectX da Windows Store precisam chamar [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) no momento da suspensão. Essa chamada pede para o driver gráfico liberar todos os buffers temporários alocados para o aplicativo evitando que o aplicativo seja encerrado para recuperar recursos de memória durante o estado de suspensão. Esse é um requisito de certificação do Windows 8.1.
+A partir do Windows 8.1, todos os aplicativos UWP DirectX devem chamar [**Idxgidevice3**](https://msdn.microsoft.com/library/windows/desktop/dn280346) suspensão. Essa chamada pede para o driver gráfico liberar todos os buffers temporários alocados para o aplicativo evitando que o aplicativo seja encerrado para recuperar recursos de memória durante o estado de suspensão. Isso é um requisito de certificação para Windows 8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -151,9 +150,9 @@ O sistema não notifica um aplicativo quando ele está encerrado, por isso seu a
 * [Como retomar um aplicativo (DirectX e C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [Como ativar um aplicativo (DirectX e C++)](how-to-activate-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -9,15 +9,13 @@ keywords: controle por voz, voz, reconhecimento de fala, linguagem natural, dita
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9528bd19fb1afb72311e57dd90c8f6f9eb0b9620
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: Auto
+ms.openlocfilehash: 094acdbcb5c5b3bf45bad757344be5187ae37cbc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653115"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570564"
 ---
 # <a name="manage-issues-with-audio-input"></a>Gerenciar problemas com entrada de áudio
 
@@ -113,9 +111,9 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 **Exemplos**
 * [Exemplo de reconhecimento de fala e sintetização de controle por voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

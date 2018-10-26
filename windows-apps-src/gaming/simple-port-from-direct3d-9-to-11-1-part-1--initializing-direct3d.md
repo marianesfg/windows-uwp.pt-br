@@ -6,19 +6,18 @@ ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9
-ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199326"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571917"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11.
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -76,9 +75,9 @@ Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recurs
 
 Após a criação do dispositivo Direct3D 11 e de seu contexto, podemos usar a funcionalidade do ponteiro COM para obter as versões mais recentes das interfaces, que incluem recursos adicionais e são sempre recomendadas.
 
-> **Observação**   D3D\_FEATURE\_LEVEL\_9\_1 (correspondente ao modelo de sombreador 2.0) é o nível mínimo de suporte exigido para seu jogo da Windows Store. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
+> **Observação**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde ao modelo de sombreador 2.0) é o nível mínimo seu jogo da Microsoft Store é necessária para dar suporte. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
 
- 
+ 
 
 Direct3D 11
 
@@ -109,7 +108,7 @@ D3D11CreateDevice(
     creationFlags,
     featureLevels,
     ARRAYSIZE(featureLevels),
-    D3D11_SDK_VERSION, // Windows Store apps must set this to D3D11_SDK_VERSION.
+    D3D11_SDK_VERSION, // UWP apps must set this to D3D11_SDK_VERSION.
     &device, // Returns the Direct3D device created.
     nullptr,
     &context // Returns the device immediate context.
@@ -128,9 +127,9 @@ O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elem
 
 O dispositivo Direct3D implementa uma interface COM para DXGI. Primeiro precisamos obter essa interface e usá-la para solicitar o adaptador DXGI que hospeda o dispositivo. Depois, usamos o adaptador DXGI para criar uma fábrica DXGI.
 
-> **Observação**   Tratam-se de interfaces COM; por isso, como primeira resposta, é possível usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
+> **Observação**  elas são interfaces COM, portanto, sua primeira resposta pode ser usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -152,9 +151,9 @@ dxgiAdapter->GetParent(
 
 Agora que temos a fábrica DXGI, podemos usá-la para criar a cadeia de permuta. É hora de definir os parâmetros da cadeia de troca. Precisamos especificar o formato da superfície; escolheremos [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059)por ser compatível com Direct2D. Desativaremos a colocação da exibição em escala, a multiamostragem e a renderização estéreo, pois elas não são usadas neste exemplo. Como a execução é feita diretamente em uma CoreWindow, podemos deixar a largura e altura como 0 e obter os valores de tela inteira automaticamente.
 
-> **Observação**   Sempre defina o parâmetro *SDKVersion* de aplicativos UWP como D3D11\_SDK\_VERSION.
+> **Observação**  sempre defina o parâmetro *SDKVersion* como D3D11\_SDK\_VERSION para aplicativos UWP.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -172,9 +171,9 @@ swapChain.As(&m_swapChain);
 
 Para garantir que não estejamos realizando mais renderizações do que a tela pode exibir, definimos a latência de quadros como 1 e usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**   Você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) para dar continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
+> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -227,9 +226,9 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 Agora que temos um identificador de dispositivo e um destino de renderização em tela inteira, estamos prontos para carregar a geometria de desenho. Vá para a [parte 2: renderização](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md).
 
- 
+ 
 
- 
+ 
 
 
 

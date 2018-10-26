@@ -8,19 +8,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 863c5c2df20ba082265aeda2691bafae3e3fe691
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394095"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571625"
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
@@ -33,21 +31,21 @@ A pesquisa é uma das principais maneiras para os usuários encontrarem conteúd
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
 
-**Entrada.**  Texto é o modo mais comum de entrada de pesquisa e o foco destas diretrizes. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
+**Entrada.** é o modo mais comum de entrada de pesquisa de texto e é o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
 
-**Entrada zero.**  Depois que o usuário tiver ativado o campo de entrada, mas antes de ter inserido texto, você pode exibir o que é chamado de "tela de entrada zero". A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
+**Entrada de zero.** Depois que o usuário tiver ativado o campo de entrada, mas antes do usuário ter inserido texto, você pode exibir o que é chamado uma "tela de entrada zero." A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
 
 ![exemplo da Cortana em uma tela de entrada zero](images/search-cortana-example.png)
 
- 
+ 
 
-**Formulação de consulta/sugestão automática.**  A formulação de consulta substitui o conteúdo de entrada zero assim que o usuário começa a inserir a entrada. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
+**Consulta formulação/sugestão automática.** Consulta formulação substitui o conteúdo de entrada zero assim que o usuário começa a inserir a entrada. Conforme o usuário insere uma cadeia de caracteres de consulta, é fornecido um conjunto atualizado continuamente de sugestões de consulta ou opções de desambiguação para ajudar a acelerar o processo de entrada e formular uma consulta eficiente. Esse comportamento de sugestões de consulta é incorporado ao [controle de sugestão automática](auto-suggest-box.md), e também é uma maneira de mostrar o ícone dentro da pesquisa (como um ícone de microfone ou de confirmação). Qualquer comportamento que não se enquadre é atribuído ao aplicativo.
 
 ![example of query/formulation sugestão automática](images/search-autosuggest-example.png)
 
- 
+ 
 
-**Conjunto de resultados.**  Os resultados de pesquisa normalmente aparecem diretamente abaixo do campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
+**Conjunto de resultados.** Resultados de pesquisa normalmente aparecem diretamente abaixo do campo de entrada de pesquisa. Embora isso não seja um requisito, a justaposição de entrada e resultados mantém o contexto e fornece acesso imediato ao usuário para editar a consulta anterior ou inserir uma nova consulta. Essa conexão pode ser ainda mais comunicada substituindo o texto de dica pela consulta que criou o conjunto de resultados.
 
 Um método para permitir acesso eficiente para editar a consulta anterior e inserir uma nova consulta é realçar a consulta anterior quando o campo for reativado. Dessa forma, qualquer pressionamento de tecla substituirá a cadeia de caracteres anterior, mas a cadeia de caracteres será mantida para que o usuário possa posicionar o cursor para editar ou acrescentar a cadeia de caracteres anterior.
 
@@ -60,11 +58,11 @@ A pesquisa é um recurso comum, e os usuários encontrarão interface do usuári
 
 Alguns escopos comuns da pesquisa incluem:
 
-**Global** e **contextual/refinado.**  Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+**Global** e **contextuais/refinadas.** Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
-**Web.**  Pesquisa um índice da Web. Os resultados incluem páginas, entidades e respostas.
+**Web.** Pesquisa um índice da web. Os resultados incluem páginas, entidades e respostas.
 
-**Meu conteúdo.**  Pesquisa dispositivo(s), nuvem, gráficos de redes sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
+**Meu conteúdo.** Pesquisa em todos os dispositivos, nuvem, gráficos de redes sociais e muito mais. Os resultados variam, mas são restringidos pela conexão à(s) conta(s) de usuário.
 
 Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
@@ -80,7 +78,7 @@ Use o texto de dica para comunicar o escopo da pesquisa. Os exemplos incluem:
 
 ![exemplo de texto de dica de pesquisa](images/search-windowsandweb.png)
 
- 
+ 
 
 Ao comunicar efetivamente o escopo de um ponto de entrada de pesquisa, você pode ajudar a garantir que a expectativa do usuário seja atendida pelos recursos da pesquisa realizada e a reduzir a possibilidade de frustração.
 
@@ -93,13 +91,13 @@ Antes de clicar no ícone de pesquisa:
 
 ![example of a search icon e collapsed search box](images/search-icon-collapsed.png)
 
- 
+ 
 
 Depois de clicar no ícone de pesquisa:
 
 ![example of a search icon e expeed search box](images/search-icon-expanded.png)
 
- 
+ 
 
 A pesquisa sempre usa um glifo de lupa apontando para a direita para o ponto de entrada. O glifo que deve ser usado é Segoe UI Symbol, código de caracteres hexadecimais 0xE0094 e tamanho da fonte geralmente de 15 epx.
 
@@ -120,19 +118,19 @@ Pesquisa como uma ação na barra de ferramentas do Windows:
 
 ![um exemplo de pesquisa como uma ação na barra de ferramentas do Windows](images/search-toolbar-action.png)
 
- 
+ 
 
 Pesquisa como uma entrada na tela do aplicativo:
 
 ![exemplo de pesquisa em uma tela de aplicativo](images/search-canvas-contacts.png)
 
- 
+ 
 
 Pesquisa em um painel de navegação:
 
 ![exemplo de pesquisa em um menu de navegação](images/search-navmenu.png)
 
- 
+ 
 
 A pesquisa embutida é mais adequada para casos em que a pesquisa é acessada com pouca frequência ou é altamente contextual:
 
@@ -177,25 +175,25 @@ Fornece uma maneira fácil de acessar o recurso de localização na página. Nes
 
 ![exemplo de localização na página 1](images/findinpage-01.png)
 
- 
+ 
 
 Depois de selecionar localizar na página, o usuário insere um termo de pesquisa. Sugestões de texto podem aparecer quando um termo de pesquisa está sendo inserido:
 
 ![exemplo de localização na página 2](images/findinpage-02.png)
 
- 
+ 
 
 Se não houver uma correspondência de texto na pesquisa, uma cadeia de caracteres de texto "Nenhum resultado" deve aparecer na caixa de resultados:
 
 ![exemplo de localização na página 3](images/findinpage-03.png)
 
- 
+ 
 
 Se houver uma correspondência de texto na pesquisa, o primeiro termo deverá ser destacado em uma cor distinta, com as próximas correspondências em um tom mais sutil dessa mesma paleta de cores, como visto neste exemplo:
 
 ![exemplo de localização na página 4](images/findinpage-04.png)
 
- 
+ 
 
 Localizar na página tem um contador de correspondência:
 
@@ -219,6 +217,6 @@ Para obter mais informações sobre como adicionar comandos à sua barra de coma
 * [Caixa de sugestão automática](auto-suggest-box.md)
 
 
- 
+ 
 
- 
+ 

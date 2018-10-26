@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d4a5e5a9fa656737ae86451a38a00edbe99c92
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9bbb723cc039d6ecca8a5ebcd30ef03559076934
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652445"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570826"
 ---
 # <a name="light-mapping-with-textures"></a>Mapeamento de luzes com texturas
 
 
-Um mapa de luz é uma textura ou um grupo de texturas que contém informações sobre a iluminação em uma cena 3D. Os mapas de luz mapeiam áreas de luz e sombra em primitivos. A passagem múltipla e a mesclagem de textura múltipla permitem que o app renderize cenas com uma aparência mais realista em comparação às técnicas de sombreamento.
+Um mapa de luz é uma textura ou um grupo de texturas que contém informações sobre iluminação em uma cena 3D. Os mapas de luz mapeiam áreas de luz e sombra em primitivos. A passagem múltipla e a mesclagem de textura múltipla permitem que o app renderize cenas com uma aparência mais realista em comparação às técnicas de sombreamento.
 
 Para um app renderizar uma cena 3D de forma realista, ele deve considerar o efeito que as fontes de luz tem sobre a aparência da cena. Embora as técnicas como sombreamento simples e de Gouraud sejam ferramentas valiosas nesse sentido, elas podem ser insuficientes para suas necessidades. O Direct3D oferece suporte à passagem múltipla e à mesclagem de textura múltipla. Esses recursos permitem que o app renderize cenas com uma aparência mais realista do que as cenas renderizadas somente com técnicas de sombreamento. Ao aplicar um ou mais mapas de luz, o app pode mapear áreas de luz e sombra nos primitivos.
 
@@ -69,16 +67,16 @@ As informações sobre o uso da mistura de textura do Direct3D para executar o m
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

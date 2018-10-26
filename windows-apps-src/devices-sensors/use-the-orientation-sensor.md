@@ -6,21 +6,19 @@ description: Saiba como usar os sensores de orientação para determinar a orien
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a9270ba675b0797344d3370aec433de90d80d5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 49199a91f6713b3f18928eaafb6875a49deaf451
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958881"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570670"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar o sensor de orientação
 
 
-**APIs importantes**
+**APIs Importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
@@ -48,7 +46,7 @@ A API do [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve estar familiarizado com a linguagem XAML, o Microsoft Visual C# e eventos.
+Você deve estar familiarizado com Extensible Application Markup Language (XAML), Microsoft VisualC c# e eventos.
 
 O dispositivo ou emulador que você estiver usando deve ser compatível com um sensor de orientação.
 

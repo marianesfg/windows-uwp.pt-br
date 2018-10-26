@@ -6,19 +6,18 @@ ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, retomar, directx
-ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199271"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571385"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Como retomar um aplicativo (DirectX e C++)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico mostra como restaurar dados importantes do aplicativo quando o sistema retoma o aplicativo UWP (Plataforma Universal do Windows) DirectX.
 
@@ -96,9 +95,9 @@ O sistema suspende o aplicativo sempre que o usuário alterna para outro aplicat
 * [Como suspender um aplicativo (DirectX e C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [Como ativar um aplicativo (DirectX e C++)](how-to-activate-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

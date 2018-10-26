@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4525cf151d53790a44995bd8a8dd77a88332cdd0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d02bfb8b8bd112a969895d4f2bd5d324fce9d6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673443"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567638"
 ---
 # <a name="periodic-notification-overview"></a>Visão geral de notificações periódicas
  
@@ -29,9 +27,9 @@ Notificações periódicas, que são chamadas também de notificações de sonda
 
 As notificações periódicas permitem que seu aplicativo obtenha atualizações de bloco em tempo real com serviço de nuvem mínimo e pouco investimento do cliente. As notificações periódicas são um método de entrega excelente para distribuir o mesmo conteúdo a uma ampla audiência.
 
-**Observação**   Você pode saber mais baixando o [Exemplo de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando o código-fonte em seu aplicativo do Windows 10.
+**Observação**  você pode saber mais baixando a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizando seu código-fonte em seu aplicativo do Windows 10.
 
- 
+ 
 
 ## <a name="how-it-works"></a>Como funciona
 
@@ -110,4 +108,4 @@ Você deve fornecer um URI exclusivo para cada notificação que quiser que o Wi
 * [Diretrizes para notificações periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
 * [Como configurar notificações periódicas para selos](https://msdn.microsoft.com/library/windows/apps/hh761476)
 * [Como configurar notificações periódicas para blocos](https://msdn.microsoft.com/library/windows/apps/hh761476)
- 
+ 

@@ -6,19 +6,18 @@ ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
-ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 05549b0f3696067689f7e8fbd05dfb0f8f1bb528
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199375"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567950"
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Portar do DirectX 9 para a Plataforma Universal do Windows (UWP)
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta seção inclui artigos, visões gerais e guias passo a passo para a portabilidade de jogos em DirectX 9 para a Plataforma Universal do Windows (UWP).
 
@@ -36,9 +35,9 @@ Esta seção inclui artigos, visões gerais e guias passo a passo para a portabi
 -   Consulte o artigo [Portabilidade de um aplicativo simples em Direct3D 9 para o DirectX 11 e a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md) passo a passo para ver uma comparação direta das estruturas de elementos gráficos do Direct3D 9 e do Direct3D 11. Esse guia também possui códigos para configurar a janela e o visor de um aplicativo.
 -   Veja as [perguntas frequentes de portabilidade do DirectX 11](directx-porting-faq.md) para ver respostas de perguntas comuns sobre a portabilidade do DirectX 9.
 
- 
+ 
 
- 
+ 
 
 
 

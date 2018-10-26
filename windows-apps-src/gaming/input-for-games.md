@@ -6,16 +6,14 @@ ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 26510cac6e4d42ee5eb36a7ae09c9c1518b47089
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300172"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571180"
 ---
 # <a name="input-for-games"></a>Entrada para jogos
 
@@ -45,17 +43,17 @@ Volantes de corrida são dispositivos de entrada que reproduzem a sensação do 
 
 Para obter informações sobre como usar volantes de corrida no jogo UWP, consulte [Volante de corrida e force feedback](racing-wheel-and-force-feedback.md).
 
-### <a name="flight-sticks"></a>Cartões de aéreas
+### <a name="flight-sticks"></a>Joysticks de pré-lançamento
 
-Cartões de aéreas são dispositivos de entrada de jogos que reproduza a sensação de cartões aéreas que seria encontrado em um avião ou cabine do espaçonave. Eles são o dispositivo de entrada perfeito para um controle de voo rápido e preciso.
+Manches são dispositivos de entrada de jogos que reproduzir a sensação de manches que seriam encontrados em um avião ou cockpit de reprodução. Eles são o dispositivo de entrada perfeito para um controle de voo rápido e preciso.
 
-Para obter mais informações sobre como usar cartões aéreas no jogo UWP, consulte [pente aéreas](flight-stick.md).
+Para obter mais informações sobre como usar manches no jogo UWP, consulte o [simulador de voo](flight-stick.md).
 
-### <a name="raw-game-controllers"></a>Controladores de jogo brutos
+### <a name="raw-game-controllers"></a>Controladores de jogo bruto
 
 Um controlador de jogo bruto é uma representação genérica de um controlador de jogo, com entradas encontradas em vários tipos diferentes de controladores de jogos comuns. Essas entradas são expostas como matrizes simples de botões, comutadores e eixos sem nome. Usando um controlador de jogo bruto, você pode permitir que os clientes criem mapeamentos de entrada personalizados, não importando o tipo de controlador que eles estejam usando.
 
-Para obter mais informações sobre como usar os controladores de jogo brutos no jogo UWP, consulte [bruto controlador de jogo](raw-game-controller.md).
+Para obter mais informações sobre como usar controladores de jogo bruto em seu jogo UWP, consulte o [controlador de jogo bruto](raw-game-controller.md).
 
 ### <a name="ui-navigation-controllers"></a>Controladores de navegação da interface do usuário
 
@@ -79,4 +77,4 @@ Para obter informações sobre como gerenciar usuários e os dispositivos de ent
 
 * [Práticas de entrada para jogos](input-practices-for-games.md)
 * [Namespace Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Namespace Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Namespace Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)

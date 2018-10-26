@@ -1,35 +1,33 @@
 ---
 author: drewbatgit
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
+description: Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
 title: Extensão de Mídia Criptografada do PlayReady
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a8cc35115b2805b2191424edca671c53c252c549
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: medium
+ms.openlocfilehash: b73464ea10aa835b82df17605e983ebdfb9cd890
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2017
-ms.locfileid: "907144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570090"
 ---
 # <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Esta seção descreve como modificar seu aplicativo Web PlayReady para oferecer suporte às alterações feitas na versão do Windows 8.1 anterior para a versão do Windows 10.
+Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
 
 O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um aplicativo Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus aplicativos Web existentes usando somente HTML5 e JavaScript.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>Novidades na extensão de mídia criptografada do PlayReady
 
-Esta seção oferece uma lista de alterações feitas à Extensão de mídia criptografada (EME) do PlayReady para habilitar proteção de conteúdos PlayReady no Windows 10.
+Esta seção fornece uma lista das alterações feitas à extensão de mídia criptografada do PlayReady (EME) para habilitar a proteção de conteúdo PlayReady no Windows 10.
 
-A lista a seguir descreve os novos recursos e alterações feitas à Extensão de mídia criptografada do PlayReady para Windows 10:
+A lista a seguir descreve os novos recursos e as alterações feitas à extensão de mídia criptografada do PlayReady para Windows 10:
 
 -   Inclusão do gerenciamento de direitos digitais (DRM) de hardware
 
@@ -38,7 +36,7 @@ A lista a seguir descreve os novos recursos e alterações feitas à Extensão d
 -   Fornece aquisição proativa de licenças não persistentes.
 -   Fornece a aquisição de várias licenças em uma mensagem.
 
-    Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1 ou [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
+    Você pode usar um objeto PlayReady com vários identificadores-chave (KeyIDs) como no Windows 8.1, ou usar [dados de modelo de descriptografia de conteúdo (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) com várias KeyIDs.
 
     > [!NOTE]
     > No Windows 10, vários identificadores-chave são suportados em &lt;KeyID&gt; em CDMData.
@@ -270,7 +268,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Considerações sobre a programação de Extensão de mídia criptografada
 
-Esta seção lista as considerações sobre programação que devem ser levadas em conta ao criar aplicativo Web habilitado para PlayReady para Windows 10.
+Esta seção lista as considerações de programação que você deve levar em consideração ao criar seu aplicativo web habilitado para PlayReady para Windows 10.
 
 Os objetos **MSMediaKeys** e **MSMediaKeySession** criados pelo seu aplicativo devem ser mantidos ativos até o seu aplicativo encerrar. Uma maneira de garantir que esses objetos fiquem ativos é atribuí-los como variáveis globais (as variáveis ficariam fora do escopo e sujeitas à coleta de lixo se declaradas como uma variável local dentro de uma função). Por exemplo, a amostra a seguir atribui as variáveis *g\_msMediaKeys* e *g\_mediaKeySession* como globais, que são, então, atribuídas aos objetos **MSMediaKeys** e **MSMediaKeySession** na função.
 

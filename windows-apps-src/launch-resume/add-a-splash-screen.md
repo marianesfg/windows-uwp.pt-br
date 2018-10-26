@@ -6,16 +6,14 @@ ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
 ms.author: twhitney
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6cff7ce434e219b0d502f384d202c3b708479a
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1861885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570895"
 ---
 # <a name="add-a-splash-screen"></a>Adicionar uma tela inicial
 
@@ -41,11 +39,11 @@ Quando você usa um modelo do Visual Studio para criar o seu aplicativo, uma ima
 
 4. Para selecionar uma nova imagem de tela inicial para um aplicativo UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**  A imagem de tela inicial que você escolher deve ter 620 x 300 pixels usando um fator de escala 1x. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Store do Windows Phone faz.
+    **Importante**imagem da tela inicial que você escolher deve ser 620 x 300 pixels usando 1X fator de escala. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Store do Windows Phone faz.
 
 5. Para selecionar uma nova imagem de tela inicial para um aplicativo da Store do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**  A imagem de tela inicial que você escolher deve ter 1152 x 1920 pixels, que é o tamanho correto para um fator de escala 2,4x. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
+    **Importante**imagem da tela inicial que você escolher deve ter 1152 x 1920 pixels que é o tamanho correto para um 2,4 x fator de escala. Se esse for o único ativo que você fornecer, então, ele será reduzido para os fatores de dimensionamento 1,4 x e 1x.
 
 6. No campo **Cor da tela de fundo** na seção **Tela inicial**, defina a cor da tela de fundo exibida na imagem da sua tela inicial. Você pode inserir o nome de uma cor ou '\#' and e o valor hex. de uma cor. Para uma lista de nomes de cores disponíveis, consulte [**elemento SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467). Definir uma cor da tela de fundo para sua tela de inicial é opcional. Se você não especificar uma cor para um aplicativo UWP, a cor da tela de fundo da tela inicial fica padroniza-se em cinza claro (valor hex. \#464646). Essa é a mesma cor que a cor da tela de fundo do **Bloco** (consulte o campo **Cor da tela de fundo** da seção **Imagens e logotipos do bloco** na guia **Ativos visuais**). Se você não especificar uma cor para um aplicativo do Windows Phone, ou configurá-lo como "transparente", a cor de tela de fundo da tela inicial será transparente.
 

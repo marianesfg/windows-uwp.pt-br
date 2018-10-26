@@ -6,15 +6,13 @@ keywords: UWP, Windows 10, texto, escrita, voz, tom, design, interface do usuár
 ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a2feb7f21f9a307632b08714ff617a4ce3aa649
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 8022b3bb5ca312be259c554f46dc9f432ea3caeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843286"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571481"
 ---
 # <a name="writing-style"></a>Estilo de escrita
 
@@ -42,25 +40,46 @@ Na maioria das vezes, o texto não é o foco de um aplicativo. Ele existe para o
 
 Os usuários devem ser capazes de ler e entender o texto rapidamente. Não preencha com apresentações desnecessárias. Dê mais espaço aos pontos-chave e sempre apresente a ideia principal antes de adicionar mais elementos.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) Selecione **filtros** para adicionar efeitos a sua imagem.
-:::fim da coluna::: :::coluna::: ![Não fazer](images/dont.svg) Se você deseja adicionar efeitos visuais ou alterações à sua imagem, selecione **filtros.**
-:::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Select **filters** to add effects to your image.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        If you want to add visual effects or alterations to your image, select **filters.**
+    :::column-end:::
+:::row-end:::
 
 ## <a name="emphasize-action"></a>Enfatizar a ação
 
 Os aplicativos são definidos por ações. Os usuários agem quando usam o aplicativo e este age respondendo ao usuário. Verifique se o texto usa a *voz ativa* no aplicativo inteiro. Na descrição, as funções e as pessoas devem ser descritas com um papel ativo na execução das ações e não o contrário.
 
-:::linha::: :::coluna::: ![Fazer:](images/do.svg) reinicie o aplicativo para ver as alterações.
-:::fim da coluna::: :::coluna::: ![Não fazer](images/dont.svg) As alterações serão aplicadas quando o aplicativo for reiniciado.
-:::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Restart the app to see your changes.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        The changes will be applied when the app is restarted.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="short-and-sweet"></a>Curto e direto
 
 Os usuários leem o texto e frequentemente ignoram blocos maiores de palavras inteiramente. Não sacrifique informações necessárias e a apresentação, mas não use mais palavras do que o necessário. Às vezes, isso significa depender de frases ou fragmentos menores. Outras vezes, isso significa ser mais seletivo com as palavras e a estrutura das frases.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) Não foi possível enviar a imagem. Se ocorrer novamente, tente reiniciar o aplicativo. Mas não se preocupe, sua foto estará esperando por você.
-:::fim da coluna::: :::coluna::: ![Não fazer](images/dont.svg) Ocorreu um erro e não conseguimos carregar a imagem. Tente novamente e, se você encontrar esse problema novamente, talvez seja necessário reiniciar o aplicativo. Mas não se preocupe, salvamos o trabalho localmente e ele estará esperando por você quando voltar.
-:::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't upload the picture. If this happens again, try restarting the app. But don't worry — your picture will be waiting when you come back.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        An error occured, and we weren't able to upload the picture. Please try again, and if you encounter this problem again, you may need to restart the app. But don't worry — we've saved your work locally, and it'll be waiting for you when you come back.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="style-conventions"></a>Convenções de estilo
 
@@ -73,8 +92,14 @@ Fale diretamente com o usuário.
 * Use "nós" para fazer referência a sua própria perspectiva. Isso é reconfortante e ajuda o usuário a sentir-se como parte da experiência.
 * Não use "eu" ou "meu" para se referir à perspectiva do aplicativo, mesmo se você for o único a criá-lo.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) Não foi possível salvar seu arquivo neste local.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't save your file to that location.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="abbreviations"></a>Abreviações
 
@@ -84,8 +109,14 @@ Fale diretamente com o usuário.
 * Não use abreviações muito semelhantes entre si.
 * Não use abreviações se estiver localizando seu aplicativo ou se os usuários falam inglês como um segundo idioma.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) As orientações sobre design da Plataforma Universal do Windows (UWP) são um recurso que ajuda você a projetar e criar aplicativos belos e refinados. Com os recursos de design que estão incluídos em cada aplicativo UWP, você pode criar interfaces do usuário (UI) que sejam dimensionadas em uma ampla variedade de dispositivos.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        The Universal Windows Platform (UWP) design guidance is a resource to help you design and build beautiful, polished apps. With the design features that are included in every UWP app, you can build user interfaces (UI) that scale across a range of devices.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="contractions"></a>Contrações
 
@@ -93,8 +124,14 @@ As pessoas estão acostumadas com contrações e esperam vê-las. Ao evitar o us
 * Use contrações quando soarem naturais no texto.
 * Não use contrações não naturais apenas para economizar espaço ou quando tornam suas palavras menos conversacionais.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) Quando estiver satisfeito com sua imagem, selecione **salvar** para adicioná-la à galeria. Lá, você poderá compartilhá-la com amigos.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        When you're happy with your image, select **save** to add it to your gallery. From there, you'll be able to share it with friends.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="periods"></a>Períodos
 
@@ -102,12 +139,18 @@ As pessoas estão acostumadas com contrações e esperam vê-las. Ao evitar o us
 * Use pontos para encerrar frases completas em dicas de ferramentas, mensagens de erro e caixas de diálogo.
 * Não encerre o texto de botões, botões de opção, rótulos ou caixas de seleção com um ponto.
 
-::: linha:::::: coluna::: ![Fazer](images/do.svg) <b>Você não está conectado.</b>
-* Verifique se os cabos de rede estão conectados.
-* Verifique se você não ativou o modo avião.
-* Veja se o switch sem fio está ligado.
-* Reinicie o roteador.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="capitalization"></a>Uso de maiúsculas
 
@@ -115,11 +158,17 @@ Letras maiúsculas são importantes, mas são fáceis de usar em excesso.
 * Coloque os substantivos em letras maiúsculas.
 * Coloque em maiúsculas o início de cada cadeia de caracteres de texto em seu aplicativo: o início de cada frase, o rótulo e o título.
 
-:::linha::: :::coluna::: ![Fazer](images/do.svg) <b>Qual parte gera mais problemas?</b>
-* Esqueci minha senha.
-* Ele não aceita minha senha.
-* Alguém pode estar usando minha conta.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>Which part is giving you trouble?</b>
+        * I forgot your password.
+        * It won't accept password.
+        * Someone else might be using my account.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="error-messages"></a>Mensagens de erro
 
@@ -133,16 +182,24 @@ Mais do que qualquer outra coisa, é importante que sua mensagem de erro não cu
 
 * **Seja claro e preciso** eliminando informações em excesso.
 
-::: linha:::::: coluna::: ![Fazer](images/do.svg) <b>Você não está conectado.</b>
-* Verifique se os cabos de rede estão conectados.
-* Verifique se você não ativou o modo avião.
-* Veja se o switch sem fio está ligado.
-* Reinicie o roteador.
-:::final da coluna::: :::coluna::: :::fim da coluna::: :::fim da linha::: 
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end::: 
 
 ## <a name="dialogs"></a>Caixas de diálogo
 
-:::linha::: :::coluna::: Muitos dos mesmos conselhos para escrever mensagens de erro também se aplicam à criação do texto para todas as caixas de diálogo do aplicativo. Embora as caixas de diálogo sejam esperadas pelo usuário, elas ainda interrompem o fluxo normal do aplicativo e devem ser úteis e concisas para que o usuário possa voltar ao que estava fazendo.
+:::row:::
+    :::column:::
+        Many of the same advice for writing error messages also applies when creating the text for any dialogs in your app. While dialogs are expected by the user, they still interrupt the normal flow of the app, and need to be helpful and concise so the user can get back to what they were doing.
 
         But most important is the "call and response" between the title of a dialog and its buttons. Make sure that your buttons are clear answers to the question posed by the title, and that their format is consistent across your app.
     :::column-end:::
@@ -153,13 +210,21 @@ Mais do que qualquer outra coisa, é importante que sua mensagem de erro não cu
         2. It won't accept my password
         3. Someone else might be using my account
     :::column-end:::
-:::fim da linha:::
+:::row-end:::
 
 ## <a name="buttons"></a>Botões
 
-:::linha::: :::coluna::: O texto nos botões deve ser conciso o suficiente para que os usuários possam ler tudo em uma olhada e de forma clara o suficiente para que a função do botão seja imediatamente óbvia. O texto em um botão nunca deve ter mais do que algumas palavras curtas, e muitos devem ser menores do que isso.
-Ao escrever o texto para os botões, lembre-se de que cada um representa uma ação. Certifique-se de usar a *voz ativa* no texto do botão, de usar palavras que representam ações em vez de reações.
-:::fim da coluna::: :::coluna::: ![Fazer](images/do.svg) * Instalar agora * Compartilhar :::fim da coluna::: :::fim da linha:::
+:::row:::
+    :::column:::
+        Text on buttons needs to be concise enough that users can read it all at a glance and clear enough that the button's function is immediately obvious. The longest the text on a button should ever be is a couple short words, and many should be shorter than that.
+        When writing the text for buttons, remember that every button represents an action. Be sure to use the *active voice* in button text, to use words that represent actions rather than reactions.
+    :::column-end:::
+    :::column:::
+        ![Do](images/do.svg)
+        * Install now
+        * Share
+    :::column-end:::
+:::row-end:::
 
 ## <a name="spoken-experiences"></a>Experiências faladas
 

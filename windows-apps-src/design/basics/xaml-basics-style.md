@@ -6,15 +6,13 @@ keywords: XAML, UWP, Introdução
 ms.author: mijacobs
 ms.date: 08/31/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45510b8129a69641fdb64c13939ccb9b4376a654
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 11f279de206a84e61144789ba43a268f2b896fee
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674943"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570184"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Criar estilos personalizados
 
@@ -28,7 +26,7 @@ O ponto de partida deste laboratório é o repositório de exemplos do PhotoLab,
 
 O app PhotoLab tem duas páginas principais:
 
-**MainPage. XAML:** exibe uma exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
+**MainPage.xaml:** exibe o modo de exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
 ![MainPage](../basics/images/xaml-basics/mainpage.png)
 
 **DetailPage.xaml:** exibe uma única foto após ela ter sido selecionada. Um menu de edição de submenu permite que a foto seja alterada, renomeada e salva.
@@ -64,8 +62,7 @@ O controle deslizante de exposição ajusta a exposição da imagem: deslize-o p
 
     O [namespace do Windows.XAML.Ui.Shapes](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes) oferece sete formas para você escolher. Há uma elipse, um retângulo e um elemento chamado Path, que pode criar qualquer tipo de forma; sim, até mesmo um unicórnio! 
     
-    <!-- TODO reduce size -->
-    ![Um unicórnio](../basics/images/xaml-basics/unicorn.png)
+    <!-- TODO reduce size --> ![Um unicórnio](../basics/images/xaml-basics/unicorn.png)
     
     > **Leia sobre isso.** O artigo sobre [formas de desenho](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) explica tudo o que você precisa saber sobre as formas XAML. 
     

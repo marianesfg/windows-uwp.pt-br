@@ -6,15 +6,13 @@ keywords: XAML, UWP, Introdução
 ms.author: jimwalk
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ddf4bacbc07eb6d7faccc1a4de2638f7219b562
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: 5d54df07cd5f2ccc32098b17fd7c656900cba978
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1639136"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570935"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Criar uma interface do usuário
 
@@ -43,7 +41,7 @@ A **página de detalhes**, exibe uma única foto após ela ter sido selecionada.
 
 Para este tutorial, você iniciará com uma versão simplificada do exemplo do PhotoLab. 
 
-1. Acesse [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Isso levará você para a página do GitHub para ver o exemplo. 
+1. Vá para [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Isso levará você para a página do GitHub para ver o exemplo. 
 2. Em seguida, você precisará clonar ou baixar a amostra. Clique no botão **Clonar ou download**. Um submenu aparece.
     <figure>
         <img src="images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
@@ -53,12 +51,12 @@ Para este tutorial, você iniciará com uma versão simplificada do exemplo do P
     **Se você não estiver familiarizado com o GitHub:**
     
     a. Clique em **Baixar ZIP** e salve o arquivo localmente. Isso baixa um arquivo .zip que contém todos os arquivos de projeto de que você precisa.
-    b. Extraia o arquivo. Use o Explorador de Arquivos para navegar até o arquivo .zip que você acabou de baixar, clique com o botão direito e selecione **Extrair Tudo...** c. Navegue até sua cópia local da amostra e acesse o diretório `Windows-appsample-photo-lab-master\xaml-basics-starting-points\user-interface`.    
+    b. Extraia o arquivo. Use o Explorador de Arquivos para navegar até o arquivo .zip que você acabou de baixar, clique com o botão direito e selecione **Extrair Tudo...** c. Navegue até sua cópia local do exemplo e acesse o diretório `Windows-appsample-photo-lab-master\xaml-basics-starting-points\user-interface`.    
 
     **Se você estiver familiarizado com o GitHub:**
 
     a. Clone a ramificação mestre do repositório localmente.
-    b. Navegar até o diretório `Windows-appsample-photo-lab\xaml-basics-starting-points\user-interface`.
+    b. Navegue até o diretório `Windows-appsample-photo-lab\xaml-basics-starting-points\user-interface`.
 
 3. Abra o projeto clicando em `Photolab.sln`.
 

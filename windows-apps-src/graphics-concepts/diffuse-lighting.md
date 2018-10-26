@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5846edda167823b7ae161d332fbde450ccf20d72
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044425"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572162"
 ---
 # <a name="diffuse-lighting"></a>Iluminação difusa
 
@@ -33,7 +31,7 @@ Iluminação difusa = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir
 
 | Parâmetro       | Valor padrão | Tipo          | Descrição                                                                                      |
 |-----------------|---------------|---------------|--------------------------------------------------------------------------------------------------|
-| soma             | N/A           | N/D           | Referência de cada componente difuso da luz.                                                     |
+| soma             | N/D           | N/D           | Referência de cada componente difuso da luz.                                                     |
 | C<sub>d</sub>   | (0,0,0,0)     | D3DCOLORVALUE | Cor difusa.                                                                                   |
 | L<sub>d</sub>   | (0,0,0,0)     | D3DCOLORVALUE | Cor difusa clara.                                                                             |
 | N               | N/D           | D3DVECTOR     | Normal de vértice                                                                                    |
@@ -41,7 +39,7 @@ Iluminação difusa = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir
 | Atten           | N/D           | FLUTUANTE         | Atenuação de luz. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md). |
 | Ponto            | N/D           | FLUTUANTE         | Fator de destaque. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).  |
 
- 
+ 
 
 Para calcular a atenuação (Atten) ou as características de destaque (ponto), consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).
 
@@ -73,9 +71,9 @@ A iluminação difusa é mais intensa para se calcular do que a iluminação amb
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

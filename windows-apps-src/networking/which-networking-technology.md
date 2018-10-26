@@ -6,16 +6,14 @@ title: Qual tecnologia de rede?
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 70ac6eb26c13d8fca3196fa64bfce2bb76f9d1b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 3c617f3ec6d189f3ee75fcf2fd0ff96d386ec32c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975598"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570481"
 ---
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
 
@@ -71,9 +69,9 @@ Use [HttpClient](httpclient.md) (e o restante da API namespace [**Windows.Web.Ht
 
 ## <a name="background-transfers"></a>Transferências em segundo plano
 
-Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e transferência que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de transferência se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para transferências.
+Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e transferência que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de transferência se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
 
-Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo é concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando uma transferência for concluída.
+Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo é concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
 
 ### <a name="when-to-use-background-transfers"></a>Quando usar transferências em segundo plano
 
@@ -131,7 +129,7 @@ A API [**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/libra
 
 ### <a name="mobile-operators"></a>Operadoras móveis
 
-O Windows 10 expõe para um público-alvo de desenvolvedores abrangente algumas APIs que só eram expostas a fabricantes de dispositivos e operadoras móveis. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
+Windows 10 expõe para um público de desenvolvedores algumas APIs que só eram expostos a fabricantes de dispositivos e operadoras móveis. Embora estejam expostas agora, essas APIs também são limitadas por recursos de aplicativo específicos que devem ser aprovados pela Microsoft para que um aplicativo possa ser publicado. O uso real dessas APIs continuará limitado principalmente a fabricantes de dispositivos e operadoras móveis.
 
 ### <a name="network-operations"></a>Operações de rede
 

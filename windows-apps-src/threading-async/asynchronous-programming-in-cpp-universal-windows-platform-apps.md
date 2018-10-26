@@ -1,27 +1,25 @@
 ---
 author: normesta
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe task definida no namespace concurrency em ppltasks.h.
+description: Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ /CX) usando a classe task definida no namespace concurrency em ppltasks.
 title: Programação assíncrona em C++
 ms.author: normesta
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, threads, assíncrono, C++
 ms.localizationpriority: medium
-ms.openlocfilehash: 869ba45929e015f27c5342af57da450f0b99b607
-ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
-ms.translationtype: HT
+ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "1921204"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571204"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programação assíncrona em C++/CX
 > [!NOTE]
 > Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows.
 
-Este artigo descreve a maneira recomendada para consumir métodos assíncronos em extensões de componente do Visual C++ (C++/CX) usando a classe `task` definida no namespace `concurrency` em ppltasks.h.
+Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ /CX) usando o `task` classe que é definido no `concurrency` namespace em ppltasks.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos assíncronos da Plataforma Universal do Windows (UWP)
 A Plataforma Universal do Windows (UWP) apresenta um modelo bem definido para chamar métodos assíncronos e fornece os tipos necessários para consumir esses métodos. Se você não estiver familiarizado com o modelo assíncrono UWP, leia [Programação Assíncrona][AsyncProgramming] antes de continuar a ler este artigo.
@@ -116,7 +114,7 @@ O exemplo anterior ilustra quatro pontos importantes:
 
 -   Como a segunda continuação é baseada em valores, se a operação que foi iniciada pela chamada a [**DeleteAsync**][deleteAsync] lançar uma exceção, a segunda continuação não será executada.
 
-**Observação**  A criação de uma cadeia da tarefa é apenas uma das maneiras de usar a classe **task** para compor operações assíncronas. Você também pode criar operações usando operadores de junção ou de opção **&&** e **||**. Para obter mais informações, consulte [Paralelismo de tarefas (Tempo de Execução de Simultaneidade)][taskParallelism].
+**Observação**criar uma cadeia da tarefa é apenas uma das maneiras de usar a classe **task** para compor operações assíncronas. Você também pode criar operações usando operadores de junção ou de opção **&&** e **||**. Para obter mais informações, consulte [Paralelismo de tarefas (Tempo de Execução de Simultaneidade)][taskParallelism].
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>Tipos de retorno da função lambda e tipos de retorno de tarefas
 Em uma continuação de tarefa, o tipo de retorno da função lambda é encapsulado em um objeto **task**. Se lambda retornar um **double**, então, o tipo de tarefa de continuação será **task<double>**. No entanto, o objeto task foi desenvolvido para que não produza tipos de retorno desnecessariamente aninhados. Se uma lambda retorna um **IAsyncOperation<SyndicationFeed^>^**, a continuação retorna um **task<SyndicationFeed^>** e não um **task<task<SyndicationFeed^>>** ou **task<IAsyncOperation<SyndicationFeed^>^>^**. Esse processo é conhecido como *não encapsulamento assíncrono* e assegura que a operação assíncrona dentro da continuação seja concluída antes que a próxima continuação seja invocada.

@@ -1,29 +1,27 @@
 ---
 author: TylerMSFT
 title: Iniciar o aplicativo da Microsoft Store
-description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar o esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas no repositório.
+description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas na loja.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b97e4da92a7cd4066ca555189f052e3e82006fe
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975648"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571937"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 
 
 
-Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar o esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas no repositório usando o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
+Este tópico descreve o esquema de URI **ms-windows-store:**. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo da Microsoft Store para páginas específicas na loja usando o método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
-Este exemplo mostra como abrir o repositório para a página de jogos:
+Este exemplo mostra como abrir o armazenamento para a página de jogos:
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
@@ -139,6 +137,6 @@ Inicia uma pesquisa para a consulta especificada. São permitidos espaços na co
 </tr>
 </table>
 
- 
+ 
 
- 
+ 
