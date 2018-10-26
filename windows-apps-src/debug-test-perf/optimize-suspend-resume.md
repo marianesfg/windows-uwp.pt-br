@@ -6,19 +6,17 @@ description: Crie apps da Plataforma Universal do Windows (UWP) que agilizem o u
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f9e045c381fc6c51a769be31403114ad15cf06bd
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 4cbaa56f9c25c0e4ea1f10c79b4f7d1100748532
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894682"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562018"
 ---
 # <a name="optimize-suspendresume"></a>Otimizar suspensão/retomada
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crie aplicativos da Plataforma Universal do Windows (UWP) que agilizem o uso do sistema de tempo de vida de processo para continuar de modo eficiente após suspensão ou término.
 
@@ -90,9 +88,9 @@ A maioria dos aplicativos precisa manipular o evento [**Resuming**](https://msdn
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Diretrizes para suspensão e retomada de aplicativo](https://msdn.microsoft.com/library/windows/apps/Hh465088)
- 
+ 
 
- 
+ 
 
 
 

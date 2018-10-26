@@ -6,16 +6,14 @@ description: Os serviços do Ponto de Extremidade de Associação (AEP) oferecem
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e204da16edd438b045fb753dca538e7fdeaa5a5f
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 5f103ee3c281ca95abcaee76cdc6f88b74a49eb1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690272"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563221"
 ---
 # <a name="aep-service-class-ids"></a>IDs de classe de serviço AEP
 
@@ -74,7 +72,7 @@ O protocolo Bluetooth oferece suporte a vários serviços, todos seguindo o mesm
 | GATT - Dados de usuário                     | **181C0000-0000-1000-8000-00805F9B34FB** |
 | GATT - Balança                  | **181D0000-0000-1000-8000-00805F9B34FB** |
 
- 
+ 
 
 Para uma lista mais completa de serviços Bluetooth disponíveis, consulte as páginas de protocolo e serviço de Bluetooth [aqui](http://go.microsoft.com/fwlink/p/?LinkID=619586) e [aqui](http://go.microsoft.com/fwlink/p/?LinkID=619587). Você também pode usar a API [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) para obter alguns serviços GATT comuns.
 
@@ -105,7 +103,7 @@ Em geral, todos os serviços UPnP têm seus nomes com hash em um GUID usando o a
 | Diretório de conteúdo                  | **89e701dd-0597-5279-a31c-235991d0db1c**  |
 | DIAL                               | **085dfa4a-3948-53c7-a0d7-16d8ec26b29b**  |
 
- 
+ 
 
 ## <a name="wsd-services"></a>Serviços WSD
 
@@ -118,7 +116,7 @@ Em geral, todos os serviços WSD têm seus nomes com hash em um GUID usando o al
 | Impressora      | **65dca7bd-2611-583e-9a12-ad90f47749cf** |
 | Scanner      | **56ec8b9e-0237-5cae-aa3f-d322dd2e6c1e** |
 
- 
+ 
 
 ## <a name="aqs-sample"></a>Amostra de AQS
 
@@ -129,6 +127,6 @@ System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" A
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D7-16D8EC26B29B}"
 ```
 
- 
+ 
 
- 
+ 

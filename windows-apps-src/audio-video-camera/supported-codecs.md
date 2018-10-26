@@ -6,16 +6,14 @@ title: Codecs compatíveis
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50d520437f9be9d2e2bc6fe8243c3d34b17ef2d9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 57a604b1b3996019bcf6e39bc88c9a59a74cb51c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "303672"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562831"
 ---
 # <a name="supported-codecs"></a>Codecs compatíveis
 
@@ -30,7 +28,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 > [!NOTE] 
 > Onde suporte a AMR-NB é indicado, este codec não tem suporte em SKUs de servidor.
 
- 
+ 
 
 ### <a name="desktop"></a>Desktop
 
@@ -341,7 +339,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="mobile"></a>Dispositivos móveis
 
@@ -652,7 +650,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-x86"></a>IoT Core (x86)
 
@@ -963,7 +961,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-arm"></a>IoT Core (ARM)
 
@@ -1274,7 +1272,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xbox"></a>XBox
 
@@ -1585,7 +1583,7 @@ As tabelas a seguir mostram o codec de áudio e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="video-codec--format-support"></a>Suporte ao codec e ao formato de vídeo
 
@@ -1595,7 +1593,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 > Onde suporte a H.265 é indicado, ele não tem necessariamente suporte em todos os dispositivos dentro da família de dispositivos.
 > Onde suporte a MPEG-2/MPEG-1 é indicado, ele tem suporte somente com a instalação do Aplicativo Universal do Windows de DVD opcional da Microsoft.
 
- 
+ 
 
 ### <a name="desktop"></a>Desktop
 
@@ -1814,7 +1812,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="mobile"></a>Dispositivos móveis
 
@@ -2033,7 +2031,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-x86"></a>IoT Core (x86)
 
@@ -2252,7 +2250,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-arm"></a>IoT (ARM)
 
@@ -2471,7 +2469,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xbox"></a>XBox
 
@@ -2690,7 +2688,7 @@ As tabelas a seguir mostram o codec de vídeo e o suporte ao formato para cada f
 </tbody>
 </table>
 
-## <a name="image-codec--format-support"></a>Suporte ao codec e ao formato de imagem 
+## <a name="image-codec--format-support"></a>Suporte ao codec e ao formato de imagem 
 
 <table>
 <colgroup>

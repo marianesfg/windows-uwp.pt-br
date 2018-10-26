@@ -6,14 +6,14 @@ title: Recursos da interface do usuário da câmera para dispositivos móveis
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7b9db18d83c9d4811c446f90c40ff3e0044dccf2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 062ca589b2a63db1f56ada4e2df4f99bc7f8b0fb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199164"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563990"
 ---
 #<a name="camera-ui-features-for-mobile-devices"></a>Recursos da interface do usuário da câmera para dispositivos móveis
 
@@ -56,9 +56,6 @@ No manipulador do evento **CameraPressed**, você pode iniciar uma captura de fo
 Quando seu aplicativo estiver sendo desligado ou o usuário sair da página de captura de mídia do aplicativo, cancele o registro do manipulador de botão físico.
 
 [!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
-
-> [!NOTE]
-> Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos da Plataforma Universal do Windows (UWP). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).                                                                                   |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

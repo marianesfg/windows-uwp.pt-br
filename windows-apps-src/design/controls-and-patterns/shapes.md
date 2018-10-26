@@ -6,16 +6,14 @@ description: Aprenda a desenhar formas, como elipses, retângulos, polígonos e 
 ms.author: jimwalk
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 44b89f90abc0930c8f57e14cd112a3c7834bace1
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 984653ad20fc40035528ab7e32b904e64d6ff8c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675203"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561962"
 ---
 # <a name="draw-shapes"></a>Desenhar formas
 
@@ -106,7 +104,7 @@ Aqui está o [**Retângulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle).
 
 ![Um Retângulo renderizado.](images/shapes-rectangle.jpg)
 
-**Dica**  Existem alguns cenários para definições de interface do usuário onde, em vez de usar um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), uma [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) pode ser mais apropriada. Se a sua intenção é criar uma forma retangular ao redor de outro conteúdo, deve ser melhor usar a **Border** porque ela pode ter conteúdo filho e será dimensionada automaticamente ao redor desse conteúdo, em vez de usar dimensões fixas para a altura e largura, como faz o **Rectangle**. Uma **Border** também tem a opção de ter bordas arredondadas quando você define a propriedade [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius).
+**Dica**existem alguns cenários para definições de interface do usuário onde em vez de usar um [**retângulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), uma [**borda**](https://msdn.microsoft.com/library/windows/apps/BR209250) pode ser mais apropriada. Se a sua intenção é criar uma forma retangular ao redor de outro conteúdo, deve ser melhor usar a **Border** porque ela pode ter conteúdo filho e será dimensionada automaticamente ao redor desse conteúdo, em vez de usar dimensões fixas para a altura e largura, como faz o **Rectangle**. Uma **Border** também tem a opção de ter bordas arredondadas quando você define a propriedade [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius).
 
 Por outro lado, provavelmente [**Retângulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) é uma opção melhor para a composição de controle. A forma **Rectangle** aparece em vários modelos de controle porque ela é usada como uma parte "FocusVisual" para controles focalizáveis. Sempre que o controle está em um estado visual "Focalizado", esse retângulo fica visível. Nos demais estados, ele fica oculto.
 
@@ -145,7 +143,7 @@ Veja a seguir o [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) renderiza
 
 ![Um Polígono renderizado.](images/shapes-polygon.jpg)
 
-**Dica**  Um valor de [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) costuma ser usado como um tipo em XAML para cenários que não estejam declarando os vértices de formas. Por exemplo, **Point** faz parte dos dados de evento para os eventos de toque, para que você saiba exatamente onde ocorreu a ação de toque no espaço de uma coordenada. Para saber mais sobre **Point** e como usá-lo na XAML ou no código, consulte o tópico de referência de API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Dica**um valor de [**ponto**](https://msdn.microsoft.com/library/windows/apps/BR225870) geralmente é usado como um tipo em XAML para cenários que não estejam declarando os vértices de formas. Por exemplo, **Point** faz parte dos dados de evento para os eventos de toque, para que você saiba exatamente onde ocorreu a ação de toque no espaço de uma coordenada. Para saber mais sobre **Point** e como usá-lo na XAML ou no código, consulte o tópico de referência de API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
 ## <a name="line"></a>Line
 
@@ -173,7 +171,7 @@ layoutRoot.Children.Add(line1);
 
 Uma [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) é semelhante a um [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) por ser delimitada por um conjunto de pontos. A única diferença é que o último ponto de uma **Polyline** não está conectado ao primeiro ponto.
 
-**Observação**   Você pode ter pontos inicial e final idênticos de forma explícita nos [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) definidos para a [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), mas nesse caso você provavelmente poderia usar um [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon).
+**Observação**  explicitamente, você poderia ter um ponto inicial idênticos e ponto final nos [**pontos**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) definido para o [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), mas nesse caso, você provavelmente poderia usar um [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) em vez disso.
 
 Quando você especifica um [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) de uma [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline), **Fill** pinta o espaço interior da forma, mesmo se os pontos inicial e final dos [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) definidos para a **Polyline** não fizerem interseção. Quando você não especifica um **Fill**, a **Polyline** é semelhante ao que teria sido renderizado se você tivesse especificado vários elementos [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) individuais, com pontos iniciais e finais de linhas consecutivas em interseção.
 

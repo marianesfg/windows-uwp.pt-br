@@ -6,19 +6,17 @@ description: Este tópico aborda algumas considerações de desempenho relaciona
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d308fd8b8ded0ac737fc39c4760bc52d8414b3cb
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b39f68d6f5f00f8e33a080b77614b9ba11627989
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894482"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562406"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Dicas de MVVM e desempenho de linguagem
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este tópico aborda algumas considerações de desempenho relacionadas à sua escolha de padrões de design de software e linguagem de programação.
 

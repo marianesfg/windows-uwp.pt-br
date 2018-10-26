@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7106b36b367716fdb53af3da506e60d019ac4e8e
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a4e2bbac12ddd3b60b2e4dd78f37b8934a8afea8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653845"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562597"
 ---
 # <a name="output-merger-om-stage"></a>Estágio de fusão de saída (OM)
 
@@ -118,16 +116,16 @@ Você pode usar qualquer combinação dos slots de destinos de renderização (a
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Pipeline de elementos gráficos](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

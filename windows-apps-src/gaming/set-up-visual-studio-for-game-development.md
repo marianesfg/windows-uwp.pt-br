@@ -6,19 +6,18 @@ ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, o visual studio, ferramentas, directx
-ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199337"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563676"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Ferramentas do Visual Studio para programação de jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -48,9 +47,9 @@ Crie [arquivos de compilação personalizada](#build-customizations-for-3d-asset
 
 Para obter mais informações, consulte [Trabalhando com texturas e imagens](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Observação**  Não use o Editor de Imagens como substituto de um aplicativo completo de edição de imagens, embora ele possa ser usado em muitos cenários simples de exibição e edição.
+> **Observação**o Editor de imagens não se destina a ser um substituto para um aplicativo de edição de imagens completo de recursos, mas é adequado para muitos simples de exibição e edição de cenários.
 
- 
+ 
 
 ## <a name="model-editor"></a>Editor de modelos
 
@@ -67,9 +66,9 @@ Consulte uma captura de tela de um modelo no editor com iluminação aplicada.
 
 Para obter mais informações, consulte [Trabalhando com modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Observação**  Não use o Editor de Modelos como substituto de um aplicativo completo de edição de modelos, embora ele possa ser usado em muitos cenários simples de exibição e edição.
+> **Observação**o Editor de modelos não se destina a ser um substituto para um modelo completo de aplicativo de edição, mas é adequado para muitos simples de exibição e edição de cenários.
 
- 
+ 
 
 ## <a name="shader-designer"></a>Designer de sombreador
 
@@ -119,7 +118,7 @@ Para obter mais informações, consulte [Trabalhando com sombreadores](https://m
 
 Você pode adicionar compilações personalizadas ao seu projeto para que o Visual Studio converta recursos em formatos utilizáveis. Depois disso, você pode carregar os ativos no aplicativo e usá-los ao criar e preencher recursos DirectX, igual faria em qualquer outro aplicativo em DirectX.
 
-Para adicionar uma compilação personalizada, no **Gerenciador de Soluções**, clique com o botão direito no projeto e selecione **Compilações Personalizadas...**. Você pode adicionar os tipos de compilação personalizada a seguir ao seu projeto.
+Para adicionar uma compilação personalizada, você clique com botão direito no projeto no **Gerenciador de soluções** e selecione **Criar personalizações...**. Você pode adicionar os seguintes tipos de compilações personalizadas ao seu projeto.
 
 -   O pipeline de conteúdo de imagem usa arquivos de imagem como entrada e produz arquivos de superfície do DirectDraw (.dds).
 -   O pipeline de conteúdo de malha usa arquivos de malha (como .fbx) e produz arquivos de malha .cmo.
@@ -144,13 +143,12 @@ O Visual Studio oferece ferramentas de depuração específicas a gráficos. Use
 
 Para obter mais informações, consulte o tópico sobre [depuração de elementos gráficos do DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Observação**  Este artigo se destina a desenvolvedores do Windows 10 que elaboram aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

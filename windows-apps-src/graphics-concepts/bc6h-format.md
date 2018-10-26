@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abff26c7f2e874d4a5e8e964fe716fcf2f1592cb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563861"
 ---
 # <a name="bc6h-format"></a>Formato BC6H
 
@@ -34,15 +32,15 @@ BC6H é especificado pelos seguintes valores de enumeração DXGI\_FORMAT:
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Esse formato BC6H não usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Esse formato BC6H usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 
-**Observação** O formato de ponto flutuante de 16 para os canais de cor é geralmente conhecido como um formato de ponto flutuante "parcial". Esse formato tem o seguinte layout de bit:
+**Observação**  o flutuante de 16 formato de ponto para os canais de cor é geralmente conhecido como um "parcial" ponto flutuante formato. Esse formato tem o seguinte layout de bit:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (float não assinado) | 5 bits de expoente + 11 bits de mantissa              |
 | SF16 (float assinado)   | 1 bit de sinal + 5 bits de expoente + 10 bits de mantissa |
 
- 
+ 
 
- 
+ 
 
 O formato BC6H pode ser usado para o recursos de textura [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (incluindo matrizes), Texture3D ou TextureCube (incluindo matrizes). Da mesma forma, esse formato se aplica a qualquer superfície de MIP-map associada a esses recursos.
 
@@ -114,7 +112,7 @@ A tabela a seguir contém os valores e a contagem de bit de cada um dos 14 forma
 | 13   | 63 bits           | 0 bits    | 60 bits (12.8, 12.8, 12.8)       | 5 bits (01011) |
 | 14   | 63 bits           | 0 bits    | 60 bits (16.4, 16.4, 16.4)       | 5 bits (01111) |
 
- 
+ 
 
 Cada formato nesta tabela pode ser identificado exclusivamente pelos bits de modo. Os dez primeiros modos são usados para blocos de duas regiões e o campo de bit de modo pode ter dois ou cinco bits de comprimento. Esses blocos também têm campos para os pontos de extremidade de cor compactados (72 ou 75 bits), a partição (5 bits) e os índices de partição (46 bits).
 
@@ -160,7 +158,7 @@ Os nomes dos campos na tabela acima são definidos da seguinte maneira:
 | by    | endpt\[1\].A\[2\] |
 | bz    | endpt\[1\].B\[2\] |
 
- 
+ 
 
 Endpt\[i\], onde i é 0 ou 1, refere-se ao conjunto de pontos de extremidade de número 0 ou 1 respectivamente.
 ## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>Extensão de sinal para valores de ponto de extremidade
@@ -329,9 +327,9 @@ unsigned short finish_unquantize(int comp)
 
 [Compactação de bloco de textura](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

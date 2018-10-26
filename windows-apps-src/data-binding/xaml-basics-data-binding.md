@@ -6,15 +6,13 @@ keywords: XAML, UWP, Introdução
 ms.author: karler
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aea8cfde83e6e3c5446503291f6a7c6235b3cbf4
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8000d9105481bc177eb2fc64646aec009fd80d36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817364"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562528"
 ---
 # <a name="create-data-bindings"></a>Criar vinculações de dados
 
@@ -33,7 +31,7 @@ O ponto de partida deste laboratório é o repositório de exemplos do PhotoLab,
 
 O app PhotoLab tem duas páginas principais:
 
-**MainPage. XAML:** exibe uma exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
+**MainPage.xaml:** exibe o modo de exibição de galeria de fotos, juntamente com algumas informações sobre cada arquivo de imagem.
 ![MainPage](../design/basics/images/xaml-basics/mainpage.png)
 
 **DetailPage.xaml:** exibe uma única foto após ela ter sido selecionada. Um menu de edição de submenu permite que a foto seja alterada, renomeada e salva.

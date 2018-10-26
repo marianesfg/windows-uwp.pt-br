@@ -5,20 +5,18 @@ description: Em vez de otimizar a interface do usuário dos vários dispositivos
 ms.author: mijacobs
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: af172b67a3981b61f4f86078710d87f760f9be3b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843026"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563320"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 
-Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Windows 10, que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela no ecossistema do Windows 10, em vez de otimizar a interface do usuário de cada dispositivo, é recomendável projetar algumas categorias de largura chave (também denominadas "pontos de interrupção"): 
+Os aplicativos UWP podem ser executados em qualquer dispositivo que executa o Windows 10, que inclui telefones, tablets, desktops, TVs e muito mais. Com um grande número de destinos de dispositivo e tamanhos de tela entre o ecossistema do Windows 10, em vez de otimizar sua interface do usuário para cada dispositivo, é recomendável projetar algumas categorias de largura chave (também chamado de "pontos de interrupção"): 
 - Pequena (menor que 640 px)
 - Média (641 px a 1007 px)
 - Grande (1008 px e maior)
@@ -103,6 +101,6 @@ Os aplicativos UWP ajustam automaticamente a escala da interface do usuário par
 - Coloque o [painel de navegação](../controls-and-patterns/navigationview.md) no modo encaixado para que ele sempre apareça.
 
 >[!TIP] 
-> Com o [**Continuum para Telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar dispositivos móveis compatíveis com o Windows 10 a um monitor, um mouse e um teclado para fazê-los funcionar como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
+> Com o [**Continuum para telefones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), os usuários podem conectar dispositivos móveis compatíveis com o Windows 10 para um monitor, mouse e teclado para fazê-los funcionar como laptops. Tenha essa nova funcionalidade em mente ao projetar pontos de interrupção específicos; um celular não permanecerá sempre na classe de tamanho.
 
 

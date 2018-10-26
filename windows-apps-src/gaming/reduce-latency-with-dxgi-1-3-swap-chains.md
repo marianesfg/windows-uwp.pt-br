@@ -6,19 +6,18 @@ ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, latência, dxgi, cadeias de troca, directx
-ms.openlocfilehash: 9f2babdac40e3baf27bec9b2e214e9350d1f2539
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199312"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563768"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reduzir latência com cadeias de troca DXGI 1.3
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro. Os jogos normalmente precisam oferecer a menor quantidade de latência possível do momento em que a entrada do jogador é recebida até o momento em que o jogador responde a essa entrada atualizando a tela. Este tópico explica uma técnica disponível a partir do Direct3D 11.2 que pode ser usada para minimizar a latência de quadros eficaz no jogo.
 
@@ -38,9 +37,9 @@ Especifique o sinalizador [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Observação**   Ao contrário de alguns sinalizadores, esse sinalizador não pode ser adicionado nem removido usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
+> **Observação**  ao contrário de alguns sinalizadores, esse sinalizador não pode ser adicionado nem removido usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). O DXGI retornará um código de erro se esse sinalizador for definido de maneira diferente de quando a cadeia de troca foi criada.
 
- 
+ 
 
 ```cpp
 // If the swap chain already exists, resize it.
@@ -159,9 +158,9 @@ Para saber mais sobre programação multithreaded no Windows, consulte os seguin
 * [Sincronização](https://msdn.microsoft.com/library/windows/desktop/ms686353)
 * [Usando objetos de evento (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
 
- 
+ 
 
- 
+ 
 
 
 

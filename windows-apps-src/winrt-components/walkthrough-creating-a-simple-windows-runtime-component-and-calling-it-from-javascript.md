@@ -6,33 +6,32 @@ ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 381e1d264e27d2b68e644895d0b795128540a5d7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 49b9fe0833151155b11b7d7b796e395bb6a2ca7f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200872"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564655"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Procedimento passo a passo: criando um componente simples do Tempo de Execução do Windows e chamando-o em JavaScript
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este passo a passo mostra como é possível usar o .NET Framework com Visual Basic ou C# para criar os próprios tipos de Windows Runtime, empacotados em um componente do Tempo de Execução do Windows, e como chamar o componente no aplicativo Universal do Windows em JavaScript para Windows.
 
-O Visual Studio facilita adicionar um componente do Tempo de Execução do Windows escrito em C# ou Visual Basic ao aplicativo e criar tipos de Tempo de Execução do Windows que é possível chamar em JavaScript. Internamente, os tipos de Tempo de Execução do Windows podem usar qualquer funcionalidade do .NET Framework permitida em um aplicativo Universal do Windows. (Para obter mais informações, consulte [Criando componentes do tempo de execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Visão geral do .NET dos aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) Externamente, os membros do seu tipo podem expor somente tipos de Windows Runtime para os parâmetros e valores de retorno. Quando você compila a solução, o Visual Studio compila o projeto do componente do Tempo de Execução do Windows do .NET Framework e executa uma etapa de compilação que cria um arquivo de metadados do Windows (. winmd). Trata-se do componente do Tempo de Execução do Windows, que inclui o Visual Studio no aplicativo.
+O Visual Studio facilita adicionar um componente do Tempo de Execução do Windows escrito em C# ou Visual Basic ao aplicativo e criar tipos de Tempo de Execução do Windows que é possível chamar em JavaScript. Internamente, os tipos de Tempo de Execução do Windows podem usar qualquer funcionalidade do .NET Framework permitida em um aplicativo Universal do Windows. (Para obter mais informações, consulte [Criando componentes do tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [.NET para visão geral de aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) Externamente, os membros do seu tipo podem expor somente tipos de tempo de execução do Windows para os parâmetros e valores de retorno. Quando você compila a solução, o Visual Studio compila o projeto do componente do Tempo de Execução do Windows do .NET Framework e executa uma etapa de compilação que cria um arquivo de metadados do Windows (. winmd). Trata-se do componente do Tempo de Execução do Windows, que inclui o Visual Studio no aplicativo.
 
-> **Observação**  O .NET Framework mapeia automaticamente alguns tipos do .NET Framework mais usados, como tipos de dados primitivos e tipos de coleção, para os equivalentes do Windows Runtime. Esses tipos do .NET Framework podem ser usados na interface pública de um componente do Tempo de Execução do Windows e serão exibidos para usuários do componente como os tipos de Tempo de Execução do Windows correspondentes. Consulte [Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+> **Observação**.NET Framework mapeia automaticamente alguns tipos do .NET Framework mais usados, como tipos de dados primitivos e tipos de coleção, para seus equivalentes de tempo de execução do Windows. Esses tipos do .NET Framework podem ser usados na interface pública de um componente do Tempo de Execução do Windows e serão exibidos para usuários do componente como os tipos de Tempo de Execução do Windows correspondentes. Consulte [Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 Este passo a passo ilustra as tarefas a seguir. Depois que tiver concluído a primeira seção, que configura o aplicativo do Windows com JavaScript, você poderá concluir as seções restantes em qualquer ordem.
 
 ## <a name="prerequisites"></a>Pré-requisitos:
 
 -   Windows 10
--   Microsoft Visual Studio 2015 ou Microsoft Visual Studio Community 2015
+-   Microsoft Visual Studio2015 ou Microsoft Visual Studio Community2015
 
 ## <a name="creating-a-simple-windows-runtime-class"></a>Criação de uma classe de Tempo de Execução do Windows simples
 
@@ -100,14 +99,14 @@ function basics2() {
 
 A primeira letra do nome de cada membro é alterada de maiúsculas para minúsculas. Essa transformação faz parte do suporte que o JavaScript oferece para habilitar o uso natural do Tempo de Execução do Windows. Namespaces e nomes de classe estão em Pascal. Os nomes de membro estão em camel, exceto nomes de evento, que estão todos em minúsculas. Consulte [Como usar o Tempo de Execução do Windows em JavaScript](https://msdn.microsoft.com/library/hh710230.aspx). As regras de uso de maiúsculas camel podem ser confusas. Uma série de letras maiúsculas iniciais normalmente é exibida em minúsculas, mas caso três letras maiúsculas sejam seguidas de uma letra minúscula, somente as duas primeiras letras são exibidas em minúsculas: por exemplo, um membro chamado IDStringKind é exibido como idStringKind. No Visual Studio, é possível compilar o projeto do componente do Tempo de Execução do Windows e usar IntelliSense no projeto de JavaScript para saber o uso de maiúsculas correto.
 
-De maneira semelhante, o .NET Framework dá suporte para habilitar o uso natural do Tempo de Execução do Windows em código gerenciado. Isso é debatido em seções subsequentes deste artigo e nos artigos [Criação de componentes do Tempo de Execução do Windows em C# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Suporte do .NET para aplicativos da Windows Store e Tempo de Execução do Windows](https://msdn.microsoft.com/library/hh694558.aspx).
+De maneira semelhante, o .NET Framework dá suporte para habilitar o uso natural do Tempo de Execução do Windows em código gerenciado. Isso é discutido nas seções subsequentes deste artigo e nos artigos [Criando componentes do tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Suporte do .NET Framework para aplicativos UWP e do Windows Runtime](https://msdn.microsoft.com/library/hh694558.aspx).
 
 ## <a name="create-a-simple-user-interface"></a>Criar uma interface do usuário simples
 
 
 No projeto JavaScript, abra o arquivo default.html e atualize o corpo conforme mostrado no código a seguir. Esse código inclui o conjunto completo de controles para o aplicativo de exemplo e especifica os nomes de função para os eventos de clique.
 
-> **Observação**  Quando você executa o aplicativo pela primeira vez, somente os botões Basics1 e Basics2 têm suporte.
+> **Observação**ao executar o aplicativo pela primeira vez, somente os botões Basics1 e Basics2 têm suporte.
 
 ```html
 <body>
@@ -184,9 +183,9 @@ Escolha o botão Básico 1 para atribuir o valor de retorno do método GetAnswer
 
 Escolha o botão Básico 2 para incrementar o valor da propriedade SampleProperty e exibir o novo valor na área de saída. Tipos primitivos, como cadeias de caracteres e números, podem ser usados como tipos de parâmetro e tipos de retorno, além de poder ser passados entre o código gerenciado e o JavaScript. Como números em JavaScript são armazenados em formato de ponto flutuante de precisão dupla, eles são convertidos em tipos numéricos do .NET Framework.
 
-> **Observação**  Por padrão, é possível definir pontos de interrupção apenas no código JavaScript. Para depurar o código Visual Basic ou C#, consulte Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic.
+> **Observação**por padrão, você pode definir pontos de interrupção apenas no código JavaScript. Para depurar o código Visual Basic ou C#, consulte Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic.
 
- 
+ 
 
 Para interromper a depuração e fechar o aplicativo, alterne do aplicativo para o Visual Studio e escolha Shift+F5.
 
@@ -195,9 +194,9 @@ Para interromper a depuração e fechar o aplicativo, alterne do aplicativo para
 
 O Tempo de Execução do Windows pode ser chamado no JavaScript ou no código gerenciado. Os objetos do Tempo de Execução do Windows podem ser passados para a frente e para trás entre os dois, e os eventos podem ser manipulados de ambos os lados. No entanto, as formas como você usa os tipos de Tempo de Execução do Windows nos dois ambientes diferem em alguns detalhes, porque o JavaScript e o .NET Framework dão suporte ao Tempo de Execução do Windows de maneira diferente. O exemplo a seguir demonstra essas diferenças usando a classe [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx). Neste exemplo, você cria uma instância da coleção PropertySet em código gerenciado e registra um manipulador de eventos para controlar alterações na coleção. Em seguida, você adiciona código JavaScript que obtém a coleção, registra o próprio manipulador de eventos e usa a coleção. Por fim, você adiciona um método que faz alterações na coleção do código gerenciado e mostra JavaScript manipulando uma exceção gerenciada.
 
-> **Importante**  Neste exemplo, o evento está sendo acionado no thread da interface do usuário. Se disparar o evento em um thread em segundo plano, por exemplo, em uma chamada assíncrona, você precisará fazer um trabalho extra para JavaScript para manipular o evento. Para obter mais informações, consulte [Acionamento de eventos em componentes do Tempo de Execução do Windows](raising-events-in-windows-runtime-components.md).
+> **Importante**neste exemplo, o evento está sendo acionado no thread da interface do usuário. Se disparar o evento em um thread em segundo plano, por exemplo, em uma chamada assíncrona, você precisará fazer um trabalho extra para JavaScript para manipular o evento. Para obter mais informações, consulte [Acionamento de eventos em componentes do Tempo de Execução do Windows](raising-events-in-windows-runtime-components.md).
 
- 
+ 
 
 No projeto SampleComponent, adicione uma nova classe **public sealed** (classe **Public NotInheritable** no Visual Basic) chamada PropertySetStats. A classe encapsula uma coleção PropertySet e manuseia o evento MapChanged. O manipulador de eventos controla o número de alterações de cada tipo que ocorrem, e o método DisplayStats produz um relatório formatado em HTML. Observe a instrução **using** adicional (instrução **Imports** no Visual Basic); tome cuidado para adicioná-la às instruções **using** existentes, em vez de substituí-las.
 
@@ -271,7 +270,7 @@ No projeto SampleComponent, adicione uma nova classe **public sealed** (classe *
 > End Class
 > ```
 
-O manipulador de eventos segue o padrão de evento familiar do .NET Framework, exceto se o remetente do evento (neste caso, o objeto PropertySet) for convertido na interface IObservableMap&lt;string, object&gt; (IObservableMap(Of String, Object) no Visual Basic), que é uma instanciação da interface do Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (É possível converter o remetente no seu tipo, se necessário.) Além disso, os argumentos do evento são apresentados como uma interface, e não como um objeto.
+O manipulador de eventos segue o padrão de evento familiar do .NET Framework, exceto que o remetente do evento (nesse caso, o objeto PropertySet) é convertido para o IObservableMap&lt;cadeia de caracteres, objeto&gt; (IObservableMap (Of String, Object) na interface Visual Basic), que é uma instanciação da interface do Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Você pode converter o remetente para seu tipo se necessário). Além disso, os argumentos do evento são apresentados como uma interface em vez de um objeto.
 
 No arquivo default.js, adicione a função Runtime1 conforme mostrado. Esse código cria um objeto PropertySetStats, obtém a coleção PropertySet e adiciona o próprio manipulador de eventos, a função onMapChanged, para manipular o evento MapChanged. Após as alterações feitas na coleção, runtime1 chama o método DisplayStats para mostrar um resumo dos tipos de alteração.
 
@@ -376,7 +375,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 Para executar o aplicativo, escolha a tecla F5. Escolha **Tempo de Execução 1** e **Tempo de Execução 2**. O manipulador de eventos JavaScript relata a primeira alteração feita na coleção. A segunda alteração, porém, tem uma chave duplicada. Os usuários de dicionários do .NET Framework esperam que o método Add lance uma exceção, e é isso o que acontece. O JavaScript manipula a exceção do .NET Framework.
 
-> **Observação**  Não é possível exibir a mensagem da exceção no código JavaScript. O texto da mensagem é substituído por um rastreamento de pilha. Para obter mais informações, consulte "Lançamento de exceções" em Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic.
+> **Observação**não é possível exibir a mensagem da exceção no código JavaScript. O texto da mensagem é substituído por um rastreamento de pilha. Para obter mais informações, consulte "Lançamento de exceções" em Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic.
 
 Por outro lado, quando JavaScript chamou o método insert usando uma chave duplicada, o valor do item foi alterado. Essa diferença no comportamento acontece por causa das diferentes maneiras que o JavaScript e o .NET Framework dão suporte ao Tempo de Execução do Windows, conforme explicado em [Criação de componentes do Tempo de Execução do Windows em C# ou Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
@@ -414,9 +413,9 @@ Além de retornar tipos de Tempo de Execução do Windows que você criou no com
 
 Observe que o dicionário deve ser retornado como uma interface implementada por [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx) e mapeada para uma interface do Windows Runtime. Nesse caso, a interface é IDictionary&lt;int, string&gt; (IDictionary(Of Integer, String) no Visual Basic). Quando o tipo de Windows Runtime IMap&lt;int, string&gt; é passado para o código gerenciado, ele é exibido como IDictionary&lt;int, string&gt;, e o inverso é verdadeiro quando o tipo gerenciado é passado para JavaScript.
 
-**Importante**  Quando um tipo gerenciado implementa várias interfaces, JavaScript usa a primeira interface exibida na lista. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
+**Importante**quando um tipo gerenciado implementa várias interfaces, JavaScript usa a primeira interface exibida na lista. Por exemplo, se você retornar Dictionary&lt;int, string&gt; ao código JavaScript, ele será exibido como IDictionary&lt;int, string&gt;, independentemente de qual interface você especificar como o tipo de retorno. Isso significa que, se a primeira interface não incluir um membro exibido em interfaces posteriores, esse membro não permanecerá visível para JavaScript.
 
- 
+ 
 
 Para testar o novo método e usas o dicionário, adicione as funções returns1 e returns2 a default. js:
 
@@ -473,7 +472,7 @@ Obviamente, JavaScript não é uma linguagem fortemente tipada, logo, usar cole�
 
 Outro comportamento inesperado: caso passe uma variável JavaScript não atribuída como um argumento de cadeia de caracteres, o que você obtém é a cadeia de caracteres "undefined". Resumindo, tome cuidado ao passar os tipos de coleção do .NET Framework para o código JavaScript.
 
-> **Observação**  Se tiver grandes quantidades de texto a ser concatenado, você poderá fazer isso com mais eficiência movendo o código para um método do .NET Framework e usando a classe StringBuilder, conforme mostrado na função showMap.
+> **Observação**se você tiver grandes quantidades de texto a ser concatenado, você pode fazer isso com mais eficiência movendo o código para um método do .NET Framework e usando a classe StringBuilder, conforme mostrado na função showMap.
 
 Embora não possa expor os próprios tipos genéricos de um componente do Tempo de Execução do Windows, você poderá retornar coleções genéricas do .NET Framework para classes do Windows Runtime usando um código como o seguinte:
 
@@ -675,7 +674,7 @@ GetPrimesInRangeAsync é um localizador de números primos muito simples por des
     -   O objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) fornece funções para processar os resultados retornados, reagir ao cancelamento e manipular os relatórios de progresso.
     -   O método AsyncInfo.Run cria uma fonte de cancelamento e um objeto que implementa a interface IProgress&lt;T&gt;. Para o representante, ele passa um token [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) da fonte de cancelamento e da interface [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx).
 
-        > **Observação**  Caso o objeto Promise não forneça uma função para reagir ao cancelamento, AsyncInfo.Run ainda passará um token cancelável, e o cancelamento ainda poderá ocorrer. Caso o objeto Promise não forneça uma função para manipular atualizações de progresso, AsyncInfo.Run ainda fornecerá um objeto que implementa IProgress&lt;T&gt;, mas os relatórios serão ignorados.
+        > **Observação**se o objeto Promise não forneça uma função para reagir ao cancelamento, asyncinfo. Run ainda passará um token cancelável e cancelamento ainda poderá ocorrer. Caso o objeto Promise não forneça uma função para manipular atualizações de progresso, AsyncInfo.Run ainda fornecerá um objeto que implementa IProgress&lt;T&gt;, mas os relatórios serão ignorados.
 
     -   O representante usa o método [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) para criar uma tarefa iniciada que usa o token e a interface de progresso. O representante da tarefa iniciada é fornecido por uma função lambda que calcula o resultado desejado. Mais sobre isso daqui a pouco.
     -   O método AsyncInfo.Run cria um objeto que implementa a interface [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx), conecta o mecanismo de cancelamento do Windows Runtime com a fonte do token e conecta a função de relatório de progresso do objeto Promise com a interface IProgress&lt;T&gt;.
@@ -738,6 +737,6 @@ Para executar o aplicativo, escolha a tecla F5. Para iniciar a operação assín
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Visão geral do .NET para aplicativos da Windows Store](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para visão geral de aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Passo a passo: Criando um componente do Tempo de Execução do Windows simples e chamando-o em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

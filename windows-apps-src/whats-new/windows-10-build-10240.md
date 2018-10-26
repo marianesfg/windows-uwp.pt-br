@@ -1,27 +1,25 @@
 ---
 author: QuinnRadich
-Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
+Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
 title: Novidades no Windows 10 build 10240 – julho de 2015
 keywords: novidades, novidades, atualizar, atualizações, recursos, novo, Windows 10, 1507, 10240
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: c5d3a9cf8a3281e7cd1f7efa460f13f8a17b10bb
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c38fe989bd854d44bb7dc3c0cba36a4ae145854c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1397135"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564231"
 ---
-# <a name="whats-new-in-windows-10-for-developers-build-10240"></a>Novidades no Windows 10 para desenvolvedores, build 10240
+# <a name="whats-new-in-windows10-for-developers-build-10240"></a>Novidades no Windows 10 para desenvolvedores, build 10240
 
 O Windows 10, build 10240 e o SDK atualizado fornecem as ferramentas, os recursos e as experiências para a criação de fantásticos aplicativos UWP (Plataforma Universal do Windows). Depois de [instalar as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10, você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
-Este é um exame recurso por recurso das novidades para você no Windows 10 build 10240 (também conhecido como Windows 10 versão 1507).
+Aqui está uma visão recurso por recurso que há de novo para você no Windows 10 build 10240 (também conhecido como Windows 10 versão 1507).
 
 ## <a name="adaptive-layouts"></a>Layouts adaptáveis
 

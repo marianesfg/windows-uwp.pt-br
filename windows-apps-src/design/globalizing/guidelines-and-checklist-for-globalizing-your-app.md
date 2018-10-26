@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 288b0509a269453e89ff827ddf27eced3ecd4c75
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 177332515db26eca7cef7a7be75c5752a239a8f1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673883"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562975"
 ---
 # <a name="guidelines-for-globalization"></a>Diretrizes de globalização
 
@@ -39,7 +37,7 @@ Projete e desenvolva seu app de forma que ele funciona corretamente em sistemas 
 | Exiba o texto e as fontes corretamente. | A fonte ideal, o tamanho da fonte e a direção do texto variam entre diferentes mercados. Para obter mais informações, consulte [**Ajustar layout e fontes e fornecer suporte a RTL**](adjust-layout-and-fonts--and-support-rtl.md) e [Fontes internacionais](loc-international-fonts.md). |
 
 ## <a name="important-apis"></a>APIs Importantes
- 
+ 
 * [Globalização](/uwp/api/Windows.Globalization?branch=live)
 * [GeographicRegion.CurrenciesInUse](/uwp/api/windows.globalization.geographicregion.CurrenciesInUse)
 * [Language.CurrentInputMethodLanguageTag](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag)

@@ -6,16 +6,14 @@ title: Receber as ofertas direcionadas
 ms.author: mhopkins
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, serviços de Store, API de ofertas direcionadas para a Microsoft Store, obter ofertas direcionadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 1032831492443460bd63671012a09edfceca2690
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: e6a0e9237c7c803a64ec20df0c501773f690f5e9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516593"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564040"
 ---
 # <a name="get-targeted-offers"></a>Receber as ofertas direcionadas
 

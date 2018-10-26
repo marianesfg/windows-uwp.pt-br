@@ -6,19 +6,17 @@ description: Confira aqui como digitalizar conteúdos do seu aplicativo usando u
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c1db020b242c43808d356076641e375cb1581ed3
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: f9128056cbb3b9218d164b243948d9dd16af0786
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696153"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563211"
 ---
 # <a name="scan-from-your-app"></a>Digitalizar de seu aplicativo
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -28,7 +26,7 @@ ms.locfileid: "696153"
 
 Aprenda aqui a digitalizar conteúdos do seu aplicativo usando uma fonte de scanner de mesa, alimentador ou autoconfigurado.
 
-**Importante**  As APIS [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631) de desktop. Os aplicativos podem usar essas APIs somente na versão para a área de trabalho do Windows 10.
+**Importante**as APIs de [**scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) fazem parte da [família de dispositivos](https://msdn.microsoft.com/library/windows/apps/Dn894631)da área de trabalho. Aplicativos podem usar essas APIs somente na versão da área de trabalho do Windows 10.
 
 Para digitalizar de seu aplicativo, você deve primeiro listar os scanners disponíveis declarando um novo objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) e obtendo o tipo [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381). Somente scanners instalados localmente com drivers WIA são listados e disponibilizados a seu aplicativo.
 
@@ -102,8 +100,8 @@ Para cada tipo de enumeração [**ImageScannerScanSource**](https://msdn.microso
 
 Para digitalizar com as configurações padrão, seu aplicativo conta com o namespace [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) para selecionar um scanner e digitalizar dessa origem. Nenhuma configuração de digitalização é alterada. Os scanners possíveis são configurado automaticamente, plano ou alimentador. Esse tipo de digitalização é o mais provável que produza uma operação de digitalização bem-sucedida, mesmo se digitalizar da fonte errada, como de scanner plano em vez de alimentador.
 
-**Observação**  Se o usuário colocar o documento para digitalizar no alimentador, o scanner digitalizará a partir do scanner plano. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
- 
+**Observação**se o usuário coloca o documento para digitalizar no alimentador, o scanner verificará da superfície em vez disso. Se o usuário tentar digitalizar de um alimentador vazio, a tarefa de digitalização não produzirá qualquer arquivo digitalizado.
+ 
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
@@ -113,7 +111,7 @@ Para digitalizar com as configurações padrão, seu aplicativo conta com o name
 
 Seu aplicativo pode usar [Digitalização configurada automaticamente](https://msdn.microsoft.com/library/windows/hardware/Ff539393) do dispositivo, para digitalizar com as melhores configurações de digitalização. Com essa opção, o próprio dispositivo pode determinar as melhores configurações de digitalização, como modo de cor e resolução da digitalização, de acordo com o conteúdo que está sendo digitalizado. O dispositivo seleciona as configurações de digitalização no tempo de execução para cada nova tarefa de digitalização.
 
-**Observação**  Nem todos os scanners dão suporte a esse recurso, portanto o aplicativo deve verificar se o scanner tem suporte para esse recurso antes de usar essa configuração.
+**Observação**nem todos os scanners dão suporte a esse recurso, portanto, o aplicativo deve verificar se o scanner é compatível com esse recurso antes de usar essa configuração.
 
 Nesse exemplo, o aplicativo primeiro verifica se o scanner é capaz de usar configuração automática e então digitaliza. Para especificar se em plano ou alimentador, simplesmente substitua **AutoConfigured** por **Flatbed** ou **Feeder**.
 
