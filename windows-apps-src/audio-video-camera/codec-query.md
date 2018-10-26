@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, codec, codificador, decodificador, consulta
 ms.localizationpriority: medium
 ms.openlocfilehash: b74ac269bcba6d15e7c4f5dcb4c34d53573deb5e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557105"
+ms.locfileid: "5665165"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a>Consulta de codecs instalados em um dispositivo
 A classe **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** permite que você consulte os codecs instalados no dispositivo atual. A lista de codecs incluídos no Windows 10 para diferentes famílias de dispositivos é mostrada no artigo [Codecs compatíveis](supported-codecs.md), mas já que os usuários e os aplicativos podem instalar codecs adicionais em um dispositivo, talvez você queira consultar o suporte ao codec em tempo de execução para determinar quais codecs estão disponíveis no dispositivo atual.
