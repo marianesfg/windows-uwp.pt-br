@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1c73f9b279f9cc3a6854db8a8509ae99904e70
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674843"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555680"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
  
@@ -55,7 +53,7 @@ Depois o aplicativo cria com êxito um URI de canal, ele o envia para seu servi�
 
 ### <a name="important-notes"></a>Observações importantes
 
--   Não podemos garantir que o URI do canal de notificação de um aplicativo permanecerá sempre o mesmo. Aconselhamos que o aplicativo solicite um novo canal a cada vez que for executado e atualize seu serviço quando o URI for alterado. O desenvolvedor nunca deve modificar o URI do canal e deve considerá-lo como uma cadeia de caracteres de caixa preta. Nesse momento, os URIs do canal expiram após 30 dias. Se o aplicativo Windows10 renovar periodicamente o canal em segundo plano, você poderá baixar a [amostra de notificações periódicas e por push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows8.1 e reutilizar o código-fonte e/ou o padrão que ele demonstra.
+-   Não podemos garantir que o URI do canal de notificação de um aplicativo permanecerá sempre o mesmo. Aconselhamos que o aplicativo solicite um novo canal a cada vez que for executado e atualize seu serviço quando o URI for alterado. O desenvolvedor nunca deve modificar o URI do canal e deve considerá-lo como uma cadeia de caracteres de caixa preta. Nesse momento, os URIs do canal expiram após 30 dias. Se seu aplicativo do Windows 10 renovar periodicamente o canal em segundo plano, em seguida, você pode baixar a [amostra de notificações periódicas e por Push](http://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 e reutilizar o código-fonte e/ou o padrão que ele demonstra.
 -   A interface entre o serviço de nuvem e o aplicativo cliente é implementada por você, o desenvolvedor. Recomendamos que o aplicativo passe por um processo de autenticação com o seu próprio serviço e transmita dados por meio de um protocolo seguro, como HTTPS.
 -   É importante que o serviço na nuvem sempre garanta que o URI do canal use o domínio "notify.windows.com". O serviço nunca deve enviar as notificações por push para um canal em algum outro domínio. Se o retorno de chamada para o aplicativo fosse comprometido, um invasor mal-intencionado poderia enviar um URI de canal para falsificar o WNS. Sem inspecionar o domínio, o serviço na nuvem poderia revelar as informações a este invasor de forma inconsciente.
 -   Se o seu serviço na nuvem tentar entregar uma notificação para um canal expirado, o WNS retornará um [código de resposta 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes). Em resposta a esse código, seu serviço não deverá mais tentar enviar notificações a esse URI.
@@ -76,9 +74,9 @@ Um nível elevado, a cadeia de informações é a seguinte:
 
 Na autenticação no WNS, o serviço na nuvem envia uma solicitação HTTP sobre o protocolo SSL. Os parâmetros são fornecidos no formato "application/x-www-for-urlencoded". Forneça seu SID de pacote no campo "client\_id" e sua chave secreta no campo "client\_secret". Para obter os detalhes da sintaxe, consulte a referência para a [solicitação de token de acesso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Observação**  Isso é apenas um exemplo, e não o código para copiar e colar que você pode usar com êxito em seu próprio código.
+**Observação**este é apenas um exemplo, o código não recortar e colar que você pode usar com êxito em seu próprio código.
 
- 
+ 
 
 ``` http
  POST /accesstoken.srf HTTP/1.1
@@ -164,20 +162,20 @@ Por exemplo, durante um dia de negociação ativo do mercado de ações, você p
 ## <a name="push-notifications-and-battery-saver"></a>Notificações por push e economia de bateria
 
 
-A economia de bateria estende a duração da bateria, limitando a atividade em segundo plano no dispositivo. O Windows 10 permite que o usuário defina a economia de bateria para que seja ativada automaticamente quando a bateria cair abaixo de um limite especificado. Quando a economia de bateria está ativada, o recebimento de notificações por push é desabilitado para economizar energia. Mas há algumas exceções para isso. As configurações de economia de bateria a seguir do Windows10 (encontradas no aplicativo **Configurações**) permitem que o aplicativo receba notificações por push, mesmo quando a economia de bateria está ativada.
+A economia de bateria estende a duração da bateria, limitando a atividade em segundo plano no dispositivo. Windows 10 permite que o usuário defina a economia de bateria para ativar automaticamente quando a bateria cai abaixo de um limite especificado. Quando a economia de bateria está ativada, o recebimento de notificações por push é desabilitado para economizar energia. Mas há algumas exceções para isso. As Windows 10 configurações de economia de bateria (encontradas no aplicativo **configurações** ) permitem que seu aplicativo receba notificações por push, mesmo quando a economia de bateria está ativada.
 
--   **Permitir notificações por push de qualquer aplicativo em economia de bateria**: esta configuração permite que todos os aplicativos recebam notificações por push enquanto a economia de bateria está ativada. Observe que a configuração se aplica somente ao Windows10 para edições de área de trabalho (Home, Pro, Enterprise e Education).
+-   **Permitir notificações por push de qualquer aplicativo em economia de bateria**: esta configuração permite que todos os aplicativos recebam notificações por push enquanto a economia de bateria está ativada. Observe que essa configuração se aplica somente ao Windows 10 para edições desktop (Home, Pro, Enterprise e Education).
 -   **Sempre permitido**: esta configuração permite que aplicativos específicos sejam executados em segundo plano enquanto a economia de bateria está ativada, inclusive o recebimento de notificações por push. Essa lista é mantida manualmente pelo usuário.
 
 Não há nenhuma maneira de se verificar o estado dessas duas configurações, mas você pode verificar o estado de economia de bateria. No Windows 10, use a propriedade [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) para verificar o estado de economia de bateria. O aplicativo também pode usar o evento [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) para escutar alterações na economia de bateria.
 
-Se o aplicativo depende muito de notificações por push, recomendamos notificar os usuários de que eles podem não receber notificações enquanto a economia de bateria estiver ativada e facilitar para que eles possam ajustar as **configurações de economia de bateria**. Ao usar o esquema de URI de configurações de economia de bateria no Windows10, `ms-settings:batterysaver-settings`, você pode fornecer um link conveniente para o aplicativo Configurações.
+Se o aplicativo depende muito de notificações por push, recomendamos notificar os usuários de que eles podem não receber notificações enquanto a economia de bateria estiver ativada e facilitar para que eles possam ajustar as **configurações de economia de bateria**. Usando o esquema URI de configurações de economia de bateria no Windows 10, `ms-settings:batterysaver-settings`, você pode fornecer um link conveniente para o aplicativo configurações.
 
-**Dica**   Quando notificar o usuário sobre as configurações de economia de bateria, é recomendável fornecer uma maneira de suprimir a mensagem no futuro. Por exemplo, a caixa de seleção `dontAskMeAgainBox` no exemplo a seguir persiste a preferência do usuário em [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+**Dica**  quando notificar o usuário sobre as configurações de economia de bateria, é recomendável fornecer uma maneira de suprimir a mensagem no futuro. Por exemplo, a caixa de seleção `dontAskMeAgainBox` no exemplo a seguir persiste a preferência do usuário em [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
- 
+ 
 
-Veja um exemplo de como verificar se a economia de bateria está ativada no Windows10. Este exemplo notifica o usuário e inicia o aplicativo Configurações para as **configurações de economia de bateria**. O `dontAskAgainSetting` permite que o usuário suprima a mensagem se ele não quiser ser notificado novamente.
+Aqui está um exemplo de como verificar se a economia de bateria está ativada no Windows 10. Este exemplo notifica o usuário e inicia o aplicativo Configurações para as **configurações de economia de bateria**. O `dontAskAgainSetting` permite que o usuário suprima a mensagem se ele não quiser ser notificado novamente.
 
 ```cs
 using System;
@@ -256,9 +254,9 @@ Este é o XAML para o [**ContentDialog**](https://docs.microsoft.com/uwp/api/Win
 * [Cabeçalhos de solicitação e resposta de serviço de notificação por push](https://msdn.microsoft.com/library/windows/apps/hh465435)
 * [Diretrizes e lista de verificação de notificações por push](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Notificações brutas](https://msdn.microsoft.com/library/windows/apps/hh761488)
- 
+ 
 
- 
+ 
 
 
 

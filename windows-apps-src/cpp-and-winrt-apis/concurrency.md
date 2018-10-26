@@ -5,16 +5,14 @@ title: Simultaneidade e operações assíncronas com C++/WinRT
 ms.author: stwhi
 ms.date: 10/21/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, concorrência, async, assíncrono, assincronia
 ms.localizationpriority: medium
-ms.openlocfilehash: 96a1a5d4636bc96d774071514b77ad8bde4df6be
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: b1a45ba0bd362c07c27516ef18c11c326d747b1f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521111"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556919"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Simultaneidade e operações assíncronas com C++/WinRT
 

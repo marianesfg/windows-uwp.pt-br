@@ -6,16 +6,14 @@ ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.author: kbridge
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ecce3c9e0eee30864c2777b657e9b951a8ab0b06
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 5c9234463ad011cc0b4d289bba9fe1ff1873ed46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393825"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559428"
 ---
 # <a name="guidelines-for-cross-slide"></a>Diretrizes de deslizamento transversal
 
@@ -60,16 +58,16 @@ Aqui estão algumas diretrizes a serem consideradas ao incluir a funcionalidade 
 
 Use o deslizamento transversal para listas ou coleções que rolam em uma única direção. Para obter mais informações, consulte [Adicionando controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Observação**  Nos casos em que a área de conteúdo pode ter movimento panorâmico nas duas direções, como navegadores da Web ou leitores eletrônicos, a interação com o tempo de pressionar e manter pressionado deve ser usada para chamar o menu de contexto para objetos como imagens e hiperlinks.
+**Observação**em casos onde a área de conteúdo pode ter movimento panorâmico nas duas direções, como navegadores da web ou leitores eletrônicos, a interação com o pressionar e manter pressionado deve ser usada para invocar o menu de contexto para objetos como imagens e hiperlinks.
 
- 
+ 
 
 |                                                                                         |                                                                                         |
 |-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | ![movimento panorâmico horizontal, lista bidimensional](images/groupedlistview1.png)                | ![movimento panorâmico vertical, lista unidimensional](images/listviewlistlayout.png)                |
 | Uma lista bidimensional de movimento panorâmico horizontal. Arraste verticalmente para selecionar ou mover um item. | Uma lista unidimensional de movimento panorâmico vertical. Arraste verticalmente para selecionar ou mover um item. |
 
- 
+ 
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
@@ -150,9 +148,9 @@ Se for necessário mover mais de um objeto, permita que os usuários selecionem 
 * [Entrada: amostra de gestos no Windows 8](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: amostra de manipulações e gestos (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Amostra de entrada por toque do DirectX](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

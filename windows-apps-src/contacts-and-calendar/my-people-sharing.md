@@ -5,16 +5,14 @@ author: muhsinking
 ms.author: mukin
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 00cea51c673f64725c6ada4f1cfb403e2949ed12
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7084c4dde7bdf2d59842a04fe9fd52bc029c264a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958559"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554004"
 ---
 # <a name="my-people-sharing"></a>Compartilhamento de Minhas Pessoas
 
@@ -107,7 +105,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da Classe Ativável. Para localizar seu nome de família de pacote, abra **Package.appxmanifest** usando o editor padrão e, procure na guia "Empacotamento". Aqui, "Aplicativo" é a classe ativável correspondente ao modo de exibição de destino do compartilhamento.
+O "appId" é o Nome da Família de Pacotes, seguido por '!' e a ID da Classe Ativável. Para localizar o nome de família do pacote, abra **Package. appxmanifest** usando o editor padrão e procure na guia "Packaging". Aqui, o "App" é a classe ativável correspondente ao modo de exibição de destino de compartilhamento.
 
 ## <a name="running-as-a-my-people-share-target"></a>Execução como destino de compartilhamento de Minhas Pessoas
 

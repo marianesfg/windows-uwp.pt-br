@@ -6,18 +6,17 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ff1b373e2038824c6349961b3b878f5570babceb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200733"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552453"
 ---
 # <a name="template-settings-classes"></a>Classes TemplateSettings
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -57,7 +56,7 @@ Aqui está um exemplo que vêm dos modelos de controle XAML padrão iniciais. Es
     Fill="{TemplateBinding Foreground}"/>
 ```
 
-O XAML completo do modelo [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) tem centenas de linhas, portanto, este é apenas um trecho minúsculo. Este XAML define a parte de um controle que é um dos 6 elementos [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) que representam a animação de rotação de progresso indeterminado. Como desenvolvedor, talvez você não goste de círculos e talvez use um primitivo de elemento gráfico diferente ou uma forma básica distinta para a progressão da animação. Por exemplo, você pode criar um **ProgressRing** que use um conjunto de elementos [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) organizados em um quadrado. Se for o caso, cada componente **Rectangle** individual de seu novo modelo pode se parecer com o seguinte:
+O XAML completo do modelo [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) tem centenas de linhas, portanto, este é apenas um trecho minúsculo. Este XAML define a parte de um controle que é um dos 6 elementos [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) que representam a animação de rotação de progresso indeterminado. Como desenvolvedor, talvez você não goste de círculos e talvez use um primitivo de elemento gráfico diferente ou uma forma básica distinta para a progressão da animação. Por exemplo, você pode criar um **ProgressRing** que use um conjunto de elementos [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) organizados em um quadrado. Se for o caso, cada componente **Rectangle** individual de seu novo modelo pode se parecer com o seguinte:
 
 ```xml
 <Rectangle
@@ -98,8 +97,7 @@ Este é outro exemplo de uso dos modelos de controle do padrão XAML, desta vez 
 
 Novamente, existem muitos XAML no modelo, portanto, mostramos apenas um trecho. E este é apenas um dos vários estados e animações de tema que usam as mesmas propriedades [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752). Para [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348), o uso dos valores **ComboBoxTemplateSettings** por meio de associações reforça que as animações relacionadas no modelo pararão e começarão nas posições que são baseadas em valores compartilhados e, portanto, fazem a transição perfeitamente.
 
-**Observação**  
-Quando você usar valores **TemplateSettings** como parte de seu modelo de controle, certifique-se de configurar propriedades que correspondem ao tipo do valor. Caso contrário, talvez você precise criar um conversor de valor para a associação de forma que o tipo de destino da associação possa ser convertido de um tipo de origem diferente do valor **TemplateSettings**. Para saber mais, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Observação**  quando você usa **TemplateSettings** valores como parte de seu modelo de controle, verifique se você está definindo propriedades que correspondem ao tipo do valor. Caso contrário, talvez você precise criar um conversor de valor para a associação de forma que o tipo de destino da associação possa ser convertido de um tipo de origem diferente do valor **TemplateSettings**. Para saber mais, consulte [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

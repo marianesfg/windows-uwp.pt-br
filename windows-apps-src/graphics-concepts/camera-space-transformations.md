@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 032518fe793db99309d098b28f2f8e94bbb072ba
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9de6759fb15aef4b32a5e9022a27cab09af300f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043925"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553491"
 ---
 # <a name="camera-space-transformations"></a>Transformações de espaço de câmera
 
@@ -49,23 +47,23 @@ L<sub>dir</sub> = norm(V \ * Lₚ), onde os parâmetros são definidos na tabela
 
 | Parâmetro       | Valor padrão | Tipo                                          | Descrição                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
+| L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
 | V               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice no espaço da câmera                           |
 | wvMatrix        | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz composta contendo as transformções de modo de exibição e mundo |
-| N               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
+| N               | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
 | Lₚ              | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da luz no espaço da câmera                            |
 | vMatrix         | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz que contém a transformação de modo de exibição                      |
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

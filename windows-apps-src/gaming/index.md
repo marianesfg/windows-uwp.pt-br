@@ -6,15 +6,14 @@ ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ms.author: mtoepke
 ms.date: 06/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx
-ms.openlocfilehash: 2f98c038c745615d16227334d7e87426394d5c79
-ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.localizationpriority: medium
+ms.openlocfilehash: 1642251ac7019d8bdf0216487eb7085d616863cf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2017
-ms.locfileid: "678217"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553048"
 ---
 # <a name="game-programming"></a>Programação de jogos
 
@@ -29,11 +28,6 @@ A UWP (Plataforma Universal do Windows) oferece novas oportunidades para criar, 
 
 Para saber como desenvolver jogos UWP usando DirectX, acesse [programação no DirectX](directx-programming.md).
 
-> **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
 Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de jogos, você deve estar familiarizado com os seguintes assuntos:
 
 -   Microsoft C++ com Extensões de Componentes (C++/CX). Esta é uma atualização do Microsoft C++ que incorpora contagem automática de referências, além de ser a linguagem de desenvolvimento de jogos UWP com DirectX 11.1 ou versões posteriores
@@ -41,9 +35,9 @@ Para fazer o melhor uso das visões gerais e dos tutoriais de desenvolvimento de
 -   Conceitos básicos de programação no Windows
 -   Familiaridade básica com as APIs do Direct3D 9 ou 11
 
- 
+ 
 
- 
+ 
 
 
 

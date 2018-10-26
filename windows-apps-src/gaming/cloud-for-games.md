@@ -6,16 +6,14 @@ ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 ms.author: joanlee
 ms.date: 03/27/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, serviços de nuvem
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a0ffc3779f604b68c699e30068e07f3461f568d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 5d15d3e6b6beb773a8d606db7a5d8a17544270be
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552178"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Usando serviços de nuvem para jogos UWP
 
@@ -203,7 +201,7 @@ A seguir estão algumas maneiras de usar as ofertas de nuvem do Azure para um jo
 ## <a name="learning-resources"></a>Recursos de aprendizagem
 
 * //build 2016: [CodeLabs &mdash; Usar o back-end do Serviço de Aplicativo do Microsoft Azure e do Microsoft SQL Azure para salvar a pontuação do jogo no Unity](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* //build 2017: [Experiências de jogo em nível mundial por meio do Microsoft Azure: lições aprendidas com títulos como Halo, Hitman e Walking Dead (vídeo)](https://channel9.msdn.com/Events/Build/2017/P4062)
+* Build 2017: [experiências de jogo em nível usando o Microsoft Azure: lições aprendidas com títulos como Halo, Hitman e WalkingDead (vídeo)](https://channel9.msdn.com/Events/Build/2017/P4062)
 * Conjunto reutilizável de blocos de construção, projetos, serviços e práticas recomendadas projetados para dar suporte a cargas de trabalho de jogos comuns usando o Azure no GitHub: [Blocos de construção para jogos no Azure](https://github.com/MicrosoftDX/nether)
 * [Serviços de jogos no Azure (vídeos)](https://channel9.msdn.com/Series/Gaming-Services-on-Azure)
 
@@ -232,6 +230,6 @@ Estamos inovando e adicionando novos recursos constantemente. Para obter mais in
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
 
- 
+ 
 
- 
+ 

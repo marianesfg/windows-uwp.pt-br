@@ -1,35 +1,33 @@
 ---
 author: v-angraf
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
-title: Página inicial (Home Dev)
-description: Fornece informações sobre a Home page do aplicativo Dev Home para um Xbox.
+title: Página inicial (Dev Home)
+description: Fornece informações sobre a Home page do aplicativo Dev Home para o Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b863b56dcff96833adccd5c1ca08743d60bf0b
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015428"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551930"
 ---
-# <a name="home-page-dev-home"></a>Página inicial (Home Dev)
+# <a name="home-page-dev-home"></a>Página inicial (Dev Home)
    
   
-A página **inicial** do Dev Home oferece acesso rápido às tarefas rotineiramente executadas em um console de desenvolvimento.   
- ![Home page do Dev Home](images/devhome_home.png)   
+A página **principal** do Dev Home fornece acesso rápido às tarefas que são executadas rotineiramente em um console de desenvolvimento.   
+ ![Página inicial da Dev Home](images/devhome_home.png)   
   
-Página **inicial** do contém os seguintes painéis:   
+A página **Home** contém os seguintes painéis:   
  
    *  [Ações rápidas](#ID4EEB)  
-   *  [Jogos & apps](#ID4EPC)  
-   *  [Contas teste](#ID4EQD)  
-   *  [Conecte-se com o navegador](#ID4EFE)  
+   *  [Jogos e aplicativos](#ID4EPC)  
+   *  [Contas de teste](#ID4EQD)  
+   *  [Conectar-se com o navegador](#ID4EFE)  
 
  
 <a id="ID4EEB"></a>
@@ -41,27 +39,27 @@ Página **inicial** do contém os seguintes painéis:
   
 O painel de **ações rápidas** contém os seguintes botões que fornecem acesso rápido às ações executadas com frequência:   
  
-   *  **Pin de mostrar o Visual Studio:** Exibe um código que você pode usar para emparelhar o console de desenvolvimento com a instalação do Visual Studio no seu computador.   
-   *  **Área restrita da alteração:** Permite que você altere qual seguro que o console é in.   
+   *  **Pin de mostrar o Visual Studio:** Exibe um código que você pode usar Emparelhe o console de desenvolvimento com a instalação do Visual Studio no computador.   
+   *  **Área restrita de alteração:** Permite que você alterar qual área restrita o console está no.   
    *  **Console de reinicialização:** Reinicia o console de desenvolvimento.   
-   *  **Sair do modo de Dev:** Retorna o console para o modo de varejo e é reiniciado o console.   
-   *  **Home lançamento:** A tela inicial de varejo é iniciado.   
-   *  **Registrar um jogo de um local de rede compartilhado:** Registra um jogo de um local de rede compartilhado.   
+   *  **Sair do modo de desenvolvimento:** Retorna o console para o modo de varejo e reinicia o console.   
+   *  **Inicialização Home:** Inicia a tela inicial de varejo.   
+   *  **Registrar um jogo de um local de rede compartilhada:** Registra um jogo de um local de rede compartilhada.   
 
   
 <a id="ID4EPC"></a>
 
    
 
-## <a name="games--apps"></a>Jogos & apps   
+## <a name="games--apps"></a>Jogos e aplicativos   
    
   
-O painel **jogos e aplicativos** pode ser usado para executar as seguintes ações:   
+O painel de **jogos e aplicativos** pode ser usado para realizar as seguintes ações:   
  
-   *  Exiba a lista de jogos e instalados no console do desenvolvimento de aplicativos.  
-   *  Inicie rapidamente jogos e aplicativos.  
+   *  Exiba a lista de jogos e aplicativos instalados no console do desenvolvimento.  
+   *  Inicie rapidamente aplicativos e jogos.  
    *  Exiba o estado PLM de jogos e aplicativos.  
-   *  Altere os estados PLM de um menu de contexto.  
+   *  Alterar os estados PLM de um menu de contexto.  
    *  Registrar e executar um título de um compartilhamento de rede remoto.
 
   
@@ -69,13 +67,13 @@ O painel **jogos e aplicativos** pode ser usado para executar as seguintes açõ
 
    
 
-## <a name="test-accounts"></a>Contas teste  
+## <a name="test-accounts"></a>Contas de teste  
    
   
-Painel de **contas de teste** pode ser usado para executar as seguintes ações:   
+O painel de **contas de teste** pode ser usado para realizar as seguintes ações:   
  
    *  Exiba a lista de usuários registrados no console.  
-   *  Assine um usuário ou de saída com um único clique.  
+   *  Assine um usuário ou sai com um único clique.  
    *  Adicione usuários e contas de convidado.  
    *  Exibir detalhes de usuários e contas de convidado.  
 
@@ -84,16 +82,16 @@ Painel de **contas de teste** pode ser usado para executar as seguintes ações:
 
    
 
-## <a name="connect-with-your-browser"></a>Conecte-se com o navegador  
+## <a name="connect-with-your-browser"></a>Conectar-se com o navegador  
    
   
-O painel de **conectar com o navegador** exibe o endereço IP e a porta que você pode usar para gerenciar seu console a partir de um navegador da web.   
+O painel de **conectar-se com o navegador** exibe o endereço IP e a porta que você pode usar para gerenciar seu console usando um navegador da web.   
   
 <a id="ID4EPE"></a>
 
    
 
-## <a name="see-also"></a>Veja também  
- [Página inicial do desenvolvedor no Console (Dev Home)](dev-home.md)
+## <a name="see-also"></a>Consulte também  
+ [Home de desenvolvedor no Console (Dev Home)](dev-home.md)
 
   

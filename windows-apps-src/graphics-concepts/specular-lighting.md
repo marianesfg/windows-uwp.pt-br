@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 305924b19914bf4e85366695add2476c3c81c281
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044805"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553605"
 ---
 # <a name="specular-lighting"></a>Iluminação especular
 
@@ -36,22 +34,22 @@ A iluminação especular é descrita pela seguinte equação.
 |-----------------------------------------------------------------------------|
 | Iluminação especular = Cₛ \ * sum\ [Lₛ \ * (N · H)<sup>P</sup> \ * Atten \ * Spot\] |
 
- 
+ 
 
 As variáveis, seus tipos e seus intervalos são:
 
 | Parâmetro    | Valor padrão | Tipo                                                             | Descrição                                                                                            |
 |--------------|---------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Cₛ           | (0,0,0,0)     | Transparência de vermelho, verde, azul e alfa (valores de ponto flutuante) | Cor especular.                                                                                        |
-| soma          | N/A           | N/D                                                              | Referência do componente especular cada da luz.                                                          |
-| N            | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Normal de vértice.                                                                                         |
+| soma          | N/D           | N/D                                                              | Referência do componente especular cada da luz.                                                          |
+| N            | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Normal de vértice.                                                                                         |
 | H            | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z)                    | Vetor de metade. Consulte a seção sobre o vetor de metade.                                                |
 | <sup>P</sup> | 0.0           | Ponto flutuante                                                   | Potência de reflexão especular. Intervalo é 0 até + infinito                                                     |
 | Lₛ           | (0,0,0,0)     | Transparência de vermelho, verde, azul e alfa (valores de ponto flutuante) | Cor especular clara.                                                                                  |
 | Atten        | N/D           | Ponto flutuante                                                   | Valor de atenuação clara. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md). |
 | Ponto         | N/D           | Ponto flutuante                                                   | Fator de destaque. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).        |
 
- 
+ 
 
 O valor de Cₛ é:
 
@@ -59,9 +57,9 @@ O valor de Cₛ é:
 -   cor do vértice 2, se a origem de material especular for a cor do vértice especular, e a segunda cor do vértice for fornecido na declaração de vértice.
 -   cor especular do material
 
-**Observação**   Se qualquer uma das opções de fonte de material especular for usado e a cor do vértice não for fornecida, a cor especular do material é usada.
+**Observação**  se qualquer uma das opções de fonte de material especular é usado e a cor do vértice não for fornecida, a cor especular do material é usada.
 
- 
+ 
 
 Componentes especulares são vinculados para estar entre 0 e 255, depois que todas as luzes são processadas e interpoladas separadamente.
 
@@ -74,15 +72,15 @@ O vetor de metade (H) existe situado entre dois vetores: o vetor de um vértice 
 |-------------------------------------------|
 | H = norm(norm(Cₚ - Vₚ) + L<sub>dir</sub>) |
 
- 
+ 
 
 | Parâmetro       | Valor padrão | Tipo                                          | Descrição                                                  |
 |-----------------|---------------|-----------------------------------------------|--------------------------------------------------------------|
 | Cₚ              | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da câmera.                                             |
 | Vₚ              | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice.                                             |
-| L<sub>dir</sub> | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção da posição de vértice para a posição da luz. |
+| L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção da posição de vértice para a posição da luz. |
 
- 
+ 
 
 Determinar o vetor de metade dessa maneira pode ser computacionalmente intensa. Como alternativa, usar realces especulares ortogonais (em vez de realces especulares relativos à câmera) instrui o sistema a agir como se o ponto de vista fosse infinitamente distante no eixo z. Isso se reflete na seguinte fórmula.
 
@@ -90,7 +88,7 @@ Determinar o vetor de metade dessa maneira pode ser computacionalmente intensa. 
 |-------------------------------------|
 | H = norm((0,0,1) + L<sub>dir</sub>) |
 
- 
+ 
 
 Essa configuração é computacionalmente menos intensa, mas muito menos precisa, portanto, é melhor usada por aplicativos que usam a projeção ortogonal.
 
@@ -120,9 +118,9 @@ A iluminação especular é mais intensa para se calcular do que a iluminação 
 
 [Matemática de iluminação](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,17 @@ description: O layout pode ser uma parte cara de um aplicativo XAML&\#8212;, tan
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 40afd15da7e225ea82814ab2fa680a3c95e00488
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b0dcb3e49bb35902a17f829c0222c570265be8b5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894742"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553856"
 ---
 # <a name="optimize-your-xaml-layout"></a>Otimizar o layout XAML
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **APIs importantes**
 
@@ -28,7 +26,7 @@ O layout é o processo de definição da estrutura visual para sua interface do 
 
 ## <a name="reduce-layout-structure"></a>Reduzir a estrutura de layout
 
-O maior ganho no desempenho de layout vem de simplificar a estrutura hierárquica da árvore de elementos de interface do usuário. Os painéis existem na árvore visual, mas são elementos estruturais, não *elementos produtores de pixels*, como um [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265) ou um [**Retângulo**](https://msdn.microsoft.com/library/windows/apps/BR243371). Simplificar a árvore reduzindo a quantidade de elementos não produtores de pixels costuma provocar uma grande melhora no desempenho.
+O maior ganho no desempenho de layout vem de simplificar a estrutura hierárquica da árvore de elementos de interface do usuário. Os painéis existem na árvore visual, mas são elementos estruturais, não *elementos produtores de pixels*, como um [**Botão**](https://msdn.microsoft.com/library/windows/apps/BR209265) ou um [**Retângulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Simplificar a árvore reduzindo a quantidade de elementos não produtores de pixels costuma provocar uma grande melhora no desempenho.
 
 Muitas interfaces do usuário são implementadas aninhando-se painéis, o que resulta em árvores profundas e complexas de painéis e elementos. É prático aninhar painéis, mas em muitos casos, a mesma interface do usuário pode ser obtida com um painel único mais complexo. Usar um único painel proporciona melhor desempenho.
 
@@ -138,7 +136,7 @@ Como esses exemplos mostram, há muitas maneiras de atingir a mesma interface do
 
 Um requisito da interface do usuário comum é ter um layout em que elementos se sobrepõem uns aos outros. Geralmente, preenchimento, margens, alinhamentos e transformações são usados para posicionar os elementos dessa maneira. O controle [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) XAML é otimizado para melhorar o desempenho do layout para elementos que se sobrepõem.
 
-**Importante**  Para ver a melhora, use um [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de célula única. Não defina [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**para ver a melhora, use uma única célula de [**grade**](https://msdn.microsoft.com/library/windows/apps/BR242704). Não defina [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ou [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### <a name="examples"></a>Exemplos
 

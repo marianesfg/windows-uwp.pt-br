@@ -6,16 +6,14 @@ ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a001f461f78acf79438bb15b03aac00a05f29a3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 8dcf1749f1e7db4d514466d6a753d6f8cace5713
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691615"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555516"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
@@ -240,7 +238,7 @@ Use a tabela a seguir para converter o código do Direct3D 9 em Direct3D 11. Iss
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="surface-format-mapping"></a>Mapeamento do formato da superfície
 
@@ -346,20 +344,20 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   Use o swizzle .r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do Direct3D 9.
+<strong>Observação</strong>  Use swizzling r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do Direct3D 9.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   Use o swizzle .rrrg no sombreador para duplicar o vermelho e mover o verde para os componentes alfa para obter o comportamento do Direct3D 9.
+<strong>Observação</strong>  Use o swizzle rrrg no sombreador para duplicar o vermelho e mover o verde para os componentes alfa para obter o comportamento do Direct3D 9.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -402,10 +400,10 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   No Direct3D 9, os dados eram dimensionados em 255.0f, mas esse valor pode ser tratado pelo sombreador.
+<strong>Observação</strong>  no Direct3D 9 os dados foi dimensionado para 255.0, mas isso pode ser manipulado no sombreador.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -416,10 +414,10 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   No Direct3D 9, os dados eram dimensionados em 255.0f, mas esse valor pode ser tratado pelo sombreador.
+<strong>Observação</strong>  no Direct3D 9 os dados foi dimensionado para 255.0, mas isso pode ser manipulado no sombreador.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -430,10 +428,10 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>   DXT1 e DXT2 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>  DXT1 e DXT2 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -444,10 +442,10 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Observação</strong>   DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
+<strong>Observação</strong>  DXT3 e DXT4 são iguais na perspectiva de API/hardware. A única diferença é quando alfa pré-multiplicado é usado, o que pode ser acompanhado por um aplicativo, sem a necessidade de um formato separado.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -510,10 +508,10 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   Use swizzling .r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do D3D9.
+<strong>Observação</strong>  Use swizzling r no sombreador para duplicar o vermelho em outros componentes para obter o comportamento do D3D9.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -584,30 +582,30 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>Observação</strong>   O sombreador obtém valores UINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9 (0.0f, 1.0f... 255.f), UINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>  o sombreador obtém valores UINT, mas se o Direct3D 9 de estilo integral sejam necessários floats no (0.0 f, 1.0 f... 255. f), UINT poderá ser convertido em float32 no sombreador.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Observação</strong>   O sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>  o sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Observação</strong>   O sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>  o sombreador obtém valores SINT, mas caso sejam necessários floats integrais no estilo do Direct3D 9, SINT poderá ser convertido em float32 no sombreador.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -650,30 +648,30 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   Exige nível de recursos 10.0 ou posterior
+<strong>Observação</strong>  exige nível de recursos 10.0 ou posterior
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>Observação</strong>   Exige nível de recursos 10.0 ou posterior
+<strong>Observação</strong>  exige nível de recursos 10.0 ou posterior
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

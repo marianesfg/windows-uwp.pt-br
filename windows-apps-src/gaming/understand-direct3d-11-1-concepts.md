@@ -6,19 +6,18 @@ ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, direct3d 9, direct3d 11, alterações
-ms.openlocfilehash: e46bb663a5497cb17f396b410fbdcb5d0295e5fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 969d8f2620adbc289c1f4c89242e0282901357c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199494"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554471"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Alterações importantes do Direct3D 9 para o Direct3D 11
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumo**
 
@@ -108,13 +107,13 @@ Todos os sombreadores são escritos em HLSL usando um perfil que corresponde a u
 
 O Direct3D 9 gerenciava as restrições de sombreadores usando uma matriz compartilhada com SetVertexShaderConstant e SetPixelShaderConstant. O Direct3D 11 usa buffers constantes, que são recursos como um buffer de vértice ou índice. Os buffers constantes são projetados para atualização eficiente. Em vez de as constantes do sombreador serem organizadas em uma matriz global, você deve organizá-las em agrupamentos lógicos e gerenciá-las por meio de um ou mais buffers constantes. Ao fazer a portabilidade de um jogo do Direct3D 9 para Direct3D 11, planeje a organização dos buffers constantes de modo a atualizá-los corretamente. Por exemplo, agrupe constantes do sombreador que não sejam atualizadas a cada quadro e um buffer constante separado, para que você não precise carregar constantemente esses dados no adaptador gráfico juntamente com constantes mais dinâmicas do sombreador.
 
-> **Observação**    A maioria dos aplicativos Direct3D 9 fazia grande uso de sombreadores, mas às vezes usava o comportamento de funções fixas herdadas. O Direct3D 11 usa apenas um modelo de sombreamento programável. Os recursos de funções fixas herdadas do Direct3D 9 foram preteridos.
+> **Observação**  aplicativos mais Direct3D 9 amplo uso de sombreadores, mas às vezes usava o comportamento de funções fixas herdados. O Direct3D 11 usa apenas um modelo de sombreamento programável. Os recursos de funções fixas herdadas do Direct3D 9 foram preteridos.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

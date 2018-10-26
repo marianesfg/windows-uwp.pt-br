@@ -6,27 +6,26 @@ ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, toque, controles, directx, entrada
-ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 53c4a91f3ef20c11783796c3ca362f74b3f39adb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "199483"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553008"
 ---
 # <a name="touch-controls-for-games"></a>Controles de toque para jogos
 
 
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprenda a adicionar controles de toque básicos ao seu jogo C++ da Plataforma Universal do Windows (UWP) com DirectX. Mostraremos como adicionar controles baseados em toque para mover uma câmera com plano fixo em um ambiente Direct3D, no qual arrastar com o dedo ou a caneta muda a perspectiva da câmera.
 
 Você pode incorporar esses controles a jogos nos quais deseja que o jogador arraste para rolar ou ter uma visão panorâmica de um ambiente 3D, como um mapa ou espaço de jogo. Por exemplo, em um jogo de estratégia ou quebra-cabeças, você pode usar esses controles para permitir que o jogador veja um ambiente de jogo maior do que a tela realizando um movimento panorâmico para a esquerda ou direita.
 
-> **Observação**  Nosso código também funciona com controles de movimentos panorâmicos baseados em mouse. Os eventos relacionados a ponteiros são abstraídos pelas APIs do Windows Runtime para que possam lidar com eventos de ponteiro baseados em toque ou mouse.
+> **Observação**nosso código também funciona com controles de movimento panorâmico baseados no mouse. Os eventos relacionados a ponteiros são abstraídos pelas APIs do Windows Runtime para que possam lidar com eventos de ponteiro baseados em toque ou mouse.
 
- 
+ 
 
 ## <a name="objectives"></a>Objetivos
 
@@ -344,14 +343,12 @@ Agora, podemos obter uma coordenada do espaço da cena na qual a câmera está f
 
 Parabéns! Você implementou um conjunto simples de controles de movimento panorâmico da câmera de toque no seu jogo.
 
-> **Observação**  
-Este artigo se destina a desenvolvedores do Windows 10 que escrevem aplicativos UWP (Plataforma Universal do Windows). Se você estiver desenvolvendo para Windows 8.x ou Windows Phone 8.x, consulte a [documentação arquivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

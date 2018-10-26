@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c7f68984274cbdb3adec0a88a0c99f7a7342380
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045109"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556409"
 ---
 # <a name="data-type-conversion"></a>Conversão de tipo de dados
 
@@ -37,7 +35,7 @@ O conjunto de termos a seguir é usado posteriormente para caracterizar várias 
 | FLOAT | Um valor de ponto flutuante em uma das representações definidas pelo Direct3D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SRGB  | Semelhante a UNORM, pois em um número n-bits todo 0 significa 0,0f e todo 1 significa 1,0f. No entanto, ao contrário de UNORM, no SRGB a sequência de codificações de inteiros não assinados entre todos os 0 e todos os 1 representa uma progressão não linear na interpretação do ponto flutuante dos números, entre 0,0f e 1,0f. De modo geral, se essa progressão não linear, SRGB, fosse exibida como uma sequência de cores, ela seria exibida como uma rampa linear de níveis de luminosidade para um observador "médio", em condições de exibição "médias", em uma exibição "média". Para obter detalhes completos, consulte o padrão de cor SRGB, IEC 61996-2-1, na IEC (International Electrotechnical Commission).                |
 
- 
+ 
 
 Os termos acima geralmente são usados como "modificadores de nome de formato", pois eles descrevem como os dados estão dispostos na memória e qual a conversão a ser executada no caminho de transporte (possivelmente incluindo filtragem) da memória para uma unidade de pipeline (ou da unidade de pipeline para a memória) como um sombreador.
 
@@ -189,7 +187,7 @@ Com inteiros, salvo indicação em contrário, todas as conversões de/para repr
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Conversão de números inteiros de ponto fixo
 
@@ -238,22 +236,22 @@ Representações de inteiro de ponto fixo são usadas de duas maneiras no Direct
 <td align="left">Inteiro de ponto fixo</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>Suponha que a representação de ponto fixo específico sendo convertida em flutuante não contenha mais do que um total de 24 bits de informações, não mais de 23 bits dos quais está no componente fracionário. Suponha que um dado número de ponto fixo, fxp, esteja na forma de i,f (i bits de números inteiros, f bits fracionários). A conversão para flutuante é semelhante ao pseudocódigo a seguir.</p>
-<p>sobrepor resultado = (float) (fxp &gt; &gt; f) + / / extrair inteiro</p>
-((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); extrair fração</td>
+<p>resultado flutuante = (flutuante) (fxp &gt; &gt; f) + / / extrair inteiro</p>
+((flutuante) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); extrair fração</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 
 
 [Apêndices](appendix.md)
 
- 
+ 
 
- 
+ 
 
 
 

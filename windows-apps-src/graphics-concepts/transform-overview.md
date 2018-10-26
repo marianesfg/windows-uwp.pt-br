@@ -6,16 +6,14 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32beeae8d2398457311a14fa53afe330acdc75f2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700842"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552685"
 ---
 # <a name="transform-overview"></a>Visão geral da transformação
 
@@ -32,7 +30,7 @@ O pipeline de geometria leva vértices como entrada. O mecanismo de transformaç
 | Transformação da projeção em espaço de projeção    | O próximo estágio é a [Transformação da projeção](projection-transform.md), que converte o espaço do modo de exibição em espaço de projeção. Nesta parte do pipeline, os objetos são geralmente dimensionados em relação à sua distância do espectador para dar a ilusão de profundidade para uma cena; objetos mais próximos parecem estar maiores que os objetos distantes. Para fins de simplicidade, esta documentação refere-se ao espaço no qual os vértices existem após a transformação de projeção como *espaço de projeção*. Alguns livros de elementos gráficos podem se referir ao espaço de projeção como *espaço homogêneo de pós-perspectiva*. Nem todas as transformações de projeção dimensionam o tamanho dos objetos em uma cena. Uma projeção como essa às vezes é chamada de um *afim* ou *projeção ortogonal*. |
 | Recorte no espaço da tela                      | Na parte final do pipeline, qualquer vértice que não ficará visível na tela é removido, para que o rasterizador não reserve um tempo para calcular as cores e o sombreamento para algo que jamais será visto. Esse processo é denominado *recorte*. Depois de recorte, os vértices restantes são dimensionados de acordo com os parâmetros do visor e convertidos em coordenadas da tela. Os vértices resultantes, vistos na tela quando a cena é rasterizada, existem no *espaço de tela*.                                                                                                                                                                                                                                                    |
 
- 
+ 
 
 As transformações são usadas para converter a geometria de objeto de um espaço de coordenadas em outro. O Direct3D usa matrizes para realizar transformações 3D. As matrizes criar transformações 3D. Você pode combinar as matrizes para produzir uma matriz única que abrange várias transformações.
 
@@ -163,9 +161,9 @@ Não importa qual tipo de matriz você está criando, lembre-se da regra da esqu
 
 [Transformações](transforms.md)
 
- 
+ 
 
- 
+ 
 
 
 

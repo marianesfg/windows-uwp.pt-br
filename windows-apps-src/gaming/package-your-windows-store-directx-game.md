@@ -6,23 +6,20 @@ ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, jogos, directx, pacote
-ms.openlocfilehash: db31338d908f4c18eaa6b5090b8cf35ac5305655
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "201061"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552486"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 
-
-\[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo morto](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos que eles realmente precisam.
 
-Além do modelo de pacote do aplicativo, o Windows 10 oferece suporte para lotes de aplicativo que agrupam dois tipos de pacotes:
+Além do modelo de pacote do aplicativo, o Windows 10 dá suporte a lotes de aplicativo que agrupam dois tipos de pacotes:
 
 -   Pacotes de aplicativos que contêm arquivos executáveis e bibliotecas específicos da plataforma. Tipicamente, um jogo UWP pode ter até três pacotes de aplicativo: um para cada arquitetura x86, x64 e CPU ARM. Todos os códigos e dados específicos da plataforma de hardware em questão deverão estar incluídos nesse pacote do aplicativo. O pacote do aplicativo também deve conter todos os principais ativos para que o jogo seja executado com um nível básico de fidelidade e desempenho.
 -   Os pacotes de recursos contêm dados opcionais ou expandidos independentes do tipo de plataforma, como ativos do jogo (texturas, malhas, som, texto). Um jogo UWP pode ter um ou mais pacotes de recurso, incluindo pacotes de recurso para ativos ou texturas de alta definição, nível de recursos 11+ do DirectX ou ativos e recursos específicos de idioma.
@@ -48,17 +45,17 @@ Os possíveis conteúdos dos pacotes de recursos dos jogos incluem:
 
 Tudo isso é definido no package.appxmanifest que faz parte do seu projeto UWP e na estrutura do diretório do seu pacote final. Por causa da nova interface de usuário do Visual Studio, se você seguir o processo neste documento, não será preciso editar manualmente.
 
-> **Importante**   O carregamento e o gerenciamento desses recursos são manipulados por meio das APIs **Windows.ApplicationModel.Resources**\*. Se você usar essas APIs de recursos de modelo de aplicativo para carregar o arquivo correto para uma localidade, um fator de escala ou um nível de recursos de DirectX, não será preciso carregar seus ativos usando caminhos de arquivo explícitos. Em vez disso, você fornece as APIs de recursos somente com o nome de arquivo generalizado do ativo que você quer e deixa o Sistema de Gerenciamento de Recursos obter a variante certa do recurso para a plataforma e a configuração de localidade atuais do usuário (que você também pode especificar diretamente com essas mesmas APIs).
+> **Importante**  o carregamento e o gerenciamento desses recursos são manipulados por meio do **Windows.ApplicationModel.Resources**\ * APIs. Se você usar essas APIs de recursos de modelo de aplicativo para carregar o arquivo correto para uma localidade, um fator de escala ou um nível de recursos de DirectX, não será preciso carregar seus ativos usando caminhos de arquivo explícitos. Em vez disso, você fornece as APIs de recursos somente com o nome de arquivo generalizado do ativo que você quer e deixa o Sistema de Gerenciamento de Recursos obter a variante certa do recurso para a plataforma e a configuração de localidade atuais do usuário (que você também pode especificar diretamente com essas mesmas APIs).
 
- 
+ 
 
 Os recursos para empacotamento de recursos são especificados de uma dessas duas maneiras básicas:
 
 -   Os arquivos de recurso têm o mesmo nome de arquivo e as versões específicas do pacote de recursos são colocadas em diretórios com nomes específicos. Esses nomes de diretório são reservados pelo sistema. Por exemplo, \\en-us, \\scale-140, \\dxfl-dx11.
 -   Os arquivos de ativos são armazenados em pastas com nomes arbitrários, mas os arquivos são nomeados com um rótulo comum que é anexado com cadeias de caracteres reservadas pelo sistema para denotar idiomas ou outros qualificadores. Especificamente, as cadeias de caracteres de qualificadores são afixadas ao nome de arquivo generalizado após um sublinhado (“\_”). Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Você também pode juntar essas cadeias de caracteres. Por exemplo, \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Observação**   Quando usado em um nome de arquivo em vez de sozinho em um nome de diretório, o qualificador de idioma deve ter o formato "lang-<tag>" (por exemplo, "lang-en-us"), conforme descrito em [Como nomear recursos usando qualificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
+    > **Observação**  quando usado em um nome de arquivo em vez de sozinho em um nome de pasta, um qualificador de idioma deve ter o formato "lang -<tag>", por exemplo, "lang-en-us" conforme descrito em [Personalizar os recursos para idioma, escala e outros qualificadores](../app-resources/tailor-resources-lang-scale-contrast.md).
 
-     
+     
 
 Para uma especificidade adicional no empacotamento de recursos, os nomes de diretórios podem ser combinados. Contudo, eles não podem ser redundantes. Por exemplo, \\en-us\\menu\_option1\_lang-en-us.png é redundante.
 
@@ -68,11 +65,11 @@ Aqui estão os seguintes nomes de diretório reservados e prefixos de sublinhado
 
 | Tipo de ativo                   | Nome do diretório do pacote de recursos                                                                                                                  | Sufixo do nome de arquivo do pacote de recursos                                                                                                    |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Ativos localizados             | Todos os idiomas possíveis, ou combinações de idioma e localização, para Windows 10. (O prefixo qualificador "lang-" não é exigido em um nome de pasta). | Um "\_" seguido pelo especificador de idioma, localidade ou idioma-localidade. Por exemplo, "\_en", "\_us" ou "\_en-us", respectivamente. |
+| Ativos localizados             | Todos os idiomas possíveis, ou combinações de idioma e localidade, para Windows 10. (O prefixo qualificador "lang-" não é exigido em um nome de pasta). | Um "\_" seguido pelo especificador de idioma, localidade ou idioma-localidade. Por exemplo, "\_en", "\_us" ou "\_en-us", respectivamente. |
 | Ativos do fator de escala        | scale-100, scale-140, scale-180. Servem para os fatores de escala de interface do usuário 1.0x, 1.4x e 1.8x, respectivamente.                                     | Um "\_" seguido por "scale-100", "scale-140" ou "scale-180".                                                                    |
 | Ativos de nível de recursos do DirectX | dxfl-dx9, dxfl-dx10 e dxfl-dx11. Servem para os níveis de recursos do DirectX 9, 10 e 11, respectivamente.                                     | Um "\_" seguido por "dxfl-dx9", "dxfl-dx10" ou "dxfl-dx11".                                                                     |
 
- 
+ 
 
 ## <a name="defining-localized-language-resource-packs"></a>Definindo pacotes de recursos de idiomas localizados
 
@@ -84,29 +81,29 @@ Ao configurar seu aplicativo para dar suporte a ativos localizados para vários 
 -   Crie um subdiretório de aplicativo (ou uma versão de arquivo) para cada idioma e localidade a que você oferecerá suporte (por exemplo, en-us, jp-jp, zh-cn, fr-fr e assim por diante).
 -   Durante o desenvolvimento, coloque cópias de TODOS os ativos (como arquivos de áudio, texturas e gráficos de menu localizados) no subdiretório da localidade do idioma correspondente, mesmo que eles não sejam diferentes entre os idiomas ou localidades. Para proporcionar uma excelente experiência para o usuário, garanta que o usuário seja alertado se ele não tiver obtido um pacote de recursos de idioma disponível para sua localidade se houver um disponível (ou se ele tiver acidentalmente excluído o pacote após o download e a instalação).
 -   Certifique-se de que cada arquivo de recursos de ativo ou cadeia de caracteres (.resw) tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\en-us e \\jp-jp, mesmo que o conteúdo do arquivo seja para um idioma diferente. Nesse caso, você os veria como \\en-us\\menu\_option1.png e \\jp-jp\\menu\_option1.png.
-    > **Observação**   Opcionalmente, você pode anexar a localidade ao nome do arquivo e armazenar no mesmo diretório; por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png.
+    > **Observação**  , opcionalmente, você pode anexar a localidade ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-JP-jp.PNG..
 
-     
+     
 
 -   Use as APIs em [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) e [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para especificar e carregar os recursos específicos de localidade para seu aplicativo. Além disso, use referências de ativo que não incluam a localidade específica, já que essas APIs determinam a localidade correta com base nas configurações do usuário e recuperam o recurso certo para ele.
--   No Microsoft Visual Studio 2015, selecione **PROJETO->Loja->Criar pacote do aplicativo...** e crie o pacote.
+-   No Microsoft Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>Definição do fator de dimensionamento dos pacotes de recursos
 
 
-O Windows 10 oferece três fatores de escala de interface do usuário: 1.0x, 1.4x e 1.8x. Os valores de dimensionamento para cada tela são definidos durante a instalação, de acordo com diversos fatores combinados: o tamanho da tela, a resolução da tela e a distância média presumida do usuário em relação à tela. O usuário também pode ajustar fatores de escala para melhorar a legibilidade. Seu jogo deve permitir reconhecimento de DPI e de fator de dimensionamento para a melhor experiência possível. Parte desse reconhecimento significa criar versões de ativos visuais críticos para cada um dos três fatores de dimensionamento. Isso também inclui testes de clique e interação do ponteiro!
+Windows 10 oferece três fatores de escala de interface de usuário: 1.0 x, 1.4 x e 1.8 x. Os valores de dimensionamento para cada tela são definidos durante a instalação, de acordo com diversos fatores combinados: o tamanho da tela, a resolução da tela e a distância média presumida do usuário em relação à tela. O usuário também pode ajustar fatores de escala para melhorar a legibilidade. Seu jogo deve permitir reconhecimento de DPI e de fator de dimensionamento para a melhor experiência possível. Parte desse reconhecimento significa criar versões de ativos visuais críticos para cada um dos três fatores de dimensionamento. Isso também inclui testes de clique e interação do ponteiro!
 
 Quando estiver configurando seu aplicativo para oferecer suporte a pacotes de recursos para diferentes fatores de escala de aplicativo UWP, você deve:
 
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada fator de dimensionamento ao qual você dará suporte (escala-100, escala-140 e escala-180).
 -   Durante o desenvolvimento, coloque cópias apropriadas ao fator de dimensionamento de TODOS os ativos em cada diretório de recursos do fator de dimensionamento, mesmo que eles não sejam diferentes entre os fatores de dimensionamento.
 -   Certifique-se de que cada ativo tenha o mesmo nome em cada diretório. Por exemplo, menu\_option1.png deve ter o mesmo nome nos diretórios \\scale-100 e \\scale-180, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\scale-100\\menu\_option1.png e \\scale-140\\menu\_option1.png.
-    > **Observação**   Novamente, você tem a opção de anexar o sufixo do fator de escala ao nome do arquivo e armazenar no mesmo diretório; por exemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png.
+    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do fator de escala ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.PNG..
 
-     
+     
 
 -   Use as APIs em [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para carregar os ativos. As referências a ativos devem ser generalizadas (sem sufixo), omitindo a variação de escala específica. O sistema irá recuperar o recurso de escala apropriado para a exibição e as configurações do usuário.
--   No Visual Studio 2015, selecione **PROJETO->Loja->Criar pacote do aplicativo...** e crie o pacote.
+-   No Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>Definição do nível de recursos do DirectX dos pacotes de recursos
 
@@ -123,7 +120,7 @@ O suporte ao formato de textura no nível de recursos 10 do DirectX ou superior 
 | 10                    | BC4, BC5                      |
 | 11                    | BC6H, BC7                     |
 
- 
+ 
 
 Além disso, cada nível de recursos do DirectX dá suporte a diferentes versões de modelo de sombreador. Os recursos de sombreador compilado podem ser criados por recurso e podem ser incluídos nos pacotes de recursos do nível de recursos do DirectX. Algumas versões mais recentes de modelos de sombreador podem usar ativos, como mapas normais, que as versões anteriores de sombreador não podiam. Esses ativos específicos do modelo de sombreador também devem ser incluídos em um pacote de recursos do nível de recursos do DirectX.
 
@@ -134,9 +131,9 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 -   Crie um subdiretório do aplicativo (ou versão do arquivo) para cada nível de recursos do DirectX ao qual você dará suporte (dxfl-dx9, dxfl-dx10 e dxfl-dx11).
 -   Durante o desenvolvimento, coloque ativos específicos do nível de recursos em cada diretório de recursos do nível de recursos. Ao contrário das localidades e dos fatores de dimensionamento, você pode ter diferentes ramificações de código de renderização para cada nível de recursos em seu jogo, e se você tiver texturas, sombreadores compilados ou outros ativos que são usados em um nível ou em um subconjunto de todos os níveis de recursos suportados, coloque os ativos correspondentes apenas nos diretórios dos níveis de recursos que os utilizam. No caso dos ativos que são carregados em todos os níveis de recursos, verifique se cada diretório de recursos do nível de recursos possui uma versão com o mesmo nome. Por exemplo, para uma textura independente de nível de recursos com o nome "coolsign.dds", coloque a versão comprimida BC3 no diretório \\dxfl-dx9 e a versão comprimida BC7 no diretório \\dxfl-dx11.
 -   Certifique-se de que cada ativo (se estiverem disponíveis para vários níveis de recursos) tenha o mesmo nome em cada diretório. Por exemplo, coolsign.dds deve ter o mesmo nome nos diretórios \\dxfl-dx9 e \\dxfl-dx11, mesmo que o conteúdo do arquivo seja diferente. Nesse caso, você os veria como \\dxfl-dx9\\coolsign.dds e \\dxfl-dx11\\coolsign.dds.
-    > **Observação**   Novamente, você tem a opção de anexar o sufixo do nível de recurso ao nome do arquivo e armazenar no mesmo diretório; por exemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds.
+    > **Observação**  novamente, você pode, opcionalmente, acrescente o sufixo do nível de recurso ao nome do arquivo e armazená-los no mesmo diretório; Por exemplo, \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.DDS..
 
-     
+     
 
 -   Declare os níveis de recursos do DirectX quando estiver configurando seus recursos de elementos gráficos.
     ```cpp
@@ -192,9 +189,9 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > **Observação**  Em seu código, carregue a textura diretamente pelo nome (ou o caminho, abaixo do diretório de nível de recursos). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregue "textures\\coolsign.dds", não "dxfl-dx11\\textures\\coolsign.dds" ou "textures\\coolsign\_dxfl-dx11.dds".
+    > **Observação**em seu código, carregue a textura diretamente pelo nome (ou caminho abaixo do diretório de nível de recursos). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregue "textures\\coolsign.dds", não "dxfl-dx11\\textures\\coolsign.dds" ou "textures\\coolsign\_dxfl-dx11.dds".
 
-     
+     
 
 -   Agora, use o [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078) para localizar o arquivo que corresponda ao nível de recursos de DirectX atual. O **ResourceManager** retorna um [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089), que você consulta com [**ResourceMap:: GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098) (ou [**ResourceMap:: TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) e um [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064) fornecido. Isso retorna um [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/br206051) que corresponde mais proximamente ao nível de recursos de DirectX que foi especificando chamando [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/mt622101).
     
@@ -215,7 +212,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   No Visual Studio 2015, selecione **PROJETO->Loja->Criar pacote do aplicativo...** e crie o pacote.
+-   No Visual Studio2015, selecione **projeto -> loja -> Criar pacote do aplicativo...** e crie o pacote.
 -   Certifique-se de ativar lotes de aplicativo nas configurações de manifesto package.appxmanifest.
 
 ## <a name="related-topics"></a>Tópicos relacionados
@@ -225,9 +222,9 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
 * [Empacotando aplicativos](https://msdn.microsoft.com/library/windows/apps/mt270969)
 * [Empacotador de aplicativo (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
 
- 
+ 
 
- 
+ 
 
 
 

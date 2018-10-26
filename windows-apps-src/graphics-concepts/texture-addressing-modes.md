@@ -12,15 +12,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75aa946f3a0f1259adf1207e9568ca6da783883e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044745"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552802"
 ---
 # <a name="texture-addressing-modes"></a>Modos de endereçamento de textura
 
@@ -43,7 +41,7 @@ Habilitar o encapsulamento de textura torna efetivamente as coordenadas de textu
 | Clamp                   | Ancora seu coordenadas de textura ao intervalo \[0.0, 1.0\] variar; o modo Clamp aplica a textura uma vez e depois mancha a cor dos pixels da borda. |
 | Border Color            | Usa uma *cor de borda* arbitrária para qualquer coordenada de textura fora do intervalo de 0.0 e 1.0.                         |
 
- 
+ 
 
 ## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Modo de endereçamento de textura Wrap
 
@@ -101,9 +99,9 @@ As limitações de repetição de textura podem depender do tamanho da textura i
 
 [Texturas](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

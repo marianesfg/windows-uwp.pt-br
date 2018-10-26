@@ -5,16 +5,14 @@ description: Saiba como trabalhar com arquivos na Plataforma Universal do Window
 ms.author: twhitney
 ms.date: 05/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos, io de arquivo, ler arquivo, gravar arquivo, criar arquivo, escrever texto, ler texto
 ms.localizationpriority: medium
-ms.openlocfilehash: ae89b5c0e072eceec155009c07b3b3a7cf563a20
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521408"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553157"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 

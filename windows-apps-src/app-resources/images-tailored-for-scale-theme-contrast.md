@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 06e80e0a928c179d9dcbf2d092135fafa337d403
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 4db96cea273348b4e1bc7059446f7528ba30a645
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691315"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557900"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros
 O app pode carregar arquivos de recurso de imagem (ou outros arquivos de ativo) personalizados para [fator de escala de exibição](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, alto contraste e outros contextos de tempo de execução. Essas imagens podem ser referenciadas no código imperativo ou na marcação XAML, por exemplo, como a propriedade **Source** de uma **Imagem**. Elas também podem aparecer no arquivo de origem do manifesto do pacote de aplicativos (o arquivo `Package.appxmanifest`), por exemplo, como o valor do ícone de aplicativo na guia Ativos Visuais do Designer de Manifesto do Visual Studio, ou em seus blocos e notificações do sistema. Usando qualificadores nos nomes de arquivo das imagens e, opcionalmente, carregando-os dinamicamente com a ajuda de um [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), você pode fazer com que o arquivo de imagem que melhor corresponde às configurações de tempo de execução do usuário para escala de exibição, tema, alto contraste, idiomas e outros contextos seja carregado.
@@ -53,7 +51,7 @@ Veja a seguir um exemplo de como você pode fornecer variantes de um recurso de 
     \scale-200\logo.png
 ```
 
-## <a name="reference-an-image-or-other-asset-from-xaml-markup-and-code"></a>Referência a uma imagem ou outros ativos de código e marcação XAML
+## <a name="reference-an-image-or-other-asset-from-xaml-markup-and-code"></a>Fazer referência a uma imagem ou outro ativo no código e na marcação XAML
 O nome &mdash;ou identificador&mdash; de um recurso de imagem é seu caminho e nome de arquivo com todos os qualificadores removidos. Se você nomear pastas e/ou arquivos como qualquer um dos exemplos na seção anterior, terá um recurso de imagem único e seu nome (como um caminho absoluto) será `/Assets/Images/logo.png`. Veja como usar esse nome na marcação XAML.
 
 ```xaml
@@ -121,7 +119,7 @@ Mas essa variante não é válida.
 ## <a name="refer-to-an-image-file-from-your-app-package-manifest"></a>Consulte um arquivo de imagem do manifesto do conjunto de aplicativo
 Se você nomear pastas e/ou arquivos como em qualquer um dos dois exemplos válidos da seção anterior, terá um único recurso de imagem de ícone de app e seu nome (como caminho relativo) será `Assets\Square44x44Logo.png`. No manifesto do conjunto de aplicativo, basta fazer referência ao recurso pelo nome. Não é necessário para usar qualquer esquema de URI.
 
-![adicionar recursos, inglês](images/app-icon.png)
+![adicionar recurso, inglês](images/app-icon.png)
 
 Isso é tudo o que você precisa fazer; o sistema operacional fará a correspondência automática de qualificador para localizar o recurso mais apropriado para o contexto atual. Para obter uma lista de todos os itens no manifesto do conjunto de aplicativo que você pode localizar ou se qualificar dessa maneira, consulte [Itens de manifesto localizáveis](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live).
 
@@ -199,8 +197,8 @@ private void RefreshUIImages()
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>Tópicos relacionados
-* [Personalizar os recursos de acordo com idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
-* [Localizar cadeias de caracteres em seu IU e manifesto do conjunto de aplicativo](localize-strings-ui-manifest.md)
+* [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md)
+* [Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote do aplicativo](localize-strings-ui-manifest.md)
 * [Armazenar e recuperar configurações e outros dados de aplicativo](../design/app-settings/store-and-retrieve-app-data.md)
 * [Suporte ao bloco e notificações do sistema para o idioma, escala e alto contraste](tile-toast-language-scale-contrast.md)
 * [Itens de manifesto localizáveis](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)

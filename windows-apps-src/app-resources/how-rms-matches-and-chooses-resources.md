@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: Auto
+ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690422"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551688"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
 Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos irá analisar todos os candidatos e determinar o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
@@ -24,7 +22,7 @@ Nesse processo de classificação, os diferentes qualificadores recebem priorida
 
 Para obter detalhes específicos sobre como a correspondência de marca de idioma é feita, consulte [Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma](how-rms-matches-lang-tags.md).
 
-Para alguns qualificadores, como escala e contraste, há sempre um grau mínimo de correspondência. Por exemplo, um candidato qualificado como "scale-100" corresponde em certo grau a um contexto "scale-400", embora não tanto quanto um candidato qualificado como "scale-200" ou, para uma correspondência perfeita, como "scale-400".
+Para alguns qualificadores, como escala e contraste, há sempre um grau mínimo de correspondência. Por exemplo, um candidato qualificado para "scale-100"corresponde a um contexto "scale-400" certo grau, embora não, bem como um candidato qualificado como"scale-200"ou (para uma correspondência perfeita)"scale-400".
 
 No entanto, para outros qualificadores, como idioma ou região de residência, é possível ter uma comparação de não correspondência (bem como graus de correspondência). Por exemplo, um candidato qualificado para idioma como "en-US" é uma correspondência parcial de um contexto "en-GB", mas um candidato qualificado como "fr" não é uma correspondência. Da mesma forma, um candidato qualificado para região de residência como "155" (Europa Ocidental) corresponde relativamente bem ao contexto de um usuário cuja configuração de região de residência seja "FR". Porém, um candidato qualificado como "US" não oferece nenhuma correspondência.
 

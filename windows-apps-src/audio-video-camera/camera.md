@@ -6,16 +6,14 @@ title: Câmera
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b8a63609bbc9caa452093517ca43f71e8d5ccc
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: d330a762844e4889d0da9ae5457acc8d9f0c2b91
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664696"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552912"
 ---
 # <a name="camera"></a>Câmera
 
@@ -66,9 +64,9 @@ Esta seção fornece orientação para a criação de aplicativos da Plataforma 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Áudio, vídeo e câmera](index.md)
- 
+ 
 
- 
+ 
 
 
 
