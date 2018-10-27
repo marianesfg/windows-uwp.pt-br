@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 346383504abd7927cf863afa59bcb574ddd2495d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543779"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5686272"
 ---
 # <a name="manage-delivery-lines"></a>Gerenciar linhas de entrega
 

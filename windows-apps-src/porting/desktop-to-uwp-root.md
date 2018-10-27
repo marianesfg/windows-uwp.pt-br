@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: e08856006bc3ed6348a6ded69421ef0be9fc69e5
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5665065"
+ms.locfileid: "5684904"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empacotar aplicativos da área de trabalho (ponte de Desktop)
 

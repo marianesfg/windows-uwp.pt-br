@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, controlador de jogo bruto
 ms.localizationpriority: medium
 ms.openlocfilehash: c57db3f9604e20d0dc83d6c3cf2ced87b1f5dcc1
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5546731"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5682594"
 ---
 # <a name="raw-game-controller"></a>Controlador de jogo bruto
 

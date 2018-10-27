@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eef1edc4e5c725756cdef788bf555f706621741d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5572465"
+ms.locfileid: "5682556"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memória quando seu app é movido para o segundo plano
 

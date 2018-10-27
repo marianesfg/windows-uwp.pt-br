@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aa83e202078336884ff2e1924ebc223bbe13dcdd
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548622"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5682988"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular a entrada do usuário por meio de injeção de entrada
 

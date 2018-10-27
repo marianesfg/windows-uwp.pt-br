@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, carimbo de data e hora personalizado, carimbo de data e hora, notificação, central de ações
 ms.localizationpriority: medium
 ms.openlocfilehash: 290825fa079052b79fb2feaec8af928f8da93f95
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5642520"
+ms.locfileid: "5693696"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Carimbos de data e hora personalizados em notificações do sistema
 
