@@ -6,15 +6,13 @@ keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, W
 ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 93ef3de0dc86ab9708f7be99836204c2232dfef4
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 112e9f60e38bc5a665d9011f35b9e92189f15f80
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5522052"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5699522"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novidades dos documentos de desenvolvedor do Windows em dezembro de 2017
 
