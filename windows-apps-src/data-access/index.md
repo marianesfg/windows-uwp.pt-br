@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, dados, banco de dados, relacional, tabelas, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: beca20d358430ecd82cd1bc57459a6f6af36be77
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5621672"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5693434"
 ---
 # <a name="data-access"></a>Acesso a dados
 
