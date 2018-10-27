@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c17c802e77d13e6e980ed5046c19bfc106d5cff
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 451a8041e0a81d43d91692e92046c32d458e0982
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563267"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710609"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -211,6 +211,8 @@ A tabela a seguir lista os recursos restritos. Você pode solicitar aprovação 
 | **Elevação** | A funcionalidade de **allowElevation** restringidas permite que os aplicativos que são criados por parceiros da Microsoft e empresas para preservar a funcionalidade de área de trabalho existente que requeira elevação automática na inicialização ou durante o tempo de vida do aplicativo.<br/><br/>Não recomendamos declarar essa funcionalidade nos aplicativos enviados para a Store. Para a maioria dos desenvolvedores, o uso dessa funcionalidade não será aprovado. Ele só será aprovado para aplicativos de linha de negócios implantados por empresas ao seu repositório particular através da Microsoft Store para empresas.  |
 | **Credenciais de dispositivo de equipe do Windows** | A funcionalidade de **teamEditionDeviceCredentials** restringidas permite que aplicativos acessem APIs que solicitar credenciais de conta de dispositivo em um dispositivo Surface Hub com Windows 10, versão 1703 ou posterior.<br/><br/>Não recomendamos declarar essa funcionalidade nos aplicativos enviados para a Store. Para a maioria dos desenvolvedores, o uso dessa funcionalidade não será aprovado. |
 | **Exibição de aplicativo de equipe do Windows** | A funcionalidade de **teamEditionView** restringidas permite que aplicativos acessem APIs para hospedar um modo de exibição do aplicativo em um dispositivo Surface Hub com Windows 10, versão 1703 ou posterior.<br/><br/>Não recomendamos declarar essa funcionalidade nos aplicativos enviados para a Store. Para a maioria dos desenvolvedores, o uso dessa funcionalidade não será aprovado. |
+| **Extensão de processamento de câmera** | A funcionalidade de **cameraProcessingExtension** restringidas permite que os aplicativos processar imagens capturadas da câmera sem controle direto de câmera.<br /><br />Essa funcionalidade é necessária para chamar as APIs no namespace [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) .<br /><br />Qualquer pessoa pode solicitar acesso a essa funcionalidade para envio à loja. |
+| **Gerenciamento de uso de dados*** | A funcionalidade de **networkDataUsageManagement** restringidas permite que os aplicativos coletar informações de uso de dados de rede.<br /><br />Essa funcionalidade é necessária para chamar [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync).<br /><br />Qualquer pessoa pode solicitar acesso a essa funcionalidade para envio à loja. |
 
 ## <a name="custom-capabilities"></a>Recursos personalizados
 

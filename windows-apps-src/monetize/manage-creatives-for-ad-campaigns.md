@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 97a7ac89585cbcf7a4609aee16978d36be027a24
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5641307"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708935"
 ---
 # <a name="manage-creatives"></a>Gerenciar criativos
 

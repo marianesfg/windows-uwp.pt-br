@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d8e90f98dd79150cf19727fe31e51278a88a198
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543211"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706145"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Suporte para marcas HLS (HTTP Live Streaming)
 A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.
