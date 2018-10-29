@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a6651c6d1117648522f95c7e7c85aad11ceed42f
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5685265"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5745694"
 ---
 # <a name="debugging-testing-and-performance"></a>Depuração, teste e desempenho
 
@@ -26,7 +26,7 @@ Esta seção mostra como usar o Microsoft Visual Studio para depurar, testar e o
 | [Testando e depurando ferramentas para PLM (Gerenciamento do Tempo de Vida do Processo)](testing-debugging-plm.md) | Ferramentas e técnicas para depurar e testar como seu aplicativo funciona com o Gerenciamento do Tempo de Vida do Processo. |
 | [Testar com o Emulador Microsoft para Windows 10 Mobile](test-with-the-emulator.md) | Simule a interação do mundo real com um dispositivo e teste os recursos de seu aplicativo usando as ferramentas incluídas no Emulador Microsoft para Windows 10 Mobile. O emulador é um aplicativo da área de trabalho que emula um dispositivo móvel que executa o Windows 10. Ele oferece um ambiente virtualizado no qual você pode depurar e testar aplicativos do Windows sem um dispositivo físico. Além disso, ele oferece um ambiente isolado para seus protótipos de aplicativos. |
 | [Testar aplicativos Surface Hub usando o Visual Studio](test-surface-hub-apps-using-visual-studio.md) | O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos UWP (Plataforma Universal do Windows), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar a aparência e o comportamento de seu aplicativo no tamanho de tela e resolução do Surface Hub. |
-| [Implantar um aplicativo por meio do registro de arquivo flexível](loose-file-registration.md) | Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las. |
+| [Implantar um aplicativo por meio de registro de arquivo flexível](loose-file-registration.md) | Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las. |
 | [Teste beta](beta-testing.md) | O **teste beta** oferece a você a oportunidade de melhorar seu aplicativo com base nos comentários de pessoas de fora da sua equipe de desenvolvimento que experimentam o aplicativo ainda não lançado em seus próprios dispositivos. |
 | [Windows Device Portal](device-portal.md) | O Windows Device Portal permite que você configure e gerencie seu dispositivo remotamente por uma rede ou conexão USB. |
 | [Kit de Certificação de Aplicativos Windows](windows-app-certification-kit.md) | Para seu aplicativo as chances de ser publicado na Microsoft Store, ou se tornando certificados do Windows, valide e teste-o localmente antes de enviá-lo para certificação. Este tópico mostra como instalar e executar o Kit de Certificação de Aplicativos Windows. |

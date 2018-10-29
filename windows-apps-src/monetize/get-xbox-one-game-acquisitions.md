@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de jogo Xbox One
 ms.localizationpriority: medium
 ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699919"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5742056"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obter aquisições de jogo Xbox One
 

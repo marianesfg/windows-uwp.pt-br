@@ -3,16 +3,16 @@ author: stevewhims
 description: Respostas às perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com C++/WinRT.
 title: Perguntas frequentes sobre C++/WinRT
 ms.author: stwhi
-ms.date: 05/07/2018
+ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, frequente, pergunta, questões, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a2ea3dddc592379199017408652cab0a2a68fbb
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 612eb6ced57fb2a8ca5d855ef9c156b0b9ae4440
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5696471"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5742519"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Perguntas frequentes sobre C++/WinRT
 Respostas para perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -51,7 +51,7 @@ Se o símbolo não resolvido for uma função livre do Windows Runtime, como [Ro
 #pragma comment(lib, "windowsapp")
 ```
 
-É recomendável que você resolva quaisquer erros de vinculador que você pode vinculando **Windowsapp**. Mas, se você não precisar seu aplicativo para passar nos testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e pela Microsoft Store para validar envios (isto é, consequentemente, não é possível para seu aplicativo para ser com êxito inserido na Microsoft Store), em seguida, você pode vincular uma biblioteca de link estático alternativa em vez disso. Por exemplo, se o erro de vinculador refere-se a **CoIncrementMTAUsage** (ou **WINRT_CoIncrementMTAUsage**), em seguida, você pode resolver que vinculando Ole32.lib se for absolutamente necessário (por exemplo, se sua versão do **Windowsapp** não Exporte a função).
+É importante que você resolva quaisquer erros de vinculador que você pode vinculando **Windowsapp** em vez de uma biblioteca de link estático alternativa, caso contrário, seu aplicativo não passa os testes do [Kit de certificação de aplicativo do Windows](../debug-test-perf/windows-app-certification-kit.md) usados pelo Visual Studio e por a Microsoft Store para validar envios (isto é, consequentemente, não é possível para seu aplicativo para ser inserido com êxito na Microsoft Store).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Devo implementar [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) e, em caso afirmativo, como?
 Se você tiver uma classe de tempo de execução que libera recursos em seu destruidor, e essa classe de tempo de execução foi projetada para ser consumida fora de sua unidade de compilação de implementação (é um componente do Tempo de Execução do Windows direcionado a consumo geral pelos aplicativos de cliente do Windows Runtime), então, recomendamos que você também implemente **IClosable** para dar suporte ao consumo de sua classe de tempo de execução para idiomas que não têm finalização determinística. Certifique-se de que seus recursos sejam liberados se o destruidor [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close), ou ambos são chamados. **IClosable::Close** pode ser chamado um número arbitrário de vezes.

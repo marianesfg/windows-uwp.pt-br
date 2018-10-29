@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, notas de versão
 ms.localizationpriority: medium
 ms.openlocfilehash: dbe932eb9391a4de0304b4be42944b2bced3287a
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5700314"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5740150"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de versão para as bibliotecas de anúncio
 

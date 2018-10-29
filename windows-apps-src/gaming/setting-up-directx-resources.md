@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, recursos, imagens
 ms.localizationpriority: medium
 ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5709071"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5746997"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>Configurar recursos DirectX e exibir uma imagem
 

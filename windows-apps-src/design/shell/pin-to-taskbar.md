@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, barra de tarefas, gerenciador de barra de tarefas, fixar na barra de tarefas, bloco principal
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fcd1f9d090c49ecbd49e05696b33f789973160
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5700626"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5748088"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>Fixar seu aplicativo na barra de tarefas
 
