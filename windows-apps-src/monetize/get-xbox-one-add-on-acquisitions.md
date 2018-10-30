@@ -1,20 +1,20 @@
 ---
 author: Xansky
 description: Use este método na API de análise da Microsoft Store para obter dados de aquisição de complemento agregados.
-title: Obter aquisições de complemento Xbox One
+title: Obter aquisições de complementos do Xbox One
 ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, serviços da loja, API, Xbox One aquisições de complemento de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5702796"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5755664"
 ---
-# <a name="get-xbox-one-add-on-acquisitions"></a>Obter aquisições de complemento Xbox One
+# <a name="get-xbox-one-add-on-acquisitions"></a>Obter aquisições de complementos do Xbox One
 
 Use este método na análise da Microsoft Store API para obter dados de aquisição de complemento agregados no formato JSON para um Xbox One jogo que ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP.
 
