@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
 ms.openlocfilehash: 17a93e10f7b440ac7c1926bc64bba4d9be248710
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5710445"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5766698"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 

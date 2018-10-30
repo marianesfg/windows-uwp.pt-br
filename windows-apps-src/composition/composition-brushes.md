@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1122ae00f9b84980a7793deef08a30a16711b4be
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5710322"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5765706"
 ---
 # <a name="composition-brushes"></a>Pincéis de composição
 Todos os itens visíveis na tela de um aplicativo UWP é visível porque ele foi pintado por um pincel. Pincéis permitem que você pintar objetos (UI) da interface de usuário com conteúdo que variam de cores simples e sólidas a imagens ou desenhos à cadeia de efeitos complexos. Este tópico apresenta os conceitos de pintar com CompositionBrush.

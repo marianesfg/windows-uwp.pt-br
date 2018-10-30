@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d, buffers, uniformes, atributos de vértice
 ms.localizationpriority: medium
 ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5684019"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5765601"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
 

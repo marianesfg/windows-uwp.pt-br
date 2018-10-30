@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
 ms.openlocfilehash: 323190b01cad8a0832d57386f6bde9fde4f2180c
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5683653"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5768500"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 

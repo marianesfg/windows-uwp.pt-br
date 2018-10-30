@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
 ms.openlocfilehash: a9924bf749499318c257001eafffabd902cddaa9
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5709312"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5767680"
 ---
 # <a name="get-add-ons-for-an-app"></a>Obter complementos para um aplicativo
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, notificação, coleção, grupo, experiência do usuário, diretrizes de experiência do usuário, diretrizes, ação, notificação do sistema, Central de ações, noninterruptive, notificações efetivas, não intrusivos notificações, acionáveis, gerenciar, organizar
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ee3431681f3d9fba5c50759e822d78c09826957
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699327"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5767917"
 ---
 # <a name="toast-notification-ux-guidance"></a>Diretrizes de experiência do usuário de notificação do sistema
 As notificações são uma parte fundamental da vida moderna; elas ajudam os usuários a ser mais produtivo e estabelecido com aplicativos e sites, bem como mantenha atualizado com as atualizações. No entanto, as notificações podem rapidamente ativem útil para opressivas e intrusivo se eles não são projetados de maneira centrada no usuário. As notificações são um botão direito do mouse para longe sendo desativado e é improvável depois que eles estão desativados, eles serão ativados novamente.  Portanto, verifique se que as notificações estejam respeita espaço na tela do usuário e a hora, para que você pode manter esse canal de envolvimento aberto.

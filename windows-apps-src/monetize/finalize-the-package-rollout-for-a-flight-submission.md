@@ -9,11 +9,11 @@ keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pa
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
 ms.openlocfilehash: 896fec01072f23d11bf949626b309be836958beb
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5693228"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5766925"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a>Finalizar a distribuição para um envio de versão de pré-lançamento
 
