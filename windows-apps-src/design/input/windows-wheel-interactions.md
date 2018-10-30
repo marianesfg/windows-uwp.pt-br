@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a360bf936843450f5646c0e4e03ad9c3bac34d2
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5686319"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5759552"
 ---
 # <a name="surface-dial-interactions"></a>Interações com o Surface Dial
 
