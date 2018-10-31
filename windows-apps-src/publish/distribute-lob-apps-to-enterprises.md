@@ -4,16 +4,16 @@ Description: You can publish line-of-business (LOB) apps directly to enterprises
 title: Distribuir aplicativos LOB para empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: c491e5db7b5cea0a1b2a6bb9387f1432d007bed2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d90a3b3b0eb216dbc07bbc331d7d461ed0f825c4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758140"
+ms.locfileid: "5816475"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
 
@@ -24,7 +24,7 @@ Você pode publicar aplicativos LOB (linha de negócios) diretamente para empres
 > No momento, somente aplicativos gratuitos podem ser distribuídos exclusivamente para empresas por meio da Microsoft Store para Empresas ou da Microsoft Store para Educação. Se você enviar um aplicativo pago como LOB, ele não estará disponível para a empresa. 
 
 > [!IMPORTANT]
-> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios de aplicativos LOB devem ser feitos por meio do painel do Centro de Desenvolvimento do Windows.
+> Não é possível usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicativos LOB diretamente para empresas. Todos os envios de aplicativos LOB devem ser publicados por meio do Partner Center.
 
 
 ## <a name="set-up-the-enterprise-association"></a>Configurar a associação empresarial
@@ -94,7 +94,7 @@ Depois que o envio passar pelo processo de certificação, o aplicativo não est
 
 A disponibilização de aplicativos para uma empresa pela Microsoft Store para Empresas ou Microsoft Store para Educação garante que o aplicativo foi assinado pela Store e está em conformidade com as Políticas da Store padrão.
 
-Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam enviado pelo Centro de Desenvolvimento do Windows (como motivos relacionados a conformidade ou aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
+Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam enviado pelo Centro de parceiros (como motivos relacionados a conformidade ou aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
 
 Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 

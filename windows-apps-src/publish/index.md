@@ -4,21 +4,21 @@ layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Publicar aplicativos do Windows
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, publicação, publicar, venda, vender, distribuir, distribuição, store, painel
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 98e47934f936b6995ab37623b610869219254b85
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 229e1eab05e392a4091c9eee5bc9af948c678d96
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766819"
+ms.locfileid: "5816387"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicativos e jogos do Windows  
  
-Você pode usar o [painel do Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos na Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje!</a>
+Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para publicar seus aplicativos e jogos na Microsoft Store. <a href="//developer.microsoft.com/store/register">Inscreva-se hoje!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>

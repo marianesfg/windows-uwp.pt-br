@@ -4,19 +4,18 @@ Description: When submitting an add-on, the options on the Properties page help 
 title: Inserir propriedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, complemento, propriedades, período de assinatura, duração de produto, tipo de conteúdo, cra, compra realizada em aplicativo, produto no aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f616e4da96c1a2c59822d1370b49016dbca1bb7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745552"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816465"
 ---
 # <a name="enter-add-on-properties"></a>Inserir propriedades de complemento
-
 
 Ao enviar um complemento, as opções da página **Propriedades** ajudam a determinar o comportamento de seu complemento quando oferecido aos clientes.
 
@@ -32,7 +31,7 @@ Os campos disponíveis nesta página variam de acordo com o tipo de produto do c
 
 ## <a name="product-lifetime"></a>Tempo de vida do produto
 
-Se você selecionou **Durável** como o tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se preferir, você pode definir o **Ciclo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1 a 365 dias).
+Se você selecionou **Durável** como o tipo de produto, o **Ciclo de vida do produto** será mostrado aqui. O **Ciclo de vida do produto** padrão de um complemento durável é **Para sempre**, o que significa que o complemento nunca expira. Se você preferir, você pode alterar o **tempo de vida do produto** para que o complemento expire após uma duração definida (com opções de 1 a 365 dias).
 
 
 ## <a name="quantity"></a>Quantidade

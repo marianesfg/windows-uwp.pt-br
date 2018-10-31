@@ -2,22 +2,22 @@
 author: JnHs
 title: Relatório de campanha publicitária
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: O relatório de Campanha publicitária no painel do Centro de Desenvolvimento do Windows permite que você veja o desempenho das campanhas de anúncios de promoção do aplicativo.
+description: O relatório de campanha publicitária no Partner Center permite que você veja o desempenho de suas campanhas de anúncios de promoção do aplicativo.
 ms.author: wdg-dev-content
-ms.date: 11/21/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, promover, app, campanha, relatório, instalações
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e7bb2a4d592ae8201d27e45eb0f05d7fbca76a7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752711"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819677"
 ---
 # <a name="ad-campaign-report"></a>Relatório de campanha publicitária
 
-O relatório de **campanha publicitária** no painel do Centro de desenvolvimento do Windows permite que você veja o desempenho de promoção do aplicativo [campanhas publicitárias](create-an-ad-campaign-for-your-app.md) . Para ver o relatório, expanda **atrair** no menu de navegação esquerdo e selecione **campanhas publicitárias**.
+O relatório de **campanha publicitária** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja o desempenho de promoção do aplicativo [campanhas publicitárias](create-an-ad-campaign-for-your-app.md) . Para ver o relatório, expanda **atrair** no menu de navegação esquerdo e selecione **campanhas publicitárias**.
 
 ## <a name="definitions"></a>Definições
 
@@ -50,7 +50,7 @@ Você pode exibir dados de desempenho de até seis campanhas publicitárias dife
 
 ## <a name="install-tracking"></a>Rastreamento de instalação
 
-A execução de uma campanha publicitária de instalação por meio do Centro de Desenvolvimento oferece a exposição necessária para anunciar seus aplicativos. As impressões de anúncio são mostradas para clientes que têm mais probabilidade de se interessar pelo aplicativo, e os clientes podem clicar no anúncio e instalar o aplicativo na Loja. Anteriormente, era difícil distinguir entre instalações que foram o resultado de uma campanha publicitária versus instalações que vieram de outras fontes.
+Executar uma campanha publicitária de instalação por meio do Partner Center oferece a exposição tão necessária para anunciar seus aplicativos. As impressões de anúncio são mostradas para clientes que têm mais probabilidade de se interessar pelo aplicativo, e os clientes podem clicar no anúncio e instalar o aplicativo na Loja. Anteriormente, era difícil distinguir entre instalações que foram o resultado de uma campanha publicitária versus instalações que vieram de outras fontes.
 
 Este relatório mostra quantas instalações que você obteve devido às campanhas publicitárias. Isso representa somente os downloads que são um resultado direto das campanhas publicitárias e não inclui downloads de outras fontes.
 
@@ -69,7 +69,7 @@ Uma instalação é rastreada na Loja pelo telefone, tablet, computador e outros
 2.  O cliente está conectado em uma conta da Microsoft.
 3.  O cliente atende aos requisitos de [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (clientes que não atendem aos requisitos de COPPA não podem ser rastreados).
 
-Consequentemente, é possível que o rastreamento de instalação do aplicativo subnotifique o número real de instalações geradas por uma campanha publicitária. Observe que você pode visualizar o total de instalações de um aplicativo (por meio de campanhas ou outros meios) no relatório [Aquisições](acquisitions-report.md) no Centro de Desenvolvimento.
+Consequentemente, é possível que o rastreamento de instalação do aplicativo subnotifique o número real de instalações geradas por uma campanha publicitária. Observe que você pode visualizar o número total de instalações de um aplicativo (por meio de campanhas ou outros meios) no relatório de [aquisições](acquisitions-report.md) no Partner Center.
 
 
 ## <a name="account-billing-history"></a>Histórico de cobrança da conta

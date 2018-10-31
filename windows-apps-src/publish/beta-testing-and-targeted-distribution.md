@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: The Windows Dev Center dashboard gives you the option to make your app available only to specified people so that you can have testers try it out before you offer it to the public.
+Description: Partner Center gives you several options to let testers try out your app before you offer it to the public.
 title: Teste beta e distribuição direcionada
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
-ms.date: 05/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
-ms.openlocfilehash: e57490e2ad9c3991baf40b6c4d15d35def59f94f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746739"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813864"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
 Não importa se você testou seu aplicativo com cuidado extremo, não há nada como a experiência concreta de outras pessoas o testarem. Seus testadores podem descobrir problemas que você ignorou, como erros ortográficos, fluxo confuso do aplicativo ou erros que poderiam causar falhas no aplicativo. Você terá a chance de corrigir esses problemas antes de fazer o envio ao público, o que resultará em um produto final apurado. 
 
-O painel do Centro de Desenvolvimento do Windows oferece diversas opções para disponibilizar um aplicativo apenas para pessoas específicas; assim, os testadores podem testá-lo antes que você o ofereça ao público. 
+Partner Center oferece várias opções para permitir que os testadores testar seu app antes de oferecê-lo para o público.
 
 Seja qual for o método escolhido, aqui estão algumas coisas para ter em mente enquanto você realiza um teste beta em seu app.
 
@@ -33,7 +33,7 @@ Seja qual for o método escolhido, aqui estão algumas coisas para ter em mente 
 
 Se você quiser permitir que os testadores usem seu aplicativo antes que ele esteja disponível para outras pessoas e certificar-se que ninguém mais possa ver sua listagem, use a opção **Audiência particular** em [Visibilidade](choose-visibility-options.md) (na página **Preço e disponibilidade** do seu envio). Esse é o único método que permite que você distribua seu app para os testadores enquanto impede totalmente que qualquer outra pessoa veja a listagem da Store do app, mesmo se eles forem capazes de digitar o link direto. 
 
-A opção de **audiência particular** pode pode apenas ser usada quando você não tiver publicado já seu aplicativo para uma audiência pública. Você pode usar essa opção com aplicativos destinados a qualquer versão do sistema operacional, mas seus testadores devem estar executando o Windows 10, versão 1607 ou posterior (incluindo o Xbox One) e devem estar conectados com a conta da Microsoft associada ao endereço de email que você fornecer.
+A opção de **audiência particular** só pode ser usada quando você não tiver publicado já seu aplicativo para uma audiência pública. Você pode usar essa opção com aplicativos destinados a qualquer versão do sistema operacional, mas seus testadores devem estar executando o Windows 10, versão 1607 ou posterior (incluindo o Xbox One) e devem estar conectados com a conta da Microsoft associada ao endereço de email que você fornecer.
 
 Para saber mais, consulte a [Audiência particular](choose-visibility-options.md#audience).
 
@@ -71,6 +71,8 @@ Para usar esta opção:
 - Depois que seu produto tiver sido publicado, distribua o link (a **URL** na [Página de identidade do app](view-app-identity-details.md)) para os testadores para que eles possam experimentá-lo.
 - Quando você estiver pronto para disponibilizar o aplicativo para o público, crie um novo envio e altere a opção **Visibilidade** para **Disponibilizar este produto e torná-lo detectável na Store** (juntamente com quaisquer outras alterações que você queira fazer).
 
+> [!IMPORTANT]
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Distribuição direcionada a clientes do Windows Phone com endereços de email especificados
 

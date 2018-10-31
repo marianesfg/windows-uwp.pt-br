@@ -4,16 +4,16 @@ Description: If you encounter errors after submitting your app to the Store, you
 title: Resolver erros de envio
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9d997d2523012588348512311980f9bb4a7160b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758437"
+ms.locfileid: "5811973"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -31,6 +31,9 @@ Se você pretende enviar um pacote que contém os binários UWP e Win32, certifi
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8. x e versões anteriores
 
+> [!IMPORTANT]
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+
 Você poderá ver **erro 2001** quando os problemas com pacotes do Windows Phone forem detectados durante o pré-processamento. Na maioria dos casos, você precisará recompilar o pacote do aplicativo para corrigir o erro. Depois de terminar, substitua o pacote anterior pelo novo na página [Pacotes](upload-app-packages.md) do envio antes de clicar em **Enviar à Loja** novamente.
 
 Existem alguns problemas que podem causar esse erro. Examine a lista abaixo para determinar quais podem se aplicar a seus pacotes.
@@ -45,7 +48,7 @@ Outro erro que você poderá ver depois de enviar seu aplicativo é **erro 1300*
 
 ## <a name="nameidentity-errors"></a>Erros de nome/identidade
 
-Se você vir um erro que diz **The name found in the package is not one of your reserved app names. Please reserve the app name and/or update your package with the correct app name for this language**, talvez seja porque você inseriu um nome incorreto no seu pacote. Esse erro também pode ocorrer se você estiver usando um nome de aplicativo que ainda não tenha reservado no Centro de Desenvolvimento. Você geralmente pode resolver esse erro seguindo estas etapas:
+Se você vir um erro que diz **The name found in the package is not one of your reserved app names. Please reserve the app name and/or update your package with the correct app name for this language**, talvez seja porque você inseriu um nome incorreto no seu pacote. Esse erro também pode ocorrer se você estiver usando um nome de aplicativo que você ainda não tenha reservado no Partner Center. Você geralmente pode resolver esse erro seguindo estas etapas:
 
 - Vá até a página [Identidade do aplicativo](view-app-identity-details.md) para seu aplicativo (em **Gerenciamento de Aplicativos**) para confirmar se o seu aplicativo tem uma identidade atribuída. Se isso não acontecer, você verá uma opção para criar uma. Você precisará reservar um nome para seu aplicativo a fim de criar a identidade. Verifique se esse é o nome que você usou em seu pacote.
 - Se o seu aplicativo já tiver uma identidade, você talvez ainda precise reservar o nome que você deseja usar no seu pacote. Em **Gerenciamento de Aplicativos**, clique em [Gerenciar nomes de aplicativos](manage-app-names.md). Digite o nome que você gostaria de usar e clique em **Reservar o nome do aplicativo**.

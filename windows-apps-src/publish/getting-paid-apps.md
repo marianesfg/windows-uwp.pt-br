@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: Here’s some important info you’ll need to ensure that you receive payment for your apps, in-app products (IAPs), and advertising earnings.
+Description: Learn about receiving payments for your apps, add-ons (in-app products), and advertising earnings.
 title: Recebimento de pagamentos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
-ms.openlocfilehash: e7a5736c48232d3fa080d13fbcbbbdb70bfa9c92
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767109"
+ms.locfileid: "5816829"
 ---
 # <a name="getting-paid"></a>Recebimento de pagamentos
-Veja a seguir algumas informações importantes que serão necessárias para que você garanta o recebimento de pagamentos de ganhos com seus apps, complementos e anúncios.
+Veja algumas informações importantes sobre o recebimento de pagamentos pelos seus aplicativos, complementos e lucros com anúncios.
 
 > [!IMPORTANT]
-> Antes de receber dinheiro pela venda de aplicativos na Microsoft Store, você deve [configurar sua conta de pagamento e preencher os formulários de impostos necessários](setting-up-your-payout-account-and-tax-forms.md).
+> Antes de receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa [configurar sua conta de pagamento e preencher os formulários de imposto necessários](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Taxa da loja
 
@@ -48,7 +48,7 @@ Lembre-se de que o preço selecionado pode incluir impostos sobre vendas ou valo
 
 ## <a name="payout-reporting"></a>Relatório de pagamento
 
-Você pode acessar detalhes sobre suas informações de pagamento e baixar relatórios no **Resumo de pagamento** do painel Centro de Desenvolvimento do Windows. Para saber mais sobre as informações mostradas aqui, e como categorizar o dinheiro que você ganhar, consulte [Resumo de pagamento](payout-summary.md).
+Você pode acessar detalhes sobre suas informações de pagamento e baixar relatórios no **Resumo de pagamentos** do [Partner Center](https://partner.microsoft.com/dashboard). Para saber mais sobre as informações mostradas aqui, e como categorizar o dinheiro que você ganhar, consulte [Resumo de pagamento](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pagamento
@@ -65,7 +65,7 @@ Para colocar seus pagamentos em espera, acesse **Configurações da Conta**. Em 
 Depois de definir o status de espera de pagamento para **Ativado**, todos os pagamentos ficarão em espera até que você alterne novamente para **Desativado**. Quando fizer isso, você estará incluído no próximo ciclo de pagamento mensal (desde que tenham sido atingidos os limites de pagamento aplicáveis). Por exemplo, se você tem seus pagamentos em espera, mas gostaria de ter um pagamento gerado em junho, alterne o status de espera de pagamento para **Desativado** antes do final de maio.
 
 > [!NOTE]
-> A seleção de **Status de pagamento em espera** se aplica a **todas** as fontes de receita pagas por meio do Centro de Desenvolvimento do Windows (Microsoft Store, anúncios, Azure Marketplace etc.) Você não pode selecionar um status de pagamento em espera diferente para cada fonte de receita.
+> A seleção de **status de espera de pagamento** se aplica a **todas as** fontes de receita pagas por meio do programa de desenvolvedor do Windows no Partner Center (Microsoft Store, anúncios, Azure Marketplace etc.). Você não pode selecionar um status de pagamento em espera diferente para cada fonte de receita.
 
 
  

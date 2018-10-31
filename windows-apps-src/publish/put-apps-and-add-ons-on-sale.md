@@ -4,20 +4,20 @@ Description: You can promote your app or add-on in the Microsoft Store by puttin
 title: Colocar apps e complementos à venda
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a815a5ba233808abb0c6159893ed306ddc96c51e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6c1c646e1e60c6b71559cfde1280a09d380298ed
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749905"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5814497"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Colocar apps e complementos à venda
 
-Você também pode promover o seu aplicativo ou complemento na Microsoft Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem.
+Você também pode promover o seu aplicativo ou complemento na Microsoft Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem. E você pode escolher se deseja oferecer a venda a todos os usuários ou torná-lo uma oferta exclusiva para clientes que têm um dos seus outros produtos.
 
 > [!NOTE]
 > Não há suporte para o preço de venda para complementos de assinatura.
@@ -27,7 +27,7 @@ Ao usar a seção **Preço de venda** da página **Preço e disponibilidade** de
 Durante o período em que o produto estiver em promoção, os clientes poderão comprá-lo a um preço menor durante o período de tempo selecionado. Se você baixar o preço para **Grátis**, eles poderão baixá-lo sem pagar durante o período de venda.
 
 > [!IMPORTANT]
-> Preço de venda é mostrado somente para os clientes em dispositivos Windows 10, incluindo o Xbox One. As promoções oferecidas para proprietários de um dos seus outros produtos são mostradas apenas para os clientes no Windows 10, versão 1607 ou posterior.
+> Preço de venda é mostrado somente para os clientes em dispositivos Windows 10, incluindo o Xbox One. Vendas que você ofereça apenas para proprietários de um dos seus outros produtos são mostradas apenas para clientes no Windows 10, versão 1607 ou posterior.
 > 
 > Em outros sistemas operacionais, os clientes verão o preço normal do aplicativo ou complemento e não poderão adquiri-los com o preço promocional. Você pode sempre alterar um preço escolhendo uma faixa de preço diferente em um novo envio, mas ele não será exibido como uma venda de tempo limitado.
 

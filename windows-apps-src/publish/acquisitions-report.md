@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: Relatório de aquisições
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 09/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: c2ccb3088d0ef241f950a5f5fcf3f40969bc0531
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769222"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813303"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 
 
-O relatório de **aquisições** no painel do Centro de desenvolvimento do Windows permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram do seu aplicativo listagem. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
+O relatório de **aquisições** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja quem adquiriu e instalou seu aplicativo, juntamente com demográficos e detalhes da plataforma e mostra informações sobre como os clientes no Windows 10 (incluindo o Xbox) chegaram detalhes do seu aplicativo. Você também pode exibir dados de aquisição em tempo real aproximado para o último período ou setenta e duas horas. 
 
-Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
+Você pode exibir esses dados no Partner Center, ou [Baixe o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar esses dados de forma programática usando nossa [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Neste relatório, uma **aquisição** significa que um novo cliente obteve uma licença para seu aplicativo (independentemente se você cobrou ou ofereceu gratuitamente). Uma **instalação** se refere ao aplicativo sendo instalado em um dispositivo Windows 10.
 

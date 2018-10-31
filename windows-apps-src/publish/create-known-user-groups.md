@@ -3,16 +3,16 @@ author: JnHs
 Description: Learn how to create known user groups to use for package flighting and more.
 title: Criar grupos de usuários conhecidos
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, grupo direcionado, clientes, grupo de versão de pré-lançamento, grupos de usuários, usuários conhecidos
 ms.localizationpriority: medium
-ms.openlocfilehash: eec9c214bcd4ac63406ec7681e66762356a0c1cf
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764689"
+ms.locfileid: "5818737"
 ---
 # <a name="create-known-user-groups"></a>Criar grupos de usuários conhecidos
 
@@ -22,7 +22,7 @@ Para ser considerado um membro do grupo, cada pessoa deve ser autenticada na Loj
 
 ## <a name="to-create-a-known-user-group"></a>Para criar um grupo de usuários conhecido
 
-1. No painel do Centro de Desenvolvimento do Windows, expanda **Envolver** no menu de navegação esquerdo e, em seguida, selecione **Grupos de clientes**. 
+1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda **envolver** no menu de navegação esquerdo e, em seguida, selecione **grupos de clientes**. 
 2. Na seção **Meus grupos de clientes**, selecione **Criar novo grupo**.
 3. Na próxima página, insira um nome para seu grupo na caixa **Nome do grupo**.
 4. Verifique se o botão de opção **Grupo de usuários conhecido** está selecionado.
@@ -38,7 +38,7 @@ Você também pode criar um grupo de usuários conhecidos ao selecionar **Criar 
 
 ## <a name="to-edit-a-known-user-group"></a>Para editar um grupo de usuários conhecido
 
-Não é possível remover um grupo de usuários conhecidos do painel (ou alterar seu nome) após a criação, mas você pode editar sua participação a qualquer momento.
+Você não pode remover um grupo de usuários conhecidos do Partner Center (ou alterar seu nome) após ela ter sido criada, mas você pode editar sua participação a qualquer momento.
 
 Para revisar e editar os grupos de usuários conhecidos, expanda o menu **Envolver** no menu de navegação esquerdo e selecione **Grupos de clientes**. Em **Meus grupos de clientes**, selecione o nome do grupo que você deseja editar. Também é possível editar um grupo de usuários conhecido na página de criação do pacote de pré-lançamento ao selecionar **Exibir e gerenciar grupos existentes** ao criar uma nova versão de pré-lançamento ou selecionar o nome do grupo na página de visão geral de um pacote de pré-lançamento. 
 

@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 213c68a7e633d7084934120bf3438709701b5cb3
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 31b3379d66485fcd5ab417ecb2782b06f6e80e67
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759126"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818483"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 
@@ -303,7 +303,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição         |
 |-----------------|---------|------|
-|     date            |    string     |  A data e hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     date            |    string     |  A data e hora que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    string     |  A URL na qual é possível acessar o relatório.    |
 
 

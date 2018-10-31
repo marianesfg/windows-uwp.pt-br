@@ -3,16 +3,16 @@ author: jnHs
 Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
 title: Configurar o agendamento preciso do lançamento
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, agenda, data de lançamento, datas, lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 910f0aea10e763316bedab7b96b21705c537282c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6474fc334922d49489c377a0c29841fc45889e1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749031"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816920"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar o agendamento preciso do lançamento
 
@@ -30,7 +30,7 @@ Observe que você não conseguirá configurar as datas na seção **Agendamento*
 > [!IMPORTANT]
 > As datas especificadas na seção Agendamento só se aplicam aos clientes no Windows 10.
 >
->Se o aplicativo oferecer suporte a versões anteriores do sistema operacional, os clientes que usam essas versões verão a listagem do aplicativo assim que ele for aprovado na certificação e conclui o processo de publicação, mesmo se você tiver selecionado uma data de lançamento mais recente. Qualquer data para **Parar aquisição** selecionada não se aplicará a esses clientes; eles ainda poderão adquirir o aplicativo (a menos que você envie uma atualização com uma nova seleção na seção [Visibilidade](choose-visibility-options.md#discoverability) ou selecione **Make app unavailable** na página **Visão geral do aplicativo**).
+>Se seu aplicativo publicado anteriormente é compatível com versões anteriores do sistema operacional, qualquer data **Parar aquisição** selecionada não serão aplicadas a esses clientes; eles ainda poderão adquirir o aplicativo (a menos que você envie uma atualização com uma nova seleção na seção [visibilidade](choose-visibility-options.md#discoverability) , ou se você selecionar **tornar aplicativo disponível** na página **Visão geral do aplicativo** ).
 
 
 ## <a name="base-schedule"></a>Agendamento base
@@ -60,7 +60,7 @@ Na lista suspensa **Parar aquisição**, você pode definir uma data e hora em q
 
 Por padrão, a opção **Parar aquisição** é definida como nunca. Para alterar essa configuração, selecione **em** na lista suspensa e especifique uma data e hora, conforme descrito acima. Na data e hora que você selecionar, os clientes não poderão mais adquirir o aplicativo.
 
-É importante entender que essa opção tem o mesmo impacto que selecionar **Make this app discoverable but not available** na seção [Visibilidade](choose-visibility-options.md#discoverability) e escolher **Parar a aquisição: os clientes com um link direto poderão ver a listagem da Loja do produto, mas só poderão baixá-lo se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10**. Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+É importante entender que essa opção tem o mesmo impacto como selecionar **disponibilizar este produto detectável, mas não está disponível** na seção [visibilidade](choose-visibility-options.md#discoverability) e escolhendo **param a aquisição: os clientes com um link direto poderão ver da loja do produto listagem, mas eles só poderão baixá-lo se adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10.** Para parar completamente de oferecer um aplicativo para novos clientes, clique em **Make app unavailable** na página de visão geral do aplicativo. Para obter mais informações, consulte [Removendo um aplicativo da Loja](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Se você selecionar uma data para **Parar aquisição** e depois decidir disponibilizar o aplicativo novamente, poderá criar um novo envio e alterar **Parar aquisição** para **Nunca**. O aplicativo ficará disponível novamente depois que o envio atualizado for publicado.

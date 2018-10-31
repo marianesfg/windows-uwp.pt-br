@@ -1,25 +1,25 @@
 ---
 author: JnHs
-Description: Learn how to send notifications from Windows Dev Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
+Description: Learn how to send notifications from Partner Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
 title: Enviar notificações por push direcionadas para clientes do seu app
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, notificações direcionadas, notificações por push, notificações do sistema, bloco
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 51da748b1f28a658886543fbf0eaab01e3f74394
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7c2cf6c9cbd4aa0b25afea47a2fe82774c3c87a7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748197"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813450"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
 Interagir com seus clientes no momento certo e com a mensagem certa é essencial para o sucesso como um desenvolvedor de aplicativos. As notificações podem incentivar os clientes a executar uma ação, como classificar um aplicativo, comprar um complemento, experimentar um novo recurso ou baixar outro aplicativo (talvez gratuitamente com um [código promocional](generate-promotional-codes.md) fornecido por você).
 
-O Centro de Desenvolvimento do Windows fornece uma plataforma de interação com o cliente controlada por dados que pode ser usada para enviar notificações para todos os clientes do seu app ou direcionadas apenas a um subconjunto dos clientes do Windows 10 do seu app que atendem aos critérios que você definiu em um [segmento do cliente](create-customer-segments.md). <!-- You can also send a single notification to all of the customers for multiple apps. -->
+[Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de envolvimento de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo, ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação para ser enviada para os clientes de mais de um dos seus aplicativos.
 
 > [!IMPORTANT]
 > Essas notificações podem ser usadas somente com aplicativos UWP.
@@ -37,19 +37,19 @@ Ao considerar o conteúdo de suas notificações, tenha em mente:
 
 Em um nível superior, você precisa executar três ações para usar notificações e interagir com seus clientes.
 
-1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência ao Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionando algumas linhas de código para registrar um canal de notificação entre o Centro de Desenvolvimento e seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência ao Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionando algumas linhas de código que registra um canal de notificação entre Partner Center e seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2. **Decida quais serão os clientes de destino.** Você pode enviar a notificação para todos os clientes do seu app, ou (para notificações criadas para um único app) para um grupo de clientes chamado um *segmento*, que você pode definir com base em critérios demográficos ou de receita. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
 3. **Crie o conteúdo da notificação e o envie.** Por exemplo, você pode criar uma notificação que incentive os novos clientes a classificar seu app, ou pode enviar uma notificação que promova uma oferta especial para adquirir um complemento.
 
 
 ## <a name="to-create-and-send-a-notification"></a>Para criar e enviar uma notificação
 
-Siga estas etapas para criar uma notificação no painel e enviá-la para um segmento de cliente específico.
+Siga estas etapas para criar uma notificação no Partner Center e enviá-lo para um segmento de cliente específico.
 
 > [!NOTE]
-> Para que um app possa receber notificações do Centro de Desenvolvimento, primeiro você deverá chamar o método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) no app a fim de registrá-lo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Para que um aplicativo possa receber notificações do Partner Center, primeiro você deve chamar o método [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) em seu aplicativo para registrar seu aplicativo para receber notificações. Esse método está disponível no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Para obter mais informações sobre como chamar esse método, incluindo um exemplo de código, consulte [Configurar o aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1. No [painel do Centro de Desenvolvimento do Windows](https://partner.microsoft.com/dashboard/), expanda a seção **Interagir** e, em seguida, selecione **Notificações**.
+1. No [Partner Center](https://partner.microsoft.com/dashboard), expanda a seção de **interagir** e, em seguida, selecione **as notificações**.
 2. Na página **Notificações**, selecione **Nova notificação**.
 3. Na seção **Selecionar um modelo** , escolha o [tipo de notificação](#notification-template-types) que você deseja enviar e, em seguida, clique em **Okey**.
 4. Na próxima página, use o menu suspenso para escolher um **Único aplicativo** ou **Vários aplicativos** para qual (quais) você deseja gerar uma notificação. Você pode selecionar apenas os aplicativos que foram [configurados para receber notificações usando o Microsoft Store Services SDK](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
@@ -111,20 +111,20 @@ Você pode avaliar quão bem está interagindo com seus clientes por meio de cad
 ### <a name="to-measure-notification-performance"></a>Avaliar o desempenho das notificações
 
 1.  Quando você cria uma notificação, na seção **Conteúdo da notificação**, selecione a caixa de diálogo **Acompanhar taxa de inicialização do aplicativo**.
-2.  Em seu aplicativo, chame o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar o Centro de Desenvolvimento que seu aplicativo foi iniciado em resposta a uma notificação direcionada. Esse método é fornecido pelo Microsoft Store Services SDK. Para obter mais informações sobre como chamar esse método, consulte [Configurar seu aplicativo para receber notificações do Centro de Desenvolvimento](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  Em seu aplicativo, chame o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) para notificar o Partner Center que seu aplicativo foi iniciado em resposta a uma notificação de destino. Esse método é fornecido pelo Microsoft Store Services SDK. Para obter mais informações sobre como chamar esse método, consulte [configurar seu aplicativo para receber notificações do Partner Center](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
 
-Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode usar o painel para ver a qualidade do desempenho de suas notificações.
+Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver o quão bem suas notificações.
 
 Para analisar os dados detalhados para cada notificação:
 
-1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
+1.  No Partner Center, expanda a seção de **interagir** e selecione **notificações**.
 2.  Na tabela de notificações existentes, selecionar **em andamento** ou **concluído**e, em seguida, examine as colunas de **taxa de entrega** e **taxa de inicialização do aplicativo** para ver o desempenho de alto nível de cada notificação.
 3.  Para ver mais detalhes de desempenho granular, selecione um nome de notificação. Na seção **Estatísticas de entrega**, você pode exibir as informações **Contagem** e **Porcentagem** para os seguintes tipos de **Status** de notificação:
     * **Falha**: A notificação não foi enviada por algum motivo. Isso pode acontecer, por exemplo, se ocorrer um problema no Serviço de Notificação do Windows (WNS).
-    * **Falha de expiração de canal**: A notificação não pôde ser entregue porque o canal entre o aplicativo e o Centro de Desenvolvimento expirou. Isso pode acontecer, por exemplo, se o cliente não abre o aplicativo há muito tempo.
+    * **Falha de expiração de canal**: A notificação não pôde ser entregue porque o canal entre o aplicativo e o Partner Center expirou. Isso pode acontecer, por exemplo, se o cliente não abre o aplicativo há muito tempo.
     * **Enviando**: A notificação está na fila para ser enviada.
     * **Enviada**: A notificação foi enviada.
     * **Inicia**: A notificação foi enviada, o cliente clicou nela e o aplicativo foi aberto em resultado disso. Observe que isso apenas rastreia inicializações de aplicativos. Notificações que convidam o cliente para realizar outras ações, como iniciar a Loja para deixar uma classificação, não são incluídas nesse status.
@@ -132,7 +132,7 @@ Para analisar os dados detalhados para cada notificação:
 
 Para analisar os dados de atividade do usuário para todas as suas notificações:
 
-1.  No painel do Centro de Desenvolvimento do Windows, expanda a seção **Acionar** e, em seguida, selecione **Notificações**.
+1.  No Partner Center, expanda a seção de **interagir** e selecione **notificações**.
 2.  Na página de **notificações** , clique na guia **Analisar** . Essa guia exibe os seguintes dados:
     * Modos de exibição de gráfico dos vários estados de ação do usuário para suas notificações do sistema e notificações da Central de ações.
     * Modos de exibição de mapa de mundo o clique por meio de taxas para suas notificações do sistema e a ação de centro de notificações.
@@ -140,7 +140,7 @@ Para analisar os dados de atividade do usuário para todas as suas notificaçõe
 
 ## <a name="translate-your-notifications"></a>Traduza suas notificações
 
-Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. O Centro de Desenvolvimento torna mais fácil para você traduzir suas notificações automaticamente, aproveitando a capacidade do serviço [Microsoft Translator](https://www.microsoft.com/translator/home.aspx).
+Para maximizar o impacto de suas notificações, considere traduzi-las para os idiomas que seus clientes preferem. Partner Center torna mais fácil para você traduzir suas notificações automaticamente, aproveitando a capacidade do serviço [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) .
 
 1.  Depois de escrever sua notificação em seu idioma padrão, selecione **Adicionar idiomas** (abaixo do menu **Idiomas** na seção **Conteúdo da notificação**).
 2.  Na janela **Adicionar idiomas**, selecione os idiomas adicionais em que você deseja que suas notificações apareçam e selecione **Atualizar**.

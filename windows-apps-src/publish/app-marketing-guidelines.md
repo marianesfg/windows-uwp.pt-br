@@ -4,16 +4,16 @@ Description: Learn how to promote your apps and content in the Microsoft Store. 
 title: Diretrizes para aplicativos de marketing do Microsoft Store
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d065504385a5e7a743bd4936e9240565d3207a36
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745266"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821090"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Diretrizes para aplicativos de marketing do Microsoft Store
 
@@ -47,9 +47,9 @@ Para promover o seu aplicativo, convém mostrar sua aparência quando executado 
 
 -   Ter seu aplicativo ou outro conteúdo disponível na Microsoft Store, ou fazer parte do [Programa de afiliados da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Se você estiver registrado no Centro de Desenvolvimento, consinta com a seção [“Licença de Marcas da Microsoft”](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) do Contrato de Desenvolvedor de Aplicativos.
+-   Se você estiver registrado como um desenvolvedor de aplicativos no Partner Center, estar em conformidade com a seção ["licença às marcas da Microsoft"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) de contrato de desenvolvedor.
 
--   Se você não estiver registrado no Centro de desenvolvimento do Windows, Microsoft concede a você uma licença mundial, não exclusiva, intransferível e sem royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
+-   Se você não estiver registrado como um desenvolvedor de aplicativos no Partner Center, Microsoft concede a você uma licença mundial, não exclusiva, intransferível e sem royalties para usar os selos exclusivamente conforme descrito nas diretrizes de selo da Microsoft Store. A Microsoft pode alterar essas diretrizes, mas, caso isso aconteça, a Microsoft usará meios razoáveis para redirecioná-lo a quaisquer novas URLs em que essas especificações sejam publicadas. A Microsoft reserva para si todos os direitos não expressamente concedidos aqui.
 
 -   Siga as especificações de uso do logotipo descritas nas [Diretrizes selo da Microsoft Store](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
