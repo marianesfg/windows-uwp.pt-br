@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f113f47a905e8b542dde4c982a162341fc0196
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763762"
+ms.locfileid: "5826837"
 ---
 # <a name="get-an-add-on-submission"></a>Obter um envio de complemento
 

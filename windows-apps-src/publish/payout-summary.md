@@ -4,16 +4,16 @@ Description: The Payout summary shows you details about the money you’ve earne
 title: Resumo de pagamentos
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 02/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, resumo de pagamentos, extrato, pagamentos, lucros, pagamentos, pagamento, receita
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cc0b38c8118a3cfc8b157eacecab91f7ac2b120
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5f6369247f0e287ec2698213b7f0b7be7e1f21d4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827425"
 ---
 # <a name="payout-summary"></a>Resumo do pagamento
 
@@ -29,7 +29,7 @@ Se você vender produtos no Azure Marketplace, também verá informações sobre
 >
 > Os pagamentos são feitos mensalmente (desde que tenha sido atingido um limite de pagamento aplicável). Normalmente, enviaremos qualquer pagamento devido em um determinado mês até o 15º dia do mês. Observe que os pagamentos geralmente levam entre 3 e 10 dias úteis adicionais para alcançar sua conta de pagamento. Para obter mais informações, consulte [Limites, métodos e períodos de pagamento](payment-thresholds-methods-and-timeframes.md).
 
-Para exibir seu **Resumo de pagamentos**, clique no ícone **Pagamento** que é exibido próximo ao canto superior direito do Centro de Desenvolvimento e selecione **Resumo de pagamentos**.
+Para exibir seu **Resumo de pagamentos**, clique no ícone de **pagamento** que aparece próximo ao canto superior direito no Partner Center e selecione **Resumo de pagamentos**.
 
 ## <a name="current-proceeds-and-payments"></a>Receita e pagamentos atuais
 

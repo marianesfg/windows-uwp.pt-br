@@ -7,12 +7,12 @@ ms.author: twhitney
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8729ec5219159884ae0e99d8cc6eaa8dbe900d90
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752837"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825792"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crie um aplicativo universal do Windows de várias instâncias
 
@@ -60,7 +60,7 @@ Para vê-lo em ação, assista a este vídeo sobre como criar aplicativos UWP de
 
 O modelo de **aplicativo UWP de redirecionamento de várias instâncias** adiciona `SupportsMultipleInstances` ao arquivo package.appxmanifest, como mostrado acima, e também adiciona um **Program.cs** (ou **Program.cpp**, se você estiver usando a versão C++ do modelo) ao seu projeto que contém uma função `Main()`. Vai para a lógica para redirecionar a ativação da função `Main` . O modelo para **Program.cs** é mostrado abaixo.
 
-A propriedade [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa a instância fornecida pelo shell preferencial para essa solicitação de ativação, se houver uma (ou `null` se houver um). Se o shell fornece uma preferência, em seguida, você pode pode redirecionar ativação para essa instância ou você pode ignorá-lo se você escolher.
+A propriedade [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa a instância fornecida pelo shell preferencial para essa solicitação de ativação, se houver uma (ou `null` se houver um). Se o shell fornece uma preferência, em seguida, você pode redirecionar a ativação para essa instância ou você pode ignorá-lo se você escolher.
 
 ``` csharp
 public static class Program

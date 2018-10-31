@@ -4,16 +4,16 @@ Description: Listing your app in the right category and subcategory helps custom
 title: Tabela de categoria e subcategoria
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, categoria, subcategoria, gênero, categorias, gêneros
 ms.localizationpriority: medium
-ms.openlocfilehash: a4e85542793fff34609817995fb213eb4f3b7d54
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5750417"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5840811"
 ---
 # <a name="category-and-subcategory-table"></a>Tabela de categoria e subcategoria
 
@@ -22,7 +22,7 @@ A listagem do aplicativo na categoria e subcategoria corretas ajuda os clientes 
 
 Você deve escolher a categoria que melhor descreve seu aplicativo. Como opção, você pode escolher uma subcategoria, se disponível. Se você não sabe ao certo qual categoria ou subcategoria usar, ou se não conseguir encontrar uma exata, escolha aquela os usuários provavelmente pesquisarão na hora de procurar aplicativos semelhantes ao seu.
 
-Se você escolher **Jogos** para sua categoria, você deve selecionar pelo menos uma subcategoria (também chamada de *gênero* para jogos). Você pode escolher a quantidade de gêneros adequada para seu jogo. Observe que, para publicar um jogo para os clientes no Xbox, você deve habilitar o [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) ou pode percorrer o processo de [aprovação de conceito](../gaming/concept-approval.md)). 
+Se você optar por **jogos** como sua categoria, você precisa selecionar pelo menos uma subcategoria (chamada de *Gênero* para jogos). Você pode escolher a quantidade de gêneros adequada para seu jogo. Observe que, para publicar um jogo para os clientes no Xbox, você deve habilitar o [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) ou pode percorrer o processo de [aprovação de conceito](../gaming/concept-approval.md)). 
 
 > [!IMPORTANT] 
 > Se você publicar o aplicativo na categoria **Jogos**, você não conseguirá selecionar uma categoria diferente em um novo envio; ele deve ser continuar a ser publicado na categoria **Jogos** (embora você possa alterar as seleções de gênero em um novo envio). Da mesma forma, você não pode escolher a categoria **Jogos** ao enviar um aplicativo publicado anteriormente em uma categoria diferente.
@@ -149,38 +149,6 @@ A Microsoft Store organiza apps nas seguintes categorias e subcategorias.
   </tr>
 </tbody>
 </table>
-
-
-<!--
-| Category                    | Subcategory                                       |
-|-----------------------------|---------------------------------------------------|
-| Books + reference           | E-reader <br> Fiction <br> Nonfiction <br> Reference |
-| Business                    | Accounting + finance <br> Collaboration <br> CRM <br> Data + analytics <br> File management <br> Inventory + logistics <br> Legal + HR <br> Project management <br> Remote desktop <br> Sales + marketing <br> Time + expenses |
-| Developer tools             | Database <br> Design tools <br> Development kits <br> Networking <br> Reference + training <br> Servers <br> Utilities <br> Web hosting |
-| Education                   | Books + reference <br> Early learning <br> Instructional tools <br> Language <br> Study aids |
-| Entertainment               | (None)                                            |
-| Food + dining               | (None)                                            |
-| Games                       | Action + adventure <br> Card + board <br> Casino <br> Classics <br> Educational <br> Family + kids <br> Fighting <br> Multi-Player Online Battle Arena <br> Music <br> Other <br> Platformer <br> Puzzle + trivia <br> Racing + flying <br> Role playing <br> Shooter <br> Simulation <br> Sports <br> Strategy <br> Tools <br> Word |
-| Government + politics       | (None)                                            |
-| Health + fitness            | (None)                                            |
-| Kids + family               | Books + reference <br> Entertainment <br> Hobbies + toys <br> Sports + activities <br> Travel |
-| Lifestyle                   | Automotive <br> DIY <br> Home + garden <br> Relationships <br> Special interest <br> Style + fashion |
-| Medical                     | (None)                                            |
-| Multimedia design           | Illustration + graphic design <br> Music production <br> Photo + video production |
-| Music                       | (None)                                            |
-| Navigation + maps           | (None)                                            |
-| News + weather              | News <br> Weather                                 |
-| Personal finance            | Banking + investments <br> Budgeting + taxes      |
-| Personalization             | Ringtones + sounds <br> Themes <br> Wallpaper + lock screens |
-| Photo + video               | (None)                                            |
-| Productivity                | (None)                                            |
-| Security                    | PC protection <br> Personal security              |
-| Shopping                    | (None)                                            |
-| Social                      | (None)                                            |
-| Sports                      | (None)                                            |
-| Travel                      | City guides <br> Hotels                           |
-| Utilities + tools           | Backup + manage <br> File managers                |
--->
 
 > [!NOTE] 
 > Algumas das categorias e subcategorias usadas na Store para clientes no Windows 8.x e Windows Phone 8.x e versões anteriores podem parecer diferentes das categorias listadas acima. 

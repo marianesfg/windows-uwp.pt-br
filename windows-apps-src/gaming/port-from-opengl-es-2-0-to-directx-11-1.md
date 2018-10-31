@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d 11, portabilidade, gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6421f5a5a71828d5234a11bab9e442a5accecda5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763330"
+ms.locfileid: "5826227"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a>Fazer portabilidade de OpenGL ES 2.0 para Direct3D 11
 

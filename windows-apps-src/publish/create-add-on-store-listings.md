@@ -4,29 +4,28 @@ Description: When submitting an add-on, the info you provide in the Store listin
 title: Criar listagens de complementos da Store
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b03984bf858d805142ac768ecf8ddd69a6232db
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 811c2c978d04e7636bb5f52a2ebf7587193c4786
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760925"
+ms.locfileid: "5826980"
 ---
 # <a name="create-add-on-store-listings"></a>Criar listagens de complementos da Store
 
-
-Ao enviar um complemento, as informações que você fornece na etapa de **Listagens da Store** serão exibidas para os clientes quando eles virem a opção de adquirir o complemento. Pense cuidadosamente nas informações da listagem da Store para representar seu complemento com precisão de forma a torná-lo atraente para os clientes. Você pode fornecer listagens da Store personalizadas para idiomas diferentes.
+Ao enviar um complemento no [Partner Center](https://partner.microsoft.com/dashboard), as informações que você fornece na etapa **listagens da Store** serão exibida para os clientes quando eles virem a opção de adquirir o complemento. Pense cuidadosamente nas informações da listagem da Store para representar seu complemento com precisão de forma a torná-lo atraente para os clientes. Você pode fornecer listagens da Store personalizadas para idiomas diferentes.
 
 > [!TIP]
-> Você também pode [importar e exportar listagens da Store](import-and-export-store-listings.md) para o complemento se você deseja inserir as informações de listagem offline em um arquivo .csv, em vez de fornecer essas informações diretamente no painel. Isso pode ser especialmente útil ao criar listagens em vários idiomas. No entanto, sempre é possível inserir suas informações diretamente no painel em vez de usar o recurso de importação/exportação.
+> Você também pode [Importar e exportar listagens da loja](import-and-export-store-listings.md) para o complemento se você deseja inserir as informações de listagem offline em um arquivo. csv, em vez de fornecer essas informações diretamente no Partner Center. Isso pode ser especialmente útil ao criar listagens em vários idiomas. No entanto, você sempre pode inserir suas informações diretamente no [Partner Center](https://partner.microsoft.com/dashboard) em vez de usar o recurso de importação/exportação.
 
 
-## <a name="store-listing-languages"></a>Idiomas da listagem da Store
+## <a name="store-listing-languages"></a>Idiomas da listagem da Loja
 
-Antes de poder inserir informações da listagem da Store, você precisa especificar um ou mais [idiomas](supported-languages.md). Você deve preencher a página **listagem da Loja** para pelo menos um idioma. É recomendável fornecer as listagens da Store para cada idioma ao qual o seu aplicativo dá suporte.
+Antes de poder inserir informações da listagem da Store, você precisa especificar um ou mais [idiomas](supported-languages.md). Você deve preencher a página **listagem da Loja** para pelo menos um idioma. É recomendável criar listagens da loja para cada idioma que seu aplicativo oferece suporte.
 
 Na seção **Listagem da Store** de envio do complemento, clique em **Adicionar/remover idiomas** e, em seguida, clique em **Gerenciar idiomas** na próxima página. Marque as caixas de seleção dos idiomas que você deseja adicionar e depois clique em **Atualizar**. Os idiomas selecionados serão exibidos na seção **Idiomas de listagem da Store** da página.
 

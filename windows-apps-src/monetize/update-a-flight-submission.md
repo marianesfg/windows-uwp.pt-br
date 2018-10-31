@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, atualização
 ms.localizationpriority: medium
-ms.openlocfilehash: c6e1cd9f1496485f0e7792d95ceb019406e47c89
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f1ad6b5d2945cea34d86a78a7322d3a8948fe99f
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747913"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828552"
 ---
 # <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
 
@@ -64,7 +64,7 @@ O corpo da solicitação tem os parâmetros a seguir.
 | flightPackages           | array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso do pacote de pré-lançamento](manage-flight-submissions.md#flight-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento. |
 | packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte [Objeto de opções de entrega de pacote](manage-flight-submissions.md#package-delivery-options-object).  |
 | targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | A data de publicação do envio no formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
+| targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
 | notesForCertification           | string  |  Fornece informações adicionais para os testadores de certificação, como credenciais da conta de teste e as etapas para acessar e confirmar recursos. Para obter mais informações, consulte [Notas para certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
 

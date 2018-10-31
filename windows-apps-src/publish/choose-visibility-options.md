@@ -3,16 +3,16 @@ author: jnHs
 Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: Escolher as opções de visibilidade
 ms.author: wdg-dev-content
-ms.date: 08/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, visibilidade, audiência particular, disponível, detectável
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a83f1ea4547e60547e427cedd5ad5338e450762
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec6bc85c15ccf9926939c3bc2e208289c8dc4bcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757981"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826598"
 ---
 # <a name="choose-visibility-options"></a>Escolher as opções de visibilidade
 
@@ -60,7 +60,7 @@ Aqui estão algumas coisas importantes para ter em mente ao escolher distribuir 
 - Seu app não estará disponível por meio da Microsoft Store para Empresas e/ou a Microsoft Store para Educação, independentemente de suas configurações de licenciamento organizacional, até mesmo para as pessoas em sua audiência particular.
 - Embora a Store garanta que seu app só esteja visível e disponível para as pessoas conectadas com uma conta da Microsoft adicionada à sua audiência particular, não podemos impedir que essas pessoas compartilhem informações ou capturas de tela fora de sua audiência particular. Quando a confidencialidade for essencial, certifique-se de que a sua audiência particular inclua apenas as pessoas que você confia que não compartilharão os detalhes de seu app com outras pessoas.
 - Informe aos seus testadores como eles podem enviar comentários para você. Você provavelmente não deseja que eles deixem comentários no Hub de Feedback, porque qualquer outro cliente poderia vê-los. Considere a inclusão de um link para que eles possam enviar emails ou fazer comentários de alguma outra forma.
-- As avaliações escritas por pessoas em seu público particular estarão disponíveis para exibição. No entanto, essas análises não serão publicadas na listagem da Store do seu app, mesmo depois que o envio for movido para **Audiência pública**. Você pode ler avaliações escritas por seu público particular exibindo o [Relatório de avaliações](reviews-report.md) no Centro de Desenvolvimento, mas não pode baixar esses dados ou usar a [API de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para acessar programaticamente essas avaliações.
+- As avaliações escritas por pessoas em seu público particular estarão disponíveis para exibição. No entanto, essas análises não serão publicadas na listagem da Store do seu app, mesmo depois que o envio for movido para **Audiência pública**. Você pode ler avaliações escritas por seu público particular exibindo o [relatório de avaliações](reviews-report.md), mas você não pode baixar esses dados ou use a [API de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) para acessar programaticamente essas avaliações.
 - Quando você move um app de **Audiência particular** para **Audiência pública**, a **Data do lançamento** mostrada na listagem da Store será a data em que ele foi publicado pela primeira vez para a audiência pública.
 
 ## <a name="discoverability"></a>Detectabilidade

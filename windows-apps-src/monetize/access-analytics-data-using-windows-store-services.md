@@ -8,12 +8,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ce72846a8f7ea5877e2d8b944a6231d526ea0166
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 876500bf57de386ca551a1b51a02df62657f147c
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742116"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826462"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -31,7 +31,7 @@ As etapas a seguir descrevem o processo completo:
 
 Antes de começar a escrever o código para chamar a API de análise da Microsoft Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
 
 * Você deve associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Microsoft Store. Você precisa a ID do locatário, a ID do cliente e a chave para obter um token de acesso do Azure AD que você passa para a API.
     > [!NOTE]
@@ -41,7 +41,7 @@ Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e
 
 1.  No Centro de Desenvolvimento, [associe a conta do Centro de Desenvolvimento ao Azure AD de sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Em seguida, na página **Usuários** na seção **Configurações da conta** do Centro de Desenvolvimento, [adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account) que representa o aplicativo ou o serviço que você usará para acessar dados de análises da sua conta do Centro de Desenvolvimento. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no Azure AD, você pode [criar um novo aplicativo do Azure AD no Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).
+2.  Em seguida, na página **Usuários** na seção **Configurações da conta** do Centro de Desenvolvimento, [adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa o aplicativo ou o serviço que você usará para acessar dados de análises da sua conta do Centro de Desenvolvimento. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no Azure AD, você pode [criar um novo aplicativo do Azure AD no Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Volte para a página **Usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 

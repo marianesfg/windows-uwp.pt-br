@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: ed2d84d6892f25dd37ae9a8992238f2fc8fe6a53
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767129"
+ms.locfileid: "5826369"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -68,7 +68,7 @@ Agora que você criou o projeto, abra o arquivo **Game1.cs** do **Gerenciador de
 
 **protected override void UnloadContent()** Este método é usado para descarregar o conteúdo do gerenciador de não conteúdo. Nós não o usamos.
 
-**protected override void Update(GameTime gameTIme)** Este método é chamado uma vez a cada ciclo do loop do jogo. Aqui, podemos atualizar os estados de qualquer objeto ou variável usados no jogo. Isso inclui itens como posição, a velocidade ou a cor de um objeto. É aqui também que a entrada de uso é manipulada. Em poucas palavras, esse método manipula cada parte da lógica do jogo, exceto objetos de desenho na tela.
+**protected override void Update (GameTime gameTime)** Esse método é chamado uma vez para cada ciclo do loop do jogo. Aqui, podemos atualizar os estados de qualquer objeto ou variável usados no jogo. Isso inclui itens como posição, a velocidade ou a cor de um objeto. Isso também é que a entrada do usuário é manipulada. Em poucas palavras, esse método manipula cada parte da lógica do jogo, exceto objetos de desenho na tela.
 **protected override void Draw(GameTime gameTime)** É aqui que os objetos são desenhados na tela, usando as posições dadas pelo método Update.
 
 ## <a name="draw-a-sprite"></a>Desenhar um sprite
@@ -82,7 +82,7 @@ Para os nossos objetivos, este primeiro sprite vai ser extremamente tedioso. [Cl
 - Abra o **Gerenciador de Soluções**
 - Clique com botão direito em **Content.mgcb** na pasta **Conteúdo** e selecione **Abrir com**. No menu pop-up selecione **Monogame Pipeline**e selecione **OK**.
 - Na nova janela, clique com botão direito no item **Conteúdo** e selecione **Adicionar -> Item Existente**.
-- Localize e selecione o retângulo verde no navegador de arquivos
+- Localize e selecione o retângulo verde no navegador de arquivos.
 - Nomeie o item "grass.png" e selecione **Adicionar**.
 
 ### <a name="3-add-class-variables"></a>3. Adicione variáveis de classe
@@ -325,8 +325,8 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 A imagem de brócolis é bem maior do que queremos que apareça no jogo, portanto, nós vamos dimensioná-la até 0,2 vezes seu tamanho original.
 
-### <a name="5-program-obstacle-behavior"></a>5. Programe o comportamento de obstáculo
-Queremos que o brócolis para surja de um lugar fora da tela e vá na direção do avatar do jogador para que ele precise se esquivar. Para conseguir isso, adicione este método à classe **Game1.cs**:
+### <a name="5-program-obstacle-behaviour"></a>5. comportamento de obstáculo programa
+Queremos que o brócolis para surja de um lugar fora da tela e vá na direção do avatar do jogador para que ele precise se esquivar. Para fazer isso, adicione este método à classe **Game1.cs** :
 
 ```CSharp
 public void SpawnBroccoli()
@@ -381,7 +381,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. manipular a entrada do teclado
-Em seguida, precisamos de um novo método para manipular a entrada do usuário por meio do teclado. Adicione este método a **Game1.cs**:
+Em seguida, precisamos de um novo método para manipular a entrada do usuário por meio do teclado. Adicione este método para **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -430,7 +430,7 @@ A primeira encerra o jogo se a tecla **Escape** for pressionada.
 
 A segunda inicia o jogo se a tecla **Space** tecla for pressionada e o jogo não tiver sido iniciado.
 
-A terceira faz o avatar dinossauro pular se **Space** for pressionada, alterando sua propriedade **dY**. Observe que o jogador não pode pular a menos que esteja no "chão" (dino.y = screenHeight * SKYRATIO) e também não vai pular se a tecla de espaço estiver sendo mantida abaixada em vez de ser pressionada uma vez. Isso impede o dinossauro de saltar assim que o jogo é iniciado, utilizando o mesmo pressionamento de tecla que inicia o jogo.
+A terceira faz o avatar dinossauro pular se **Space** for pressionada, alterando sua propriedade **dY**. Observe que o jogador não pode pular a menos que estejam no "chão" (Dino = screenHeight * SKYRATIO) e também não vai pular se a tecla de espaço está sendo pressionada em vez de ser pressionada uma vez. Isso impede o dinossauro de saltar assim que o jogo é iniciado, utilizando o mesmo pressionamento de tecla que inicia o jogo.
 
 Por fim, a última instrução if/else verifica se as setas direcionais para a esquerda ou direita estão sendo pressionadas e, em caso afirmativo, altera a propriedade **dX** do dinossauro, de acordo.
 
@@ -484,9 +484,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que os sprites do brócolis e do dinossauro serão desenhados sobre o sprite da grama existente; portanto, eles nunca poderão se ocultar atrás dela, independentemente de sua posição.
+No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que o brócolis e o sprite dinossauro serão desenhados sobre o sprite da grama existente, portanto, eles nunca podem estar oculta atrás dela, independentemente de sua posição.
 
-Tente executar o jogo agora e movimentar o dinossauro com as teclas de seta e a barra de espaços. Se tiver seguido as etapas acima, você deve ser capaz de fazer com que o seu avatar se movimente dentro da janela do jogo, e o brócolis deve ir na direção dele a uma velocidade crescente.
+Tente executar o jogo agora e movimentar o dinossauro com as teclas de seta e a barra de espaços. Se você tiver seguido as etapas acima, você deve ser capaz de fazer seu avatar se movimente dentro da janela do jogo e o brócolis deve gerar a uma velocidade crescente.
 
 ![Avatar do jogador e obstáculo](images/monogame-tutorial-2.png)
 
@@ -650,7 +650,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 Isso chama o método **RectangleCollision** que criamos na **SpriteClass** e sinaliza o jogo como over se retornar true.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. Adicione a entrada do usuário para redefinir o jogo
-Adicione este código para o método **KeyboardHandler**, para permitir que o usuário redefina o jogo se pressionar Enter:
+Adicione este código ao método **KeyboardHandler** , para permitir que o usuário redefina o jogo se pressionar Enter:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
