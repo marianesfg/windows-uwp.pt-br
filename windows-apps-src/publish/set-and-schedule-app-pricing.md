@@ -3,16 +3,16 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Definir e agendar o preço do aplicativo
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
 ms.localizationpriority: medium
-ms.openlocfilehash: 99e11e29c5625d528777046075f01a824f1b0b37
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839331"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 
@@ -37,23 +37,18 @@ Na seção **Preços**, clique em **exibir tabela de conversão** para ver os pr
 Lembre-se de que a faixa de preços selecionada pode incluir impostos sobre vendas ou valor agregado que seus clientes devem pagar. Para saber mais sobre as implicações fiscais do seu aplicativo nos mercados selecionados, consulte [Detalhes fiscais para aplicativos pagos](tax-details-for-paid-apps.md). Você também deve analisar as [considerações de preço para mercados específicos](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
-> Se você escolher a opção **Parar aquisição** em **Disponibilizar este produto mas não torná-lo detectável na Store** na seção [Visibilidade](choose-visibility-options.md#discoverability)), não será capaz de definir o preço para o envio (já que ninguém será capaz de adquirir o app, a menos que tenha um código promocional para obter o app gratuitamente).
+> Se você escolher a opção de **Parar a aquisição** em **disponibilizar este produto mas não detectável na loja** na seção [visibilidade](choose-visibility-options.md#discoverability) ), não será capaz de definir o preço para seu envio (já que ninguém será capaz de adquirir o aplicativo a menos que um código promocional eles usam para acessar o aplicativo gratuitamente).
 
 ## <a name="schedule-price-changes"></a>Agendar alterações de preço
 
 Opcionalmente, você pode agendar uma ou mais alterações de preço se quiser que o preço base do seu aplicativo seja alterado para uma data e hora específicas. 
 
 > [!IMPORTANT]
-> As alterações de preço são mostradas apenas para clientes em dispositivos Windows 10 (incluindo o Xbox). Se o app oferecer suporte a versões anteriores do SO, as alterações de preço não serão aplicadas. 
->
-> - Para clientes no Windows 8, o aplicativo sempre será oferecido em seu **Preço base** (e não em qualquer preço específico de mercado), mesmo se você agendar alterações de preço adicionais. 
-> - Para clientes no Windows 8.1 e no Windows Phone 8.1 e versões anteriores, o app sempre será oferecido a uma faixa de preço inicial para o mercado do cliente, mesmo se você agendar alterações de preço adicionais nesse mercado.
-> 
-> Tenha isso em mente ao agendar alterações de preço. Por exemplo, se você lançar seu app a uma faixa preço mais baixa inicialmente e depois agendar uma data em que o preço deve aumentar, seus clientes em versões anteriores do SO que comprarem o app pagarão o preço mais baixo (original).
+> As alterações de preço são mostradas apenas para clientes em dispositivos Windows 10 (incluindo o Xbox). Se seu aplicativo publicado anteriormente é compatível com versões anteriores, as alterações de preço não serão aplicadas a esses clientes. Para clientes no Windows 8, o aplicativo sempre será oferecido em seu **Preço base** (e não em qualquer preço específico de mercado), mesmo se você agendar alterações de preço adicionais. Para clientes no Windows 8.1 e no Windows Phone 8.1 e versões anteriores, o aplicativo sempre será oferecido a faixa de preço inicial para o mercado do cliente.
 
 Clique em **Agendar uma alteração de preço** para ver as opções de alteração de preço. Escolha a faixa de preço que você deseja usar (ou insira um preço livre para substituições de preço base para um único mercado) e selecione a data, a hora e o fuso horário.
 
-Você pode clicar em **Schedule a price change again** para agendar quantas alterações quiser.
+Você pode clicar novamente **Agendar uma alteração de preço** para agendar quantas alterações quiser.
 
 > [!NOTE]
 > As alterações de preço agendadas funcionam de forma diferente do [preço de venda](put-apps-and-add-ons-on-sale.md). Ao colocar um app à venda, o preço é mostrado com um tachado na Store, e os clientes poderão comprar o app ao preço de venda durante o período selecionado. Após o período de venda, o preço de venda não será mais aplicável, e o app estará disponível ao seu preço base (ou um preço diferente que você especificou para esse mercado, se aplicável).
@@ -66,7 +61,7 @@ Você pode clicar em **Schedule a price change again** para agendar quantas alte
 Por padrão, as opções selecionadas acima serão aplicadas a todos os mercados em que o aplicativo for oferecido. Você pode optar por alterar o preço de um ou mais mercados, escolhendo uma faixa de preço diferente ou inserindo um preço livre na moeda local do mercado.
 
 > [!IMPORTANT]
-> Os clientes no Windows 8 sempre verão o app em seu **Preço base**, mesmo se você selecionar um preço diferente para seu mercado.
+> Se seu aplicativo publicado anteriormente é compatível com o Windows 8, os clientes sempre verão o app ao seu **preço de Base**, mesmo se você selecionar um preço diferente para seu mercado.
 
 Para alterar o preço para mercados específicos, clique em **Escolha os mercados para substituir o preço**. A janela pop-up **Seleção de mercado** será exibida, listando todos os mercados em que você optou por disponibilizar o app. (Se você excluir algum mercado na seção **Mercados**, ele não estará disponível.) 
 

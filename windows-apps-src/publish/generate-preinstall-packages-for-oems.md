@@ -4,16 +4,16 @@ Description: If your developer account has been granted the appropriate permissi
 title: Gerar pacotes de pré-instalação para OEMs
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8564d3dc7240bb556f3cb90c51165def9e2d4eba
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 02f7c1ad1a396464532a1c63c925bf9e19600f1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839430"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Gerar pacotes de pré-instalação para OEMs
 
@@ -22,7 +22,7 @@ Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você pod
 
 ## <a name="important-preinstall-policy--limitations"></a>Política e limitações de pré-instalação importantes
 
-Aplicativos de pré-instalação devem ser certificados por meio do Centro de Desenvolvimento do Windows para terem a licença mais recente da Loja, de forma a poderem se conectar à Loja e receber atualizações do aplicativo.
+Aplicativos de pré-instalação devem ser certificados por meio do [Partner Center](https://partner.microsoft.com/dashboard) para terem a licença da loja mais recente para que eles sejam capazes de se conectar à loja e receber atualizações de aplicativos.
 
 Qualquer aplicativo pré-instalado deve ser e permanecer gratuito em todos os mercados.
 
@@ -31,7 +31,7 @@ Qualquer aplicativo pré-instalado deve ser e permanecer gratuito em todos os me
 
 Quando uma conta tiver sido habilitada com permissões de pré-instalação, conclua as seguintes etapas:
 
-1.  Em seu painel, navegue até o aplicativo a ser pré-instalado.
+1.  No Partner Center, navegue até o aplicativo a ser pré-instalado.
 2.  No menu de navegação esquerdo, expanda **Gerenciamento de aplicativo** e selecione **Pacotes atuais**.
 3.  Na seção **Solicitar pacotes para pré-instalação do sistema operacional**, selecione **Habilitar pacotes baixáveis**.
 4.  Na caixa de diálogo de confirmação, selecione **Habilitar**.
