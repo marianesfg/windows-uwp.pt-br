@@ -8,17 +8,17 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c56bfc65e279a461d33de0e98b1a9ea51bd901cb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740780"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821953"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
 
-Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários.
+Para receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa configurar sua conta de pagamento e preencher os formulários de imposto necessários no [Partner Center](https://partner.microsoft.com/dashboard).
 
 Se você pretende listar apenas os aplicativos gratuitos (e não planeja oferecer compras no aplicativo ou use o Microsoft Advertising), não precisa configurar uma conta de pagamento nem preencher formulários tributários. Se você mudar de ideia mais tarde e decidir que deseja vender aplicativos (ou complementos), você pode configurar sua conta de pagamento e preencher os formulários de imposto naquele momento. Você não poderá enviar aplicativos pagos ou complementos até que sua conta de pagamento e perfil fiscal tenham sido concluídos.
 
@@ -44,7 +44,7 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
  
 **Para configurar sua conta de pagamento**
 
-1.  No painel do Centro de Desenvolvimento do Windows, acesse **Configurações da conta** ao selecionar o ícone no canto superior direito.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), vá para **configurações de conta** , selecionando o ícone no canto superior direito.
 2.  No menu de navegação esquerdo da página **Configurações da conta**, clique em **Conta de pagamento**.
 
    > [!NOTE]
@@ -74,7 +74,7 @@ Perguntas comuns sobre como usar o PayPal como forma de pagamento:
 
 -   **Que configurações do PayPal preciso ter para receber pagamentos?** Você deve garantir que sua conta do PayPal não bloqueie pagamentos via eCheck. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal. Consulte a [página de configuração da conta do PayPal](http://go.microsoft.com/fwlink/p/?linkid=513139) para saber mais.
 -   **Meu país/região tem suporte?** Consulte [Tipos de conta, locais e taxas](account-types-locations-and-fees.md) para saber onde o PayPal é aceito como forma de pagamento.
--   **Minha conta do PayPal deve ser registrada no mesmo país/região da minha conta do Centro de Desenvolvimento?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
+-   **Minha conta do PayPal deve ser registrado no mesmo país/região da minha conta do Partner Center?** Não. Quando você configura uma conta do PayPal, é possível aceitar a configuração padrão. Você não deve ter problemas com outros países/regiões e moedas, a menos que tenha pagamento bloqueado em algumas moedas. Essa configuração é gerenciada na página Preferências de Recebimento de Pagamento do PayPal.
 -   **Preciso aceitar os pagamentos do PayPal manualmente?** Não. As contas do PayPal são configuradas por padrão para exigir que os usuários aceitem pagamentos manualmente, o que significa que se você não aceitar o pagamento dentro de 30 dias, ele é devolvido. Você pode alterar essa configuração desativando “Perguntar-me” na página Mais Configurações do PayPal.
 
 
@@ -99,9 +99,9 @@ Se você for um desenvolvedor que vive na Rússia, talvez precise fornecer uma d
 
 Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
 
--   O **Nome do titular da conta** inserido para sua conta de pagamento no painel do Centro de Desenvolvimento do Windows deverá ser o nome exato associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
+-   O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ser o mesmo nome associado com sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
 -   Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda rublo (RUB).
--   As informações bancárias inseridas no Centro de Desenvolvimento em caracteres latinos é traduzida para caracteres cirílicos.
+-   Informações bancárias inseridas no Partner Center em caracteres latinos são traduzidas para caracteres cirílicos.
 -   Os pagamentos devem ser efetuados em uma conta bancária e não em um cartão bancário.
 
 #### <a name="ukraine"></a>Ucrânia
@@ -116,9 +116,9 @@ A Microsoft fornece os três documentos quando é feita a tentativa de efetuar s
 
 Para garantir que seu pagamento seja bem-sucedido, também tenha em mente o seguinte:
 
--   O **Nome do titular da conta** inserido para sua conta de pagamento no painel do Centro de Desenvolvimento do Windows deverá ser o nome exato associado à sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
+-   O **nome do titular da conta** inserido para sua conta de pagamento no Partner Center deve ser o mesmo nome associado com sua conta bancária. Por exemplo, se seu nome da conta bancária contiver um nome do meio, adicione-o ao **Nome do titular da conta**.
 -   Os pagamentos são transferidos diretamente da Microsoft para sua conta bancária na moeda USD.
--   As informações bancárias inseridas no Centro de Desenvolvimento em caracteres latinos é traduzida para caracteres cirílicos.
+-   Informações bancárias inseridas no Partner Center em caracteres latinos são traduzidas para caracteres cirílicos.
 
 
 ## <a name="tax-forms"></a>Formulários fiscais
@@ -128,7 +128,7 @@ Depois que você tiver [registrado para uma conta de desenvolvedor](opening-a-de
 -   Especificar seu país/região de residência e cidadania.
 -   Preencher os formulários fiscais apropriados.
 
-Você pode preencher e enviar os formulários de imposto eletronicamente no painel; na maioria dos casos, não é necessário imprimir e enviar formulários por correio.
+Você pode preencher e enviar os formulários de imposto eletronicamente no Partner Center; Na maioria dos casos, você não precisará imprimir e formulários.
 
 > [!IMPORTANT]
 > Os diversos países e regiões têm requisitos fiscais diferentes. O valor exato dos impostos que você precisa pagar depende dos países e das regiões onde seus aplicativos são vendidos. Veja o [Contrato de Desenvolvedor de Aplicativos](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) para saber em quais países/regiões a Microsoft paga os impostos sobre vendas e uso em seu nome. Em outros países/regiões, dependendo de onde você está registrado, talvez seja necessário remeter os impostos sobre vendas e uso referentes às vendas de seu aplicativo diretamente para a autoridade fiscal local. Além disso, as receitas de vendas do aplicativo que você recebe podem ser taxadas como renda. Recomendamos enfaticamente que você entrar em contato com a autoridade relevante para seu país ou região que pode ajudar a melhor determinar as informações de impostos corretas para suas atividades de desenvolvedor da Microsoft Store.
@@ -136,7 +136,7 @@ Você pode preencher e enviar os formulários de imposto eletronicamente no pain
  
 **Para preencher seu perfil fiscal**
 
-1.  No painel do Centro de Desenvolvimento do Windows, clique no ícone **Configurações da conta** no canto superior direito.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), clique no ícone de **configurações da conta** no canto superior direito.
 2.  No menu de navegação esquerdo da página **Configurações da conta**, clique em **Perfil fiscal**.
 
    > [!NOTE]
