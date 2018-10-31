@@ -4,16 +4,16 @@ Description: Review this list to help avoid issues that frequently prevent apps 
 title: Evitar erros comuns de certificação
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a3c3cd5d7b75408a368c6b5fbc0b4a8bfe2839
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835246"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar erros comuns de certificação
 
@@ -33,7 +33,7 @@ Analise esta lista para ajudar a evitar problemas que, frequentemente, impedem a
 
 -   [Forneça todas as informações necessárias](notes-for-certification.md) para uso do aplicativo, como nome de usuário e senha da conta de teste (caso seu aplicativo exija o logon em um serviço) ou etapas necessárias para acessar recursos ocultos ou bloqueados.
 
--   Inclua uma [política de privacidade](create-app-store-listings.md#privacy-policy) se o aplicativo exigir; por exemplo, se o aplicativo acessar qualquer tipo de informações pessoais de qualquer forma ou como exigido por lei. Para ajudar a determinar se seu aplicativo requer uma política de privacidade, revise o [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Incluir uma [URL da política de privacidade](enter-app-properties.md#privacy-policy-url) , se seu aplicativo exigir; Por exemplo, se seu aplicativo acessa qualquer tipo de informações pessoais de qualquer forma ou como exigido por lei. Para ajudar a determinar se seu aplicativo requer uma política de privacidade, revise o [Contrato de desenvolvedor](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) e as [Políticas da Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Assegure que a descrição de seu aplicativo represente claramente o que seu aplicativo faz. Para obter ajuda, veja nossa orientação sobre [como elaborar uma ótima descrição de aplicativo](write-a-great-app-description.md).
 

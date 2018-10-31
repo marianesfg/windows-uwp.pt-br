@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: fd98a3019efc8f2774fb7a1b52f5dcd27778cd2a
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834020"
 ---
 # <a name="guidelines-for-background-tasks"></a>Diretrizes de tarefas em segundo plano
 

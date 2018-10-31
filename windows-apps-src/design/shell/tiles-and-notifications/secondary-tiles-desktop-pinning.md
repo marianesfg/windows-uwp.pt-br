@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, ponte de desktop, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile, aplicativo da área de trabalho, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: 44e37b47e22d10f509afd5d7503fa8f7a43ab365
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832672"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Fixar blocos secundários do aplicativo da área de trabalho
 

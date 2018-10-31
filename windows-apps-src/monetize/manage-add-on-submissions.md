@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bf15f71071355ddf61d820fc33949b10d42cdfa
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d8e3ab04c2842fc08fb8b0aa298660bfbd0cfd7f
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833190"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -336,7 +336,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição               |
 |-----------------|---------|------|
-|     date            |    string     |  A data e hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     date            |    string     |  A data e hora que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    string     |  A URL na qual você pode acessar o relatório.    |
 
 ## <a name="enums"></a>Enumerações

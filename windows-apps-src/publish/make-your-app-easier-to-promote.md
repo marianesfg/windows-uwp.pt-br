@@ -4,16 +4,16 @@ Description: Get your app noticed! Aside from making your app the best it can be
 title: Facilite a promoção do seu app
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 3/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, promocional, promoção, em destaque, demonstração, store
 ms.localizationpriority: medium
-ms.openlocfilehash: ede4cc948b20ee90b9d2e3866e7c342caa1e2be8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 43970ce024408032f0e2e9891eaae34efa68e014
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830126"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Facilitar a promoção do seu app
 
@@ -29,7 +29,7 @@ A Microsoft Store expõe diversos aplicativos, agrupados por categoria ou tema. 
 
     Ao destacar os aplicativos, a Microsoft Store poderá usar [capturas de tela e imagens do app](app-screenshots-and-images.md) em vários layouts. Certifique-se de criar ótimas capturas de tela que representem o seu aplicativo e verifique se a primeira captura de tela é especialmente representativa e atraente. Você pode fornecer diferentes conjuntos de capturas de tela para mostrar a aparência do aplicativo em cada tipo de dispositivo compatível.
 
-    Para maximizar as chances de seu app se destacar na Store, forneça todas as imagens aplicáveis nas seções **Logotipos da Store** e **Ativos de arte adicionais** da sua listagem da Store. As imagens **9:16 Arte de cartaz (720 x 1080 ou 1440 x 2160 pixels)** e **16:9 Arte de super-herói (1920 x 1080 ou 3840 x 2160 pixels)** são particularmente importantes para o Windows 10 (incluindo o Xbox). Se seu app dá suporte à família de dispositivos Xbox e/ou Holographic, é recomendável fornecer todas as imagens aplicáveis para essas famílias de dispositivos também. Para obter mais detalhes e diretrizes, consulte [Capturas de tela, imagens e trailers do app](app-screenshots-and-images.md).
+    Para maximizar as chances de seu app se destacar na Store, forneça todas as imagens aplicáveis nas seções **Logotipos da Store** e **Ativos de arte adicionais** da sua listagem da Store. O **9:16 arte de cartaz (720 x 1080 ou 1440 x 2160 pixels)** e imagens de **16:9 arte de super-herói (1920 x 1080 ou 3840 x 2160 pixels)** são particularmente importantes. Se seu app dá suporte à família de dispositivos Xbox e/ou Holographic, é recomendável fornecer todas as imagens aplicáveis para essas famílias de dispositivos também. Para obter mais detalhes e diretrizes, consulte [Capturas de tela, imagens e trailers do app](app-screenshots-and-images.md).
 
 -   **Crie uma versão do seu app, que não seja uma versão gratuita e uma versão paga diferente**
 

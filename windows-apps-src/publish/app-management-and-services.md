@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: Manage and view details related to each of your apps in the Windows Dev Center dashboard, and configure services such as A/B testing and maps.
+Description: Manage and view details related to each of your apps in Partner Center, and configure services such as A/B testing and maps.
 title: Gerenciamento de apps e serviços
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.author: wdg-dev-content
-ms.date: 07/18/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1bb8202613385a9ffc3e48ec95873d3270c10a8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 112f69704c502f1aa394aa1dd8d544aa0728477d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835366"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
-Você pode gerenciar e exibir detalhes relacionados a cada um de seus aplicativos no painel do Centro de Desenvolvimento do Windows e configure serviços como notificações, teste A/B e mapas.
+Você pode gerenciar e exibir detalhes relacionados a cada um dos seus aplicativos no [Partner Center e configure serviços como notificações, A / B teste e mapas.
 
-Ao trabalhar com um aplicativo em seu painel, você verá seções no menu de navegação esquerdo para **gerenciamento de aplicativos** e **serviços**. Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
+Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para o **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
 ## <a name="services"></a>Serviços
 
@@ -39,7 +39,7 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 ## <a name="maps"></a>Mapas
 
-Para usar os serviços de mapa em aplicativos para Windows Phone 8.1 e versões anteriores, você precisa de uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Você pode obter esse token na página **Mapas** na seção **Serviços**.
+Para usar serviços de mapa em aplicativos publicado anteriormente para Windows Phone 8.1 e versões anteriores, você precisa de uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Você pode obter esse token na página **Mapas** na seção **Serviços**.
 
 > [!NOTE]
 > Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulte [Solicitar uma chave de autenticação de mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/authentication-key) para obter mais informações.
@@ -90,7 +90,7 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 A seção **WNS/MPNS** fornece opções para ajudá-lo a criar e enviar notificações para clientes do seu aplicativo. 
 
 > [!TIP]
-> Para aplicativos UWP, sugerimos usando a opção de **notificações** no painel. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto direcionado de seus clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
+> Para aplicativos UWP, sugerimos usar o recurso de **notificações** no Partner Center. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto direcionado de seus clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
 Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você também pode usar uma das seguintes opções: 
 
@@ -98,7 +98,7 @@ Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você
 
 -   **Aplicativos Móveis do Microsoft Azure** permite que você envie notificações por push, autentique e gerencie usuários de aplicativo e armazene dados de aplicativo na nuvem. Para saber mais, consulte a [documentação de Aplicativos Móveis](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   **Serviço de Notificação por Push da Microsoft (MPNS)** pode ser usado com seus pacotes .xap para Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. Se você estiver usando o MPNS, você precisará carregar um certificado para o campo fornecido na página **WNS/MPNS** . Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   **Serviço de notificação por Push da Microsoft (MPNS)** pode ser usado com pacotes. xap publicado anteriormente para Windows Phone. Você pode enviar um número limitado de notificações não autenticadas sem fazer qualquer configuração aqui, embora seja recomendável usar notificações autenticadas para evitar limitações. Se você estiver usando o MPNS, você precisará carregar um certificado para o campo fornecido na página **WNS/MPNS** . Para saber mais, veja [Configurando um serviço Web autenticado para enviar notificações por push para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
  
 
  

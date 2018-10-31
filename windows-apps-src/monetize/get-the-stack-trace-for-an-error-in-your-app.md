@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro
 ms.localizationpriority: medium
 ms.openlocfilehash: 75eac585517ce4d4d41b8933a76cf8f4fe20be96
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5837863"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obter o rastreamento de pilha de um erro em seu aplicativo
 

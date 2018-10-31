@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, amostra, aplicativo, foto, editor
 ms.localizationpriority: medium
 ms.openlocfilehash: 60bfcd79ed2d659aff8d435bd397df05eb45af72
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5756975"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836958"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Aplicativos de exemplo de C++/WinRT do Editor de Fotos
 Você pode clonar ou baixar o aplicativo de exemplo do repositório do GitHub para o [aplicativo de exemplo do Editor de fotos do C++/WinRT](https://github.com/Microsoft/Windows-appsample-photo-editor).

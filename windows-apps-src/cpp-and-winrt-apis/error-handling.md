@@ -7,12 +7,12 @@ ms.date: 05/21/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, erro, processamento, exceção
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f6248452d97d10b6004067b6c0a973973443db
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832445"
 ---
 # <a name="error-handling-with-cwinrt"></a>Processamento de erros com C++/WinRT
 
@@ -77,7 +77,7 @@ winrt::check_bool(::SetEvent(h.get()));
 Se o valor que você passa para [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) é false, a seguinte sequência de ações ocorre.
 
 - **winrt::check_bool** chama a função [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error).
-- **winrt::throw_last_error** chama [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar o valor do último código de erro do thread e, em seguida, chama a função [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult).
+- **WinRT:: throw_last_error** chama [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) para recuperar o valor do último código de erro do thread de chamada e, em seguida, chama a função [**WinRT:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) .
 - **winrt::throw_hresult** gera uma exceção usando um objeto [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) (ou um objeto padrão) que representa esse código de erro.
 
 Como as APIs do Windows relatam erros no tempo de execução usando vários tipos de valor de retorno, existem algumas outras funções auxiliares úteis além de **winrt::check_bool** para verificar os valores e gerar exceções.

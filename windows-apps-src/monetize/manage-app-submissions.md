@@ -8,12 +8,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: b042e3cc3e92bce7a895e717c6bc20c2e11d1677
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f95e91c1ef9e47ab3371a1481237dc510eddae7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831532"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
@@ -592,7 +592,7 @@ Esse recurso dá acesso aos dados do relatório de certificação para um envio.
 
 | Valor           | Tipo    | Descrição             |
 |-----------------|---------|------|
-|     date            |    string     |  A data e hora em que o relatório foi gerado, no formato ISO 8601.    |
+|     date            |    string     |  A data e hora que o relatório foi gerado, no formato ISO 8601.    |
 |     reportUrl            |    string     |  A URL na qual é possível acessar o relatório.    |
 
 

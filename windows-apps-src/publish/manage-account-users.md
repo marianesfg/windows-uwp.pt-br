@@ -1,31 +1,31 @@
 ---
 author: jnHs
-Description: Add users to your Dev Center account and assign them roles with specific permissions.
+Description: Add users to your Partner Center account and assign them roles with specific permissions.
 title: Gerenciar usuários de contas
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, usuários de contas, gerenciar usuários, azure ad, multiusuário, vários usuários
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b659a12d972612d07f78504d46af396617513b4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829866"
 ---
 # <a name="manage-account-users"></a>Gerenciar usuários de contas
 
-Você pode usar o Azure Active Directory para adicionar e gerenciar mais usuários na conta do Centro de Desenvolvimento. Você pode definir a função ou as permissões personalizadas que cada usuário deve ter. Você também pode atribuir uma função a um grupo de usuários, ou a um aplicativo Azure AD.
+Você pode usar o Azure Active Directory para adicionar e gerenciar usuários adicionais em sua conta do [Partner Center](https://partner.microsoft.com/dashboard) . Você pode definir a função ou as permissões personalizadas que cada usuário deve ter. Você também pode atribuir uma função a um grupo de usuários, ou a um aplicativo Azure AD.
 
-Para adicionar e gerenciar usuários da conta, você deve primeiro associar sua conta do Centro de Desenvolvimento ao Azure Active Directory de sua organização. 
+Para adicionar e gerenciar usuários da conta, você deve primeiro associar sua conta do Partner Center Azure Active Directory da sua organização. 
 
 Esta seção descreve como fazer o seguinte:
 
--   [Associar sua conta do Centro de Desenvolvimento ao Azure Active Directory](associate-azure-ad-with-dev-center.md)
--   [Adicionar usuários, grupos e aplicativos do Azure AD à sua conta do Centro de Desenvolvimento](add-users-groups-and-azure-ad-applications.md)
+-   [Associar o Azure Active Directory à sua conta do Partner Center](associate-azure-ad-with-dev-center.md)
+-   [Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Partner Center](add-users-groups-and-azure-ad-applications.md)
 -   [Definir funções e permissões personalizadas para usuários de contas](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> Esta seção é específica para o programa de desenvolvedores de aplicativos do Windows, mas a associação de um locatário e o gerenciamento de usuários funcionam da mesma forma para contas no Programa de Desenvolvedores de Hardware para Windows (consulte [Administração do Painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações) ou no Programa de Aplicativos da Área de Trabalho do Windows (consulte [Programa de Aplicativos da Área de Trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obter mais informações).
+> Estes tópicos são específicos para o programa de desenvolvedor de aplicativos do Windows no Partner Center, mas a associação de um locatário e gerenciamento de usuários funcionam da mesma forma para contas no programa de desenvolvedores de Hardware do Windows (consulte [Administração do painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações) ou no Programa de aplicativo de área de trabalho do Windows (consulte [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obter mais informações).

@@ -1,34 +1,34 @@
 ---
 author: JnHs
-Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base.
+Description: You can create ad campaigns in Partner Center to help promote your app and grow your app's user base.
 title: Criar uma campanha publicitária para seu app
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 33c6388902322357d27918b6e4b95555785288bc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751522"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833336"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
-Você pode criar uma campanha publicitária usando o painel do Centro de Desenvolvimento para promover seu aplicativo e ampliar a base de usuários de seu aplicativo. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações de seu aplicativo no painel do Centro de Desenvolvimento, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
+Você pode criar campanhas publicitárias no [Partner Center](https://partner.microsoft.com/dashboard) para ajudar a promover seu aplicativo e ampliar a base de seu usuário. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações do aplicativo no Partner Center, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
 
 Você pode criar campanhas publicitárias somente para aplicativos que passaram na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md).
 
 > [!NOTE]
-> Esta seção da documentação descreve como criar uma campanha publicitária no painel do Centro de Desenvolvimento. Como alternativa, você pode usar a [API de promoções da Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md) para criar e gerenciar as campanhas publicitárias de forma programática.
+> Esta seção da documentação descreve como criar uma campanha publicitária no Partner Center. Como alternativa, você pode usar a [API de promoções da Microsoft Store](../monetize/run-ad-campaigns-using-windows-store-services.md) para criar e gerenciar as campanhas publicitárias de forma programática.
 
 ## <a name="instructions"></a>Instruções
 
 Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
-1.  No menu de navegação esquerdo do painel, expanda **Atrair** e, em seguida, selecione **Campanhas de anúncios**.
+1.  No menu de navegação à esquerda do [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** e, em seguida, selecione **as campanhas publicitárias**.
 2.  Selecione **Criar campanha** (ou se você criou campanhas antes, selecione **Nova campanha**).
 3.  Na página seguinte, na seção **Objetivo da campanha**, escolha um destes procedimentos:
     * **Aumentar as instalações do seu aplicativo**. Selecione essa opção se sua campanha publicitária tiver o objetivo de levar as pessoas a instalar seu aplicativo.
@@ -48,7 +48,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
         O orçamento mensal é proporcional ao mês em que a campanha publicitária é criada. Em outras palavras, se você criar uma campanha publicitária na metade de um mês, será cobrado pela metade de seu orçamento mensal nesse mês.
 
-    * Especifique um método de pagamento para a campanha publicitária ao clicar em **Adicionar novo método de pagamento** e preencha os detalhes da sua conta. Se você já tiver fornecido um método de pagamento, é possível selecionar **Escolher um método de pagamento diferente** se for necessário atualizá-lo. O país/região do endereço de cobrança do seu método de pagamento deve coincidir com o país/região associado à conta do Centro de Desenvolvimento.
+    * Especifique um método de pagamento para a campanha publicitária ao clicar em **Adicionar novo método de pagamento** e preencha os detalhes da sua conta. Se você já tiver fornecido um método de pagamento, é possível selecionar **Escolher um método de pagamento diferente** se for necessário atualizá-lo. O país/região do endereço de cobrança do seu método de pagamento deve coincidir com o país/região associado à conta de desenvolvedor.
 
     * Se você recebeu um cupom de um representante da Microsoft para pagar uma campanha publicitária, clique em **Usar um cupom**, insira o código do cupom e clique em **Aplicar** para aplicar o cupom à campanha.
 
@@ -103,10 +103,3 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 Para ver o desempenho das campanhas publicitárias, retorne à página **Campanhas publicitárias**. Selecione **Filtros de seção** para definir o escopo que está incluído no relatório por **Data**, **Objetivo da campanha**, **Nome do aplicativo**, **Tipo de campanha** ou **Status**. Além de ver informações sobre **Impressões**, **Cliques**, **Conversões** e **Gastos** da sua campanha, você pode usar o relatório para **Pausar** ou **Retomar** uma campanha. Para saber mais, consulte [Relatório de campanhas publicitárias](promote-your-app-report.md).
 
 Para editar uma campanha, selecione seu nome na lista.
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-* [Gerenciando sua campanha publicitária](managing-your-ad-campaign.md)
-* [Sobre anúncios domésticos](about-house-ads.md)
-* [Relatório de promoção do seu app](promote-your-app-report.md)
-* [Perguntas comuns sobre campanhas publicitárias](common-questions.md)

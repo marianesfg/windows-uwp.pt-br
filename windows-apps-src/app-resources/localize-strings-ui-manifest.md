@@ -10,12 +10,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: b1e57d5c8ae4d1586de9f16455dc178c5e154fbf
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c9789e21bd4d2a598db292721cabfe58d7c12ebe
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836688"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -259,7 +259,7 @@ private void RefreshUIText()
 ## <a name="loading-strings-from-a-class-library-or-a-windows-runtime-library"></a>Carregando cadeias de caracteres de uma biblioteca de classes ou uma biblioteca do Windows Runtime
 Os recursos de cadeia de caracteres de uma biblioteca de classes referenciada (Universal do Windows) ou uma [Biblioteca do Windows Runtime (Universal do Windows)](../winrt-components/index.md) são normalmente adicionados a uma subpasta do pacote em que eles estão incluídos durante o processo de compilação. O identificador de recurso de uma cadeia de caracteres normalmente assume o formato *LibraryName/ResourcesFileName/ResourceIdentifier*.
 
-Uma biblioteca pode obter um ResourceLoader para seus próprios recursos. Por exemplo, o código a seguir ilustra como uma biblioteca ou um app que faz referência a ela pode obter um ResourceLoader para recursos de cadeia de caracteres da biblioteca.
+Uma biblioteca pode obter um ResourceLoader para seus próprios recursos. Por exemplo, o código a seguir ilustra como uma biblioteca ou um aplicativo que faz referência a ela pode obter um ResourceLoader para recursos de cadeia de caracteres da biblioteca.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");

@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Health report in the Windows Dev Center dashboard lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
+Description: The Health report in Partner Center lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
 title: Relatório de integridade
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, integridade, falhas, eventos sem resposta, integridade de aplicativo, dados de integridade, rastreamento de pilha, arquivo cab, falha, falhas, pdb, símbolos
 ms.localizationpriority: medium
-ms.openlocfilehash: d1c32468bfa933ea0d9d56150f0b2610eb1668e5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 06cf6a7050f7598e86582393a92b92d1bdd877d1
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829760"
 ---
 # <a name="health-report"></a>Relatório de integridade
 
-O relatório **Integridade** no painel Centro de Desenvolvimento do Windows permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta. Você pode exibir esses dados no painel ou [baixar o relatório](download-analytic-reports.md) para visualizar offline. Onde for aplicável, você pode exibir rastreamentos de pilha e/ou arquivos CAB para depuração adicional.
+O relatório de **integridade** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você obtenha dados relacionados ao desempenho e à qualidade de seu aplicativo, incluindo falhas e eventos sem resposta. Você pode exibir esses dados no Partner Center, ou [Baixe o relatório](download-analytic-reports.md) para exibição offline. Onde for aplicável, você pode exibir rastreamentos de pilha e/ou arquivos CAB para depuração adicional.
 
 Como alternativa, você pode recuperar os dados desse relatório de forma programática usando a [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 

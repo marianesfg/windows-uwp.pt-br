@@ -4,16 +4,16 @@ Description: Product declarations help make sure your app is displayed appropria
 title: Declarações de produto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.author: wdg-dev-content
-ms.date: 12/05/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1fc444dbd106f4eeb0996903f71701a96a9735
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831155"
 ---
 # <a name="product-declarations"></a>Declarações de produto
 
@@ -46,16 +46,14 @@ Para obter mais informações, consulte [acessibilidade](../design/accessibility
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Os clientes podem instalar esse aplicativo em unidades alternativas ou armazenamento removível.
 
-Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo para o armazenamento externo ou removível unidade de mídia, como um cartão SD, ou para um volume fora do sistema, como uma unidade externa. (Para o Windows Phone 8.1, isso foi anteriormente indicado por meio do Storemanifest.)
+Essa caixa é marcada por padrão, para permitir que os clientes instalem seu aplicativo para o armazenamento externo ou removível unidade de mídia, como um cartão SD, ou para um volume fora do sistema, como uma unidade externa.
 
-Se você deseja impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitem apenas a instalação na unidade de disco rígido interno em seus dispositivos, desmarque essa caixa.
-
-Observe que não há nenhuma opção para restringir a instalação para que um aplicativo *só* pode ser instalado em mídia de armazenamento removível.
+Se você deseja impedir que seu aplicativo seja instalado em unidades alternativas ou armazenamento removível e permitem apenas a instalação na unidade de disco rígido interno em seus dispositivos, desmarque essa caixa. (Observe que não há nenhuma opção para restringir a instalação para que um aplicativo *só* pode ser instalado a mídia de armazenamento removível).
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>O Windows pode incluir dados do aplicativo em backups automáticos no OneDrive.
 
-Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo sejam incluídos quando um cliente optar por fazer com que o Windows faça backups automáticos no OneDrive. (Para o Windows Phone 8.1, isso foi anteriormente indicado por meio do Storemanifest.)
+Esta caixa é marcada por padrão, para permitir que os dados do seu aplicativo sejam incluídos quando um cliente optar por fazer com que o Windows faça backups automáticos no OneDrive.
 
 Se você deseja impedir que os dados do aplicativo sejam incluídos em backups automáticos, desmarque essa caixa.
 

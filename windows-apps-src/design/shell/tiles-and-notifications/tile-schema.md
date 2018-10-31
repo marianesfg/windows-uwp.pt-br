@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, bloco, notificação de bloco, conteúdo de bloco, esquema, carga de bloco
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cdcf8b609b76283ba680ec9ca4d2502624e2024
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5759592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833514"
 ---
 # <a name="tile-content-schema"></a>Esquema de conteúdo do bloco
 

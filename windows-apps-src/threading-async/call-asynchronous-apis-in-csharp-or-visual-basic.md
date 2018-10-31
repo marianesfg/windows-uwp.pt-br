@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, assíncrona
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834547"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Chamar APIs assíncronas no Visual Basic ou C#
 

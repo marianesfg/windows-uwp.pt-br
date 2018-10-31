@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, cadeia de caracteres
 ms.localizationpriority: medium
 ms.openlocfilehash: 72032c3c522a8434d266842a83c443889e8efc19
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836848"
 ---
 # <a name="string-handling-in-cwinrt"></a>Processamento de cadeia de caracteres em C++/WinRT
 

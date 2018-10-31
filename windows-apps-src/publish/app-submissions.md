@@ -5,15 +5,15 @@ title: Envios de aplicativos
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: lista de verificação, windows, uwp, envio, enviar, jogo, app, envio
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b3aed7c5fe912155904b3b0da666427e6727d19d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833633"
 ---
 # <a name="app-submissions"></a>Envios de aplicativos
 
@@ -23,12 +23,15 @@ Assim que tiver [criado seu aplicativo reservando um nome](create-your-app-by-re
 Você pode iniciar o envio quando seu aplicativo estiver completo e pronto para ser publicado, ou pode começar a inserir informações mesmo antes de ter escrito uma única linha de código. Atualizações feitas ao seu envio são salvas, para que você possa voltar e trabalhar nele sempre que você está pronto.
 
 > [!NOTE]
-> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acessar o [Centro de desenvolvimento do Windows](https://partner.microsoft.com/dashboard) e enviar aplicativos na Microsoft Store.
+> Você deve ter uma [conta de desenvolvedor](http://go.microsoft.com/fwlink/p/?LinkId=615100) de ativa no [Partner Center](https://partner.microsoft.com/dashboard) para enviar aplicativos na Microsoft Store.
 
-Depois que o aplicativo for publicado, você poderá publicar uma versão atualizada criando outro envio em seu painel. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de visão geral do aplicativo. Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
+Depois que o aplicativo for publicado, você pode publicar uma versão atualizada criando outro envio no Partner Center. Criar um novo envio permite fazer e publicar quaisquer mudanças necessárias, caso você esteja carregando novos pacotes ou apenas alterando detalhes, como o preço ou a categoria. Para criar um novo envio para um aplicativo publicado, clique em **Atualizar** ao lado do envio mais recente mostrado na página de **Visão geral** . Você também pode [Remover um aplicativo da loja](guidance-for-app-package-management.md#removing-an-app-from-the-store) se você precisar fazer isso (e, em seguida, disponibilizá-lo novamente mais tarde, se você quiser).
 
 > [!NOTE]
-> Esta seção da documentação descreve como criar um envio de aplicativo no painel do Centro de Desenvolvimento. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.
+> Esta seção da documentação descreve como criar um envio de aplicativo no Partner Center. Opcionalmente, você poderá usar a [API de envio da Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar envios de apps.
+
+> [!IMPORTANT]
+> A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="app-submission-checklist"></a>Lista de verificação de envio de aplicativo
 
@@ -91,17 +94,20 @@ Você precisará de todas as informações obrigatórias para pelo menos um dos 
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Descrição**               | Necessário                                    | [Escreva uma ótima descrição do app](write-a-great-app-description.md) |
 | **Novidades desta versão**   | Opcional                                 | [Notas de versão](create-app-store-listings.md#whats-new-in-this-version)       |
-| **Recursos do aplicativo**              | Opcional                                    | [Recursos do aplicativo](create-app-store-listings.md#app-features)         |
+| **Recursos do aplicativo**              | Opcional                                    | [Recursos do produto](create-app-store-listings.md#product-features)         |
 | **Capturas de tela**               | Obrigatório (pelo menos uma captura de tela; recomenda-se quatro ou mais)          | [Capturas de tela](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos da Store**               | Recomendado; necessário em algumas versões do sistema operacional | [Logotipos da Store](app-screenshots-and-images.md#store-logos)             |
-| **Ativos de arte adicionais**     | Recomendado (especialmente para algumas versões do sistema operacional)         | [Ativos de arte adicionais](app-screenshots-and-images.md#additional-art-assets) |
 | **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
-| **Campos complementares**  | Opcional                                    | [Informações complementares](create-app-store-listings.md#supplemental-fields) 
+| **Imagem do Windows 10 e Xbox (16:9 Arte de super-herói)**     | Recomendações        | [Windows 10 e Xbox imagem (16:9 arte de super-herói)
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imagens do Xbox**     | Necessário para a exibição correta se você publicar no Xbox        | [Imagens do Xbox
+] (aplicativo capturas de tela e images.md #-imagens do xbox) |
+| **Campos complementares**  | Opcional                                    | [Campos complementares](create-app-store-listings.md#supplemental-fields) 
 | **Termos de pesquisa**              | Opcional                                    | [Termos de pesquisa](create-app-store-listings.md#search-terms)         |
 | **Informações sobre direitos autorais e marcas registradas** | Opcional                                 | [Informações sobre direitos autorais e marcas registradas](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Termos de licença adicionais**  | Opcional                                    | [Termos de licença adicionais](create-app-store-listings.md#additional-license-terms) |
 | **Desenvolvido por**              | Opcional                                    | [Desenvolvido por](create-app-store-listings.md#developed-by)                   |
-| **Listagens da Store específicas de plataforma** | Opcional                               | [Criar listagens da Store específicas de plataforma](create-platform-specific-store-listings.md)  |
+
 
 <span/>
 

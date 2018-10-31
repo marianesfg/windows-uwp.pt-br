@@ -4,16 +4,16 @@ Description: You can use package flights to distribute packages that are only gi
 title: Pacotes de pré-lançamento
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 ms.author: wdg-dev-content
-ms.date: 6/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, liberação de versões de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: c34aa5f060671341900e25095ee8dc1d2d45a657
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5838907"
 ---
 # <a name="package-flights"></a>Pacotes de pré-lançamento
 
@@ -21,7 +21,7 @@ Você pode usar pacotes de pré-lançamento para distribuir pacotes específicos
 
 Com pacotes de pré-lançamento, apenas os pacotes são diferentes; o armazenamento de listagem detalhes será o mesmo para todos os seus clientes. Qualquer pessoa em seu grupo de versão de pré-lançamento receberão os pacotes que você inclui no pacote de pré-lançamento, enquanto os clientes que não estão no grupo de versão de pré-lançamento continuam recebendo seus pacotes regulares (completa).  Se você decidir mais tarde que você deseja disponibilizar os pacotes de um pacote de pré-lançamento para todos os seus clientes, você pode usar facilmente esses mesmos pacotes em um envio de versão completa. Os pacotes de pré-lançamento devem passar o [processo de certificação](the-app-certification-process.md), da mesma forma que qualquer envio.
 
-Ao configurar pacotes de pré-lançamento, você pode especificar as pessoas que devem receber pacotes específicos, adicionando-as para um **grupo de usuários conhecido** (às vezes chamado de grupo de versão de pré-lançamento). Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. (Os pacotes de pré-lançamento podem incluir pacotes que segmentem qualquer versão de sistema operacional, inclusive Windows 8.1/Windows Phone 8.1 ou anteriores). Qualquer pessoa que não tiver sido adicionada a um dos grupos de versão de pré-lançamento ou que esteja usando um dispositivo não compatível com pacotes de pré-lançamento receberá pacotes do envio de versão completa.
+Ao configurar pacotes de pré-lançamento, você pode especificar as pessoas que devem receber pacotes específicos, adicionando-as para um **grupo de usuários conhecido** (às vezes chamado de grupo de versão de pré-lançamento). Qualquer pessoa em um grupo de versão de pré-lançamento que estiver usando um dispositivo executando uma versão do Windows 10 que ofereça suporte a pacotes de pré-lançamento (build Windows.Desktop 10586 ou posterior; build Windows.Mobile 10586.63 ou posterior; ou Xbox One) receberá os pacotes dos pacote de pré-lançamentos que você atribuir a esse grupo em particular. (Seus pacotes de pré-lançamento podem incluir pacotes que segmentem qualquer versão do sistema operacional, inclusive Windows 8.1 / Windows Phone 8.1 ou versões anterior, se seu aplicativo publicado anteriormente já oferece suporte a eles.) Qualquer pessoa que não foi adicionado a um dos grupos de versão de pré-lançamento ou está usando um dispositivo que não dá suporte a pacotes de pré-lançamento receberão pacotes do envio de versão completa.
 
 > [!IMPORTANT] 
 > Em dispositivos desktop e móveis, as pessoas nos grupos de versão de pré-lançamento receberão os pacotes no pré-lançamento automaticamente sempre que você fornecer atualizações. No entanto, **pessoas nos grupos de versão de pré-lançamento que estiverem usando dispositivos Xbox precisarão verificar atualizações manualmente** para receber os pacotes mais recentes, certificando-se de que eles estejam conectados ao dispositivo usando a conta da Microsoft (com o endereço de email associado incluído no grupo de usuários conhecidos).
@@ -51,7 +51,7 @@ Na página de criação do pacote de pré-lançamento, é necessário inserir um
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Especificar pacotes para incluir em seu pacote de pré-lançamento
 
-Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento. É possível incluir pacotes que segmentem qualquer versão do sistema operacional, inclusive Windows 10, Windows 8.x e Windows Phone 8.x ou anteriores.
+Depois que tiver salvado os detalhes do pacote de pré-lançamento, você verá a página de visão geral. Clique em **Pacotes** para especificar os pacotes que você gostaria de incluir no versão de pré-lançamento. Você pode incluir pacotes que segmentem qualquer versão do sistema operacional compatíveis com o aplicativo.
 
 Você tem a opção de selecionar pacotes que estavam associados a um envio publicado anterior (um envio de versão completa ou um dos seus pacotes de pré-lançamento, se você tiver mais de um). Se você precisar carregar novos pacotes para usar para esse pacote de pré-lançamento, você pode carregá-los aqui (usando o [mesmo processo de quando carrega pacotes de aplicativos para um envio de versão completa comum](upload-app-packages.md)). Clique em **Salvar** quando terminar de especificar os pacotes a serem incluídos no pacote de pré-lançamento.
 

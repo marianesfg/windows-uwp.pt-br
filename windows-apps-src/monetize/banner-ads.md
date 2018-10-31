@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831792"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 

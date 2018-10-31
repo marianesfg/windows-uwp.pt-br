@@ -4,38 +4,38 @@ Description: Set roles or custom permissions for account users.
 title: Definir funções ou permissões personalizadas para usuários de contas
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
-ms.openlocfilehash: 753b71d409fd660687af77410f7f5796aa3c8a5c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835699"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
-Ao [adicionar usuários à sua conta do Centro de Desenvolvimento](add-users-groups-and-azure-ad-applications.md), será necessário especificar o acesso disponível na conta. Você pode fazer isso ao atribuir [funções padrão](#roles), que se aplicam à conta inteira, ou [personalizar as permissões deles](#custom) para fornecer o nível apropriado de acesso. Algumas das permissões personalizadas se aplicam à conta inteira, e algumas podem ser limitadas a um ou mais produtos específicos (ou concedidas a todos os produtos, se desejar).
+Quando você [Adicionar usuários à sua conta do Partner Center](add-users-groups-and-azure-ad-applications.md), você precisará especificar o acesso que eles têm na conta. Você pode fazer isso ao atribuir [funções padrão](#roles), que se aplicam à conta inteira, ou [personalizar as permissões deles](#custom) para fornecer o nível apropriado de acesso. Algumas das permissões personalizadas se aplicam à conta inteira, e algumas podem ser limitadas a um ou mais produtos específicos (ou concedidas a todos os produtos, se desejar).
 
 > [!NOTE] 
 > As mesmas funções e permissões podem ser aplicadas, independentemente de estar adicionando um usuário, um grupo ou um aplicativo Azure AD.
 
 Ao determinar qual função ou permissão aplicar, lembre-se: 
--   Os usuários (incluindo grupos e aplicativos do Azure AD) poderão acessar a conta inteira do Centro de Desenvolvimento com as permissões associadas à função atribuídas, exceto ao [personalizar as permissões](#custom) e atribuir [permissões de nível de produto](#product-level-permissions) para que funcionem somente com aplicativos e/ou complementos específicos.
+-   Os usuários (incluindo grupos e aplicativos Azure AD) serão capazes de acessar toda a conta do Partner Center com as permissões associadas às suas funções atribuídas, a menos que você [Personalizar permissões](#custom) e atribuir [permissões de nível de produto](#product-level-permissions) para que ele só possa trabalhar com aplicativos específicos e/ou complementos.
 -   Você pode permitir que um usuário, grupo ou aplicativo Azure AD tenha acesso à funcionalidade de mais de uma função selecionando várias funções, ou usando permissões personalizadas para conceder o acesso que você queira.
 -   Um usuário com uma determinada função (ou conjunto de permissões personalizadas) também pode fazer parte de um grupo que tenha uma função diferente (ou conjunto de permissões). Nesse caso, o usuário terá acesso a toda a funcionalidade associada ao grupo e à conta individual.
 
 > [!TIP]
-> Este tópico é específico para o programa de desenvolvedores de aplicativos do Windows. Para obter informações sobre funções de usuário no programa de desenvolvedores de hardware, consulte [Gerenciamento de funções de usuário](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Para obter informações sobre funções de usuário no Programa de Aplicativo da Área de Trabalho do Windows, consulte [Programa de Aplicativo da Área de Trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
+> Este tópico é específico para o programa de desenvolvedor de aplicativos do Windows no [Partner Center](https://partner.microsoft.com/dashboard). Para obter informações sobre funções de usuário no programa de desenvolvedores de hardware, consulte [Gerenciamento de funções de usuário](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Para obter informações sobre funções de usuário no Programa de Aplicativo da Área de Trabalho do Windows, consulte [Programa de Aplicativo da Área de Trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
 
 
 <span id="roles" />
 
 ## <a name="assign-roles-to-account-users"></a>Atribuir funções a usuários da conta
 
-Por padrão, um conjunto de funções padrão é apresentado para que você escolha quando é necessário adicionar um usuário, um grupo ou um aplicativo Azure AD à sua conta do Centro de Desenvolvimento. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta. 
+Por padrão, um conjunto de funções padrão é apresentado para você escolha quando você adiciona um usuário, grupo ou aplicativo Azure AD à sua conta do Partner Center. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta. 
 
 A menos que você defina [permissões personalizadas](#custom) ao selecionar **Personalizar permissões**, cada usuário, grupo ou aplicativo Azure AD adicionado a uma conta deve receber pelo menos uma das funções padrão a seguir. 
 
@@ -45,7 +45,7 @@ A menos que você defina [permissões personalizadas](#custom) ao selecionar **P
 
 | Função                 | Descrição              |
 |----------------------|--------------------------|
-| Gerente              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Centro de Desenvolvimento, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD é dependente da permissão da conta no Azure AD. Ou seja, se um usuário receber a função Gerente, mas não tiver permissões de administrador global no Azure AD da organização, não será possível criar novos usuários ou excluir usuários do diretório (embora seja possível alterar a função do Centro de Desenvolvimento do usuário). <p> Observe que, se a conta do Centro de Desenvolvimento estiver associada a mais de um locatário do Azure AD, o Gerente não poderá ver os detalhes completos de um usuário (incluindo nome, sobrenome, email para recuperação de senha e se ele é um administrador global do Azure AD) a menos que acesse o mesmo locatário que o usuário com uma conta que possui credenciais de administrador global para esse locatário. No entanto, ele pode adicionar e remover usuários em qualquer locatário associado à conta do Centro de Desenvolvimento. |
+| Gerente              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Partner Center, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD é dependente da permissão da conta no Azure AD. Ou seja, se um usuário receber a função gerente, mas não tem permissões de administrador global da organização do Azure AD, não será possível criar novos usuários ou excluir usuários do diretório (embora seja possível alterar a função do usuário do Partner Center). <p> Observe que, se a conta do Partner Center estiver associada a mais de um locatário do Azure AD, um gerente não pode ver detalhes completos de um usuário (incluindo nome, sobrenome, email de recuperação de senha, e se ele é um administrador global do Azure AD) a menos que estejam conectado ao mesmo locatário que o usuário com uma conta que tenha permissões de administrador global para esse locatário. No entanto, eles podem adicionar e remover usuários em qualquer locatário associado à conta do Partner Center. |
 | Desenvolvedor            | Pode carregar pacotes e enviar aplicativos e complementos, além de exibir o [Relatório de uso](usage-report.md) para obter detalhes de telemetria. Pode acessar a funcionalidade de [Experiências entre dispositivos](https://go.microsoft.com/fwlink/?linkid=874042) . Não pode exibir informações financeiras ou configurações da conta.   |
 | Colaborador comercial | Pode exibir relatórios de [Integridade](health-report.md) e de [Uso](usage-report.md). Não é possível criar ou enviar produtos, alterar configurações de conta ou exibir informações financeiras.   |
 | Colaborador financeiro  | Pode exibir [relatórios de pagamento](payout-summary.md), informações financeiras e relatórios de aquisição. Não pode fazer alterações em aplicativos, complementos ou configurações da conta.    |
@@ -173,7 +173,6 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentários do cliente</b>    </td><td>    Pode exibir os relatórios <a href="reviews-report.md">análises</a> e <a href="feedback-report.md">Comentários</a> do produto.       </td><td>    N/D (para responder a comentários ou análises, a permissão <b>Contato com cliente</b> deve ser concedida)   </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
-    <tr><td align="left">    <b>Tempo real</b>   </td><td>    Pode exibir o relatório em tempo real para o produto. (observação: este relatório está disponível no momento pelo <a href="dev-center-insider-program.md">Programa Insider do Centro de Desenvolvimento</a>.)      </td><td>    N/D   </td><td>    N/D     </td><td>    N/D                 </td></tr>
     </tbody>
     </table>
 

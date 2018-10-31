@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 199f9def3150373fed2b3c7d8e711c1eeda6e721
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759359"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830480"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Os recursos de app e o Sistemas de Gerenciamento de Recursos
 

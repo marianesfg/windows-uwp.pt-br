@@ -4,23 +4,23 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de conta, localizações e taxas
 description: Oferecemos contas de desenvolvedor individuais e empresariais em muitos países e regiões.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
-ms.openlocfilehash: 619b245ed6037192fe8b846a20d9fe0fe97baa24
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831571"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
-Oferecemos contas individuais e empresariais em muitos [países e regiões](#developer-account-and-app-submission-markets). Os dois tipos de conta fornecem acesso para publicar aplicativos na Store e participar de programas adicionais de desenvolvedor Microsoft.
+O Windows os dois pessoa de programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de fornece conta que acesso para publicar aplicativos na loja e participar de outros programas da Microsoft.
 
 > [!NOTE]
-> Ao se inscrever em uma conta, certifique-se de entrar com a conta da Microsoft que deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
+> Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.
 
 Quando você [começar o processo de inscrição](http://go.microsoft.com/fwlink/p/?LinkId=615100), precisará escolher entre criar uma conta individual ou uma conta empresarial. Os dois tipos de conta permitirão que você envie aplicativos, jogos, suplementos e serviços.
 
