@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bcbd1dfceb0dc51addfe9572fba746680745b26
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752207"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824868"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -115,7 +115,7 @@ Ou altere o TargetTheme no RevealBorderBrush para escuro. Lembre-se: se o Target
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Habilitando o Revelação em controles personalizados
 
-Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é importante saber um pouco mais sobre como o efeito do Revelação funciona. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
+Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é importante saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
 
 - **Borda** mostra as bordas dos elementos interativos quando um ponteiro está próximo. Esse efeito mostra que esses objetos próximos podem executar ações semelhantes às do objeto em foco.
 - **Hover**  aplica uma forma de halo suave ao redor do item focalizado ou focado e executa uma animação ao clicar. 

@@ -4,26 +4,26 @@ Description: You can respond directly to reviews of your app to let customers kn
 title: Responder às críticas dos clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.author: wdg-dev-content
-ms.date: 7/17/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: f4bad59e298ef65cc7aaf6561b77cc86eeff832e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 823ca28618540dbaab1f4e5711ee59d277b0c894
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748369"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824122"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 
 
 Você pode responder às críticas ao seu aplicativo para permitir que os clientes saibam que você está ouvindo os comentários. Com uma resposta às críticas, você pode informar aos clientes os recursos que foram adicionados ou os bugs que foram corrigidos com base nos comentários deles, ou obter um feedback mais específico sobre como melhorar seu aplicativo. Serão exibidas na Microsoft Store para todos os clientes do Windows 10 ver suas respostas. Você também pode optar por enviar sua resposta por email para o cliente (se ele ainda não o desativaram e estiver usando um dispositivo com Windows 10, versão 1803 ou superior).
 
-Para ver as análises do seu aplicativo e fornecer respostas, encontre o aplicativo em seu painel do Centro de Desenvolvimento do Windows. No menu de navegação para a esquerda, expanda **Análises** e, em seguida, clique em **Avaliações** para exibir o [Relatório de avaliações](reviews-report.md). Selecione a **Responder para analisar** para fornecer sua resposta.
+Para ver as críticas do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação esquerdo, expanda **Analisar** e clique em **análises** para exibir o [relatório críticas](reviews-report.md). Selecione a **Responder para analisar** para fornecer sua resposta.
 
 > [!TIP]
-> Além de usar o painel para responder às críticas, você pode responder para opiniões [programaticamente](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+> Além de usar o Partner Center para responder às críticas, você pode responder para opiniões [programaticamente](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
 
 Por padrão, sua resposta será lançada na loja, logo abaixo da revisão do cliente original. Essas respostas ficarão visíveis para os clientes que acessarem a loja em um dispositivo Windows 10. Se o cliente que fez a crítica está usando um dispositivo com Windows 10, versão 1803 ou superior, e eles não tiver optado por não receber respostas de email, uma cópia de sua resposta também será enviada para esse cliente por email.  Você precisará fornecer um endereço de email válido para enviar sua resposta, o que podemos incluirá no email para o cliente. Em seguida, eles podem usar este endereço de email para contatá-lo diretamente.
 

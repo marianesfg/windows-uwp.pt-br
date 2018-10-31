@@ -4,16 +4,16 @@ Description: The App properties page of the app submission process lets you defi
 title: Inserir as propriedades do aplicativo
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, configurações de jogo, modo de exibição, requisitos do sistema, requisitos de hardware, hardware mínimo, hardware recomendado, política de privacidade, informações de contato de suporte, site do app, informações de suporte
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b7fffe4c687009f71c9908ca9391278a172209a
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 9356c536946508c4531170cde8982e7b79c6e4f6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746051"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5823412"
 ---
 # <a name="enter-app-properties"></a>Inserir as propriedades do aplicativo
 
@@ -60,7 +60,7 @@ Insira a URL da página da Web em que seus clientes podem buscar suporte relacio
 
 ## <a name="game-settings"></a>Configurações do jogo
 
-Esta seção só aparecerá se você tiver selecionado **Jogos** como categoria do produto. Aqui você pode especificar quais recursos são compatíveis com seu jogo. Todas as informações que você fornecer nesta seção serão exibidas na listagem da Loja do produto.
+Esta seção só aparecerá se você tiver selecionado **Jogos** como categoria do produto. Aqui você pode especificar quais recursos são compatíveis com seu jogo. As informações que você fornecer nesta seção serão exibidas na loja do produto de listagem.
 
 Se o jogo oferecer suporte a qualquer uma das opções multijogador, indique o número mínimo e máximo de jogadores em uma sessão. Você não pode inserir mais que o mínimo ou o máximo de 1.000 jogadores.
 

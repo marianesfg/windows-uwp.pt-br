@@ -4,19 +4,18 @@ description: Vincula o valor de uma propriedade em um modelo de controle ao valo
 title: Extensão de marcação TemplateBinding
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 10/29/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 842f1bf1642e79d4bd2651560fdf7208cfb1877d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d4aaca880caf30b46cb1ed26d66700bb12d76404
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5739837"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5823649"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensão de marcação {TemplateBinding}
-
 
 Vincula o valor de uma propriedade em um modelo de controle ao valor de outra propriedade exposta no controle modelo. **TemplateBinding** só pode ser usado dentro de uma definição [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) em XAML.
 
@@ -59,18 +58,21 @@ Um **TemplateBinding** é sempre uma associação de uma via. Ambas as proprieda
 
 ### <a name="xbind-in-controltemplate"></a>x: Bind em ControlTemplate
 
-Começando com a próxima atualização principal para o Windows 10, você pode usar a extensão de marcação **X:Bind** em qualquer lugar você usou **TemplateBinding** em [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
+> [!NOTE]
+> Usar x: Bind em um ControlTemplate requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior. Para saber mais sobre as versões de destino, consulte [Código adaptável de versão](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) será necessário (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **x: Bind**.
+A partir do Windows 10, versão 1809, você pode usar a extensão de marcação **X:Bind** em qualquer lugar usar **TemplateBinding** em um [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). 
 
-Com o suporte de **x: Bind** , agora você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)
+A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) é necessária (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **x: Bind**.
 
-No exemplo a seguir, o Text será avaliada como Button.Content.ToString(). O TargetType em ControlTemplate age como a fonte de dados e realize o mesmo resultado que um TemplateBinding para pai.
+Com o suporte de **x: Bind** , você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em um [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
+
+Neste exemplo, a propriedade **Text** será avaliada como **Button.Content.ToString**. O TargetType em ControlTemplate age como a fonte de dados e realize o mesmo resultado que um TemplateBinding para pai.
 
 ```xaml
 <ControlTemplate TargetType="Button">
     <Grid>
-        <TextBlock Text="{x:Bind Content}" />
+        <TextBlock Text="{x:Bind Content, Mode=OneWay}"/>
     </Grid>
 </ControlTemplate>
 ```

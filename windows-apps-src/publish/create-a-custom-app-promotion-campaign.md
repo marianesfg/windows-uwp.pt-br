@@ -4,22 +4,22 @@ description: Além de criar uma campanha publicitária para seu app que será ex
 title: Criar uma campanha personalizada de promoção de app
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 ms.author: wdg-dev-content
-ms.date: 09/27/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, personalizado, app, promoção, campanha
 ms.localizationpriority: medium
-ms.openlocfilehash: 0349833c012789b55d33575702390f264335aa2f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747457"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824838"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Criar uma campanha personalizada de promoção de app
 
 Além de criar uma [campanha publicitária para seu aplicativo](create-an-ad-campaign-for-your-app.md) que será executada em aplicativos do Windows, você também pode promover seu aplicativo usando outros canais. Por exemplo, você pode promover o aplicativo usando um provedor de marketing de aplicativos terceirizado, ou pode postar links para seu aplicativo em redes sociais. Essas atividades são chamadas *campanhas personalizadas*.
 
-Se você veicular campanhas personalizadas para seu aplicativo, é possível acompanhar o desempenho relativo de cada uma criando uma URL para cada campanha personalizada, na qual cada URL contém uma *ID de campanha* diferente. Quando um cliente que executam o Windows 10 clica em uma URL que contém uma ID de campanha, a Microsoft associa o clique campanha personalizada correspondente e disponibiliza esses dados para você.
+Se você veicular campanhas personalizadas para seu aplicativo, é possível acompanhar o desempenho relativo de cada uma criando uma URL para cada campanha personalizada, na qual cada URL contém uma *ID de campanha* diferente. Quando um cliente que executam o Windows 10 clica em uma URL que contém uma ID de campanha, a Microsoft associa o clique campanha personalizada correspondente e disponibiliza esses dados para você no [Partner Center](https://partner.microsoft.com/dashboard).
 
 > [!IMPORTANT]
 > Esses dados acompanhados somente para clientes no Windows 10. Os clientes que usam outros sistemas operacionais ainda podem seguir o link até a listagem do seu aplicativo, mas dados sobre as atividades esses clientes não serão incluídos.
@@ -28,7 +28,7 @@ Existem dois tipos principais de dados associados a campanhas personalizadas: *v
 
 Você pode recuperar dados de desempenho da campanha personalizada para o seu app das seguintes maneiras:
 
-* Você pode exibir dados sobre visualizações de página e conversões para seu aplicativo ou complemento nos gráficos **Visualizações de página e conversões do aplicativo por ID da campanha** e **Total de conversões de campanha** gráficos no [Relatório de aquisições](acquisitions-report.md) no painel do Centro de Desenvolvimento.
+* Você pode exibir dados sobre exibições de página e conversões para seu aplicativo ou complemento de gráficos **exibições de página do aplicativo e conversões por ID da campanha** e **conversões de campanha Total** no [relatório de aquisições](acquisitions-report.md).
 * Se o aplicativo for aplicativo UWP (Plataforma Universal do Windows), é possível usar APIs no SDK do Windows para recuperar de forma programática a ID da campanha personalizada que resultou em uma conversão.
 
 ## <a name="example-custom-campaign-scenario"></a>Exemplo de cenário de campanha personalizada
@@ -47,9 +47,9 @@ Assim que os seguidores no Facebook e no Twitter clicam nas URLs, a Microsoft ra
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>Noções básicas sobre a qualificação de aquisições de aplicativo como conversões
 
-Uma *conversão* de campanha personalizada é uma aquisição que resulta do clique de um cliente a partir de uma URL promovida por uma campanha personalizada. Existem diferentes cenários para a qualificação como uma conversão para os gráficos **Visualizações de página e conversões por ID da campanha** e **Total de conversões de campanha** no relatório [Relatório de aquisições](acquisitions-report.md) no painel Centro de Desenvolvimento e para a qualificação como uma conversão pela [recuperação da ID da campanha de forma programática](#programmatically).
+Uma *conversão* de campanha personalizada é uma aquisição que resulta do clique de um cliente a partir de uma URL promovida por uma campanha personalizada. Existem cenários diferentes para a qualificação como uma conversão para os gráficos de **exibições de página do aplicativo e conversões por ID da campanha** e **conversões de campanha Total** no [relatório de aquisições](acquisitions-report.md) e para a qualificação como uma conversão para [ recuperar de forma programática a ID da campanha](#programmatically).
 
-### <a name="qualifying-conversions-in-the-dashboard-report"></a>Qualificação de conversões no relatório do painel
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualificação de conversões no relatório de aquisições
 
 Os cenários a seguir se qualificam como uma conversão para os gráficos **Visualizações de página e conversões de aplicativo por ID da campanha** e **Total de conversões da campanha** no [Relatório de aquisições](acquisitions-report.md):
 
@@ -195,4 +195,4 @@ Antes de promover uma URL de campanha personalizada, recomendamos que você test
 
 3.  Clique na URL muitas vezes, fechando o aplicativo UWP ou a página do navegador após cada visita à página do seu app. Em **uma** das visitas à página do aplicativo, adquira-o para gerar uma conversão. Conte o número total de vezes que você clicou na URL.
 
-4. Confirme se as visualizações e conversões de página esperadas aparecem nos gráficos **Visualizações e conversões de página por ID da campanha** e **Total de conversões de campanha** no [relatório de Aquisições](acquisitions-report.md) no painel do Centro de Desenvolvimento e teste o código do aplicativo para confirmar se ele pode recuperar com êxito a ID da campanha usando as APIs descritas acima.
+4. Confirme se os conversões e as exibições de página esperadas aparecem nos gráficos de **exibições de página do aplicativo e conversões por ID da campanha** e **Total de conversões de campanha** no [relatório de aquisições](acquisitions-report.md)e testar o código do seu aplicativo para confirmar se ele pode Recupere com êxito a ID da campanha usando as APIs descritas acima.

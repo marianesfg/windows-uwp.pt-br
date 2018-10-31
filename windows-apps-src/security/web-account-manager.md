@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: bfec782952ef20dbc496e50d9513febc8dee3248
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 71a5cddcd5ccb5185cda422c3df16797f5765688
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740399"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825267"
 ---
 # <a name="web-account-manager"></a>Gerenciador de Contas da Web
 
@@ -337,7 +337,7 @@ Obter um token silenciosamente é bastante simples, por isso você deve usar ess
 
 ## <a name="remove-a-stored-account"></a>Remover uma conta armazenada
 
-Se você persistir uma conta da Web, talvez queira oferecer aos usuários a capacidade de desassociar a conta ao app. Dessa forma, eles podem efetivamente fazer "logoff" do app: suas informações de conta não serão mais carregadas automaticamente após o início. Para fazer isso, primeiro remova qualquer conta salva e as informações do armazenamento. Em seguida, chame **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para limpar o cache e invalide qualquer token existente que seu app possa ter. 
+Se você persistir uma conta da Web, talvez queira oferecer aos usuários a capacidade de desassociar a conta ao app. Dessa forma, eles podem efetivamente "logoff" do aplicativo: suas informações de conta não serão carregadas automaticamente após o início. Para fazer isso, primeiro remova qualquer conta salva e as informações do armazenamento. Em seguida, chame **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para limpar o cache e invalide qualquer token existente que seu app possa ter. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

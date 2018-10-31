@@ -1,25 +1,25 @@
 ---
 author: JnHs
-Description: Get detailed analytics for your Windows apps, in the dashboard or via other methods.
+Description: Get detailed analytics for your Windows apps, in Partner Center or via other methods.
 title: Analisar o desempenho do aplicativo
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
-ms.date: 07/17/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: e31ae50a1895c5878a2183b7f63ce3080623f7e9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5768440"
+ms.locfileid: "5824961"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
-Você pode visualizar análises detalhadas de seus aplicativos no painel do Centro de Desenvolvimento do Windows. Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar métricas sobre a integridade do aplicativo, o uso de anúncios e muito mais.
+Você pode visualizar análises detalhadas de seus aplicativos no [Partner Center](https://partner.microsoft.com/dashboard). Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar métricas sobre a integridade do aplicativo, o uso de anúncios e muito mais.
 
-Você pode exibir relatórios de análise no painel ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você [acessar seus dados analíticos sem usar o painel](#no-dashboard).
+Você pode exibir relatórios analíticos diretamente no Partner Center ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você para [acessar seus dados analíticos fora do Partner Center](#outside).
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Exibir análises chave para todos os aplicativos
 
@@ -45,11 +45,11 @@ Nesta seção, você encontrará detalhes sobre as informações apresentadas em
 > [!NOTE]
 > Dependendo dos recursos e da implementação específicos do aplicativo, você não verá dados em todos esses relatórios.
 
-<span id="no-dashboard"/>
+<span id="outside"/>
 
-## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Acessar os dados analíticos sem usar o painel do Centro de Desenvolvimento
+## <a name="access-analytics-data-outside-of-partner-center"></a>Acessar dados analíticos fora do Partner Center
 
-Além de exibir relatórios no painel, você pode acessar sua análise do app em algumas maneiras diferentes.
+Além de exibir relatórios no Partner Center, você pode acessar sua análise do app em um número de diferentes maneiras.
 
 ### <a name="microsoft-store-analytics-api"></a>API de análise da Microsoft Store
 
@@ -57,7 +57,7 @@ Use a [API de análise da Store](../monetize/access-analytics-data-using-windows
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>O pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI
 
-Use o [pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) para explorar e monitorar seus dados analíticos do Centro de Desenvolvimento no Power BI. O Power BI é um serviço de análise de negócios baseado em nuvem que oferece para você um único modo de exibição de seus dados corporativos.
+Use o [pacote de conteúdo do Centro de desenvolvimento do Windows para Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) para explorar e monitorar os dados de análise do Partner Center no Power BI. O Power BI é um serviço de análise de negócios baseado em nuvem que oferece para você um único modo de exibição de seus dados corporativos.
 
 Use os recursos a seguir para começar a usar o Power BI para acessar seus dados analíticos.
 
@@ -66,7 +66,7 @@ Use os recursos a seguir para começar a usar o Power BI para acessar seus dados
 * [Saiba como usar o pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI para se conectar aos seus dados analíticos](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Para se conectar ao pacote de conteúdo do Centro de Desenvolvimento do Windows para Power BI, recomendamos que você especifique suas credenciais em um diretório do Azure AD que esteja associado com sua conta do Centro de Desenvolvimento. Se você usar suas credenciais de conta da Microsoft, seus dados analíticos não serão atualizados automaticamente no Power BI, e você terá que se conectar ao Power BI para atualizar seus dados. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obter mais informações sobre como configurar a associação, consulte [Associar o Azure Active Directory com sua conta do Centro de Desenvolvimento](associate-azure-ad-with-dev-center.md).
+> Para se conectar ao pacote de conteúdo do Centro de desenvolvimento do Windows para Power BI, recomendamos que você especifique suas credenciais em um diretório do Azure AD associado à sua conta do Partner Center. Se você usar suas credenciais de conta da Microsoft, seus dados analíticos não serão atualizados automaticamente no Power BI, e você terá que se conectar ao Power BI para atualizar seus dados. Se sua organização já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem Azure AD. Caso contrário, você pode [baixá-lo gratuitamente](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obter mais informações sobre como configurar a associação, consulte [Associar o Azure Active Directory com sua conta do Partner Center](associate-azure-ad-with-dev-center.md).
 
 ### <a name="dev-center-app"></a>Aplicativo do Centro de Desenvolvimento
 
