@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a63e91bd5415f33118294a03567bb5e670ae2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 3bbf7bdf1f41b1dff1049674f3b4463bac6ccb80
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839817"
+ms.locfileid: "5860077"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
@@ -28,7 +28,7 @@ Quando o usuário prefixa uma entrada com um símbolo de e comercial (@) em uma 
 > **APIs importantes**: [classe ContentLink](/uwp/api/windows.ui.xaml.documents.contentlink), [classe ContentLinkInfo](/uwp/api/windows.ui.text.contentlinkinfo), [classe RichEditTextRange](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> As APIs para obter links de conteúdo estão espalhadas pelos seguintes namespaces: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents e Windows.UI.Text.
+> As APIs para links de conteúdo estão espalhadas pelos seguintes namespaces: Controls, Documents e UI.
 
 
 
