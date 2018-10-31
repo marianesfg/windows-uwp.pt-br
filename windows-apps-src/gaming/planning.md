@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, planejamento, acessibilidade, nuvem, monetizar, pacote, tecnologia, conceito, aprovação
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d350077e3199bdc875d4ad89559cb88ae8950c9
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5822896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5861785"
 ---
 # <a name="planning-for-uwp-games"></a>Planejamento para jogos UWP
 

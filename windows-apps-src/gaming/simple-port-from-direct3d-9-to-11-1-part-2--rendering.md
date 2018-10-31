@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, estrutura de renderização, conversão, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5833653"
+ms.locfileid: "5867540"
 ---
 # <a name="convert-the-rendering-framework"></a>Converter a estrutura de renderização
 
