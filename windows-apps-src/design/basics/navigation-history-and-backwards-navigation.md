@@ -9,12 +9,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42bc7fdb91a8c7642e132d4ac3d93be1f0927df0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d2f437db1a1792df22fd084cedee31cb6e590d24
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5840005"
+ms.locfileid: "5873185"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Histórico de navegação e navegação retroativa para apps UWP
 
@@ -287,21 +287,6 @@ Os exemplos de código fornecidos acima demonstram como manipular todas essas en
 Anteriormente, os aplicativos UWP usavam [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para navegação regressiva. A API continuará a ter suporte para garantir a compatibilidade com versões anteriores, mas não recomendamos depender [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). Em vez disso, seu aplicativo deve desenhar seu próprio botão Voltar no aplicativo.
 
 Se seu aplicativo continuará usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), em seguida, o sistema de interface do usuário renderizará o sistema botão Voltar:
-
-- Se seu aplicativo for **não com guias**, em seguida, o botão Voltar é renderizado na barra de título. As interações de usuário e a experiência visual para o botão Voltar ficam inalteradas de compilações anteriores.
-
-    ![Botão Voltar barra de título](images/nav-back-pc.png)
-
-- Se um aplicativo estiver **com guias**, o botão Voltar é renderizado dentro de um novo sistema para trás barra.
-
-    ![Sistema voltar desenhado barra de botões](images/back-nav/tabs.png)
-
-### <a name="system-back-bar"></a>Voltar do sistema barra
-
-> [!NOTE]
-> "Voltar do sistema barra" é apenas uma descrição, não um nome oficial.
-
-Voltar do sistema barra é uma "faixa" inserida entre a faixa de guia e a área de conteúdo do aplicativo. A faixa passa pela largura do aplicativo, com o botão Voltar na borda esquerda. O faixa tem uma altura vertical de 32 pixels para garantir que o tamanho de destino de toque adequado para o botão Voltar.
 
 - Se seu aplicativo for **não com guias**, em seguida, o botão Voltar é renderizado na barra de título. As interações de usuário e a experiência visual para o botão Voltar ficam inalteradas de compilações anteriores.
 

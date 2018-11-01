@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 31b3379d66485fcd5ab417ecb2782b06f6e80e67
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5818483"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5875560"
 ---
 # <a name="manage-package-flight-submissions"></a>Gerenciar envios de pacote de pré-lançamento
 

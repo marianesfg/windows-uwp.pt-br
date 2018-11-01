@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1122ae00f9b84980a7793deef08a30a16711b4be
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876079"
 ---
 # <a name="composition-brushes"></a>Pincéis de composição
 Todos os itens visíveis na tela de um aplicativo UWP é visível porque ele foi pintado por um pincel. Pincéis permitem que você pintar objetos (UI) da interface de usuário com conteúdo que variam de cores simples e sólidas a imagens ou desenhos à cadeia de efeitos complexos. Este tópico apresenta os conceitos de pintar com CompositionBrush.
 
-Observe que, ao trabalhar com o aplicativo UWP XAML, você pode escolher para pintar um UIElement com um [Pincel de XAML](/windows/uwp/design/style/brushes) ou um [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush). Normalmente, é aconselhável escolher um pincel XAML, se seu cenário seja compatível com um pincel de XAML e mais fácil. Por exemplo, animando a cor de um botão, alterando o preenchimento de um texto ou uma forma com uma imagem. Por outro lado, se você estiver tentando fazer algo que não é compatível com um pincel XAML como como pintura com uma máscara animada ou um stretch inserções animado ou uma cadeia de efeitos, você pode usar um CompositionBrush para pintar um UIElement com o uso de [ XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Observe que, ao trabalhar com o aplicativo UWP XAML, você pode escolher para pintar um UIElement com um [Pincel de XAML](/windows/uwp/design/style/brushes) ou um [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush). Normalmente, é aconselhável escolher um pincel XAML, se seu cenário seja compatível com um pincel de XAML e mais fácil. Por exemplo, animando a cor de um botão, alterando o preenchimento de um texto ou uma forma com uma imagem. Por outro lado, se você estiver tentando fazer algo que não é compatível com um pincel XAML como pintura com uma máscara animada ou um stretch inserções animado ou uma cadeia de efeitos, você pode usar um CompositionBrush para pintar um UIElement com o uso de [ XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 Ao trabalhar com a camada Visual, um CompositionBrush deve ser usado para pintar a área de um [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual).
 

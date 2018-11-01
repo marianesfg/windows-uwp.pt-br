@@ -8,11 +8,11 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, arquivos, io de arquivo, ler arquivo, gravar arquivo, criar arquivo, escrever texto, ler texto
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5816109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5869520"
 ---
 # <a name="work-with-files"></a>Trabalhar com arquivos
 

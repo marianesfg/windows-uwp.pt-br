@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831502"
+ms.locfileid: "5872097"
 ---
 # <a name="relativesource-markup-extension"></a>Extensão de marcação {RelativeSource}
 
