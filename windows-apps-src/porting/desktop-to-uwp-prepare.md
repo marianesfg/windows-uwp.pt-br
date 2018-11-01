@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 9abd10a352243e7c7ca7e665b3fb5ee774e0346e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 3a0b3a9f5ce7c03b8add9cc459bade684b9daf21
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840871"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886681"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>Preparar para empacotar um aplicativo da área de trabalho
 
@@ -103,7 +103,7 @@ As dependências não serão instaladas se o aplicativo for instalado por sidelo
 
 + __Seu aplicativo inicia um utilitário para executar tarefas__. Evite iniciar utilitários de comando, como o PowerShell e o Cmd.exe. Na verdade, se os usuários instalarem seu aplicativo em um sistema que executa o Windows 10 S, em seguida, seu aplicativo não será capaz de iniciá-los em todos os. Isso pode bloquear o seu aplicativo do envio à Microsoft Store porque todos os aplicativos enviados para a Microsoft Store devem ser compatíveis com o Windows 10 S.
 
-Iniciar um utilitário pode geralmente fornecer uma maneira conveniente para obter informações do sistema operacional, acessar o registro ou acessar as funcionalidades do sistema. No entanto, você pode usar APIs UWP para realizar esses tipos de tarefas. Essas APIs são mais eficientes, porque eles não precisam de um executável separado para ser executado, mas o mais importante, eles mantenham o aplicativo alcance fora do pacote. O design do aplicativo permanece consistente com o isolamento, a confiança e a segurança que vem com um aplicativo que você ter empacotado, e seu aplicativo irá se comportar como esperado em sistemas que executam o Windows 10 S.
+Iniciar um utilitário pode geralmente fornecer uma maneira conveniente para obter informações do sistema operacional, acessar o registro ou acessar as funcionalidades do sistema. No entanto, você pode usar APIs UWP para realizar esses tipos de tarefas. Essas APIs são mais eficientes, porque eles não precisam de um executável separado para ser executado, mas o mais importante, eles mantenham o aplicativo alcance fora do pacote. O design do aplicativo permanece consistente com o isolamento, a confiança e a segurança que vem com um aplicativo que você tiver empacotado, e seu aplicativo irá se comportar como esperado em sistemas que executam o Windows 10 S.
 
 + __Seu aplicativo hosts suplementos, plug-ins ou extensões__.   Em muitos casos, as extensões do estilo COM provavelmente continuarão a funcionar desde que a extensão não tenha sido empacotada e seja instalada com confiança total. Isso ocorre porque esses instaladores podem usar suas funcionalidades de confiança total para modificar o registro e colocar arquivos de extensão, onde quer que seu aplicativo de host espera encontrá-los.
 

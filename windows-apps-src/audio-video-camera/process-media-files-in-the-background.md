@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5812460"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886671"
 ---
 # <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 

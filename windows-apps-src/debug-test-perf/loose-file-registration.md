@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, gerente de aplicativos, implantação, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5836888"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5888428"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implantar um aplicativo por meio de registro de arquivo flexível 
 

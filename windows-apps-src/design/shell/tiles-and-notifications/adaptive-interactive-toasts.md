@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp, notificações do sistema, notificações do sistema interativas, notificações do sistema adaptáveis, conteúdo de notificação do sistema, conteúdo da notificação do sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: 791b1dcede799de4ecf8480d994a5c0f1ddb58af
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5813201"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886895"
 ---
 # <a name="toast-content"></a>Conteúdo da notificação do sistema
 
