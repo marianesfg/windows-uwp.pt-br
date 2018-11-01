@@ -8,12 +8,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb29a50ef4fc8c5a56e410a59802b217c033cbc
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: f17bb6bbefb2fd3266edac20ca1f23af76eb0a3c
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827869"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884477"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Aplicar correções de tempo de execução em um pacote MSIX usando a estrutura de suporte do pacote
 
@@ -65,13 +65,13 @@ O PSF contém correções de tempo de execução que você pode usar no momento,
 
 ### <a name="file-redirection-fixup"></a>Correção de redirecionamento de arquivo
 
-Você pode usar o [Arquivo de correção de redirecionamento](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para redirecionar tentativas de gravar ou ler dados em um diretório que não é acessível a partir de um aplicativo executado em um contêiner de MSIX.
+Você pode usar o [Arquivo de correção de redirecionamento](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) para redirecionar tentativas de gravar ou ler dados em um diretório que não é acessível a partir de um aplicativo executado em um contêiner de MSIX.
 
-Por exemplo, se seu aplicativo grava em um arquivo de log que esteja no mesmo diretório que seus aplicativos executáveis, você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) para criar esse arquivo de log em outro local, como o repositório de dados de aplicativo local.
+Por exemplo, se seu aplicativo grava em um arquivo de log que esteja no mesmo diretório que seus aplicativos executáveis, você pode usar a [Correção de redirecionamento de arquivo](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) para criar esse arquivo de log em outro local, como o repositório de dados de aplicativo local.
 
 ### <a name="runtime-fixes-from-the-community"></a>Correções de tempo de execução da comunidade
 
-Certifique-se de revisar as contribuições de comunidade para nossa página do [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop) . É possível que outros desenvolvedores resolveram um problema semelhante ao seu e compartilharam uma correção de tempo de execução.
+Certifique-se de revisar as contribuições de comunidade para nossa página do [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework) . É possível que outros desenvolvedores resolveram um problema semelhante ao seu e compartilharam uma correção de tempo de execução.
 
 ## <a name="apply-a-runtime-fix"></a>Aplicar uma correção de tempo de execução
 
@@ -88,7 +88,7 @@ Vamos percorra cada tarefa.
 
 ### <a name="create-the-package-layout-folder"></a>Criar a pasta de layout do pacote
 
-Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote.  Você pode fazer isso de um **x64 nativo Prompt de comando de ferramentas para o VS 2017**, ou manualmente com o caminho de bin do SDK no caminho de pesquisa executável.
+Se já tiver um arquivo .msix (ou. AppX), você pode descompactar seu conteúdo em uma pasta de layout que servirá como a área de transferência para seu pacote. Você pode fazer isso em um prompt de comando usando a ferramenta de makemsix, com base no seu caminho de instalação do SDK, que é onde você encontrará a ferramenta makemsix.exe em seu computador Windows 10: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
 
 ```
 makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -103,11 +103,7 @@ Se você não tiver um arquivo .msix (ou. AppX) para começar, você pode criar 
 
 ### <a name="get-the-package-support-framework-files"></a>Obter os arquivos da estrutura de suporte do pacote
 
-Você pode obter o pacote Nuget PSF usando o Visual Studio. Você também pode obtê-lo usando a ferramenta de linha de comando do Nuget autônomo.
-
-#### <a name="get-the-package-by-using-visual-studio"></a>Obter o pacote usando o Visual Studio
-
-No Visual Studio, clique no nó do seu projeto ou solução e escolha um dos comandos Manage Nuget Packages.  Procurar **Microsoft.PackageSupportFramework** ou **PSF** para localizar o pacote em Nuget.org. Em seguida, instalá-lo.
+Você pode obter o pacote Nuget PSF usando a ferramenta de linha de comando do Nuget autônomo ou por meio do Visual Studio.
 
 #### <a name="get-the-package-by-using-the-command-line-tool"></a>Obter o pacote usando a ferramenta de linha de comando
 
@@ -117,15 +113,20 @@ Instalar a ferramenta de linha de comando do Nuget deste local: https://www.nuge
 nuget install Microsoft.PackageSupportFramework
 ```
 
+#### <a name="get-the-package-by-using-visual-studio"></a>Obter o pacote usando o Visual Studio
+
+No Visual Studio, clique no nó do seu projeto ou solução e escolha um dos comandos Manage Nuget Packages.  Procurar **Microsoft.PackageSupportFramework** ou **PSF** para localizar o pacote em Nuget.org. Em seguida, instalá-lo.
+
+
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>Adicionar os arquivos de pacote Framework de suporte ao pacote
 
 Adicione as DLLs de PSF necessária de 32 bits e 64 bits e os arquivos executáveis no diretório do pacote. Use a tabela a seguir como guia. Você também vai querer incluir qualquer correção de tempo de execução que você precisa. No nosso exemplo, precisamos a correção de tempo de execução de redirecionamento de arquivo.
 
 | Executável do aplicativo esteja x64 | Executável do aplicativo esteja x86 |
 |-------------------------------|-----------|
-| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
-| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
-| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
+| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |
+| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) |
+| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) |
 
 O conteúdo do pacote agora deve ser semelhante isso.
 

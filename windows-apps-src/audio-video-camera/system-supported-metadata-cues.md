@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, metadados, indicação, controle por voz, capítulo
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e97c913764db24c68ce7becdba0fc283e1a3b73
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830006"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5885400"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicações de metadados programados com suporte do sistema
 Este artigo descreve como tirar proveito dos vários formatos de metadados programados podem ser inseridos em arquivos de mídia ou em fluxos. Os aplicativos UWP podem se registrar em eventos gerados pelo pipeline de mídia durante a reprodução sempre que essas indicações de metadados forem encontradas. Usando a classe [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), os apps podem implementar suas próprias indicações de metadados personalizados, mas este artigo se concentra em vários padrões de metadados detectados automaticamente pelo pipeline de mídia, incluindo:

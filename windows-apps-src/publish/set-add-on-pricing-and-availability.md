@@ -4,21 +4,20 @@ Description: When submitting an add-on, the options on the Pricing and availabil
 title: Definir disponibilidade e preço de complemento
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, complemento, cra, preço
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c9bd463fc15dae55d0e9ee2297f33671e3171b7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6dc557306fe2e5e24ce1210e75ac5f29628306ae
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742356"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886247"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Definir disponibilidade e preço de complemento
 
-
-Ao enviar um complemento, as opções na página **Preço e disponibilidade** determinam quanto cobrar por seu complemento e como ele deve ser oferecido aos clientes.
+Ao enviar um complemento no [Partner Center](https://partner.microsoft.com/dashboard), as opções na página **preço e disponibilidade** determinam quanto cobrar os clientes para o complemento e como ele deve ser oferecido aos clientes.
 
 ## <a name="markets"></a>Mercados
 
@@ -36,8 +35,8 @@ A opção padrão é **Podem ser exibidos na listagem da Store do produto pai**.
 
 Para complementos que você não quer disponibilizar por completo, selecione **Oculto na Store** e uma das seguintes opções:
 
--   **Disponível para compra somente no produto pai**: a seleção dessa opção permite que qualquer cliente adquira o complemento no aplicativo, mas o complemento não será exibido na listagem da Store do aplicativo. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
--   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Store do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não há suporte para os clientes no Windows 8.1 ou versões anteriores**. Se seu aplicativo estiver disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta deste complemento aos clientes no Windows 8.1 ou versões anteriores, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e, em seguida, publicar um novo envio para o aplicativo. Isso é recomendado mesmo se o aplicativo não segmentar o Windows 8.1 ou versões anteriores. é uma melhor experiência para seus clientes se você nunca lhes oferecer um complemento que você optou por tornar indisponível.
+-   **Disponível para compra no produto pai somente**: escolher essa opção permite que qualquer cliente adquira o complemento no seu aplicativo, mas o complemento não será exibido na listagem da loja do seu aplicativo ou torná-lo detectável na loja. Use essa opção somente quando a oferta não for amplamente disponível, por exemplo, durante os períodos iniciais de testes internos.
+-   **Parar a aquisição: qualquer cliente com um link direto pode ver a listagem da Store do produto, mas é possível baixá-lo somente se já tiverem adquirido o produto antes ou tiverem um código promocional e estiverem usando um dispositivo Windows 10. Esse complemento não é exibido na listagem do produto pai**: a seleção dessa opção significa que o complemento não será exibido na listagem do aplicativo e nenhum cliente pode adquirir o complemento. No entanto, **essa opção não há suporte para os clientes no Windows 8.1 ou versões anteriores**. Se seu aplicativo publicado anteriormente está disponível no Windows 8.1 ou anterior, o complemento ainda estará disponível para compra aos clientes. Para interromper a oferta deste complemento aos clientes no Windows 8.1 ou versões anteriores, você precisará atualizar seu aplicativo para remover o código que oferece o complemento e, em seguida, publicar um novo envio para o aplicativo. Isso é recomendado mesmo se o aplicativo não segmentar o Windows 8.1 ou versões anteriores. é uma melhor experiência para seus clientes se você nunca lhes oferecer um complemento que você optou por tornar indisponível.
     
  > [!NOTE] 
  > A seleção da opção **Parar aquisição** e/ou enviar uma atualização de aplicativo que remove o complemento do código do aplicativo não afeta clientes que já adquiriram o complemento, independentemente do sistema operacional.

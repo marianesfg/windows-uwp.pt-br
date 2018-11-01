@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, anúncios, desempenho
 ms.localizationpriority: medium
 ms.openlocfilehash: 30f24b2494470f60371e466bb4d1e1878475d963
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5818555"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5885020"
 ---
 # <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 
