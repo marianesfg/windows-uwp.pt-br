@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, portabilidade, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 47892bac1a19018201187cbc901e4b680480268b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5828157"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5879798"
 ---
 # <a name="game-porting-guides"></a>Guias de portabilidade para jogos
 
