@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: a128535617c97e73b5a389db827fcf8c579b7f13
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5871910"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938853"
 ---
 # <a name="create-random-numbers"></a>Criar números aleatórios
 

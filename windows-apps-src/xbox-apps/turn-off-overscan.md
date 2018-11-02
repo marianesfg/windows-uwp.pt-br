@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 1adb221f-6f70-4255-9329-2046a486ca45
 ms.localizationpriority: medium
 ms.openlocfilehash: 32932845db47ed47b7e80f68cf4e424ba97e85c0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5859776"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937793"
 ---
 # <a name="how-to-draw-ui-to-the-edge-of-the-screen"></a>Como desenhar a interface para a borda da tela   
 Por padrão, os aplicativos terão bordas colocadas nas bordas do visor para levar em conta a área de segurança da TV (para obter mais informações, consulte [Projetando para Xbox e TV](../design/devices/designing-for-tv.md#tv-safe-area)). 

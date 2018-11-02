@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, pacotes opcionais, conjunto relacionado, extensão de pacote, o visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885466"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940956"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Pacotes opcionais e conjunto de criação relacionado
 Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Eles são úteis para conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho, ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original.
