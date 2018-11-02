@@ -8,16 +8,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro
 ms.localizationpriority: medium
-ms.openlocfilehash: 75eac585517ce4d4d41b8933a76cf8f4fe20be96
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0befb91175690576b4c0b44fe6e701d4c4efd7df
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941751"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977767"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Obter o rastreamento de pilha de um erro em seu aplicativo
 
-Use este método na API de análise da Microsoft Store para obter os rastreamentos de pilha de um erro em seu app. Este método pode apenas baixar o rastreamento de pilha de um erro de app que ocorreu nos últimos 30 dias. Os rastreamentos de pilha também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter os rastreamentos de pilha de um erro em seu app. Este método pode apenas baixar o rastreamento de pilha de um erro de app que ocorreu nos últimos 30 dias. Rastreamentos de pilha também estão disponíveis na seção **falhas** do [relatório de integridade](../publish/health-report.md) no Partner Center.
 
 Antes de usar este método, primeiro você deve usar o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar a ID do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha.
 
@@ -51,7 +51,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Store do app para o qual você deseja obter a pilha de rastreamento. A ID da Store está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Store de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | string | A ID da Store do app para o qual você deseja obter a pilha de rastreamento. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) no Partner Center. Uma ID da Store de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | cabId | string | A ID exclusiva do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha. Para obter essa ID, use o método [obter detalhes de um erro em seu app](get-details-for-an-error-in-your-app.md) para recuperar os detalhes de um erro específico em seu app, e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
 
  

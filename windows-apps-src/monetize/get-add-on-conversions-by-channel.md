@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, conversões de complemento, canal
 ms.localizationpriority: medium
-ms.openlocfilehash: d64af06acb730160f7f9f7f0e9eda96074b3eac7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940262"
+ms.locfileid: "5974670"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Obter conversões de complemento por canal
 
@@ -21,7 +21,7 @@ Use este método na API de análise da Microsoft Store para obter as conversões
 * Uma *conversão* significa que um cliente (conectado com uma conta da Microsoft) obteve recentemente uma licença para seu complemento (seja paga ou gratuita).
 * O *canal* é o método em que um cliente chegou à página de listagem do seu app (por exemplo, por meio da Loja ou de uma [campanha de promoção de apps personalizada](../publish/create-a-custom-app-promotion-campaign.md)).
 
-Essas informações também estão disponíveis no [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) no painel do Centro de Desenvolvimento do Windows.
+Essas informações também estão disponíveis no [relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 55843f229252b2f68df096442f27544a59ce69cd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945235"
+ms.locfileid: "5973608"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de C#: envios de apps, complementos e versões de pré-lançamento
 
@@ -38,7 +38,7 @@ Estes exemplos usam as seguintes bibliotecas:
 O exemplo a seguir implementa um programa de linha de comando que chama os outros métodos de exemplo neste artigo para demonstrar as diversas maneiras de usar a API do envio da Microsoft Store. Para adaptar este programa para seu próprio uso:
 
 * Atribua as propriedades ```ApplicationId```, ```InAppProductId``` e ```FlightId``` à ID do app, ao complemento e ao pacote de pré-lançamento que você deseja gerenciar.
-* Atribua as propriedades ```ClientId``` e ```ClientSecret``` para a ID e a chave do cliente para seu app e substitua a cadeia de caracteres *tenantid* na URL de ```TokenEndpoint``` pela ID de locatário de seu app. Para obter mais informações, consulte [Como associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)
+* Atribua as propriedades ```ClientId``` e ```ClientSecret``` para a ID e a chave do cliente para seu app e substitua a cadeia de caracteres *tenantid* na URL de ```TokenEndpoint``` pela ID de locatário de seu app. Para obter mais informações, consulte [como associar um aplicativo do Azure AD com sua conta do Partner Center](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
@@ -56,13 +56,13 @@ O app de exemplo usa a classe auxiliar ```ClientConfiguration``` para transmitir
 
 ## <a name="create-an-app-submission"></a>Criar um envio de aplicativo
 
-O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de aplicativo. O método ```RunAppSubmissionUpdateSample``` na classe cria um novo envio como clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```RunAppSubmissionUpdateSample``` executa estas tarefas:
+O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de aplicativo. O ```RunAppSubmissionUpdateSample``` método na classe cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Partner Center. Especificamente, o método ```RunAppSubmissionUpdateSample``` realiza estas tarefas:
 
 1. Para começar, o método [obtém dados do aplicativo especificado](get-an-app.md).
 2. Em seguida, ele [exclui o envio pendente para o app](delete-an-app-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o aplicativo](create-an-app-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele muda alguns detalhes para o novo envio e carrega um novo pacote para o envio no armazenamento do Blob do Azure.
-5. Em seguida, ele [atualiza](update-an-app-submission.md) e [confirma](commit-an-app-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+5. Em seguida, ele [atualizações](update-an-app-submission.md) e, em seguida, [confirma](commit-an-app-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-app-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
@@ -77,7 +77,7 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 1. Para começar, o método [cria um novo complemento](create-an-add-on.md).
 2. Em seguida, ele [cria um novo envio para o complemento](create-an-add-on-submission.md).
 3. Ele carrega um arquivo ZIP que contém ícones para o envio no armazenamento do Blob do Azure.
-4. Em seguida, ele [confirma o novo envio para o Centro de Desenvolvimento do Windows](commit-an-add-on-submission.md).
+4. Em seguida, ele [confirma o novo envio para o Partner Center](commit-an-add-on-submission.md).
 5. Por fim, ele [verifica periodicamente o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
@@ -87,12 +87,12 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 
 ## <a name="update-an-add-on-submission"></a>Atualizar um envio de complemento
 
-O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de complemento existente. O método ```RunInAppProductSubmissionUpdateSample``` na classe cria um novo envio como clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```RunInAppProductSubmissionUpdateSample``` executa estas tarefas:
+O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de complemento existente. O ```RunInAppProductSubmissionUpdateSample``` método na classe cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Partner Center. Especificamente, o método ```RunInAppProductSubmissionUpdateSample``` realiza estas tarefas:
 
 1. Para começar, o método [obtém dados do complemento especificado](get-an-add-on.md).
 2. Em seguida, ele [exclui o envio pendente para o complemento](delete-an-add-on-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o complemento](create-an-add-on-submission.md) (o novo envio é uma cópia do último envio publicado).
-5. Em seguida, ele [atualiza](update-an-add-on-submission.md) e [confirma](commit-an-add-on-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+5. Em seguida, ele [atualizações](update-an-add-on-submission.md) e, em seguida, [confirma](commit-an-add-on-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-an-add-on-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]
@@ -102,13 +102,13 @@ O exemplo a seguir implementa uma classe que usa vários métodos na API de envi
 
 ## <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
-O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de pacote de pré-lançamento. O método ```RunFlightSubmissionUpdateSample``` na classe cria um novo envio como clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Centro de Desenvolvimento do Windows. Especificamente, o método ```RunFlightSubmissionUpdateSample``` executa estas tarefas:
+O exemplo a seguir implementa uma classe que usa vários métodos na API de envio da Microsoft Store para atualizar um envio de pacote de pré-lançamento. O ```RunFlightSubmissionUpdateSample``` método na classe cria um novo envio como um clone do último envio publicado e, em seguida, atualiza e confirma o envio clonado para o Partner Center. Especificamente, o método ```RunFlightSubmissionUpdateSample``` realiza estas tarefas:
 
 1. Para começar, o método [obtém dados do pacote de pré-lançamento especificado](get-a-flight.md).
 2. Em seguida, ele [exclui o envio pendente para o pacote de pré-lançamento](delete-a-flight-submission.md), caso haja um.
 3. Em seguida, ele [cria um novo envio para o pacote de pré-lançamento](create-a-flight-submission.md) (o novo envio é uma cópia do último envio publicado).
 4. Ele carrega um novo pacote para o envio no armazenamento do Blob do Azure.
-5. Em seguida, ele [atualiza](update-a-flight-submission.md) e [confirma](commit-a-flight-submission.md) o novo envio para o Centro de Desenvolvimento do Windows.
+5. Em seguida, ele [atualizações](update-a-flight-submission.md) e, em seguida, [confirma](commit-a-flight-submission.md) o novo envio para o Partner Center.
 6. Por fim, ele periodicamente [verifica o status do novo envio](get-status-for-a-flight-submission.md) até que o envio seja confirmado com êxito.
 
 > [!div class="tabbedCodeSnippets"]

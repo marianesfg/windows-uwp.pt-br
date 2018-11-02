@@ -7,16 +7,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 25fbd3e037b2b81743ec2bb137b6df2a04736a76
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 922ab18bfebfbe539788ade3caa7626919d6b19a
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5923659"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5976179"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>Obter detalhes de um erro em seu aplicativo da área de trabalho
 
-Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu app no formato JSON. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. Os dados de erros detalhados também estão disponíveis na seção [Relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico do seu app no formato JSON. Este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. Dados de erros detalhados também está disponível no [relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
 
 Antes de usar este método, primeiro você deve usar o método [obter dados de relatório de erros](get-error-reporting-data.md) para recuperar a ID do erro para o qual você deseja obter informações detalhadas.
 
@@ -50,7 +50,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID de produto do aplicativo da área de trabalho para o qual você deseja recuperar os detalhes do erro. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | string | A ID de produto do aplicativo da área de trabalho para o qual você deseja recuperar os detalhes do erro. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (por exemplo, o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | failureHash | string | A ID exclusiva do erro para o qual você deseja obter informações detalhadas. Para obter esse valor para o erro no qual você está interessado, use o método [obter dados de relatório de erros](get-error-reporting-data.md) e o valor **failureHash** no corpo da resposta desse método. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual.<p/><p/>**Observação:**&nbsp;&nbsp;este método só pode recuperar detalhes dos erros que ocorreram nos últimos 30 dias. |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é a data atual. |  Não  |

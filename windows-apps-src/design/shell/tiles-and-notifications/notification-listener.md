@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
 ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946985"
+ms.locfileid: "5972810"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 

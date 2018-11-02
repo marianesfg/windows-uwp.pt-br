@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, serviços de Store, API de ofertas direcionadas para a Microsoft Store, obter ofertas direcionadas
 ms.localizationpriority: medium
-ms.openlocfilehash: e6a0e9237c7c803a64ec20df0c501773f690f5e9
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 87d59a4b5dabbc76c231e84034d701fccfe36fcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931862"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972448"
 ---
 # <a name="get-targeted-offers"></a>Receber as ofertas direcionadas
 
@@ -57,7 +57,7 @@ Esse método retorna um corpo de resposta formatada em JSON que contém uma matr
 
 | Campo      | Tipo   | Descrição         |
 |------------|--------|------------------|
-| ofertas      | array  | Uma série de IDs de produtos para os complementos que estão associados às ofertas direcionadas disponíveis para o usuário atual. Essas IDs de produto são especificados na página **Ofertas direcionadas** do seu aplicativo no painel do Centro de Desenvolvimento do Windows.            |
+| ofertas      | array  | Uma série de IDs de produtos para os complementos que estão associados às ofertas direcionadas disponíveis para o usuário atual. Essas IDs de produto são especificados na página de **ofertas direcionadas** para o seu aplicativo no Partner Center.            |
 | trackingId  | string | Um GUID que, opcionalmente, você pode usar para acompanhar a oferta de destino em seu próprio código ou serviços. |
 
 

@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, controle de anúncios, XAML, .net, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: 600939c91b67b57e3c900d33cebe659bcae6ef7a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: b2346fceaae3996de8aa54640c206b5fcd8c4a87
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932765"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5976129"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl em XAML e .NET
 
@@ -80,7 +80,7 @@ Este guia passo a passo mostra como usar a classe [AdControl](https://docs.micro
 5. Na marca **Grade**, adicione o código do **AdControl**. Atribua as propriedades [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) e [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) aos [valores de unidade publicitária de teste](set-up-ad-units-in-your-app.md#test-ad-units). Ajuste também a **Altura** e a **Largura** do controle para que ele tenha um dos [tamanhos de anúncio compatíveis para anúncios em faixa](supported-ad-sizes-for-banner-ads.md).
 
     > [!NOTE]
-    > Cada **AdControl** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Loja, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
+    > Cada **AdControl** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade publicitária consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
 
     A marca **Grade** se parece com o código a seguir.
 
@@ -126,17 +126,17 @@ Este guia passo a passo mostra como usar a classe [AdControl](https://docs.micro
 
 1. Verifique se o uso de anúncios em faixa no aplicativo segue as [diretrizes para anúncios em faixa](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads).
 
-2.  No painel do Centro de Desenvolvimento, vá para a página [Anúncios no app](../publish/in-app-ads.md) e [crie uma unidade publicitária](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Faixa**. Anote a ID da unidade publicitária e a ID do aplicativo.
+2.  No Partner Center, vá para a página de [anúncios no aplicativo](../publish/in-app-ads.md) e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). No tipo de unidade publicitária, especifique **Faixa**. Anote a ID da unidade publicitária e a ID do aplicativo.
     > [!NOTE]
-    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Ao criar uma unidade publicitária dinâmica UWP no painel, o valor da ID de aplicativo da unidade publicitária sempre corresponde à ID da Microsoft Store do seu aplicativo (um valor de valor da ID da Microsoft Store é semelhante a 9NBLGGH4R315).
+    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de publicitária dinâmica UWP no Partner Center, o valor de ID do aplicativo para a unidade publicitária sempre corresponde a ID da loja do aplicativo (um valor de ID da loja de exemplo é semelhante a 9NBLGGH4R315).
 
 3. Como alternativa, você pode habilitar o controle de anúncios para **AdControl** ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncios permite que você maximize seus recursos de promoção de apps e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas, como Taboola e Smaato e anúncios para campanhas promocionais de aplicativos da Microsoft.
 
-4.  Em seu código, substitua os valores da unidade publicitária de teste (**ApplicationId** e **AdUnitId**) pelos valores dinâmicos gerados no Centro de Desenvolvimento.
+4.  No seu código, substitua os valores de unidade de anúncio de teste (**ApplicationId** e **AdUnitId**) pelos valores dinâmicos gerados no Partner Center.
 
-5.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento.
+5.  [Enviar seu aplicativo](../publish/app-submissions.md) para a loja usando o Partner Center.
 
-6.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
+6.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
 
 <span id="manage" />
 

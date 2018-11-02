@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, controle de mapa, modos de exibição de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b162be26073db6989f9ea13cc7805d2d0f3f0d3
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929492"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5976376"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Exibir mapas com modos de exibição 2D, 3D e Streetside
 

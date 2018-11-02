@@ -7,16 +7,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: b9b26f36d7fe2dc553e211ae48f7bd66651c5827
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 024c903ea43d9fabc90b2f6b7891f6de4e92b1d5
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931602"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5976096"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obter o rastreamento de pilha de um erro em seu aplicativo da área de trabalho
 
-Use este método na da API de análise da Microsoft Store para obter o rastreamento de pilha para um erro em um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método pode apenas baixar o rastreamento de pilha de um erro que ocorreu nos últimos 30 dias. Os rastreamentos de pilha também estão disponíveis no [Relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no painel do Centro de Desenvolvimento do Windows.
+Use este método na da API de análise da Microsoft Store para obter o rastreamento de pilha para um erro em um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método pode apenas baixar o rastreamento de pilha de um erro que ocorreu nos últimos 30 dias. Rastreamentos de pilha também estão disponíveis no [relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
 
 Antes de usar este método, primeiro você deve usar o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar o hash da ID do arquivo CAB associada ao erro para o qual você deseja recuperar o rastreamento de pilha.
 
@@ -50,7 +50,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter um rastreamento de pilha. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja obter um rastreamento de pilha. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise para seu aplicativo da área de trabalho no Partner Center](https://msdn.microsoft.com/library/windows/desktop/mt826504) (por exemplo, o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | cabIdHash | string | O hash da ID exclusiva do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha. Para obter esse valor, use o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar os detalhes de um erro específico em seu aplicativo, e use o valor de **cabIdHash** no corpo da resposta desse método. |  Sim  |
 
  

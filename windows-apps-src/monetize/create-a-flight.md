@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
-description: Use este método na API de envio da Microsoft Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 title: Criar um pacote de pré-lançamento
 ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 57ad1847e8989cb6aed20024d1c13d36e154d834
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1e7fec507497784849bdda76ed0fdd4993181731
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933506"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977556"
 ---
 # <a name="create-a-package-flight"></a>Criar um pacote de pré-lançamento
 
-Use este método na API de envio da Microsoft Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para criar um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 
 > [!NOTE]
 > Este método cria um pacote de pré-lançamento sem nenhum envio. Para criar um envio para o pacote de pré-lançamento, consulte os métodos em [Gerenciar envios do pacote de pré-lançamento](manage-flight-submissions.md).
@@ -100,7 +100,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Partner Center.  |
 | friendlyName           | cadeia de caracteres  | O nome do pacote de pré-lançamento, conforme especificado na solicitação.   |  
 | groupIds           | array  | Uma matriz de cadeias de caracteres que contêm os IDs dos grupos de versão de pré-lançamento que estão associados ao pacote de pré-lançamento, conforme especificado na solicitação. Para saber mais sobre grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
 | rankHigherThan           | cadeia de caracteres  | O nome amigável do pacote de pré-lançamento que foi classificado imediatamente abaixo do pacote de pré-lançamento atual, conforme especificado na solicitação. Para saber mais sobre a classificação de grupos de versão de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
@@ -113,7 +113,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | A solicitação é inválida. |
-| 409  | O pacote de pré-lançamento não pôde ser criado por causa de seu estado atual ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento é [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O pacote de pré-lançamento não pôde ser criado por causa do estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

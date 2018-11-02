@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Use este método na API de envio da Microsoft Store para recuperar informações de pacote de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar informações de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
 title: Obter pacotes de pré-lançamento de um aplicativo
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versões de pré-lançamento, pacotes de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 847e837c67990b5cbdb3a7a28c0c8115e96c8644
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f67bb76e1d964dd246be16870a7c76591eb1e7d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930387"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5974267"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obter pacotes de pré-lançamento de um aplicativo
 
-Use este método na API de envio da Microsoft Store para listar os pacotes de pré-lançamento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Use este método na API de envio da Microsoft Store para listar os pacotes de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center. Para obter mais informações sobre pacotes de pré-lançamento, consulte [Pacotes de pré-lançamento](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -115,7 +115,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | Nenhum pacote de pré-lançamento foi encontrado. |
-| 409  | O aplicativo usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | O aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

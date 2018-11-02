@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários, fixar, fixando, guia de início rápido, exemplo de código, exemplo, secondarytile
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fcea65a43ec3ca3d7e29056bec129e0f03d4229
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5923020"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973050"
 ---
 # <a name="pin-secondary-tiles"></a>Fixar blocos secundários
 

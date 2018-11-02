@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b89cad4c299f7326d0bb7d9ea4b8c6685f70f26c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933108"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973701"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de assinatura para o app
 
@@ -35,7 +35,7 @@ Os complementos de assinatura para aplicativos UWP dão suporte aos seguintes re
 
 Para habilitar a compra de complementos de assinatura em seu app, siga estas etapas.
 
-1. [Crie um envio de complemento](../publish/add-on-submissions.md) para sua assinatura no painel do Centro de Desenvolvimento e publique o envio. Conforme você segue o processo de envio de complemento, preste atenção às seguintes propriedades:
+1. [Criar um envio de complemento](../publish/add-on-submissions.md) para sua assinatura no Partner Center e publicar o envio. Conforme você segue o processo de envio de complemento, preste atenção às seguintes propriedades:
 
     * [Tipo de produto](../publish/set-your-add-on-product-id.md#product-type): selecione **Assinatura**.
 
@@ -70,8 +70,8 @@ Os exemplos de código nesta seção demonstram como usar as APIs no namespace [
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Microsoft Store. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Store enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
-* Você [criou um complemento de assinatura para o app](../publish/add-on-submissions.md) no painel do Centro de Desenvolvimento.
+* Você tenha [criado um envio de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Store enquanto você o testa. Para obter mais informações, consulte [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você tenha [criado um complemento de assinatura para o aplicativo](../publish/add-on-submissions.md) no Partner Center.
 
 O código nestes exemplos pressupõe que:
 * O arquivo de código tenha instruções **using** para **Windows.Services.Store** e namespaces **System.Threading.Tasks**.

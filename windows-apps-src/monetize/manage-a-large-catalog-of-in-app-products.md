@@ -8,19 +8,19 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, catálogo, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: eb286c9487b57cf36f9dc558902a0da532bfdc0a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f57adf62939c28794e3ecdf6e59f2c4763de9c21
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929449"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977857"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Gerenciar um catálogo abrangente de produtos no aplicativo
 
 Se o seu app oferecer um catálogo abrangente de produtos no aplicativo, você também poderá seguir o processo descrito neste tópico para ajudar a gerenciar seu catálogo. Em versões anteriores ao Windows 10, a Loja tem um limite de 200 listagens de produtos por conta de desenvolvedor, e o processo descrito neste tópico poderá ser usado para contornar essa limitação. Começando com Windows 10, a loja não tem nenhum limite para o número de listagens de produtos por conta de desenvolvedor, e o processo descrito neste artigo não é mais necessário.
 
 > [!IMPORTANT]
-> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como assinaturas e complementos consumíveis gerenciados pela Microsoft Store, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Microsoft Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
+> Este artigo demonstra como usar membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte a tipos de complemento mais recentes, como complementos consumíveis gerenciado pela loja e assinaturas e foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter mais informações, consulte [Compras no aplicativo e avaliações](in-app-purchases-and-trials.md).
 
 Para habilitar esse recurso, você criará algumas entradas de produtos para faixas de preços específicos, em que cada uma poderá representar centenas de produtos em um catálogo. Use a sobrecarga do método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) que especifica a oferta definida em aplicativo associada a um produto no aplicativo listado na Loja. Além de especificar uma oferta e uma associação ao produto durante a chamada, seu aplicativo deve também passar um objeto [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263384) que contenha os detalhes da oferta de um catálogo abrangente. Se esses detalhes não forem fornecidos, os detalhes para o produto listado serão usados no lugar.
 

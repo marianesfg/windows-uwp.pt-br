@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, atualização
 ms.localizationpriority: medium
-ms.openlocfilehash: f1ad6b5d2945cea34d86a78a7322d3a8948fe99f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 670522e9842ca5e048777a1168caa1efbca6ce94
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924142"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973761"
 ---
 # <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
 
@@ -28,7 +28,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio de pacote de pré-lançamento de um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md).
+* Crie um envio de pacote de pré-lançamento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Solicitação
 
@@ -51,8 +51,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio do pacote de pré-lançamento. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja atualizar um envio. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento criada no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de pré-lançamento no painel.  |
-| submissionId | string | Obrigatório. A ID do envio para atualizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento para o qual você deseja atualizar um envio. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento que foi criado no Partner Center, essa ID também está disponível na URL da página de pré-lançamento no Partner Center.  |
+| submissionId | string | Obrigatório. A ID do envio para atualizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -61,7 +61,7 @@ O corpo da solicitação tem os parâmetros a seguir.
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightPackages           | array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso do pacote de pré-lançamento](manage-flight-submissions.md#flight-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento. |
+| flightPackages           | array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para obter mais detalhes sobre os valores no corpo da resposta, consulte [Recurso do pacote de pré-lançamento](manage-flight-submissions.md#flight-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Partner Center. |
 | packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte [Objeto de opções de entrega de pacote](manage-flight-submissions.md#package-delivery-options-object).  |
 | targetPublishMode           | string  | O modo de publicação do envio. Ele pode ter um dos seguintes valores: <ul><li>Imediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | A data de publicação do envio em formato ISO 8601, se o *targetPublishMode* estiver definido como SpecificDate.  |
@@ -151,7 +151,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | Não foi possível atualizar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
-| 409  | Não foi possível atualizar o envio do pacote de pré-lançamento por causa do estado atual do app, ou o app usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Não foi possível atualizar o envio do pacote de pré-lançamento por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

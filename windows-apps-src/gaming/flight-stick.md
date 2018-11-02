@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, joystick para simulador de voo
 ms.localizationpriority: medium
 ms.openlocfilehash: ebe7695b3f16271f3adedae658c0d62d38d7c078
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924503"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977230"
 ---
 # <a name="flight-stick"></a>Joystick de voo
 

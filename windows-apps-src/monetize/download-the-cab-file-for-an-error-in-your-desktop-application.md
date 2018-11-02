@@ -7,16 +7,16 @@ ms.date: 03/06/2018
 ms.topic: article
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c69e9697b75a5afa1eaf33ef2706404555ab6ff
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f9dcd76767662b5e40f587d7ac32ffd7d94a6053
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935549"
+ms.locfileid: "5975318"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
 
-Use este método na da API de análise da Microsoft Store para baixar o arquivo CAB associado a um determinado erro para um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Os downloads de arquivo CAB também estão disponíveis no [Relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no painel do Centro de Desenvolvimento do Windows.
+Use este método na da API de análise da Microsoft Store para baixar o arquivo CAB associado a um determinado erro para um aplicativo da área de trabalho que você adicionou ao [programa do aplicativo de área de trabalho do Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método pode apenas baixar o arquivo CAB de um erro de app que ocorreu nos últimos 30 dias. Downloads de arquivo CAB também estão disponíveis no [relatório de integridade](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicativos da área de trabalho no Partner Center.
 
 Antes de usar esse método, primeiro você deverá usar o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar o hash de ID do arquivo CAB que deseja baixar.
 
@@ -50,7 +50,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja baixar um arquivo CAB. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Centro de Desenvolvimento para o seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como o **Relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
+| applicationId | string | A ID do produto do aplicativo da área de trabalho para o qual você deseja baixar um arquivo CAB. Para obter a ID do produto de um aplicativo da área de trabalho, abra qualquer [relatório de análise do Partner Center para seu aplicativo da área de trabalho](https://msdn.microsoft.com/library/windows/desktop/mt826504) (por exemplo, o **relatório de integridade**) e recupere a ID do produto da URL. |  Sim  |
 | cabIdHash | string | O hash da ID exclusiva do arquivo CAB que você deseja baixar. Para obter esse valor, use o método [obter detalhes de um erro em seu aplicativo da área de trabalho](get-details-for-an-error-in-your-desktop-application.md) para recuperar os detalhes de um erro específico em seu aplicativo, e use o valor de **cabIdHash** no corpo da resposta desse método. |  Sim  |
 
 
