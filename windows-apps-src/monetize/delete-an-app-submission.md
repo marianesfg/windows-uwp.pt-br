@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de aplicativo, excluir
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f23bebd196cb28088bf68e673a17a4c0aebf5a3
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: da2533eb8b6e45e4426a1d25931638466547e01b
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922440"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972002"
 ---
 # <a name="delete-an-app-submission"></a>Excluir um envio de app
 
@@ -47,7 +47,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do app que contém o envio para excluir. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Obrigatório. A ID do envio para excluir. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| submissionId | string | Obrigatório. A ID do envio para excluir. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -76,7 +76,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
-| 409  | O envio especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o app usa um recurso do painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | O envio especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bbf42acb90d81892fec2788c83c3595f5b6b2f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932942"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972277"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -35,7 +35,7 @@ As barras de comandos fornecem aos usuários acesso fácil às tarefas mais comu
 O controle CommandBar é um controle de finalidade geral, flexível e leve que pode exibir conteúdo complexo, como imagens ou blocos de texto, e comandos simples, como os controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) e [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
 > [!NOTE]
-XAML fornece o controle [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) e o controle [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar). Use AppBar somente quando você estiver atualizando um aplicativo Universal do Windows 8 que usa AppBar e precisar minimizar as alterações. Para novos aplicativos no Windows 10, recomendamos usar o controle CommandBar. Este documento pressupõe que você está usando o controle CommandBar.
+> XAML fornece o controle [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) e o controle [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar). Use AppBar somente quando você estiver atualizando um aplicativo Universal do Windows 8 que usa AppBar e precisar minimizar as alterações. Para novos aplicativos no Windows 10, recomendamos usar o controle CommandBar. Este documento pressupõe que você está usando o controle CommandBar.
 
 ## <a name="examples"></a>Exemplos
 

@@ -7,16 +7,16 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ef566ed473c7d65ceeb290ee76bfa043f4766f5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 70a1e5d2105c73e76b974a888e3edb1bcb009aa6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941970"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971505"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Obter dados de análise do Xbox Live
 
-Use este método na API de análise da Microsoft Store para obter os últimos 30 dias de dados analíticos gerais para os clientes jogando seu [jogo habilitado para Xbox Live](../xbox-live/index.md), incluindo os dados de uso de acessórios do dispositivo, tipo de conexão de internet, distribuição de pontuação do jogador, estatísticas de jogo e amigos. Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter os últimos 30 dias de dados analíticos gerais para os clientes jogando seu [jogo habilitado para Xbox Live](../xbox-live/index.md), incluindo os dados de uso de acessórios do dispositivo, tipo de conexão de internet, distribuição de pontuação do jogador, estatísticas de jogo e amigos. Essas informações também estão disponíveis no [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
 > Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).

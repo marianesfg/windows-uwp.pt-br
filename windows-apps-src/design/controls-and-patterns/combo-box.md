@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927100"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971889"
 ---
 # <a name="combo-box"></a>Caixa de combinação
 
@@ -169,15 +169,15 @@ Para fazer uma combinação caixa com "atualizações ao vivo" enquanto o usuár
 
 #### <a name="selected-item-behavior-change"></a>Mudança de comportamento do item selecionado
 
-No RS5 (SDK do Windows versão 10.0.NNNNN.0 (Windows 10, versão MMAA), o comportamento dos itens selecionados é atualizado para dar suporte a caixas de combinação editável.
+No Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior, o comportamento dos itens selecionados é atualizado para dar suporte a caixas de combinação editável.
 
-Antes de RS5, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) foi precisam estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+Antes do SDK 17763, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) foi precisam estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
 
 - SelectedItem = null
 - SelectedValue = null
 - SelectedIndex = -1
 
-No RS5 e posterior, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não é necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
+No SDK 17763 e versões posterior, o valor da propriedade SelectedItem (e, portanto, SelectedValue e SelectedIndex) não é necessário para estar na coleção de itens da caixa de combinação. Usando o exemplo anterior, definindo `colorComboBox.SelectedItem = "Pink"` resulta em:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -192,7 +192,7 @@ Você pode definir a propriedade [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.
 ## <a name="make-a-combo-box-editable"></a>Tornar uma caixa de combinação editável
 
 > [!IMPORTANT]
-> Esse recurso requer o [Windows 10 Insider Preview compilação e o SDK mais recente](https://insider.windows.com/for-developers/).
+> Esse recurso requer o Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior.
 
 Por padrão, uma caixa de combinação permite que o usuário selecione em uma lista predefinida de opções. No entanto, há casos em que a lista contém apenas um subconjunto de valores válidos, e o usuário deve ser capaz de inserir outros valores que não estejam listados. Para dar suporte a isso, você pode tornar a caixa de combinação editável.
 

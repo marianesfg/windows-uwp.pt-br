@@ -8,16 +8,16 @@ ms.date: 09/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
-ms.openlocfilehash: 81dabcf92136174b08c6a20fd9a98122fcd2c813
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: fd463bf98fb751efa011ba5fc3e1e7b9eb7b41eb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939251"
+ms.locfileid: "5971949"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obter dados de relatório de erros do seu aplicativo
 
-Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados do seu app no formato JSON para um determinado intervalo de datas e outros filtros opcionais. Este método só pode recuperar os erros que ocorreram nos últimos 30 dias. Essas informações também estão disponíveis na seção **Falhas** do [Relatório de integridade](../publish/health-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados do seu app no formato JSON para um determinado intervalo de datas e outros filtros opcionais. Este método só pode recuperar os erros que ocorreram nos últimos 30 dias. Essas informações também estão disponíveis na seção **falhas** do [relatório de integridade](../publish/health-report.md) no Partner Center.
 
 Você pode recuperar informações de erro adicionais usando os métodos [obter detalhes de erro](get-details-for-an-error-in-your-app.md), [obter rastreamento de pilha](get-the-stack-trace-for-an-error-in-your-app.md) e [baixar arquivo CAB](download-the-cab-file-for-an-error-in-your-app.md).
 
@@ -50,7 +50,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID da Store do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID da Store está disponível na [página de identidade do app](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | string | A ID da Store do aplicativo para o qual você deseja recuperar dados de relatório de erros. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) no Partner Center. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados do relatório de erros a serem recuperados. O padrão é a data atual. Se *aggregationLevel* for **day**, **week** ou **month**, esse parâmetro deverá especificar uma data no formato ```mm/dd/yyyy```. Se *aggregationLevel* for **hour**, esse parâmetro poderá especificar uma data no formato ```mm/dd/yyyy``` ou uma data e hora no formato ```yyyy-mm-dd hh:mm:ss```.<p/><p/>**Observação:**&nbsp;&nbsp;este método só pode recuperar os erros que ocorreram nos últimos 30 dias.  |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados do relatório de erros a serem recuperados. O padrão é a data atual. Se *aggregationLevel* for **day**, **week** ou **month**, esse parâmetro deverá especificar uma data no formato ```mm/dd/yyyy```. Se *aggregationLevel* for **hour**, esse parâmetro poderá especificar uma data no formato ```mm/dd/yyyy``` ou uma data e hora no formato ```yyyy-mm-dd hh:mm:ss```. |  Não  |
 | top | int | O número de linhas de dados a serem retornadas na solicitação. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
