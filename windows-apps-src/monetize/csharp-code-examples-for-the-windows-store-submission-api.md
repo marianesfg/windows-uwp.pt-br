@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 55843f229252b2f68df096442f27544a59ce69cd
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888336"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5945235"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de C#: envios de apps, complementos e versões de pré-lançamento
 

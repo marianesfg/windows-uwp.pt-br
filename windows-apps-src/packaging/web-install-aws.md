@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, sideload de instalador, AppInstaller, aplicativo, relacionados pacotes opcionais, definidos, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5881888"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5946524"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
 
