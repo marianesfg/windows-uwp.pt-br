@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: Use este método na API de envio da Microsoft Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Partner Center.
 title: Obter todos os complementos
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: 43875ae33c531e66c288f8b54f74116315715380
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922476"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991281"
 ---
 # <a name="get-all-add-ons"></a>Obter todos os complementos
 
-Use este método na API de envio da Microsoft Store para recuperar dados para todos os complementos para todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para recuperar dados de todos os complementos para todos os aplicativos que estão registrados em sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -147,7 +147,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | Nenhum complemento foi encontrado. |
-| 409  | Os aplicativos ou complementos usam recursos de painel do Centro de Desenvolvimento que [atualmente não são compatíveis com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Os aplicativos ou complementos usam recursos do Partner Center que estão [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

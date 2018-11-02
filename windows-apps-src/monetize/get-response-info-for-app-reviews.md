@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, informações de resposta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71497a858060109eaac0f593ce03f2ba3cbf03cc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 466455a5e8da9364206245f1e0ac10acfed07ee7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919533"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5968640"
 ---
 # <a name="get-response-info-for-reviews"></a>Obter informações de resposta para análises
 
@@ -49,7 +49,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   | Descrição                                     |  Obrigatório  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | cadeia | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
+| applicationId | cadeia | A ID da Loja do aplicativo que contém a análise para a qual você deseja determinar se pode responder. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) no Partner Center. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8. |  Sim  |
 | reviewId | cadeia | A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de app](get-app-reviews.md) na API de análise da Microsoft Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md). <br/>Se você omitir esse parâmetro, o corpo da resposta para esse método indicará se você tem permissões para responder a quaisquer análises para o aplicativo especificado. |  Não  |
 
 
@@ -87,6 +87,6 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Enviar respostas às análises usando a API de análise da Microsoft Store](submit-responses-to-app-reviews.md)
-* [Responder às críticas de clientes usando o painel do Centro de Desenvolvimento](../publish/respond-to-customer-reviews.md)
+* [Responder às críticas dos clientes usando o Partner Center](../publish/respond-to-customer-reviews.md)
 * [Responder às críticas usando serviços da Microsoft Store](respond-to-reviews-using-windows-store-services.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)

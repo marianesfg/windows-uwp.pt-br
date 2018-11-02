@@ -8,16 +8,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API de ofertas direcionadas da Microsoft Store, ofertas direcionadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 706f48e64fb8e7534686b8fd7e9666b98dffd9b7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5942018"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969152"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Gerenciar ofertas direcionadas usando os serviços da Loja
 
-Se você criar uma *oferta direcionada* na página **Participar > Ofertas direcionadas** do seu aplicativo no painel do Centro de Desenvolvimento do Windows, use a *API de ofertas direcionadas da Microsoft Store* no código do seu app para recuperar informações que ajudem você a implementar a experiência no app para a oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Se você criar uma *oferta direcionada* no **participar > ofertas direcionadas** página do seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 A API de ofertas direcionadas é uma API REST simples que você pode usar para obter as ofertas segmentadas disponíveis para o usuário atual, com base no fato de o usuário fazer parte do segmento de clientes ou não para a oferta segmentada. Para usar esta API no código do seu aplicativo, siga estas etapas:
 

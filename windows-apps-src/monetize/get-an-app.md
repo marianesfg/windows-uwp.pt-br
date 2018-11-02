@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
-description: Use este método na API de envio da Microsoft Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar informações sobre um aplicativo específico que está registrado à sua conta do Partner Center.
 title: Obter um aplicativo
 ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, app
 ms.localizationpriority: medium
-ms.openlocfilehash: 94c46363f75c75bb595b184e5a142e737a32ea50
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4c43a946234c738198e7ab929171051e4bafff63
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933430"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5997645"
 ---
 # <a name="get-an-app"></a>Obter um aplicativo
 
-Use este método na API de envio da Microsoft Store para recuperar informações sobre um aplicativo específico que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para recuperar informações sobre um aplicativo específico que está registrado à sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -93,7 +93,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | O aplicativo especificado não foi encontrado. |
-| 409  | O aplicativo usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | O aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

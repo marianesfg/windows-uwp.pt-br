@@ -8,19 +8,19 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ae98a3fdea561179b6cd76035715d53521143d35
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 48fb632d0491d333f8c4a7c5e775041ec31aeee3
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947456"
+ms.locfileid: "5997485"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 
 Se você permitir que os clientes usem seu app gratuitamente durante um período de avaliação, incentive-os a atualizar para a versão completa do app excluindo ou limitando alguns recursos durante o período de avaliação. Determine quais recursos devem ser limitados antes de começar a codificação, depois certifique-se de que o seu aplicativo permita que eles funcionem após a compra de uma licença completa. Você também pode habilitar recursos, como faixas ou marcas-d'água, que são mostrados apenas durante a avaliação, antes de o cliente comprar o aplicativo.
 
 > [!IMPORTANT]
-> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como assinaturas e complementos consumíveis gerenciados pela Microsoft Store, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Microsoft Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
+> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para implementar a funcionalidade de demonstração. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte a tipos de complemento mais recentes, como complementos consumíveis gerenciado pela loja e assinaturas e foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter informações sobre como implementar a funcionalidade de demonstração usando o namespace **Windows.Services.Store**, consulte [este artigo](implement-a-trial-version-of-your-app.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

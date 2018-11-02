@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bbf7bdf1f41b1dff1049674f3b4463bac6ccb80
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929610"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969172"
 ---
 # <a name="content-links-in-text-controls"></a>Links de conteúdo em controles de texto
 
@@ -164,7 +164,7 @@ O seletor de pessoas cria um ContentLinkInfo com um Uri que usa o protocolo **ms
 - Se LinkContentKind não for "People", ele abre o aplicativo **Pessoas**. Por exemplo, isso pode acontecer se você tiver modificado LinkContentKind no manipulador de eventos ContentLinkChanged.
 
 > [!TIP]
-> Para obter mais informações sobre como abrir outros aplicativos e sites de seu aplicativo, consulte os tópicos em [Iniciar um aplicativo com um Uri] (/windows/uwp/launch-resume/launch-app-with-uri).
+> Para obter mais informações sobre como abrir outros aplicativos e sites de seu aplicativo, consulte os tópicos em [Iniciar um aplicativo com um Uri](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Invocado
 

@@ -7,16 +7,16 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisição, funil
 ms.localizationpriority: medium
-ms.openlocfilehash: 20c07425542c207c2289c6b512102e10f64bab66
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8aaceb9af3eed04039148bdd863ca3e473c7c245
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924293"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970203"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Obter dados de funil de aquisição do app
 
-Use este método na API de análise da Microsoft Store para obter os dados de funil de aquisição de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições](../publish/acquisitions-report.md#acquisition-funnel) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter os dados de funil de aquisição de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de aquisições](../publish/acquisitions-report.md#acquisition-funnel) no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

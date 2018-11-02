@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, intersticial, javascript, código de exemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: 42ff810808e0e7b8d83152f7d23e535c721d3405
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1921725e5b598a2e5e79ed90c607414e4efe574e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5918771"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5968541"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de exemplo de anúncio intersticial em JavaScript
 
@@ -25,7 +25,7 @@ Esta seção mostra o conteúdo dos arquivos em HTML e JavaScript em um aplicati
 
 Este aplicativo de exemplo usa dois botões para solicitar e, em seguida, iniciar um anúncio intersticial. Os arquivos main.js e index.html gerados pelo Visual Studio foram modificados e são mostrados abaixo. O arquivo script.js mostrado abaixo contém a maior parte do código no exemplo, e você deve adicionar esse arquivo à pasta **js** no projeto.
 
-Substitua os valores das variáveis ```applicationId``` e ```adUnitId``` por valores ativos do Centro de Desenvolvimento do Windows antes de enviar o aplicativo para a Microsoft Store. Para obter mais informações, consulte [Configurar unidades publicitárias no app](set-up-ad-units-in-your-app.md#live-ad-units).
+Substitua os valores do ```applicationId``` e ```adUnitId``` variáveis por valores ativos do Partner Center antes de enviar seu aplicativo para a loja. Para obter mais informações, consulte [Configurar unidades publicitárias no app](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
 > Para alterar este exemplo e mostrar um anúncio intersticial de banner em vez de um anúncio intersticial em vídeo, passe o valor **InterstitialAdType.display** para o primeiro parâmetro do método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) em vez de **InterstitialAdType.video**. Para saber mais, consulte [Anúncios intersticiais](interstitial-ads.md).

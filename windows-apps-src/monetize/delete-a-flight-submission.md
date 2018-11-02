@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, excluir, pacote de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: afc68c3e851652fd0af0749540e1978ee6cc539c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 2196a6b7023a062905ae721ebdb536e2c8044057
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940523"
+ms.locfileid: "5997445"
 ---
 # <a name="delete-a-package-flight-submission"></a>Excluir um envio de pacote de pré-lançamento
 
@@ -47,8 +47,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o envio do pacote de pré-lançamento que você deseja excluir. Para saber mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para excluir. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento criada no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de pré-lançamento no painel.  |
-| submissionId | string | Obrigatório. A ID do envio para excluir. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento que contém o envio para excluir. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento que foi criado no Partner Center, essa ID também está disponível na URL da página de pré-lançamento no Partner Center.  |
+| submissionId | string | Obrigatório. A ID do envio para excluir. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -77,7 +77,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
-| 409  | O envio especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o app usa um recurso do painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | O envio especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

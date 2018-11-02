@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 337342378fc42b33c0bddb980b143ab195305458
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c9d348ffc0895d5adb16886c5a66af14a1884b8b
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943209"
+ms.locfileid: "5991251"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obter dados de desempenho da campanha publicitária
 
 
 Use esse método na API de análise da Microsoft Store para obter um resumo agregado dos dados de desempenho da campanha publicitária promocional dos aplicativos durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
-Esse método retorna os mesmos dados fornecidos pelo [Relatório de anúncios de instalação de aplicativos](../publish/app-install-ads-reports.md) no painel do Centro de Desenvolvimento do Windows. Para obter mais informações sobre campanhas publicitárias, consulte [Criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
+Esse método retorna os mesmos dados fornecidos pelo [relatório de campanha publicitária](../publish/app-install-ads-reports.md) no Partner Center. Para obter mais informações sobre campanhas publicitárias, consulte [Criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
 
 Para criar, atualizar ou recuperar detalhes de campanhas publicitárias, você pode usar os métodos de [Gestão de campanhas publicitárias](manage-ad-campaigns.md) na [API de promoções da Microsoft Store](run-ad-campaigns-using-windows-store-services.md).
 

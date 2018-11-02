@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fdfe811a90eae1e67ef7f626815be1ef78a4c61
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928587"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970110"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respostas às críticas
 
@@ -23,7 +23,7 @@ Use este método na API de análises da Microsoft Store para enviar respostas à
 Quando um cliente envia uma crítica, ele pode optar por não receber respostas para sua crítica. Se você tentar responder a uma crítica para a qual o cliente optou por não receber respostas, o corpo da resposta desse método indicará que a tentativa de resposta não foi bem-sucedida. Antes de chamar esse método, você pode, opcionalmente, determinar se você tem permissão para responder a uma determinada crítica usando o método [obter as informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md).
 
 > [!NOTE]
-> Além de usar esse método para responder às opiniões programaticamente, você também pode responder às opiniões [usando o painel do Centro de Desenvolvimento do Windows](../publish/respond-to-customer-reviews.md) como alternativa.
+> Além de usar esse método para responder programaticamente às críticas, você também pode responder às análises [usando Partner Center](../publish/respond-to-customer-reviews.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -67,7 +67,7 @@ Cada objeto na matriz *Respostas* contém os seguintes valores.
 
 | Valor        | Tipo   | Descrição           |  Necessário  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | cadeia |  A ID da Loja do aplicativo com a crítica que você deseja responder. A ID da Loja está disponível na [Página de identidade do aplicativo](../publish/view-app-identity-details.md) do painel do Centro de Desenvolvimento. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.   |  Sim  |
+| ApplicationId | cadeia |  A ID da Loja do aplicativo com a crítica que você deseja responder. A ID da loja está disponível na [página de identidade de aplicativo](../publish/view-app-identity-details.md) do Partner Center. Uma ID da Loja de exemplo é 9WZDNCRFJ3Q8.   |  Sim  |
 | ReviewId | cadeia |  A ID da revisão que você deseja responder (este é um GUID). As IDs de revisão estão disponíveis nos dados de resposta do método [obter avaliações de app](get-app-reviews.md) na API de análise da Microsoft Store e no [download offline](../publish/download-analytic-reports.md) do [Relatório de avaliações](../publish/reviews-report.md).   |  Sim  |
 | ResponseText | cadeia | A resposta que você deseja enviar. Sua resposta deve seguir [estas diretrizes](../publish/respond-to-customer-reviews.md#guidelines-for-responses).   |  Sim  |
 | SupportEmail | cadeia | Endereço de email de suporte do seu aplicativo, que o cliente pode usar para contatá-lo diretamente. Este deve ser um endereço de email válido.     |  Sim  |
@@ -146,7 +146,7 @@ O código a seguir demonstra um exemplo de corpo de resposta JSON para essa soli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Responder às críticas de clientes usando o painel do Centro de Desenvolvimento](../publish/respond-to-customer-reviews.md)
+* [Responder às críticas dos clientes usando o Partner Center](../publish/respond-to-customer-reviews.md)
 * [Responder às críticas usando serviços da Microsoft Store](respond-to-reviews-using-windows-store-services.md)
 * [Obter informações de resposta para avaliações de aplicativo](get-response-info-for-app-reviews.md)
 * [Obter avaliações de aplicativo](get-app-reviews.md)

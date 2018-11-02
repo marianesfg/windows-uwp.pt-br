@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 83f113f47a905e8b542dde4c982a162341fc0196
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ad6381562b37b1a759a575e070edd6b1bf63402d
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920688"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991231"
 ---
 # <a name="get-an-add-on-submission"></a>Obter um envio de complemento
 
@@ -25,7 +25,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio de complemento para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [Criar um envio de complemento](create-an-add-on-submission.md).
+* Crie um envio de complemento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um envio de complemento](create-an-add-on-submission.md) .
 
 ## <a name="request"></a>Solicitação
 
@@ -47,8 +47,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja obter. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
-| submissionId | string | Obrigatório. A ID do envio a ser obtida. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja obter. A ID da loja está disponível no Partner Center, e está incluído nos dados de resposta para solicitações para [criar um complemento](create-an-add-on.md) ou [obter detalhes de complemento](get-all-add-ons.md).  |
+| submissionId | string | Obrigatório. A ID do envio a ser obtida. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -140,7 +140,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | O envio não foi encontrado. |
-| 409  | O envio não pertence ao complemento especificado, ou o complemento usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio não pertence ao complemento especificado, ou o complemento usa um recurso de Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

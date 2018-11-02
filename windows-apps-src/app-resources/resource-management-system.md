@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930851"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970276"
 ---
 # <a name="resource-management-system"></a>Sistema de Gerenciamento de Recursos
 O Sistema de Gerenciamento de Recursos tem recursos em tempo de compilação e em tempo de execução. No momento da compilação, o sistema cria um índice de todas as variantes dos recursos que são empacotados com o app. Trata-se do índice de recurso do pacote, conhecido também como PRI, que também está incluído no pacote do app. No momento da execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor, consulta as informações no PRI e carrega automaticamente os recursos que oferecem a melhor correspondência para essas configurações.

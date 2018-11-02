@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
-description: Use este método na API de envio da Microsoft Store para obter dados para um pacote de pré-lançamento de um app que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para obter dados de um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 title: Obter um pacote de pré-lançamento
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, versão de pré-lançamento, pacote de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 772dd59ad25cd5439df8b88cd8818f98334c2969
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 09fd5c703e4a601ad28a05156aec9133444cfd9e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940789"
+ms.locfileid: "5970399"
 ---
 # <a name="get-a-package-flight"></a>Obter um pacote de pré-lançamento
 
-Use este método na API de envio da Microsoft Store para obter dados para um pacote de pré-lançamento de um app que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para obter dados de um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -46,8 +46,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o pacote de pré-lançamento que você deseja obter. A ID da Loja do aplicativo está disponível no painel do Centro de Desenvolvimento.  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento a ser obtida. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento criada no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de pré-lançamento no painel.  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o pacote de pré-lançamento que você deseja obter. A ID da loja para o aplicativo está disponível no Partner Center.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento a ser obtida. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento que foi criado no Partner Center, essa ID também está disponível na URL da página de pré-lançamento no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -90,7 +90,7 @@ O exemplo a seguir demonstra o corpo da resposta JSON para uma chamada bem-suced
 
 | Valor      | Tipo   | Descrição                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+| flightId            | string  | A ID do pacote de pré-lançamento. Esse valor é fornecido pelo Partner Center.  |
 | friendlyName           | string  | O nome do pacote de pré-lançamento, conforme especificado pelo desenvolvedor.   |  
 | lastPublishedFlightSubmission       | object | Um objeto que fornece informações sobre o último envio publicado do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |
 | pendingFlightSubmission        | object  |  Um objeto que fornece informações sobre o envio pendente atual do pacote de pré-lançamento. Para saber mais, consulte a seção [Objeto de envio](#submission_object) a seguir.  |   
@@ -118,7 +118,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|---------------------  |
 | 400  | A solicitação é inválida. |
 | 404  | O pacote de pré-lançamento especificado não foi encontrado.   |   
-| 409  | O aplicativo usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
+| 409  | O aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |                                                                                                 
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

@@ -8,19 +8,19 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e0d2bed4f2da49596a4859916637225bbbfd97
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 89e9fff8f041c4beb2a897c7be75b2f6e009f809
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945618"
+ms.locfileid: "5968710"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de produtos no aplicativo
 
 Seja seu app gratuito ou não, você pode vender conteúdo, outros apps ou uma nova funcionalidade do app (como o desbloqueio do próximo nível de um jogo) no próprio app. Veja a seguir como habilitar esses produtos no seu aplicativo.
 
 > [!IMPORTANT]
-> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar compras de produto no aplicativo. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte aos tipos de complemento mais recentes, como assinaturas e complementos consumíveis gerenciados pela Microsoft Store, e foi projetado para ser compatível com tipos de produtos e recursos futuros com suporte do Centro de Desenvolvimento do Windows e da Microsoft Store. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter mais informações sobre como habilitar compras de produto no aplicativo usando o namespace **Windows.Services.Store** , consulte [Este artigo](enable-in-app-purchases-of-apps-and-add-ons.md).
+> Este artigo demonstra como usar os membros do namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) para habilitar compras de produto no aplicativo. Esse namespace não está sendo atualizado com os novos recursos e recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) em vez disso. O namespace **Windows.Services.Store** dá suporte a tipos de complemento mais recentes, como complementos consumíveis gerenciado pela loja e assinaturas e foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. O namespace **Windows.Services.Store** foi introduzido no Windows 10, versão 1607 e pode ser usada somente em projetos para **Windows 10 Anniversary Edition (10.0; Compilação 14393)** ou uma versão posterior no Visual Studio. Para obter mais informações sobre como habilitar compras de produto no aplicativo usando o namespace **Windows.Services.Store** , consulte [Este artigo](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 > [!NOTE]
 > Os produtos no aplicativo não podem ser oferecidos em uma versão de avaliação do aplicativo. Os clientes que usam uma versão de avaliação do aplicativo só poderão comprar um produto no aplicativo se comprarem a versão completa do seu aplicativo.
@@ -54,7 +54,7 @@ Para cada recurso a ser disponibilizado por meio de uma transação de produto n
     * "RainbowThemePack"
 
   > [!NOTE]
-  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor da [ID do produto](../publish/set-your-add-on-product-id.md#product-id) especificado quando você [define o complemento correspondente para o seu aplicativo no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
+  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor de [ID do produto](../publish/set-your-add-on-product-id.md#product-id) especificado quando você [define o complemento correspondente para o seu aplicativo no Partner Center](../publish/add-on-submissions.md).
 
 2.  **Codifique o recurso em um bloco de condições**
 
@@ -80,10 +80,10 @@ Esta etapa é fácil: basta mudar todas as referências a [CurrentAppSimulator](
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Etapa 4: Configurar o produto no aplicativo na Loja
 
-No painel do Centro de Desenvolvimento, navegue até seu aplicativo e [crie um complemento](../publish/add-on-submissions.md) que corresponda à sua oferta de produto no aplicativo. Defina a ID do produto, o tipo, o preço e outras propriedades para o complemento. Lembre-se de configurá-lo com a mesma configuração que você definiu no WindowsStoreProxy.xml durante o teste.
+No Partner Center, navegue até seu aplicativo e [criar um complemento](../publish/add-on-submissions.md) que corresponda à sua oferta de produto no aplicativo. Defina a ID do produto, o tipo, o preço e outras propriedades para o complemento. Lembre-se de configurá-lo com a mesma configuração que você definiu no WindowsStoreProxy.xml durante o teste.
 
   > [!NOTE]
-  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor da [ID do produto](../publish/set-your-add-on-product-id.md#product-id) especificado para o complemento correspondente no painel.
+  > O token de oferta no aplicativo que você usa em seu código deve corresponder ao valor de [ID do produto](../publish/set-your-add-on-product-id.md#product-id) que você especificar para o complemento correspondente no Partner Center.
 
 ## <a name="remarks"></a>Comentários
 

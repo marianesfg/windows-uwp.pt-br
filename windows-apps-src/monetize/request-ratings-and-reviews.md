@@ -7,12 +7,12 @@ ms.date: 06/15/2018
 ms.topic: article
 keywords: Windows 10, uwp, classificações, opiniões
 ms.localizationpriority: medium
-ms.openlocfilehash: d736fa47251c85491a29b324a3ed59181a5060c8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935090"
+ms.locfileid: "5981185"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicite classificações e opiniões para seu aplicativo
 
@@ -20,7 +20,7 @@ Você pode adicionar código ao seu aplicativo da Plataforma Universal do Window
 * Você pode mostrar um diálogo de classificação e opinião diretamente no contexto de seu aplicativo.
 * Programaticamente, você pode abrir a página de classificação e opinião do seu app na Microsoft Store.
 
-Quando você estiver pronto para analisar seus dados de classificações e opiniões, poderá exibir os dados no painel do Centro de Desenvolvimento do Windows ou usar a API de análise de Microsoft Store para recuperar esses dados programaticamente.
+Quando você estiver pronto para analisar seus dados de classificações e críticas, você pode exibir os dados no Partner Center ou usar a API de análise da Microsoft Store para recuperar esses dados programaticamente.
 
 > [!IMPORTANT]
 > Ao adicionar uma função de classificação dentro de seu aplicativo, todas as análises devem enviar o usuário para mecanismos de classificação da loja, independentemente de estrela escolhida. Se você coletar comentários ou comentários dos usuários, ele deve ser claro que ele não está relacionado à classificação do aplicativo ou críticas na loja, mas é enviado diretamente para o desenvolvedor do aplicativo. Consulte o código desenvolvedor de conduta para obter mais informações relacionadas à [Fraudulent ou atividades desonestos](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
@@ -102,7 +102,7 @@ Para obter mais informações, consulte [Iniciar o app da Microsoft Store](../la
 ## <a name="analyze-your-ratings-and-reviews-data"></a>Analisar seus dados de classificações e opiniões
 
 Para analisar os dados de classificações e opiniões de seus clientes, você tem várias opções:
-* Você pode usar o relatório [Opiniões](../publish/reviews-report.md) no painel do Centro de Desenvolvimento do Windows para ver classificações e opiniões de seus clientes. Você também pode baixar esse relatório para exibi-lo offline.
+* Você pode usar o relatório [de análises](../publish/reviews-report.md) no Partner Center para ver as classificações e opiniões de seus clientes. Você também pode baixar esse relatório para exibi-lo offline.
 * Você pode usar os métodos [Obter classificações do app](get-app-ratings.md) e [Obter opiniões do app](get-app-reviews.md) na API de análise da Store para recuperar programaticamente as classificações e opiniões de seus clientes no formato JSON.
 
 ## <a name="related-topics"></a>Tópicos relacionados

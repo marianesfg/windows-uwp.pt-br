@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: Use este método na API de envio da Microsoft Store para recuperar informações sobre um complemento de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar informações sobre um complemento para um aplicativo que está registrado à sua conta do Partner Center.
 title: Obter um complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complemento, produto in-App, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36638c3e3890d5e2bca149d1006469bb97057f05
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 9620b0b7cf4d1ecb583215b2ab0fafe0e82712bf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924962"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991678"
 ---
 # <a name="get-an-add-on"></a>Obter um complemento
 
-Use este método na API de envio da Microsoft Store para recuperar informações sobre um complemento (também conhecido como produto no aplicativo ou IAP) de um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para recuperar informações sobre um complemento (também conhecido como produto in-App ou IAP) para um aplicativo que está registrado à sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -46,7 +46,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Obrigatório. A ID da Loja do complemento a ser recuperada. A ID da Loja está disponível no painel do Centro de Desenvolvimento.  |
+| id | string | Obrigatório. A ID da Loja do complemento a ser recuperada. A ID da loja está disponível no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -99,7 +99,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | O complemento especificado não foi encontrado. |
-| 409  | O complemento usa um recurso de painel do Centro de Desenvolvimento que [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | O complemento usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

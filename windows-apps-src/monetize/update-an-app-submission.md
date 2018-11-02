@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de aplicativo, atualização
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bf6ed961f4f84cbc2bbef4a4fe79625dcadc326
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 82311d96296b3b7c7db0a3485348b7d1bf4a734c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943626"
+ms.locfileid: "5991369"
 ---
 # <a name="update-an-app-submission"></a>Atualizar um envio de aplicativo
 
@@ -27,7 +27,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio de aplicativo para um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um envio de aplicativo](create-an-app-submission.md).
+* Crie um envio para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método [criar um envio de aplicativo](create-an-app-submission.md) .
 
 ## <a name="request"></a>Solicitação
 
@@ -50,7 +50,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obrigatório. A ID da Loja do aplicativo para o qual você deseja atualizar um envio. Para obter mais informações sobre a ID da Loja, consulte [Exibir detalhes de identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Obrigatório. A ID do envio para atualizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| submissionId | string | Obrigatório. A ID do envio para atualizar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -73,7 +73,7 @@ O corpo da solicitação tem os parâmetros a seguir.
 | hasExternalInAppProducts           |     boolean          |   Indica se o aplicativo permite que os usuários façam compras fora do sistema de comércio da Microsoft Store. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    booliano           |  Indica se o aplicativo foi testado para atender às diretrizes de acessibilidade. Para obter mais informações, consulte [Declarações de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contém [observações de certificação](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) do aplicativo.    |    
-| applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](manage-app-submissions.md#application-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.   |    
+| applicationPackages           |   array  | Contém objetos que fornecem detalhes sobre cada pacote no envio. Para saber mais, veja a seção [Pacote de aplicativos](manage-app-submissions.md#application-package-object). Durante a chamada desse método para atualizar um envio de aplicativo, somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion* e *minimumSystemRam* desses objetos são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Partner Center.   |    
 | packageDeliveryOptions    | objeto  | Contém as configurações de distribuição de pacote gradual e de atualização obrigatória para o envio. Para obter mais informações, consulte [Objeto de opções de entrega de pacote](manage-app-submissions.md#package-delivery-options-object).  |
 | enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](manage-app-submissions.md#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booliano   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
@@ -296,7 +296,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | O envio não pôde ser atualizado porque a solicitação não é válida. |
-| 409  | Não foi possível atualizar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Não foi possível atualizar o envio por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

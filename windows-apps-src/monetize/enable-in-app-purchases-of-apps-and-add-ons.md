@@ -8,12 +8,12 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c5a5536ef1853a726421bdc75269f0cb5c1a84b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: beb7165586c62770fd6b18fff8c7ad0095bc78ba
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947184"
+ms.locfileid: "5981136"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras no aplicativo e complementos no aplicativo
 
@@ -32,8 +32,8 @@ Cada método apresenta uma interface do usuário de compra padrão para o usuár
 
 Este exemplo tem os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
-* Se você quiser habilitar compras no aplicativo para um complemento para o app, também deverá [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
+* Você tenha [criado um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Se você quiser habilitar compras no aplicativo para um complemento para o aplicativo, você também deve [criar o complemento no Partner Center](../publish/add-on-submissions.md).
 
 O código neste exemplo pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.

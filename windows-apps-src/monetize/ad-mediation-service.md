@@ -7,12 +7,12 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncios
 ms.localizationpriority: medium
-ms.openlocfilehash: f8ebffbd7a2fa209289c99780e0bbbea94afac2e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 9adae5b000277b774536c8b307cc1bc055ce3bc4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920625"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971242"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Serviço de controle de anúncios da Microsoft
 
@@ -30,7 +30,7 @@ O serviço de controle de anúncios integra-se a várias de redes de publicidade
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Gerenciar a complexidade das relações da rede de publicidade  
 
-O serviço de controle de anúncios integra-se a uma ampla variedade de redes de anúncios para que você não precise fazer esse trabalho. Depois de usar o SDK do Microsoft Advertising para exibir anúncios em seu aplicativo, você pode modificar as configurações de controle de anúncios [usando o painel do Centro de Desenvolvimento](../publish/in-app-ads.md#mediation-settings) para exibir anúncios de várias redes de publicidade. Você aproveita os anúncios de novas redes de publicidade sem precisar fazer alterações no seu código.
+O serviço de controle de anúncios integra-se a uma ampla variedade de redes de anúncios para que você não precise fazer esse trabalho. Depois de usar o SDK do Microsoft Advertising para exibir anúncios em seu aplicativo, você pode modificar as configurações de mediação de anúncios [no Partner Center](../publish/in-app-ads.md#mediation-settings) para exibir anúncios de várias redes de publicidade. Você aproveita os anúncios de novas redes de publicidade sem precisar fazer alterações no seu código.
 
 Gerenciamos a relação de ponta a ponta com as redes de publicidade em seu nome. Tudo, desde a integração de rede de publicidade para veiculação de anúncios aos relatórios e pagamentos, é administrados por nós sem o seu envolvimento.
 
@@ -49,7 +49,7 @@ O serviço de controle de anúncios funciona para gerar o maior rendimento para 
 
 Novas redes de anúncios são incluídas automaticamente e avaliadas em relação ao desempenho por meio de um orçamento de aprendizagem. Em um curto período de tempo, eles encontrar seu lugar na cachoeira. Isso aumenta a competitividade das redes de publicidade e ajuda o desenvolvedor a aproveitar ao máximo a monetização por meio de aplicativos.
 
-É altamente recomendável usar nossas [configurações recomendadas de controle](../publish/in-app-ads.md#mediation-settings) para maximizar a receita dos anúncios em seus aplicativos. Isso permite que os algoritmos permitam o melhor rendimento para seu aplicativo. No entanto, você também tem a liberdade de escolher suas próprias configurações de controle no painel do Centro de Desenvolvimento para ter mais controle sobre as redes de publicidade que servem anúncios e a ordem em isso é feito.
+É altamente recomendável usar nossas [configurações recomendadas de controle](../publish/in-app-ads.md#mediation-settings) para maximizar a receita dos anúncios em seus aplicativos. Isso permite que os algoritmos permitam o melhor rendimento para seu aplicativo. No entanto, você também tem a liberdade de escolher suas próprias configurações de mediação no Partner Center para ter mais controle sobre as redes de publicidade que servem anúncios e a ordem em que isso é feito.
 
 ## <a name="rich-data-and-signals"></a>Sinais e dados avançados
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, aplicativo de demonstração varejo
 ms.localizationpriority: medium
 ms.openlocfilehash: ee0344d521b4c31449a2291517b20a09280818fc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937527"
+ms.locfileid: "5969225"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo
 

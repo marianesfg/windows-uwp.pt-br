@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Use a API de análise da Microsoft Store para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows.
+description: Use a API de análise da Microsoft Store para recuperar de forma programática dados analíticos de aplicativos que estão registrados em sua organização ' s conta do Partner Center do Windows.
 title: Acessar dados analíticos usando serviços da Store
 ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 876500bf57de386ca551a1b51a02df62657f147c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8656270b81e0aae46c5d4f3a7b651135c163f76d
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938916"
+ms.locfileid: "5970050"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
-Use a *API de análise da Microsoft Store* para recuperar de forma programática dados analíticos de aplicativos que são registrados na conta da sua organização no Centro de Desenvolvimento do Windows. Essa API permite que você recupere dados para aquisições de aplicativos e complementos (também conhecidos como produto no aplicativo ou IAP), erros, classificações de aplicativos e avaliações. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
+Use a *API de análise da Microsoft Store* para recuperar de forma programática dados analíticos de aplicativos que estão registrados em Windows Partner Center conta do sua organização. Essa API permite que você recupere dados para aquisições de aplicativos e complementos (também conhecidos como produto no aplicativo ou IAP), erros, classificações de aplicativos e avaliações. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
 As etapas a seguir descrevem o processo completo:
 
@@ -31,17 +31,17 @@ As etapas a seguir descrevem o processo completo:
 
 Antes de começar a escrever o código para chamar a API de análise da Microsoft Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Centro de Desenvolvimento](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
+* Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
 
-* Você deve associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento, recuperar a ID do locatário e a ID de cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Microsoft Store. Você precisa a ID do locatário, a ID do cliente e a chave para obter um token de acesso do Azure AD que você passa para a API.
+* Você deve associar um aplicativo Azure AD à sua conta do Partner Center, recuperar a ID do locatário e ID do cliente para o aplicativo e gerar uma chave. O aplicativo do Azure AD representa o aplicativo ou serviço do qual você quer chamar a API de análise da Microsoft Store. Você precisa a ID do locatário, a ID do cliente e a chave para obter um token de acesso do Azure AD que você passa para a API.
     > [!NOTE]
     > Você só precisa executar essa tarefa uma vez. Depois que você tiver a ID do locatário, a ID do cliente e a chave, poderá reutilizá-las sempre que precisa criar um novo token de acesso do Azure AD.
 
-Para associar um aplicativo Azure AD à sua conta do Centro de Desenvolvimento e recuperar os valores necessários:
+Para associar um aplicativo Azure AD à sua conta do Partner Center e recuperar os valores necessários:
 
-1.  No Centro de Desenvolvimento, [associe a conta do Centro de Desenvolvimento ao Azure AD de sua organização](../publish/associate-azure-ad-with-dev-center.md).
+1.  No Partner Center, [associe a conta do Partner Center da sua organização com o diretório do Azure AD da sua organização](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Em seguida, na página **Usuários** na seção **Configurações da conta** do Centro de Desenvolvimento, [adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa o aplicativo ou o serviço que você usará para acessar dados de análises da sua conta do Centro de Desenvolvimento. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no Azure AD, você pode [criar um novo aplicativo do Azure AD no Centro de Desenvolvimento](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
+2.  Em seguida, na página **usuários** na seção **configurações da conta** do Partner Center, [Adicione o aplicativo do Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa o aplicativo ou serviço que você usará para acessar dados analíticos de sua conta do Partner Center. Certifique-se de atribuir esse aplicativo à **Manager**. Se o aplicativo ainda não existe no diretório do Azure AD, você pode [criar um novo aplicativo Azure AD no Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Volte para a página **Usuários**, clique no nome do seu aplicativo Azure AD para ir para as configurações do aplicativo e copie os valores da **ID do locatário** e da **ID do cliente**.
 
@@ -66,7 +66,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Para os valor de *tenant\_id* no POST URI e os parâmetros *client\_id* e *client\_secret*, especifique a ID do locatário, a ID do cliente e a chave para o aplicativo que você recuperou do Centro de Desenvolvimento na seção anterior. Para o parâmetro *resource*, especifique ```https://manage.devcenter.microsoft.com```.
+Para o valor de *tenant\_id* no POST URI e os parâmetros *client\_id* e *client\_secret* , especifique a ID de locatário, ID de cliente e a chave para seu aplicativo que você recuperou do Partner Center na seção anterior. Para o parâmetro *resource*, especifique ```https://manage.devcenter.microsoft.com```.
 
 Depois que seu token de acesso expirar, você poderá atualizá-lo seguindo as instruções descritas [aqui](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
@@ -78,7 +78,7 @@ Depois que tiver um token de acesso do Azure AD, você estará pronto para chama
 
 ### <a name="methods-for-uwp-apps"></a>Métodos para aplicativos UWP
 
-Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Centro de Desenvolvimento.
+Os métodos de análise a seguir estão disponíveis para aplicativos UWP no Partner Center.
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
@@ -111,7 +111,7 @@ Os métodos adicionais a seguir estão disponíveis para uso por contas de desen
 
 ### <a name="methods-for-xbox-one-games"></a>Métodos para jogos Xbox One
 
-Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos Xbox One inseridos por meio do Portal de Desenvolvedor Xbox (XDP) e disponíveis no painel do Centro de Desenvolvimento de Análise XDP.
+Os métodos adicionais a seguir estão disponíveis para uso por contas de desenvolvedor com jogos Xbox One inseridos por meio do Portal de desenvolvedor do Xbox (XDP) e disponíveis no painel de análise XDP.
 
 | Cenário       | Métodos      |
 |---------------|--------------------|

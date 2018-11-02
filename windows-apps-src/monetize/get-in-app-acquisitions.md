@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
-ms.openlocfilehash: c1fb44457b8589c9e1525de9c8dca2801c0c47bf
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4adb202df2806caeb0dc88469521b0f373886c43
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940315"
+ms.locfileid: "5969687"
 ---
 # <a name="get-add-on-acquisitions"></a>Obter aquisições de complemento
 
-Use este método na API de análise da Microsoft Store para obter dados agregados de aquisição para complementos para seu app em formato JSON durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados agregados de aquisição para complementos para seu app em formato JSON durante um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório de aquisições de complemento](../publish/add-on-acquisitions-report.md) no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

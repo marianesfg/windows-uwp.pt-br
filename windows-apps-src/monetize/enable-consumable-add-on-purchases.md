@@ -8,12 +8,12 @@ ms.author: mhopkins
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fc67e2b48779e7b22f20dc4adfbe28580bc325fc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: e4687833b55f1456d298b552f5cce897f8b4eaa1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946731"
+ms.locfileid: "5980935"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumíveis
 
@@ -47,8 +47,8 @@ A qualquer momento, você também pode [obter o saldo restante](enable-consumabl
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Microsoft Store. Opcionalmente, é possível configurar o aplicativo para que ele não possa ser descoberto na Microsoft Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
-* Você [criou um complemento para o complemento consumível para o app](../publish/add-on-submissions.md) no painel do Centro de Desenvolvimento.
+* Você tenha [criado um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o aplicativo para que ele não possa ser descoberto na Microsoft Store enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Você tenha [criado um complemento consumível para o aplicativo](../publish/add-on-submissions.md) no Partner Center.
 
 O código nestes exemplos pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.
