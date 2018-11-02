@@ -8,19 +8,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: 823ca28618540dbaab1f4e5711ee59d277b0c894
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877160"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930805"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 
 
 Você pode responder às críticas ao seu aplicativo para permitir que os clientes saibam que você está ouvindo os comentários. Com uma resposta às críticas, você pode informar aos clientes os recursos que foram adicionados ou os bugs que foram corrigidos com base nos comentários deles, ou obter um feedback mais específico sobre como melhorar seu aplicativo. Serão exibidas na Microsoft Store para todos os clientes do Windows 10 ver suas respostas. Você também pode optar por enviar sua resposta por email para o cliente (se ele ainda não o desativaram e estiver usando um dispositivo com Windows 10, versão 1803 ou superior).
 
-Para ver as críticas do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação esquerdo, expanda **Analisar** e clique em **análises** para exibir o [relatório críticas](reviews-report.md). Selecione a **Responder para analisar** para fornecer sua resposta.
+Para ver as críticas do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação esquerdo, expanda *Analytics** e, em seguida, clique em **análises** para exibir o [relatório críticas](reviews-report.md). Selecione a **Responder para analisar** para fornecer sua resposta.
 
 > [!TIP]
 > Além de usar o Partner Center para responder às críticas, você pode responder para opiniões [programaticamente](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).

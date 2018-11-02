@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, segmento, segmentos, grupo de destino, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
-ms.openlocfilehash: b53c3c3480a986e77ad44f95831b1be5ce016808
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.openlocfilehash: 8aa61056a25fca4193cf325c8573813bf1f6a560
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882772"
+ms.locfileid: "5929600"
 ---
 # <a name="create-customer-segments"></a>Criar segmentos de cliente
 
@@ -43,7 +43,7 @@ Observações importantes sobre segmentos de cliente:
 4.  Na lista **Incluir clientes desse aplicativo**, selecione um dos seus aplicativos para direcionar.
 5.  Na seção **Definir condições de inclusão**, especifique os critérios de filtro para o segmento.
 
-    Você pode escolher entre diversos de critérios de filtro, incluindo **Aquisições**, **Fonte de aquisições**, **Uso**, **Demografia**, **Classificação**, **Previsão de rotatividade**, **Compras da Loja**, **Aquisições na Loja** e **Gasto da Loja**.
+    Você pode escolher dentre uma variedade de critérios de filtro, incluindo **aquisições**, **origem de aquisição**, **demografia**, **classificação**, **previsão de rotatividade**, **compras Store**, **aquisições de armazenamento**e **Store gastar**.
 
     Por exemplo, se você quiser criar um segmento que inclua somente os clientes do app com 18 a 24 anos, selecione os critérios de filtro [**Demografia**] [**Faixa etária**] [**é**] [**18 a 24**] nas listas suspensas.
 

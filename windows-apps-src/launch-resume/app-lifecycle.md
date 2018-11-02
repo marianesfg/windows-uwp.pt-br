@@ -9,11 +9,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887322"
+ms.locfileid: "5926824"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>O ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10
 
