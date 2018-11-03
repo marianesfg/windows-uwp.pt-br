@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Use este método na API de envio da Microsoft Store para criar um complemento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para criar um complemento para um aplicativo que está registrado na sua conta PartnerCenter.
 title: Criar um complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar complemento, produto in-App, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36b6be05d1efc1cbc23f26a509230750c8896c87
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d262a86c4a177095015c3f1391b19f1a7719d0a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939291"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992604"
 ---
 # <a name="create-an-add-on"></a>Criar um complemento
 
-Use este método na API de envio da Microsoft Store para criar um complemento (também conhecido como produto no app ou IAP) para um aplicativo que está registrado para sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para criar um complemento (também conhecido como produto in-App ou IAP) para um aplicativo que está registrado à sua conta do Partner Center.
 
 > [!NOTE]
 > Este método cria um complemento sem nenhum envio. Para criar um envio para um complemento, veja os métodos em [Gerenciar envios de complemento](manage-add-on-submissions.md).
@@ -99,7 +99,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição                                                                                                                                                                           |
 |--------|------------------|
 | 400  | A solicitação é inválida. |
-| 409  | O complemento não pôde ser criado por causa de seu estado atual ou o complemento usa um recurso de painel do Centro de Desenvolvimento é [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O complemento não pôde ser criado por causa do estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

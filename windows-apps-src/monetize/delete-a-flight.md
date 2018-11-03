@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
-description: Use este método na API de envio da Microsoft Store para excluir um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para excluir um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 title: Excluir um pacote de pré-lançamento
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, excluir versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 56f7c4fa55620d4c5be8baddc6323a9c7482e02f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 23e90a322f347375cfdb33eca9315a5ca538fd4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940616"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995269"
 ---
 # <a name="delete-a-package-flight"></a>Excluir um pacote de pré-lançamento
 
-Use este método na API de envio da Microsoft Store para excluir um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para excluir um pacote de pré-lançamento para um aplicativo que está registrado à sua conta do Partner Center.
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -47,8 +47,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o pacote de pré-lançamento que você deseja excluir. A ID da Loja do aplicativo está disponível no painel do Centro de Desenvolvimento.  |
-| flightId | string | Obrigatório. A ID do pacote de pré-lançamento para excluir. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento criada no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de pré-lançamento no painel.  |
+| applicationId | string | Obrigatório. A ID da Loja do aplicativo que contém o pacote de pré-lançamento que você deseja excluir. A ID da loja para o aplicativo está disponível no Partner Center.  |
+| flightId | string | Obrigatório. A ID do pacote de pré-lançamento para excluir. Essa ID está disponível nos dados de resposta de solicitações para [criar um pacote de pré-lançamento](create-a-flight.md) e [obter pacotes de pré-lançamento para um aplicativo](get-flights-for-an-app.md). Para uma versão de pré-lançamento que foi criado no Partner Center, essa ID também está disponível na URL da página de pré-lançamento no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -77,7 +77,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O pacote de pré-lançamento especificado não foi encontrado.  |
-| 409  | A pacote de pré-lançamento do pacote especificada foi encontrada, mas não pôde ser excluída em seu estado atual ou o aplicativo que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Pacote de pré-lançamento especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

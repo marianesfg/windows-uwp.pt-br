@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, problemas conhecidos, solução de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3adbc12b0e891461a97bb90575141517b280be76
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d1b3b1fb68ed246d6a5a8334c5cf4d1c0754b719
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941810"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992555"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conhecidos e solução de problemas para anúncios em aplicativos
 
@@ -42,7 +42,7 @@ Se você tiver criado um anúncio recentemente (menos de um dia), talvez ele nã
 
 Há muitos motivos para você não ver anúncios, incluindo erros de rede. Outros motivos podem incluir:
 
-* Selecionar uma unidade de anúncios no Centro de Desenvolvimento do Windows com um tamanho maior ou menor do que o tamanho do **AdControl** no código do seu aplicativo.
+* Selecionar uma unidade de anúncio no Partner Center com um tamanho que seja maior ou menor que o tamanho do **AdControl** no código do aplicativo.
 
 * Os anúncios não aparecerão se você estiver usando um [valor de modo de teste](set-up-ad-units-in-your-app.md#test-ad-units) para seu ID de unidade de anúncios ao executar um aplicativo dinâmico.
 
@@ -60,7 +60,7 @@ Anúncios de teste podem ser mostrados, mesmo quando você está esperando anún
 
 * Aplicativos de sideload ou aplicativos que estão em execução no emulador não mostrarão anúncios ativos.
 
-Quando uma unidade de anúncio dinâmico estiver fornecendo anúncios de teste, o status da unidade de anúncio mostra **Ativo e fornecendo anúncios de teste** no Centro de Desenvolvimento do Windows. Isso não se aplica atualmente aos aplicativos de telefone.
+Quando uma unidade de anúncio em tempo real estiver fornecendo anúncios de teste, o status da unidade de anúncio mostra **ativo e fornecendo anúncios de teste** no Partner Center. Isso não se aplica atualmente aos aplicativos de telefone.
 
 
 <span id="reference_errors"/>

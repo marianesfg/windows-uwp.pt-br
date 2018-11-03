@@ -1,19 +1,19 @@
 ---
 author: Xansky
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Use este método na API de envio da Microsoft Store para criar um novo envio de um pacote de pré-lançamento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para criar um novo envio de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
 title: Criar um envio de pacote de pré-lançamento
 ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b06f922de1de1dd9943d460672fab218b51a5eb
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4cdcc0f06820600523be111d67d3cad5e38b6ceb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925853"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5989974"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 
@@ -30,7 +30,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um pacote de pré-lançamento de um aplicativo em sua conta do Centro de Desenvolvimento. Você pode fazer isso no painel do Centro de Desenvolvimento ou usando o método [criar um pacote de pré-lançamento](create-a-flight.md).
+* Crie um pacote de pré-lançamento para um aplicativo. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um pacote de pré-lançamento](create-a-flight.md) .
 
 ## <a name="request"></a>Solicitação
 
@@ -119,7 +119,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | Não foi possível criar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
-| 409  | Não foi possível criar o envio do pacote de pré-lançamento por causa do estado atual do app, ou o app usa um recurso de painel do Centro de Desenvolvimento [não é compatível no momento com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O envio do pacote de pré-lançamento não pôde ser criado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso de Partner Center [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

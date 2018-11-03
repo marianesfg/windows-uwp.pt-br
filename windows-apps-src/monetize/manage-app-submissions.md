@@ -1,36 +1,36 @@
 ---
 author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios dos apps que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios dos aplicativos que estão registrados em sua conta do Partner Center.
 title: Gerenciar envios de aplicativo
 ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de aplicativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f95e91c1ef9e47ab3371a1481237dc510eddae7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921074"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996669"
 ---
 # <a name="manage-app-submissions"></a>Gerenciar envios de aplicativo
 
 A API de envio da Microsoft Store oferece métodos que é possível usar para gerenciar envios dos aplicativos, inclusive distribuições de pacote graduais. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Se você usar essa API de envio da Microsoft Store para criar um envio para um aplicativo, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> Se você usar a API de envio da Microsoft Store para criar um envio para um aplicativo, certifique-se de fazer outras alterações no envio somente usando a API, em vez de Partner Center. Se você usar o Partner Center para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 > [!IMPORTANT]
-> Você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md) ou publicar os envios de [aplicativos LOB](../publish/distribute-lob-apps-to-enterprises.md) diretamente para empresas. Para esses dois cenários, você deve usar o painel do Centro de Desenvolvimento do Windows para publicar o envio.
+> Você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md) ou publicar os envios de [aplicativos LOB](../publish/distribute-lob-apps-to-enterprises.md) diretamente para empresas. Para esses dois cenários, você deve usar o Partner Center para publicar o envio.
 
 
 <span id="methods-for-app-submissions" />
 
 ## <a name="methods-for-managing-app-submissions"></a>Métodos para gerenciar envios de aplicativo
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de app. Antes de usar esses métodos, o app já deve existir na sua conta do Centro de Desenvolvimento e você deve primeiro criar um envio para o app no painel. Para obter mais informações, consulte os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de app. Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Partner Center e você deve primeiro criar um envio para o aplicativo no Partner Center. Para obter mais informações, consulte os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
 
 <table>
 <colgroup>
@@ -127,7 +127,7 @@ Para criar um envio de um aplicativo, siga este processo.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. [Confirme o envio de aplicativo](commit-an-app-submission.md) executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
+5. [Confirme o envio de aplicativo](commit-an-app-submission.md) executando o método a seguir. Isso alertará o Partner Center que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -141,13 +141,13 @@ Para criar um envio de um aplicativo, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o Partner Center.
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Métodos para gerenciar uma distribuição de pacote gradual
 
-É possível distribuir gradualmente os pacotes atualizados em um envio de aplicativo para um percentual de clientes do aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, inclusive instruções sobre como habilitar e gerenciar uma distribuição de pacote gradual no painel do Centro de Desenvolvimento, consulte [este artigo](../publish/gradual-package-rollout.md).
+É possível distribuir gradualmente os pacotes atualizados em um envio de aplicativo para um percentual de clientes do aplicativo no Windows 10. Isso permite que você monitore comentários e dados de análise dos pacotes específicos para verificar se a atualização é necessária antes de implantá-la mais amplamente. Você pode alterar a porcentagem de distribuição (ou parar a atualização) para um envio publicado sem precisar criar um novo envio. Para obter mais detalhes, incluindo instruções sobre como habilitar e gerenciar uma distribuição de pacote gradual no Partner Center, consulte [Este artigo](../publish/gradual-package-rollout.md).
 
 Para habilitar programaticamente uma distribuição de pacote gradual para um envio de aplicativo, siga esse processo usando métodos na API de envio da Microsoft Store:
 
@@ -339,7 +339,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor      | Tipo   | Descrição      |
 |------------|--------|-------------------|
-| id            | string  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md), [obter todos os apps](get-all-apps.md) e [obter um app](get-an-app.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| id            | string  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de aplicativo](create-an-app-submission.md), [obter todos os apps](get-all-apps.md) e [obter um app](get-an-app.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 | applicationCategory           | string  |   Uma cadeia de caracteres que especifica a [categoria e/ou subcategoria](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para o aplicativo. Categorias e subcategorias são combinadas em uma única cadeia de caracteres com o caractere de sublinhado '_', como **BooksAndReference_EReader**.      |  
 | pricing           |  objeto  | Um [recurso de preço](#pricing-object) que contém informações de preço para o aplicativo.        |   
 | visibilidade           |  string  |  A visibilidade do aplicativo. Ele pode ter um dos seguintes valores: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
@@ -362,7 +362,7 @@ Esse recurso tem os valores a seguir.
 | enterpriseLicensing           |  string  |  Um dos [valores de licenciamento empresarial](#enterprise-licensing) que indicam o comportamento de licenciamento empresarial para o aplicativo.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indica se a Microsoft tem permissão para [disponibilizar o aplicativo para as futuras famílias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Um dicionário de pares de chave e valor, onde cada chave é uma [família de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) e cada valor é um valor booliano que indica se seu aplicativo tem permissão para segmentar a família de dispositivos especificadas.     |    
-| friendlyName           |   cadeia  |  O nome amigável do envio, conforme mostrado no painel do Centro de Desenvolvimento. Esse valor é gerado para você ao criar o envio.       |  
+| friendlyName           |   string  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.       |  
 | trailers           |  array |   Uma matriz que contém até 15 [recursos de trailer](#trailer-object) que representam trailers de vídeo para a listagem de apps.<br/><br/>   |  
 
 
@@ -389,8 +389,8 @@ Esse recurso contém informações de venda de um aplicativo.
 
 > [!IMPORTANT]
 > O recurso **Venda** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de aplicativo usando a API de envio da Microsoft Store. No futuro, atualizaremos a API de envio da Microsoft Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de aplicativo.
->    * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de aplicativo.
->    * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o painel do Centro de Desenvolvimento para modificar os dados de venda de seu envio de aplicativo.
+>    * Depois de chamar o [método GET para obter um envio de aplicativo](get-an-app-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o Partner Center para obter os dados de venda de seu envio de aplicativo.
+>    * Ao chamar o [método PUT para atualizar um envio de aplicativo](update-an-app-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para modificar os dados de venda de seu envio de aplicativo.
 
 Esse recurso tem os valores a seguir.
 
@@ -425,9 +425,9 @@ Esse recurso contém informações de listagem base de um aplicativo. Esse recur
 |  copyrightAndTrademarkInfo                |   string      |  Informações opcionais de [direitos autorais e/ou marca comercial](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
 |  keywords                |  array       |  Uma matriz de [palavra-chave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ajudar seu aplicativo a aparecer nos resultados de pesquisa.    |
 |  licenseTerms                |    string     | Os [termos de licença](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionais do seu aplicativo.     |
-|  privacyPolicy                |   string      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu app, faça isso na página [Propriedades](../publish/enter-app-properties.md#privacy-policy-url) no painel do Centro de Desenvolvimento. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
-|  supportContact                |   string      |  Este valor está obsoleto. Para definir ou alterar a URL do contato de suporte ou o email para o seu app, faça isso na página [Propriedades](../publish/enter-app-properties.md#support-contact-info) no painel do Centro de Desenvolvimento. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
-|  websiteUrl                |   string      |  Este valor está obsoleto. Para definir ou alterar a URL da página da Web para o seu app, faça isso na página [Propriedades](../publish/enter-app-properties.md#website) no painel do Centro de Desenvolvimento. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
+|  privacyPolicy                |   string      |   Este valor está obsoleto. Para definir ou alterar a URL da política de privacidade para o seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#privacy-policy-url) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.       |
+|  supportContact                |   string      |  Este valor está obsoleto. Para definir ou alterar o suporte contato URL ou endereço de email para seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#support-contact-info) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.        |
+|  websiteUrl                |   string      |  Este valor está obsoleto. Para definir ou alterar a URL da página da web para o seu aplicativo, você deve fazer isso na página de [Propriedades](../publish/enter-app-properties.md#website) no Partner Center. Você pode omitir esse valor de suas chamadas para a API de envio. Se você definir esse valor, ele será ignorado.      |    
 |  descrição               |    string     |   A [descrição](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) dos detalhes do aplicativo.   |     
 |  features               |    array     |  Uma matriz de até 20 cadeias de caracteres que lista os [recursos](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) do seu aplicativo.     |
 |  releaseNotes               |  string       |  As [notas de versão](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) do aplicativo.    |
@@ -451,8 +451,8 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 |-----------------|---------|------|
 |  fileName               |    string     |   O nome do arquivo de imagem no arquivo ZIP que você carregou para o envio.    |     
 |  fileStatus               |   string      |  O status do arquivo de imagem. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | A ID da imagem. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
-|  descrição  |  string  | A descrição da imagem.  |
+|  id  |  string  | A ID da imagem. Esse valor é fornecido pelo Partner Center.  |
+|  description  |  string  | A descrição da imagem.  |
 |  imageType  |  string  | Indica o tipo da imagem. Há suporte para as seguintes cadeias de caracteres. <p/>[Imagens de captura de tela](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Captura de tela (use esse valor para a captura de tela da área de trabalho)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Logotipos da Loja](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Ícone (use esse valor para o logotipo 1:1 de 300 x 300 pixels)</li></ul><p/>[Imagens promocionais](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Imagens do Xbox](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Imagens promocionais opcionais](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
@@ -460,7 +460,7 @@ Esse recurso contém dados de imagem e ícone para uma listagem do aplicativo. P
 
 ### <a name="gaming-options-resource"></a>Recurso de opções de jogo
 
-Esse recurso contém configurações relacionadas a jogo para o app. Os valores nesse recurso correspondem às [configurações de jogo](../publish/enter-app-properties.md#game-settings) para envios no painel do Centro de Desenvolvimento.
+Esse recurso contém configurações relacionadas a jogo para o app. Os valores nesse recurso correspondem às [configurações de jogo](../publish/enter-app-properties.md#game-settings) para envios no Partner Center.
 
 ```json
 {
@@ -567,14 +567,14 @@ Esse recurso contém detalhes sobre um pacote de aplicativos para o envio.
 Esse recurso tem os valores a seguir.  
 
 > [!NOTE]
-> Durante a chamada do método [atualizar um envio de aplicativo](update-an-app-submission.md), somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Centro de Desenvolvimento.
+> Durante a chamada do método [atualizar um envio de aplicativo](update-an-app-submission.md), somente os valores *fileName*, *fileStatus*, *minimumDirectXVersion*, e *minimumSystemRam* desse objeto são necessários no corpo da solicitação. Os outros valores são preenchidos pelo Partner Center.
 
 | Valor           | Tipo    | Descrição                   |
 |-----------------|---------|------|
 | fileName   |   string      |  O nome do pacote.    |  
 | fileStatus    | string    |  O status do pacote. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>PendingUpload</li><li>Carregado</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Centro de Desenvolvimento.   |     
-| versão    |  string   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| id    |  string   |  Uma ID que identifica exclusivamente o pacote. Esse valor é fornecido pelo Partner Center.   |     
+| version    |  string   |  A versão do pacote do aplicativo. Para obter mais informações, consulte [Numeração de versão do pacote](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  A arquitetura do pacote (por exemplo, ARM).   |     
 | languages    | array    |  Uma matriz de códigos de idioma para os idiomas com suporte do aplicativo. Para obter mais informações, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
 | recursos    |  array   |  Uma matriz de recursos necessários pelo pacote. Para obter mais informações sobre recursos, consulte [Declarações de recursos de aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
@@ -639,13 +639,13 @@ Esse recurso contém [configurações de distribuição de pacote](#manage-gradu
 | fallbackSubmissionId    |  string   |  A ID da submissão que será recebido por clientes que não recebem os pacotes de lançamento gradual.   |          
 
 > [!NOTE]
-> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de Desenvolvimento e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
+> Os valores *packageRolloutStatus* e *fallbackSubmissionId* são atribuídos pelo Centro de parceiro e não devem ser definidos pelo desenvolvedor. Se você incluir esses valores no corpo da solicitação, esses valores serão ignorados.
 
 <span id="trailer-object" />
 
 ### <a name="trailers-resource"></a>Recurso de trailers
 
-Esse recurso representa um trailer de vídeo para a listagem do app. Os valores nesse recurso correspondem às opções de [trailer](../publish/app-screenshots-and-images.md#trailers) para envios no painel do Centro de Desenvolvimento.
+Esse recurso representa um trailer de vídeo para a listagem do app. Os valores nesse recurso correspondem às opções [trailers](../publish/app-screenshots-and-images.md#trailers) para envios no Partner Center.
 
 Você pode adicionar até 15 recursos de trailer à matriz *trailers* em um [recurso de envio de aplicativo](#app-submission-object). Para carregar arquivos de vídeo do trailer e imagens em miniatura para um envio, adicione esses arquivos ao mesmo arquivo ZIP que contém os pacotes e as imagens de listagem para o envio e então carregue esse arquivo ZIP no URI da SAS (assinatura de acesso compartilhado) do envio. Para obter mais informações sobre o upload do arquivo ZIP no URI da SAS, consulte [Criar um envio de aplicativo](#create-an-app-submission).
 
@@ -677,9 +677,9 @@ Esse recurso tem os valores a seguir.
 
 | Valor           | Tipo    | Descrição        |
 |-----------------|---------|------|
-|  id               |    string     |   A ID do trailer. Esse valor é fornecido pelo Centro de Desenvolvimento.   |
+|  id               |    string     |   A ID do trailer. Esse valor é fornecido pelo Partner Center.   |
 |  videoFileName               |    string     |    O nome do arquivo de vídeo de trailer no arquivo ZIP que contém arquivos para o envio.    |     
-|  videoFileId               |   string      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Centro de Desenvolvimento.   |     
+|  videoFileId               |   string      |  A ID do arquivo de vídeo de trailer. Esse valor é fornecido pelo Partner Center.   |     
 |  trailerAssets               |   object      |  Um dicionário de pares de chave e valor, onde cada chave é um código de idioma e cada valor é um [recurso de ativos de trailer](#trailer-assets-object) que contém outros ativos específicos da localidade para o trailer. Para saber mais sobre os códigos de idioma com suporte, consulte [Idiomas com suporte](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
@@ -706,7 +706,7 @@ Esse recurso descreve a imagem em miniatura para um trailer. Esse recurso tem os
 | Valor           | Tipo    | Descrição           |
 |-----------------|---------|------|
 |  fileName               |    string     |   O nome do arquivo de imagem em miniatura no arquivo ZIP que você carregou para o envio.    |     
-|  id  |  string  | A ID da imagem em miniatura. Esse valor é fornecido pelo Centro de Desenvolvimento.  |
+|  id  |  string  | A ID da imagem em miniatura. Esse valor é fornecido pelo Partner Center.  |
 |  description  |  string  | A descrição da imagem em miniatura. Esse valor é composto somente por metadados e não é exibido para os usuários.   |
 
 <span/>
@@ -726,7 +726,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o aplicativo.      |     
 |  NotAvailable              |   O aplicativo não está disponível na região especificada.    |     
 |  Grátis              |   O app é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do app, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para visualizar a tabela completa de faixas de preço disponíveis para a conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página **Preço e disponibilidade** de qualquer um dos envios de app no painel do Centro de Desenvolvimento e clique no link **tabela de modo de exibição** na seção **Mercados e preços personalizados** (para algumas contas de desenvolvedor, este link está na seção **Preço**).    |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do app, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de preço níveis que estão disponíveis para sua conta de desenvolvedor, incluindo os preços de mercado específicos que estão associados a cada camada, vá para a página **preço e disponibilidade** para qualquer um dos envios de seus aplicativos no Partner Center e Clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, este link está na seção **preços** ).    |
 
 
 <span id="enterprise-licensing" />
@@ -736,7 +736,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 Os seguintes valores representam o comportamento de licenciamento organizacional do app. Para obter mais informações sobre essas opções, consulte [Opções de licenciamento organizacional](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
-> Embora você possa configurar as opções de licenciamento organizacional para um envio de aplicativo por meio da API de envio, você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md). Para publicar envios para a Microsoft Store para Empresas e a Microsoft Store para Educação, você deve usar o painel do Centro de Desenvolvimento do Windows.
+> Embora você possa configurar as opções de licenciamento organizacional para um envio de aplicativo por meio da API de envio, você não pode usar essa API para publicar os envios de [compras de volume por meio da Microsoft Store para Empresas e da Microsoft Store para Educação](../publish/organizational-licensing.md). Para publicar envios para a Microsoft Store para empresas e Microsoft Store para educação, você deve usar o Partner Center.
 
 
 | Valor           |  Descrição      |
@@ -775,4 +775,4 @@ Os seguintes valores representam o código de status de um envio.
 
 * [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Obter dados de app usando a API de envio da Microsoft Store](get-app-data.md)
-* [Envios de aplicativo no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Envios de aplicativo no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)

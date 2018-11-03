@@ -8,12 +8,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, diretrizes, práticas recomendadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 323190b01cad8a0832d57386f6bde9fde4f2180c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942435"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994394"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Diretrizes para a interface do usuário e experiência do usuário para anúncios
 
@@ -73,7 +73,7 @@ Esta seção fornece exemplos de cenários de anúncios em faixa que violam a [p
 
 * Ignorar o timer de atualização mínimo interno para anúncios em faixa por qualquer meio, incluindo (mas não se limitando a) trocar objetos do [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) ou forçar uma atualização da página sem a interação do usuário.
 
-* Usar unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do painel do Centro de Desenvolvimento do Windows) durante a fase de desenvolvimento e teste ou em um emulador.
+* Uso de unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 
@@ -157,7 +157,7 @@ Esta seção fornece exemplos de cenários de anúncios intersticiais que violam
 
 * Solicitar um anúncio intersticial simplesmente para ter um anúncio de backup para uma sequência de cascata de anúncios. Se você solicitar um anúncio intersticial e, em seguida, receber o evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), o próximo anúncio intersticial mostrado em seu app deve ser o anúncio que está pronto para ser exibido por meio do método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-* Usar unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do painel do Centro de Desenvolvimento do Windows) durante a fase de desenvolvimento e teste ou em um emulador.
+* Uso de unidades de anúncio em tempo real (ou seja, unidades de anúncio que você obtém do Partner Center) durante o desenvolvimento e teste, ou em um emulador.
 
 * Escrever ou distribuir um código que chame serviços de anúncios por meios que não sejam as bibliotecas do Microsoft Advertising em execução no contexto de seu app.
 

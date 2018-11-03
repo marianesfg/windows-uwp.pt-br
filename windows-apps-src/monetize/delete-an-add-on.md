@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: Use este método na API de envio da Microsoft Store para excluir um complemento para um app que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para excluir um complemento para um aplicativo que está registrado à sua conta do Partner Center.
 title: Excluir um complemento
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complemento, excluir, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: db8c394cac29afabba5229e21712320c82b89364
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 53c7125b48c32c8e39861f933f80fb88d6d904be
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935060"
+ms.locfileid: "5989765"
 ---
 # <a name="delete-an-add-on"></a>Excluir um complemento
 
-Use este método na API de envio da Microsoft Store para excluir um complemento (também conhecido como produto no app ou IAP) para um app registrado para sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para excluir um complemento (também conhecido como produto in-App ou IAP) para um aplicativo que está registrado à sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -46,7 +46,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Obrigatório. A ID da Loja do complemento para excluir. A ID da Loja está disponível no painel do Centro de Desenvolvimento.  |
+| id | string | Obrigatório. A ID da Loja do complemento para excluir. A ID da loja está disponível no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -75,7 +75,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | A solicitação é inválida. |
 | 404  | O complemento especificado não foi encontrado.  |
-| 409  | O complemento especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o complemento que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | O complemento especificado foi encontrado, mas não pôde ser excluído em seu estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados
