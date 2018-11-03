@@ -1,24 +1,24 @@
 ---
 author: Xansky
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
-description: Use este método na API de envio da Microsoft Store para recuperar informações sobre todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar informações sobre todos os aplicativos que estão registrados em sua conta do Partner Center.
 title: Obter todos os aplicativos
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: b0f7307e424cebcf52f56e17ad3630f6111bee21
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: a689f540cb939cea3549b6660f2daf9a70f9b1f6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926989"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988104"
 ---
 # <a name="get-all-apps"></a>Obter todos os aplicativos
 
 
-Use este método na API de envio da Microsoft Store para recuperar dados de todos os aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para recuperar dados de todos os aplicativos que estão registrados em sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -127,7 +127,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | Nenhum aplicativo foi encontrado. |
-| 409  | Os aplicativos usam recursos de painel do Centro de Desenvolvimento que [atualmente não são compatíveis com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Os aplicativos usam recursos do Partner Center que estão [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

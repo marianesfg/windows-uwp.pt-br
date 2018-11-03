@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análises
 ms.localizationpriority: medium
-ms.openlocfilehash: 61ce463be2ef2d5e3328c132302704f50c336105
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 656f00ec8a7711a43c44790b04ea01dace4c4ee2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926654"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988736"
 ---
 # <a name="get-app-reviews"></a>Obter avaliações de aplicativo
 
 
-Use este método na API de análise da Microsoft Store para obter dados de opinião em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [Relatório de análises](../publish/reviews-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de opinião em formato JSON para um determinado intervalo de datas e outros filtros opcionais. Essas informações também estão disponíveis no [relatório críticas](../publish/reviews-report.md) no Partner Center.
 
 Depois que você recuperar críticas, você pode usar os métodos [obter as informações de resposta para avaliações de app](get-response-info-for-app-reviews.md) e [enviar respostas às críticas do app](submit-responses-to-app-reviews.md) na API de análises da Microsoft Store para responder às análises de forma programática.
 

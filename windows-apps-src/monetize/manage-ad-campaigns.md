@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 36df4e7d8060b9e4420a5fe1a2144ad29520c7f7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6c86c0d5d1a10442c7addeed11cdbfc37846f337
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920896"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988094"
 ---
 # <a name="manage-ad-campaigns"></a>Gerenciar campanhas publicitárias
 
 Use esses métodos na [API de promoções da Microsoft Store](run-ad-campaigns-using-windows-store-services.md) para criar, editar e obter campanhas publicitárias promocionais para seu app. Cada campanha criada usando esse método pode ser associada a apenas um app.
 
->**Observação**&nbsp;&nbsp;Você também pode criar e gerenciar as campanhas publicitárias usando o painel do Centro de Desenvolvimento do Windows e campanhas que você criar programaticamente podem ser acessadas no painel. Para obter mais informações sobre como gerenciar campanhas publicitárias no painel, consulte [Criar uma campanha publicitária para seu app](../publish/create-an-ad-campaign-for-your-app.md).
+>**Observação**&nbsp;&nbsp;você também pode criar e gerenciar as campanhas publicitárias usando o Partner Center e campanhas que você criar programaticamente podem ser acessadas no Partner Center. Para obter mais informações sobre como gerenciar as campanhas publicitárias no Partner Center, consulte [criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
 
 Quando você usa esses métodos para criar ou atualizar uma campanha, normalmente também chama um ou mais dos seguintes métodos para gerenciar *linhas de entrega*, *perfis de direcionamento* e *criativos* associados à campanha. Para saber mais sobre a relação entre campanhas, linhas de entrega, perfis de direcionamento e criativos, consulte [Executar campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
@@ -33,7 +33,7 @@ Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
 
-  >**Observação**&nbsp;&nbsp;como parte dos pré-requisitos, certifique-se de [criar pelo menos uma campanha publicitária no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e adicionar pelo menos um método de pagamento para a campanha publicitária no painel. As linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
+  >**Observação**&nbsp;&nbsp;como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
 * [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 

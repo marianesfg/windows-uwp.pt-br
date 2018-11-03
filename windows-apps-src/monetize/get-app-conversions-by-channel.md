@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, conversões de app, canal
 ms.localizationpriority: medium
-ms.openlocfilehash: 60e166b70c6a2aacf20673b30461002f3aa61305
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947647"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987329"
 ---
 # <a name="get-app-conversions-by-channel"></a>Obter conversões de app por canal
 
@@ -21,7 +21,7 @@ Use este método na API de análise da Microsoft Store para obter as conversões
 * Uma *conversão* significa que um cliente (conectado com uma conta da Microsoft) obteve recentemente uma licença para seu aplicativo (seja paga ou gratuita).
 * O *canal* é o método em que um cliente chegou à página de listagem do seu app (por exemplo, por meio da Loja ou de uma [campanha de promoção de apps personalizada](../publish/create-a-custom-app-promotion-campaign.md)).
 
-Essas informações também estão disponíveis no [Relatório de aquisições](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) no painel do Centro de Desenvolvimento do Windows.
+Essas informações também estão disponíveis no [relatório de aquisições](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
