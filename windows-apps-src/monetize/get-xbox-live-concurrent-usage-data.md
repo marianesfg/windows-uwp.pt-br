@@ -7,17 +7,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, uso simultâneo
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e982d7c5eb1ff8365d2aa527f75d181905784a0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4506176dcd62a4699c57343c50dfc1b0e7a40b14
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927130"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986148"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Obter dados de uso simultâneo do Xbox Live
 
 
-Use este método na API de análise da Microsoft Store para obter dados de uso quase em tempo real (com latência de 5 a 15 minutos) sobre o número médio de clientes jogando seu [jogo habilitado para Xbox Live](../xbox-live/index.md) a cada minuto, hora ou dia durante um intervalo de tempo especificado. Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de uso quase em tempo real (com latência de 5 a 15 minutos) sobre o número médio de clientes jogando seu [jogo habilitado para Xbox Live](../xbox-live/index.md) a cada minuto, hora ou dia durante um intervalo de tempo especificado. Essas informações também estão disponíveis no [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
 > Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).

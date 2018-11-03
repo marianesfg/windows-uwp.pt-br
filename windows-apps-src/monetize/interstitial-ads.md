@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: f25b607b382b179ecf82d277ca2ac7e06d596a06
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 27ef8173db2976d58f9ccd0422a1217e2bd91d13
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926062"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5980680"
 ---
 # <a name="interstitial-ads"></a>Anúncios intersticiais
 
@@ -73,7 +73,7 @@ Esta seção fornece exemplos em C#, mas também há suporte para Visual Basic e
 4.  Em um local indicado no aplicativo (por exemplo, em ```MainPage``` ou em alguma outra página), declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e diversos campos da cadeia de caracteres que representam a ID do aplicativo e a ID da unidade de anúncio para o anúncio intersticial. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
-    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Loja, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
+    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
@@ -126,7 +126,7 @@ As instruções a seguir pressupõem que você tenha criado um projeto Universal
 4.  Em um arquivo .js no projeto, declare um objeto [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) e vários campos que contenham a ID do aplicativo e a ID da unidade do anúncio intersticial. O exemplo de código a seguir atribui os campos `applicationId` e `adUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
-    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Store, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
+    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
 
@@ -177,7 +177,7 @@ Este exemplo pressupõe que você tenha criado um projeto **DirectX and XAML App
 3.  No mesmo arquivo de cabeçalho, declare diversos campos da sequência que representam a ID do aplicativo e a ID da unidade publicitária para o anúncio intersticial. O exemplo de código a seguir atribui os campos `myAppId` e `myAdUnitId` aos [valores de teste](set-up-ad-units-in-your-app.md#test-ad-units) para anúncios intersticiais.
 
     > [!NOTE]
-    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu app na Store, [substitua os valores de teste por valores reais](#release) do Centro de Desenvolvimento do Windows.
+    > Cada **InterstitialAd** tem uma *unidade publicitária* correspondente que é usado por nossos serviços para veicular anúncios para o controle, e cada unidade de anúncio consiste em uma *ID da unidade publicitária* e *ID do aplicativo*. Nestas etapas, você atribui os valores da ID da unidade publicitária de teste e da ID do aplicativo para seu controle. Esses valores de teste só podem ser usados em uma versão de teste do seu app. Antes de publicar seu aplicativo para a loja, você deve [substituir esses valores por valores dinâmicos de teste](#release) do Partner Center.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
 
@@ -215,17 +215,17 @@ Este exemplo pressupõe que você tenha criado um projeto **DirectX and XAML App
 
 1. Verifique se o uso de anúncios intersticiais no aplicativo segue as [diretrizes para anúncios intersticiais](ui-and-user-experience-guidelines.md#interstitialbestpractices10).
 
-2.  No painel do Centro de Desenvolvimento, vá para a página [Anúncios no app](../publish/in-app-ads.md) e [crie uma unidade publicitária](set-up-ad-units-in-your-app.md#live-ad-units). Para o tipo de unidade publicitária, escolha **Vídeo intersticial** ou **Faixa intersticial**, dependendo do tipo de anúncio intersticial mostrado. Anote a ID da unidade publicitária e a ID do aplicativo.
+2.  No Partner Center, vá para a página de [anúncios no aplicativo](../publish/in-app-ads.md) e [criar uma unidade de anúncio](set-up-ad-units-in-your-app.md#live-ad-units). Para o tipo de unidade publicitária, escolha **Vídeo intersticial** ou **Faixa intersticial**, dependendo do tipo de anúncio intersticial mostrado. Anote a ID da unidade publicitária e a ID do aplicativo.
     > [!NOTE]
-    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Ao criar uma unidade publicitária dinâmica UWP no painel, o valor da ID de aplicativo da unidade publicitária sempre corresponde à ID da Microsoft Store do seu aplicativo (um valor de valor da ID da Microsoft Store é semelhante a 9NBLGGH4R315).
+    > Os valores da ID de aplicativo para unidades publicitárias de teste e unidades publicitárias dinâmicas UWP têm formatos diferentes. Valores de ID de aplicativo de teste são GUIDs. Quando você cria uma unidade de publicitária dinâmica UWP no Partner Center, o valor de ID do aplicativo para a unidade publicitária sempre corresponde a ID da loja do aplicativo (um valor de ID da loja de exemplo é semelhante a 9NBLGGH4R315).
 
 3. Opcionalmente, você pode habilitar o controle de anúncios para o **InterstitialAd** ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation) na página [Anúncios no app](../publish/in-app-ads.md). O controle de anúncios permite que você maximize seus recursos de promoção de aplicativos e receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas, como Taboola e Smaato e anúncios para campanhas promocionais de aplicativos da Microsoft.
 
-4.  Em seu código, substitua os valores de unidade publicitária de teste pelos valores dinâmicos gerados no Centro de Desenvolvimento.
+4.  No seu código, substitua os valores de unidade de anúncio de teste pelos valores dinâmicos gerados no Partner Center.
 
-5.  [Envie seu aplicativo](../publish/app-submissions.md) para a Loja usando o painel do Centro de Desenvolvimento do Windows.
+5.  [Enviar seu aplicativo](../publish/app-submissions.md) para a loja usando o Partner Center.
 
-6.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento.
+6.  Analise seus [relatórios de desempenho de publicidade](../publish/advertising-performance-report.md) no Partner Center.
 
 <span id="manage" />
 

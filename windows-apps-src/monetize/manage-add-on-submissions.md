@@ -1,32 +1,32 @@
 ---
 author: Xansky
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Centro de Desenvolvimento do Windows.
+description: Use estes métodos na API de envio da Microsoft Store para gerenciar envios de complemento dos aplicativos que estão registrados em sua conta do Partner Center.
 title: Gerenciar envios de complemento
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: d8e3ab04c2842fc08fb8b0aa298660bfbd0cfd7f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0ae0e07b588415094281683ff762c02ed5242654
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930397"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981583"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
 A API de envio da Microsoft Store oferece métodos que é possível usar para gerenciar envios de complemento (também conhecido como produto no aplicativo ou IAP) para os aplicativos. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Se você usar essa API de envio da Microsoft Store para criar um envio para um complemento, certifique-se de fazer outras alterações no envio somente usando a API, em vez do painel do Centro de Desenvolvimento. Se você usar o painel para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
+> Se você usar a API de envio da Microsoft Store para criar um envio para um complemento, certifique-se de fazer outras alterações no envio somente por usando a API, em vez de fazer alterações no Partner Center. Se você usar o Partner Center para alterar um envio que criou originalmente usando a API, você não poderá alterar ou confirmar esse envio usando a API. Em alguns casos, o envio pode ficar em um estado de erro em que ele não pode continuar no processo de envio. Se isso ocorrer, você deve excluir o envio e criar um novo.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Métodos para gerenciar envios de complementos
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de usar esses métodos, o complemento já deve existir na conta do Centro de Desenvolvimento. Você pode criar um complemento no painel ao [definir o tipo de produto e a ID de produto](../publish/set-your-add-on-product-id.md) ou usar os métodos da API de envio da Microsoft Store descritos em [Gerenciar complementos](manage-add-ons.md).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de usar esses métodos, o complemento já deve existir na sua conta do Partner Center. Você pode criar um complemento no Partner Center, [definir o tipo de produto e a ID do produto](../publish/set-your-add-on-product-id.md) ou usando os métodos da API de envio Microsoft Store em descrito em [Gerenciar complementos](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -81,7 +81,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 
 Para criar um envio de um complemento, siga este processo.
 
-1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo do Azure AD à sua conta do Centro de Desenvolvimento do Windows e obter a ID e a chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
+1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo Azure AD à sua conta do Partner Center e obter a ID e a chave cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Microsoft Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
@@ -121,7 +121,7 @@ Para criar um envio de um complemento, siga este processo.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Confirme o envio executando o método a seguir. Isso alertará o Centro de Desenvolvimento que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
+5. Confirme o envio executando o método a seguir. Isso alertará o Partner Center que você terminou seu envio e que suas atualizações agora devem ser aplicadas à sua conta. Para saber mais, veja [Confirmar um envio de complemento](commit-an-add-on-submission.md).
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -135,7 +135,7 @@ Para criar um envio de um complemento, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o painel do Centro de Desenvolvimento.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o Partner Center.
 
 <span/>
 
@@ -232,7 +232,7 @@ Esse recurso tem os valores a seguir.
 
 | Valor      | Tipo   | Descrição        |
 |------------|--------|----------------------|
-| id            | string  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| id            | string  | A ID do envio. Essa ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md), [obter todos os complementos](get-all-add-ons.md) e [obter um complemento](get-an-add-on.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 | contentType           | string  |  O [tipo de conteúdo](../publish/enter-add-on-properties.md#content-type) fornecido no complemento. Ele pode ter um dos seguintes valores: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | keywords           | array  | Uma matriz de cadeias de caracteres que contenham até 10 [palavras-chave](../publish/enter-add-on-properties.md#keywords) do complemento. O aplicativo pode consultar complementos usando essas palavras-chave.   |
 | lifetime           | string  |  O tempo de vida do complemento. Ele pode ter um dos seguintes valores: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
@@ -245,7 +245,7 @@ Esse recurso tem os valores a seguir.
 | status  | string  |  O status do envio. Ele pode ter um dos seguintes valores: <ul><li>Nenhum(a)</li><li>Cancelado</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicação</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificação</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | objeto  |  Um [recurso de detalhes do status](#status-details-object) que contém detalhes adicionais sobre o status do envio, inclusive informações sobre eventuais erros. |
 | fileUploadUrl           | string  | O URI da assinatura de acesso compartilhado (SAS) para carregar todos os pacotes para o envio. Se você estiver adicionando novos pacotes para o envio, carregue o arquivo ZIP que contém os pacotes para essa URI. Para saber mais, veja [Criar um envio de complemento](#create-an-add-on-submission).  |
-| friendlyName  | cadeia  |  O nome amigável do envio, conforme mostrado no painel do Centro de Desenvolvimento. Esse valor é gerado para você ao criar o envio.  |
+| friendlyName  | string  |  O nome amigável do envio, conforme mostrado no Partner Center. Esse valor é gerado para você ao criar o envio.  |
 
 <span id="listing-object" />
 
@@ -292,8 +292,8 @@ Esse recurso contém informações de venda de um complemento.
 
 > [!IMPORTANT]
 > O recurso **Venda** não tem mais suporte, e atualmente você não pode acessar nem modificar os dados de venda de um envio de complemento usando a API de envio da Microsoft Store. No futuro, atualizaremos a API de envio da Microsoft Store para apresentar uma nova maneira de acessar programaticamente as informações de vendas para envios de complemento.
->    * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o painel do Centro de Desenvolvimento para obter os dados de venda de seu envio de complemento.
->    * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar usando o painel do Centro de Desenvolvimento para alterar os dados de venda para a submissão do suplemento.
+>    * Depois de chamar o [método GET para obter um envio de complemento](get-an-add-on-submission.md), o valor de *sales* estará vazio. Você pode continuar a usar o Partner Center para obter os dados de venda de seu envio de complemento.
+>    * Ao chamar o [método PUT para atualizar um envio de complemento](update-an-add-on-submission.md), as informações no valor de *sales* serão ignoradas. Você pode continuar a usar o Partner Center para alterar os dados de venda de seu envio de complemento.
 
 Esse recurso tem os valores a seguir.
 
@@ -354,7 +354,7 @@ Os seguintes valores representam as faixas de preço disponíveis no recurso [pr
 |  Base               |   A faixa de preço não está definida. Use o preço base para o complemento.      |     
 |  NotAvailable              |   O complemento não está disponível na região especificada.    |     
 |  Grátis              |   O complemento é gratuito.    |    
-|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para visualizar a tabela completa de faixas de preço disponíveis para a conta de desenvolvedor, incluindo os preços específicos do mercado associados a cada camada, acesse a página **Preço e disponibilidade** de qualquer um dos envios de app no painel do Centro de Desenvolvimento e clique no link **tabela de modo de exibição** na seção **Mercados e preços personalizados** (para algumas contas de desenvolvedor, este link está na seção **Preço**).     |
+|  Faixa de*xxxx*               |   Uma cadeia de caracteres que especifica a faixa de preço do complemento, no formato **Faixa<em>xxxx</em>**. No momento, há suporte para os seguintes intervalos de faixas de preço:<br/><br/><ul><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **true**, os valores de nível de preço disponíveis para sua conta são **Tier1012** - **Tier1424**.</li><li>Se o valor *isAdvancedPricingModel* do [preço do recurso](#pricing-object) for **false**, os valores de nível de preço disponíveis para sua conta são **Tier2** - **Tier96**.</li></ul>Para ver a tabela completa de preço níveis que estão disponíveis para sua conta de desenvolvedor, incluindo os preços de mercado específicos que estão associados a cada camada, vá para a página **preço e disponibilidade** para qualquer um dos envios de seus aplicativos no Partner Center e Clique no link **Exibir tabela** na seção **mercados e preços personalizados** (para algumas contas de desenvolvedor, este link está na seção **preços** ).     |
 
 <span id="submission-status-code" />
 
@@ -385,4 +385,4 @@ Os seguintes valores representam o código de status de um envio.
 
 * [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
 * [Gerenciar complementos usando a API de envio da Microsoft Store](manage-add-ons.md)
-* [Envios de complemento no painel do Centro de Desenvolvimento](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
+* [Envios de complemento no Partner Center](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)

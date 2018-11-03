@@ -8,12 +8,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras no aplicativo, IAPs, complementos, avaliações, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 28fe27cc4464598414fec11d6812e2e9ea377aff
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945843"
+ms.locfileid: "5978951"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Compras no aplicativo e avaliações usando o namespace Windows.ApplicationModel.Store
 
@@ -22,7 +22,7 @@ Você pode usar membros no namespace [Windows.ApplicationModel.Store](https://ms
 Os artigos nesta seção fornecem orientações detalhadas e exemplos de código para usar os membros no namespace **Windows.ApplicationModel.Store** para vários cenários comuns. Para uma visão geral dos conceitos básicos relacionados a compras realizadas em aplicativo em aplicativos UWP, consulte [Compras realizadas em aplicativo e avaliações](in-app-purchases-and-trials.md). Para obter um exemplo completo que demonstra como implementar avaliações e compras no aplicativo usando o namespace **Windows.ApplicationModel.Store**, consulte o [Exemplo da Loja](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> O namespace **Windows.ApplicationModel.Store** não está mais sendo atualizado com os novos recursos. Se o seu projeto se destina ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior no Visual Studio (ou seja, você tem como destino o Windows 10, versão 1607 ou posterior), recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Para obter mais informações, consulte [Compras no aplicativo e avaliações](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). O namespace **Windows.ApplicationModel.Store** não tem suporte em aplicativos da área de trabalho do Windows que usam a [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em apps ou jogos que usam uma área restrita de desenvolvimento no Centro de Desenvolvimento (por exemplo, esse é o caso para qualquer jogo que se integre ao Xbox Live). Estes produtos devem usar o namespace **Windows.Services.Store** para implementar compras no aplicativo e avaliações.
+> O namespace **Windows.ApplicationModel.Store** não está mais sendo atualizado com os novos recursos. Se o seu projeto se destina ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior no Visual Studio (ou seja, você tem como destino o Windows 10, versão 1607 ou posterior), recomendamos que você use o namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Para obter mais informações, consulte [Compras no aplicativo e avaliações](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). O namespace **ApplicationModel** não é suportado em aplicativos da área de trabalho do Windows que usam a [Ponte de Desktop](https://developer.microsoft.com/windows/bridges/desktop) ou em aplicativos ou jogos que usam uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live). Estes produtos devem usar o namespace **Windows.Services.Store** para implementar compras no aplicativo e avaliações.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introdução às classes CurrentApp e CurrentAppSimulator
 
@@ -390,7 +390,7 @@ Este elemento descreve a licença do app. **App** é um filho obrigatório do el
 |  **AppId**  |    Sim   |  1   |   O GUID que identifica o app na Loja. Pode ser qualquer GUID para testes.        |
 |  **LinkUri**  |    Sim  |  1   |    O URI da página de listagem na loja. Pode ser qualquer URI válido para testes.         |
 |  **CurrentMarket**  |    Sim  |  1   |    O país/região do cliente.         |
-|  **AgeRating**  |    Sim  |  1   |     Um inteiro que representa a classificação etária mínima do app. É o mesmo valor especificado no painel do Centro de Desenvolvimento quando você envia o app. Os valores usados pela Loja são: 3, 7, 12 e 16. Para obter mais informações sobre essas classificações, consulte [Classificações etárias](../publish/age-ratings.md).        |
+|  **AgeRating**  |    Sim  |  1   |     Um inteiro que representa a classificação etária mínima do app. Isso é o mesmo valor especificado no Partner Center quando você envia o aplicativo. Os valores usados pela Loja são: 3, 7, 12 e 16. Para obter mais informações sobre essas classificações, consulte [Classificações etárias](../publish/age-ratings.md).        |
 |  [MarketData](#marketdata-child-of-app)  |    Sim  |  1 ou mais      |    Contém informações sobre o app para um determinado país/região. Para cada país/região em que o app estiver listado, você deve incluir um elemento **MarketData**.       |    |
 
 <span id="marketdata-child-of-app"/>

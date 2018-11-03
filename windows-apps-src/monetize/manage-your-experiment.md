@@ -1,34 +1,34 @@
 ---
 author: Xansky
-Description: After you define your experiment in the Dev Center dashboard and code your experiment in your app, you are ready to active your experiment and use the Dev Center dashboard to review the results of your experiment.
-title: Gerenciar seu experimento no painel
+Description: After you define your experiment in Partner Center and code your experiment in your app, you are ready to active your experiment and use Partner Center to review the results of your experiment.
+title: Gerenciar seu experimento no Partner Center
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: 8386452d12ba689199c220ae8bc81e3fe8b7a28b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 9d1cdb80a2278850f18cecc631fef0b5dff0fefc
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930792"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979454"
 ---
-# <a name="manage-your-experiment-in-the-dashboard"></a>Gerenciar seu experimento no painel
+# <a name="manage-your-experiment-in-partner-center"></a>Gerenciar seu experimento no Partner Center
 
-Depois de [definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para ativar seu experimento e usar o painel do Centro de Desenvolvimento para analisar os resultados de seu experimento. Depois de obter todos os dados de que precisa, você pode encerrar seu experimento e escolher se deseja continuar usando os valores variáveis de variação do controle em todos os seus aplicativos ou alternar para usar os valores variáveis em uma das outras variações.
+Depois de você [definir seu experimento no Partner Center](define-your-experiment-in-the-dev-center-dashboard.md) e [codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md), você estará pronto para ativar seu experimento e usar o Partner Center para analisar os resultados de seu experimento. Depois de obter todos os dados de que precisa, você pode encerrar seu experimento e escolher se deseja continuar usando os valores variáveis de variação do controle em todos os seus aplicativos ou alternar para usar os valores variáveis em uma das outras variações.
 
 > [!NOTE]
-> Quando você ativa um experimento, o Centro de Desenvolvimento começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para que os dados do experimento apareçam no painel.
+> Quando você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
 
 Para um guia passo a passo que demonstra o processo de criação e execução de um experimento de ponta a ponta, veja [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 ## <a name="activate-your-experiment"></a>Ativar seu experimento
 
-Quando estiver satisfeito com os parâmetros de seu experimento no painel e tiver atualizado o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar os eventos de exibição e de conversão para o Centro de Desenvolvimento.
+Quando estiver satisfeito com os parâmetros de seu experimento no Partner Center e você atualizou o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar eventos de exibição e conversão para o Partner Center.
 
-1. Entre no [painel do Centro de Desenvolvimento](https://dev.windows.com/overview).
+1. Entre no [Partner Center](https://partner.microsoft.com/dashboard).
 2. Em **Seus aplicativos**, selecione o aplicativo com o experimento que você deseja ativar.
 3. No painel de navegação, selecione **Serviços** e, em seguida, selecione **Experimentação**.
 4. Na tabela de projetos na seção **Projetos**, expanda o projeto que contém seu experimento e siga um destes procedimentos:
@@ -40,19 +40,19 @@ Quando estiver satisfeito com os parâmetros de seu experimento no painel e tive
 
 ## <a name="review-the-results-of-your-experiment"></a>Analise os resultados de seu experimento
 
-1. No Centro de Desenvolvimento, volte para a página **Experimentação** do seu aplicativo.
+1. No Partner Center, retorne à página **experimentação** para seu aplicativo.
 2. Na seção **Experimentos ativos**, clique no nome do seu experimento ativo para ir para a página do experimento.
 3. Para um experimento ativo ou concluído, as primeiras duas seções nesta página fornecem os resultados de seu experimento:
   * A seção **Resumo dos resultados** lista suas metas para o experimento e a porcentagem de taxa de conversão para cada variação.
   * A seção **Detalhes dos resultados** fornece mais detalhes para cada variação de todas as metas em seu experimento, incluindo os modos de exibição, conversões, usuários exclusivos, taxa de conversão, delta %, confiança e importância. A *confiança* é uma medida estatística da confiabilidade de uma estimativa, que calcula a margem de erro. A *importância* é uma medida estatística, com base no tamanho da amostra, para determinar a probabilidade de que um resultado não seja devido à chance, mas em vez disso, seja atribuído a uma causa específica.
 
 > [!NOTE]
-> O Centro de Desenvolvimento relata apenas o primeiro evento de conversão de cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu app em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
+> Partner Center relata apenas o primeiro evento de conversão para cada usuário em um período de 24 horas. Se um usuário aciona vários eventos de conversão em seu app em um período de 24 horas, apenas o primeiro evento de conversão é relatado. Isso se destina a ajudar a impedir que um usuário único com muitos eventos de conversão distorça os resultados do experimento de um grupo de amostra de usuários.
 
 
 ## <a name="complete-your-experiment"></a>Conclua seu experimento
 
-1. No painel, retorne à página do experimento. Para instruções, veja a seção anterior.
+1. No Partner Center, retorne à página do experimento. Para instruções, veja a seção anterior.
 2. Na seção **Resumo dos resultados**, siga um destes procedimentos:
   * Se você deseja finalizar o experimento e continuar a usar os valores variáveis na variação de controle em seu aplicativo, clique em **Manter**.
   * Se você deseja finalizar o experimento, mas alternar para usar os valores variáveis em uma variação diferente em seu aplicativo, clique em **Alternar** sob a variação para a qual deseja alternar.
@@ -61,8 +61,8 @@ Quando estiver satisfeito com os parâmetros de seu experimento no painel e tive
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-* [Criar um projeto e definir variáveis remotas no painel do Centro de Desenvolvimento](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
-* [Definir seu experimento no painel do Centro de Desenvolvimento](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Criar um projeto e definir variáveis remotas no Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Codificar o aplicativo para experimentação](code-your-experiment-in-your-app.md)
+* [Definir seu experimento no Partner Center](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Criar e executar seu primeiro experimento com testes A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)

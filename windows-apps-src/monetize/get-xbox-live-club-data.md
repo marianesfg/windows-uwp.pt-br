@@ -7,16 +7,16 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, clubes
 ms.localizationpriority: medium
-ms.openlocfilehash: b7a37b30634006f0865d0ba1c1c2844a7acf4139
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: fd28e6877f5b2bb3fa7d85f9dbc7c82672b7ea2f
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946365"
+ms.locfileid: "5980036"
 ---
 # <a name="get-xbox-live-club-data"></a>Obter dados de clube do Xbox Live
 
-Use este método na API de análise da Microsoft Store para obter dados de clube para seu [jogo habilitado para Xbox Live](../xbox-live/index.md). Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de clube para seu [jogo habilitado para Xbox Live](../xbox-live/index.md). Essas informações também estão disponíveis no [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
 > Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).

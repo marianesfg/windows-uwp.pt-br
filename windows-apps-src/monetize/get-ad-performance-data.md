@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, anúncios, desempenho
 ms.localizationpriority: medium
-ms.openlocfilehash: 30f24b2494470f60371e466bb4d1e1878475d963
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7310eeb04915933adc149165fa6774ed2f413814
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927580"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5982798"
 ---
 # <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 
 
 Use esse método na API de análise da Microsoft Store para obter os dados de desempenho dos aplicativos agregados de um aplicativo durante um determinado intervalo de datas e outros filtros opcionais. Este método retorna os dados no formato JSON.
 
-Esse método retorna os mesmos dados fornecidos pelo [Relatório de desempenho de anúncios](../publish/advertising-performance-report.md) no painel do Centro de Desenvolvimento do Windows.
+Esse método retorna os mesmos dados fornecidos pelo [relatório de desempenho de anúncios](../publish/advertising-performance-report.md) no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -118,12 +118,12 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | applicationId       | string | A ID da Loja do aplicativo do qual você está recuperando dados de desempenho do anúncio.     |
 | applicationName     | string | O nome de exibição do aplicativo.                         |
 | adUnitId           | string | A ID da unidade de anúncio.        |
-| adUnitName           | string | O nome da unidade de anúncio, conforme especificado pelo desenvolvedor no painel do Centro de Desenvolvimento.              |
+| adUnitName           | string | O nome da unidade publicitária, conforme especificado pelo desenvolvedor no Partner Center.              |
 | adProvider           |  string  |  O nome do provedor de anúncios   |
 | deviceType          | string | O tipo de dispositivo no qual os anúncios foram veiculados. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                              |
 | market              | string | O código de país ISO 3166 do mercado onde os anúncios foram veiculados.             |
 | accountCurrencyCode     | string | O código da moeda da conta.        |
-| pubCenterAppName       |  string  |   O nome do aplicativo pubCenter associado ao aplicativo no Centro de Desenvolvimento.   |
+| pubCenterAppName       |  string  |   O nome do aplicativo pubCenter que está associado com o aplicativo no Partner Center.   |
 | adProviderRequests        | int | O número de solicitações de anúncio do provedor de anúncios especificado.                 |
 | impressions           | int | O número de impressões do anúncio.        |
 | clicks            | int | O número de cliques no anúncio.       |

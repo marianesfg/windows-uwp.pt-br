@@ -7,17 +7,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, análise do Xbox Live, multijogador
 ms.localizationpriority: medium
-ms.openlocfilehash: 86f6b4c5742b4abc9bfd5b56e0242376770516a7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6074f3774d099c63f6c39ac4ef0e95a7b6745912
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932311"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5980508"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obter dados de multijogador do Xbox Live
 
 
-Use este método na API de análise da Microsoft Store para obter dados de multijogador para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) por dia ou por mês. Essas informações também estão disponíveis no [Relatório de análise do Xbox](../publish/xbox-analytics-report.md) no painel do Centro de Desenvolvimento do Windows.
+Use este método na API de análise da Microsoft Store para obter dados de multijogador para seu [jogo habilitado para Xbox Live](../xbox-live/index.md) por dia ou por mês. Essas informações também estão disponíveis no [relatório de análise do Xbox](../publish/xbox-analytics-report.md) no Partner Center.
 
 > [!IMPORTANT]
 > Esse método oferece suporte somente a jogos para Xbox ou que usam os serviços do Xbox Live. Esses jogos devem passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do programa [ID@Xbox](../xbox-live/developer-program-overview.md#id). Esse método não oferece suporte no momento para jogos publicados pelo [Programa de Criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).

@@ -8,12 +8,12 @@ ms.date: 02/08/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: e8f82bc3045d56f93e8d42ea183e2ac2bc788380
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f1544ee3404e77ec7565c626a6ca96e439832c90
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5934438"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5978731"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obter informações do produto para apps e complementos
 
@@ -28,8 +28,8 @@ Para obter um aplicativo de exemplo completo, consulte o [exemplo da Microsoft S
 
 Esses exemplos têm os seguintes pré-requisitos:
 * Um projeto do Visual Studio para um aplicativo da Plataforma Universal do Windows (UWP) destinado ao **Windows 10 Anniversary Edition (10.0; Build 14393)** ou uma versão posterior.
-* Você [criou um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no painel do Centro de Desenvolvimento do Windows e esse app foi publicado e disponibilizado na Loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
-* Se você quiser obter informações de produto para um complemento para o aplicativo, também deverá [criar o complemento no painel do Centro de Desenvolvimento](../publish/add-on-submissions.md).
+* Você tenha [criado um envio de aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e esse aplicativo é publicado na loja. Opcionalmente, é possível configurar o app para que ele não possa ser descoberto na Loja enquanto você o testa. Para obter mais informações, consulte as [diretrizes para teste](in-app-purchases-and-trials.md#testing).
+* Se você deseja obter informações de produto para um complemento para o aplicativo, você também deve [criar o complemento no Partner Center](../publish/add-on-submissions.md).
 
 O código nestes exemplos pressupõe que:
 * O código seja executado no contexto de uma [Página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contenha um [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` e um [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Esses objetos sejam usados para indicar que uma operação assíncrona está ocorrendo e exibir mensagens de saída, respectivamente.

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
-ms.openlocfilehash: 346383504abd7927cf863afa59bcb574ddd2495d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: e3d4a09524f1ebc0e944036bd9458b1b32ee04d3
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939311"
+ms.locfileid: "5980185"
 ---
 # <a name="manage-delivery-lines"></a>Gerenciar linhas de entrega
 
@@ -21,7 +21,7 @@ Use esses métodos na API de promoções da Microsoft Store a fim de criar uma o
 
 Para saber mais sobre a relação entre linhas de entrega e campanhas publicitárias, perfis de direcionamento e criativos, consulte [Veicular campanhas publicitárias usando serviços da Microsoft Store](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
->**Observação**&nbsp;&nbsp;Antes de poder criar linhas de veiculação de campanhas publicitárias com essa API, primeiro você deve [criar uma campanha de anúncios pagos usando a página **Promover seu aplicativo** no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e, em seguida, é necessário adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. As campanhas publicitárias criadas usando a API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
+>**Observação**&nbsp;&nbsp;antes de poder criar linhas de entrega de campanhas publicitárias usando essa API, você deve primeiro [criar uma campanha publicitária usando a página de **campanhas publicitárias** no Partner Center](../publish/create-an-ad-campaign-for-your-app.md)e você deve adicionar pelo menos um pagamento instrumento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Campanhas publicitárias criadas usando a API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -30,7 +30,7 @@ Para usar esses métodos, primeiro você precisa do seguinte:
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
 
   > [!NOTE]
-  > Como parte dos pré-requisitos, certifique-se de [criar pelo menos uma campanha publicitária no painel do Centro de Desenvolvimento](../publish/create-an-ad-campaign-for-your-app.md) e adicionar pelo menos um meio de pagamento para a campanha publicitária no painel. As linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na cobrança na página **Promover seu aplicativo** no painel.
+  > Como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
 * [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 

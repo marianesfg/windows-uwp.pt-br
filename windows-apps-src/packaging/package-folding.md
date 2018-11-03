@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919217"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5984642"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desenvolvendo com os pacotes de ativo e dobramento de pacote 
 

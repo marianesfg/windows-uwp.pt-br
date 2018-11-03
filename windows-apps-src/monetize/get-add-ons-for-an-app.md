@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
-description: Use este método na API de envio da Microsoft Store para recuperar informações sobre as compras no aplicativo para um aplicativo que está registrado na sua conta do Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para recuperar informações sobre as compras no aplicativo para um aplicativo que está registrado para o Partner Center.
 title: Obter complementos para um app
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: a9924bf749499318c257001eafffabd902cddaa9
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3689a4fe16d016bb23bb7141630fd1f6a7b83142
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932673"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5978559"
 ---
 # <a name="get-add-ons-for-an-app"></a>Obter complementos para um aplicativo
 
-Use este método na API de envio da Microsoft Store para listar os complementos para um aplicativo que está registrado à sua conta do Centro de Desenvolvimento do Windows.
+Use este método na API de envio da Microsoft Store para listar os complementos para um aplicativo que está registrado à sua conta do Partner Center.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -111,7 +111,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 404  | Nenhum complemento foi encontrado. |
-| 409  | Os complementos usam recursos de painel do Centro de Desenvolvimento que [atualmente não são compatíveis com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Os complementos usam recursos do Partner Center que estão [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

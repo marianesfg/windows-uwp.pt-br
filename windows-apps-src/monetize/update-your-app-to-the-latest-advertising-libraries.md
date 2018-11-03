@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, AdControl, AdMediatorControl, migração
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e57cc24554f851ba79cfc47e917b92b3ad3047e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936519"
+ms.locfileid: "5985659"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Atualizar seu aplicativo para as bibliotecas mais recentes de anúncios em faixa
 
@@ -29,7 +29,7 @@ Antes desse SDK ser lançado, nós fornecemos anteriormente a classe **AdControl
 
 * Quando o **AdControl** no aplicativo solicitar um novo anúncio, o evento **ErrorOccurred** do controle será acionado e a propriedade **ErrorCode** dos argumentos de evento terá o valor **NoAdAvailable**.
 
-* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do Centro de Desenvolvimento. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
+* Quaisquer unidades de publicidade associadas ao aplicativo serão desativadas. Você não pode remover essas unidades desativadas da sua conta do DePartnerv. Se você atualizar o aplicativo para usar um [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp), ignore essas unidades de anúncio e crie novas.
 
 * Os anúncios em faixa também não serão mais disponibilizados para qualquer unidade de anúncio usada em mais de um aplicativo. Certifique-se de que suas unidades de anúncio serão usadas em um único aplicativo.
 
@@ -88,4 +88,4 @@ Remova todas as referências existentes às bibliotecas do Microsoft Advertising
 
 Teste o aplicativo para garantir que ele exiba anúncios em faixa conforme o esperado.
 
-Se a versão anterior do aplicativo já estiver disponível na Loja, [crie um novo envio](../publish/app-submissions.md) para o aplicativo atualizado no painel do Centro de Desenvolvimento para republicá-lo.
+Se a versão anterior do seu aplicativo já está disponível na loja, [Crie um novo envio](../publish/app-submissions.md) para o aplicativo atualizado no Partner Center republicar o aplicativo.

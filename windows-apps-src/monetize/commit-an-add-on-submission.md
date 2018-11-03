@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
-description: Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado para o Centro de Desenvolvimento do Windows.
+description: Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado para o Partner Center.
 title: Confirmar um envio de complemento
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 52dce19410741c0ac7b006b14d572ec7280a5e2c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926243"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985495"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 
-Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto no aplicativo ou IAP) para o Centro de Desenvolvimento do Windows. A ação de confirmação alerta o Centro de Desenvolvimento de que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Centro de Desenvolvimento confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio serão mostradas no painel do Centro de Desenvolvimento.
+Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto in-App ou IAP) para o Partner Center. A confirmação alertas Partner Central de ações que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
 
 Para obter mais informações sobre como a operação de confirmação se adapta ao processo de envio de um complemento, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -49,8 +49,8 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja confirmar. A ID da Loja está disponível no painel do Centro de Desenvolvimento, e ela está incluída nos dados de resposta de solicitações para [Obter todos os complementos](get-all-add-ons.md) e [Criar um complemento](create-an-add-on.md). |
-| submissionId | string | Obrigatório. A ID do envio que você deseja confirmar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md). Para um envio criado no painel do Centro de Desenvolvimento, essa ID também está disponível na URL da página de envio no painel.  |
+| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja confirmar. A ID da loja está disponível no Partner Center, e está incluído nos dados de resposta para solicitações para [obter todos os complementos](get-all-add-ons.md) e [criar um complemento](create-an-add-on.md). |
+| submissionId | string | Obrigatório. A ID do envio que você deseja confirmar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 
 ### <a name="request-body"></a>Corpo da solicitação
@@ -91,7 +91,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 |--------|------------------|
 | 400  | Os parâmetros de solicitação não são válidos. |
 | 404  | O envio especificado não pôde ser encontrado. |
-| 409  | O envio especificado foi encontrado, mas não pôde ser confirmado em seu estado atual ou o complemento que usa um recurso de painel do Centro de Desenvolvimento atualmente [não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | O envio especificado foi encontrado, mas não pôde ser confirmado em seu estado atual ou o complemento usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

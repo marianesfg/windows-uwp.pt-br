@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, cra, compra realizada em aplicativo, produto no aplicativo, envio de cra
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921924"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5982449"
 ---
 # <a name="add-on-submissions"></a>Envios de complemento
 

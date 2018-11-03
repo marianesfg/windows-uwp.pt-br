@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificação, coleções, coleção, notificações de grupo, notificações de agrupamentos, grupo, organizar, Central de ações, notificação do sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: be7c4ec2e9a47eeeb00663ae94f89e44c6751352
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945195"
+ms.locfileid: "5982521"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>Agrupar notificações do sistema com coleções
 Use coleções para organizar as notificações do sistema do aplicativo na Central de ações. As coleções ajudam os usuários a localizar informações na Central de ações mais facilmente e permitem aos desenvolvedores gerenciar melhor suas notificações.  As APIs a seguir permitem remover, criar e atualizar coleções de notificação.
