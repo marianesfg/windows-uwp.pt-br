@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933035"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986118"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tempo de execução do Windows 8. x para UWP estudo de caso: exemplo de aplicativo QuizGame
 

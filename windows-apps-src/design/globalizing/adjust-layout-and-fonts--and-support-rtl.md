@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, localizabilidade, localização, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: ac69701eca128d327dfd80cfddc7fad41c50c50e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943046"
+ms.locfileid: "5985584"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar layout e fontes e fornecer suporte a RTL
 Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda). Direção de fluxo é a direção na qual o script é criado e exibido e os elementos de interface do usuário na página são visualizados por nós.
