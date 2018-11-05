@@ -1,6 +1,6 @@
 ---
 author: manoskow
-Description: Learn how to create effective and user-focused notifications that make your users prductive and happy.
+Description: Learn how to create effective and user-focused notifications that make your users productive and happy.
 title: Diretrizes de experiência do usuário de notificação do sistema
 label: Toast UX Guidance
 template: detail.hbs
@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificação, coleção, grupo, experiência do usuário, diretrizes de experiência do usuário, diretrizes, ação, notificação do sistema, Central de ações, noninterruptive, notificações efetivas, não intrusivos notificações, acionáveis, gerenciar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c77719bd45c3169ec02a280099d27e10099a25c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974713"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032697"
 ---
 # <a name="toast-notification-ux-guidance"></a>Diretrizes de experiência do usuário de notificação do sistema
 As notificações são uma parte fundamental da vida moderna; elas ajudam os usuários a ser mais produtivo e estabelecido com aplicativos e sites, bem como mantenha atualizado com as atualizações. No entanto, as notificações podem rapidamente ativem útil para opressivas e intrusivo se eles não são projetados de maneira centrada no usuário. As notificações são um botão direito do mouse para longe sendo desativado e é improvável depois que eles estão desativados, eles serão ativados novamente.  Portanto, verifique se que as notificações estejam respeita espaço na tela do usuário e a hora, para que você pode manter esse canal de envolvimento aberto.
@@ -57,7 +57,7 @@ Como mencionado anteriormente, o conteúdo na Central de ações persistir por t
 Ambas essas notificações gorup de uma maneira para conteúdo relevante fique juntos (isto é, pense separando ligas esportes diferentes em um aplicativo de esportes ou classificando mensagens por bate-papo de grupo). Coleções são uma maneira mais óbvia para notificaitons de grupo, enquanto cabeçalhos são mais sutis, mas ambas permitem que os usuários façam triagem e escolha as notificações mais rapidamente. 
 
 ## <a name="other-resources"></a>Outros recursos
-Esses quatro pontos acima são diretrizes que consideramos efffective através de nosso próprio análise de telemetria e primeiro e experimentos de terceiros. Tenha em mente, no entanto, que essas diretrizes são apenas: diretrizes.  Estamos confiantes essas regras ajudará a aumentar o envolvimento e a produtividade de suas notificações, mas nada pode substituir centrada no usuário pensando e aprendendo com seus próprios dados.  
+Esses quatro pontos acima são diretrizes que descobrimos eficientes através de nosso próprio análise de telemetria e primeiro e experimentos de terceiros. Tenha em mente, no entanto, que essas diretrizes são apenas: diretrizes.  Estamos confiantes essas regras ajudará a aumentar o envolvimento e a produtividade de suas notificações, mas nada pode substituir centrada no usuário pensando e aprendendo com seus próprios dados.  
 
 Se você enviar notificações para seu aplicativo UWP hoje, você pode visualizar análises sobre o que aconteceu com suas notificações no [Centro de desenvolvimento](https://developer.microsoft.com/en-us/windows)! Esses dados vem de graça ao usar o [SDK de serviços de armazenamento](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) ou as [APIs de WNS](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Essas métricas lhe dará mais ideias que acontece com suas notificações na plataforma windows, bem como os usuários estão interagindo com notificações. Acessar esse painel indo para o menu no lado esquerdo envolver > notificações, em seguida, clicando na guia "Analisar" dentro da página de notificações.  Isso está localizado no mesmo lugar, que você deve ir para enviar notificações do portal do Centro de desenvolvimento.
 
