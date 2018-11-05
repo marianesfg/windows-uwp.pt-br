@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: a130243fb5a77277e4e8a326316cd30bab2cd96e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992285"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039417"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obter e compreender os dados de tarja magnética
 
