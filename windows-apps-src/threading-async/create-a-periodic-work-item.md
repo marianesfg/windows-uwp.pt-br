@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, item de trabalho periódico, threading, temporizadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985099"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6052231"
 ---
 # <a name="create-a-periodic-work-item"></a>Criar um item de trabalho periódico
 
