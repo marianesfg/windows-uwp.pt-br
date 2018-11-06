@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 563807798cefe083fa1de85dc1f7e4c3ae679211
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992512"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048475"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Personalizar os recursos para idioma, escala, alto contraste e outros qualificadores
 
@@ -39,7 +39,7 @@ Portanto, para alto contraste, o conjunto de qualificadores é `contrast-standar
 
 Este é um exemplo do uso de qualificadores para nomear pastas que contêm arquivos de ativo. Use qualificadores em nomes de pasta, se você tiver vários arquivos de ativo por qualificador. Dessa forma, você definirá o qualificador uma vez no nível da pasta, e o qualificador aplicará isso a tudo que estiver contido na pasta.
 
-```
+```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
 \Assets\Images\contrast-high\<logo.png, and other image files>
 \Assets\Images\contrast-black\<logo.png, and other image files>
@@ -52,7 +52,7 @@ Se você nomear as pastas como no exemplo acima, o app usará a configuração d
 
 Em vez de criar e nomear pastas, você pode usar um qualificador para nomear os próprios arquivos de recurso. Talvez você prefira fazer isso se tiver apenas um arquivo de recurso por qualificador. Veja um exemplo a seguir.
 
-```
+```console
 \Assets\Images\logo.contrast-standard.png
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.contrast-black.png
@@ -68,7 +68,7 @@ Consulte [Fazer referência a um identificador de recurso de cadeia de caractere
 ## <a name="actual-and-neutral-qualifier-matches"></a>Correspondências de qualificador reais e neutras
 Você não precisa fornecer um arquivo de recurso para *cada* valor de qualificador. Por exemplo, se você achar que só precisa de um ativo visual para alto contraste e outro para o contraste padrão, nomeie esses ativos da seguinte forma.
 
-```
+```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
@@ -81,7 +81,7 @@ Se você alterar o nome do `logo.png` para `logo.contrast-standard.png`, o nome 
 
 Se você só precisar de um conjunto de ativos para alto contraste e outro para contraste padrão, poderá usar nomes de pasta, em vez de nomes de arquivo. Nesse caso, a omissão do nome da pasta resultará em uma correspondência neutra.
 
-```
+```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
@@ -92,7 +92,7 @@ Para obter mais detalhes sobre como funciona a correspondência de qualificador,
 
 Você pode combinar qualificadores em nomes de pasta e de arquivo. Por exemplo, convém que o app carregue ativos de imagem quando o modo de alto contraste estiver ativado *e* o fator de escala de exibição for 400. Uma maneira de fazer isso é por meio de pastas aninhadas.
 
-```
+```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
@@ -100,7 +100,7 @@ Para que `logo.png` e outros arquivos sejam carregados, as configurações devem
 
 Outra opção é combinar vários qualificadores em um único nome de pasta.
 
-```
+```console
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
@@ -108,7 +108,7 @@ Em um nome de pasta, combine vários qualificadores separados com um sublinhado.
 
 Você pode combinar vários qualificadores em um nome de arquivo no mesmo formato.
 
-```
+```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
@@ -160,14 +160,14 @@ Dificilmente você precisará do nome de qualificador `devicefamily`. Você pode
 
 Mas, como último recurso, é possível usar os qualificadores devicefamily para nomear pastas que armazenarão as exibições XAML (uma exibição XAML é um arquivo XAML que contém controles e layout de interface do usuário).
 
-```
+```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
 Outra alternativa é nomear os arquivos.
 
-```
+```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
@@ -203,21 +203,21 @@ Se você deseja que o app ofereça suporte a diferentes idiomas de exibição, e
 
 Você normalmente usa um qualificador `language` para nomear as pastas que contêm os arquivos de recursos (`.resw`).
 
-```
+```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
 É possível omitir a parte `language-` de um qualificador `language` (ou seja, o nome do qualificador). Você não pode fazer isso com os outros tipos de qualificadores, e você só pode fazer isso em um nome de pasta.
 
-```
+```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
 Em vez de nomear pastas, você poderá usar os qualificadores `language` para nomear os próprios arquivos de recursos.
 
-```
+```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
@@ -234,7 +234,7 @@ O Windows seleciona automaticamente um fator de escala para cada monitor com bas
 
 Aqui está um exemplo de como definir o qualificador no nível da pasta.
 
-```
+```console
 \Assets\Images\scale-100\<logo.png, and other image files>
 \Assets\Images\scale-200\<logo.png, and other image files>
 \Assets\Images\scale-400\<logo.png, and other image files>
@@ -242,7 +242,7 @@ Aqui está um exemplo de como definir o qualificador no nível da pasta.
 
 Este exemplo o define no nível do arquivo.
 
-```
+```console
 \Assets\Images\logo.scale-100.png
 \Assets\Images\logo.scale-200.png
 \Assets\Images\logo.scale-400.png
