@@ -8,17 +8,17 @@ ms.date: 04/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 53ac8dff5895522c24c1645e4db95c90d575df95
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: f7b4addf2a7bdc2d93cbcf64f13a640a4ef5b12a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982161"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046618"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Detectar e responder a alterações de estado de áudio
 A partir do Windows 10, versão 1803, seu aplicativo pode detectar quando o sistema reduz o nível ou silencia o nível de áudio de um stream de áudio usado pelo aplicativo. Você pode receber notificações de captura e renderizar fluxos para um dispositivo de áudio e categoria de áudio específico ou para um objeto [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) que o aplicativo está usando para reprodução de mídia. Por exemplo, o sistema pode reduzir ou "ignorar", o nível de reprodução de áudio quando um alarme está tocando. O sistema ativa o mudo do aplicativo quando entra em segundo plano caso não tenha declarado a funcionalidade *backgroundMediaPlayback* no manifesto. 
 
-O padrão para processar alterações de estado de áudio é o mesmo para todos os fluxos de áudio com suporte. Primeiro, crie uma instância da classe [**AudioStateMonitor**](https://docs.microsoft.comuwp/api/windows.media.audio.audiostatemonitor). No exemplo a seguir, o aplicativo está usando a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para capturar o áudio para chat de jogo. Um método de fábrica é chamado para obter um monitoramento de estado do áudio associado ao fluxo de captura de áudio de chat do jogo do dispositivo de comunicação padrão.  Em seguida, um manipulador é registrado para o evento [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged), que pode ser acionado quando o nível de áudio do stream associado é alterado pelo sistema.
+O padrão para processar alterações de estado de áudio é o mesmo para todos os fluxos de áudio com suporte. Primeiro, crie uma instância da classe [**AudioStateMonitor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor). No exemplo a seguir, o aplicativo está usando a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para capturar o áudio para chat de jogo. Um método de fábrica é chamado para obter um monitoramento de estado do áudio associado ao fluxo de captura de áudio de chat do jogo do dispositivo de comunicação padrão.  Em seguida, um manipulador é registrado para o evento [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged), que pode ser acionado quando o nível de áudio do stream associado é alterado pelo sistema.
 
 [!code-cs[DeviceIdCategoryVars](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeviceIdCategoryVars)]
 

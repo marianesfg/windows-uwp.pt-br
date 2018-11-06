@@ -8,12 +8,12 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c7576f98045bce3bcfcee093aa8d61059354d45a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996851"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045273"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência dos recursos e os escolhe
 Quando um recurso é solicitado, pode haver vários candidatos que correspondam em um certo grau ao contexto de recurso atual. O Sistema de Gerenciamento de Recursos irá analisar todos os candidatos e determinar o melhor deles para ser retornado. Para isso, todos os qualificadores são levados em consideração para classificar todos os candidatos.
@@ -41,7 +41,7 @@ Se houver um vínculo, o valor do qualificador de contexto com a próxima priori
 ## <a name="example-of-choosing-a-resource-candidate"></a>Exemplo de escolha de um candidato a recurso
 Considere estes arquivos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -53,7 +53,7 @@ de/images/logo.jpg
 
 Suponha que estas sejam as configurações no contexto atual.
 
-```
+```console
 Application language: en-US; fr-FR;
 Scale: 400
 Contrast: Standard
@@ -61,7 +61,7 @@ Contrast: Standard
 
 O Sistema de Gerenciamento de Recursos elimina três dos arquivos, pois o alto contraste e o idioma alemão não correspondem ao contexto definido pelas configurações. Isso descarta esses candidatos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -70,7 +70,7 @@ fr/images/logo.scale-100.jpg
 
 Para os candidatos restantes, o Sistema de Gerenciamento de Recursos usa o qualificador de contexto de prioridade mais alta, que é idioma. Os recursos em inglês são uma correspondência mais próxima do que os recursos em francês, pois o inglês está listado antes do francês nas configurações.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -78,13 +78,13 @@ en/images/logo.scale-100.jpg
 
 Em seguida, o Sistema de Gerenciamento de Recursos usa o qualificador de contexto com a próxima prioridade mais alta, que é escala. Portanto, este será o recurso retornado.
 
-```
+```console
 en/images/logo.scale-400.jpg
 ```
 
 Você pode usar o método avançado [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) para recuperar todos os candidatos na ordem em que eles correspondem às configurações de contexto. No exemplo que acabamos de analisar, **ResolveAll** retorna candidatos nesta ordem.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -94,7 +94,7 @@ fr/images/logo.scale-100.jpg
 ## <a name="example-of-producing-a-fallback-choice"></a>Exemplo de produção de uma opção de fallback
 Considere estes arquivos.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -105,7 +105,7 @@ de/images/contrast-standard/logo.jpg
 
 Suponha que estas sejam as configurações no contexto atual.
 
-```
+```console
 User language: de-DE;
 Scale: 400
 Contrast: High
@@ -113,7 +113,7 @@ Contrast: High
 
 Todos os arquivos são eliminados porque não correspondem ao contexto. Então, entramos em uma passagem padrão, na qual o padrão (consulte [Compilar recursos manualmente com o MakePri.exe](compile-resources-manually-with-makepri.md)) durante a criação do arquivo PRI era esse.
 
-```
+```console
 Language: fr-FR;
 Scale: 400
 Contrast: Standard
@@ -121,7 +121,7 @@ Contrast: Standard
 
 Isso descarta todos os recursos que correspondem ao usuário atual ou ao padrão.
 
-```
+```console
 fr/images/contrast-standard/logo.scale-400.jpg
 fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
@@ -129,7 +129,7 @@ de/images/contrast-standard/logo.jpg
 
 O Sistema de Gerenciamento de Recursos usa o qualificador de contexto de prioridade mais alta, idioma, para retornar o recurso nomeado com a pontuação mais alta.
 
-```
+```console
 de/images/contrast-standard/logo.jpg
 ```
 

@@ -8,12 +8,12 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c777996dceeb443c25fcf526e3a029fca00047c1
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996333"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043479"
 ---
 # <a name="makepriexe-command-line-options"></a>Opções de linha de comando do MakePri.exe
 
@@ -28,7 +28,7 @@ Você pode executar `MakePri.exe help` ou `MakePri.exe /?` para ver os comandos 
 
 ## <a name="makepri-commands"></a>Comandos MakePri
 
-```
+```console
 C:\>makepri help
 
 Usage:
@@ -67,7 +67,7 @@ Help:
 
 O comando `createconfig` cria um arquivo de configuração PRI novo e inicializado definindo os padrões de qualificador especificados. Execute `MakePri.exe createconfig /?` para ver uma ajuda detalhada deste comando.
 
-```
+```console
 C:\>makepri createconfig /?
 
 Usage:
@@ -119,7 +119,7 @@ O comando `dump` gera um arquivo xml despejado contendo uma lista de todos os re
 > [!NOTE]
 > Um pacote de recursos sem esquema é aquele que foi criado com a opção *omitSchemaFromResourcePacks* no arquivo de configuração PRI. Para despejar um pacote de recursos sem esquema, use a opção `/es <main_package_PRI_file>`. Se você não especificar o arquivo principal, verá a mensagem de erro "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)*".
 
-```
+```console
 C:\>makepri dump /?
 
 Usage:
@@ -168,7 +168,7 @@ Help:
 
 O comando `new` cria um novo arquivo PRI indexando os arquivos do projeto, conforme indicado pelo arquivo de configuração. Execute `MakePri.exe new /?` para ver uma ajuda detalhada deste comando.
 
-```
+```console
 C:\>makepri new /?
 
 Usage:
@@ -240,7 +240,7 @@ Help:
 
 O comando `resourcepack` cria um novo arquivo PRI indexando os arquivos do projeto, conforme indicado pelo arquivo de configuração. Um arquivo PRI de pacote de recursos contém apenas as variantes adicionais de recursos já especificadas em um arquivo PRI existente. Execute `MakePri.exe resourcepack /?` para ver uma ajuda detalhada deste comando.
 
-```
+```console
 C:\>makepri resourcepack /?
 
 Usage:
@@ -307,7 +307,7 @@ Help:
 
 O comando `versioned` cria um arquivo PRI com controle de versão indexando os arquivos do projeto, conforme indicado pelo arquivo de configuração. Execute `MakePri.exe versioned /?` para ver uma ajuda detalhada deste comando.
 
-```
+```console
 C:\>makepri versioned /?
 
 Usage:
@@ -412,7 +412,7 @@ Use a opção de arquivo de índice (/if) com `dump`, `resourcepack` e `versione
 
 Para `resourcepack` e `versioned`, em vez de fornecer um arquivo PRI como parâmetro de entrada para /IndexFile(if), você poderá fornecer um arquivo de esquema.
 
-```
+```console
 /IndexFile(if) <FILEPATH>
 ```
 
@@ -422,7 +422,7 @@ Para `resourcepack` e `versioned`, em vez de fornecer um arquivo PRI como parâm
 
 Use a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e `versioned` para especificar as opções que fornecem controle detalhado sobre o comportamento de indexadores de recurso. Opções de índice são desabilitadas por padrão.
 
-```
+```console
 /IndexOptions(io) <OPTIONS>
 ```
 
@@ -435,25 +435,25 @@ Use a opção de opções de índice (/ e/s) com `new`, `resourcepack`, e `versi
 
 Use a opção de arquivo de mapeamento (/mf) com `new`, `resourcepack` e `versioned` para gerar um arquivo de mapeamento. O [MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md) usa o arquivo de mapeamento para gerar pacotes de aplicativos.
 
-```
+```console
 /MappingFile(mf) <MAPPINGFILETYPE>
 ```
 
 **MAPPINGFILETYPE** é um token que especifica o formato do arquivo de mapeamento. O único formato válido com suporte é `appx`.
 
-```
+```console
 /mf appx
 ```
 
 Este é um conteúdo de exemplo de um arquivo de mapeamento principal.
 
-```
+```console
 "ResourceDimensions"                   "language-de-de"
 ```
 
 E este é um conteúdo de exemplo de um arquivo de mapeamento de pacote de recursos.
 
-```
+```console
 "ResourceId"                           "Resources184.la5decaf08"
 "ResourceDimensions"                   "language-de-de"
 ```
@@ -462,7 +462,7 @@ E este é um conteúdo de exemplo de um arquivo de mapeamento de pacote de recur
 
 Se os pacotes de recursos forem criados, o resumo de saída de MakePRI.exe será mais detalhado. Veja um exemplo a seguir.
 
-```
+```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
 Language Qualifiers: fr-FR, de-DE
 
@@ -489,7 +489,7 @@ Successfully Completed
 
 Se a opção de substituição (/o) não for fornecida, e os arquivos de saída especificados já existirem, MakePri.exe exigirá uma confirmação antes da substituição.
 
-```
+```console
 Following file(s) already exist at output location:
 <file(s)>
 Overwrite these file(s)? [Y]es (any other key to cancel):
@@ -515,7 +515,7 @@ Use a opção de arquivo de esquema (/sf) com `new`, `resourcepack` e `versioned
 
 Para `resourcepack` e `versioned`, em vez de fornecer um arquivo PRI como parâmetro de entrada para /IndexFile(if), você poderá fornecer um arquivo de esquema.
 
-```
+```console
 /SchemaFile(sf) <FILEPATH>
 ```
 
@@ -545,7 +545,7 @@ Este é um exemplo de arquivo de esquema.
 
 A opção de versão principal (/vma) (para o comando `new`) está obsoleta; seu uso resultará nesta mensagem de aviso.
 
-```
+```console
 'VersionMajor (vma)' input parameter has been deprecated. Please specify major version in the configuration file using 'majorVersion' attribute on 'resources' node.
 ```
 

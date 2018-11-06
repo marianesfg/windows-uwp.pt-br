@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996917"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042713"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 

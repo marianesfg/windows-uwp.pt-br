@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: daa40656c72812e19c7f6f5fa71e50c2206670af
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972523"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040260"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar os recursos padrão usados pelo app
 

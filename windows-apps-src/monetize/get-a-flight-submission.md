@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f40219503c0a57f76fcee81858acf51f59b1df
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990723"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043725"
 ---
 # <a name="get-a-package-flight-submission"></a>Obter um envio de pacote de pré-lançamento
 
