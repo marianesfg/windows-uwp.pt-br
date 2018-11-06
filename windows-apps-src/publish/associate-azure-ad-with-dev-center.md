@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
 ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971015"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049401"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Associar o Azure Active Directory à sua conta do Partner Center
 
