@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031718"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6276103"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11.
 
@@ -75,7 +75,7 @@ Primeiramente, criamos o dispositivo. Vamos obter uma lista de níveis de recurs
 
 Após a criação do dispositivo Direct3D 11 e de seu contexto, podemos usar a funcionalidade do ponteiro COM para obter as versões mais recentes das interfaces, que incluem recursos adicionais e são sempre recomendadas.
 
-> **Observação**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde ao modelo de sombreador 2.0) é o nível mínimo seu jogo da Microsoft Store é necessária para dar suporte. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
+> **Observação**  D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde ao modelo de sombreador 2.0) é o nível mínimo de seu jogo da Microsoft Store é necessária para dar suporte. (Ocorrerá falha na certificação dos pacotes ARM de seu jogo se você não der suporte a 9\_1.) Se o seu jogo também incluir um caminho de renderização de recursos do modelo 3 de sombreador, você deverá incluir D3D\_FEATURE\_LEVEL\_9\_3 na matriz.
 
  
 
@@ -127,7 +127,7 @@ O Direct3D 11 inclui uma API de dispositivo chamada DXGI (infraestrutura de elem
 
 O dispositivo Direct3D implementa uma interface COM para DXGI. Primeiro precisamos obter essa interface e usá-la para solicitar o adaptador DXGI que hospeda o dispositivo. Depois, usamos o adaptador DXGI para criar uma fábrica DXGI.
 
-> **Observação**  elas são interfaces COM, portanto, sua primeira resposta pode ser usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
+> **Observação**  são interfaces COM, portanto, sua primeira resposta pode ser usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Porém, em vez disso, use ponteiros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Em seguida, chame o método [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), fornecendo um ponteiro COM vazio do tipo de interface correto.
 
  
 
@@ -171,7 +171,7 @@ swapChain.As(&m_swapChain);
 
 Para garantir que não estejamos realizando mais renderizações do que a tela pode exibir, definimos a latência de quadros como 1 e usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
+> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) para continuar a outros trabalhos enquanto o thread de renderização está bloqueado.
 
  
 

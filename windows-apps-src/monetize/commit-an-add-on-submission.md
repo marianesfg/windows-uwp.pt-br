@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044759"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203094"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 
-Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto in-App ou IAP) para o Partner Center. A confirmação alertas Partner Central de ações que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
+Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado (também conhecido como produto in-App ou IAP) para o Partner Center. Confirmação ação alertas Partner Center que os dados de envio foram carregados (incluindo todos os ícones relacionados). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
 
 Para obter mais informações sobre como a operação de confirmação se adapta ao processo de envio de um complemento, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de complemento](manage-add-on-submissions.md).
 
@@ -49,7 +49,7 @@ Esse método tem a seguinte sintaxe. Veja as seções a seguir para obter exempl
 
 | Nome        | Tipo   | Descrição                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja confirmar. A ID da loja está disponível no Partner Center, e está incluído nos dados de resposta para solicitações para [obter todos os complementos](get-all-add-ons.md) e [criar um complemento](create-an-add-on.md). |
+| inAppProductId | string | Obrigatório. A ID da Loja do complemento que contém o envio que você deseja confirmar. A ID da loja está disponível no Partner Center e está incluído nos dados de resposta para solicitações para [obter todos os complementos](get-all-add-ons.md) e [criar um complemento](create-an-add-on.md). |
 | submissionId | string | Obrigatório. A ID do envio que você deseja confirmar. Esse ID está disponível nos dados de resposta para solicitações para [criar um envio de complemento](create-an-add-on-submission.md). Para um envio que foi criado no Partner Center, essa ID também está disponível na URL da página de envio no Partner Center.  |
 
 

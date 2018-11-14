@@ -5,14 +5,14 @@ title: Obter aquisições de complementos do Xbox One
 ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
-keywords: Windows 10, uwp, serviços da loja, API, Xbox One aquisições de complemento de análise da Microsoft Store
+keywords: Windows 10, uwp, serviços da Store, API, Xbox One aquisições de complemento de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043143"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205111"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Obter aquisições de complementos do Xbox One
 
@@ -106,7 +106,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | market              | string  | O código de país ISO 3166 do mercado onde ocorreu a aquisição.                                                                                                                                                                  |
 | gender              | string  | <p>Uma das sequências a seguir que especifica o gênero do usuário que fez a aquisição:</p> <ul><li>"m"</li><li>"f"</li><li>"Unknown"</li></ul>                                                                                                    |
 | idade            | string  | <p>Uma das sequências a seguir que indica a faixa etária do usuário que fez a aquisição:</p> <ul><li>"menos de 13"</li><li>"17 13"</li><li>"18 a 24"</li><li>"25-34"</li><li>"35-44"</li><li>"44-55"</li><li>"greater than 55"</li><li>"Unknown"</li></ul>                                                                                                 |
-| acquisitionType     | string  | <p>Uma das sequências a seguir que indica o tipo de aquisição:</p> <ul><li>"Gratuito"</li><li>"Avaliação"</li><li>"Pago"</li><li>"O código promocional"</li><li>"Iap"</li><li>"Assinatura Iap"</li><li>"Audiência privada"</li><li>"Pré ordem"</li><li>"Xbox Game Pass" (ou "Game Pass" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Disco"</li><li>"Código pré-pago"</li><li>"Pré ordem cobrada"</li><li>"Cancelada pré ordem"</li><li>"Falha na ordem de pré"</li></ul>                                                                                                    |
+| acquisitionType     | string  | <p>Uma das sequências a seguir que indica o tipo de aquisição:</p> <ul><li>"Gratuito"</li><li>"Avaliação"</li><li>"Pago"</li><li>"O código promocional"</li><li>"Iap"</li><li>"Assinatura Iap"</li><li>"Audiência privada"</li><li>"Pré ordem"</li><li>"Xbox Game Pass" (ou "Game Pass" se estiver consultando dados antes de 23 de março de 2018)</li><li>"Disco"</li><li>"Código pré-pago"</li><li>"Cobrado pré ordem"</li><li>"Cancelada pré ordem"</li><li>"Falha na ordem de pré"</li></ul>                                                                                                    |
 | acquisitionQuantity | número inteiro | O número de aquisições que ocorreram.                        |
 
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050435"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163900"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos personalizados e acessadores de evento em componentes do Tempo de Execução do Windows
 
@@ -33,7 +33,7 @@ Felizmente, os compiladores de Visual Basic e C# simplificam esse processo: quan
 
 O código a seguir do evento NumberChanged mostra o padrão básico de eventos UWP. Neste exemplo, o construtor do objeto de argumento do evento, NumberChangedEventArgs, utiliza um único parâmetro inteiro que representa o valor numérico alterado.
 
-> **Observação**esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente de tempo de execução do Windows.
+> **Observação**esse é o mesmo padrão que os compiladores usam para eventos comuns que você declara em um componente do tempo de execução do Windows.
 
  
 > [!div class="tabbedCodeSnippets"]

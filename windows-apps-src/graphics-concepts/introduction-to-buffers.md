@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 14e78aec9afa361b2627d62d92f0ee7d7ab0565b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040851"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272335"
 ---
 # <a name="introduction-to-buffers"></a>Introdução aos buffers
 
@@ -53,7 +53,7 @@ Para acessar dados de um buffer de vértices, você precisa saber qual vértice 
 -   Deslocamento -o número de bytes desde o início do buffer para os dados para o primeiro vértice.
 -   BaseVertexLocation -o número de bytes do deslocamento até o primeiro vértice usado pela chamada de desenho apropriada.
 
-Antes de criar um buffer de vértices, você precisa definir seu layout. Depois que o objeto de layout de entrada é criado, você pode vinculá-lo para o [estágio de Assembler de entrada (IA)](input-assembler-stage--ia-.md).
+Antes de criar um buffer de vértices, você precisará definir seu layout. Depois que o objeto de layout de entrada é criado, você pode vinculá-lo para o [estágio de Assembler de entrada (IA)](input-assembler-stage--ia-.md).
 
 ### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Buffer de índice
 
@@ -63,11 +63,11 @@ Buffers de índice contém deslocamentos de inteiro em buffers de vértice e sã
 
 Os índices sequenciais armazenados em um buffer de índice estão localizados com os seguintes parâmetros:
 
--   Deslocamento - o número de bytes do endereço base do buffer de índice.
+-   Deslocamento - o número de bytes do endereço de base do buffer de índice.
 -   StartIndexLocation - Especifica o primeiro elemento de buffer de índice de endereço básico e o deslocamento. O local inicial representa o primeiro índice para renderizar.
 -   IndexCount -o número de índices para renderizar.
 
-Início do Buffer de índice = endereço de Base de Buffer de índice + deslocamento (bytes) + StartIndexLocation \ * ElementSize (bytes);
+Início do Buffer de índice = endereço de Base de Buffer de índice + deslocamento (bytes) + StartIndexLocation \ * ElementSize (bytes).
 
 Nesse cálculo, ElementSize é o tamanho de cada elemento de buffer de índice, que é dois ou quatro bytes.
 
@@ -81,7 +81,7 @@ Cada elemento armazena uma constante de 1 a 4 componentes determinada pelo forma
 
 Um buffer constante só pode usar um sinalizador de associação única, que não pode ser combinado com qualquer outro sinalizador de associação.
 
-Para ler um buffer constante de sombreador de um sombreador, use uma função de carga HLSL. Cada estágio de sombreador permite até 15 buffers constantes de sombreador; cada buffer pode manter até 4.096 constantes.
+Para ler um buffer de constantes de sombreador de um sombreador, use uma função de carregamento HLSL. Cada estágio de sombreador permite até 15 buffers constantes de sombreador; cada buffer pode manter até 4.096 constantes.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 

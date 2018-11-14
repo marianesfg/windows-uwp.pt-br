@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, fraca, referência forte
 ms.localizationpriority: medium
 ms.openlocfilehash: c37319ce7f7d29acfc2c1822e76fadc29b5ec863
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6135356"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6270936"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referências fracas e fortes em C++ c++ WinRT
 

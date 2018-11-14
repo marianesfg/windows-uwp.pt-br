@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 82623a86548866a78f56385ee0a535bfcb822c46
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044245"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6270811"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -56,7 +56,7 @@ Vamos começar com os princípios básicos de bom design de navegação:
 
 ### <a name="consistency"></a>Consistência
 
-A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários são familiares com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
+A navegação deve ser consistente com as expectativas dos usuários. Usando [controles padrão](#use-the-right-controls) que os usuários estão familiarizados com e seguir convenções padrão para ícones, localização e estilo tornarão navegação previsível e intuitiva para os usuários.
 
 ![imagem dos componentes da página](images/nav/page-components.svg)
 
@@ -187,7 +187,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
         - Você deseja mostrar todas as opções de navegação na tela.
         - Desejam mais espaço para conteúdo do seu aplicativo.
-        - Ícones não podem descrever claramente as categorias de navegação.
+        - Ícones não descrevem claramente as categorias de navegação.
         
         Use guias quando:
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, requisitos do pacote, pacotes, formato de pacote, versão com suporte, enviar
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045080"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6274045"
 ---
 # <a name="app-package-requirements"></a>Requisitos do pacote do app
 
@@ -71,7 +71,7 @@ Os pacotes de seu aplicativo devem atender a estes requisitos.
 
 | Propriedade de pacote de aplicativos | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamanho do pacote         | .msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>pacotes de .msix ou. AppX voltados para Windows 10:25 máximo GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
+| Tamanho do pacote         | .msixbundle ou. appxbundle: máximo de 25 GB por pacote <br>.msix ou. AppX pacotes voltados para Windows 10:25 máximo GB por pacote<br>Pacotes .appx voltados para Windows 8.1: máximo de 8 GB por pacote <br> Pacotes .appx voltados para Windows 8: máximo de 2 GB por pacote <br> Pacotes .appx para Windows Phone 8.1: máximo de 4 GB por pacote <br> Pacotes .xap: máximo de 1 GB por pacote                                                                           |
 | Hashes do mapa de blocos     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]

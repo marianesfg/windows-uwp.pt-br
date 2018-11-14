@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034407"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193277"
 ---
 # <a name="process-media-files-in-the-background"></a>Processar arquivos de mídia em segundo plano
 
@@ -126,7 +126,7 @@ Registre a tarefa em segundo plano chamando [**Register**](https://msdn.microsof
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Um aplicativo típico registrará na tarefa em segundo plano quando o aplicativo é iniciado inicialmente, como o evento **OnNavigatedTo** .
+Um aplicativo típico registrará sua tarefa em segundo plano quando o aplicativo é iniciado inicialmente, como o evento **OnNavigatedTo** .
 
 Inicie a tarefa em segundo plano chamando o método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) do objeto **MediaProcessingTrigger**. O objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) devolvido por esse método informa se a tarefa em segundo plano foi iniciada com êxito ou se não foi iniciada. 
 
