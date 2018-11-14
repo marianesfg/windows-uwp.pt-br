@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows 10, uwp, pagamentos, vendas de aplicativos, receita do aplicativo, pagamento, taxa da store, pagamento em espera, porcentagem
 ms.localizationpriority: medium
 ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026917"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202541"
 ---
 # <a name="getting-paid"></a>Recebimento de pagamentos
-Veja algumas informações importantes sobre o recebimento de pagamentos pelos seus aplicativos, complementos e lucros com anúncios.
+Veja algumas informações importantes sobre o recebimento de pagamentos por seus aplicativos, complementos e lucros com anúncios.
 
 > [!IMPORTANT]
 > Antes de receber dinheiro pela venda de aplicativos na Microsoft Store, você precisa [configurar sua conta de pagamento e preencher os formulários de imposto necessários](setting-up-your-payout-account-and-tax-forms.md).

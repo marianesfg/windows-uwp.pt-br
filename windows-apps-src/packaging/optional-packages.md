@@ -8,12 +8,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, pacotes opcionais, conjunto relacionado, extensão de pacote, o visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: c21b84467151493836186d1d55ab5e4e542899ec
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192197"
+ms.locfileid: "6259118"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Pacotes opcionais e conjunto de criação relacionado
 Os pacotes opcionais contêm conteúdo que pode ser integrado com um pacote principal. Eles são úteis para conteúdo para download (DLC), dividindo um aplicativo grande para restrições de tamanho, ou para enviar qualquer conteúdo adicional para separado do seu aplicativo original.
@@ -29,7 +29,7 @@ Conjuntos relacionados são uma extensão de pacotes opcionais, pois eles permit
 Para obter todas as ferramentas de desenvolvimento mais recentes, consulte [Downloads e ferramentas para o Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
-> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados à Microsoft Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para Linha de Negócios (LOB) ou aplicativos empresariais sem permissão do Centro de Desenvolvimento se não forem enviados para a Store. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
+> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados à Microsoft Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para aplicativos de linha de negócios (LOB) ou enterprise sem permissão do Partner Center se não forem enviados para a loja. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
 
 ### <a name="code-sample"></a>Exemplo de código
 Enquanto você está lendo neste artigo, é recomendável que você siga com o [exemplo de código do pacote opcional](https://github.com/AppInstaller/OptionalPackageSample) no GitHub para um conhecimento prático de pacotes opcionais como e relacionados conjuntos de trabalho no Visual Studio.

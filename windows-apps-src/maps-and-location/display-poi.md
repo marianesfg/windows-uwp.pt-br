@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, pinos de pressão
 ms.localizationpriority: medium
 ms.openlocfilehash: 13c0ea463cbab97e03c87c4e558bba0eff92300c
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190810"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275676"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Exibir pontos de interesse em um mapa
 

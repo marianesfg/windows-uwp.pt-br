@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffdc88449c025ba0a590ccc2bbd3f0c05346630f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051371"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6443286"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -21,13 +21,13 @@ Este mapa fornece uma visão geral dos recursos empresariais principais para apl
 
 **Observação**este artigo é voltado para aqueles que escrevem aplicativos UWP de empresa. Para saber sobre o desenvolvimento para a UWP geral, consulte os [Guias de instruções para aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para saber sobre o desenvolvimento para WPF, Windows Forms ou Win32, visite o [centro de desenvolvimento da área de trabalho](https://dev.windows.com/desktop). Para saber sobre recursos para profissionais de TI, como a implantação no Windows 10 ou gerenciamento de recursos de segurança empresarial, consulte [Windows 10 no TechNet](https://msdn.microsoft.com/library/dn986868).
 
-Existe uma versão deste aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
+Existe uma versão do aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
 
 Coisas vale destacar na frente:
 
 ## <a name="whats-new-for-enterprise-applications"></a>Novidades para aplicativos corporativos
 
-Veja a seguir algumas ferramentas, bibliotecas e recursos que foram criados bastante recentemente.
+Veja algumas ferramentas, bibliotecas e recursos que foram criados bastante recentemente.
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
@@ -43,7 +43,7 @@ Veja a seguir algumas ferramentas, bibliotecas e recursos que foram criados bast
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao mesmo tempo em que implementação comprovadas padrões e práticas recomendadas.
+Windows Template Studio é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao implementar comprovadas padrões e práticas recomendadas.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -82,7 +82,7 @@ Consulte a [Biblioteca de interface do usuário do Windows (versão prévia)](ht
 
 ### <a name="uwp-controls-in-desktop-applications"></a>Controles UWP em aplicativos da área de trabalho
 
-Windows 10 agora permite que você use controles UWP em C++ Win32, Windows Forms e WPF aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos mais recentes de interface do usuário do Windows 10 que só estão disponíveis por meio de controles UWP, como o Windows Ink e controles que dão suporte ao sistema de Design Fluent. Esse recurso é chamado Ilhas XAML.
+Windows 10 agora permite que você use controles UWP em C++ Win32, WPF e Windows Forms aplicativos da área de trabalho. Isso significa que você pode aprimorar a aparência e a funcionalidade de seus aplicativos da área de trabalho existentes com os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP, como controles que dão suporte ao sistema de Design Fluent e Windows Ink. Esse recurso é chamado Ilhas XAML.
 
 Consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -108,9 +108,9 @@ Consulte [Usar um banco de dados do SQL Server em um aplicativo UWP](https://doc
 
 ### <a name="msix-deployment"></a>Implantação de MSIX
 
-MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade dos pacotes de aplicativo existente e instalar arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
+MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiência de empacotamento modernos para todos os aplicativos do Windows. O formato de pacote MSIX preserva a funcionalidade de pacotes de aplicativo existente e instale arquivos além de habilitar recursos de empacotamento e implantação novos e modernos para aplicativos Win32, WPF e Windows Forms.
 
-MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi,. AppX, tecnologias de instalação do App-V e ClickOnce.
+MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi, AppX, tecnologias de instalação do App-V e ClickOnce.
 
 ![Ícone MSIX](images/WinUI_MSIX_2col_740x417.png)
 
@@ -173,13 +173,13 @@ Muitos usuários hoje levam para o trabalho o próprio celular ou tablet, com di
 
 ## <a name="deployment"></a>Implantação
 
-Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente, ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
+Você tem opções para distribuir aplicativos aos usuários da sua organização. Você pode usar a Microsoft Store para empresas, gerenciamento de dispositivo móvel existente ou você pode fazer o sideload de aplicativos para dispositivos. Você pode também disponibilizar seus aplicativos para geral pública por publicação na Microsoft Store.
 
 | Tópico | Descrição |
 |-------|-------------|
 | [Distribuir os aplicativos LOB para empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Você pode publicar aplicativos de linha de negócios diretamente para empresas para aquisição de grande volume pela Microsoft Store para empresas, sem tornar os aplicativos amplamente disponíveis ao público. |
 | [Fazer sideload de apps](https://technet.microsoft.com/library/mt269549) | Ao fazer sideload de um aplicativo, você implanta um pacote do aplicativo assinado em um dispositivo. Você mantém a assinatura, a hospedagem e a implantação desses aplicativos. O processo de sideload de aplicativos é simplificado para Windows 10.             |
-| [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publique e gerencie todos os seus aplicativos para todos os dispositivos do Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
+| [Publicar aplicativos na Microsoft Store](https://dev.windows.com/publish) | A Microsoft Store unificada permite que você publicar e gerenciar todos os seus aplicativos para todos os dispositivos Windows. Personalize a disponibilidade de seu aplicativo com o preço por mercado, controles de distribuição e visibilidade, além de outras opções. |
 
 ## <a name="enterprise-uwp-samples"></a>Exemplos de UWP empresariais
 
@@ -189,12 +189,12 @@ Ação - falar Josh e/ou Karl para obter mais exemplos de voltados para enterpri
 
 | Tópico |  Descrição |
 |------ |--------------|
-| [Amostra de estoque VanArsdel](https://github.com/Microsoft/InventorySample) | Se um aplicativo do Windows 10 de exemplo (usando a plataforma Universal do Windows) em cenários de linha de negócios, mostrando como usar os recursos mais recentes do Windows em aplicativos da área de trabalho. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel.
-Destaca o MVVM, banco de dados SQL, Entity Framework. Liste outras pessoas.|
+| [Exemplo de inventário de VanArsdel](https://github.com/Microsoft/InventorySample) | Se um aplicativo do Windows 10 de exemplo (usando a plataforma Universal do Windows) em cenários de linha de negócios, mostrando como usar os recursos mais recentes do Windows em aplicativos da área de trabalho. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel.
+Destaca o MVVM, banco de dados SQL, Entity Framework. Lista de outras pessoas.|
 
 ## <a name="patterns-and-practices"></a>Padrões e práticas
 
-Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos de XAML flexível, sustentável e testáveis no WPF, Windows 10 UWP e no Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
+Bases de código para grande escala, aplicativos de nível corporativo podem ficar difíceis de gerenciar. O Prism é uma estrutura para criar aplicativos de XAML flexível, manutenção e testáveis no WPF, Windows 10 UWP e no Xamarin Forms. O Prism fornece a implementação de uma coleção de padrões de design que são úteis para escrever aplicativos de XAML bem estruturados e que possam ser mantidos, incluindo o MVVM, injeção de dependência, comandos, EventAggregator, entre outros.
 
 Para obter mais informações sobre o Prism, consulte [GitHub repo](https://github.com/PrismLibrary/Prism).
 

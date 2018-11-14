@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ec7d57e75d00f3418d4ff176c1ae4256eeab6983
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6186244"
+ms.locfileid: "6252447"
 ---
 # <a name="reposition-animations"></a>Animações de reposicionamento
 

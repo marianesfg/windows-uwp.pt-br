@@ -8,12 +8,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 59cd664e268e9e62786728aeb122ec52acd721c0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 75ba42674ca1ea460698fcce6e67bb3528589797
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031348"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6251605"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -253,9 +253,9 @@ O caminho identifica a localização hierárquica da subárvore [ResourceMap](/u
 
 Para obter exemplos e mais informações, consulte [Localizar cadeias de caracteres em sua IU e manifesto do pacote de aplicativo](localize-strings-ui-manifest.md) e [Suporte à notificação de bloco e notificações do sistema para o idioma, escala e alto contraste](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, quando a recuperação subjacente realiza um [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) com *ignoreCase* definido como `true`.
+O componente de caminho de `ms-resource` diferencia maiúsculas de minúsculas, como os URIs genéricos. No entanto, a recuperação subjacente faz um [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) com *ignoreCase* definido como `true`.
 
-O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Assim, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos chamado Hello#World.resw, use esse URI.
+O formato normalizado do URI mantém a capitalização e faz a decodificação (um símbolo de "%" seguido pela representação hexadecimal de dois dígitos) RFC 3986 dos caracteres. Os caracteres "?", "#", "/", "*" e '”' (o caractere de aspas duplas) devem ter codificação por percentual em um caminho para representar dados como um arquivo ou nomes de pasta. Todos os caracteres codificados percentuais são decodificados antes da recuperação. Dessa forma, para recuperar um recurso de cadeia de caracteres de um arquivo de recursos denominado `Hello#World.resw`, use esse URI.
 
 ```xml
 ms-resource:///Hello%23World/String1

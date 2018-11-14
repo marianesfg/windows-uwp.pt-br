@@ -2,23 +2,23 @@
 author: stevewhims
 title: Estudo de caso do Windows Runtime 8.x para UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simple para um aplicativo da plataforma Universal do Windows do Windows 10 (UWP).
+description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simples para um aplicativo da plataforma Universal do Windows do Windows 10 (UWP).
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cec8171b381a607616e2054784fa888074d3f90e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033341"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189293"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Estudo de caso do Windows Runtime 8.x para UWP: Bookstore1
 
 
-Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simple para um aplicativo de plataforma Windows10Universal do Windows (UWP). Um aplicativo Universal 8.1 é aquele que cria um pacote do aplicativo para Windows 8.1 e um pacote de aplicativo diferente para o Windows Phone 8.1. Com o Windows 10, você pode criar um único pacote de aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tópico apresenta um estudo de caso de portabilidade de um aplicativo Universal 8.1 muito simples para um aplicativo da plataforma Windows10Universal do Windows (UWP). Um aplicativo Universal 8.1 é aquele que cria um pacote do aplicativo para Windows 8.1 e um pacote de aplicativo diferente para o Windows Phone 8.1. Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de exibição. O modelo de exibição tem uma lista de livros que mostra o título, o autor e a capa do livro. As imagens da capa do livro têm **Build Action** definida como **Content** e **Copy to Output Directory** definida como **Do not copy**.
 
@@ -44,7 +44,7 @@ Bookstore1\_81 no Windows
 
 Bookstore1\_81 no Windows Phone
 
-##  <a name="porting-to-a-windows10-project"></a>Portando para um projeto do Windows 10
+##  <a name="porting-to-a-windows10-project"></a>Fazendo a portabilidade para um projeto do Windows 10
 
 A solução Bookstore1\_81 é um projeto de Aplicativo Universal 8.1 e contém estes projetos.
 
@@ -64,7 +64,7 @@ Para este estudo de caso, temos as opções usuais descritas em [Se você tiver 
 
 **No projeto do Windows**
 
--   Copie BookstoreStyles.xaml. Usaremos esse um como um ótimo ponto de partida porque todas as chaves de recurso neste arquivo serão resolvidas em um aplicativo do Windows 10; Algumas no arquivo equivalente do WindowsPhone serão não.
+-   Copie BookstoreStyles.xaml. Usaremos esse um como um ótimo ponto de partida porque todas as chaves de recurso neste arquivo serão resolvidas em um aplicativo do Windows 10; Alguns no arquivo equivalente do WindowsPhone serão não.
 
 Edite o código-fonte e os arquivos de marcação que você acabou de copiar e altere as referências ao namespace Bookstore1\_81 para Bookstore1Universal\_10. Uma maneira rápida de fazer isso é usar o recurso **Substituir nos Arquivos**. Não são necessárias alterações no código no modelo de exibição, nem em qualquer outro código imperativo. Porém, apenas para facilitar ainda mais a identificação de qual versão do aplicativo está em execução, altere o valor retornado pela propriedade **Bookstore1Universal\_10.BookstoreViewModel.AppName** de "BOOKSTORE1\_81" para "BOOKSTORE1UNIVERSAL\_10".
 

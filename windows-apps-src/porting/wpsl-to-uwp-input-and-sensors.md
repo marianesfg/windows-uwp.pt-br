@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a0041fd154a4ce32930e10e21175706e8e7ad988
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025791"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202627"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portabilidade do WindowsPhone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo
 
@@ -24,9 +24,9 @@ O código que se integra ao dispositivo propriamente dito e aos sensores envolve
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>Ciclo de vida do aplicativo (gerenciamento do tempo de vida do processo)
 
-Seu aplicativo WindowsPhone Silverlight contém o código para salvar e restaurar o estado do aplicativo e o estado da exibição para que possa ser marcado para exclusão e depois reativado. O ciclo de vida de aplicativos da plataforma Universal do Windows (UWP) tem forte paralelo com WindowsPhone dos aplicativos do Silverlight, já que eles foram criados com o mesmo objetivo de maximizar os recursos disponíveis para qualquer aplicativo que o usuário tiver optado por ter em primeiro plano a qualquer momento. Você descobrirá que seu código se adaptará facilmente ao novo sistema.
+Seu aplicativo WindowsPhone Silverlight contém o código para salvar e restaurar o estado do aplicativo e o estado da exibição para que possa ser marcado para exclusão e depois reativado. O ciclo de vida de aplicativos da plataforma Universal do Windows (UWP) tem forte paralelo com WindowsPhone dos aplicativos do Silverlight, já que eles foram criados com o mesmo objetivo de maximizar os recursos disponíveis para qualquer aplicativo que o usuário escolheu ter o em primeiro plano a qualquer momento. Você descobrirá que seu código se adaptará facilmente ao novo sistema.
 
-**Observação**  pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo Silverlight do WindowsPhone. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
+**Observação**  pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo WindowsPhone Silverlight. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
 
 Uma "janela de enumeração" é o período entre a entrada do aplicativo em inatividade e o acionamento do evento de suspensão pelo sistema. Para um aplicativo UWP, não existe uma janela de enumeração; o evento de suspensão é acionado assim que o aplicativo se torna inativo.
 
@@ -34,7 +34,7 @@ Para obter mais informações, consulte [Ciclo de vida do aplicativo](https://ms
 
 ## <a name="camera"></a>Câmera
 
-Código de captura de câmera WindowsPhone Silverlight usa as classes **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**ou **Microsoft.Phone.Tasks.CameraCaptureTask** . Para portar esse código para a UWP (Plataforma Universal do Windows), você pode usar a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). Há um exemplo de código no tópico [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Esse método permite que você capture uma foto para um arquivo de armazenamento, e requer o **microfone** e **webcam**[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) para ser definido no manifesto do pacote do aplicativo.
+Código de captura de câmera do WindowsPhone Silverlight usa as classes **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**ou **Microsoft.Phone.Tasks.CameraCaptureTask** . Para portar esse código para a UWP (Plataforma Universal do Windows), você pode usar a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). Há um exemplo de código no tópico [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Esse método permite que você capture uma foto para um arquivo de armazenamento, e requer o **microfone** e **webcam**[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) para ser definido no manifesto do pacote do aplicativo.
 
 Outra opção é a classe [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que também requer as[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747)do **microfone** e **webcam**.
 
@@ -44,7 +44,7 @@ Não há suporte a aplicativos de lente para aplicativos UWP.
 
 A maneira de pensar sobre alterações direcionadas de aplicativo ao Windows 10. O novo modelo conceitual é um aplicativo direcionado à UWP (Plataforma Universal do Windows) e executado em todos os dispositivos Windows. Ele também pode destacar recursos que sejam exclusivos de famílias de dispositivos específicas. Se necessário, o aplicativo também tem a opção de se limitar a uma ou mais famílias de dispositivos especificamente. Para saber mais sobre o que são famílias de dispositivos (e como decidir qual família de dispositivos priorizar), veja [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-**Observação**  , recomendamos que você não use família ou sistema operacional para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](wpsl-to-uwp-porting-to-a-uwp-project.md)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
+**Observação**  , recomendamos que você não use sistema operacional ou a família de dispositivos para detectar a presença de recursos. Identificar o sistema operacional ou a família de dispositivos atual normalmente não é a melhor maneira de determinar se um recurso de sistema operacional ou de família de dispositivos está presente. Em vez de detectar o sistema operacional ou a família de dispositivos (e o número de versão), teste a presença do próprio recurso (consulte [Compilação condicional e código adaptável](wpsl-to-uwp-porting-to-a-uwp-project.md)). Se você precisar de um determinado sistema operacional ou uma família de dispositivos, certifique-se de usá-la como uma versão mínima compatível, em vez de criar o teste para essa versão.
 
 Recomendamos várias técnicas para personalizar a interface do usuário do seu aplicativo em diferentes dispositivos. Continue a usar elementos de dimensionamento automático e painéis de layout dinâmico como você sempre fez. Em sua marcação XAML, continue usando tamanhos em pixels efetivos (anteriormente conhecidos como pixels de exibição) para que sua interface do usuário se adapte a diferentes resoluções e fatores de escala (consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).). E use os acionadores e setters adaptáveis do Gerenciador de Estado Visual para adaptar sua interface do usuário ao tamanho de janela (consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).).
 
@@ -69,7 +69,7 @@ Além disso, consulte também [Compilação condicional e código adaptável](wp
 
 ## <a name="device-status"></a>Status do dispositivo
 
-Um aplicativo WindowsPhone Silverlight pode usar a classe **devicestatus** para obter informações sobre o dispositivo no qual o aplicativo é executado. Embora não haja equivalente direto da UWP para o namespace **Microsoft.Phone.Info**, aqui estão algumas propriedades e eventos que você pode usar em um aplicativo UWP no lugar das chamadas aos membros da classe **DeviceStatus**.
+Um aplicativo do WindowsPhone Silverlight pode usar a classe **devicestatus** para obter informações sobre o dispositivo no qual o aplicativo é executado. Embora não haja equivalente direto da UWP para o namespace **Microsoft.Phone.Info**, aqui estão algumas propriedades e eventos que você pode usar em um aplicativo UWP no lugar das chamadas aos membros da classe **DeviceStatus**.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -7,12 +7,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f454c7e7386ba829cf6c99edc0b5b8f2d831f00
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025186"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268831"
 ---
 # <a name="optional-packages-with-executable-code"></a>Pacotes opcionais com código executável
  
@@ -26,7 +26,7 @@ Os pacotes opcionais com código executável são úteis para dividir um aplicat
 Para obter as ferramentas de desenvolvimento mais recentes, consulte [Downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para Linha de Negócios (LOB) ou aplicativos empresariais sem permissão do Centro de Desenvolvimento se não forem enviados para a Store. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
+> Para enviar um aplicativo que usa pacotes opcionais e/ou conjuntos relacionados para a Store, você precisará de permissão. Pacotes opcionais e conjuntos relacionados podem ser usados para aplicativos de linha de negócios (LOB) ou enterprise sem permissão do Partner Center se não forem enviados para a loja. Consulte [Suporte do desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter permissão para enviar um aplicativo que usa pacotes opcionais e conjuntos relacionados.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Pacotes opcionais do C++ com código executável
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 661c324fbe7a80a6ff150da06536879a25c0c0c2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041782"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203841"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Configurando o seu Mac com o Windows 10
 
@@ -22,9 +22,9 @@ Use seu computador Mac atual para desenvolver aplicativos para Windows.
 
 ## <a name="run-windows-on-your-mac-and-use-visual-studio"></a>Execute o Windows em seu Mac e use o Visual Studio
 
-Você está pronto para começar a desenvolver aplicativos Universais do Windows, mas não tem um computador disponível? Tudo bem. Você pode usar o seu Mac! Com soluções de terceiros populares como Apple Boot Camp, Oracle VirtualBox, VMware Fusion e Parallels Desktop, você pode instalar o Windows 10 e Microsoft Visual Studio em um computador Apple.
+Você está pronto para começar a desenvolver aplicativos Universais do Windows, mas não tem um computador disponível? Tudo bem. Você pode usar o seu Mac! Com soluções de terceiros populares como Apple Boot Camp, Oracle VirtualBox, VMware Fusion e Parallels Desktop, você pode instalar o Windows 10 e o Microsoft Visual Studio em um computador Apple.
 
-**Observação**você precisará de uma imagem inicializável do Windows 10 no disco ou unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador poderá ser adquirido da [Microsoft Store](http://apps.microsoft.com/windows/app). Você também pode baixá-lo [deste local](http://go.microsoft.com/fwlink/?LinkId=623906), o que é útil se você já estiver executando o Windows e deseja atualizar.
+**Observação**você precisará de uma imagem inicializável do Windows 10 no disco ou unidade flash USB. Se você for um assinante do MSDN, poderá baixar a imagem da instalação do Centro de Desenvolvimento do MSDN Subscriber. Se você não for um assinante, o instalador pode ser comprado na [Microsoft Store](http://apps.microsoft.com/windows/app). Você também pode baixá-lo [deste local](http://go.microsoft.com/fwlink/?LinkId=623906), o que é útil se você já estiver executando o Windows e deseja atualizar.
 
 Quando você tiver o Windows em execução, você pode instalar a versão mais recente do Visual Studio de [downloads de desenvolvedor para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) e começar a escrever aplicativos!
 
@@ -32,7 +32,7 @@ Quando você tiver o Windows em execução, você pode instalar a versão mais r
 
 ## <a name="apple-boot-camp"></a>Apple Boot Camp
 
-O aplicativo Boot Camp Assistant é pré-instalados em cada Mac recente e iniciando-o orientará você durante o processo de instalação do Windows 10. Tudo o que você precisa é de uma cópia do Windows (das fontes listadas acima) e pelo menos 30 Gb de espaço livre em disco. Depois de instalado, você pode optar por inicializar no Mac OSX ou no Windows 10. Para obter mais informações, consulte a [página de instruções de Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) da Apple.
+O aplicativo Boot Camp Assistant é pré-instalados em cada Mac recente e iniciá-lo orientará você durante o processo de instalação do Windows 10. Tudo o que você precisa é de uma cópia do Windows (das fontes listadas acima) e pelo menos 30 Gb de espaço livre em disco. Depois de instalado, você pode optar por inicializar no Mac OSX ou no Windows 10. Para obter mais informações, consulte a [página de instruções de Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) da Apple.
 
 ## <a name="parallels-desktop"></a>Parallels Desktop
 

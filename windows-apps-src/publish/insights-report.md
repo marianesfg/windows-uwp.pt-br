@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, insight, tendência, anomalias, anomalias, alterações de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 324666095c26eb8d05732ce7e1ad3217b210d406
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026560"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6265096"
 ---
 # <a name="insights-report"></a>Relatório de insights
 
@@ -27,10 +27,10 @@ O relatório classifica os dados em três guias: **aquisições**, **integridade
 Insights são mostrados quando detectarmos uma alteração significativa em seus dados. Para cada insight, vamos mostrar o seguinte:
 - **Tipo de informação**: A área em que a informação foi detectada.
 - **Valor**: A métrica específica que alterado significativamente (ou **todos os** se a alteração se aplica a todo **tipo de informação**).
-- **Data**: A data em que identificamos a alteração. Essa data representa o final da semana em que detectamos um aumento significativo ou redução em comparação comparada a semana anterior.
-- **Impacto geral**: A porcentagem que o valor aumento ou redução em sua base de clientes inteiro. Isso ajuda você a entender como amplo o impacto de uma determinada alteração pode estar, especialmente quando comparando-o com informações de porcentagem mostradas no **principais colaboradores.**
-- **Principais colaboradores**: se aplicável, o segmento específico, pacote ou outros fatores de identificação para ajudar a entender qual os clientes a alteração está relacionada à. Por exemplo, uma alteração pode ser detectada principalmente com os clientes de um mercado específico ou em um determinado tipo de dispositivo. Dados de **integridade,** isso pode incluir hashes de falha específicos ou versões do pacote. Onde for aplicável, também mostraremos a porcentagem que o valor aumento ou redução para que o fator.
+- **Data**: A data em que identificamos a alteração. Essa data representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior.
+- **Impacto geral**: A porcentagem que o valor de aumento ou redução em sua base de clientes inteiro. Isso ajuda você a entender como amplo o impacto de uma determinada alteração pode ser, especialmente quando comparando-o com informações de porcentagem mostradas no **principais colaboradores.**
+- **Principais colaboradores**: se aplicável, o segmento específico, pacote ou outros fatores de identificação para ajudar a entender qual os clientes a alteração está relacionada à. Por exemplo, uma alteração pode ser detectada principalmente com os clientes de um mercado específico ou em um determinado tipo de dispositivo. Dados de **integridade,** isso pode incluir hashes de falha específicos ou versões do pacote. Onde for aplicável, também mostraremos a porcentagem que o valor de aumento ou redução para que o fator.
 - **Ação**:
-   - Selecione **Mostrar tendência de 14 dias** para exibir um gráfico mostrando como a métrica alterada durante os inteiros 14 dias à data da informação.
+   - Selecione **Mostrar tendência de 14 dias** para exibir um gráfico mostrando como a métrica alterada durante os todo 14 dias à data da informação.
    - Selecione **Conte-nos se é preciso** envie seus comentários e conte-nos saber se as informações que fornecemos parecem ser precisas. Seus comentários nos ajudarão a continuar a melhorar os dados que fornecemos aqui. 
 

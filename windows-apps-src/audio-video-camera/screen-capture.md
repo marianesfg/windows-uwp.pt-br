@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
 ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029584"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6457183"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -70,7 +70,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a executado no thread da interface do usuário com o código a seguir:
+Como esse é o código de interface do usuário, ele precisa ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a ser executado no thread da interface do usuário com o código a seguir:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;

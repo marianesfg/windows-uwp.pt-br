@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, listagem, descrição, página da store, notas de versão, título
 ms.localizationpriority: medium
 ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028364"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187850"
 ---
 # <a name="create-app-store-listings"></a>Criar listagens da Store do app
 
@@ -23,9 +23,9 @@ A seção **Listagens da Store** do [processo de envio de aplicativo](app-submis
 Muitos dos campos em uma **listagem da Store** são opcionais, mas sugerimos que você forneça várias imagens e o máximo de informações possível para a listagem se destacar. O mínimo necessário para etapa de **listagens da Microsoft Store** ser considerada como concluída é uma descrição de texto e pelo menos uma [captura de tela](app-screenshots-and-images.md#screenshots).
 
 > [!TIP]
-> Você pode, opcionalmente, [Importar e exportar listagens da loja](import-and-export-store-listings.md) se você prefere inserir as informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregamento de arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo. 
+> Você pode, opcionalmente, [Importar e exportar listagens da loja](import-and-export-store-listings.md) se você prefere inserir as informações de listagem offline em um arquivo. csv, em vez de fornecer informações e carregar arquivos diretamente no Partner Center. O uso da opção de importar e exportar pode ser especialmente útil se você tiver listagens em vários idiomas, já que ele permite fazer várias atualizações ao mesmo tempo. 
 
-Se seu aplicativo publicado anteriormente é compatível com o Windows 8. x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes. 
+Se seu aplicativo publicado anteriormente dá suporte ao Windows 8. x e/ou Windows Phone 8. x ou anterior, você pode [criar listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para mostrar aos clientes. 
 
 ## <a name="store-listing-languages"></a>Idiomas da listagem da Loja
 
@@ -50,12 +50,12 @@ Os campos disponíveis são descritos abaixo.
 
 Essa caixa de lista suspensa permite que você especifique qual nome deve ser usado na listagem da loja (se você tiver reservado mais de um nome para o aplicativo).
 
-Se você tiver carregado pacotes no mesmo idioma como o armazenamento de listagem que você está trabalhando no, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio, após ter carregado os pacotes que usam o novo nome.
+Se você tiver carregado pacotes no mesmo idioma como o armazenamento de listagem que você está trabalhando, o nome usado nesses pacotes será selecionado. Se você precisar renomear [o aplicativo](manage-app-names.md#rename-an-app-that-has-already-been-published) depois que ele já tiver sido publicado, você pode selecionar um nome diferente reservado aqui quando você cria um novo envio, após ter carregado os pacotes que usam o novo nome.
 
-Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, já que não existe um pacote associado nesse idioma no qual obter o nome.
+Se você ainda não tiver carregado pacotes para o idioma que você está trabalhando e reservados mais de um nome, você precisará selecionar um dos nomes de aplicativo reservados, pois não há um pacote associado nesse idioma no qual obter o nome.
 
 > [!NOTE]
-> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um usuário instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, é recomendável que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
+> O **nome do produto** que você selecionar somente se aplica a listagem da loja no idioma estiver trabalhando em. Ela não afeta o nome exibido quando um cliente instala o aplicativo; Esse nome vem do manifesto do pacote que é instalado. Para evitar confusão, recomendamos que os pacotes e listagem da loja de cada idioma usem o mesmo nome.
 
 ## <a name="description"></a>Descrição
 
@@ -67,7 +67,7 @@ Para obter algumas dicas sobre como fazer a sua descrição se destacar, consult
 
 ## <a name="whats-new-in-this-version"></a>Novidades desta versão
 
-Se esta for a primeira vez em que está enviando o seu app, deixe esse campo em branco. Para obter uma atualização de um aplicativo existente, isso é onde você pode permitir que os clientes saibam o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres. (Anteriormente, esse campo foi chamado de **Notas de versão**).
+Se esta for a primeira vez em que está enviando o seu app, deixe esse campo em branco. Para uma atualização de um aplicativo existente, isso é onde você pode permitir que os clientes saibam o que mudou na versão mais recente. Este campo tem um limite de 1500 caracteres. (Anteriormente, esse campo foi chamado de **Notas de versão**).
 
 ## <a name="product-features"></a>Recursos do produto
 
