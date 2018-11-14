@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02f7c1ad1a396464532a1c63c925bf9e19600f1b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036576"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266221"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Gerar pacotes de pré-instalação para OEMs
 
@@ -22,7 +22,7 @@ Se sua conta de desenvolvedor tiver recebido as permissões adequadas, você pod
 
 ## <a name="important-preinstall-policy--limitations"></a>Política e limitações de pré-instalação importantes
 
-Aplicativos de pré-instalação devem ser certificados por meio do [Partner Center](https://partner.microsoft.com/dashboard) para terem a licença da loja mais recente para que eles sejam capazes de se conectar à loja e receber atualizações de aplicativos.
+Aplicativos de pré-instalação devem ser certificados por meio do [Partner Center](https://partner.microsoft.com/dashboard) para que a licença da loja mais recente para que eles sejam capazes de se conectar à loja e receber atualizações do aplicativo.
 
 Qualquer aplicativo pré-instalado deve ser e permanecer gratuito em todos os mercados.
 

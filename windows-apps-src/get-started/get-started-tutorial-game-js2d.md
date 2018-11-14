@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044443"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6263984"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Criar um jogo UWP em JavaScript
 
@@ -32,7 +32,7 @@ Para publicar seu aplicativo na Microsoft Store, ele deve ser escrito como um ap
 
 Este projeto é compilado com JavaScript usando o Visual Studio. Com algumas pequenas mudanças, ele também pode ser hospedado em um site ou adaptado para outras plataformas. 
 
-**Observação:** Este não é um um jogo completo (ou BOM!); ele foi projetado para demonstrar o uso de JavaScript e um terceiro biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
+**Observação:** Isso não é um jogo completo (ou BOM!); ele foi projetado para demonstrar o uso de JavaScript e um terceiro biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos

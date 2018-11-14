@@ -13,11 +13,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 386fba3cec00de6c443daa60409fe3bb74621fa1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024064"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186517"
 ---
 # <a name="pivot"></a>Pivô
 
@@ -47,14 +47,14 @@ O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para alcançar comuns de navegação superior e padrões de guias, é recomendável usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
+Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
-No entanto, se sua navegação requer o dedo por toque, é recomendável usar o pivô.
+No entanto, se sua navegação requer o dedo por toque, recomendamos usar o pivô.
 
 Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
-- Estouro carrosséis estouro de itens, enquanto o NavigationView usa um menu suspenso para que os usuários podem ver todos os itens de pivô.
-- Pivot manipula a navegação entre seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
+- Estouro carrosséis itens, enquanto o NavigationView usa um menu suspenso de estouro para que os usuários possam ver todos os itens de pivô.
+- Pivot manipula a navegação entre as seções de conteúdo, enquanto NavigationView permite mais controle sobre o comportamento de navegação.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Usar o NavigationView em vez de pivô
 
