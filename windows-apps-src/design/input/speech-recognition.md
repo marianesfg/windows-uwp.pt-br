@@ -11,11 +11,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9148b2d57c55bdff09be9a9d6bb8a6b65d93f12
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027706"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161305"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -32,7 +32,7 @@ Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se
 
 Automaticamente solicitará que o usuário com uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](http://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-![Política de privacidade para acesso de microfone](images/speech/privacy.png)
+![Política de privacidade para o acesso de microfone](images/speech/privacy.png)
 
 Se o usuário clica em Sim para conceder o acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página do microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
 
@@ -222,7 +222,7 @@ A gramática de ditado de texto livre padrão pode reconhecer a maioria das pala
 
 A gramática de pesquisa na Web, assim como uma gramática de ditado, contém um grande número de palavras e frases que um usuário pode dizer. No entanto, ela é otimizada para reconhecer termos que as pessoas normalmente usam ao pesquisar na Web.
 
-**Observação**gramáticas de pesquisa na web e de ditado predefinidas podem ser grandes e online (não no dispositivo), desempenho pode não ser tão rápido, assim como acontece com uma gramática personalizada instalada no dispositivo.     
+**Observação**gramáticas de pesquisa na web e de ditado predefinidas podem ser grandes e online (não no dispositivo), desempenho pode não ser tão rápido como gramáticas personalizadas instaladas no dispositivo.     
 
 Essas gramáticas predefinidas podem ser usadas para reconhecer até 10 segundos de entrada de fala e não exigem nenhum esforço de criação de sua parte. No entanto, elas exigem uma conexão com uma rede.
 

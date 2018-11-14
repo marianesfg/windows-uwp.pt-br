@@ -13,11 +13,11 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eef1616625ca30b1887e7f317c59f7a75abfeea
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6164632"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6273703"
 ---
 # <a name="navigation-view"></a>Modo de exibição de navegação
 

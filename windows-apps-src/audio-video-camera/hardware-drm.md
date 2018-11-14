@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e898e342cb26ab86a74c30b5ced3dd3a9b68165
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023491"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257386"
 ---
 # <a name="hardware-drm"></a>DRM de Hardware
 
@@ -81,7 +81,7 @@ Para cada reprodução de mídia, você precisa definir o **MediaProtectionManag
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-A melhor maneira de saber se você está no DRM de hardware ou software é verificar em C:\\Users\\&lt;nome de usuário&gt;\\AppData\\Local\\Packages\\&lt;nome do aplicativo&gt;\\LocalCache\\PlayReady\\\*
+A melhor maneira de saber se você está em DRM de hardware ou software é verificar em C:\\Users\\&lt;nome de usuário&gt;\\AppData\\Local\\Packages\\&lt;nome do aplicativo&gt;\\LocalCache\\PlayReady\\\*
 
 -   Se houver um arquivo mspr.hds, você estará em DRM de software.
 -   Se houver outro arquivo \*.hds, você estará em DRM de hardware.

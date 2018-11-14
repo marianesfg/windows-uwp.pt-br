@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 773216dc392f7bb234e232f3dd3e7c2190a22de1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190748"
 ---
 # <a name="playready-drm"></a>DRM do PlayReady
 
@@ -400,7 +400,7 @@ A tabela a seguir descreve a implementação do DRM do PlayReady para Windows 10
 Antes de começar a criar seu aplicativo UWP protegido pelo PlayReady, o seguinte software deve ser instalado no sistema:
 
 -   Windows 10.
--   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar o Microsoft Visual Studio2015 ou posterior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio2013 para compilar qualquer uma das amostras do DRM do PlayReady para aplicativos do Windows 8.1 da loja.
+-   Se você estiver compilando alguma das amostras para o DRM do PlayReady para aplicativos UWP, você deve usar o Microsoft Visual Studio2015 ou posterior para compilar as amostras. Você ainda pode usar o Microsoft Visual Studio2013 para compilar qualquer uma das amostras do DRM do PlayReady para aplicativos de armazenamento do Windows 8.1.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->

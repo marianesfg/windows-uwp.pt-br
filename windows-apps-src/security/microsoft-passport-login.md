@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: caa0063c0aa919e094abedd96b6205e83467e0e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027131"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189977"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Criar um app de logon do Windows Hello
 
@@ -26,7 +26,7 @@ Antes de começar, você deve ler a visão geral do [Windows Hello](microsoft-pa
 ## <a name="get-started"></a>Introdução
 
 
-Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisará ser usando o Visual Studio 2015 (Community Edition ou superior), ou uma versão posterior do Visual Studio, em um computador Windows 10. Embora o Visual Studio 2015 é a versão mínima necessária, é recomendável que você use a versão mais recente do Visual Studio para as últimas atualizações de segurança e de desenvolvedor.
+Para criar esse projeto, você precisará de alguma experiência em C# e XAML. Você também precisará ser usando o Visual Studio 2015 (Community Edition ou superior), ou uma versão posterior do Visual Studio, em um computador Windows 10. Embora o Visual Studio 2015 é a versão mínima necessária, recomendamos que você use a versão mais recente do Visual Studio para as últimas atualizações de segurança e de desenvolvedor.
 
 -   Abra o Visual Studio e selecione File > New > Project.
 -   Isso abrirá uma janela "New Project". Navegação para Templates > Visual C#.

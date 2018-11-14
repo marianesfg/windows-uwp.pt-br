@@ -2,18 +2,18 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Testes do Kit de Certificação de Aplicativos Windows
-description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo esteja pronto para ser publicado na Microsoft Store.
+description: O Kit de certificação de aplicativo do Windows contém diversos testes que podem ajudar a garantir que seu aplicativo está pronto para ser publicado na Microsoft Store.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 65afbaa4440a5bce43ca6d48126e6cc2b8316466
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023664"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194486"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Testes do Kit de Certificação de Aplicativos Windows
 
@@ -321,7 +321,7 @@ Verifique se o aplicativo foi compilado como uma compilação de versão e não 
 
 Examine as mensagens de erro para identificar a API os usos de aplicativo que não é uma [API para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Observação**aplicativos C++ integrados em uma configuração de depuração passará neste teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
+> **Observação**aplicativos C++ integrados em uma configuração de depuração falham nesse teste mesmo se a configuração usar somente APIs do SDK do Windows para aplicativos UWP. Consulte, [alternativas às APIs do Windows em aplicativos UWP](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obter mais informações.
 
 ## <a name="performance-tests"></a>Testes de desempenho
 
@@ -483,7 +483,7 @@ Use a tabela a seguir como guia.
 
 ### <a name="branding-validation"></a>Validação de marca
 
-Aplicativos UWP devem ser completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
+Aplicativos UWP devem estar completos e totalmente funcionais. Os aplicativos que usam as imagens padrão (de modelos ou exemplos de SDK) apresentam uma experiência do usuário ruim e não podem ser identificados facilmente no catálogo da loja.
 
 ### <a name="test-details"></a>Detalhes do teste
 

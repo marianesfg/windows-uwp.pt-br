@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
-description: Este documento discute um recurso direcionado a compatíveis com o Windows 10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para.
+description: Este artigo discute um recurso direcionado a compatíveis com o Windows 10, que permite que aplicativos .NET com navegação por toque usem o código existente responsável por operações essenciais para.
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
 ms.openlocfilehash: 3228cd80e7a9e8efb5dca1ec3a2d469e40a52c8a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052301"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252256"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes do Tempo de Execução do Windows agenciados para um aplicativo UWP de sideload
 
@@ -163,7 +163,7 @@ Isso será feito pelos scripts a seguir. Adicione os scripts à linha de comando
     rem erase "$(TargetPath)"
 ```
 
-Uma vez a referência**winmd**é criada (na pasta "referência" na pasta de destino do projeto), ela será levada (copiada) para cada projeto de aplicativo de sideload de consumo e referenciada. Isso será descrito ainda na próxima seção. A estrutura de projeto incorporada nas regras de compilação acima garante que a implementação e o**winmd**de referênciaestejam em diretórios claramente distinguidos na hierarquia de compilação para evitar confusão.
+Uma vez a referência**winmd**é criada (na pasta "referência" na pasta de destino do projeto), ela será levada (copiada) para cada projeto de aplicativo de sideload de consumo e referenciada. Isso será descrito ainda na próxima seção. A estrutura de projeto incorporada nas regras de compilação acima garante que a implementação e o**winmd**de referênciasão em diretórios claramente distinguidos na hierarquia de compilação para evitar confusão.
 
 ## <a name="side-loaded-applications-in-detail"></a>Aplicativos de sideload em detalhes
 Conforme mencionado anteriormente, o aplicativo de sideload é criado como qualquer outro aplicativo UWP, mas com um detalhe adicional: a declaração da disponibilidade da(s) RuntimeClass(es) no manifesto do aplicativo de sideload. Isso permite que o aplicativo simplesmente escreva algo novo para acessar a funcionalidade do componente de desktop. Uma nova entrada de manifesto na seção <Extension> descreve a RuntimeClass implementada no componente de desktop e informações sobre onde ela está localizada. Esse conteúdo da declaração no manifesto do aplicativo é o mesmo para aplicativos que segmentam o Windows 10. Por exemplo:
@@ -408,7 +408,7 @@ Normalmente, só outras referências entre projetos são feitas. No entanto, um 
 
 As referências acima são uma mistura cuidadosa de referências que são essenciais para o bom funcionamento desse servidor híbrido. O protocolo é abrir o arquivo .csproj (conforme descrito em como editar o projeto OutputType) e adicionar essas referências conforme necessário.
 
-Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN[práticas recomendadas para interoperabilidade com componentes de tempo de execução do Windows (aplicativos UWP usando c \ # /VB/c + + e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
+Depois que as referências estão configuradas corretamente, a próxima tarefa é implementar a funcionalidade do servidor. Consulte o tópico do MSDN[práticas recomendadas para interoperabilidade com componentes de tempo de execução do Windows (aplicativos UWP usando c# /VB/c + + e XAML)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx).
 A tarefa é criar uma dll de componente do Tempo de Execução do Windows que consiga chamar o código de desktop como parte de sua implementação. O exemplo exibido inclui os principais padrões usados no Tempo de Execução do Windows:
 
 -   Chamadas de método
@@ -421,7 +421,7 @@ A tarefa é criar uma dll de componente do Tempo de Execução do Windows que co
 
 **Instalar**
 
-Para instalar o aplicativo, copie a implementação**winmd**para o diretório correto especificado no manifesto do sideload do aplicativo associado: <ActivatableClassAttribute>Value = "path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Falha ao copiar a implementação**winmd**para o servidor local do diretório fará com que o sideload todas as chamadas do aplicativo para novo na RuntimeClass lancem um erro "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro é frequentemente**não**associado a exceções visíveis.
+Para instalar o aplicativo, copie o**winmd**de implementaçãopara o diretório correto especificado no manifesto do sideload do aplicativo associado: <ActivatableClassAttribute>Value = "path". Copie também todos os arquivos de suporte associados e a dll do proxy/stub (esse último detalhe é abordado abaixo). Falha ao copiar a implementação**winmd**para o servidor local do diretório fará com que o sideload todas as chamadas do aplicativo para novo na RuntimeClass lancem um erro "classe não registrada". Não instalar o proxy/stub (ou deixar de registrar) fará com que todas as chamadas falhem sem nenhum valor de retorno. Este último erro é frequentemente**não**associado a exceções visíveis.
 Se exceções forem observadas devido a esse erro de configuração, elas podem se referir à "conversão inválida".
 
 **Considerações sobre implementação de servidores**
@@ -555,7 +555,7 @@ Aqui está uma lista não exaustiva das coisas a serem consideradas:
 
 -   A transferência em massa dos resultados reduz a quantidade de conversas do processo cruzado. Isso normalmente é realizado pelo uso do constructo de matriz do Windows Runtime.
 
--   Retornando*lista<T>* onde*T*é um objeto de um fetch de propriedade ou operação assíncrona, fará com que muitos quantidade de conversas de processo cruzado. Por exemplo, suponha que você retorne um*lista&lt;pessoas&gt;* objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada*pessoas*objeto retornado é representado por um proxy e cada chamada para um método ou propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um "inocente",*lista&lt;pessoas&gt;* objeto onde*contagem*é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
+-   Retornando*lista<T>* onde*T*é um objeto de um fetch de propriedade ou operação assíncrona, fará com que muitos quantidade de conversas cruzado de processo cruzado. Por exemplo, suponha que você retorne um*lista&lt;pessoas&gt;* objetos. Cada passe de iteração será uma chamada de processo cruzado. Cada*pessoas*objeto retornado é representado por um proxy e cada chamada para um método ou propriedade nesse objeto individual resultará em uma chamada de processo cruzado. Portanto, um "inocente",*lista&lt;pessoas&gt;* objeto onde*contagem*é grande fará com que um grande número de chamadas lentas. Um melhor desempenho resulta da transferência em massa de estruturas do conteúdo em uma matriz. Por exemplo:
 
 ```csharp
 struct PersonStruct

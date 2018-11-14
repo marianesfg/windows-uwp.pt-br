@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envios de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae0e07b588415094281683ff762c02ed5242654
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044285"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196422"
 ---
 # <a name="manage-add-on-submissions"></a>Gerenciar envios de complemento
 
@@ -26,7 +26,7 @@ A API de envio da Microsoft Store oferece métodos que é possível usar para ge
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Métodos para gerenciar envios de complementos
 
-Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de usar esses métodos, o complemento já deve existir na sua conta do Partner Center. Você pode criar um complemento no Partner Center, [definir o tipo de produto e a ID do produto](../publish/set-your-add-on-product-id.md) ou usando os métodos da API de envio Microsoft Store em descrito em [Gerenciar complementos](manage-add-ons.md).
+Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um envio de complemento. Antes de usar esses métodos, o complemento já deve existir na sua conta do Partner Center. Você pode criar um complemento no Partner Center, [Definindo o tipo de produto e a ID do produto](../publish/set-your-add-on-product-id.md) ou usando os métodos da API de envio Microsoft Store em descrito em [Gerenciar complementos](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -81,7 +81,7 @@ Use os métodos a seguir para obter, criar, atualizar, confirmar ou excluir um e
 
 Para criar um envio de um complemento, siga este processo.
 
-1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo Azure AD à sua conta do Partner Center e obter a ID e a chave cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
+1. Se você ainda não tiver feito isso, conclua os pré-requisitos descritos em [criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluindo associar um aplicativo Azure AD à sua conta do Partner Center e obter a ID e chave do cliente. Você só precisa fazer uma vez. Depois que você tiver a ID e a chave do cliente, poderá reutilizá-las sempre que precisar criar um novo token de acesso do Azure AD.  
 
 2. [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Você deve passar esse token de acesso aos métodos na API de envio da Microsoft Store. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expirar, você poderá obter um novo.
 
@@ -135,7 +135,7 @@ Para criar um envio de um complemento, siga este processo.
 
     Para confirmar o status de envio, examine o valor de *status* no corpo da resposta. Esse valor deve mudar de **CommitStarted** para **PreProcessing** se a solicitação for bem-sucedida ou **CommitFailed** se houver erros na solicitação. Se houver erros, o campo *statusDetails* contém mais detalhes sobre o erro.
 
-7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar monitorando o progresso do envio usando o método anterior ou visitando o Partner Center.
+7. Após a confirmação ser concluída, o envio será enviado para a Loja para inclusão. Você pode continuar a monitorar o progresso do envio usando o método anterior ou visitando o Partner Center.
 
 <span/>
 

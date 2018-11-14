@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da loja
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eca34975217bace912ee06b967e028f30155452
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039096"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199886"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Loja
 
@@ -30,11 +30,11 @@ Para saber os detalhes de tarifas cobradas pela Microsoft Store e como receber o
 | [Envolver os clientes com o Microsoft Store Services SDK](microsoft-store-services-sdk.md)      | O Microsoft Store Services SDK fornece bibliotecas e ferramentas que você pode usar para adicionar recursos aos seus aplicativos que o ajudam a se envolver com seus clientes. Esses recursos incluem notificações específicas, / testes comparativos e iniciar o Hub de Feedback do seu aplicativo. |
 | [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)      |   Execute testes A/B em seus aplicativos UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Esse recurso requer o Microsoft Store Services SDK.  |
 | [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md)      |   Adicione código aos seus aplicativos UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários no [relatório de comentários](../publish/feedback-report.md) no Partner Center. Esse recurso requer o Microsoft Store Services SDK.   |
-| [Configure seu aplicativo para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)  |  Registre um canal de notificação para seu aplicativo UWP para que ele possa receber [notificações por push do Partner Center](../publish/send-push-notifications-to-your-apps-customers.md)e controlar a taxa de inicializações do aplicativo resultantes das notificações por push. Esse recurso requer o Microsoft Store Services SDK.  |
+| [Configurar seu aplicativo para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)  |  Registre um canal de notificação para seu aplicativo UWP para que ele possa receber [notificações por push do Partner Center](../publish/send-push-notifications-to-your-apps-customers.md)e controlar a taxa de inicializações do aplicativo resultantes das notificações por push. Esse recurso requer o Microsoft Store Services SDK.  |
 | [Registrar eventos personalizados para o Partner Center](log-custom-events-for-dev-center.md)  | Registrar eventos personalizados do seu aplicativo UWP e revise os eventos no [relatório de uso](../publish/usage-report.md) no Partner Center. Esse recurso requer o Microsoft Store Services SDK. |
 | [Solicitar classificações e opiniões](request-ratings-and-reviews.md) |  Incentivar os clientes a classificar ou analisar seu app mostrando programaticamente uma classificação e uma interface do usuário de análise.  |
 | [Serviços da Microsoft Store](using-windows-store-services.md)    |  Saiba como usar APIs RESTful para automatizar envios para a Loja, acessar dados de análise dos aplicativos e automatizar outras tarefas relacionadas à Loja.    |
-| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo no seu aplicativo do Windows para que clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
+| [Adicionar recursos de demonstração (RDX) de varejo ao seu aplicativo](retail-demo-experience.md)        |  Inclua um modo de demonstração de varejo em seu aplicativo do Windows para que os clientes que experimentar computadores e dispositivos no chão de vendas podem ir para a direita em.  |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows 10, uwp, certificação de aplicativos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8363bc3085e9d6ec4e1a86751b691266b12b365c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029544"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203386"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Testes de aplicativo da Ponte de Desktop Windows
 
 [Aplicativos de ponte de desktop](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) são convertidos em aplicativos da plataforma Universal do Windows (UWP) usando a [Ponte da área de trabalho](https://developer.microsoft.com/en-us/windows/bridges/desktop)de aplicativos da área de trabalho do Windows. Após a conversão, o aplicativo da área de trabalho do Windows é empacotado, reparado e implantado na forma de um pacote de aplicativo UWP (.appx ou .appxbundle) na área de trabalho do Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Testes obrigatórios versus opcionais
-Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante o carregamento da Microsoft Store. É recomendável investigando esses resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
+Testes opcionais para aplicativos de ponte de Desktop do Windows são apenas informativas e não serão usados para avaliar seu aplicativo durante a integração do Microsoft Store. É recomendável investigando esses resultados para produzir apps da melhor qualidade de teste. Os critérios gerais de aprovação/reprovação para a a integração à loja são determinados pelos testes obrigatórios e não por esses testes opcionais.
 
 ## <a name="current-optional-tests"></a>Testes opcionais atuais
 

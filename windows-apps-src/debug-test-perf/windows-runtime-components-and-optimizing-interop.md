@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 726dc4aaa34b9b68aa198e236abcef57b78b21f4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046753"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192907"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>Componentes UWP e otimização de interoperabilidade
 
@@ -32,7 +32,7 @@ A UWP tem uma biblioteca de tipos que estão acessíveis em qualquer linguagem n
 
 Quando você desenvolve um aplicativo UWP em C# ou Visual Basic, os dois conjuntos de APIs mais comuns usados são as APIs UWP e as APIs .NET para aplicativos UWP. Em geral, os tipos que são definidos no UWP estão em namespaces que começam com "Windows". e os tipos .NET estão em namespaces que começam com "System". Mas há exceções. Os tipos em .NET para aplicativos UWP não exigem interoperabilidade quando são usados. Se você achar que tem mau desempenho em uma área que usa a UWP, poderá usar APIs .NET para aplicativos UWP para obter melhor desempenho.
 
-**Observação**  a maioria dos componentes UWP fornecidos com Windows 10 está implementada em C++, para que você possa limites da interoperabilidade ao usá-los em c# ou Visual Basic. Como sempre, não deixe de avaliar seu aplicativo para observar se o uso de componentes UWP afeta o desempenho do aplicativo antes de investir em alterações do seu código.
+**Observação**  a maioria dos componentes UWP fornecidos com o Windows 10 é implementada em C++, para que você possa limites da interoperabilidade ao usá-los em c# ou Visual Basic. Como sempre, não deixe de avaliar seu aplicativo para observar se o uso de componentes UWP afeta o desempenho do aplicativo antes de investir em alterações do seu código.
 
 Neste tópico, a expressão "componentes UWP" refere-se a componentes escritos em linguagem diferente do C# ou do Visual Basic.
 

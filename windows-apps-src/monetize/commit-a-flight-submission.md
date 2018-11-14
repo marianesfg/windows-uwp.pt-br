@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 58293a73589c7d2780360df24bcc24f38335f1e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034182"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6197091"
 ---
 # <a name="commit-a-package-flight-submission"></a>Confirmar um envio de pacote de pré-lançamento
 
-Use este método na API de envio da Microsoft Store para confirmar um envio de versão de pré-lançamento do pacote novo ou atualizado para o Partner Center. A confirmação alertas Partner Central de ações que os dados de envio foram carregados (incluindo todos os pacotes relacionados). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
+Use este método na API de envio da Microsoft Store para confirmar um envio de versão de pré-lançamento do pacote novo ou atualizado para o Partner Center. Confirmação ação alertas Partner Center que os dados de envio foram carregados (incluindo todos os pacotes relacionados). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
 
 Para obter mais informações sobre como a operação de confirmação se encaixa no processo de criação de um envio de pacote de pré-lançamento usando a API de envio da Microsoft Store, consulte [Gerenciar envios de pacote de pré-lançamento](manage-flight-submissions.md).
 

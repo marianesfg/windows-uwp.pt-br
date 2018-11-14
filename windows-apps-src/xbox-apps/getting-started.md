@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b45386d93d37d00b8448a4f4a3548be6de7f685b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 4761b668877af6380ad176e56fb84410a4f509fc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042447"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185016"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 
@@ -33,7 +33,7 @@ Antes de começar, você precisará fazer o seguinte:
 
 1.  Instale o Visual Studio 2015 atualização 3 ou o Visual Studio 2017.
 
-    Se estiver instalando o Visual Studio 2015 atualização 3, certifique-se de que você escolha a instalação **personalizada** e selecione a caixa de seleção de **Ferramentas de desenvolvimento de aplicativos universais do Windows** – ele não é parte da instalação padrão. Se você for um desenvolvedor de C++, escolha **Instalação personalizada** e selecione **C++**.
+    Se você estiver instalando o Visual Studio 2015 atualização 3, certifique-se de que você escolha a instalação **personalizada** e marque a caixa de seleção de **Ferramentas de desenvolvimento de aplicativos universais do Windows** , ela não é parte da instalação padrão. Se você for um desenvolvedor de C++, escolha **Instalação personalizada** e selecione **C++**.
 
     Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, no painel de **Resumo** à direita, em **desenvolvimento da plataforma Universal do Windows**, certifique-se de que você selecione a caixa de seleção de **Ferramentas da plataforma Universal do Windows C++** . Não é parte da instalação padrão.
 
@@ -50,7 +50,7 @@ Agora que seu computador de desenvolvimento está pronto, você pode assistir a 
 
 ## <a name="setting-up-your-xbox-one-console"></a>Configurando seu console Xbox One
 
-1.  Ative o Modo de Desenvolvedor no seu Xbox One. Baixar o aplicativo, obter o código de ativação e, em seguida, insira-o na página [consoles gerenciar Xbox One](https://partner.microsoft.com/xboxactivate) em sua conta do Centro de desenvolvimento. Para saber mais, consulte [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
+1.  Ative o Modo de Desenvolvedor no seu Xbox One. Baixar o aplicativo, obtenha o código de ativação e, em seguida, insira-o na página [consoles gerenciar Xbox One](https://partner.microsoft.com/xboxactivate) em sua conta do Partner Center. Para saber mais, consulte [Ativação do modo de desenvolvedor do Xbox One](devkit-activation.md). 
 
 2.  Abra o aplicativo **Ativação do modo de desenvolvedor** e selecione **Alternar e reiniciar**. Parabéns! Agora você tem um Xbox One no Modo de Desenvolvedor!
   
@@ -64,11 +64,11 @@ Agora que seu computador de desenvolvimento está pronto, você pode assistir a 
 
 Para obter mais informações, consulte [Configurar UWP no ambiente de desenvolvimento do Xbox](development-environment-setup.md).
 
-1.  **Para c#**: criar um novo projeto Universal do Windows e no **Gerenciador de soluções**, clique com botão direito no projeto e selecione **Propriedades**. Selecione a guia **Depurar** , altere o **dispositivo de destino** para **Computador remoto**, digite o endereço IP ou nome do host do seu console Xbox One no campo **máquina remota** e selecione **Universal (protocolo não criptografado)** no ** Modo de autenticação** lista suspensa.   
+1.  **Para c#**: criar um novo projeto Universal do Windows e no **Gerenciador de soluções**, clique com botão direito no projeto e selecione **Propriedades**. Selecione a guia **depuração** , altere o **dispositivo de destino** para **Computador remoto**, digite o endereço IP ou nome do host do seu console Xbox One no campo **máquina remota** e selecione **Universal (protocolo não criptografado)** no ** Modo de autenticação** lista suspensa.   
 
     Você pode encontrar o endereço IP do seu Xbox One iniciando a Dev Home no seu console (o grande bloco do lado direito de Início), no canto superior esquerdo. Para obter mais informações sobre a Dev Home, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).  
 
-2.  **Para C++ e HTML/Javascript projetos**: você siga um caminho semelhante para projetos c#, mas nas propriedades do projeto vá para a guia **depuração** , selecione **Máquina remota** no depurador para abrir a lista suspensa, digite o endereço IP ou nome do host do console no campo de **Nome do computador** e selecione **Universal (protocolo não criptografado)** no campo **Tipo de autenticação** .
+2.  **Para C++ e HTML/Javascript projetos**: siga um caminho semelhante para projetos c#, mas nas propriedades do projeto vá para a guia **depuração** , selecione **Máquina remota** no depurador para abrir a lista suspensa, digite o endereço IP ou nome do host do console no campo de **Nome do computador** e selecione **Universal (protocolo não criptografado)** no campo de **Tipo de autenticação** .
 
 3. Selecione **x64** na lista suspensa à esquerda do botão verde reproduzir na barra de menu principal.
    

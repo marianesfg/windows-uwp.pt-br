@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037761"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196830"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
 Use a **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
 
 * Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
-* Publicado anteriormente o Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
+* Publicado anteriormente Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
 
 > [!IMPORTANT]
 > A partir de 31 de outubro de 2018, produtos recém-criado não podem incluir pacotes que segmentem 8.x/Windows do Windows Phone 8. x ou anterior. Para obter mais informações, consulte esta [postagem de blog](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
@@ -33,7 +33,7 @@ Para obter mais informações sobre como integrar esses SDKs com seus aplicativo
 
 Para criar uma unidade de anúncio para um [Anúncio em faixa](../monetize/banner-ads.md), [Anúncio intersticial](../monetize/interstitial-ads.md) ou [Anúncio nativo](../monetize/native-ads.md) em seu aplicativo:
 
-1.  Vá até o **monetizar** &gt; **anúncios no app** página no Partner Center e clique em **Criar unidade publicitária**.
+1.  Vá até a **monetizar** &gt; **anúncios no app** página no Partner Center e clique em **Criar unidade publicitária**.
 2.  Na lista suspensa **Nome do aplicativo**, selecione o aplicativo no qual a unidade publicitária será usada.
 3.  No campo **Nome da unidade de anúncio**, insira um nome para a unidade publicitária. Pode ser qualquer cadeia de caracteres descritiva a ser usada para identificar a unidade publicitária para fins de relatório.
 4.  Na lista suspensa **Tipo de unidade de anúncio**, selecione o tipo de anúncio.
@@ -72,7 +72,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade de anúncio não tiver nenhuma atividade nos últimos seis meses, podemos será rotule-o como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -112,7 +112,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 
 |  Rede de publicidade  |  Descrição  |  Tipos de anúncio com suporte  |
 |--------------|---------------|---------------------|
-| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e ele não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
+| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
 | AppNexus (direto) | Selecione esta opção para veicular anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
 | Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |
@@ -154,7 +154,7 @@ As redes de publicidade disponíveis veiculam anúncios em todos os [mercados co
 
 ## <a name="coppa-compliance"></a>Conformidade com o COPPA
 
-Quando você [criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade publicitária existente](#available-ad-units), a seção de **conformidade com COPPA** aparece na parte inferior da página, se o aplicativo selecionado para a unidade publicitária tiver pelo menos uma assinatura que tenha chegado o [na loja](../publish/the-app-certification-process.md#in-the-store) etapa no aplicativo processo de certificação.
+Quando você [criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade publicitária existente](#available-ad-units), a seção de **conformidade com COPPA** aparece na parte inferior da página, se o aplicativo selecionado para a unidade publicitária tiver pelo menos uma assinatura que tenha chegado o [no repositório de](../publish/the-app-certification-process.md#in-the-store) etapa no aplicativo processo de certificação.
 
 Para fins do Children's Online Privacy Protection Act (“COPPA”), você deve selecionar **Este aplicativo é direcionado para crianças com menos de 13 anos** nessa seção se seu aplicativo é direcionado para crianças com menos de 13 anos. Se você selecionar essa opção, a Microsoft seguirá as etapas para desabilitar seus serviços de publicidade comportamental ao oferecer um anúncio em seu aplicativo.
 

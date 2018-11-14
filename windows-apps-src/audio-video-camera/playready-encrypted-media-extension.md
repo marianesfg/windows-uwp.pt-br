@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
+description: Esta seção descreve como modificar seu aplicativo de web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
 title: Extensão de Mídia Criptografada do PlayReady
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b73464ea10aa835b82df17605e983ebdfb9cd890
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036966"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185390"
 ---
 # <a name="playready-encrypted-media-extension"></a>Extensão de Mídia Criptografada do PlayReady
 
 
 
-Esta seção descreve como modificar seu aplicativo da web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
+Esta seção descreve como modificar seu aplicativo de web PlayReady para dar suporte a alterações feitas desde a versão anterior do Windows 8.1 para a versão do Windows 10.
 
 O uso de elementos de mídia PlayReady no Internet Explorer permite que desenvolvedores criem um aplicativo Web que possa fornecer conteúdo PlayReady ao usuário enquanto impõe regras de acesso definidas pelo provedor de conteúdo. Esta seção descreve como adicionar elementos de mídia PlayReady aos seus aplicativos Web existentes usando somente HTML5 e JavaScript.
 

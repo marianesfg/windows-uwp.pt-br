@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 03b1e6a5fce559e9e6bf900bae3e3f83921567e6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035015"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191529"
 ---
 # <a name="debug-a-background-task"></a>Depurar uma tarefa em segundo plano
 
@@ -103,7 +103,7 @@ Se um aplicativo que utiliza tarefas em segundo plano for implantado com o Visua
 -   Se a tarefa em segundo plano exigir acesso à tela de bloqueio, coloque o aplicativo na tela de bloqueio antes de tentar depurar essa tarefa. Para obter informações sobre como especificar opções de manifesto para aplicativos compatíveis com a tela de bloqueio, consulte [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md).
 -   Os parâmetros de registro de tarefas em segundo plano são validados no momento do registro. Um erro será retornado se algum parâmetro de registro for inválido. Verifique se o aplicativo trata tranquilamente cenários em que o registro de tarefas de segundo plano apresenta falha. Se, em vez disso, o aplicativo depender de ter um objeto de registro válido depois de tentar registrar uma tarefa, ele poderá travar.
 
-Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [como disparar a suspensão, retomada e eventos em aplicativos UWP de plano de fundo](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Para obter mais informações sobre como usar o VS para depurar uma tarefa em segundo plano, consulte [como disparar suspensão, retomada e segundo plano eventos em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
@@ -112,7 +112,7 @@ Para obter mais informações sobre como usar o VS para depurar uma tarefa em se
 * [Registrar uma tarefa em segundo plano](register-a-background-task.md)
 * [Declarar tarefas em segundo plano no manifesto do aplicativo](declare-background-tasks-in-the-application-manifest.md)
 * [Diretrizes para tarefas em segundo plano](guidelines-for-background-tasks.md)
-* [Como disparar a suspensão, retomada e eventos em aplicativos UWP de plano de fundo](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
+* [Como disparar suspensão, retomada e segundo plano eventos em aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Analisando a qualidade do código de aplicativos UWP com análise de código do Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  

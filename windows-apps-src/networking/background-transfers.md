@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bc007ee1725ea3048895ccb9e7340bc0f08e8b8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051951"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6256042"
 ---
 # <a name="background-transfers"></a>Transferências em segundo plano
 Use a API de transferência em segundo plano para copiar arquivos de maneira confiável na rede. A API de transferência em segundo plano fornece recursos avançados de carregamento e download que são executados em segundo plano durante a suspensão do aplicativo e persistirão após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de download se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
@@ -30,7 +30,7 @@ Quando um aplicativo usa transferência em segundo plano para iniciar uma transf
 > [!NOTE]
 > Devido às restrições de recurso por app, um app não deve ter mais de 200 transferências (DownloadOperations + UploadOperations) de cada vez. Exceder esse limite pode deixar a fila de transferência do app em um estado irrecuperável.
 
-Quando um aplicativo é iniciado, ele deverá chamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) em todos os objetos [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) e [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) existentes. Não fazer isso fará com que o vazamento de transferências já preencheu e será eventualmente inutilizar o uso do recurso transferência em segundo plano.
+Quando um aplicativo é iniciado, ele deverá chamar [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) em todos os objetos [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) e [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) existentes. Não fazer isso fará com que o vazamento de transferências já foi concluída e será eventualmente inutilizar o uso do recurso transferência em segundo plano.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Executando solicitações de arquivos autenticados com a transferência em segundo plano
 A transferência em segundo plano proporciona métodos que oferecem suporte para credenciais básicas de servidor e proxy, cookies e uso de cabeçalhos HTTP personalizados (via [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) para cada operação de transferência.
@@ -42,7 +42,7 @@ Por exemplo, a política de custo definida para uma operação pode indicar que 
 
 Embora o recurso de transferência em segundo plano tenha seus próprios mecanismos para manipular alterações no status de rede, existem outras considerações gerais de conectividade para aplicativos conectados a rede. Leia sobre o [aproveitamento de informações de conexão de rede disponíveis](https://msdn.microsoft.com/library/windows/apps/hh452983) para saber mais.
 
-> **Observação**para aplicativos executados em dispositivos móveis, há recursos que permitem ao usuário monitorar e restringir a quantidade de dados que são transferidos com base no tipo de conexão, status, de roaming e planejar os dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
+> **Observação**para aplicativos em execução em dispositivos móveis, há recursos que permitem ao usuário monitorar e restringir a quantidade de dados que são transferidos com base no tipo de conexão, status, de roaming e plano de dados do usuário. Por isso, as transferências em segundo plano podem ser pausadas no telefone mesmo quando a [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indica que a transferência deve continuar.
 
 A tabela a seguir indica quando as transferências em segundo plano são permitidas no telefone para cada valor da [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138), levando em consideração o status atual do telefone. Você pode usar a classe [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) para determinar o status atual do telefone.
 

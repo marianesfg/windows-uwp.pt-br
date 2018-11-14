@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, escala de sobreposições, sobreposições, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043811"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196771"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Dimensionamento e sobreposições de cadeia de troca
 
@@ -166,7 +166,7 @@ Use as etapas a seguir para criar uma cadeia de troca de primeiro plano que use 
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Observação**  definir o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que esta for redimensionada.
+    > **Observação**  definir o [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) novamente sempre que a cadeia de troca for redimensionada.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(

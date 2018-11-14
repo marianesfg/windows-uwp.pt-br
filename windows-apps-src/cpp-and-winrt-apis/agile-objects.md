@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2fa129a60c7dfcc170a9ddeec318a062fb8cbe56
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043765"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194641"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágeis em C++/WinRT
 
-Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como objetos de C++ padrão mais podem). Essa classe de tempo de execução do Windows é *ágil*. Apenas um pequeno número de classes do Windows Runtime que acompanha o Windows não é ágil, mas ao usá-los, você precisará levar em consideração o modelo de threading e o comportamento de empacotamento (empacotamento é transmitir dados por um marco de delimitação apartment). Ele é um bom padrão para cada objeto de tempo de execução do Windows ser ágil, portanto, sua própria [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são ágeis por padrão.
+Na grande maioria dos casos, uma instância de uma classe de tempo de execução do Windows pode ser acessada de qualquer thread (assim como objetos C++ mais padrão podem). Essa classe de tempo de execução do Windows é *ágil*. Apenas um pequeno número de classes do Windows Runtime que acompanha o Windows não é ágil, mas ao usá-los, você precisará levar em consideração o modelo de threading e o comportamento de empacotamento (empacotamento é transmitir dados por um marco de delimitação apartment). Ele é um bom padrão para cada objeto de tempo de execução do Windows ser ágil, portanto, sua própria [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) tipos são ágeis por padrão.
 
 No entanto, é possível recusá-los. Você pode ter um motivo convincente para exigir que um objeto do seu tipo resida, por exemplo, em um determinado single-threaded apartment. Normalmente, isso envolve os requisitos de reentrância. Entretanto, cada vez mais, até mesmo APIs da interface do usuário oferecem objetos ágeis. Em geral, a agilidade é a opção mais simples e eficiente. Além disso, quando você implementa uma fábrica de ativação, ela deve ser ágil mesmo que a sua classe de tempo de execução correspondente não seja.
 

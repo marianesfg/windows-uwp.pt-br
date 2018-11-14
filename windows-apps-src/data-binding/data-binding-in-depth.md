@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 9d990c206892872711626fb98f386f7b28f43543
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 0d7f6667aeb2f6c7c07f8f4c2d5944f559ebe0d8
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027560"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208258"
 ---
 # <a name="data-binding-in-depth"></a>Vinculação de dados em detalhes
 
@@ -32,11 +32,11 @@ ms.locfileid: "6027560"
 
 A vinculação de dados é uma maneira de a interface do usuário do seu aplicativo exibir dados e, opcionalmente, ficar em sincronia com esses dados. A vinculação de dados permite separar a preocupação dos dados da preocupação da interface do usuário, e isso resulta em um modelo conceitual mais simples, bem como melhor legibilidade, capacidade de teste e capacidade de manutenção do seu aplicativo.
 
-Você pode usar a vinculação de dados simplesmente para exibir os valores de uma fonte de dados quando a interface do usuário é mostrada primeiro, mas não para responder a alterações nesses valores. Este é um modo de associação chamada *única*, e funciona bem para um valor que não muda durante o tempo de execução. Como alternativa, você pode optar por "observar" os valores e atualizar a interface do usuário quando mudam. Isso mais é chamado *unidirecional*, e funciona bem para dados somente leitura. Por fim, você pode optar por observar e atualizar, para que as alterações que o usuário faz aos valores da interface do usuário sejam automaticamente enviadas de volta para a fonte de dados. Esse modo é chamado *bidirecional*, e funciona bem para dados de leitura / gravação. Aqui estão alguns exemplos.
+Você pode usar a vinculação de dados simplesmente para exibir os valores de uma fonte de dados quando a interface do usuário é mostrada primeiro, mas não para responder a alterações nesses valores. Este é um modo de associação chamada *única*, e funciona bem para um valor que não muda durante o tempo de execução. Como alternativa, você pode optar por "observar" os valores e atualizar a interface do usuário quando mudam. Esse modo é chamado *unidirecional*, e funciona bem para dados somente leitura. Por fim, você pode optar por observar e atualizar, para que as alterações que o usuário faz aos valores da interface do usuário sejam automaticamente enviadas de volta para a fonte de dados. Esse modo é chamado *bidirecional*, e funciona bem para dados de leitura / gravação. Aqui estão alguns exemplos.
 
 -   Você pode usar o modo unidirecional para associar uma [**imagem**](https://msdn.microsoft.com/library/windows/apps/BR242752) a foto do usuário atual.
 -   Você pode usar o modo unidirecional para associar um [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a uma coleção de artigos de notícias em tempo real agrupados pela seção de jornal.
--   Você pode usar o modo bidirecional para associar um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) ao nome do cliente em um formulário.
+-   Você pode usar o modo bidirecional para associar um [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) para o nome do cliente em um formulário.
 
 Independentemente do modo, existem dois tipos de associação, e ambos normalmente são declarados na marcação da interface do usuário. Você pode optar por usar a [extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ou a [extensão de marcação {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). E você ainda pode usar uma combinação das duas no mesmo aplicativo, inclusive no mesmo elemento de interface do usuário. {x: Bind} é novo no Windows 10 e tem um desempenho melhor. Todos os detalhes descritos neste tópico se aplicam a ambos os tipos de associação, a menos que explicitamente declarado o contrário.
 
@@ -63,7 +63,7 @@ Nas seções a seguir, vamos dar uma olhada na origem da associação, no destin
 
 Consulte uma implementação muito rudimentar de uma classe que poderíamos usar como uma fonte de associação.
 
-Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, adicionar novos itens de **Midl File (. idl)** para o projeto, chamado conforme mostrado no C++ c++ WinRT abaixo de listagem de exemplo de código. Substitua o conteúdo desses novos arquivos com o código de [MIDL 3.0](/uwp/midl-3/intro) mostrada na listagem da, compile o projeto para gerar `HostViewModel.h` e `.cpp`e, em seguida, adicione o código para os arquivos gerados para corresponder a listagem. Para obter mais informações sobre esses arquivos gerados e como copiá-los em seu projeto, consulte [controles XAML; associar a C++ c++ WinRT propriedade](/windows/uwp/cpp-and-winrt-apis/binding-property).
+Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, adicionar novos itens de **Midl File (. idl)** para o projeto, chamado conforme mostrado no C++ c++ WinRT abaixo de listagem de exemplo de código. Substitua o conteúdo desses novos arquivos com o código de [MIDL 3.0](/uwp/midl-3/intro) mostrada na listagem, compile o projeto para gerar `HostViewModel.h` e `.cpp`e, em seguida, adicione o código para os arquivos gerados para corresponder a listagem. Para obter mais informações sobre esses arquivos gerados e como copiá-los em seu projeto, consulte [controles XAML; associar a C++ c++ WinRT propriedade](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 public class HostViewModel
@@ -199,7 +199,7 @@ void HostViewModel::PropertyChanged(winrt::event_token const& token) noexcept
 
 Agora a propriedade **NextButtonText** é observável. Quando você cria uma associação unidirecional ou bidirecional com essa propriedade (mostraremos posteriormente), o objeto de associação resultante assina o evento **PropertyChanged**. Quando esse evento é acionado, o manipulador do objeto de associação recebe um argumento que contém o nome da propriedade que foi alterada. É assim que o objeto de associação sabe qual valor de propriedade usar e ler novamente.
 
-Para que você não precisa implementar o padrão mostrado acima várias vezes, se você estiver usando c# e em seguida, você pode simplesmente derivar de classe base **BindableBase** que você encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum"). Consulte um exemplo de como fica.
+Para que você não precise implementar o padrão mostrado acima várias vezes, se você estiver usando c#, em seguida, você pode simplesmente derivar de classe base **BindableBase** que você encontrará na amostra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (na pasta "Comum"). Consulte um exemplo de como fica.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -254,7 +254,7 @@ Nos dois exemplos a seguir, a propriedade **Button. Content** é o destino da as
 <Button Content="{Binding ...}" ... />
 ```
 
-Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX), você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja usar com a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
+Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX), em seguida, você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja usar com a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
 
 > [!IMPORTANT]
 > Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) estará disponível se você instalou o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809), ou posterior. Sem esse atributo, você precisará implementar as interfaces [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) e [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) para ser capaz de usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) .
@@ -328,7 +328,7 @@ Quando concluído, podemos dar uma olhada na marcação que declara o objeto de 
 </Page>
 ```
 
-Observe o valor que especificamos para **Path**. Esse valor é interpretado no contexto da página em si e, nesse caso, o caminho começa fazendo referência a propriedade **ViewModel** que acabamos para a página de **MainPage** . Essa propriedade retorna uma instância **HostViewModel** e, portanto, podemos especificar esse objeto para acessar a propriedade **HostViewModel.NextButtonText**. E podemos especificar **Mode**, para substituir o [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) padrão de unidirecional.
+Observe o valor que especificamos para **Path**. Esse valor é interpretado no contexto da página em si, e nesse caso, o caminho começa fazendo referência a propriedade **ViewModel** que acabamos para a página de **MainPage** . Essa propriedade retorna uma instância **HostViewModel** e, portanto, podemos especificar esse objeto para acessar a propriedade **HostViewModel.NextButtonText**. E podemos especificar **Mode**, para substituir o [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) padrão de unidirecional.
 
 A propriedade [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) dá suporte a várias opções de sintaxe para associação a propriedades aninhadas, propriedades anexadas e indexadores de inteiros e cadeias de caracteres. Para obter mais informações, consulte [Sintaxe do Property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). A associação a indexadores de inteiros tem o mesmo efeito da associação a propriedades dinâmicas, mas sem implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). Para outras configurações, consulte [Extensão de marcação {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
@@ -375,11 +375,11 @@ Por exemplo, considere que você tenha um tipo chamado SampleDataGroup, que impl
 O código para dar suporte a **{x:Bind}** é gerado no tempo de compilação nas classes parciais de suas páginas. Esses arquivos podem ser encontrados em sua pasta `obj`, com nomes como (para C#) `<view name>.g.cs`. O código gerado inclui um manipulador do evento [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) de sua página e esse manipulador chama o método **Initialize** em uma classe gerada que representa as associações da sua página. **Initialize** chama **Update** para começar a movimentação de dados entre a origem da associação e o destino. **Loading** é disparado antes da primeira medida passar da página ou do controle de usuário. Portanto, se seus dados são carregados de forma assíncrona, talvez não estejam prontos no momento em que **Initialize** for chamado. Sendo assim, depois de carregar dados, você pode forçar a inicialização de associações únicas, chamando `this.Bindings.Update();`. Se você só precisa de associações únicas para dados carregados de forma assíncrona é muito mais barato inicializá-las assim que ter associações unidirecionais e ouvir as alterações. Se os seus dados não sofrerem mudanças detalhadas, e se é provável que sejam atualizados como parte de uma ação específica, então, você pode tornar suas associações únicas e forçar uma atualização manual a qualquer momento com uma chamada para **Update**.
 
 > [!NOTE]
-> **{x: Bind}** não é adequado para cenários de associação tardia, como navegar na estrutura de dicionário de um objeto JSON, nem digitação pato. "Digitação pato" é uma forma fraca de digitação com base em correspondências lexicais em nomes de propriedade (um, "se ele orienta, nada e grasnar como um pato, em seguida, ele é um pato"). Com "Duck typing", uma vinculação à propriedade **idade** seria igualmente atendida com uma **pessoa** ou um **vinhos** objeto (supondo que esses tipos tinham uma propriedade de **idade** ). Para esses cenários, use a extensão de marcação **{Binding}** .
+> **{x: Bind}** não é adequado para cenários de associação tardia, como navegar na estrutura de dicionário de um objeto JSON, nem digitação pato. "Digitação pato" é uma forma fraca de digitação com base em correspondências lexicais em nomes de propriedade (um, "se ele orienta, nada e grasnar como um pato, é um pato"). Com "Duck typing", uma vinculação à propriedade **idade** seria igualmente atendida com uma **pessoa** ou um **vinhos** objeto (supondo que esses tipos tinham uma propriedade de **idade** ). Para esses cenários, use a extensão de marcação **{Binding}** .
 
 ### <a name="binding-object-declared-using-binding"></a>Objeto de associação declarado usando {Binding}
 
-Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX) em seguida, para usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja associar a. Para usar [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), você não precisará desse atributo.
+Se você estiver usando C++ c++ extensões de componente WinRT ou VisualC + + (C++ c++ /CX), para usar a extensão de marcação [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) , você precisará adicionar o atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a qualquer classe de tempo de execução que você deseja associar. Para usar [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), você não precisará desse atributo.
 
 ```cppwinrt
 // HostViewModel.idl
@@ -426,7 +426,7 @@ O valor padrão de [**DataContext**](https://msdn.microsoft.com/library/windows/
 
 Um objeto de associação tem uma propriedade **Source**, que assume como padrão o [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) do elemento de interface do usuário no qual a associação é declarada. Você pode substituir esse padrão definindo **Source**, **RelativeSource** ou **ElementName** explicitamente na associação (veja [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) para obter detalhes).
 
-Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), o [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) é definida automaticamente como o objeto de dados que está sendo modelado. O exemplo abaixo pode ser usado como o **ItemTemplate** de um controle de itens associado a uma coleção de qualquer tipo que tem propriedades de string chamadas **Title** e **Description**.
+Dentro de um [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) é definida automaticamente como o objeto de dados que está sendo modelado. O exemplo abaixo pode ser usado como o **ItemTemplate** de um controle de itens associado a uma coleção de qualquer tipo que tem propriedades de string chamadas **Title** e **Description**.
 
 ```xaml
 <DataTemplate x:Key="SimpleItemTemplate">
@@ -641,7 +641,7 @@ Observe também que um vetor virtualizado pode retornar **null** para alguns ite
 
 ## <a name="binding-to-data-grouped-by-a-key"></a>Associação a dados agrupados por uma chave
 
-Se você usar uma coleção simples de itens (livros, por exemplo, representados por uma classe **BookSku** ) e agrupar os itens usando uma propriedade comum como uma chave (a propriedade **booksku. AuthorName** , por exemplo), o resultado será chamado de dados agrupados. Quando você agrupa os dados, não é mais uma coleção simples. Dados agrupados são uma coleção de objetos de grupo, onde cada objeto de grupo tem
+Se você usar uma coleção simples de itens (livros, por exemplo, representados por uma classe de **BookSku** ) e agrupar os itens usando uma propriedade comum como uma chave (a propriedade de **booksku. AuthorName** , por exemplo), o resultado será chamado de dados agrupados. Quando você agrupa os dados, não é mais uma coleção simples. Dados agrupados são uma coleção de objetos de grupo, onde cada objeto de grupo tem
 
 - uma chave, e
 - uma coleção de itens cuja propriedade corresponde a essa chave.

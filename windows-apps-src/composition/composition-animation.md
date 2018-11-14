@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038700"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188253"
 ---
 # <a name="composition-animations"></a>Animações de composição
 
@@ -39,9 +39,9 @@ Aqui, um efeito de paralaxe visual move objetos diferentes em diferentes taxas q
 
 ## <a name="using-compositionanimations-to-create-motion"></a>Usando o CompositionAnimations para criar um movimento
 
-Para gerar movimento na interface do usuário, os desenvolvedores podem acessar animações em XAML (link para Storyboards aqui) ou a camada Visual. As animações na camada Visual fornecem os desenvolvedores com uma série de benefícios:
+Para gerar movimento na interface do usuário, os desenvolvedores podem acessar animações em XAML (link para Storyboards aqui) ou a camada Visual. As animações na camada Visual fornecem aos desenvolvedores uma série de benefícios:
 
-- Desempenho – em vez de animação associada ao Thread de interface do usuário tradicional, animações na plataforma Windows da interface do usuário operam em um thread independente a 60 FPS, habilitar experiências de movimento suave.
+- Desempenho – em vez de animação associada ao Thread de interface do usuário tradicional, animações na plataforma de interface do usuário Windows operam em um thread independente a 60 FPS, habilitar experiências de movimento suave.
 - Modelo de modelagem – animações na camada da interface do usuário do Windows são modelos, o significado pode usar uma única animação em vários objetos e ajuste as propriedades ou parâmetros sem se preocupar em obstruir anterior usa.
 - Personalização – a camada de interface do usuário do Windows não apenas torna mais fácil fazer belo interface do usuário, mas com uma ampla variedade de tipos de animação, possível criar novos e incríveis experiências com um gradiente de personalizações
 
@@ -55,8 +55,8 @@ Como um desenvolvedor de criação de experiências na camada da interface do us
 
 | Conceito de animação | Descrição |
 | ----------------- | ----------- |
-| [Movimento baseadas em tempo com KeyFrameAnimations](time-animations.md)  | Os KeyFrameAnimations são usados para controlar diretamente na íntegra uma experiência de movimento durante um período de tempo. Desenvolvedores descrevendo um movimento inicial, final, interpolação entre e duração de maneira keyframed tradicional. |
-| [Movimento relativo com os ExpressionAnimations](relation-animations.md)  | Os ExpressionAnimations são usados para descrever como um movimento de uma propriedade de objeto deve ser orientado em relação à propriedade do outro objeto. Os desenvolvedores definem uma equação matemática que define a relação de referência. |
+| [Movimento baseadas em tempo com KeyFrameAnimations](time-animations.md)  | Os KeyFrameAnimations são usados para controlar diretamente na íntegra uma experiência de movimento durante um período de tempo. Desenvolvedores descrevendo um movimento inicial, final, interpolação entre e duração de uma maneira de keyframed tradicionais. |
+| [Movimento relativo com os ExpressionAnimations](relation-animations.md)  | Os ExpressionAnimations são usados para descrever como um movimento de uma propriedade de objeto deve ser orientado em relação à propriedade do outro objeto. Os desenvolvedores definem uma equação matemática que define a relação de base de referência. |
 | ImplicitAnimations | Essas animações são baseados em gatilhos e são definidas separadamente da lógica principal do aplicativo. ImplicitAnimations são usados para descrever como e quando as animações ocorrem como uma resposta às alterações de propriedade direta. |
-| [Movimento controladas por entrada com animações de entrada](input-driven-animations.md)  | Animações de entrada abrange um conjunto de cenários que permitem que os desenvolvedores de descrever o movimento com base em manipulação por meio de toque ou outras modalidades de entrada. Essas animações são orientadas com base na entrada do usuário ativo ou gestos. |
+| [Movimento controladas por entrada com animações de entrada](input-driven-animations.md)  | Animações de entrada abrange um conjunto de cenários que permitem que os desenvolvedores de descrever o movimento com base em manipulação por meio de toque ou outras modalidades de entrada. Essas animações são controladas com base na entrada do usuário ativo ou gestos. |
 | [Movimento baseados na física com os NaturalMotionAnimations](natural-animations.md)  | Os NaturalMotionAnimations são usados para descrever o movimento natural e familiar movimento controladas por forçar a experiências com base no mundo real. Em vez de definir o tempo, os desenvolvedores definir características do movimento (por exemplo, damping proporção para molas) |

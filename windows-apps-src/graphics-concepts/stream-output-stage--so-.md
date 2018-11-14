@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028682"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193480"
 ---
 # <a name="stream-output-so-stage"></a>Estágio de Saída de Fluxo(SO)
 
@@ -45,7 +45,7 @@ Dados de vértice de um estágio de sombreador anterior.
 
 O estágio de Saída de Fluxo (SO) emite continuamente (ou transmite) dados de vértice do estágio ativo anterior, como o estágio de Sombreador de Geometria (GS), para um ou mais buffers na memória. Se o estágio de Sombreador de Geometria (GS) estiver inativo, o estágio de Saída de Fluxo (SO) gera continuamente dados de vértice do estágio de Sombreador de Domínio (DS) para buffers na memória (ou se o DS também estiver inativo, do estágio do Sombreador de Vértice (VS)).
 
-Quando uma faixa de triângulo ou linha for vinculada ao estágio de Assembler de entrada (IA), cada faixa é convertida em uma lista antes que eles são transmitidos. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
+Quando uma faixa de triângulos ou linha for vinculada ao estágio de Assembler de entrada (IA), cada faixa é convertida em uma lista antes que eles são transmitidos. Os vértices sempre são gravados como primitivos completas (por exemplo, 3 vértices por vez para triângulos); primitivos incompletos nunca são transmitidos. Tipos primitivos com adjacência descartam os dados de adjacência antes de transmitir os dados.
 
 O estágio de saída de fluxo dá suporte a até 4 buffers simultaneamente.
 

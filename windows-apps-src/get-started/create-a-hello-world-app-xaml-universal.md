@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039238"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192317"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um app "Hello, world" (XAML)
 
@@ -95,7 +95,7 @@ Para exibir e editar um arquivo no projeto, clique duas vezes no arquivo no **Ge
 
 *Package.appxmanifest*
 -   Um arquivo de manifesto que descreve seu aplicativo: nome, descrição, bloco, página de início, etc.
--   Inclui uma lista de dependências, recursos e arquivos que ele contém.
+-   Inclui uma lista de dependências, recursos e os arquivos que ele contém.
 
 *Um conjunto de imagens de logotipo*
 -   Assets/Square150x150Logo.scale-200.png e Wide310x150Logo.scale 200.png representam seu aplicativo (tamanho médio ou todo o) no menu Iniciar.

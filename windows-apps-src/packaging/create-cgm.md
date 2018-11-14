@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa de grupo de conteúdo, instalação de streaming, instalação de streaming de aplicativos uwp, mapa de grupo de conteúdo de origem
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a2922d6d3f54d693a9fe9c0982ea06cc5f2caae
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037965"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189798"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crie e converta um mapa de grupo de conteúdo de origem
 
@@ -25,7 +25,7 @@ Você precisará criar um arquivo `SourceAppxContentGroupMap.xml` e, em seguida,
 
 Vamos caminhar através de um cenário simples onde a instalação de streaming de aplicativos UWP é benéfica. 
 
-Digamos que você criou um jogo UWP, mas o tamanho do seu aplicativo final é superior a 100 GB. Isso vai levar muito tempo para baixar da Microsoft Store, que pode ser inconveniente. Se você optar por usar a instalação de streaming de aplicativos UWP, poderá especificar a ordem em que os arquivos do seu aplicativo são baixados. Ao dizer à loja que faça o download de arquivos essenciais primeiro, o usuário poderá se envolver com seu aplicativo mais cedo, enquanto outros arquivos não essenciais serão baixados em segundo plano.
+Digamos que você criou um jogo UWP, mas o tamanho do seu aplicativo final é superior a 100 GB. Isso vai levar muito tempo para fazer o download da Microsoft Store, que pode ser inconveniente. Se você optar por usar a instalação de streaming de aplicativos UWP, poderá especificar a ordem em que os arquivos do seu aplicativo são baixados. Ao dizer à loja que faça o download de arquivos essenciais primeiro, o usuário poderá se envolver com seu aplicativo mais cedo, enquanto outros arquivos não essenciais serão baixados em segundo plano.
 
 > [!NOTE]
 > Usar a instalação de streaming de aplicativo UWP depende muito da organização de arquivos do seu aplicativo. Recomenda-se que você pense sobre o layout de conteúdo do seu aplicativo em relação à instalação de streaming de aplicativo UWP o mais rápido possível para tornar mais simples a segmentação dos arquivos de seu aplicativo.

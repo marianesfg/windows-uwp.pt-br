@@ -1,6 +1,6 @@
 ---
 author: GrantMeStrength
-title: Criar um app complexo da plataforma Universal do Windows (UWP)
+title: Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
 description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos - conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 ms.author: jken
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ce5e0d272e14b9c69f660c8c7de6a838fa7956ac
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032551"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194717"
 ---
-#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criar um app complexo da plataforma Universal do Windows (UWP)
+#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
 
 Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos: conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 
@@ -135,7 +135,7 @@ Para saber mais, consulte as [extensões e contratos de aplicativo](https://msdn
 
 **Diferentes exibições, fatores forma e configurações de hardware**Windows coloca os usuários no comando e seu aplicativo na linha de frente. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
 
-**Tocar primeiro**Windows fornece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
+**Tocar primeiro**Windows oferece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
 
 Por exemplo, zoom semântico é uma forma de toque otimizado para navegar por uma grande quantidade de conteúdo. Os usuários podem fazer movimentos panorâmicos ou rolar por categorias de conteúdo e depois ampliar essas categorias para ver informações cada vez mais detalhadas. Você pode usar isso para apresentar o seu conteúdo de forma mais prática, visual e informativa do que com a navegação tradicional e os padrões de layout, como guias.
 
@@ -144,21 +144,21 @@ Claro, você pode se beneficiar de inúmeras vantagens de interações de toque,
 **Interessante e novo**Certifique-se de que seu aplicativo pareça novo e interesse aos usuários com estas experiências padrão:
 
 -   **Animações**Use sua biblioteca de animações para deixar seu aplicativo rápido e fluido para seus usuários. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais. Saiba mais sobre [animações na interface do usuário](../graphics/animations-overview.md).
--   **Notificações do sistema**permite que os usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convidá-los para o seu aplicativo, mesmo quando o aplicativo é fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../design/shell/tiles-and-notifications/index.md).
--   **Blocos de aplicativos**fornece atualizações recentes e relevantes para atrair os usuários de volta ao seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../design/shell/tiles-and-notifications/creating-tiles.md).
+-   **Notificações do sistema**permite que os usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convide-os para o seu aplicativo, mesmo quando o aplicativo é fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../design/shell/tiles-and-notifications/index.md).
+-   **Blocos de aplicativo**fornece atualizações recentes e relevantes para atrair os usuários de volta ao seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalização**
 
 -   **Configurações**permite que os usuários criem a experiência que quiserem ao salvar configurações do aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../design/app-settings/app-settings-and-data.md).
--   **Roaming**criar uma experiência contínua entre dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde pararam e preserva a experiência do usuário eles mais se importam, independentemente do dispositivo que eles estão usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../design/app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Roaming**criar uma experiência contínua entre dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde pararam e preserva a experiência do usuário que eles mais se importam, independentemente do dispositivo que eles estão usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../design/app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
 -   **Blocos de usuário**  tornar seu aplicativo mais pessoal aos usuários carregando a imagem de bloco de usuário deles ou permitir que os usuários definam conteúdos do seu aplicativo como bloco pessoal no Windows.
 
 **Recursos do dispositivo**Certifique-se de que seu aplicativo tira proveito dos recursos dos dispositivos atuais.
 
--   **Gestos de proximidade**permita que os usuários conectem dispositivos com outros usuários que estão fisicamente próximos, por fisicamente encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Câmeras e dispositivos de armazenamento externo**conecte seus usuários a suas câmeras internas ou conectado-in para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em que seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Gestos de proximidade**permitem que os usuários conectem dispositivos com outros usuários que estão fisicamente próximos, fisicamente encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   **Câmeras e dispositivos de armazenamento externo**conecte seus usuários a suas câmeras internas ou conectado para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
 -   **Acelerômetros e outros sensores**   Dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
--   **Localização geográfica**Use informações de localização geográfica dados da web padrão ou de sensores de localização geográfica para ajudar os usuários a circular, encontrar a posição em um mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+-   **Localização geográfica**Use informações de localização geográfica dados da web padrão ou de sensores de geolocalização para ajudar os usuários a circular, encontrar a posição em um mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Vamos considerar o aplicativo de viagens novamente. Para ser ótimo em ajudar amigos a criar de forma colaborativa itinerários de viagens em grupo, você pode usar alguns destes recursos:
 
@@ -211,14 +211,14 @@ Para saber mais sobre como usar superfícies diferentes, confira <!--[Command de
 
 **Como você deve organizar comandos?** Usar seu esboço das etapas do fluxo para identificar os comandos que você precisa criar. Depois, pense nos locais onde usar estes comandos em seu aplicativo.
 
--   **Sempre tente usar o conteúdo.** Sempre que possível, permitem que os usuários manipulem diretamente o conteúdo na tela do aplicativo, em vez de adicionar comandos esse ato no conteúdo. Por exemplo, no aplicativo de viagens, permita que os usuários reorganizem seu itinerário, arrastando e soltando as atividades em uma lista na tela, em vez de selecionar a atividade e usar botões de comando Para cima ou Para baixo.
+-   **Sempre tente usar o conteúdo.** Sempre que possível, permitem que os usuários manipulem diretamente o conteúdo na tela do aplicativo, em vez de adicionar comandos que act no conteúdo. Por exemplo, no aplicativo de viagens, permita que os usuários reorganizem seu itinerário, arrastando e soltando as atividades em uma lista na tela, em vez de selecionar a atividade e usar botões de comando Para cima ou Para baixo.
 -   **Se não puder, use o conteúdo.** Coloque comandos em uma destas superfícies de IU se você não puder usar o conteúdo:
 
     -   Na [barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302): você deve colocar a maioria dos comandos na barra de comandos, que costuma estar oculta até que o usuário toque para deixá-la invisível.
     -   Na tela do aplicativo: se o usuário estiver em uma página ou modo de exibição que tenha uma única finalidade, você pode oferecer comandos para essa finalidade diretamente na tela. Deve haver muito pouco desses comandos presentes.
     -   Em um [menu de contexto](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): você pode usar menus de contexto para ações da área de transferência (como recortar, copiar e colar) ou para comandos que se aplicam ao conteúdo que não pode ser selecionado (como a adição de uma tachinha a um local no mapa).
 
-**Decida como dispor o seu aplicativo em cada exibição.** Windows dá suporte a orientações retrato e paisagem e ao redimensionamento de aplicativos para qualquer largura, desde tela cheia a largura mínima. Você quer que o seu aplicativo tenha uma boa aparência e funcione perfeitamente em qualquer site, em qualquer tela, em ambas as orientações. Isso significa que você precisa planejar o layout dos elementos da interface para diferentes tamanhos e exibições. Ao fazer isso, a IU do seu aplicativo muda de maneira fluida para atender às necessidades e preferências do usuário.
+**Decida como dispor o seu aplicativo em cada modo de exibição.** Windows dá suporte a orientações retrato e paisagem e ao redimensionamento de aplicativos para qualquer largura, desde tela cheia a largura mínima. Você quer que o seu aplicativo tenha uma boa aparência e funcione perfeitamente em qualquer site, em qualquer tela, em ambas as orientações. Isso significa que você precisa planejar o layout dos elementos da interface para diferentes tamanhos e exibições. Ao fazer isso, a IU do seu aplicativo muda de maneira fluida para atender às necessidades e preferências do usuário.
 
 ![designs móveis e de computador para um aplicativo](images/ux-budgettracker1-md-notablet.png)
 

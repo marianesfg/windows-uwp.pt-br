@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, relatório, telemetria, sessões de usuário
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f22d9aafada5bab8deaef246f64a7447569c82
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038690"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203376"
 ---
 # <a name="usage-report"></a>Relatório de uso
 
 
-O relatório de **uso** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja como os clientes no Windows 10 (incluindo o Xbox) estão usando seu aplicativo e mostra informações sobre eventos personalizados definidos por você. Você pode exibir esses dados no Partner Center, ou [Baixe o relatório](download-analytic-reports.md) para exibição offline.
+O relatório de **uso** no [Partner Center](https://partner.microsoft.com/dashboard) permite que você veja como os clientes no Windows 10 (incluindo o Xbox) estão usando seu aplicativo e mostra informações sobre eventos personalizados definidos por você. Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -46,14 +46,14 @@ Este gráfico tem guias separadas que você pode exibir, mostrando o uso por dia
 - **Usuários**: mostra o total de **sessões de usuário** durante o período de tempo selecionado. Cada sessão do usuário representa um período distinto, a partir do qual o app é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade. Por isso, um único cliente pode ter várias sessões do usuário ao longo do mesmo dia ou semana. O total de **Usuários ativos** (qualquer cliente que usa o aplicativo no dia ou na semana) e **novos usuários** (um cliente que usou o aplicativo pela primeira vez nesse dia ou na semana) também são mostrados. Observe que se você tiver aplicado quaisquer filtros à página, você não verá **Novos usuários** neste gráfico.
 - **Dispositivos**: mostra a quantidade de dispositivos diários usados para interagir com seu aplicativo por todos os usuários.
 - **Duração**: mostra o total de horas de envolvimento (horas em que um usuário está usando ativamente o app).
-- **Envolvimento**: mostra os minutos de envolvimento média por usuário (duração média de todas as sessões de usuário). 
+- **Contrato**: mostra os minutos de envolvimento média por usuário (duração média de todas as sessões de usuário). 
 - **Retenção**: mostra o total de **DAU/MAU** (usuários diários ativos/usuários mensais ativos) durante o período selecionado.
 - **Previsão de rotatividade**: mostra quantos usuários propensos têm probabilidade de pararem de usar seu aplicativo em breve, com base no uso recente.
 
-Quando o **30d** o período de tempo é selecionado, você poderá ver marcadores em círculo ao exibir as guias de **usuários**, **dispositivos**ou **duração** . Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos um aumento significativo ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
+Quando o **30d** período é selecionado, você poderá ver marcadores em círculo ao exibir as guias de **usuários**, **dispositivos**ou **duração** . Eles representam um aumento significativo ou diminuir um valor determinado que acreditamos que você vai querer saber sobre. A data em que o círculo é exibido representa o final da semana em que detectamos uma significativo aumento ou redução em comparação comparada a semana anterior. Para ver mais detalhes sobre o que mudou, passe o mouse sobre o círculo.  
 
 > [!TIP]
-> Você pode exibir mais insights relacionados a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
+> Você pode exibir mais informações relacionadas a alterações significativas nos últimos 30 dias no [relatório de ideias](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sessões de usuário

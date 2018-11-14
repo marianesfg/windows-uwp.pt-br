@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b2ea47f819d3a187621615ee3a85be5af895d3b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a5ac814dfb86259791de2632587a1cfd0d456a37
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049381"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184819"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
@@ -61,15 +61,15 @@ Veja o tópico [Desativação do modo de desenvolvedor do Xbox One](devkit-deact
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Eu vendi meu Xbox One e o deixei no modo de desenvolvedor. Como posso desativar o modo de desenvolvedor?
 
-Se você não tiver mais acesso ao Xbox One, você poderá desativá-lo no Centro de Desenvolvimento do Windows. Para obter detalhes, veja a seção **Desativar seu console usando o Centro de Desenvolvimento do Windows** no tópico [Desativação do modo de desenvolvedor do Xbox One](devkit-deactivation.md#deactivate-your-console-using-windows-dev-center). 
+Se você não tiver acesso ao Xbox One, você pode desativá-lo no Windows Partner Center. Para obter detalhes, consulte a seção de **desativar seu console usando o Partner Center** no tópico [Xbox One desativação do modo de desenvolvedor](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
-### <a name="i-left-the-developer-program-using-windows-dev-center-but-im-in-still-developer-mode-what-do-i-do"></a>Saí do programa de desenvolvedor usando o Centro de Desenvolvimento do Windows, mas ainda estou no modo de desenvolvedor. O que devo fazer?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Saí do programa de desenvolvedor usando o Partner Center, mas estou no modo de desenvolvedor ainda. O que devo fazer?
 
 Inicie o Dev Home e selecione o botão **Sair do modo de desenvolvedor**. Isso reiniciará o seu console no modo de varejo. 
 
 ### <a name="can-i-publish-my-app"></a>Posso publicar meu aplicativo?
 
-Você poderá [publicar aplicativos](../publish/index.md) por meio do Centro de Desenvolvimento se tiver uma [conta de desenvolvedor](https://developer.microsoft.com/store/register). Os aplicativos UWP criados e testados em um console do Xbox One de varejo irão passar pelo mesmo processo de ingestão, revisão e publicação que o Windows realiza atualmente, com análises adicionais para atender aos padrões atuais do Xbox One.
+Você pode [publicar aplicativos](../publish/index.md) por meio do Partner Center se você tiver uma [conta de desenvolvedor](https://developer.microsoft.com/store/register). Os aplicativos UWP criados e testados em um console do Xbox One de varejo irão passar pelo mesmo processo de ingestão, revisão e publicação que o Windows realiza atualmente, com análises adicionais para atender aos padrões atuais do Xbox One.
 
 ### <a name="can-i-publish-my-game"></a>Posso publicar meu jogo?
 

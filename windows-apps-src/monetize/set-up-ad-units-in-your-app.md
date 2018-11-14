@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Saiba como adicionar valores de ID de unidade de anúncios e a ID de aplicativo do Partner Center ao seu aplicativo antes de enviar seu aplicativo para a loja.
+description: Saiba como adicionar valores de ID de unidade de anúncios e a ID de aplicativo do Partner Center para o seu aplicativo antes de enviar seu aplicativo para a loja.
 title: Configurar unidades de anúncios em seu aplicativo
 ms.author: mhopkins
 ms.date: 05/11/2018
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, unidades publicitária, testes
 ms.localizationpriority: medium
 ms.openlocfilehash: 11c66756d95e041a45fbc075b02eb744bf542871
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045476"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191078"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 
@@ -54,7 +54,7 @@ Enquanto você estiver desenvolvendo seu aplicativo, use os valores de ID do apl
 
 Para obter uma unidade de anúncio em tempo real do Partner Center e usá-lo em seu aplicativo:
 
-1.  [Criar uma unidade publicitária](../publish/in-app-ads.md#create-ad-unit) na página **anúncios no app** no Partner Center. Especifique o tipo correto de unidade publicitário para o controle de anúncios que você está usando em seu app.
+1.  [Criar uma unidade publicitária](../publish/in-app-ads.md#create-ad-unit) na página de **anúncios no app** no Partner Center. Especifique o tipo correto de unidade publicitário para o controle de anúncios que você está usando em seu app.
     > [!NOTE]
     > Como opção, você pode habilitar o controle de anúncios para a unidade publicitária ao definir as configurações na seção [Configurações de controle](../publish/in-app-ads.md#mediation). O controle de anúncios permite que você maximize seus recursos de promoção de apps e de receita de anúncios exibindo anúncios de várias redes de anúncios, incluindo os anúncios de outras redes de anúncios pagas e os anúncios não relacionados à geração de receitas para campanhas promocionais de aplicativos da Microsoft. Por padrão, automaticamente escolhemos as configurações de mediação de anúncio do aplicativo usando os algoritmos de aprendizado de máquina para ajudá-lo a maximizar a receita de anúncios em todos os mercados que seu aplicativo oferece suporte, mas, como alternativa, você pode definir manualmente as configurações de controle.
 

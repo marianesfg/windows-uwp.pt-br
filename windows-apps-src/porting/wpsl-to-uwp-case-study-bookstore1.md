@@ -2,23 +2,23 @@
 author: stevewhims
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: Este tópico apresenta um estudo de caso de portabilidade de um aplicativo WindowsPhone Silverlight muito simples para um aplicativo da plataforma Universal do Windows do Windows 10 (UWP).
-title: WindowsPhone Silverlight para estudo de caso UWP, Bookstore1
+title: WindowsPhone Silverlight estudo de caso UWP, Bookstore1
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c335f607eb1897f79035850cd6a5af9e7a7a56dc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035272"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186874"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight para UWP estudo de caso: Bookstore1
 
 
-Este tópico apresenta um estudo de caso de portabilidade de um aplicativo WindowsPhone Silverlight muito simples para um aplicativo de plataforma Windows10Universal do Windows (UWP). Com o Windows 10, você pode criar um único pacote de aplicativo que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Este tópico apresenta um estudo de caso de portabilidade de um aplicativo WindowsPhone Silverlight muito simples para um aplicativo da plataforma Windows10Universal do Windows (UWP). Com o Windows 10, você pode criar um pacote de aplicativo único que os clientes podem instalar em uma ampla variedade de dispositivos, e que é o que faremos neste estudo de caso. Consulte [Guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 O aplicativo que portaremos consiste em uma **ListBox** associada a um modelo de exibição. O modelo de exibição tem uma lista de livros que mostra o título, o autor e a capa do livro. As imagens da capa do livro têm **Build Action** definida como **Content** e **Copy to Output Directory** definida como **Do not copy**.
 
@@ -38,7 +38,7 @@ Aqui está a aparência do Bookstore1WPSL8, o aplicativo que vamos portar. Trata
 
 ![aparência do Bookstore1WPSL8](images/wpsl-to-uwp-case-studies/c01-01-wpsl-how-the-app-looks.png)
 
-## <a name="porting-to-a-windows10-project"></a>Portando para um projeto do Windows 10
+## <a name="porting-to-a-windows10-project"></a>Fazendo a portabilidade para um projeto do Windows 10
 
 É uma tarefa muito rápida criar um novo projeto no Visual Studio, copiar arquivos para ele a partir do Bookstore1WPSL8 e incluir os arquivos copiados no novo projeto. Comece criando um novo projeto Aplicativo em Branco (Universal do Windows). Dê a ele o nome de Bookstore1Universal\_10. Esses são os arquivos que devem ser copiados de Bookstore1WPSL8 para Bookstore1Universal\_10.
 

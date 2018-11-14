@@ -10,19 +10,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031168"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6254813"
 ---
 # <a name="home-page-dev-home"></a>Página inicial (Dev Home)
    
   
-A página **principal** do Dev Home fornece acesso rápido às tarefas que são executadas rotineiramente em um console de desenvolvimento.   
+A página **principal** do Dev Home fornece acesso rápido às tarefas que são normalmente executadas em um console de desenvolvimento.   
  ![Página inicial da Dev Home](images/devhome_home.png)   
   
-A página **Home** contém os seguintes painéis:   
+A página **Home** contém os painéis a seguir:   
  
    *  [Ações rápidas](#ID4EEB)  
    *  [Jogos e aplicativos](#ID4EPC)  
@@ -40,10 +40,10 @@ A página **Home** contém os seguintes painéis:
 O painel de **ações rápidas** contém os seguintes botões que fornecem acesso rápido às ações executadas com frequência:   
  
    *  **Pin de mostrar o Visual Studio:** Exibe um código que você pode usar Emparelhe o console de desenvolvimento com a instalação do Visual Studio no computador.   
-   *  **Área restrita de alteração:** Permite que você alterar qual área restrita o console está no.   
+   *  **Área restrita de alteração:** Permite que você alterar qual área restrita do console está no.   
    *  **Console de reinicialização:** Reinicia o console de desenvolvimento.   
    *  **Sair do modo de desenvolvimento:** Retorna o console para o modo de varejo e reinicia o console.   
-   *  **Inicialização Home:** Inicia a tela inicial de varejo.   
+   *  **Inicial de inicialização:** Inicia a tela inicial de varejo.   
    *  **Registrar um jogo de um local de rede compartilhada:** Registra um jogo de um local de rede compartilhada.   
 
   
@@ -56,10 +56,10 @@ O painel de **ações rápidas** contém os seguintes botões que fornecem acess
   
 O painel de **jogos e aplicativos** pode ser usado para realizar as seguintes ações:   
  
-   *  Exiba a lista de jogos e aplicativos instalados no console do desenvolvimento.  
+   *  Exiba a lista de jogos e aplicativos instalados no console de desenvolvimento.  
    *  Inicie rapidamente aplicativos e jogos.  
    *  Exiba o estado PLM de jogos e aplicativos.  
-   *  Alterar os estados PLM de um menu de contexto.  
+   *  Alterar os estados do PLM de um menu de contexto.  
    *  Registrar e executar um título de um compartilhamento de rede remoto.
 
   
@@ -73,7 +73,7 @@ O painel de **jogos e aplicativos** pode ser usado para realizar as seguintes a�
 O painel de **contas de teste** pode ser usado para realizar as seguintes ações:   
  
    *  Exiba a lista de usuários registrados no console.  
-   *  Assine um usuário ou sai com um único clique.  
+   *  Assine um usuário ou com um único clique.  
    *  Adicione usuários e contas de convidado.  
    *  Exibir detalhes de usuários e contas de convidado.  
 
