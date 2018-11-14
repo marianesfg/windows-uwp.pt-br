@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049714"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453597"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -28,7 +28,7 @@ A linguagem de programação C++ é usada na empresa *e* em segmentos de fornece
 
 Do ponto de vista do idioma, C++ sempre foi sobre criação e consumo de abstrações dos tipos rico e leve. Mas o idioma mudou radicalmente desde os ponteiros brutos, loops brutos e alocação de memória criteriosa e liberação de C++98. C++ moderno (do C++11 em diante) é sobre expressão clara de ideias, simplicidade, leitura fácil e uma menor probabilidade de introdução de bugs.
 
-Para criar e consumir APIs do Windows Runtime usando C++, há C++/WinRT. Isso é a substituição recomendada da Microsoft para o [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) projeção de linguagem e a [Biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
+Para criar e consumir APIs do Windows Runtime usando C++, há C++/WinRT. Essa é a substituição recomendada da Microsoft para o [C++ c++ /CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) projeção de linguagem e a [Biblioteca de modelos em C++ Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
 
 Você usa tipos de dados C++ padrão, algoritmos e palavras-chave ao usar C++/WinRT. A projeção tem seus próprios tipos de dados personalizados, mas na maioria dos casos você não precisa aprendê-los, porque eles fornecem as conversões apropriadas para e de tipos padrão. Dessa forma, você pode continuar a usar os recursos de linguagem C++ padrão que você está acostumado a usar e o código-fonte que você já tem. C++/WinRT torna extremamente fácil chamar as APIs do Windows Runtime em qualquer aplicativo de C++, do Win32 a UWP.
 
@@ -40,7 +40,7 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | - | - |
 | [Introdução ao C++/WinRT](intro-to-using-cpp-with-winrt.md) | Uma introdução ao C++/WinRT, uma projeção de linguagem C++ padrão para APIs do Windows Runtime. |
 | [Introdução ao C++/WinRT](get-started.md) | Este tópico fornece instruções para você se atualizar sobre o uso do C++/WinRT por um exemplo de código simples. |
-| [Quais são as novidades no C++ c++ WinRT](news.md) | Alterações em C++ e notícias c++ WinRT. |
+| [Novidades no C++ c++ WinRT](news.md) | Alterações em C++ e notícias c++ WinRT. |
 | [Perguntas frequentes](faq.md) | Respostas às perguntas que você pode ter sobre a criação e consumo de APIs do Windows Runtime com C++/WinRT. |
 | [Solução de problemas](troubleshooting.md) | A tabela de sintomas de solução de problemas e soluções neste tópico pode ser útil para você se você estiver recortando novo código ou fazendo a portabilidade de um aplicativo existente. |
 | [Aplicativos de exemplo de C++/WinRT do Editor de Fotos](photo-editor-sample.md) | O Editor de Fotos é um aplicativo de exemplo UWP que mostra o desenvolvimento com a projeção de linguagem C++/WinRT. O aplicativo de exemplo permite que você recupere fotos a partir da biblioteca de **Imagens** e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes. | 
@@ -58,12 +58,12 @@ C++/WinRT tem melhor desempenho e produz binários menores do que qualquer outra
 | [Controles de itens XAML; vincular a uma coleção C++/WinRT](binding-collection.md) | Uma coleção que pode ser efetivamente vinculada a um controle de itens XAML é conhecida como uma coleção *observável*. Este tópico mostra como implementar e consumir uma coleção observável e como associar um controle de itens XAML a ela. |
 | [Controles personalizados (modelos) XAML com C++/WinRT](xaml-cust-ctrl.md) | Este tópico o orienta pelas etapas de criação de um controle personalizado simples usando C++ c++ WinRT. Você pode se basear as informações para criar seus próprios controles de interface do usuário rico e personalizáveis. |
 | [Consumir componentes COM com C++/WinRT](consume-com.md) | Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces. |
-| [Criar componentes COM com C++/WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudá-lo a criar componentes COM clássicos, assim como ele ajuda a criar classes de tempo de execução do Windows. |
+| [Criar componentes COM com C++/WinRT](author-coclasses.md) | C++ c++ WinRT pode ajudar você a criar componentes COM clássicos, assim como ele ajuda você a criar classes de tempo de execução do Windows. |
 | [Mudar do C++/CX para C++/WinRT](move-to-winrt-from-cx.md) | Este tópico mostra como fazer a portabilidade do código C++/CX para seu equivalente no C++/WinRT. |
 | [Interoperabilidade entre C++/WinRT e C++/CX](interop-winrt-cx.md) | Este tópico mostra duas funções auxiliares que podem ser usadas para realizar a conversão entre os objetos [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) e C++/WinRT. |
 | [Mudar do WRL para C++/WinRT](move-to-winrt-from-wrl.md) | Este tópico mostra como fazer a portabilidade do código da [Biblioteca de Modelos C++ do Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) para seu equivalente no C++/WinRT. |
 | [Interoperabilidade entre C++/WinRT e ABI](interop-winrt-abi.md) | Este tópico mostra como realizar a conversão entre interface binária do aplicativo (ABI) e objetos do C++/WinRT. |
-| [Referências fortes e fracas em C++ c++ WinRT](weak-references.md) | O tempo de execução do Windows é um sistema de contagem de referência; e em um sistema desse tipo, é importante saber sobre o significado do e distinção entre, referências fortes e fracas. |
+| [Referências fracas e fortes em C++ c++ WinRT](weak-references.md) | O tempo de execução do Windows é um sistema de contagem de referência. em um sistema desse tipo, é importante saber sobre o significado do e distinção entre, referências fracas e fortes. |
 | [Objetos ágeis](agile-objects.md) | Um objeto ágil é aquele que pode ser acessado de qualquer conversa. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los. |
 
 ### <a name="topics-about-the-c-language"></a>Tópicos sobre a linguagem C++

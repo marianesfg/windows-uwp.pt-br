@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Oferecendo suporte à orientação de tela (DirectX e C++)
-description: Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware de elementos gráficos do dispositivo Windows 10 são usados de forma eficiente e efetiva.
+description: Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 são usados de forma eficiente e efetiva.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, orientação da tela, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ed8739f8ba7b2049af154d458ccaa831b8526a5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029699"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181682"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 
 
 
-Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware de elementos gráficos do dispositivo Windows 10 são usados de forma eficiente e efetiva.
+Seu aplicativo UWP (Plataforma Universal do Windows) pode dar suporte a várias orientações de tela quando você manipula o evento [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268). Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 são usados de forma eficiente e efetiva.
 
-Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permitir que os usuários alterem as configurações de vídeo. Devido a esse, Windows 10 em si controla a rotação das imagens para assegurar que elas fiquem "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 imediatamente gira a imagem para exibição final. Para três as quatro orientações de tela específicas (explicadas posteriormente), o Windows 10 usa recursos gráficos adicionais e computação para exibir a imagem final.
+Antes de começar, lembre-se de que o hardware gráfico sempre emite dados em pixel da mesma maneira, independentemente da orientação do dispositivo. Os dispositivos Windows 10 podem determinar sua orientação de exibição atual (com algum tipo de sensor ou com uma alternância de software) e permitir que os usuários alterem as configurações de vídeo. Por isso, Windows 10 em si controla a rotação das imagens para assegurar que elas fiquem "verticais" com base na orientação do dispositivo. Por padrão, seu aplicativo recebe a notificação de que algo mudou na orientação, por exemplo, o tamanho de uma janela. Quando isso acontece, o Windows 10 imediatamente gira a imagem para exibição final. Para três as quatro orientações de tela específicas (explicadas posteriormente), o Windows 10 usa recursos gráficos adicionais e computação para exibir a imagem final.
 
 Para aplicativos UWP DirectX, o objeto [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) inclui os dados básicos de orientação de exibição que seu aplicativo pode consultar. A orientação padrão é *paisagem*, em que a largura em pixels da exibição é maior que a altura; a orientação alternativa é *retrato*, onde a exibição é girada a 90 graus nas duas direções e a largura torna-se menor que a altura.
 

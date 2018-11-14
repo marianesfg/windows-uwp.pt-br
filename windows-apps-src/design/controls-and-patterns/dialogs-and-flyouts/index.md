@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d4ff66e988634cf1ba48809688ea6535e6e95b03
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033824"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161107"
 ---
 # <a name="dialogs-and-flyouts"></a>Caixas de diálogo e submenus
 
@@ -86,7 +86,7 @@ Considerando que as caixas de diálogo bloqueiam interações e os submenus não
 :::row-end:::
 
 
-## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Maneiras de evitar o uso de caixas de diálogo e submenus
+## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Formas de evitar o uso de caixas de diálogo e submenus
 
 Considere a importância das informações que você deseja compartilhar: é importante o suficiente para interromper o usuário? Considere também a frequência com que as informações precisam ser exibidas. Se você estiver mostrando uma caixa de diálogo ou notificação a cada poucos minutos, convém alocar espaço para essas informações na interface do usuário principal, em vez disso. Por exemplo, em um cliente de chat, em vez de mostrar um submenu sempre que um amigo entra, você pode exibir uma lista de amigos que estão online no momento e realçar amigos conforme eles entrarem.
 
@@ -98,7 +98,7 @@ Consulte o [artigo de caixas de diálogo](dialogs.md).
 
 ## <a name="how-to-create-a-flyout"></a>Como criar um submenu
 
-Consulte o [artigo do submenu](flyouts.md). 
+Consulte o [artigo de submenu](flyouts.md). 
 
 ## <a name="examples"></a>Exemplos
 
