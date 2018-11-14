@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, usuários de contas, gerenciar usuários, azure ad, multiusuário, vários usuários
 ms.localizationpriority: medium
 ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024804"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6658172"
 ---
 # <a name="manage-account-users"></a>Gerenciar usuários de contas
 
@@ -28,4 +28,4 @@ Esta seção descreve como fazer o seguinte:
 -   [Definir funções e permissões personalizadas para usuários de contas](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> Estes tópicos são específicos para o programa de desenvolvedor de aplicativos do Windows no Partner Center, mas a associação de um locatário e gerenciamento de usuários funcionam da mesma forma para contas no programa de desenvolvedores de Hardware do Windows (consulte [Administração do painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações) ou no Programa de aplicativo de área de trabalho do Windows (consulte [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obter mais informações).
+> Estes tópicos são específicos para o programa de desenvolvedor de aplicativos do Windows no Partner Center, mas a associação de um locatário e gerenciamento de usuários funcionam da mesma forma para contas no programa de desenvolvedor de Hardware do Windows (consulte [Administração do painel](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obter mais informações) ou no Programa de aplicativo de área de trabalho do Windows (consulte o [Programa de aplicativo de área de trabalho do Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obter mais informações).

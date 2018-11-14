@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: f964c8ac4a579fe4c360967c6bc9e613659a668b
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 7fc8c8e68e4b20498f84b4d20d84eca0dbfa7237
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6469789"
+ms.locfileid: "6650894"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empacotar um aplicativo da área de trabalho usando o Desktop App Converter
 
@@ -122,7 +122,7 @@ Para empacotar seu aplicativo, execute o comando ``DesktopAppConverter.exe`` na 
 Você especificará o número de fornecedor, nome e a versão do pacote do aplicativo usando os parâmetros.
 
 > [!NOTE]
-> Se você reservou o nome do seu aplicativo na loja do Windows, você pode obter o pacote e os nomes dos editores usando o Centro de Desenvolvimento do Windows. Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
+> Se você tiver reservado o nome do aplicativo na Microsoft Store, você pode obter os nomes de pacote e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
 
 ### <a name="a-quick-look-at-command-parameters"></a>Um olhar rápido sobre os parâmetros do comando
 
@@ -145,7 +145,7 @@ Aqui estão algumas maneiras comuns de empacotar seu aplicativo.
 * [Empacotar um aplicativo que tem um arquivo do instalador (. msi)](#installer-conversion)
 * [Empacotar um aplicativo que tem um arquivo executável de instalação](#setup-conversion)
 * [Empacotar um aplicativo que não tenha um instalador](#no-installer-conversion)
-* [Empacotar um app, assinar o app e prepará-lo para o envio à loja](#optional-parameters)
+* [Empacotar um app, assinar o app e prepará-lo para envio à loja](#optional-parameters)
 
 <a id="installer-conversion" />
 
@@ -158,7 +158,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 ```
 
 > [!IMPORTANT]
-> Há dois coisas importantes para ter em mente aqui. Primeiro, certifique-se de que seu instalador esteja localizado em uma pasta independente e que apenas os arquivos relacionados a esse instalador estão na mesma pasta. O conversor copia todo o conteúdo dessa pasta para o ambiente Windows isolado. <br> Em segundo lugar, se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.  
+> Há dois coisas importantes para ter em mente aqui. Primeiro, certifique-se de que seu instalador esteja localizado em uma pasta independente e que apenas os arquivos relacionados a esse instalador estão na mesma pasta. O conversor copia todo o conteúdo dessa pasta para o ambiente Windows isolado. <br> Em segundo lugar, se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.  
 
 **Vídeo**
 
@@ -176,7 +176,7 @@ Aponte para o executável de instalação usando o parâmetro ``Installer``.
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1
 ```
 >[!IMPORTANT]
->Se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
+>Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
 
 O parâmetro ``InstallerArguments`` é um parâmetro opcional. No entanto, como o Desktop App Converter precisa do seu instalador para ser executado no modo autônomo, você pode ter usá-lo se seu aplicativo precisar de sinalizadores silenciosos para executar silenciosamente. O sinalizador ``/S`` é um sinalizador silencioso muito comum, mas o sinalizador que você usa pode ser diferente dependendo da tecnologia do instalador que você usou para criar o arquivo de configuração.
 
@@ -197,7 +197,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 ```
 
 >[!IMPORTANT]
->Se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
+>Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
 
 **Vídeo**
 
@@ -213,7 +213,7 @@ Este exemplo é semelhante ao primeiro, exceto que mostra como você pode assina
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
 ```
 >[!IMPORTANT]
->Se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
+>Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
 
 O ``Sign`` parâmetro gera um certificado e, em seguida, assina seu aplicativo com ele. Para executar seu aplicativo, você terá que instalar esse certificado gerado. Para saber como, consulte a seção [Executar o aplicativo empacotado](#run-app) deste guia.
 
@@ -271,13 +271,13 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Opcional |Um interruptor que, quando presente, informa esse script para chamar MakeAppx na saída. |
 |-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um botão que, quando presente, informa este script para a saída como um pacote de MSIX do pacote. |
 |<a id="identity-params" /><strong>Parâmetros de identidade do pacote</strong>||
-|-PackageName &lt;Cadeia de Caracteres&gt; |Necessário |O nome do seu pacote de aplicativos Universais do Windows. Se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
+|-PackageName &lt;Cadeia de Caracteres&gt; |Necessário |O nome do seu pacote de aplicativos Universais do Windows. Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
 |-Publisher &lt;Cadeia de Caracteres&gt; |Necessário |O editor do pacote da sua aplicativo Universal Windows |
 |-Version &lt;Versão&gt; |Necessário |O número da versão do pacote da sua aplicativo Universal Windows |
 |<a id="manifest-params" /><strong>Parâmetros do manifesto do pacote</strong>||
 |-AppExecutable &lt;Cadeia de Caracteres&gt; |Opcional |O nome do executável principal do seu aplicativo (por exemplo, "MyApp.exe"). Esse parâmetro é necessário para uma conversão sem instalador. |
 |-AppFileTypes &lt;Cadeia de Caracteres&gt;|Opcional |Uma lista separada por vírgulas de tipos de arquivos com a qual o aplicativo será associado. Exemplo de uso: - AppFileTypes "'.md', '.markdown'".|
-|-AppId &lt;Cadeia de Caracteres&gt; |Opcional |Especifica um valor para definir a Id do Aplicativo no manifesto do pacote do aplicativo do Windows. Se não for especificado, ele será definido como o valor passado para *PackageName*. Em muitos casos, usar o *PackageName* funciona bem. No entanto, se o Centro de Desenvolvimento atribuir uma identidade ao pacote que começa com um número, transmita também o parâmetro <i>-AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
+|-AppId &lt;Cadeia de Caracteres&gt; |Opcional |Especifica um valor para definir a Id do Aplicativo no manifesto do pacote do aplicativo do Windows. Se não for especificado, ele será definido como o valor passado para *PackageName*. Em muitos casos, usar o *PackageName* funciona bem. No entanto, se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
 |-AppDisplayName &lt;Cadeia de Caracteres&gt;  |Opcional |Especifica um valor para definir o Nome da exibição do aplicativo no manifesto do pacote do aplicativo do Windows. Se não for especificado, ele será definido como o valor passado para *PackageName*. |
 |-AppDescription &lt;Cadeia de Caracteres&gt; |Opcional |Especifica um valor para definir a Descrição do Aplicativo no manifesto do pacote do aplicativo do Windows. Se não for especificado, ele será definido como o valor passado para *PackageName*.|
 |-PackageDisplayName &lt;Cadeia de Caracteres&gt; |Opcional |Especifica um valor para definir o nome da exibição do pacote no manifesto do pacote do aplicativo do Windows. Se não for especificado, ele será definido como o valor passado para *PackageName*. |

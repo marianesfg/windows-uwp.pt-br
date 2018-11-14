@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
-ms.openlocfilehash: 184cd246019bacc6419580cd47d2904374606031
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b5ebbb628add9474412441ff507e7429f3bfd3ab
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451690"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6661173"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Empacotar aplicativos da área de trabalho (ponte de Desktop)
 
@@ -90,7 +90,7 @@ Com o Visual Studio, é muito mais fácil criar um pacote. Você vai adicionar u
 
 :heavy_check_mark: Gerar seu pacote usando um assistente.
 
-: heavy_check_mark: atribuir facilmente uma identidade ao seu aplicativo de um nome que você já reservou no painel do Centro de desenvolvimento do Windows.
+: heavy_check_mark: atribuir facilmente uma identidade ao seu aplicativo de um nome que você já reservou no [Partner Center](https://partner.microsoft.com/dashboard).
 
 Consulte o [pacote de um aplicativo da área de trabalho usando o Visual Studio](desktop-to-uwp-packaging-dot-net.md)
 
