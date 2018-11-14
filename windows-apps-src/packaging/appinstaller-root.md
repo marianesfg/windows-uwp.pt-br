@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Instalador de Aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: f3da1f4f393eea1362b6e59d2ad7e9a2a97bc33b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648688"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281964"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>Instalar aplicativos UWP com o Instalador de Aplicativo
 

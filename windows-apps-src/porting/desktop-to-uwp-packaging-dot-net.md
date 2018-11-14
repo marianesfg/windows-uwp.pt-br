@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: cc71a58594c8794369bedd7f415518100892ff67
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 5f87b17ff4452417a06817ee5128d66af4b0e53b
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6667291"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6450457"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Empacotar um aplicativo da área de trabalho usando o Visual Studio
 
-Você pode usar o Visual Studio para gerar um pacote para seu aplicativo da área de trabalho. Em seguida, você pode publicar esse pacote para a Microsoft Store ou fazer o sideload dele em um ou mais computadores.
+Você pode usar o Visual Studio para gerar um pacote para seu aplicativo da área de trabalho. Em seguida, você pode publicar esse pacote na Windows Store ou fazer o sideload dele em um ou mais computadores.
 
 A versão mais recente do Visual Studio fornece uma nova versão do projeto empacotamento que elimina todas as etapas manuais que costumavam ser necessárias para empacotar seu aplicativo. Basta adicionar um projeto de empacotamento, referenciar seu projeto de desktop e depois pressionar F5 para depurar seu aplicativo. Sem ajustes manuais. Essa nova experiência simplificada é uma grande melhoria em relação à experiência disponível na versão anterior do Visual Studio.
 
@@ -66,7 +66,7 @@ Examine este guia antes de começar a criar um pacote para seu aplicativo: [prep
 
 7. Use o assistente [Criar pacotes de aplicativo](../packaging/packaging-uwp-apps.md) para gerar um arquivo appxupload.
 
-   Você pode carregar esse arquivo diretamente para a loja.
+   Você pode carregar esse arquivo diretamente na Store.
 
 **Vídeo**
 
