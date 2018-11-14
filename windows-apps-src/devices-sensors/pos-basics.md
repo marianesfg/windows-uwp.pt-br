@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040204"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275739"
 ---
 # <a name="getting-started-with-point-of-service"></a>Introdução ao Ponto de Serviço
 
@@ -26,7 +26,7 @@ Esta seção contém tópicos que são comuns em todas as categorias de disposit
 | [Enumerando dispositivos](pos-basics-enumerating.md)        | Saiba como definir um seletor de dispositivo usado para consultar os dispositivos disponíveis para o sistema e usar esse seletor para enumerar dispositivos de Ponto de Serviço.  |
 | [Criar um objeto de dispositivo](pos-basics-deviceobject.md)  | Saiba como criar um objeto de dispositivo de PointOfService que oferece acesso às propriedades somente leitura do periférico e solicitar o periférico para uso exclusivo. |
 | [Declaração e habilitar ](pos-basics-claim.md)  | Saiba como reservar um periférico de PointOfService para uso exclusivo e habilitar para operações de e/s.  |
-| [Compartilhar periféricos com outras pessoas](pos-basics-sharing.md) | Saiba como compartilhar periféricos Bluetooth conectado ou rede com outros computadores em um ambiente onde vários computadores contam com periféricos compartilhados em vez de dedicado periféricos conectados para cada computador.
+| [Compartilhar periféricos com outras pessoas](pos-basics-sharing.md) | Saiba como compartilhar periféricos Bluetooth conectado ou rede com outros computadores em um ambiente onde vários computadores contam com periféricos compartilhados em vez de dedicada periféricos conectados para cada computador.
 | [PointOfService de ponta a ponta](pos-get-started.md)  | Este é um exemplo de ponta a ponta de como interagir com periféricos do PointOfService que utilizam os exemplos acima. |
 |
 

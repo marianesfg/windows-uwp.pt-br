@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b309064c0110084d5445e8680d65f9935a3f69fe
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6445175"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654400"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -85,7 +85,7 @@ Aqui está um exemplo de elemento **Identidade** com texto de espaço reservado 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Se você tiver reservado o nome do seu aplicativo na Windows store, você pode obter o nome e o fornecedor usando o painel do Centro de desenvolvimento do Windows. Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
+> Se você tiver reservado o nome do seu aplicativo na Microsoft Store, você pode obter o nome e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
 
 ### <a name="properties"></a>Propriedades
 
