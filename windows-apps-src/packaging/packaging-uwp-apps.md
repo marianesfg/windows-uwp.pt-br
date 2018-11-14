@@ -11,33 +11,33 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0ed6cb2fe2b932dcb3011ff7cf9cf7ce197182
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 03d656d7a79dfa2a09e98f0fd54d9d0a4924559e
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6197061"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261174"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>União de um aplicativo UWP com o Visual Studio
 
 Para vender seu aplicativo UWP (Plataforma Universal do Windows) ou distribuí-lo para outros usuários, você precisa empacotá-lo. Se você não quiser distribuir seu app por meio da Microsoft Store, poderá fazer o sideload do pacote do app diretamente para um dispositivo ou distribuí-lo através de [Instalação Web](installing-UWP-apps-web.md). Este artigo descreve o processo de configuração, criação e teste de um pacote do aplicativo UWP usando o Visual Studio. Para obter mais informações sobre como gerenciar e implantar aplicativos da linha de negócios (LOB), consulte [Gerenciamento de aplicativos corporativos](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-No Windows 10, você pode enviar um pacote do aplicativo, lote de aplicativo ou um arquivo de upload de pacote do aplicativo completo para o Centro de desenvolvimento do Windows. Destas opções, enviar um arquivo de upload do pacote fornecerá a melhor experiência. 
+No Windows 10, você pode enviar um pacote do aplicativo, lote de aplicativo ou um arquivo de upload de pacote do aplicativo completo para o [Partner Center](https://partner.microsoft.com/dashboard). Destas opções, enviar um arquivo de upload do pacote fornecerá a melhor experiência. 
 
 ## <a name="types-of-app-packages"></a>Tipos de pacotes de aplicativo
 
 - **Pacote do aplicativo (. AppX ou .msix)**  
-    Um arquivo que contém seu aplicativo em um formato que pode ser adicionado por sideload em um dispositivo. Qualquer arquivo do pacote de aplicativo único criado pelo Visual Studio é **não** se destina a ser enviado ao centro de desenvolvimento e deve ser usado para sideload e testes. Se você quiser enviar seu aplicativo no Centro de Desenvolvimento, use o arquivo de upload do pacote do aplicativo.  
+    Um arquivo que contém seu aplicativo em um formato que pode ser adicionado por sideload em um dispositivo. Qualquer arquivo do pacote de aplicativo único criado pelo Visual Studio é **não** se destina a ser enviado para o Partner Center e deve ser usado para sideload e testes. Se você quiser enviar seu aplicativo para o Partner Center, use o arquivo de upload de pacote do aplicativo.  
 
 - **Lote de aplicativo (. appxbundle ou .msixbundle)**  
     Um lote de aplicativo é um tipo de pacote que pode conter vários pacotes de aplicativos, cada um deles é criado para dar suporte a uma arquitetura de dispositivo específico. Por exemplo, um lote de aplicativo pode conter três pacotes de aplicativo separado para configurações x86, x64 e ARM. Lotes de aplicativo devem ser gerados sempre que possível, pois eles permitem que seu aplicativo esteja disponível na maior variedade possível de dispositivos.  
 
 - **App Package Upload File (.appxupload)**  
-    Um único arquivo que pode conter vários pacotes de aplicativos ou um lote de aplicativo para dar suporte a várias arquiteturas de processador. O arquivo de upload também contém um arquivo de símbolo para [Analisar o desempenho do aplicativo](https://docs.microsoft.com/windows/uwp/publish/analytics) depois que seu aplicativo for publicado na Microsoft Store. Este arquivo será automaticamente criado para você se você estiver empacotando seu aplicativo com o Visual Studio com a intenção de enviá-lo ao Centro de Desenvolvimento para publicação. É importante observar que esta é **o único** envio do pacote do aplicativo ao Centro de Desenvolvimento que pode ser criado usando o Visual Studio.
+    Um único arquivo que pode conter vários pacotes de aplicativos ou um lote de aplicativo para dar suporte a várias arquiteturas de processador. O arquivo de upload também contém um arquivo de símbolo para [Analisar o desempenho do aplicativo](https://docs.microsoft.com/windows/uwp/publish/analytics) depois que seu aplicativo for publicado na Microsoft Store. Esse arquivo será automaticamente criado para você se você estiver compactando seu aplicativo com o Visual Studio com a intenção de enviá-lo para o Partner Center para publicação. É importante observar que essas são os **somente** válido pacote Partner Center envios de aplicativo que podem ser criados usando o Visual Studio.
 
 Aqui está uma visão geral das etapas de preparação e de criação de um pacote do app:
 
-1.  [Antes de empacotar seu aplicativo](#before-packaging-your-app). Siga estas etapas para se certificar de que o app esteja pronto para ser empacotado para envio ao Centro de Desenvolvimento.
+1.  [Antes de empacotar seu aplicativo](#before-packaging-your-app). Siga estas etapas para garantir que seu aplicativo esteja pronto para ser empacotado para envio do Partner Center.
 2.  [Configure um pacote do aplicativo](#configure-an-app-package). Use o designer de manifesto do Visual Studio para configurar o pacote. Por exemplo, adicione imagens de bloco e escolha as orientações compatíveis com o aplicativo.
 3.  [Crie um arquivo de upload de pacote do aplicativo](#create-an-app-package-upload-file). Use o assistente de pacote de aplicativo do Visual Studio para criar um pacote do aplicativo e, em seguida, certificar o pacote com o Kit de Certificação de Aplicativos Windows.
 4.  [Fazer o sideload do pacote do aplicativo](#sideload-your-app-package). Depois do sideload do aplicativo para um dispositivo, você poderá testar se ele funciona como esperado.
@@ -46,7 +46,7 @@ Depois de concluir as etapas acima, você estará pronto para distribuir seu apl
 
 ## <a name="before-packaging-your-app"></a>Antes de empacotar o aplicativo
 
-1.  **Teste o aplicativo.** Antes de empacotar o aplicativo para envio ao Centro de Desenvolvimento, certifique-se de que ele funcione conforme esperado em todas as famílias de dispositivos a que você pretende dar suporte. Essas famílias de dispositivos podem incluir desktop, celular, Surface Hub, Xbox, dispositivos IoT ou outros.
+1.  **Teste o aplicativo.** Antes de empacotar seu aplicativo para envio do Partner Center, certifique-se de que ele funcione conforme esperado em todas as famílias de dispositivos que você pretende dar suporte. Essas famílias de dispositivos podem incluir desktop, celular, Surface Hub, Xbox, dispositivos IoT ou outros.
 2.  **Otimize o aplicativo.** Você pode usar as ferramentas de criação de perfil e depuração do Visual Studio para otimizar o desempenho do aplicativo UWP. Por exemplo, a ferramenta de linha do tempo para capacidade de resposta da interface do usuário, a ferramenta de uso da memória, a ferramenta de uso da CPU e muito mais. Para obter mais informações sobre essas ferramentas, consulte o tópico [Tour sobre recurso de perfil](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour).
 3.  **Verifique a compatibilidade do .NET Native (para aplicativos VB e C#).** Na Plataforma Universal do Windows, existe um compilador nativo que melhorará o desempenho do tempo de execução do app. Com essa alteração, você deverá testar seu aplicativo nesse ambiente de compilação. Por padrão, a configuração de build **Release** habilita a cadeia de ferramentas .NET Native, então é importante testar seu aplicativo com essa configuração **Release** e verificar se seu aplicativo se comporta como o esperado. Alguns problemas de depuração comuns que podem acontecer com o .NET Native serão explicados mais detalhadamente em [Depuração de aplicativos universais do Windows do .NET Native](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
 
@@ -78,12 +78,12 @@ Se você está distribuindo seu aplicativo por meio da Microsoft Store, o Visual
 
 ## <a name="create-an-app-package-upload-file"></a>Crie um arquivo de upload de pacote do aplicativo
 
-Para distribuir um aplicativo por meio da Microsoft Store, você deve criar um pacote do aplicativo (. AppX ou .msix), lote de aplicativo (. appxbundle ou .msixbundle), ou um pacote de upload (. appxupload) e [enviar o aplicativo empacotado no Centro de desenvolvimento](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Embora seja possível enviar um pacote do aplicativo ou lote de aplicativo para o Centro de Desenvolvimento sozinho, você é incentivado a enviar um pacote de upload.
+Para distribuir um aplicativo por meio da Microsoft Store, você deve criar um pacote do aplicativo (. AppX ou .msix), lote de aplicativo (. appxbundle ou .msixbundle), ou um pacote de upload (. appxupload) e [enviar o aplicativo empacotado para o Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Embora seja possível enviar um aplicativo pacote ou lote de aplicativo para o Partner Center sozinho, você é incentivado a enviar um pacote de upload.
 
 >[!NOTE]
-> O arquivo de upload do pacote do aplicativo (.appxupload) é o **único** tipo de pacote do aplicativo válido para o Centro de Desenvolvimento que pode ser criado usando o Visual Studio. Outros [pacotes do aplicativo válidos podem ser criados manualmente](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), sem o Visual Studio. 
+> O arquivo de upload do pacote do aplicativo (. appxupload) é o tipo **somente** do pacote do aplicativo válido para o Partner Center que podem ser criados usando o Visual Studio. Outros [pacotes do aplicativo válidos podem ser criados manualmente](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), sem o Visual Studio. 
 
-Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga as próximas etapas para criar um pacote adequado para envio ao Centro de Desenvolvimento usando o Visual Studio.
+Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga estas etapas para criar um pacote adequado para envio do Partner Center usando o Visual Studio.
 
 **Para criar o seu arquivo de upload do pacote do aplicativo**
 
@@ -93,23 +93,23 @@ Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga 
 
     O assistente **Criar pacotes de aplicativo** aparecerá.
 
-3.  Selecione Sim na primeira caixa de diálogo perguntando se você deseja criar pacotes para carregar no Centro de Desenvolvimento. Depois, clique em Avançar.  
+3.  Selecione Sim na primeira caixa de diálogo perguntando se você deseja criar pacotes para carregar para o Partner Center, depois clique em Avançar.  
     ![Janela da caixa de diálogo Crie Seus Pacotes mostrada](images/packaging-screen3.jpg)
 
-    Se você escolher Não, o Visual Studio não irá gerar o arquivo (.appxupload) para upload no pacote do aplicativo para envios ao Centro de Desenvolvimento. Caso queira apenas fazer o sideload do aplicativo para executá-lo em dispositivos internos ou para testes, você pode selecionar essa opção. Para obter mais informações sobre o sideload, consulte [Habilitar seu dispositivo para desenvolvimento](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
-4.  Entre usando a conta de desenvolvedor no Centro de Desenvolvimento do Windows. Se ainda não tiver uma conta de desenvolvedor, o assistente ajudará você a criar uma.
-5.  Selecione o nome do aplicativo para o pacote ou reserve um novo caso você ainda não tenha reservado um com o portal do Centro de Desenvolvimento do Windows.  
+    Se você escolher não, o Visual Studio não irá gerar o arquivo de upload (. appxupload) do pacote de aplicativo para envios de Partner Center. Caso queira apenas fazer o sideload do aplicativo para executá-lo em dispositivos internos ou para testes, você pode selecionar essa opção. Para obter mais informações sobre o sideload, consulte [Habilitar seu dispositivo para desenvolvimento](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
+4.  Entre com sua conta de desenvolvedor para o Partner Center. Se ainda não tiver uma conta de desenvolvedor, o assistente ajudará você a criar uma.
+5.  Selecione o nome do aplicativo para o seu pacote ou reserve um novo se você ainda não tenha reservado um no Partner Center.  
     ![Janela Criar Pacotes de Aplicativos com a seleção do nome do aplicativo mostrada](images/packaging-screen4.jpg)
 6.  Certifique-se de que selecionou todas as três configurações de arquitetura (x86, x64 e ARM) na caixa de diálogo **Selecionar e Configurar Pacotes** para garantir que seu aplicativo possa ser implantado para a mais ampla variedade de dispositivos. Na caixa de listagem **Gerar lote de aplicativo**, selecione **Sempre**. Um lote de aplicativo (. appxbundle) tem preferência sobre um arquivo de pacote de aplicativo único, pois ele contém uma coleção de pacotes de aplicativos configurados para cada tipo de arquitetura do processador. Ao escolher gerar o lote de aplicativo, o lote de aplicativo será incluído no arquivo de upload (. appxupload) do pacote do aplicativo final junto com informações de depuração e análise de falha. Se você não tiver certeza de quais arquiteturas escolher ou deseja saber mais sobre quais arquiteturas são usadas por vários dispositivos, consulte [Arquiteturas de pacote do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Janela Criar Pacotes de Aplicativos com a configuração do pacote mostrada](images/packaging-screen5.jpg)
 
 
-7.  Incluir arquivos de símbolo PDB completos para [Analisar o desempenho do aplicativo](https://docs.microsoft.com/windows/uwp/publish/analytics) no Centro de Desenvolvimento do Windows depois que seu aplicativo for publicado. Configurar todos os detalhes adicionais, como a numeração de versão ou o local de saída do pacote.
-9.  Clique em **Criar** para gerar o pacote do aplicativo. Se você selecionou **Sim** na etapa 3 e estiver criando um pacote de envio para o Centro de Desenvolvimento, o assistente criará um arquivo de upload (. appxupload) do pacote. Se você selecionou **não** na etapa 3, o assistente criará um único pacote do aplicativo ou um lote de aplicativo com base nas suas seleções na etapa 6.
+7.  Inclua arquivos de símbolo PDB completos para [analisar o desempenho do aplicativo](https://docs.microsoft.com/windows/uwp/publish/analytics) do Partner Center depois que seu aplicativo for publicado. Configurar todos os detalhes adicionais, como a numeração de versão ou o local de saída do pacote.
+9.  Clique em **Criar** para gerar o pacote do aplicativo. Se você tiver selecionado **Sim** na etapa 3 e estiver criando um pacote para o envio do Partner Center, o assistente criará um arquivo de upload (. appxupload) do pacote. Se você selecionou **não** na etapa 3, o assistente criará um único pacote do aplicativo ou um lote de aplicativo com base nas suas seleções na etapa 6.
 10. Quando seu aplicativo for empacotado com êxito, você verá esta caixa de diálogo.  
     ![Janela Criação de pacote concluída com opções de validação mostradas](images/packaging-screen6.jpg)
 
-    Valide o aplicativo antes de enviá-lo para o Centro de Desenvolvimento para certificação em uma máquina local ou remota. Você pode validar apenas compilações de lançamento para o pacote do app e não compilações de depuração.
+    Valide seu aplicativo antes de enviá-lo para o Partner Center para certificação em uma máquina local ou remota. Você pode validar apenas compilações de lançamento para o pacote do app e não compilações de depuração.
 
 11. Para validar seu aplicativo localmente, deixe a opção **Máquina local** selecionada e clique em **Iniciar o Kit de Certificação de Aplicativos Windows**. Para obter mais informações sobre como testar seu aplicativo com o Kit de Certificação de Aplicativos Windows, consulte [Kit de Certificação de Aplicativos Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 
@@ -117,9 +117,9 @@ Você pode fazer isso usando o assistente **Criar pacotes do aplicativo**. Siga 
 
     Se você tiver um dispositivo Windows 10 remoto que você deseja usar para testar, você precisará instalar manualmente o Kit de certificação de aplicativos Windows nesse dispositivo. A próxima seção o guiará pelas etapas. Depois de ter feito isso, você pode selecionar **Máquina remota** e clicar em **Iniciar o Kit de Certificação de Aplicativos Windows** para se conectar ao dispositivo remoto e executar os testes de validação.
 
-12. Após a conclusão de WACK e a certificação do app, você estará pronto para enviar seu app para o Centro de Desenvolvimento. Certifique-se de carregar o arquivo correto. A localização padrão do arquivo pode ser encontrada na pasta raiz da sua solução `\[AppName]\AppPackages` e terminará com a extensão de arquivo .appxupload. O nome será do formulário `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` se você optar por um lote de aplicativo com todos pacotes de arquitetura selecionados.
+12. Depois de WACK e seu aplicativo foi aprovado para certificação, você estará pronto para enviar seu aplicativo para o Partner Center. Certifique-se de carregar o arquivo correto. A localização padrão do arquivo pode ser encontrada na pasta raiz da sua solução `\[AppName]\AppPackages` e terminará com a extensão de arquivo .appxupload. O nome será do formulário `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` se você optar por um lote de aplicativo com todos pacotes de arquitetura selecionados.
 
-Para obter mais informações sobre como enviar seu aplicativo para o Centro de Desenvolvimento, consulte [Envios de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+Para obter mais informações sobre como enviar seu aplicativo para o Partner Center, consulte [envios de aplicativo](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
 
 **Validar o pacote do aplicativo em um dispositivo remoto do Windows 10**
 

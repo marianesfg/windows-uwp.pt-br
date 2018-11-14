@@ -9,20 +9,20 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, registrar eventos
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 47c1eb02434dc71cb7da949d58ec38cf3b4cf65a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047451"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210007"
 ---
 # <a name="log-custom-events-for-partner-center"></a>Registrar eventos personalizados para o Partner Center
 
 O [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center permite que você obtenha informações sobre eventos personalizados definidos por você em seu aplicativo da plataforma Universal do Windows (UWP). Um evento personalizado é uma string arbitrária que representa um evento ou atividade em seu aplicativo. Por exemplo, um jogo pode definir eventos personalizados denominados *firstLevelPassed*, *secondLevelPassed*e assim por diante, que são registrados quando o usuário passa cada nível do jogo.
 
-Para registrar um evento personalizado do seu aplicativo, transmita a string de evento personalizado para o método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) fornecido pelo Microsoft Store Services SDK. Você pode revisar o total de ocorrências de seus eventos personalizados na seção **eventos personalizados** do [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.
+Para registrar um evento personalizado do seu aplicativo, transmita a string de evento personalizado para o método [Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) fornecido pelo Microsoft Store Services SDK. Você pode examinar o total de ocorrências de seus eventos personalizados na seção **eventos personalizados** do [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.
 
 > [!NOTE]
-> Eventos personalizados que você faça logon Partner Center estão relacionados a [eventos do Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)e não aparecem no **Visualizador de eventos**.
+> Eventos personalizados que você faça logon Partner Center estão relacionados a [eventos do Windows](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx), e eles não aparecem no **Visualizador de eventos**.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
