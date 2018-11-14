@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ec0f99f069950776ab934c82bd3197bdd6c9dd6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032920"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6249640"
 ---
 # <a name="mouse-interactions"></a>Interações por mouse
 
@@ -67,7 +67,7 @@ Um conjunto conciso de interações de mouse é usado de forma consistente em to
 <td align="left"><p>Clicar com o botão direito do mouse para selecionar e executar um comando</p></td>
 <td align="left"><p>Clique com o botão direito do mouse para exibir a barra de navegação (se disponível) e a barra de aplicativos com os comandos globais. Clique com o botão direito do mouse em um elemento para selecioná-lo e exibir a barra de apps com os comandos contextuais relacionados ao elemento selecionado.</p>
 <div class="alert">
-<strong>Observação</strong>botão direito do mouse para exibir um menu de contexto, se os comandos de barra de seleção ou o aplicativo não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
+<strong>Observação</strong>com o botão direito para exibir um menu de contexto, se os comandos de barra de seleção ou o aplicativo não forem os comportamentos adequados da interface do usuário. Mas a nossa recomendação é que você use a barra de apps para os comportamentos de todos os comandos.
 </div>
 <div>
  
@@ -98,7 +98,7 @@ Responda à entrada do mouse em seus aplicativos manipulando os mesmos eventos d
 
 Use eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar funcionalidade de entrada básica sem a necessidade de gravar código para cada dispositivo de entrada de ponteiro. No entanto, você ainda pode aproveitar as funcionalidades especiais de cada dispositivo (como eventos do botão de rolagem do mouse) usando os eventos de ponteiro, gesto e manipulação desse objeto.
 
-**Exemplos:** Consulte essa funcionalidade em ação em nossos [exemplos de aplicativos](https://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Exemplos:** Consulte essa funcionalidade em ação em nossos [exemplos de aplicativo](https://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: exemplo de funcionalidades do dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)

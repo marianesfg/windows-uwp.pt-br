@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044709"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6673481"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 
-Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e oferece suporte com várias redes de anúncios conhecidas. Nossa plataforma está em conformidade com o OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
+Aumente suas oportunidades de receita ao colocar anúncios no seu aplicativo UWP (Plataforma Universal do Windows) para Windows 10 usando o SDK do Microsoft Advertising. Nossa plataforma de monetização de anúncios oferece uma variedade de formatos de anúncio que pode ser integrada perfeitamente em seu controle de aplicativos e oferece suporte com várias redes de anúncios conhecidas. Nossa plataforma é compatível com o OpenRTB, 2. x grande, MRAID 2 e 3 VPAID padrões e é compatível com MOAT e IAS. 
 
 <br/>
 
@@ -92,7 +92,7 @@ Para obter instruções e exemplos de código, consulte [este artigo](native-ads
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Etapa 3: criar uma unidade publicitária e configurar a mediação
 
-Depois que você terminar de testar seu aplicativo e estiver pronto para enviá-lo para a loja, crie uma unidade publicitária na página [anúncios no app](../publish/in-app-ads.md) no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
+Depois que você terminar de testar seu aplicativo e estiver pronto para enviá-lo para a loja, crie uma unidade publicitária na página de [anúncios no app](../publish/in-app-ads.md) no Partner Center. Em seguida, atualize o código do aplicativo para usar essa unidade publicitária para o aplicativo receba anúncios ativos. Para obter mais informações, consulte [Configurar unidades publicitárias no aplicativo](set-up-ad-units-in-your-app.md#live-ad-units).
 
 Por padrão, o aplicativo exibirá anúncios da rede da Microsoft para anúncios pagos. Para maximizar a receita do anúncio, você pode habilitar o [controle de anúncios](ad-mediation-service.md) da unidade publicitária para exibir anúncios de outras redes de publicidade pagas, como o Taboola e o Smaato. Você também pode aumentar os recursos de promoção de apps ao veicular anúncios de campanhas promocionais de aplicativos da Microsoft.
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: cbc884fa3079eaa9db348de3430ed6d59d1e8a0d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050294"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6265821"
 ---
 # <a name="color"></a>Cor
 
@@ -256,7 +256,7 @@ Para obter mais informações sobre como usar pincéis, consulte [Pincéis XAML]
 
 ## <a name="scoping-system-colors"></a>Escopo de cores do sistema
 
-Além de definir suas próprias cores em seu aplicativo, você pode também definir o escopo nossas cores systematized para regiões desejados em todo o aplicativo usando a marca **ColorSchemeResources** . Essa API permite que você não apenas colorização e grupos grandes de tema de controles ao mesmo tempo ao definir algumas propriedades, mas também oferece a você outro sistema muitos benefícios que você normalmente não obtém com definindo suas próprias cores personalizadas manualmente:
+Além de definir suas próprias cores em seu aplicativo, você também pode abranger nossas cores systematized para regiões desejados em todo o aplicativo usando a marca **ColorSchemeResources** . Essa API permite que você não apenas colorização e grupos grandes de tema de controles ao mesmo tempo ao definir algumas propriedades, mas também permite que você outro sistema muitos benefícios que você normalmente não obtém com definindo suas próprias cores personalizadas manualmente:
 
 - Qualquer cor definida usando **ColorSchemeResources** não terão efeito alto contraste
   * Ou seja, seu aplicativo estarão acessível a mais pessoas sem adicionais de design ou desenvolvimento custo
@@ -267,21 +267,21 @@ Além de definir suas próprias cores em seu aplicativo, você pode também defi
 
 ### <a name="how-to-use-colorschemeresources"></a>Como usar ColorSchemeResources
 
-ColorSchemeResources é uma API que informa o sistema quais recursos estão sendo no escopo onde. ColorSchemeResources deve realizar uma [Tecla: x](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), que pode ser uma das três opções:
+ColorSchemeResources é uma API que informa o sistema quais recursos estão sendo escopo onde. ColorSchemeResources deve realizar uma [Tecla: x](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), que pode ser uma das três opções:
 - Padrão
   * Mostrará as alterações de cor no tema [claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) e [escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
 - Luz
-  * Mostrará as alterações de cor somente no [tema claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 
+  * Mostrará as alterações de cor apenas no [tema claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 
 - Dark
-  * Mostrará as alterações de cor somente no [tema escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
+  * Mostrará as alterações de cor apenas no [tema escuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)
 
-Definir esse X:Key garantirá que suas cores alterar adequadamente para o tema do sistema ou aplicativo, caso você queira uma aparência personalizada diferente quando no tema.
+Configuração que X:Key garantirá que suas cores alterar adequadamente para o tema do sistema ou aplicativo, caso você queira uma aparência personalizada diferente quando no tema.
 
 ### <a name="how-to-apply-scoped-colors"></a>Como aplicar cores analisadas
 
-Escopo de recursos por meio do **ColorSchemeResources** API em XAML permite que você se qualquer cor do sistema ou pincel que está em nossa biblioteca de [recursos de tema](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) e redefini-los dentro do escopo de uma página ou um contêiner.
+Escopo de recursos por meio do **ColorSchemeResources** API em XAML permite que você se qualquer cor do sistema ou pincel que está em nossa biblioteca de [recursos de tema](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) e redefini-los no escopo de uma página ou um contêiner.
 
-Por exemplo, se você definido duas cores de sistema - **SystemBaseLowColor** e **SystemBaseMediumLowColor** dentro de uma grade e, em seguida, colocado dois botões na sua página: um dentro dessa grade e fora de um:
+Por exemplo, se você definido duas cores do sistema - **SystemBaseLowColor** e **SystemBaseMediumLowColor** dentro de uma grade e, em seguida, colocado dois botões na sua página: um dentro dessa grade e fora de um:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -298,10 +298,10 @@ Por exemplo, se você definido duas cores de sistema - **SystemBaseLowColor** e 
 
 Você obteria **Button_A** com as novas cores aplicadas e **Button_B** permaneceriam aparência como nosso botão padrão do sistema:
 
-![cores do sistema analisados no botão](images/color/scopedcolors_cyan_button.png)
+![cores do sistema com escopo no botão](images/color/scopedcolors_cyan_button.png)
 
-No entanto, já que todas as nossas cores do sistema também cascata para outros controles, definir **SystemBaseLowColor** e **SystemBaseMediumLowColor** afetará mais do que apenas os botões. Nesse caso, controla como **ToggleButton**, **RadioButton** e **Slider** também serão afetados por essas alterações de cor do sistema, esses controles seja colocados acima escopo da grade de exemplo.
-Se você deseja analisar um sistema cor alterar *a apenas um único controles* , é possível fazer isso definindo **ColorSchemeResources** dentro de recursos desse controle:
+No entanto, desde que todos os nossos cores do sistema também cascata para outros controles, definir **SystemBaseLowColor** e **SystemBaseMediumLowColor** afetará mais do que apenas os botões. Nesse caso, os controles como **ToggleButton**, **RadioButton** e **controle deslizante** também serão afetados por essas alterações de cor do sistema, esses controles seja colocados acima escopo da grade de exemplo.
+Se você deseja analisar um sistema cor alterar *a um único controles só* é possível fazer isso definindo **ColorSchemeResources** dentro de recursos do controle:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -342,13 +342,13 @@ Aninhamento de cores do sistema também é possível e isso é feito colocando *
 </Grid>
 ```
 
-Neste exemplo, **Button_A** é Herdar cores definem em recursos de **Grid_A**do e **Botão aninhado** é herdando cores de recursos **Grid_B**do. Por extensão, isso significa que todos os outros controles são colocados dentro **Grid_B** verificar ou aplicar recursos de **Grid_B**do primeiro, antes de verificar ou aplicar **Grid_A**do recursos, e finalmente aplicar nossas cores padrão se nada é definido no nível de página ou do aplicativo.
+Neste exemplo, **Button_A** é Herdar cores definem em recursos de **Grid_A**do e **Botão aninhado** é Herdar cores de **Grid_B**do recursos. Por extensão, isso significa que todos os outros controles colocados dentro **Grid_B** verificar ou aplicar recursos de **Grid_B**do primeiro, antes de verificar ou aplicar **Grid_A**do recursos, e finalmente aplicação de nossos cores padrão se nada é definido no nível de página ou do aplicativo.
 
 Isso funciona para qualquer número de elementos aninhados cujos recursos têm definições de cores.
 
 ### <a name="scoping-with-a-resourcedictionary"></a>Escopo com um ResourceDictionary
 
-Você não está limitado a um contêiner ou recursos da página e também pode definir essas cores do sistema em um ResourceDictionary que pode então ser mesclado no escopo de qualquer a maneira como você normalmente faria mesclar um dicionário.
+Você não está limitado a um contêiner ou recursos da página e também pode definir essas cores do sistema em um ResourceDictionary que pode então ser mesclado em qualquer escopo a maneira como você normalmente faria mesclar um dicionário.
 
 #### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
 
@@ -390,9 +390,9 @@ Na página que contém o layout, simplesmente mescle esse dicionário no escopo 
 
 Agora, todos os recursos, temas e cores personalizadas podem ser colocadas em um dicionário de recursos **MyCustomTheme** único e escopo onde necessário sem precisar se preocupar sobre extra desorganização em sua marcação de layout.
 
-### <a name="other-ways-to-define-color-resources"></a>Outras maneiras de definir os recursos de cor
+### <a name="other-ways-to-define-color-resources"></a>Outras maneiras de definir recursos de cor
 
-Também permite ColorSchemeResources de cores do sistema deve ser colocado e definindo diretamente dentro dele, como um wrapper, em vez de linha:
+Também permite ColorSchemeResources de cores do sistema deve ser colocado e definindo diretamente nele como um wrapper, em vez de linha:
 
 ``` xaml
 <ColorSchemeResources x:Key="Dark">

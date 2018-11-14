@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 112e9f60e38bc5a665d9011f35b9e92189f15f80
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 394dbdb5ae9065aa9424a470ad2e9295ddd63c8d
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6460899"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671962"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Novidades dos documentos de desenvolvedor do Windows em dezembro de 2017
 
@@ -48,7 +48,7 @@ Em dispositivos que permitem interações por toque, adicione a funcionalidade d
 
 O portal Microsoft Collaborate fornece ferramentas e serviços para simplificar a colaboração de engenharia dentro do ecossistema da Microsoft habilitando o compartilhamento de itens de trabalho do sistema de engenharia (bugs, solicitações de recursos etc.) e a distribuição de conteúdo (compilações, documentos, especificações). [Saiba mais](https://docs.microsoft.com/en-us/collaborate).
 
-![Microsoft Collaborate no painel do Centro de Desenvolvimento do Windows](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft Collaborate no Partner Center](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>Empacotar aplicativos da área de trabalho com projetos UWP
 

@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047953"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6655996"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -25,13 +25,13 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 
 | Formulário fiscal da Receita Federal dos EUA | Descrição | Disponibilidade |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até em ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
-|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até em ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
+|1099-MISC, 1099-K | Relacionado a atividade de vendas e/ou pagamentos feitos a você pela participação em marketplaces da Microsoft | Formulários impressos serão protocolados até na ou antes de **31 de janeiro**, e cópias em. PDF serão disponibilizadas no [Partner Center](https://partner.microsoft.com/dashboard) (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
+|1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até na ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
-> O endereço que usamos nos formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
+> O endereço que usamos em formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
 
-Os formulários fiscais serão enviados a você do endereço a seguir:
+Os formulários de imposto serão enviados a você do endereço a seguir:
 
 **Cidadãos dos EUA:**
 <table>
@@ -43,10 +43,10 @@ Os formulários fiscais serão enviados a você do endereço a seguir:
 **Cidadãos fora dos EUA:**
 <table>
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Corporation via Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
-<tr><td>Publicidade *</td><td>Microsoft Irlanda Operations Limited (pagamento é feito pela Microsoft Online Inc. via Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;empresas&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Corporation por meio do Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade *</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Online Inc. por meio do Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
 <tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
-<tr><td colspan="3">* Cidadãos dos seguintes países lucro receita de publicidade serão pagos por meio do Microsoft Irlanda Operations Limited: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
+<tr><td colspan="3">* Cidadãos dos seguintes países lucro receita de publicidade serão pagos por meio do Microsoft Irlanda operações limitado: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos
@@ -77,7 +77,7 @@ Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Mic
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
-     <th>Se eu for um desenvolvedor de Estados Unidos vender anúncios em aplicativos e... </th>
+     <th>Se eu for um desenvolvedor dos Estados Unidos vender anúncios em aplicativos e... </th>
      <th> Devo receber este formulário</th>
   </tr>
   <tr> 
@@ -106,7 +106,7 @@ Recebi pelo menos US$ 600 em pagamentos não relacionados a vendas de app da Mic
     <td valign="top"><b>Por que o imposto foi retido em minhas pagamentos quando preenchi um formulário W8?</b></td>
     <td valign="top">Impostos serão retidos se:<br>
      1. Você não preencher a seção de tratados fiscais do W8 corretamente, ou<br>
-     2. Você residir em um país que não tenha um tratado fiscal com os Estados Unidos.<br><br>Você pode visitar o Partner Center a qualquer momento para enviar um formulário W8 atualizado.<br><br><b>Observação</b>: nem todos os renda está sujeita à retenção de imposto.</td>
+     2. Você residir em um país que não tenha um tratado fiscal com os Estados Unidos.<br><br>Você pode visitar o Partner Center a qualquer momento para enviar um formulário W8 atualizado.<br><br><b>Observação</b>: nem todos os renda está sujeita a retenção de imposto.</td>
   </tr>
   <tr>
     <td valign="top"><b>Enviei um formulário W8 atualizado com informações de tratado válidas. A Microsoft pode me reembolsar o imposto que foi retido?</b></td>

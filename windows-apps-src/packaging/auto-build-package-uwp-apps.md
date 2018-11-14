@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 78cb7240fd11cee77556078f10500ca1a2087f0e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 775e780be823b6e7b80eda9f488d69fe4fc29edf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194840"
+ms.locfileid: "6258179"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -292,7 +292,7 @@ Para gerar pacotes de envio da Loja, associe seu app à Loja usando o Assistente
 
 O Assistente de Associação à Store gera um arquivo chamado Package.StoreAssociation.xml que contém as informações de associação à Store. Se você armazenar seu código-fonte em um repositório público, como o GitHub, esse arquivo irá conter todos os nomes de aplicativo reservados para essa conta. Você pode excluir esse arquivo antes de torná-lo público.
 
-Se você não tiver acesso à conta do Centro de Desenvolvimento que foi usada para publicar o aplicativo, siga as instruções neste documento: [Criando um aplicativo para terceiros? Como empacotar seu aplicativo da Store.](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97)
+Se você não tiver acesso à conta do Partner Center que foi usada para publicar o aplicativo, você pode seguir as instruções neste documento: [Criando um aplicativo para um participante 3ª? Como empacotar seu aplicativo da loja](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
 
 Em seguida, você precisa verificar se a etapa de compilação inclui o seguinte parâmetro:
 
@@ -306,11 +306,11 @@ Isso irá gerar um arquivo de upload que pode ser enviado para a loja.
 
 Use a extensão do Visual Studio Team Services para a Microsoft Store para integrar-se à API da Store e envie seu pacote de apps para a Store.
 
-Você precisa conectar sua conta do Centro de Desenvolvimento ao Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso.
+Você precisa conectar sua conta do Partner Center com Azure Active Directory (AD) e, em seguida, criar um aplicativo no AD para autenticar as solicitações. Você pode seguir as orientações na página de extensão para fazer isso.
 
 Depois que você tiver configurado a extensão, você pode adicionar a tarefa de compilação e configure-a com sua ID do aplicativo e o local do arquivo de upload.
 
-![configurar o Centro de Desenvolvimento](images/building-screen17.png)
+![Configurar o partner center](images/building-screen17.png)
 
 Onde o valor do parâmetro `Package File` será:
 

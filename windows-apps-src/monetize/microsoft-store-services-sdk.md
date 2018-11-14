@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f29062e00701f578b63f79935d17b1203afc0f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037096"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209130"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Envolver os clientes com o Microsoft Store Services SDK
 
-O Microsoft Store Services SDK fornece recursos que ajudam você a interagir com clientes nos aplicativos da plataforma Universal do Windows (UWP), como enviar notificações direcionadas aos seus aplicativos e executar experimentos a / B em seus aplicativos. Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores do Visual Studio.
+A Microsoft Store Services SDK fornece recursos que ajudam você a interagir com clientes nos aplicativos da plataforma Universal do Windows (UWP), como enviar notificações direcionadas aos seus aplicativos e executar experimentos a / B em seus aplicativos. Esse SDK é uma extensão do Visual Studio 2015 e versões posteriores do Visual Studio.
 
 > [!NOTE]
 > Para exibir anúncios em seus aplicativos UWP, use o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp) em vez do Microsoft Store Services SDK. As bibliotecas de publicidade foram movidas do Microsoft Store Services SDK para o SDK do Microsoft Advertising. Para obter mais informações, consulte [Exibir anúncios no seu aplicativo](display-ads-in-your-app.md).
@@ -30,9 +30,9 @@ Atualmente, o Microsoft Store Services SDK dá suporte aos seguintes cenários p
 
 |  Cenário  |  Descrição   |
 |------------|----------------|
-|  [Executar experimentos em seu aplicativo UWP com testes A/B](run-app-experiments-with-a-b-testing.md)    |  Execute testes A/B em seu aplicativo UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento no Partner Center, use a classe [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obter variações para o seu experimento em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, usar o LogForVariation [ ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)método para enviar eventos de exibição e conversão para o Partner Center. Por fim, use o Partner Center para exibir os resultados e gerenciar o experimento.  |
+|  [Executar experimentos em seu aplicativo UWP com testes A/B](run-app-experiments-with-a-b-testing.md)    |  Execute testes A/B em seu aplicativo UWP (Plataforma Universal do Windows) para medir a eficácia de recursos em alguns clientes antes de liberar os recursos para todos. Depois de definir um experimento no Partner Center, usar a classe [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obter variações para o seu experimento em seu aplicativo, use esses dados para modificar o comportamento do recurso que você está testando e, em seguida, use o LogForVariation [ ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)método para enviar eventos de exibição e conversão para o Partner Center. Por fim, use o Partner Center para exibir os resultados e gerenciar o experimento.  |
 |  [Inicie o Hub de Feedback do seu aplicativo UWP](launch-feedback-hub-from-your-app.md)    |  Use a classe [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) em seu aplicativo UWP para direcionar os clientes do Windows 10 ao Hub de Feedback, onde eles podem enviar problemas, sugestões e aprovações. Em seguida, gerencie esses comentários no [relatório de comentários](../publish/feedback-report.md) no Partner Center. |
-|  [Configure seu aplicativo UWP para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)    |  Use a classe [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) em seu aplicativo UWP para registrar seu aplicativo para receber notificações por push direcionadas que você envia para seus clientes usando o Partner Center.  |
+|  [Configure seu aplicativo UWP para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)    |  Use a classe [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) em seu aplicativo UWP para registrar seu aplicativo para receber notificações por push direcionadas que você enviar para seus clientes usando o Partner Center.  |
 |   [Registre eventos personalizados em seu aplicativo UWP para o relatório de uso no Partner Center](log-custom-events-for-dev-center.md)   |  Use a classe [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) em seu aplicativo UWP para registrar eventos personalizados que estão associados a seu aplicativo no Partner Center. Em seguida, examine o total de ocorrências de seus eventos personalizados na seção **eventos personalizados** do [relatório de uso](https://msdn.microsoft.com/windows/uwp/publish/usage-report) no Partner Center.  |
 
 <span id="prerequisites" />
@@ -143,5 +143,5 @@ Se nós lançamos uma nova versão do SDK que apresenta novas APIs ou recursos d
 * [Referência de API do Microsoft Store Services SDK](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Executar experimentos com testes A/B](run-app-experiments-with-a-b-testing.md)
 * [Iniciar o Hub de Feedback do seu aplicativo](launch-feedback-hub-from-your-app.md)
-* [Configure seu aplicativo para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)
+* [Configurar seu aplicativo para receber notificações por push do parceiro](configure-your-app-to-receive-dev-center-notifications.md)
 * [Registrar eventos personalizados para o Partner Center](log-custom-events-for-dev-center.md)

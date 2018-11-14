@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74fc017453472b515e597b73ee8bb582376f6b12
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 2dc2f8e65ec9ed4e05b6b62e9fc28bbc75f28075
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6464367"
+ms.locfileid: "6650546"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novidades dos documentos de desenvolvedor do Windows em maio de 2018
 
@@ -114,11 +114,11 @@ Nós já revitalized nosso Get iniciado conteúdo com novos acompanhamentos de a
 
 ### <a name="advertising-performance-report"></a>Relatório de desempenho de anúncios
 
-O [relatório de desempenho de anúncios](../publish/advertising-performance-report.md) no painel do Centro de desenvolvimento agora fornece métricas de visualização. Também adicionamos o artigo de [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md) para fornecer recomendações para otimizar a visualização de seus anúncios.
+O [relatório de desempenho de anúncios](../publish/advertising-performance-report.md) no Partner Center agora fornece métricas de visualização. Também adicionamos o artigo de [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md) para fornecer recomendações para otimizar a visualização de seus anúncios.
 
 ### <a name="targeted-push-notifications"></a>Notificações por push direcionadas
 
-A página de [notificações](../publish/send-push-notifications-to-your-apps-customers.md) no painel do Centro de desenvolvimento agora fornece dados de análise adicionais para todas as suas notificações nos modos de exibição de mapa de gráfico e o mundo.
+A página de [notificações](../publish/send-push-notifications-to-your-apps-customers.md) no Partner Center agora fornece dados de análise adicionais para todas as suas notificações nos modos de exibição de mapa de gráfico e o mundo.
 
 ## <a name="videos"></a>Vídeos
 

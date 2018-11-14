@@ -2,18 +2,18 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrindo uma conta de desenvolvedor
-description: Aqui está uma visão geral de como se registrar para uma conta de desenvolvedor são do Windows para a Microsoft Store e outros programas da Microsoft no Partner Center.
+description: Aqui está uma visão geral de como se registrar para uma conta de desenvolvedor do Windows para a Microsoft Store e outros programas da Microsoft no Partner Center.
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258944"
 ---
 # <a name="opening-a-developer-account"></a>Abrindo uma conta de desenvolvedor
 
@@ -63,8 +63,8 @@ Se você precisar ter várias pessoas acesso a conta da empresa ao entrar com a 
 
 -   Criar a conta da Microsoft usando um endereço de email que já não pertença a você ou outra pessoa, como MyCompany_PartnerCenter@outlook.com. Não use um endereço de email no domínio da sua empresa, especialmente se sua empresa já usa o Azure AD. (Como observado acima, você pode adicionar mais usuários do Azure da sua empresa AD posteriormente.)
 -   Limite o acesso a essa conta da Microsoft ao menor número possível de usuários.
--   Configurar uma lista de distribuição de emails corporativos que inclua todos aqueles que precisam acessar a conta de desenvolvedor e adicione este endereço de email para o [informações de segurança associadas com a conta da Microsoft [(https://account.microsoft.com/security). Isso permite que todos os funcionários da lista recebam os códigos de segurança enviados para esse alias. Se a configuração de uma lista de distribuição não é viável, você pode adicionar o endereço de email de uma pessoa a suas informações de segurança, mas o proprietário desse endereço de email será o único que pode acessar e compartilhar o código de segurança quando solicitado (como quando novas informações de segurança são adicionadas à t Ele conta ou quando ele é acessado em um novo dispositivo).
--   Adicione um número de telefone às informações de segurança da conta da Microsoft. Tente usar um número que não exige uma extensão e seja acessível para os principais membros da equipe.
+-   Configurar uma lista de distribuição de emails corporativos que inclua todos aqueles que precisam acessar a conta de desenvolvedor e adicione este endereço de email para o [informações de segurança associadas com a conta da Microsoft [(https://account.microsoft.com/security). Isso permite que todos os funcionários da lista recebam os códigos de segurança enviados para esse alias. Se a configuração de uma lista de distribuição não é possível, você pode adicionar o endereço de email de uma pessoa para suas informações de segurança, mas o proprietário desse endereço de email será o único que pode acessar e compartilhar o código de segurança quando solicitado (como quando novas informações de segurança são adicionadas à t Ele conta ou quando ele é acessado em um novo dispositivo).
+-   Adicione um número de telefone para informações de segurança da conta da Microsoft. Tente usar um número que não exige uma extensão e seja acessível para os principais membros da equipe.
 -   Em geral, solicite que os desenvolvedores usem [dispositivos confiáveis](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) para fazer logon na conta de desenvolvedor da sua empresa. Todos os membros principais da equipe devem ter acesso a esses dispositivos confiáveis. Isso reduzirá a necessidade do envio de códigos de segurança durante o acesso à conta. Existe um limite quanto ao número de códigos que podem ser gerados por conta a cada semana.
 -   Se você precisar permitir acesso à conta a partir de um computador não confiável, limite esse acesso a no máximo cinco desenvolvedores. Idealmente, esses desenvolvedores devem acessar a conta de computadores que compartilham o mesmo local geográfico e de rede.
 -   Analise frequentemente as informações de segurança da empresa em https://account.microsoft.com/security para garantir que elas estejam atualizadas.

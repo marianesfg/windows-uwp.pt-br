@@ -8,16 +8,16 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: a506eec99aabaddac6251eb6548a671ecd283d0b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: a687aa7ed1115692f765e516dc8c8b15504b709e
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6281113"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6648198"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>O que é um aplicativo da Plataforma Universal do Windows (UWP)?
 
-![Os aplicativos da Plataforma Universal do Windows são executados em uma variedade de dispositivos, são compatíveis com interface do usuário adaptável, entrada do usuário natural, um repositório, um centro de desenvolvimento e serviços de nuvem](images/universalapps-overview.png)
+![Aplicativos da plataforma Windows universais executar em uma variedade de dispositivos, dar suporte a interface do usuário adaptável, entrada do usuário natural, uma loja, do partner center e serviços de nuvem](images/universalapps-overview.png)
 
 Um aplicativo UWP:
 
@@ -134,7 +134,7 @@ Além da interação em diferentes dispositivos, [planeje seu aplicativo](https:
 
 ### <a name="submit-your-app-to-the-store"></a>Enviar seu aplicativo para a loja
 
-O novo painel unificado do Centro de Desenvolvimento do Windows permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um local. Veja [Usando o painel do Centro de Desenvolvimento do Windows unificado](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar seus aplicativos para publicação na Microsoft Store.
+[Partner Center](https://partner.microsoft.com/dashboard) permite que você gerencie e envie todos os seus aplicativos para dispositivos Windows em um só lugar. Consulte [jogos e publicar aplicativos do Windows](../publish/index.md) para aprender a enviar seus aplicativos para publicação na Microsoft Store.
 
 Os novos recursos simplificam os processos, dando mais controle para você. Você também encontrará [relatórios de análise](https://msdn.microsoft.com/library/windows/apps/mt148522) detalhados, [detalhes de pagamento](https://msdn.microsoft.com/library/windows/apps/dn986925) combinados, formas de [promover seu aplicativo e atrair os seus clientes](https://msdn.microsoft.com/library/windows/apps/mt148526), e muito mais.
 

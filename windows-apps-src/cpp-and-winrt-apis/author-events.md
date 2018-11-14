@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444593"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671610"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos com C++/WinRT
 
@@ -148,7 +148,7 @@ Cada vez que você clicar na janela, subtraia 1 do saldo da conta bancária. Par
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Delegados parametrizados e sinais simples, em uma ABI
 
-Se o evento deve ser acessível em uma interface binária do aplicativo (ABI)&mdash;como entre um componente e seu aplicativo consumo&mdash;, em seguida, o evento deve usar um tipo de representante de tempo de execução do Windows. O exemplo acima usa o tipo de delegado [**Windows::Foundation::EventHandler\ < t \ >**](/uwp/api/windows.foundation.eventhandler) Windows Runtime. [**TypedEventHandler\ < TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo de representante de tempo de execução do Windows.
+Se o evento deve ser acessível em uma interface binária do aplicativo (ABI)&mdash;como entre um componente e seu aplicativo consumo&mdash;, em seguida, o evento deve usar um tipo de representante de tempo de execução do Windows. O exemplo acima usa a [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) tipo de representante de tempo de execução do Windows. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) é outro exemplo de um tipo de representante de tempo de execução do Windows.
 
 Os parâmetros de tipo para esses tipos de dois delegado têm cruzar a ABI, portanto, os parâmetros de tipo devem ser tipos de tempo de execução do Windows, também. Isso inclui classes de tempo de execução de primeiro e de terceiros, bem como tipos primitivos, como números e cadeias de caracteres. O compilador ajuda você com um erro "*deve ser tipo WinRT*" Se você esquecer essa restrição.
 
