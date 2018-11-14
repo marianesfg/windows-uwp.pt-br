@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, assíncrono, threads, threading
 ms.localizationpriority: medium
 ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6282938"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6464517"
 ---
 # <a name="threading-and-async-programming"></a>Programação threading e assíncrona
 A programação threading e assíncrona permite que seu aplicativo realize o trabalho de forma assíncrona em threads paralelos.
