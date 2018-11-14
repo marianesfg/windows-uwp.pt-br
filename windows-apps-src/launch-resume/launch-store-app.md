@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: ecb99c16d413e5e9869215f2d048ad6d9d52206f
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6454111"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668471"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 
@@ -43,7 +43,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia a página de detalhes (PDP) de um produto. <p>O ID da Loja é recomendado para clientes no Windows 10 e funcionará em todas as versões de sistema operacional, mas as maneiras anteriores de fazer isso (ex: PFN) ainda têm suporte.</p>
-<p>Esses valores podem ser encontrados no painel Centro de Desenvolvimento do Windows na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidade do aplicativo</a> da seção Gerenciamento do aplicativo de cada aplicativo.</p>
+<p>Esses valores podem ser encontrados no [Partner Center](https://partner.microsoft.com/dashboard) na página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidade do aplicativo</a> na seção de gerenciamento do aplicativo para cada aplicativo.</p>
 </td>
 <td>
 ID da Loja <p>(Recomendado)</p>
