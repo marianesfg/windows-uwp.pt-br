@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025999"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271088"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço reivindicar e habilitar o modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço de declaração e habilitar o modelo
 
 ## <a name="claiming-for-exclusive-use"></a>Declaração para uso exclusivo
 
@@ -23,7 +23,7 @@ Depois de criar um objeto de dispositivo de PointOfService com sucesso, você de
 > [!Note]
 > A ação de declaração estabelece um bloqueio exclusivo para um dispositivo, mas não colocá-lo em um estado operacional.  Para obter mais informações, consulte [Habilitar dispositivo para operações de e/s](#Enable-device-for-I/O-operations) .
 
-### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar / liberar
+### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar / versão
 
 |Dispositivo|Declaração | Versão | 
 |-|:-|:-|
@@ -49,7 +49,7 @@ A ação de declaração simplesmente estabelece um direitos exclusivos para o d
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ Display de balcão não exige que você habilitar explicitamente o dispositivo para operações de e/s.  Habilitar é executada automaticamente pelas APIs do LineDisplay PointOfService que executa e/s.
+¹ Display de balcão não exige que você habilitar explicitamente o dispositivo para operações de e/s.  Permitindo que é executada automaticamente pelas APIs do LineDisplay PointOfService que executa e/s.
 
 ## <a name="code-sample-claim-and-enable"></a>Exemplo de código: reivindicar e habilitar
 
