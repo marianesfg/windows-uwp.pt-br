@@ -12,11 +12,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: b7c80ed7521d797602cde15607f966a1fc3665cd
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045705"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158154"
 ---
 # <a name="reveal-focus"></a>Foco do revelação
 
@@ -67,8 +67,8 @@ Revela que foco está desativada por padrão. Para habilitá-lo:
 
 Depois de definir a propriedade **FocusVisualKind** , o sistema aplica automaticamente o efeito de foco do revelação a todos os controles cuja propriedade [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) é definida como **True** (o valor padrão da maioria dos controles). 
 
-## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não está revelar foco ativado por padrão? 
-Como você pode ver, é muito fácil ativar revelar foco quando o aplicativo detecta está em execução em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, você desejará personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
+## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não revelar foco por padrão? 
+Como você pode ver, é muito fácil ativar revelar o foco quando o app detectar que ele é executado em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
 
 ## <a name="customizing-reveal-focus"></a>Personalizando o foco do revelação
 
@@ -76,7 +76,7 @@ Você pode personalizar o efeito de foco do revelação modificando as proprieda
 
 Mas antes de começar a pena, vale a pena saber um pouco mais sobre os componentes que compõem o foco do revelação.
 
-Há três partes nos elementos visuais de foco do revelação padrão: a borda principal, a borda secundária e o brilho do revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do foco do revelação tem espessura proporcional à espessura da borda principal e é executado em torno o *fora* da borda principal.
+Há três partes nos elementos visuais de foco do revelação padrão: a borda principal, a borda secundária e o brilho do revelação. A borda principal apresenta espessura de **2px** e é moldada em torno da parte *externa* da borda secundária. A borda secundária apresenta espessura de **1px** e é moldada em torno da parte *interna* da borda secundária. O brilho do foco do revelação tem espessura proporcional à espessura da borda principal e é executado em torno do *fora* da borda principal.
 
 Além dos elementos estáticos, elementos visuais de foco do revelação apresentam uma luz animada que pulsates quando estão em repouso e se move na direção do foco ao mover o foco.
 

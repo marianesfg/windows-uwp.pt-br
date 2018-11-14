@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote do ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025548"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163198"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Desenvolvendo com os pacotes de ativo e dobramento de pacote 
 
@@ -27,7 +27,7 @@ Se você estiver pensando em usar pacotes de ativo para o seu aplicativo ou já 
 
 Para entender como o dobramento de pacote não afeta seu processo de desenvolvimento, vamos voltar ao inicio para entender o que acontece quando você separa seu aplicativo em vários pacotes (com pacotes de ativo ou pacotes de recursos). 
 
-Em geral, ao separar alguns dos arquivos do seu aplicativo em outros pacotes (que não são pacotes de arquitetura), você não conseguirá acessar esses arquivos diretamente em relação ao local onde seu código é executado. Isso ocorre porque esses pacotes são instalados em diretórios diferentes de onde o pacote de arquitetura está instalado. Por exemplo, se você estiver criando um jogo e seu jogo for traduzido para francês e alemão e você desenvolveu para x86 e x64 máquinas, então você deve ter esses arquivos de pacote de aplicativo dentro do lote de aplicativo do seu jogo:
+Em geral, ao separar alguns dos arquivos do seu aplicativo em outros pacotes (que não são pacotes de arquitetura), você não conseguirá acessar esses arquivos diretamente em relação ao local onde seu código é executado. Isso ocorre porque esses pacotes são instalados em diretórios diferentes de onde o pacote de arquitetura está instalado. Por exemplo, se você estiver criando um jogo e seu jogo for traduzido para francês e alemão e você criados para x86 e x64 máquinas, então você deve ter esses arquivos de pacote de aplicativo dentro do lote de aplicativo do seu jogo:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040541"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164216"
 ---
 # <a name="add-a-splash-screen"></a>Adicionar uma tela inicial
 
@@ -39,7 +39,7 @@ Quando você usa um modelo do Visual Studio para criar o seu aplicativo, uma ima
 
 4. Para selecionar uma nova imagem de tela inicial para um aplicativo UWP, pressione o botão com reticências que aparece próximo ao rótulo **1240 x 600 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1240 x 600 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 
-    **Importante**imagem da tela inicial que você escolher deve ser 620 x 300 pixels usando 1X fator de escala. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Store do Windows Phone faz.
+    **Importante**imagem da tela inicial que você escolher deve ser 620 x 300 pixels usando um 1 x fator de escala. Além disso, ao projetar sua tela inicial, observe que ela é menor do que a tela e centralizada. Ela não preenche a tela como uma tela inicial de um aplicativo da Store do Windows Phone faz.
 
 5. Para selecionar uma nova imagem de tela inicial para um aplicativo da Store do Windows Phone, pressione o botão com reticências que aparece próximo ao rótulo **1152 x 1920 px** abaixo de **Ativos dimensionados**. Escolha a imagem de 1152 x 1920 pixels (.png, .jpg, or .jpeg) que gostaria de usar como imagem da sua tela inicial.
 

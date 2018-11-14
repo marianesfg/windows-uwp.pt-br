@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032950"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154102"
 ---
 # <a name="interaction-primer"></a>Cartilha de interação
 
@@ -236,7 +236,7 @@ Você deve fornecer comandos de interface do usuário, ou funcionalidades, espec
 
 Um teclado é o dispositivo principal de inserção de texto, e geralmente é indispensável para pessoas portadoras de determinadas deficiências ou usuários que o consideram um método mais rápido e mais eficiente de interagir com um aplicativo.
 
-Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones com um mouse e teclado para fazê-los funcionar como um notebook.
+Com o [Continuum para telefone](http://go.microsoft.com/fwlink/p/?LinkID=699431), uma nova experiência para dispositivos móveis Windows 10 compatíveis, os usuários podem conectar seus telefones a um mouse e teclado para fazê-los funcionar como um notebook.
 
 ### <a name="device-support"></a>Suporte a dispositivos
 

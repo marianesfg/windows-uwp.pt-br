@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031853"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191503"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criando componentes do Windows Runtime em C# e Visual Basic
 A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em aplicativos da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
@@ -27,7 +27,7 @@ Internamente, os tipos do Windows Runtime no componente podem usar qualquer func
 
 -   Os campos, os parâmetros e os valores de retorno de todos os tipos públicos e membros no componente devem ser tipos do Windows Runtime.
 
-    Essa restrição inclui os tipos do Windows Runtime que você cria, bem como os tipos fornecidos pelo Windows Runtime propriamente dito. Ele também inclui vários tipos do .NET Framework. A inclusão desses tipos faz parte do suporte que o .NET Framework fornece para habilitar o uso natural do Windows Runtime em código gerenciado: o código aparentemente usa tipos do .NET Framework familiares, em vez dos tipos do Windows Runtime subjacentes. Por exemplo, é possível usar tipos primitivos do .NET Framework, como Int32 e Double, determinados tipos fundamentais como DateTimeOffset e Uri, e alguns tipos de interface genérica mais usados, como IEnumerable&lt;T&gt; (IEnumerable(Of T) em Visual Basic) e IDictionary&lt;TKey,TValue&gt;. (Observe que os argumentos de tipo desses tipos genéricos devem ser tipos de tempo de execução do Windows). Isso é discutido nas seções do Windows Runtime passando tipos para código gerenciado e passagem gerenciados tipos de tempo de execução do Windows, neste tópico.
+    Essa restrição inclui os tipos do Windows Runtime que você cria, bem como os tipos fornecidos pelo Windows Runtime propriamente dito. Ele também inclui vários tipos do .NET Framework. A inclusão desses tipos faz parte do suporte que o .NET Framework fornece para habilitar o uso natural do Windows Runtime em código gerenciado: o código aparentemente usa tipos do .NET Framework familiares, em vez dos tipos do Windows Runtime subjacentes. Por exemplo, é possível usar tipos primitivos do .NET Framework, como Int32 e Double, determinados tipos fundamentais como DateTimeOffset e Uri, e alguns tipos de interface genérica mais usados, como IEnumerable&lt;T&gt; (IEnumerable(Of T) em Visual Basic) e IDictionary&lt;TKey,TValue&gt;. (Observe que os argumentos de tipo desses tipos genéricos devem ser tipos de tempo de execução do Windows). Isso é discutido nas seções do Windows Runtime passagem de tipos para código gerenciado e gerenciados passar tipos de tempo de execução do Windows, neste tópico.
 
 -   Classes públicas e interfaces podem conter métodos, propriedades e eventos. É possível declarar representantes para os eventos ou usar o representante EventHandler&lt;T&gt;. Uma classe pública ou interface não pode:
 
@@ -210,7 +210,7 @@ function asyncExample(id) {
 
 Para ações e operações assíncronas que dão suporte ao cancelamento ou aos relatórios de progresso, use a classe [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para gerar uma tarefa iniciada e vincular os recursos de cancelamento e relatórios de progresso da tarefa aos recursos de cancelamento e relatórios de progresso da interface do Windows Runtime. Para obter um exemplo que dê suporte ao cancelamento e aos relatórios de progresso, consulte [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-É possível usar os métodos da classe AsyncInfo mesmo que o método assíncrono não dê suporte ao cancelamento ou aos relatórios de progresso. Caso você use uma função lambda do Visual Basic ou um método anônimo de C#, não forneça parâmetros para o token e a interface [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o AsAsyncOperation&lt;TResult&gt; método, semelhante à seguinte quando você usa o [asyncinfo. Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) método sobrecarga em vez disso:
+É possível usar os métodos da classe AsyncInfo mesmo que o método assíncrono não dê suporte ao cancelamento ou aos relatórios de progresso. Caso você use uma função lambda do Visual Basic ou um método anônimo de C#, não forneça parâmetros para o token e a interface [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o AsAsyncOperation&lt;TResult&gt; método, esta aparência quando você usa o [asyncinfo. Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) método sobrecarga em vez disso:
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

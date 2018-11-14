@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, anúncios, desempenho
 ms.localizationpriority: medium
 ms.openlocfilehash: 7310eeb04915933adc149165fa6774ed2f413814
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050122"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6155194"
 ---
 # <a name="get-ad-performance-data"></a>Obter dados de desempenho de anúncios
 
@@ -123,7 +123,7 @@ Os elementos na matriz *Value* contêm os seguintes valores.
 | deviceType          | string | O tipo de dispositivo no qual os anúncios foram veiculados. Para obter uma lista das cadeias de caracteres com suporte, consulte a seção [campos de filtro](#filter-fields) acima.                              |
 | market              | string | O código de país ISO 3166 do mercado onde os anúncios foram veiculados.             |
 | accountCurrencyCode     | string | O código da moeda da conta.        |
-| pubCenterAppName       |  string  |   O nome do aplicativo pubCenter que está associado com o aplicativo no Partner Center.   |
+| pubCenterAppName       |  string  |   O nome do aplicativo pubCenter associado com o aplicativo no Partner Center.   |
 | adProviderRequests        | int | O número de solicitações de anúncio do provedor de anúncios especificado.                 |
 | impressions           | int | O número de impressões do anúncio.        |
 | clicks            | int | O número de cliques no anúncio.       |

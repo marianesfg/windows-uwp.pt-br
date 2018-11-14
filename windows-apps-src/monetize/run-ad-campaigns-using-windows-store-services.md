@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 81e77fb01347c2a6ec2630e08f3a00ee6cf47de7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046011"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152529"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Veicular campanhas publicitárias usando os serviços da Store
 
@@ -25,7 +25,7 @@ As etapas a seguir descrevem o processo completo:
 2.  Antes de chamar um método na API de promoções da Microsoft Store [obtenha um token de acesso do Azure AD](#obtain-an-azure-ad-access-token). Depois de obter um token, você terá 60 minutos para usá-lo em chamadas à API de promoções da Microsoft Store antes que ele expire. Depois que o token expirar, será possível gerar um novo.
 3.  [Chame a API de promoções da Microsoft Store](#call-the-windows-store-promotions-api).
 
-Como alternativa, você pode criar e gerenciar campanhas publicitárias usando o Partner Center e todas as campanhas publicitárias que você criar programaticamente através de promoções da Microsoft Store que API também pode ser acessado no Partner Center. Para obter mais informações sobre como gerenciar as campanhas publicitárias no Partner Center, consulte [criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
+Como alternativa, você pode criar e gerenciar as campanhas publicitárias usando o Partner Center e todas as campanhas publicitárias que você criar programaticamente através de promoções da Microsoft Store que API também pode ser acessada no Partner Center. Para obter mais informações sobre como gerenciar as campanhas publicitárias no Partner Center, consulte [criar uma campanha publicitária para seu aplicativo](../publish/create-an-ad-campaign-for-your-app.md).
 
 > [!NOTE]
 > Qualquer desenvolvedor com uma conta do Partner Center pode usar a API de promoções da Microsoft Store para gerenciar as campanhas publicitárias de seus aplicativos. Agências de mídia também podem solicitar acesso a essa API para executar campanhas publicitárias em nome dos seus anunciantes. Se você for uma agência de mídia que deseja saber mais sobre essa API ou solicitar acesso à ela, envie sua solicitação para storepromotionsapi@microsoft.com.
@@ -36,7 +36,7 @@ Como alternativa, você pode criar e gerenciar campanhas publicitárias usando o
 
 Antes de começar a escrever o código para chamar a API de promoções da Microsoft Store, certifique-se de que você concluiu os pré-requisitos a seguir.
 
-* Antes de poder criar e iniciar uma campanha publicitária usando essa API com êxito, você deve primeiro [criar uma campanha publicitária usando a página de **campanhas publicitárias** no Partner Center](../publish/create-an-ad-campaign-for-your-app.md), e você deve adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
+* Antes de poder criar e iniciar uma campanha publicitária usando essa API com êxito, você deve primeiro [criar uma campanha publicitária usando a página de **campanhas publicitárias** no Partner Center](../publish/create-an-ad-campaign-for-your-app.md), e você deve adicionar pelo menos um método de pagamento nesta página. Depois que você fizer isso, é possível criar linhas de entrega faturáveis para campanhas publicitárias usando essa API. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página de **campanhas publicitárias** no Partner Center.
 
 * Você (ou sua organização) deve ter um diretório do Azure AD, e você deve ter permissão de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para o diretório. Se você já usa o Office 365 ou outros serviços comerciais da Microsoft, você já tem o diretório Azure AD. Caso contrário, você pode [criar um novo Azure AD no Partner Center](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sem nenhum custo adicional.
 

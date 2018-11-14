@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032757"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163955"
 ---
 # <a name="getting-started-creating-a-project"></a>Ponto de Partida: criando um projeto
 
@@ -27,9 +27,9 @@ O vídeo a seguir compara o Xcode e o Visual Studio.
 
 Você também achará [Compilando aplicativos para postagem de blog do Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/) muito útil.
 
-Criar um aplicativo para Windows 10 (mais formalmente chamado de um aplicativo da plataforma Universal do Windows (UWP)) é bastante parecido com criar um aplicativo iOS usando Storyboards. O aplicativo do Windows 10 geralmente é construído ao longo de várias páginas, cada página que contém uma parte diferente da interface do usuário, como um site da web. Cada página geralmente tem dois arquivos de origem associados: um para armazenar a interface do usuário em formato [XAML (visão geral)](https://msdn.microsoft.com/library/windows/apps/mt185595) e um que contém o código-fonte, frequentemente em C#. Conforme seu usuário interage com seu aplicativo, ele navega entre essas páginas. Neste passo a passo, você criará um aplicativo com duas páginas.
+Criar um aplicativo para Windows 10 (mais formalmente chamado de um aplicativo da plataforma Universal do Windows (UWP)) é bastante parecido com criar um aplicativo iOS usando Storyboards. O aplicativo do Windows 10 geralmente é construído em várias páginas, cada página que contém uma parte da interface do usuário, como um site diferente. Cada página geralmente tem dois arquivos de origem associados: um para armazenar a interface do usuário em formato [XAML (visão geral)](https://msdn.microsoft.com/library/windows/apps/mt185595) e um que contém o código-fonte, frequentemente em C#. Conforme seu usuário interage com seu aplicativo, ele navega entre essas páginas. Neste passo a passo, você criará um aplicativo com duas páginas.
 
-**Observação**um recurso importante dos aplicativos do Windows 10 é o fato de que o mesmo código-fonte e o mesmo conjunto de API está disponível para você independentemente da plataforma. Como você sabe, ao gravar um aplicativo iOS universal para iPhone e iPad, você pode determinar em tempo de execução em qual plataforma seu aplicativo está sendo executado e tomar a ação apropriada. De maneira semelhante, aplicativos do Windows 10 podem dizer, em tempo de execução, o dispositivo estão sendo executados. Com um aplicativo UWP, não é preciso usar \#ifdef's em seu código fonte para criar compilações para telefone versus para desktop. Convenientemente, aplicativos do Windows 10 também usam de modo inteligente os controles de interface do usuário dependendo do dispositivo: por exemplo, seu aplicativo pode fazer referência a um controle do seletor de data, e o controle automaticamente parecerá e funcionará de maneira diferente dependendo se ele tem em execução em um desktop ou na tela de um telefone. No entanto, seu código-fonte permanece o mesmo.
+**Observação**um recurso importante dos aplicativos do Windows 10 é o fato de que o mesmo código-fonte e o mesmo conjunto de API está disponível para você independentemente da plataforma. Como você sabe, ao gravar um aplicativo iOS universal para iPhone e iPad, você pode determinar em tempo de execução em qual plataforma seu aplicativo está sendo executado e tomar a ação apropriada. De forma semelhante, aplicativos do Windows 10 podem dizer, em tempo de execução, o dispositivo estão sendo executados. Com um aplicativo UWP, não é preciso usar \#ifdef's em seu código fonte para criar compilações para telefone versus para desktop. Convenientemente, aplicativos do Windows 10 também usam de modo inteligente os controles de interface do usuário dependendo do dispositivo: por exemplo, seu aplicativo pode fazer referência a um controle de seletor de data, e o controle automaticamente parecerá e funcionará de maneira diferente dependendo se ele tem em execução em um desktop ou na tela de um telefone. No entanto, seu código-fonte permanece o mesmo.
 
 Vamos ver como podemos criar um aplicativo do Windows 10. Comece executando o Visual Studio. Ao ser executado pela primeira vez, o Visual Studio pedirá que você obtenha uma licença de desenvolvedor. Uma licença de desenvolvedor permite instalar e testar os aplicativos UWP em seu computador local antes de enviá-los à Microsoft Store. Para obter uma licença, siga as instruções na tela para entrar em uma conta da Microsoft. Se não tiver uma, clique no link **Inscrever-se** na caixa de diálogo **Licença de Desenvolvedor** e siga as instruções na tela.
 

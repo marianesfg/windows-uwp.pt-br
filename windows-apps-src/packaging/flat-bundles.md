@@ -8,23 +8,23 @@ ms.topic: article
 keywords: windows 10, empacotamento, configuração do pacote, lote simples
 ms.localizationpriority: medium
 ms.openlocfilehash: b877996dd5fa32ac764fb587092f501320931527
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044433"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6150954"
 ---
 # <a name="flat-bundle-app-packages"></a>Pacotes de aplicativo do lote simples 
 
 > [!IMPORTANT]
 > Se você pretender enviar seu aplicativo para a Store, precisará entrar em contato com [Suporte ao desenvolvedor Windows](https://developer.microsoft.com/windows/support) para obter aprovação para usar lotes simples.
 
-Lotes simples são uma maneira melhor de arquivos do pacote do aplicativo. Um arquivo de lote de aplicativo usa uma estrutura de empacotamento de vários níveis na qual os arquivos do pacote de aplicativo precisam estar contidos dentro do lote do Windows típico, lotes simples removem essa necessidade referindo-se apenas os arquivos de pacote do aplicativo, permitindo que eles fiquem fora do lote de aplicativo. Como os arquivos de pacote do aplicativo não estão contidos no lote, eles podem ser processados paralelamente, que resulta em menor tempo, publicação mais rápida (porque cada arquivo de pacote do aplicativo pode ser processado ao mesmo tempo) de carregamento e, por fim, mais rápido desenvolvimento iterações.
+Lotes simples são uma maneira melhor de arquivos do pacote do seu aplicativo. Um arquivo de lote de aplicativo usa uma estrutura de empacotamento de vários níveis na qual os arquivos de pacote do aplicativo precisam estar contidos dentro do lote do Windows típico, lotes simples removem essa necessidade referindo-se apenas os arquivos de pacote do aplicativo, permitindo que eles fiquem fora do lote de aplicativo. Como os arquivos de pacote do aplicativo não estão contidos no lote, eles podem ser processados paralelamente, que resulta em menor tempo, publicação mais rápida (porque cada arquivo de pacote do aplicativo pode ser processado ao mesmo tempo) de carregamento e, por fim, mais rápido desenvolvimento iterações.
 
 ![Diagrama de lote simples](images/bundle-combined.png)
 
-Outra vantagem de lotes simples é a necessidade de criar menos pacotes. Como arquivos do pacote de aplicativo são apenas referenciados, duas versões do aplicativo poderá referenciar o mesmo arquivo de pacote se o pacote não tiver mudado entre as duas versões. Assim, você precisa criar apenas os pacotes de aplicativo que foram alterados ao compilar os pacotes para a próxima versão do seu aplicativo.
-Por padrão, os lotes simples farão referência arquivos do pacote do aplicativo na mesma pasta como a si. No entanto, essa referência pode ser alterada para outros caminhos (caminhos relativos, compartilhamentos de rede e locais http). Para fazer isso, você deve fornecer diretamente um **BundleManifest** durante a criação de lote simples. 
+Outra vantagem de lotes simples é a necessidade de criar menos pacotes. Como arquivos do pacote de aplicativo são apenas referenciados, duas versões do aplicativo podem referenciar o mesmo arquivo de pacote se o pacote não tiver mudado entre as duas versões. Assim, você precisa criar apenas os pacotes de aplicativo que foram alterados ao compilar os pacotes para a próxima versão do seu aplicativo.
+Por padrão, os lotes simples farão referência arquivos do pacote de aplicativo na mesma pasta como a si. No entanto, essa referência pode ser alterada para outros caminhos (caminhos relativos, compartilhamentos de rede e locais http). Para fazer isso, você deve fornecer diretamente um **BundleManifest** durante a criação de lote simples. 
 
 ## <a name="how-to-create-a-flat-bundle"></a>Como criar um lote simples
 
@@ -45,4 +45,4 @@ Para obter mais informações sobre como usar MakeAppx.exe, consulte [Criar um p
 Como alternativa, você pode criar um lote simples usando o layout de empacotamento. Para fazer isso, defina o atributo **FlatBundle** como **true** no elemento **PackageFamily** do manifesto do lote de aplicativo. Para saber mais sobre o layout de empacotamento, consulte [Criação do pacote com o layout de empacotamento](packaging-layout.md).
 
 ## <a name="how-to-deploy-a-flat-bundle"></a>Como implantar um lote simples 
-Antes de um lote simples poder ser implantado, cada um dos pacotes de aplicativo (além do lote de aplicativo) precisará ser assinado com o mesmo certificado. Isso ocorre porque todos os arquivos de pacote de aplicativo (.appx/.msix) agora são arquivos independentes e não são mais contidos no arquivo de lote (.appxbundle/.msixbundle) do aplicativo. Depois que os pacotes forem assinados, use o [cmdlet Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) no PowerShell para apontar para o arquivo de lote de aplicativo e implantar o aplicativo (supondo que pacotes de aplicativo estão onde o lote de aplicativo espera). 
+Antes de um lote simples poder ser implantado, cada um dos pacotes de aplicativo (além do lote de aplicativo) precisará ser assinado com o mesmo certificado. Isso ocorre porque todos os arquivos de pacote de aplicativo (.appx/.msix) agora são arquivos independentes e não estão contidos no arquivo de lote (.appxbundle/.msixbundle) do aplicativo mais. Depois que os pacotes forem assinados, use o [cmdlet Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) do PowerShell para apontar para o arquivo de lote de aplicativo e implantar o aplicativo (supondo que pacotes de aplicativo estão onde o lote de aplicativo espera). 

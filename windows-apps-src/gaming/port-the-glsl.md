@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, glsl, porta
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6048812"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181246"
 ---
 # <a name="port-the-glsl"></a>Fazer a portabilidade do GLSL
 

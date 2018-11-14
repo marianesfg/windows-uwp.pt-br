@@ -10,15 +10,15 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: 041bf37072b595c0889bd1493857e508e27c510c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043585"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149756"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Executar, depurar e testar um aplicativo da área de trabalho empacotado
 
-Execute seu aplicativo empacotado e ver sua aparência sem ter que assiná-lo. Em seguida, defina pontos de interrupção e percorra o código. Quando você estiver pronto para testar seu aplicativo em um ambiente de produção, assinar o aplicativo e instalá-lo. Este tópico mostra como fazer cada uma dessas coisas.
+Executar o aplicativo empacotado e veja sua aparência sem ter que assiná-lo. Em seguida, defina pontos de interrupção e percorra o código. Quando você estiver pronto para testar seu aplicativo em um ambiente de produção, assinar o aplicativo e instalá-lo. Este tópico mostra como fazer cada uma dessas coisas.
 
 <a id="run-app" />
 
@@ -42,7 +42,7 @@ Para iniciar seu aplicativo, encontre-o no menu Iniciar do Windows.
 ![Aplicativo empacotado no menu Iniciar](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="debug-your-app"></a>Depurar seu aplicativo
 
@@ -70,7 +70,7 @@ Se você fizer alterações ao seu aplicativo para corrigir bugs, reempacote-o u
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Depurar o ciclo de vida inteiro do aplicativo
 
-Em alguns casos, convém controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes que ele inicie.
+Em alguns casos, você pode querer controle mais refinado sobre o processo de depuração, incluindo a capacidade de depurar seu aplicativo antes de iniciar.
 
 Você pode usar o [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) para obter controle total sobre o ciclo de vida do aplicativo incluindo suspensão, retomada e encerramento.
 
@@ -82,11 +82,11 @@ Para testar seu aplicativo em uma configuração realista enquanto você se prep
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testar um aplicativo que você empacotou usando o Visual Studio
 
-O Visual Studio assina seu aplicativo usando um certificado de teste. Você encontrará esse certificado na pasta de saída gerada pelo assistente **Criar pacotes de aplicativo**. O arquivo de certificado tem a extensão *. cer* e você precisará instalar esse certificado no armazenamento de **Autoridades de certificação raiz confiáveis** no computador que você deseja testar seu aplicativo em. Consulte [Fazer o sideload do pacote](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+O Visual Studio assina seu aplicativo usando um certificado de teste. Você encontrará esse certificado na pasta de saída gerada pelo assistente **Criar pacotes de aplicativo**. O arquivo de certificado tem a extensão *. cer* e você precisará instalar esse certificado no repositório **Autoridades de certificação raiz confiáveis** no computador que você deseja testar o aplicativo. Consulte [Fazer o sideload do pacote](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Testar um aplicativo que você empacotou usando o Desktop App Converter (DAC)
 
-Se você empacotar seu aplicativo usando o Desktop App Converter, você pode usar o ``sign`` parâmetro para entrar automaticamente seu aplicativo usando um certificado gerado. Você precisará instalar esse certificado e, em seguida, instalar o aplicativo. Consulte [Executar o aplicativo empacotado](desktop-to-uwp-run-desktop-app-converter.md#run-app).   
+Se você empacotar seu aplicativo usando o Desktop App Converter, você pode usar o ``sign`` parâmetro para assinar automaticamente seu aplicativo usando um certificado gerado. Você precisará instalar esse certificado e, em seguida, instalar o aplicativo. Consulte [Executar o aplicativo empacotado](desktop-to-uwp-run-desktop-app-converter.md#run-app).   
 
 
 ### <a name="manually-sign-apps-optional"></a>Assinar aplicativos manualmente (opcional)
@@ -97,7 +97,7 @@ Você também pode assinar seu aplicativo manualmente. Veja como
 
 2. Instale esse certificado para no repositório de certificados **Trusted Root** ou **Trusted People** em seu sistema.
 
-3. Assine seu aplicativo usando esse certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Assinar seu aplicativo usando esse certificado, consulte o [sinal de um pacote de aplicativo usando a SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Certifique-se de que o nome do fornecedor no certificado corresponde ao nome do fornecedor do seu aplicativo.

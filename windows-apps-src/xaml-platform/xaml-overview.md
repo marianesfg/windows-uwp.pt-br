@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: b2576c11e50092b5d8e70189e0e8a88cfab716f9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026887"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184457"
 ---
 # <a name="xaml-overview"></a>Visão geral do XAML
 
@@ -254,6 +254,6 @@ O XAML é frequentemente editado dentro de um IDE, como o Visual Studio e uma de
 
 Depois que o aplicativo for executado, se houver erros de análise de XAML não detectados no tempo de projeto, eles serão relatados pelo CLR (Common Language Runtime) como um [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). Para saber mais sobre o que você pode fazer para um tempo de execução **XamlParseException**, veja [Manipulação de exceções para aplicativos do Windows Runtime do Windows em C# ou Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
-**Observação**os aplicativos que usam C++ c++ /CX para código não recebem o específico [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774). Mas a mensagem na exceção esclarece que a origem do erro está relacionada ao XAML, e inclui informações de contexto, como números de linha em um arquivo XAML, assim como o **XamlParseException** faz.
+**Observação**os aplicativos que usam C++ c++ CX para código não receber o [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)específico. Mas a mensagem na exceção esclarece que a origem do erro está relacionada ao XAML, e inclui informações de contexto, como números de linha em um arquivo XAML, assim como o **XamlParseException** faz.
 
 Para saber sobre a depuração de um aplicativo do Windows Runtime, veja [Iniciar uma sessão de depuração](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx).

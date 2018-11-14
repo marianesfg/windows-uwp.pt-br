@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, geocodificação, mapa, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043409"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142882"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Executar geocódigo e geocódigo reverso
 
@@ -27,7 +27,7 @@ As classes envolvidas na geocodificação e geocodificação reversa são organi
 -   A classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) contém métodos que manipulam geocodificação ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) e reverter geocodificação ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
 -   Esses métodos retornam uma instância de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
 -   A propriedade de [**locais**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) expõe uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . 
--   [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objetos têm uma propriedade de [**endereço**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expõe um objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa um endereço residencial e uma propriedade de [**ponto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expõe um objeto [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que representa uma localização geográfica.
+-   Objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) têm uma propriedade de [**endereço**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expõe um objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa um endereço e uma propriedade de [**ponto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expõe um objeto [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que representa uma localização geográfica.
 
 > [!IMPORTANT]
 > Você deve especificar uma chave de autenticação de mapas para poder usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).

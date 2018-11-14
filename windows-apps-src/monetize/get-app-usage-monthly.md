@@ -6,14 +6,14 @@ title: Obter uso do app mensalmente
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
-keywords: Windows 10, uwp, serviços da loja, API, uso de análise da Microsoft Store
+keywords: Windows 10, uwp, serviços da Store, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 585e44a884bc90c5c7e69458ad5d024d7f26a79f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039679"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159798"
 ---
 # <a name="get-monthly-app-usage"></a>Obter uso do app mensalmente
 
@@ -90,12 +90,12 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | packageVersion            | string  | A versão do pacote onde ocorreu o uso.                                            |
 | deviceType                | string  | Uma das seguintes cadeias de caracteres que especifica o tipo de dispositivo onde ocorreu o uso:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Servidor**</li><li>**Holographic**</li><li>**Desconhecido**</li></ul>                                                                                                                           |
 | subscriptionName          | string  | Indica se o uso foi por meio do Xbox Game Pass.                                              |
-| monthlySessionCount       | comprimento    | O número de sessões de usuário durante esse mês.                                              |
+| monthlySessionCount       | comprimento    | O número de sessões de usuário durante o mês.                                              |
 | engagementDurationMinutes | double  | Os minutos em que os usuários estão ativamente usando o aplicativo medido por um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                               |
-| monthlyActiveUsers        | comprimento    | O número de clientes que estão usando o aplicativo naquele mês.                                           |
+| monthlyActiveUsers        | comprimento    | O número de clientes que estão usando o aplicativo nesse mês.                                           |
 | monthlyActiveDevices      | comprimento    | O número de dispositivos executando o aplicativo para um período distinto, a partir de quando o aplicativo é iniciado (início do processo) e termina quando ele é encerrado (final do processo) ou após um período de inatividade.                                                        |
-| monthlyNewUsers           | comprimento    | O número de clientes que usaram o aplicativo pela primeira vez nesse mês.                    |
-| averageDailyActiveUsers   | double  | O número médio de clientes que usam o aplicativo no dia a dia.                             |
+| monthlyNewUsers           | comprimento    | O número de clientes que usaram seu aplicativo pela primeira vez nesse mês.                    |
+| averageDailyActiveUsers   | double  | O número médio de clientes usando o aplicativo diariamente.                             |
 | averageDailyActiveDevices | double  | O número médio de dispositivos usados para interagir com seu aplicativo por todos os usuários diariamente. |
 
 

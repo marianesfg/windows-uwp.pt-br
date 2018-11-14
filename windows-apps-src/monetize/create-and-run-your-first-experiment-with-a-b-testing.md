@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes comparativos, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: e5a4c3607486a7163648c7aa5a0e1d03d37e421f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043685"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159778"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Criar e executar seu primeiro experimento
 
@@ -33,7 +33,7 @@ Para seguir este passo a passo, você deve ter uma conta do Partner Center e voc
 ## <a name="create-a-project-with-remote-variables-in-partner-center"></a>Criar um projeto com variáveis remotas no Partner Center
 
 1. Entre no [Partner Center](https://partner.microsoft.com/dashboard).
-2. Se você já tiver um aplicativo no Partner Center que você deseja usar para criar um experimento, selecione esse aplicativo no Partner Center. Se você ainda não tiver um aplicativo no Partner Center, [criar um novo aplicativo reservando um nome](../publish/create-your-app-by-reserving-a-name.md) e, em seguida, selecione-o no Partner Center.
+2. Se você já tiver um aplicativo no Partner Center que você deseja usar para criar um experimento, selecione esse aplicativo no Partner Center. Se você ainda não tiver um aplicativo no Partner Center, [Crie um novo aplicativo reservando um nome](../publish/create-your-app-by-reserving-a-name.md) e, em seguida, selecione-o no Partner Center.
 3. No painel de navegação, clique em **Serviços** e depois em **Experimentação**.
 4. Na seção **Projetos** da próxima página, clique no botão **Novo projeto**.
 5. Na página **Novo projeto**, insira o nome **Experimentos de clique de botão** para seu novo projeto.
@@ -90,7 +90,7 @@ Para seguir este passo a passo, você deve ter uma conta do Partner Center e voc
 Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga estas etapas para analisar os resultados do seu experimento e concluir o processo.
 
 > [!NOTE]
-> Assim que você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar os dados de seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
+> Assim que você ativa um experimento, Partner Center começa imediatamente a coletar dados de quaisquer aplicativos que sejam instrumentados para registrar dados para o seu experimento. No entanto, pode levar várias horas para dados do experimento apareçam no Partner Center.
 
 1. No Partner Center, retorne à página **experimentação** para seu aplicativo.
 2. Na seção **Experimentos ativos**, clique em **Otimizar cliques de botão** para acessar a página desse experimento.

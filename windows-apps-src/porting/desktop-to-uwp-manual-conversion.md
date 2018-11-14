@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023000"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6143650"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -27,11 +27,11 @@ Considere o empacotamento manual se instalar seu aplicativo usando o comando xco
 Se não tiver certeza sobre quais alterações seu instalador faz no sistema, ou se você preferir usar ferramentas automatizadas para geral seu manifesto do pacote, considere qualquer uma [dessas](desktop-to-uwp-root.md#convert) opções.
 
 >[!IMPORTANT]
->A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (caso contrário, conhecida como a ponte de Desktop, foi introduzido no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
+>A capacidade de criar um pacote de aplicativo do Windows para seu aplicativo da área de trabalho (também conhecido como a ponte de Desktop) foi introduzida no Windows 10, versão 1607, e pode ser usada somente em projetos para atualização de aniversário do Windows 10 (10.0; Build 14393) ou uma versão posterior no Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Primeiro, prepare seu aplicativo
 
-Consulte este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
+Examine este guia antes de começar a criar um pacote para seu aplicativo: [preparar para empacotar um aplicativo da área de trabalho](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Criar um manifesto do pacote
 
@@ -85,7 +85,7 @@ Aqui está um exemplo de elemento **Identidade** com texto de espaço reservado 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Se você já reservou o nome do seu aplicativo na Windows store, você pode obter o nome e o fornecedor usando o painel do Centro de desenvolvimento do Windows. Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
+> Se você tiver reservado o nome do seu aplicativo na Windows store, você pode obter o nome e o fornecedor usando o painel do Centro de desenvolvimento do Windows. Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
 
 ### <a name="properties"></a>Propriedades
 
@@ -206,7 +206,7 @@ Você pode executar seu aplicativo para testá-lo localmente sem precisar obter 
 Para atualizar os arquivos .exe ou .dll do seu aplicativo, substitua os arquivos existentes em seu pacote pelos novos, aumente o número de versão em AppxManifest.xml e, em seguida, execute o comando acima novamente.
 
 > [!NOTE]
-> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
+> Um aplicativo empacotado sempre é executado como um usuário interativo, e qualquer unidade em que você instale seu aplicativo empacotado para deve estar formatada no formato NTFS.
 
 ## <a name="next-steps"></a>Próximas etapas
 

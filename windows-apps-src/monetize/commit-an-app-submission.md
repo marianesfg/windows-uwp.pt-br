@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a61fb1568cf85d01a31e5921fa757d3e8c767ff
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050102"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185449"
 ---
 # <a name="commit-an-app-submission"></a>Confirmar um envio de app
 
 
-Use este método na API de envio da Microsoft Store para confirmar um envio de aplicativo novo ou atualizado para o Partner Center. A confirmação alertas Partner Central de ações que os dados de envio foram carregados (incluindo todos os pacotes relacionados e imagens). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
+Use este método na API de envio da Microsoft Store para confirmar um envio de aplicativo novo ou atualizado para o Partner Center. Confirmação ação alertas Partner Center que os dados de envio foram carregados (incluindo todos os pacotes relacionados e imagens). Em resposta, o Partner Center confirma as alterações nos dados de envio para inclusão e publicação. Depois que a operação de confirmação for bem-sucedida, as alterações no envio são mostradas no Partner Center.
 
 Para obter mais informações sobre como a operação de confirmação se adapta ao processo de envio de um aplicativo, usando a API de envio da Microsoft Store, consulte [Gerenciar envios de aplicativo](manage-app-submissions.md).
 

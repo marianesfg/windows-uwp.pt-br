@@ -8,19 +8,19 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 4aaacee011b3732b8d1456935239d7a4a5405a4d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035163"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193610"
 ---
 # <a name="add-controls"></a>Adicionar controles
 
 
 \[ Atualizado para aplicativos UWP no Windows 10. Para ler artigos sobre o Windows 8.x, consulte o [arquivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Um bom jogo da Plataforma Universal do Windows (UWP) dá suporte a uma ampla variedade de interfaces. Um jogador em potencial pode ter o Windows 10 em um tablet sem botões físicos, um computador com um controlador Xbox conectado, ou o desktop para jogos mais recente multimídia com alto desempenho mouse e teclado de jogos. No nosso jogo, os controles são implementados na classe [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Essa classe agrega todos os três tipos de entrada (mouse e teclado, touch e gamepad) em um único controlador. O resultado final é um jogo de tiros em primeira pessoa que usa controles move-look padrão no gênero que funcionam em vários dispositivos.
+Um bom jogo da Plataforma Universal do Windows (UWP) dá suporte a uma ampla variedade de interfaces. Um jogador em potencial pode ter o Windows 10 em um tablet sem botões físicos, um computador com um controlador Xbox conectado, ou o jogos da área de trabalho mais recente multimídia com alto desempenho mouse e teclado de jogos. No nosso jogo, os controles são implementados na classe [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Essa classe agrega todos os três tipos de entrada (mouse e teclado, touch e gamepad) em um único controlador. O resultado final é um jogo de tiros em primeira pessoa que usa controles move-look padrão no gênero que funcionam em vários dispositivos.
 
 > [!NOTE]
 > Para obter mais informações sobre controles, consulte [Controles move-look para jogos](tutorial--adding-move-look-controls-to-your-directx-game.md) e [Controles de toque para jogos](tutorial--adding-touch-controls-to-your-directx-game.md).
@@ -401,7 +401,7 @@ Se o evento **MoveLookController::OnPointerPressed** for acionado em um disposit
 
 
 
-Aqui o **MoveLookController** atribui a ID de ponteiro do ponteiro que acionou o evento a uma variável específica correspondente à região de observação. No caso de um toque que ocorre na região de observação, a variável **m\_lookPointerID** é definida como a ID do ponteiro que disparou o evento. Uma variável booliana, **m\_lookInUse**, também é definida para indicar que o controle ainda não foi liberado.
+Aqui o **MoveLookController** atribui a ID de ponteiro do ponteiro que acionou o evento a uma variável específica correspondente à região de observação. No caso de um toque ocorre na região de observação, a variável **m\_lookPointerID** é definida como a ID do ponteiro que disparou o evento. Uma variável booliana, **m\_lookInUse**, também é definida para indicar que o controle ainda não foi liberado.
 
 Agora examinaremos como o exemplo de jogo processa o evento de tela sensível ao toque [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276).
 

@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, uwp, análises, relatórios, painel, aplicativos, dados, métricas
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042713"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163807"
 ---
 # <a name="analyze-app-performance"></a>Analisar o desempenho do aplicativo
 
 Você pode visualizar análises detalhadas de seus aplicativos no [Partner Center](https://partner.microsoft.com/dashboard). Estatísticas e gráficos permitem que você saiba como está andamento de seus aplicativos, desde quantos clientes você conseguiu até como eles estão usando seu aplicativo e o que eles têm a dizer sobre ele. Você também pode encontrar métricas sobre a integridade do aplicativo, o uso de anúncios e muito mais.
 
-Você pode exibir relatórios analíticos diretamente no Partner Center ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também oferecemos várias maneiras para você para [acessar seus dados analíticos fora do Partner Center](#outside).
+Você pode exibir relatórios analíticos diretamente no Partner Center ou [baixar os relatórios necessários](download-analytic-reports.md) para analisar os dados offline. Também fornecemos várias maneiras para você para [acessar seus dados analíticos fora do Partner Center](#outside).
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Exibir análises chave para todos os aplicativos
 
@@ -49,7 +49,7 @@ Nesta seção, você encontrará detalhes sobre as informações apresentadas em
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Acessar dados analíticos fora do Partner Center
 
-Além de exibir relatórios no Partner Center, você pode acessar sua análise do app em um número de diferentes maneiras.
+Além de exibir relatórios no Partner Center, você pode acessar sua análise do aplicativo de várias maneiras diferentes.
 
 ### <a name="microsoft-store-analytics-api"></a>API de análise da Microsoft Store
 

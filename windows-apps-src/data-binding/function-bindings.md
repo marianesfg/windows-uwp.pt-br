@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: A marcação xbind permite funções para ser usada na marcação.
+description: A marcação xbind permite funções para ser usado na marcação.
 title: 'Funções em x: Bind'
 ms.author: jimwalk
 ms.date: 04/26/2018
@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e00762f389791fb3972b6f224759d35bf547e38
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028828"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192704"
 ---
 # <a name="functions-in-xbind"></a>Funções em x: Bind
 
@@ -161,7 +161,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Você pode usar funções no x: Bind para alcançar os mesmos cenários como o que foi suportado por meio de conversores e MultiBinding no WPF.
+> Você pode usar funções no x: Bind para alcançar os mesmos cenários como o que foi com suporte por meio de conversores e MultiBinding no WPF.
 
 ## <a name="function-arguments"></a>Argumentos de função
 

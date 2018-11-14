@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 80242b95e64f0d642df0284c94455d60825f6daf
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046414"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6145468"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Exibir uma tela inicial por mais tempo
 
@@ -34,7 +34,7 @@ Exiba uma tela inicial por mais tempo criando uma tela inicial estendida para o 
 
 Verifique se sua tela inicial estendida imita com precisão a tela inicial padrão seguindo estas recomendações:
 
--   Sua página de tela inicial estendida deve usar uma imagem de 620 x 300 pixels consistente com a imagem especificada para a sua tela inicial no manifesto do aplicativo (imagem da tela inicial do aplicativo). No Microsoft Visual Studio2015, as configurações de tela inicial são armazenadas na seção de **Tela inicial** da guia **Ativos visuais** no manifesto do aplicativo (arquivo Package. appxmanifest).
+-   Sua página de tela inicial estendida deve usar uma imagem de 620 x 300 pixels consistente com a imagem especificada para a sua tela inicial no manifesto do aplicativo (imagem da tela inicial do aplicativo). No Microsoft Visual Studio2015, as configurações de tela inicial são armazenadas na seção de **Tela inicial** na guia **Ativos visuais** no manifesto do aplicativo (arquivo Package. appxmanifest).
 -   Sua tela inicial estendida deve usar uma cor de tela de fundo consistente com a cor de tela de fundo especificada para a sua tela inicial no manifesto do aplicativo (tela de fundo da tela inicial do seu aplicativo).
 -   Seu código deve usar a classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para posicionar a imagem da tela inicial do aplicativo nas mesmas coordenadas de tela que a tela inicial padrão.
 -   O código deve responder a eventos de redimensionamento de janelas (por exemplo, quando a tela é girada ou o aplicativo é movido ao lado de outro aplicativo na tela) usando a classe [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) para reposicionar itens em sua tela inicial estendida.
@@ -219,7 +219,7 @@ Use estas etapas de forma a definir os métodos para a exibição correta da sua
     }
     ```
 
-    **Observação**antes de tentar obter a localização da imagem Verifique se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, conforme mostrado no exemplo.
+    **Observação**antes de tentar obter a localização da imagem Certifique-se a variável de classe (`splash`) contém um objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, conforme mostrado no exemplo.
 
      
 

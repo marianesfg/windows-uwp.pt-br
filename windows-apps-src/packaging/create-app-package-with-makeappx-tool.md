@@ -9,11 +9,11 @@ keywords: windows 10, uwp, empacotamento
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d5cc0d73975b591d7584b1ac606aa3323cd6da3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042758"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6148119"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Criar um pacote do aplicativo com a ferramenta MakeAppx.exe
 
@@ -80,14 +80,14 @@ A lista a seguir contém argumentos possíveis:
 
 | **Argumento**                          | **Descrição**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;output package name&gt;           | O nome do pacote criado. Esse é o nome de arquivo acrescentado .msix ou. AppX. |
-| &lt;encrypted output package name&gt; | O nome do pacote criptografado criado. Esse é o nome de arquivo acrescentado .emsix ou .eappx. |
-| &lt;input package name&gt;            | O nome do pacote. Esse é o nome de arquivo acrescentado .msix ou. AppX. |
-| &lt;encrypted input package name&gt;  | O nome do pacote criptografado. Esse é o nome de arquivo acrescentado .emsix ou .eappx. |
-| &lt;output bundle name&gt;            | O nome do lote criado. Esse é o nome de arquivo acrescentado .msixbundle ou. appxbundle. |
-| &lt;encrypted output bundle name&gt;  | O nome do lote criptografado criado. Esse é o nome de arquivo acrescentado .emsixbundle ou .eappxbundle. |
-| &lt;input bundle name&gt;             | O nome do lote. Esse é o nome de arquivo acrescentado .msixbundle ou. appxbundle. |
-| &lt;encrypted input bundle name&gt;   | O nome do lote criptografado. Esse é o nome de arquivo acrescentado .emsixbundle ou .eappxbundle. |
+| &lt;output package name&gt;           | O nome do pacote criado. Isso é o nome do arquivo acrescentado .msix ou. AppX. |
+| &lt;encrypted output package name&gt; | O nome do pacote criptografado criado. Isso é o nome do arquivo acrescentado .emsix ou .eappx. |
+| &lt;input package name&gt;            | O nome do pacote. Isso é o nome do arquivo acrescentado .msix ou. AppX. |
+| &lt;encrypted input package name&gt;  | O nome do pacote criptografado. Isso é o nome do arquivo acrescentado .emsix ou .eappx. |
+| &lt;output bundle name&gt;            | O nome do lote criado. Isso é o nome do arquivo acrescentado .msixbundle ou. appxbundle. |
+| &lt;encrypted output bundle name&gt;  | O nome do lote criptografado criado. Isso é o nome do arquivo acrescentado .emsixbundle ou .eappxbundle. |
+| &lt;input bundle name&gt;             | O nome do lote. Isso é o nome do arquivo acrescentado .msixbundle ou. appxbundle. |
+| &lt;encrypted input bundle name&gt;   | O nome do lote criptografado. Isso é o nome do arquivo acrescentado .emsixbundle ou .eappxbundle. |
 | &lt;content directory&gt;             | Caminho do conteúdo do pacote ou lote de aplicativo. |
 | &lt;mapping file&gt;                  | Nome do arquivo que especifica a origem e o destino do pacote. |
 | &lt;output directory&gt;              | Caminho do diretório de pacotes e lotes de saída. |

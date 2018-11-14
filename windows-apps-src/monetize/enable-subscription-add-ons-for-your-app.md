@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024830"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183573"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de assinatura para o app
 
@@ -126,7 +126,7 @@ Não oferecemos períodos de carência para cobrança de assinatura. Se não pud
 No momento, os cenários a seguir não têm suporte para complementos de assinatura.
 
 * No momento, não há suporte para a venda de assinaturas para clientes diretamente por meio da Store. As assinaturas só estão disponíveis para compras no aplicativo de produtos digitais.
-* Os clientes não podem trocar de períodos de assinatura usando a página [http://account.microsoft.com/services](http://account.microsoft.com/services) para a conta da Microsoft. Para alternar para um período de assinatura diferente, os clientes devem cancelar sua assinatura atual e então comprar uma assinatura com um período de assinatura diferente do seu aplicativo.
+* Os clientes não podem trocar de períodos de assinatura usando a página [http://account.microsoft.com/services](http://account.microsoft.com/services) para a conta da Microsoft. Para alternar para um período de assinatura diferente, os clientes devem cancelar sua assinatura atual e, em seguida, comprar uma assinatura com um período de assinatura diferente do seu aplicativo.
 * No momento, a troca de camada não tem suporte para complementos de assinatura (por exemplo, alternar um cliente de uma assinatura básica para uma assinatura premium com mais recursos).
 * No momento, não há suporte a [vendas](../publish/put-apps-and-add-ons-on-sale.md) e [códigos promocionais](../publish/generate-promotional-codes.md) para complementos de assinatura.
 

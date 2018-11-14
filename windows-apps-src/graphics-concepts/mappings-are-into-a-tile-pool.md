@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025017"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151250"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Mapeamentos estão em um pool de blocos
 
@@ -33,7 +33,7 @@ Vamos explorar qual armazenamento a tabela de página pode exigir na pior das hi
 
 Considere que cada entrada da tabela de página é de 64 bits.
 
-Para a tabela de página pior caso a ocorrência de uma única superfície, considerando os limites de recursos em Direct3D11, suponha que um recurso de streaming é criado com um formato de 128 bits por elemento (por exemplo, um flutuante RGBA), então um bloco de 64KB de tamanho contém apenas 4096 pixels. O tamanho máximo suportado [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (mas com apenas um mipmap) exigiria aproximadamente 1 GB de armazenamento na tabela de página quando preenchido por completo (sem incluir mipmaps) usando entradas de tabela de 64 bits. A adição de mipmaps implica no crescimento do armazenamento de tabela de página totalmente mapeada (pior hipótese) em aproximadamente um terço, cerca de 1,3 GB.
+Para a tabela de página pior ocorrência de uma única superfície, considerando os limites de recursos no Direct3D11, suponha que um recurso de streaming é criado com um formato de 128 bits por elemento (por exemplo, um flutuante RGBA), então um bloco de 64KB de tamanho contém apenas 4096 pixels. O tamanho máximo suportado [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) de 16384\*16384\*2048 (mas com apenas um mipmap) exigiria aproximadamente 1 GB de armazenamento na tabela de página quando preenchido por completo (sem incluir mipmaps) usando entradas de tabela de 64 bits. A adição de mipmaps implica no crescimento do armazenamento de tabela de página totalmente mapeada (pior hipótese) em aproximadamente um terço, cerca de 1,3 GB.
 
 Nesse caso, seria equivalente a fornecer acesso a aproximadamente 10,6 terabytes de memória endereçável. Pode haver um limite na quantidade de memória endereçável. Porém, isso reduziria esses valores, talvez próximos do intervalo de terabytes.
 

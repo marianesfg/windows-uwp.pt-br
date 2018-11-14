@@ -14,11 +14,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 9bc19460fe1b9b9c6b637606a737e1157d98feef
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029982"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146665"
 ---
 # <a name="create-write-and-read-a-file"></a>Criar, gravar e ler um arquivo
 
@@ -118,7 +118,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **Gravando texto em um arquivo**
 
-Grave texto no seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
+Grave texto em seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
 
 ```csharp
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -256,7 +256,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  Em seguida, obtenha um fluxo de saída chamando o método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) do `stream`. Se você estiver usando c#, em seguida, inclua isso em uma instrução **using** para gerenciar o tempo de vida do fluxo de saída. Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode controlar seu tempo de vida envolve em um bloco ou defini-lo como `nullptr` quando terminar com ele.
+2.  Em seguida, obtenha um fluxo de saída chamando o método [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) do `stream`. Se você estiver usando c#, em seguida, coloque isso em uma instrução **using** para gerenciar o ciclo de vida do fluxo de saída. Se você estiver usando [C++ c++ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), em seguida, você pode controlar seu tempo de vida envolve em um bloco ou defini-lo como `nullptr` quando terminar com ele.
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))

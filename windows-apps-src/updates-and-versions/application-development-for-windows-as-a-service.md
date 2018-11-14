@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029348"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163757"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desenvolvimento de apps para Windows como serviço
 
@@ -30,13 +30,13 @@ As compilações distribuídas como Programa Windows Insider fornecem à equipe 
 
 Embora a Microsoft libere versões de pré-lançamento compiladas para o participante do programa Windows Insider, a Microsoft publicará amplamente dois tipos de versões do Windows 10 ao público em base contínua:
 
-**Atualizações de recursos** instalam as versões mais recentes de novos recursos, experiências e funcionalidades em dispositivos que já estão executando o Windows 10. Como as atualizações de recursos contém uma cópia completa do Windows, elas são também o que os clientes usar para instalar o Windows 10 em dispositivos existentes que executam o Windows 7 ou Windows 8.1 e em novos dispositivos onde não há nenhum sistema operacional está instalado. A Microsoft espera publicar atualizações semestralmente. 
+**Atualizações de recursos** instalar as versões mais recentes de novos recursos, experiências e funcionalidades em dispositivos que já estão executando o Windows 10. Como as atualizações de recursos contém uma cópia completa do Windows, elas são também o que os clientes usar para instalar o Windows 10 em dispositivos existentes que executam o Windows 7 ou Windows 8.1 e em novos dispositivos onde não há nenhum sistema operacional está instalado. A Microsoft espera publicar atualizações semestralmente. 
 
 **Atualizações de qualidade** entregam resoluções de problemas de segurança e outras correções de bugs importantes. As atualizações de qualidade serão fornecidas para melhorar cada recurso atualmente no suporte, em uma frequência de uma ou mais vezes por mês. A Microsoft continuará a publicar atualizações de qualidade no processo de atualização das terças-feiras (algumas vezes referida como Patch da terça-feira) Além disso, a Microsoft pode publicar atualizações de qualidade adicionais para Windows 10 fora do processo de atualização das terças-feiras quando for necessário para atender as necessidades do cliente.
 
 Durante o desenvolvimento do Windows 10, a Microsoft simplificou o ciclo de liberação e engenharia de produto do Windows para que podemos entregar os recursos, experiências e funcionalidades que os clientes queriam de forma mais rápida do que nunca. Também criamos novas formas para entregar e instalar as atualizações de recursos e as atualizações de qualidade que simplificam as implantações e gerenciamento existente, ampliando a base de funcionários que podem ficar atualizados com as mais recentes funcionalidades e experiências do Windows e um custo de propriedade menor. Portanto, implementamos novas opções de manutenção – chamadas de canal semestral e canal de manutenção a longo prazo (LTSC) – que fornecem soluções pragmáticas para manter mais dispositivos mais atualizados nos ambientes corporativos que era possível anteriormente.
 
-A tabela a seguir mostra descreve os vários canais de manutenção e seus atributos chaves.
+A tabela a seguir descreve os vários canais de manutenção e seus atributos chaves.
 
 | Opção de serviço | Disponibilidade de novas atualizações de recursos para instalação | Tempo de vida de manutenção | Principais benefícios | Edições com suporte |
 | --- | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ Nas seções a seguir, você encontrará informações adicionais sobre as etapa
 
 Entendemos que compatibilidade é importante para os desenvolvedores. Os ISVs e desenvolvedores querem garantir que seus aplicativos serão executados como esperado em todas as versões compatíveis do sistema operacional Windows. Os consumidores e empresas têm um investimento chave aqui — eles querem garantir que os aplicativos pelos quais eles pagaram continuarão a funcionar. Nós sabemos que compatibilidade é o critério principal para decisões de compra. Aplicativos que são escritos com base em práticas recomendadas levarão a muito menos variação de código quando uma nova versão do Windows for lançada e reduzirá a fragmentação — esses aplicativos têm um investimento em engenharia reduzido para manter e um tempo mais rápido no mercado.
 
-No cronograma do Windows 7, compatibilidade era muito mais uma abordagem reativa. No Windows8, começamos a observar isso forma diferente, trabalhando dentro do Windows para garantir que a compatibilidade foi considerada algo secundário. Windows 10 é a versão mais compatível por design do sistema operacional até a data. Aqui estão algumas maneiras chave como conseguimos isso:
+No cronograma do Windows 7, compatibilidade era muito mais uma abordagem reativa. No Windows8, começamos a observar isso diferente, trabalhando dentro do Windows para garantir que a compatibilidade foi considerada algo secundário. Windows 10 é a versão mais compatível por design do sistema operacional até a data. Aqui estão algumas maneiras chave como conseguimos isso:
 -   **Telemetria de aplicativos**: isso nos ajuda a compreender a popularidade do aplicativo no ecossistema do Windows para instruir o teste de compatibilidade.
 -   **Parcerias ISV**: trabalhar diretamente com parceiros externos para fornecer a eles dados e ajudá-los a corrigir problemas que nossos usuários experimentam.
 -   **Revisões de design e detecção de upstream**: uma parceria com equipes de recursos para reduzir o número de alterações significativas no Windows. Análise de compatibilidade é uma entrada pela qual as nossas equipes de recurso devem passar.
@@ -81,7 +81,7 @@ As seções a seguir contêm algumas práticas recomendadas que a Microsoft reco
 
 ### <a name="windows-version-check"></a>Verificação de versão do Windows
 
-Versão do sistema operacional foi incrementada com o Windows 10. Isso significa que o número de versão interno foi alterado para 10.0. Como sempre, não medimos esforços para manter a compatibilidade de aplicativos e dispositivos após uma mudança de versão do sistema operacional. Para a maioria das categorias de aplicativos (sem nenhuma dependência de kernel), a mudança não afetará negativamente a funcionalidade do aplicativo e aplicativos existentes continuarão a funcionar bem no Windows 10.
+Versão do sistema operacional foi incrementada com o Windows 10. Isso significa que o número de versão interno foi alterado para 10.0. Como sempre, não medimos esforços para manter a compatibilidade de aplicativos e dispositivos após uma mudança de versão do sistema operacional. Para a maioria das categorias de aplicativos (sem nenhuma dependência de kernel), a mudança não afetará negativamente a funcionalidade do aplicativo e os aplicativos existentes continuarão a funcionar bem no Windows 10.
 
 A manifestação dessa alteração é específica do aplicativo. Isso significa que qualquer aplicativo que verifica especificamente para a versão do sistema operacional obterá um número de versão superior, que pode levar a uma ou mais das seguintes situações:
 -   Os instaladores de aplicativos podem não ser capazes de instalar o aplicativo e os aplicativos talvez não consigam iniciar.

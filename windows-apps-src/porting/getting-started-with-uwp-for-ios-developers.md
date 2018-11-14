@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 485dc6f93cb0fd83601b3202ef9965e625b2a0b4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050742"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135893"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introdução à UWP para desenvolvedores de iOS
 
 
-Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para o Windows 10, esses documentos são um ótimo lugar para começar. Eles apresentam alguns conceitos que você precisará conhecer ao começar a escrever aplicativos e abordam como você pode publicar seu trabalho na Microsoft Store.
+Se você for um desenvolvedor do iOS e estiver cogitando desenvolver para Windows 10, esses documentos são um ótimo lugar para começar. Eles apresentam alguns conceitos que você precisará conhecer ao começar a escrever aplicativos e abordam como você pode publicar seu trabalho na Microsoft Store.
 
 Nesta seção, começaremos gradualmente e veremos como usar o Microsoft Visual Studio e a linguagem de programação C# para criar um aplicativo trivial; especificamente, abordaremos como o processo pode ser diferente em comparação com as ferramentas que você usa no momento. (Não gosta de C#? Não se preocupe. Outras linguagens de programação e ferramentas estão disponíveis, falaremos sobre isso em [Introdução: escolhendo uma linguagem de programação](getting-started-choosing-a-programming-language.md)).
 

@@ -13,11 +13,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026201"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191144"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -250,7 +250,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>Substituir o comportamento padrão do teclado
 
-Em alguns casos, talvez seja necessário substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
+Em alguns casos, você precisará substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
 
 ## <a name="disable-a-keyboard-accelerator"></a>Desativar um acelerador de teclado 
 
@@ -402,7 +402,7 @@ Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.butt
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-button-small.png)
 
-*Combinação de teclas aceleradoras acrescentada a dica de ferramenta do botão padrão*
+*Combinação de teclas aceleradoras anexada a dica de ferramenta do botão padrão*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">
@@ -414,7 +414,7 @@ Para o [botão](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.butt
 
 ![Dica de ferramenta de tecla aceleradora](images/accelerators/accelerators-appbarbutton-small.png)
 
-*Combinação de teclas aceleradoras acrescentada a dica de ferramenta do AppBarButton padrão*
+*Combinação de teclas aceleradoras anexada a dica de ferramenta do AppBarButton padrão*
 
 ```xaml
 <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">

@@ -9,16 +9,16 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f223b858861cf0f965c5b7ea8778426a8340af
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038284"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6153358"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
 
-Design e downloads relacionados à interface do usuário para aplicativos de Design fluente/UWP. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
+Design e downloads relacionados à interface do usuário para aplicativos UWP/Design fluente. Para ferramentas adicionais, como o Visual Studio, consulte <a href="https://developer.microsoft.com/downloads">nossa página principal de downloads</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de ferramentas de design
@@ -107,12 +107,12 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
 
 ![Imagem de Editor de tema XAML fluente](images/XamlThemeEditor_screenshot.png)
 **Editor de tema XAML fluente**<br>
-O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstrar a flexibilidade do sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
+O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstrar a flexibilidade de sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixe a amostra de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso dos novos controles e densidade aprimorada na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência rica e produtiva para gerenciar e comprando dispositivos IoT (nesse caso, lâmpadas).<br>
+O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada, produtiva para gerenciar e adquirir dispositivos IoT (nesse caso, lâmpadas).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)
@@ -120,7 +120,7 @@ O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para
 O BuildCast é uma amostra de ponta a ponta criada para demonstrar o sistema de Design fluente e UWP. Ele permite navegar, baixar e executar podcasts em vídeo seletos, incluindo uma amostra dos mais populares do Channel 9 e alguns feeds populares de entusiasta da tecnologia do Windows. Ele também apresenta anotações à tinta, indicadores e execução remota. Essa amostra foi inicialmente mostrada na conferência Build de 2017 durante a palestra <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Crie aplicativos incríveis com o Design Fluent</a>. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Baixe a amostra do BuildCast</a> <br><a href="https://github.com/Microsoft/BuildCast">Confira a amostra do BuildCast no GitHub</a>
 
-![Agendador de almoço](images/lunchscheduler.png)
+![Almoço Agendador](images/lunchscheduler.png)
 **Lunch Scheduler**<br>
 Uma amostra da plataforma UWP que agenda almoços com amigos e colegas de trabalho. Marque um almoço, convide amigos para um restaurante de interesse e deixe que o aplicativo cuide da organização desse almoço para todas as pessoas envolvidas. Esse aplicativo incorpora elementos do Sistema Design Fluente em um aplicativo UWP, incluindo acrílico, revelação e animações conectadas. <br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler/archive/master.zip">Baixar a amostra do Lunch Scheduler</a><br/><a href="https://github.com/Microsoft/Windows-appsample-lunch-scheduler">Confira a amostra do Lunch Scheduler no GitHub</a></p>  
 

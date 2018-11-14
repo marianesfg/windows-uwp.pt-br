@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046989"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137740"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -55,7 +55,7 @@ Compras no jogo são produtos comprados dentro de um jogo. Eles também são gen
 
 É possível criar dois tipos de complementos na loja: _duráveis_ ou _consumíveis_. Duráveis são itens que persistem por um período especificado e que só podem ser comprados uma vez até expirarem. Consumíveis são itens que podem ser comprados e usados reiteradas vezes.
 
-Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um consumível gerenciado pelo desenvolvedor, você é responsável por manter o controle do saldo do item para o jogador; com um consumível gerenciado pela loja, a Microsoft Store acompanha do saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se eles são _gerenciados pelo desenvolvedor_ ou _gerenciados pela Loja_ (esse recurso estará disponível a partir do Windows 10, versão 1607). Com um consumível gerenciado pelo desenvolvedor, você é responsável por controlar o saldo do item para o jogador; com um consumível gerenciado pela loja, a Microsoft Store acompanha do saldo do item para você. Para obter mais informações, consulte [Visão geral dos complementos consumíveis](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Criar compras no jogo
 

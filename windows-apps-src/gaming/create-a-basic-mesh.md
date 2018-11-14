@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, jogos, malha, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045446"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184563"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 
@@ -21,7 +21,7 @@ ms.locfileid: "6045446"
 
 Os jogos 3D da UWP (Plataforma Universal do Windows) geralmente usam polígonos para representar objetos e superfícies do jogo. As listas de vértices que compõem a estrutura desses objetos e superfícies poligonais são chamadas de malhas. Aqui, vamos criar uma malha básica para um objeto cúbico e fornecê-lo no pipeline de sombreador para renderização e exibição.
 
-> **Importante**  o código de exemplo incluído aqui usa tipos (como Xmfloat3 e Xmfloat4x4) e métodos embutidos declarados no Directxmath. Se você estiver recortando e colando esse código, \#include &lt;DirectXMath.h&gt; no seu projeto.
+> **Importante**  o código de exemplo incluído aqui usa tipos (como DirectX:: Xmfloat3 e Xmfloat4x4) e métodos embutidos declarados no Directxmath. Se você estiver recortando e colando esse código, \#include &lt;DirectXMath.h&gt; no seu projeto.
 
  
 
@@ -259,7 +259,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Observação**geralmente, você declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados dessa multiplicação devem corresponder os parâmetros de tamanho atual do visor 2D (que normalmente correspondem com a altura em pixels e a largura do Exiba). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
+> **Observação**geralmente, você declara a matriz de projeção ao configurar recursos específicos do dispositivo, porque os resultados dessa multiplicação devem coincidir os parâmetros de tamanho atual do visor 2D (que normalmente correspondem com a altura em pixels e a largura da Exiba). Se isso mudar, dimensione os valores das coordenadas x e y de acordo com as alterações.
 
  
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027686"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146176"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Adicionando conteúdo visual ao exemplo do Marble Maze
 
@@ -32,7 +32,7 @@ Seguimos estas três etapas básicas conforme desenvolvíamos os aspectos visuai
 
 Também nos concentramos primeiro em Adicionar ativos 3D e, em seguida, ativos 2D. Por exemplo, nós nos concentramos na lógica central do jogo antes de adicionamos o sistema de menus e temporizador.
 
-Também precisamos repetir algumas dessas etapas várias vezes durante o processo de desenvolvimento. Por exemplo, como fizemos alterações aos modelos de malha e Mármore, tínhamos também mudar parte do código do sombreador que dá suporte a esses modelos.
+Também precisamos repetir algumas dessas etapas várias vezes durante o processo de desenvolvimento. Por exemplo, como fizemos alterações aos modelos de malha e Mármore, tivemos também alterar algumas do código de sombreador que dá suporte a esses modelos.
 
 > [!NOTE]
 > O exemplo de código que corresponde a este documento pode ser encontrado no [Exemplo do jogo Marble Maze em DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
@@ -40,14 +40,14 @@ Também precisamos repetir algumas dessas etapas várias vezes durante o process
  
 Seguem alguns dos principais pontos discutidos neste documento para quando você trabalhar com DirectX e conteúdo visual de jogos, ou seja, quando inicializar as bibliotecas de elementos gráficos do DirectX, carregar recursos de cena e atualizar e renderizar a cena.
 
--   Em geral, adicionar conteúdo de jogo envolve várias etapas. Muitas vezes, essas etapas também exigem iteração. Os desenvolvedores de jogos geralmente se concentram primeiro em Adicionar conteúdo de jogo 3D e, em seguida, adicionar conteúdo 2D.
+-   Em geral, adicionar conteúdo de jogo envolve várias etapas. Muitas vezes, essas etapas também exigem iteração. Os desenvolvedores de jogos geralmente se concentram primeiro em Adicionar conteúdo de jogo 3D e, em seguida, em Adicionar conteúdo 2D.
 -   Conquiste mais clientes e proporcione uma ótima experiência a todos eles dando suporte para a maior variedade possível de componentes de hardware gráfico.
 -   Separe transparentemente os formatos de tempo de design e de tempo de execução. Estruture seus ativos de tempo de design para maximizar a flexibilidade e permitir rápidas iterações no conteúdo. Formate e compacte seus ativos para que eles sejam carregados e processados da maneira mais eficiente possível em tempo de execução.
 -   Você cria os dispositivos Direct3D e Direct2D em um aplicativo UWP de maneira bastante semelhante à que costuma fazer em um aplicativo de área de trabalho clássico do Windows. Uma diferença importante é a forma como a cadeia de troca é associada à janela de saída.
 -   Ao criar seu jogo, certifique-se de que o formato de malha escolhido dê suporte aos cenários principais. Por exemplo, se o seu jogo requer colisão, verifique se é possível obter dados de colisão a partir das suas malhas.
 -   Separe a lógica do jogo da lógica de renderização atualizando primeiramente todos os objetos de cena antes de renderizá-los.
 -   Você normalmente desenha seus objetos de cena 3D e, em seguida, qualquer 2D objetos que aparecem na frente da cena.
--   Sincronize o desenho com o espaço em branco vertical para garantir que o jogo não perca tempo desenhando quadros que não chegarão a aparecer na tela. Um *vazio vertical* é o tempo entre quando um quadro fim do desenho para o monitor e começa o próximo quadro.
+-   Sincronize o desenho com o espaço em branco vertical para garantir que o jogo não perca tempo desenhando quadros que não chegarão a aparecer na tela. Um *vazio vertical* é o tempo entre quando um quadro fim do desenho para o monitor e inicia o próximo quadro.
 
 ## <a name="getting-started-with-directx-graphics"></a>Introdução a elementos gráficos DirectX
 
@@ -56,9 +56,9 @@ Quando planejamos o jogo Marble Maze Universal Windows Platform (UWP), escolhemo
 
 O Marble Maze usa Direct3D 11.1 para renderizar os ativos de jogo 3D, ou seja, a bolinha e o labirinto. O Marble Maze também usa o Direct2D, DirectWrite e Windows Imaging Component (WIC) para desenhar os ativos de jogo 2D, como os menus e o temporizador.
 
-O processo de desenvolvimento de jogos requer planejamento. Se você for iniciante em elementos gráficos do DirectX, recomendamos que você leia [DirectX: Introdução ao](directx-getting-started.md) se familiarizar com os conceitos básicos da criação de um jogo DirectX UWP. Ao ler esse documento e trabalhar com o código de origem do Marble Maze, você pode consultar os seguintes recursos para obter informações mais detalhadas sobre elementos gráficos DirectX:
+O processo de desenvolvimento de jogos requer planejamento. Se você for iniciante em elementos gráficos do DirectX, recomendamos que você leia [DirectX: Introdução ao](directx-getting-started.md) para se familiarizar com os conceitos básicos da criação de um jogo DirectX UWP. Ao ler esse documento e trabalhar com o código de origem do Marble Maze, você pode consultar os seguintes recursos para obter informações mais detalhadas sobre elementos gráficos DirectX:
 
--   [Elementos gráficos do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080): descreve o Direct3D 11, uma poderosa com aceleração de hardware, API gráfica 3D para renderizar uma geometria 3D na plataforma Windows.
+-   [Elementos gráficos do Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080): descreve o Direct3D 11, uma poderosa com aceleração de hardware, API gráfica 3D para processamento de geometria 3D na plataforma Windows.
 -   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): descreve o Direct2D, uma API de gráficos 2D com aceleração de hardware, que fornece alto desempenho e renderização de alta qualidade para geometria 2D, bitmaps e texto.
 -   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038): descreve a DirectWrite, que dá suporte à renderização de texto de alta qualidade.
 -   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902): descreve o WIC, uma plataforma extensível que fornece a API de baixo nível para imagens digitais.
@@ -146,7 +146,7 @@ void DX::DeviceResources::CreateDeviceIndependentResources()
 
 ###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Criando os dispositivos Direct3D e Direct2D
 
-O método **DeviceResources::CreateDeviceResources** chama o [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Como o Marble Maze dá suporte a nível de recursos 9.1 e acima, o método **deviceresources:: Createdeviceresources** Especifica os níveis 9.1 a 11.1 na matriz **featureLevels** . O Direct3D passa pela lista em ordem e dá ao aplicativo o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a mais baixa para que o aplicativo obtenha o nível de recurso mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
+O método **DeviceResources::CreateDeviceResources** chama o [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) para criar o objeto de dispositivo para representar o adaptador de vídeo do Direct3D. Como o Marble Maze dá suporte ao nível de recursos 9.1 e acima, o método **deviceresources:: Createdeviceresources** Especifica os níveis 9.1 a 11.1 na matriz **featureLevels** . O Direct3D passa pela lista em ordem e dá ao aplicativo o primeiro nível de recurso que estiver disponível. Portanto, as entradas de matriz **D3D\_FEATURE\_LEVEL** são listadas da maior para a mais baixa para que o aplicativo receberá o nível de recurso mais alto disponível. O método **DeviceResources::CreateDeviceResources** obtém o dispositivo Direct3D 11.1 consultando o dispositivo Direct3D 11 que volta do **D3D11CreateDevice**.
 
 ```cpp
 // This flag adds support for surfaces with a different color channel ordering
@@ -250,7 +250,7 @@ Para saber mais sobre o DXGI e a interoperabilidade entre Direct2D e Direct3D, c
 
 ### <a name="associating-direct3d-with-the-view"></a>Associando o Direct3D com a exibição
 
-O método **DeviceResources::CreateWindowSizeDependentResources** cria os recursos de elementos gráficos que dependem de um dado tamanho de janela, como a cadeia de troca e os destinos de renderização do Direct3D e do Direct2D. Uma característica importante que diferencia um aplicativo UWP DirectX de um aplicativo de área de trabalho é a forma como a cadeia de troca é associada à janela de saída. Uma cadeia de troca é responsável por exibir o buffer para o qual o dispositivo é renderizado no monitor. [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md) descreve como o sistema de janelas para um aplicativo UWP diferencia-se de um aplicativo da área de trabalho. Porque um aplicativo UWP não funciona com objetos [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) , o Marble Maze deve usar o método [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) para associar o dispositivo de saída para o modo de exibição. O exemplo a seguir mostra a parte do método **DeviceResources::CreateWindowSizeDependentResources** que cria a cadeia de troca.
+O método **DeviceResources::CreateWindowSizeDependentResources** cria os recursos de elementos gráficos que dependem de um dado tamanho de janela, como a cadeia de troca e os destinos de renderização do Direct3D e do Direct2D. Uma característica importante que diferencia um aplicativo UWP DirectX de um aplicativo de área de trabalho é a forma como a cadeia de troca é associada à janela de saída. Uma cadeia de troca é responsável por exibir o buffer para o qual o dispositivo é renderizado no monitor. [Estrutura do aplicativo Marble Maze](marble-maze-application-structure.md) descreve como o sistema de janelas para um aplicativo UWP diferencia-se de um aplicativo da área de trabalho. Como um aplicativo UWP não funciona com objetos [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) , o Marble Maze deve usar o método [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) para associar o dispositivo de saída para o modo de exibição. O exemplo a seguir mostra a parte do método **DeviceResources::CreateWindowSizeDependentResources** que cria a cadeia de troca.
 
 ```cpp
 // Obtain the final swap chain for this window from the DXGI factory.
@@ -265,7 +265,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-Para minimizar o consumo de energia, o que é importante em dispositivos alimentados por bateria, como laptops e tablets, o método **DeviceResources::CreateWindowSizeDependentResources** chama o método [IDXGIDevice1::SetMaximumFrameLatency](https://msdn.microsoft.com/library/windows/desktop/ff471334) para garantir que o jogo seja renderizado somente após o vazio vertical. Sincronização com o vazio vertical é descrita com mais detalhes na seção [apresentando a cena](#presenting-the-scene) neste documento.
+Para minimizar o consumo de energia, o que é importante em dispositivos alimentados por bateria, como laptops e tablets, o método **DeviceResources::CreateWindowSizeDependentResources** chama o método [IDXGIDevice1::SetMaximumFrameLatency](https://msdn.microsoft.com/library/windows/desktop/ff471334) para garantir que o jogo seja renderizado somente após o vazio vertical. Sincronizar com o vazio vertical é descrita mais detalhadamente na seção [apresentando a cena](#presenting-the-scene) neste documento.
 
 ```cpp
 // Ensure that DXGI does not queue more than one frame at a time. This both 
@@ -339,7 +339,7 @@ protected:
 Ao fornecer uma classe de base comum para elementos de interface do usuário, a classe **UserInterface**, que gerencia a interface do usuário, precisa apenas armazenar uma coleção de objetos **ElementBase**, o que simplifica o gerenciamento de interface do usuário que é reutilizável. O Marble Maze define tipos que derivam do **ElementBase** que implementam comportamentos específicos do jogo. Por exemplo, **HighScoreTable** define o comportamento da tabela de recordes. Para saber mais sobre esses tipos, vá ao código-fonte.
 
 > [!NOTE]
-> Como o XAML permite que você crie mais facilmente interfaces do usuário complexas, como as encontradas em jogos de simulação e estratégia, considere a possibilidade de usar XAML para definir sua interface do usuário. Para obter informações sobre como desenvolver uma interface do usuário em XAML em um jogo DirectX UWP, consulte [estender o exemplo de jogo](tutorial-resources.md), que se refere à 3D do DirectX, exemplo de jogo de tiro.
+> Como o XAML permite que você crie mais facilmente interfaces do usuário complexas, como as encontradas em jogos de simulação e estratégia, considere a possibilidade de usar XAML para definir sua interface do usuário. Para obter informações sobre como desenvolver uma interface do usuário em XAML em um jogo UWP DirectX, consulte [estender o exemplo de jogo](tutorial-resources.md), que se refere à 3D do DirectX, exemplo de jogo de tiro.
 
  
 
@@ -486,7 +486,7 @@ O documento [Semantics](https://msdn.microsoft.com/library/windows/desktop/bb509
 
  
 
-Para obter mais informações sobre o estágio do assembly de entrada, consulte o [Estágio de Assembler de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) e [Introdução ao estágio de Assembler de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117).
+Para obter mais informações sobre o estágio de assembly de entrada, consulte o [Estágio de Assembler de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) e [Introdução ao estágio de Assembler de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117).
 
 O processo de usar os sombreadores de vértice e de pixel para renderizar a cena está descrito na secção [Renderizando a cena](#rendering-the-scene), mais adiante neste documento.
 
@@ -520,7 +520,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-O método **marblemazemain:: Update** atualiza depois **ConstantBuffer** objetos, um para o Labirinto e outro para a bola de gude. O método **marblemazemain:: Render** , então, liga cada objeto **ConstantBuffer** para o buffer constante antes de cada objeto é renderizado. O exemplo a seguir mostra a estrutura **ConstantBuffer** , que está em **Marblemazemain. h**.
+O método **marblemazemain:: Update** atualiza depois **ConstantBuffer** objetos, um para o Labirinto e outro para a bola de gude. O método **marblemazemain:: Render** , então, liga cada objeto **ConstantBuffer** para o buffer constante antes de cada objeto ser renderizado. O exemplo a seguir mostra a estrutura **ConstantBuffer** , que está em **Marblemazemain. h**.
 
 ```cpp
 // Describes the constant buffer that draws the meshes.
@@ -623,7 +623,7 @@ float radius = m_marbleMesh.GetMeshBoundingBoxExtents(0).x / 2;
 m_physics.SetRadius(radius);
 ```
 
-A maneira como você carrega dados de colisão basicamente depende do formato de tempo de execução que você usa. Para obter mais informações sobre como o Marble Maze carrega a geometria de colisão de um arquivo de malha SDK, consulte o método **MarbleMazeMain::ExtractTrianglesFromMesh** no código-fonte.
+A maneira como você carrega dados de colisão basicamente depende do formato de tempo de execução que você usa. Para obter mais informações sobre como o Marble Maze carrega a geometria de colisão de um arquivo de SDK-Mesh, consulte o método **MarbleMazeMain::ExtractTrianglesFromMesh** no código-fonte.
 
 ## <a name="updating-game-state"></a>Atualizando o estado do jogo
 
@@ -723,7 +723,7 @@ else
 }
 ```
 
-O exemplo a seguir mostra como o método **marblemazemain:: Update** atualiza os buffers constantes para a bolinha e o labirinto. A matriz de modelo, ou universal, do labirinto é sempre a matriz de identidade. Exceto para a diagonal principal, cujos elementos são todos 1, a matriz de identidade é uma matriz quadrada formada por zeros. A matriz modelo da bola de gude é baseada na sua matriz de posição vezes sua matriz de rotação.
+O exemplo a seguir mostra como o método **marblemazemain:: Update** atualiza os buffers constantes para a bola de gude e o labirinto. A matriz de modelo, ou universal, do labirinto é sempre a matriz de identidade. Exceto para a diagonal principal, cujos elementos são todos 1, a matriz de identidade é uma matriz quadrada formada por zeros. A matriz modelo da bola de gude é baseada na sua matriz de posição vezes sua matriz de rotação.
 
 ```cpp
 // Update the model matrices based on the simulation.
@@ -925,7 +925,7 @@ O método **SampleOverlay::Render** usa uma técnica semelhante para desenhar o 
 
 Depois de desenhar objetos de cena todos os 2D e 3D, o maze Marble apresenta a imagem renderizada no monitor. Ele sincroniza o desenho com o espaço em branco vertical para garantir que não haja perda de tempo com o desenho de quadros que nunca chegarão a aparecer na tela. O Marble Maze também lida com mudanças de dispositivo quando apresenta uma cena.
 
-Depois que o método **marblemazemain:: Render** retorna, o loop de jogo chama o método de **DX::DeviceResources::Present** para enviar a imagem renderizada no monitor ou exibição. O método **DX::DeviceResources::Present** chama [idxgiswapchain:: present](https://msdn.microsoft.com/library/windows/desktop/bb174576) para executar a operação de apresentação, conforme mostrado no exemplo a seguir:
+Depois que o método **marblemazemain:: Render** retorna, o loop do jogo chama o método de **DX::DeviceResources::Present** para enviar a imagem renderizada no monitor ou exibição. O método **DX::DeviceResources::Present** chama [idxgiswapchain:: present](https://msdn.microsoft.com/library/windows/desktop/bb174576) para executar a operação de apresentação, conforme mostrado no exemplo a seguir:
 
 ```cpp
 // The first argument instructs DXGI to block until VSync, putting the application

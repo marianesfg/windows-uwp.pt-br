@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 028cc9586180f2d94337282c3ed0cd58317b539b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182691"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -34,7 +34,7 @@ Aqui estão algumas experiências de aplicativo comuns:
 - Abrir, salvar e excluir arquivos
 - Edição ou a criação de conteúdo
 
-Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Dando suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como acessível possível, portátil e utilizável.
+Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Oferecendo suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como acessível possível, portátil e utilizável.
 
 
 
@@ -100,11 +100,11 @@ Para obter uma lista completa, consulte [Controles e elementos de interface do u
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 
-Você pode colocar elementos de comando em várias superfícies no seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
+Você pode colocar elementos de comando em várias superfícies em seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
 
-Sempre tente permitir que os usuários manipulem diretamente o conteúdo em vez de por meio de comandos esse ato no conteúdo, como arrastar e soltar para reorganizar os itens de lista em vez de botões de comando acima e abaixo. 
+Sempre tente permitir que os usuários manipulem diretamente o conteúdo em vez de por meio de comandos que act no conteúdo, como arrastar e soltar para reorganizar os itens de lista em vez de down botões de comando. 
 
-No entanto, isso não pode ser possível com determinados dispositivos de entrada, ou ao acomodar preferências e recursos de usuário específico. Nesses casos, forneça funcionalidades de comandos tantos quanto possível e coloque esses elementos de comando em uma superfície de comando em seu aplicativo.
+No entanto, isso talvez não seja possível com alguns dispositivos de entrada, ou ao acomodar preferências e recursos de usuário específico. Nesses casos, forneça funcionalidades de comandos máximo possível e coloque esses elementos de comando em uma superfície de comando no seu aplicativo.
 
 Veja uma lista de algumas das superfícies de comando mais comuns.
 
@@ -144,7 +144,7 @@ Veja uma lista de algumas das superfícies de comando mais comuns.
 
 ## <a name="provide-command-feedback"></a>Fornecer comentários de comando 
 
-Comentários do comando se comunica aos usuários que uma interação ou comando foi detectado, como ele foi interpretado e manipulado, e se ele foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
+Comentários do comando se comunica com os usuários que uma interação ou um comando foi detectado, como ele foi interpretado e manipulado e se ele foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
 
 > [!NOTE]
 > Não fornece comentários, a menos que seja absolutamente necessário e os comentários não está disponível em outro lugar. Mantenha seu aplicativo da interface do usuário clara e organizada, a menos que você esteja agregando valor.

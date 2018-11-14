@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 77d2a914147fb2cd20f8043e0b52a824ddf3710d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036886"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6157602"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
@@ -29,7 +29,7 @@ Identifique os dispositivos de entrada conectados a um dispositivo da Plataforma
 
 O namespace [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contém a classe [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) usada para recuperar as propriedades expostas por um ou mais mouses conectados. Crie um novo objeto **MouseCapabilities** e obtenha as propriedades que interessam a você.
 
-**Observação**os valores retornados pelas propriedades abordadas aqui são baseados em todos os mouses detectados: as propriedades Boolianas retornam não zero se pelo menos um mouse der suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por qualquer uma mouse.
+**Observação**os valores retornados pelas propriedades abordadas aqui são baseados em todos os mouses detectados: as propriedades Boolianas retornam não zero se pelo menos um mouse der suporte a um recurso específico e as propriedades numéricas retornarem o valor máximo exposto por um mouse.
 
  
 

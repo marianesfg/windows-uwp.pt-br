@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, gamepad, vibração
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ea8afb0a9e66ccb4ea603bd78dc5030ca18babe
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033618"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182602"
 ---
 # <a name="gamepad-and-vibration"></a>Gamepad e vibração
 
@@ -37,7 +37,7 @@ Gamepads do Xbox One são equipados com um teclado direcional (ou D-pad); **A**,
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
 
 > [!NOTE]
-> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads do Xbox 360, que têm o mesmo layout de controle como padrão gamepads do Xbox One.
+> `Windows.Gaming.Input.Gamepad` também dá suporte a gamepads do Xbox 360, que têm o mesmo layout de controle padrão gamepads do Xbox One.
 
 ### <a name="vibration-and-impulse-triggers"></a>Gatilhos de vibração e impulso
 
@@ -181,7 +181,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-O exemplo a seguir interrompe o rastreamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-a como `nullptr` quando ele for removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta de entrada do quando controladores são conectados e desconectados de atualização.
+O exemplo a seguir para o acompanhamento de um gamepad que foi removido. Você também precisará manipular o que acontece com os gamepads que você está controlando quando forem removidas; Por exemplo, esse código apenas rastreia entrada de um gamepad e simplesmente define-a como `nullptr` quando ele é removido. Você precisará verificar cada quadro, caso o gamepad está ativo e quais gamepad você estiver coleta de entrada do quando controladores são conectados e desconectados de atualização.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -333,7 +333,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lendo os botões
 
-Cada um dos botões de gamepad&mdash;as quatro direções do direcional, botões superiores esquerdos e direito, pressionar o botão esquerdo e direito, **A**, **B**, **X**, **Y**, **modo de exibição**e **Menu**&mdash;fornece um digital ler Indica se ele for pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [GamepadButtons][] .
+Cada um dos botões de gamepad&mdash;as quatro direções do direcional, botões superiores esquerdos e direito, pressionar o botão esquerdo e direito, **A**, **B**, **X**, **Y**, **modo de exibição**e **Menu**&mdash;fornece um digital ler Indica se ele foi pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [GamepadButtons][] .
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -388,7 +388,7 @@ Os gamepads do Xbox One são equipados com um total de quatro motores de vibraç
 
 A vibração do gamepad é controlada por meio da propriedade [Vibration][] da classe [Gamepad][]. `Vibration` é uma instância da estrutura [GamepadVibration][] que é composta de quatro valores de ponto flutuante; cada valor representa a intensidade de um dos motores.
 
-Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializa um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copie-o para o `Gamepad.Vibration` propriedade para alterar as intensidades reais do motoras ao mesmo tempo.
+Embora os membros do `Gamepad.Vibration` propriedade pode ser modificada diretamente, é recomendável que você inicializar um separado `GamepadVibration` instância para os valores que você deseja e, em seguida, copie-o para o `Gamepad.Vibration` propriedade para alterar as intensidades reais do motoras de uma vez.
 
 O exemplo a seguir demonstra como alterar as intensidades do motor de uma vez.
 
@@ -438,7 +438,7 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 mainGamepad.Vibration = vibration;
 ```
 
-Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor de direita r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e com maior frequência. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
+Lembre-se de que esses dois motores não são idênticos. Portanto, definir essas propriedades com o mesmo valor não produz a mesma vibração em um motor como no outro. Para qualquer valor, o motor esquerdo produz uma vibração mais forte com uma frequência menor que o direito de r motor que&mdash;para o mesmo valor&mdash;produz uma vibração mais suave e com maior frequência. Mesmo no valor máximo, o motor esquerdo não consegue produzir as frequências altas do motor direito, nem o motor direito consegue produzir as forças altas do motor esquerdo. Ainda assim, como os motores são rigidamente conectados ao corpo do gamepad, os jogadores não sentem as vibrações totalmente de forma independente mesmo os motores tendo características diferentes e podendo vibrar com intensidades diferentes. Esse esquema permite produzir uma variedade mais ampla e mais expressiva de sensações do que se os motores fossem idênticos.
 
 ### <a name="using-the-impulse-triggers"></a>Usando os gatilhos de impulso
 

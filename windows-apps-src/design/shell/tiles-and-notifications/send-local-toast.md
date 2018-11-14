@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, enviar notificações do sistema, notificações, enviar notificações, notificações do sistema, como fazer, guia de início rápido, introdução, exemplo de código, passo a passo
 ms.localizationpriority: medium
 ms.openlocfilehash: 95f72180038b6ccbed5f399c2cd58081915baf2c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023230"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184786"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar uma notificação do sistema local
 
@@ -48,7 +48,7 @@ Explicaremos os seguintes procedimentos:
 
 Para entender completamente este tópico, os itens a seguir serão úteis...
 
-* Um conhecimento prático dos termos e conceitos de notificações do sistema. Para obter mais informações, consulte a[Visão geral da notificação do sistema e ação central](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/).
+* Um conhecimento prático dos termos e conceitos de notificações do sistema. Para obter mais informações, consulte a[Visão geral de Central de notificação do sistema e a ação](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/).
 * Uma familiaridade com o conteúdo da notificação do sistema Windows 10. Para obter mais informações, consulte [documentação de conteúdo da notificação do sistema](adaptive-interactive-toasts.md).
 * Um projeto de aplicativo UWP do Windows 10
 

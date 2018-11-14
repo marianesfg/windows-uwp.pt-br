@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e042a9bbedee3ded0601eda06da8e349c4b788c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034824"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152086"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar o idioma do reconhecedor de fala
 
@@ -58,7 +58,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Os idiomas instalados podem variar entre dispositivos. Verifique a existência de um idioma se você depender dele para uma determinada restrição.
 
-**Observação**é necessário reinicializar depois que um novo pacote de idiomas é instalado. Uma exceção com o código de erro SPERR\_NOT\_FOUND (0x8004503a) será acionada se o idioma especificado não tiver suporte ou sua instalação não tiver sido concluída.
+**Observação**é necessário reinicializar depois que um novo pacote de idiomas está instalado. Uma exceção com o código de erro SPERR\_NOT\_FOUND (0x8004503a) será acionada se o idioma especificado não tiver suporte ou sua instalação não tiver sido concluída.
 
  
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030273"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158899"
 ---
 # <a name="controller-api-reference"></a>Referência de API do controle   
 Você pode obter o número de controles físicos conectados e desativá-los de usando a API REST.

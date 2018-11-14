@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 0183e19135758f73dfea9b63535437ff9b66011a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036436"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159020"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Criar um jogo 3D em JavaScript usando three.js
 
@@ -30,7 +30,7 @@ Quer ter uma prévia do app que faremos antes de continuar a ler? Confira em Cod
 </iframe>
 
 > [!NOTE] 
-> Este não é um um jogo completo; ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
+> Isso não é um jogo completo; ele foi projetado para demonstrar o uso de JavaScript e uma biblioteca de terceiros para deixar um app pronto para ser publicado na Microsoft Store.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -642,7 +642,7 @@ Por fim, aplicamos quaisquer que sejam os valores atualizados de `x` e `y` à c�
 
 Parabéns! Agora, você tem uma câmera de jogador controlada que pode se movimentar e olhar ao redor. Nós ainda vamos passar direto pelas paredes, mas isso é algo preocupar depois. Em seguida, adicionaremos nosso dinossauro.
 
-<iframe height='300' scrolling='no' title='Se movimentar' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta se <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>Mover em torno</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Veja a caneta se <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>Mover em torno</a> dos documentos do Microsoft Edge (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) em <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035764"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189788"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
@@ -160,7 +160,7 @@ Para excluir ou limitar recursos em uma versão de avaliação do seu aplicativo
 
 Se seu app usa APIs no namespace **Windows.Services.Store** para implementar compras no aplicativo ou a funcionalidade de avaliação, você deve publicar seu aplicativo na Microsoft Store e baixá-lo em seu dispositivo de desenvolvimento para usar sua licença de teste. Siga este processo para testar seu código:
 
-1. Se seu aplicativo ainda não estiver publicado e disponibilizado na loja, verifique se que seu aplicativo atende aos requisitos mínimos do [Kit de certificação de aplicativo do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se que o aplicativo passa pelo processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe a configuração adequada de [pacotes de pré-lançamento](../publish/package-flights.md). Incorretamente configurado pacote de pré-lançamento pode não estar poderá ser baixado.
+1. Se seu aplicativo ainda não estiver publicado e disponibilizado na loja, certifique-se de que seu aplicativo atende aos requisitos mínimos do [Kit de certificação de aplicativo do Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) , [enviar seu aplicativo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) no Partner Center e verifique se que o aplicativo passa pelo processo de certificação. Você pode [configurar seu app para que ele não possa ser descoberto na Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) durante os testes. Observe a configuração adequada de [pacotes de pré-lançamento](../publish/package-flights.md). Incorretamente configurado pacote de pré-lançamento pode não estar poderá ser baixado.
 
 2. Em seguida, certifique-se de que você tenha concluído o seguinte:
 
@@ -227,7 +227,7 @@ Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho
 
 ### <a name="products-skus-and-availabilities"></a>Produtos, SKUs e disponibilidades
 
-Cada produto na Store tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos da maioria dos desenvolvedores no Partner Center, e a maioria dos desenvolvedores nunca definirão SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
+Cada produto na Store tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos da maioria dos desenvolvedores no Partner Center e a maioria dos desenvolvedores nunca definirão SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
 
 | Objeto |  Descrição  |
 |---------|-------------------|
@@ -243,7 +243,7 @@ Cada app, complemento ou outro produto na Store tenha uma **ID da Store** associ
 
 A ID da Store de qualquer produto na Store é uma cadeia de 12 caracteres alfanuméricos, como ```9NBLGGH4R315```. Há várias maneiras diferentes de se obter a ID da Store para um produto na Store:
 
-* Para um aplicativo, você pode obter a ID da loja na [página identidade do aplicativo](../publish/view-app-identity-details.md) no Partner Center.
+* Para um aplicativo, você pode obter a ID da loja na [página de identidade de aplicativo](../publish/view-app-identity-details.md) no Partner Center.
 * Para um complemento, você pode obter a ID da loja na página de visão geral do add-on no Partner Center.
 * Para qualquer produto, você também pode obter a ID da Store programaticamente usando a propriedade [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid) do objeto [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) que representa o produto.
 
@@ -261,7 +261,7 @@ Para produtos com SKUs e disponibilidades, as SKUs e as disponibilidades também
 Se você quiser disponibilizar um complemento para seus clientes no contexto do seu aplicativo, você deve [Inserir uma ID de produto exclusiva](../publish/set-your-add-on-product-id.md#product-id) para seu complemento quando você [criar o envio do complemento](../publish/add-on-submissions.md) no Partner Center. Você pode usar essa ID do produto (product ID) para fazer referência ao complemento em seu código, embora os cenários específicos nos quais você poderá usar a ID do produto dependerão do namespace usado para compras no aplicativo do seu app.
 
 > [!NOTE]
-> A ID do produto que você digita no Partner Center para um complemento é diferente [ID da loja do add-on](#store-ids). A ID da loja é gerada pelo Partner Center.
+> A ID do produto que você insere no Partner Center para um complemento é diferente [ID da loja do complemento](#store-ids). A ID da loja é gerada pelo Partner Center.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Apps que usam o namespace Windows.Services.Store
 

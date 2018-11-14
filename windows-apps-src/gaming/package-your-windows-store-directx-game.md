@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030211"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189891"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 
 Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores. Neste tópico, você aprenderá a usar pacotes e lotes de aplicativos para personalizar seu aplicativo de forma que os clientes recebam apenas os recursos que eles realmente precisam.
 
-Além do modelo de pacote do aplicativo, o Windows 10 dá suporte a lotes de aplicativo que agrupam dois tipos de pacotes:
+Além do modelo de pacote do aplicativo, o Windows 10 dá suporte a pacotes de aplicativo que agrupam dois tipos de pacotes:
 
 -   Pacotes de aplicativos que contêm arquivos executáveis e bibliotecas específicos da plataforma. Tipicamente, um jogo UWP pode ter até três pacotes de aplicativo: um para cada arquitetura x86, x64 e CPU ARM. Todos os códigos e dados específicos da plataforma de hardware em questão deverão estar incluídos nesse pacote do aplicativo. O pacote do aplicativo também deve conter todos os principais ativos para que o jogo seja executado com um nível básico de fidelidade e desempenho.
 -   Os pacotes de recursos contêm dados opcionais ou expandidos independentes do tipo de plataforma, como ativos do jogo (texturas, malhas, som, texto). Um jogo UWP pode ter um ou mais pacotes de recurso, incluindo pacotes de recurso para ativos ou texturas de alta definição, nível de recursos 11+ do DirectX ou ativos e recursos específicos de idioma.
@@ -189,7 +189,7 @@ Ao configurar seu aplicativo para dar suporte a pacotes de recursos de diferente
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > **Observação**em seu código, carregue a textura diretamente pelo nome (ou caminho abaixo do diretório de nível de recursos). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregue "textures\\coolsign.dds", não "dxfl-dx11\\textures\\coolsign.dds" ou "textures\\coolsign\_dxfl-dx11.dds".
+    > **Observação**em seu código, carregue a textura diretamente pelo nome (ou o caminho abaixo do diretório de nível de recursos). Não inclua o nome do diretório de nível de recursos nem o sufixo. Por exemplo, carregue "textures\\coolsign.dds", não "dxfl-dx11\\textures\\coolsign.dds" ou "textures\\coolsign\_dxfl-dx11.dds".
 
      
 

@@ -13,11 +13,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043080"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186692"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -67,7 +67,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustrações mostram revelar destaque em vários controles diferentes:
+Estas ilustrações mostram o realce do revelação em vários controles diferentes:
 
 ![Exemplos do Revelação](images/RevealExamples_Collage.png)
 
@@ -115,7 +115,7 @@ Ou altere o TargetTheme no RevealBorderBrush para escuro. Lembre-se: se o Target
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Habilitando o Revelação em controles personalizados
 
-Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é importante saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
+Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é útil saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
 
 - **Borda** mostra as bordas dos elementos interativos quando um ponteiro está próximo. Esse efeito mostra que esses objetos próximos podem executar ações semelhantes às do objeto em foco.
 - **Hover**  aplica uma forma de halo suave ao redor do item focalizado ou focado e executa uma animação ao clicar. 
@@ -132,7 +132,7 @@ Você pode adicionar o Revelação a controles personalizados. Antes de fazer is
 
 
 Esses efeitos são definidos por dois pincéis: 
-* Revelação borda é definido por **RevealBorderBrush**
+* Revelação borda é definido pela **RevealBorderBrush**
 * Revelação hover é definido por **RevealBackgroundBrush**
 
 ```xaml

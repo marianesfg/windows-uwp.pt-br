@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024225"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6148954"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxe de comandos de movimentação e desenho
 
@@ -229,7 +229,7 @@ Em vez de usar decimais ou inteiros, você pode usar notação científica. Por 
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Ferramentas de desenho que produzem comandos de movimentação e desenho
 
-Usando a ferramenta de **caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio2015 geralmente produzem um objeto de [**caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , mover e desenhar comandos.
+Usando a ferramenta de **caneta** e outras ferramentas de desenho no Blend for Microsoft Visual Studio2015 geralmente produzir um objeto de [**caminho**](/uwp/api/Windows.UI.Xaml.Shapes.Path) , mover e desenhar comandos.
 
 É possível que você veja dados de comandos de movimentação e desenho existentes em algumas partes de controle definidas nos modelos padrão de controles do Windows Runtime XAML. Por exemplo, alguns controles usam um [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tem dados definidos como comandos de movimentação e desenho.
 

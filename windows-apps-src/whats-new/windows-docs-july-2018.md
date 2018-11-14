@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Quais são as novidades do Windows Docs em julho de 2018 - desenvolver aplicativos UWP
+title: Novidades do Windows Docs em julho de 2018 - desenvolver aplicativos UWP
 description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a julho de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, julho
 ms.author: quradic
@@ -8,15 +8,15 @@ ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9c2ff7e809c635eb97e818c91e5d6647a963560
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047281"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6139514"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -36,17 +36,17 @@ Confira nossos guias PWA para:
 
 ### <a name="notepad"></a>Bloco de notas
 
-Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
+Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e o Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
-### <a name="design-landing-page"></a>Página de aterrissagem do design
+### <a name="design-landing-page"></a>Página de aterrissagem de design
 
 Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
-Os kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Check-out aqui.](../design/downloads/index.md)
+Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Check-out aqui.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -64,7 +64,7 @@ Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microso
 
 Além disso, fizemos algumas atualizações para páginas existentes:
 
-* Sumário agora é melhor organizado em quatro buckets distintos de nível superior: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
+* Sumário agora é melhor organizado em quatro buckets de nível superior distintos: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
 
 * [Guia do desenvolvedor do WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
@@ -74,11 +74,11 @@ Além disso, fizemos algumas atualizações para páginas existentes:
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introdução para desenvolvedores: criar e personalizar um formulário no Windows 10
 
-Os [documentos de Introdução](../get-started/index.md) para desenvolvedores do Windows agora fornecem experiência prática com as tarefas de desenvolvimento de aplicativo básico. Este vídeo orienta você por meio de um desses tópicos e aborda as Noções básicas de criação de um formulário da interface do usuário em seu aplicativo. [Assista ao vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver o código em ação, em seguida, [Confira o tópico por conta própria.](http://aka.ms/CreateForms)
+[Introdução documentos](../get-started/index.md) para desenvolvedores do Windows agora fornecem experiência prática com as tarefas de desenvolvimento de aplicativo básico. Este vídeo orienta você por meio de um desses tópicos e aborda as Noções básicas de criação de um formulário da interface do usuário em seu aplicativo. [Assista ao vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver o código em ação, em seguida, [Confira o tópico por conta própria.](http://aka.ms/CreateForms)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Aprimorar seu Bot com bate-papo de personalidade do projeto
 
-Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequenas curto uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementá-lo e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
+Bate-papo do projeto personalidade permite que você adicionar uma pessoa personalizável para a robôs bate-papo. Por meio da integração com o SDK do Microsoft Bot estrutura, você pode adicionar recursos de pequeno falar uma maneira mais conversa interagir com os clientes. [Assista ao vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para saber como implementar e [experimentar a demonstração interativa](http://aka.ms/PersonalityChat) para uma experiência prática.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 

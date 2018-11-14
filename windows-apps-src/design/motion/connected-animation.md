@@ -12,11 +12,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 51cf9dd0d28590d86bf05cc16634e465e260626c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041742"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182809"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animação conectada para aplicativos UWP
 
@@ -24,7 +24,7 @@ As animações conectadas permitem que você crie uma experiência de navegaçã
 
 Em uma animação conectada, um elemento parece "Continuar" entre duas exibições durante uma alteração no conteúdo de interface do usuário, voando pela tela desde a sua localização na exibição de origem até seu destino na nova exibição. Isso enfatiza o conteúdo comum entre os modos de exibição e cria um efeito belo e dinâmico como parte de uma transição.
 
-> **APIs importantes**: [classe ConnectedAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), o [ConnectedAnimationService classe](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
+> **APIs importantes**: [ConnectedAnimation classe](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), o [ConnectedAnimationService classe](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 ## <a name="see-it-in-action"></a>Veja em ação
 
@@ -55,26 +55,26 @@ As animações conectadas geralmente são usadas na troca de páginas, embora po
 ## <a name="configure-connected-animation"></a>Configurar animação conectada
 
 > [!IMPORTANT]
-> Esse recurso requer que a versão de destino do seu aplicativo ser Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior. A propriedade de configuração não está disponível no SDKs anteriores. Você pode direcionar uma versão mínima inferior ao SDK 17763 usando código adaptável ou XAML condicional. Para obter mais informações, consulte [aplicativos adaptáveis de versão](/debug-test-perf/version-adaptive-apps).
+> Esse recurso requer que a versão de destino do seu aplicativo ser Windows 10, versão 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) ou posterior. A propriedade de configuração não está disponível no SDKs anteriores. Você pode direcionar uma versão mínima inferior SDK 17763 usando código adaptável ou XAML condicional. Para obter mais informações, consulte [aplicativos adaptáveis de versão](/debug-test-perf/version-adaptive-apps).
 
 A partir do Windows 10, versão 1809, ainda mais as animações conectadas incorporam o design Fluent, fornecendo animação configurações personalizadas especificamente para frente e para trás navegação de página.
 
-Você pode especificar uma configuração de animação, definindo a propriedade de configuração sobre o ConnectedAnimation. (Mostraremos exemplos na próxima seção).
+Especifique uma configuração de animação, definindo a propriedade de configuração sobre o ConnectedAnimation. (Mostraremos exemplos na próxima seção).
 
 Esta tabela descreve as configurações disponíveis. Para obter mais informações sobre os princípios de movimento aplicadas nessas animações, consulte [direção e gravidade](index.md).
 
 | [GravityConnectedAnimationConfiguration]() |
 | - |
 | Isso é a configuração padrão e é recomendado para navegação para frente. |
-Conforme o usuário avança no aplicativo (A para B), o elemento conectado aparece fisicamente "puxe fora da página". Ao fazer isso, o elemento aparecerá em frente no espaço de z e cair um pouco como um efeito de gravidade levando espera. Para superar os efeitos de gravidade, o elemento ganha velocidade e acelera para sua posição final. O resultado é uma animação de "escala e dip". |
+Conforme o usuário navega para frente no aplicativo (A para B), o elemento conectado aparece fisicamente "puxe fora da página". Ao fazer isso, o elemento aparecerá em frente no espaço de z e cair um pouco como um efeito de gravidade levando espera. Para superar os efeitos de gravidade, o elemento ganha velocidade e acelera para sua posição final. O resultado é uma animação de "escala e dip". |
 
 | [DirectConnectedAnimationConfiguration]() |
 | - |
-| Conforme o usuário navega para trás no aplicativo (B para A), a animação é mais direta. O elemento conectado linearmente traduz dos B para um usando uma função de suavização por desaceleração cúbica Bézier. A funcionalidade visual para trás retorna o usuário para seu estado anterior mais rápido possível e ainda manter o contexto do fluxo de navegação. |
+| Conforme o usuário navega para trás no aplicativo (B para A), a animação é mais direta. O elemento conectado linearmente traduz de B para um usando uma função de suavização por desaceleração cúbica Bézier. A funcionalidade visual para trás retorna o usuário para seu estado anterior mais rápido possível e ainda manter o contexto do fluxo de navegação. |
 
 | [BasicConnectedAnimationConfiguration]() |
 | - |
-| Este é o padrão (e somente) animação usada em versões anteriores ao Windows 10, versão 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)). |
+| Este é o padrão (e única) animação usada em versões anteriores ao Windows 10, versão 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)). |
 
 ### <a name="connectedanimationservice-configuration"></a>Configuração de ConnectedAnimationService
 
@@ -83,7 +83,7 @@ A classe [ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.co
 - [DefaultDuration](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.defaultduration)
 - [DefaultEasingFunction](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.defaulteasingfunction)
 
-Para obter os diversos efeitos, algumas configurações ignoram essas propriedades em ConnectedAnimationService e usam seus próprios valores em vez disso, conforme descrito nesta tabela.
+Para obter os diversos efeitos, algumas configurações ignoram essas propriedades no ConnectedAnimationService e usam seus próprios valores em vez disso, conforme descrito nesta tabela.
 
 | Configuração | Aspectos DefaultDuration? | Aspectos DefaultEasingFunction? |
 | - | - | - |
@@ -120,7 +120,7 @@ if (animation != null)
 
 Este exemplo mostra como usar o ConnectedAnimationService para criar uma transição para frente navegação entre duas páginas (Page_A para Page_B).
 
-A configuração de animação recomendada para navegação progressiva é [GravityConnectedAnimationConfiguration](). Este é o padrão, portanto, você não precisa definir a propriedade de [configuração](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.configuration) , a menos que você deseja especificar uma configuração diferente.
+A configuração de animação recomendada para navegação direta é [GravityConnectedAnimationConfiguration](). Este é o padrão, portanto, você não precisa definir a propriedade de [configuração](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.configuration) , a menos que você deseja especificar uma configuração diferente.
 
 Configure a animação na página de origem.
 
@@ -187,7 +187,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Para navegação regressiva (Page_B para Page_A), que você siga as mesmas etapas, mas as páginas de origem e destino são revertidas.
 
-Quando o usuário navega de volta, eles esperam que o aplicativo seja retornado para o estado anterior assim que possível. Portanto, a configuração recomendada é [DirectConnectedAnimationConfiguration](). Esta animação é mais rápido, mais direto e usa a suavização por desaceleração.
+Quando o usuário navega de volta, eles esperam que o aplicativo a ser retornado para o estado anterior assim que possível. Portanto, a configuração recomendada é [DirectConnectedAnimationConfiguration](). Esta animação é mais rápido, mais direto e usa a suavização por desaceleração.
 
 Configure a animação na página de origem.
 
@@ -225,11 +225,11 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-Entre o momento em que a animação é configurada e quando ele é iniciado, o elemento de origem aparecerá congelado acima de outra interface do usuário no aplicativo. Isso permite que você realize qualquer outra animação de transição simultaneamente. Por esse motivo, você não deverá esperar mais de 250 milissegundos entre as duas etapas porque a presença do elemento de origem pode tornar-se distrativa. Se você preparar uma animação e não iniciá-la em três segundos, o sistema irá descartar a animação e qualquer tentativa subsequente de [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) falhará.
+Entre o momento em que a animação é configurada e quando ele é iniciado, o elemento de origem aparecerá congelado acima de outra interface do usuário no aplicativo. Isso permite que você realize qualquer outra animação de transição simultaneamente. Por esse motivo, você não deverá esperar mais que 250 milissegundos entre as duas etapas porque a presença do elemento de origem pode tornar-se distrativa. Se você preparar uma animação e não iniciá-la em três segundos, o sistema irá descartar a animação e qualquer tentativa subsequente de [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) falhará.
 
 ## <a name="connected-animation-in-list-and-grid-experiences"></a>Animação conectada em experiências de lista e de grade
 
-Muitas vezes, você vai querer criar uma animação conectada de ou para um controle de lista ou grade. Você pode usar os dois métodos em [ListView](/uwp/api/windows.ui.xaml.controls.listview) e [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) e [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync), para simplificar esse processo.
+Muitas vezes, você vai querer criar uma animação conectada de ou para um controle de lista ou grade. Você pode usar os dois métodos em [ListView](/uwp/api/windows.ui.xaml.controls.listview) e [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) and [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync), para simplificar esse processo.
 
 Por exemplo, digamos que você tem um **ListView** que contém um elemento com o nome "PortraitEllipse" em seu modelo de dados.
 
@@ -246,7 +246,7 @@ Por exemplo, digamos que você tem um **ListView** que contém um elemento com o
 </ListView>
 ```
 
-Para preparar uma animação conectada com a elipse correspondente a um determinado item de lista, chame o método [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) com uma chave exclusiva, o item e o nome "PortraitEllipse".
+Para preparar uma animação conectada com a elipse correspondente a um determinado item de lista, chame o método de [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) com uma chave exclusiva, o item e o nome "PortraitEllipse".
 
 ```csharp
 void PrepareAnimationWithItem(ContactsItem item)
@@ -255,7 +255,7 @@ void PrepareAnimationWithItem(ContactsItem item)
 }
 ```
 
-Para iniciar uma animação com esse elemento como destino, por exemplo, quando navegar de volta de uma exibição detalhada, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Se você acabou de carregar a fonte de dados para o ListView, o TryStartConnectedAnimationAsync irá esperar para iniciar a animação até que o recipiente do item correspondente seja criado.
+Para iniciar uma animação com esse elemento como destino, como quando navegar de volta de uma exibição detalhada, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Se você acabou de carregar a fonte de dados para o ListView, o TryStartConnectedAnimationAsync irá esperar para iniciar a animação até que o recipiente do item correspondente seja criado.
 
 ```csharp
 private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
@@ -283,7 +283,7 @@ private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 <iframe width=640 height=360 src='https://microsoft.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=552c725c%2De353%2D4118%2Dbd2b%2Dc2d0584c9848&amp;vId=9066bbbe%2Dcf58%2D4ab4%2Db274%2D595616f5d0a0&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true' allowfullscreen></iframe>
 -->
 
-Uma *animação coordenada* é um tipo especial de animação de entrada onde um elemento parece juntamente com o alvo da animação conectada, animando em conjunto com o elemento de animação conectada conforme ele se move pela tela. As animações coordenadas podem adicionar maior interesse visual a uma transição e chamar mais a atenção do usuário para o contexto compartilhado entre as exibições de origem e destino. Nessas imagens, a interface de usuário da legenda para o item está animando através de uma animação conectada.
+Uma *animação coordenada* é um tipo especial de animação de entrada onde um elemento é exibida juntamente com o destino de animação conectada, animando em conjunto com o elemento de animação conectada conforme ele se move pela tela. As animações coordenadas podem adicionar maior interesse visual a uma transição e chamar mais a atenção do usuário para o contexto compartilhado entre as exibições de origem e destino. Nessas imagens, a interface de usuário da legenda para o item está animando através de uma animação conectada.
 
 Quando uma animação conectada usa a configuração de gravidade, gravidade é aplicada para o elemento de animação conectada e os elementos coordenados. Os elementos coordenados serão "vez" junto com o elemento conectado para que os elementos se realmente coordenados.
 
@@ -319,7 +319,7 @@ void OnNavigatedTo(NavigationEventArgs e)
 - Use [GravityConnectedAnimationConfiguration]() para navegação para frente.
 - Use [DirectConnectedAnimationConfiguration]() para navegação regressiva.
 - Não espere em solicitações de rede ou outras operações assíncronas de longa execução entre a preparação e a partir de uma animação conectada. Talvez seja necessário carregar previamente as informações necessárias para executar a transição antecipadamente, ou utilizar uma imagem de baixa resolução no lugar enquanto uma imagem de alta resolução é carregada na exibição de destino.
-- Use [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) para evitar uma animação de transição em um **quadro** , se você estiver usando o **ConnectedAnimationService**, já que animações conectadas não devem ser usadas simultaneamente com a navegação padrão faz a transição. Consulte [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) para obter mais informações sobre como usar as transições de navegação.
+- Use [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) para impedir que uma animação de transição em um **quadro** , se você estiver usando o **ConnectedAnimationService**, já que animações conectadas não devem ser usadas simultaneamente com a navegação padrão faz a transição. Consulte [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) para obter mais informações sobre como usar as transições de navegação.
 
 ## <a name="download-the-code-samples"></a>Baixar as amostras de código
 

@@ -10,19 +10,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: ec27464c2bcece46e4a658cc59ac8ef0b7f390f7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031448"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162056"
 ---
 # <a name="settings-page-dev-home"></a>Página de configurações (Dev Home)
    
   
-A página de **configurações** de Dev Home fornece acesso às várias configurações para o console de desenvolvimento.   
+A página de **configurações** de Dev Home fornece acesso a várias configurações para o console de desenvolvimento.   
  ![Página de configurações de Dev Home](images/devhome_settings.png)   
   
-A página **configurações** contém os seguintes painéis:   
+A página de **configurações** contém os painéis a seguir:   
  
    *  [Configurações do console](#ID4EEB)  
    *  [Configurações de atualização de recuperação do sistema operacional](#ID4EOB)  
@@ -39,7 +39,7 @@ A página **configurações** contém os seguintes painéis:
 ## <a name="console-settings"></a>Configurações do console  
    
   
-O painel de **configurações do Console** fornece uma exibição "em um relance" de configurações do console e informações. Você pode usar essas ferramentas para exibir e editar o nome do host do console, área restrita e configurações de teclas de acesso de segurança.   
+O painel de **configurações do Console** fornece uma exibição "em um relance" de informações e configurações do console. Você pode usar essas ferramentas para exibir e editar o nome do host do console, área restrita e configurações de teclas de acesso de segurança.   
   
 <a id="ID4EOB"></a>
 
@@ -48,7 +48,7 @@ O painel de **configurações do Console** fornece uma exibição "em um relance
 ## <a name="os-recovery-update-settings"></a>Configurações de atualização de recuperação do sistema operacional  
    
   
-O painel de **recuperação do sistema operacional atualizar configurações** configura as configurações de atualização automática do console. Observe que as alterações dessas configurações pode levar até 24 horas para entrar em vigor.   
+O painel de **recuperação do sistema operacional atualizar configurações** configura as configurações de atualização automática do console. Observe que as alterações para essas configurações pode levar até 24 horas para entrar em vigor.   
   
 <a id="ID4EYB"></a>
 
@@ -66,7 +66,7 @@ O painel do **Visual Studio** é usado para Emparelhe o console com o Visual Stu
 ## <a name="debug-settings"></a>Configurações de depuração  
    
   
-O painel de **configurações de depuração** é usado para exibir e ativar/desativar comuns configurações de depuração.   
+O painel de **configurações de depuração** é usado para exibir e alternar comuns configurações de depuração.   
   
 <a id="ID4EMC"></a>
 
@@ -84,7 +84,7 @@ O painel de **configuração de script autônomo** gerencia scripts de instalaç
 ## <a name="default-home-experience"></a>Experiência inicial padrão  
    
   
-O painel **Padrão Home experiência** determina se a tela inicial de varejo ou a tela [Inicial de desenvolvedor no Console (Dev Home)](dev-home.md) é exibida quando o console é iniciado.   
+O painel **Padrão Home experiência** determina se a tela inicial de varejo ou a tela [Inicial de desenvolvedor no Console (Dev Home)](dev-home.md) é exibida quando o console for iniciado.   
   
 <a id="ID4EJD"></a>
 

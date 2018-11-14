@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: Permitem que os aplicativos para sites usando manipuladores URI do aplicativo
+title: Habilitar aplicativos para sites usando manipuladores de URI do aplicativo
 description: Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites.
 keywords: Vinculação profunda do Windows
 ms.author: twhitney
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034962"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185268"
 ---
-# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Permitem que os aplicativos para sites usando manipuladores URI do aplicativo
+# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Habilitar aplicativos para sites usando manipuladores de URI do aplicativo
 
 Aplicativos para sites associa seu aplicativo com um site para que quando alguém abre um link para seu site, seu aplicativo é iniciado em vez de abrir o navegador. Se seu aplicativo não estiver instalado, o site é aberto no navegador como de costume. Os usuários podem confiar nessa experiência porque apenas proprietários conteúdo verificados podem se registrar para um link. Os usuários serão capazes de verificar todos os links da web para o aplicativo registrados em Configurações > aplicativos > aplicativos para sites.
 
@@ -25,7 +25,7 @@ Para habilitar web-vinculação ao aplicativo você precisará:
 - Manipule a ativação no aplicativo.
 
 > [!Note]
-> A partir do Windows 10 Creators update, com suporte links clicado no Microsoft Edge iniciará o aplicativo correspondente. Links com suporte clicado em outros navegadores (por exemplo, Internet Explorer, etc.), o manterá na experiência de navegação.
+> A partir do Windows 10 Creators update, com suporte links clicado no Microsoft Edge iniciará o aplicativo correspondente. Links com suporte clicada em outros navegadores (por exemplo, Internet Explorer, etc.), o manterá na experiência de navegação.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registre-se para manipular links http e https no manifesto do aplicativo
 
@@ -168,7 +168,7 @@ Teste a configuração do seu aplicativo e do site executando essa ferramenta co
 
 Se a ferramenta não retorna nada, validação funcionará nesse arquivo quando carregados. Se houver um código de erro, ele não funcionará.
 
-Você pode habilitar a seguinte chave do registro forçar o caminho correspondência para aplicativos de sideload como parte da validação de local:
+Você pode habilitar a seguinte chave do registro forçar o caminho de correspondência para aplicativos de sideload como parte da validação de local:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
@@ -197,7 +197,7 @@ Se você quiser seguir a lógica de ativação de protocolo, defina um ponto de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Projeto de exemplo de aplicativo de Web](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[Exemplo de aplicativo Web de projeto](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [Windows. Protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [Manipular ativação de URI](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-[Iniciar associação exemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API launchuriasync ().
+[Iniciar de associação de exemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) ilustra como usar a API launchuriasync ().

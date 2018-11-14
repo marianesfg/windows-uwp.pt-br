@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eaca23a72ff794a85ffd8ac13c3f522cabf32aa7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026711"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190282"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Blocos, selos e notificações para aplicativos UWP
  
@@ -53,7 +53,7 @@ Bloco é a representação de um aplicativo no menu Iniciar. Todo aplicativo UWP
 | --- | --- |
 | [Notificações do sistema](adaptive-interactive-toasts.md) | As notificações do sistema interativas e adaptáveis permitem criar notificações pop-up flexíveis com mais conteúdo, imagens embutidas opcionais e interação do usuário opcional. |
 | [Enviar uma notificação do sistema local](send-local-toast.md) | Saiba como enviar uma notificação do sistema interativa. |
-| [Visualizador de notificações](notifications-visualizer.md) | Notificações que Visualizer é um novo aplicativo da plataforma Universal do Windows (UWP) na [loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design adaptável blocos dinâmicos para Windows 10. |
+| [Visualizador de notificações](notifications-visualizer.md) | Notificações que Visualizador é um novo aplicativo da plataforma Universal do Windows (UWP) na [loja](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ajuda os desenvolvedores no design adaptável blocos dinâmicos para Windows 10. |
 | [Escolher um método de entrega de notificação](choosing-a-notification-delivery-method.md) | Este artigo aborda as quatro opções de notificação - local, agendada, periódica e por push - que fornecem atualizações de blocos e notificação e conteúdo de notificações do sistema. |
 | [Visão geral de notificações periódicas](periodic-notification-overview.md) | Notificações periódicas, que são chamadas também de notificações de sondagem, atualizam blocos e selos em um intervalo fixo, baixando o conteúdo da nuvem. |
 | [Visão geral dos Serviços de Notificação por Push do Windows (WNS)](windows-push-notification-services--wns--overview.md) | Os Serviços de Notificação por Push do Windows (WNS) permitem que desenvolvedores terceirizados enviem atualizações de notificações do sistema, de blocos, de selos e brutas pelo próprio serviço de nuvem. Isso proporciona um mecanismo para entregar novas atualizações aos usuários de forma eficaz e confiável. |

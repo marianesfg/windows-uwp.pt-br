@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, manejar, evento, delegado
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ca257de29be8e732e05c343a4b782b1676627bf
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052291"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190007"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Manejar eventos usando delegados em C++/WinRT
 
@@ -51,7 +51,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Quando registrado o representante, o exemplo de código acima passa um bruto *esse* ponteiro (apontando para o objeto atual). Para saber como estabelecer uma referência forte ou fraca ao objeto atual, consulte a seção subpropriedade **se você usar uma função de membro como um delegado** na seção [com segurança acessando o ponteiro *this* com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Quando registrado o representante, o exemplo de código acima passa um bruto *esse* ponteiro (apontando para o objeto atual). Para saber como estabelecer uma referência forte ou fraca ao objeto atual, consulte a seção subpropriedade **se você usar uma função de membro como um delegado** na seção [com segurança acessando o *esse* ponteiro com um representante do manipulador de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 Há outras formas para construir um **RoutedEventHandler**. A seguir está o bloco de sintaxe tirado do tópico documentação para [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (escolha *C++/WinRT* a partir da lista suspensa **Idioma** na página). Observe os vários construtores: um deles leva um lambda; outro uma função livre; e outro (aquele que usamos acima) usa um objeto e um ponteiro para função de membro.
 
@@ -124,7 +124,7 @@ private:
 };
 ```
 
-Em vez de uma referência forte, como no exemplo acima, você pode armazenar uma referência fraca para o botão (consulte [referências fortes e fracas em C++ c++ WinRT](weak-references.md)).
+Em vez de uma referência forte, como no exemplo acima, você pode armazenar uma referência fraca para o botão (consulte [referências fortes e fracas no C++ c++ WinRT](weak-references.md)).
 
 Como alternativa, quando você registra um delegado, você pode especificar **WinRT:: auto_revoke** (que é um valor de tipo [**WinRT:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar um revogador de evento (do tipo [**WinRT:: event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). O revocador do evento mantém uma referência fraca à origem do evento (o objeto que gera o evento) para você. Você pode revogar manualmente ao chamar a função membro **event_revoker::revoke**; mas o revogador de evento chama essa função automaticamente quando sai do escopo. A função **revoke** verifica se o fonte do evento ainda existe e, caso afirmativo, revoga o delegado. Neste exemplo, não há necessidade de armazenar a origem do evento e não há necessidade de um destruidor.
 
@@ -159,7 +159,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 ```
 
 > [!NOTE]
-> No exemplo de código acima, `Button::Click_revoker` é um alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Um padrão semelhante se aplica a todos os eventos de C++/WinRT. Cada evento de tempo de execução do Windows tem uma sobrecarga de função revoke que retorna um revogador de evento, e que tipo de revogador é um membro de origem do evento. Portanto, para entrar em outro exemplo, o evento [**corewindow:: SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tem uma sobrecarga de função de registro que retorna um valor do tipo **CoreWindow::SizeChanged_revoker**.
+> No exemplo de código acima, `Button::Click_revoker` é um alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Um padrão semelhante se aplica a todos os eventos de C++/WinRT. Cada evento de tempo de execução do Windows tem uma sobrecarga de função revogar que retorna um revogador de evento, e que tipo de revogador é um membro de origem do evento. Portanto, para entrar em outro exemplo, o evento [**corewindow:: SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tem uma sobrecarga de função de registro que retorna um valor do tipo **CoreWindow::SizeChanged_revoker**.
 
 
 Você pode considerar a revogação de manipuladores em um cenário de navegação de página. Se você estiver navegando repetidamente em uma página e depois retroceder, você pode revogar quaisquer manipuladores quando você navega para fora da página. Como alternativa, se você estiver reutilizando a mesma instância de página, então verifique o valor do seu token e registre somente se ele ainda não estiver sido definido (`if (!m_token){ ... }`). Uma terceira opção é armazenar um revogador de evento na página como um membro de dados. E uma quarta opção, conforme descrito mais adiante neste tópico, é capturar uma referência forte ou uma fraca para o objeto *isso* na sua função lambda.
@@ -204,7 +204,7 @@ Como sugere o comentário da "corrotina", em vez de usar um delegado com os even
 > [!NOTE]
 > Ele não estiver correto implementar mais de um *manipulador de conclusão* para uma ação assíncrona ou operação. Você pode ter um único delegate para seu evento concluído, ou você pode `co_await` -lo. Se você tiver ambos, o segundo falhará.
 
-Se você com delegados em vez de uma corrotina, em seguida, você pode optar por uma sintaxe mais simples.
+Se você com delegados em vez de uma corrotina, você pode optar por uma sintaxe mais simples.
 
 ```cppwinrt
 async_op_with_progress.Completed(
@@ -230,9 +230,9 @@ winrt::hstring f(ListView listview)
 }
 ```
 
-## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessando com segurança o *esse* ponteiro com um representante do manipulador de eventos
+## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Acessar com segurança o *esse* ponteiro com um representante do manipulador de eventos
 
-Se você manipula um evento com função de membro de um objeto ou de dentro de uma função lambda dentro da função de membro de um objeto, em seguida, você precisa pensar sobre os tempos de vida relativos do destinatário do evento (o objeto manipulando o evento) e a origem do evento (o objeto acionamento do evento). Para obter mais informações e exemplos de código, consulte [referências fortes e fracas em C++ c++ WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+Se você manipula um evento com função de membro de um objeto ou de dentro de uma função lambda dentro da função de membro de um objeto, em seguida, você precisa pensar sobre os tempos de vida relativos do destinatário do evento (o objeto manipulando o evento) e a origem do evento (o objeto acionamento do evento). Para obter mais informações e exemplos de código, consulte [referências fortes e fracas no C++ c++ WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>APIs Importantes
 * [struct de marcador WinRT:: auto_revoke_t](/uwp/cpp-ref-for-winrt/auto-revoke-t)
@@ -242,4 +242,4 @@ Se você manipula um evento com função de membro de um objeto ou de dentro de 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Criar eventos com C++/WinRT](author-events.md)
 * [Simultaneidade e operações assíncronas com C++/WinRT](concurrency.md)
-* [Referências fortes e fracas em C++ c++ WinRT](weak-references.md)
+* [Referências fracas e fortes em C++ c++ WinRT](weak-references.md)

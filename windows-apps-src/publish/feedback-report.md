@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ab5e5f3fe533568079869c4fbd62530504544bf7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026039"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6147761"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -24,9 +24,9 @@ O **relatório de comentários** no Partner Center permite que você veja proble
 
 Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ótima maneira de aprender sobre os problemas e recursos que são mais importantes para eles. Quando seus clientes sabem que podem enviar comentários diretamente, eles têm menos probabilidade de deixar esses comentários como uma análise negativa na Loja.
 
-Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários dos clientes nesse relatório, mesmo que não tenha especificamente solicitado comentários dentro de seu aplicativo.
+Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
 
-Comentários também podem ser útil ao usar o [pacote de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
+Feedback também pode ser útil ao usar o [pacote de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
 
 > [!TIP]
 > Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **envolver** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
@@ -56,7 +56,7 @@ Nesse relatório, você encontrará os comentários individuais deixados por seu
 - **Mais populares**: mostra os comentários que tiveram votos a favor por outros clientes nos últimos sete dias, começando com os comentários que obtiveram a atividade mais recente.
 - **Mais recentes**: mostra todos os comentários, começando com os comentários deixados mais recentemente.
 
-Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente enviou os comentários for um membro de no Windows Insider programa.
+Ao lado de cada comentário, você verá a data em que os comentários foram deixados e o tipo de comentário. Você também verá o mercado do cliente, o pacote específico que foi instalado no dispositivo que eles foram usado quando deixaram os comentários, o tipo do dispositivo e **Do Windows Insider** se o cliente que enviou os comentários for um membro do Windows Insider programa.
 
 Você também verá uma opção para [responder aos comentários](respond-to-customer-feedback.md).
 

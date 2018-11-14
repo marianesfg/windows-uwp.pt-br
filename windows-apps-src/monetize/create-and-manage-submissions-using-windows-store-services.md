@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: c91c7b42642df9a03aab1324f074799b63157e62
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041984"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6144045"
 ---
 # <a name="create-and-manage-submissions"></a>Criar e gerenciar envios
 
 
-Use a *API de envio da Microsoft Store* para consultar programaticamente e criar os envios de aplicativos, complementos e pacotes de pré-lançamento para a conta do Partner Center seu da sua organização. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
+Use a *API de envio da Microsoft Store* para consultar programaticamente e criar os envios de aplicativos, complementos e pacotes de pré-lançamento para a conta do sua organização Partner Center. Essa API será útil se sua conta gerenciar muitos aplicativos ou complementos e você quiser automatizar e otimizar o processo de envio para esses ativos. Essa API usa o Active Directory do Azure (Azure AD) para autenticar as chamadas do seu aplicativo ou serviço.
 
 As etapas a seguir descrevem o processo completo de usar a API de envio da Microsoft Store:
 

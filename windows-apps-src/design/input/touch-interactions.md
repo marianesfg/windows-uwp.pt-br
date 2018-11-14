@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034252"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189223"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -82,7 +82,7 @@ A tabela a seguir mostra algumas das diferenças entre os dispositivos de entrad
 
 ## <a name="use-touch-feedback"></a>Usar comentário por toque
 
-O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e se adaptar a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
+O feedback visual apropriado durante as interações com o seu aplicativo ajuda os usuários a reconhecer, aprender e adaptar-se a como suas interações são interpretadas pelo aplicativo e o Windowsplatform. O feedback visual pode indicar interações bem-sucedidas, retransmitir o status do sistema, aprimorar o sentido de controle, reduzir erros, ajudar os usuários a entenderem o sistema e os dispositivos de entrada, além de estimular a interação.
 
 A resposta visual é importante quando o usuário recorre à entrada por toque em atividades que exigem exatidão e precisão com base no local. A exibição do feedback sempre que a entrada por toque for detectada ajudará o usuário a entender as regras de direcionamento personalizadas definidas pelo aplicativo e seus respectivos controles.
 
@@ -438,7 +438,7 @@ Um gesto consiste em uma série de eventos de manipulação. Cada gesto começa 
 
 Em seguida, um ou mais eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) são disparados. Por exemplo, se você toca na tela e, em seguida, arrasta o dedo pela tela. Finalmente, um evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) é gerado quando a interação é concluída.
 
-**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e mouse.
+**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e de mouse.
 
  
 

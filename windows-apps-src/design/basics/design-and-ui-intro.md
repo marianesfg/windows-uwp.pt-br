@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 422a6b40c86a84367054a20cabe1a0b0a32cb89d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049008"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189709"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introdução ao design de aplicativos UWP
 
@@ -27,11 +27,11 @@ Esta introdução fornece uma visão geral dos recursos de design universais que
 
 ## <a name="effective-pixels-and-scaling"></a>dimensionamento e pixels efetivos
 
-Aplicativos UWP executados em todos os [dispositivos Windows 10](../devices/index.md), da sua TV ao seu tablet ou computador. Então, como projetar uma interface do usuário que tenha boa aparência em uma ampla variedade de dispositivos e tamanhos de tela?
+Aplicativos UWP executados em todos os [dispositivos Windows 10](../devices/index.md), da sua TV ao seu tablet ou computador. Então, como você cria uma interface do usuário que tenha boa aparência em uma ampla variedade de dispositivos e tamanhos de tela?
 
 ![mesmo aplicativo em vários dispositivos](images/universal-image-1.jpg)
 
-UWP ajuda ajustando automaticamente os elementos de interface do usuário para que fiquem legível e fácil de interagir com em todos os dispositivos e tamanhos de tela.
+UWP ajuda ajustando automaticamente os elementos de interface do usuário para que seja legível e fácil de interagir com em todos os dispositivos e tamanhos de tela.
 
 Quando seu aplicativo é executado em um dispositivo, o sistema usa um algoritmo para normalizar a forma como os elementos da interface do usuário são exibidos na tela. Esse algoritmo de dimensionamento leva em conta a distância de visualização e a densidade da tela (pixels por polegada) para otimizar o tamanho percebido (em vez do tamanho físico). O algoritmo de dimensionamento garante que uma fonte de 24 px no Surface Hub a 3 m de distância seja tão legível para o usuário quanto uma fonte de 24 px no telefone de 5" a alguns centímetros de distância.
 

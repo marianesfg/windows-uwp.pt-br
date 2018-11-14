@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 667efeb67c956f8d4378b0e7e4011f7e06977519
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027736"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152687"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>Notificações de selo para aplicativos UWP
 
@@ -130,7 +130,7 @@ Em vez de um número, um selo pode exibir um de um conjunto de glifos de status 
 
 ## <a name="create-a-badge"></a>Criar um selo
 
-Estes exemplos mostram como criar uma atualização de selo.
+Esses exemplos mostram como criar uma atualização de selo.
 
 ### <a name="create-a-numeric-badge"></a>Criar um selo numérico
 

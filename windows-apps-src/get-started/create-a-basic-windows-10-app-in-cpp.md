@@ -1,7 +1,7 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: Criar um Hello Hello World em C++ c++ /CX (Windows 10)
+title: Criar uma saudação Hello World em C++ c++ /CX (Windows 10)
 description: Com o Microsoft Visual Studio2017, você pode usar C++ c++ /CX para desenvolver um aplicativo que é executado no Windows 10, incluindo telefones que executam o Windows 10. Esses apps têm uma interface do usuário definida em linguagem XAML.
 ms.author: jken
 ms.date: 06/11/2018
@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bc2258557c492956130424069e6e0c4b73f28056
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045755"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187646"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Criar um aplicativo "Hello world" em C++ c++ /CX
 
 > [!IMPORTANT]
-> Este tutorial usa C++ c++ /CX. A Microsoft lançou C++ c++ WinRT: uma inteiramente padrão C++ 17 projeção de linguagem moderna do Windows Runtime (WinRT) APIs. Para obter mais informações sobre essa linguagem, consulte [C++ c++ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
+> Este tutorial usa C++ c++ /CX. A Microsoft lançou C++ c++ WinRT: uma inteiramente padrão C++ 17 projeção de linguagem moderna do Windows Runtime (WinRT) APIs. Para obter mais informações sobre esse idioma, consulte [C++ c++ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
 
 Com o Microsoft Visual Studio2017, você pode usar C++ c++ /CX para desenvolver um aplicativo que é executado no Windows 10 com uma interface do usuário que é definido em Extensible Application Markup Language (XAML).
 
@@ -27,7 +27,7 @@ Com o Microsoft Visual Studio2017, você pode usar C++ c++ /CX para desenvolver 
 
 ## <a name="before-you-start"></a>Antes de começar
 
--   Para concluir este tutorial, você deve usar o Visual StudioCommunity 2017, ou uma das versões que não são da comunidade do Visual Studio2017, em um computador que esteja executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
+-   Para concluir este tutorial, você deve usar o Visual StudioCommunity 2017, ou uma das versões que não são da comunidade do Visual Studio2017, em um computador que está executando o Windows 10. Para baixá-los, veja [Obter as ferramentas](http://go.microsoft.com/fwlink/p/?LinkId=532666).
 -   Presumimos que você tenha uma compreensão básica de C++ c++ /CX, XAML e os conceitos na [Visão geral de XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Pressupomos que você esteja usando o layout de janela padrão no Visual Studio. Para redefinir o layout padrão, na barra de menus, escolha **Janela** > **Redefinir Layout da Janela**.
 
@@ -63,7 +63,7 @@ Se você tiver experiência em programação da área de trabalho do Windows em 
 
 ## <a name="hello-world-store-app-in-ccx"></a>Aplicativo Hello World da Store em C++ c++ /CX
 
-Nosso primeiro aplicativo é um "Hello World" que demonstra alguns recursos básicos de interatividade, layout e estilos. Vamos criar um aplicativo com base no modelo de projeto de Aplicativo Universal do Windows. Se você já desenvolveu aplicativos para Windows 8.1 e Windows Phone 8.1, você pode se lembrar de que foram necessários três projetos no Visual Studio, um para o aplicativo do Windows, um para o aplicativo do telefone e outro com código compartilhado. A plataforma Universal do Windows (UWP) Windows 10 torna possível ter apenas um projeto, que é executado em todos os dispositivos, inclusive computadores desktop e laptop com Windows 10, dispositivos como tablets, telefones celulares, dispositivos VR e assim por diante.
+Nosso primeiro aplicativo é um "Hello World" que demonstra alguns recursos básicos de interatividade, layout e estilos. Vamos criar um aplicativo com base no modelo de projeto de Aplicativo Universal do Windows. Se você já desenvolveu aplicativos para Windows 8.1 e Windows Phone 8.1, você pode se lembrar de que foram necessários três projetos no Visual Studio, um para o aplicativo do Windows, um para o aplicativo de telefone e outro com código compartilhado. A plataforma Universal do Windows (UWP) Windows 10 torna possível ter apenas um projeto, que é executado em todos os dispositivos, inclusive computadores desktop e laptop com Windows 10, dispositivos como tablets, telefones celulares, dispositivos VR e assim por diante.
 
 Começaremos com os conceitos básicos:
 

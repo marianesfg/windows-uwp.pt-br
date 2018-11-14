@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, o visual studio, ferramentas, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029873"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151076"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Ferramentas do Visual Studio para programação de jogos
 
@@ -47,7 +47,7 @@ Crie [arquivos de compilação personalizada](#build-customizations-for-3d-asset
 
 Para obter mais informações, consulte [Trabalhando com texturas e imagens](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Observação**o Editor de imagens não se destina a ser um substituto para um aplicativo de edição de imagens completo de recursos, mas é adequado para muitos simples de exibição e edição de cenários.
+> **Observação**o Editor de imagens não se destina a ser uma substituição para uma aplicativo de edição de imagens completo de recursos, mas é adequado para muitos simples de exibição e edição de cenários.
 
  
 
@@ -66,7 +66,7 @@ Consulte uma captura de tela de um modelo no editor com iluminação aplicada.
 
 Para obter mais informações, consulte [Trabalhando com modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Observação**o Editor de modelos não se destina a ser um substituto para um modelo completo de aplicativo de edição, mas é adequado para muitos simples de exibição e edição de cenários.
+> **Observação**o Editor de modelos não se destina a ser uma substituição para um modelo completo de aplicativo de edição, mas é adequado para muitos simples de exibição e edição de cenários.
 
  
 

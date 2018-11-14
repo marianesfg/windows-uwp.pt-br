@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a13ec942080d7fe517a10b837bea9ae8fae27750
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033930"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6144012"
 ---
 # <a name="handle-app-prelaunch"></a>Tratar a pré-inicialização do aplicativo
 
@@ -112,9 +112,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Observe o `TryEnablePrelaunch()` funcionar, acima. O motivo pelo qual a chamada para `CoreApplication.EnablePrelaunch()` é acrescentado fora para essa função é como quando um método é chamado, o JIT (apenas na compilação de time) tentará compilar todo o método. Se seu aplicativo é executado em uma versão do Windows 10 que não dá suporte a `CoreApplication.EnablePrelaunch()`, em seguida, o JIT falhará. Por fatoração a chamada para um método que é chamado apenas quando o aplicativo determina que a plataforma oferece suporte a `CoreApplication.EnablePrelaunch()`, podemos evitar esse problema.
+Observe o `TryEnablePrelaunch()` funcionar, acima. O motivo pelo qual a chamada para `CoreApplication.EnablePrelaunch()` é acrescentado fora para essa função é como quando um método é chamado, o JIT (apenas na compilação de time) tentará compilar todo o método. Se seu aplicativo é executado em uma versão do Windows 10 que não dá suporte a `CoreApplication.EnablePrelaunch()`, em seguida, o JIT falhará. Analisando a chamada em um método que é chamado apenas quando o aplicativo determina que a plataforma dá suporte a `CoreApplication.EnablePrelaunch()`, podemos evitar esse problema.
 
-Há também código no exemplo acima que você remova se seu aplicativo precisa recusar de pré-inicialização quando em execução no Windows 10, versão 1511. Na versão 1511, todos os aplicativos UWP foram aceitou automaticamente em pré-inicialização, que pode não ser apropriado para seu aplicativo.
+Há também código no exemplo acima que você remova se seu aplicativo precisa recusar de pré-inicialização quando executado no Windows 10, versão 1511. Na versão 1511, todos os aplicativos UWP foram aceitou automaticamente em pré-inicialização, que pode não ser apropriado para seu aplicativo.
 
 ## <a name="use-the-visibilitychanged-event"></a>Usar o evento VisibilityChanged
 

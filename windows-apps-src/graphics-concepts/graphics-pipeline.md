@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4a362a3a7be06e48c64ce3e4d43ff917b9b24c5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040131"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162718"
 ---
 # <a name="graphics-pipeline"></a>Pipeline de elementos gráficos
 
@@ -38,7 +38,7 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
  
 ## <a name="hull-shader-stage"></a>Estágio de sombreador Hull
  
-|-|-| | Finalidade | O [estágio de sombreador Hull (HS)](hull-shader-stage--hs-.md) é um dos estágios de mosaico, que divide uma única superfície de um modelo em vários triângulos. Um sombreador hull é chamado uma vez por patch e transforma os pontos de controle de entrada que definem uma superfície de ordem baixa em pontos de controle que formam um patch. Ela também faz alguns cálculos por patch para fornecer dados para o estágio de mosaico (TS) e o estágio de sombreador de domínio (DS). | | Entrada | Entre 1 e pontos de controle de entrada 32, que juntos definem uma superfície de ordem baixa. | | Saída | Entre pontos de controle de saída 1 e 32, que juntos formam um patch. O sombreador hull declara o estado para o estágio de mosaico (TS), incluindo o número de pontos de controle, o tipo da face do patch e o tipo de particionamento para usar ao criar o mosaico. |
+|-|-| | Finalidade | O [estágio de sombreador Hull (HS)](hull-shader-stage--hs-.md) é um dos estágios de mosaico, que divide uma única superfície de um modelo em vários triângulos. Um sombreador hull é chamado uma vez por patch e transforma os pontos de controle de entrada que definem uma superfície de ordem baixa em pontos de controle que formam um patch. Ela também faz alguns cálculos por patch para fornecer dados para o estágio de mosaico (TS) e o estágio de sombreador de domínio (DS). | | Entrada | Entre 1 e pontos de controle de entrada 32, que juntos definem uma superfície de ordem baixa. | | Saída | Entre os pontos de controle de saída 1 e 32, que juntos formam um patch. O sombreador hull declara o estado para o estágio de mosaico (TS), incluindo o número de pontos de controle, o tipo da face do patch e o tipo de particionamento para usar ao criar o mosaico. |
 
 ## <a name="tessellator-stage"></a>Estágio de mosaico
 
@@ -46,7 +46,7 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
 
 ## <a name="domain-shader-stage"></a>Estágio de sombreador de domínio
 
-|-|-| | Finalidade | O [estágio do sombreador de domínio (DS)](domain-shader-stage--ds-.md) calcula a posição do vértice de um ponto subdividido no patch saída; Ele calcula a posição do vértice que corresponde a cada amostra de domínio. Um sombreador de domínio é executado uma vez por mosaico ponto de saída do estágio e tem acesso somente leitura para o sombreador hull patch de saída e constantes de patch de saída, e o estágio de mosaico coordenadas UV de saída. | | Entrada | Um sombreador de domínio consome pontos de controle de saída do [sombreador Hull (hs)](hull-shader-stage--hs-.md). As saídas do sombreador hull incluem: pontos de controle, dados da constante de patch, e fatores de mosaico (os fatores de mosaico podem incluir os valores usados pelo gerador de mosaico de função fixa, bem como os valores brutos, antes do arredondamento por mosaico inteiro, o que facilita o geomorfismo, por exemplo). Um sombreador de domínio é chamado uma vez por coordenadas de saída do [estágio de mosaico (TS)](tessellator-stage--ts-.md). | | Saída | O estágio de sombreador de domínio (DS) gera a posição do vértice de um ponto subdividido no patch de saída. |
+|-|-| | Finalidade | O [estágio do sombreador de domínio (DS)](domain-shader-stage--ds-.md) calcula a posição do vértice de um ponto subdividido no patch saída; Ele calcula a posição do vértice que corresponde a cada amostra de domínio. Um sombreador de domínio é executado uma vez por mosaico ponto de saída do estágio e tem acesso somente leitura para o sombreador hull patch de saída e constantes de patch de saída e o estágio de mosaico coordenadas UV de saída. | | Entrada | Um sombreador de domínio consome pontos de controle de saída do [sombreador Hull (hs)](hull-shader-stage--hs-.md). As saídas do sombreador hull incluem: pontos de controle, dados da constante de patch, e fatores de mosaico (os fatores de mosaico podem incluir os valores usados pelo gerador de mosaico de função fixa, bem como os valores brutos, antes do arredondamento por mosaico inteiro, o que facilita o geomorfismo, por exemplo). Um sombreador de domínio é chamado uma vez por coordenadas de saída do [estágio de mosaico (TS)](tessellator-stage--ts-.md). | | Saída | O estágio de sombreador de domínio (DS) gera a posição do vértice de um ponto subdividido no patch de saída. |
 
 ## <a name="geometry-shader-stage"></a>Estágio de sombreador de geometria
 
@@ -58,7 +58,7 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
 
 ## <a name="rasterizer-stage"></a>Estágio do rasterizador
 
-|-|-| | Finalidade | O [estágio do rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivas que não estão exibidas, prepara-as para o estágio de sombreador de Pixel (PS) e determina como invocar os sombreadores de pixel. Converte informações de vetor (compostas de formas ou primitivos) em uma imagem de rasterização (composta de pixels) para fins de exibição de gráficos 3D em tempo real. | | Entrada | Vértices (x, y, z, w) chegando ao rasterizador estágio são consideradas no espaço de recorte homogêneo. Neste espaço de coordenadas do eixo X aponta para a direita, Y aponta para cima e Z aponta para longe da câmera. | | Saída | Os pixels reais que precisam ser renderizados. Inclui alguns atributos de vértice para uso em interpolação pelo sombreador de Pixel. |
+|-|-| | Finalidade | O [estágio do rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivas que não estão exibidas, prepara-as para o estágio de sombreador de Pixel (PS) e determina como invocar os sombreadores de pixel. Converte informações de vetor (compostas de formas ou primitivos) em uma imagem de rasterização (composta de pixels) para fins de exibição de gráficos 3D em tempo real. | | Entrada | Vértices (x, y, z, w) chegando ao rasterizador estágio são consideradas no espaço de recorte homogêneo. Nesse espaço de coordenadas do eixo X aponta para a direita, Y aponta para cima e Z aponta para longe da câmera. | | Saída | Os pixels reais que precisam ser renderizado. Inclui alguns atributos de vértice para uso em interpolação pelo sombreador de Pixel. |
 
 ## <a name="pixel-shader-stage"></a>Estágio do sombreador de pixel
  
@@ -66,7 +66,7 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
 
 ## <a name="output-merger-stage"></a>Estágio de fusão de saída
  
-|-|-| | Finalidade | O [estágio de fusão de saída (OM)](output-merger-stage--om-.md) combina vários tipos de dados de saída (valores de sombreador de pixel, informações de profundidade e estêncil) com o conteúdo dos buffers de destino e de profundidade/estêncil de renderização para gerar o resultado do pipeline final. | | Entrada | As entradas de fusão de saída são o estado do Pipeline, os dados de pixel gerados pelos sombreadores de pixel, o conteúdo dos destinos de renderização e o conteúdo dos buffers de profundidade/estêncil. | | Saída | A cor do pixel renderizado final. |
+|-|-| | Finalidade | O [estágio de fusão de saída (OM)](output-merger-stage--om-.md) combina vários tipos de dados de saída (valores de sombreador de pixel, informações de profundidade e estêncil) com o conteúdo dos buffers de profundidade/estêncil e de destino de renderização para gerar o resultado do pipeline final. | | Entrada | As entradas de fusão de saída são o estado do Pipeline, os dados de pixel gerados pelos sombreadores de pixel, o conteúdo dos destinos de renderização e o conteúdo dos buffers de profundidade/estêncil. | | Saída | A cor de pixel renderizado final. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

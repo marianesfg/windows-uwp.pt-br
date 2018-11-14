@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044036"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140300"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Estrutura de renderização I: introdução à renderização
 
@@ -628,7 +628,7 @@ Cada placa de vídeo implementa um certo nível de funcionalidade de DirectX dep
 
 Com o nível de recursos, na criação de um dispositivo, pode-se tentar criá-lo para o nível de recursos que se deseja solicitar. Se for possível criar um dispositivo, isso significa que o nível de recursos existe; caso contrário, o hardware não permite tal nível de recursos. Você pode tentar recriar um dispositivo em um nível de recursos inferior ou optar por sair do aplicativo. Por exemplo, o nível de recursos 12\_0 requer Direct3D 11.3 ou Direct3D 12 e modelo de sombreador 5.1. Para obter mais informações, consulte [Níveis de recursos do Direct3D: visão geral de cada nível de recursos](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Usando os níveis de recursos, você pode desenvolver um aplicativo para Direct3D9, Microsoft Direct3D10 ou Direct3D11 e, em seguida, executá-lo em 9, 10 ou 11 hardware (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Usando os níveis de recurso, você pode desenvolver um aplicativo para Direct3D9, Microsoft Direct3D10 ou Direct3D11 e, em seguida, executá-lo em 9, 10 ou 11 hardware (com algumas exceções). Para obter mais informações, consulte [Níveis de recursos do Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Renderização estéreo
 

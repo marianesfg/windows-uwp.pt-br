@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: c9789e21bd4d2a598db292721cabfe58d7c12ebe
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032485"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6138027"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadeias de caracteres na interface do usuário e no manifesto do pacote de aplicativos
 Para obter mais informações sobre a proposta de valor de localização do app, consulte [Globalização e localização](../design/globalizing/globalizing-portal.md).
@@ -30,7 +30,7 @@ Diferente dos recursos de imagem, em que apenas um recurso de imagem está conti
 1. Defina o idioma padrão do app.
     1. Com a solução aberta no Visual Studio, abra `Package.appxmanifest`.
     2. Na guia Aplicativo, confirme se o idioma padrão está definido corretamente (por exemplo, "en" ou "en-US"). As etapas restantes assumirão que você definiu o idioma padrão como "en-US".
-    <br>**Observação**no mínimo, você precisa fornecer recursos de cadeia de caracteres localizados para esse idioma padrão. Esses são os recursos que serão carregados se nenhuma correspondência melhor for encontrada para o idioma preferencial do usuário ou as configurações de idioma de exibição.
+    <br>**Observação**, no mínimo, você precisa fornecer recursos de cadeia de caracteres localizados para esse idioma padrão. Esses são os recursos que serão carregados se nenhuma correspondência melhor for encontrada para o idioma preferencial do usuário ou as configurações de idioma de exibição.
 2. Crie um arquivo de recursos (.resw) para o idioma padrão.
     1. No nó do projeto, crie uma nova pasta e nomeie-a como "Strings".
     2. Em `Strings`, crie uma nova subpasta e nomeie-a como "en-US".
@@ -61,7 +61,7 @@ Ao atribuir um identificador de recurso de cadeia de caracteres a um elemento XA
 
 Em vez de definir **Width** em um arquivo de recursos, você provavelmente permitirá que os controles sejam dimensionados dinamicamente de acordo com o conteúdo.
 
-**Observação**para [Propriedades anexadas](../xaml-platform/attached-properties-overview.md), você precisa de uma sintaxe especial na coluna Nome de um arquivo. resw. Por exemplo, para definir um valor para a propriedade anexada [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) do identificador "Greeting" identifier, este é o conteúdo que você inserirá na coluna Name.
+**Observação**para [Propriedades anexadas](../xaml-platform/attached-properties-overview.md), você precisa de uma sintaxe especial na coluna Name de um arquivo. resw. Por exemplo, para definir um valor para a propriedade anexada [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) do identificador "Greeting" identifier, este é o conteúdo que você inserirá na coluna Name.
 
 ```xml
 Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
@@ -96,7 +96,7 @@ Se um nome de recurso é segmentado (ele contém "." caracteres), em seguida, su
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI do seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
+Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI de seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -118,7 +118,7 @@ Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options
 ## <a name="localize-the-string-resources"></a>Localizar os recursos de cadeia de caracteres
 1. Faça uma cópia do arquivo de recursos (.resw) em outro idioma.
     1. Em "Strings", crie uma nova subpasta e nomeie-a como "de-DE" para alemão (Alemanha).
-   <br>**Observação**para o nome da pasta, você pode usar qualquer [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulte [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md) para obter informações detalhadas sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
+   <br>**Observação**para o nome de pasta, você pode usar qualquer [marca de idioma BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulte [Personalizar os recursos para idioma, escala e outros qualificadores](tailor-resources-lang-scale-contrast.md) para obter informações detalhadas sobre o qualificador de idioma e uma lista de marcas de idioma comuns.
    2. Faça uma cópia de `Strings/en-US/Resources.resw` na pasta `Strings/de-DE`.
 2. Traduza as cadeias de caracteres.
     1. Abra `Strings/de-DE/Resources.resw` e traduza os valores na coluna Value. Você não precisa traduzir os comentários.
@@ -173,13 +173,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Se você pretendia mover o recurso "AppDisplayName" de `Resources.resw` para `ManifestResources.resw`, no manifesto do pacote de aplicativos, altere `ms-resource:AppDisplayName` para `ms-resource:/ManifestResources/AppDisplayName`.
 
-Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), em seguida, deixe os pontos no nome quando você faz referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
+Se um nome de arquivo de recurso é segmentado (ele contém "." caracteres), em seguida, deixar os pontos no nome quando você faz referência a ele. **Não** substitua os pontos por caracteres de barra ("/"), como você faria para um nome de recurso.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI do seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
+Se estiver em dúvida, você pode usar [MakePri.exe](makepri-exe-command-options.md) para despejar o arquivo PRI de seu aplicativo. Cada recurso `uri` é mostrada no arquivo despejado.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -266,7 +266,7 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Para uma biblioteca de tempo de execução do Windows (Windows Universal), se o namespace padrão é segmentado (ele contém "." caracteres), em seguida, use pontos no nome do mapa do recurso.
+Para uma biblioteca de tempo de execução do Windows (Universal Windows), se o namespace padrão é segmentado (ele contém "." caracteres), em seguida, use pontos no nome do mapa de recursos.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
@@ -279,7 +279,7 @@ Você não precisa fazer isso para uma biblioteca de classes (Universal Windows)
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Carregando cadeias de caracteres de outros pacotes
-Os recursos para um pacote de aplicativo são gerenciados e acessados por meio do pacote possui um nível superior[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que pode ser acessado no[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)atual. Em cada pacote, vários componentes podem ter seus ownResourceMapsubtrees, que pode ser acessada por meio de [**Getsubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Os recursos para um pacote de aplicativo são gerenciados e acessados por meio do pacote possui um nível superior[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) que pode ser acessado no[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)atual. Em cada pacote, vários componentes podem ter seus ownResourceMapsubtrees, que você pode acessar por meio de [**Getsubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Um pacote de estrutura podem acessar seus próprios recursos com um URI de identificador de recurso absoluto. Consulte também [Esquemas URI](uri-schemes.md).
 

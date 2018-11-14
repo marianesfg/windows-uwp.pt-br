@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, dados do aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044295"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135944"
 ---
 # <a name="get-app-data"></a>Obter dados de app
 
-Use os seguintes métodos na API de envio da Microsoft Store para obter dados de aplicativos existentes em sua conta do Partner Center. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
+Use os métodos a seguir na API de envio da Microsoft Store para obter dados de aplicativos existentes em sua conta do Partner Center. Para obter uma introdução à API de envio da Microsoft Store, inclusive pré-requisitos para usar a API, consulte [Criar e gerenciar envios usando serviços da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 Antes de usar esses métodos, o aplicativo já deve existir na sua conta do Partner Center. Para criar ou gerenciar envios de aplicativos, consulte os métodos em [Gerenciar envios de aplicativo](manage-app-submissions.md).
 
@@ -102,7 +102,7 @@ Este recurso tem os seguintes valores.
 | primaryName   | string  | O nome principal do aplicativo.      |
 | packageFamilyName | string  | O nome da família de pacotes do aplicativo.      |
 | packageIdentityName          | string  | O nome da identidade do pacote do aplicativo.                       |
-| publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor **Package/Identity/Publisher** que aparece na página [identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para o aplicativo no Partner Center.       |
+| publisherName       | string  | A ID de fornecedor do Windows que está associada ao aplicativo. Isso corresponde ao valor **Package/Identity/Publisher** que aparece na página de [identidade do aplicativo](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) para o aplicativo no Partner Center.       |
 | firstPublishedDate      | string  | A data em que o app foi publicado pela primeira vez, no formato ISO 8601.   |
 | lastPublishedApplicationSubmission       | object | Um [recurso de envio](#submission_object) que fornece informações sobre o último envio publicado do app.    |
 | pendingApplicationSubmission        | object  |  Um [recurso de envio](#submission_object) que fornece informações sobre o envio atual pendente do app.   |   

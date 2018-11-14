@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 43b4b7e6ba9e251a5907154125eff08e8d92a713
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043795"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6147987"
 ---
 # <a name="xname-attribute"></a>Atributo x:Name
 
@@ -59,7 +59,7 @@ As ferramentas de design muitas vezes geram valores **x:Name** automaticamente p
 
 **x:Name** não pode ser definido na sintaxe do elemento da propriedade XAML ou em códigos que usam [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). **x:Name** só pode ser definido usando sintaxe de atributo XAML em elementos.
 
-**Observação**especificamente para C++ c++ /CX aplicativos, um campo de suporte para uma referência **X:Name** não é criado para o elemento raiz de um arquivo XAML ou uma página. Se você precisa mencionar o objeto raiz do code-behind C++, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Observação**especificamente para C++ c++ /CX aplicativos, um campo de suporte para uma referência de **X:Name** não é criado para o elemento raiz de um arquivo XAML ou uma página. Se você precisa mencionar o objeto raiz do code-behind C++, use outras APIs ou outro percurso de árvore. Por exemplo, você pode chamar [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para um elemento filho nomeado conhecido e depois chamar [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ### <a name="xname-and-other-name-properties"></a>x:Name e outras propriedades de Name
 

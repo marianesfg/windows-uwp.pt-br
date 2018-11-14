@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, teste beta, distribuição limitada, beta, betas, teste, testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045416"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6145153"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Teste beta e distribuição direcionada
 
 Não importa se você testou seu aplicativo com cuidado extremo, não há nada como a experiência concreta de outras pessoas o testarem. Seus testadores podem descobrir problemas que você ignorou, como erros ortográficos, fluxo confuso do aplicativo ou erros que poderiam causar falhas no aplicativo. Você terá a chance de corrigir esses problemas antes de fazer o envio ao público, o que resultará em um produto final apurado. 
 
-Partner Center oferece várias opções para permitir que os testadores testar seu app antes de oferecê-lo para o público.
+Partner Center oferece várias opções para permitir que os testadores testar seu aplicativo antes de oferecê-lo para o público.
 
 Seja qual for o método escolhido, aqui estão algumas coisas para ter em mente enquanto você realiza um teste beta em seu app.
 

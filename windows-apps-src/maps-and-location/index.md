@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, local, serviços de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026940"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152214"
 ---
 # <a name="maps-and-location-overview"></a>Visão geral de mapas e local
 
@@ -23,7 +23,7 @@ ms.locfileid: "6026940"
 Esta seção explica como é possível exibir mapas, usar serviços de mapa, encontrar o local e configurar uma cerca geográfica no aplicativo. Esta seção também mostra como iniciar o aplicativo Mapas do Windows em um mapa específico, rota ou um conjunto de trajetos passo a passo.
 
 > [!TIP]
-> Para saber mais sobre como usar mapas e localização em seu aplicativo, baixe os exemplos a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
+> Para saber mais sobre como usar mapas e local no seu aplicativo, baixe os exemplos a seguir do [repositório Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) no GitHub:
 -   [Amostra de mapa da UWP (Plataforma Universal do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Amostra de geolocalização da UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
@@ -53,7 +53,7 @@ Adicione rotas, trajeto e funcionalidades de geocódigo ao aplicativo usando API
 | [Exibir pontos de interesse (POI) em um mapa](display-poi.md) | Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML. |
 | [Exibir rotas e trajeto](routes-and-directions.md) | Solicite rotas e trajeto e os exiba no aplicativo. |
 | [Executar geocodificação e geocodificação reversa](geocoding.md) | Converta endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no namespace [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). |
-| [Localizar e baixar pacotes de mapas para uso offline](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| No passado, o aplicativo tinha que direcionar os usuários para o aplicativo configurações para baixar mapas offline. Agora, você pode usar classes no namespace [offlinemaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar os pacotes baixados em uma determinada área (com base em um [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> Você pode também verificar e escutar o status baixado de pacotes de mapas, bem como iniciar um download sem exigir que o usuário deixar seu aplicativo. <br> Você encontrará exemplos de como fazer isso no conteúdo de referência e a [amostra de mapa da plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
+| [Localizar e baixar pacotes de mapas para uso offline](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| No passado, o aplicativo tinha que direcionar os usuários para o aplicativo configurações para baixar mapas offline. Agora, você pode usar classes no namespace [offlinemaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para encontrar os pacotes baixados em uma determinada área (com base em um [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> Você pode também verificar e escutar o status dos pacotes de mapa baixado, bem como iniciar um download sem exigir que o usuário deixar seu aplicativo. <br> Você encontrará exemplos de como fazer isso no conteúdo de referência e a [amostra de mapa da plataforma Universal do Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 ## <a name="get-the-users-location"></a>Obter a localização do usuário
 

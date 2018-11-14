@@ -9,15 +9,15 @@ keywords: windows 10, uwp
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be6cfbc40fc645bfb66ef2f0fb9b8b5f2976da8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023210"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142381"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Amostras da UWP no Xbox One
 
-Há vários exemplos UWP de plataforma cruzada que foi otimizados para o Xbox One durante a execução nessa plataforma. Você pode procurar o código no GitHub, leia o arquivo readme e do wiki e clonar os projetos no computador.
+Há vários exemplos UWP de plataforma cruzada que foi otimizados para o Xbox One durante a execução na plataforma. Você pode procurar o código no GitHub, leia o arquivo readme e do wiki e clonar os projetos no computador.
 
 ## <a name="tvhelpers"></a>TVHelpers
 
@@ -29,13 +29,13 @@ Para saber mais, consulte o projeto [TVHelpers](https://github.com/Microsoft/TVH
 
 ## <a name="the-news-experience"></a>A experiência de notícias
 
-[A experiência de notícias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café, é um aplicativo de notícias de exemplo que funciona entre a área de trabalho, telefone e Xbox One e oferece uma experiência premium que tira proveito dos pontos fortes de cada dispositivo. No Xbox, ele é otimizado para gamepad, a interface do usuário é adaptado para a experiência de 10 pés e mantém conteúdo na área de segurança para TV, entre outras otimizações. Consulte [a postagem do blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obter mais informações.
+[A experiência de notícias](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), café, é um aplicativo de notícias de exemplo que funciona em área de trabalho, telefone e Xbox One e oferece uma experiência premium que tira proveito dos pontos fortes de cada dispositivo. No Xbox, ele é otimizado para gamepad, a interface do usuário é adaptado para a experiência de 10 pés e mantém conteúdo na área de segurança para TV, entre outras otimizações. Consulte [a postagem do blog](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) para obter mais informações.
 
 ![A experiência de notícias](images/samples-1.png)
 
 ## <a name="gamepad-style-navigation-xaml-sample"></a>Exemplo de estilo Gamepad de navegação (XAML)
 
-O [exemplo de estilo Gamepad de navegação (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) é um exemplo UWP que mostra as maneiras de melhorar a navegação direcional em seu aplicativo. Embora isso também é aplicável a aplicativos da área de trabalho, onde um cliente pode querer poder usar um teclado para navegar o aplicativo, é especialmente relevante para os aplicativos Xbox, onde o método de entrada principal é gamepad ou controle remoto.
+O [exemplo de estilo Gamepad de navegação (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) é um exemplo UWP que mostra as maneiras de melhorar a navegação direcional em seu aplicativo. Embora isso também é aplicável a aplicativos da área de trabalho, onde um cliente pode querer ser capaz de usar um teclado para navegar o aplicativo, é especialmente relevante para os aplicativos Xbox, onde o método de entrada principal é gamepad ou controle remoto.
 
 ![Exemplo de plataforma Windows universal: redimensionar o modo de exibição do aplicativo](images/samples-2.png)
 

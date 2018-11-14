@@ -5,15 +5,15 @@ description: Saiba como iniciar um aplicativo em um dispositivo remoto usando o 
 ms.author: pafarley
 ms.date: 02/12/2018
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, projeto Roma
+keywords: dispositivos Windows 10, uwp, conectados, sistemas remotos, Roma, project rome
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: cbd548e0c591c679ecfbee88793c51e2a2ca2b37
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026647"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183498"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar um app em um dispositivo remoto
 
