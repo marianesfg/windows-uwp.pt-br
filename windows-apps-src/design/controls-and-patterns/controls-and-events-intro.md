@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 290c06a7bac75217c8249821821f081da619c7f3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6181887"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266581"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introdução a controles e padrões
 

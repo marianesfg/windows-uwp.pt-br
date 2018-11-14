@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 48fb632d0491d333f8c4a7c5e775041ec31aeee3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196093"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6465269"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir ou limitar recursos em uma versão de avaliação
 

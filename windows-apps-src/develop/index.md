@@ -9,11 +9,11 @@ ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049507"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654410"
 ---
 <div> 
 <h1>Desenvolver aplicativos UWP</h1>
@@ -118,7 +118,7 @@ ms.locfileid: "6049507"
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>Interface do usuário do aplicativo</h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para controles, layout, tipografia, animação, usabilidade e design de interface do usuário, consulte a seção de Design e interface do usuário.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para controles, layout, tipografia, animação, a usabilidade e design de interface do usuário, consulte a seção de Design e interface do usuário.</a></p>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@ ms.locfileid: "6049507"
                     </div>
                     <div class="cardText">
                         <h3>Exemplos</h3>
-                        <p> Aprenda a criar ótimos aplicativos para Windows fazendo experiências com essas amostras. Esses exemplos mostram como os recursos funcionam e ajudar a você iniciar rapidamente seus próprios aplicativos UWP.</p>
+                        <p> Aprenda a criar ótimos aplicativos para Windows, experimentar essas amostras. Esses exemplos mostram como os recursos funcionam e ajudar a você iniciar rapidamente seus próprios aplicativos UWP.</p>
                     </div>
                 </div>
             </div>

@@ -8,11 +8,11 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22ab5ad60ed397092e61f2c43cde4eb2e0c86c4f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050825"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6655753"
 ---
 # <a name="design-basics-for-uwp-apps"></a>Noções básicas de design para aplicativos UWP
 

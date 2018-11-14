@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6decdd4325a1c3cf854e340799b9d2f4a3272e6c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052321"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6211903"
 ---
 ## <a name="support-and-feedback"></a>Suporte e comentários
 
@@ -22,7 +22,7 @@ Tem dúvidas? Pergunte-nos sobre o [Stack Overflow](https://aka.ms/pos-stackover
 
 Nos ajuda a localizar suas perguntas:
 - Adicione a marca de [pointofservice](https://aka.ms/pos-stackoverflow) à sua pergunta sobre o Stack Overflow. 
-- Inclua o termo ["pointofservice"](https://aka.ms/pos-msdn-uwpforum) na sua postagem no Fórum do MSDN UWP
+- Inclua o termo ["pointofservice"](https://aka.ms/pos-msdn-uwpforum) em seu post no Fórum do MSDN UWP
 
-### <a name="make-feature-suggestions-or-give-feedback"></a>Sugestões de recursos ou um comentário
+### <a name="make-feature-suggestions-or-give-feedback"></a>Sugestões de recursos ou fornecer comentários
 Consulte [UserVoice de comentários do desenvolvedor](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594).

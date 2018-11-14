@@ -7,18 +7,18 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: dde635624101fdcf0803770bc69e7922f56f704e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 4bc64b0a6919180b6041bdbf4f81463019d274eb
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031575"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261574"
 ---
 # <a name="start-coding"></a>Comece a codificar
 
 ![Criar seu aplicativo](images/build-your-app.png)
 
-Bem-vindo à [plataforma UWP](universal-application-platform-guide.md)! Nessa página, indicaremos as informações corretas para você começar a codificar os aplicativos do Windows 10 que deseja criar.
+Bem-vindo à [plataforma UWP](universal-application-platform-guide.md)! Nessa página, nós vai apontar você as informações corretas que necessárias para começar a codificar os aplicativos do Windows 10 que você deseja criar.
 
 Antes de começar o desenvolvimento, você deve [preparar-se.](get-set-up.md)
 

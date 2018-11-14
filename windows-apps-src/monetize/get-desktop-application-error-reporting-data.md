@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, aplicativo da área de trabalho
 ms.localizationpriority: medium
 ms.openlocfilehash: eb0081024f59af5180f5018664934277e7fad835
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185142"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6458720"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Obter dados de relatório de erros do seu aplicativo da área de trabalho
 

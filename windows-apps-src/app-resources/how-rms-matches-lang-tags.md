@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: f64072f2f04b5cd45b3b75ccad908ef6906c00f5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192330"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6649243"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Como o Sistema de Gerenciamento de Recursos faz a correspondência de marcas de idioma
 

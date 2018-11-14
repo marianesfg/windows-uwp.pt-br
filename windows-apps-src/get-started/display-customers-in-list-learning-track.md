@@ -8,11 +8,11 @@ ms.topic: article
 keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, vinculação de dados, lista
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e58231d644616a088eb06f24a2465c240e10c16
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6184138"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6445963"
 ---
 # <a name="display-customers-in-a-list"></a>Exibir clientes em uma lista
 

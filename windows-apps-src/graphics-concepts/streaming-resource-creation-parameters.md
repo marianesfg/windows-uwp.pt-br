@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035123"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6647603"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parâmetros de criação de recursos de streaming
 
@@ -39,7 +39,7 @@ Lado a lado; ou seja, streaming (por definição), cubo de textura, desenhar arg
 <span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Sinalizadores de ligação com suporte**  
 Associar como recurso de sombreador, acesso não ordenado, estêncil de profundidade ou destino de renderização.
 
-**Não tem suporte:** Associar como buffer constante, buffer de vértice (vincular um Buffer em blocos como um SRV/UAV/RTV é suportado), índice buffer, saída de fluxo, decodificador ou codificador de vídeo.
+**Não tem suporte:** Associar como buffer constante, buffer de vértice (vincular um Buffer em blocos como um SRV/UAV/RTV é suportado), índice de buffer, saída de fluxo, decodificador ou codificador de vídeo.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Formatos com suporte**  
 Todos os formatos que devem estar disponíveis para determinada configuração, independentemente dela ser lado a lado, com algumas exceções.

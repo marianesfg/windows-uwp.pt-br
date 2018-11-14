@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: fd97efca42049fd9f5adc4d051688074d91132fa
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6186337"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6466888"
 ---
 # <a name="create-an-app-submission"></a>Criar um envio de app
 

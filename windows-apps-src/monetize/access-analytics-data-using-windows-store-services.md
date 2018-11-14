@@ -8,12 +8,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 8656270b81e0aae46c5d4f3a7b651135c163f76d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 80ca7d66489f936e8097e9466f74032fbfb78eaf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051550"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257975"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acessar dados analíticos usando serviços da Store
 
@@ -115,7 +115,7 @@ Os métodos adicionais a seguir estão disponíveis para uso por contas de desen
 
 | Cenário       | Métodos      |
 |---------------|--------------------|
-| Aquisições |  <ul><li>[Obter aquisições de jogo Xbox One](get-xbox-one-game-acquisitions.md)</li></ul> |
+| Aquisições |  <ul><li>[Obter aquisições de jogos Xbox One](get-xbox-one-game-acquisitions.md)</li><li>[Obter aquisições de complementos do Xbox One](get-xbox-one-add-on-acquisitions.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware e drivers
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, status
 ms.localizationpriority: medium
 ms.openlocfilehash: 4378df5333e29dfe570ff50efd37b0361b9a6ca9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031468"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6461316"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>Obter o status de um envio de pacote de pré-lançamento
 
@@ -25,7 +25,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio de pacote de pré-lançamento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) .
+* Crie um envio de pacote de pré-lançamento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Solicitação
 

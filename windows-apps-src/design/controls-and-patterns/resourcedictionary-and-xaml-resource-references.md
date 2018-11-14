@@ -14,11 +14,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032358"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266809"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referências de recursos de ResourceDictionary e XAML
 
@@ -204,7 +204,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) é uma classe base da qual os controles herdam e tem uma propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740). Portanto, você pode adicionar um dicionário de recursos local a qualquer **FrameworkElement**.
 
-Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' é dentro da **borda**, portanto, sua pesquisa de recursos examina primeira recursos da **borda**, em seguida, recursos da **página**e, em seguida, os recursos do [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) . O **TextBlock** mostrará "Hola mundo".
+Aqui, tanto [Page](https://msdn.microsoft.com/library/windows/apps/br227503) quanto [Border](https://msdn.microsoft.com/library/windows/apps/br209250) têm dicionários de recursos, e ambas têm um recurso chamado "greeting". O [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) chamado 'textBlock2' está dentro da **borda**, portanto, sua pesquisa de recursos examina primeira recursos da **borda**, em seguida, recursos da **página**e, em seguida, os recursos do [aplicativo](https://msdn.microsoft.com/library/windows/apps/br242324) . O **TextBlock** mostrará "Hola mundo".
 
 Para acessar os recursos desse elemento no código, use a propriedade [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) do elemento. O acesso aos recursos de um [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) no código, em vez de XAML, examinará apenas esse dicionário, não os dicionários do elemento pai.
 
