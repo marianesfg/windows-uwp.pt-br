@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e41ef25f0d4cce3b36187862936136d84988ad0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051861"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252193"
 ---
 # <a name="authentication-and-user-identity"></a>Autenticação e identidade do usuário
 
@@ -23,7 +23,7 @@ Aplicativos da Plataforma Universal do Windows (UWP) têm várias opções para 
 
 Para conexões de aplicativos regulares a serviços de provedor de identidade de terceiros, como Facebook, Twitter, Flickr etc., use o [agente de autenticação Web](web-authentication-broker.md). Para mais comodidade, use o [Cofre de Credenciais](credential-locker.md) para salvar e transferir as informações de logon do usuário.
 
-As empresas que usam o Windows 10 considerem usar o [Microsoft Passport e Windows Hello](microsoft-passport.md), que permite a autenticação de dois fatores altamente segura. Se não for possível usar o Microsoft Passport, os [cartões inteligentes](smart-cards.md) e a [biometria de impressão digital](fingerprint-biometrics.md) podem acrescentar uma camada adicional de segurança.
+As empresas que usam o Windows 10 considerem usar [o Microsoft Passport e Windows Hello](microsoft-passport.md), que permite a autenticação de dois fatores altamente segura. Se não for possível usar o Microsoft Passport, os [cartões inteligentes](smart-cards.md) e a [biometria de impressão digital](fingerprint-biometrics.md) podem acrescentar uma camada adicional de segurança.
 
 <table>
 <tr><th>Tópico</th><th>Descrição</th></tr>

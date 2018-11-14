@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ffac7fa77191bbe56e7aa3870c71c3c02254d72
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044456"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185665"
 ---
 # <a name="app-management-and-services"></a>Gerenciamento de apps e serviços
 
 Você pode gerenciar e exibir detalhes relacionados a cada um dos seus aplicativos no [Partner Center e configure serviços como notificações, A / B teste e mapas.
 
-Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para o **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
+Ao trabalhar com um aplicativo no Partner Center, você verá seções no menu de navegação esquerdo para **gerenciamento de aplicativos**e **Serviços** . Você pode expandir essas seções para acessar a funcionalidade descrita abaixo.
 
 ## <a name="services"></a>Serviços
 
@@ -41,7 +41,7 @@ Para saber mais, veja [Executar experimentos de aplicativos com testes A/B](../m
 
 Para usar serviços de mapa em aplicativos destinados ao Windows 10 ou Windows 8.x, visite o [Centro de Desenvolvimento do Bing Mapas](http://go.microsoft.com/fwlink/p/?LinkId=614880). Para obter informações sobre como solicitar uma chave de autenticação de mapas da Central de desenvolvedores do Bing Maps e adicioná-lo ao seu aplicativo, consulte a [solicitação de uma chave de autenticação de mapas](../maps-and-location/authentication-key.md) para obter mais informações. 
 
-Use a página **mapas** somente para aplicativos publicado anteriormente para Windows Phone 8.1 e versões anteriores. Para usar serviços de mapa nesses aplicativos, você precisará solicitar uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Quando você clica em **obter token**, vamos gerar um ID do aplicativo (**ApplicationID**) do serviço de mapa e serviço Token de autenticação (**AuthenticationToken**) para o seu aplicativo de mapa. Não se esqueça de adicionar esses valores ao seu código antes de você pacote e enviar seu aplicativo. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Use a página **mapas** somente para aplicativos publicados anteriormente para Windows Phone 8.1 e versões anteriores. Para usar serviços de mapa nesses aplicativos, você precisará solicitar uma ID de aplicativo de serviço de mapa e um token para incluir no código do seu aplicativo. Quando você clica em **obter token**, vamos gerar um ID do aplicativo (**ApplicationID**) do serviço de mapa e mapeie serviço Token de autenticação (**AuthenticationToken**) para o seu aplicativo. Certifique-se de adicionar esses valores ao seu código antes de você pacote e enviar seu aplicativo. Para saber mais, consulte [Como adicionar um controle de mapa a uma página (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Compras e coleções de produtos
 
@@ -51,7 +51,7 @@ Para obter mais informações, consulte [Gerenciar direitos a produtos de um ser
 
 ## <a name="administrator-consent"></a>Consentimento do administrador
 
-f seu produto se integra com o Azure AD e chama as APIs que solicitam um [aplicativo permissões ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para seu consentimento de concessão de organização para seu produto a agir em nome de todos os usuários no locatário.
+f seu produto se integra com o Azure AD e chama as APIs que solicitar [permissões do aplicativo ou permissões delegadas](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requerem o consentimento do administrador, digite sua ID de cliente do Azure AD aqui. Isso permite que os administradores que adquiram o aplicativo para a organização conceder consentimento para seu produto a agir em nome de todos os usuários no locatário.
 
 Para obter mais informações, consulte [solicitando consentimento para um locatário inteiro](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
@@ -87,7 +87,7 @@ Os desenvolvedores com permissões de OEM também podem [gerar pacotes de pré-i
 A seção **WNS/MPNS** fornece opções para ajudá-lo a criar e enviar notificações para clientes do seu aplicativo. 
 
 > [!TIP]
-> Para aplicativos UWP, sugerimos usar o recurso de **notificações** no Partner Center. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto direcionado de seus clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
+> Para aplicativos UWP, sugerimos usar o recurso de **notificações** no Partner Center. Esse recurso permite que você envie notificações para todos os clientes do seu aplicativo, ou a um subconjunto de destino de clientes do Windows 10 que atendem aos critérios definidos em um [segmento do cliente](create-customer-segments.md). Para obter mais informações, consulte [Enviar notificações para clientes do seu aplicativo](send-push-notifications-to-your-apps-customers.md).
 
 Dependendo do tipo de pacote do aplicativo e seus requisitos específicos, você também pode usar uma das seguintes opções: 
 

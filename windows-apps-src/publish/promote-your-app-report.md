@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, promover, app, campanha, relatório, instalações
 ms.localizationpriority: medium
 ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025687"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210027"
 ---
 # <a name="ad-campaign-report"></a>Relatório de campanha publicitária
 
@@ -69,7 +69,7 @@ Uma instalação é rastreada na Loja pelo telefone, tablet, computador e outros
 2.  O cliente está conectado em uma conta da Microsoft.
 3.  O cliente atende aos requisitos de [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) (clientes que não atendem aos requisitos de COPPA não podem ser rastreados).
 
-Consequentemente, é possível que o rastreamento de instalação do aplicativo subnotifique o número real de instalações geradas por uma campanha publicitária. Observe que você pode visualizar o número total de instalações de um aplicativo (por meio de campanhas ou outros meios) no relatório de [aquisições](acquisitions-report.md) no Partner Center.
+Consequentemente, é possível que o rastreamento de instalação do aplicativo subnotifique o número real de instalações geradas por uma campanha publicitária. Observe que você pode exibir o número total de instalações de um aplicativo (por meio de campanhas ou outros meios) no relatório de [aquisições](acquisitions-report.md) no Partner Center.
 
 
 ## <a name="account-billing-history"></a>Histórico de cobrança da conta

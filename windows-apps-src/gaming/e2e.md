@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031555"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186577"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -104,26 +104,16 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
     </tr>        
 </table>
 
-### <a name="windows-dev-center"></a>Centro de Desenvolvimento do Windows
+### <a name="partner-center"></a>Partner Center
 
-Registrar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows é a primeira etapa para publicar seu jogo do Windows. Com uma conta de desenvolvedor, você pode reservar o nome de seu jogo e enviar jogos gratuitos e pagos à Microsoft Store para todos os dispositivos Windows. Use sua conta de desenvolvedor para gerenciar seu jogo e produtos no jogo, obter análises detalhadas e habilitar serviços que criam ótimas experiências para jogadores do mundo inteiro. 
+[Registrar uma conta de desenvolvedor no Partner Center](https://developer.microsoft.com/store/register) é a primeira etapa para publicar seu jogo do Windows. Com uma conta de desenvolvedor, você pode reservar o nome de seu jogo e enviar jogos gratuitos e pagos à Microsoft Store para todos os dispositivos Windows. Use sua conta de desenvolvedor para gerenciar seu jogo e produtos no jogo, obter análises detalhadas e habilitar serviços que criam ótimas experiências para jogadores do mundo inteiro. 
 
-A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de criar uma conta no Centro de Desenvolvimento. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
+A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de registrar uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
 
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>Registrar uma conta de desenvolvedor</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/bg124287">Você está pronto para se inscrever?</a></td>
-    </tr> 
-</table>
 
 ### <a name="developer-programs"></a>Programas de desenvolvedor
 
-A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Considere a possibilidade de participar de um programa de desenvolvedor se você quiser desenvolver jogos para Xbox One e integrar recursos do Xbox Live ao seu jogo. Para publicar um jogo na Microsoft Store, você também precisará criar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows.
+A Microsoft oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. Considere a possibilidade de participar de um programa de desenvolvedor se você quiser desenvolver jogos para Xbox One e integrar recursos do Xbox Live ao seu jogo. Para publicar um jogo na Microsoft Store, você também precisará criar uma conta de desenvolvedor no [Partner Center](https://partner.microsoft.com/dashboard) .
 
 #### <a name="xbox-live-creators-program"></a>Programa de Criadores do Xbox Live
 
@@ -146,7 +136,7 @@ Se você deseja ter acesso a mais recursos do Xbox Live, marketing dedicado e su
 
 #### <a name="idxbox"></a>ID@Xbox
 
-O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. Recomendamos que você se inscreva no ID@Xbox antes de registrar uma conta de desenvolvedor no Centro de Desenvolvimento do Windows.
+O programa ID@Xbox ajuda desenvolvedores de jogos qualificados a autopublicar no Windows e no Xbox One. Se você quiser desenvolver para o Xbox One ou adicionar recursos do Xbox Live, como pontuação, conquistas, placares de líderes, ao seu jogo do Windows 10, inscreva-se no ID@Xbox. Torne-se um desenvolvedor do ID@Xbox para obter as ferramentas e o suporte necessários para soltar sua imaginação e maximizar seu sucesso. É recomendável que você aplique a ID@Xbox primeiro antes de criar uma conta de desenvolvedor no Partner Center.
 
 <table>
     <colgroup>
@@ -606,7 +596,7 @@ O Direct3D 11.3 é uma API de elemento gráfico de baixo nível que usa o modelo
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">O que é Direct3D12?</a></td>
     </tr>
     <tr>
-        <td>Visão geral das Direct3D11</td>
+        <td>Visão geral do Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Elementos gráficos do Direct3D 11</a></td>
     </tr>
     <tr>
@@ -1019,7 +1009,7 @@ Se você é um "iniciante" na programação da UWP e está considerando usar XAM
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>UWP de APIsto da área de trabalho do Windows
+### <a name="windows-desktop-apisto-uwp"></a>Área de trabalho do Windows APIsto UWP
 
 Estes são alguns links para ajudá-lo a mover seu jogo da área de trabalho do Windows para a UWP.
 
@@ -1368,9 +1358,9 @@ Um bloco é a representação de seu jogo no menu Iniciar. Os blocos e notifica�
 </table>
  
 
-### <a name="enable-in-app-product-iap-purchases"></a>Habilitar compras de produtos no aplicativo (IAP)
+### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de produto no aplicativo (complemento)
 
-Um IAP (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Os IAPs podem ser novos complementos, níveis de jogo, itens ou qualquer outra coisa que os jogadores possam aproveitar. Usados adequadamente, os IAPs podem gerar receita e ainda melhorar a experiência do jogo. Você define e publica os IAPs de seu jogo por meio do painel do Centro de Desenvolvimento do Windows e habilita compras no aplicativo no código do jogo.
+Um complemento (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Complementos podem ser níveis de jogo, itens ou qualquer outra coisa que os jogadores podem aproveitar. Usados adequadamente, complementos podem gerar receita e ainda melhorar a experiência do jogo. Definir e publicar os complementos do seu jogo por meio do Partner Center e habilitar compras no aplicativo no código do jogo.
 
 <table>
     <colgroup>
@@ -1378,20 +1368,20 @@ Um IAP (produto no aplicativo) é um item suplementar que os jogadores podem com
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Produtos duráveis no aplicativo</td>
+        <td>Complementos duráveis</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219684">Habilitar compras de produtos no aplicativo</a></td>
     </tr>
     <tr>
-        <td>Produtos consumíveis no aplicativo</td>
+        <td>Complementos consumíveis</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">Habilitar compras de produtos consumíveis no aplicativo</a></td>
     </tr>
     <tr>
-        <td>Detalhes e envio de produtos no aplicativo</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Envios de IAP</a></td>
+        <td>Envio e detalhes de complemento</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Envios de complemento</a></td>
     </tr>
     <tr>
-        <td>Monitorar vendas IAP e dados demográficos para seu jogo</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Relatório de aquisições de IAP</a></td>
+        <td>Monitorar vendas de complemento e dados demográficos para seu jogo</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Relatório de aquisições de complemento</a></td>
     </tr>
 </table>
  
@@ -1548,7 +1538,7 @@ Os guias e as informações a seguir ajudam a tornar o processo de publicação 
 
 ### <a name="publishing"></a>Publicação
 
-Você usará o novo painel unificado do Centro de Desenvolvimento do Windows para publicar e gerenciar seus pacotes de jogos.
+Você usará o [Partner Center](https://partner.microsoft.com/dashboard) para publicar e gerenciar seus pacotes de jogos.
 
 <table>
     <colgroup>
@@ -1556,15 +1546,15 @@ Você usará o novo painel unificado do Centro de Desenvolvimento do Windows par
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Publicação de aplicativos do Centro de Desenvolvimento do Windows</td>
+        <td>Publicação de aplicativos do Partner Center</td>
         <td><a href="https://dev.windows.com/publish">Publique aplicativos do Windows</a></td>
     </tr>
     <tr>
-        <td>Publicação avançada do Centro de Desenvolvimento do Windows (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Guia de publicação avançada do Painel do Centro de Desenvolvimento do Windows</a></td>
+        <td>Publicação avançada do parceiro (GDN)</td>
+        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Guia de publicação avançada do Partner Center</a></td>
     </tr>
     <tr>
-        <td>Use o Azure Active Directory (AAD) para adicionar usuários à sua conta do Centro de Desenvolvimento</td>
+        <td>Use o Azure Active Directory (AAD) para adicionar usuários à sua conta do Partner Center</td>
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/manage-account-users">Gerenciar usuários de contas</a></td>
     </tr>   
     <tr>
@@ -1664,7 +1654,7 @@ O manifesto da loja (StoreManifest.xml) é um arquivo de configuração opcional
 
 Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". Você pode ter terminado o desenvolvimento da primeira versão, mas a jornada de seu jogo no mercado está apenas começando. Você pode monitorar o uso e os relatórios de erros, responder aos comentários dos usuários e publicar atualizações para seu jogo.
 
-### <a name="windows-dev-center-analytics-and-promotion"></a>Análises e promoções do Centro de Desenvolvimento do Windows
+### <a name="partner-center-analytics-and-promotion"></a>Análises e promoções do partner Center
 
 <table>
     <colgroup>
@@ -1673,10 +1663,10 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
     </colgroup>
     <tr>
         <td>Aplicativo do Centro de Desenvolvimento</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Aplicativo do Centro de Desenvolvimento do Windows 10 para exibir o desempenho de seus aplicativos publicados</a></td>
+        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Obter o aplicativo para exibir o desempenho de seus aplicativos publicados</a></td>
     </tr>  
     <tr>
-        <td>Análises do Centro de Desenvolvimento do Windows</td>
+        <td>Análise do Partner Center</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">Analisar o desempenho do aplicativo</a></td>
     </tr>
     <tr>

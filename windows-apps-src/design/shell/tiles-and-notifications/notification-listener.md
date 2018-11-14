@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
 ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031078"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206633"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
@@ -279,7 +279,7 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento em primeiro plano para notificação adicionada/ignorada
 
 > [!IMPORTANT] 
-> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para Windows, podemos irá corrigir isso.
+> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para o Windows, podemos irá corrigir isso.
 
 Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receba evento notificações de alteração de ambos os enquanto seu aplicativo está em execução ou fechado.
 
@@ -296,4 +296,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>Como fixdelays na tarefa em segundo plano
 
-Ao testar o app, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir isso, você vai querer solicitar que o usuário togo para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, encontre o aplicativo na lista, selecioná-lo e alterá-lo para "Sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada em até, aproximadamente um segundo a notificação sendo recebido.
+Ao testar o app, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir isso, você vai querer solicitar que o usuário togo para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, encontre o aplicativo na lista, selecioná-lo e alterá-lo para "Sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada dentro em torno de um segundo da notificação sendo recebido.

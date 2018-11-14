@@ -1,18 +1,18 @@
 ---
 author: laurenhughes
 title: Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
-description: Tutorial para configurar o servidor de web AWS validar a instalação do aplicativo por meio do instalador de aplicativo do aplicativo
+description: Tutorial para configurar o servidor de web AWS para validar a instalação do aplicativo por meio do instalador de aplicativo do aplicativo
 ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 keywords: Windows 10, Windows 10, UWP, sideload de instalador, AppInstaller, aplicativo, relacionados pacotes opcionais, definidos, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049805"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209474"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hospedagem de pacotes de aplicativo UWP no AWS para instalação pela Web
 
@@ -30,52 +30,52 @@ Para seguir com sucesso este tutorial, você precisará do seguinte:
 
 Opcional: [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) no GitHub. Isso é útil se você não tem um pacote do aplicativo ou página da Web para trabalhar, mas ainda quer aprender a usar esse recurso.
 
-Este tutorial passará pela como configurar uma página da web e pacotes de host no AWS. Isso exigirá uma assinatura AWS. Dependendo da operação de escala, você pode usar sua participação livre para seguir este tutorial. 
+Este tutorial passará sobre como configurar uma página da web e pacotes de host no AWS. Isso exigirá uma assinatura AWS. Dependendo da operação de escala, você pode usar sua associação gratuita para seguir este tutorial. 
 
 ## <a name="step-1---aws-membership"></a>Etapa 1 - associação AWS
 Para obter uma associação AWS, visite a [página de detalhes da conta AWS](https://aws.amazon.com/free/). Para os fins deste tutorial, você pode usar uma associação gratuita.
 
 ## <a name="step-2---create-an-amazon-s3-bucket"></a>Etapa 2 - criar uma classificação Amazon S3
 
-Amazon Simple Storage Service (S3) é um AWS oferta para coletar, armazenar e analisar dados. S3 buckets são uma maneira conveniente de pacotes de aplicativo UWP de host e páginas da web para distribuição. 
+Amazon Simple Storage Service (S3) é um AWS oferta para coletar, armazenar e análise de dados. S3 buckets são uma maneira conveniente de pacotes de aplicativo UWP de host e páginas da web para distribuição. 
 
 Depois de fazer logon AWS com suas credenciais, em `Services` localizar `S3`. 
 
-Selecione **criar compartimento de memória**e insira um **nome de partição de memória** para seu site. Siga os prompts de caixa de diálogo para definir propriedades e permissões. Para garantir que seu aplicativo UWP pode ser distribuído pelo seu site, habilitar a **leitura** e permissões de **gravação** para o compartimento de memória e selecione **conceder acesso de leitura público para esse compartimento de memória**.
+Selecione a **classificação de criar**e insira um **nome de classificação** para seu site. Siga os prompts de caixa de diálogo para definir propriedades e permissões. Para garantir que seu aplicativo UWP pode ser distribuído pelo seu site, habilitar a **leitura** e permissões de **gravação** para sua classificação e selecione **conceder acesso de leitura público a esta classificação**.
 
-![Definir permissões no compartimento de memória Amazon S3](images/aws-permissions.png) 
+![Definir permissões em Amazon S3 classificação](images/aws-permissions.png) 
 
-Revise o resumo para garantir que as opções selecionadas são refletidas. Clique em **Criar partição de memória** para concluir esta etapa. 
+Revise o resumo para garantir que as opções selecionadas serão refletidas. Clique em **criar classificação** para concluir esta etapa. 
 
-## <a name="step-3---upload-uwp-app-package-and-web-pages-to-an-s3-bucket"></a>Etapa 3 - carregar o pacote de aplicativo UWP e páginas da web para uma classificação S3
+## <a name="step-3---upload-uwp-app-package-and-web-pages-to-an-s3-bucket"></a>Etapa 3: carregar o pacote de aplicativo UWP e páginas da web para uma classificação S3
 
-Um você criou uma classificação Amazon S3, você poderá vê-lo em sua exibição Amazon S3. Aqui está um exemplo da aparência de nosso compartimento de memória de demonstração:
+Um você criou uma classificação Amazon S3, você poderá vê-lo em sua exibição Amazon S3. Aqui está um exemplo da aparência de nossa classificação de demonstração:
 
 ![Modo de exibição de classificação Amazon S3](images/aws-post-create.png)
 
 Agora estamos prontos para carregar os pacotes de aplicativo e páginas da web que gostaríamos para hospedar nosso compartimento Amazon S3 em. 
 
-Clique no compartimento de memória recém-criado para carregar o conteúdo. O compartimento de memória está vazio, já que nada tem sido carregado. Clique no botão **carregar** e selecione os pacotes de aplicativos e arquivos de página da web que você deseja carregar.
+Clique no compartimento de memória recém-criado para carregar o conteúdo. A classificação está vazia, já que nada foi carregado ainda. Clique no botão **carregar** e selecione os pacotes de aplicativos e arquivos de página da web que você deseja carregar.
 
 > [!NOTE]
 > Você pode usar o pacote do aplicativo que faz parte do repositório de [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp) fornecido no GitHub se não tiver um pacote do aplicativo disponível. O certificado (MySampleApp.cer) que o pacote usou também faz parte da amostra no GitHub. O certificado deve ser instalado em seu dispositivo antes de instalar o aplicativo.
 
-![Carregue o pacote de aplicativo](images/aws-upload-package.png)
+![Carregue o pacote do aplicativo](images/aws-upload-package.png)
 
-Assim como as permissões para a criação de uma classificação Amazon S3, o conteúdo no compartimento de memória também deve ter **ler**, **gravar**e permissões de **conceder acesso de leitura público para esse objeto (s)** .
+Da mesma forma que as permissões para a criação de uma classificação Amazon S3, o conteúdo no compartimento de memória também deve ter **ler**, **gravar**e permissões de **conceder acesso de leitura público para esse objeto (s)** .
 
 Se você quiser testar carregar uma página da web, mas não tiver um, você pode usar a página de html de exemplo (default) do [Projeto inicial](https://github.com/AppInstaller/MySampleWebApp/blob/master/MySampleWebApp/default.html).
 
 > [!IMPORTANT]
 > Antes de carregar a página da web, confirme se a referência do pacote do aplicativo na página da web está correta. 
 
-Para obter a referência de pacote do aplicativo, carregue o pacote do aplicativo pela primeira vez e copie a URL do pacote de aplicativo. Edite a página da web html para refletir o caminho do pacote de aplicativo correta. Consulte o exemplo de código para obter mais detalhes. 
+Para obter a referência de pacote do aplicativo, carregue o pacote de aplicativo pela primeira vez e copie a URL do pacote de aplicativo. Edite a página html para refletir o caminho do pacote de aplicativo correta. Consulte o exemplo de código para obter mais detalhes. 
 
 Selecione o arquivo de pacote do aplicativo carregados para obter o link de referência para o pacote do aplicativo, ele deve ser semelhante a este exemplo:
 
 ![caminho do pacote carregados](images/aws-package-path.png)
 
-**Copie** o link para o aplicativo do pacote e adicionar a referência em sua página da web. 
+**Copie** o link para o aplicativo do pacote e adicione a referência na sua página da web. 
 
 ```html
 <html>
@@ -90,7 +90,7 @@ Selecione o arquivo de pacote do aplicativo carregados para obter o link de refe
 ```
 Carregue o arquivo html para sua classificação Amazon S3. Lembre-se de definir as permissões para permitir o acesso de **leitura** e **gravação** .
 
-## <a name="step-4---test"></a>Etapa 4 - teste
+## <a name="step-4---test"></a>Etapa 4: teste
 
 Depois que a página da web são carregados em sua classificação Amazon S3, obtenha o link para a página da web, selecionando o arquivo html carregados.
 

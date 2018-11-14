@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows 10, uwp, conta de desenvolvedor, individual, empresa, negócios
 ms.localizationpriority: medium
 ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052211"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154906"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de conta, localizações e taxas
 
-O Windows os dois pessoa de programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de fornece conta que acesso para publicar aplicativos na loja e participar de outros programas da Microsoft.
+O Windows programa de ofertas do [Partner Center](https://partner.microsoft.com/dashboard) ambos os individuais e contas em muitos [países e regiões](#developer-account-and-app-submission-markets)da empresa. Qualquer tipo de conta fornece acesso para publicar aplicativos na Store e participar de outros programas da Microsoft.
 
 > [!NOTE]
 > Ao abrir sua conta de desenvolvedor, certifique-se de entrar no [Partner Center](https://partner.microsoft.com/dashboard) com a conta da Microsoft que você deseja usar para sua conta de desenvolvedor. Você terá a opção de [adicionar mais usuários à conta](manage-account-users.md) mais tarde.

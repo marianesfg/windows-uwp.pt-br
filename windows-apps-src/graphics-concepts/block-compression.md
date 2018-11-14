@@ -4,20 +4,19 @@ description: A compactação de bloco é uma técnica de compactação de textur
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
 keywords:
 - Compactação de bloco
-author: michaelfromredmond
-ms.author: mithom
+author: hickeys
+ms.author: hickeys
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c959ced5ada9145ca494dd023c9aa802d7dccc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 8ff4c88a46c1e89df96b48d82da333432790e461
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024324"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205867"
 ---
 # <a name="block-compression"></a>Compactação de bloco
-
 
 A compactação de bloco é uma técnica de compactação de textura com perdas para reduzir o volume de memória e o tamanho da textura, dando um aumento de desempenho. Uma textura compactada em bloco pode ser menor do que uma textura com 32 bits por cor.
 
@@ -29,13 +28,12 @@ Uma textura compactada em bloco deve ser criada como um múltiplo do tamanho de 
 
 ## <a name="span-idbasicsspanspan-idbasicsspanspan-idbasicsspanhow-block-compression-works"></a><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>Como a compactação de bloco funciona
 
-
 A compactação de bloco é uma técnica para reduzir a quantidade de memória necessária para armazenar dados de cor. Armazenando algumas cores no tamanho original e outras cores usando um esquema de codificação, você pode reduzir significativamente a quantidade de memória necessária para armazenar a imagem. Como o hardware decodifica automaticamente os dados compactados, não há nenhuma penalidade de desempenho para o uso de texturas compactadas.
 
 Para ver como funciona a compactação, examine os dois exemplos a seguir. O primeiro exemplo descreve a quantidade de memória usada para armazenar dados não compactados; o segundo exemplo descreve a quantidade de memória usada para armazenar dados compactados.
 
--   [Armazenando dados compactados](#storing-uncompressed-data)
--   [Armazenando dados compactados](#storing-compressed-data)
+- [Armazenando dados compactados](#storing-uncompressed-data)
+- [Armazenando dados compactados](#storing-compressed-data)
 
 ### <a name="span-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoring-uncompressed-dataspanstoring-uncompressed-data"></a><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>Armazenando dados compactados
 
@@ -61,14 +59,13 @@ A próxima seção mostra como o Direct3D possibilita o uso de compactação de 
 
 ## <a name="span-idusingblockcompressionspanspan-idusingblockcompressionspanspan-idusingblockcompressionspanusing-block-compression"></a><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>Usando a compactação de bloco
 
-
 Crie uma textura compactada em bloco da mesma forma que uma textura descompactada, exceto pelo fato de você especificar um formato compactado em bloco.
 
 Em seguida, crie um modo de exibição para associar a textura ao pipeline. Uma vez que uma textura compactada em bloco pode ser usada apenas como uma entrada para um estágio de sombreador, convém criar um modo de exibição de recurso do sombreador.
 
 Use uma textura compactada em bloco da mesma maneira que você usaria uma textura não compactada. Se seu aplicativo receberá um ponteiro de memória para dados compactados em bloco, você precisa levar em conta a memória preenchimento em uma minimapa que faz com que o tamanho declarado ser diferente do tamanho real.
 
--   [Tamanho virtual versus tamanho físico](#virtual-size-versus-physical-size)
+- [Tamanho virtual versus tamanho físico](#virtual-size-versus-physical-size)
 
 ### <a name="span-idvirtualsizespanspan-idvirtualsizespanspan-idvirtualsizespanspan-idvirtual-size-versus-physical-sizespanvirtual-size-versus-physical-size"></a><span id="Virtual_Size"></span><span id="virtual_size"></span><span id="VIRTUAL_SIZE"></span><span id="virtual-size-versus-physical-size"></span>Tamanho virtual versus tamanho físico
 
@@ -86,7 +83,6 @@ Resumindo, tome cuidado ao usar blocos de memória alinhados ao copiar regiões 
 
 ## <a name="span-idcompressionalgorithmsspanspan-idcompressionalgorithmsspanspan-idcompressionalgorithmsspancompression-algorithms"></a><span id="Compression_Algorithms"></span><span id="compression_algorithms"></span><span id="COMPRESSION_ALGORITHMS"></span>Algoritmos de compactação
 
-
 As técnicas de compactação de bloco no Direct3D dividem os dados de textura descompactados em blocos de 4 × 4, compactam cada bloco e armazenam os dados. Por esse motivo, as texturas a serem compactadas devem ter dimensões de textura que são múltiplas de 4.
 
 ![compactação de bloco](images/d3d10-compression-1.png)
@@ -103,13 +99,11 @@ O Direct3D implementa vários esquemas de compactação, cada um implementa um e
 | Cor de um componente             | Um componente (8)                     | [BC4](#bc4)                    |
 | Cor de dois componentes             | Dois componentes (8:8)                  | [BC5](#bc5)                    |
 
- 
-
--   [BC1](#bc1)
--   [BC2](#bc2)
--   [BC3](#bc3)
--   [BC4](#bc4)
--   [BC5](#bc5)
+- [BC1](#bc1)
+- [BC2](#bc2)
+- [BC3](#bc3)
+- [BC4](#bc4)
+- [BC5](#bc5)
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span id="BC1"></span><span id="bc1"></span>BC1
 
@@ -121,14 +115,14 @@ O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores
 
 Os índices de cor (a–p) são usados para procurar as cores originais em uma tabela de cores. A tabela de cores contém 4 cores. As duas primeiras cores, color\_0 e color\_1, são as cores mínima e máxima. As outras duas cores, color\_2 e color\_3, são cores intermediárias calculadas com uma interpolação linear.
 
-```
+```cpp
 color_2 = 2/3*color_0 + 1/3*color_1
 color_3 = 1/3*color_0 + 2/3*color_1
 ```
 
 As quatro cores recebem valores de índice de 2 bits que serão salvos em blocos a–p.
 
-```
+```cpp
 color_0 = 00
 color_1 = 01
 color_2 = 10
@@ -139,7 +133,7 @@ Por fim, todas as cores nos blocos a–p são comparadas com as quatro cores na 
 
 Esse algoritmo se compromete a dados que também contêm alfa de 1 bit. A única diferença é que color\_3 é definida como 0 (que representa uma cor transparente) e color\_2 é uma mistura linear de color\_0 e color\_1.
 
-```
+```cpp
 color_2 = 1/2*color_0 + 1/2*color_1;
 color_3 = 0;
 ```
@@ -166,7 +160,7 @@ O formato BC3 usa os índices de alfa (a–p) para procurar as cores originais e
 
 O algoritmo determina o número de valores alfa interpolados examinando os dois valores alfa de referência. Se alpha\_0 for maior que alpha\_1, o BC3 interpolará 6 valores alfa, caso contrário, ele interpolará 4. Quando o BC3 interpola apenas 4 valores alfa, ele define dois valores alfa adicionais (0 para totalmente transparente e 255 para totalmente opaco). O BC3 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
 
-```
+```cpp
 if( alpha_0 > alpha_1 )
 {
   // 6 interpolated alpha values.
@@ -201,14 +195,14 @@ O algoritmo usa os índices de 3 bits para procurar as cores em uma tabela de co
 
 O algoritmo determina o número de valores de cor interpolados examinando os dois valores de referência. Se red\_0 for maior que red\_1, o BC4 interpolará 6 valores de cor, caso contrário, ele interpolará 4. Quando o BC4 interpola apenas 4 valores de cor, ele define dois valores de cor adicional (0.0f para totalmente transparente e 1.0f para totalmente opaco). O BC4 compacta os valores alfabéticos na área de texel de 4 × 4, armazenando o código de bit correspondente aos valores alfa interpolados que melhor correspondem ao alfa original para um determinado texel.
 
--   [BC4\_UNORM](#bc4-unorm)
--   [BC4\_SNORM](#bc4-snorm)
+- [BC4\_UNORM](#bc4-unorm)
+- [BC4\_SNORM](#bc4-snorm)
 
 ### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM
 
 A interpolação dos dados de componente único é feita como no exemplo de código a seguir.
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -239,7 +233,7 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 O DXGI\_FORMAT\_BC4\_SNORM é exatamente o mesmo, exceto que os dados são codificados no intervalo SNORM e quando 4 valores de cor são interpolados. A interpolação dos dados de componente único é feita como no exemplo de código a seguir.
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -259,8 +253,8 @@ else
   red_3 = (3*red_0 + 2*red_1)/5.0f; // bit code 011
   red_4 = (2*red_0 + 3*red_1)/5.0f; // bit code 100
   red_5 = (1*red_0 + 4*red_1)/5.0f; // bit code 101
-  red_6 = -1.0f;                     // bit code 110
-  red_7 =  1.0f;                     // bit code 111
+  red_6 = -1.0f;                    // bit code 110
+  red_7 =  1.0f;                    // bit code 111
 }
 ```
 
@@ -270,8 +264,8 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 Use o formato BC5 para armazenar dados de cor de dois componentes usando 8 bits para cada cor. Como resultado da precisão maior (em comparação com [BC1](#bc1)), o BC5 é ideais para armazenar dados de ponto flutuante no intervalo de \[0 a 1\] usando o formato DXGI\_FORMAT\_BC5\_UNORM e \[-1 a + 1\] usando o formato de DXGI\_FORMAT\_BC5\_SNORM. Pressupondo uma textura de 4 × 4 usando o formato de dados maior possível, essa técnica de compactação reduz a memória necessária de 32 bytes (16 cores × 2 componentes/cor × 1 byte/componente) para 16 bytes.
 
--   [BC5\_UNORM](#bc5-unorm)
--   [BC5\_SNORM](#bc5-snorm)
+- [BC5\_UNORM](#bc5-unorm)
+- [BC5\_SNORM](#bc5-snorm)
 
 O algoritmo funciona em blocos de texels de 4 × 4. Em vez de armazenar 16 cores para ambos os componentes, o algoritmo armazena 2 cores de referência para cada componente (red\_0, red\_1, green\_0 e green\_1) e 16 índices de cor de 3 bits para cada componente (vermelho a até vermelho p, e verde a até verde p), conforme mostrado no diagrama a seguir.
 
@@ -285,7 +279,7 @@ O algoritmo determina o número de valores de cor interpolados examinando os doi
 
 A interpolação dos dados de componente único é feita como no exemplo de código a seguir. Os cálculos para os componentes verdes são semelhantes.
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -316,7 +310,7 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 O DXGI\_FORMAT\_BC5\_SNORM é exatamente o mesmo, exceto que os dados são codificados no intervalo SNORM e quando 4 valores de dados são interpolados, os dois valores adicionais são -1.0f e 1.0f. A interpolação dos dados de componente único é feita como no exemplo de código a seguir. Os cálculos para os componentes verdes são semelhantes.
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -345,19 +339,18 @@ As cores de referência recebem índices de 3 bits (000 – 111, uma vez que há
 
 ## <a name="span-iddifferencesspanspan-iddifferencesspanspan-iddifferencesspanformat-conversion"></a><span id="Differences"></span><span id="differences"></span><span id="DIFFERENCES"></span>Conversão de formato
 
-
 O Direct3D permite cópias entre texturas pré-estruturadas e texturas compactadas por bloco com as mesmas larguras de bit.
 
 Você pode copiar recursos entre alguns tipos de formato. Esse tipo de operação de cópia executa um tipo de conversão de formato que reinterpreta os dados de recursos como um tipo de formato diferente. Considere este exemplo que mostra a diferença entre a reinterpretação de dados com o comportamento de um tipo mais comum de conversão:
 
-```
+```cpp
 FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
 Para reinterpretar 'f' como o tipo de 'u', use [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx):
 
-```
+```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
@@ -365,7 +358,7 @@ Na reinterpretação anterior, o valor subjacente dos dados não muda; [memcpy](
 
 Para executar o tipo mais comum de conversão, use a atribuição:
 
-```
+```cpp
 u = f; // 'u' becomes 1.
 ```
 
@@ -415,9 +408,6 @@ A tabela a seguir lista os formatos de destino e origem permitidos que você pod
 </tbody>
 </table>
 
- 
-
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
-
 
 [Recursos de textura compactada](compressed-texture-resources.md)

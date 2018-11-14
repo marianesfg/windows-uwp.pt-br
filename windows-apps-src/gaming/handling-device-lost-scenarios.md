@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11, dispositivo perdido
 ms.localizationpriority: medium
 ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048988"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208168"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
 
@@ -28,7 +28,7 @@ No DirectX 9, os aplicativos devem encontrar uma condição "[dispositivo perdid
 -   O dispositivo gráfico para de responder e é reiniciado.
 -   Um adaptador gráfico é fisicamente conectado ou removido.
 
-Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que o dispositivo Direct3D deve ser reinicializado e os recursos do dispositivo precisam ser recriados. Este tutorial passo a passo explica como os aplicativos e jogos do Direct3D 11 podem detectar e responder a qualquer circunstância em que o adaptador gráfico seja reiniciado, removido ou alterado. O modelo de aplicativo DirectX 11 (Universal Windows) fornecido com o Microsoft Visual Studio2015 fornece exemplos de código.
+Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que o dispositivo Direct3D deve ser reinicializado e os recursos do dispositivo precisam ser recriados. Este tutorial passo a passo explica como os aplicativos e jogos do Direct3D 11 podem detectar e responder a qualquer circunstância em que o adaptador gráfico seja reiniciado, removido ou alterado. O modelo de aplicativo DirectX 11 (Windows Universal) fornecido com o Microsoft Visual Studio2015 fornece exemplos de código.
 
 ## <a name="instructions"></a>Instruções
 
@@ -168,4 +168,4 @@ Para obter mais detalhes, consulte [**GetDeviceRemovedReason**](https://msdn.mic
 
 O Prompt de Comando do Desenvolvedor do Visual Studio dá suporte a uma ferramenta de linha de comando chamada 'dxcap' para captura de eventos Direct3D e reprodução relacionada ao Diagnóstico de Gráficos do Visual Studio. Você pode usar a opção de linha de comando "-forcetdr" enquanto seu aplicativo estiver em execução, o que forçará um evento de recuperação e detecção de tempo limite de GPU, disparando DXGI\_ERROR\_DEVICE\_REMOVED e permitindo que você teste seu código de tratamento de erro.
 
-> **Note** O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Para obter mais informações sobre como instalar as ferramentas de gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
+> **Note** O DXCap e suas DLLs de suporte são instalados em system32/syswow64 como parte das Ferramentas Gráficas para Windows 10, que não são mais distribuídas por meio do SDK do Windows. Em vez disso, elas são fornecidas através do Recurso de Ferramentas de Gráficos sob Demanda que é um componente opcional do sistema operacional e deve ser instalado para que as Ferramentas de Gráficos sejam habilitadas e usadas no Windows 10. Obter mais informações sobre como instalar as ferramentas de gráficos para Windows 10 podem ser encontradas aqui: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>

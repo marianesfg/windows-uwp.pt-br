@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, conceitos básicos
 ms.localizationpriority: medium
 ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035173"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200702"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
 
@@ -46,7 +46,7 @@ Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um 
 
 3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, talvez você não tenha os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
 
-4. Dê ao projeto de um **nome**, um **local** para os arquivos sejam armazenados e um **nome de solução**e, em seguida, clique em **Okey**.
+4. Dê ao projeto de um **nome**, um **local** para os arquivos sejam armazenados e um **nome da solução**e, em seguida, clique em **Okey**.
 
 ![Novo projeto](images/marble-maze-sample-fundamentals-1.png)
 
@@ -66,13 +66,13 @@ Nos menus suspensos na parte superior do Visual Studio, à esquerda do botão ve
 
 ###  <a name="controlling-the-game"></a>Controlando o jogo
 
-Você pode usar o acelerômetro, toque, o controlador do Xbox One ou o mouse para controlar o Marble Maze.
+Você pode usar toque, o acelerômetro, o controlador do Xbox One ou o mouse para controlar o Marble Maze.
 
 -   Use o teclado direcional no controle para mudar o item de menu ativo.
 -   Use toque, o início ou um botão no controlador de, ou o mouse para selecionar um item de menu.
 -   Use toque, o acelerômetro, o botão de controle esquerdo ou o mouse para inclinar o labirinto.
 -   Use toque, o início ou um botão no controlador de, ou o mouse para fechar menus, como a tabela de pontuações altas.
--   Use o botão Iniciar no controlador de ou a tecla P no teclado para pausar ou retomar o jogo.
+-   Use o botão Iniciar no controlador ou a tecla P no teclado para pausar ou retomar o jogo.
 -   Use o botão Voltar no controlador ou a tecla Página Inicial no teclado para reiniciar o jogo.
 -   Quando a tabela de pontuações altas estiver visível, use o botão Voltar no controlador de ou a tecla página inicial no teclado para limpar todas as pontuações.
 
@@ -101,7 +101,7 @@ Recomendamos o uso das seguintes convenções no seu modelo de tratamento de err
 -   Use exceções para comunicar erros inesperados.
 -   Não use exceções para controlar o fluxo do código.
 -   Capture somente as exceções que podem ser tratadas e recuperadas com segurança. Caso contrário, não capture a exceção e permita que o aplicativo seja encerrado.
--   Quando você chamar uma rotina DirectX que retorna **HRESULT**, use a função **DX::ThrowIfFailed**. Essa função é definida em [directxhelper. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** lança uma exceção se o fornecido **HRESULT** é um código de erro. Por exemplo, **E\_POINTER** faz com que **ThrowIfFailed** gere [Platform:: NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
+-   Quando você chamar uma rotina DirectX que retorna **HRESULT**, use a função **DX::ThrowIfFailed**. Essa função é definida em [directxhelper. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** lança uma exceção se o **HRESULT** fornecido é um código de erro. Por exemplo, **E\_POINTER** faz com que **ThrowIfFailed** gere [Platform:: NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
 
     Quando você usar **ThrowIfFailed**, coloque a chamada DirectX em uma linha separada para ajudar a melhorar a legibilidade do código, conforme mostrado no exemplo a seguir.
 
@@ -121,7 +121,7 @@ Use anotações SAL junto com ferramentas de análise de código para ajudar a d
 
 Usando a linguagem de anotação de código-fonte da Microsoft (SAL), você pode anotar, ou descrever, como uma função usa seus parâmetros. Anotações SAL também descrevem valores de retorno. Anotações SAL trabalham com a ferramenta de Análise de Código C/C++ para descobrir possíveis defeitos no o código fonte C e C++. Erros de codificação comuns relatados pela ferramenta incluem saturações de buffer, memória não inicializada, cancelamentos de referência de ponteiro nulo e vazamentos de memória e recursos.
 
-Considere o método **basicloader:: Loadmesh** , que é declarado em [basicloader. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h). Esse método usa `_In_` para especificar esse *nome de arquivo* é um parâmetro de entrada (e, portanto, apenas serão lidas nos), `_Out_` para especificar que *vertexBuffer* e *indexBuffer* são parâmetros de saída (e, portanto, apenas serão gravadas em) e `_Out_opt_` para especificar *vertexCount* e *indexCount* são opcionais parâmetros de saída (e podem ser gravados). Como *vertexCount* e *indexCount* são parâmetros de saída opcionais, eles podem ser **nullptr**. A ferramenta de Análise de Código C/C++ examina chamadas para esse método de forma a garantir que os parâmetros que ela transmitir irão atender a esses critérios.
+Considere o método **basicloader:: Loadmesh** , que é declarado em [basicloader. H](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h). Esse método usa `_In_` para especificar esse *nome de arquivo* é um parâmetro de entrada (e, portanto, apenas serão lidos de), `_Out_` para especificar que *vertexBuffer* e *indexBuffer* são parâmetros de saída (e, portanto, apenas serão gravadas em) e `_Out_opt_` para especificar *vertexCount* e *indexCount* são opcionais parâmetros de saída (e podem ser gravados). Como *vertexCount* e *indexCount* são parâmetros de saída opcionais, eles podem ser **nullptr**. A ferramenta de Análise de Código C/C++ examina chamadas para esse método de forma a garantir que os parâmetros que ela transmitir irão atender a esses critérios.
 
 ```cpp
 void LoadMesh(
@@ -133,7 +133,7 @@ void LoadMesh(
     );
 ```
 
-Para realizar a análise de código no seu aplicativo, na barra de menus, escolha **Construir > Executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para executar análise de código em seu aplicativo, na barra de menus, escolha **Construir > Executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 A lista completa de anotações disponíveis está definida em sal.h. Para saber mais, veja [Anotações SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

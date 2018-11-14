@@ -9,17 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036456"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6263140"
 ---
 # <a name="send-an-sms-message"></a>Enviar uma mensagem SMS
 
 Este tópico mostra como iniciar a caixa de diálogo de SMS para permitir que o usuário envie uma mensagem SMS. Você pode previamente preencher os campos de SMS com dados antes de mostrar a caixa. A mensagem não será enviada até que o usuário toque no botão enviar.
 
-Para chamar esse código, declare os recursos de **bate-papo**, **smsSend**e **chatSystem** no manifesto do pacote. Esses são [recursos restritos](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , mas você pode usá-los em seu aplicativo. Você precisará da aprovação somente se você pretende publicar seu aplicativo para a loja. Consulte [taxas, locais e tipos de conta](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
+Para chamar esse código, declare os recursos de **bate-papo**, **smsSend**e **chatSystem** no manifesto do pacote. Estas são [as funcionalidades restritas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , mas você pode usá-los em seu aplicativo. Você precisará da aprovação somente se você pretende publicar seu aplicativo para a loja. Consulte [taxas, locais e tipos de conta](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
 
 ## <a name="launch-the-compose-sms-dialog"></a>Iniciar a caixa de redação de SMS
 

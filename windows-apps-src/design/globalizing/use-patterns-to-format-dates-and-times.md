@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024715"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185966"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar modelos e padrões para formatar datas e horas
 
@@ -61,7 +61,7 @@ No exemplo acima, nós inseridos uma cadeia de caracteres de formato independent
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-O formatador acima retorna valores específicos de cultura para os componentes individuais dentro dos colchetes {}. No entanto, a ordem dos componentes no padrão de formato é invariável. Você obtém exatamente o que deseja, o que pode ou não ser apropriado em termos de cultura. Este formatador é válido para inglês (Estados Unidos), mas não para francês (França), nem para japonês.
+O formatador acima retorna valores específicos a cada cultura para os componentes individuais dentro de colchetes {}. No entanto, a ordem dos componentes no padrão de formato é invariável. Você obtém exatamente o que deseja, o que pode ou não ser apropriado em termos de cultura. Este formatador é válido para inglês (Estados Unidos), mas não para francês (França), nem para japonês.
 
 ``` syntax
 En-US: January 1

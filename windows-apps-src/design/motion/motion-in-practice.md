@@ -13,11 +13,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 36081c14cfb75a1cedb103ba17eff4a05f5e4e83
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023283"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202813"
 ---
 # <a name="bringing-it-together"></a>Reunião
 
@@ -86,7 +86,7 @@ Veja três maneiras de aplicar os conceitos básicos de movimento fluente em seu
 
 Animações implícitas são uma maneira simples de alcançar o movimento fluente por automaticamente interpolando entre os valores novos e antigos durante uma alteração de parâmetro.
 
-Você pode animar implicitamente alterações para as seguintes propriedades:
+Implicitamente, você pode animar as alterações para as seguintes propriedades:
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **Opacidade**

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ba07f897111e27dc895aa187172841cac4b44f73
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042477"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6254904"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Definir o formato, a resolução e a taxa de quadros para o MediaCapture
 
@@ -32,7 +32,7 @@ O código neste artigo foi adaptado da [amostra CameraResolution](http://go.micr
 
 Criar uma classe auxiliar simples para encapsular a funcionalidade da interface [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) torna mais fácil selecionar um conjunto de propriedades de codificação que atendem aos critérios específicos. Essa classe auxiliar é particularmente útil devido ao seguinte comportamento do recurso de propriedades de codificação:
 
-**Aviso**  o método de [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) usa um membro da enumeração [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) , como **VideoRecord** ou **fotos**e retorna uma lista de qualquer [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) ou objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) que transmitem o fluxo de codificação configurações, como a resolução da foto capturada ou vídeo. Os resultados da chamada a **GetAvailableMediaStreamProperties** podem incluir **ImageEncodingProperties** ou **VideoEncodingProperties**, independentemente do valor de **MediaStreamType** especificado. Por esse motivo, você sempre deve verificar o tipo de cada valor retornado e convertê-lo para o tipo apropriado antes de tentar acessar qualquer um dos valores de propriedade.
+**Aviso**  o método [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) usa um membro da enumeração [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) , como **VideoRecord** ou **fotos**e retorna uma lista de qualquer [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) ou objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) que transmitem o fluxo de codificação de configurações, como a resolução da foto capturada ou vídeo. Os resultados da chamada a **GetAvailableMediaStreamProperties** podem incluir **ImageEncodingProperties** ou **VideoEncodingProperties**, independentemente do valor de **MediaStreamType** especificado. Por esse motivo, você sempre deve verificar o tipo de cada valor retornado e convertê-lo para o tipo apropriado antes de tentar acessar qualquer um dos valores de propriedade.
 
 A classe auxiliar definida a seguir manipula a verificação e a conversão de tipo para [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) ou [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217), para que o código do aplicativo não precise distinguir entre os dois tipos. Além disso, a classe auxiliar expõe propriedades para a taxa de proporção das propriedades, a taxa de quadros (somente para propriedades de codificação de vídeo) e um nome amigável que facilita a exibição das propriedades de codificação na interface do usuário do aplicativo.
 

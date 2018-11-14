@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp, blocos rastreáveis, blocos dinâmicos, notificações de bloco rastreáveis
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126755dfb6f5f0e117d10daef85a83e8a171f1f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041915"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190797"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificações de blocos rastreáveis
 
@@ -113,7 +113,7 @@ O objeto LaunchActivatedEventArgs tem uma propriedade que habilita notificaçõe
 
 O [objeto TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo) contém uma propriedade chamada [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), que contém uma lista de notificações exibida no bloco nos últimos 15 minutos. O primeiro item na lista representa a notificação atual do bloco, enquanto os itens subsequentes representam as notificações que o usuário viu antes da notificação atual. Se o bloco foi limpo, essa lista estará vazia.
 
-Cada um Argumentsproperty ShownTileNotificationhas. O Argumentsproperty será inicializado com o argumentsstring de carga de notificação do bloco ou nulo se a carga não incluiu o argumentsstring.
+Cada um Argumentsproperty ShownTileNotificationhas. O Argumentsproperty será inicializado com o argumentsstring de sua carga de notificação de bloco ou nulo se a carga não incluiu o argumentsstring.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)

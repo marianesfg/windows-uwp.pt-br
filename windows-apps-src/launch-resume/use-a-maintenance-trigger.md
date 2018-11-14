@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 5f11afbafc424a4ed7f2c973f0417c792ab7da65
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050202"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6156720"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
@@ -38,7 +38,7 @@ Mais informações sobre como escrever uma classe de tarefa em segundo plano est
 Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
 > [!NOTE]
-> Se *FreshnessTime* for definida como menos de 15 minutos, uma exceção é lançada durante a tentativa de registrar a tarefa em segundo plano.
+> Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção é lançada durante a tentativa de registrar a tarefa em segundo plano.
 
 Este exemplo de código cria um gatilho que é executada uma vez por hora.
 

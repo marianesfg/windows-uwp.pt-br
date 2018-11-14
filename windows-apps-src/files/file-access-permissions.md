@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046827"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209431"
 ---
 # <a name="file-access-permissions"></a>Permissões de acesso a arquivo
 
@@ -94,7 +94,7 @@ O diretório de instalação do aplicativo é um local somente leitura. Você n�
 ### <a name="application-data-locations"></a>Locais de dados de aplicativo
 As pastas em que seu aplicativo pode armazenar dados. Essas pastas (local, móvel e temporária) são criadas quando o aplicativo é instalado.
 
-Há duas maneiras principais de acessar arquivos e pastas do seu aplicativo locais de dados:
+Há duas maneiras principais de acessar arquivos e pastas de locais de dados do seu aplicativo:
 
 1.  Use as propriedades [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) para recuperar uma pasta de dados do aplicativo.
 

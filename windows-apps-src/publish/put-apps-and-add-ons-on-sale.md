@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c1c646e1e60c6b71559cfde1280a09d380298ed
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045373"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149828"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Colocar apps e complementos à venda
 
-Você também pode promover o seu aplicativo ou complemento na Microsoft Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem. E você pode escolher se deseja oferecer a venda a todos os usuários ou torná-lo uma oferta exclusiva para clientes que têm um dos seus outros produtos.
+Você também pode promover o seu aplicativo ou complemento na Microsoft Store colocando-o em promoção por um tempo limitado. Você pode optar por oferecer o produto em uma faixa de preços menor ou com um desconto baseado em porcentagem. E você pode escolher se deseja oferecer a venda a todos os usuários ou torná-lo uma oferta exclusiva para os clientes que têm um dos seus outros produtos.
 
 > [!NOTE]
 > Não há suporte para o preço de venda para complementos de assinatura.

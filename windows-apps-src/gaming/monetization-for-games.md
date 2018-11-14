@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, monetização
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6137740"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189110"
 ---
 #  <a name="monetization-for-games"></a>Monetização para jogos
 
@@ -29,7 +29,7 @@ Antigamente, bastaria dar um preço para o jogo e esperar que as pessoas o compr
 
 ## <a name="worldwide-distribution-channel"></a>Canal de distribuição em todo o mundo
 
-A Microsoft Store pode disponibilizar seu jogo para download em mais de 200 países e regiões em todo o mundo, com suporte para cobrança por meio de várias formas de pagamento, inclusive Visa, Mastercard e PayPal. Para obter uma lista completa de países e regiões, consulte [Mercados e preços personalizados](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
+A Microsoft Store pode disponibilizar seu jogo para download em mais de 200 países e regiões em todo o mundo, com suporte para cobrança por meio de várias formas de pagamento, inclusive Visa, Mastercard e PayPal. Para obter uma lista completa de países e regiões, consulte [Definir seleção de mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Defina um preço para o jogo
 
@@ -39,8 +39,8 @@ Aqui estão alguns conceitos importantes a respeito do preço do jogo na Loja.
 
 ### <a name="base-price"></a>Preço base
 
-O preço base do jogo é o que determina se o jogo é categorizado como _pago_ ou _gratuito_. É possível usar o [painel do Centro de Desenvolvimento](https://developer.microsoft.com/windows) para configurar o preço base de acordo com o país e a região.
-O processo de determinação do preço pode incluir as [responsabilidades tributárias na venda para países diferentes](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) e [considerações sobre custo para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). Também é possível [definir preços personalizados para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Para obter mais informações, consulte [Definir preço e seleção de mercado](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+O preço base do jogo é o que determina se o jogo é categorizado como _pago_ ou _gratuito_. Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) para configurar o preço base com base no país e região.
+O processo de determinação do preço pode incluir as [responsabilidades tributárias na venda para países diferentes](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) e [considerações sobre custo para mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets). Também é possível [definir preços personalizados para mercados específicos](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets).
 
 ### <a name="sale-price"></a>Preço de venda
 
@@ -49,7 +49,7 @@ Uma maneira de promover o jogo é reduzir o preço por um tempo limitado. També
 
 ## <a name="in-game-purchases"></a>Compras no jogo
 
-Compras no jogo são produtos comprados dentro de um jogo. Eles também são genericamente conhecidos como _compras realizadas em aplicativo_. Na Microsoft Store, esses produtos são chamados de _Complementos_. [Os complementos são publicados](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) por meio do painel do Centro de Desenvolvimento do Windows. Você também precisará habilitar os complementos no código do jogo.
+Compras no jogo são produtos comprados dentro de um jogo. Eles também são genericamente conhecidos como _compras realizadas em aplicativo_. Na Microsoft Store, esses produtos são chamados de _Complementos_. [Complementos são publicados](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) por meio do Partner Center. Você também precisará habilitar os complementos no código do jogo.
 
 ### <a name="types-of-add-ons"></a>Tipos de complementos
 
@@ -60,7 +60,7 @@ Ao criar consumíveis, decida como deseja acompanhá-los &mdash; ou seja, se ele
 ### <a name="create-in-game-purchases"></a>Criar compras no jogo
 
 As compras realizadas em aplicativo e as APIs de informações de licença mais recentes fazem parte do namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) no SDK do Windows (a partir do Windows 10, versão 1607). Se você estiver desenvolvendo um novo jogo segmentado para a versão 1607 ou posterior, recomendaremos usar o namespace __Windows.Services.Store__ porque ele dá suporte aos tipos de complemento mais recentes e tem um desempenho melhor.
-Ele também foi projetado para ser compatível com futuros tipos de produtos e recursos suportados pelo Centro de Desenvolvimento do Windows e pela Loja. Ao desenvolver para versões anteriores do Windows 10, use o namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez disso.
+Ele também foi projetado para ser compatível com futuros tipos de produtos e recursos compatíveis com o Partner Center e o armazenamento. Ao desenvolver para versões anteriores do Windows 10, use o namespace [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) em vez disso.
 
 Para obter mais informações, vá até [Compras no aplicativo e avaliações](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials).
 
@@ -93,14 +93,14 @@ Para criar um pacote que possa ser carregado na Loja:
 1. Abra a solução do jogo no Visual Studio.
 2. Dentro do Visual Studio, vá até __Projeto__ > __Loja__ > __Criar Pacotes de Aplicativos...__
 3. Para o __você deseja criar pacotes para carregar na Microsoft Store?__ opção, selecione __Sim__.
-4. Entre na conta de desenvolvedor do Centro de Desenvolvimento. Ou [registre-se](https://developer.microsoft.com/store/register) para obter uma conta de desenvolvedor, se ainda não tiver uma.
+4. Entre sua conta de desenvolvedor [Partner Center](https://partner.microsoft.com/dashboard) . Ou [registre-se](https://developer.microsoft.com/store/register) para obter uma conta de desenvolvedor, se ainda não tiver uma.
 5. Selecione um aplicativo cujo pacote de carregamento você deseja criar. Se você ainda não tiver criado um envio de aplicativo, dê um novo nome de aplicativo para criar um novo envio. Para obter mais informações, consulte [Crie seu aplicativo reservando um nome](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Depois que o pacote tiver sido criado com êxito, clique em __Iniciar o Kit de Certificação de Aplicativos Windows__ para iniciar o processo de teste.
 7. Corrija todos os erros para criar um pacote de jogo.
 
 #### <a name="publish-the-game-as-hidden"></a>Publique o jogo como oculto
 
-1. Vá até [Centro de Desenvolvimento](https://developer.microsoft.com/store) e conecte-se.
+1. Vá para o [Partner Center](https://partner.microsoft.com/dashboard) e entrar.
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo com o qual você deseja trabalhar. Se você ainda não tiver criado um envio de aplicativo, clique em __Criar um novo aplicativo__ e reserve um nome.
 3. Na página __Visão geral do aplicativo__, clique em __Iniciar seu envio__.
 4. Configure esse novo envio. Na página de envio:
@@ -120,7 +120,7 @@ Depois de ser enviado para a Loja, o jogo entrará no [processo de certificaçã
 Com a solução do jogo aberta no Visual Studio:
 
 1. Vá até __Projeto__ > __Loja__ > __Associar o aplicativo à Loja...__
-2. Entre na conta de desenvolvedor do Centro de Desenvolvimento e selecione o nome do aplicativo ao qual associar essa solução.
+2. Entre sua conta de desenvolvedor do Partner Center e selecione o nome do aplicativo ao qual associar essa solução com.
 3. Clique duas vezes no arquivo __Package.appxmanifest.xml__ e vá até a guia __Empacotamento__ para verificar se o jogo está associado corretamente.
 
 Se você tiver associado a solução a um jogo publicado que seja dinâmico e esteja listado na Loja, a solução terá uma licença ativa e você estará uma etapa mais próxima da criação de complementos para o jogo. Para obter mais informações, consulte [Empacotando aplicativos](https://msdn.microsoft.com/windows/uwp/packaging/index).
@@ -129,7 +129,7 @@ Se você tiver associado a solução a um jogo publicado que seja dinâmico e es
 
 À medida que você cria complementos, certifique-se de que eles estejam associados ao envio de jogo certo. Para saber mais detalhes sobre como configurar todas as diversas informações associadas a um complemento, consulte [Envios de complemento](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-1. Vá até o [Centro de Desenvolvimento](https://developer.microsoft.com/store) e conecte-se.
+1. Vá para o [Partner Center](https://partner.microsoft.com/dashboard) e entrar.
 2. Na página __Visão geral do painel__ ou __Todos os aplicativos__, clique no aplicativo para o qual você deseja criar o complemento.
 3. Na página __Visão geral do aplicativo__, na seção __Complementos__, selecione __Criar um novo complemento__.
 4. Selecione o tipo de produto do complemento: __consumível gerenciado pelo desenvolvedor__, __consumível gerenciado pela loja__ ou __durável__.

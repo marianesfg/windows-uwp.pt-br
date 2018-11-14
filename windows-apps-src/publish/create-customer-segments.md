@@ -9,15 +9,15 @@ keywords: windows 10, uwp, segmento, segmentos, grupo de destino, clientes
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aa61056a25fca4193cf325c8573813bf1f6a560
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052121"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149936"
 ---
 # <a name="create-customer-segments"></a>Criar segmentos de cliente
 
-Há momentos em que você talvez queira direcionar um subconjunto de sua base de clientes para fins promocionais e de envolvimento. Você pode fazer isso no [Partner Center](https://partner.microsoft.com/dashboard) , criando um tipo de [grupo de clientes](create-customer-groups.md) , conhecido como um *segmento* que inclua os clientes do Windows 10 que demográficos ou os critérios de receita que você escolher.
+Há momentos em que você talvez queira direcionar um subconjunto de sua base de clientes para fins promocionais e de envolvimento. Você pode fazer isso no [Partner Center](https://partner.microsoft.com/dashboard) , criando um tipo de [grupo de clientes](create-customer-groups.md) conhecido como um *segmento* que inclua os clientes do Windows 10 que atendem aos demográficos ou os critérios de receita que você escolher.
 
 Por exemplo, você poderia criar um segmento que inclua apenas os clientes que têm 50 anos ou mais, ou que inclua os clientes que gastaram mais de US$ 10 na Microsoft Store. Você também pode combinar esses critérios e criar um segmento que inclui todos os clientes com mais de 50 anos que gastaram mais de US$ 10 na Loja. 
 

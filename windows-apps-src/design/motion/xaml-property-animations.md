@@ -10,11 +10,11 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: 9372ba818805446948a444632e809ec06691c5e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036376"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6262880"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animando elementos XAML com animações de composição
 
@@ -40,7 +40,7 @@ Esta tabela mostra as propriedades que você pode usar para modificar a renderiz
 | -- | -- | -- |
 | [Opacidade](/uwp/api/windows.ui.xaml.uielement.opacity) | Double | O grau de opacidade do objeto |
 | [Translation](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | Deslocar a posição X/Y/Z do elemento |
-| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação para aplicar ao elemento |
+| [TransformMatrix](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | A matriz de transformação se aplicam ao elemento |
 | [Scale](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | Dimensionar o elemento, centralizado sobre o ponto central |
 | [Rotação](/uwp/api/windows.ui.xaml.uielement.rotation) | Float | Girar o elemento em torno da RotationAxis e o ponto central |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | O eixo de rotação |
@@ -50,7 +50,7 @@ O valor da propriedade TransformMatrix é combinado com as propriedades de escal
 
 Essas propriedades não afetam o layout do elemento, portanto, modificar essas propriedades não faz com que uma nova [medição](/uwp/api/windows.ui.xaml.uielement.measure)/[cálculo](/uwp/api/windows.ui.xaml.uielement.arrange) .
 
-Essas propriedades têm a mesma finalidade e o comportamento que as propriedades de nome semelhante na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto a conversão não está em Visual).
+Essas propriedades têm a mesma finalidade e o comportamento que as propriedades de nome na composição [Visual](/uwp/api/windows.ui.composition.visual) classe (exceto a conversão não está em Visual).
 
 ### <a name="example-setting-the-scale-property"></a>Exemplo: Definindo a propriedade de escala
 
@@ -90,7 +90,7 @@ Você também não pode usar as novas propriedades se você usar ElementComposit
 
 É possível alternar de um conjunto de propriedades, desmarcando-los, mas para simplificar não é recomendado. Se a propriedade é feita por uma DependencyProperty (por exemplo, Projection é sustentado por UIElement.ProjectionProperty), em seguida, chame ClearValue para restaurá-lo para seu estado "não utilizado". Caso contrário, (por exemplo, a propriedade Scale), defina a propriedade para o valor padrão.
 
-## <a name="animating-uielement-properties-with-compositionanimation"></a>Animar propriedades UIElement com CompositionAnimation
+## <a name="animating-uielement-properties-with-compositionanimation"></a>Animar propriedades de UIElement com CompositionAnimation
 
 Você pode animar as propriedades de renderização listadas na tabela com um CompositionAnimation. Essas propriedades também podem ser referenciadas por um [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation).
 
@@ -113,7 +113,7 @@ button.StartAnimation(animation);
 
 ### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>Exemplo: Como animar a propriedade de escala com um ExpressionAnimation
 
-Uma página tem dois botões. O segundo botão anima para duas vezes ser tão grande (via scale) como o primeiro botão.
+Uma página tem dois botões. O segundo botão anima para duas vezes ser tão grande (por meio de escala) como o primeiro botão.
 
 ```xaml
 <Button x:Name="sourceButton" Content="Source"/>

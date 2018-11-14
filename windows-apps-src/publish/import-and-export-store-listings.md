@@ -8,22 +8,22 @@ ms.topic: article
 keywords: windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store
 ms.localizationpriority: medium
 ms.openlocfilehash: 9df66baa1b5771055894b2e3accc0c8a9dff8a60
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047634"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206431"
 ---
 # <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Store
 
-Em vez de [Inserir informações de listagens da Store diretamente no Partner Center](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações por exportar suas listagens em um arquivo. csv, inserindo as informações e ativos e, em seguida, importando o arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
+Em vez de [Inserir informações de listagens da Store diretamente no Partner Center](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações exportar suas listagens em um arquivo. csv, inserindo as informações e os ativos, e importando o arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
 
 Essa opção é especialmente útil se você deseja criar ou atualizar Listagens da Store para seu produto em vários idiomas, pois você pode copiar/colar as mesmas informações em vários campos e facilmente fazer as alterações que devem ser aplicada para idiomas específicos. No entanto, você não pode usar esse método para criar ou atualizar [listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para aplicativos publicado anteriormente que dão suporte a versões mais antigas do sistema operacional. 
 
 > [!TIP]
 > Você também pode usar esse recurso para importar e exportar os detalhes da listagem da Store de um complemento. Para complementos, o processo funciona da mesma maneira exceto que [somente os campos relevantes para complementos](#add-ons) são incluídos.
 
-Tenha em mente que você sempre pode criar ou atualizar listagens diretamente no Partner Center (mesmo se você já usou o método de importação/exportação). Atualizando diretamente no Partner Center pode ser mais fácil quando você só está fazendo uma simples alteração, mas você pode usar outros métodos a qualquer momento.
+Tenha em mente que você sempre pode criar ou atualizar listagens diretamente no Partner Center (mesmo se você já usou o método de importação/exportação). Atualizar diretamente no Partner Center pode ser mais fácil quando você só está fazendo uma simples alteração, mas você pode usar qualquer um dos métodos a qualquer momento.
 
 ## <a name="export-listings"></a>Exportar listagens
 
@@ -72,7 +72,7 @@ O fornecimento de informações para os campos que correspondem aos ativos, como
 Se você já tiver carregado ativos para a listagem da Store, esses ativos serão representados por uma URL. Essas URLs podem ser reutilizadas em várias descrições de um produto ou mesmo em produtos diferentes na mesma conta de desenvolvedor, portanto, você pode copiar essas URLs para reutilizá-las em um campo diferente, se desejar.
 
 > [!TIP]
-> Para confirmar qual ativo corresponde a uma URL, é possível inserir a URL em um navegador para exibir a imagem (ou baixar o vídeo do trailer).  Você deve estar conectado à sua conta do Partner Center para que essa URL funcione.
+> Para confirmar qual ativo corresponde a uma URL, é possível inserir a URL em um navegador para exibir a imagem (ou baixar o vídeo do trailer).  Você deve estar conectado à sua conta do Partner Center para que essa URL trabalhar.
 
 Se você quiser usar um novo ativo que você ainda não adicionado ao Partner Center, você pode fazer isso ao importar as listagens como uma pasta, em vez de um arquivo. csv único. É necessário criar uma pasta com o arquivo .csv. Em seguida, adicione as imagens à mesma pasta, na pasta raiz ou em uma subpasta. Você deverá inserir o caminho completo, incluindo o nome da pasta raiz, no campo.
 
@@ -82,7 +82,7 @@ Se você quiser usar um novo ativo que você ainda não adicionado ao Partner Ce
 Por exemplo, se a pasta raiz for **my_folder** e você quiser usar uma imagem chamada **screenshot1.png** para **DesktopScreenshot1**, é possível adicionar screenshot1.png na raiz da pasta e, em seguida, inserir **my_folder/screenshot1.png** no campo **DesktopScreenshot1**. Se você criou uma pasta de imagens na pasta raiz e, em seguida, inseriu screenshot1.jpg lá, é necessário inserir **my_folder/images/screenshot1.png**. Observe que depois de importar as listagens usando uma pasta, caminhos para as imagens serão convertidos para URLs para os arquivos no Partner Center na próxima vez em que você exportar as listagens. É possível copiar e colar essas URLs para usá-las novamente (por exemplo, para usar os mesmos ativos em vários idiomas de listagem). 
 
 > [!IMPORTANT]
-> Se a listagem exportada inclui trailers, esteja ciente de que excluir a URL do trailer ou a imagem em miniatura do seu arquivo. csv remove completamente o arquivo excluído do Partner Center, e você não poderá acessá-lo lá (a menos que ele também é usado no ano pode listagem em que ainda não tenha sido excluído). 
+> Se a listagem exportada inclui trailers, lembre-se que excluir a URL do trailer ou a imagem em miniatura do seu arquivo. csv remove completamente o arquivo excluído do Partner Center, e você não poderá acessá-lo lá (a menos que ele também é usado no ano pode listagem em que ainda não tenha sido excluído). 
 
 ## <a name="import-listings"></a>Importar listagens
 
@@ -97,7 +97,7 @@ Em caso de problemas, você verá uma observação indicando que é necessário 
 > [!TIP]
 > É possível acessar essas informações novamente mais tarde por meio do link **Exibir erros da última importação**.
 
-Nenhuma das informações do seu arquivo. csv serão salvas no Partner Center até que todos os erros no arquivo sejam resolvidos, até mesmo para campos sem erros. Depois de importar um arquivo. csv sem erros, as informações de listagem fornecidas por você serão salvas no Partner Center e serão usada para esse envio.
+Nenhuma das informações do seu arquivo. csv serão salvas no Partner Center até que todos os erros no arquivo sejam resolvidos, até mesmo para campos sem erros. Depois de importar um arquivo. csv sem erros, as informações de listagem fornecidas serão salvas no Partner Center e serão usada para esse envio.
 
 Você pode continuar a fazer atualizações nas listagens importando outro arquivo. csv atualizado ou fazendo alterações diretamente no Partner Center.
 

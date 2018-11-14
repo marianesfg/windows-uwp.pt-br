@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042361"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257406"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de ponto de serviço compatíveis
 
@@ -68,7 +68,7 @@ ms.locfileid: "6042361"
 |
 
 
-¹ Upgradable para dar suporte a códigos de barras 2D por meio de Honeywell <br/>
+¹ Upgradable para dar suporte a 2D códigos de barras por meio de Honeywell <br/>
 Firmware de ² mínimo necessário 016 (2018.01.18) necessários. Atualizável usando Zebra [123Scan](http://www.zebra.com/123Scan). 
 
 

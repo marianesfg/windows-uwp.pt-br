@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035495"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185570"
 ---
 # <a name="search-and-find-in-page"></a>Pesquisar e localizar na página
 
@@ -31,7 +31,7 @@ A pesquisa é uma das principais maneiras para os usuários encontrarem conteúd
 ## <a name="elements-of-the-search-experience"></a>Elementos da experiência de pesquisa
 
 
-**Entrada.** é o modo mais comum de entrada de pesquisa de texto e é o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
+**Entrada.** é o modo mais comum de entrada de pesquisa de texto e o foco deste guia. Outros modos de entrada comuns incluem voz e câmera, mas eles geralmente exigem a capacidade de interface com o hardware do dispositivo e podem exigir outros controles ou interface do usuário personalizada no aplicativo.
 
 **Entrada de zero.** Depois que o usuário tiver ativado o campo de entrada, mas antes do usuário ter inserido texto, você pode exibir o que é chamado uma "tela de entrada zero." A tela de entrada zero normalmente aparecerá na tela do aplicativo para que a [sugestão automática](auto-suggest-box.md) substitua esse conteúdo quando o usuário começar a inserir a consulta. Histórico de pesquisa recente, pesquisas mais populares, sugestões de pesquisa contextual e dicas são todos bons candidatos para o estado de entrada zero.
 
@@ -58,7 +58,7 @@ A pesquisa é um recurso comum, e os usuários encontrarão interface do usuári
 
 Alguns escopos comuns da pesquisa incluem:
 
-**Global** e **contextuais/refinadas.** Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
+**Global** e **contextual/refinado.** Pesquisa várias origens de nuvem e conteúdo local. Resultados variados incluem URLs, documentos, mídia, ações, aplicativos e muito mais.
 
 **Web.** Pesquisa um índice da web. Os resultados incluem páginas, entidades e respostas.
 

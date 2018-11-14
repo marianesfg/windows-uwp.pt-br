@@ -2,29 +2,29 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar apps usando a ferramenta WinAppDeployCmd.exe
-description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo de plataforma Universal do Windows (UWP) de um computador Windows 10 em qualquer dispositivo Windows 10.
+description: O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo da plataforma Universal do Windows (UWP) em um computador Windows 10 em qualquer dispositivo Windows 10.
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 13468ce3b74992c026d94223b5e67aea99d79991
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044076"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152066"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar apps usando a ferramenta WinAppDeployCmd.exe
 
 
-O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo de plataforma Universal do Windows (UWP) de um computador Windows 10 em qualquer dispositivo Windows 10. Você pode usar essa ferramenta para implantar um pacote do aplicativo quando o dispositivo Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
+O Windows Application Deployment (WinAppDeployCmd.exe) é uma ferramenta de linha de comando que pode usar para implantar um aplicativo da plataforma Universal do Windows (UWP) em um computador Windows 10 em qualquer dispositivo Windows 10. Você pode usar essa ferramenta para implantar um pacote do aplicativo quando o dispositivo Windows 10 está conectado por USB ou disponível na mesma sub-rede sem a necessidade do Microsoft Visual Studio ou a solução desse aplicativo. Você também pode implementar o aplicativo sem empacotar primeiro a um computador ou Xbox One remoto. Este artigo descreve como instalar aplicativos UWP usando essa ferramenta.
 
-Basta o SDK do Windows 10 instalado para executar a ferramenta WinAppDeployCmd em um prompt de comando ou um arquivo de script. Quando você instala um aplicativo com WinAppDeployCmd.exe, isso utiliza o arquivo.appx/.msix ou AppxManifest (para arquivos soltos) para carregar no lado do seu aplicativo em um dispositivo Windows 10. Esse comando não instala o certificado necessário para o aplicativo. Para executar o aplicativo, o dispositivo Windows 10 deve estar no modo de desenvolvedor ou já ter o certificado instalado.
+Basta o SDK do Windows 10 instalado para executar a ferramenta WinAppDeployCmd em um prompt de comando ou um arquivo de script. Quando você instala um aplicativo com WinAppDeployCmd.exe, usa o arquivo de.appx/.msix ou AppxManifest (para arquivos soltos) para carregar no lado do seu aplicativo em um dispositivo Windows 10. Esse comando não instala o certificado necessário para o aplicativo. Para executar o aplicativo, o dispositivo Windows 10 deve estar no modo de desenvolvedor ou já ter o certificado instalado.
 
 Para implementar em dispositivos móveis, você deve primeiro criar um pacote. Para obter mais informações, veja [aqui](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-A ferramenta **WinAppDeployCmd.exe** está localizada aqui em seu computador Windows 10: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (com base no seu caminho de instalação do SDK). 
+A ferramenta **WinAppDeployCmd.exe** está localizada aqui em seu computador Windows 10: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (com base em seu caminho de instalação do SDK). 
 > [!NOTE]
 > Na versão 15063 e posterior do SDK, ele está instalado lado a lado em pastas específicas à versão.  SDKs anteriores (14393 e anteriores) são gravados diretamente na pasta pai.
 

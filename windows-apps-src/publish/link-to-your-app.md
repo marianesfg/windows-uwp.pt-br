@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, link, protocolo da windows store, vincular a um aplicativo, vincular ao aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: d0d0a9fc862734611167e5118392126cb42687f2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031408"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205224"
 ---
 # <a name="link-to-your-app"></a>Link para seu app
 
@@ -43,7 +43,7 @@ Você pode criar um link que inicia o Microsoft Store e vai diretamente para a p
 
 Esses links são úteis quando você sabe que os usuários estão em um dispositivo Windows e você deseja que eles sejam encaminhados diretamente para a página de listagem da Loja. Por exemplo, você pode usar o link depois de verificar as cadeias de caracteres de agente do usuário em um navegador para confirmar se o sistema operacional do usuário oferece suporte à Loja quando você já está se comunicando por um aplicativo UWP.
 
-Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do seu aplicativo a este link:
+Para usar esse esquema de URI para vincular diretamente à listagem da loja do seu aplicativo, acrescente a ID da loja do aplicativo a este link:
 
 `ms-windows-store://pdp/?ProductId=`
 

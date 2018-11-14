@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 9f1e41c3e09d9a711ce9174a5a658a55c7c44abd
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044526"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158538"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
@@ -123,11 +123,11 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 ```
 
 > [!NOTE]
-> Quando iniciado por contrato de arquivo, certifique-se de que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não para o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de arquivo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não para o conteúdo do aplicativo anterior.
 
-Recomendamos que você crie um novo XAML **quadro** para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação para o novo quadro XAML não contém nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Se você decidir usar um único **quadro** de XAML para inicialização em contratos de arquivo, você deve limpar as páginas do diário de navegação do **quadro**antes de navegar para uma nova página.
+Recomendamos que você crie um novo XAML **quadro** para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação para o novo quadro XAML não contém nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Se você decidir usar um único **quadro** de XAML para inicialização e contratos de arquivo, você deve limpar as páginas do diário de navegação do **quadro**antes de navegar para uma nova página.
 
-Quando seu aplicativo é iniciado por ativação de arquivo, você deve considerar incluindo a interface do usuário que permite que o usuário voltar para o início da página do aplicativo.
+Quando seu aplicativo é iniciado por ativação de arquivo, você deve considerar incluindo da interface do usuário que permite ao usuário voltar para o início da página do aplicativo.
 
 ## <a name="remarks"></a>Comentários
 

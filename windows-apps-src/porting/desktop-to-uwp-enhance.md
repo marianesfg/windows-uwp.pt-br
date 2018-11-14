@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e76d3d517be73417777eb31dfc3994f92186522
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044663"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191389"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Aprimorar seu aplicativo da área de trabalho para Windows 10
 
@@ -153,7 +153,7 @@ Para saber mais sobre notificações, consulte [Notificações do sistema intera
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Dar suporte às bases de instalação do Windows XP, do Windows Vista e do Windows 7/8
 
-Você pode modernizar seu aplicativo para Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
+Você pode modernizar seu aplicativo para o Windows 10 sem precisar criar um novo branch e manter bases de código separadas.
 
 Se você quiser compilar binários separados para usuários do Windows 10, use a compilação condicional. Se você preferir criar um conjunto de binários implantado para todos os usuários do Windows, use as verificações de tempo de execução.
 
@@ -167,7 +167,7 @@ Primeiro, adicione uma nova configuração de compilação ao seu projeto.
 
 ![Configuração de compilação](images/desktop-to-uwp/build-config.png)
 
-Para essa configuração de compilação, crie uma constante para identificar o código que chama as APIs do Windows Runtime.  
+Para essa configuração de compilação, crie uma constante para identificar o código que chama APIs do Windows Runtime.  
 
 Para projetos baseados em .NET, a constante é chamada uma **Constante de Compilação Condicional**.
 
@@ -206,7 +206,7 @@ O compilador só cria esse código se essa constante for definida em sua configu
 
 Você pode compilar um conjunto de binários para todos os usuários do Windows, independentemente da versão do Windows executada. Seu aplicativo chama APIs do Windows Runtime apenas se o usuário executa seu aplicativo como um aplicativo empacotado no Windows 10.
 
-A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar esse pacote Nuget: [Auxiliares de ponte de Desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, em seguida, use o ``IsRunningAsUWP()`` método como uma ponte de todo o código que chama as APIs do Windows Runtime. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+A maneira mais fácil de adicionar verificações de tempo de execução ao seu código é instalar esse pacote Nuget: [Auxiliares de ponte de Desktop](https://www.nuget.org/packages/DesktopBridge.Helpers/) e, em seguida, use o ``IsRunningAsUWP()`` método como uma ponte de todo o código que chama APIs do Windows Runtime. consulte esta postagem de blog para obter mais detalhes: [Ponte de Desktop - identificar o contexto do aplicativo](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Vídeo relacionado
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a398b621ff309af8c6f8252613d3ea106d96485
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048620"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6150181"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -67,7 +67,7 @@ Para especificar um computador remoto para aplicativos do C# ou Microsoft Visual
 
 ![Caixa de Diálogo Conexões Remotas](images/debug-remote-connections.png)
 
-Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e vá para a guia **depuração** . A partir daí, marque **encontrar** lado **máquina remota:**
+Para retornar a essa caixa de diálogo, você pode abrir as propriedades do projeto e vá para a guia **depuração** . A partir daí, marque **Localizar** próxima **máquina remota:**
 
 ![Guia de depuração](images/debug-remote-machine-config.png)
 
@@ -134,7 +134,7 @@ As novas propriedades incluem:
 
 ### <a name="requirements"></a>Requisitos
 Para utilizar as opções de implementação remota avançada, você deve satisfazer os requisitos a seguir:
-* Ter o Visual Studio 2015 atualização 3 ou alguns Visual Studio versão posterior instalado com o Windows 10 Tools 1.4.1 ou posterior (que inclui o SDK de atualização de aniversário do Windows 10), recomendamos que você use a versão mais recente do Visual Studio com atualizações para garantir que você obtenha todos os o recursos de desenvolvimento e segurança mais recentes.
+* Ter o Visual Studio 2015 atualização 3 ou alguns Visual Studio versão posterior instalado com o Windows 10 Tools 1.4.1 ou posterior (que inclui o SDK de atualização de aniversário do Windows 10), recomendamos que você use a versão mais recente do Visual Studio com as atualizações para garantir que você obtenha todos os o recursos de desenvolvimento e segurança mais recentes.
 * Foque em um dispositivo remoto Xbox da Atualização de Aniversário do Windows 10 ou computador com a Atualização do Windows 10 para Criadores. 
 * Use o modo de Autenticação Universal
 

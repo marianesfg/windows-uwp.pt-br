@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 98bb74f2c37e91d5b7d9b02a5733b42877769c54
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047208"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205973"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 
@@ -26,7 +26,7 @@ O tópico anterior era [Portando o projeto](w8x-to-uwp-porting-to-a-uwp-project.
 
 Exceções de análise XAML podem ser difíceis de diagnosticar, especialmente se não houver mensagens de erro significativas na exceção. Certifique-se de que o depurador esteja configurado para capturar exceções de primeira chance (para tentar e capturar a exceção de análise logo no início). Você pode inspecionar a variável de exceção no depurador para determinar se o HRESULT ou a mensagem tem informações úteis. Além disso, verifique na janela de saída do Visual Studio se há mensagens de erro de saída do analisador XAML.
 
-Se seu aplicativo for encerrado e tudo o que você sabe é que uma exceção sem tratamento foi lançada durante a análise da marcação XAML, isso pode ser o resultado de uma referência a um recurso ausente (ou seja, um recurso cuja chave existe para aplicativos Universal 8.1, mas não para aplicativos do Windows 10 como algumas chaves de estilo de **TextBlock** do sistema). Ou ela pode ser uma exceção lançada dentro de um **UserControl**, um controle personalizado ou um painel de layout personalizado.
+Se seu aplicativo for encerrado e tudo o que você sabe é que uma exceção sem tratamento foi lançada durante a análise da marcação XAML, em seguida, que pode ser o resultado de uma referência a um recurso ausente (ou seja, um recurso cuja chave existe para aplicativos Universal 8.1 mas não para aplicativos do Windows 10 como algumas chaves de estilo de **TextBlock** do sistema). Ou ela pode ser uma exceção lançada dentro de um **UserControl**, um controle personalizado ou um painel de layout personalizado.
 
 Um último recurso é uma divisão binária. Remova cerca da metade da marcação de uma página e execute novamente o aplicativo. Em seguida, você saberá se o erro está em algum lugar dentro da metade removida (que agora você deverá restaurar em qualquer caso) ou na metade que você *não* removeu. Repita o processo dividindo a metade que contém o erro e assim por diante, até zerar o problema.
 

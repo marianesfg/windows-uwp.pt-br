@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d8fb1dc486c039007c3ea0d4ee36d72c0c511f9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032315"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159928"
 ---
 # <a name="create-a-hello-world-app-js"></a>Criar um app Hello, world (JS)
 
-Este tutorial ensina a usar JavaScript e HTML para criar um simples "Hello, world" aplicativo destinado a Universal Windows Platform (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode criar um aplicativo que é executado em qualquer dispositivo Windows 10.
+Este tutorial ensina a usar JavaScript e HTML para criar um simples "Hello, world" aplicativo direcionado a Universal Windows Platform (UWP) no Windows 10. Com um único projeto no Microsoft Visual Studio, você pode criar um aplicativo que é executado em qualquer dispositivo Windows 10.
 
 > [!NOTE]
 > Este tutorial usa o Visual Studio Community 2017. Se você estiver usando uma versão diferente do Visual Studio, ele pode ter uma aparência um pouco diferente.

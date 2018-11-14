@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5d3ab7b50721b969859006831b33e9b00e300f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039656"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6155802"
 ---
 #  <a name="troubleshooting-porting-windowsphone-silverlight-to-uwp"></a>Solução de problemas de portabilidade do WindowsPhone Silverlight para UWP
 
@@ -26,7 +26,7 @@ O tópico anterior era [Portando o projeto](wpsl-to-uwp-porting-to-a-uwp-project
 
 Exceções de análise XAML podem ser difíceis de diagnosticar, especialmente se não houver mensagens de erro significativas na exceção. Certifique-se de que o depurador esteja configurado para capturar exceções de primeira chance (para tentar e capturar a exceção de análise logo no início). Você pode inspecionar a variável de exceção no depurador para determinar se o HRESULT ou a mensagem tem informações úteis. Além disso, verifique na janela de saída do Visual Studio se há mensagens de erro de saída do analisador XAML.
 
-Se seu aplicativo for encerrado e tudo o que você sabe é que uma exceção sem tratamento foi lançada durante a análise da marcação XAML, isso pode ser o resultado de uma referência a um recurso ausente (ou seja, um recurso cuja chave existe para aplicativos do WindowsPhone Silverlight, mas não para Windows 10 aplicativos, como algumas chaves de estilo de **TextBlock** do sistema). Ou ela pode ser uma exceção lançada dentro de um **UserControl**, um controle personalizado ou um painel de layout personalizado.
+Se seu aplicativo for encerrado e tudo o que você sabe é que uma exceção sem tratamento foi lançada durante a análise da marcação XAML, em seguida, que pode ser o resultado de uma referência a um recurso ausente (ou seja, um recurso cuja chave existe para aplicativos do WindowsPhone Silverlight, mas não para Windows 10 aplicativos, como algumas chaves de estilo de **TextBlock** do sistema). Ou ela pode ser uma exceção lançada dentro de um **UserControl**, um controle personalizado ou um painel de layout personalizado.
 
 Um último recurso é uma divisão binária. Remova cerca da metade da marcação de uma página e execute novamente o aplicativo. Em seguida, você saberá se o erro está em algum lugar dentro da metade removida (que agora você deverá restaurar em qualquer caso) ou na metade que você *não* removeu. Repita o processo dividindo a metade que contém o erro e assim por diante, até zerar o problema.
 

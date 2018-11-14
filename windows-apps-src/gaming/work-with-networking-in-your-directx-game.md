@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, rede, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: cc30a66db3fb01edebf4705ecb2e85ea4dbb94d6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030929"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258362"
 ---
 # <a name="networking-for-games"></a>Rede para jogos
 
@@ -47,9 +47,9 @@ Diversas APIs de rede podem ser usadas em jogos DirectX. Portanto, é importante
 
 Estas são algumas das APIs de rede mais populares para jogos:
 
--   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. A classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) fornece um soquete TCP que pode ser usado em jogos da Microsoft Store. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
+-   TCP e soquetes - Fornece uma conexão confiável. Use o TCP para operações de jogos que não precisem de segurança. O TCP permite que o servidor seja facilmente dimensionado, então ele costuma ser usado em jogos que usam o modelo de infraestrutura (cliente-servidor ou Internet ponto a ponto). O TCP também pode ser usado por jogos ad hoc (ponto a ponto local) via Wi-Fi Direct e Bluetooth. O TCP costuma ser usado para movimento de objetos do jogo, interação entre os personagens, bate-papo com texto e outras operações. A classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) fornece um soquete TCP que pode ser usado nos jogos da Microsoft Store. A classe **StreamSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
 -   TCP e soquetes usando SSL - Fornece uma conexão confiável que impede interceptações. Use conexões TCP com SSL para operações de jogos que precisem de segurança. A criptografia e a sobrecarga de SSL aumentam o custo de latência e desempenho, então ela é usada apenas quando a segurança é necessária. O TCP com SSL costuma ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) fornece um soquete TCP que dá suporte à SSL.
--   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. A classe [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) fornece um soquete UDP que pode ser usado em jogos da Microsoft Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
+-   UDP e soquetes - Fornece transferências de rede não confiáveis com baixa sobrecarga. O UDP é usado para operações de jogos que exigem baixa latência e podem tolerar alguma perda no pacote. Também costuma ser usado para jogos de luta, tiros e habilidades, áudio de rede e bate-papo de voz. A classe [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) fornece um soquete UDP que pode ser usado nos jogos da Microsoft Store. A classe **DatagramSocket** é usada com as classes relacionadas [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) no namespace.
 -   HTTP Cliente - Fornece uma conexão confiável para servidores HTTP. O cenário de rede mais comum é para acessar um site da web para recuperar ou armazenar informações. Um exemplo simples seria um jogo que usa um site da web para armazenar informações de usuários e pontuações de jogos. Quando usado com SSL para segurança, um cliente HTTP pode ser usado para logon, compra e troca de ativos, criação e gerenciamento de personagens do jogo. A classe [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) fornece uma HTTP API moderna de cliente para uso em jogos da Microsoft Store. A classe **HttpClient** é usada com as classes relacionadas [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no namespace.
 
 ## <a name="handling-network-exceptions-in-your-directx-game"></a>Manipulando exceções de rede em seu jogo em DirectX

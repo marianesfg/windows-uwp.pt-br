@@ -11,17 +11,17 @@ pm-contact: clint.rutkas
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 97df5037d2cdc07361cbc7f80830ba951a0a3caa
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051991"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6251096"
 ---
 # <a name="windows-template-studio"></a>Windows Template Studio
 
 ![imagem hero](images/wts1.png)
 
-Windows modelo Studio (WTS) é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao mesmo tempo em que implementação comprovadas padrões e práticas recomendadas. Espalhados em todo o código gerado temos links de documentos, Stack Overflow e blogs para fornecer dados úteis. WTS dá suporte à criação de aplicativos em c# ou Visual Basic.
+Windows modelo Studio (WTS) é uma extensão de 2017 Visual Studio que acelera a criação de novos aplicativos da plataforma Universal do Windows (UWP) usando uma experiência com base em assistente. O projeto UWP resultante é válido e legível código que incorpora os recursos mais recentes do Windows 10 ao implementar comprovadas padrões e práticas recomendadas. Espalhados em todo o código gerado temos links de documentos, Stack Overflow e blogs para fornecer dados úteis. WTS dá suporte à criação de aplicativos em c# ou Visual Basic.
 
 Para obter mais informações, visite o [repositório de projeto no GitHub](https://github.com/microsoft/windowsTemplateStudio).
 

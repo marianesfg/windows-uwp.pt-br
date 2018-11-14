@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, gerente de aplicativos, implantação, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037900"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6157381"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implantar um aplicativo por meio de registro de arquivo flexível 
 
@@ -20,16 +20,16 @@ Este guia mostra como usar o layout de arquivo flexível para validar e comparti
 
 ## <a name="what-is-a-loose-file-layout"></a>O que é um layout de arquivo flexível?
 
-Layout de arquivo flexível é simplesmente o ato de colocar o conteúdo do aplicativo em uma pasta em vez de passar pelo processo de empacotamento. O conteúdo do pacote é "livremente" disponível em uma pasta e não empacotado. 
+Layout de arquivo flexível é simplesmente o ato de colocar o conteúdo do aplicativo em uma pasta em vez de passar pelo processo de empacotamento. O conteúdo do pacote é "livremente" disponível em uma pasta e não compactados. 
 
 > [!WARNING]
 > Registro de layout de arquivo flexível é para desenvolvedores e designers validar rapidamente seus aplicativos durante o desenvolvimento ativo. Essa abordagem não deve ser usado para "dogfood" ou o aplicativo de versão de pré-lançamento. É recomendável que a validação final ser realizado em um aplicativo empacotado que está assinado com um certificado confiável. 
 
 ## <a name="advantages-of-loose-file-registration"></a>Vantagens de registro de arquivo flexível
 
-- **Validação rápida** - porque os arquivos do aplicativo já são desempacotados, os usuários podem registrar o layout de arquivo flexível e iniciar o aplicativo rapidamente. Como um aplicativo regular, o usuário poderá usar o aplicativo como ele foi criado. 
+- **Validação rápida** - porque os arquivos do aplicativo já são desempacotados, os usuários podem registrar o layout de arquivo flexível e iniciar o aplicativo rapidamente. Assim como um aplicativo normal, o usuário será capaz de usar o aplicativo como ele foi criado. 
 - **Facilitar a distribuição em rede** - se os arquivos soltos estão localizados em um compartilhamento de rede em vez de uma unidade local, os desenvolvedores podem enviar o local de compartilhamento de rede para outros usuários que tenham acesso à rede, e eles podem registrar o layout de arquivo flexível e executar o aplicativo. Isso permite que vários usuários validar o aplicativo simultaneamente. 
-- **Colaboração** - registro de arquivo flexível permite que os desenvolvedores e designers continuarão funcionando no ativos visuais, enquanto o aplicativo estiver registrado. Os usuários verão essas alterações quando eles iniciam o aplicativo. Observe que você pode alterar apenas ativos estáticos dessa maneira. Se você precisar modificar qualquer código ou conteúdo criado dinamicamente, você deve compilar novamente o aplicativo.
+- **Colaboração** - registro de arquivo flexível permite que os desenvolvedores e designers continuarão funcionando no ativos visuais enquanto o aplicativo é registrado. Os usuários verão essas alterações quando ele iniciam o aplicativo. Observe que você pode alterar apenas ativos estáticos dessa maneira. Se você precisar modificar qualquer código ou conteúdo criado dinamicamente, você deve compilar novamente o aplicativo.
 
 ## <a name="how-to-register-a-loose-file-layout"></a>Como registrar um layout de arquivo flexível
 
@@ -57,7 +57,7 @@ WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Addres
 
 ### <a name="windows-device-portal"></a>Windows Device Portal
 
-Windows Device Portal está disponível em todos os dispositivos Windows 10 e é usado pelos desenvolvedores para testar e validar o seu trabalho. Ele atende a todos os públicos-alvo comunidade de desenvolvedores com sua experiência do usuário do navegador e pontos de extremidade REST. Para obter mais informações sobre o Portal de dispositivos, consulte [Visão geral do Windows Device Portal](device-portal.md).
+Windows Device Portal está disponível em todos os dispositivos Windows 10 e é usado pelos desenvolvedores para testar e validar seu trabalho. Ele atende a todos os públicos-alvo da comunidade do desenvolvedor com sua experiência do usuário do navegador e pontos de extremidade REST. Para obter mais informações sobre o Portal de dispositivos, consulte a [Visão geral do Windows Device Portal](device-portal.md).
 
 Para registrar o layout de arquivo flexível no Portal de dispositivos, siga estas etapas.
 
@@ -67,11 +67,11 @@ Para registrar o layout de arquivo flexível no Portal de dispositivos, siga est
 1. Se o dispositivo host não tem acesso ao compartilhamento de rede, haverá um prompt para inserir as credenciais necessárias.
 1. Quando o registro for concluído, você pode iniciar o aplicativo.
 
-Na página do Gerenciador de aplicativos do Device Portal, você também pode registrar layouts de arquivo flexível opcional para o seu aplicativo principal, selecionando a caixa de seleção **que eu quiser especificar pacotes opcionais** e, em seguida, especificando os caminhos de compartilhamento de rede dos aplicativos opcionais. 
+Na página do Gerenciador de aplicativos do Device Portal, você também pode registrar layouts de arquivo flexível opcional para o seu aplicativo principal, selecionando a caixa de seleção **que especificar pacotes opcionais** e, em seguida, especificando os caminhos de compartilhamento de rede dos aplicativos opcionais. 
 
 ### <a name="powershell"></a>PowerShell 
 
-Windows PowerShell também permite que você registre layouts de arquivo flexível, mas somente no dispositivo local. Se você precisar registrar um layout para um dispositivo remoto, você precisará usar um dos outros métodos. 
+O Windows PowerShell também permite que você registre layouts de arquivo flexível, mas somente no dispositivo local. Se você precisar registrar um layout para um dispositivo remoto, você precisará usar um dos outros métodos. 
 
 Para registrar o layout de arquivo flexível, iniciar o PowerShell e digite o seguinte.
 
@@ -85,7 +85,7 @@ Add-AppxPackage -Register <path to manifest file>
 Atualmente, unidades de rede mapeadas não são suportadas para registros de arquivo flexível. Consulte a unidade mapeada com total o caminho do compartilhamento de rede.
 
 ### <a name="registration-failure"></a>Falha no registro
-O dispositivo no qual está ocorrendo o registro precisarão ter acesso para o layout de arquivo. Se o layout de arquivo é hospedado em um compartilhamento de rede, certifique-se de que o dispositivo tem acesso. 
+O dispositivo no qual está ocorrendo o registro precisarão ter acesso para o layout de arquivo. Se o layout do arquivo é hospedado em um compartilhamento de rede, certifique-se de que o dispositivo tem acesso. 
 
 ### <a name="modifications-to-visual-assets-arent-being-loaded-in-the-app"></a>Modificações ativos visuais não estão sendo carregadas no aplicativo 
-O aplicativo será carregado seus ativos visuais no momento da inicialização. Se as modificações foram feitas em recursos visuais depois de iniciar o aplicativo, você deve iniciar novamente o aplicativo para exibir as alterações mais recentes.
+O aplicativo será carregado seus ativos visuais no momento da inicialização. Se as modificações foram feitas para os ativos visuais depois de iniciar o aplicativo, você deve iniciar novamente o aplicativo para exibir as alterações mais recentes.

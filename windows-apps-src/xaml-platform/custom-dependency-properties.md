@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 3b52c801ffcf1cfe916e41cfd102a37397fadfee
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033407"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158235"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizadas
 
@@ -184,7 +184,7 @@ Ao criar a propriedade de identificador, combine o nome de propriedade registrad
 O wrapper de propriedade deve chamar [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) na implementação **get** e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) na implementação **set**.
 
 > [!WARNING]
-> Em circunstâncias excepcionais, suas implementações de wrapper devem realizar somente as operações [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) . Caso contrário, você obterá um comportamento diferente quando a propriedade for definida via XAML, em comparação à definição via código. Por uma questão de eficiência, o analisador XAML ignora os wrappers ao definir as propriedades de dependência e se comunica com o repositório de backup por meio do **SetValue**.
+> Em circunstâncias excepcionais, as implementações de wrapper devem executar apenas as operações [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) e [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) . Caso contrário, você obterá um comportamento diferente quando a propriedade for definida via XAML, em comparação à definição via código. Por uma questão de eficiência, o analisador XAML ignora os wrappers ao definir as propriedades de dependência e se comunica com o repositório de backup por meio do **SetValue**.
 
 ```csharp
 public String Label

@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d1e4afd620b871d4273699aea5c02cc9faec80
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029368"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158876"
 ---
 # <a name="midi"></a>MIDI
 
 
 
-Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows. Windows 10 compatível com MIDI via USB (drivers compatíveis com a classe e mais proprietários), MIDI sobre Bluetooth LE (edição de aniversário do Windows 10 e posterior) e por meio de produtos de terceiros disponíveis gratuitamente, MIDI pela Ethernet e roteado MIDI.
+Este artigo mostra como enumerar dispositivos MIDI (Interface Digital de Instrumento Musical) e enviar e receber mensagens MIDI de um aplicativo Universal do Windows. Windows 10 dá suporte a MIDI por USB (drivers compatíveis com a classe e mais proprietários), MIDI sobre Bluetooth LE (edição de aniversário do Windows 10 e posterior) e por meio de produtos de terceiros disponíveis gratuitamente, MIDI pela Ethernet e roteado MIDI.
 
 ## <a name="enumerate-midi-devices"></a>Enumerar dispositivos MIDI
 
