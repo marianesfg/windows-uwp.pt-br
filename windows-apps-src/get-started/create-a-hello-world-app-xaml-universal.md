@@ -8,12 +8,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, uwp, primeiro app, Olá, mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 28b30a592951017fb4a0b3803261cb0258be6ae3
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6263534"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652104"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Criar um app "Hello, world" (XAML)
 
@@ -204,7 +204,7 @@ Um "manipulador de eventos" parece complicado, mas é apenas outro nome para o c
 
 3.  Edite o código do manipulador de eventos em *MainPage.xaml.cs*, a página code-behind. É aqui que as coisas ficam interessantes. O manipulador de eventos padrão tem esta aparência:
 
-```C#
+```cs
 private void Button_Click(object sender, RoutedEventArgs e)
 {
 
@@ -213,18 +213,18 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
   Vamos alterá-la para que ela tenha esta aparência:
 
-```C#
+```cs
 private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MediaElement mediaElement = new MediaElement();
-            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("Hello, World!");
-            mediaElement.SetSource(stream, stream.ContentType);
-            mediaElement.Play();
-        }
+{
+    MediaElement mediaElement = new MediaElement();
+    var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+    Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("Hello, World!");
+    mediaElement.SetSource(stream, stream.ContentType);
+    mediaElement.Play();
+}
 ```
 
-Não deixe de incluir a palavra-chave **async** também ou você receberá um erro ao tentar executar o aplicativo.
+Verifique se a assinatura do método agora inclui a palavra-chave **async** , ou você receberá um erro ao tentar executar o aplicativo.
 
 ### <a name="what-did-we-just-do"></a>O que acabamos de fazer?
 

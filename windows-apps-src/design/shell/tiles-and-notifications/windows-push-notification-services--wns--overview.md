@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 633fd26a7dfc799f9b9c9058f88ba6b1fa40ac57
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6458541"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6672465"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
  
@@ -38,7 +38,7 @@ O diagrama a seguir mostra o fluxo de dados completo para o envio de uma notific
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registrando seu aplicativo e recebendo as credenciais para o serviço na nuvem
 
 
-Antes de enviar notificações usando o WNS, o aplicativo deve ser registrado com o Painel da Microsoft Store. Isso lhe fornecerá credenciais para o aplicativo que serão usadas pelo serviço na nuvem para a autenticação no WNS. Essas credenciais consistem em um SID (Identificador de Segurança de Pacote) e uma chave secreta. Para realizar esse registro, vá para o [Centro de Desenvolvimento do Windows](http://go.microsoft.com/fwlink/p/?linkid=511146) e selecione **Painel**. Depois de criar o aplicativo, você pode recuperar as credenciais seguindo as instruções na página de **Gerenciamento de aplicativo - WNS/MPNS**. Se você desejar usar a solução dos serviços Live, siga o link **site de serviços do Live** nesta página.
+Antes de enviar notificações usando o WNS, o aplicativo deve ser registrado com o Painel da Microsoft Store. Isso lhe fornecerá credenciais para o aplicativo que serão usadas pelo serviço na nuvem para a autenticação no WNS. Essas credenciais consistem em um SID (Identificador de Segurança de Pacote) e uma chave secreta. Para realizar esse registro, entre [Partner Center](https://partner.microsoft.com/dashboard). Depois de criar o aplicativo, você pode recuperar as credenciais seguindo as instruções na página de **Gerenciamento de aplicativo - WNS/MPNS**. Se você desejar usar a solução dos serviços Live, siga o link **site de serviços do Live** nesta página.
 
 Cada aplicativo tem seu próprio conjunto de credenciais para seu serviço na nuvem. Essas credenciais não podem ser usadas para enviar notificações para qualquer outro aplicativo.
 
