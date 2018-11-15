@@ -2,23 +2,23 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Publicar seu aplicativo da área de trabalho empacotado em da Windows store ou carregue-o em um ou mais dispositivos.
+title: Publicar seu aplicativo da área de trabalho empacotado para a Microsoft Store ou carregue-o em um ou mais dispositivos.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b16e06c81eeb90e500e40fc9b4d7ab709651091
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: f79e641b377f0e34ece8f0be434fae11cba621a6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6452735"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668703"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Distribuir um aplicativo da área de trabalho empacotado
 
-Publicar seu aplicativo da área de trabalho empacotado em da Windows store ou carregue-o em um ou mais dispositivos.  
+Publicar seu aplicativo da área de trabalho empacotado para a Microsoft Store ou carregue-o em um ou mais dispositivos.  
 
 > [!NOTE]
 > Você tem um plano de como fazer a transição de usuários para seu aplicativo empacotado? Antes de distribuir seu aplicativo, consulte a seção [Transição de usuários para seu aplicativo empacotado](#transition-users) deste guia para obter algumas ideias.
@@ -27,7 +27,7 @@ Publicar seu aplicativo da área de trabalho empacotado em da Windows store ou c
 
 A [Microsoft Store](https://www.microsoft.com/store/apps) é uma maneira conveniente para que seus clientes obtenham o aplicativo.
 
-Publica seu aplicativo para esse repositório para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações por meio da [Microsoft Store para empresas](https://www.microsoft.com/business-store).
+Publica seu aplicativo na Microsoft Store para atingir um público maior. Além disso, clientes organizacionais podem adquirir seu aplicativo para distribuição interna em suas organizações por meio da [Microsoft Store para empresas](https://www.microsoft.com/business-store).
 
 Caso planeje publicar na Microsoft Store, você verá algumas perguntas adicionais como parte do processo de envio. Isso ocorre porque o manifesto do pacote declara uma funcionalidade restrita denominada **runFullTrust** e precisamos aprovar o uso desse recurso pelo aplicativo. Você pode ler mais sobre esse requisito aqui: [Funcionalidade restrita](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 

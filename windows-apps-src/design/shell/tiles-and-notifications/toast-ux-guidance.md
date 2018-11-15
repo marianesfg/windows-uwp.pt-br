@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificação, coleção, grupo, experiência do usuário, diretrizes de experiência do usuário, diretrizes, ação, notificação do sistema, Central de ações, noninterruptive, notificações efetivas, não intrusivos notificações, acionáveis, gerenciar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6463476"
+ms.locfileid: "6666579"
 ---
 # <a name="toast-notification-ux-guidance"></a>Diretrizes de experiência do usuário de notificação do sistema
 As notificações são uma parte fundamental da vida moderna; elas ajudam os usuários a ser mais produtivo e estabelecido com aplicativos e sites, bem como mantenha atualizado com as atualizações. No entanto, as notificações podem rapidamente ativem útil opressivas e intrusivo se eles não são projetados de maneira centrada no usuário. As notificações são um botão direito do mouse para longe sendo desativado e é improvável que depois que eles estão desativados, eles serão ativados novamente.  Portanto, verifique se que as notificações estejam respeita espaço na tela do usuário e a hora, para que você pode manter esse canal de envolvimento aberto.
@@ -59,7 +59,7 @@ Ambas essas notificações gorup de uma maneira para conteúdo relevante fique j
 ## <a name="other-resources"></a>Outros recursos
 Esses quatro pontos acima são diretrizes que descobrimos eficientes através de nosso próprio análise de telemetria e primeiro e experimentos de terceiros. Tenha em mente, no entanto, que essas diretrizes são apenas: diretrizes.  Estamos confiantes essas regras ajudará a aumentar o envolvimento e a produtividade de suas notificações, mas nada pode substituir centrada no usuário pensando e aprender os próprios dados.  
 
-Se você enviar notificações para seu aplicativo UWP hoje, você pode visualizar análises sobre o que aconteceu com suas notificações no [Centro de desenvolvimento](https://developer.microsoft.com/en-us/windows)! Esses dados vem livres ao usar o [SDK de serviços de armazenamento](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) ou as [APIs de WNS](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Essas métricas fornecerá mais informações sobre o que acontece com suas notificações na plataforma windows, bem como os usuários estão interagindo com notificações. Acessar esse painel indo para o menu no lado esquerdo envolver > notificações, em seguida, clicando na guia "Analisar" dentro da página de notificações.  Isso está localizado no mesmo lugar, que você deve ir para enviar notificações do portal do Centro de desenvolvimento.
+Se você enviar notificações para seu aplicativo UWP hoje, você pode visualizar análises sobre o que aconteceu com suas notificações no [Partner Center](https://partner.microsoft.com/dashboard)! Esses dados vem livres ao usar o [SDK de serviços de armazenamento](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) ou as [APIs de WNS](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Essas métricas fornecerá mais informações sobre o que acontece com suas notificações na plataforma windows, bem como os usuários estão interagindo com notificações. Acessar esses dados indo para o menu no lado esquerdo envolver > notificações, em seguida, clicando na guia "Analisar" dentro da página de notificações.  Isso está localizado no mesmo lugar, que você deve ir para enviar notificações do Partner Center.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
