@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, compromissos, calendário
 ms.localizationpriority: medium
 ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649996"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6847204"
 ---
 # <a name="manage-appointments"></a>Gerenciar compromissos
 

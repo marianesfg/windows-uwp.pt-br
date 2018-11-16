@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 55d90ffb50d6db71e135cbecf56487b96ba3377c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451577"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6841107"
 ---
 # <a name="beta-testing"></a>Teste beta
 
@@ -42,9 +42,9 @@ Com o teste beta, você pode:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-No painel unificado do Centro de Desenvolvimento do Windows, você pode limitar a distribuição de seus aplicativos somente para os testadores, independentemente de quais sistemas operacionais seu aplicativo se direcione. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
+No [Partner Center](https://partner.microsoft.com/dashboard), você pode limitar a distribuição dos seus aplicativos somente para os testadores, independentemente de quais sistemas operacionais seu aplicativo se destina. Não é necessário criar uma versão separada de seu aplicativo com um nome e identificador de pacote separados; você pode fazer o teste e criar um novo envio quando estiver pronto para disponibilizar o aplicativo para todos. É claro, você pode criar um aplicativo separado apenas para testes se preferir. Se você fizer isso, certifique-se de dar um nome diferente do que pretende como o nome do aplicativo final público.
 
-Consulte [Teste beta e distribuição direcionada](https://msdn.microsoft.com/library/windows/apps/Mt185377) para saber como enviar seu aplicativo para a loja para teste beta.
+Consulte [Teste beta e distribuição direcionada](../publish/beta-testing-and-targeted-distribution.md) para saber como enviar seu aplicativo para a loja para teste beta.
 
  
 

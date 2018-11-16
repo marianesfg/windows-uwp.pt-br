@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, ponto de serviço, pos, leitor de tarja magnética
 ms.localizationpriority: medium
 ms.openlocfilehash: 11653c10310726c79de9deef17a570207045ec4a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6452969"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6283008"
 ---
 # <a name="magnetic-stripe-reader"></a>Leitor de tarjas magnéticas
 

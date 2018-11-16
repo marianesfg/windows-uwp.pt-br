@@ -170,7 +170,6 @@
 ### [Suporte para blocos e notificações do sistema para idioma, escala e contraste](shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
 ## [Fixar seu app na barra de tarefas](shell/pin-to-taskbar.md)
 ## [Personalização da barra de título](shell/title-bar.md)
-## [Projetando para conjuntos](shell/design-for-sets.md)
 
 ## Notificações
 ### Notificações do sistema

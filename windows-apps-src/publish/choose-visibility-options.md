@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, visibilidade, audiência particular, disponível, detectável
 ms.localizationpriority: medium
 ms.openlocfilehash: ec6bc85c15ccf9926939c3bc2e208289c8dc4bcc
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6275301"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6832779"
 ---
 # <a name="choose-visibility-options"></a>Escolher as opções de visibilidade
 

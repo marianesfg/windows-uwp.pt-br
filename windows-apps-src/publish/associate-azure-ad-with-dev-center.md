@@ -7,12 +7,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad, locatário do azure, locatário do aad, locatário do azure ad, gerenciamento de locatário, locatários
 ms.localizationpriority: medium
-ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648261"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853631"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Associar o Azure Active Directory à sua conta do Partner Center
 
@@ -47,7 +47,7 @@ Se sua organização já usa o Azure AD, siga estas etapas para vincular sua con
 
 Se você precisar configurar um novo Azure AD para vincular com sua conta do Partner Center, siga estas etapas.
 
-1.  Desde o [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações do desenvolvedor**. No menu **configurações** , selecione **locatários**.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de engrenagem (perto do canto superior direito do painel) e, em seguida, selecione **as configurações do desenvolvedor**. No menu **configurações** , selecione **locatários**.
 2.  Selecione **Criar novo Azure AD**.
 3.  Insira as informações de diretório para seu novo Azure AD:
     - **Nome de domínio**: o nome exclusivo que usaremos para seu domínio do Azure AD, junto com ". onmicrosoft.com". Por exemplo, se você inseriu "exemplo", seu domínio do Azure AD seria "example.onmicrosoft.com".

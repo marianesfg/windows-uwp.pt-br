@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
 ms.openlocfilehash: 070cb8929ac7a3b0f5041abc0383afb71182223d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673049"
+ms.locfileid: "6837938"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Obter dados de relatório para seu Xbox One erros jogo
 

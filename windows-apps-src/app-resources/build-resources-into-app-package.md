@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 61b526cd7aa2da8733457b16dd0487ef4ead9cca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674427"
+ms.locfileid: "6460116"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Compilar recursos no pacote de aplicativos, e não em um pacote de recursos
 

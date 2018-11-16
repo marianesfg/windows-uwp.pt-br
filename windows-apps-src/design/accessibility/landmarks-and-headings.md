@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 250ed555e6fcf7dc40d31d89a40fa7a96295aacf
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6468873"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6669868"
 ---
 # <a name="landmarks-and-headings"></a>Marcos e títulos
 
