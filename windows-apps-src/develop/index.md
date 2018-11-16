@@ -9,11 +9,11 @@ ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6852470"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6988795"
 ---
 <div> 
 <h1>Desenvolver aplicativos UWP</h1>
@@ -176,7 +176,7 @@ ms.locfileid: "6852470"
                         <h3>Plataforma</h3>
                         <p style="display:block"><a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a></p>
                         <p style="display:block"><a href="/windows/uwp/launch-resume/">Inicialização, retomada e execução de tarefas em segundo plano</a></p>
-                        <p style="display:block"><a href="/windows/uwp/security/">Segurança</a></p>
+                        <p style="display:block"><a href="/windows/uwp/security/">Security</a></p>
                         <p style="display:block"><a href="/windows/uwp/threading-async/">Programação threading e assíncrona</a></p>
                         <p style="display:block"><a href="/windows/uwp/composition/visual-layer">Camada visual</a></p>
                         <p style="display:block"><a href="/windows/uwp/updates-and-versions/application-development-for-windows-as-a-service">Windows como serviço</a></p>

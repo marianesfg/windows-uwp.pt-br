@@ -9,13 +9,13 @@ keywords: Windows 10, uwp, Microsoft Store Services SDK, direcionadas notificaç
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d1281436ce0fe8c7b04429cea897eedc58b15d9
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6670715"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6976907"
 ---
-# <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar seu aplicativo para notificações por push direcionadas
+# <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar seu app para notificações por push direcionadas
 
 Você pode usar a página de **notificações por Push** no Partner Center para interagir diretamente com os clientes enviando notificações por push direcionadas para os dispositivos nos quais seu aplicativo da plataforma Universal do Windows (UWP) está instalado. Por exemplo, você pode usar notificações por push direcionadas para incentivar os clientes a executar uma ação, como a classificação do seu aplicativo ou o uso de um novo recurso. Você pode enviar vários tipos diferentes de notificações por push, incluindo notificações do sistema, notificações de bloco e notificações XML brutas. Você também pode controlar a taxa de inicializações do aplicativo resultantes de suas notificações por push. Para obter mais informações sobre esse recurso, consulte [Enviar notificações por push para clientes do seu aplicativo](../publish/send-push-notifications-to-your-apps-customers.md).
 

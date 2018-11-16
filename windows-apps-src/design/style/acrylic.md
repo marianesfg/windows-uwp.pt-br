@@ -12,12 +12,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f9d56090e8fc1de83eeb4e8a68ca1830692c5b2f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6854936"
+ms.locfileid: "6981152"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -85,7 +85,6 @@ Considere os seguintes padrões de uso para decidir a melhor maneira de incorpor
 
 Se seu aplicativo não é capaz de aproveitar o NavigationView e você pretende adicionar um acrílico por conta própria, recomendamos usar acrílico relativamente transparente com opacidade de tonalidade de 60%.
  - Quando o painel é aberto como uma sobreposição sobre outros conteúdos do aplicativo, isso deve ser [60% de acrílico de aplicativo](#acrylic-theme-resources)
- - Quando o painel é aberto lado a lado com conteúdo principal do aplicativo, isso deve ser [60% de acrílico de fundo](#acrylic-theme-resources)
 
 ![Aplicativo de mapas usando o comando horizontal no aplicativo](images/Maps_In_App_Acrylic_1.png)
 
@@ -93,7 +92,7 @@ Além disso, ter seu conteúdo estender ou rolagem sob o acrílico na parte supe
 
 ### <a name="vertical-panes"></a>Painéis verticais
 
-Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em do NavigationView **Collapsed** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
+Para painéis verticais ou superfícies que ajudam a seção conteúdo do seu aplicativo, recomendamos que você use um plano de fundo opaco em vez de acrílico. Se seu painéis verticais abrir em cima de conteúdo, como em do NavigationView **compacto** ou modos **mínimo** , sugerimos que usar acrílico no aplicativo para ajudar a manter o contexto da página quando o usuário tem esse painel aberto.
 
 ### <a name="transient-surfaces"></a>Superfícies transitórios
 
