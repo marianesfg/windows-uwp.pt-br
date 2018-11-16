@@ -15,12 +15,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f392d1d6c8eaa309e1774e8a98671a7743fdc9d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: e6bba6c22b7f0055a93bfd1826bc3a2acc0f2164
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665016"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6968380"
 ---
 # <a name="designing-for-mixed-reality"></a>Desenvolvendo para realidade misturada
 
@@ -86,7 +86,7 @@ Vários métodos de entrada novos foram projetados principalmente para uso com d
 * [Dispositivo clicker](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (HoloLens somente)
 * [Controladores de movimento](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (dispositivos de realidade misturada somente, mostrados acima.)
 
-Esses controladores fazem a interação com objetos virtuais se tornar natural e precisa. Algumas das interações você obtém gratuitamente. Por exemplo, o HoloLens seleciona gesto ou clicando na tecla Windows do controlador de movimento ou gatilho gerará a resposta de entrada esperada, novamente, sem codificação de sua parte.
+Esses controladores fazem a interação com objetos virtuais se tornar natural e precisa. Algumas das interações você obtém gratuitamente. Por exemplo, o HoloLens seleciona gesto ou clicando na tecla Windows do controlador de movimento ou gatilho gerará a resposta de entrada que você esperaria, novamente, sem codificação de sua parte.
 
 Em outras ocasiões, você desejará adicionar código para tirar proveito das informações extras e entradas que são disponibilizadas. Por exemplo, os controladores de movimento podem ser usados para manipular objetos com um nível de controle fino, se você escrever um código que leva em consideração sua posição e pressionamento de botão.
 
