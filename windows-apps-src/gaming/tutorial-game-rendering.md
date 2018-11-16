@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
 ms.openlocfilehash: 134c9005a796f52fb61ba628c0a85c8dbd875442
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6454018"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6855149"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Estrutura de renderização II: introdução ao jogo
 
