@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização, cena, teste de profundidade, direct3d, sombras
 ms.localizationpriority: medium
 ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6990378"
+ms.locfileid: "7101150"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Renderizar a cena com teste de profundidade
 
