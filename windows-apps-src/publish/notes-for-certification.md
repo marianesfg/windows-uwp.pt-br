@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, notas para testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: ab3ba2eb08c01bac3b9c0536ce11b8e2bea96054
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6457729"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6836589"
 ---
 # <a name="notes-for-certification"></a>Notas para certificação
 

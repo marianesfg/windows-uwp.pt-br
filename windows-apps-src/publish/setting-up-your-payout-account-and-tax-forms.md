@@ -8,12 +8,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 767ea7ca6a5f226fda75d97c3497ae77a5819626
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665918"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845647"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar a conta de pagamento e formulários de imposto
 
@@ -44,8 +44,8 @@ A conta de pagamento é a conta bancária para a qual enviamos a receita de suas
  
 **Para configurar sua conta de pagamento**
 
-1.  No [Partner Center](https://partner.microsoft.com/dashboard), vá para **configurações de conta** , selecionando o ícone no canto superior direito.
-2.  No menu de navegação esquerdo da página **Configurações da conta**, clique em **Conta de pagamento**.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de **configurações da conta** no canto superior direito e selecione **as configurações do desenvolvedor**.
+2.  No menu de navegação esquerdo, selecione a **conta de pagamento**.
 
    > [!NOTE]
    > Como se tratam de informações confidenciais, talvez você seja solicitado a entrar novamente.
@@ -136,8 +136,8 @@ Você pode preencher e enviar os formulários de imposto eletronicamente no Part
  
 **Para preencher seu perfil fiscal**
 
-1.  No [Partner Center](https://partner.microsoft.com/dashboard), clique no ícone de **configurações da conta** no canto superior direito.
-2.  No menu de navegação esquerdo da página **Configurações da conta**, clique em **Perfil fiscal**.
+1.  No [Partner Center](https://partner.microsoft.com/dashboard), selecione o ícone de **configurações da conta** no canto superior direito e selecione **as configurações do desenvolvedor**.
+2.  No menu de navegação esquerdo, selecione o **perfil de imposto**.
 
    > [!NOTE]
    > Como se tratam de informações confidenciais, talvez você seja solicitado a entrar novamente.

@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bd5a92f1e8dfe762ac3433bf64f9fe705644a9f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 4899e117096cf6d03c497fec79038e6d96aca3fd
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6669071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840953"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -65,7 +65,7 @@ Você pode fornecer essas imagens como arquivos .png (com até 50 MB), que devem
 
 ### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>9:16 Arte de cartaz (720 x 1080 ou 1440 x 2160 pixels)
 
-É usado como a imagem de logotipo principal para clientes no Windows 10 e dispositivos Xbox; portanto, é **altamente recomendável** fornecer essa imagem para garantir uma exibição adequada. Sua listagem pode não ter uma boa aparência se você não a incluir e não será consistente com outras listagens vistas pelos clientes ao navegar na Store. Essa imagem também pode ser usada nos resultados da pesquisa ou nas coleções editorialmente comissionadas.
+É usado como a imagem de logotipo principal para clientes no Windows 10 e dispositivos Xbox; portanto, é **altamente recomendável** fornecer essa imagem para garantir uma exibição adequada. Sua listagem pode não ter uma boa aparência se você não incluí-lo e não será consistente com outras listagens que os clientes verão enquanto navegando na loja. Essa imagem também pode ser usada nos resultados da pesquisa ou nas coleções editorialmente comissionadas.
 
 Essa imagem deve incluir o nome do app, e qualquer texto na imagem deve atender aos requisitos de legibilidade acessíveis (taxa de contraste de 4,51). Observe que as sobreposições de texto podem aparecer no quarto inferior dessa imagem, portanto, não inclua texto ou imagens chave ali.
 

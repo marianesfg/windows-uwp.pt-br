@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, blocos secundários
 ms.localizationpriority: medium
 ms.openlocfilehash: e27786701fa2ae9ac00a7eab57e840ec9a0dc811
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6659383"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6973264"
 ---
 # <a name="secondary-tiles"></a>Blocos secundários
 

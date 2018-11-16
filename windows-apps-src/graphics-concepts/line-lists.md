@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a514fb072dd95b9de2c29e097e8387c0f1068a4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031278"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6974581"
 ---
 # <a name="line-lists"></a>Listas de linhas
 
