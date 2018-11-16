@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes comparativos, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: e5a4c3607486a7163648c7aa5a0e1d03d37e421f
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6207704"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6992433"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Criar e executar seu primeiro experimento
 
@@ -106,7 +106,7 @@ Aguarde várias horas depois de concluir a seção anterior e, em seguida, siga 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 * [Criar um projeto e definir variáveis remotas no Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Codificar o aplicativo para experimentação](code-your-experiment-in-your-app.md)
+* [Codificar seu aplicativo para experimentação](code-your-experiment-in-your-app.md)
 * [Definir seu experimento no Partner Center](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Gerenciar seu experimento no Partner Center](manage-your-experiment.md)
 * [Executar experimentos de app com teste A/B](run-app-experiments-with-a-b-testing.md)

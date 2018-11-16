@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4be90230407c3d539c55dc05d1272fbaaa2ae10e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190067"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6979329"
 ---
 # <a name="app-capability-declarations"></a>Declarações de funcionalidades do app
 
@@ -108,16 +108,16 @@ Para declarar um recurso restrito, modificar seu arquivo de origem do [manifesto
 
 ### <a name="restricted-capability-approval-process"></a>Processo de aprovação de funcionalidade restrita
 
-Anteriormente, era necessário contatar o suporte para obter aprovação para usar uma funcionalidade. Nós agora permitimos que você forneça essas informações no painel do Centro de Desenvolvimento como parte do [processo de envio](../publish/app-submissions.md).
+Anteriormente, era necessário contatar o suporte para obter aprovação para usar uma funcionalidade. Vamos agora permitem que você forneça essas informações no [Partner Center](https://partner.microsoft.com/dashboard/) como parte do [processo de envio](../publish/app-submissions.md).
 
 Quando você carrega pacotes para seu envio, detectaremos se as funcionalidades restritas são declaradas. Se fizermos isso, será necessário fornecer detalhes sobre como seu produto usa cada funcionalidade na página [Opções de envio](../publish/manage-submission-options.md#restricted-capabilities). Certifique-se de fornecer o máximo de detalhes possível para nos ajudar a entender por que seu produto precisa declarar a funcionalidade. Observe que isso pode adicionar algum tempo adicional para seu envio concluir o processo de certificação.
 
 Durante o processo de certificação, nossos testadores analisarão as informações que você fornecer para determinar se o envio é aprovado para usar a funcionalidade. Observe que isso pode adicionar algum tempo adicional para concluir o processo de certificação do seu envio. Se nós aprovarmos o uso da funcionalidade, seu aplicativo continuará o restante do processo de certificação. Você geralmente não precisa repetir o processo de aprovação da funcionalidade ao enviar atualizações do seu aplicativo (a menos que você declare funcionalidades adicionais).
 
-Se nós não aprovarmos o uso da funcionalidade, seu envio haverá falha na certificação e forneceremos comentários no relatório de certificação. Em seguida, você tem a opção de criar um novo envio e carregar os pacotes que não declaram a funcionalidade ou, se aplicável, resolver problemas relacionados ao uso da funcionalidade e solicitar a aprovação em um novo envio.
+Se nós não aprovarmos o uso da funcionalidade, seu envio haverá falha na certificação e forneceremos comentários no relatório de certificação. Em seguida, você tem a opção de criar um novo envio e carregar os pacotes que não declaram a funcionalidade ou, se aplicável, resolver problemas relacionados ao uso da funcionalidade e aprovação da solicitação em um novo envio.
 
 > [!NOTE]
-> Se o envio usar uma área restrita de desenvolvimento no Centro de Desenvolvimento (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), você deverá solicitar aprovação antecipadamente, em vez de fornecer informações na página **Opções de envio**. Para isso, visite a [página de suporte do Windows Developer](https://developer.microsoft.com/windows/support). Selecione o tópico de suporte do desenvolvedor **problema do painel**, tipo de problema **envios de aplicativo**e subcategoria **outros**. Em seguida, descreva como você está usando a funcionalidade e por que é necessária para seu produto. Se você não fornecer todas as informações necessárias, sua solicitação será negada. Também pode ser solicitado que você forneça mais informações. Observe que esse processo geralmente leva 5 dias úteis ou mais, portanto, envie sua solicitação antecipadamente.
+> Se seu envio usa uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), você deverá solicitar aprovação antecipadamente em vez de fornecer informações na página de **Opções de envio** . Para isso, visite a [página de suporte do Windows Developer](https://developer.microsoft.com/windows/support). Selecione o tópico de suporte do desenvolvedor **problema do painel**, tipo de problema **envios de aplicativo**e subcategoria **outros**. Em seguida, descreva como você está usando a funcionalidade e por que é necessária para seu produto. Se você não fornecer todas as informações necessárias, sua solicitação será negada. Também pode ser solicitado que você forneça mais informações. Observe que esse processo geralmente leva 5 dias úteis ou mais, portanto, envie sua solicitação antecipadamente.
 >
 > Você também pode usar esse método de solicitar aprovação (em vez de fornecer essas informações durante seu envio), ou não você estiver usando uma área restrita de desenvolvimento, se você preferir confirmar que você é aprovadas para usar um recurso restrito antes de iniciar seu envio.
 
