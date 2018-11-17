@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
 ms.openlocfilehash: d65faebfc2be0e9ed254185d00932da9a57f718b
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6975860"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7172965"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Usar um temporizador para enviar um item de trabalho
 
