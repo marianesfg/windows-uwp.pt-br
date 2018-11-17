@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análises da Microsoft Store, aquisições de complemento
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7100636"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7151928"
 ---
 # <a name="submit-responses-to-reviews"></a>Enviar respostas às críticas
 

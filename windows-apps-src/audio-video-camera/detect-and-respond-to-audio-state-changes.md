@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f7b4addf2a7bdc2d93cbcf64f13a640a4ef5b12a
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7104238"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7158101"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Detectar e responder a alterações de estado de áudio
 A partir do Windows 10, versão 1803, seu aplicativo pode detectar quando o sistema reduz o nível ou silencia o nível de áudio de um stream de áudio usado pelo aplicativo. Você pode receber notificações de captura e renderizar fluxos para um dispositivo de áudio e categoria de áudio específico ou para um objeto [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) que o aplicativo está usando para reprodução de mídia. Por exemplo, o sistema pode reduzir ou "ignorar", o nível de reprodução de áudio quando um alarme está tocando. O sistema ativa o mudo do aplicativo quando entra em segundo plano caso não tenha declarado a funcionalidade *backgroundMediaPlayback* no manifesto. 

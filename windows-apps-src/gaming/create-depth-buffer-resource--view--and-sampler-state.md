@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d, buffer de profundidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6976947"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7155433"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Criar recursos de dispositivo de buffer de profundidade
 
