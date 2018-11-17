@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, instalações de aplicativo
 ms.localizationpriority: medium
 ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6977227"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7162387"
 ---
 # <a name="get-app-installs"></a>Obter as instalações do aplicativo
 
