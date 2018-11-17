@@ -12,12 +12,13 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.custom: RS5
+ms.openlocfilehash: dd0031affaf5ae48553479660d91ae610e7f1acb
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980709"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169772"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto com o modo de exibição de manuscrito
 
@@ -318,6 +319,7 @@ private double GetPopupVerticalOffset()
 Assim como acontece com todos os controles de estrutura XAML, você pode personalizar a estrutura e o comportamento visual de um [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para seus requisitos específicos.
 
 Para ver um exemplo completo de criação de uma modelo personalizado Confira as instruções de [criar controles personalizados de transporte](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) ou a [amostra de controle de edição personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+
 
 
 
