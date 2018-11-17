@@ -7,17 +7,19 @@ ms.date: 09/21/2018
 ms.topic: article
 keywords: Windows 10, uwp, formulários do windows, win32, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6972424"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7145336"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
 
 > [!NOTE]
-> O XAML da UWP que hospeda a API está disponível como uma visualização de desenvolvedor. Embora Encorajamos você a experimentar essa API em seu próprio código de protótipo agora, não recomendamos que você usá-lo no código de produção neste momento. Essa API continuará a se desenvolver e estabilizar em futuras versões do Windows. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
+> As ilhas de API e XAML de hospedagem do XAML da UWP estão disponíveis atualmente como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses recursos continuam a se desenvolver e estabilizar em futuras versões do Windows. A Microsoft não oferece nenhuma garantia, explícita ou implícita, com relação às informações fornecidas aqui.
+>
+> Se você tiver comentários sobre o XAML hospedagem ilhas de API e XAML, envie seus comentários para XamlIslandsFeedback@microsoft.com. Suas ideias e cenários são extremamente importantes para nós.
 
 A partir do SDK do Windows 10 Insider Preview build 17709, aplicativos da área de trabalho não UWP (incluindo aplicativos C++ Win32, WPF e Windows Forms) podem usar o *XAML da UWP que hospeda a API* para hospedar controles UWP em qualquer elemento de interface do usuário que está associado um (identificador de janela HWND). Essa API permite que os aplicativos da área de trabalho não UWP usar os recursos de interface do usuário do Windows 10 mais recentes que só estão disponíveis por meio de controles UWP. Por exemplo, aplicativos da área de trabalho do UWP não podem usar essa API para hospedar controles UWP que usam o [Sistema de Design fluente](../design/fluent-design-system/index.md) e oferecer suporte à [Tinta do Windows](../design/input/pen-and-stylus-interactions.md).
 
