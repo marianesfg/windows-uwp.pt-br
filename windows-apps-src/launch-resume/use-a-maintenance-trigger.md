@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5f11afbafc424a4ed7f2c973f0417c792ab7da65
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 08bf867b6690a84f89b61cac9942b8ad6c27cd99
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7160174"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280624"
 ---
 # <a name="use-a-maintenance-trigger"></a>Usar um gatilho de manutenção
 
@@ -35,7 +35,7 @@ Este exemplo pressupõe que você tenha um código leve que possa executar em se
 
 Mais informações sobre como escrever uma classe de tarefa em segundo plano estão disponíveis em [Criar e registrar uma tarefa em segundo plano no processo](create-and-register-an-inproc-background-task.md) ou em [Criar e registrar uma tarefa em segundo plano fora do processo](create-and-register-a-background-task.md).
 
-Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
+Crie um novo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517). O segundo parâmetro, *OneShot*, especifica se a tarefa de manutenção só será executada uma vez ou se continuará a ser executada periodicamente. Se *OneShot* for definido como verdadeiro, o primeiro parâmetro (*FreshnessTime*) especificará o número de minutos aguardados até que a tarefa em segundo plano seja agendada. Se *OneShot* for definido como falso, *FreshnessTime* especificará com que frequência a tarefa em segundo plano será executada.
 
 > [!NOTE]
 > Se *FreshnessTime* for definido como menos de 15 minutos, uma exceção é lançada durante a tentativa de registrar a tarefa em segundo plano.

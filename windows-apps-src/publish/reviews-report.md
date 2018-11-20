@@ -8,12 +8,12 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
-ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: e5deef6d5e67c1236fb88f93269fcf91bb50243c
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158247"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281778"
 ---
 # <a name="reviews-report"></a>Relatório de avaliações
 
@@ -22,7 +22,7 @@ O relatório **de análises** no [Partner Center](https://partner.microsoft.com/
 
 Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline. Como alternativa, você pode recuperar programaticamente esses dados usando o método [obter avaliações de app](../monetize/get-app-reviews.md) na da [API REST de análise da Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Você também pode responder ao cliente análises [diretamente a partir desta página](respond-to-customer-reviews.md), por meio de programação [por meio da API de análises da Microsoft Store](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+Você também pode responder a clientes análises [diretamente a partir desta página](respond-to-customer-reviews.md) ou programaticamente [através da Microsoft Store API de análises](../monetize/submit-responses-to-app-reviews.md).
 
 > [!TIP]
 > Para visualizar rapidamente avaliações, classificações e comentários do usuário para todos seus aplicativos nos últimos 30 dias, expanda **Interagir** no menu de navegação esquerdo e selecione **Avaliações e comentários.** 
@@ -114,7 +114,7 @@ Como observado acima, quando pesquisar as críticas, somente o texto original de
 
 ## <a name="responding-to-customer-reviews"></a>Respondendo às análises dos clientes
 
-Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard), a [API de análises da Microsoft Store](../monetize/submit-responses-to-app-reviews.md)ou o [aplicativo do Centro de desenvolvimento](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para enviar respostas a muitas das críticas dos clientes. Para obter mais informações, consulte [Responder às análises dos clientes](respond-to-customer-reviews.md)
+Você pode usar o [Partner Center](https://partner.microsoft.com/dashboard) ou a [que API de análises da Microsoft Store](../monetize/submit-responses-to-app-reviews.md) para enviar respostas a muitas das críticas dos clientes. Para obter mais informações, consulte [Responder às análises dos clientes](respond-to-customer-reviews.md)
 
 Veja algumas ações adicionais que você pode realizar com base nas classificações e críticas observadas.
 

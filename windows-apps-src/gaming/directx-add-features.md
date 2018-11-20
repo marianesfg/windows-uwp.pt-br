@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogo, directx, xaml, rotação da tela, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: be3f8e57a592512335a826c142876d1ff3c53e5b
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158443"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289303"
 ---
 # <a name="add-features-to-directx-games"></a>Adicionar recursos a jogos DirectX
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, volante de corrida, force feedback
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b4b35bb729ee49dbfd3f2b2b2a029a4319521c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7145409"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7279069"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>Volante de corrida e force feedback
 

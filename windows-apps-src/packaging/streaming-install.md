@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, instalação, de streaming de instalação de aplicativo uwp de streaming
 ms.localizationpriority: medium
 ms.openlocfilehash: e4915d2fb4d1133cd190d766d38c79934d9f3956
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7155188"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7283417"
 ---
 # <a name="uwp-app-streaming-install"></a>Instalação de streaming de aplicativo UWP
 A instalação de streaming da Plataforma Universal do Windows (UWP) permite que você especifique as partes do seu aplicativo que você gostaria que a Microsoft Store baixasse primeiro. Quando os arquivos essenciais do aplicativo são baixados primeiro, o usuário pode iniciar e interagir com o aplicativo enquanto o resto termina de fazer o download em segundo plano. 
