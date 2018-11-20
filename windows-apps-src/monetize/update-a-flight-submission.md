@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, atualização
 ms.localizationpriority: medium
 ms.openlocfilehash: 670522e9842ca5e048777a1168caa1efbca6ce94
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7173909"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281788"
 ---
 # <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
 

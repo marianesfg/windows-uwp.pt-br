@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7173453"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7284753"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
 ms.openlocfilehash: 1666d64c26c8ccfecda142e50f2e672d0f4c8864
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158905"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7288940"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Acessar sensores e dispositivos a partir de uma tarefa em segundo plano
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, win32, área de trabalho, notificações do sistema, enviar uma notificação do sistema, enviar notificações do sistema local, ponte de desktop, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f1cd95d6dfff6b4c9038fd5a773d1438b1b7176
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7167332"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7284600"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar uma notificação do sistema local a partir de aplicativos C++ WRL da área de trabalho
 
