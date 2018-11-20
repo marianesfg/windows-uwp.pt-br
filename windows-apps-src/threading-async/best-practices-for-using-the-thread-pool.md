@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, thread, pool de threads
 ms.localizationpriority: medium
 ms.openlocfilehash: ff607e3b39ea9d9a3731cc1f231fe1eb27b0b155
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7299474"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7445712"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>Práticas recomendadas para usar o pool de threads
 
