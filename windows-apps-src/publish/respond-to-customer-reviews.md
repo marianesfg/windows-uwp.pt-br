@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 9552e9dede62d4d89b71f031cd2ff2c76964d0cb
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158553"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7305027"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 
@@ -23,7 +23,7 @@ Você pode responder às críticas ao seu aplicativo para permitir que os client
 Para ver as críticas do seu aplicativo e fornecer respostas, encontre o aplicativo no [Partner Center](https://partner.microsoft.com/dashboard). No menu de navegação esquerdo, expanda *análise** e, em seguida, clique em **análises** para exibir o [relatório críticas](reviews-report.md). Selecione a **Responder para analisar** para fornecer sua resposta.
 
 > [!TIP]
-> Além de usar o Partner Center para responder às críticas, você pode responder para opiniões [programaticamente](../monetize/submit-responses-to-app-reviews.md), ou usando o [Centro de desenvolvimento do aplicativo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws).
+> Além de usar o Partner Center para responder às críticas, você pode responder a avaliações [programaticamente](../monetize/submit-responses-to-app-reviews.md).
 
 Por padrão, sua resposta será lançada na loja, logo abaixo da revisão de cliente original. Essas respostas ficarão visíveis para os clientes que acessarem a loja em um dispositivo Windows 10. Se o cliente que fez a crítica está usando um dispositivo executando o Windows 10, versão 1803 ou posterior, e eles não tiver optado por não receber respostas de email, uma cópia de sua resposta também será enviada para o cliente por email.  Você precisará fornecer um endereço de email válido para enviar sua resposta, o que podemos incluirá o email para o cliente. Em seguida, eles podem usar este endereço de email para contatá-lo diretamente.
 
