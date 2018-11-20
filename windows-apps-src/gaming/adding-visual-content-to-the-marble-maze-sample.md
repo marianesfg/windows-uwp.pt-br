@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7147892"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291511"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Adicionando conteúdo visual ao exemplo do Marble Maze
 
@@ -938,7 +938,7 @@ Neste exemplo, **m\_swapChain** é um objeto [IDXGISwapChain1](https://msdn.micr
 
 O primeiro parâmetro para [idxgiswapchain:: present](https://msdn.microsoft.com/library/windows/desktop/hh446797), *SyncInterval*, especifica o número de espaços em branco verticais para aguardar antes de apresentar o quadro. O Marble Maze especifica 1 e, portanto, aguarda até o próximo espaço em branco vertical.
 
-The [IDXGISwapChain::Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) method returns an error code that indicates that the device was removed or otherwise failed. Nesse caso, o Marble Maze reinicializa o dispositivo.
+O método [idxgiswapchain:: present](https://msdn.microsoft.com/library/windows/desktop/bb174576) retorna um código de erro que indica que o dispositivo foi removido ou falhou. Nesse caso, o Marble Maze reinicializa o dispositivo.
 
 ```cpp
 // If the device was removed either by a disconnection or a driver upgrade, we
@@ -956,7 +956,7 @@ else
 ## <a name="next-steps"></a>Próximas etapas
 
 
-Leia [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para saber mais sobre algumas das principais práticas que você deve ter em mente ao trabalhar com dispositivos de entrada. This document discusses how Marble Maze supports touch, accelerometer, Xbox controllers, and mouse input.
+Leia [Adicionando entrada e interatividade ao exemplo do Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para saber mais sobre algumas das principais práticas que você deve ter em mente ao trabalhar com dispositivos de entrada. Este documento discute como o Marble Maze dá suporte a toque, acelerômetro, controladores do Xbox e entrada de mouse.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

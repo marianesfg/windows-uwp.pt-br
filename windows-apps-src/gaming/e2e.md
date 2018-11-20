@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
-ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7155394"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291630"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -247,8 +247,8 @@ Os fóruns de desenvolvedores são um ótimo lugar para fazer e responder pergun
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Fóruns de desenvolvedores de aplicativos do Windows</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Fóruns de aplicativos e Windows Store</a></td>
+        <td>Fóruns de desenvolvedores de aplicativos e jogos publicação</td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Anúncios em apps e publicação</a></td>
     </tr>
     <tr>
         <td>Fórum do desenvolvedor de aplicativos UWP</td>
@@ -1661,10 +1661,6 @@ Quando você termina o desenvolvimento e envia seu jogo, não é "fim de jogo". 
     <col width="50%" />
     <col width="50%" />
     </colgroup>
-    <tr>
-        <td>Aplicativo do Centro de Desenvolvimento</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Obter o aplicativo para exibir o desempenho de seus aplicativos publicados</a></td>
-    </tr>  
     <tr>
         <td>Análise do Partner Center</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">Analisar o desempenho do aplicativo</a></td>

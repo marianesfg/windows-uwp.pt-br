@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQL Server, banco de dados
 ms.localizationpriority: medium
 ms.openlocfilehash: 8396fb7685a774568b6cd63acb11f78133584f46
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169569"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7285879"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Usar um banco de dados do SQL Server em um aplicativo UWP
 Seu aplicativo pode se conectar diretamente a um banco de dados do SQL Server e, em seguida, armazenar e recuperar dados usando classes no namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx).
