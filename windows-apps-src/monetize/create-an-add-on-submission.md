@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: c4aecb07034b7c8a161546fc9d8001247e9234cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163223"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7295223"
 ---
 # <a name="create-an-add-on-submission"></a>Criar um envio de complemento
 
