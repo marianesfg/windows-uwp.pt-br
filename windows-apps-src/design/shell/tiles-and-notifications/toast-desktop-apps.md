@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, win32, desktop, notificações do sistema, ponte de desktop, opções para enviar notificações do sistema, servidor com, ativador com, com, com falso, sem com, não com, enviar notificação do sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ee44d990ef29fa8281a14c8ad03b6c6ff16a4cf
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307346"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7442101"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificações do sistema a partir de aplicativos da área de trabalho
 

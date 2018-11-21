@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, localização, cerca geográfica
 ms.localizationpriority: medium
 ms.openlocfilehash: 86104f00ed0189290fd0cd718042573d9d592cc3
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7285441"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7444661"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Diretrizes de aplicativos com cerca geográfica
 
