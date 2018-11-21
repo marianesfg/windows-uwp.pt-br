@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, tarefa em segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 1eeac0239bd0c6df38f82fa185c1ed6f7eb3f9dc
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7294466"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440008"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
 

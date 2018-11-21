@@ -7,12 +7,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, empacotamento, configuração do pacote, lote simples
 ms.localizationpriority: medium
-ms.openlocfilehash: b877996dd5fa32ac764fb587092f501320931527
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.openlocfilehash: 8d95591f12b61054a654b9b1284bdd90d74a937b
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7293896"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436795"
 ---
 # <a name="flat-bundle-app-packages"></a>Pacotes de aplicativo do lote simples 
 
@@ -36,7 +36,7 @@ Para criar um lote simples usando MakeAppx.exe, use o comando "MakeAppx.exe bund
 Eis um exemplo da sintaxe do comando:
 
 ```syntax
-MakeAppx bundle [options] /d <content directory> /fb <output flat bundle name>
+MakeAppx bundle [options] /d <content directory> /fb /p <output flat bundle name>
 ```
 
 Para obter mais informações sobre como usar MakeAppx.exe, consulte [Criar um pacote de aplicativos com a ferramenta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).

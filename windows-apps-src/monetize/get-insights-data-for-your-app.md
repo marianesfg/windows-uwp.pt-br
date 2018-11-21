@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, serviços da Store, API, insights de análise da Micr
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fbca074cffba64067b22d94aea6e0476c10480af
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7288172"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7434765"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 
