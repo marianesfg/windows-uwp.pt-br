@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogos, trailers, listagens avançadas, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 86c753e51d15b142cdcd7e54b3ed0304d13169b6
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7421704"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582386"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Python: envio de aplicativo com opções e trailers de jogos
 

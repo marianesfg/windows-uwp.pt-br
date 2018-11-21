@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438217"
+ms.locfileid: "7557699"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar um aplicativo para obter resultados
 

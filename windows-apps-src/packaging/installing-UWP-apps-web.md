@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
 ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422436"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582196"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalando aplicativos UWP a partir de uma página da Web
 

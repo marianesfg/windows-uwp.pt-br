@@ -9,11 +9,11 @@ ms.author: normesta
 keywords: windows 10, uwp, temporizador, threads
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f4b8249a81cb7d71ba1f4775fd858ae87779c85
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445925"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7553753"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usando objetos do Windows Runtime em um ambiente multithread
 Este artigo discute a maneira como o .NET Framework lida com chamadas de códigos C# e Visual Basic para objetos fornecidos pelo Windows Runtime ou pelo Componentes do Tempo de Execução do Windows.

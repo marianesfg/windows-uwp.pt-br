@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, elementos gráficos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445662"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7558823"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Adicionando conteúdo visual ao exemplo do Marble Maze
 

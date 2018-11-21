@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, notificação do sistema, Central de ações na nuvem, ignorar universal, notificação, entre dispositivos, ignorar uma vez, ignorar em todos os locais
 ms.localizationpriority: medium
 ms.openlocfilehash: 40a9c446172b25f2430a3f75014c8e168a91c233
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7418621"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7567770"
 ---
 # <a name="universal-dismiss"></a>Ignorar universal
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7424214"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7555378"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicações de rede em segundo plano
 Para continuar a comunicação de rede quando não estiver em primeiro plano, seu aplicativo pode usar tarefas em segundo plano e uma destas duas opções.

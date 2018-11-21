@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, suspensão de publicação, data de publicação, enviar para publicar, aprovação de funcionalidade restrita
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f7d58989035db1a14aba685c8951d23d2f94b52
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7446015"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582446"
 ---
 # <a name="manage-submission-options"></a>Gerenciar opções de envio
 

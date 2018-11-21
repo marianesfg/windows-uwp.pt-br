@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: f3959254787ce22bea27495520805485e0ea179b
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7428652"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7561630"
 ---
 # <a name="getting-started-with-point-of-service"></a>Introdução ao Ponto de Serviço
 
