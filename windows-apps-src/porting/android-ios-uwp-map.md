@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 7d73c89602db877b35d357d15393e089db9ae027
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419313"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576380"
 ---
-#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
+# <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Mapeamento do conceito de aplicativos do Windows para desenvolvedores do Android e iOS
 
 Se você for um desenvolvedor com habilidades de Android ou iOS e/ou de código e quiser mudar para o Windows 10 e a Plataforma Universal do Windows (UWP), este método tem tudo o que você precisa para mapear recursos de plataforma — e seu conhecimento — entre as três plataformas.
 

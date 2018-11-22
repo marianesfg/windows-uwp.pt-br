@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, grupo direcionado, clientes, grupo de versão de pré-lançamento, grupos de usuários, usuários conhecidos
 ms.localizationpriority: medium
 ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7442157"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7574107"
 ---
 # <a name="create-known-user-groups"></a>Criar grupos de usuários conhecidos
 
