@@ -1,19 +1,17 @@
 ---
-author: WilliamsJason
 title: Referência de API de carregamento da pasta do Device Portal
 description: Saiba como acessar as APIs de carregamento da pasta de maneira programática.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
-ms.openlocfilehash: 481ec666c327b15088d8e60577c51fa1697918fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0805dbeedcf66bc3596f3d284f51e8f177608396
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557789"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699741"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>Carregar uma pasta para o diretório de desenvolvimento
 

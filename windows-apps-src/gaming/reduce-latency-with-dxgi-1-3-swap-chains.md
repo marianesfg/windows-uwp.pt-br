@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Reduzir a latência com cadeias de troca DXGI 1.3
 description: Use o DXGI 1.3 para reduzir a latência de quadros eficaz aguardando a cadeia de troca sinalizar o horário apropriado para começar a renderizar um novo quadro.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, latência, dxgi, cadeias de troca, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ec315cc9ed59a4b3272151f2ee1bb4bde8d9df10
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555631"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697379"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reduzir latência com cadeias de troca DXGI 1.3
 

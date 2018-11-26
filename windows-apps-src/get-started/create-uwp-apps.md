@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Criar apps com a Plataforma Universal do Windows
 description: É mais fácil do que você imagina criar um aplicativo da plataforma Universal do Windows (UWP) para Windows 10.
-ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, introdução
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bc64b0a6919180b6041bdbf4f81463019d274eb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2f4e38d590fc2e905221c71c1fbc6b137f5fdea0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566697"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702274"
 ---
 # <a name="start-coding"></a>Comece a codificar
 

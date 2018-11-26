@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar seu dispositivo para desenvolvimento
 description: Configure seu dispositivo Windows 10 para desenvolvimento e depuração.
 keywords: Introdução, Licença de desenvolvedor, Visual Studio, licença de desenvolvedor, habilitar dispositivo
-ms.author: quradic
 ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0355b5e29a450b909bf6dcacf1c1b88c80ff1335
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1338373226b30c3126782a62f3b5260a47e86d63
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575825"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697209"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar seu dispositivo para desenvolvimento
 

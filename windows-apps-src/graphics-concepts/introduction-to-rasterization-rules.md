@@ -4,17 +4,15 @@ description: Muitas vezes, os pontos especificados para vértices não correspon
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
 keywords:
 - Introdução às regras de rasterização
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 65522195b9729ddd4f2ebeb193f43c905359eda2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575374"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698805"
 ---
 # <a name="introduction-to-rasterization-rules"></a>Introdução às regras de rasterização
 

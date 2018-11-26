@@ -1,19 +1,17 @@
 ---
 Description: Troubleshoot Microsoft Take a Test events and errors with the event viewer.
 title: Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos.
-author: PatrickFarley
-ms.author: pafarley
 ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
 ms.date: 10/06/2017
 ms.topic: article
 keywords: Windows 10, uwp, educação
 ms.localizationpriority: medium
-ms.openlocfilehash: eaf4c8e2641359e6d9a92444f66a1b6d4e5e5881
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2f4bdcf45c7dd37dd540a666d99b5fa2fd2d49f8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563432"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701345"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>Solução de problemas com Fazer um Teste da Microsoft com o visualizador de eventos
 

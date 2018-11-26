@@ -1,19 +1,17 @@
 ---
-author: scottmill
 title: Movimento relativo do mouse
 description: Use os controles relativos de mouse, que não usam o cursor do sistema e não retornam coordenadas absolutas da tela, e rastreiam o delta de pixel entre os movimentos do mouse em jogos.
-ms.author: scotmi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, mouse, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
-ms.openlocfilehash: adf3b629095f633521b99133ce1961e5c8408ef5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575093"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697639"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>Movimento relativo do mouse e CoreWindow
 

@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Animações baseadas em relações
 description: Crie um movimento com base em uma propriedade em outro objeto.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animação
 ms.localizationpriority: medium
-ms.openlocfilehash: cde3868d1a554396bfda7c13ea0c71bd037416bc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572408"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701405"
 ---
 # <a name="relation-based-animations"></a>Animações baseadas em relações
 

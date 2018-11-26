@@ -1,18 +1,16 @@
 ---
-author: ridomin
 title: Criar um arquivo do Instalador de Aplicativo com o Visual Studio
 description: Saiba como usar o Visual Studio para permitir atualizações automáticas usando o arquivo .appinstaller.
-ms.author: rmpablos
 ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador do aplicativo, AppInstaller, sideload
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d4740c132f274cb3eeee5776790d077d2cbec47
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567694"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697769"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Criar um arquivo do Instalador de Aplicativo com o Visual Studio
 

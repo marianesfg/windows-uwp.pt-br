@@ -2,18 +2,16 @@
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos do Windows 10 e da plataforma Universal do Windows (UWP).
 title: Enterprise
-author: awkoren
-ms.author: alkoren
 ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffdc88449c025ba0a590ccc2bbd3f0c05346630f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b3106df6d8a1fd85b92aa06dd5c5cf7a7f79ded5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579071"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696702"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -118,7 +116,7 @@ Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
 
 <a id="distribution" />
 
-## <a name="security"></a>Security
+## <a name="security"></a>Segurança
 
 Windows 10 oferece um conjunto de recursos de segurança para os desenvolvedores de aplicativos protejam a identidade de seus usuários, a segurança de redes corporativas e os dados de negócios armazenados em dispositivos. Novos para Windows 10 é o Microsoft Passport, uma alternativa de senha de dois fatores fácil de implantar que seja acessível por meio de um PIN ou Windows Hello, que fornece segurança de nível empresarial e dá suporte à impressão digital, rosto e íris com base em reconhecimento.
 

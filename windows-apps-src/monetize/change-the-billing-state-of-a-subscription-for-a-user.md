@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Use este método na API de compra da Microsoft Store para alterar o estado de cobrança de uma assinatura para um usuário.
 title: Alterar o estado de cobrança de uma assinatura para um usuário
-ms.author: mhopkins
 ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, API de compra na Microsoft Store, assinaturas
 ms.localizationpriority: medium
-ms.openlocfilehash: 8daec4928867c92734fc3f6322836eb923aeda21
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e4cf27331a218c0c0ef06ee1a80c141b889504a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567883"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699959"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Alterar o estado de cobrança de uma assinatura para um usuário
 

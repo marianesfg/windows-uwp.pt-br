@@ -4,17 +4,15 @@ description: Pela programação do Direct3D e do Windows, objetos na tela são r
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
 keywords:
 - Retângulos
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cb870fa851e51773d95d23ebf9d31f76774924de
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aa94eb00058ba3297e7ca7cc4f93581d9281fd1c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571700"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702537"
 ---
 # <a name="rectangles"></a>Retângulos
 

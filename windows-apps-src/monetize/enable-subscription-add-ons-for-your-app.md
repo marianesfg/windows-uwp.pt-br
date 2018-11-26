@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Saiba como usar o namespace Windows.Services.Store para implementar complementos de assinatura.
 title: Habilitar complementos de assinatura para o app
 keywords: windows 10, uwp, assinaturas, complementos, compras no aplicativo, IAPs, Windows.Services.Store
-ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577945"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697489"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de assinatura para o app
 

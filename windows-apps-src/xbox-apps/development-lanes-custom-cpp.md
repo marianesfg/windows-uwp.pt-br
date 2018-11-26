@@ -1,19 +1,17 @@
 ---
-author: JordanEllis6809
 title: Desenvolvimento de jogos C++ no Xbox usando a Plataforma Universal do Windows (UWP)
 description: Desenvolvimento de jogos UWP c++ no Xbox.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c954efde29603b0f1d8fef2c80378c87b954e02
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556344"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701586"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>Traga C++ personalizados jogos para UWP no Xbox
 

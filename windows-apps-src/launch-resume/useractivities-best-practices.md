@@ -1,18 +1,16 @@
 ---
-author: PatrickFarley
 title: Práticas recomendadas de atividades de usuários
 description: Este guia descreve as práticas recomendadas para criar e atualizar as atividades do usuário.
 keywords: atividade do usuário, atividades do usuário, linha do tempo, cortana retorma de onde você parou, cortana retoma de onde eu parei, project rome
-ms.author: pafarley
 ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 199499e8737d638301f32d01a00ac603e3f5348f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577667"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699314"
 ---
 # <a name="user-activities-best-practices"></a>Práticas recomendadas de atividades de usuários
 

@@ -4,17 +4,15 @@ description: O visor é um retângulo (2D) bidimensional no qual uma cena 3D é 
 ms.assetid: D0DD646E-13AE-452A-AD22-8C35000D0BA9
 keywords:
 - Visores e recorte
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7d2a8953d202cc22729f99a096b5fb62cf1131d9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562475"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698871"
 ---
 # <a name="viewports-and-clipping"></a>Visores e recorte
 
