@@ -1,20 +1,18 @@
 ---
-author: stevewhims
 Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. We'll be using these terms in this topic and other topics in this feature area, so it's important to know what they mean.
 title: Entenda os idiomas de perfil do usuário e idiomas de manifesto do app
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalização, localizabilidade, localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 2215231b21700fc17b08c2149316f9a59f8d1f04
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577385"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720072"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Entenda os idiomas de perfil do usuário e idiomas de manifesto do app
 Um usuário do Windows pode usar **Configurações** > **Hora e Idioma** > **Região e idioma** para configurar uma lista ordenada de idiomas de preferência de exibição, ou um único idioma de preferência de exibição. Um idioma pode ter uma variante regional. Por exemplo, você pode selecionar o espanhol falado na Espanha, o espanhol falado no México, o espanhol falado nos Estados Unidos, entre outros.

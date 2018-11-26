@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 description: Adicione pastas existentes de música, fotos ou vídeos às bibliotecas correspondentes. Você também pode remover pastas de bibliotecas, obter a lista de pastas em uma biblioteca e descobrir fotos, músicas e vídeos armazenados.
-ms.author: lahugh
 ms.date: 06/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1859d758806b4e92758decb40b8a30d02acb254d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567810"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692294"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Arquivos e pastas nas bibliotecas Música, Fotos e Vídeos
 

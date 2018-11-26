@@ -1,18 +1,16 @@
 ---
-author: JoshuaPartlow
 description: O Editor de Fotos é um aplicativo de exemplo UWP que mostra o desenvolvimento com a projeção de linguagem C++/WinRT. O aplicativo de exemplo permite que você recupere fotos a partir da biblioteca de Imagens e, em seguida, edite a imagem selecionada com efeitos fotográficos diferentes.
 title: Aplicativos de exemplo de C++/WinRT do Editor de Fotos
-ms.author: wdg-dev-content
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, amostra, aplicativo, foto, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bfcd79ed2d659aff8d435bd397df05eb45af72
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8c6f668ef3d92f968e75659b0ba1937abadb079c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578837"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694905"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Aplicativos de exemplo de C++/WinRT do Editor de Fotos
 Você pode clonar ou baixar o aplicativo de exemplo do repositório do GitHub para o [aplicativo de exemplo do Editor de fotos do C++/WinRT](https://github.com/Microsoft/Windows-appsample-photo-editor).

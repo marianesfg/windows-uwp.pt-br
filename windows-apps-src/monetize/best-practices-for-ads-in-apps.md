@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: Saiba mais sobre as práticas recomendadas para anúncios em aplicativos, incluindo as diretrizes de experiência do usuário e processamento de erros.
 title: Práticas recomendadas para anúncios nos aplicativos
-ms.author: mhopkins
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, passo a passo
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d6c7c0cbc1999c0b4afc33cb84479294d2b18f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3084c72d32967d691054b452f5f5f2e903bedd5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559103"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720252"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>Práticas recomendadas para anúncios nos aplicativos
 

@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obter propriedades do arquivo
 description: Obtenha as propriedades&\#8212;nível superior, básicas e estendidas&\#8212;de um arquivo representado pelo objeto StorageFile.
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fc44300376efb5b56f390457e516f35a3ec4202
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562352"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712742"
 ---
 # <a name="get-file-properties"></a>Obter propriedades do arquivo
 

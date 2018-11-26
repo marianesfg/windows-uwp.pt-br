@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Estrutura do aplicativo Marble Maze
 description: A estrutura de um app UWP (Plataforma Universal do Windows) DirectX é diferente daquela de um app de área de trabalho tradicional.
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
-ms.author: elcowle
 ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, estrutura
 ms.localizationpriority: medium
-ms.openlocfilehash: 1272200bf128443c82807aec9df5559f207819e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d19fe1a81a193baf7fe6b7b86865dfb7ea65c00b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565461"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691857"
 ---
 # <a name="marble-maze-application-structure"></a>Estrutura do app Marble Maze
 

@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: É altamente recomendável ler este guia de portabilidade até o final, mas também entendemos que você esteja ansioso para avançar e chegar ao estágio em que o seu projeto é compilado e executado.
 title: Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 98bb74f2c37e91d5b7d9b02a5733b42877769c54
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7c31d414bab1e551b418a1ff653678665d66aea5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566507"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694113"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solucionando problemas de portabilidade do Windows Runtime 8.x para UWP
 

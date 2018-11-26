@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
 title: Sistema de Gerenciamento de Recursos
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/20/2017
 ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
-ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563686"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695714"
 ---
 # <a name="resource-management-system"></a>Sistema de Gerenciamento de Recursos
 O Sistema de Gerenciamento de Recursos tem recursos em tempo de compilação e em tempo de execução. No momento da compilação, o sistema cria um índice de todas as variantes dos recursos que são empacotados com o app. Trata-se do índice de recurso do pacote, conhecido também como PRI, que também está incluído no pacote do app. No momento da execução, o sistema detecta as configurações do usuário e da máquina que estão em vigor, consulta as informações no PRI e carrega automaticamente os recursos que oferecem a melhor correspondência para essas configurações.

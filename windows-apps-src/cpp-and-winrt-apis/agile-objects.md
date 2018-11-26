@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Um objeto ágil é aquele que pode ser acessado de qualquer thread. Seus tipos C++/WinRT são ágeis por padrão, mas você pode recusá-los.
 title: Objetos ágeis com C++/WinRT
-ms.author: stwhi
 ms.date: 10/20/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fa129a60c7dfcc170a9ddeec318a062fb8cbe56
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574246"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720442"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágeis em C++/WinRT
 

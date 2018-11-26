@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: Saiba como iniciar um anúncio intersticial usando c#.
 title: Código exemplo de anúncio intersticial em C#
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, intersticial, c#, código de exemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: 07f0927d741bbadc31aaf26f5188af245ec44790
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a8276e1a9639b23a965c5a608fb951d1e1035133
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573396"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691617"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de exemplo de anúncio intersticial em C\# #  
 

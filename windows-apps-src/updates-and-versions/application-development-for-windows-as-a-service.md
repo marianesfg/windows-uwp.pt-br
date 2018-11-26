@@ -1,25 +1,23 @@
 ---
 title: Desenvolvimento de aplicativos para Windows como serviço
 description: Dissocie a versão e o suporte do app das compilações específicas do Windows.
-author: GrantMeStrength
-ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579355"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694687"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desenvolvimento de apps para Windows como serviço
 
 **Aplicável a**
 -   Windows 10
--   Windows 10 Mobile
+-   Windows10 Mobile
 -   Windows 10 IoT Core 
 
 No ambiente de hoje, onde as expectativas do usuário com frequência são definidas por experiências centradas no dispositivo, os ciclos de produtos completos precisam ser medido em meses, não anos. Além disso, novas versões devem ser disponibilizadas continuamente e devem ser implantadas com um impacto mínimo sobre os usuários. A Microsoft projetou o Windows 10 para atender a estes requisitos implementando uma nova abordagem à inovação, desenvolvimento e entrega denominada [Windows como serviço (WaaS)](https://docs.microsoft.com/windows/deployment/update/waas-overview). A chave para habilitar ciclos de produtos significativamente menores enquanto mantém os níveis de alta qualidade é uma abordagem centrada na comunidade inovadora para testes que a Microsoft implementou para Windows 10. A comunidade, conhecida como Participantes do Programa Windows Insider, é composta por milhões de usuários em todo o mundo. Quando os participantes do Programa Windows Insider optam por ingressarem na comunidade, eles testam várias compilações ao longo do curso do ciclo de vida do produto e fornecem feedback à Microsoft por meio de uma metodologia interativa denominada de liberação de versões de pré-lançamento.

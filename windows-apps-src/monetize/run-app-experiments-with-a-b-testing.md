@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: You can use Partner Center to run experiments for your Universal Windows Platform (UWP) apps with A/B testing.
 title: Executar experimentos de app com testes A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6697d522ee14a00bb8cb9c0c2c367f01d6e50ef4
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: d4f5271d70cefea99a9caff04e7203e05043440c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422592"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692547"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Executar experimentos de aplicativo com teste A/B
 

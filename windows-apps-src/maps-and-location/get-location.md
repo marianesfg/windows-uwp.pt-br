@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: Obter a localização do usuário
 description: Encontre a localização do usuário e responda a alterações na localização. O acesso à localização do usuário é gerenciado por configurações de privacidade no aplicativo Configurações. Este tópico também mostra como verificar se o aplicativo tem permissão para acessar a localização do usuário.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
-ms.author: pafarley
 ms.date: 11/28/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, funcionalidade de localização
 ms.localizationpriority: medium
-ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fae533e0ce42e14e3c53f5083b746a9aae221adf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564323"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706853"
 ---
 # <a name="get-the-users-location"></a>Obter a localização do usuário
 

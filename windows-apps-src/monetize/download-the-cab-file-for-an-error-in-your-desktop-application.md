@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Use este método na API de análise da Microsoft Store para baixar o arquivo CAB para um erro em seu aplicativo da área de trabalho.
 title: Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
-ms.author: mhopkins
 ms.date: 03/06/2018
 ms.topic: article
 keywords: windows 10, uwp, API de análise da Microsoft Store, baixar CAB, aplicativo da área de trabalho
 ms.localizationpriority: medium
-ms.openlocfilehash: f9dcd76767662b5e40f587d7ac32ffd7d94a6053
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582346"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712520"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>Baixar o arquivo CAB de um erro em seu aplicativo da área de trabalho
 

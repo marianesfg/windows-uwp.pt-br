@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Manipular Cenários removidos de dispositivos no Direct3D 11
 description: Este tópico explica como recriar a cadeia de interface do dispositivo Direct3D e DXGI quando o adaptador gráfico é removido ou reinicializado.
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11, dispositivo perdido
 ms.localizationpriority: medium
-ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c11bbf7657644fbf616590f50d75d93f62ed993e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562808"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691302"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
 

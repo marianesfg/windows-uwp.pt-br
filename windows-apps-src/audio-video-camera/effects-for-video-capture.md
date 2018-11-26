@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: Este tópico mostra como aplicar efeitos à visualização de câmera e fluxos de gravação de vídeo e mostra como usar o efeito de estabilização de vídeo.
 title: Efeitos para captura de vídeo
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d427a532e9821b81b6f23d08babecd692c8c95e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9960e66c6bcdd7105e201d48e2317de4a39a19a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557067"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695979"
 ---
 # <a name="effects-for-video-capture"></a>Efeitos para captura de vídeo
 

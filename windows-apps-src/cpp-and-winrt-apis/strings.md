@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Com o C++/WinRT, você pode chamar APIs do Windows Runtime usando tipos de cadeia de caracteres longa C++ padrão ou usar o tipo winrt::hstring.
 title: Tratamento de cadeia de caracteres em C++/WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, cadeia de caracteres
 ms.localizationpriority: medium
-ms.openlocfilehash: 72032c3c522a8434d266842a83c443889e8efc19
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9572d9ba8b96d245b783535e159acbae9043ea3e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578309"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695337"
 ---
 # <a name="string-handling-in-cwinrt"></a>Processamento de cadeia de caracteres em C++/WinRT
 

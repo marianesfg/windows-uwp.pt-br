@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Definir e agendar o preço do aplicativo
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
 ms.localizationpriority: medium
-ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d901ec630c680adfaa637d5555fc2182749bec89
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579514"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720272"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 

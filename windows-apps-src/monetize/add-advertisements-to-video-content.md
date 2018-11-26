@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: Saiba como usar a classe AdScheduler para mostrar anúncios no conteúdo de vídeo.
 title: Mostrar anúncios em conteúdo de vídeo
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, vídeo, agendador, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 29e2c46636445adac496d0f2149e956c5703c20d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562838"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691354"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anúncios em conteúdo de vídeo
 

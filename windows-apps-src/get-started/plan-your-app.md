@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 title: Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
 description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos - conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
-ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ce5e0d272e14b9c69f660c8c7de6a838fa7956ac
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 05a69cfdf96d6c7d3426b8d1ba414a42ff48a117
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559778"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691837"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
 

@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Set roles or custom permissions for account users.
 title: Definir funções ou permissões personalizadas para usuários de contas
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
-ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580430"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719616"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
@@ -169,10 +167,10 @@ Observe que algumas permissões não podem ser definidas para complementos. Isso
     </thead>
     <tbody>
     <tr><td align="left">    <b>Aquisições</b>     </td><td>    Pode exibir os relatórios <a href="acquisitions-report.md">Aquisições</a> e <a href="add-on-acquisitions-report.md">Aquisições de complemento</a> do produto.        </td><td>    N/D    </td><td>    N/d (configurações do produto pai incluem o relatório de **aquisições de complemento** )        </td><td>    N/D                         </td></tr>
-    <tr><td align="left">    <b>Uso</b> </td><td>    Pode exibir o <a href="usage-report.md">Relatório de uso</a> do produto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Uso</b> </td><td>    Pode exibir o <a href="usage-report.md">Relatório de uso</a> do produto.     </td><td>    N/D       </td><td>    N/A     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Health</b> </td><td>    Pode exibir o <a href="health-report.md">Relatório de integridade</a> do produto.    </td><td>    N/D     </td><td>    N/A     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Comentários do cliente</b>    </td><td>    Pode exibir os relatórios <a href="reviews-report.md">análises</a> e <a href="feedback-report.md">Comentários</a> do produto.       </td><td>    N/D (para responder a comentários ou análises, a permissão <b>Contato com cliente</b> deve ser concedida)   </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
+    <tr><td align="left">    <b>Análise do Xbox</b> </td><td>    Pode exibir o [relatório de análise do Xbox](xbox-analytics-report.md) para o produto.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/D          </td></tr>
     </tbody>
     </table>
 

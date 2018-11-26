@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Um namescope XAML armazena relacionamentos entre os nomes de objetos definidos por XAML e suas instâncias equivalentes. Esse conceito é semelhante ao significado mais abrangente do termo namescope em outras linguagens e tecnologias de programação.
 title: Namescopes XAML
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ffe6119e9cac162486d23472f5d5876924b7ef9e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579992"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694284"
 ---
 # <a name="xaml-namescopes"></a>Namescopes XAML
 

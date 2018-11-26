@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 66a9cfe2-b212-4c73-8a36-963c33270099
 description: Este artigo lista as marcas de protocolo HLS (HTTP Live Streaming) com suporte para aplicativos UWP.
 title: Suporte para marcas HLS (HTTP Live Streaming)
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d8e90f98dd79150cf19727fe31e51278a88a198
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572971"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696148"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Suporte para marcas HLS (HTTP Live Streaming)
 A tabela a seguir lista as marcas HLS que têm suporte para aplicativos UWP.

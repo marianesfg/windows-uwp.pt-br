@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portabilidade de buffers de OpenGL ES 2.0, uniformes, vértices para Direct3D
 description: Durante o processo de compatibilização para o Direct3D 11 a partir do OpenGL ES 2.0, você deve mudar a sintaxe e o comportamento de API para passar dados entre o aplicativo e os programas sombreadores.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, opengl, direct3d, buffers, uniformes, atributos de vértice
 ms.localizationpriority: medium
-ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566477"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691517"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar buffers, uniformes e atributos de vértice do OpenGL ES 2.0 com os do Direct3D
 

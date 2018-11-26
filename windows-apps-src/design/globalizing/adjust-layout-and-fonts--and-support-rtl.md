@@ -1,21 +1,19 @@
 ---
-author: stevewhims
 Description: Design your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.
 title: Ajustar layout e fontes e fornecer suporte a RTL
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
-ms.author: stwhi
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, localizabilidade, localização, rtl, ltr
 ms.localizationpriority: medium
-ms.openlocfilehash: ac69701eca128d327dfd80cfddc7fad41c50c50e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568947"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694667"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Ajustar layout e fontes e fornecer suporte a RTL
 Projete seu app de forma a dar suporte a layouts e fontes de vários idiomas, incluindo direção de fluxo RTL (da direita para a esquerda). Direção de fluxo é a direção na qual o script é criado e exibido e os elementos de interface do usuário na página são visualizados por nós.

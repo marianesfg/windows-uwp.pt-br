@@ -1,19 +1,17 @@
 ---
-author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Gerenciar configurações da conta e informações de perfil
 description: Você pode exibir e atualizar suas configurações de conta de desenvolvedor e informações de perfil na seção configurações da conta do Partner Center.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
-ms.openlocfilehash: 0acbf8378d2cffa7c083e1da06ed0775df69d60e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f1b1b5a5a575df5874e6942a8eff27632cb49921
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570256"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719845"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 

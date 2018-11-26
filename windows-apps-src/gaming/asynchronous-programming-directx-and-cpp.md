@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Programação assíncrona (DirectX e C++)
 description: Este tópico cobre vários pontos a serem considerados quando se utiliza programação assíncrona e threading com DirectX.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, programação assíncrona, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f395136ff7f331f58b9c8e0ac1ee9efea296c02
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560968"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712924"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>Programação assíncrona (DirectX e C++)
 

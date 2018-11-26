@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Planejar a portabilidade do DirectX
 description: Planeje o seu projeto de portabilidade para jogos do DirectX 9 para o DirectX 11 e Plataforma Universal do Windows (UWP) - atualize o código dos elementos gráficos e coloque o seu jogo no ambiente do Windows Runtime.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, directx, compatibilização
 ms.localizationpriority: medium
-ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: abbcd688df01b779a1cb3ab9e30bd13709926be4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580032"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691437"
 ---
 # <a name="plan-your-directx-port"></a>Planejar a portabilidade do DirectX
 

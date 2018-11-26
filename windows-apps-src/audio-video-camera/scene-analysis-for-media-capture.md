@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: Este artigo descreve como usar SceneAnalysisEffect e FaceDetectionEffect para analisar o conteúdo do fluxo de visualização de captura de mídia.
 title: Efeitos para análise de quadros de câmera
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555041"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695916"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efeitos para análise de quadros de câmera
 

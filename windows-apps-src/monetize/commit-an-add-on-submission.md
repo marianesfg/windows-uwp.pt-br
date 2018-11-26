@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
 description: Use este método na API de envio da Microsoft Store para confirmar um envio de complemento novo ou atualizado para o Partner Center.
 title: Confirmar um envio de complemento
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, confirmar envio de complemento, produto no app, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577474"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694925"
 ---
 # <a name="commit-an-add-on-submission"></a>Confirmar um envio de complemento
 

@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: A5320094-DF53-42FC-A6BA-A958F8E9210B
 title: Testar aplicativos Surface Hub usando o Visual Studio
 description: O simulador do Visual Studio fornece um ambiente para projetar, desenvolver, depurar e testar aplicativos UWP, incluindo aplicativos criados para o Surface Hub.
-ms.author: pafarley
 ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 63214ce47bffc5a0b13f421e5185d06cd810ea34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b40fd56a85be6dce441324a427790cda28f9d7ac
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578933"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719230"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testar aplicativos Surface Hub usando o Visual Studio
 O simulador do Visual Studio fornece um ambiente onde você pode projetar, desenvolver, depurar e testar os aplicativos UWP (Plataforma Universal do Windows), incluindo os aplicativos que você criou para o Microsoft Surface Hub. O simulador não usa a mesma interface de usuário que o Surface Hub, mas é útil para testar seu aplicativo a aparência e comportamento com tamanho de tela do Surface Hub e resolução.

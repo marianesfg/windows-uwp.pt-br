@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 description: Jogos da Plataforma Universal do Windows (UWP) maiores, principalmente os que dão suporte a vários idiomas com ativos específicos de região ou oferecem ativos de alta definição opcionais, podem inflar para tamanhos maiores.
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, pacote
 ms.localizationpriority: medium
-ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555598"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692165"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empacotar seu jogo em DirectX da Plataforma Universal do Windows (UWP)
 

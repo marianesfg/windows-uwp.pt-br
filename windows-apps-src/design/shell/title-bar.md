@@ -1,20 +1,18 @@
 ---
-author: jwmsft
 description: Personalize a barra de título de um aplicativo da área de trabalho para corresponder a personalidade do aplicativo.
 title: Personalização da barra de título
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ebe590f98afef031ab183589fc7dcfc29cd9493
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557358"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698485"
 ---
 # <a name="title-bar-customization"></a>Personalização da barra de título
 

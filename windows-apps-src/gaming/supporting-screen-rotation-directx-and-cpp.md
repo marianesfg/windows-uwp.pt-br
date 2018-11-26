@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Oferecendo suporte à orientação de tela (DirectX e C++)
 description: Aqui, vamos discutir as práticas recomendadas para manipular a rotação da tela em seu aplicativo UWP DirectX, para que o hardware gráfico do dispositivo Windows 10 são usados de forma eficiente e efetiva.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, orientação da tela, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ed8739f8ba7b2049af154d458ccaa831b8526a5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574011"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712540"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Oferecendo suporte à orientação de tela (DirectX e C++)
 

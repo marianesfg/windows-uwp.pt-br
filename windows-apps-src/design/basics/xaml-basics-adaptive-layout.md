@@ -1,18 +1,16 @@
 ---
-author: muhsinking
 title: Tutorial Criar layouts adaptáveis
 description: Este artigo aborda as noções básicas do layout adaptável no XAML
 keywords: XAML, UWP, Introdução
-ms.author: mukin
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556775"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695085"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Criar layouts adaptáveis
 

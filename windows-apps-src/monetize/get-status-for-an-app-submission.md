@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 039B8810-5C9E-4DB9-A6AF-33E7401311FF
 description: Use este método na API de envio da Microsoft Store para obter o status de um envio de aplicativo.
 title: Obter o status de um envio de aplicativo
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de aplicativo, status
 ms.localizationpriority: medium
-ms.openlocfilehash: f92911d431579f9408b02680abf1d49f17740903
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 97070136f9e1f926a275185d2b4c222513aa49d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566003"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692244"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Obter o status de um envio de aplicativo
 

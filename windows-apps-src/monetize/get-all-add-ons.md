@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: Use este método na API de envio da Microsoft Store para recuperar todos os dados de complemento para todos os aplicativos que estão registrados em sua conta do Partner Center.
 title: Obter todos os complementos
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, complementos, produtos no aplicativo, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578625"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692374"
 ---
 # <a name="get-all-add-ons"></a>Obter todos os complementos
 

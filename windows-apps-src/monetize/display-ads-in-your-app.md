@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: O SDK do Microsoft Advertising oferece várias maneiras de monetizar seu aplicativo com anúncios.
 title: Apresentar anúncios em seu app com o SDK do Microsoft Advertising
-ms.author: mhopkins
 ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, faixa, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582009"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695035"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Apresentar anúncios em seu app com o SDK do Microsoft Advertising
 

@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 3848cd72-eccd-400e-93ff-13649cd81b6c
 description: Este artigo fornece suporte para aplicativos que usam o modelo de mídia em segundo plano herdado para reprodução e fornece orientações para migrar para o novo modelo.
 title: Reprodução de mídia em segundo plano herdada
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560115"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692967"
 ---
 # <a name="legacy-background-media-playback"></a>Reprodução de mídia em segundo plano herdada
 

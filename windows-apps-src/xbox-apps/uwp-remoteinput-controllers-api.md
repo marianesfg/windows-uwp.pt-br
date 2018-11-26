@@ -1,18 +1,16 @@
 ---
-author: WilliamsJason
 title: Referência da API de controles do Device Portal
 description: Saiba como obter o número de controles físicos conectados e desativá-los de maneira programática.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b5061f9193d78d4ff23f5fa707b0bea67a10f98
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561960"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707043"
 ---
 # <a name="controller-api-reference"></a>Referência de API do controle   
 Você pode obter o número de controles físicos conectados e desativá-los de usando a API REST.

@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir arquivos e pastas com um seletor
 description: Acesse arquivos e pastas permitindo que o usuário interaja com um seletor. Você pode usar as classes FileOpenPicker e FileSavePicker para obter acesso a arquivos e FolderPicker para obter acesso a uma pasta.
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b79bfa9ecdf76d2d59e3c0991240d88599dbe6dd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7ed2c1715ebb682aed3da4b55ef94cc0c60f8391
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564086"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693816"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>Abrir arquivos e pastas com um seletor
 

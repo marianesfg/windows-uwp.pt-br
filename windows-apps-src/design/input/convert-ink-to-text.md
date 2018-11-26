@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Use handwriting recognition and ink analysis to recognize Windows Ink strokes as text and shapes.
 title: Reconhecer traços do Windows Ink como texto e formas
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keywords: Windows Ink, escrita à tinta do Windows, DirectInk, InkPresenter, InkCanvas, reconhecimento de manuscrito, interação do usuário, entrada
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 83142b0a3b24e25f8e7a922d800262f505cd8cc2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b25a37fb06688e7841490e00d1c83640d3155d50
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569126"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692877"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconhecer traços do Windows Ink como texto e formas
 
@@ -274,7 +272,6 @@ Aqui está essa amostra em ação:
 | ![Antes da análise](images/ink/ink-analysis-raw2-small.png) | ![Depois da análise](images/ink/ink-analysis-analyzed2-small.png) |
 
 ---
-
 ## <a name="constrained-handwriting-recognition"></a>Reconhecimento de manuscrito restrito
 
 Na seção anterior ([Reconhecimento de forma livre com análise de tinta](#free-form-recognition-with-ink-analysis)), demonstramos como usar as [APIs de análise de tinta](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis) para analisar e reconhecer traços de tinta arbitrários dentro da área de InkCanvas.

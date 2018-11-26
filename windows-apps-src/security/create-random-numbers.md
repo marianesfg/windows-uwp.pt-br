@@ -2,18 +2,16 @@
 title: Criar números aleatórios
 description: Este exemplo de código mostra como criar um número aleatório ou buffer para uso em criptografia em um aplicativo UWP (Plataforma Universal do Windows).
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: a128535617c97e73b5a389db827fcf8c579b7f13
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f36e50f2de36df39177370d688b9add5591403e1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564984"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693953"
 ---
 # <a name="create-random-numbers"></a>Criar números aleatórios
 

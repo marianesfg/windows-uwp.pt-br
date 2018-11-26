@@ -1,18 +1,16 @@
 ---
-author: c-don
 title: Implantar um aplicativo por meio de registro de arquivo flexível
 description: Este guia mostra como usar o layout de arquivo flexível para validar e compartilhar aplicativos do Windows 10 sem a necessidade de empacotá-las.
-ms.author: cdon
 ms.date: 6/1/2018
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, gerente de aplicativos, implantação, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574356"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694825"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implantar um aplicativo por meio de registro de arquivo flexível 
 

@@ -4,17 +4,15 @@ description: Uma faixa de linhas é um primitivo composto de segmentos de linha 
 ms.assetid: 6E8C58E1-B463-44FD-A69F-81CCBF25D856
 keywords:
 - Faixas de linhas
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a5fbf4d7fd4f82e6bc44795d64e6b98b6c732f49
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 869f0ac2b255c0dee231828f6d9064a917668821
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575149"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692717"
 ---
 # <a name="line-strips"></a>Faixas de linhas
 

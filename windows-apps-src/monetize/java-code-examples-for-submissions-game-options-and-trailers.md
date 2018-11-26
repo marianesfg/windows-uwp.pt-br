@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Use os exemplos de código Java nesta seção para saber mais sobre como enviar opções de jogo e trailers usando a API de envio da Microsoft Store.
 title: Exemplo de Java - envio de aplicativo com opções e trailers de jogos
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, API de envio da Microsoft Store, exemplos de código, opções de jogo, trailers, listagens avançadas, java
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e8c9c18840b15efa3aeea7e04ea0546c623fd37
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 974bbc4c864edb9450f9ba677c60349b5e1f8ece
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561469"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712633"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Exemplo de Java: envio de aplicativo com opções e trailers de jogos
 

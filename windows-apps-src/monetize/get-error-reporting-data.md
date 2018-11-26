@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Use este método na API de análise da Microsoft Store para obter dados de relatório de erros agregados para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter dados de relatório de erros do seu aplicativo
-ms.author: mhopkins
 ms.date: 09/04/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros
 ms.localizationpriority: medium
-ms.openlocfilehash: fd463bf98fb751efa011ba5fc3e1e7b9eb7b41eb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 69504fd8d670158a35e5afd5dcd035acd296f084
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557996"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692076"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Obter dados de relatório de erros do seu aplicativo
 

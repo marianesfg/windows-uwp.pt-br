@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Iniciar o aplicativo padrão para um URI
 description: Saiba como iniciar o app padrão para um URI (Uniform Resource Identifier). Os URIs permitem iniciar outro aplicativo para realizar uma tarefa específica. Este tópico também apresenta uma visão geral dos muitos esquemas de URI compilados no Windows.
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.author: twhitney
 ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5a0af7b7227f149722cf34a368fc588198880ef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572005"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696480"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar o app padrão de um URI
 

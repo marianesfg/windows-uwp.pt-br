@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: atributo xLoad
-description: xLoad permite dinâmica criação e destruição de um elemento e seus filhos, diminuindo o uso de memória e o tempo de inicialização. 
-ms.author: jimwalk
+description: xLoad permite dinâmica criação e destruição de um elemento e seus filhos, diminuindo o uso de memória e o tempo de inicialização.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577819"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693157"
 ---
 # <a name="xload-attribute"></a>Atributo x:Load
 

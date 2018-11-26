@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: Use este método na API de envio da Microsoft Store para criar um novo envio de versão de pré-lançamento do pacote para um aplicativo que está registrado à sua conta do Partner Center.
 title: Criar um envio de pacote de pré-lançamento
-ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cdcc0f06820600523be111d67d3cad5e38b6ceb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568987"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691657"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Referência de GLSL para HLSL
 description: Porte seu código GLSL (OpenGL Shader Language) para código Microsoft HLSL (High Level Shader Language) ao portar sua arquitetura gráfica do OpenGL ES 2.0 para o Direct3D 11 para criar um jogo para a UWP (Plataforma Universal do Windows).
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreadores
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8f468584d995de40ff14df1527ab1df8275c36a8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580573"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691950"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referência de GLSL para HLSL
 

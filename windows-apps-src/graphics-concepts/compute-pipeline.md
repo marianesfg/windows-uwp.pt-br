@@ -2,18 +2,16 @@
 title: Calcular o pipeline
 description: O pipeline de computação do Direct3D foi projetado para tratar os cálculos que podem ser feitos principalmente em paralelo com o pipeline de gráficos.
 ms.assetid: 355B66C6-C0DF-47BA-A9C9-7AFA50B5B614
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91c95019c327f39a58a7397a66f9d4bbc88f843d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575512"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720312"
 ---
 # <a name="compute-pipeline"></a>Calcular o pipeline
 

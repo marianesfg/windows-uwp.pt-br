@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Um valor escalar precisa ser encapsulado em um objeto de classe de referência antes de ser passado para uma função que espera **IInspectable**. Esse processo de encapsulamento é conhecido como *conversão* do valor.
 title: Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT
-ms.author: stwhi
 ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, XAML, controle, boxing, escalar, valor
 ms.localizationpriority: medium
-ms.openlocfilehash: f4b99f587fbd517b677d85b50abb26fdf072b359
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c86d1ac8ce83ea092ce0e2730ea0e9d4a201b94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555532"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720262"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Valores de conversão de boxing e unboxing para IInspectable com C++/WinRT
  

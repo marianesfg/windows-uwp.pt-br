@@ -1,19 +1,17 @@
 ---
-author: abbycar
 title: Adicionar uma interface do usuário
 description: Saiba como adicionar uma sobreposição de interface do usuário 2D para um jogo DirectX UWP.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
-ms.author: abigailc
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, interface do usuário, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9962cc9043bd650390721715ca73b2e85a219c25
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 09005eb12997126a9cad68c388beb0473b19fda3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571175"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696612"
 ---
 # <a name="add-a-user-interface"></a>Adicionar uma interface do usuário
 

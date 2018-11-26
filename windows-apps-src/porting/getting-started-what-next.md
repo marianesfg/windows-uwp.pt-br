@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 title: Introdução, O que vem depois
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: Com essas informações básicas, você agora pode começar a escrever aplicativos UWP (Plataforma Universal do Windows) mais interessantes.
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557596"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698405"
 ---
 # <a name="getting-started-what-next"></a>Introdução: o que vem depois?
 

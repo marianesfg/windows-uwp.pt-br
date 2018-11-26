@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Fornece um valor para qualquer atributo XAML avaliando uma referência a um recurso que vem da implementação personalizada da pesquisa de recursos. A pesquisa de recursos é executada pela implementação da classe CustomXamlResourceLoader.
 title: Extensão de marcação CustomResource
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fb88fc3a764a89dfe7ac8a9c399149b6b98eca5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7eabcb188aa1687d36d4b4e6f432783aa68969de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579653"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696411"
 ---
 # <a name="customresource-markup-extension"></a>Extensão de marcação {CustomResource}
 

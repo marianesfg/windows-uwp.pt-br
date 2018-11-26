@@ -4,17 +4,15 @@ description: Buffers de índice são buffers de memória que contêm dados de í
 ms.assetid: 14D3DEC5-CF74-488B-BE41-16BF5E3201BE
 keywords:
 - Buffers de índice
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0df56ebeefdbdabe5904547d77e90077549422c2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 36d08006fa2f32812f97daef5135a98dce16c4e5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578758"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695065"
 ---
 # <a name="index-buffers"></a>Buffers de índice
 

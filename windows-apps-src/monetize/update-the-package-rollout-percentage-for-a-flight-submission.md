@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Use este método na API de envio da Microsoft Store para atualizar a porcentagem da distribuição de pacote para o envio de um pacote de pré-lançamento.
 title: Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pacote, envio de versão de pré-lançamento, atualização, porcentagem
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b65f4071fb9a05754ef68d98b8e2da1435c0153
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 025db5cb0beb36a5b4a3ca1b765b5da3434c9d7a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559295"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692457"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Atualizar a porcentagem de distribuição para um envio de versão de pré-lançamento
 

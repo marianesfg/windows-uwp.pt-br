@@ -1,19 +1,17 @@
 ---
-author: normesta
 title: Exibir pontos de interesse (POI) em um mapa
 description: Adicione pontos de interesse (POI) a um mapa usando pinos, imagens, formas e elementos de interface do usuário XAML.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
-ms.author: normesta
 ms.date: 08/11/2017
 ms.topic: article
 keywords: windows 10, uwp, mapa, localização, pinos de pressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 13c0ea463cbab97e03c87c4e558bba0eff92300c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554110"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720332"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Exibir pontos de interesse em um mapa
 
