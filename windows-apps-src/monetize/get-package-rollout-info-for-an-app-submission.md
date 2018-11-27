@@ -7,11 +7,11 @@ keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pa
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692109"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827075"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>Obter informações de distribuição para um envio de aplicativo
 

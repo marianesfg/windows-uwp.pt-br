@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: b49ba463e39d09b915ce3925f94ae7d9f11a9a47
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697669"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829066"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Introdução ao scanner de código de barras da câmera
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Etapa 1: adicionar declarações de funcionalidades ao manifesto do seu aplicativo

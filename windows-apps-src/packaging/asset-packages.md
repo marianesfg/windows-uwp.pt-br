@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7718096"
+ms.locfileid: "7829127"
 ---
 # <a name="introduction-to-asset-packages"></a>Introdução aos pacotes de ativo
 

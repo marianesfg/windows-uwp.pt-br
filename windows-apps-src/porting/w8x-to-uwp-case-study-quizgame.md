@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: Este tópico apresenta um estudo de caso de portabilidade de um teste de ponto a ponto jogo WinRT 8.1 exemplo de aplicativo para um aplicativo da plataforma Universal do Windows do Windows 10 (UWP).
 title: Estudo de caso do Windows Runtime 8.x para UWP, exemplo de aplicativo QuizGame ponto a ponto
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567996"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827750"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Tempo de execução do Windows 8. x para UWP estudo de caso: exemplo de aplicativo QuizGame
 
