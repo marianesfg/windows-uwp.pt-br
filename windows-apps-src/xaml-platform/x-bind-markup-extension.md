@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5407849c15da25adc29fa97c0215b9734a5d3258
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694845"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855394"
 ---
 # <a name="xbind-markup-extension"></a>Extensão de marcação {x:Bind}
 
@@ -143,7 +143,7 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 | **Mode** | Especifica o mode de associação como uma dessas cadeias de caracteres: "OneTime", "OneWay" ou "TwoWay". O padrão é "OneTime". Observe que isso é diferente do padrão para **{Binding}**, que é "OneWay" na maioria dos casos. |
 | **TargetNullValue** | Especifica um valor a ser exibido quando o valor de origem é solucionado, mas é explicitamente **null**. |
 | **BindBack** | Especifica uma função a ser usada na direção inversa de uma associação bidirecional. |
-| **UpdateSourceTrigger** | Especifica quando enviar as alterações de volta a partir do controle para o modelo na associações de TwoWay. O padrão para todas as propriedades exceto TextBox.Text é PropertyChanged, TextBox.Text é LostFocus.|
+| **UpdateSourceTrigger** | Especifica quando enviar as alterações de volta a partir do controle para o modelo na associações de TwoWay. O padrão para todas as propriedades exceto TextBox. Text é PropertyChanged; TextBox. Text é LostFocus.|
 
 > [!NOTE]
 > Se você estiver convertendo a marcação de **{Binding}** em **{x:Bind}**, examine as diferenças nos valores padrão da propriedade **Mode**.
@@ -154,7 +154,7 @@ Essas propriedades funcionam da mesma forma que as propriedades da classe [**Bin
 
 Como **{x:Bind}** usa código gerado para atingir seus benefícios, requer informações de tipo em tempo de compilação. Isso significa que você não pode associar a propriedades onde você não souber o tipo antes do tempo. Por isso, você não pode usar **{x:Bind}** com a propriedade **DataContext**, que é do tipo **Object** e também está sujeita a alterações no tempo de execução.
 
-Ao usar **{x:Bind}** com modelos de dados, você deve indicar o tipo associado definindo um **x:DataType**, conforme mostrado no exemplo a seguir. Você pode também definir o tipo para um tipo de classe de interface ou base, e então use projeções, se necessário, para formular uma expressão completa.
+Ao usar **{x: Bind}** com modelos de dados, você deve indicar o tipo associado definindo um valor de **x: DataType** , conforme mostrado na seção [exemplos](#examples) . Você pode também definir o tipo para um tipo de classe de interface ou base, e então use projeções, se necessário, para formular uma expressão completa.
 
 As associações compiladas dependem da geração de código. Portanto, se você usar **{x:Bind}** em um dicionário de recursos, o dicionário de recursos precisará ter uma classe code-behind. Veja [Dicionários de recursos com {x:Bind}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para obter um exemplo de código.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, empacotamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 04736c9ac4de5adf162d32191ff30f7a981d6a6f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854404"
 ---
 # <a name="packaging-apps"></a>Empacotando aplicativos
 
