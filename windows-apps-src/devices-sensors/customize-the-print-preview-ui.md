@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: Personalizar a interface do usuário para visualização de impressão
 description: Esta seção descreve como personalizar as opções de impressão e as configurações na interface do usuário de visualização da impressão.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, impressão
 ms.localizationpriority: medium
-ms.openlocfilehash: 71fb45842e8aaa4200e2597ac0736d911ac9bf34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570780"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718517"
 ---
 # <a name="customize-the-print-preview-ui"></a>Personalizar a interface do usuário para visualização de impressão
 

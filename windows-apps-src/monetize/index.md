@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: O SDK do Windows, SDK do Microsoft Advertising, Microsoft Store Services SDK e a Microsoft Store oferecem muitos recursos que permitem que você ganhe mais dinheiro com seus aplicativos e obtenha clientes a partir do envolvimento com seus usuários.
 title: Monetização, envolvimento e serviços da Loja
-ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, monetizar, envolvimento, promover, serviços da loja
 ms.localizationpriority: medium
-ms.openlocfilehash: 9eca34975217bace912ee06b967e028f30155452
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566763"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718670"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetização, envolvimento e serviços da Loja
 

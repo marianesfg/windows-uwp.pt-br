@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: Use os exemplos de código Java nesta seção para saber mais sobre como usar a API de envio da Microsoft Store.
 title: Exemplo de Java - envios de apps, complementos e versões de pré-lançamento
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, exemplos de código, java
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a0df9fe873ab7d7330e06a18bb1816df3157d7a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0466c7dad5ac2f543e6b447a9b2661c2889f7b4e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579316"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718587"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Exemplo de Java: envios de apps, complementos e versões de pré-lançamento
 
