@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Princípios básicos da amostra do Marble Maze
 description: Este documento descreve as características fundamentais do projeto Marble Maze; Por exemplo, como ele usa o Visual C++ no ambiente do Windows Runtime, como ele é criado e estruturado e como ele é compilado.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
-ms.author: elcowle
 ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, conceitos básicos
 ms.localizationpriority: medium
-ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577017"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704125"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
 

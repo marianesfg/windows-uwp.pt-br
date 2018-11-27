@@ -2,18 +2,16 @@
 title: Introdução ao desenvolvimento de aplicativos seguros do Windows
 description: Este artigo introdutório ajuda arquitetos e desenvolvedores compreendam melhor os vários recursos de plataforma do Windows 10 que aceleram a criação de aplicativos da plataforma Universal do Windows (UWP) seguros.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: adc74410a5012dbc59cc995e80ee5fa729f0176f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 38318e7f97c8eba7d0137a865f5025fb9a77fa55
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564228"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704743"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introdução ao desenvolvimento de aplicativos seguros do Windows
 

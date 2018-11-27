@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Instalando aplicativos UWP a partir de uma página da Web
 description: Nesta seção, analisaremos as etapas que você precisa executar para permitir que os usuários instalem seus aplicativos diretamente a partir da página da Web.
-ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 515beebd55049ecb4d0c6747fa7d37e76577ef7f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582196"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708116"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Instalando aplicativos UWP a partir de uma página da Web
 

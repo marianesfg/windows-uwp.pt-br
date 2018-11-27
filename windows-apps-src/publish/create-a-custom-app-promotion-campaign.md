@@ -1,19 +1,17 @@
 ---
-author: JnHs
 description: Além de criar uma campanha publicitária para seu app que será executada em aplicativos do Windows, você poderá promover seu app usando outros canais.
 title: Criar uma campanha personalizada de promoção de app
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, personalizado, app, promoção, campanha
 ms.localizationpriority: medium
-ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578811"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704613"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Criar uma campanha personalizada de promoção de app
 

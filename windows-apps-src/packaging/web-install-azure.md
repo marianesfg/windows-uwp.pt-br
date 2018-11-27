@@ -1,18 +1,16 @@
 ---
-author: c-don
 title: Instalação do aplicativo UWP a partir de um Servidor Web do Azure
 description: Este tutorial demonstra como configurar um servidor Web do Azure. Verifique se o aplicativo Web pode hospedar pacotes de aplicativo host, invocar e usar o Instalador de aplicativo de maneira eficaz.
-ms.author: cdon
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, conjunto relacionado, pacotes opcionais, servidor Web do Azure
 ms.localizationpriority: medium
-ms.openlocfilehash: b7ea002686199b992af45af775f53c96fd108a13
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0f0e4fe6cd2b05c2de4648a410ba43ce27e48922
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567976"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705227"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Instalar um aplicativo UWP a partir de um aplicativo Web do Azure
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: Saiba como usar o namespace Windows.Services.Store para obter informações de produto relacionados à Loja para o aplicativo atual ou um de seus complementos.
 title: Obter informações do produto para apps e complementos
-ms.author: mhopkins
 ms.date: 02/08/2018
 ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: f1544ee3404e77ec7565c626a6ca96e439832c90
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9b923764c6374e403d2652db715f65a80c48bacf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561601"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705389"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obter informações do produto para apps e complementos
 

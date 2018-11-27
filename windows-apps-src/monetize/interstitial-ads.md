@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Saiba como incluir anúncios intersticiais em um aplicativo UWP para Windows 10 usando o SDK do Microsoft Advertising.
 title: Anúncios intersticiais
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncio, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 27ef8173db2976d58f9ccd0422a1217e2bd91d13
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573691"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708386"
 ---
 # <a name="interstitial-ads"></a>Anúncios intersticiais
 

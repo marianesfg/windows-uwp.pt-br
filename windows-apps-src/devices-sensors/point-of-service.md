@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Ponto de Serviço
 description: Esta seção contém artigos sobre como usar diversos recursos do namespace Ponto de Serviço.
-ms.author: jken
 ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9450a5980ee83c41c60e630c616ba620e0ac4930
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0c55f1b739ef88ec65b7fd44655406415bc0468
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567956"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708726"
 ---
 # <a name="point-of-service"></a>Ponto de Serviço
 Esta seção contém artigos sobre como usar [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice) para interagir com periféricos encontrados em ambientes de varejo e hotelaria de aplicativos universais do Windows.

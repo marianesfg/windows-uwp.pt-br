@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Este tópico usa um exemplo de código completo do Direct2D para mostrar como usar C++ c++ WinRT consumir COM classes e interfaces.
 title: Consumir componentes COM com C++/WinRT
-ms.author: stwhi
 ms.date: 07/23/2018
 ms.topic: article
 keywords: Windows 10, uwp, padrão, c++, cpp, winrt, COM, componente, classe, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: a07c9877a6d6d953e578d927959b1202444ede21
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9000cad79e12a645689d90ef37a8ff43b9fc95b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578565"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706307"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM com C++/WinRT
 

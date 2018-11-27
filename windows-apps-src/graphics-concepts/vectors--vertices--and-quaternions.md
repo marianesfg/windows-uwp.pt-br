@@ -4,17 +4,15 @@ description: Em todo o Direct3D, os vértices descrevem a posição e a orienta�
 ms.assetid: 94EC3D59-43FC-4509-A233-916E9FA8381E
 keywords:
 - Vetores, vértices e quatérnios
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2373d18b51015652bc1ef3035402e1da95a54abf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563490"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704344"
 ---
 # <a name="vectors-vertices-and-quaternions"></a>Vetores, vértices e quatérnios
 

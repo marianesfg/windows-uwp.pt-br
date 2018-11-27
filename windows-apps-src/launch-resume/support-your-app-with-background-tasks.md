@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Dar suporte a seu app com tarefas em segundo plano
 description: Os tópicos nesta seção mostram como fazer um código leve funcionar em segundo plano em resposta aos gatilhos.
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
-ms.author: twhitney
 ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2413a27c12a9b36f0fd57482492414e7b5a379b6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568937"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705600"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Dar suporte a seu app com tarefas em segundo plano
 

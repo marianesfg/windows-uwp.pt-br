@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Simbologias do scanner de código de barras da câmera
 description: Simbologias do scanner de código de barras da câmera compatíveis
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: c74e72c826687c2b21284c169c345e145505e104
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576766"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708096"
 ---
 # <a name="symbologies"></a>Simbologias
 Este tópico fornece amostras de códigos de barras para cada uma das simbologias compatíveis com o decodificador de códigos barras de software que acompanha o Windows 10, incluindo: UPC/EAN, código 39, código 128, intercalado 2 de 5, DataBar omnidirecional, Databar empilhado , código QR e GS1DWCode.

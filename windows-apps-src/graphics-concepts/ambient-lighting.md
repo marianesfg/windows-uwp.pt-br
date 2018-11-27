@@ -4,17 +4,15 @@ description: A iluminação ambiente fornece iluminação constante para uma cen
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
 keywords:
 - Iluminação ambiente
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579733"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707391"
 ---
 # <a name="ambient-lighting"></a>Iluminação ambiente
 
@@ -35,7 +33,7 @@ Em que:
 | Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Cor ambiente global                                                                                              |
 | Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuação de luz da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md). |
 | Ponto<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Fator de destaque da luz ith. Consulte [Fator de atenuação e destaque](attenuation-and-spotlight-factor.md).  |
-| soma               | N/D           | N/A           | Soma da luz ambiente                                                                                          |
+| soma               | N/A           | N/A           | Soma da luz ambiente                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Cor ambiente da luz da luz ith                                                                              |
 
  

@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: Criar um app Hello, world (JS)
 description: Este tutorial ensina a usar JavaScript e HTML para criar um simples & \#0034; Olá, mundo & \#0034; destinado a Universal Windows Platform (UWP) no Windows 10.
-ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d8fb1dc486c039007c3ea0d4ee36d72c0c511f9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c5b99c95167940c1ae51dbe96a3e43dc6fb0af34
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7575994"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705797"
 ---
 # <a name="create-a-hello-world-app-js"></a>Criar um app Hello, world (JS)
 

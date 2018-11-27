@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Vídeos de desenvolvimento de jogos
 description: Coleção de vídeos de desenvolvimento de jogos de conferências como GDC e //build.
 ms.assetid: 75643d92-293a-4d97-bc5f-2cb4217cb385
-ms.author: joanlee
 ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, vídeos, GDC, build
 ms.localizationpriority: medium
-ms.openlocfilehash: 83865ca17801d51fdd611e6ad0187da98a4bec9e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564964"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708206"
 ---
 # <a name="game-development-videos"></a>Vídeos de desenvolvimento de jogos
 

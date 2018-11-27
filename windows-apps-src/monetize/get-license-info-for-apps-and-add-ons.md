@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: Saiba como usar o namespace Windows.Services.Store para obter informações de licença para o aplicativo atual e seus complementos.
 title: Obter informações de licença para seus aplicativos e complementos
-ms.author: mhopkins
 ms.date: 12/04/2017
 ms.topic: article
 keywords: windows 10, uwp, licenças, aplicativos, complementos, compras no aplicativo, IAPs, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 545e052794a8649daa62872cf74b0986cb7bf4b9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4d7c832907af17436d588f0fac6c5039d4affa82
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576900"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705376"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Obter informações de licença para apps e complementos
 

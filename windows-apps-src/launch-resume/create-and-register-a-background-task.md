@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Criar e registrar uma tarefa em segundo plano fora do processo
 description: Crie uma classe de tarefa em segundo plano fora do processo e a registre para ser executada quando seu app não estiver em primeiro plano.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
-ms.author: twhitney
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
@@ -12,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 8d32b4559e91cc898944f3767d4b082935359d49
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553593"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704537"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Criar e registrar uma tarefa em segundo plano fora do processo
 

@@ -1,19 +1,17 @@
 ---
-author: normesta
 description: Este tópico mostra como iniciar a caixa de diálogo de SMS para permitir que o usuário envie uma mensagem SMS. Você pode previamente preencher os campos de SMS com dados antes de mostrar a caixa. A mensagem não será enviada até que o usuário toque no botão enviar.
 title: Enviar uma mensagem SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contatos, SMS, envio
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578209"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706082"
 ---
 # <a name="send-an-sms-message"></a>Enviar uma mensagem SMS
 

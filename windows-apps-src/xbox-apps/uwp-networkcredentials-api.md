@@ -1,23 +1,22 @@
 ---
-author: WilliamsJason
-title: Referência de API de credenciais de rede do dispositivo Portal
+title: Referência de API de credenciais de rede do Device Portal
 description: Saiba como adicionar, remover ou atualizar as credenciais de rede de maneira programática.
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e00169f92ee6f0aa48df64ec4a1186f9682b358
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "410104"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705098"
 ---
 # <a name="network-credentials-api-reference"></a>Referência de API de credenciais de rede
-Você pode adicionar, remover ou atualizar as credenciais de rede armazenados na sua devkit usando essa API REST.
+Você pode adicionar, remover ou atualizar as credenciais de rede armazenados no seu devkit usando essa API REST.
 
-## <a name="get-existing-credentials"></a>Obter credenciais existentes
+## <a name="get-existing-credentials"></a>Obter as credenciais existentes
 
 **Solicitação**
 
-Você pode obter uma lista dos compartilhamentos armazenados juntamente com o nome de usuário do usuário que tenha credenciais para o compartilhamento de rede.
+Você pode obter uma lista dos compartilhamentos armazenados juntamente com o nome de usuário do usuário que tenha credenciais de compartilhamento de rede.
 
 Método      | URI da solicitação
 :------     | :-----
@@ -29,7 +28,7 @@ GET | /ext/networkcredential
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**   
 
@@ -37,10 +36,10 @@ GET | /ext/networkcredential
 
 **Resposta**   
 
-- Matriz JSON no seguinte formato:
+- Matriz JSON no formato a seguir:
 * Credenciais
   * NetworkPath - o caminho para o compartilhamento de rede.
-  * Username - o nome de usuário que tenha sido credenciais armazenadas.
+  * Nome de usuário - o nome de usuário que armazenou credenciais.
 
 **Código de status**
 
@@ -66,19 +65,19 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI      | Descrição     | 
 | ------------------ |-----------------|
-| NetworkPath        | O caminho para o compartilhamento de rede você está adicionando credenciais de acesso. |
+| NetworkPath        | O caminho de rede para o compartilhamento de você está adicionando credenciais para acessar. |
 <br>
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**
 
 - Os seguintes elementos JSON:
 * NetworkPath - o caminho para o compartilhamento de rede.
-* Username - o nome de usuário para armazenar as credenciais em.
-* Password - a senha nova ou atualizada para este usuário.
+* Nome de usuário - o nome de usuário para armazenar as credenciais em.
+* Password - a senha do nova ou atualizada para esse usuário.
 
 **Resposta**   
 
@@ -108,12 +107,12 @@ Você pode especificar os seguintes parâmetros adicionais no URI da solicitaç�
 
 | Parâmetro do URI      | Descrição     | 
 | ------------------ |-----------------|
-| NetworkPath        | O caminho de rede para o compartilhamento da qual você está removendo credenciais armazenadas. |
+| NetworkPath        | O caminho de rede para o compartilhamento da qual você está removendo as credenciais armazenadas. |
 <br>
 
 **Cabeçalhos de solicitação**
 
-- Nenhum
+- Nenhum(a)
 
 **Corpo da solicitação**   
 

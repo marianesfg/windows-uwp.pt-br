@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Este tópico mostra como criar APIs de C++/WinRT, usando a estrutura de base **winrt::implements**, direta ou indiretamente.
 title: Criar APIs com C++/WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
-ms.openlocfilehash: 21670e0908a212341d401b4cbca314a9242b26a2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7fd543d7c3ad9dec878cc02b14a79c254d91b4be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580812"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706001"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
