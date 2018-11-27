@@ -4,17 +4,15 @@ description: O estágio de sombreador de geometria (GS) processa triângulos pri
 ms.assetid: 8A1350DD-B006-488F-9DAF-14CD2483BA4E
 keywords:
 - Estágio de sombreador de geometria (GS)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c4659ee4200915a7cc82f46c90f0e53965f322d5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 63c678f4b2dde1a5e35c0131b5154493c9703951
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559599"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717437"
 ---
 # <a name="geometry-shader-gs-stage"></a>Estágio de sombreador de geometria (GS)
 

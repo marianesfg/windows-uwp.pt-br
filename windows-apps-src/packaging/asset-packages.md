@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Introdução aos pacotes de ativo
 description: Pacotes de ativo são um tipo de pacote que atuam como um local centralizado para arquivos comuns de um aplicativo, eliminando a necessidade de arquivos duplicados nos pacotes de arquitetura.
-ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 98980e67d24eb96aa55af7fefe10b5e4c2cdfa67
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566174"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718096"
 ---
 # <a name="introduction-to-asset-packages"></a>Introdução aos pacotes de ativo
 

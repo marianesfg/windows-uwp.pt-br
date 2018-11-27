@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Novidades do Windows Docs em julho de 2017 - Desenvolver aplicativos UWP
 description: Novos recursos, amostras e diretrizes para desenvolvedores foram adicionados à documentação do desenvolvedor do Windows 10 referente a julho de 2017.
 keywords: novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10
-ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dd00d1aba0e6a58cd2128c90b2c7f714d3f8f802
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579534"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717346"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2017
 
