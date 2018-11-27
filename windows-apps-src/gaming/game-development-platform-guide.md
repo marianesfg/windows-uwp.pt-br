@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Tecnologias de jogos para aplicativos UWP (Plataforma Universal do Windows)
 description: Neste guia, você aprenderá sobre as tecnologias disponíveis para o desenvolvimento de jogos UWP (Plataforma Universal do Windows).
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, tecnologia, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576831"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707669"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologias de jogos para aplicativos UWP
 

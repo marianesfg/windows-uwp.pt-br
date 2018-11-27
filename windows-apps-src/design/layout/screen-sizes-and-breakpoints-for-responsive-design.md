@@ -1,19 +1,17 @@
 ---
-author: mijacobs
 title: Tamanhos de tela e pontos de interrupção para um design responsivo
 description: Em vez de otimizar a interface do usuário dos vários dispositivos no ecossistema do Windows 10, é recomendável projetar algumas categorias de largura chave chamadas pontos de interrupção.
-ms.author: mijacobs
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dbe71805ac0607a974374fb7a4f50a1d3f4d6811
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574472"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708911"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamanhos de tela e pontos de interrupção
 

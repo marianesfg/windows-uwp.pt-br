@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Criar e registrar uma tarefa em segundo plano no processo
 description: Crie e registre uma tarefa no processo que é executada no mesmo processo de seu app em primeiro plano.
-ms.author: twhitney
 ms.date: 11/03/2017
 ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
-ms.openlocfilehash: 1eeac0239bd0c6df38f82fa185c1ed6f7eb3f9dc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2a59fe6056661289726fdaa6c2dd26e90d5e3fad
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577912"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709015"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Criar e registrar uma tarefa em segundo plano no processo
 

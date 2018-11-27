@@ -1,24 +1,22 @@
 ---
-author: Karl-Bridge-Microsoft
 title: Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade
 Description: ''
 label: ''
 template: detail.hbs
 keywords: teclado, controlador de jogo, controle remoto, navegação, navegação interna direcional, área direcional, estratégia de navegação, entrada, interação do usuário, acessibilidade, usabilidade
 ms.date: 03/02/2018
-ms.author: kbridge
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f4c86847e02c4ba987f8b1dcc42016145b175193
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4c76e62a4fcccec91fc6b3a083671ff68af2202e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580596"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705058"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegação por foco para teclado, gamepad, controle remoto e ferramentas de acessibilidade
 
