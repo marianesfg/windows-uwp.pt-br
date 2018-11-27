@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Este tópico demonstra como criar um componente do Tempo de Execução do Windows contendo uma classe de tempo de execução que gera eventos. Ele também demonstra um aplicativo que consome o componente e maneja os eventos.
 title: Criar eventos com C++/WinRT
-ms.author: stwhi
 ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, criar, evento
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 31f076ca259d10cc5bd49daea66741ead6e117c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579743"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710666"
 ---
 # <a name="author-events-in-cwinrt"></a>Criar eventos com C++/WinRT
 

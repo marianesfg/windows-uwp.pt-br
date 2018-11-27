@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Você começa o processo de portabilidade ao criar um novo projeto do Windows 10 no Visual Studio e copiar seus arquivos nele.
 title: Portando projetos WindowsPhone Silverlight para projetos UWP
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d1224c1707d3e86c9ddd309ecf06bd0c0767fb83
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575742"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7711824"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portando projetos WindowsPhone Silverlight para projetos UWP
 

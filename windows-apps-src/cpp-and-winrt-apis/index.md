@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: O C++/WinRT é uma linguagem C++17 moderna e inteiramente padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em arquivo e cabeçalho.
 title: C++/WinRT
-ms.author: stwhi
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 664fd22fc954403776e1becc31563a06d5fdd15b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710142"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 

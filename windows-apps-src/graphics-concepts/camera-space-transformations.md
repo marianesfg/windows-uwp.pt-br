@@ -4,17 +4,15 @@ description: Os vértices no espaço da câmera são calculados transformando os
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
 keywords:
 - Transformações de espaço de câmera
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9de6759fb15aef4b32a5e9022a27cab09af300f8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567165"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710380"
 ---
 # <a name="camera-space-transformations"></a>Transformações de espaço de câmera
 
@@ -47,10 +45,10 @@ L<sub>dir</sub> = norm(V \ * Lₚ), onde os parâmetros são definidos na tabela
 
 | Parâmetro       | Valor padrão | Tipo                                          | Descrição                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
+| L<sub>dir</sub> | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
 | V               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice no espaço da câmera                           |
 | wvMatrix        | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz composta contendo as transformções de modo de exibição e mundo |
-| N               | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
+| N               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
 | Lₚ              | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da luz no espaço da câmera                            |
 | vMatrix         | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz que contém a transformação de modo de exibição                      |
 

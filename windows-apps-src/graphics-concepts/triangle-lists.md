@@ -4,17 +4,15 @@ description: Uma lista de triângulos é uma lista de triângulos isolados. Os t
 ms.assetid: BC50D532-9E9C-4AAE-B466-9E8C4AD1862A
 keywords:
 - Listas de triângulos
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f5c8c7354ef0f7e9bd4878e4d78aa045ab7fbd0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569000"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709324"
 ---
 # <a name="triangle-lists"></a>Listas de triângulos
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
 description: Use este método na API de análise da Microsoft Store para obter dados mensal de uso de aplicativo para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter uso do app mensalmente
-ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API, uso de análise da Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 585e44a884bc90c5c7e69458ad5d024d7f26a79f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567181"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710695"
 ---
 # <a name="get-monthly-app-usage"></a>Obter uso do app mensalmente
 

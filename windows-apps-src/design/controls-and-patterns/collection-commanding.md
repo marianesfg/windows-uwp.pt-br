@@ -1,11 +1,9 @@
 ---
-author: mijacobs
 description: Como usar comandos contextuais para implementar esses tipos de ações de um modo que forneça a melhor experiência possível para todos os tipos de entrada.
 title: Comandos contextuais
 ms.assetid: ''
 label: Contextual commanding in collections
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f06d7015fcb208b55fe0cb57b96eaecbc99317cc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568807"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711156"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuais para coleções e listas
 

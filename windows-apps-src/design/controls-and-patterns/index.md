@@ -1,21 +1,19 @@
 ---
 description: Obtenha orientação de design e instruções de codificação para adicionar controles e padrões ao seu aplicativo UWP. Encontre mais de 45 controles poderosos para uso com o seu aplicativo.
 title: Controles e padrões UWP - Desenvolvimento de aplicativos do Windows
-author: mijacobs
 keywords: controles de UWP, interface do usuário, controles de aplicativo
 label: Controls & patterns
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d557280ab253a09d5697f369c694e490d3c7d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c2f1a2b5ae514222ed6ef06cc7099a0261747dbc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564570"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709835"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Controles e padrões para apps UWP
  
