@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: Learn how to register your UWP app to receive push notifications that you send from Partner Center.
 title: Configurar seu app para notificações por push direcionadas
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK, direcionadas notificações por push, o Partner Center
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d1281436ce0fe8c7b04429cea897eedc58b15d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f60780186256e7f78a9596c979c79bfc704ae4c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715804"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar seu app para notificações por push direcionadas
 

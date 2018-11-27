@@ -1,19 +1,17 @@
 ---
-author: KarlErickson
 ms.assetid: F46306EC-DFF3-4FF0-91A8-826C1F8C4A52
 title: Vinculação de dados e MVVM
 description: Vinculação de dados é o núcleo do padrão de design de arquitetura Model-View-ViewModel (MVVM) da interface do usuário e permite que acoplamento entre o código de interface do usuário e não da interface do usuário.
-ms.author: karler
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a70603c26c7123af50fc920d327ccef332b7ed6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 931f2fcbcdbf58b9dc2ca40403d7466b620a8991
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564632"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7700089"
 ---
 # <a name="data-binding-and-mvvm"></a>Vinculação de dados e MVVM
 

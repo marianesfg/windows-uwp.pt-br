@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Desenhar na tela
 description: Por fim, compatibilizamos o código que desenha o cubo giratório na tela.
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, directx, elementos gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0050b854b6c8c02cd6eda5e4903fe07ee25d521d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fc93111d48f71a6ca8acad8191a2afb535fad2f0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711967"
 ---
 # <a name="draw-to-the-screen"></a>Desenhar na tela
 

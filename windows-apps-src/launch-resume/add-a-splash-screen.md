@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Adicionar uma tela inicial
 description: Defina a imagem da tela inicial e a cor da tela de fundo usando o Microsoft Visual Studio.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
-ms.author: twhitney
 ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560035"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715864"
 ---
 # <a name="add-a-splash-screen"></a>Adicionar uma tela inicial
 

@@ -1,12 +1,13 @@
 ---
-author: JordanEllis6809
 title: Unity - Controle de versão do seu projeto UWP
 description: Versão do seu projeto UWP Unity.
-ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.locfileid: "200782"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711628"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: controle de versão do seu projeto UWP
 
@@ -48,18 +49,18 @@ Selecionaremos alguns arquivos e pastas diferentes na pasta **UWP/ScrapyardPhoen
 
 ## <a name="folders"></a>Pastas  
 
-`Assets` | ***Incluir*** | Contém imagens da Windows Store  
-`Data`   | ***Ignorar*** | Onde o Unity compila seu projeto (Cenas, Sombreadores, Scripts, Prefabs, etc.).  
-`Dependencies` | ***Incluir*** | Essa pasta foi criada para manter todas as dependências de UWP (por exemplo, XboxLiveSDK.dll)  
-`Properties` | ***Incluir*** | Contém configurações mais avançadas que podem ser modificadas pelo desenvolvedor.  
-`Unprocessed` | ***Ignorar*** | Contém arquivos Unity `.dll` e `.pdb`  
+`Assets` | ***Incluir*** | Contém imagens da Microsoft Store  
+`Data`   | ***Ignorar*** | Onde o Unity compila seu projeto (cenas, sombreadores, Scripts, Prefabs, etc.)  
+`Dependencies` | ***Incluir*** | Essa pasta foi criada para manter todas as dependências UWP (por exemplo, xboxlivesdk. dll)  
+`Properties` | ***Incluir*** | Contém configurações mais avançadas que podem ser modificadas pelo desenvolvedor  
+`Unprocessed` | ***Ignorar*** | Contém o Unity `.dll` e `.pdb` arquivos  
 
 ## <a name="files"></a>Arquivos  
 
 `App.cs` | ***Incluir*** | Ponto de entrada para seu aplicativo UWP; Isso pode ser modificado e estendido com outros arquivos de origem  
-`Package.appxmanifest` | ***Incluir*** | Manifesto do pacote para seu AppX  
-`project.json` | ***Incluir*** | Descreve os pacotes NuGet de que seu `*.csproj` depende  
-`ScrapyardPhoenix.csproj` | ***Incluir*** | Descreve o destino de compilação UWP e você adicionar outras dependências ao seu UWP projeto, esse arquivo `*.csproj` terá essas informações  
+`Package.appxmanifest` | ***Incluir*** | Arquivo de origem do manifesto de pacote do aplicativo para seu AppX  
+`project.json` | ***Incluir*** | Descreve os pacotes NuGet seu `*.csproj` depende  
+`ScrapyardPhoenix.csproj` | ***Incluir*** | Descreve o destino de compilação UWP; Se você adicionar outras dependências ao seu UWP projeto, esse `*.csproj` arquivo irá conter informações  
 `ScrapyardPhoenix.csproj.user` | ***Ignorar*** | Esse arquivo contém informações de usuário local
 
 ## <a name="resulting-gitignore"></a>.gitignore resultante

@@ -1,19 +1,17 @@
 ---
-author: normesta
 description: Por meio do namespace Windows.ApplicationModel.Contacts, você tem várias opções para selecionar contatos.
 title: Selecionar contatos
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
 keywords: contatos, seleção de um único contato selecionar vários contatos contatos, selecionar vários selecionar dados de contato específicos contato, seleção de contato de dados específicos, seleção de campos específicos
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a721e618864155e4eec66d222e8eeafa2e0ca038
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 28943c5ff60ebf2326193e4c3f90a02111f4aec2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579703"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716157"
 ---
 # <a name="select-contacts"></a>Selecionar contatos
 

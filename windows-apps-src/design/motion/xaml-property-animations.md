@@ -1,8 +1,6 @@
 ---
-author: Jwmsft
 title: Animações de propriedade XAML
 description: Animando elementos XAML com animações de composição.
-ms.author: jimwalk
 ms.date: 09/13/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -10,12 +8,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2a7e2c3a08fc925c57e19b9c51011854b947a52d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 81da1e769ab171e47a4f4046e8ec7e7c84ecf2d1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572342"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714142"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animando elementos XAML com animações de composição
 

@@ -1,18 +1,16 @@
 ---
-author: mijacobs
 title: Criar estilos personalizados
 description: Este artigo aborda as noções básicas da definição de estilo dos elementos de interface do usuário em XAML
 keywords: XAML, UWP, Introdução
-ms.author: mijacobs
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 11f279de206a84e61144789ba43a268f2b896fee
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7439118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716989"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Criar estilos personalizados
 

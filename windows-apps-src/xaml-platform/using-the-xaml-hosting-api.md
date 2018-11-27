@@ -1,18 +1,16 @@
 ---
-author: mcleanbyron
 description: Este artigo descreve como hospedar UWP XAML da interface do usuário em seu aplicativo da área de trabalho.
 title: Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
-ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
 keywords: Windows 10, uwp, formulários do windows, win32, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b6883b605bed0b259cd70d1f6dc0264476eddd40
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571916"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711977"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Usando o XAML da UWP que hospeda a API em um aplicativo da área de trabalho
 

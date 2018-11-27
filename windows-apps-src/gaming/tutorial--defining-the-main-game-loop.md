@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Definir o objeto principal do jogo
 description: Agora, observaremos os detalhes do objeto principal do exemplo de jogo e como as regras implementadas são convertidas em interações com o ambiente do jogo.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, objeto principal
 ms.localizationpriority: medium
-ms.openlocfilehash: b94d7139f35b3a18edd66af9959a0958d0bdcbc1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 96aefc8b053dd7490f47910ca5bb79989855e1a3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7573804"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713117"
 ---
 # <a name="define-the-main-game-object"></a>Definir o objeto principal do jogo
 

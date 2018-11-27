@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: Use este método na API de análise da Microsoft Store para obter dados de classificações agregadas para um determinado intervalo de datas e outros filtros opcionais.
 title: Obter classificações de aplicativo
-ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, classificações
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b118abe32fe350277e02ed1f1f1d721e4c1690e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 32f32d3389a340c25d99ec0f0a68e0c20af89c2b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715741"
 ---
 # <a name="get-app-ratings"></a>Obter classificações de aplicativo
 

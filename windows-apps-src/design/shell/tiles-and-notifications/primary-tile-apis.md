@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: You can programmatically pin your own app's primary tile to Start, just like you can pin secondary tiles. And you can check whether it's currently pinned.
 title: APIs de bloco primário
 label: Primary tile API's
 template: detail.hbs
-ms.author: wdg-dev-content
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, fixar bloco primário, apis de bloco primário, verificar se o bloco está fixado, bloco dinâmico
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d5c65881552199fce6f90bbf15e4bb2bac950ce
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6156919"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713862"
 ---
 # <a name="primary-tile-apis"></a>APIs de bloco primário
  

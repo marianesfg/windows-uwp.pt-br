@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Fazer a portabilidade do GLSL
 description: Quando você tiver movido o código que cria e configura os seus buffers e objetos de sombreador, será o momento de fazer a portabilidade do código dentro dos sombreadores da linguagem de sombreadores GL do OpenGL ES 2.0 (GLSL) para a linguagem de sombreadores de alto nível do Direct3D 11 (HLSL).
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, glsl, porta
 ms.localizationpriority: medium
-ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554025"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713077"
 ---
 # <a name="port-the-glsl"></a>Fazer a portabilidade do GLSL
 
@@ -60,7 +58,6 @@ Aqui, o buffer constante usa registro b0 para colocar em espera o buffer em paco
 
 <a name="instructions"></a>Instruções
 ------------
-
 ### <a name="step-1-port-the-vertex-shader"></a>Etapa 1: compatibilizar o sombreador de vértice
 
 No nosso exemplo simples de OpenGL ES 2.0, o sombreador de vértice tem três entradas: uma matriz 4x4 de projeção de exibição constante de modelo e dois vetores de 4 coordenadas. Esses dois vetores contêm a posição do vértice e sua cor. O sombreador transforma o vetor posição em coordenadas de perspectiva e o atribui ao intrínseco gl\_Position para rasterização. A cor de vértice é copiada para uma variável, que varia, para interpolação durante a rasterização também.
@@ -160,10 +157,8 @@ A cor do pixel na posição é gravada no destino de renderização. Agora, vamo
 
 [Fazer a portabilidade de buffers de vértices e dados](port-the-vertex-buffers-and-data-config.md) Próxima etapa
 ---------
-
 [Desenhar na tela](draw-to-the-screen.md) Observações
 -------
-
 Entender a semântica HLSL e o compactação de buffers constantes pode evitar certa dor de cabeça, e oferecer oportunidade de otimização. Caso tenha chance, leia [Sintaxe variável (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introdução a buffers no Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) e [Como: criar um buffer constante](https://msdn.microsoft.com/library/windows/desktop/ff476896). Caso não consiga fazer isso, consulte algumas dicas iniciais sobre semântica e buffers constantes para ter sempre em mente:
 
 -   Sempre confira duas vezes o código da configuração Direct3D do renderizador para garantir que: as estruturas dos buffers constantes correspondam às declarações da estrutura cbuffer no HLSL; e que os tipos escalares do componente coincidam em ambas as declarações.

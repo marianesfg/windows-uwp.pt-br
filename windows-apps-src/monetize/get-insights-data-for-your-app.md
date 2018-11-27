@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Use este método na API de análise da Microsoft Store para obter dados de insights do seu aplicativo.
 title: Obter dados de insights
-ms.author: mhopkins
 ms.date: 07/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API, insights de análise da Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fbca074cffba64067b22d94aea6e0476c10480af
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715501"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 

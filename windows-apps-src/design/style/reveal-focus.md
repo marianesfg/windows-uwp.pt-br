@@ -1,9 +1,7 @@
 ---
-author: cphilippona
 description: Revela que foco é um efeito de iluminação que anima a borda de elementos focalizáveis quando o usuário move o foco do gamepad ou teclado até eles.
 title: Foco do revelação
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 03/1/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: b7c80ed7521d797602cde15607f966a1fc3665cd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581218"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711582"
 ---
 # <a name="reveal-focus"></a>Foco do revelação
 

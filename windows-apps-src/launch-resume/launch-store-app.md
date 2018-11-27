@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Iniciar o aplicativo da Microsoft Store
 description: Este tópico descreve o esquema de URI ms-windows-store. Seu aplicativo pode usar esse esquema de URI para iniciar o aplicativo Microsoft Store para páginas específicas na loja.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb99c16d413e5e9869215f2d048ad6d9d52206f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f64a290443ed5e45a5379b13f70dcc1ea2f57fa9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578442"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714808"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar o aplicativo da Microsoft Store
 

@@ -2,18 +2,16 @@
 title: Proteção de dados
 description: Este artigo explica como usar a classe DataProtectionProvider no namespace Windows.Security.Cryptography.DataProtection para criptografar e descriptografar dados digitais em um aplicativo UWP.
 ms.assetid: 9EE3CC45-5C44-4196-BD8B-1D64EFC5C509
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
-ms.openlocfilehash: edcce656f5be681a11e79b4714e96c2dcde621d5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c93527a2ee738a3e6b0f4e9b9d2a1343158441b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580905"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714658"
 ---
 # <a name="data-protection"></a>Proteção de dados
 

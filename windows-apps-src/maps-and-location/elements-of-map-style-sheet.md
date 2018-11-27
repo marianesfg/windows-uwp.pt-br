@@ -1,20 +1,18 @@
 ---
-author: normesta
 description: As entradas e as propriedades de uma folha de estilos de mapa
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Referência da folha de estilos de mapa
-ms.author: normesta
 ms.date: 03/16/2017
 ms.topic: article
 keywords: windows 10, uwp, mapas, folha de estilos de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: eace82801b2e3d1423eeec9e9da7cf56db043666
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ecf83b25a8f448cb0ac22bbad0aa2d4f687c721
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556439"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715132"
 ---
 # <a name="map-style-sheet-reference"></a>Referência da folha de estilos de mapa
 

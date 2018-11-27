@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can respond directly to reviews of your app to let customers know you’re listening to their feedback.
 title: Responder às críticas dos clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, responder, respostas, examine
 ms.localizationpriority: medium
-ms.openlocfilehash: 9552e9dede62d4d89b71f031cd2ff2c76964d0cb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1feb6f463fe018d356d678b23199716ad0cbd3e8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569635"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716035"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder às críticas dos clientes
 

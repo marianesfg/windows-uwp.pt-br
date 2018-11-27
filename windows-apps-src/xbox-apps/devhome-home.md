@@ -1,20 +1,18 @@
 ---
-author: v-angraf
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
 title: Página inicial (Dev Home)
 description: Fornece informações sobre a Home page do aplicativo Dev Home para o Xbox One.
-ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555076"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714496"
 ---
 # <a name="home-page-dev-home"></a>Página inicial (Dev Home)
    
