@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: Relatório de aquisições
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, aquisições, vendas de aplicativos, downloads de aplicativos, instalações, funil, aquisição, conversões, canal, exibições de página de aplicativos
 ms.localizationpriority: medium
-ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569139"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716842"
 ---
 # <a name="acquisitions-report"></a>Relatório de aquisições
 

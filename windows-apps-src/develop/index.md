@@ -1,19 +1,17 @@
 ---
 description: Aprenda a desenvolver um aplicativo UWP.
 title: Desenvolver aplicativos UWP
-author: mijacobs
 layout: LandingPage
 keywords: os desenvolvedores de desenvolver uwp aplicativo desenvolvimento threading async visão geral sobre o portal de plataforma
-ms.author: mijacobs
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558972"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718637"
 ---
 <div> 
 <h1>Desenvolver aplicativos UWP</h1>
@@ -176,7 +174,7 @@ ms.locfileid: "7558972"
                         <h3>Plataforma</h3>
                         <p style="display:block"><a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a></p>
                         <p style="display:block"><a href="/windows/uwp/launch-resume/">Inicialização, retomada e execução de tarefas em segundo plano</a></p>
-                        <p style="display:block"><a href="/windows/uwp/security/">Security</a></p>
+                        <p style="display:block"><a href="/windows/uwp/security/">Segurança</a></p>
                         <p style="display:block"><a href="/windows/uwp/threading-async/">Programação threading e assíncrona</a></p>
                         <p style="display:block"><a href="/windows/uwp/composition/visual-layer">Camada visual</a></p>
                         <p style="display:block"><a href="/windows/uwp/updates-and-versions/application-development-for-windows-as-a-service">Windows como serviço</a></p>

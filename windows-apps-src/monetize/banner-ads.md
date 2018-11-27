@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Saiba como usar anúncios em faixa em seu aplicativo UWP.
 title: Anúncios em faixa
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anúncios, publicidade, AdControl, anúncios em faixa
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564432"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716800"
 ---
 # <a name="banner-ads"></a>Anúncios em faixa
 

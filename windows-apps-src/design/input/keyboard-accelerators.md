@@ -1,23 +1,21 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how accelerator keys can improve the usability and accessibility of UWP apps.
 title: Aceleradores de teclado
 label: Keyboard accelerators
 template: detail.hbs
 keywords: teclado, acelerador, tecla aceleradora, atalhos do teclado, acessibilidade, navegação, foco, texto, entrada, interações do usuário, gamepad, remoto
-ms.author: kbridge
 ms.date: 10/10/2017
 ms.topic: article
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717639"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 

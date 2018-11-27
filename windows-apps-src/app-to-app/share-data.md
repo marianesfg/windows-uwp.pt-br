@@ -2,18 +2,16 @@
 description: Este artigo explica como dar suporte ao contrato de Compartilhamento em um aplicativo da Plataforma Universal do Windows (UWP).
 title: Compartilhar dados
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 63e07e56acc8767e4acbad3688c13d75527e9c6f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5ed9be96ee44635249f01e7b919f3789d84305e1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716574"
 ---
 # <a name="share-data"></a>Compartilhar dados
 

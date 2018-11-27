@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Ciclo de vida de aplicativos UWP do Windows 10
 description: Este tópico descreve o ciclo de vida de um aplicativo da Plataforma Universal do Windows (UWP) do Windows 10, do momento em que ele é ativado até quando ele é fechado.
 keywords: ciclo de vida do aplicativo suspenso, ativar o início da retomada
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.author: twhitney
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718424"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>O ciclo de vida do aplicativo da Plataforma Universal do Windows (UWP) para Windows 10
 

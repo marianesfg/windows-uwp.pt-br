@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Este tópico fornece instruções para você se atualizar sobre o uso do C++/WinRT por um exemplo de código simples.
 title: Introdução ao C++/WinRT
-ms.author: stwhi
 ms.date: 10/19/2018
 ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução, ponto, de partida
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cb8e18904f61976103689c8d83475ec248eb38b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cc98f61acc3b5dccdc4869b646337fdf9a6e701a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570964"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716225"
 ---
 # <a name="get-started-with-cwinrt"></a>Introdução ao C++/WinRT
 

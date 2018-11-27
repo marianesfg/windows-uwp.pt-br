@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Prepare-se para começar
 description: É mais fácil do que pensa. Siga estas instruções e comece a criar aplicativos da plataforma Universal do Windows (UWP) para Windows 10.
-ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18fd4d481d30eda68acaf4e48e4d1c1bf4ed7d24
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576420"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716787"
 ---
 # <a name="get-set-up"></a>Prepare-se para começar
 

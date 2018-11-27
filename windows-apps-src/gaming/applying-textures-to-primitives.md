@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Aplicar texturas a primitivas
 description: Aqui, carregamos dados de textura bruta e os aplicamos em um primitivo 3D usando o cubo que criamos em Usando efeitos e profundidade em primitivas.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, jogos, texturas, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 437c861e6d3017d83b520732dd0e279d882835c5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577740"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717649"
 ---
 # <a name="apply-textures-to-primitives"></a>Aplicar texturas a primitivas
 
@@ -34,7 +32,6 @@ Também partimos do princípio de que você passou pelos artigos [Quickstart: se
 
 <a name="instructions"></a>Instruções
 ------------
-
 ### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definindo variáveis para um cubo texturizado
 
 Primeiro, precisamos definir as estruturas **BasicVertex** e **ConstantBuffer** para o cubo texturizado. Essas estruturas especificam as posições, as orientações e as texturas de vértice para o cubo e como ele será exibido. Caso contrário, declaramos as variáveis similarmente ao tutorial anterior, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).

@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Criação do pacote com o layout de empacotamento
 description: O layout de empacotamento é um documento único que descreve a estrutura de empacotamento do aplicativo. Ele especifica os lotes de um aplicativo (principal e opcional), os pacotes nos lotes e os arquivos nos pacotes.
-ms.author: lahugh
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, empacotamento, layout do pacote, pacote de ativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3e54b74cf3052fdeb5b70cc90f59ab0ea59aef76
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574933"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718374"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Criação do pacote com o layout de empacotamento  
 
