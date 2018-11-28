@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, controle de anúncios
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7847661"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Serviço de controle de anúncios da Microsoft
 

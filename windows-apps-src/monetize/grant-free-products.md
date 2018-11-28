@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de compra da Microsoft Store, conceder produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 75edbe720e2e4483432d3d865650e5d7e7a24b40
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7849173"
 ---
 # <a name="grant-free-products"></a>Conceder produtos gratuitos
 
