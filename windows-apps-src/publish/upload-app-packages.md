@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, pacotes, carregamento, carregamento de pacote
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711433"
+ms.locfileid: "7831007"
 ---
 # <a name="upload-app-packages"></a>Carregue os pacotes do aplicativo
 

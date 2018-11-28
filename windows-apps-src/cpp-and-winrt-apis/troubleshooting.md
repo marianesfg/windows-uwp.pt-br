@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, solução de problemas, HRESULT, erro
 ms.localizationpriority: medium
 ms.openlocfilehash: 120d5c8014ce9ac3cab9b2dfb1d778173f2434c4
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695005"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831246"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solucionando problemas de C++/WinRT
 

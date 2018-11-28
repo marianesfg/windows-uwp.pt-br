@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cb6a2466ea201c9b5047f7eb159477a0d584429
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851487"
 ---
 # <a name="direct3d-graphics-glossary"></a>Glossário de elementos gráficos do Direct3D
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada, registro, personalizado
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7717917"
+ms.locfileid: "7831472"
 ---
 # <a name="registry-data-for-game-controllers"></a>Dados do Registro para controladores de jogo
 
