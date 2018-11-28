@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, status
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd898c51d694d2dd60185623126c7f566af0f55
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697389"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7841496"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>Obter o status de um envio de pacote de pré-lançamento
 

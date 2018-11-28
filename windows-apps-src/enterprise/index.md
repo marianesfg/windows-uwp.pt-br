@@ -6,26 +6,18 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3106df6d8a1fd85b92aa06dd5c5cf7a7f79ded5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 6cce98591cdaa78a887d7a5fb495e999a4ffc453
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696702"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833156"
 ---
 # <a name="enterprise"></a>Enterprise
 
-Este mapa fornece uma visão geral dos recursos empresariais principais para aplicativos da plataforma Windows10Universal do Windows (UWP).
+Este artigo fornece uma visão geral dos recursos empresariais principais fornecidos pela plataforma Universal do Windows (UWP) para aplicativos do Windows 10.
 
-**Observação**este artigo é voltado para aqueles que escrevem aplicativos UWP de empresa. Para saber sobre o desenvolvimento para a UWP geral, consulte os [Guias de instruções para aplicativos do Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para saber sobre o desenvolvimento para WPF, Windows Forms ou Win32, visite o [centro de desenvolvimento da área de trabalho](https://dev.windows.com/desktop). Para saber sobre recursos para profissionais de TI, como a implantação no Windows 10 ou gerenciamento de recursos de segurança empresarial, consulte [Windows 10 no TechNet](https://msdn.microsoft.com/library/dn986868).
-
-Existe uma versão do aplicativo que mostra algumas dos avanços que foram apresentados na compilação durante esta apresentação [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502)
-
-Coisas vale destacar na frente:
-
-## <a name="whats-new-for-enterprise-applications"></a>Novidades para aplicativos corporativos
-
-Veja algumas ferramentas, bibliotecas e recursos que foram criados bastante recentemente.
+## <a name="whats-new-and-recent-for-enterprise-applications"></a>O que há de novo e recentes para aplicativos corporativos
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
@@ -36,6 +28,8 @@ Veja algumas ferramentas, bibliotecas e recursos que foram criados bastante rece
 > * [.NET Standard 2.0](#standard)
 > * [Conectividade do SQL Server](#sql-server)
 > * [Implantação de MSIX](#MSIX)
+
+Para obter um vídeo que demonstra alguns desses recursos em detalhes, veja [Rapidamente construir aplicativos LOB com UWP e o Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502).
 
 <a id="template-studio" />
 
@@ -110,7 +104,7 @@ MSIX é o formato de pacote de aplicativo do Windows que oferece uma experiênci
 
 MSIX é um formato de empacotamento criado para ser seguro, seguro e confiável, com base em uma combinação de. msi, AppX, tecnologias de instalação do App-V e ClickOnce.
 
-![Ícone MSIX](images/WinUI_MSIX_2col_740x417.png)
+![Ícone MSIX](images/MSIX-App-Package.ico)
 
 Consulte a [documentação da MSIX](https://docs.microsoft.com/windows/msix/).
 
@@ -181,14 +175,10 @@ Você tem opções para distribuir aplicativos aos usuários da sua organizaçã
 
 ## <a name="enterprise-uwp-samples"></a>Exemplos de UWP empresariais
 
-Texto de introdução aqui.
-
-Ação - falar Josh e/ou Karl para obter mais exemplos de voltados para enterprise juntos.
-
 | Tópico |  Descrição |
 |------ |--------------|
-| [Exemplo de inventário de VanArsdel](https://github.com/Microsoft/InventorySample) | Se um aplicativo do Windows 10 de exemplo (usando a plataforma Universal do Windows) em cenários de linha de negócios, mostrando como usar os recursos mais recentes do Windows em aplicativos da área de trabalho. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel.
-Destaca o MVVM, banco de dados SQL, Entity Framework. Lista de outras pessoas.|
+| [Exemplo de inventário de VanArsdel](https://github.com/Microsoft/InventorySample) | Um aplicativo de exemplo UWP que demonstra cenários de linha de negócios. O exemplo é baseado em torno de criação e gerenciamento de clientes, pedidos e produtos da empresa fictícia VanArsdel. |
+| [Exemplo de banco de dados de pedidos do cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Um aplicativo de exemplo UWP que apresenta recursos úteis para desenvolvedores corporativos, como autenticação do Azure Active Directory (AAD), controles (incluindo uma grade de dados) da interface do usuário, integração de banco de dados Sqlite e SQL Azure, Entity Framework e serviços de nuvem da API. O exemplo é baseado em torno de criação e gerenciamento de contas de clientes, pedidos e produtos da empresa fictícia Contoso. |
 
 ## <a name="patterns-and-practices"></a>Padrões e práticas
 

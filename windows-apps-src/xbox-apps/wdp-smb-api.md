@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
 ms.openlocfilehash: e248a6ff666efe7dca262daa81a21ab44a4dc5aa
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704845"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832596"
 ---
 # <a name="developer-folder-api-reference"></a>Pasta de API da pasta do desenvolvedor   
 Você pode acessar arquivos relacionados ao desenvolvimento no Xbox One usando um Explorador de Arquivos padrão. Isso permite exibir facilmente e substituir arquivos do computador para o console.

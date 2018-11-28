@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de complemento, excluir, produto no aplicativo, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: cdcd74b86ce846f19f8a4eb912781762adb66a2d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844666"
 ---
 # <a name="delete-an-add-on-submission"></a>Excluir um envio de complemento
 

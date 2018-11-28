@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, tarefa em segundo plano, serviço de aplicativo
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 97dd249165877591743892a136d51e0969dd902a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7709117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7841861"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Fazer a portabilidade de uma tarefa em segundo plano fora do processo para uma tarefa em segundo plano no processo
 

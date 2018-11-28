@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, fazendo a portabilidade, loop do jogo, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707610"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833544"
 ---
 # <a name="port-the-game-loop"></a>Fazer a portabilidade do loop do jogo
 

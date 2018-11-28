@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, preços, preços de aplicativos, preço do aplicativo, vender aplicativos, alteração de preço, preço personalizado, preço, custo, substituir preço base, preço livre, livre
 ms.localizationpriority: medium
 ms.openlocfilehash: d901ec630c680adfaa637d5555fc2182749bec89
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7845931"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Definir e agendar o preço do aplicativo
 

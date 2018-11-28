@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7844696"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
