@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, renderização
 ms.localizationpriority: medium
 ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7845080"
+ms.locfileid: "7967522"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Estrutura de renderização I: introdução à renderização
 

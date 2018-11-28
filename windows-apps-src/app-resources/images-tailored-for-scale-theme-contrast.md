@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, recurso, imagem, ativo, MRT, qualificador
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849322"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7968784"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Carregar imagens e ativos personalizados para escala, tema, alto contraste e outros
 O app pode carregar arquivos de recurso de imagem (ou outros arquivos de ativo) personalizados para [fator de escala de exibição](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, alto contraste e outros contextos de tempo de execução. Essas imagens podem ser referenciadas no código imperativo ou na marcação XAML, por exemplo, como a propriedade **Source** de uma **Imagem**. Elas também podem aparecer no arquivo de origem do manifesto do pacote de aplicativos (o arquivo `Package.appxmanifest`), por exemplo, como o valor do ícone de aplicativo na guia Ativos Visuais do Designer de Manifesto do Visual Studio, ou em seus blocos e notificações do sistema. Usando qualificadores nos nomes de arquivo das imagens e, opcionalmente, carregando-os dinamicamente com a ajuda de um [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), você pode fazer com que o arquivo de imagem que melhor corresponde às configurações de tempo de execução do usuário para escala de exibição, tema, alto contraste, idiomas e outros contextos seja carregado.
