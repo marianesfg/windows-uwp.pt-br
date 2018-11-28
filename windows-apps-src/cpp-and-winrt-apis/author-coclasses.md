@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, padrão, c++, cpp, winrt, projeção, autor, COM, com
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847316"
+ms.locfileid: "7965938"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Criar componentes COM com C++/WinRT
 
