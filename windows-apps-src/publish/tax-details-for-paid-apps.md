@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, impostos, impostos do aplicativo, requisitos fiscais, expansão do comércio, taxa de imposto
 ms.localizationpriority: medium
 ms.openlocfilehash: 60bf36e8e5e07c73e8c59088be167e9dfb584c60
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844951"
 ---
 # <a name="tax-details-for-paid-apps"></a>Detalhes de impostos para aplicativos pagos
 
