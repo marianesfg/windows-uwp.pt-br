@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, local, serviços de mapa
 ms.localizationpriority: medium
 ms.openlocfilehash: aea553a46357a26028848db5ff0e9b5debbeae56
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715112"
+ms.locfileid: "7836910"
 ---
 # <a name="maps-and-location-overview"></a>Visão geral de mapas e local
 

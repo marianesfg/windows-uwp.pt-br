@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, criar envio de versão de pré-lançamento
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839411"
 ---
 # <a name="create-a-package-flight-submission"></a>Criar um envio de pacote de pré-lançamento
 

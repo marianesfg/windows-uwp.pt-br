@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, escala de sobreposições, sobreposições, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713137"
+ms.locfileid: "7835066"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Dimensionamento e sobreposições de cadeia de troca
 

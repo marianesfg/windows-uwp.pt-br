@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a68e78bef540717d4f4c33d3132748fa727b4068
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 551f8b925ffd56950ba893da7b81fefb4579f558
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7714082"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840009"
 ---
 # <a name="bluetooth-gatt-server"></a>Servidor de GATT de Bluetooth
 
@@ -68,7 +68,7 @@ Os seguintes descritores são geradas pelo sistema, com base no GattLocalCharact
 
 > Observe que a difusão não é suportada no momento.  Especificar o GattCharacteristicProperty transmissão resultará em uma exceção.
 
-### <a name="build-up-the-heirarchy-of-services-and-characteristics"></a>Criar a hierarquia de serviços e características
+### <a name="build-up-the-hierarchy-of-services-and-characteristics"></a>Criar a hierarquia de serviços e características
 O GattServiceProvider é usado para criar e anunciar a definição do serviço principal raiz.  Cada serviço requer o próprio objeto de provedor de serviços que leva em um GUID é: 
 
 ```csharp

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx, modelos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700622"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7850542"
 ---
 # <a name="directx-game-project-templates"></a>Modelos de projeto de jogo DirectX
 

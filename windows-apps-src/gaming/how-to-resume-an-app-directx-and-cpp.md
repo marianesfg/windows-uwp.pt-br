@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, retomar, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7843162"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Como retomar um aplicativo (DirectX e C++)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, jogos, malha, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848820"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Criar e exibir uma malha básica
 

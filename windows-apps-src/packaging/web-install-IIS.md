@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, instalador de aplicativo, AppInstaller, sideload, relacionados pacotes opcionais, definidos, servidor IIS
 ms.localizationpriority: medium
 ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7849561"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Instale um aplicativo UWP a partir de um servidor IIS
 

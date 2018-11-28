@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, uri, recorte, esboço
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691083"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7850420"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar a captura de tela
 

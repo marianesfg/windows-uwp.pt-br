@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: Otimizar a atividade em segundo plano
 description: Crie apps UWP que funcionem com o sistema para usar tarefas em segundo plano economizando a bateria.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 932dd3c89933eab9baefe6ff2c45359db6efbb14
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71a56bc23b4b727d5be2ed35fb77afae03f0689c
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555562"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851894"
 ---
 # <a name="optimize-background-activity"></a>Otimizar a atividade em segundo plano
 

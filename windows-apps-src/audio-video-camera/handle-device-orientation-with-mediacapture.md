@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866a3b02d67409d03fccf427663de65cc94919b2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7843642"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>Tratar a orientação do dispositivo com MediaCapture
 Quando seu aplicativo captura uma foto ou vídeo que deve ser exibido fora do aplicativo, como salvar um arquivo no dispositivo do usuário ou compartilhar online, é importante que você codifique a imagem com os metadados de orientação adequados para que quando outro aplicativo ou dispositivo exibir a imagem, ela fique na posição correta. Determinar os dados de orientação corretos para incluir em um arquivo de mídia pode ser uma tarefa complexa porque há várias variáveis a serem consideradas, inclusive a orientação do chassi do dispositivo, a orientação da tela e o posicionamento da câmera no chassi (se é uma câmera frontal ou traseira). 
