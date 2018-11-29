@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829542"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987058"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Procedimento passo a passo: criando um componente simples do Tempo de Execução do Windows e chamando-o em JavaScript
 
@@ -97,7 +97,7 @@ function basics2() {
 
 A primeira letra do nome de cada membro é alterada de maiúsculas para minúsculas. Essa transformação faz parte do suporte que o JavaScript oferece para habilitar o uso natural do Tempo de Execução do Windows. Namespaces e nomes de classe estão em Pascal. Os nomes de membro estão em camel, exceto nomes de evento, que estão todos em minúsculas. Consulte [Como usar o Tempo de Execução do Windows em JavaScript](https://msdn.microsoft.com/library/hh710230.aspx). As regras de uso de maiúsculas camel podem ser confusas. Uma série de letras maiúsculas iniciais normalmente é exibida em minúsculas, mas caso três letras maiúsculas sejam seguidas de uma letra minúscula, somente as duas primeiras letras são exibidas em minúsculas: por exemplo, um membro chamado IDStringKind é exibido como idStringKind. No Visual Studio, é possível compilar o projeto do componente do Tempo de Execução do Windows e usar IntelliSense no projeto de JavaScript para saber o uso de maiúsculas correto.
 
-De maneira semelhante, o .NET Framework dá suporte para habilitar o uso natural do Tempo de Execução do Windows em código gerenciado. Isso é abordado em seções subsequentes deste artigo e nos artigos [Criando componentes do tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Suporte do .NET Framework para aplicativos UWP e do Windows Runtime](https://msdn.microsoft.com/library/hh694558.aspx).
+De maneira semelhante, o .NET Framework dá suporte para habilitar o uso natural do Tempo de Execução do Windows em código gerenciado. Isso é debatido em seções subsequentes deste artigo e nos artigos [Criando componentes do tempo de execução do Windows em c# e Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Suporte do .NET Framework para aplicativos UWP e do Windows Runtime](https://msdn.microsoft.com/library/hh694558.aspx).
 
 ## <a name="create-a-simple-user-interface"></a>Criar uma interface do usuário simples
 

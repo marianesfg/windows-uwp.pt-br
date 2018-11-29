@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eb7b1b620fcfa16576d84eaa2564408394d59de
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826269"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7964295"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a>Hospedagem de uma visualização de scanner de código de barras de câmera em seu aplicativo
 ## <a name="step-1-setup-your-camera-preview"></a>Etapa 1: Configurar a visualização da câmera

@@ -9,11 +9,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855414"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988452"
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -30,11 +30,11 @@ Para dar suporte a reconhecimento de fala com seu aplicativo, o usuário deve se
 
 Automaticamente solicitará que o usuário com uma caixa de diálogo do sistema solicitando permissão para acessar e usar o microfone do áudio feed conjunto apenas (exemplo do [reconhecimento de fala e exemplo de síntese de fala](http://go.microsoft.com/fwlink/p/?LinkID=619897) mostrado abaixo), o **microfone** [dispositivo funcionalidade](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) em do [manifesto do pacote do aplicativo](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Para obter mais detalhes, consulte as [declarações de funcionalidades do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-![Política de privacidade para o acesso de microfone](images/speech/privacy.png)
+![Política de privacidade para acesso de microfone](images/speech/privacy.png)
 
-Se o usuário clica em Sim para conceder o acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página do microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
+Se o usuário clica em Sim para conceder acesso a microfone, seu aplicativo é adicionado à lista de aplicativos aprovados nas configurações -> privacidade -> página do microfone. No entanto, como o usuário pode optar por desativar essa configuração a qualquer momento, você deve confirmar que seu aplicativo tem acesso a microfone antes de tentar usá-lo.
 
-Se você também deseja dar suporte a ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações -> privacidade -> fala) é habilitado.
+Se você também deseja dar suporte ditado, Cortana, ou o reconhecimento de fala outros serviços (por exemplo, uma [gramática predefinida](#predefined-grammars) definidos em uma restrição de tópico), você também deve confirmar que **o reconhecimento de fala on-line** (Configurações -> privacidade -> fala) é habilitado.
 
 Este trecho de código mostra como seu aplicativo pode verificar se um microfone está presente e se ele tem permissão para usá-lo.
 

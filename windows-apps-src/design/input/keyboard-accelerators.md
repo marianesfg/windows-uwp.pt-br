@@ -11,11 +11,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831621"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986973"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -248,7 +248,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 
 ## <a name="override-default-keyboard-behavior"></a>Substituir o comportamento padrão do teclado
 
-Em alguns casos, você precisará substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
+Em alguns casos, talvez seja necessário substituir o comportamento padrão de teclas específicas, como a tecla Backspace ou a tecla Enter. Por exemplo, 
 
 ## <a name="disable-a-keyboard-accelerator"></a>Desativar um acelerador de teclado 
 

@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852058"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988253"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interações com caneta e Windows Ink em apps UWP
 
@@ -30,7 +30,7 @@ Otimize seu aplicativo da Plataforma Universal do Windows (UWP) para entrada de 
 | Vídeos |   |
 | --- | --- |
 | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *Usando escrita à tinta em seu aplicativo UWP* | *Usar a caneta e o Windows Ink para criar enterpriseapps mais envolvente* |
+| *Usando escrita à tinta em seu aplicativo UWP* | *Usar Windows caneta e tinta para criar enterpriseapps mais envolvente* |
 
 A plataforma Windows Ink, juntamente com um dispositivo de caneta, oferece uma maneira natural de criar anotações manuscritas digitais, desenhos e anotações. A plataforma dá suporte à captura de dados de tinta por entrada de digitalizador, gerenciamento e geração de dados de tinta, renderização desses dados como traços de tinta no dispositivo de saída e conversão de tinta em texto por meio do reconhecimento de manuscrito.
 
