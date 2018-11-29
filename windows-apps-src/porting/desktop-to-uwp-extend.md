@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828795"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991952"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Estender seu aplicativo da área de trabalho com componentes UWP modernos
 
@@ -76,7 +76,7 @@ Em seguida, no projeto UWP, adicione uma referência ao componente de tempo de e
 
 ### <a name="build-your-solution"></a>Desenvolver sua solução
 
-Crie uma solução para garantir que nenhum erro apareça. Se você receber erros, abra o **Gerenciador de configuração** e certifique-se de que seus projetos direcionados à mesma plataforma.
+Crie sua solução para garantir que nenhum erro apareça. Se você receber erros, abra o **Gerenciador de configuração** e certifique-se de que seus projetos direcionados à mesma plataforma.
 
 ![Gerenciador de configuração](images/desktop-to-uwp/config-manager.png)
 
@@ -93,7 +93,7 @@ Esta imagem mostra um aplicativo Windows Forms que abre uma interface do usuári
 ![adaptive-design](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Este exemplo mostra uma UI XAML adicionando um projeto UWP à solução. Que é a abordagem com suporte estável Mostrar interfaces do usuário XAML em um aplicativo da área de trabalho. A alternativa para essa abordagem é adicionar controles UWP XAML diretamente para seu aplicativo da área de trabalho usando uma ilha de XAML. Ilhas XAML está atualmente disponíveis como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Esses controles e APIs continuará a se desenvolver e estabilizar em futuras versões do Windows. Para saber mais sobre ilhas de XAML, consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Este exemplo mostra uma UI XAML adicionando um projeto UWP à solução. Que é a abordagem com suporte estável Mostrar interfaces do usuário XAML em um aplicativo da área de trabalho. A alternativa para essa abordagem é adicionar controles UWP XAML diretamente para seu aplicativo da área de trabalho usando uma ilha de XAML. Ilhas XAML estão disponíveis atualmente como uma visualização de desenvolvedor. Embora Encorajamos você a experimentá-los em seu próprio código de protótipo agora, não recomendamos que você usá-los no código de produção neste momento. Essas APIs e controles continuam a se desenvolver e estabilizar em futuras versões do Windows. Para saber mais sobre ilhas de XAML, consulte [controles UWP em aplicativos da área de trabalho](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>O padrão de design
 
@@ -264,7 +264,7 @@ Para tornar seu aplicativo um destino de compartilhamento, faça o seguinte:
 
 : two: [Substituir o manipulador de eventos OnShareTargetActivated](#override)
 
-: three: [Adicionar extensões de área de trabalho ao projeto UWP](#desktop-extensions)
+: three: [Adicionar extensões da área de trabalho ao projeto UWP](#desktop-extensions)
 
 : four: [Adicionar a extensão do processo de confiança total](#full-trust)
 
@@ -343,7 +343,7 @@ Adicione a extensão de **Extensões de área de trabalho do Windows para a UWP*
 
 ### <a name="add-the-full-trust-process-extension"></a>Adicione a extensão do processo de confiança total
 
-No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e, em seguida, adicione a extensão do processo de confiança total ao lado a extensão de destino de compartilhamento que você adicionar esse arquivo anteriormente.
+No **Gerenciador de soluções**, abra o arquivo **Package. appxmanifest** do projeto empacotamento em sua solução e, em seguida, adicione a extensão do processo de confiança total ao lado a extensão de destino de compartilhamento de adicionar esse arquivo anteriormente.
 
 ```xml
 <Extensions>
@@ -359,13 +359,13 @@ Essa extensão permitem que o aplicativo UWP iniciar o aplicativo da área de tr
 
 ### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificar o aplicativo da área de trabalho para obter o arquivo compartilhado
 
-Modificar seu aplicativo da área de trabalho para encontrar e processar o arquivo compartilhado. Neste exemplo, o aplicativo UWP armazenou o arquivo compartilhado na pasta de dados de aplicativo local. Portanto, nós seria modificar o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para fotos de recepção dessa pasta.
+Modificar seu aplicativo da área de trabalho para encontrar e processar o arquivo compartilhado. Neste exemplo, o aplicativo UWP armazenou o arquivo compartilhado na pasta de dados de aplicativo local. Portanto, podemos seria modificar o aplicativo da área de trabalho do [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para fotos de recepção nessa pasta.
 
 ```csharp
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-Para abrir instâncias do aplicativo da área de trabalho que já estão pelo usuário, também pode manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) e passar o caminho para o local do arquivo. Dessa forma todas as instâncias do aplicativo da área de trabalho mostrará a foto compartilhada.
+Para abrir instâncias do aplicativo da área de trabalho que já estão pelo usuário, nós também pode manipular o evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) e passar o caminho para o local do arquivo. Dessa forma todas as instâncias do aplicativo da área de trabalho mostrará a foto compartilhada.
 
 ```csharp
 ...

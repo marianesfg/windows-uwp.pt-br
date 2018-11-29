@@ -11,11 +11,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829676"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990880"
 ---
 # <a name="pivot"></a>Pivô
 
@@ -45,9 +45,9 @@ O controle de pivô, assim como [NavigationView](navigationview.md), sublinha o 
 
 ## <a name="is-this-the-right-control"></a>Este é o controle correto?
 
-Para alcançar comuns de navegação superior e padrões de guias, recomendamos usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
+Para alcançar comuns de navegação superior e padrões de guias, é recomendável usar o [NavigationView](navigationview.md), que se adapte a diferentes tamanhos de tela automaticamente e permite a personalização maior.
 
-No entanto, se sua navegação requer o dedo por toque, recomendamos usar o pivô.
+No entanto, se sua navegação requer dedo toque, recomendamos usar o pivô.
 
 Principais diferenças entre os controles NavigationView e pivô são o comportamento de excedentes padrão e a API de navegação:
 
@@ -112,7 +112,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque-passar o dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
+Esse código imita a experiência de navegação interna do controle de pivô, menos a experiência de toque dedo entre seções de conteúdo. No entanto, como você pode ver, você também pode personalizar vários pontos, incluindo a transição animada, parâmetros de navegação e recursos de pilha.
 
 ## <a name="create-a-pivot-control"></a>Criar um controle de pivô
 

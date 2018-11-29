@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827447"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991446"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilações automáticas para seu app UWP
 
@@ -338,7 +338,7 @@ Na atualização de aniversário do Windows 10, você pode duas vezes no arquivo
 >[!NOTE]
 > Esse método não instala o certificado nem as dependências associadas.
 
-Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar o site à lista de sites confiáveis no navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
+Se você quiser distribuir seus pacotes de aplicativo do Windows em um site como VSTS ou HockeyApp, você precisará adicionar esse site à lista de sites confiáveis no navegador. Caso contrário, o Windows marca o arquivo como bloqueado.
 
 <span id="certificates-best-practices"/>
 

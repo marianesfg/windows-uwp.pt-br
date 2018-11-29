@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, serviços da Store, API de ofertas direcionadas da Microsoft Store, ofertas direcionadas
 ms.localizationpriority: medium
 ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833479"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989406"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Gerenciar ofertas direcionadas usando os serviços da Loja
 
-Se você criar uma *oferta direcionada* no **participar > ofertas direcionadas** página do seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do seu aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Se você criar uma *oferta direcionada* no **participar > ofertas direcionadas** página do seu aplicativo no Partner Center, use a *API de ofertas direcionadas da Microsoft Store* no código do aplicativo para recuperar informações que ajuda você a implementar a experiência no aplicativo para o oferta direcionada. Para obter mais informações sobre ofertas direcionadas e como criá-las no painel, consulte [Use ofertas direcionadas para maximizar o engajamento e as conversões](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 A API de ofertas direcionadas é uma API REST simples que você pode usar para obter as ofertas segmentadas disponíveis para o usuário atual, com base no fato de o usuário fazer parte do segmento de clientes ou não para a oferta segmentada. Para usar esta API no código do seu aplicativo, siga estas etapas:
 

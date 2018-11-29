@@ -3,21 +3,21 @@ Description: Learn how to register your UWP app to receive push notifications th
 title: Configurar seu app para notificações por push direcionadas
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, Microsoft Store Services SDK, direcionadas notificações por push, o Partner Center
+keywords: Windows 10, uwp, Microsoft Store Services SDK, direcionadas notificações por push, Partner Center
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: f60780186256e7f78a9596c979c79bfc704ae4c2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843059"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987009"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar seu app para notificações por push direcionadas
 
 Você pode usar a página de **notificações por Push** no Partner Center para interagir diretamente com os clientes enviando notificações por push direcionadas para os dispositivos nos quais seu aplicativo da plataforma Universal do Windows (UWP) está instalado. Por exemplo, você pode usar notificações por push direcionadas para incentivar os clientes a executar uma ação, como a classificação do seu aplicativo ou o uso de um novo recurso. Você pode enviar vários tipos diferentes de notificações por push, incluindo notificações do sistema, notificações de bloco e notificações XML brutas. Você também pode controlar a taxa de inicializações do aplicativo resultantes de suas notificações por push. Para obter mais informações sobre esse recurso, consulte [Enviar notificações por push para clientes do seu aplicativo](../publish/send-push-notifications-to-your-apps-customers.md).
 
-Antes de enviar notificações por push direcionadas para seus clientes do Partner Center, você deve usar um método da classe [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) no Microsoft Store Services SDK para registrar seu aplicativo para receber notificações. Você pode usar métodos adicionais dessa classe para notificar o Partner Center que seu aplicativo foi iniciado em resposta a uma notificação por push direcionada (se você deseja controlar a taxa de inicializações do aplicativo resultantes de suas notificações) e para parar de receber notificações.
+Antes de enviar notificações por push direcionadas para seus clientes do Partner Center, você deve usar um método da classe [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) no Microsoft Store Services SDK para registrar seu aplicativo para receber notificações. Você pode usar métodos adicionais dessa classe para notificar o Centro de parceiro que seu aplicativo foi iniciado em resposta a uma notificação por push direcionada (se você deseja controlar a taxa de inicializações do aplicativo resultantes de suas notificações) e para parar de receber notificações.
 
 ## <a name="configure-your-project"></a>Configurar seu projeto
 
@@ -57,7 +57,7 @@ Para registrar seu aplicativo para receber notificações por push direcionadas 
 
 ### <a name="how-targeted-push-notifications-are-routed-to-customers"></a>Como as notificações por push direcionadas são roteadas para os clientes
 
-Quando o app chama **RegisterNotificationChannelAsync**, esse método coleta a conta da Microsoft do cliente que está atualmente conectado ao dispositivo. Mais tarde, quando você enviar uma notificação por push direcionadas para um segmento que inclui esse cliente, o Partner Center envia a notificação para dispositivos que estão associados a conta da Microsoft desse cliente.
+Quando o app chama **RegisterNotificationChannelAsync**, esse método coleta a conta da Microsoft do cliente que está atualmente conectado ao dispositivo. Mais tarde, quando você enviar uma notificação por push direcionadas para um segmento que inclui esse cliente, o Partner Center enviará a notificação para dispositivos que estão associados a conta da Microsoft desse cliente.
 
 Se o cliente que iniciou o app oferecer o dispositivo para outra pessoa usar enquanto ele ainda estiver conectado ao dispositivo com a conta da Microsoft, lembre-se de que a outra pessoa poderá ver a notificação direcionada para o cliente original. Isso pode ter consequências indesejadas, especialmente para os apps que oferecem serviços aos quais os clientes podem se conectar para usar. Para impedir que outros usuários vejam suas notificações direcionadas neste cenário, chame o método [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) quando os clientes saírem de seu aplicativo. Para saber mais, veja [Cancelar registro para notificações por push](#unregister) posteriormente neste artigo.
 
@@ -75,7 +75,7 @@ Por exemplo, convém recompensar os usuários do seu aplicativo que adquiriram o
 
 Se você selecionar a opção de **acompanhar taxa de inicialização do aplicativo** para a sua notificação por push direcionadas no Partner Center, chame o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) do ponto de entrada apropriado em seu aplicativo para notificar o Centro de parceiro que seu aplicativo foi iniciado em resposta a uma notificação por push.
 
-Além disso, esse método retorna os argumentos de inicialização originais para o seu app. Quando você optar por controlar a taxa de inicialização do aplicativo para sua notificação por push, uma rastreamento opaco que ID será adicionada aos argumentos de inicialização para ajudar a controlar o aplicativo inicie no Partner Center. Você deve passar argumentos de inicialização para o seu aplicativo para o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) , e esse método envia a ID de rastreamento para o Partner Center, remove a ID de rastreamento de argumentos de inicialização e retornará os argumentos de inicialização originais para seu código.
+Além disso, esse método retorna os argumentos de inicialização originais para o seu app. Quando você optar por controlar a taxa de inicialização do aplicativo para sua notificação por push, uma rastreamento opaco que ID será adicionada aos argumentos de inicialização para ajudar a controlar o aplicativo Iniciar no Partner Center. Você deve passar argumentos de inicialização para o seu aplicativo para o método [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) , e esse método enviará a ID de rastreamento para o Partner Center, remove a ID de rastreamento de argumentos de inicialização e retorna os argumentos de inicialização originais para seu código.
 
 A maneira como você chama esse método depende do tipo de ativação da notificação por push:
 

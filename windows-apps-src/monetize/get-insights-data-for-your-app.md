@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, serviços da Store, API, insights de análise da Micr
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851573"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992450"
 ---
 # <a name="get-insights-data"></a>Obter dados de insights
 
@@ -77,9 +77,9 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | A ID da loja do aplicativo para o qual você está recuperando dados de insights.     |
-| insightDate                | string | A data em que identificamos a alteração de uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
+| insightDate                | string | A data em que identificamos a alteração em uma métrica específica. Essa data representa o final da semana em que detectamos um aumento significativo ou diminuir em uma métrica em comparação com a semana anterior. |
 | tipo de dados     | string | Uma das seguintes cadeias de caracteres que especifica a área de análise gerais que descreve essa informação:<p/><ul><li><strong>aquisição</strong></li><li><strong>integridade</strong></li><li><strong>uso</strong></li></ul>   |
-| insightDetail          | array | Um ou mais [valores InsightDetail](#insightdetail-values) que representam os detalhes de visão atual.    |
+| insightDetail          | array | Um ou mais [valores InsightDetail](#insightdetail-values) que representam os detalhes de informação atual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
@@ -87,8 +87,8 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | Valor               | Tipo   | Descrição                           |
 |---------------------|--------|-------------------------------------------|
 | FactName           | string | Um dos seguintes valores que indica a métrica que descreve o insight atual ou a dimensão atual, com base no valor de **tipo de dados** .<ul><li>**Integridade**, esse valor é sempre **contagem de ocorrências**.</li><li>Para **aquisição**, esse valor é sempre **AcquisitionQuantity**.</li><li>Para **uso**, esse valor pode ser uma das seguintes cadeias de caracteres:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
-| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a visão.   |
-| PercentChange            | string |  Porcentagem a métrica alterou em sua base de clientes inteiro.  |
+| SubDimensions         | array |  Um ou mais objetos que descrevem uma métrica única para a informação.   |
+| PercentChange            | string |  A porcentagem a métrica alterada em sua base de clientes inteiro.  |
 | DimensionName           | string |  O nome da métrica descrito na dimensão atual. Exemplos incluem **EventType**, **mercado**, **DeviceType**, **PackageVersion**, **AcquisitionType**, **AgeGroup** e **sexo**.   |
 | DimensionValue              | string | O valor da métrica que está descrito na dimensão atual. Por exemplo, se **DimensionName** **EventType**, **DimensionValue** pode ser **travamento** ou **congelamento**.   |
 | FactValue     | string | O valor absoluto da métrica na data em que a informação foi detectada.  |

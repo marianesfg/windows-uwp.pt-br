@@ -5,12 +5,12 @@ ms.date: 09/17/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bbe7875fcd35003b1ec35b02da0f1a86a54ef31
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7842391"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990512"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicativos adaptáveis de versão: use as novas APIs e mantenha a compatibilidade com versões anteriores
 
@@ -56,7 +56,7 @@ Para referência, a tabela a seguir mostra os números de compilação para cada
 | Atualização dos criadores | 1703 | 15063 |
 | Atualização do Fall Creators | 1709 | 16299 |
 | Atualização de abril de 2018 | 1803 | 17134 |
-| Atualização de outubro de 2018 | 1809 | _Insider Preview_ |
+| Atualização de outubro de 2018 | 1809 | 17763 |
 
 Você pode baixar qualquer versão do SDK do [arquivo de emulador e do SDK do Windows](https://developer.microsoft.com/downloads/sdk-archive). Você pode baixar o SDK mais recente do Windows Insider Preview na seção de desenvolvedor do site [Participante do Insider Program](https://insider.windows.com/Home/BuildWithWindows).
 

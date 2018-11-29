@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, funções de usuário, permissão do usuário, funções personalizadas, acesso de usuário, personalizar permissões, funções padrão
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7844696"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992341"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Definir funções ou permissões personalizadas para usuários de contas
 
@@ -33,7 +33,7 @@ Ao determinar qual função ou permissão aplicar, lembre-se:
 
 ## <a name="assign-roles-to-account-users"></a>Atribuir funções a usuários da conta
 
-Por padrão, um conjunto de funções padrão é apresentado para escolher quando você adiciona um usuário, grupo ou aplicativo Azure AD à sua conta do Partner Center. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta. 
+Por padrão, um conjunto de funções padrão é apresentado para que você escolha quando você adiciona um usuário, grupo ou aplicativo Azure AD à sua conta do Partner Center. Cada função tem um conjunto específico de permissões para executar determinadas funções na conta. 
 
 A menos que você defina [permissões personalizadas](#custom) ao selecionar **Personalizar permissões**, cada usuário, grupo ou aplicativo Azure AD adicionado a uma conta deve receber pelo menos uma das funções padrão a seguir. 
 
@@ -43,7 +43,7 @@ A menos que você defina [permissões personalizadas](#custom) ao selecionar **P
 
 | Função                 | Descrição              |
 |----------------------|--------------------------|
-| Gerente              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Partner Center, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD é dependente da permissão da conta no Azure AD. Ou seja, se um usuário receber a função gerente, mas não tem permissões de administrador global da organização do Azure AD, não será possível criar novos usuários ou excluir usuários do diretório (embora seja possível alterar a função do usuário do Partner Center). <p> Observe que, se a conta do Partner Center estiver associada a mais de um locatário do Azure AD, um gerente não poderá ver detalhes completos de um usuário (incluindo nome, sobrenome, email de recuperação de senha, e se ele é um administrador global do Azure AD), a menos que eles são conectado ao mesmo locatário que o usuário com uma conta que tenha permissões de administrador global para esse locatário. No entanto, eles podem adicionar e remover usuários em qualquer locatário associado à conta do Partner Center. |
+| Gerente              | Tem acesso completo à conta, exceto para alterar configurações de imposto e pagamento. Isso inclui o gerenciamento de usuários no Partner Center, mas observe que a capacidade de criar e excluir usuários no locatário do Azure AD é dependente da permissão da conta no Azure AD. Ou seja, se um usuário receber a função gerente, mas não tiver permissões de administrador global da organização do Azure AD, não será possível criar novos usuários ou excluir usuários do diretório (embora seja possível alterar a função do usuário do Partner Center). <p> Observe que, se a conta do Partner Center está associada a mais de um locatário do Azure AD, um gerente não poderá ver detalhes completos de um usuário (incluindo nome, sobrenome, email de recuperação de senha, e se ele é um administrador global do Azure AD), a menos que eles são conectado ao mesmo locatário que o usuário com uma conta que tenha permissões de administrador global para esse locatário. No entanto, eles podem adicionar e remover usuários em qualquer locatário associado à conta do Partner Center. |
 | Desenvolvedor            | Pode carregar pacotes e enviar aplicativos e complementos, além de exibir o [Relatório de uso](usage-report.md) para obter detalhes de telemetria. Pode acessar a funcionalidade de [Experiências entre dispositivos](https://go.microsoft.com/fwlink/?linkid=874042) . Não pode exibir informações financeiras ou configurações da conta.   |
 | Colaborador comercial | Pode exibir relatórios de [Integridade](health-report.md) e de [Uso](usage-report.md). Não é possível criar ou enviar produtos, alterar configurações de conta ou exibir informações financeiras.   |
 | Colaborador financeiro  | Pode exibir [relatórios de pagamento](payout-summary.md), informações financeiras e relatórios de aquisição. Não pode fazer alterações em aplicativos, complementos ou configurações da conta.    |

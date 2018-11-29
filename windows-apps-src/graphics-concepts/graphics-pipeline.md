@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55621cec768e0aac680c3a84fd803e591459a97d
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851739"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988659"
 ---
 # <a name="graphics-pipeline"></a>Pipeline de elementos gráficos
 
@@ -56,7 +56,7 @@ Os mais utilizados são o estágio de sombreador de vértice (VS) e o estágio d
 
 ## <a name="rasterizer-stage"></a>Estágio do rasterizador
 
-|-|-| | Finalidade | O [estágio do rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivas que não estão exibidas, prepara-as para o estágio de sombreador de Pixel (PS) e determina como invocar os sombreadores de pixel. Converte informações de vetor (compostas de formas ou primitivos) em uma imagem de rasterização (composta de pixels) para fins de exibição de gráficos 3D em tempo real. | | Entrada | Vértices (x, y, z, w) chegando ao rasterizador estágio são consideradas no espaço de recorte homogêneo. Nesse espaço de coordenadas do eixo X aponta para a direita, Y aponta para cima e Z aponta para longe da câmera. | | Saída | Os pixels reais que precisam ser renderizado. Inclui alguns atributos de vértice para uso em interpolação pelo sombreador de Pixel. |
+|-|-| | Finalidade | O [estágio do rasterizador (RS)](rasterizer-stage--rs-.md) recorta primitivas que não estão exibidas, prepara-as para o estágio de sombreador de Pixel (PS) e determina como invocar os sombreadores de pixel. Converte informações de vetor (compostas de formas ou primitivos) em uma imagem de rasterização (composta de pixels) para fins de exibição de gráficos 3D em tempo real. | | Entrada | Vértices (x, y, z, w) chegando ao rasterizador estágio são consideradas no espaço de recorte homogêneo. Nesse espaço de coordenadas do eixo X aponta para a direita, Y aponta para cima e Z aponta para longe da câmera. | | Saída | Os pixels reais que precisam ser renderizados. Inclui alguns atributos de vértice para uso em interpolação pelo sombreador de Pixel. |
 
 ## <a name="pixel-shader-stage"></a>Estágio do sombreador de pixel
  

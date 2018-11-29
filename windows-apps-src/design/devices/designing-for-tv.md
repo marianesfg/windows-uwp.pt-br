@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7850105"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988534"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Projetar para TV e Xbox
 
@@ -832,7 +832,7 @@ Você poderia colocar o trecho de código anterior nos recursos da página ou do
 > [!NOTE]
 > Este trecho de código é especificamente para `ListView`s; para um estilo de `GridView`, defina o atributo [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) como [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) e [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) como `GridView`.
 
-Para um controle mais refinado sobre como itens são trazidos para exibição, se seu aplicativo for destinado ao versão 1803 ou posterior, você pode usar o [evento UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-la no [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) de **ListView**/**GridView** para capturá-lo antes que o **ScrollViewer** interno, como os trechos de código a seguir:
+Para um controle mais refinado sobre como itens são inseridas no modo de exibição, se seu aplicativo for destinado ao versão 1803 ou posterior, você pode usar o [evento UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Você pode colocá-la no [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) de **ListView**/**GridView** detectá-lo antes que o **ScrollViewer** interno faz, como os trechos de código a seguir:
 
 ```xaml
 <GridView x:Name="gridView">

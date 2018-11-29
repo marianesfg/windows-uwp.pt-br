@@ -1,17 +1,17 @@
 ---
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Saiba como adicionar valores de ID de unidade de anúncios e a ID de aplicativo do Partner Center para o seu aplicativo antes de enviar seu aplicativo para a loja.
+description: Saiba como adicionar valores de ID de unidade de anúncios e a ID de aplicativo do Partner Center ao seu aplicativo antes de enviar seu aplicativo para a loja.
 title: Configurar unidades de anúncios em seu aplicativo
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anúncios, publicidade, unidades publicitária, testes
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839201"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991377"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anúncios em seu aplicativo
 

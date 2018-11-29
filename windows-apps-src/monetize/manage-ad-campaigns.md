@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835838"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990439"
 ---
 # <a name="manage-ad-campaigns"></a>Gerenciar campanhas publicitárias
 
@@ -31,7 +31,7 @@ Para usar esses métodos, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](run-ad-campaigns-using-windows-store-services.md#prerequisites) da API de promoções da Microsoft Store.
 
-  >**Observação**&nbsp;&nbsp;como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página de **campanhas publicitárias** no Partner Center.
+  >**Observação**&nbsp;&nbsp;como parte dos pré-requisitos, certifique-se que você [criar pelo menos uma campanha publicitária no Partner Center](../publish/create-an-ad-campaign-for-your-app.md) e que você adicionar pelo menos um método de pagamento para a campanha publicitária no Partner Center. Linhas de entrega de campanhas publicitárias criadas usando essa API cobram automaticamente o instrumento de pagamento padrão escolhido na página **campanhas publicitárias** no Partner Center.
 
 * [Obtenha um token de acesso do Azure AD](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usar no cabeçalho da solicitação desses métodos. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
 

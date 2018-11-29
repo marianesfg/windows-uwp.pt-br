@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843457"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986182"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introdução ao desenvolvimento de aplicativos UWP no Xbox One
 
@@ -33,7 +33,7 @@ Antes de começar, você precisará fazer o seguinte:
 
     Se você estiver instalando o Visual Studio 2015 atualização 3, certifique-se de que você escolha a instalação **personalizada** e marque a caixa de seleção de **Ferramentas de desenvolvimento de aplicativos universais do Windows** , ela não é parte da instalação padrão. Se você for um desenvolvedor de C++, escolha **Instalação personalizada** e selecione **C++**.
 
-    Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, no painel de **Resumo** à direita, em **desenvolvimento da plataforma Universal do Windows**, certifique-se de que você selecione a caixa de seleção de **Ferramentas da plataforma Universal do Windows C++** . Não é parte da instalação padrão.
+    Se estiver instalando o Visual Studio 2017, escolha a carga de trabalho **Desenvolvimento da Plataforma Universal do Windows**. Se você for um desenvolvedor de C++, no painel de **Resumo** à direita, em **desenvolvimento da plataforma Universal do Windows**, certifique-se de que você selecione a caixa de seleção de **Ferramentas da plataforma Universal do Windows C++** . Ele não é parte da instalação padrão.
 
     Para obter mais informações, consulte [Configurar UWP no ambiente de desenvolvimento do Xbox](development-environment-setup.md).
 
@@ -60,13 +60,13 @@ Agora que seu computador de desenvolvimento está pronto, você pode assistir a 
 
 ## <a name="creating-your-first-project-in-visual-studio"></a>Criando seu primeiro projeto no Visual Studio
 
-Para obter mais informações, consulte [Configurar UWP no ambiente de desenvolvimento do Xbox](development-environment-setup.md).
+Para obter informações mais detalhadas, consulte [Configurar UWP no ambiente de desenvolvimento do Xbox](development-environment-setup.md).
 
-1.  **Para c#**: criar um novo projeto Universal do Windows e no **Gerenciador de soluções**, clique com botão direito no projeto e selecione **Propriedades**. Selecione a guia **depuração** , altere o **dispositivo de destino** para **Computador remoto**, digite o endereço IP ou nome do host do seu console Xbox One no campo **máquina remota** e selecione **Universal (protocolo não criptografado)** no ** Modo de autenticação** lista suspensa.   
+1.  **Para c#**: criar um novo projeto Universal do Windows e no **Gerenciador de soluções**, clique com botão direito no projeto e selecione **Propriedades**. Selecione a guia **Depurar** , altere o **dispositivo de destino** para **Computador remoto**, digite o endereço IP ou nome do host do seu console Xbox One no campo **máquina remota** e selecione **Universal (protocolo não criptografado)** no ** Modo de autenticação** lista suspensa.   
 
     Você pode encontrar o endereço IP do seu Xbox One iniciando a Dev Home no seu console (o grande bloco do lado direito de Início), no canto superior esquerdo. Para obter mais informações sobre a Dev Home, consulte [Introdução às ferramentas do Xbox One](introduction-to-xbox-tools.md).  
 
-2.  **Para C++ e HTML/Javascript projetos**: siga um caminho semelhante para projetos c#, mas nas propriedades do projeto vá para a guia **depuração** , selecione **Máquina remota** no depurador para abrir a lista suspensa, digite o endereço IP ou nome do host do console no campo de **Nome do computador** e selecione **Universal (protocolo não criptografado)** no campo de **Tipo de autenticação** .
+2.  **Para C++ e HTML/Javascript projetos**: siga um caminho semelhante para projetos c#, mas nas propriedades do projeto vá para a guia **depuração** , selecione **Máquina remota** no depurador para abrir a lista suspensa, digite o endereço IP ou nome do host do console no campo de **Nome do computador** e selecione **Universal (protocolo não criptografado)** no campo **Tipo de autenticação** .
 
 3. Selecione **x64** na lista suspensa à esquerda do botão verde reproduzir na barra de menu principal.
    

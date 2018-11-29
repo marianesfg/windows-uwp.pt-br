@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, trailer, vídeo, captura de tela, imagem, ícone, listagem da Store, imagens de listagem da Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 0019ded3b409acf0e6530bffa4ad73f85bfa8855
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854354"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992579"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de tela, imagens e trailers do app
 
@@ -83,11 +83,11 @@ Essa imagem é necessária para a exibição correta no Windows Phone 8.1 e vers
 
 Se seu envio *apenas* incluem pacotes UWP, você não precisará fornecer essa imagem (a menos que você marque a caixa para **para clientes no Windows 10 e Xbox, exibir imagens de logotipo carregadas em vez das imagens dos meus pacotes**, conforme descrito no próximo seção).
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados apenas as imagens de logotipo na loja
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Exibição carregados apenas imagens de logotipo na loja
 
-Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e em vez disso, que a Store use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se o seu aplicativo publicado anteriormente é compatível com versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes.)
+Você tem a opção de impedir que a loja usando as imagens de logotipo nos pacotes do aplicativo ao exibir a listagem para clientes no Windows 10 (incluindo o Xbox) e, em vez disso, que a loja use apenas as imagens enviadas. Isso oferece mais controle sobre a aparência do aplicativo em várias telas em toda a Store para clientes no Windows 10 (incluindo o Xbox). (Se o seu aplicativo publicado anteriormente é compatível com versões anteriores do sistema operacional, os clientes ainda poderão ver imagens dos seus pacotes.)
 
-Tenha a Store use apenas as imagens que você carrega (para clientes no Windows 10, incluindo o Xbox), e não use as imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir imagens de logotipo em vez das imagens dos meus pacotes enviadas **.
+Para ter a Store use apenas as imagens carregadas (para clientes no Windows 10, incluindo o Xbox), e não use as imagens de seus pacotes, marque a caixa que diz **para clientes no Windows 10 e Xbox, exibir imagens de logotipo em vez das imagens dos meus pacotes enviadas **.
 
 Quando você marcar essa caixa, aparece uma nova seção chamada **loja exibir imagens** . Aqui, você pode carregar 3 imagens, incluindo o tamanho do **Bloco de aplicativo de 1:1 ícone (300 x 300 pixels)** (se você marcar a caixa, o campo para fornecer que essa imagem se moverá para essa seção). É recomendável fornecer os três tamanhos de imagem se você usar essa opção: 300 x 300, 150 x 150 e 71 x 71 pixels. No entanto, somente o tamanho 300 x 300 é necessário.
 
@@ -104,7 +104,7 @@ Essa seção permite fornecer ilustrações para ajudar a exibir seu produto com
 
 ### <a name="trailers"></a>Trailers
 
-Trailers são vídeos curtos que permitem aos clientes ver o produto em ação, para que ele possam ter uma melhor compreensão de como ele é. Eles são mostrados na parte superior da listagem da loja de seu aplicativo (desde que você inclua uma imagem de [16:9 arte de super-herói](#windows-10-and-xbox-image-169-super-hero-art) ). 
+Trailers são vídeos curtos que permitem aos clientes ver o produto em ação, para que ele possam ter uma melhor compreensão de como ele é. Eles são exibidos na parte superior da listagem da loja de seu aplicativo (desde que você inclua uma imagem de [16:9 arte de super-herói](#windows-10-and-xbox-image-169-super-hero-art) ). 
 
 Os trailers são codificados com [Smooth Streaming](http://www.iis.net/downloads/microsoft/smooth-streaming), que adapta a qualidade de um streaming de vídeo entregue aos clientes em tempo real com base na largura de banda disponível e nos recursos da CPU.
 
@@ -137,7 +137,7 @@ Você também deve cumprir os requisitos listados a seguir.
 > [!TIP]
 > Se você tiver criado listagens da Microsoft Store em vários idiomas, você pode selecionar **Escolha dentre trailers existentes** para reutilizar os trailers já enviados. Você não precisa carregá-los individualmente para cada idioma.
 
-Para remover um trailer da lista, clique em **X** ao lado do nome de arquivo. Você pode optar por removê-lo somente a listagem da loja atual no qual você está trabalhando ou removê-lo de todas as listagens de loja do produto (em todos os idiomas).
+Para remover um trailer da lista, clique em **X** ao lado do nome de arquivo. Você pode optar por removê-lo somente a listagem da loja atual no qual você está trabalhando ou removê-lo todas as listagens de loja do produto (em todos os idiomas).
 
 
 ### <a name="trailer-requirements"></a>Requisitos do trailer
@@ -221,7 +221,7 @@ Para arquivos H.264 Mezzanine, é recomendável:
 
 ### <a name="windows-10-and-xbox-image-169-super-hero-art"></a>Imagem do Windows 10 e Xbox (16:9 Arte de super-herói)
 
-Na seção **Windows 10 e Xbox imagem** , a imagem de **16:9 arte de super-herói (1920 x 1080 ou 3840 x 2160 pixels)** é usada em vários layouts da Microsoft Store em todos os tipos de dispositivos Windows 10 (incluindo o Xbox). É recomendável fornecer essa imagem, independentemente das versões de sistema operacional ou dos tipos de dispositivo aos quais seu aplicativo se destina.
+Na seção **Windows 10 e Xbox imagem** , a imagem de **16:9 arte de super-herói (1920 x 1080 ou 3840 x 2160 pixels)** é usada em vários layouts na Microsoft Store em todos os tipos de dispositivo Windows 10 (incluindo o Xbox). É recomendável fornecer essa imagem, independentemente das versões de sistema operacional ou dos tipos de dispositivo aos quais seu aplicativo se destina.
 
 Essa imagem é *necessária* para a exibição correta se a listagem inclui [trailers vídeo](#trailers). Para clientes no Windows 10, versão 1607 ou posterior (que inclui o Xbox), ela é usada como a imagem principal na parte superior da listagem da Store (ou aparece após a reprodução dos trailers). Ela também pode ser usada para apresentar seu app em layouts promocionais na Store. Observe que essa imagem não deve incluir o título do produto ou outros textos.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiões
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f99ca0db7b6e1f46c45ac8713c83ad34c02078f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836973"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992048"
 ---
 # <a name="define-market-selection"></a>Definir seleção de mercado
 
@@ -476,7 +476,7 @@ O Ajuste de Expansão do Comércio será aplicado a todas as transações proces
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto do mundo" para Windows 8.x
 
-Se seu aplicativo publicado anteriormente inclui pacotes para Windows 8. x, é importante estar ciente de que um número de mercados é tratado como um mercado único "de resto do mundo" para os clientes que usam o armazenamento no Windows 8. x, mesmo que eles são mostrados como mercados individuais no Partner Center.
+Se seu aplicativo publicado anteriormente inclui pacotes para Windows 8. x, é importante estar ciente de que um número de mercados é tratado como um mercado único "de resto do mundo" para os clientes que usam a loja no Windows 8. x, mesmo que eles são mostrados como mercados individuais no Partner Center.
 
 Se você deixar a seleção de mercado padrão ao enviar seu aplicativo, você não precisa se preocupar com isso, e seu aplicativo estará disponível para todos os mercados possíveis. No entanto, se você deseja excluir determinados mercados, tenha em mente que excluir até mesmo um desses mercados "Resto do mundo" significa que seu aplicativo não estará disponível em *Nenhum* dos mercados "Resto do mundo" para clientes no Windows8 ou Windows 8.1.
 

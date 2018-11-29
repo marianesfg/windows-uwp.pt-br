@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: deeae0cc66a7e75da2e44c0d2aba2a9ed459b824
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855534"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991932"
 ---
 # <a name="introduction-to-buffers"></a>Introdução aos buffers
 
@@ -21,7 +21,7 @@ Um recurso de buffer é uma coleção de dados completamente tipados, agrupados 
 
 Um elemento de buffer é composto de 1 a 4 componentes. Elementos de buffer podem incluir valores de dados de pacote (como valores de superfície R8G8B8A8), inteiros de 8 bits únicos ou quatro valores de ponto flutuante de 32 bits.
 
-Um buffer é criado como um recurso não estruturado. Como ele é estruturado, um buffer não pode conter níveis de mipmap, não é possível obter filtrado quando lido e não pode ser com várias amostras.
+Um buffer é criado como um recurso não estruturado. Como é estruturado, um buffer não pode conter níveis de mipmap, não é possível obter filtrado quando lido e não pode ser com várias amostras.
 
 ## <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>Tipos de buffer
 
@@ -51,7 +51,7 @@ Para acessar dados de um buffer de vértices, você precisa saber qual vértice 
 -   Deslocamento -o número de bytes desde o início do buffer para os dados para o primeiro vértice.
 -   BaseVertexLocation -o número de bytes do deslocamento até o primeiro vértice usado pela chamada de desenho apropriada.
 
-Antes de criar um buffer de vértices, você precisará definir seu layout. Depois que o objeto de layout de entrada é criado, você pode vinculá-lo para o [estágio de Assembler de entrada (IA)](input-assembler-stage--ia-.md).
+Antes de criar um buffer de vértices, você precisará definir seu layout. Depois que o objeto de layout de entrada é criado, você pode vinculá-lo ao [estágio de Assembler de entrada (IA)](input-assembler-stage--ia-.md).
 
 ### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Buffer de índice
 
@@ -65,7 +65,7 @@ Os índices sequenciais armazenados em um buffer de índice estão localizados c
 -   StartIndexLocation - Especifica o primeiro elemento de buffer de índice de endereço básico e o deslocamento. O local inicial representa o primeiro índice para renderizar.
 -   IndexCount -o número de índices para renderizar.
 
-Início do Buffer de índice = endereço de Base de Buffer de índice + deslocamento (bytes) + StartIndexLocation \ * ElementSize (bytes).
+Início do Buffer de índice = endereço de Base de Buffer de índice + deslocamento (bytes) + StartIndexLocation \ * ElementSize (bytes);
 
 Nesse cálculo, ElementSize é o tamanho de cada elemento de buffer de índice, que é dois ou quatro bytes.
 
@@ -79,7 +79,7 @@ Cada elemento armazena uma constante de 1 a 4 componentes determinada pelo forma
 
 Um buffer constante só pode usar um sinalizador de associação única, que não pode ser combinado com qualquer outro sinalizador de associação.
 
-Para ler um buffer de constantes de sombreador de um sombreador, use uma função de carregamento HLSL. Cada estágio de sombreador permite até 15 buffers constantes de sombreador; cada buffer pode manter até 4.096 constantes.
+Para ler um buffer constante de sombreador de um sombreador, use uma função de carregamento HLSL. Cada estágio de sombreador permite até 15 buffers constantes de sombreador; cada buffer pode manter até 4.096 constantes.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Tópicos relacionados
 

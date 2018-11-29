@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, amostra, directx, conceitos básicos
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7854983"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991199"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Princípios básicos de exemplo do Marble Maze
 
@@ -34,7 +34,7 @@ Consulte a seguir alguns dos pontos-chave que este documento discute para quando
 ## <a name="creating-the-visual-studio-project"></a>Criando o projeto do Visual Studio
 
 
-Se você baixou e extraiu o exemplo, você pode abrir o arquivo **MarbleMaze_VS2017.sln** (na pasta **C++** ) no Visual Studio, e você terá o código na frente você.
+Se você baixou e extraiu o exemplo, você pode abrir o arquivo **MarbleMaze_VS2017.sln** (na pasta **C++** ) no Visual Studio, e você terá o código na frente de você.
 
 Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um projeto existente. No entanto, se você ainda não tem um projeto existente que forneça a funcionalidade básica necessária para o seu jogo UWP DirectX, convém criar um projeto com base no modelo **Aplicativo DirectX 11 (Universal do Windows)** do Visual Studio, pois ele fornece um aplicativo 3D de trabalho básico. Para fazer isso, execute estas etapas:
 
@@ -42,9 +42,9 @@ Quando criamos o projeto do Visual Studio para o Marble Maze, começamos com um 
 
 2. Na janela **Novo projeto** , na barra lateral esquerda, selecione **instalado > Modelos > Visual C++**.
 
-3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, talvez você não tenha os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
+3. Na lista do meio, selecione o **Aplicativo DirectX 11 (Universal Windows)**. Se você não vir essa opção, você não pode ter os componentes necessários instalados&mdash;consulte [Modificar Visual Studio 2017, adicionando ou removendo cargas de trabalho e componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter informações sobre como instalar componentes adicionais.
 
-4. Dê ao projeto de um **nome**, um **local** para os arquivos sejam armazenados e um **nome da solução**e, em seguida, clique em **Okey**.
+4. Dê ao projeto de um **nome**, um **local** para os arquivos sejam armazenados e um **nome de solução**e, em seguida, clique em **Okey**.
 
 ![Novo projeto](images/marble-maze-sample-fundamentals-1.png)
 
@@ -84,7 +84,7 @@ Para chamar APIs do Windows Runtime do JavaScript e do .NET, essas linguagens ex
 > [!IMPORTANT]
 > Você só precisa usar **^** e **ref new** quando criar objetos ou componentes do Tempo de Execução do Windows. Você pode usar a sintaxe do C++ padrão ao criar o código básico do aplicativo que não usa o Windows Runtime.
 
-O Marble Maze usa **^** junto com **Microsoft::WRL::ComPtr** para gerenciar objetos alocados em pilha e reduzir a perda de memória. Recomendamos que você use ^ para gerenciar o tempo de vida de variáveis de tempo de execução do Windows, **ComPtr** para gerenciar o tempo de vida de variáveis COM (por exemplo, quando você usa o DirectX) e **std::shared\_ptr** ou **std::unique\_ptr** para gerenciar o tempo de vida de todos os outros objetos C++ alocados em pilha.
+O Marble Maze usa **^** junto com **Microsoft::WRL::ComPtr** para gerenciar objetos alocados em pilha e reduzir a perda de memória. Recomendamos que você use ^ para gerenciar o tempo de vida de variáveis de tempo de execução do Windows, **ComPtr** para gerenciar a vida útil das variáveis COM (por exemplo, quando você usa o DirectX) e **std::shared\_ptr** ou **std::unique\_ptr** para gerenciar o tempo de vida de todos os outros objetos C++ alocados em pilha.
 
  
 
@@ -131,7 +131,7 @@ void LoadMesh(
     );
 ```
 
-Para executar análise de código em seu aplicativo, na barra de menus, escolha **Construir > Executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Para realizar a análise de código em seu aplicativo, na barra de menus, escolha **Construir > Executar análise de código na solução**. Para saber mais sobre a análise de código, consulte [Analisando a qualidade do código C/C++ com o uso da análise de código](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 A lista completa de anotações disponíveis está definida em sal.h. Para saber mais, veja [Anotações SAL](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

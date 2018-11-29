@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854098"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991219"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
@@ -27,7 +27,7 @@ A seguir, explicaremos mais sobre esses formulários, inclusive quem os receber�
 |1042-S | Relacionado a pagamentos feitos a você que estão sujeitos à retenção de imposto dos Estados Unidos | Formulários impressos serão protocolados até na ou antes de **15 de março**e cópias em. PDF serão disponibilizadas no Partner Center (no **configurações da conta > perfil fiscal**) ao mesmo tempo |
 
 > [!NOTE]
-> O endereço que usamos em formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
+> O endereço que usamos nos formulários de imposto da Receita Federal dos EUA vem do endereço em seu [perfil de imposto](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Se seu endereço mudou, atualize-o em seu **Perfil fiscal**.
 
 Os formulários de imposto serão enviados a você do endereço a seguir:
 
@@ -41,10 +41,10 @@ Os formulários de imposto serão enviados a você do endereço a seguir:
 **Cidadãos fora dos EUA:**
 <table>
 <tr><th>Grupo de negócios</th><th>Entidade legal</th><th>Address</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Corporation por meio do Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
-<tr><td>Publicidade *</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Online Inc. por meio do Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Corporation via Microsoft Irlanda atuando como intermediário qualificado para a Microsoft Corporation)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
+<tr><td>Publicidade *</td><td>Microsoft Irlanda operações limitado (pagamento é feito pela Microsoft Online Inc. via Microsoft Irlanda atuando como agente de pagamento para a Microsoft Online Inc.)</td><td>Um único local da Microsoft<br>Sul&nbsp;região&nbsp;comercial&nbsp;Park<br>Leopardstown, Dublin 18 Irlanda</td></tr>
 <tr><td>Publicidade</td><td>A Microsoft Online Inc.</td><td>6100 Neil estrada<br>Reno, NV 89511 EUA</td></tr>
-<tr><td colspan="3">* Cidadãos dos seguintes países lucro receita de publicidade serão pagos por meio do Microsoft Irlanda operações limitado: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
+<tr><td colspan="3">* Cidadãos dos seguintes países/regiões lucro receita de publicidade serão pagos por meio do Microsoft Irlanda operações limitado: Áustria, Bélgica, Bulgária, Croácia, Chipre, República Tcheca, Dinamarca, Estônia, Finlândia, França, Alemanha, Grécia, Hungria, Irlanda, Ilha de Man, Itália, Letônia, Liechtenstein, Lituânia, Luxemburgo, Malta, Mônaco, países baixos, Noruega, Polônia, Portugal, Romênia, Eslováquia, Eslovênia, África do Sul, Espanha, Suécia, Suíça, Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para desenvolvedores localizados nos Estados Unidos
@@ -56,7 +56,7 @@ Os formulários de imposto serão enviados a você do endereço a seguir:
   </tr>
   <tr> 
      <td valign="top">Atingi a marca de <b>mais de 200 vendas de app</b> com um valor total de compra dessas vendas <b>superior a USD 20.000</b> no ano fiscal aplicável (<b>sem</b> contar vendas feitas no Brasil e na China por meio da Microsoft Store no Windows 10).</td>
-    <td valign="top"><b>1099-K</b>:<br>Declarante: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: o formulário 1099-K contém valores de <b>compra bruta</b> , não os pagamentos feitos a você.</td>
+    <td valign="top"><b>1099-K</b>:<br>Declarante: Microsoft Corporation<br>EIN: * * * 4442<br><br><b>Importante</b>: o formulário 1099-K contém quantidades de <b>compra bruta</b> , não os pagamentos feitos a você.</td>
   </tr>
   <tr> 
      <td valign="top">Recebi <b>pelo menos US$ 10 em pagamentos</b> por (i) vendas de app feitas no Brasil e na China por meio da Microsoft Store no Windows 10 ou (ii) vendas no Minecraft Marketplace.<br>

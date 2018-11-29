@@ -8,19 +8,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847555"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989834"
 ---
 # <a name="settings-page-dev-home"></a>Página de configurações (Dev Home)
    
   
-A página de **configurações** de Dev Home fornece acesso a várias configurações para o console de desenvolvimento.   
+A página de **configurações** de Dev Home fornece acesso às várias configurações para o console de desenvolvimento.   
  ![Página de configurações de Dev Home](images/devhome_settings.png)   
   
-A página de **configurações** contém os painéis a seguir:   
+A página **configurações** contém os seguintes painéis:   
  
    *  [Configurações do console](#ID4EEB)  
    *  [Configurações de atualização de recuperação do sistema operacional](#ID4EOB)  
@@ -46,7 +46,7 @@ O painel de **configurações do Console** fornece uma exibição "em um relance
 ## <a name="os-recovery-update-settings"></a>Configurações de atualização de recuperação do sistema operacional  
    
   
-O painel de **recuperação do sistema operacional atualizar configurações** configura as configurações de atualização automática do console. Observe que as alterações para essas configurações pode levar até 24 horas para entrar em vigor.   
+O painel de **recuperação do sistema operacional atualizar configurações** configura configurações de atualização automática do console. Observe que as alterações para essas configurações pode levar até 24 horas para entrar em vigor.   
   
 <a id="ID4EYB"></a>
 
@@ -64,7 +64,7 @@ O painel do **Visual Studio** é usado para Emparelhe o console com o Visual Stu
 ## <a name="debug-settings"></a>Configurações de depuração  
    
   
-O painel de **configurações de depuração** é usado para exibir e alternar comuns configurações de depuração.   
+O painel de **configurações de depuração** é usado para exibir e ativar/desativar comuns configurações de depuração.   
   
 <a id="ID4EMC"></a>
 
@@ -82,7 +82,7 @@ O painel de **configuração de script autônomo** gerencia scripts de instalaç
 ## <a name="default-home-experience"></a>Experiência inicial padrão  
    
   
-O painel **Padrão Home experiência** determina se a tela inicial de varejo ou a tela [Inicial de desenvolvedor no Console (Dev Home)](dev-home.md) é exibida quando o console for iniciado.   
+O painel **Padrão Home experiência** determina se a tela inicial de varejo ou a tela [Inicial de desenvolvedor no Console (Dev Home)](dev-home.md) é exibida quando o console é iniciado.   
   
 <a id="ID4EJD"></a>
 

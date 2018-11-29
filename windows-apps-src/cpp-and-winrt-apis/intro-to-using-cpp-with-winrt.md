@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, introdução
 ms.localizationpriority: medium
 ms.openlocfilehash: b92d0def08267c36497f0afd24d23308bc4a2e85
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836695"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989598"
 ---
 # <a name="introduction-to-cwinrt"></a>Introdução ao C++/WinRT
 &nbsp;
@@ -38,13 +38,13 @@ Com o C++/WinRT, você também pode implementar suas próprias classes de tempo 
 Para modelos de projeto C++/WinRT no Visual Studio, bem como para propriedades e destinos C++/WinRT do MSBuild, baixe e instale a [Extensão do Visual Studio (VSIX) do C++/WinRT](https://aka.ms/cppwinrt/vsix) no [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 > [!NOTE]
-> Com a versão 1.0.181002.2 (ou posterior) de VSIX instalado, criando um novo C + c++ WinRT projeto automaticamente instala o [pacote Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para o projeto. O pacote Microsoft.Windows.CppWinRT NuGet fornece melhor C + c++ suporte de compilação do projeto WinRT, tornando seu projeto portátil entre uma máquina de desenvolvimento e um agente de compilação (em que somente o pacote NuGet e não o VSIX, está instalado).
+> Com a versão 1.0.181002.2 (ou posterior) do VSIX instalado, criando um novo C + c++ WinRT projeto automaticamente instala o [pacote Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para o projeto. O pacote Microsoft.Windows.CppWinRT NuGet fornece melhor C + c++ suporte de compilação do projeto WinRT, tornando seu projeto portáveis entre uma máquina de desenvolvimento e um agente de compilação (no qual somente o pacote NuGet e não o VSIX, está instalado).
 >
 > Para um projeto existente&mdash;depois de instalar a versão 1.0.181002.2 (ou posterior) do VSIX&mdash;, recomendamos que você abra o projeto no Visual Studio, clique **no projeto** \> **Manage NuGet Packages...**  \>  **Procurar**, digite ou cole **Microsoft.Windows.CppWinRT** na caixa de pesquisa, selecione o item nos resultados da pesquisa e, em seguida, clique em **instalar** para instalar o pacote para o projeto.
 
 Você precisará do Visual Studio 2017 (é necessário pelo menos a versão 15.6, mas é recomendável pelo menos a 15.7) e o SDK do Windows versão 10.0.17134.0 (Windows 10, versão 1803). Se você ainda não instalou-lo, você precisará instalar a opção de **Ferramentas da plataforma Universal do Windows C++** de dentro do instalador do Visual Studio. E, nas **configurações**do Windows > **atualização \ & segurança** > **para desenvolvedores**, escolha a opção de **modo de desenvolvedor** , em vez da opção de **Sideload de aplicativos** .
 
-Em seguida, será possível criar e criar ou abrir, C++ c++ WinRT projeto no Visual Studio e implantá-lo. Como alternativa, você pode converter um projeto existente adicionando a `<CppWinRTEnabled>true</CppWinRTEnabled>` propriedade para seu `.vcxproj` arquivo.
+Em seguida, será possível criar e criar ou abrir, C++ c++ WinRT projeto no Visual Studio e implantá-lo. Como alternativa, você pode converter um projeto existente adicionando o `<CppWinRTEnabled>true</CppWinRTEnabled>` propriedade para sua `.vcxproj` arquivo.
 
 ```xml
 <Project ...>

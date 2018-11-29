@@ -6,15 +6,15 @@ ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7850500"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991899"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novidades dos documentos de desenvolvedor do Windows em setembro de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de setembro.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de setembro.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -26,7 +26,7 @@ A documentação do desenvolvedor do Windows está sendo constantemente atualiza
 
 [Referência de API do Windows.AI.MachineLearning da](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) foi atualizado para o SDK mais recente do Windows Insider.
 
-[Repositório do GitHub de aprendizado de máquina do Windows](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizado com novas amostras que funcionam com o SDK mais recente.
+[Repositório do GitHub de aprendizado de máquina Windows](https://github.com/Microsoft/Windows-Machine-Learning) foi atualizado com novas amostras que funcionam com o SDK mais recente.
 
 ![Gráfico do Windows Machine Learning](images/winml-graphic.png)
 
@@ -40,19 +40,19 @@ Para obter mais informações sobre a biblioteca de interface do usuário do Win
 
 ### <a name="how-blur-effects-work"></a>Como o trabalho de efeitos de desfoque
 
-Um dos nossos criadores, o Mike Jacobs esteemed, começou a uma série de artigos sobre Desfoque de visão e fotografia ao design de aplicativos e jogos médio. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Um dos nossos criadores, o Mike Jacobs esteemed, começou uma série de artigos sobre Desfoque de visão e fotografia ao design de aplicativos e jogos médio. Se você tiver interesse em aprender mais sobre esse efeito visual onipresente, confira [o artigo primeiro na visão e fotografia](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) e [a segunda de suavização em elementos gráficos.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
-![Desfocar em ação](images/blur-example.jpg)
+![Desfoque em ação](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Diretrizes de contribuição
 
-Atualizamos [nossas diretrizes contribui](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para a nossa documentação da UWP. Essa nova orientação esclarece o fluxo de trabalho e as expectativas por contribuições externas para nossos documentos.
+Atualizamos [nossas diretrizes contribui](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) para nossa documentação UWP. Essa nova orientação esclarece o fluxo de trabalho e as expectativas por contribuições externas para nossos documentos.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Aaron Gustafson:
 
@@ -60,7 +60,7 @@ Aaron Gustafson:
 
 Chris Heilmann
 
-* [4 vídeos sobre a ferramenta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 vídeos na ferramenta webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

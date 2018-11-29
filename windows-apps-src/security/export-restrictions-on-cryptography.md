@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, segurança
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826837"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989154"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Restrições de exportação na criptografia
 
@@ -21,7 +21,7 @@ Use esta informação para determinar se seu aplicativo usa criptografia de form
 
 O Bureau of Industry and Security do Departamento de Comércio dos Estados Unidos regula a exportação de tecnologia que usa determinados tipos de criptografia. Todos os apps listados na Microsoft Store devem estar em conformidade com estas leis e regulamentações porque os arquivos do aplicativo podem ser armazenados nos Estados Unidos. Mesmo os aplicativos carregados por desenvolvedores de aplicativos de outros países/regiões para distribuição fora dos Estados Unidos devem estar em conformidade com essas regulamentações. Sendo assim, ao enviar um aplicativo para a Microsoft Store, todos os desenvolvedores devem garantir que seus apps não contenham tecnologia proibida por essas regulamentações.
 
-> **Observação**as informações fornecidas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Microsoft Store, certifique-se de que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
+> **Observação**as informações descritas aqui fornecem algumas orientações, mas é sua responsabilidade, como desenvolvedor que publica aplicativos na Microsoft Store, certifique-se de que seu aplicativo esteja em conformidade com todas as leis e regulamentos aplicáveis.
 
  
 

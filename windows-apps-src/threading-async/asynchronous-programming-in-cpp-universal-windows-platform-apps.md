@@ -1,23 +1,23 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ /CX) usando a classe task definida no namespace concurrency em ppltasks. h.
+description: Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ /CX) usando a classe task definida no namespace concurrency em ppltasks.
 title: Programação assíncrona em C++
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, threads, assíncrono, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834724"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992148"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Programação assíncrona em C++/CX
 > [!NOTE]
 > Este tópico existe para ajudar você na manutenção do seu aplicativo C++/CX. Recomendamos que você use [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para novos aplicativos. C++/WinRT é uma projeção de linguagem C++17 completamente moderna e padrão para APIs do Windows Runtime (WinRT), implementada como uma biblioteca com base em cabeçalho e arquivo, projetada para fornecer acesso de primeira classe à API moderna do Windows.
 
-Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ CX) usando o `task` classe que é definido no `concurrency` namespace em ppltasks. h.
+Este artigo descreve a maneira recomendada de consumir métodos assíncronos em extensões de componente VisualC + + (C++ c++ /CX) usando o `task` classe que é definido no `concurrency` namespace em ppltasks.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Tipos assíncronos da Plataforma Universal do Windows (UWP)
 A Plataforma Universal do Windows (UWP) apresenta um modelo bem definido para chamar métodos assíncronos e fornece os tipos necessários para consumir esses métodos. Se você não estiver familiarizado com o modelo assíncrono UWP, leia [Programação Assíncrona][AsyncProgramming] antes de continuar a ler este artigo.

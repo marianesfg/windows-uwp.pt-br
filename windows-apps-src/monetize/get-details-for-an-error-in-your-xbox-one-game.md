@@ -1,16 +1,16 @@
 ---
-description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico para seu Xbox One jogo.
+description: Use este método na API de análise da Microsoft Store para obter dados detalhados de um erro específico de seu Xbox One jogo.
 title: Obter detalhes de um erro em seu Xbox One jogo
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, erros, detalhes
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827770"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992188"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Obter detalhes de um erro em seu Xbox One jogo
 
@@ -48,7 +48,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando detalhes do erro. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
+| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando detalhes do erro. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto estará incluída no arquivo. tsv. |  Sim  |
 | failureHash | string | A ID exclusiva do erro para o qual você deseja obter informações detalhadas. Para obter esse valor para o erro que você está interessado, use o método [obter dados de relatório de erro para o seu Xbox One jogo](get-error-reporting-data-for-your-xbox-one-game.md) e use o valor de **failureHash** no corpo da resposta desse método. |  Sim  |
 | startDate | date | A data de início no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é 30 dias antes da data atual. |  Não  |
 | endDate | date | A data de término no intervalo de datas dos dados de erros detalhados a serem recuperados. O padrão é a data atual. |  Não  |
@@ -99,7 +99,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | market          | string  | O código de país ISO 3166 do mercado do dispositivo.     |
 | osBuild         | string  | O número de versão do sistema operacional no qual o erro ocorreu.       |
 | packageVersion  | string  | A versão do pacote do jogo que está associado esse erro.    |
-| deviceModel           | string  | Uma das seguintes cadeias de caracteres que especifica o console Xbox One no qual o jogo estava em execução quando o erro ocorreu.<p/><ul><li><strong>Xbox da Microsoft um</strong></li><li><strong>Um S Xbox da Microsoft</strong></li><li><strong>X de um Xbox da Microsoft</strong></li></ul>  |
+| deviceModel           | string  | Uma das seguintes cadeias de caracteres que especifica o console Xbox One no qual o jogo estava em execução quando o erro ocorreu.<p/><ul><li><strong>Xbox da Microsoft um</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
 | osVersion       | string  | A versão do sistema operacional no qual ocorreu o erro. Isso é sempre o valor **Windows 10**.    |
 | osRelease       | string  |  Uma das seguintes cadeias de caracteres que especifica a versão do sistema operacional Windows 10 ou anel de liberação (como uma subpopulação na versão do sistema operacional) no qual ocorreu o erro.<p/><ul><li><strong>Versão1507</strong></li><li><strong>Versão1511</strong></li><li><strong>Versão1607</strong></li><li><strong>Versão1703</strong></li><li><strong>Versão1709</strong></li><li><strong>Versão1803</strong></li><li><strong>Versão prévia de lançamento</strong></li><li><strong>Participante do Programa Windows Insider - Modo Rápido</strong></li><li><strong>Participante do Programa Windows Insider - Modo Lento</strong></li></ul><p>Se a versão do sistema operacional ou anel de liberação de versão de pré-lançamento for desconhecida, este campo terá o valor <strong>Desconhecido</strong>.</p>    |
 | deviceType      | string  | O tipo de dispositivo no qual o erro ocorreu. Isso é sempre o valor **Console**.     |
