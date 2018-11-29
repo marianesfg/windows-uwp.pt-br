@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, fone de ouvido
 ms.localizationpriority: medium
 ms.openlocfilehash: b3de68cc59c9928a52eba5caeb840e9e825eecf0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7989439"
+ms.locfileid: "8200316"
 ---
 # <a name="headset"></a>Fone de ouvido
 

@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993442"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200544"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Os criadores de aplicativo do sistema de Design fluente para Windows
 
@@ -48,7 +48,7 @@ Recursos de Design Fluente estão integrados ao UWP. Alguns desses recursos&mdas
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-Além de diretrizes de design, nossos artigos de Design fluente também mostram como escrever o código que faz com que seus designs de acontecer. UWP usa XAML, um idioma com base em marcação que torna mais fácil criar interfaces do usuário. Veja um exemplo:
+Além de diretrizes de design, nossos artigos de Design fluente também mostram como escrever o código que faz com que seus designs acontecer. UWP usa XAML, um idioma com base em marcação que torna mais fácil criar interfaces do usuário. Veja um exemplo:
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">
