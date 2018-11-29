@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, joystick de arcade, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965018"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190345"
 ---
 # <a name="arcade-stick"></a>Joystick de arcade
 
@@ -30,7 +30,7 @@ Os joysticks de arcade são dispositivos de entrada valorizados por reproduzirem
 
 Os joysticks de arcade Xbox One são equipados com um joystick digital de 8 vias, seis botões de **ação** (representados como A1 A6 na imagem abaixo) e dois botões **especiais** (representados como S1 e S2); eles são dispositivos de entrada inteiramente digitais que não dão suporte a controles analógicos ou vibração. Os joysticks de arcade Xbox One também são equipados com botões **Exibir** e **Menu** usado para dar suporte à navegação de interface do usuário, mas eles não estiverem aceitam comandos e não podem ser prontamente acessados como botões de joystick.
 
-![Arcade drive com o joystick de 4 direcional, botões de ação 6 (A1-A6) e 2 botões especiais (S1 e S2)](images/arcade-stick-1.png)
+![Controles de Arcade Joystick com 4 direcional de joystick, botões de ação 6 (A1-A6) e 2 botões especiais (S1 e S2)](images/arcade-stick-1.png)
 
 ### <a name="ui-navigation"></a>Navegação da interface do usuário
 
@@ -144,7 +144,7 @@ Além do estado do joystick de arcade, cada leitura inclui um carimbo de data e 
 Cada um dos botões de joystick de arcade&mdash;as quatro direções do joystick, seis botões de **ação** e dois botões **especiais** &mdash;fornece uma leitura digital que indica se ele foi pressionado (para baixo) ou liberado (para cima). Para garantir a eficiência, as leituras dos botões não são representadas como valores booleanos individuais; em vez disso, elas são reunidas em um único campo de bits que é representado pela enumeração [ArcadeStickButtons][] .
 
 > [!NOTE]
-> Os joysticks de Arcade são equipados com botões adicionais usados para navegação na interface do usuário, como os botões de **modo de exibição** e **Menu** . Esses botões não fazem parte da enumeração `ArcadeStickButtons` e só podem ser lidos acessando o joystick de arcade como um dispositivo de navegação da interface do usuário. Para obter mais informações, consulte [Dispositivo de navegação da interface do usuário](ui-navigation-controller.md).
+> Os joysticks de Arcade são equipados com botões adicionais usados para navegação na interface do usuário, como os botões de **modo de exibição** e um **Menu** . Esses botões não fazem parte da enumeração `ArcadeStickButtons` e só podem ser lidos acessando o joystick de arcade como um dispositivo de navegação da interface do usuário. Para obter mais informações, consulte [Dispositivo de navegação da interface do usuário](ui-navigation-controller.md).
 
 Os valores dos botões são lidos na propriedade `Buttons` da estrutura [ArcadeStickReading][]. Como essa propriedade é um campo de bits, o mascaramento bit a bit é usado para isolar o valor do botão de interesse. O botão está pressionado (para baixo) quando o bit correspondente está definido; caso contrário, ele está liberado (para acima).
 

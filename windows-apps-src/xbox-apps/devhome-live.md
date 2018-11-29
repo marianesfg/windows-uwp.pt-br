@@ -8,19 +8,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993472"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8188981"
 ---
 # <a name="xbox-live-page-dev-home"></a>Página (Dev Home) do Xbox Live
    
   
-A página de início do desenvolvimento **Do Xbox Live** captura informações multijogador e exibe o status atual do serviço Xbox Live.   
+A página **Do Xbox Live** de Dev Home captura informações multijogador e exibe o status atual do serviço Xbox Live.   
  ![Página do Xbox Live de Dev Home](images/devhome_live.png)   
   
-A página **Do Xbox Live** contém os painéis a seguir:   
+A página **Do Xbox Live** contém os seguintes painéis:   
  
    *  [XBTrace (advancedmp)](#ID4EPB)  
    *  [Status do Xbox Live](#ID4E3B)  
@@ -33,7 +33,7 @@ A página **Do Xbox Live** contém os painéis a seguir:
 ## <a name="xbtrace-advancedmp"></a>XBTrace (advancedmp)  
    
   
-A página de **XBTrace (advancedmp)** for iniciada ou interrompida captura de um rastreamento de multijogador. Ele também pode capturar um instantâneo do estado atual de multijogador.   
+A página **XBTrace (advancedmp)** for iniciada ou interrompida captura de um rastreamento de multijogador. Ele também pode capturar um instantâneo do estado atual de multijogador.   
   
 <a id="ID4E3B"></a>
 

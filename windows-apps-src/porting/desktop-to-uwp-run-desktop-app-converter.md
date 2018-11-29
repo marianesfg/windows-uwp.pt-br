@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: ca618dde24c1eed254d89c2d84734b7e3aec6306
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967983"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8204156"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Empacotar um aplicativo da área de trabalho usando o Desktop App Converter
 
@@ -120,7 +120,7 @@ Para empacotar seu aplicativo, execute o comando ``DesktopAppConverter.exe`` na 
 Você especificará o número de fornecedor, nome e a versão do pacote do aplicativo usando os parâmetros.
 
 > [!NOTE]
-> Se você tiver reservado o nome do aplicativo na Microsoft Store, você pode obter os nomes de pacote e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
+> Se você já reservou o nome do aplicativo na Microsoft Store, você pode obter os nomes de pacote e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você planeja fazer o upload de seu aplicativo em outros sistemas, você pode fornecer seus próprios nomes para isso, desde que o nome do editor que você escolher corresponda ao nome no certificado que você usa para assinar seu aplicativo.
 
 ### <a name="a-quick-look-at-command-parameters"></a>Um olhar rápido sobre os parâmetros do comando
 
@@ -176,7 +176,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 >[!IMPORTANT]
 >Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro.
 
-O parâmetro ``InstallerArguments`` é um parâmetro opcional. No entanto, como o Desktop App Converter precisa do seu instalador para ser executado no modo autônomo, você pode ter usá-lo se seu aplicativo precisar de sinalizadores silenciosos para executar silenciosamente. O sinalizador ``/S`` é um sinalizador silencioso muito comum, mas o sinalizador que você usa pode ser diferente dependendo da tecnologia do instalador que você usou para criar o arquivo de configuração.
+O parâmetro ``InstallerArguments`` é um parâmetro opcional. No entanto, porque o Desktop App Converter precisa do seu instalador para ser executado no modo autônomo, você precisa usá-lo se seu aplicativo precisar de sinalizadores silenciosos para executar silenciosamente. O sinalizador ``/S`` é um sinalizador silencioso muito comum, mas o sinalizador que você usa pode ser diferente dependendo da tecnologia do instalador que você usou para criar o arquivo de configuração.
 
 **Vídeo**
 
@@ -267,7 +267,7 @@ Você também pode exibir toda a lista executando o comando ``Get-Help`` na jane
 |-InstallerArguments &lt;Cadeia de Caracteres&gt; |Opcional |Uma lista separada por vírgulas ou uma série de argumentos para forçar o instalador a executar sem supervisão/silenciosamente. Este parâmetro é opcional se o instalador for um msi. Para obter um registro do seu instalador, forneça o argumento de registro para o instalador aqui e use o caminho &lt;log_folder&gt;, que é um token que o conversor substitui com o caminho apropriado. <br><br>**OBSERVAÇÃO**: Os sinalizadores sem supervisão/silenciosos e os argumentos de registro variarão entre as tecnologias instaladoras. <br><br>Um exemplo de uso para este parâmetro: -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log" Outro exemplo que não gera um arquivo de registro pode ser ```-InstallerArguments "/quiet", "/norestart"``` Mais uma vez, você deve literalmente dirigir todos os registros para o caminho do token &lt;log_folder&gt; se quiser que o conversor capture e coloque na pasta de registro final.|
 |-InstallerValidExitCodes &lt;Int32&gt; |Opcional |Uma lista separada por vírgulas de códigos de saída que indicam o seu instalador executado com sucesso (por exemplo: 0, 1234, 5678).  Por padrão, isso é 0 para non-msi e 0, 1641, 3010 para msi.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Opcional |Um interruptor que, quando presente, informa esse script para chamar MakeAppx na saída. |
-|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um botão que, quando presente, informa este script para a saída como um pacote de MSIX do pacote. |
+|-MakeMSIX [&lt;SwitchParameter&gt;]  |Opcional |Um botão que, quando presente, informa este script para empacotar a saída como um pacote de MSIX. |
 |<a id="identity-params" /><strong>Parâmetros de identidade do pacote</strong>||
 |-PackageName &lt;Cadeia de Caracteres&gt; |Necessário |O nome do seu pacote de aplicativos Universais do Windows. Se o Partner Center atribui uma identidade ao pacote que começa com um número, certifique-se de que você também passa o parâmetro <i>- AppId</i> e use apenas o sufixo da cadeia de caracteres (após o separador decimal) como o valor desse parâmetro. |
 |-Publisher &lt;Cadeia de Caracteres&gt; |Necessário |O editor do pacote da sua aplicativo Universal Windows |
@@ -330,7 +330,7 @@ Siga estas etapas para instalar o certificado gerado e, em seguida, execute seu 
 
 ## <a name="modify-the-packaged-app"></a>Modificar o app empacotado
 
-Você provavelmente precisará fazer alterações ao seu aplicativo empacotado para corrigir bugs, adicionar recursos visuais ou aprimorar seu aplicativo com experiências modernas como blocos dinâmicos.
+Você provavelmente precisará fazer alterações ao seu aplicativo empacotado para resolver bugs, adicionar recursos visuais ou aprimorar seu aplicativo com experiências modernas como blocos dinâmicos.
 
 Depois de fazer suas alterações, você não precisa executar o conversor novamente. Na maioria dos casos, você pode reempacotar seu aplicativo usando a ferramenta MakeAppx e o arquivo appxmanifest XML o DAC gera para o seu aplicativo. Consulte [Gerar um pacote de aplicativo do Windows](desktop-to-uwp-manual-conversion.md#make-appx).
 
@@ -396,7 +396,7 @@ Você também pode consultar [esta](desktop-to-uwp-known-issues.md#app-converter
 
 Consulte [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
-**Executar o aplicativo / encontrar e corrigir problemas**
+**Execute seu aplicativo / encontrar e corrigir problemas**
 
 Consulte [Executar, depurar e testar um aplicativo da área de trabalho empacotado](desktop-to-uwp-debug.md)
 

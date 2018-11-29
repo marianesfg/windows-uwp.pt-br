@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projetado, projeção, implementação, implementar, classe de tempo de execução, ativação
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fd543d7c3ad9dec878cc02b14a79c254d91b4be
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968764"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190893"
 ---
 # <a name="author-apis-with-cwinrt"></a>Criar APIs com C++/WinRT
 
@@ -249,7 +249,7 @@ namespace MyProject
 }
 ```
 
-Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **fazer** retorna a interface padrão do tipo de implementação.
+Para ir de **MyType** a um **IStringable** ou objeto **IClosable** que você pode usar ou retornar como parte de sua projeção, você pode chamar o modelo de função [**winrt::make**](/uwp/cpp-ref-for-winrt/make). **tornar** retorna a interface padrão do tipo de implementação.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -278,12 +278,12 @@ iclosable.Close();
 
 A classe **MyType** não é parte da projeção; ela é a implementação. Mas, dessa forma você pode chamar seus métodos de implementação diretamente, sem a sobrecarga de uma chamada de função virtual. No exemplo acima, mesmo que **MyType::ToString** use a mesma assinatura do método projetada em **IStringable**, nós chamamos o método não virtual diretamente, sem cruzar a interface do binário do aplicativo (ABI). O **com_ptr** simplesmente contém um ponteiro para a estrutura **MyType**, então você também pode acessar outros detalhes internos de **MyType** por meio da variável `myimpl` e o operador de seta.
 
-No caso em que você tiver um objeto de interface e souber que é uma interface em sua implementação, em seguida, você pode voltar para a implementação usando o modelo de função [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . Novamente, é uma técnica que evita chamadas de função virtuais e permite que você obtenha diretamente na implementação.
+No caso em que você tiver um objeto de interface e souber que se trata de uma interface em sua implementação, em seguida, você pode voltar para a implementação usando o modelo de função [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) . Novamente, é uma técnica que evita chamadas de função virtuais e permite que você obtenha diretamente na implementação.
 
 > [!NOTE]
 > Se você ainda não tiver instalado o SDK do Windows versão 10.0.17763.0 (Windows 10, versão 1809) ou posterior, em seguida, você precisará chamar [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) em vez de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-Veja um exemplo. [Implemente a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)é outro exemplo.
+Veja um exemplo. Há outro exemplo em [implementar a classe de controle personalizado **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)

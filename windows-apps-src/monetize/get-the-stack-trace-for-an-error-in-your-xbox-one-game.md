@@ -1,20 +1,20 @@
 ---
-description: Use este método na API de análise da Microsoft Store para obter o rastreamento de pilha de um erro em seu Xbox One jogo.
+description: Use este método na API de análise da Microsoft Store para obter os rastreamentos de pilha de um erro em seu Xbox One jogo.
 title: Obter o rastreamento de pilha de um erro em seu Xbox One jogo
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, rastreamento de pilha, erro
 ms.localizationpriority: medium
 ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969584"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8194439"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Obter o rastreamento de pilha de um erro em seu Xbox One jogo
 
-Use este método na análise da Microsoft Store API para obter o rastreamento de pilha de um erro em seu Xbox One jogo que ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP. Este método pode apenas baixar o rastreamento de pilha de um erro que ocorreu nos últimos 30 dias.
+Use este método na análise da Microsoft Store API para obter os rastreamentos de pilha de um erro em seu Xbox One jogo que ingerido por meio do Portal de desenvolvedor do Xbox (XDP) e está disponível no painel do Centro de parceiro de análise XDP. Este método pode apenas baixar o rastreamento de pilha de um erro que ocorreu nos últimos 30 dias.
 
 Antes de usar esse método, primeiro você deve usar o método [obter detalhes de um erro em seu jogo Xbox One](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar a ID do arquivo CAB que está associado ao erro para o qual você deseja recuperar o rastreamento de pilha.
 
@@ -48,7 +48,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  |
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando um rastreamento de pilha. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto está incluída no arquivo. tsv. |  Sim  |
+| applicationId | string | A ID do produto do jogo Xbox One para o qual você está recuperando um rastreamento de pilha. Para obter a ID do produto do jogo, navegue até seu jogo no Portal de Desenvolvedor do Xbox (XDP) e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de integridade do relatório de análise do Partner Center do Windows, a ID do produto estará incluída no arquivo. tsv. |  Sim  |
 | cabId | string | A ID exclusiva do arquivo CAB associado ao erro para o qual você deseja recuperar o rastreamento de pilha. Para obter essa ID, use o método [obter detalhes de um erro em seu Xbox One jogo](get-details-for-an-error-in-your-xbox-one-game.md) para recuperar os detalhes de um erro específico em seu aplicativo e use o valor de **cabId** no corpo da resposta desse método. |  Sim  |
 
  

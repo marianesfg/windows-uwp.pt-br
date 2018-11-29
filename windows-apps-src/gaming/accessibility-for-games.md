@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, acessibilidade, jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: 489804c4645c8e6d1c4926e362f81926c8b2f3c8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965263"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189744"
 ---
 #  <a name="making-games-accessible"></a>Tronando os jogos acessíveis
 
