@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993482"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197721"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portabilidade do WindowsPhone Silverlight para UWP para fator forma e experiência do usuário
 
 
 O tópico anterior era [Portando camadas de negócios e de dados](wpsl-to-uwp-business-and-data.md).
 
-Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar. Diferenças entre os dispositivos, como o tamanho físico, orientação padrão e fator de resolução de pixel efetivo para a maneira como um aplicativo da plataforma Universal do Windows (UWP) é processado pelo Windows 10. A boa notícia é que grande parte do trabalho pesado é feito para você pelo sistema usando conceitos inteligentes como pixels efetivos.
+Os aplicativos do Windows compartilham uma aparência comum em computadores, dispositivos móveis e muitos outros tipos de dispositivos. Os padrões da interface do usuário, de entrada e de interação são muito semelhantes, e um usuário que alterne entre dispositivos ficará contente com a experiência familiar. Diferenças entre os dispositivos, como tamanho físico, orientação padrão e fator de resolução de pixel efetivo para a maneira como um aplicativo da plataforma Universal do Windows (UWP) é processado pelo Windows 10. A boa notícia é que grande parte do trabalho pesado é feito para você pelo sistema usando conceitos inteligentes como pixels efetivos.
 
 ## <a name="different-form-factors-and-user-experience"></a>Fatores forma diferentes e a experiência do usuário
 
@@ -30,7 +30,7 @@ A resposta resumida é que isso é subjetivo, já que depende não só do tamanh
 
 De maneira objetiva, uma tela é medida em unidades de polegadas e pixels (brutos) físicos. Conhecer ambas as métricas permite calcular quantos pixels cabem em uma polegada. Essa é a densidade de pixels, também conhecida como DPI (pontos por polegada) ou também PPI (pixels por polegada). E a recíproca do DPI é o tamanho físico dos pixels como uma fração de uma polegada. A densidade de pixels também é conhecida como *resolução*, embora esse termo seja frequentemente usado de forma geral para significar contagem de pixels.
 
-À medida que a distância de exibição aumenta, todas as métricas de objeto *parecem* menores, e são resolvidos para o *tamanho efetivo* da tela e para sua *resolução efetiva*. Em geral, o telefone é o que fica mais próximo aos olhos; em seguida, vêm o tablet e o monitor do computador, e os dispositivos [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) e as TVs são os que ficam mais distantes. Para compensar, os dispositivos tendem a ficar objetivamente maiores conforme a distância de exibição. Quando você define tamanhos em elementos da interface do usuário, está definindo esses tamanhos em unidades chamadas pixels efetivos (epx). E o Windows 10 levará em conta a DPI e a distância de exibição típica de um dispositivo, para calcular o melhor tamanho dos elementos da interface do usuário em pixels físicos para oferecer a melhor experiência de exibição. Consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
+À medida que a distância de exibição aumenta, todas as métricas de objeto *parecem* menores, e são resolvidos para o *tamanho efetivo* da tela e para sua *resolução efetiva*. Em geral, o telefone é o que fica mais próximo aos olhos; em seguida, vêm o tablet e o monitor do computador, e os dispositivos [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) e as TVs são os que ficam mais distantes. Para compensar, os dispositivos tendem a ficar objetivamente maiores conforme a distância de exibição. Quando você define tamanhos em elementos da interface do usuário, está definindo esses tamanhos em unidades chamadas pixels efetivos (epx). E Windows 10 levará em conta a DPI e a distância de exibição típica de um dispositivo, para calcular o melhor tamanho dos elementos da interface do usuário em pixels físicos para oferecer a melhor experiência de exibição. Consulte [Pixels de exibição/efetivos, distância de exibição e fatores de escala](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Mesmo assim, recomendamos que você teste seu aplicativo com muitos dispositivos diferentes para que possa confirmar cada experiência.
 

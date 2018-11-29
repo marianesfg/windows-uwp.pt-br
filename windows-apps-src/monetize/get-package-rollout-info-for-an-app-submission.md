@@ -7,11 +7,11 @@ keywords: windows 10, uwp, API de envio da Microsoft Store, distribuição de pa
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970943"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197433"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>Obter informações de distribuição para um envio de aplicativo
 
@@ -24,7 +24,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um envio de aplicativo](create-an-app-submission.md) .
+* Crie um envio para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método [criar um envio de aplicativo](create-an-app-submission.md) .
 
 ## <a name="request"></a>Solicitação
 

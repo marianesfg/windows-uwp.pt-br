@@ -8,19 +8,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964792"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197297"
 ---
 # <a name="networking-page-dev-home"></a>Página de rede (Dev Home)
    
   
-A página **de rede** de Dev Home simula várias condições de redes para fins de solução de problemas. Ele também permite que você inicie um rastreamento de pacote de rede.   
+A página de **rede** de Dev Home simula várias condições de redes para fins de solução de problemas. Ele também permite que você inicie um rastreamento de pacote de rede.   
  ![Página de rede de Dev Home](images/devhome_networking.png)   
   
-A página de **rede** contém os painéis a seguir:   
+A página de **rede** contém os seguintes painéis:   
  
    *  [Simulação de rede](#ID4EEB)  
    *  [XBTrace (netcap)](#ID4EOB)  

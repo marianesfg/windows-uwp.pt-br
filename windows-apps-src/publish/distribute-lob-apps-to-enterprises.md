@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, lob, linha de negócios, aplicativos corporativos, store para empresas, store para educação, empresa
 ms.localizationpriority: medium
 ms.openlocfilehash: eecd7a3ff86de5db9693bf6ce597e2b1e00bb4ad
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967233"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8196728"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicativos LOB para empresas
 
@@ -92,7 +92,7 @@ Depois que o envio passar pelo processo de certificação, o aplicativo não est
 
 A disponibilização de aplicativos para uma empresa pela Microsoft Store para Empresas ou Microsoft Store para Educação garante que o aplicativo foi assinado pela Store e está em conformidade com as Políticas da Store padrão.
 
-Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam enviado por meio do Partner Center (como motivos relacionados a conformidade ou aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
+Em alguns casos, as empresas podem não querer que seus aplicativos LOB sejam enviado pelo Centro de parceiros (como motivos relacionados a conformidade ou aplicativos que precisam de recursos adicionais). Nesse caso, a empresa pode implantar os aplicativos diretamente nos computadores por meio de sideload, sem usar a Microsoft Store para Empresas ou a Microsoft Store para Educação.
 
 Para saber mais, veja [Sideload de aplicativos LOB no Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
