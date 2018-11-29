@@ -3,11 +3,11 @@ title: Referência da API de informações de implantação do Device Portal
 description: Saiba como acessar a API de informações de implantação de maneira programática.
 ms.localizationpriority: medium
 ms.openlocfilehash: c44089313b100880b419e9b55a26101e877496f3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7973957"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8198458"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita informações de implantação para um ou mais pacotes instalados.
 

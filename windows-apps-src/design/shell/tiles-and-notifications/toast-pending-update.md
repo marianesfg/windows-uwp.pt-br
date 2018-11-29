@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, notificação do sistema, atualização pendente, atualizaçãopendente, interatividade multietapas, interações de várias etapas
 ms.localizationpriority: medium
 ms.openlocfilehash: b1574ee2913bd2889af204aae1089dc170df95b8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965174"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197611"
 ---
 # <a name="toast-with-pending-update-activation"></a>Notificação do sistema com ativação de atualização pendente
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, análise, comentário, revisor
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ec883e7bcb98d69673b520df918e085182d35ec
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7984652"
+ms.locfileid: "8199403"
 ---
 # <a name="reviews-report"></a>Relatório de avaliações
 

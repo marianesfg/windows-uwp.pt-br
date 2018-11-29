@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965579"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197529"
 ---
 # <a name="xaml-syntax-guide"></a>Guia de sintaxe do XAML
 
@@ -238,7 +238,7 @@ Em primeiro lugar, a presença do elemento de objeto indica que deve ser criada 
 
 Outra regra do XAML é que os atributos de um elemento devem ser capazes de ser definidos em qualquer ordem. Por exemplo, não há diferença entre `<Rectangle Height="50" Width="100" />` e `<Rectangle Width="100"  Height="50" />`. A ordem de uso é uma questão de estilo.
 
-**Observação**os designers de XAML geralmente promovem convenções de ordenação se você usar superfícies de design diferentes do editor de XML, mas é possível editar livremente esse XAML mais tarde, para reordenar os atributos ou introduzir novos.
+**Observação**os designers XAML geralmente promovem convenções de ordenação se você usar superfícies de design diferentes do editor de XML, mas é possível editar livremente esse XAML mais tarde, para reordenar os atributos ou introduzir novos.
 
 ## <a name="attached-properties"></a>Propriedades anexadas
 
@@ -276,7 +276,7 @@ Muitas propriedades na API de Tempo de Execução do Windows usam enumerações 
 -   Não use uma forma qualificada, pois ela não funcionará. Por exemplo, este é um XAML inválido: `<Button Visibility="Visibility.Visible"/>`.
 -   Não use o valor da constante. Em outras palavras, não confie no valor inteiro da enumeração que aparece explícita ou implicitamente, dependendo de como a enumeração foi definida. Embora isso pareça funcionar, não é uma boa prática tanto no XAML como em código, pois você está confiando no que poderia ser um detalhe de implementação transitório. Por exemplo, não faça isto: `<Button Visibility="1"/>`.
 
-**Observação**nos tópicos de referência para APIs que usam XAML e enumerações, clique no link para o tipo de enumeração na seção de **valor de propriedade** da **sintaxe**. Isso vincula à página de enumeração na qual você descobre as constantes nomeadas referentes a essa enumeração.
+**Observação**nos tópicos de referência para APIs que usam XAML e enumerações, clique no link para o tipo de enumeração na seção **o valor da propriedade** de **sintaxe**. Isso vincula à página de enumeração na qual você descobre as constantes nomeadas referentes a essa enumeração.
 
 As enumerações podem ser relacionadas a sinalizador, ou seja, atribuídas com **FlagsAttribute**. Se você precisar especificar uma combinação de valores para uma enumeração de sinalizadores como um valor de atributo XAML, use o nome de cada constante de enumeração, com uma vírgula (,) entre cada nome, sem espaços. Atributos do tipo sinalizador não são comuns no vocabulário XAML do Windows Runtime, mas [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) é um exemplo em que definir um valor de enumeração do tipo sinalizador em XAML não tem suporte.
 
