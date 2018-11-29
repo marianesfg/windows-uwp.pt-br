@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7844043"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986934"
 ---
 # <a name="bc6h-format"></a>Formato BC6H
 
@@ -30,7 +30,7 @@ BC6H é especificado pelos seguintes valores de enumeração DXGI\_FORMAT:
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Esse formato BC6H não usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Esse formato BC6H usa um bit de sinal nos valores de canal de cor da ponto flutuante de 16 bits.
 
-**Observação**  o flutuante de 16 formato de ponto de canais de cor é geralmente conhecido como um "meio" ponto flutuante formato. Esse formato tem o seguinte layout de bit:
+**Observação**  o flutuante de 16 formato de ponto de canais de cor é geralmente conhecido como um "parcial" ponto flutuante formato. Esse formato tem o seguinte layout de bit:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (float não assinado) | 5 bits de expoente + 11 bits de mantissa              |

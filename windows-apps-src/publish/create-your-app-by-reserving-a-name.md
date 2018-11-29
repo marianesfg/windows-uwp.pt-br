@@ -7,11 +7,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834882"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990016"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Crie seu app reservando um nome
 
@@ -56,7 +56,7 @@ Escolher o melhor nome para o aplicativo é uma tarefa importante. Escolha um no
 
 ## <a name="manage-additional-app-names"></a>Gerenciar nomes de aplicativos adicionais
 
-Você pode adicionar e gerenciar mais nomes na página **Gerenciar nomes de aplicativo** na seção de **gerenciamento de aplicativo** para cada um dos seus aplicativos no Partner Center.
+Você pode adicionar e gerenciar mais nomes na página **Gerenciar nomes de aplicativo** na seção **gerenciamento de aplicativo** para cada um dos seus aplicativos no Partner Center.
 
 Em alguns casos, convém reservar vários nomes para usar o mesmo aplicativo, como quando você deseja oferecer seu aplicativo em vários idiomas e quer usar nomes diferentes para cada idioma. Você precisará reservar um nome adicional se desejar alterar o nome do aplicativo completamente.
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp, aplicativo do azure ad, aad, usuário, grupo, vários usuários, multiusuário
 ms.localizationpriority: medium
 ms.openlocfilehash: 7dd300aa6a37c205e01c6f73d95ef1818d516fc0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840912"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989860"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Adicionar usuários, grupos e aplicativos Azure AD à sua conta do Partner Center
 
@@ -33,7 +33,7 @@ Tenha em mente que todos os usuários do Partner Center (incluindo grupos e apli
 
 ## <a name="add-users-to-your-partner-center-account"></a>Adicionar usuários à sua conta do Partner Center
 
-Para adicionar usuários à sua conta do Partner Center, vá para a página de **usuários** em **configurações de conta** e selecione **Adicionar usuários.** Você deve estar conectado com uma conta de gerenciador do locatário do Azure AD em que você deseja trabalhar. 
+Para adicionar usuários à sua conta do Partner Center, vá para a página de **usuários** nas **configurações da conta** e selecione **Adicionar usuários.** Você deve estar conectado com uma conta de gerenciador do locatário do Azure AD em que você deseja trabalhar. 
 
 ### <a name="add-existing-users"></a>Adicionar usuários existentes 
 
@@ -97,7 +97,7 @@ Se você precisar enviar um convite novamente, localize o usuário na página **
 
 ### <a name="changing-a-users-directory-password"></a>Como alterar a senha do diretório de um usuário
 
-Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se você tiver fornecido um **Email de recuperação de senha** ao criar a conta de usuário. Você também pode atualizar a senha do usuário seguindo as etapas a seguir (se você estiver conectado com uma conta de administrador global no seu locatário do Azure AD para alterar a senha do usuário). Observe que isso irá alterar a senha do usuário em seu locatário Azure AD, juntamente com a senha que ele usa para acessar o Partner Center. 
+Se um dos usuários precisar alterar a senha, ele pode fazer isso sozinho se você tiver fornecido um **Email de recuperação de senha** ao criar a conta de usuário. Você também pode atualizar a senha do usuário seguindo as etapas a seguir (se você estiver conectado com uma conta de administrador global no seu locatário do Azure AD para alterar a senha do usuário). Observe que isso mudará a senha do usuário em seu locatário Azure AD, juntamente com a senha que ele usa para acessar o Partner Center. 
 
 1.  Na página de **usuários** (em **configurações da conta**), selecione o nome da conta de usuário que você deseja editar.
 2.  Selecione o botão **Redefinir senha** na parte inferior da página.
@@ -115,13 +115,13 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Par
 ### <a name="add-groups-from-your-organizations-directory"></a>Adicionar grupos do diretório da sua organização
 
 1.  Selecione o ícone de engrenagem (perto do canto superior direito do Partner Center) e, em seguida, selecione **as configurações do desenvolvedor**. No menu **configurações** , selecione **os usuários**.
-2. Selecione a página de **usuários** , **grupos de adicionar**.
+2. Na página de **usuários** , selecione **Adicionar grupos**.
 2.  Selecione um ou mais grupos na lista exibida. Você pode usar a caixa de pesquisa para procurar grupos específicos.
     > [!TIP]
     > Se você selecionar mais de um grupo para adicionar à sua conta do Partner Center, você deve atribuir a eles a mesma função ou conjunto de permissões personalizados. Para adicionar vários grupos com permissões/funções diferentes, repita as etapas abaixo para cada função ou um conjunto de permissões personalizados.
 
 3.  Quando tiver terminado de selecionar grupos, clique em **Adicionar selecionado**.
-4.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para os grupos selecionados. Todos os membros do grupo poderão acessar sua conta do Partner Center com as permissões que você aplicar ao grupo, independentemente dos funções/permissões associadas à sua conta individual.
+4.  Na seção **Funções**, especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para os grupos selecionados. Todos os membros do grupo poderão acessar sua conta do Partner Center com as permissões aplicadas ao grupo, independentemente dos funções/permissões associadas à sua conta individual.
 5.  Clique em **Salvar**.
 
 
@@ -129,10 +129,10 @@ Você pode adicionar um grupo do diretório da organização à sua conta do Par
 
 Se você deseja conceder acesso ao Partner Center para um novo grupo, você pode criar um novo grupo na seção de **usuários** . Observe que o novo grupo será criado no diretório da organização, não apenas em sua conta do Partner Center.
 
-1.  Na página de **usuários** (em **configurações do desenvolvedor**), clique em **Adicionar grupos**.
+1.  Na página de **usuários** (em **configurações de desenvolvedor**), clique em **Adicionar grupos**.
 2.  Na próxima página, selecione o **novo grupo**.
 3.  Insira o nome de exibição para o novo grupo.
-4.  Especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o grupo. Todos os membros do grupo poderão acessar sua conta do Partner Center com as permissões que você aplicar ao grupo, independentemente dos funções/permissões associadas à sua conta individual.
+4.  Especifique [funções ou permissões personalizadas](set-custom-permissions-for-account-users.md) para o grupo. Todos os membros do grupo poderão acessar sua conta do Partner Center com as permissões aplicadas ao grupo, independentemente dos funções/permissões associadas à sua conta individual.
 5.  Selecione os usuários para atribuir ao novo grupo na lista que aparece. Você pode usar a caixa de pesquisa para procurar usuários específicos.
 6.  Quando terminar de selecionar usuários, clique em **Adicionar selecionado** para adicioná-los ao novo grupo.
 7.  Clique em **Salvar**.
@@ -163,7 +163,7 @@ Você pode permitir que aplicativos ou serviços que fazem parte da Azure sua or
 Se você deseja conceder acesso ao Partner Center para um novo Azure AD conta do aplicativo, você pode criar uma na seção de **usuários** . Observe que isso criará uma nova conta no diretório da organização, não apenas em sua conta do Partner Center.
 
 > [!TIP]
-> Se você estiver usando principalmente esse aplicativo Azure AD para autenticação do Partner Center e não precisa que os usuários acessem diretamente, insira qualquer endereço válido para a **URL de resposta** e **URI da ID do aplicativo**, desde que esses valores não são usados por outro do Azure Aplicativo de anúncio em seu diretório.
+> Se você estiver usando principalmente este aplicativo do Azure AD para autenticação do Partner Center e não precisa que os usuários acessem diretamente, insira qualquer endereço válido para a **URL de resposta** e **URI da ID do aplicativo**, desde que esses valores não sejam usados por outro do Azure Aplicativo de anúncio em seu diretório.
 
 1.  Na página de **usuários** (em **configurações da conta**), selecione **Adicionar aplicativos Azure AD**.
 2.  Na próxima página, selecione o **aplicativo de novo Azure AD**.
@@ -181,7 +181,7 @@ Após adicionar ou criar um aplicativo Azure AD, você pode retornar à seção 
 
 ### <a name="manage-keys-for-an-azure-ad-application"></a>Gerenciar chaves para um aplicativo Azure AD
 
-Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisará de uma chave. Você pode criar chaves para um aplicativo do Azure AD ao editar suas informações no Partner Center. Você também pode remover as chaves que não são mais necessárias.
+Se o aplicativo Azure AD ler e gravar dados no Microsoft Azure AD, ele precisará de uma chave. Você pode criar chaves para um aplicativo Azure AD ao editar suas informações no Partner Center. Você também pode remover as chaves que não são mais necessárias.
 
 1.  Na página de **usuários** (em **configurações da conta**), selecione o nome do aplicativo do Azure AD.
     > [!TIP]
@@ -223,7 +223,7 @@ Na página **usuários** (em **configurações da conta**), selecione o link mos
 
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>Remover usuários, grupos e aplicativos Azure AD
 
-Para remover um usuário, grupo ou aplicativo Azure AD de sua conta do Partner Center, selecione o link **Remover** que aparece ao lado do nome na página **usuários** . Depois de confirmar que você deseja removê-la, esse usuário, grupo ou aplicativo Azure AD poderá mais acessar sua conta do Partner Center (a menos que você adicioná-lo novamente mais tarde).
+Para remover um usuário, grupo ou aplicativo Azure AD da sua conta do Partner Center, selecione o link **Remover** que aparece ao lado do nome na página **usuários** . Depois de confirmar que você deseja removê-la, esse usuário, grupo ou aplicativo Azure AD poderá mais acessar sua conta do Partner Center (a menos que você adicioná-lo novamente mais tarde).
 
 > [!IMPORTANT]
 > Remover um usuário, grupo ou aplicativo Azure AD significa que ele não terá acesso à sua conta do Partner Center. Isso **não** exclui o usuário, grupo ou aplicativo Azure AD do diretório da organização.

@@ -8,19 +8,19 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 348b937b7967cbde80c0bc25a502e727a04e8af0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840804"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988429"
 ---
 # <a name="media-capture-page-dev-home"></a>Captura de mídia página (Dev Home)
    
   
-A página **de captura de mídia** de Dev Home captura de vídeo do título que está sendo executado no console.   
+A página **de captura de mídia** de Dev Home capturas de vídeo do título que está sendo executado no console.   
  ![Página de captura de Dev Home](images/devhome_capture.png)   
   
-A página **de captura de mídia** contém os painéis a seguir:   
+A página **de captura de mídia** contém os seguintes painéis:   
  
    *  [Captura de vídeo](#ID4EHB)  
 

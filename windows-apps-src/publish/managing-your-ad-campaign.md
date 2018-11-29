@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ead654573d16628e5dd07c58c937d4f71cb7f84c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855364"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990066"
 ---
 # <a name="manage-your-ad-campaign"></a>Gerenciar sua campanha publicitária
 
 
-Para gerenciar as campanhas publicitárias de seu aplicativo no [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** no menu de navegação esquerdo e, em seguida, selecione **as campanhas publicitárias**. Você visualizará todas as campanhas publicitárias associadas aos seus aplicativos com impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de campanha publicitária](promote-your-app-report.md).
+Para gerenciar as campanhas publicitárias para seu aplicativo no [Partner Center](https://partner.microsoft.com/dashboard), expanda **atrair** no menu de navegação esquerdo e, em seguida, selecione **as campanhas publicitárias**. Você visualizará todas as campanhas publicitárias associadas aos seus aplicativos com impressões, cliques e instalações para cada campanha publicitária. Para saber mais sobre impressões, cliques e instalações, veja as definições desses termos no [Relatório de campanha publicitária](promote-your-app-report.md).
 
 Para filtrar a lista de campanhas publicitárias, clique no menu suspenso **Filtros de seção** e escolha os filtros a seguir:
 

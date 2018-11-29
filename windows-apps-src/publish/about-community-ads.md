@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8acf83e2b39ece5fcd46c3d89d921e4f3013b67
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832394"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985909"
 ---
 # <a name="about-community-ads"></a>Sobre anúncios de comunidade
 
@@ -19,7 +19,7 @@ Se seu aplicativo [exibe anúncios em faixa ou anúncios intersticiais em faixa]
 
 Veja como este programa funciona:
 
-* Depois que você optar por em anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
+* Depois que você aceitação anúncios de comunidade conforme descrito a seguir, você pode [criar uma campanha publicitária de comunidade gratuita](create-an-ad-campaign-for-your-app.md). Em seguida, o seu aplicativo compartilhará espaço publicitário promocional com outros desenvolvedores que também aceitarão de anúncios de comunidade. Seu aplicativo mostrará anúncios para os aplicativos publicados por outros desenvolvedores que participam em anúncios de comunidade, e seus aplicativos exibirão anúncios para seu aplicativo.
 * Ganhe créditos para o espaço de anúncio promocional em outros aplicativos, mostrando anúncios de comunidade em seu aplicativo. Os créditos são calculados de acordo com o seguinte processo:
   * Para cada país ou região em que um aplicativo que serve anúncios da comunidade está disponível, o valor de eCPM (custo efetivo por mil impressões) da taxa do mercado atual para o país ou a região é multiplicado pelo número de solicitações de anúncios da comunidade feitas pelo seu aplicativo nesse país ou região. Esse valor corresponde aos créditos que você ganhou para o seu aplicativo nesse país ou nessa região.
   * Seus créditos totais acumulados por um determinado tempo são iguais à soma de todos os créditos obtidos em cada país ou região para cada um dos seus aplicativos que está servindo anúncios da comunidade.

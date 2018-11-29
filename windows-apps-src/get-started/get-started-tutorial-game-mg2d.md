@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832252"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986046"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Criar um jogo UWP em MonoGame 2D
 
@@ -26,7 +26,7 @@ O MonoGame é uma estrutura leve de desenvolvimento de jogos. Este tutorial vai 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 +   Windows 10 e Microsoft Visual Studio 2017.  [Clique aqui para saber como fazer a preparação inicial com o Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ A estrutura de desenvolvimento da área de trabalho do .NET. Se você ainda não tiver instalado, você pode obtê-lo, executando o instalador do Visual Studio novamente e modificar a instalação do Visual Studio 2017.
++ A estrutura de desenvolvimento da área de trabalho do .NET. Se você ainda não tiver instalado, você pode obtê-lo novamente executando o instalador do Visual Studio e modificar a instalação do Visual Studio 2017.
 +   Conhecimento básico de C# ou uma linguagem de programação similar orientada a objetos. [Clique aqui para acessar uma introdução a C#](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   É útil ter familiaridade com conceitos de ciências básicas de computação, como classes, métodos e variáveis.
 
@@ -323,7 +323,7 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 A imagem de brócolis é bem maior do que queremos que apareça no jogo, portanto, nós vamos dimensioná-la até 0,2 vezes seu tamanho original.
 
-### <a name="5-program-obstacle-behaviour"></a>5. comportamento de obstáculo programa
+### <a name="5-program-obstacle-behaviour"></a>5. comportamento de obstáculo programe
 Queremos que o brócolis para surja de um lugar fora da tela e vá na direção do avatar do jogador para que ele precise se esquivar. Para fazer isso, adicione este método à classe **Game1.cs** :
 
 ```CSharp
@@ -482,7 +482,7 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que os sprites do brócolis e o dinossauro serão desenhados sobre o sprite da grama existente, portanto, eles nunca podem estar oculta atrás dela, independentemente de sua posição.
+No MonoGame, novas chamadas de **spriteBatch.Draw** vão desenhar sobre todas as chamadas anteriores. Isso significa que o brócolis e os sprites do dinossauro serão desenhados sobre o sprite da grama existente, portanto, eles nunca podem estar oculta atrás dela, independentemente de sua posição.
 
 Tente executar o jogo agora e movimentar o dinossauro com as teclas de seta e a barra de espaços. Se você tiver seguido as etapas acima, você deve ser capaz de fazer seu avatar se movimente dentro da janela do jogo e o brócolis deve gerar a uma velocidade crescente.
 

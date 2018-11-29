@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7845921"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986924"
 ---
 # <a name="advertising-performance-report"></a>Relatório de desempenho de anúncios
 
 
 O **relatório de desempenho de anúncios** no [Partner Center](https://partner.microsoft.com/dashboard) mostra suas [unidades de anúncio](in-app-ads.md) de desempenho, incluindo anúncios de comunidade. Esse relatório inclui dados de diversos provedores de anúncios em aplicativos UWP que usam a [mediação de anúncios](in-app-ads.md#mediation).
 
-Para exibir esse relatório, expanda **Analisar** no menu de navegação esquerdo e selecione **Desempenho do anúncio**. Você pode exibir esses dados no Partner Center, ou baixar os dados do relatório para exibição offline clicando nos ícones de seta na página. Como alternativa, é possível recuperar de forma programática esses dados usando o método [obter dados de desempenho de anúncios](../monetize/get-ad-performance-data.md) na [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
+Para exibir esse relatório, expanda **Analisar** no menu de navegação esquerdo e selecione **Desempenho do anúncio**. Você pode exibir esses dados no Partner Center ou baixar os dados do relatório para exibição offline clicando nos ícones de seta na página. Como alternativa, é possível recuperar de forma programática esses dados usando o método [obter dados de desempenho de anúncios](../monetize/get-ad-performance-data.md) na [API REST de análise](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Ao exibir os relatórios de desempenho de publicidade, observe que os dados dos relatórios dos últimos três dias podem mudar à medida que recebemos e processamos novos dados de várias fontes. Além disso, as novas declarações de dados podem ocorrer para até 90 dias retroativos.
 
@@ -58,7 +58,7 @@ O relatório de **Desempenho de anúncios** inclui dados para as seguintes métr
 | Taxa de preenchimento  | A porcentagem de solicitações de anúncio enviadas do aplicativo em que um anúncio foi exibido.  |
 | Cliques  |  O número de vezes que uma pessoa clicou em um anúncio no seu aplicativo. |
 | CTR  |  Taxa de cliques, que significa o número de vezes que um anúncio foi clicado, dividido pelo número de impressões. |
-| Visualização | A porcentagem de impressões de anúncios que são visíveis no seu aplicativo. Para obter mais detalhes sobre como esse valor é calculado, consulte [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md). |
+| Visualização | O percentual de impressões de anúncios que são visíveis no seu aplicativo. Para obter mais detalhes sobre como esse valor é calculado, consulte [otimizar a visualização de suas unidades de anúncio](../monetize/optimize-ad-unit-viewability.md). |
 | Créditos obtidos  | Se estiver executando uma campanha de [anúncio de comunidade](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), isso indica o número de créditos que você ganhou para espaço publicitário promocional, mostrando anúncios de comunidade em seu aplicativo.  |
 | Créditos gastos  | Se estiver executando uma campanha de [anúncio de comunidade](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), isso indica o número de créditos gastos em anúncios para seu aplicativo.  |
 

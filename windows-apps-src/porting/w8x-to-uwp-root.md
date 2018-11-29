@@ -7,30 +7,30 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852028"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983778"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Mudar do Windows Runtime 8.x para a UWP
 
 
 Se você tiver um aplicativo Universal 8.1 — se ele está direcionando o Windows 8.1, Windows Phone 8.1 ou ambos, saiba que seu código-fonte e suas habilidades serão portados perfeitamente para Windows 10. Com o Windows 10, você pode criar um aplicativo da plataforma Universal do Windows (UWP), que é um pacote de aplicativo único que os clientes podem instalar em cada tipo de dispositivo. Para obter mais informações sobre o Windows 10, aplicativos UWP e os conceitos de código e interface do usuário adaptável que mencionaremos neste guia de portabilidade, consulte o [guia para aplicativos UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Ao fazer a portabilidade, você perceberá que o Windows 10 compartilha a maioria das APIs com as plataformas anteriores, bem como marcação XAML, estrutura de interface do usuário e ferramentas, e você achará tudo isso muito familiar. Assim como antes, você ainda pode escolher entre C++, C# e Visual Basic como a linguagem de programação a ser usada com a estrutura da IU XAML. Seus primeiros passos ao planejar exatamente o que fazer com seu aplicativo atual ou aplicativos dependerá dos tipos de aplicativos e projetos que você tem. Isso é explicado nas seções a seguir.
+Ao fazer a portabilidade, você perceberá que o Windows 10 compartilha a maioria das APIs com as plataformas anteriores, bem como marcação XAML, estrutura da IU e ferramentas, e você achará tudo isso muito familiar. Assim como antes, você ainda pode escolher entre C++, C# e Visual Basic como a linguagem de programação a ser usada com a estrutura da IU XAML. Seus primeiros passos ao planejar exatamente o que fazer com seu aplicativo atual ou aplicativos dependerá dos tipos de aplicativos e projetos que você tem. Isso é explicado nas seções a seguir.
 
 ## <a name="if-you-have-a-universal-81-app"></a>Se você já tiver um aplicativo Universal 8.1
 
 Um aplicativo Universal 8.1 é criado a partir de um projeto de Aplicativo Universal 8.1. Digamos que o nome do projeto é AppName\_81. Ele contém estes subprojetos.
 
--   AppName\_81.Windows. Este é o projeto que compila o pacote do aplicativo para o Windows 8.1.
+-   AppName\_81.Windows. Este é o projeto que compila o pacote de aplicativo para Windows 8.1.
 -   AppName\_81.WindowsPhone. Este é o projeto que compila o pacote do aplicativo para o Windows Phone 8.1.
 -   AppName\_81.Shared. Este é o projeto que contém o código-fonte, os arquivos de marcação e outros ativos e recursos usados pelos outros dois projetos.
 
 Geralmente, um aplicativo Universal do Windows 8.1 oferece os mesmos recursos — e faz isso usando o mesmo código e marcação — em formatos Windows 8.1 e Windows Phone 8.1. Um aplicativo como esse é um candidato ideal para a portabilidade para um único aplicativo do Windows 10 que segmenta a família de dispositivos Universal (e que você pode instalar na mais ampla variedade de dispositivos). Você portará essencialmente o conteúdo do projeto compartilhado e precisará usar pouco ou nada dos outros dois projetos porque haverá pouco ou nada neles.
 
-Outras vezes, o Windows 8.1 e/ou o formulário do Windows Phone 8.1 do aplicativo contêm recursos únicos. Ou eles contêm os mesmos recursos, mas implementam esses recursos usando técnicas diferentes ou tecnologia distinta. Com um aplicativo assim, é possível optar por fazer a portabilidade de um único aplicativo direcionado à família de dispositivos Universal (neste caso, você vai desejar que o aplicativo se adapte a dispositivos diferentes) ou pode optar por portá-lo como mais de um aplicativo, talvez um direcionado à família de dispositivos da área de trabalho e outro à família de dispositivos móveis. A natureza do aplicativo Universal 8.1 determinará quais destas opções são melhores para o seu caso.
+Em outras ocasiões, o Windows 8.1 e/ou o formulário do Windows Phone 8.1 do aplicativo contêm recursos únicos. Ou eles contêm os mesmos recursos, mas implementam esses recursos usando técnicas diferentes ou tecnologia distinta. Com um aplicativo assim, é possível optar por fazer a portabilidade de um único aplicativo direcionado à família de dispositivos Universal (neste caso, você vai desejar que o aplicativo se adapte a dispositivos diferentes) ou pode optar por portá-lo como mais de um aplicativo, talvez um direcionado à família de dispositivos da área de trabalho e outro à família de dispositivos móveis. A natureza do aplicativo Universal 8.1 determinará quais destas opções são melhores para o seu caso.
 
 1.  Porte o conteúdo do projeto compartilhado para um aplicativo destinado à família de dispositivos Universal. Se aplicável, recupere qualquer outro conteúdo de projetos do Windows e do WindowsPhone, e use esse conteúdo incondicionalmente no aplicativo ou condicionalmente no dispositivo em que o seu aplicativo está sendo executado no momento (o último comportamento é conhecido como *adaptável*).
 2.  Porte o conteúdo do projeto do WindowsPhone para um aplicativo destinado à família de dispositivos Universal. Se aplicável, resgate qualquer outro conteúdo do projeto do Windows, usando-o incondicionalmente ou de modo adaptável.

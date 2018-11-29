@@ -6,14 +6,14 @@ ms.topic: article
 keywords: Windows 10, uwp, bluetooth, bluetooth LE, baixo consumo de energia, gatt, lacuna, central, periférico, cliente, servidor, Inspetor, fornecedor
 ms.localizationpriority: medium
 ms.openlocfilehash: 3853003e54e58b3949c248fb03cb0a83e2d6d112
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829219"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983946"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth Low Energy
-Bluetooth baixa energia (LE) é uma especificação que define os protocolos de descoberta e comunicação entre os dispositivos de consumo de energia. Descoberta de dispositivos é feita por meio do protocolo de perfil de acesso genérico (intervalo). Após a detecção, comunicação de dispositivo para dispositivo é feita por meio do protocolo de atributo genérico (GATT). Este tópico fornece uma visão geral de Bluetooth LE em aplicativos UWP. Para ver mais detalhes sobre Bluetooth LE, consulte a [Especificação de núcleo de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification) versão 4.0, em que foi introduzido Bluetooth LE. 
+Bluetooth baixa energia (LE) é uma especificação que define protocolos para descoberta e comunicação entre os dispositivos de consumo de energia. Descoberta de dispositivos é feita por meio do protocolo de perfil de acesso genérico (intervalo). Após a detecção, comunicação de dispositivo para dispositivo é feita por meio do protocolo de atributo genérico (GATT). Este tópico fornece uma visão geral de Bluetooth LE em aplicativos UWP. Para ver mais detalhes sobre Bluetooth LE, consulte a [Especificação de núcleo de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification) versão 4.0, onde foi introduzido Bluetooth LE. 
 
 ![Funções do Bluetooth LE](images/gatt-roles.png)
 
@@ -27,17 +27,17 @@ Protocolos GATT e lacuna podem ser implementados em seu aplicativo UWP usando os
 As duas funções principais de descoberta são chamadas Central e periférico. Em geral, o Windows funciona no modo Central e se conecta a vários dispositivos periféricos. 
 
 ## <a name="attributes"></a>Atributos
-Um acrônimo comuns, que você verá as APIs de Bluetooth Windows é GATT (atributo genérico). O perfil de GATT define a estrutura de dados e modos de operação pelo qual se comunicar dois dispositivos Bluetooth LE. O atributo é o bloco de construção principal de GATT. Os principais tipos de atributos são serviços, características e descritores. Esses atributos executam diferente entre clientes e servidores, portanto, é mais útil discutir sua interação nas seções relevantes. 
+Um acrônimo comuns que você verá nas APIs de Bluetooth Windows é atributo genérico (GATT). O perfil de GATT define a estrutura de dados e modos de operação pelo qual se comunicar dois dispositivos Bluetooth LE. O atributo é o bloco de construção principal de GATT. Os principais tipos de atributos são serviços, características e descritores. Esses atributos executam diferente entre clientes e servidores, portanto, é mais útil discutir sua interação nas seções relevantes. 
 
-![Hierarquia de atributo comum em um perfil comuns](images/gatt-service.png)
+![Hierarquia de atributo comum em um perfil comum](images/gatt-service.png)
 
 *O serviço cardíaca é expresso no formulário de API do servidor GATT*
 
 ## <a name="client-and-server"></a>Cliente e servidor
-Depois que uma conexão é estabelecida, o dispositivo que contém os dados (geralmente um sensor de IoT pequeno ou dispositivo acessório) é conhecido como o servidor. O dispositivo que usa esses dados para executar uma função é conhecido como o cliente. Por exemplo, um computador com Windows (cliente) lê dados de um monitor de frequência cardíaca (servidor) para controlar se um usuário está funcionando-out ideal. Para obter mais informações, consulte os tópicos [GATT cliente](gatt-client.md) e [Servidor GATT](gatt-server.md) .
+Depois que uma conexão é estabelecida, o dispositivo que contém os dados (geralmente um sensor IoT pequeno ou dispositivo acessório) é conhecido como o servidor. O dispositivo que usa esses dados para executar uma função é conhecido como o cliente. Por exemplo, um computador com Windows (cliente) lê dados de um monitor de frequência cardíaca (servidor) para controlar se um usuário está funcionando-out ideal. Para obter mais informações, consulte os tópicos [GATT cliente](gatt-client.md) e [Servidor GATT](gatt-server.md) .
 
 ## <a name="watchers-and-publishers-beacons"></a>Inspetores e editores (Beacons)
-Além das funções Central e do periférico, há funções observador e emissora. As emissoras normalmente são chamadas de Beacons, eles não se comunicam pela GATT porque eles usam o espaço limitado fornecido no pacote de anúncio para comunicação. Da mesma forma, não tem um observador estabelecer uma conexão para receber dados, ele procura anúncios nas proximidades. Para configurar o Windows para observar nas proximidades anúncios, use a classe [BluetoothLEAdvertisementWatcher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher) . Para cargas de beacon de difusão, use a classe [BluetoothLEAdvertisementPublisher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher) . Para obter mais informações, consulte o tópico de [anúncio](ble-beacon.md) .
+Além das funções Central e do periférico, há funções observador e emissora. As emissoras normalmente são chamadas de Beacons, eles não se comunicam pela GATT porque eles usam o espaço limitado fornecido no pacote de anúncio para comunicação. Da mesma forma, um observador não precisará estabelecer uma conexão para receber dados, ele procura por anúncios nas proximidades. Para configurar o Windows para observar nas proximidades anúncios, use a classe [BluetoothLEAdvertisementWatcher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher) . Para cargas de beacon de difusão, use a classe [BluetoothLEAdvertisementPublisher](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher) . Para obter mais informações, consulte o tópico de [anúncio](ble-beacon.md) .
 
 ## <a name="see-also"></a>Consulte também
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)

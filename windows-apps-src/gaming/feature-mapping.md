@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 9, directx 11, portabilidade
 ms.localizationpriority: medium
 ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847862"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988626"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Correlacionar recursos do DirectX 9 com APIs do DirectX 11
 
@@ -580,7 +580,7 @@ Use a tabela a seguir para converter formatos do Direct3D 9 em formatos DXGI.
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>Observação</strong>  o sombreador obtém valores UINT, mas se estilo integrante do Direct3D 9 sejam necessários floats no (0, 0F, 1, 0F... 255. f), UINT poderá ser convertido em float32 no sombreador.
+<strong>Observação</strong>  o sombreador obtém valores UINT, mas se estilo integrante do Direct3D 9 sejam necessários floats no (0.0 f, 1.0 f... 255. f), UINT poderá ser convertido em float32 no sombreador.
 </div>
 <div>
  

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832715"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986077"
 ---
 # <a name="resolve-submission-errors"></a>Resolver erros de envio
 
@@ -19,13 +19,13 @@ Se você encontrar erros depois de enviar seu aplicativo para a Loja, deverá re
 
 ## <a name="uwp-apps"></a>Aplicativos UWP
 
-Se você estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não é um arquivo de .msixupload ou. appxupload gerado pelo Visual Studio para a loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx/.msix ou .msixbundle/appxbundle .
+Se você estiver enviando um aplicativo UWP, você poderá ver um erro durante o pré-processamento se o arquivo do pacote não é um arquivo .msixupload ou. appxupload gerado pelo Visual Studio para a loja. Certifique-se de que você siga as etapas no [pacote de um aplicativo UWP com Visual Studio](../packaging/packaging-uwp-apps.md) ao criar o arquivo do pacote do aplicativo e carrega somente o arquivo .msixupload ou. appxupload na página de [pacotes](upload-app-packages.md) do envio, não um appx/.msix ou .msixbundle/appxbundle .
 
 Caso um erro de compilação seja exibido, certifique-se de que você consiga compilar o seu aplicativo no modo Versão com êxito. Para obter mais informações, consulte [Erros do compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Aplicativo da área de trabalho
 
-Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote na Store ou fazer o sideload dele em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Se você pretende enviar um pacote que contém os binários UWP e Win32, certifique-se de que você cria esse pacote usando o projeto de empacotamento do Windows que está disponível no Visual Studio 2017 Update 4. Se você criar o pacote usando um modelo de projeto UWP, você não poderá enviar que pacote Store ou carregue-lo em outros computadores. Mesmo se o pacote publica com êxito, ele pode se comportar de maneiras inesperadas no computador do usuário. Para obter mais informações, consulte o [pacote de um aplicativo usando o Visual Studio (ponte de Desktop)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8. x e versões anteriores
 

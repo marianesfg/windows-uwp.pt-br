@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e212e16039d49e3ffd08aa5886d48c61ee24e9e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841751"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986736"
 ---
 # <a name="in-app-ads"></a>Anúncios no aplicativo
 
-Use a **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
+Use o **monetizar** &gt; página de **anúncios no app** no [Partner Center](https://partner.microsoft.com/dashboard) para criar e gerenciar unidades de anúncio para:
 
 * Aplicativos da Plataforma Universal do Windows (UWP) que usam o [SDK do Microsoft Advertising](http://aka.ms/ads-sdk-uwp).
 * Publicado anteriormente Windows 8. x e Windows Phone 8. x aplicativos que usam o [Microsoft Advertising SDK para Windows e Windows Phone 8. x](http://aka.ms/store-8-sdk).
@@ -70,7 +70,7 @@ Depois de criar unidades publicitárias para um ou mais aplicativos em sua conta
 Para editar as [Configurações de mediação](#mediation) para uma unidade publicitária UWP ou a [Conformidade com COPPA](#coppa) para o aplicativo no qual a unidade publicitária é usada, clique no nome da unidade publicitária.
 
 > [!NOTE]
-> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será o rótulo como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
+> Se uma unidade publicitária não tiver nenhuma atividade nos últimos seis meses, podemos será rotule-o como **inativo**e removeremos do Partner Center. Você pode usar filtros para mostrar apenas unidades publicitárias **Ativas** ou **Inativas**. Caso veja uma unidade publicitária que você acredita que esteja marcada incorretamente como **Inativa**, [contate o suporte](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -86,11 +86,11 @@ Para definir as configurações de controle de anúncio de uma unidade de anúnc
 1. [Criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade de anúncio existente](#available-ad-units).
 2. Na página de **anúncios no aplicativo** , vá para a seção de **configurações de controle** e a configuração suas configurações.
 
-    * Por padrão, a caixa de seleção **Permitir que a Microsoft otimizar minhas configurações** será selecionada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode escolher as redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garantirá que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
-    * Se você quiser escolher seu próprio ad configurações de controle, escolha **as configurações padrão de modificar**.
+    * Por padrão, a caixa de seleção **Permitir que a Microsoft otimizar minhas configurações** será selecionada. É recomendável usar essa opção. Essa opção usa algoritmos de aprendizado de máquina para escolher automaticamente as configurações de controle de anúncios para que o aplicativo ajude você a maximizar a receita de anúncios em todos os mercados aos quais o aplicativo ofereça suporte. Quando você usa essa opção, você também pode optar pelas redes de publicidade que você deseja usar na configuração. Desmarque as redes de publicidade que você não deseja fazer parte da configuração e nosso algoritmo garantirá que seu aplicativo recebe apenas anúncios das redes de publicidade selecionado.
+    * Se você quiser escolher sua próprias ad configurações de controle, escolha **as configurações padrão de modificar**.
 
     > [!NOTE]
-    > As etapas restantes nesta seção só são aplicáveis se você optar por **modificar configurações de padrão**.
+    > As etapas restantes nesta seção só são aplicáveis se você optar por **Modificar definições padrão**.
 
 3. Na lista suspensa **Destino**, escolha **Linha de Base** para definir as configurações padrão do controle de anúncios. Essa configuração padrão será aplicada a todos os mercados, exceto para mercados em que você pode definir configurações específicas de mercado.
 4. Em seguida, especifique a proporção de anúncios que você deseja mostrar no controle de redes pagas (que pagarão a receita das impressões) e outras redes de anúncios (que não pagarão a receita das impressões). Para fazer isso, insira um valor entre 0 e 100 nos campos **Peso** de **Redes de publicidade pagas** e **Outras redes de publicidade**.  
@@ -110,7 +110,7 @@ A tabela a seguir lista as redes pagas atualmente com suporte para cada tipo de 
 
 |  Rede de publicidade  |  Descrição  |  Tipos de anúncio com suporte  |
 |--------------|---------------|---------------------|
-| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
+| Juramento e AppNexus |  Esta é uma rede de anúncios gerenciada pelo Microsoft que veicula anúncios por meio de nosso parceiro redes, juramento e AppNexus.<p/>**Observação**: juramento e AppNexus sempre aparecem em primeiro lugar na lista de **redes de publicidade pagas** para unidades de anúncios em faixa, e ele não pode ser alterado rebaixadas para esses tipos de anúncios. | Faixa, Vídeo intersticial |
 | AppNexus (direto) | Selecione esta opção para veicular anúncios de [AppNexus](https://www.appnexus.com). | Vídeo intersticial, Nativo  |
 | Anúncios de instalação de Aplicativos Microsoft | Selecione esta opção para veicular anúncios de instalação de aplicativo ou anúncios de novo envolvimento de aplicativos criados por outros desenvolvedores no ecossistema do Windows, que [cria campanhas publicitárias promocionais para seus aplicativos](create-an-ad-campaign-for-your-app.md).  |  Faixa, Vídeo intersticial, Nativo  |
 | Recomendações de conteúdo do MSN |  Selecione esta opção para veicular anúncios do MSN recomendações de conteúdo. |  Faixa, faixa intersticial  |
@@ -152,7 +152,7 @@ As redes de publicidade disponíveis veiculam anúncios em todos os [mercados co
 
 ## <a name="coppa-compliance"></a>Conformidade com o COPPA
 
-Quando você [criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade publicitária existente](#available-ad-units), a seção de **conformidade com COPPA** aparece na parte inferior da página, se o aplicativo selecionado para a unidade publicitária tiver pelo menos uma assinatura que tenha chegado o [no repositório de](../publish/the-app-certification-process.md#in-the-store) etapa no aplicativo processo de certificação.
+Quando você [criar uma unidade de anúncio](#create-ad-unit) ou [Selecionar uma unidade publicitária existente](#available-ad-units), a seção de **conformidade com COPPA** aparece na parte inferior da página, se o aplicativo selecionado para a unidade publicitária tiver pelo menos uma assinatura que tenha chegado o [na loja](../publish/the-app-certification-process.md#in-the-store) etapa no aplicativo processo de certificação.
 
 Para fins do Children's Online Privacy Protection Act (“COPPA”), você deve selecionar **Este aplicativo é direcionado para crianças com menos de 13 anos** nessa seção se seu aplicativo é direcionado para crianças com menos de 13 anos. Se você selecionar essa opção, a Microsoft seguirá as etapas para desabilitar seus serviços de publicidade comportamental ao oferecer um anúncio em seu aplicativo.
 

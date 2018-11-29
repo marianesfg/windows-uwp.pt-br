@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854697"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990499"
 ---
 # <a name="rotation"></a>Rotação
 
@@ -44,7 +44,7 @@ Use a rotação para ajudar os usuários a girarem os elementos da interface dir
 
 ![diagrama demonstrando várias posturas de dedos suportadas pela rotação.](images/ux-rotate-positions.png)
 
-**Observação**  intuitivamente e, na maioria dos casos, o ponto de rotação é um dos pontos de duas toque, a menos que o usuário pode especificar um ponto de rotação não relacionado aos pontos de contato (por exemplo, em um aplicativo de desenho ou layout). As imagens a seguir demonstram como a experiência do usuário pode ser reduzida se o ponto de rotação não for restringida dessa forma.
+**Observação**  intuitivamente e na maioria dos casos, o ponto de rotação é um dos pontos de duas toque, a menos que o usuário pode especificar um ponto de rotação não relacionado aos pontos de contato (por exemplo, em um aplicativo de desenho ou layout). As imagens a seguir demonstram como a experiência do usuário pode ser reduzida se o ponto de rotação não for restringida dessa forma.
 
 A primeira foto mostra os pontos inicial (polegar) e secundário (dedo indicador): o dedo indicador está tocando uma árvore e o polegar está tocando uma tora.
 

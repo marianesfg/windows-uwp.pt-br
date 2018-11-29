@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, serviços da Store, API de análise da Microsoft Store, aquisições de jogo Xbox One
 ms.localizationpriority: medium
 ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837581"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986107"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Obter aquisições de jogo Xbox One
 
@@ -45,7 +45,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 | Parâmetro        | Tipo   |  Descrição      |  Obrigatório  
 |---------------|--------|---------------|------|
-| applicationId | string | A ID do produto do jogo Xbox One do qual você está recuperando dados de aquisição. Para obter a ID do produto do jogo, navegue até seu jogo no programa de análise XDP e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de aquisições do relatório de análise do Partner Center, a ID do produto está incluída no arquivo. tsv.  |  Sim  |
+| applicationId | string | A ID do produto do jogo Xbox One do qual você está recuperando dados de aquisição. Para obter a ID do produto do jogo, navegue até seu jogo no programa de análise XDP e recupere a ID do produto da URL. Como alternativa, se você baixar os dados de aquisições do relatório de análise do Partner Center, a ID do produto estará incluída no arquivo. tsv.  |  Sim  |
 | startDate | date | A data de início no intervalo de datas de dados de aquisição a serem recuperados. O padrão é a data atual. |  Não  |
 | endDate | date | A data final no intervalo de datas de dados de aquisição a serem recuperados. O padrão é a data atual. |  Não  |
 | top | int | O número de linhas de dados para retornar. O valor máximo e o valor padrão; se não forem especificados, será 10.000. Se houver mais linhas na consulta, o corpo da resposta incluirá um link que você poderá usar para solicitar a próxima página de dados. |  Não  |
@@ -89,7 +89,7 @@ Os elementos na matriz *Value* contêm os valores a seguir.
 | date                | string | A primeira data no intervalo de datas dos dados de aquisição. Se a solicitação especificou um único dia, o valor será essa data. Se a solicitação especificou uma semana, um mês ou outro intervalo de datas, o valor será a primeira data nesse intervalo de datas. |
 | applicationId       | string | A ID do produto do jogo Xbox One do qual você está recuperando dados de aquisição. |
 | applicationName     | string | O nome de exibição do jogo.       |
-| acquisitionType     | string | Uma das sequências a seguir que indica o tipo de aquisição:<ul><li><strong>Grátis</strong></li><li><strong>Avaliação</strong></li><li><strong>Pagos</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li><li><strong>Assinatura Iap</strong></li><li><strong>Audiência particular</strong></li><li><strong>Ordem de versões anteriores</strong></li><li><strong>Xbox Game Pass</strong> (ou <strong>Game Pass</strong> se estiver consultando dados anteriores a 23 de março de 2018)</li><li><strong>Disco</strong></li><li><strong>Código pré-pago</strong></li><li><strong>Ordem de pré cobrados</strong></li><li><strong>Ordem de pré cancelada</strong></li><li><strong>Ordem de pré com falha</strong></li></ul>    |
+| acquisitionType     | string | Uma das sequências a seguir que indica o tipo de aquisição:<ul><li><strong>Grátis</strong></li><li><strong>Avaliação</strong></li><li><strong>Pagos</strong></li><li><strong>Código promocional</strong></li><li><strong>Iap</strong></li><li><strong>Assinatura Iap</strong></li><li><strong>Audiência particular</strong></li><li><strong>Ordem de versões anteriores</strong></li><li><strong>Xbox Game Pass</strong> (ou <strong>Game Pass</strong> se estiver consultando dados anteriores a 23 de março de 2018)</li><li><strong>Disco</strong></li><li><strong>Código pré-pago</strong></li><li><strong>Ordem pré cobrados</strong></li><li><strong>Ordem pré cancelada</strong></li><li><strong>Ordem pré com falha</strong></li></ul>    |
 | idade                 | string | Uma das sequências a seguir que indica a faixa etária do usuário que fez a aquisição:<ul><li><strong>less than 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>     |
 | deviceType          | string | Uma das sequências a seguir que especifica o tipo de dispositivo que concluiu a aquisição:<ul><li><strong>Computador</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Servidor</strong></li><li><strong>Tablet</strong></li><li><strong>Holographic</strong></li><li><strong>Desconhecido</strong></li></ul>  |
 | gender              | string | Uma das sequências a seguir que especifica o gênero do usuário que fez a aquisição:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>     |

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, pacotes, carregar, disponibilidade da família de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 217a6ab9f25ee533a754138db5cf83c2ac81e3e9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853501"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992460"
 ---
 # <a name="device-family-availability"></a>Disponibilidade da família de dispositivos
 
@@ -53,7 +53,7 @@ Se o envio para um aplicativo publicado anteriormente incluir pacotes que podem 
 > [!IMPORTANT]
 > Para evitar completamente que uma família de dispositivos Windows 10 específica Obtenha seu envio, atualize o elemento [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) no manifesto para direcionar somente a família de dispositivos que você deseja dar suporte (isto é, Windows ou Windows. desktop), em vez disso, que deixá-lo como o valor Windows. universal (para a família de dispositivos universal) que o Microsoft Visual Studio inclui no manifesto por padrão.
 
-É importante também estar ciente de que as seleções feitas na seção **Disponibilidade da família de dispositivos** se aplica apenas a novas aquisições. Quem já tem o seu aplicativo pode continuar a usá-lo e receberá as atualizações enviadas, mesmo se você remover a família de dispositivos aqui. Isso se aplica inclusive aos clientes que compraram o aplicativo antes de atualizar para o Windows 10. Por exemplo, se você tiver um aplicativo publicado com pacotes do Windows Phone 8.1 e adicionar um pacote do Windows 10 (UWP) destinado à família de dispositivos Windows. universal, clientes móveis do Windows 10 que tinham o pacote do Windows Phone 8.1 serão oferecidos uma atualização para esta Windows Pacote de 10 (UWP), mesmo se você tiver desmarcado a caixa para **Windows 10 Mobile**.
+É importante também estar ciente de que as seleções feitas na seção **Disponibilidade da família de dispositivos** se aplica apenas a novas aquisições. Quem já tem o seu aplicativo pode continuar a usá-lo e receberá as atualizações enviadas, mesmo se você remover a família de dispositivos aqui. Isso se aplica inclusive aos clientes que compraram o aplicativo antes de atualizar para o Windows 10. Por exemplo, se você tiver um aplicativo publicado com pacotes do Windows Phone 8.1, e você adiciona um pacote do Windows 10 (UWP) à família de dispositivos Windows. universal, clientes móveis do Windows 10 que tinham o pacote do Windows Phone 8.1 serão oferecidos uma atualização para esta Windows Pacote de 10 (UWP), mesmo se você tiver desmarcado a caixa para **Windows 10 Mobile**.
 
 Para saber mais sobre as famílias de dispositivos, consulte [**Visão geral das famílias de dispositivos**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 

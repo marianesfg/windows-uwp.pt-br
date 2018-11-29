@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f1daac8bc94d49c501307728c1e966ba89435f9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826877"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985074"
 ---
 # <a name="input-for-games"></a>Entrada para jogos
 
@@ -43,9 +43,9 @@ Para obter informações sobre como usar volantes de corrida no jogo UWP, consul
 
 ### <a name="flight-sticks"></a>Joysticks de pré-lançamento
 
-Joysticks para simulador de voo são dispositivos de entrada de jogos que reproduzir a sensação de manches que seriam encontrados em um avião ou cockpit de reprodução. Eles são o dispositivo de entrada perfeito para um controle de voo rápido e preciso.
+Manches são dispositivos de entrada de jogos que reproduzir a sensação de manches que seriam encontrados em um avião ou cockpit de reprodução. Eles são o dispositivo de entrada perfeito para um controle de voo rápido e preciso.
 
-Para obter mais informações sobre como usar joysticks de pré-lançamento em seu jogo UWP, consulte o [simulador de voo](flight-stick.md).
+Para obter mais informações sobre como usar manches no jogo UWP, consulte o [simulador de voo](flight-stick.md).
 
 ### <a name="raw-game-controllers"></a>Controladores de jogo bruto
 

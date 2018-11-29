@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, captura de tela
 ms.localizationpriority: medium
 ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826372"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992566"
 ---
 # <a name="screen-capture"></a>Captura de tela
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Como esse é o código de interface do usuário, ele precisa ser chamado no thread da interface do usuário. Se você estiver chamando-o em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar a ser executado no thread da interface do usuário com o código a seguir:
+Como esse é o código de interface do usuário, ele deve ser chamado no thread da interface do usuário. Se você estiver chamada dele em code-behind para uma página do seu aplicativo (por exemplo, **MainPage.xaml.cs**) isso é feito para você automaticamente, mas se não, você pode forçar para ser executada no thread da interface do usuário com o código a seguir:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -166,7 +166,7 @@ Quando **Recreate** é chamado, todos os quadros existentes são descartados. Is
 O trecho de código a seguir está um exemplo de ponta a ponta de como implementar a captura de tela em um aplicativo UWP. Neste exemplo, temos um botão no front-end que, quando clicado, chama o método **Button_ClickAsync** .
 
 > [!NOTE]
-> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como configurá-lo para seu projeto.
+> Este trecho de código usa [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), uma biblioteca para renderização de gráficos 2D. Consulte a documentação para obter informações sobre como defini-lo para seu projeto.
 
 ```cs
 using Microsoft.Graphics.Canvas;
