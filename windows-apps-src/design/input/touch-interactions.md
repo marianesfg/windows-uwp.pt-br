@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965702"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193384"
 ---
 # <a name="touch-interactions"></a>Interações por toque
 
@@ -436,7 +436,7 @@ Um gesto consiste em uma série de eventos de manipulação. Cada gesto começa 
 
 Em seguida, um ou mais eventos [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) são disparados. Por exemplo, se você toca na tela e, em seguida, arrasta o dedo pela tela. Finalmente, um evento [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) é gerado quando a interação é concluída.
 
-**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e de mouse.
+**Observação**se você não tiver um monitor de tela sensível ao toque, você pode testar seu código de eventos de manipulação no simulador usando uma interface de roda do mouse e mouse.
 
  
 

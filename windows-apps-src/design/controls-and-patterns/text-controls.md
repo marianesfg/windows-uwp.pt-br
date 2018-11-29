@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 467be141d2c198bc95c93771ffa9cf2ad8fd6c0d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967617"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193341"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -123,7 +123,7 @@ A partir do Windows 10, versão 1803, caixas de entrada de texto XAML têm supor
 
 ![Caixa de texto se expande quando tocado com caneta](images/handwritingview/handwritingview2.gif)
 
-Para obter mais informações, consulte [a entrada de texto com o modo de exibição de manuscrito](text-handwriting-view.md).
+Para obter mais informações, consulte a [entrada de texto com o modo de exibição de manuscrito](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Escolher o teclado correto para seu controle de texto
 

@@ -6,22 +6,22 @@ ms.topic: article
 keywords: windows 10, uwp, importar listagens da store, exportar listagens da store, importação/exportação, csv de listagens da store
 ms.localizationpriority: medium
 ms.openlocfilehash: 5630a9019aa11b87f06744e03ae74ec38c792d41
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964169"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8215411"
 ---
 # <a name="import-and-export-store-listings"></a>Importar e exportar as listagens da Store
 
-Em vez de [Inserir informações de listagens da Store diretamente no Partner Center](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações exportar suas listagens em um arquivo. csv, inserindo as informações e os ativos, e importando o arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
+Em vez de [Inserir informações de listagens da Store diretamente no Partner Center](create-app-store-listings.md), você tem a opção de adicionar ou atualizar informações por exportar suas listagens em um arquivo. csv, inserindo as informações e os ativos e importando o arquivo atualizado. Você pode usar esse método para criar listagens novas ou atualizar listagens já criadas.
 
 Essa opção é especialmente útil se você deseja criar ou atualizar Listagens da Store para seu produto em vários idiomas, pois você pode copiar/colar as mesmas informações em vários campos e facilmente fazer as alterações que devem ser aplicada para idiomas específicos. No entanto, você não pode usar esse método para criar ou atualizar [listagens da loja específicas de plataforma](create-platform-specific-store-listings.md) para aplicativos publicado anteriormente que dão suporte a versões mais antigas do sistema operacional. 
 
 > [!TIP]
 > Você também pode usar esse recurso para importar e exportar os detalhes da listagem da Store de um complemento. Para complementos, o processo funciona da mesma maneira exceto que [somente os campos relevantes para complementos](#add-ons) são incluídos.
 
-Tenha em mente que você sempre pode criar ou atualizar listagens diretamente no Partner Center (mesmo se você já usou o método de importação/exportação). Atualizar diretamente no Partner Center pode ser mais fácil quando você só está fazendo uma simples alteração, mas você pode usar qualquer um dos métodos a qualquer momento.
+Lembre-se que você sempre pode criar ou atualizar listagens diretamente no Partner Center (mesmo se você já usou o método de importação/exportação). Atualizando diretamente no Partner Center pode ser mais fácil quando você só está fazendo uma simples alteração, mas você pode usar outros métodos a qualquer momento.
 
 ## <a name="export-listings"></a>Exportar listagens
 
@@ -36,7 +36,7 @@ Se você já criou listagens (ou se já tiver carregado pacotes), também é pos
 Veja uma visão geral do que está contido em cada uma das colunas no arquivo .CSV exportado:
 - A coluna **Campo** contém um nome associado a cada parte de uma listagem da Store. Elas correspondem aos mesmos itens que você pode fornecer ao criar listagens da loja no Partner Center, embora alguns dos nomes sejam um pouco diferentes. Para itens que você pode inserir mais de um do mesmo tipo, é possível ver diversas linhas, até o número máximo que você pode fornecer. Por exemplo, para **Recursos do aplicativo**, você verá **Recurso1**, **Recurso2** etc. até **Recurso20** (desde que você possa fornecer até 20 recursos do aplicativo).
 - A coluna de **identificação** contém um número que associa o Partner Center com cada campo. 
-- A coluna **tipo** fornece diretrizes gerais sobre que tipo de informações devem ser fornecidas para o campo, como **texto** ou o **caminho relativo (ou URL para o arquivo no Partner Center)**. 
+- A coluna **tipo** fornece diretrizes gerais sobre qual tipo de informações devem ser fornecidas para o campo, como **texto** ou o **caminho relativo (ou URL para o arquivo no Partner Center)**. 
 - A coluna **Padrão** (e qualquer outra coluna identificada com códigos de idioma-localidade) representam o texto ou ativos associados a cada parte da listagem da loja. Você pode editar os campos nessas colunas para fazer atualizações em suas listagens da Store.
 
 >[!IMPORTANT]
@@ -65,19 +65,19 @@ A exclusão das informações em um campo para um idioma, sem remover a linha in
 
 Diversos campos em suas listagens exportadas exigem a entrada de texto, como aqueles no exemplo acima, **Descrição** e **Notas de versão**. Para esses tipos de campos, digite o texto apropriado no campo para cada idioma. Certifique-se de seguir o tamanho e outros requisitos de cada campo. Para saber mais sobre esses requisitos, consulte [Criar listagens da Store do aplicativo](create-app-store-listings.md).
 
-O fornecimento de informações para os campos que correspondem aos ativos, como imagens e trailers, é um pouco mais complicado. Em vez de **texto**, o **tipo** para esses ativos é o **caminho relativo (ou URL para o arquivo no Partner Center)**. 
+O fornecimento de informações para os campos que correspondem aos ativos, como imagens e trailers, é um pouco mais complicado. Em vez de **texto**, o **tipo** desses ativos é o **caminho relativo (ou URL para o arquivo no Partner Center)**. 
      
 Se você já tiver carregado ativos para a listagem da Store, esses ativos serão representados por uma URL. Essas URLs podem ser reutilizadas em várias descrições de um produto ou mesmo em produtos diferentes na mesma conta de desenvolvedor, portanto, você pode copiar essas URLs para reutilizá-las em um campo diferente, se desejar.
 
 > [!TIP]
-> Para confirmar qual ativo corresponde a uma URL, é possível inserir a URL em um navegador para exibir a imagem (ou baixar o vídeo do trailer).  Você deve estar conectado à sua conta do Partner Center para que essa URL trabalhar.
+> Para confirmar qual ativo corresponde a uma URL, é possível inserir a URL em um navegador para exibir a imagem (ou baixar o vídeo do trailer).  Você deve estar conectado à sua conta do Partner Center para que essa URL funcione.
 
 Se você quiser usar um novo ativo que você ainda não adicionado ao Partner Center, você pode fazer isso ao importar as listagens como uma pasta, em vez de um arquivo. csv único. É necessário criar uma pasta com o arquivo .csv. Em seguida, adicione as imagens à mesma pasta, na pasta raiz ou em uma subpasta. Você deverá inserir o caminho completo, incluindo o nome da pasta raiz, no campo.
 
 > [!TIP]
 > Para obter os melhores resultados ao importar as listagens como uma pasta, certifique-se de usar a versão mais recente do Microsoft Edge, Chrome ou Firefox.
 
-Por exemplo, se a pasta raiz for **my_folder** e você quiser usar uma imagem chamada **screenshot1.png** para **DesktopScreenshot1**, é possível adicionar screenshot1.png na raiz da pasta e, em seguida, inserir **my_folder/screenshot1.png** no campo **DesktopScreenshot1**. Se você criou uma pasta de imagens na pasta raiz e, em seguida, inseriu screenshot1.jpg lá, é necessário inserir **my_folder/images/screenshot1.png**. Observe que depois de importar as listagens usando uma pasta, caminhos para as imagens serão convertidos para URLs para os arquivos no Partner Center na próxima vez em que você exportar as listagens. É possível copiar e colar essas URLs para usá-las novamente (por exemplo, para usar os mesmos ativos em vários idiomas de listagem). 
+Por exemplo, se a pasta raiz for **my_folder** e você quiser usar uma imagem chamada **screenshot1.png** para **DesktopScreenshot1**, é possível adicionar screenshot1.png na raiz da pasta e, em seguida, inserir **my_folder/screenshot1.png** no campo **DesktopScreenshot1**. Se você criou uma pasta de imagens na pasta raiz e, em seguida, inseriu screenshot1.jpg lá, é necessário inserir **my_folder/images/screenshot1.png**. Observe que depois de importar as listagens usando uma pasta, caminhos para as imagens serão convertidos para URLs para os arquivos no Partner Center na próxima vez que você exportar as listagens. É possível copiar e colar essas URLs para usá-las novamente (por exemplo, para usar os mesmos ativos em vários idiomas de listagem). 
 
 > [!IMPORTANT]
 > Se a listagem exportada inclui trailers, lembre-se que excluir a URL do trailer ou a imagem em miniatura do seu arquivo. csv remove completamente o arquivo excluído do Partner Center, e você não poderá acessá-lo lá (a menos que ele também é usado no ano pode listagem em que ainda não tenha sido excluído). 

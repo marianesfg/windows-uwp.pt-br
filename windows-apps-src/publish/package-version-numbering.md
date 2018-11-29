@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969352"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8203956"
 ---
 # <a name="package-version-numbering"></a>Numeração de versão do pacote
 
@@ -32,7 +32,7 @@ Você pode fornecer vários pacotes UWP com o mesmo número de versão. Contudo,
 
 Quando você fornece vários pacotes UWP que usam o mesmo número de versão, a arquitetura (na ordem x64, x86, ARM, neutro) será usada para decidir qual é a maior classificação (quando o armazenamento determina qual pacote fornecer para o dispositivo do cliente). Ao classificar lotes de aplicativos que usem o mesmo número de versão, a classificação de arquitetura mais alta dentro do lote será considerada: um lote de aplicativos que contém um pacote x64 terá uma classificação maior do que aquele que contém somente um pacote x86.
 
-Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores que têm dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
+Isso dá uma grande flexibilidade para desenvolver seu aplicativo ao longo do tempo. Você pode carregar e enviar novos pacotes que usam números de versão menores para adicionar suporte para dispositivos Windows 10 que não oferecia suporte anteriormente, você pode adicionar pacotes superiores que têm dependências mais estritas para aproveitar o hardware ou recursos do sistema operacional ou você pode adicionar pacotes superiores que servem como atualizações para alguns ou todos os seus clientes existentes base.
 
 O exemplo a seguir ilustra como a numeração de versão pode ser gerenciada para a entrega dos pacotes pretendidos para seus clientes em vários envios.
 
@@ -40,7 +40,7 @@ O exemplo a seguir ilustra como a numeração de versão pode ser gerenciada par
 
 Windows 10 permite que você escreva uma única base de código que é executado em todos os lugares. Isso torna muito mais fácil iniciar um novo projeto de plataforma cruzada. No entanto, por várias razões, não convém mesclar bases de código existente para criar um único projeto imediatamente.
 
-Você pode usar as regras de controle de versão de pacote para mover gradualmente seus clientes para um único pacote para a família de dispositivos Universal, enquanto um número de atualizações interinas para famílias de dispositivo específico (inclusive aqueles que tirar proveito das APIs do Windows 10). O exemplo a seguir ilustra como as mesmas regras são aplicadas consistentemente em uma série de envios para o mesmo aplicativo.
+Você pode usar as regras de controle de versão de pacote para mover gradualmente seus clientes para um único pacote para a família de dispositivos Universal, enquanto um número de atualizações interinas para famílias de dispositivo específico (inclusive aqueles que tirar proveito das APIs do Windows 10). O exemplo a seguir ilustra como as mesmas regras são aplicadas consistentemente ao longo de uma série de envios para o mesmo aplicativo.
 
 | Envio | Conteúdo                                                  | Experiência do cliente                                                                                                                                                                             |
 |------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Você pode usar as regras de controle de versão de pacote para mover gradualmen
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usando a numeração de versão para reverter para um pacote enviado anteriormente para novas aquisições
 
-Se você mantém cópias de seus pacotes, você terá a opção de reverter o pacote do aplicativo na loja para um pacote anterior do Windows 10 se você deve descobrir problemas com uma versão. Isso é uma maneira temporária de limitar a interrupção para seus clientes enquanto você dedicar tempo para corrigir o problema.
+Se você mantém cópias de seus pacotes, você terá a opção de reverter o pacote do aplicativo na loja para um pacote anterior do Windows 10 se você deve descobrir problemas com uma versão. Essa é uma maneira temporária de limitar a interrupção para seus clientes enquanto você dedicar tempo para corrigir o problema.
 
 Para fazer isso, crie um novo [envio](app-submissions.md). Remova o pacote problemático e carregue o pacote antigo que você deseja fornecer na Loja. Os clientes que já receberam o pacote que você está revertendo ainda terão o pacote problemático (já que seu pacote mais antigo terá um número de versão anterior). Mas isso impedirá que qualquer um adquira o pacote problemático, enquanto permite que o aplicativo fique disponível na Loja.
 

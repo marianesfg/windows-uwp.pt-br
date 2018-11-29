@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 651914cfb2abd4326c6ac6295f10ad359925d465
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972302"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191298"
 ---
 # <a name="tooltips"></a>Dicas de ferramenta
 
@@ -112,7 +112,7 @@ Você pode usar qualquer objeto como o [Conteúdo](/uwp/api/windows.ui.xaml.cont
 
 Por padrão, uma dica de ferramenta é exibida centralizada acima do ponteiro. O posicionamento não é restringido pela janela do aplicativo, para que a dica de ferramenta seja exibida parcial ou totalmente fora dos limites da janela de aplicativo.
 
-– Grande parte dos ajustes, use a propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou **Placement** anexado para especificar se a dica de ferramenta deve desenhar acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta. Apenas um dos dois valores deslocamento afetará a posição final - VerticalOffset quando posicionamento for superior ou inferior, HorizontalOffset quando posicionamento é à esquerda ou direita.
+– Grande parte dos ajustes, use a propriedade de [posicionamento](/uwp/api/windows.ui.xaml.controls.tooltip.placement) ou **Placement** anexado para especificar se a dica de ferramenta deve desenhar acima, abaixo, à esquerda ou à direita do ponteiro. Você pode definir as propriedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) ou [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para alterar a distância entre o ponteiro e a dica de ferramenta. Apenas um dos dois valores de deslocamento afetará a posição final - VerticalOffset quando posicionamento for superior ou inferior, HorizontalOffset quando posicionamento é à esquerda ou direita.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->

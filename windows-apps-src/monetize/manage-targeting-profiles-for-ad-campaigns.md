@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de promoções da Microsoft Store, campanhas publicitárias
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d84c6eb678bf884709e13ecefd81e64097ee738
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967820"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192489"
 ---
 # <a name="manage-targeting-profiles"></a>Gerenciar perfis de direcionamento
 
@@ -143,7 +143,7 @@ O corpo da solicitação e resposta desses métodos contêm os campos a seguir. 
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  número inteiro   |  A ID do perfil de direcionamento.     |   Sim    |       |   Não      |       
 |  nome   |  cadeia   |   O nome do perfil de direcionamento.    |    Não   |      |  Sim     |       
-|  targetingType   |  cadeia   |  Um dos seguintes valores: <ul><li>**Automática**: Especifique esse valor para permitir que a Microsoft Escolha o perfil de direcionamento com base nas configurações do aplicativo no Partner Center.</li><li>**Manual**: especifique esse valor para definir seu próprio direcionamento de perfil.</li></ul>     |  Não     |  Automático    |   Sim    |       
+|  targetingType   |  cadeia   |  Um dos seguintes valores: <ul><li>**Auto**: Especifique esse valor para permitir que a Microsoft Escolha o perfil de direcionamento com base nas configurações do aplicativo no Partner Center.</li><li>**Manual**: especifique esse valor para definir seu próprio direcionamento de perfil.</li></ul>     |  Não     |  Automático    |   Sim    |       
 |  idade   |  matriz   |   Um ou mais números inteiros que identificam os intervalos de idade dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores de idade](#age-values) neste artigo.    |    Não    |  null    |     Não    |       
 |  sexo   |  matriz   |  Um ou mais números inteiros que identificam os sexos dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Valores de sexo](#gender-values) neste artigo.       |  Não    |  null    |     Não    |       
 |  país   |  matriz   |  Um ou mais números inteiros que identificam os códigos de país dos usuários de destino. Para obter uma lista completa de números inteiros, consulte [Códigos de país](#country-code-values) neste artigo.    |  Não    |  null   |      Não   |       
