@@ -1,18 +1,18 @@
 ---
-title: Dispositivo de PointOfService reivindicar e habilitar o modelo
+title: Dispositivo de PointOfService declarem e habilitar o modelo
 description: Saiba mais sobre a declaração de PointOfService e habilitar o modelo
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980956"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço de declaração e habilitar o modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de ponto de serviço declarem e habilitar o modelo
 
 ## <a name="claiming-for-exclusive-use"></a>Declaração para uso exclusivo
 
@@ -21,7 +21,7 @@ Depois de criar um objeto de dispositivo de PointOfService com sucesso, você de
 > [!Note]
 > A ação de declaração estabelece um bloqueio exclusivo para um dispositivo, mas não colocá-lo em um estado operacional.  Para obter mais informações, consulte [Habilitar dispositivo para operações de e/s](#Enable-device-for-I/O-operations) .
 
-### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar / versão
+### <a name="apis-used-to-claim--release"></a>APIs usadas para reivindicar / liberar
 
 |Dispositivo|Declaração | Versão | 
 |-|:-|:-|

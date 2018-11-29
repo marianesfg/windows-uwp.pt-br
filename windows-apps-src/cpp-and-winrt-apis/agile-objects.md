@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, padrão, c++, cpp, winrt, projeção, ágil, objeto, agilidade, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843707"
+ms.locfileid: "7978658"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágeis em C++/WinRT
 
@@ -23,7 +23,7 @@ No entanto, é possível recusá-los. Você pode ter um motivo convincente para 
 
 ## <a name="code-examples"></a>Exemplos de código
 
-Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++ + c++ WinRT dá suporte à agilidade.
+Vamos usar um exemplo de implementação de uma classe de tempo de execução para ilustrar como C++ + c++ /WinRT dá suporte à agilidade.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 Não importa onde o struct de marcador apareça no pacote de parâmetros variadic.
 
-Se ou não recusar agilidade, você pode implementar **IMarshal** por conta própria. Por exemplo, você pode usar o marcador **WinRT:: non_agile** para evitar a implementação de agilidade padrão e implementar **IMarshal** por conta própria&mdash;talvez para oferecer suporte à semântica de marshal-por-valor.
+Ou não recusar agilidade, você pode implementar **IMarshal** por conta própria. Por exemplo, você pode usar o marcador **WinRT:: non_agile** para evitar a implementação de agilidade padrão e implementar **IMarshal** por conta própria&mdash;talvez para oferecer suporte à semântica de marshal-por-valor.
 
 ## <a name="agile-references-winrtagileref"></a>Referências ágeis (winrt::agile_ref)
 

@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, análise do Xbox, análise do Xbox em tempo real, estatística do Xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980050"
 ---
 # <a name="xbox-analytics-report"></a>Relatório de análise do Xbox
 
 O relatório de **análise do Xbox** no [Partner Center](https://partner.microsoft.com/dashboard) mostra estatísticas sobre como os clientes estão participando com os recursos do Xbox em seu jogo. Ele também fornece informações de integridade do serviço para ajudar a resolver erros de cliente.
 
 > [!IMPORTANT]
-> Você só verá esse relatório se estiver publicando um jogo para Xbox ou um jogo que usa os serviços Xbox Live. Para fazer isso, você deve passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Jogos publicados por meio do [Programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) não estiverem visíveis nesse relatório.
+> Você só verá esse relatório se estiver publicando um jogo para Xbox ou um jogo que usa os serviços Xbox Live. Para fazer isso, você deve passar pelo [processo de aprovação de conceito](../gaming/concept-approval.md), que inclui jogos publicados por [parceiros da Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) e jogos enviados por meio do [ ID@Xbox programa](../xbox-live/developer-program-overview.md#id). Jogos publicados por meio do [Programa de criadores do Xbox Live](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) não são visíveis no momento nesse relatório.
 
-Você pode exibir o relatório de **análise do Xbox** no menu de navegação esquerdo para o seu jogo, expandindo **Analisar** e selecionar a **análise do Xbox**.  Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
+Você pode exibir o relatório de **análise do Xbox** do menu de navegação esquerdo para o seu jogo, expandindo **Analisar** e selecionar a **análise do Xbox**.  Você pode exibir esses dados no Partner Center, ou [baixar o relatório](download-analytic-reports.md) para exibição offline.
 
 
 ## <a name="overview-tab"></a>Guia Visão geral

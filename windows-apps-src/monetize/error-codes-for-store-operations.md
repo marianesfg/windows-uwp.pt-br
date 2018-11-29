@@ -6,28 +6,28 @@ ms.topic: article
 keywords: Windows 10, uwp, compras no aplicativo, IAPs, complementos, códigos de erro
 ms.localizationpriority: medium
 ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976606"
 ---
 # <a name="error-codes-for-store-operations"></a>Códigos de erro para operações da Microsoft Store
 
 <!-- confirm whether symbolic names are defined for app developers, or do they just handle direct error code values -->
 
-Este artigo descreve os códigos de erro comuns que você pode encontrar enquanto você estiver desenvolvendo ou teste operações relacionadas à loja em seu aplicativo.
+Este artigo descreve os códigos de erro comuns que podem ocorrer enquanto você estiver desenvolvendo ou teste operações relacionadas à loja em seu aplicativo.
 
 ## <a name="in-app-purchase-error-codes"></a>Códigos de erro de compra no aplicativo
 
-Os seguintes códigos de erro estão relacionados para operações de compra no aplicativo.
+Os seguintes códigos de erro são relacionados às operações de compra no aplicativo.
 
 |  Código de erro  |  Descrição  |
 |--------------|---------------|
 | 0x803F6100   | A compra no aplicativo não pôde ser concluída porque da criança está ativa. Para concluir a compra, entre no dispositivo com sua conta da Microsoft e executar o aplicativo novamente.               |
-| 0x803F6101   | O aplicativo especificado não foi encontrado. O aplicativo pode não estar disponível na loja, ou você pode ter sido a ID da loja errado para o aplicativo.     |
-| 0x803F6102   | O complemento especificado não foi encontrado. O complemento pode não estar disponível na loja ou seu pode ter sido a ID da loja errado para o complemento.                                               |
-| 0x803F6103   | O produto especificado não pôde ser encontrado. O produto não estará disponível na loja, ou você pode ter sido a ID da loja errado para o produto.                                          |
+| 0x803F6101   | O aplicativo especificado não foi encontrado. O aplicativo não pode estar disponível na loja, ou você pode ter sido a ID da loja errado para o aplicativo.     |
+| 0x803F6102   | O complemento especificado não foi encontrado. O complemento não pode estar disponível na loja ou seu pode ter sido a ID da loja errado para o complemento.                                               |
+| 0x803F6103   | O produto especificado não pôde ser encontrado. O produto não pode estar disponível na loja, ou você pode ter sido a ID da loja errado para o produto.                                          |
 | 0x803F6104   | A compra no aplicativo não pôde ser concluída porque você está executando uma versão de avaliação do aplicativo. Para concluir compras no aplicativo, instale a versão completa do aplicativo.               |
 | 0x803F6105   | A compra no aplicativo não pôde ser concluída porque você não estiver conectado com sua conta da Microsoft.                                              |
 | 0x803F6107   | Algo inesperado ocorreu durante o processamento a operação atual.                                             |
@@ -42,34 +42,34 @@ Os seguintes códigos de erro estão relacionados para operações de compra no 
 
 ## <a name="licensing-error-codes"></a>Códigos de erro de licenciamento
 
-Os seguintes códigos de erro estão relacionados para o licenciamento operações para aplicativos ou complementos.
+Os seguintes códigos de erro são relacionados ao licenciamento operações para aplicativos ou complementos.
 
 |  Código de erro  |  Descrição  |
 |--------------|---------------|
 | 0x803F700C   | O dispositivo está offline no momento. Para usar este aplicativo enquanto o dispositivo está offline, abra as configurações de armazenamento e alterne a configuração de **Permissões off-line** .            |
 | 0x803F8001   | Você não tem um direito para o produto. Você pode estar usando uma conta da Microsoft diferente daquele que foi usada para comprar o produto.           |
-| 0x803F8002   | Seu direito para o produto expirou.           |
-| 0x803F8003   | Seu direito para o produto está em um estado inválido que impede que uma licença que está sendo criada.   |
+| 0x803F8002   | Sua qualificação para o produto expirou.           |
+| 0x803F8003   | Sua qualificação para o produto está em um estado inválido que impede que uma licença que está sendo criada.   |
 | 0x803F8009<br/>0x803F800A   | O período de avaliação para o aplicativo tiver expirado.   |
 | 0x803F8190   |  A licença não permite que o produto a ser usado no atual país ou região do dispositivo.  |
-| 0x803F81F5<br/>0x803F81F6<br/>0x803F81F7<br/>0x803F81F8<br/>0x803F81F9   |  Você atingiu o número máximo de dispositivos que podem ser usadas com jogos e aplicativos da Store. Para usar este jogo ou o aplicativo no dispositivo atual, primeiro remova outro dispositivo de sua conta.  |
+| 0x803F81F5<br/>0x803F81F6<br/>0x803F81F7<br/>0x803F81F8<br/>0x803F81F9   |  Você atingiu o número máximo de dispositivos que podem ser usados com jogos e aplicativos da Store. Para usar este jogo ou o aplicativo no dispositivo atual, primeiro remova outro dispositivo de sua conta.  |
 | 0x803F9000<br/>0x803F9001    |  A licença está expirado ou corrompido. Para ajudar a resolver esse erro, tente executar a [solução de problemas para aplicativos do Windows](https://support.microsoft.com/help/4027498/windows-run-the-troubleshooter-for-windows-apps) para redefinir o cache de armazenamento.     |
-| 0x803F9006    |  A operação não pôde ser concluída porque o usuário que está qualificado para este produto não é conectado ao dispositivo com a conta da Microsoft.            |
+| 0x803F9006    |  A operação não pôde ser concluída porque o usuário quem está qualificado para este produto não esteja conectado ao dispositivo com a conta da Microsoft.            |
 | 0x803F9008<br/>0x803F9009    |  O dispositivo está offline. O dispositivo precisa estar online para usar este produto.            |
 | 0x803F900A    |  A assinatura expirou.            |
 
 
 ## <a name="self-install-update-error-codes"></a>Instalar automaticamente os códigos de erro de atualização
 
-Os seguintes códigos de erro são relacionados a [atualizações de pacote de instalação automática](../packaging/self-install-package-updates.md).
+Os seguintes códigos de erro estão relacionados à [instalação automática de atualizações de pacote](../packaging/self-install-package-updates.md).
 
 |  Código de erro  |  Descrição  |
 |--------------|---------------|
 | 0x803F6200   | Consentimento do usuário é necessário para baixar a atualização do pacote.               |
 | 0x803F6201   | Consentimento do usuário é necessário para baixar e instalar a atualização do pacote.                                                  |
 | 0x803F6203   | Consentimento do usuário é necessário para instalar a atualização do pacote.                                         |
-| 0x803F6204   | Consentimento do usuário é necessário para baixar a atualização do pacote porque o download ocorrer em uma conexão de rede limitada.                                             |
-| 0x803F6206   | Consentimento do usuário é necessário para baixar e instalar a atualização do pacote porque o download ocorrer em uma conexão de rede limitada.     |
+| 0x803F6204   | Consentimento do usuário é necessário para baixar a atualização do pacote porque o download ocorrerão em uma conexão de rede limitada.                                             |
+| 0x803F6206   | Consentimento do usuário é necessário para baixar e instalar a atualização do pacote porque o download ocorrerão em uma conexão de rede limitada.     |
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

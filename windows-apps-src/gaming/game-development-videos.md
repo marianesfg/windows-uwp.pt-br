@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, vídeos, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843354"
+ms.locfileid: "7975174"
 ---
 # <a name="game-development-videos"></a>Vídeos de desenvolvimento de jogos
 
@@ -23,8 +23,8 @@ Veja esta lista de vídeos de desenvolvimento de jogos das principais conferênc
 
 O que é LiveOps? Saiba por que os desenvolvedores estão criando jogos ao vivo: [seu jogo para todos com PlayFab (entrevista)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) - James Gwertzman, David Holladay
 
-* [Que abordagem de Lean do fada fofinhas ao desenvolvimento de jogos - como um independentes studio aumentou um acerto jogo após apenas 8 semanas](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler de fada Fofinhas
-* [Dia 1: seu jogo, em qualquer lugar](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
+* [Que abordagem de Lean do fada fofinhas ao desenvolvimento de jogos - studio como uma independentes aumentou um acerto jogo após apenas 8 semanas](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler de fada Fofinhas
+* [1 dia: seu jogo, em qualquer lugar](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
 * [Dia 2: seu jogo para todos com PlayFab (apresentação)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-With-PlayFab-Theater-Presentation) -Brendan Vanous
 * [Dia 3: seu jogo, cada maneira que ele seja reproduzido](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
 
@@ -49,9 +49,9 @@ O que é LiveOps? Saiba por que os desenvolvedores estão criando jogos ao vivo:
 O que é VSTS? Saiba como implementar DevOps em seu processo de compilação: [Introdução ao Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
 
 * [Planejamento e a criação de jogos usando todo o potencial do VSTS: demonstração ágil, de ponta a ponta de CI & CD](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
-* [Criar seu jogo próximo da compilação de nuvem equipes de Unity e o Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
+* [Criar seu jogo próximo alimentado pelo Visual Studio Team Services e equipes Unity compilação de nuvem](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
 * [Testar continuamente, distribuir e monitorar seu jogo com o aplicativo Center](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - James White
-* [Instalação do pipeline de CI/CD para Node. js, Python, .NET, Go, Ruby ou Java - em minutos](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) - Abel Wang
+* [Instalação CI/CD do pipeline para Node. js, Python, .NET, Go, Ruby ou Java - em minutos](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) - Abel Wang
 * [Agile ferramentas conjunto com o VSTS](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) - Rogan Ferguson, James Montemagno
 
 ### <a name="git"></a>Git
@@ -77,18 +77,18 @@ Novo para sistemas de controle de versão? Introdução ao sistema de arquivos V
 
 ### <a name="mixed-reality"></a>Realidade Misturada
 
-* [Criação de aplicativos Windows MR com o Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Rodriguez
-* [a nuvem AR: por que o futuro do MR não é um dispositivo, ele é todos eles](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
+* [Criando aplicativos Windows MR com o Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Rodriguez
+* [a nuvem AR: por que o futuro do MR não é um dispositivo, ele é todas elas](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
 
 ## <a name="game-accessibility-conference-2018"></a>Conferência de acessibilidade em jogos de 2018
 
 * [Procurando brilhante. 2017 do jogo acessibilidade avança](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton, especialista do setor de acessibilidade
 * [O CVAA e o que isso significa para acesso de jogos](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss de Comissão Federal de comunicações
-* [Posso feitas meu jogo Blind acessível – você não quer acredita que o que aconteceu depois...](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Michelle Martin de jogos MetalPop
-* [Opções de Design de acessibilidade cognitivas e educação de música para Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Lori Landay da faculdade Berklee de música
-* [Ramping por acessibilidade](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) - Karen Stevens de EA esportes
-* Acessibilidade do jogo moderna [. Alterando Condolências à solução](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker de Playstation e Sam Thompson de Sony World Wide Studios
-* [Reprodução de vídeo Games anos sem Vista](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, advogado de acessibilidade
+* [Posso feitas meu jogo Blind acessível – você não quer acredita que o que aconteceu em seguida...](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Martin Michelle de jogos MetalPop
+* [Opções de Design de acessibilidade cognitivas e música educação para Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Lori Landay da faculdade Berklee de música
+* [Ramping backup de acessibilidade](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) - Karen Stevens de EA esportes
+* Acessibilidade do jogo moderna [. Alterando Condolências à solução](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker de Playstation e Sam Thompson da Sony World Wide Studios
+* [Jogando videogames anos sem Vista](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, advogado de acessibilidade
 * [Como a colaboração da comunidade melhora desenvolvimento](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) - Jason Canam de jogos domésticos
 * [Como Streaming ao vivo traz a inclusão de nível próximo](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) - Tara Voelker do Mixer
 * [Todos os jogadores surdo deseja fazer é ter alguns divertido](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - alto-falantes do painel: Chris Robinson e Kristen Piersa, acessibilidade defende. Michael Anthony da Microsoft
@@ -108,7 +108,7 @@ Novo para sistemas de controle de versão? Introdução ao sistema de arquivos V
 * [Xbox Live para AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) - Brian Tyler
 * [Conheça a convergiu Microsoft Store para Windows andXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
 * [Renderização holográfica do Windows: um SDK para ecossistemas de VR e AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) -Alex Pfaffe, Alex Turner
-* [Alcançar mais jogadores por meio do Xbox recursos de acessibilidade no Xbox One andPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) - Evelyn Thomas
+* [Atingindo mais jogadores por meio do Xbox recursos de acessibilidade no Xbox One andPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) - Evelyn Thomas
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Vídeos da sessão de desenvolvimento de jogos GDC 2015
 

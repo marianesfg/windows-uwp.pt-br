@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, testes A/B, experimentos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981083"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>Gerenciar seu experimento no Partner Center
 
@@ -24,7 +24,7 @@ Para um guia passo a passo que demonstra o processo de criação e execução de
 
 ## <a name="activate-your-experiment"></a>Ativar seu experimento
 
-Quando estiver satisfeito com os parâmetros de seu experimento no Partner Center e você atualizou o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar eventos de exibição e conversão para o Partner Center.
+Quando estiver satisfeito com os parâmetros de seu experimento no Partner Center e tiver atualizado o código do aplicativo, você estará pronto para ativar seu experimento para poder iniciar a coleta de dados de experimento do seu aplicativo. Quando o experimento está ativo, seu aplicativo pode recuperar os valores de variação e relatar eventos de exibição e conversão para o Partner Center.
 
 1. Entre no [Partner Center](https://partner.microsoft.com/dashboard).
 2. Em **Seus aplicativos**, selecione o aplicativo com o experimento que você deseja ativar.

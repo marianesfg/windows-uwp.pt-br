@@ -7,17 +7,17 @@ keywords: windows 10, uwp, notificações direcionadas, notificações por push,
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 902a8d84c2a0cfa1549c4c3926e838e9bb8ed9c4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7848873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981493"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Enviar notificações para clientes do seu aplicativo
 
 Interagir com seus clientes no momento certo e com a mensagem certa é essencial para o sucesso como um desenvolvedor de aplicativos. As notificações podem incentivar os clientes a executar uma ação, como classificar um aplicativo, comprar um complemento, experimentar um novo recurso ou baixar outro aplicativo (talvez gratuitamente com um [código promocional](generate-promotional-codes.md) fornecido por você).
 
-O [Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de envolvimento de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação a serem enviadas para os clientes de mais de um dos seus aplicativos.
+[Partner Center](https://partner.microsoft.com/dashboard) fornece uma controlada por dados plataforma de interação de cliente, você pode usar para enviar notificações para todos os clientes do seu aplicativo ou direcionadas apenas a um subconjunto de clientes do seu aplicativo do Windows 10 que atendem aos critérios definidos em um cliente [ segmento](create-customer-segments.md). Você também pode criar uma notificação a serem enviadas para os clientes de mais de um dos seus aplicativos.
 
 > [!IMPORTANT]
 > Essas notificações podem ser usadas somente com aplicativos UWP.
@@ -35,7 +35,7 @@ Ao considerar o conteúdo de suas notificações, tenha em mente:
 
 Em um nível superior, você precisa executar três ações para usar notificações e interagir com seus clientes.
 
-1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência para a Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionando algumas linhas de código que registra um canal de notificação entre Partner Center e seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+1. **Registre seu aplicativo para receber notificações por push.** Você pode fazer isso adicionando uma referência ao Microsoft Store Services SDK em seu aplicativo e, em seguida, adicionando algumas linhas de código que registra um canal de notificação entre Partner Center e seu aplicativo. Usaremos este canal para disponibilizar as notificações para seus clientes. Para obter mais detalhes, consulte [Configurar seu aplicativo para notificações por push direcionadas](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2. **Decida quais serão os clientes de destino.** Você pode enviar a notificação para todos os clientes do seu app, ou (para notificações criadas para um único app) para um grupo de clientes chamado um *segmento*, que você pode definir com base em critérios demográficos ou de receita. Para obter mais informações, consulte [Criar segmentos de clientes](create-customer-segments.md).
 3. **Crie o conteúdo da notificação e o envie.** Por exemplo, você pode criar uma notificação que incentive os novos clientes a classificar seu app, ou pode enviar uma notificação que promova uma oferta especial para adquirir um complemento.
 
@@ -114,7 +114,7 @@ Você pode avaliar quão bem está interagindo com seus clientes por meio de cad
 
 ### <a name="to-view-notification-performance"></a>Para exibir o desempenho de notificação
 
-Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver como suas notificações.
+Quando você tiver configurado a notificação e seu aplicativo para medir o desempenho de notificação conforme descrito acima, você pode ver quão bem suas notificações.
 
 Para analisar os dados detalhados para cada notificação:
 

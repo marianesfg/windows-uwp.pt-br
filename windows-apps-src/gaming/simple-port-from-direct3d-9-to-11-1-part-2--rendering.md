@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, estrutura de renderização, conversão, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7855035"
+ms.locfileid: "7976021"
 ---
 # <a name="convert-the-rendering-framework"></a>Converter a estrutura de renderização
 
@@ -105,7 +105,7 @@ Quando definimos o layout de entrada, garantimos que ele representasse a mesma e
 
 Aqui está o sombreador de vértice de transformação de hardware, desta vez definido em seu próprio arquivo.
 
-> **Observação**os sombreadores de vértice são necessários para gerar o valor de sistema sv\_position.. Essa semântica resolve os dados de posição de vértice para valores de coordenadas nos casos em que x fica entre -1 e 1, y fica entre -1 e 1, z é dividido pelo valor de w da coordenada homogênea original (z/w) e w é 1 dividido pelo valor original de w (1/w).
+> **Observação**os sombreadores de vértice são exigidos para gerar o valor de sistema sv\_position.. Essa semântica resolve os dados de posição de vértice para valores de coordenadas nos casos em que x fica entre -1 e 1, y fica entre -1 e 1, z é dividido pelo valor de w da coordenada homogênea original (z/w) e w é 1 dividido pelo valor original de w (1/w).
 
  
 
@@ -236,7 +236,7 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir o código de bytes do sombreador no pacote do aplicativo compilado, adicione o arquivo HLSL ao projeto do Visual Studio. O Visual Studio usará a [Ferramenta Compilador de Efeitos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar arquivos HLSL em arquivos .CSO (objetos compilados de sombreador) e incluí-los no pacote do aplicativo.
 
-> **Observação**  não se esqueça de definir o nível de recurso de destino correto para o compilador HLSL: clique com botão direito o arquivo de origem HLSL no Visual Studio, selecione Propriedades e altere a configuração de **Modelo de sombreador** em **compilador HLSL -&gt; geral**. O Direct3D compara essa propriedade com os recursos de hardware quando o aplicativo cria o recurso do sombreador Direct3D.
+> **Observação**  não se esqueça de definir o nível de recurso de destino correto para o compilador HLSL: clique com botão direito do arquivo de origem HLSL no Visual Studio, selecione Propriedades e altere a configuração de **Modelo de sombreador** em **compilador HLSL -&gt; geral**. O Direct3D compara essa propriedade com os recursos de hardware quando o aplicativo cria o recurso do sombreador Direct3D.
 
  
 

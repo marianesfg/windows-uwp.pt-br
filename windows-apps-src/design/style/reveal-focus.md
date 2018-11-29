@@ -10,11 +10,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977583"
 ---
 # <a name="reveal-focus"></a>Foco do revelação
 
@@ -22,7 +22,7 @@ ms.locfileid: "7834630"
 
 Revela que foco é um efeito de iluminação para [experiências de 10 pés](/windows/uwp/design/devices/designing-for-tv), como Xbox One e telas de televisão. Ele anima a borda de elementos focalizáveis, como botões, quando o usuário move o foco do gamepad ou do teclado até eles. Ele está desativado por padrão, mas é fácil de habilitar. 
 
-(Para o efeito de realce de revelação, um efeito de iluminação que destaca elementos interativos, consulte o [artigo do realce de revelação](/windows/uwp/design/style/reveal).)
+(Para o efeito de realce de revelação, um efeito de iluminação que destaca elementos interativos, consulte o [artigo revelar destaque](/windows/uwp/design/style/reveal)).
 
 
 > **APIs importantes**: [propriedade Application.FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [enumeração FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind) e [propriedade Control.UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
@@ -65,8 +65,8 @@ Revela que foco está desativada por padrão. Para habilitá-lo:
 
 Depois de definir a propriedade **FocusVisualKind** , o sistema aplica automaticamente o efeito de foco do revelação a todos os controles cuja propriedade [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) é definida como **True** (o valor padrão da maioria dos controles). 
 
-## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não revelar foco por padrão? 
-Como você pode ver, é muito fácil ativar revelar o foco quando o app detectar que ele é executado em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
+## <a name="why-isnt-reveal-focus-on-by-default"></a>Por que não está revelar foco ativado por padrão? 
+Como você pode ver, é muito fácil ativar revelar o foco quando o app detectar que ele está em execução em um Xbox. Então, por que o sistema não o ativa para você? Porque o foco do revelação aumenta o tamanho do foco visual, que pode causar problemas com o layout de interface do usuário. Em alguns casos, convém personalizar o efeito de foco do revelação para otimizá-lo para seu aplicativo.
 
 ## <a name="customizing-reveal-focus"></a>Personalizando o foco do revelação
 

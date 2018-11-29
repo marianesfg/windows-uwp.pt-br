@@ -1,20 +1,20 @@
 ---
 title: Novidades do Windows Docs em agosto de 2018 - desenvolver aplicativos UWP
-description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 de agosto de 2018.
+description: Novos recursos, vídeos, amostras e diretrizes para desenvolvedores têm foram adicionados à documentação do desenvolvedor do Windows 10 referente a agosto de 2018.
 keywords: Novidades, atualização, recursos, diretrizes para desenvolvedores, Windows 10, agosto
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: da8bc3b441a1b619e086934f277cb14be6bcc37a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852554"
+ms.locfileid: "7980641"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novidades dos documentos de desenvolvedor do Windows em agosto de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de agosto.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recursos, diretrizes para desenvolvedores e vídeos foram disponibilizados no mês de agosto.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -28,7 +28,7 @@ Os recursos a seguir foram adicionados para o Windows compilações do Insider P
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [divisão](../design/controls-and-patterns/buttons.md#create-a-split-button)e [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) fornecem controles de botão com recursos especializados para aprimorar a interface do usuário do seu aplicativo.
 
-![Um botão de divisão para a seleção de cor de primeiro plano](../design/controls-and-patterns/images/split-button-rtb.png)
+![Um botão de divisão para selecionar a cor de primeiro plano](../design/controls-and-patterns/images/split-button-rtb.png)
 
 * NavigationView agora oferece suporte a [navegação superior](../design/controls-and-patterns/navigationview.md), para casos em que seu aplicativo tem um número menor de opções de navegação e exigem mais espaço para conteúdo do seu aplicativo.
 
@@ -44,30 +44,30 @@ Para saber mais, consulte o [tempo de execução de aplicar correções para um 
 
 ### <a name="web-api-extensions"></a>Extensões de API da Web
 
-Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar rich web informações sobre a API de MDN mostrada diretamente na [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Uma lista de [extensões de API do Microsoft herdadas](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) foi adicionada à documentação do Mozilla Developer Network para desenvolvimento da web entre navegadores. Essas extensões de API são exclusivos do Internet Explorer ou o Microsoft Edge e complementam as informações existentes sobre o suporte de compatibilidade e navegador nos documentos de web MDN. Microsoft herdados [extensões CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) e [JavaScript extensões](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) também estão disponíveis, e você pode encontrar rich web informações sobre a API de MDN mostrada diretamente no [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ c++ exemplos de código do WinRT
 
-Adicionamos 250 [C++ c++ WinRT](../cpp-and-winrt-apis/index.md) listagens para todos os tópicos documentos que acompanha C + existente do código c++ exemplos de código CX.
+Adicionamos 250 [C++ c++ WinRT](../cpp-and-winrt-apis/index.md) listagens para todos os tópicos documentos que acompanha C + existente de código c++ exemplos de código CX.
 
 ### <a name="project-rome"></a>Project Rome
 
-O site de [documentos do projeto Roma](https://docs.microsoft.com/windows/project-rome/) tiver sido reorganizado em uma abordagem de recurso primeiro. Isso deve ser mais fácil para desenvolvedores para encontrar o que estão procurando e a implementação dos recursos de sua escolha em várias plataformas.
+O site de [documentos do projeto Roma](https://docs.microsoft.com/windows/project-rome/) tiver sido reorganizado em uma abordagem de recurso-first. Isso deve ser mais fácil para desenvolvedores para encontrar o que estão procurando e a implementação dos recursos de sua escolha em várias plataformas.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="xbox-live-unity-plugin"></a>Plug-in do Xbox Live Unity
 
-O plug-in do Xbox Live para o Unity contém suporte para adicionar a assinatura do Xbox Live, estatísticas, listas de amigos, armazenamento em nuvem e placares de líderes ao seu título. [Assista ao vídeo](https://youtu.be/fVQZ-YgwNpY) para saber mais, em seguida, [Baixe o pacote do GitHub](https://aka.ms/UnityPlugin) para começar.
+Plug-in do Xbox Live para o Unity contém suporte para adicionar a assinatura do Xbox Live, estatísticas, listas de amigos, armazenamento em nuvem e placares de líderes ao seu título. [Assista ao vídeo](https://youtu.be/fVQZ-YgwNpY) para saber mais, em seguida, [Baixe o pacote do GitHub](https://aka.ms/UnityPlugin) para começar.
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 
-* [Como o kernel sabe quando reiniciar um driver de vídeo?](https://youtu.be/3SNAdyO1l5c)
+* [Como o kernel saber quando reiniciar um driver de vídeo?](https://youtu.be/3SNAdyO1l5c)
 
 Larry Osterman:
 
-* [O que é a história por trás do objeto Burgermaster no Windows?](https://youtu.be/0TDSbyAIvX0)
+* [Qual é a história por trás do objeto Burgermaster no Windows?](https://youtu.be/0TDSbyAIvX0)

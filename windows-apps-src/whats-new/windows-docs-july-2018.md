@@ -6,15 +6,15 @@ ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d445f31d22baaafeb16c004543770cf5d6df05a7
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981473"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novidades dos documentos de desenvolvedor do Windows em julho de 2018
 
-A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. O seguinte visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
+A documentação do desenvolvedor do Windows está sendo constantemente atualizada com informações sobre os novos recursos disponíveis para desenvolvedores em toda a plataforma Windows. As seguintes visões gerais de recurso, diretrizes para desenvolvedores, vídeos e amostras foram disponibilizadas no mês de julho.
 
 [Instale as ferramentas e o SDK](http://go.microsoft.com/fwlink/?LinkId=821431) no Windows 10 e você estará pronto para [criar um aplicativo Universal do Windows](../get-started/create-uwp-apps.md) ou descobrir como pode usar seu [código de aplicativo existente no Windows](../porting/index.md).
 
@@ -34,17 +34,17 @@ Confira nossos guias PWA para:
 
 ### <a name="notepad"></a>Bloco de notas
 
-Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e o Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
+Está disponível no Windows 10 Insider Preview Build 17713, [o bloco de notas foi atualizado com muitos recursos novos](http://aka.ms/ant-man). Zoom, delimitador localizar/substituir e suporte para terminações de linha Unix/Linux (AL) e Mac (CR) agora estão disponíveis para [Os participantes do Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Diretrizes para desenvolvedor
 
 ### <a name="design-landing-page"></a>Página de aterrissagem de design
 
-Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de um instantâneo de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
+Confira o [atualizado página inicial de Design](https://developer.microsoft.com/windows/apps/design) para uma visão geral de uma visão geral de áreas de design UWP e informações sobre as últimas atualizações ao Design Fluent.
 
 ### <a name="design-toolkits"></a>Kits de ferramentas de design
 
-Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Check-out aqui.](../design/downloads/index.md)
+Kits de ferramentas do Adobe XD e Adobe Illustrator foram atualizados com os novos recursos. Esses kits de ferramentas de design fornecem controles e modelos de layout para criar aplicativos UWP. [Confira-los aqui.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -56,15 +56,15 @@ Adicionamos vários novos tópicos a [WebVR documentação](https://docs.microso
 
 * [WebVR em aplicativos Web progressivos](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): Saiba como adicionar WebVR para um aplicativo de Web progressivos (PWA).
 
-* [WebVR no WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Saiba como adicionar WebVR a um controle de exibição da Web em um aplicativo do Windows 10.
+* [WebVR no WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Saiba como adicionar WebVR a um controle WebView em um aplicativo do Windows 10.
 
 * [Demonstrações de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Confira algumas demonstrações WebVR usando o Microsoft Edge e um headset imersivo do Windows Mixed Reality.
 
 Além disso, fizemos algumas atualizações para páginas existentes:
 
-* Sumário agora é melhor organizado em quatro buckets de nível superior distintos: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
+* Sumário agora é melhor organizado em quatro buckets distintos de nível superior: **conceitos básicos**, **desenvolvimento**, **recursos**e **demonstrações**.
 
-* [Guia do desenvolvedor do WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
+* [Guia do desenvolvedor WebVR (página inicial)](https://docs.microsoft.com/microsoft-edge/webvr/): atualizada aparência, com maiores imagens e ícones e nova demonstração.
 
 * [Usando a WebVR com o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): atualizado para incluir informações sobre o Windows Update de 10 de abril de 2018.
 
@@ -80,7 +80,7 @@ Bate-papo do projeto personalidade permite que você adicionar uma pessoa person
 
 ### <a name="one-dev-question"></a>Uma pergunta sobre desenvolvimento
 
-A série de vídeos de uma pergunta sobre desenvolvimento, os desenvolvedores da Microsoft há muito tempo abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
+A série de vídeos de uma pergunta sobre desenvolvimento, há muito tempo desenvolvedores da Microsoft abrangem uma série de perguntas sobre o desenvolvimento do Windows, cultura de equipe e histórico. Veja as perguntas mais recentes que podemos respondeu!
 
 Raymond Chen:
 

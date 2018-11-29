@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, directx 11, dispositivo perdido
 ms.localizationpriority: medium
 ms.openlocfilehash: c11bbf7657644fbf616590f50d75d93f62ed993e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846834"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974134"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Manipular cenários removidos de dispositivos no Direct3D 11
 
@@ -26,7 +26,7 @@ No DirectX 9, os aplicativos devem encontrar uma condição "[dispositivo perdid
 -   O dispositivo gráfico para de responder e é reiniciado.
 -   Um adaptador gráfico é fisicamente conectado ou removido.
 
-Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que o dispositivo Direct3D deve ser reinicializado e os recursos do dispositivo precisam ser recriados. Este tutorial passo a passo explica como os aplicativos e jogos do Direct3D 11 podem detectar e responder a qualquer circunstância em que o adaptador gráfico seja reiniciado, removido ou alterado. O modelo de aplicativo DirectX 11 (Windows Universal) fornecido com o Microsoft Visual Studio2015 fornece exemplos de código.
+Mediante essas circunstâncias, o DXGI retorna um código de erro indicando que o dispositivo Direct3D deve ser reinicializado e os recursos do dispositivo precisam ser recriados. Este tutorial passo a passo explica como os aplicativos e jogos do Direct3D 11 podem detectar e responder a qualquer circunstância em que o adaptador gráfico seja reiniciado, removido ou alterado. Exemplos de código são fornecidos do modelo aplicativo DirectX 11 (Windows Universal) fornecido com o Microsoft Visual Studio2015.
 
 ## <a name="instructions"></a>Instruções
 

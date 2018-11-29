@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 05cf78d7dec260b990d2ce71662e3db6eb07d07f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835501"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977844"
 ---
 # <a name="getting-started-common-controls"></a>Introdução: controles comuns
 
 
 ## <a name="common-controls-list"></a>Lista de controles comuns
 
-Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. Obviamente, há muitos controles mais que estão disponíveis para você. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
+Na seção anterior, você trabalhou com apenas dois controles: botões e blocos de texto. É claro, há muito mais controles que estão disponíveis para você. Aqui estão alguns controles comuns que você usará em seus aplicativos e seus equivalentes do iOS. Os controles de iOS estão listados em ordem alfabética, perto dos controles da Plataforma Universal do Windows (UWP) mais similares.
 
 O que há de mais inteligente com relação aos controles UWP é que eles podem perceber em qual tipo de dispositivo estão sendo executados e mudar a aparência e a funcionalidade deles de acordo. Por exemplo, se seu projeto usa o controle [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), é bastante inteligente ele se otimizar para ter aparência e comportamento diferentes em um desktop e em um telefone. Você não precisa fazer nada: os controles se ajustam no tempo de execução.
 

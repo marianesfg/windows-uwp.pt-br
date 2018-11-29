@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978156"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicações de rede em segundo plano
 Para continuar a comunicação de rede quando não estiver em primeiro plano, seu aplicativo pode usar tarefas em segundo plano e uma destas duas opções.
-- Agente de soquete. Se seu aplicativo usa soquetes para conexões de longo prazo em seguida, quando ele sai do primeiro plano, ele pode delegar a propriedade de um soquete para um agente de soquete do sistema. Em seguida, o agente: ativa seu aplicativo quando chega tráfego no soquete; transfere a propriedade de volta para seu aplicativo; e seu aplicativo processa o tráfego de chegada.
+- Agente de soquete. Se seu aplicativo usa soquetes para conexões de longa em seguida, quando eles saem do primeiro plano, ele pode delegar a propriedade de um soquete para um agente de soquete do sistema. Em seguida, o agente: ativa seu aplicativo quando chega tráfego no soquete; transfere a propriedade de volta para seu aplicativo; e seu aplicativo processa o tráfego de chegada.
 - Gatilhos de canal de controle. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Realizando operações de rede em tarefas em segundo plano

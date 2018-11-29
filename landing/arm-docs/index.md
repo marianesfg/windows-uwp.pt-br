@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 ms.topic: article
 keywords: Windows 10 no ARM, ARM, criação de aplicativos do win32 ARM64, criando drivers ARM64
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7844300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978704"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 em execução no ARM
-Windows 10 é executado em computadores com processadores ARM. Esta página fornece as informações para saber mais sobre a plataforma e começar a desenvolver aplicativos. Também recomendamos que você forneça seus comentários usando os links na parte inferior da página.
+Windows 10 é executado em computadores com processadores ARM. Esta página fornece as informações para que você saiba mais sobre a plataforma e começar a desenvolver aplicativos. Também recomendamos que você forneça seus comentários usando os links na parte inferior da página.
 
 ## <a name="introductory-videos"></a>Vídeos introdutórios
 Assista e saiba como o Windows 10 é executado no ARM.
@@ -24,11 +24,11 @@ Assista e saiba como o Windows 10 é executado no ARM.
 <ul class="cols cols3">
     <li>
         <a href="https://youtu.be/OZtVBDeVqCE"><img alt="Building ARM64 Win32 C++ apps video" src="./images/Arm64Scaled.png" /></a>
-        <h3>Criando aplicativos de C++ Win32 ARM64</h3><p>Saiba como instalar as ferramentas de ARM64 para o Visual Studio. Em seguida, nós o guiaremos você pelas etapas de criação e compilar um novo projeto de 64 ARM.</p>
+        <h3>Criando aplicativos de C++ Win32 ARM64</h3><p>Saiba como instalar as ferramentas de ARM64 para o Visual Studio. Em seguida, nós o guiaremos você pelas etapas de criação e compilando um novo projeto de 64 ARM.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Build/2018/BRK2438"><img alt="Build 2018 Windows 10 on ARM for developers" src="./images/buildVideoStillScaled.png" /></a>
-        <h3>Build 2018 Windows 10 no ARM para desenvolvedores</h3><p>Saiba mais sobre o Windows 10 em dispositivos ARM, como a mágica do x86 funciona de emulação e, finalmente, como enviar e criar aplicativos para Windows 10 no ARM. Podemos ser exibida como criar aplicativos ARM64 para área de trabalho e UWP.</p>
+        <h3>Build 2018 Windows 10 no ARM para desenvolvedores</h3><p>Saiba mais sobre o Windows 10 em dispositivos ARM, como a mágica do x86 funciona de emulação e, finalmente, como enviar e criar aplicativos para Windows 10 no ARM. Será mostraremos como criar aplicativos ARM64 para área de trabalho e UWP.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Ch9Live/Windows-Community-Standup/Kevin-Gallo-January-2018"><img alt="Community standup video featuring Kevin Gallo" src="./images/communityStandupStillScaled.png" /></a>
@@ -37,7 +37,7 @@ Assista e saiba como o Windows 10 é executado no ARM.
 </ul>
 
 ## <a name="understanding-windows-10-on-arm"></a>Noções básicas sobre o Windows 10 no ARM
-Obtenha saber a plataforma, observando a esses recursos.
+Acessar Meus a plataforma, observando a esses recursos.
 
 <ul class="cardsF panelContent cols cols2">
     <li>
@@ -95,7 +95,7 @@ Inicie a adaptar seus aplicativos para Windows 10 no ARM e tirar proveito dos re
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <a class="card" href="https://blogs.windows.com/buildingapps/?p=52087" title="Criando ARM64 aplicativos" data-linktype="absolute-path">
+                <a class="card" href="https://blogs.windows.com/buildingapps/?p=52087" title="Criando aplicativos ARM64" data-linktype="absolute-path">
                     <div class="cardImageOuter">
                             <img class="cardImage" role="presentation" alt="Build ARM64 Win32 apps blog icon" src="/media/common/i_build.svg" data-linktype="external" />
                     </div>
@@ -110,7 +110,7 @@ Inicie a adaptar seus aplicativos para Windows 10 no ARM e tirar proveito dos re
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <a class="card" href="/windows/uwp/porting/apps-on-arm-troubleshooting-arm32" title="Solução de problemas de aplicativos arm32" data-linktype="absolute-path">
+                <a class="card" href="/windows/uwp/porting/apps-on-arm-troubleshooting-arm32" title="Solucionar problemas de aplicativos arm32" data-linktype="absolute-path">
                     <div class="cardImageOuter">
                             <img class="cardImage" role="presentation" alt="UWP apps on ARM icon" src="/media/common/i_code-edit.svg" data-linktype="external" />
                     </div>
@@ -131,8 +131,8 @@ Inicie a adaptar seus aplicativos para Windows 10 no ARM e tirar proveito dos re
                     </div>
                 </a>
                 <div class="cardText">
-                    <h3>Depuração em ARM</h3>
-                    <p class="x-hidden-focus">Obter o código em execução sem problemas no Windows 10 no ARM.</p>
+                    <h3>Depuração no ARM</h3>
+                    <p class="x-hidden-focus">Obter o código funcionando normalmente no Windows 10 no ARM.</p>
                 </div>
             </div>
         </div>
@@ -191,8 +191,8 @@ Inicie a adaptar seus aplicativos para Windows 10 no ARM e tirar proveito dos re
     </li>
 </ul>-->
 
-## <a name="let-us-know-if-you-have-feedback"></a>Conte se você tiver comentários
-Estamos continuamente aperfeiçoando nosso produto por seus comentários utilizando e de nossos clientes existentes. Se você já tem uma ideia, está travados em um problema ou apenas deseja compartilhar como muito bem sua experiência é, esses links ajudará você.
+## <a name="let-us-know-if-you-have-feedback"></a>Conte-nos sua se você tiver comentários
+Estamos continuamente aperfeiçoando nosso produto por seus comentários aproveitando e de nossos clientes existentes. Se você já tem uma ideia, está travados em um problema ou apenas deseja compartilhar como muito bem sua experiência é, esses links ajudará você.
 
 <ul class="cardsM cols cols3">
 <li>
@@ -218,7 +218,7 @@ Estamos continuamente aperfeiçoando nosso produto por seus comentários utiliza
             <img class="cardImage" role="presentation" alt="Give doc feedback icon" src="/media/common/i_form.svg" data-linktype="external" />
             <div class="cardText">
                 <h3>Fornecer comentários de documento</h3>
-                <p>Você encontrou um problema com nossos documentos? Você deseja para que possamos fazer algo mais claro? Crie um problema no repositório do GitHub nossos documentos.</p>
+                <p>Você encontrou um problema com nossos documentos? Você deseja para que possamos fazer algo mais clara? Crie um problema no repositório do GitHub nossos documentos.</p>
             </div>
         </a>
     </li>

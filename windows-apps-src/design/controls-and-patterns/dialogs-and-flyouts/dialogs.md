@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 520f4bdd72c51cd1508c9e655107ae909f6e4243
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977960"
 ---
 ## <a name="dialog-controls"></a>Controles de caixa de diálogo
 
@@ -118,7 +118,7 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Fornecer uma ação segura
+## <a name="provide-a-safe-action"></a>Forneça uma ação segura
 Como caixas de diálogo bloqueiam a interação do usuário e como os botões são o mecanismo principal para os usuários ignorarem a caixa de diálogo, certifique-se de que a caixa de diálogo contém pelo menos um botão de ação "segura" e não destrutiva, como "Fechar" ou "Acertou!". **Todas as caixas de diálogo devem conter pelo menos um botão de ação segura para fechar a caixa de diálogo.** Isso garante que o usuário possa fechar a caixa de diálogo sem executar uma ação.<br>![Uma caixa de diálogo de um botão](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp

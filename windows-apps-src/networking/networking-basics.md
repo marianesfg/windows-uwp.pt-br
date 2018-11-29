@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7848103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980814"
 ---
 # <a name="networking-basics"></a>Noções básicas de rede
 Coisas que você deve fazer para qualquer aplicativo habilitado por rede.

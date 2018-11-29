@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, anúncios, campanhas, promover
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980578"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Criar uma campanha publicitária para seu app
 
-Você pode criar campanhas publicitárias no [Partner Center](https://partner.microsoft.com/dashboard) para ajudar a promover seu aplicativo e ampliar a base de seu usuário. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações do aplicativo no Partner Center, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
+Você pode criar campanhas publicitárias no [Partner Center](https://partner.microsoft.com/dashboard) para promover seu aplicativo e ampliar seus usuários base. Por padrão, escolheremos o público-alvo para seus anúncios com base nas configurações do aplicativo no Partner Center, mas, opcionalmente, você pode definir seu próprio público. Você também pode usar um conjunto padrão de modelos de anúncios ou carregar seus próprios designs de anúncios. Para obter mais detalhes sobre campanhas publicitárias, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md).
 
 Você pode criar campanhas publicitárias somente para aplicativos que passaram na fase final de publicação do [processo de certificação de aplicativo](the-app-certification-process.md).
 
@@ -50,7 +50,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 
     * Se você recebeu um cupom de um representante da Microsoft para pagar uma campanha publicitária, clique em **Usar um cupom**, insira o código do cupom e clique em **Aplicar** para aplicar o cupom à campanha.
 
-    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios internos, pois são executados somente em seus próprios aplicativos.
+    Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Público**. Esta etapa não está disponível para campanhas de anúncios internos, pois veiculados somente em seus próprios aplicativos.
 
 9.  Na página **Público**, mostraremos as configurações de público recomendadas para a campanha. Como opção, você pode ajustar essas informações:
     * **Países/regiões**: escolha até cinco países ou regiões em que você deseja que o anúncio apareça. Para obter uma lista de países ou regiões com suporte, consulte [Perguntas comuns sobre campanhas publicitárias](common-questions.md#where-will-my-ad-appear).
@@ -70,7 +70,7 @@ Veja aqui como criar uma campanha publicitária para promover um aplicativo.
 10.  Se você escolheu **Aumentar o envolvimento do app** como seu objetivo de campanha, poderá selecionar um dos segmentos de cliente para direcionar. Os anúncios criados usando essa campanha serão mostrados apenas para os clientes que estão incluídos no segmento. Apenas um segmento pode ser selecionado por campanha publicitária. Para obter informações sobre segmentos, consulte [Criar segmentos de clientes](create-customer-segments.md). Ao terminar, clique em **Salvar e avançar** para ir até a etapa **Design do anúncio**. Esta etapa não está disponível para campanhas de anúncios internos, porque eles são executados somente em seus próprios aplicativos.
 
 11.  Na página **Design de anúncio**, escolha uma destas opções:
-    * **Gerado automaticamente**. Essa é a opção padrão, e permite que você crie um anúncio de modelos padrão. Você pode fazer seleções a fim de personalizar o conteúdo do anúncio, e visualizaremos a aparência do anúncio com base em suas opções (automaticamente atualizadas à medida que você faz as seleções).
+    * **Gerado automaticamente**. Essa é a opção padrão, e permite que você criar um anúncio de modelos padrão. Você pode fazer seleções a fim de personalizar o conteúdo do anúncio, e visualizaremos a aparência do anúncio com base em suas opções (automaticamente atualizadas à medida que você faz as seleções).
         * Na lista suspensa **Idioma**, selecione o idioma do anúncio. O texto para o selo da Microsoft Store será exibido no idioma selecionado.
         * Para adicionar uma linha extra de texto ao anúncio, digite o texto no campo **Slogan personalizado**.
             > [!NOTE]

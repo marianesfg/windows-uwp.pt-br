@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, direct3d 11, inicialização, fazendo a portabilidade, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852048"
+ms.locfileid: "7981043"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar o Direct3D 11.
 
@@ -169,7 +169,7 @@ swapChain.As(&m_swapChain);
 
 Para garantir que não estejamos realizando mais renderizações do que a tela pode exibir, definimos a latência de quadros como 1 e usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Assim, é possível economizar energia e atender a um requisito de certificação da loja; a parte 2 deste guia passo a passo fala mais sobre apresentação na tela.
 
-> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) para continuar a outros trabalhos enquanto o thread de renderização está bloqueado.
+> **Observação**  você pode usar multithreading (por exemplo, itens de trabalho [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) ) continuidade a outros trabalhos enquanto o thread de renderização está bloqueado.
 
  
 

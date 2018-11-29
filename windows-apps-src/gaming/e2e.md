@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, jogos, desenvolvimento de jogos
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980555"
 ---
 # <a name="windows-10-game-development-guide"></a>Guia de desenvolvimento de jogos do Windows 10
 
@@ -106,7 +106,7 @@ Ao longo deste guia, você encontrará links profundos para a documentação rel
 
 [Registrar uma conta de desenvolvedor no Partner Center](https://developer.microsoft.com/store/register) é a primeira etapa para publicar seu jogo do Windows. Com uma conta de desenvolvedor, você pode reservar o nome de seu jogo e enviar jogos gratuitos e pagos à Microsoft Store para todos os dispositivos Windows. Use sua conta de desenvolvedor para gerenciar seu jogo e produtos no jogo, obter análises detalhadas e habilitar serviços que criam ótimas experiências para jogadores do mundo inteiro. 
 
-A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de registrar uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
+A Microsoft também oferece vários programas de desenvolvedor para ajudar você a desenvolver e publicar jogos do Windows. É recomendável verificar se algum deles serve para você antes de criar uma conta do Partner Center. Para obter mais informações, acesse [Programas de desenvolvedor](#developer-programs).
 
 
 ### <a name="developer-programs"></a>Programas de desenvolvedor
@@ -594,7 +594,7 @@ O Direct3D 11.3 é uma API de elemento gráfico de baixo nível que usa o modelo
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">O que é Direct3D12?</a></td>
     </tr>
     <tr>
-        <td>Visão geral do Direct3D11</td>
+        <td>Visão geral das Direct3D11</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Elementos gráficos do Direct3D 11</a></td>
     </tr>
     <tr>
@@ -1356,9 +1356,9 @@ Um bloco é a representação de seu jogo no menu Iniciar. Os blocos e notifica�
 </table>
  
 
-### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de produto no aplicativo (complemento)
+### <a name="enable-in-app-product-add-on-purchases"></a>Habilitar compras de produtos no aplicativo (complemento)
 
-Um complemento (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Complementos podem ser níveis de jogo, itens ou qualquer outra coisa que os jogadores podem aproveitar. Usados adequadamente, complementos podem gerar receita e ainda melhorar a experiência do jogo. Definir e publicar os complementos do seu jogo por meio do Partner Center e habilitar compras no aplicativo no código do jogo.
+Um complemento (produto no aplicativo) é um item suplementar que os jogadores podem comprar no jogo. Complementos podem ser níveis de jogos, itens ou qualquer outra coisa que os jogadores podem aproveitar. Usados adequadamente, complementos podem gerar receita e ainda melhorar a experiência do jogo. Definir e publicar complementos do seu jogo por meio do Partner Center e habilitar compras no aplicativo no código do jogo.
 
 <table>
     <colgroup>

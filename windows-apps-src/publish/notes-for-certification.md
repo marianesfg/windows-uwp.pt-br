@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, notas para testadores
 ms.localizationpriority: medium
 ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848797"
+ms.locfileid: "7980254"
 ---
 # <a name="notes-for-certification"></a>Notas para certificação
 
@@ -26,9 +26,9 @@ Certifique-se de incluir (se aplicável ao seu aplicativo):
 
 -   **Etapas para verificar o uso de áudio em segundo plano**: se seu aplicativo permite que o áudio seja executado em segundo plano, os testadores podem precisar de instruções sobre como acessar esse recurso para que eles possam confirmar se ele funciona corretamente.
 
--  **Diferenças de esperado no comportamento com base na região ou outras configurações de cliente**: por exemplo, se os clientes em diferentes regiões verão conteúdo diferente, certifique-se de chamar isso para que os testadores entendam as diferenças e analisem adequadamente.
+-  **Diferenças de esperado no comportamento com base na região ou outras configurações de cliente**: por exemplo, se os clientes em diferentes regiões verão conteúdo diferente, certifique-se de chamá-lo-out para que os testadores entendam as diferenças e analisem adequadamente.
 
--   **Informações sobre o que mudou em uma atualização de aplicativo**: atualizações para os aplicativos já publicados, convém informar aos testadores o que mudou, especialmente se os pacotes são os mesmos e você está apenas alterando as alterações ao seu aplicativo (como a adição de mais de listagem capturas de tela, alterar a categoria do aplicativo, ou editar a descrição).
+-   **Informações sobre o que mudou em uma atualização de aplicativo**: atualizações para os aplicativos já publicados, convém informar aos testadores o que mudou, especialmente se os pacotes forem os mesmos e você está apenas alterando alterações ao seu aplicativo (como a adição de mais de listagem capturas de tela, alterar a categoria do aplicativo, ou editar a descrição).
 
 -   **A data em que você está inserindo as notas**: isso é especialmente importante se você estiver usando uma área restrita de desenvolvimento no Partner Center (por exemplo, esse é o caso para qualquer jogo que se integra ao Xbox Live), já que as notas inseridas ao publicar em uma área restrita será permanecerão quando você solicita a certificação. Ver a data ajuda os testadores a avaliar se há algum problema temporário que não se aplica mais.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e418e5a159df44d6ff6e15e4faa972164447f5ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852015"
+ms.locfileid: "7978535"
 ---
 # <a name="which-networking-technology"></a>Qual tecnologia de rede?
 
@@ -69,7 +69,7 @@ Use [HttpClient](httpclient.md) (e o restante da API namespace [**Windows.Web.Ht
 
 Use a [API de transferência em segundo plano](background-transfers.md) quando desejar transferir arquivos de forma confiável pela rede. A API de transferência em segundo plano fornece recursos avançados de upload e transferência que são executados em segundo plano durante a suspensão do aplicativo e persistem após o encerramento do aplicativo. A API monitora o status da rede e automaticamente suspende e retoma transferências quando a conexão é perdida. As transferências também reconhecem o sensor de dados e de bateria, ou seja, a atividade de transferência se ajusta de acordo com a conectividade atual e o status de bateria do dispositivo. Esses recursos são essenciais quando o aplicativo é executado em dispositivos móveis ou alimentados por bateria. A API é ideal para carregar e baixar arquivos muito grandes usando HTTP(S). Também há suporte a FTP, mas apenas para downloads.
 
-Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo for concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
+Um novo recurso de transferência em segundo plano no Windows 10 é a capacidade de disparar pós-processamento quando uma transferência de arquivo é concluída, para que você possa atualizar catálogos locais, ativar outros aplicativos ou notificar o usuário quando um download for concluído.
 
 ### <a name="when-to-use-background-transfers"></a>Quando usar transferências em segundo plano
 

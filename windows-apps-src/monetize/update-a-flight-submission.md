@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de envio da Microsoft Store, envio de versão de pré-lançamento, atualização
 ms.localizationpriority: medium
 ms.openlocfilehash: fe1e88383d6562526d77aea8c75891216cd75ade
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850957"
+ms.locfileid: "7981063"
 ---
 # <a name="update-a-package-flight-submission"></a>Atualizar um envio de pacote de pré-lançamento
 
@@ -26,7 +26,7 @@ Para usar este método, primeiro você precisa do seguinte:
 
 * Se você não tiver feito isso, conclua todos os [pré-requisitos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para a API de envio da Microsoft Store.
 * [Obtenha um token de acesso do Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) a ser usado no cabeçalho da solicitação para este método. Depois de obter um token de acesso, você terá 60 minutos para usá-lo antes que ele expire. Depois que o token expira, você pode obter um novo.
-* Crie um envio de pacote de pré-lançamento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método de [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) .
+* Crie um envio de pacote de pré-lançamento para um dos seus aplicativos. Você pode fazer isso no Partner Center, ou você pode fazer isso usando o método [criar um envio de pacote de pré-lançamento](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Solicitação
 
@@ -149,7 +149,7 @@ Se não for possível concluir a solicitação, a resposta conterá um dos segui
 | Código de erro |  Descrição   |
 |--------|------------------|
 | 400  | Não foi possível atualizar o envio do pacote de pré-lançamento porque a solicitação é inválida. |
-| 409  | O envio do pacote de pré-lançamento não pôde ser atualizado por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Não foi possível atualizar o envio do pacote de pré-lançamento por causa do estado atual do aplicativo, ou o aplicativo usa um recurso do Partner Center que está [atualmente não é compatível com a API de envio da Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 
 ## <a name="related-topics"></a>Tópicos relacionados

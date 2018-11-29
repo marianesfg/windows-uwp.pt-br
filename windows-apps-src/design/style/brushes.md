@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e46ef0e459ede5fd1185d78186968735d886e63
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975079"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>Uso de pincéis para pintar os planos de fundo, o primeiro plano e contornos
 
@@ -37,7 +37,7 @@ Um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR24296
 
 ### <a name="predefined-color-names"></a>Nomes de cores predefinidas
 
-Você pode usar um nome de cor predefinido, como [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) ou [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx). Existem 256 nomes de cores disponíveis. Um analisador XAML converte o nome da cor em uma estrutura de [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) com os canais de cor corretos. Os 256 nomes de cores são baseadas nos nomes de cores *X11* das folhas de estilos em cascata, Level3 especificação (CSS3), portanto, talvez você já esteja familiarizado com essa lista de nomes de cores se tiver experiência em design ou desenvolvimento da web.
+Você pode usar um nome de cor predefinido, como [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) ou [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx). Existem 256 nomes de cores disponíveis. Um analisador XAML converte o nome da cor em uma estrutura de [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) com os canais de cor corretos. Os 256 nomes de cores se baseiam nos nomes de cores *X11* das folhas de estilos em cascata, Level3 especificação (CSS3), portanto, talvez você já esteja familiarizado com essa lista de nomes de cores se tiver experiência em design ou desenvolvimento da web.
 
 Este é um exemplo que define a propriedade [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) de um [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) como a cor predefinida [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx).
 
