@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: de67a61b4d5982675d32e0446b67d7cf70051923
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975737"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Cartilha de dispositivos para aplicativos UWP (Plataforma Universal do Windows)
 

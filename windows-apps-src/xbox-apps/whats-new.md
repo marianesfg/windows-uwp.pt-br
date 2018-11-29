@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
 ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847575"
+ms.locfileid: "7973973"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Novidades para desenvolvedores na atualização mais recente da UWP em Xbox One
 
@@ -21,13 +21,13 @@ A atualização mais recente da Universal Windows Platform (UWP) no Xbox One con
 Xbox não dá mais suporte ao desenvolvimento de aplicativos x86 ou envios de aplicativos x86 para a loja.
 
 ## <a name="apps-can-now-support-navigating-back-to-the-previous-app"></a>Aplicativos podem agora dão suporte à navegação de volta para o aplicativo anterior 
-UWP no Xbox One aplicativos agora oferece suporte para navegação de volta para o aplicativo anterior. Para fazer isso, se inscrever no evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) e defina a propriedade **Handled** como **false** em seu manipulador de eventos.
+UWP no Xbox One aplicativos agora pode dar suporte a navegação de volta para o aplicativo anterior. Para fazer isso, se inscrever no evento [**Windows.UI.Core.SystemNavigationManager.BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893595) e defina a propriedade **Handled** como **false** em seu manipulador de eventos.
 
 > [!NOTE]
 > Por motivos de compatibilidade, essa funcionalidade está disponível somente para aplicativos que são criados com a versão mais recente da UWP no Xbox One. 
 
 ## <a name="dev-home-is-now-the-default-home-experience-on-development-consoles"></a>A dev Home agora é a experiência inicial padrão em consoles de desenvolvimento
-Consoles de desenvolvimento agora iniciem Dev Home como a experiência inicial padrão. Isso permite que você acertar funcionam sem a necessidade de clique por meio da tela inicial do varejo. Dev Home agora inclui uma ação rápida para iniciar a tela inicial de varejo. Além disso, uma nova configuração permite que você faça varejo Home a experiência padrão. 
+Consoles de desenvolvimento agora iniciem Dev Home como a experiência inicial padrão. Isso permite que você acertar funcionam sem a necessidade de clicam na tela inicial do varejo. Dev Home agora inclui uma ação rápida para iniciar a tela inicial de varejo. Além disso, uma nova configuração permite que você faça varejo domésticos a experiência padrão. 
 
 ## <a name="new-dev-home-user-interface"></a>Nova interface do usuário Dev Home
 A interface do usuário Dev Home agora inclui as seguintes melhorias de produtividade:
@@ -39,7 +39,7 @@ A interface do usuário Dev Home agora inclui as seguintes melhorias de produtiv
 O Windows Device Portal (WDP) agora inclui suporte adicional para as configurações do console. 
 
 ## <a name="you-can-now-switch-the-type-of-your-uwp-title-between-app-and-game"></a>Agora você pode alternar o tipo de seu título UWP entre "App" e "Jogo"
-Alternar o tipo de seu título UWP entre "App" e "De jogo" permite que você teste cenários de jogos sem publicação na loja. Na Dev Home, selecione o aplicativo no painel de **jogos e aplicativos** , pressione o botão modo de exibição no controlador, selecionar os **detalhes do aplicativo** e, em seguida, alterar o tipo de "Aplicativo" ou "Jogo".
+Alternar o tipo de seu título UWP entre "App" e "Jogo" permite que você teste cenários de jogos sem publicação na loja. Na Dev Home, selecione o aplicativo no painel de **jogos e aplicativos** , pressione o botão modo de exibição no controlador, selecionar os **detalhes do aplicativo** e, em seguida, altere o tipo para "App" ou "Jogo".
 
 ## <a name="see-also"></a>Consulte também
 - [Problemas conhecidos](known-issues.md)

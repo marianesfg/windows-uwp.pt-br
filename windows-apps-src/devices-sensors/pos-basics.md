@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, ponto de serviço, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7844997"
+ms.locfileid: "7976626"
 ---
 # <a name="getting-started-with-point-of-service"></a>Introdução ao Ponto de Serviço
 
@@ -24,7 +24,7 @@ Esta seção contém tópicos que são comuns em todas as categorias de disposit
 | [Enumerando dispositivos](pos-basics-enumerating.md)        | Saiba como definir um seletor de dispositivo usado para consultar os dispositivos disponíveis para o sistema e usar esse seletor para enumerar dispositivos de Ponto de Serviço.  |
 | [Criar um objeto de dispositivo](pos-basics-deviceobject.md)  | Saiba como criar um objeto de dispositivo de PointOfService que oferece acesso às propriedades somente leitura do periférico e solicitar o periférico para uso exclusivo. |
 | [Declaração e habilitar ](pos-basics-claim.md)  | Saiba como reservar um periférico de PointOfService para uso exclusivo e habilitar para operações de e/s.  |
-| [Compartilhar periféricos com outras pessoas](pos-basics-sharing.md) | Saiba como compartilhar periféricos Bluetooth conectado ou rede com outros computadores em um ambiente onde vários computadores contam com periféricos compartilhados em vez de dedicada periféricos conectados para cada computador.
+| [Compartilhar periféricos com outras pessoas](pos-basics-sharing.md) | Saiba como compartilhar periféricos Bluetooth conectado ou rede com outros computadores em um ambiente onde vários computadores contam com periféricos compartilhados em vez de dedicado periféricos conectados para cada computador.
 | [PointOfService de ponta a ponta](pos-get-started.md)  | Este é um exemplo de ponta a ponta de como interagir com periféricos do PointOfService que utilizam os exemplos acima. |
 |
 
@@ -36,7 +36,7 @@ Esta seção contém tópicos que são comuns em todas as categorias de disposit
 | [Ciclo de vida do aplicativo](../launch-resume/app-lifecycle.md) | Saiba mais sobre o ciclo de vida de um aplicativo UWP e o que acontece quando o Windows inicia, suspende e retoma o seu aplicativo. |
 | [Recursos de aplicativo](../app-resources/index.md) | Saiba como criar, empacotar e consumir recursos de arquivo, imagem e cadeia de caracteres do seu aplicativo. |
 | [Associação de dados](../data-binding/index.md) | Saiba como usar a vinculação de dados para exibir dados na interface do usuário do seu aplicativo. |
-| [Enumeração do dispositivo](enumerate-devices.md) | Saiba sobre técnicas de enumeração de uso avançada para localizar os periféricos.|
+| [Enumeração do dispositivo](enumerate-devices.md) | Saiba sobre técnicas de enumeração de uso avançada para encontrar os periféricos.|
 | [Aplicativos adaptáveis de versão](../debug-test-perf/version-adaptive-apps.md) | Saiba como projetar seu aplicativo para que ele seja executado em várias versões do Windows 10.|
 |
 

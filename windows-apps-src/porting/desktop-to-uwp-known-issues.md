@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973520"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Problemas conhecidos com pacotes de aplicativos da área de trabalho
 
@@ -131,27 +131,27 @@ certutil -dump <cert_file.pfx>
 
 Isso pode acontecer quando o pacote contém um binário que tenha um certificado corrompido. Veja alguns dos motivos por que isso pode acontecer:
 
-* O início do certificado não está no final de uma imagem.  
+* O início do certificado não estiver no final de uma imagem.  
 
 * O tamanho do certificado não é positivo.
 
 * O início de certificado não for após o `IMAGE_NT_HEADERS32` estrutura para um executável de 32 bits ou após o `IMAGE_NT_HEADERS64` estrutura para um executável de 64 bits.
 
-* O ponteiro de certificado não é alinhado corretamente para uma estrutura WIN_CERTIFICATE.
+* O ponteiro de certificado não alinhado corretamente para uma estrutura WIN_CERTIFICATE.
 
-Para encontrar arquivos que contêm um certificado PE incorreto, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
+Para encontrar arquivos que contêm um certificado PE ruins, abra um **Prompt de comando**e defina a variável de ambiente denominada `APPXSIP_LOG` como um valor de 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-Em seguida, no **Prompt de comando**, assine o aplicativo novamente. Por exemplo:
+Em seguida, no **Prompt de comando**, assine seu aplicativo novamente. Por exemplo:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informações sobre arquivos que contêm um certificado PE incorreto serão exibido na **Janela do Console**. Por exemplo:
+Informações sobre arquivos que contêm um certificado PE ruins aparecerão na **Janela do Console**. Por exemplo:
 
 ```
 ...

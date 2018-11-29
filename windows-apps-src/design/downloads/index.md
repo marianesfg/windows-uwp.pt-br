@@ -8,11 +8,11 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977405"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Projetar kits de ferramentas e amostras para aplicativos UWP
  
@@ -104,14 +104,14 @@ Estes kits de ferramentas fornecem controles e modelos de layout para o design d
     
 ## <a name="samples"></a>Exemplos
 
-![Imagem de Editor de tema XAML fluente](images/XamlThemeEditor_screenshot.png)
+![Imagem do Editor de tema XAML fluente](images/XamlThemeEditor_screenshot.png)
 **Editor de tema XAML fluente**<br>
-O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstrar a flexibilidade de sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
+O Editor de tema XAML fluente é uma ferramenta que ajuda a demonstram a flexibilidade do sistema de Design Fluent, bem como é compatível com o processo de desenvolvimento de aplicativo, geração de marcação XAML para nossa estrutura ResourceDictionary usada em aplicativos da plataforma Universal do Windows (UWPs).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Baixe a amostra de ferramenta</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Confira a ferramenta no GitHub</a>
 
 ![Imagem de VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos poderosos subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada, produtiva para gerenciar e adquirir dispositivos IoT (nesse caso, lâmpadas).<br>
+O aplicativo de exemplo do UWP de ponta a ponta Van Arsdel, Ltd. foi criado para demonstrar a próxima onda de sistema de Design Fluent Microsoft. Ele faz amplo uso do maior densidade e novos controles na <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Biblioteca de interface do usuário do Windows</a> , bem como recursos avançados subjacentes da estrutura de experiência do usuário e composição. O exemplo mostra como você pode criar uma experiência avançada e produtiva para gerenciar e comprar dispositivos IoT (nesse caso, lâmpadas).<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Baixe a amostra VanArsdel</a> <br><a href="https://github.com/microsoft/vanarsdel">Confira a amostra VanArsdel no GitHub</a>
 
 ![criar a imagem de conversão](images/buildcast.png)

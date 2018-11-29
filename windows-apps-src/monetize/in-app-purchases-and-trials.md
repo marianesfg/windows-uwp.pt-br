@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, avaliações, consumível, durável, assinatura
 ms.localizationpriority: medium
 ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827301"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973357"
 ---
 # <a name="in-app-purchases-and-trials"></a>Compras e avaliações no aplicativo
 
@@ -225,7 +225,7 @@ Para configurar um objeto **StoreContext** em um aplicativo da área de trabalho
 
 ### <a name="products-skus-and-availabilities"></a>Produtos, SKUs e disponibilidades
 
-Cada produto na Store tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos da maioria dos desenvolvedores no Partner Center e a maioria dos desenvolvedores nunca definirão SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
+Cada produto na Store tem pelo menos uma *SKU*, e cada SKU tem pelo menos uma *disponibilidade*. Esses conceitos são abstraídos da maioria dos desenvolvedores no Partner Center, e a maioria dos desenvolvedores nunca definirão SKUs ou disponibilidades para seus aplicativos ou complementos. No entanto, como o objeto de modelo para produtos da Store no namespace **Windows.Services.Store** inclui disponibilidades e SKUs, um entendimento básico sobre esses conceitos pode ser útil para alguns cenários.
 
 | Objeto |  Descrição  |
 |---------|-------------------|
@@ -259,7 +259,7 @@ Para produtos com SKUs e disponibilidades, as SKUs e as disponibilidades também
 Se você quiser disponibilizar um complemento para seus clientes no contexto do seu aplicativo, você deve [Inserir uma ID de produto exclusiva](../publish/set-your-add-on-product-id.md#product-id) para seu complemento quando você [criar o envio do complemento](../publish/add-on-submissions.md) no Partner Center. Você pode usar essa ID do produto (product ID) para fazer referência ao complemento em seu código, embora os cenários específicos nos quais você poderá usar a ID do produto dependerão do namespace usado para compras no aplicativo do seu app.
 
 > [!NOTE]
-> A ID do produto que você insere no Partner Center para um complemento é diferente [ID da loja do complemento](#store-ids). A ID da loja é gerada pelo Partner Center.
+> A ID do produto que você digita no Partner Center para um complemento é diferente [ID da loja do complemento](#store-ids). A ID da loja é gerada pelo Partner Center.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Apps que usam o namespace Windows.Services.Store
 

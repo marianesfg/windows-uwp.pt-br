@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, API de coleção da Microsoft Store, exibir produtos
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851927"
+ms.locfileid: "7973500"
 ---
 # <a name="query-for-products"></a>Consulta por produtos
 
@@ -132,7 +132,7 @@ O objeto CollectionItemContractV6 contém os parâmetros a seguir.
 | devOfferId           | string             | A ID de oferta de uma compra realizada em aplicativo.              | Não       |
 | endDate              | datetime           | A data de término do item.              | Sim      |
 | fulfillmentData      | string             | N/D         | Não       |
-| inAppOfferToken      | string             | A sequência de ID de produto especificada pelo desenvolvedor que é atribuída ao item no Partner Center. Uma ID de produto de exemplo é *product123*. | Não       |
+| inAppOfferToken      | string             | A string de ID de produto especificada pelo desenvolvedor que é atribuída ao item no Partner Center. Uma ID de produto de exemplo é *product123*. | Não       |
 | itemId               | string             | A ID que identifica esse item de coleção em relação a outros itens que o usuário tem. Essa ID é exclusiva por produto.   | Sim      |
 | localTicketReference | cadeia de caracteres             | A ID de *localTicketReference* anteriormente fornecida no corpo da solicitação.                  | Sim      |
 | modifiedDate         | datetime           | A data em que este item foi modificado pela última vez.              | Sim      |

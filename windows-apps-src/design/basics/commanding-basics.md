@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980208"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>Noções básicas de design de comandos para apps UWP
 
@@ -23,7 +23,7 @@ Em um aplicativo da plataforma Universal do Windows (UWP), *elementos de comando
 
 ## <a name="provide-the-best-command-experience"></a>Fornecer a melhor experiência de comando
 
-O aspecto de uma interface de comando mais importante é que sua tentativa de permitir que o usuário realizar. À medida que você pretende a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, em seguida, você pode tomar decisões sobre as ferramentas e interações implementá-los.
+O aspecto de uma interface de comando mais importante é que seu tentando permitir que o usuário realizar. À medida que você pretende a funcionalidade do seu aplicativo, considere as etapas necessárias para executar essas tarefas e as experiências do usuário que você deseja habilitar. Depois de concluir um rascunho inicial dessas experiências, você pode tomar decisões sobre as ferramentas e interações implementá-los.
 
 Aqui estão algumas experiências de aplicativo comuns:
 
@@ -33,7 +33,7 @@ Aqui estão algumas experiências de aplicativo comuns:
 - Abrir, salvar e excluir arquivos
 - Edição ou a criação de conteúdo
 
-Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Oferecendo suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como acessível possível, portátil e utilizável.
+Seja criativo com o design de suas experiências de comando. Escolha quais dispositivos de entrada de seu aplicativo dá suporte, e como seu aplicativo responde a cada dispositivo. Dando suporte a mais ampla variedade de recursos e preferências tornar seu aplicativo como acessível possível, portátil e utilizável.
 
 
 
@@ -99,11 +99,11 @@ Para obter uma lista completa, consulte [Controles e elementos de interface do u
 
 ## <a name="place-commands-on-the-right-surface"></a>Colocar comandos na superfície certa
 
-Você pode colocar elementos de comando em várias superfícies em seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
+Você pode colocar elementos de comando em várias superfícies no seu aplicativo, incluindo a tela do aplicativo ou contêineres de comando especial, como uma barra de comandos, submenu da barra de comandos, barra de menu ou caixa de diálogo.
 
 Sempre tente permitir que os usuários manipulem diretamente o conteúdo em vez de por meio de comandos que act no conteúdo, como arrastar e soltar para reorganizar os itens de lista em vez de down botões de comando. 
 
-No entanto, isso talvez não seja possível com alguns dispositivos de entrada, ou ao acomodar preferências e recursos de usuário específico. Nesses casos, forneça funcionalidades de comandos máximo possível e coloque esses elementos de comando em uma superfície de comando no seu aplicativo.
+No entanto, isso não pode ser possível com certos dispositivos de entrada, ou ao acomodar preferências e recursos de usuário específico. Nesses casos, forneça funcionalidades comandos máximo possível e coloque esses elementos de comando em uma superfície de comando em seu aplicativo.
 
 Veja uma lista de algumas das superfícies de comando mais comuns.
 
@@ -143,7 +143,7 @@ Veja uma lista de algumas das superfícies de comando mais comuns.
 
 ## <a name="provide-command-feedback"></a>Fornecer comentários de comando 
 
-Comentários do comando se comunica com os usuários que uma interação ou um comando foi detectado, como ele foi interpretado e manipulado e se ele foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
+Comentários do comando se comunica com os usuários que uma interação ou comando foi detectado, como ele foi interpretado e manipulado e se ele foi bem-sucedida ou não. Isso ajuda os usuários a entender o que fizeram e o que eles podem fazer em seguida. Idealmente, os comentários devem ser integrados naturalmente em sua interface de usuário para que os usuários não precisem ser interrompidos ou executar nenhuma ação adicional, a menos que absolutamente necessário.
 
 > [!NOTE]
 > Não fornece comentários, a menos que seja absolutamente necessário e os comentários não está disponível em outro lugar. Mantenha seu aplicativo da interface do usuário clara e organizada, a menos que você esteja agregando valor.

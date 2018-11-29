@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850917"
+ms.locfileid: "7975588"
 ---
 # <a name="create-write-and-read-a-file"></a>Criar, gravar e ler um arquivo
 
@@ -116,7 +116,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **Gravando texto em um arquivo**
 
-Grave texto em seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
+Grave texto no seu arquivo chamando o método [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .
 
 ```csharp
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -150,7 +150,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 
 **Gravando bytes em um arquivo usando um buffer (2 etapas)**
 
-1.  Primeiro, chame [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obter um buffer dos bytes (com base em uma cadeia de caracteres) que você deseja gravar em seu arquivo.
+1.  Primeiro, chame [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) para obter um buffer dos bytes (com base em uma cadeia de caracteres) que você deseja gravar no seu arquivo.
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -361,7 +361,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **Lendo texto de um arquivo**
 
-Leia o texto do seu arquivo chamando o método [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) .
+Leia texto do seu arquivo chamando o método [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) .
 
 ```csharp
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);

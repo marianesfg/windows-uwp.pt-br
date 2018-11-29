@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, descrição, descrever, listagem da Store, marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: a6cea0103d484cc84f9c253a08f07ed3d69b67f3
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974177"
 ---
 # <a name="write-a-great-app-description"></a>Escrever uma ótima descrição do app
 
@@ -25,7 +25,7 @@ Aqui estão algumas dicas para tornar a descrição do seu aplicativo a melhor q
 -   **Use listas e parágrafos curtos.** Clientes potenciais podem dar apenas uma rápida olhada na descrição do seu aplicativo. Se o conteúdo for dividido usando parágrafos curtos e listas, a avaliação fica mais fácil.
 
     > [!NOTE]
-    > Adicionar uma lista de [recursos do produto](create-app-store-listings.md#product-features) também pode ajudar a mostrar rapidamente o que seu aplicativo faz. A lista aparece logo abaixo da descrição do aplicativo.
+    > Adicionar uma lista de [recursos do produto](create-app-store-listings.md#product-features) também pode ajudar a mostrar rapidamente o que ele faz. A lista aparece logo abaixo da descrição do aplicativo.
 
 -   **Evite linguagem seca.** Escreva sua descrição com linguagem envolvente. Faça com que o texto descreva claramente a função do aplicativo, mas diga isso de um modo que não pareça tedioso. Para muitos aplicativos, um tom casual e amigável funciona bem.
 -   **Use um tamanho adequado.** Uma boa descrição pode ser lida rapidamente, mas também inclui informações suficientes para manter o usuário interessado e explicar o que o aplicativo faz. A descrição de um aplicativo complexo precisa de mais sentenças; já um aplicativo simples precisa de apenas algumas. Na maioria dos casos, o tamanho ideal é algo em torno de 200 palavras, mas bem abaixo de 3000.

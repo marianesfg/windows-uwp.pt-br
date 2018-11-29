@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977138"
 ---
 # <a name="handle-file-activation"></a>Tratar a ativação do arquivo
 
@@ -121,7 +121,7 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 ```
 
 > [!NOTE]
-> Quando iniciado por contrato de arquivo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não para o conteúdo do aplicativo anterior.
+> Quando iniciado por contrato de arquivo, verifique se o que botão Voltar leva o usuário voltar para a tela que iniciou o aplicativo e não o conteúdo do aplicativo anterior.
 
 Recomendamos que você crie um novo XAML **quadro** para cada evento de ativação que abre uma nova página. Dessa forma, o backstack de navegação para o novo quadro XAML não contém nenhum conteúdo anterior que o aplicativo possa ter na janela atual quando suspenso. Se você decidir usar um único **quadro** de XAML para inicialização e contratos de arquivo, você deve limpar as páginas do diário de navegação do **quadro**antes de navegar para uma nova página.
 

@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848647"
+ms.locfileid: "7978588"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Noções básicas de design de navegação para aplicativos UWP
 
@@ -186,7 +186,7 @@ Após decidir-se por uma estrutura de página, você precisará decidir como os 
 
         - Você deseja mostrar todas as opções de navegação na tela.
         - Desejam mais espaço para conteúdo do seu aplicativo.
-        - Ícones não descrevem claramente as categorias de navegação.
+        - Ícones não podem descrever claramente as categorias de navegação.
         
         Use guias quando:
 

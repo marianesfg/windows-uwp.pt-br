@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp, centro de desenvolvimento, configurações da conta, perfil, perfil da conta, conta de desenvolvedor, configurações da conta de desenvolvedor
 ms.localizationpriority: medium
 ms.openlocfilehash: f1b1b5a5a575df5874e6942a8eff27632cb49921
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980146"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Gerenciar configurações da conta e informações de perfil
 
 Você pode exibir e atualizar suas configurações de conta de desenvolvedor e informações de perfil na seção **configurações da conta** do [Partner Center](https://partner.microsoft.com/dashboard). 
 
 > [!NOTE]
-> Preferências de notificação (como o tipo de notificações para receber e como recebê-lo) podem ser gerenciadas no **Centro de mensagens** (que você pode acessar selecionando o ícone de mensagem na parte superior do Partner Center).
+> Preferências de notificação (por exemplo, que tipo de notificações recebido e como recebê-lo) podem ser gerenciadas no **Centro de mensagens** (que você pode acessar selecionando o ícone de mensagem na parte superior do Partner Center).
 
 ## <a name="account-settings"></a>Configurações da conta
 
-Para exibir as configurações de conta, clique no ícone de engrenagem no canto superior direito do Partner Center e, em seguida, selecione **as configurações do desenvolvedor**. Aqui você encontrará detalhes sobre sua conta e links para outras páginas onde você pode exibir informações e executar diversas tarefas relacionadas à conta.
+Para exibir suas configurações de conta, clique no ícone de engrenagem no canto superior direito do Partner Center e, em seguida, selecione **as configurações do desenvolvedor**. Aqui você encontrará detalhes sobre sua conta e links para outras páginas onde você pode exibir informações e executar diversas tarefas relacionadas à conta.
 
-Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editadas.
+Na seção **Detalhes da conta**, você pode ver o status e o tipo da sua conta. Você também pode ver sua ID de vendedor e outras informações de identificação do fornecedor aqui. Esses valores são atribuídos pela Microsoft para identificar exclusivamente sua conta de desenvolvedor e não podem ser editados.
 
 > [!NOTE]
 > Os detalhes de identidade para seus aplicativos individuais podem ser encontrados na página [Identidade do Aplicativo](view-app-identity-details.md) de cada aplicativo.
@@ -44,11 +44,11 @@ A alteração de seu nome para exibição de editor fará com que verifiquemos s
 
 Abaixo estão alguns dos outros itens que você encontrará na seção **Configurações da conta**.
 
-- **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualizar significativamente as informações de contato), você pode analisar o status da verificação aqui.
-- **Programa de Insider do Centro de desenvolvimento**: você pode ativar ou desativar o [Programa de Insider do Centro de desenvolvimento](dev-center-insider-program.md) na página principal do página de **configurações da conta** .
+- **Status da verificação**: quando sua conta está passando a verificação de processo (por exemplo, quando você se inscreve pela primeira vez ou depois que você atualiza significativamente as informações de contato), você pode analisar o status da verificação aqui.
+- **Programa de Insider do Centro de desenvolvimento**: você pode aceitar ou fora [Do programa Insider do Centro de desenvolvimento](dev-center-insider-program.md) na página principal do página de **configurações da conta** .
 - **Conta de pagamento** e **Perfil fiscal**: aqui é onde você pode [configurar a conta de pagamento e os formulários fiscais](setting-up-your-payout-account-and-tax-forms.md). Você precisará fazer isso antes de cobrar pelos aplicativos ou complementos.
 - **Associações empresariais**: aceite convites de empresas as quais desejam que você publique aplicativos para uso exclusivo. Para saber mais, consulte [Distribuir aplicativos de linha de negócios para empresas](distribute-lob-apps-to-enterprises.md) a fim de obter mais informações.
-- **Os usuários**: adicionar usuários à sua conta e atribuir a eles funções e permissões. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
+- **Os usuários**: adicione usuários à sua conta e atribuir a eles funções e permissões. Para obter mais informações, consulte [Gerenciar usuários de contas](manage-account-users.md).
 - **Locatários**: gerenciar suas associações de locatário do Azure AD. Para obter mais informações, consulte [associar o Azure AD com sua conta do Partner Center](associate-azure-ad-with-dev-center.md).
 - **Programas**: veja detalhes sobre os programas em que estão participando e saiba mais sobre outros programas que podem ser de seu interesse.
 - **Contratos**: consulte os contratos aceitos pela sua conta.

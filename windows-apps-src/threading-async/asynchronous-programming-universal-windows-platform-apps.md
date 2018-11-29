@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, assíncrona
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847069"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972686"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 Este tópico descreve a programação assíncrona na plataforma Universal do Windows (UWP) e sua representação em c#, Microsoft Visual Basic.NET, C++ e JavaScript.
@@ -55,7 +55,7 @@ Com um padrão assíncrono UWP, você pode evitar explicitamente gerenciar todos
 Um segmento típico de código gravado em C# ou em Visual Basic é executado de forma síncrona. Isso significa que, quando você executa uma linha, ela termina antes da execução da próxima linha. Havia modelos de programação Microsoft .NET anteriores para execução assíncrona, porém, o código resultante tende a enfatizar a mecânica de execução do código assíncrono em vez de focar na tarefa que o código está tentando realizar. Os compiladores da UWP, do .NET framework, e do C# Visual Basic adicionaram recursos que reduzem a mecânica assíncrona fora do seu código. Para .NET e a UWP, você pode gravar o código assíncrono que focaliza o que o seu código faz em vez de como e quando fazê-lo. Seu código assíncrono parecerá razoavelmente similar ao código síncrono. Para saber mais, veja [Chamar APIs assíncronas em C# ou Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md).
 
 ## <a name="asynchronous-patterns-in-uwp-with-cwinrt"></a>Padrões assíncronos na UWP com C++ c++ WinRT
-Com C++ c++ WinRT, você usar corrotinas e o operador de **co_await** . Para obter mais informações e exemplos de código, consulte [programação assíncrona em C++ c++ WinRT](../cpp-and-winrt-apis/concurrency.md).
+Com C++ c++ WinRT, você usa corrotinas e o operador de **co_await** . Para obter mais informações e exemplos de código, consulte [programação assíncrona em C++ c++ WinRT](../cpp-and-winrt-apis/concurrency.md).
 
 ## <a name="asynchronous-patterns-in-uwp-with-ccx"></a>Padrões assíncronos na UWP com C++ c++ /CX
 Em C++/CX, a programação assíncrona se baseia na [**classe task**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx) e em seu [**método then**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx). A sintaxe é semelhante àquela das promessas JavaScript. A **classe task** e seus tipos relacionados também fornecem a funcionalidade para cancelamento e gerenciamento do contexto do thread. Para obter mais informações, consulte [programação assíncrona em C++ c++ /CX](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, personalizar, listagem, descrição, anteriormente
 ms.localizationpriority: medium
 ms.openlocfilehash: bfb21d56df357640734e9e5026783cc398468f0a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7841235"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978857"
 ---
 # <a name="create-platform-specific-store-listings"></a>Criar listagens específicas de plataforma da Store
 
@@ -33,7 +33,7 @@ Listagens da loja específicas de plataforma podem ser útil se você quer menci
 
 Próximo da parte superior da sua página de **listagem da Store** , se seu aplicativo publicado anteriormente incluir pacotes que dão suporte a versões anteriores do sistema operacional ((Windows 8. x ou versões anteriores e/ou Windows Phone 8. x ou anterior), você pode selecionar **criar uma listagem de loja de aplicativos específicos da plataforma **. Depois de selecionar essa opção, você deverá escolher entre as versões do sistema operacional direcionadas e compatíveis com o envio. Depois que você já criou listagens da loja específicas de plataforma para todas as versões anteriores do sistema operacional seu aplicativo se destina, não será possível fazer outra seleção.
 
-Você pode usar a listagem padrão (Windows 10) como ponto de partida, que mostrará o texto aplicável e as imagens que você inseriu para o armazenamento padrão listagem; em seguida, você poderá fazer alterações que quiser antes de salvar. Você também pode iniciar uma listagem da Loja completamente nova se preferir.
+Você pode usar a listagem padrão (Windows 10) como ponto de partida, que mostrará o texto aplicável e as imagens inseridos repositório padrão listagem; em seguida, você poderá fazer alterações que quiser antes de salvar. Você também pode iniciar uma listagem da Loja completamente nova se preferir.
 
 Depois que você clicar em **Continuar**, a página **Listagem da Microsoft Store** agora incluirá uma seção para a listagem da Microsoft Store específica de plataforma que você acabou de criar. Esta seção incluirá seu próprio conjunto de campos para **Descrição** (necessário), **Novidades desta versão**, **Capturas de tela**, **Ícone do bloco do aplicativo**, **Recursos do aplicativo** e **Requisitos adicionais do sistema**. Certifique-se de inserir informações em cada campo em que você deseja exibir informações na listagem da Loja personalizada, mesmo que sejam as mesmas informações da listagem da Loja padrão. Se você deixar um desses campos em branco, nenhuma informação será exibida para tal campo na listagem da Loja personalizada.
 

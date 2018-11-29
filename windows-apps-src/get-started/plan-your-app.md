@@ -1,5 +1,5 @@
 ---
-title: Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
+title: Criar um app complexo da plataforma Universal do Windows (UWP)
 description: Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos - conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 ms.date: 02/08/2017
@@ -7,13 +7,13 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 05a69cfdf96d6c7d3426b8d1ba414a42ff48a117
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851246"
+ms.locfileid: "7975747"
 ---
-#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criando um aplicativo da plataforma Universal do Windows (UWP) complexo
+#  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Criar um app complexo da plataforma Universal do Windows (UWP)
 
 Nas equipes de design da Microsoft, nosso processo de criação de aplicativo consiste em cinco estágios distintos: conceito, estrutura, dinâmica, visual e protótipo. Recomendamos que você adote um processo semelhante e se divirta criando novas experiências para o mundo aproveitar.
 
@@ -133,7 +133,7 @@ Para saber mais, consulte as [extensões e contratos de aplicativo](https://msdn
 
 **Diferentes exibições, fatores forma e configurações de hardware**Windows coloca os usuários no comando e seu aplicativo na linha de frente. Você provavelmente deseja que a interface do usuário do seu aplicativo chame a atenção independentemente do tipo de dispositivo, do modo de entrada, da orientação de exibição, da configuração de hardware e das circunstâncias que o usuário decida usá-lo.
 
-**Tocar primeiro**Windows oferece uma experiência de toque única que faz mais do que apenas emular a funcionalidade do mouse.
+**Tocar primeiro**Windows oferece uma experiência de toque única que mais do que apenas emular a funcionalidade do mouse.
 
 Por exemplo, zoom semântico é uma forma de toque otimizado para navegar por uma grande quantidade de conteúdo. Os usuários podem fazer movimentos panorâmicos ou rolar por categorias de conteúdo e depois ampliar essas categorias para ver informações cada vez mais detalhadas. Você pode usar isso para apresentar o seu conteúdo de forma mais prática, visual e informativa do que com a navegação tradicional e os padrões de layout, como guias.
 
@@ -143,18 +143,18 @@ Claro, você pode se beneficiar de inúmeras vantagens de interações de toque,
 
 -   **Animações**Use sua biblioteca de animações para deixar seu aplicativo rápido e fluido para seus usuários. Ajude os usuários a entenderem as alterações de contexto e vincule experiências com transições visuais. Saiba mais sobre [animações na interface do usuário](../graphics/animations-overview.md).
 -   **Notificações do sistema**permite que os usuários saibam sobre conteúdos sensíveis ao tempo ou pessoalmente relevantes por meio de notificações do sistema e convide-os para o seu aplicativo, mesmo quando o aplicativo é fechado. Saiba mais sobre [blocos, selos e notificações do sistema](../design/shell/tiles-and-notifications/index.md).
--   **Blocos de aplicativo**fornece atualizações recentes e relevantes para atrair os usuários de volta ao seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../design/shell/tiles-and-notifications/creating-tiles.md).
+-   **Blocos de aplicativos**fornece atualizações recentes e relevantes para atrair os usuários de volta ao seu aplicativo. Há mais sobre isso na próxima seção. Saiba mais sobre [blocos de aplicativos](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalização**
 
--   **Configurações**permite que os usuários criem a experiência que quiserem ao salvar configurações do aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../design/app-settings/app-settings-and-data.md).
+-   **Configurações**permite que os usuários criem a experiência que quiserem ao salvar configurações no aplicativo. Consolide todas as suas configurações em uma tela, e então permita que os usuários configurem o seu aplicativo usando um mecanismo comum com o qual já estejam familiarizados. Saiba mais sobre [adicionar configurações de aplicativos](../design/app-settings/app-settings-and-data.md).
 -   **Roaming**criar uma experiência contínua entre dispositivos fazendo roaming de dados que permite que os usuários retomem uma tarefa exatamente onde pararam e preserva a experiência do usuário que eles mais se importam, independentemente do dispositivo que eles estão usando. Facilite o uso do seu aplicativo em qualquer lugar—na cozinha, no computador da família ou de trabalho, no tablet pessoal, e outros fatores forma—mantendo configurações e estados com roaming. Saiba mais sobre [gerenciamento de dados de aplicativos](../design/app-settings/store-and-retrieve-app-data.md) e consulte [Diretrizes de dados de aplicativo em roaming](https://msdn.microsoft.com/library/windows/apps/hh465094).
 -   **Blocos de usuário**  tornar seu aplicativo mais pessoal aos usuários carregando a imagem de bloco de usuário deles ou permitir que os usuários definam conteúdos do seu aplicativo como bloco pessoal no Windows.
 
 **Recursos do dispositivo**Certifique-se de que seu aplicativo tira proveito dos recursos dos dispositivos atuais.
 
 -   **Gestos de proximidade**permitem que os usuários conectem dispositivos com outros usuários que estão fisicamente próximos, fisicamente encostando os dois dispositivos (jogos para vários jogadores). Saiba mais sobre [proximidade e toques](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Câmeras e dispositivos de armazenamento externo**conecte seus usuários a suas câmeras internas ou conectado para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Câmeras e dispositivos de armazenamento externo**conecte seus usuários a suas câmeras internas ou conectado-in para conversas ou conferências, gravar vlogs, tirar fotos de perfil, documentar o mundo à volta deles ou qualquer atividade em seu aplicativo seja bom. Saiba mais sobre o [acesso a conteúdo em armazenamento removível](https://msdn.microsoft.com/library/windows/apps/hh465189).
 -   **Acelerômetros e outros sensores**   Dispositivos vêm com vários sensores atualmente. O seu aplicativo pode esmaecer ou clarear o seu visor com base na luz ambiente, redirecionar o fluxo da IU caso o usuário girar o visor, ou reagir a qualquer movimento físico. Saiba mais sobre [sensores](../devices-sensors/sensors.md).
 -   **Localização geográfica**Use informações de localização geográfica dados da web padrão ou de sensores de geolocalização para ajudar os usuários a circular, encontrar a posição em um mapa ou receber notificações sobre pessoas e atividades próximas e destinos. Saiba mais sobre [localização geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
@@ -228,7 +228,7 @@ Pense naquilo que você quer que os usuários pensem, sintam ou façam assim que
 
 **Bloco e notificações**  o bloco é o rosto do seu aplicativo. Entre os vários aplicativos encontrados na tela Inicial do usuário, o que vai fazer o usuário querer abrir o seu? Crie um bloco que destaque a marca do seu aplicativo e mostre o que ele tem de melhor. Use notificações de bloco para o seu aplicativo parecer sempre novo e relevantes, atraindo o usuário de volta para o seu aplicativo várias vezes.
 
-**Tela inicial**a tela inicial deve carregar mais rápido possível e permanece na tela somente quando necessário para inicializar o estado do aplicativo. O que você mostra na tela inicial deve expressar a personalidade do seu aplicativo.
+**Tela inicial**a tela inicial deve carregar mais rápido possível e ficar na tela apenas tempo necessário para inicializar o estado do aplicativo. O que você mostra na tela inicial deve expressar a personalidade do seu aplicativo.
 
 **Primeira inicialização**antes dos usuários se inscrever para seu serviço, fazerem login conta ou adicionarem seu próprio conteúdo, o que eles verão? Tente demonstrar o valor do seu aplicativo antes de solicitar informações dos usuários. Considere mostrar amostra de conteúdos para que as pessoas possam dar uma olha e entender o que o seu aplicativo faz antes de você pedir a eles que confirmem.
 

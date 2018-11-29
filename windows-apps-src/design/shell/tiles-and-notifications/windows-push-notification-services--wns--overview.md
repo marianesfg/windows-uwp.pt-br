@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f131ad229b4ba22f7fa4652aa302e3596819f206
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7845663"
+ms.locfileid: "7980123"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Visão geral dos Serviços de Notificação por Push do Windows (WNS)
  
@@ -72,7 +72,7 @@ Um nível elevado, a cadeia de informações é a seguinte:
 
 Na autenticação no WNS, o serviço na nuvem envia uma solicitação HTTP sobre o protocolo SSL. Os parâmetros são fornecidos no formato "application/x-www-for-urlencoded". Forneça seu SID de pacote no campo "client\_id" e sua chave secreta no campo "client\_secret". Para obter os detalhes da sintaxe, consulte a referência para a [solicitação de token de acesso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
 
-**Observação**este é apenas um exemplo, o código não recortar e colar que você pode usar com êxito em seu próprio código.
+**Observação**este é apenas um exemplo, o código não copiar e colar que você pode usar com êxito em seu próprio código.
 
  
 

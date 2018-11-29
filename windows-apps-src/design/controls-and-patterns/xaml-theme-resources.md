@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 770896f467ff3a2c24fff65fdf16f1e13c83b688
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976676"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -375,7 +375,7 @@ Fornece as propriedades comuns para todos os outros estilos de contêiner [RichT
 </Style>
 ```
 
-**Observação**: os estilos de [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) não têm todos os estilos de rampa de texto que o [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) , principalmente porque o modelo de objeto de documento baseado em bloco para **RichTextBlock** facilita a definição de atributos no texto individual elementos. Além disso, definir [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) com o uso da propriedade de conteúdo XAML provoca uma situação em que não há elementos de texto para os quais definir um estilo e, portanto, você teria que definir um estilo para o contêiner. Isso não é um problema para **RichTextBlock** pois o conteúdo de texto sempre precisa estar em elementos de texto específicos, como [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503), onde você pode aplicar estilos XAML do cabeçalho de página, do subcabeçalho de página e das definições de rampa de texto semelhantes.
+**Observação**: os estilos [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) não têm todos os estilos de rampa de texto que o [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) , principalmente porque o modelo de objeto de documento baseado em bloco para **RichTextBlock** facilita a definição de atributos no texto individual elementos. Além disso, definir [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) com o uso da propriedade de conteúdo XAML provoca uma situação em que não há elementos de texto para os quais definir um estilo e, portanto, você teria que definir um estilo para o contêiner. Isso não é um problema para **RichTextBlock** pois o conteúdo de texto sempre precisa estar em elementos de texto específicos, como [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503), onde você pode aplicar estilos XAML do cabeçalho de página, do subcabeçalho de página e das definições de rampa de texto semelhantes.
 
 ## <a name="miscellaneous-named-styles"></a>Estilos nomeados diversos
 

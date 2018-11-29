@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, depuração, teste, desempenho
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972900"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implantando e depurando aplicativos UWP
 
@@ -30,7 +30,7 @@ Para escolher um destino, vá para a lista suspensa de destino de depuração pr
 -   **Máquina Local** implantará o aplicativo no computador de desenvolvimento atual. Essa opção estará disponível apenas se a **Versão Mínima da Plataforma de Destino** de seu aplicativo for menor ou igual ao sistema operacional no computador de desenvolvimento.
 -   A **Máquina Remota** permitirá que você especifique um destino remoto para implantar o aplicativo. Mais informações sobre a implantação em um computador remoto podem ser encontradas em [Especificando um dispositivo remoto](#specifying-a-remote-device).
 -   O **Dispositivo** implantará o aplicativo em um dispositivo conectado USB. O dispositivo deve ser desbloqueado pelo desenvolvedor e ter a tela desbloqueada.
--   Um destino de **Emulador** será inicializado e implantará o aplicativo em um emulador com a configuração especificada no nome. Emuladores estão apenas disponíveis no Hyper-V habilitada computadores que executam o Windows 8.1 ou posterior.
+-   Um destino de **Emulador** será inicializado e implantará o aplicativo em um emulador com a configuração especificada no nome. Emuladores estão somente disponíveis no Hyper-V habilitada computadores que executam o Windows 8.1 ou posterior.
 
 
 ## <a name="debugging-deployed-apps"></a>Depurando aplicativos implantados
@@ -45,7 +45,7 @@ A seleção de **Não iniciar, mas sim depurar meu código quando iniciar** far�
 Os aplicativos UWP podem ser desenvolvidos e compilados no Windows 8.1 ou posterior, mas exigem que o Windows 10 seja executado. Se você estiver desenvolvendo um aplicativo UWP em um computador Windows 8.1, poderá depurar remotamente um aplicativo UWP em execução em outro dispositivo Windows 10, desde que os computadores host e de destino estejam na mesma LAN. Para fazer isso, baixe e instale as [Ferramentas Remotas para Visual Studio](https://www.visualstudio.com/downloads/) em ambos os computadores. A versão instalada deve corresponder à versão existente do Visual Studio que você instalou, e a arquitetura que você selecionar (x86, x64) também deverá corresponder à do aplicativo de destino.   
 
 ## <a name="package-layout"></a>Layout de pacote
-A partir do Visual Studio 2015 atualização 3, adicionamos a opção para desenvolvedores especificar o caminho de layout para seus aplicativos UWP. Isso determina onde o layout de pacote é copiado para o disco quando você compila seu aplicativo. Por padrão, essa propriedade é definida em relação ao diretório raiz do projeto. Se você não modificar essa propriedade, o comportamento permanecerá o mesmo para versões anteriores do Visual Studio.
+A partir do Visual Studio 2015 atualização 3, adicionamos a opção para desenvolvedores especificar o caminho de layout para aplicativos UWP. Isso determina onde o layout de pacote é copiado para o disco quando você compila seu aplicativo. Por padrão, essa propriedade é definida em relação ao diretório raiz do projeto. Se você não modificar essa propriedade, o comportamento permanecerá o mesmo para versões anteriores do Visual Studio.
 
 Esta propriedade pode ser modificada na propriedade **Debug** do projeto.
 
@@ -132,7 +132,7 @@ As novas propriedades incluem:
 
 ### <a name="requirements"></a>Requisitos
 Para utilizar as opções de implementação remota avançada, você deve satisfazer os requisitos a seguir:
-* Ter o Visual Studio 2015 atualização 3 ou alguns Visual Studio versão posterior instalado com o Windows 10 Tools 1.4.1 ou posterior (que inclui o SDK de atualização de aniversário do Windows 10), recomendamos que você use a versão mais recente do Visual Studio com as atualizações para garantir que você obtenha todos os o recursos de desenvolvimento e segurança mais recentes.
+* Ter o Visual Studio 2015 atualização 3 ou alguns Visual Studio versão posterior instalado com o Windows 10 Tools 1.4.1 ou posterior (que inclui o SDK de atualização de aniversário do Windows 10), recomendamos que você use a versão mais recente do Visual Studio com atualizações para garantir que você obtenha todos os o recursos de desenvolvimento e segurança mais recentes.
 * Foque em um dispositivo remoto Xbox da Atualização de Aniversário do Windows 10 ou computador com a Atualização do Windows 10 para Criadores. 
 * Use o modo de Autenticação Universal
 
@@ -177,7 +177,7 @@ Você não pode selecionar **manter todos os arquivos no dispositivo** ao regist
 > [!NOTE]
 > **Registrar o layout de rede** é atualmente suportado no Xbox executando a Atualização de Aniversário do Windows 10 e os computadores executando a Atualização do Windows 10 para Criadores.
 
-O dispositivo remoto, o layout é registrado no seguinte local padrão dependendo da família: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - esse é um link simbólico para o **caminho do pacote de registro** do computador não usa um link simbólico e em vez disso, registra diretamente o pacote ** caminho do registro**
+O dispositivo remoto, o layout é registrado no seguinte local padrão dependendo da família: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - esse é um link simbólico para o **caminho do registro do pacote** do computador não usa um link simbólico e em vez disso, registra diretamente o pacote ** caminho do registro**
 
 
 ## <a name="debugging-options"></a>Opções de depuração
