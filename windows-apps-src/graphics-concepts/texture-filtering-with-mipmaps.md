@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854897"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982334"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Filtragem de textura com mipmaps
 
@@ -47,7 +47,7 @@ Em seguida, seu aplicativo deve definir o método de filtragem que o Direct3D us
 
 As texturas de mipmap são usadas em cenas 3D para reduzir o tempo necessário para renderizar uma cena. Eles também melhoram o realismo da cena. No entanto, eles geralmente exigem grandes quantidades de memória.
 
-**Observação**  cada superfície em uma cadeia de mipmaps tem dimensões são metade da superfície anterior na cadeia. Se o mipmap de nível superior tiver dimensões de 256x128, as dimensões do mipmap do segundo nível serão de 128 x64, do terceiro nível serão de 64x32 e assim por diante, até 1x1. Você não pode solicitar um número de níveis de mipmap em Níveis que possam fazer com que a largura ou altura de qualquer mipmap da cadeia seja menor que 1. No caso simples de uma superfície de mipmap de nível superior de 4x2, o valor máximo permitido para Níveis é três. As dimensões de nível superior são de 4x2, as dimensões do segundo nível são de 2x1 e as dimensões do terceiro nível são de 1x1. Um valor maior que 3 em Níveis resulta em um valor fracionário na altura do mipmap de segundo nível e, portanto, não permitido.
+**Observação**  cada superfície em uma cadeia de mipmaps tem dimensões são metade que da superfície anterior na cadeia. Se o mipmap de nível superior tiver dimensões de 256x128, as dimensões do mipmap do segundo nível serão de 128 x64, do terceiro nível serão de 64x32 e assim por diante, até 1x1. Você não pode solicitar um número de níveis de mipmap em Níveis que possam fazer com que a largura ou altura de qualquer mipmap da cadeia seja menor que 1. No caso simples de uma superfície de mipmap de nível superior de 4x2, o valor máximo permitido para Níveis é três. As dimensões de nível superior são de 4x2, as dimensões do segundo nível são de 2x1 e as dimensões do terceiro nível são de 1x1. Um valor maior que 3 em Níveis resulta em um valor fracionário na altura do mipmap de segundo nível e, portanto, não permitido.
 
  
 

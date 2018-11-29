@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 52745a4fcd6b5a6b33982595f8c7c65c0bee3c32
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842309"
+ms.locfileid: "7982107"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Criando componentes do Windows Runtime em C# e Visual Basic
 A partir do .NET Framework 4.5, é possível usar código gerenciado para criar os próprios tipos do Windows Runtime, empacotados em um componente do Tempo de Execução do Windows. É possível usar o componente em aplicativos da Plataforma Universal do Windows (UWP) com C++, JavaScript, Visual Basic ou C#. Este tópico descreve as regras para a criação de um componente e descreve alguns aspectos do suporte do .NET Framework para o Windows Runtime. Em geral, esse suporte foi projetado para ser transparente para o programador do .NET Framework. No entanto, ao criar um componente a ser usado com JavaScript ou C++, você precisa estar ciente das diferenças na maneira como essas linguagens dão suporte ao Windows Runtime.
@@ -208,7 +208,7 @@ function asyncExample(id) {
 
 Para ações e operações assíncronas que dão suporte ao cancelamento ou aos relatórios de progresso, use a classe [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para gerar uma tarefa iniciada e vincular os recursos de cancelamento e relatórios de progresso da tarefa aos recursos de cancelamento e relatórios de progresso da interface do Windows Runtime. Para obter um exemplo que dê suporte ao cancelamento e aos relatórios de progresso, consulte [Passo a passo: criação de um componente simples em C# ou Visual Basic e a chamada dele em JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-É possível usar os métodos da classe AsyncInfo mesmo que o método assíncrono não dê suporte ao cancelamento ou aos relatórios de progresso. Caso você use uma função lambda do Visual Basic ou um método anônimo de C#, não forneça parâmetros para o token e a interface [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o AsAsyncOperation&lt;TResult&gt; método, esta aparência quando você usa o [asyncinfo. Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) método sobrecarga em vez disso:
+É possível usar os métodos da classe AsyncInfo mesmo que o método assíncrono não dê suporte ao cancelamento ou aos relatórios de progresso. Caso você use uma função lambda do Visual Basic ou um método anônimo de C#, não forneça parâmetros para o token e a interface [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Caso você use uma função lambda de C#, forneça um parâmetro token, mas o ignore. O exemplo anterior, que usou o AsAsyncOperation&lt;TResult&gt; método, semelhante ao seguinte quando você usa o [asyncinfo. Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) método sobrecarga em vez disso:
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

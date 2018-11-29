@@ -1,17 +1,17 @@
 ---
 description: O código que se integra ao dispositivo propriamente dito e aos sensores envolve a entrada do usuário e a saída para ele.
-title: Portabilidade do WindowsPhone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo '
+title: Portabilidade WindowsPhone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo '
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850440"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983460"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portabilidade do WindowsPhone Silverlight para UWP para e/s, dispositivo e modelo de aplicativo
 
@@ -22,9 +22,9 @@ O código que se integra ao dispositivo propriamente dito e aos sensores envolve
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>Ciclo de vida do aplicativo (gerenciamento do tempo de vida do processo)
 
-Seu aplicativo WindowsPhone Silverlight contém o código para salvar e restaurar o estado do aplicativo e o estado da exibição para que possa ser marcado para exclusão e depois reativado. O ciclo de vida de aplicativos da plataforma Universal do Windows (UWP) tem forte paralelo com WindowsPhone dos aplicativos do Silverlight, já que eles foram criados com o mesmo objetivo de maximizar os recursos disponíveis para qualquer aplicativo que o usuário escolheu ter o em primeiro plano a qualquer momento. Você descobrirá que seu código se adaptará facilmente ao novo sistema.
+Seu aplicativo WindowsPhone Silverlight contém o código para salvar e restaurar o estado do aplicativo e o estado da exibição para que possa ser marcado para exclusão e depois reativado. O ciclo de vida de aplicativos da plataforma Universal do Windows (UWP) tem forte paralelo com WindowsPhone dos aplicativos do Silverlight, já que eles foram criados com o mesmo objetivo de maximizar os recursos disponíveis para qualquer aplicativo que o usuário tiver optado por ter em primeiro plano a qualquer momento. Você descobrirá que seu código se adaptará facilmente ao novo sistema.
 
-**Observação**  pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo WindowsPhone Silverlight. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
+**Observação**  pressionar o botão **Voltar** do hardware automaticamente encerra um aplicativo do WindowsPhone Silverlight. Pressionar o botão **Voltar** em um dispositivo móvel *não* encerra automaticamente um aplicativo UWP. Em vez disso, ele fica suspenso e, em seguida, pode ser encerrado. Porém, esses detalhes são transparentes para um aplicativo que responde corretamente a eventos do ciclo de vida do aplicativo.
 
 Uma "janela de enumeração" é o período entre a entrada do aplicativo em inatividade e o acionamento do evento de suspensão pelo sistema. Para um aplicativo UWP, não existe uma janela de enumeração; o evento de suspensão é acionado assim que o aplicativo se torna inativo.
 
@@ -32,7 +32,7 @@ Para obter mais informações, consulte [Ciclo de vida do aplicativo](https://ms
 
 ## <a name="camera"></a>Câmera
 
-Código de captura de câmera do WindowsPhone Silverlight usa as classes **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**ou **Microsoft.Phone.Tasks.CameraCaptureTask** . Para portar esse código para a UWP (Plataforma Universal do Windows), você pode usar a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). Há um exemplo de código no tópico [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Esse método permite que você capture uma foto para um arquivo de armazenamento, e requer o **microfone** e **webcam**[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) para ser definido no manifesto do pacote do aplicativo.
+Código de captura de câmera WindowsPhone Silverlight usa as classes **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**ou **Microsoft.Phone.Tasks.CameraCaptureTask** . Para portar esse código para a UWP (Plataforma Universal do Windows), você pode usar a classe [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124). Há um exemplo de código no tópico [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Esse método permite que você capture uma foto para um arquivo de armazenamento, e requer o **microfone** e **webcam**[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747) para ser definido no manifesto do pacote do aplicativo.
 
 Outra opção é a classe [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) , que também requer as[**funcionalidades do dispositivo**](https://msdn.microsoft.com/library/windows/apps/dn934747)do **microfone** e **webcam**.
 
@@ -67,7 +67,7 @@ Além disso, consulte também [Compilação condicional e código adaptável](wp
 
 ## <a name="device-status"></a>Status do dispositivo
 
-Um aplicativo do WindowsPhone Silverlight pode usar a classe **devicestatus** para obter informações sobre o dispositivo no qual o aplicativo é executado. Embora não haja equivalente direto da UWP para o namespace **Microsoft.Phone.Info**, aqui estão algumas propriedades e eventos que você pode usar em um aplicativo UWP no lugar das chamadas aos membros da classe **DeviceStatus**.
+Um aplicativo WindowsPhone Silverlight pode usar a classe **devicestatus** para obter informações sobre o dispositivo no qual o aplicativo é executado. Embora não haja equivalente direto da UWP para o namespace **Microsoft.Phone.Info**, aqui estão algumas propriedades e eventos que você pode usar em um aplicativo UWP no lugar das chamadas aos membros da classe **DeviceStatus**.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

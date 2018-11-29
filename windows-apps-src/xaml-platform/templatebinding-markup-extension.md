@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7841123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982094"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensão de marcação {TemplateBinding}
 
@@ -63,9 +63,9 @@ A partir do Windows 10, versão 1809, você pode usar a extensão de marcação 
 
 A propriedade [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) é necessária (não opcional) em [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) ao usar **x: Bind**.
 
-Com o suporte de **x: Bind** , você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em um [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
+Com suporte a **x: Bind** , você pode usar ambas as [associações de função](../data-binding/function-bindings.md) como vinculações bidirecionais bem como em um [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391).
 
-Neste exemplo, a propriedade **Text** é avaliada como **Button.Content.ToString**. O TargetType em ControlTemplate age como a fonte de dados e realiza o mesmo resultado como um TemplateBinding pai.
+Neste exemplo, a propriedade **Text** será avaliada como **Button.Content.ToString**. TargetType em ControlTemplate age como a fonte de dados e realize o mesmo resultado como um TemplateBinding pai.
 
 ```xaml
 <ControlTemplate TargetType="Button">

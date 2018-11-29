@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a42a59f76da99461b2e2428f5732ca0c433b6540
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854178"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983372"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Iniciar um app com um URI
 
@@ -27,8 +27,8 @@ Esta seção descreve como usar um URI (Uniform Resource Identifier) para inicia
 | [Iniciar o aplicativo UWP](launch-store-app.md) | Este tópico descreve o esquema de URI ms-windows-store. Seu app pode usar esse esquema de URI para iniciar o aplicativo UWP para páginas específicas na Store. |
 | [Iniciar o app Mapas do Windows](launch-maps-app.md) | Saiba como iniciar o app Mapas do Windows a partir de seu app. |
 | [Iniciar o app Pessoas](launch-people-apps.md) | Este tópico descreve o esquema de URI ms-people. Seu app pode usar esse esquema de URI para iniciar o app Pessoas para ações específicas. |
-| [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar os esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
-| [Habilitar aplicativos para sites usando manipuladores de URI do aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
+| [Iniciar a captura de tela](launch-screen-snipping.md) | Saiba como usar esquemas de URI para abrir uma nova captura ou para abrir o aplicativo de recorte e esboço. |
+| [Permitem que os aplicativos para sites usando manipuladores de URI do aplicativo](web-to-app-linking.md) | Promova o envolvimento do usuário com seu aplicativo, oferecendo suporte os aplicativos para o recurso de sites. |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 * [Iniciar um app em um dispositivo remoto](launch-a-remote-app.md)

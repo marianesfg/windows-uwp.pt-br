@@ -7,11 +7,11 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cc650c1f81fbcac5b62b090a6dc58b5f8709cd7a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838438"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983758"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: Oferecer suporte à tinta no aplicativo UWP
 
@@ -38,7 +38,7 @@ Com o Windows Ink, você pode fornecer aos clientes o equivalente digital de pra
 * Um computador (ou uma máquina virtual) executando a versão atual do Windows 10
 * [Visual Studio 2017 e o SDK do RS2](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Dependendo da configuração, talvez seja necessário instalar o pacote NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.1.9) e habilitar o **modo de desenvolvedor** nas configurações do sistema (Configurações -> atualização & segurança -> para desenvolvedores -> Use recursos de desenvolvedor).
+* Dependendo da configuração, talvez seja necessário instalar o pacote NuGet [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.1.9) e habilitar o **modo de desenvolvedor** nas configurações do sistema (Configurações -> atualização e segurança -> para desenvolvedores -> Use recursos de desenvolvedor).
 * Se você for novato no desenvolvimento de aplicativos UWP (Plataforma Universal do Windows) com o Visual Studio, dê uma olhada nestes tópicos antes de iniciar este tutorial:  
     * [Prepare-se para começar](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * [Criar um aplicativo "Olá, Mundo" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)

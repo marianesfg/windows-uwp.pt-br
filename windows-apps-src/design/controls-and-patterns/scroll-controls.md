@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 22e2321c301535fe89f2a7bba13497d51c6d8b78
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 368454e32ba2c88994161f6c7deb554fff73972a
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827371"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983382"
 ---
 # <a name="scroll-viewer-controls"></a>Controles do visualizador de rolagem
 
@@ -87,7 +87,7 @@ Para adicionar a rolagem vertical à página, encapsule o conteúdo da página e
 </Page>
 ```
 
-Este XAML mostra como colocar uma imagem em um visualizador de rolagem e habilitar o zoom.
+Este XAML mostra como habilitar rolagem horizontal, coloque uma imagem em um visualizador de rolagem e habilitar o zoom.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"

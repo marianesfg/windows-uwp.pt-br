@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982509"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Introdução à UWP para desenvolvedores de iOS
 
@@ -22,9 +22,9 @@ Nesta seção, começaremos gradualmente e veremos como usar o Microsoft Visual 
 
 Windows 10 introduz uma nova plataforma para criar aplicativos envolventes no desktop, laptop, tablet, dispositivos de telefone e muito mais. Como os aplicativos da Plataforma Universal do Windows (UWP) oferecem inúmeros recursos exclusivos, uma simples portagem do seu aplicativo do iOS impossibilitará o uso desses recursos. Portanto, recomendamos que você experimente os novos controles e recursos para ver como eles facilitarão o processo de desenvolvimento e possibilitarão novos aplicativos.
 
-O resultado é este: não apenas portar seu aplicativo, mas **reinventar** seu aplicativo e tirar proveito dos novos recursos e dos novos dispositivos. Não aceite o menor denominador comum, mas Crie experiências sofisticadas que usem os recursos exclusivos do Windows 10, como blocos dinâmicos, notificações e interagir com a Cortana.
+O resultado é este: não apenas portar seu aplicativo, mas **reinventar** seu aplicativo e tirar proveito dos novos recursos e dos novos dispositivos. Não se conformar com o menor denominador comum, mas Crie experiências sofisticadas que usem os recursos exclusivos do Windows 10, como blocos dinâmicos, notificações e interagir com a Cortana.
 
-Para começar com estes tutoriais, você precisará de um computador com Windows 10 e Microsoft Visual Studio instalado. Você pode baixá-los em [downloads de desenvolvedor para programação de aplicativos UWP](https://developer.microsoft.com/en-us/windows/downloads). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
+Para começar com estes tutoriais, você precisará de um computador com Windows 10 e Microsoft Visual Studio instalado. Você pode baixá-los em [downloads de desenvolvedor para programar aplicativos UWP](https://developer.microsoft.com/en-us/windows/downloads). Não tem um PC? Não se preocupe, você pode usar seu Mac: consulte [Instalando o Windows e as ferramentas de desenvolvimento no seu Mac](setting-up-your-mac-with-windows-10.md).
 
 | Tópico | Descrição |
 |-------|-------------|

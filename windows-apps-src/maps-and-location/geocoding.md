@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp, geocodificação, mapa, localização
 ms.localizationpriority: medium
 ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842949"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982960"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Executar geocódigo e geocódigo reverso
 
 Este guia mostra como converter endereços em localizações geográficas (geocódigo) e converta localizações geográficas em endereços (geocódigo reverso) chamando os métodos da classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) no Maps [** **](https://msdn.microsoft.com/library/windows/apps/dn636979)namespace.
 
 > [!TIP]
-> Para saber mais sobre como usar mapas em seu aplicativo, baixe o exemplo [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) do [repositório de amostras universais do Windows](hhttps://github.com/Microsoft/Windows-universal-samples) no GitHub.
+> Para saber mais sobre como usar mapas em seu aplicativo, baixe a amostra [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) do [repositório de amostras universais do Windows](hhttps://github.com/Microsoft/Windows-universal-samples) no GitHub.
 
 As classes envolvidas na geocodificação e geocodificação reversa são organizadas da seguinte maneira.
 
 -   A classe [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) contém métodos que manipulam geocodificação ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) e reverter geocodificação ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
 -   Esses métodos retornam uma instância de [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) .
 -   A propriedade de [**locais**](https://msdn.microsoft.com/library/windows/apps/dn627552) do [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) expõe uma coleção de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) . 
--   Objetos de [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) têm uma propriedade de [**endereço**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expõe um objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa um endereço e uma propriedade de [**ponto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expõe um objeto [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que representa uma localização geográfica.
+-   Objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) têm uma propriedade de [**endereço**](https://msdn.microsoft.com/library/windows/apps/dn636929) , que expõe um objeto de [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) que representa um endereço e uma propriedade de [**ponto**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) , que expõe um objeto [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) que representa uma localização geográfica.
 
 > [!IMPORTANT]
 > Você deve especificar uma chave de autenticação de mapas para poder usar os serviços de mapa. Para obter mais informações, consulte [Solicitar uma chave de autenticação de mapas](authentication-key.md).

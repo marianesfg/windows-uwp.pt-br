@@ -8,16 +8,16 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, ouvinte de notificação, usernotificationlistener, documentação, notificações de acesso
 ms.localizationpriority: medium
-ms.openlocfilehash: c0717fb3d1db42483214e8396d436c47c23744ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833686"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983888"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Ouvinte de notificação: acessar todas as notificações
 
-O ouvinte de notificação fornece acessar às notificações de um usuário. Os smartwatches e outros dispositivos acessórios podem usar o ouvinte de notificação para enviar as notificações do telefone ao dispositivo acessório. Os apps de automação doméstica poderão usar o ouvinte de notificação para executar ações específicas quando as notificações forem recebidas, como fazer as luzes piscarem quando você receber uma chamada. 
+O ouvinte de notificação fornece acessar às notificações de um usuário. Os smartwatches e outros dispositivos acessórios podem usar o ouvinte de notificação para enviar as notificações do telefone ao dispositivo acessório. Aplicativos de automação doméstica podem usar o ouvinte de notificação para executar ações específicas quando as notificações forem recebidas, como fazer que as luzes piscarem quando você receber uma chamada. 
 
 > [!IMPORTANT]
 > **Requer Atualização de Aniversário**: você precisa usar o SDK 14393 e estar executando o build 14393 ou posterior para usar o ouvinte de notificação.
@@ -277,7 +277,7 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Evento em primeiro plano para notificação adicionada/ignorada
 
 > [!IMPORTANT] 
-> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para o Windows, podemos irá corrigir isso.
+> Problema conhecido: O evento em primeiro plano fará um loop de CPU em versões recentes do Windows e anteriormente não funcionou antes disso. Não use o evento em primeiro plano. Em uma atualização futura para Windows, podemos irá corrigir isso.
 
 Em vez de usar o evento em primeiro plano, use o código mostrado anteriormente para uma tarefa de plano de fundo do [modelo de processo único](../../../launch-resume/create-and-register-an-inproc-background-task.md) . A tarefa em segundo plano também permitirá que você receba evento notificações de alteração de ambos os enquanto seu aplicativo está em execução ou fechado.
 
@@ -294,4 +294,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>Como fixdelays na tarefa em segundo plano
 
-Ao testar seu aplicativo, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir o atraso, prompt togo o usuário para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, encontre o aplicativo na lista, selecioná-lo e defini-lo como "Sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada dentro em torno de um segundo da notificação sendo recebido.
+Ao testar seu aplicativo, você pode perceber que a tarefa em segundo plano atrasa algumas vezes e não dispara por vários minutos. Para corrigir o atraso, prompt togo o usuário para as configurações do sistema -> sistema -> bateria -> uso da bateria pelo aplicativo, encontre o aplicativo na lista, selecioná-lo e defini-lo para "sempre permitido em segundo plano".Depois disso, a tarefa em segundo plano sempre deve ser disparada em até, aproximadamente um segundo a notificação sendo recebido.

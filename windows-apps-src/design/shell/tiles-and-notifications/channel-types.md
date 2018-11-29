@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 075eaf5c02e5bddb4b87d7e4aaf931cbfde53cdd
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839664"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983106"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Escolhendo o tipo de canal de notificação por push certo
 
 Este artigo trata dos três tipos de canais de notificação por push UWP (primários, secundários e alternativos) que ajudam você a fornecer conteúdo no seu aplicativo. 
 
-(Para obter detalhes sobre como criar notificações por push, consulte [Visão geral de serviços de notificação de por Push do Windows (WNS)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md)). 
+(Para obter detalhes sobre como criar notificações por push, consulte a [Visão geral de serviços de notificação de por Push do Windows (WNS)](../tiles-and-notifications/windows-push-notification-services--wns--overview.md).) 
 
 ## <a name="types-of-push-channels"></a>Tipos de canais de push 
 
