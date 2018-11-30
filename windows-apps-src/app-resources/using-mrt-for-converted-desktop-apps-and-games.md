@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, jogos, centennial, desktop app converter, mui, assembly satélite
 ms.localizationpriority: medium
 ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971998"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217667"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Use o Sistema de Gerenciamento de Recursos do Windows 10 em um app ou jogo herdado
 
@@ -303,7 +303,7 @@ Agora que o arquivo PRI já foi criado, você pode criar e assinar o pacote:
  * `/f` define o arquivo de mapeamento a ser usado (criado na etapa anterior) 
  * `/p` define o nome do pacote de saída
  * `/o` define-o para substituir o arquivo de saída, se houver
-0. Depois que o pacote é criado, ele deve ser assinado. A maneira mais fácil de obter um certificado de assinatura é criando um projeto Windows Universal vazio no Visual Studio e copiando o `.pfx` arquivo criado, mas você pode criar um manualmente usando o `MakeCert` e `Pvk2Pfx` utilitários conforme descrito em [o **como criar um certificado de assinatura de pacote do aplicativo** tópico no MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Depois que o pacote é criado, ele deve ser assinado. A maneira mais fácil de obter um certificado de assinatura é criando um projeto Windows Universal vazio no Visual Studio e copiando o `.pfx` arquivo ele cria, mas você pode criar um manualmente usando o `MakeCert` e `Pvk2Pfx` utilitários conforme descrito em [o **como criar um certificado de assinatura de pacote de aplicativo** tópico no MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
  * **Importante:** se você criar manualmente um certificado de assinatura, verifique se colocou os arquivos em um diretório que não seja o diretório de origem do pacote ou o diretório do projeto; caso contrário, ele poderá fazer parte do pacote, incluindo a chave privada!
 0. Para assinar o pacote, use o comando a seguir. Observe que o `Publisher` especificado no elemento `Identity` do `AppxManifest.xml` deve coincidir com o `Subject` do certificado (esse **não** é o elemento `<PublisherDisplayName>`, que é o nome de exibição localizado que aparecerá para os usuários). Como sempre, substitua os nomes de arquivo `contoso_demo...` pelos nomes apropriados para o projeto e (**muito importante**) assegure que o arquivo `.pfx` não está no diretório atual (caso contrário, ele teria sido criado como parte do pacote, incluindo a chave privada de assinatura):
 
