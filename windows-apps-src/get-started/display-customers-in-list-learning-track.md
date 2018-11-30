@@ -7,11 +7,11 @@ keywords: introdução, uwp, windows 10, acompanhamento de aprendizado, vincula�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8210236"
+ms.locfileid: "8324418"
 ---
 # <a name="display-customers-in-a-list"></a>Exibir clientes em uma lista
 

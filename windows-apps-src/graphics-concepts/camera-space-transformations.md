@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8201986"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8323902"
 ---
 # <a name="camera-space-transformations"></a>Transformações de espaço de câmera
 
@@ -45,10 +45,10 @@ L<sub>dir</sub> = norm(V \ * Lₚ), onde os parâmetros são definidos na tabela
 
 | Parâmetro       | Valor padrão | Tipo                                          | Descrição                                               |
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
-| L<sub>dir</sub> | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
+| L<sub>dir</sub> | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Vetor de direção do vértice de objeto à luz          |
 | V               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição do vértice no espaço da câmera                           |
 | wvMatrix        | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz composta contendo as transformções de modo de exibição e mundo |
-| N               | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
+| N               | N/D           | Vetor 3D (x, y e valores de ponto flutuante de z) | Normal de vértice                                             |
 | Lₚ              | N/A           | Vetor 3D (x, y e valores de ponto flutuante de z) | Posição da luz no espaço da câmera                            |
 | vMatrix         | Identidade      | matriz 4 x 4 de valores de ponto flutuante           | Matriz que contém a transformação de modo de exibição                      |
 
