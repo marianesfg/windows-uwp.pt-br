@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, egl, dxgi, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 1279d5100aa00e1b94d7d56b472a0574d22c3416
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965449"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210334"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Comparar código EGL com DXGI e Direct3D
 
@@ -47,7 +47,7 @@ Assim como o EGL, a DXGI e o Direct3D fornecem APIs para os seguintes comportame
 -   Renderização em destinos específicos (como texturas).
 -   Atualização da superfície de exibição da janela com os resultados da renderização com recursos gráficos.
 
-Para ver o processo Direct3D básico para configuração do pipeline de elementos gráficos, confira o modelo aplicativo DirectX 11 (Universal Windows) no Microsoft Visual Studio2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de aplicativos da Plataforma Universal do Windows (UWP), como a rotação da tela.
+Para ver o processo Direct3D básico para configuração do pipeline gráfico, confira o modelo aplicativo DirectX 11 (Universal Windows) no Microsoft Visual Studio2015. A classe de renderização básica nele é um bom parâmetro para a configuração da infraestrutura de elementos gráficos do Direct3D 11 e para a configuração de recursos básicos nela, bem como para o suporte a recursos de aplicativos da Plataforma Universal do Windows (UWP), como a rotação da tela.
 
 O EGL tem pouquíssimas APIs relativas ao Direct3D 11, e navegar nele pode ser difícil se você não conhece a nomenclatura e os jargões específicos à plataforma. Consulte um panorama simples para você se orientar.
 

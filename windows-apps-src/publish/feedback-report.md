@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967145"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213198"
 ---
 # <a name="feedback-report"></a>Relatório de comentários
 
@@ -24,10 +24,10 @@ Incentivar os clientes a fornecerem comentários sobre seu aplicativo é uma ót
 
 Você pode usar a API de comentários no [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que os clientes [iniciem diretamente o Hub de Feedback em seu aplicativo](../monetize/launch-feedback-hub-from-your-app.md). Lembre-se de que qualquer cliente que tenha baixado seu aplicativo em um dispositivo Windows 10 que dê suporte a comentários Hub tem a capacidade de deixar comentários sobre ele usando o aplicativo de Hub de Feedback. Por isso, você poderá ver comentários de clientes nesse relatório, mesmo se você tiver não solicitado comentários especificamente de dentro de seu aplicativo.
 
-Feedback também pode ser útil ao usar o [pacote de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
+Feedback também pode ser útil ao usar [pacotes de pré-lançamento](package-flights.md), pois o relatório de **comentários** mostra o pacote específico que cada cliente tinha instalado em seu dispositivo quando deixou os comentários.
 
 > [!TIP]
-> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **envolver** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
+> Para visualizar rapidamente avaliações, classificações e comentários do usuário em todos os seus aplicativos nos últimos 30 dias, expanda **interagir** no menu de navegação esquerdo e selecione **avaliações e comentários.** 
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -61,7 +61,7 @@ Você também verá uma opção para [responder aos comentários](respond-to-cus
 
 ## <a name="translating-feedback"></a>Tradução de comentários
 
-Por padrão, os comentários que não foram escritos em seu idioma preferencial são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
+Por padrão, os comentários que não foram escritos no idioma preferencial são traduzidos para você. Se você preferir, a tradução dos comentários poderá ser desabilitada ao desmarcar a caixa de seleção **Traduzir comentários** na parte superior direita, ao lado dos filtros de página.
 
 Observe que os comentários são traduzidos por um sistema de tradução automática, e a tradução resultante pode não ser precisa. O texto original será fornecido, se você quiser compará-lo com a tradução, ou traduzi-lo por meio de algum outro meio.
 
