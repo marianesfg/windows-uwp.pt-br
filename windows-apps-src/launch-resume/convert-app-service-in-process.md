@@ -7,11 +7,11 @@ keywords: serviço de aplicativo do Windows 10, uwp,
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a976ac69d289a5582c2f3546227adba707ac5297
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993352"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217002"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Converter um serviço de app para ser executado no mesmo processo de seu app host
 
@@ -44,7 +44,7 @@ A segunda alteração é mover a lógica de serviço do seu projeto de tarefa em
 
 Agora seu aplicativo pode executar diretamente o serviço de aplicativo. Por exemplo, em App.xaml.cs:
 
-[!NOTE] O código a seguir é diferente do fornecido por exemplo 1 (serviço de fora do processo). O código a seguir é fornecido apenas para fins de ilustração e não deve ser usado como parte do exemplo 2 (no processo de serviço).  Para continuar a transição do artigo do exemplo 1 (serviço de fora do processo) no exemplo 2 (no processo de serviço) continuar a usar o código fornecido por exemplo 1 em vez de código de caráter abaixo.
+[!NOTE] O código a seguir é diferente daquele fornecido por exemplo 1 (serviço de fora do processo). O código a seguir é fornecido apenas para fins de ilustração e não deve ser usado como parte do exemplo 2 (no processo de serviço).  Para continuar a transição do artigo do exemplo 1 (serviço de fora do processo) no exemplo 2 (no processo de serviço) continuar a usar o código fornecido por exemplo 1 em vez de código de caráter abaixo.
 
 ``` cs
 using Windows.ApplicationModel.AppService;
