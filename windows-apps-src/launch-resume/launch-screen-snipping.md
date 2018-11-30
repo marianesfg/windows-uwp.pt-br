@@ -7,19 +7,19 @@ keywords: Windows 10, uwp, uri, recorte, esboço
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7aa0b70aee50c79088a68378fa75664711c3d564
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970809"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212879"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar a captura de tela
 
-O **ms-screenclip:** e **ms-screensketch:** esquemas de URI permite que você inicie o recorte ou editar capturas de tela.
+O **ms-screenclip:** e **ms-screensketch:** esquemas URI permite que você inicie o recorte ou editar capturas de tela.
 
 ## <a name="open-a-new-snip-from-your-app"></a>Abra um novo recorte do seu aplicativo
 
-O **ms-screenclip:** URI permite que seu aplicativo abrir e iniciar uma nova captura automaticamente. O recorte resultante é copiado para área de transferência do usuário, mas não será automaticamente passado para o aplicativo de abertura.
+O **ms-screenclip:** URI permite que seu aplicativo abrir automaticamente e iniciar um novo recorte. O recorte resultante é copiado para área de transferência do usuário, mas não será automaticamente passado para o aplicativo sendo aberto.
 
 **ms-screenclip:** usa os seguintes parâmetros:
 
@@ -36,7 +36,7 @@ O **ms-screensketch:** URI permite que você iniciar o aplicativo de recorte e e
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | não | Um token que identifica o arquivo para abrir no aplicativo recorte e esboço. Obtida [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Se esse parâmetro é omitido, o aplicativo será iniciado sem abrir um arquivo. |
+| sharedAccessToken | string | não | Um token que identifica o arquivo para abrir no aplicativo recorte e esboço. Recuperou do [SharedStorageAccessManager.AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Se esse parâmetro é omitido, o aplicativo será iniciado sem abrir um arquivo. |
 | fonte | string | não | Uma cadeia de caracteres forma livre para indicar a origem que iniciou o URI. |
 | isTemporary | bool | não | Se definido como verdadeiro, esboço da tela tentará excluir o arquivo após abri-lo. |
 

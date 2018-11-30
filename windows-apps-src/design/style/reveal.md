@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965058"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8216969"
 ---
 # <a name="reveal-highlight"></a>Realce do revelação
 
@@ -65,7 +65,7 @@ O Revelação funciona automaticamente para alguns controles. Para outros contro
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Estas ilustrações mostram o realce do revelação em vários controles diferentes:
+Estas ilustrações mostram revelar destaque em vários controles diferentes:
 
 ![Exemplos do Revelação](images/RevealExamples_Collage.png)
 
@@ -113,7 +113,7 @@ Ou altere o TargetTheme no RevealBorderBrush para escuro. Lembre-se: se o Target
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Habilitando o Revelação em controles personalizados
 
-Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é útil saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
+Você pode adicionar o Revelação a controles personalizados. Antes de fazer isso, é importante saber um pouco mais sobre como funciona o efeito do revelação. O Revelação é composto de dois efeitos individuais: **Borda do Revelação** e **Hover do Revelação**.
 
 - **Borda** mostra as bordas dos elementos interativos quando um ponteiro está próximo. Esse efeito mostra que esses objetos próximos podem executar ações semelhantes às do objeto em foco.
 - **Hover**  aplica uma forma de halo suave ao redor do item focalizado ou focado e executa uma animação ao clicar. 

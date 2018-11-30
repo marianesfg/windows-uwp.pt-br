@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, compras no aplicativo, IAPs, complementos, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b923764c6374e403d2652db715f65a80c48bacf
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7974124"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217193"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obter informações do produto para apps e complementos
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970080"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213450"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight para mapeamentos de API UWP
 
@@ -22,7 +22,7 @@ A tabela de mapeamento ajudará você quando você estiver trabalhando em um pro
 
 **Como usar a tabela:** Primeiro, procure o nome da classe que você está usando. As classes estão listadas sempre que o mapeamento é mais complicado do que simplesmente alterar o nome do namespace. Caso a classe não esteja listada, o mapeamento é apenas uma alteração do namespace. Assim, encontre o nome do namespace da classe, e você encontrará o nome do namespace UWP equivalente. A classe estará nesse namespace. Caso o namespace não esteja listado é porque o nome não foi alterado.
 
-**Observação**Windows 10 dá suporte a muito mais do .NET Framework do que um aplicativo da loja do Windows Phone. Por exemplo, o Windows 10 tem diversos namespaces System.ServiceModel.\*, bem como System.Net, System.NET. NetworkInformation e ServiceModel.
+**Observação**Windows 10 dá suporte a muito mais do .NET Framework do que um aplicativo da loja do Windows Phone. Por exemplo, o Windows 10 tem vários namespaces System.ServiceModel.\*, bem como System.Net, System.NET. NetworkInformation e ServiceModel.
 Além disso, em um aplicativo do Windows 10, você aproveitará .NET Native, que uma tecnologia de compilação ahead-of-time que converte MSIL em código de máquina executável nativamente. Aplicativos .NET Native iniciam com mais rapidez, usam menos memória e bateria do que seus equivalentes MSIL.
 
 | WindowsPhone Silverlight | Windows Runtime |
