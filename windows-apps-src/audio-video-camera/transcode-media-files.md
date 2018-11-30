@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a6eb19ca5954b3ce71ecbaefe3339bee78f8717
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971081"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207741"
 ---
 # <a name="transcode-media-files"></a>Transcodificar arquivos de mídia
 
@@ -84,7 +84,7 @@ Você pode registrar eventos para responder quando o andamento da [**TranscodeAs
 ## <a name="encode-a-metadata-stream"></a>Codificar um fluxo de metadados
 A partir do Windows 10, versão 1803, você pode incluir metadados programados quando arquivos de mídia de transcodificação. Ao contrário de exemplos de transcodificação de vídeo acima, que use a mídia integrada codificação métodos de criação de perfil, como [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4), você deve criar manualmente o perfil de codificação de metadados para suportar o tipo de metadados que são codificação .
 
-Essa primeira etapa na criação de um perfil de incoding de metadados é criar um objeto [**TimedMetadataEncodingProperties**] que descreve a codificação dos metadados a ser transcodificado. A propriedade de subtipo é um GUID que especifica o tipo de metadados. Os detalhes de codificação para cada tipo de metadados é proprietários e não for fornecido pelo Windows. Neste exemplo, o GUID de metadados da GoPro (gprs) é usado. Em seguida, [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) é chamado para definir um blob binário de dados que descrevem o formato de fluxo é específico para o formato de metadados. Em seguida, um **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) é criado a partir da propriedades de codificação, e um rótulo de faixa e um nome permitir que um aplicativo de leitura do fluxo de endcoded para identificar o fluxo de metadados e, opcionalmente, exibir o nome de fluxo da interface do usuário. 
+Essa primeira etapa na criação de um perfil de incoding de metadados é criar um objeto [**TimedMetadataEncodingProperties**] que descreve a codificação dos metadados a ser transcodificado. A propriedade de subtipo é um GUID que especifica o tipo de metadados. Os detalhes de codificação para cada tipo de metadados é proprietários e não for fornecido pelo Windows. Neste exemplo, o GUID de metadados da GoPro (gprs) é usado. Em seguida, [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) é chamado para definir um blob binário de dados que descrevem o formato de fluxo é específico para o formato de metadados. Em seguida, um **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) é criado a partir da propriedades de codificação, e um rótulo de faixa e um nome permitir que um aplicativo que lê o fluxo de endcoded para identificar o fluxo de metadados e, opcionalmente, exibir o nome de fluxo da interface do usuário. 
  
 [!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
 

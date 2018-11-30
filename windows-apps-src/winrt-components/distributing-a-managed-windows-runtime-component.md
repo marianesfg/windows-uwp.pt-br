@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ef51e2235d8ac5c46af6093809d241d5c137d57d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968714"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8209935"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuição de um componente do Tempo de Execução do Windows gerenciado
 
@@ -39,7 +39,7 @@ Para decidir como distribuir o componente, leve em consideração como ele é co
 
 Um SDK de extensão é especialmente útil caso mais de uma das opções acima seja verdadeira.
 
-> **Observação**para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa de software livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
+> **Observação**para componentes complexos, o sistema de gerenciamento de pacotes NuGet oferece uma alternativa livre para SDKs de extensão. Assim como os SDKs de extensão, NuGet permite criar pacotes que simplificam a instalação de componentes complexos. Para obter uma comparação de pacotes NuGet e SDKs de extensão do Visual Studio, consulte [Adição de referências usando-se NuGet em comparação com um SDK de extensão](https://msdn.microsoft.com/library/jj161096.aspx) na Biblioteca MSDN.
 
 ## <a name="distribution-by-file-copy"></a>Distribuição por cópia do arquivo
 

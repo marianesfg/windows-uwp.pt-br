@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993292"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207718"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Testar com o Emulador Microsoft para Windows 10 Mobile
 
@@ -45,7 +45,7 @@ Para verificar os requisitos de BIOS, confira [Como habilitar Hyper-V para o emu
 
 Para verificar os requisitos de RAM e do sistema operacional, no Painel de Controle, selecione **Sistema e Segurança**e, em seguida, selecione **Sistema**.
 
-Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; não é compatível com versões anteriores do Visual Studio.
+Microsoft Emulator para Windows 10 Mobile requer o Visual Studio 2015 ou posterior; ele não é compatível com versões anteriores do Visual Studio.
 
 O Emulador da Microsoft para Windows 10 Mobile não pode carregar aplicativos direcionados à versão de sistema operacional do Windows Phone que seja anterior ao Windows Phone 7.1.
 
@@ -621,7 +621,7 @@ A seguir estão os problemas conhecidos com o emulador, com as formas sugeridas 
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Mensagem de erro: "Falha ao remover o comutador Ethernet virtual"
 
-Em determinadas situações, inclusive depois de atualizar para uma versão de pré-lançamento novo do Windows 10, um comutador de rede virtual associado ao emulador pode obter em um estado no qual ele não pode ser excluído pela interface do usuário.
+Em determinadas situações, inclusive depois de atualizar para uma versão de pré-lançamento novo do Windows 10, um comutador de rede virtual associado ao emulador pode entrem em um estado onde ele não pode ser excluído pela interface do usuário.
 
 Para recuperar o sistema dessa situação, execute "netcfg -d" em um prompt de comando de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Quando a execução do comando for concluída, reinicie o computador para concluir o processo de recuperação.
 

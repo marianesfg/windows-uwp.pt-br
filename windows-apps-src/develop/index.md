@@ -7,11 +7,11 @@ ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964455"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205567"
 ---
 <div> 
 <h1>Desenvolver aplicativos UWP</h1>
@@ -116,7 +116,7 @@ ms.locfileid: "7964455"
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>Interface do usuário do aplicativo</h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para controles, layout, tipografia, animação, a usabilidade e design de interface do usuário, consulte a seção de Design e interface do usuário.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">Para controles, layout, tipografia, animação, usabilidade e design de interface do usuário, consulte a seção de Design e interface do usuário.</a></p>
                     </div>
                 </div>
             </div>
@@ -269,7 +269,7 @@ ms.locfileid: "7964455"
                     </div>
                     <div class="cardText">
                         <h3>Exemplos</h3>
-                        <p> Aprenda a criar ótimos aplicativos para Windows, experimentar essas amostras. Esses exemplos mostram como os recursos funcionam e ajudar a você iniciar rapidamente seus próprios aplicativos UWP.</p>
+                        <p> Aprenda a criar ótimos aplicativos para Windows pela tentativa com essas amostras. Esses exemplos mostram como os recursos funcionam e ajudam você iniciar rapidamente seus próprios aplicativos UWP.</p>
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@ ms.locfileid: "7964455"
                     </div>                
                     <div class="cardText">
                         <h3>Ferramentas de desenvolvedor</h3>
-                        <p>Obtenha o Visual Studio 2017, o SDK do Windows 10 e outras ferramentas de desenvolvedor.</p>
+                        <p>Obter Visual Studio 2017, o SDK do Windows 10 e outras ferramentas de desenvolvedor.</p>
                     </div>
                 </div>
             </div>

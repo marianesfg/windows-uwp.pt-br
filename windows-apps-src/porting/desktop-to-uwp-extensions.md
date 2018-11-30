@@ -8,17 +8,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ae09190b916fdaae68a67a2b9c11caa20d30e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965164"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202837"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrar seu aplicativo da área de trabalho empacotado com o Windows 10
 
 Use extensões para integrar seu aplicativo da área de trabalho empacotado com o Windows 10 de maneiras predefinidas.
 
-Por exemplo, use uma extensão para criar uma exceção de firewall, tornar seu aplicativo o aplicativo padrão para um tipo de arquivo ou aponte telas para a versão empacotada do seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
+Por exemplo, use uma extensão para criar uma exceção de firewall, faça seu aplicativo o aplicativo padrão para um tipo de arquivo ou aponte telas para a versão empacotada do seu aplicativo. Para usar uma extensão, basta adicionar alguns XML ao arquivo de manifesto do pacote do seu aplicativo. Nenhum código é necessário.
 
 Este tópico descreve essas extensões e as tarefas que você pode executar usando-as.
 
@@ -120,7 +120,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 |-------|-------------|
 |Categoria |Sempre ``windows.fileTypeAssociation``.
 |Nome |Uma Id exclusiva para o seu aplicativo. Essa Id é usada internamente para gerar um [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) com hash associado à sua associação de tipo de arquivo. Você pode usar este Id para gerenciar as alterações nas versões futuras do seu aplicativo. |
-|MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você quer herdar associações de arquivos.|
+|MigrationProgId |O [identificador programático (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) que descreve o aplicativo, o componente e a versão do aplicativo da área de trabalho do qual você quer herdar associações de arquivo.|
 
 #### <a name="example"></a>Exemplo
 
@@ -154,7 +154,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Associe seu aplicativo empacotado um conjunto de tipos de arquivo
 
-Seu aplicativo empacotado pode ser associado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, selecionar a opção **Abrir com** , seu aplicativo aparecerá na lista de sugestões.
+Seu aplicativo empacotado pode ser associado com extensões de tipo de arquivo. Se um usuário clica um arquivo e, em seguida, selecionar a opção **Abrir com** , seu aplicativo aparece na lista de sugestões.
 
 #### <a name="xml-namespace"></a>Namespace XML
 
@@ -342,7 +342,7 @@ Encontre a referência do esquema completo [aqui](https://docs.microsoft.com/uwp
 
 ### <a name="create-firewall-exception-for-your-app"></a>Criar a exceção de firewall para o seu aplicativo
 
-Se seu aplicativo precisar de comunicação através de uma porta, você pode adicionar seu aplicativo à lista de exceções de firewall.
+Se seu aplicativo precisar de comunicação através de uma porta, você pode adicionar seu aplicativo à lista de exceções do firewall.
 
 #### <a name="xml-namespace"></a>Namespace XML
 
@@ -1052,7 +1052,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |-------|-------------|
 |Categoria |Sempre ``windows.autoPlayHandler``.
 |ActionDisplayName |Uma cadeia de caracteres que representa a ação que os usuários podem realizar com um dispositivo que conectam a um computador (por exemplo: "Importar arquivos" ou "Reproduzir vídeo"). |
-|ProviderDisplayName | Uma cadeia de caracteres que representa o aplicativo ou serviço (por exemplo: "Player de vídeo Contoso"). |
+|ProviderDisplayName | Uma cadeia de caracteres que representa seu aplicativo ou serviço (por exemplo: "Player de vídeo Contoso"). |
 |ContentEvent |O nome de um evento de conteúdo que faz com que os usuários sejam avisados com ``ActionDisplayName`` e ``ProviderDisplayName``. Um evento de conteúdo é gerado quando um dispositivo de volume, como um cartão de memória de câmera, um pen drive ou um DVD, for inserido no computador. Você pode encontrar a lista completa desses eventos [aqui](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
 |Verb |A configuração verbo identifica um valor que é passado ao seu aplicativo para a opção selecionada. Você pode especificar várias ações de inicialização para um evento de Reprodução Automática e usar a configuração Verbo para determinar qual opção u usuário selecionou para seu aplicativo. Você pode descobrir a opção selecionada pelo usuário verificando a propriedade verb dos argumentos do evento de inicialização passados para seu aplicativo. Também pode usar qualquer valor para a configuração Verbo exceto open, que está reservado. |
 |DropTargetHandler |A ID de classe do aplicativo que implementa a interface [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) . Arquivos da mídia removível são transmitidos para o método [Soltar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) da implementação [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
@@ -1088,9 +1088,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Reinicie automaticamente depois de receber uma atualização da Microsoft Store
 
-Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização para ele, o aplicativo é fechado.
+Se seu aplicativo estiver aberto quando os usuários instalarem uma atualização para ele, o aplicativo será fechado.
 
-Se quiser que o aplicativo ser reiniciado após a atualização é concluída, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
+Se você quiser desse aplicativo ser reiniciado após a atualização, chame a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) em cada processo que você deseja reiniciar.
 
 Cada janela ativa em seu aplicativo recebe uma mensagem [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) . Neste ponto, seu aplicativo pode chamar a função [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) novamente para atualizar a linha de comando, se necessário.
 
@@ -1107,13 +1107,13 @@ Depois que a atualização for concluída, seu aplicativo for reiniciado.
 
 Integre-se com outros aplicativos, inicie outros processos ou compartilhe informações.
 
-* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão](#printing)
+* [Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão](#printing)
 * [Compartilhe fontes com outros aplicativos do Windows](#fonts)
 * [Inicie um processo Win32 a partir de um aplicativo Universal Windows Platform (UWP)](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte a impressão
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Fazer com que seu aplicativo apareça como o destino de impressão em aplicativos que dão suporte à impressão
 
 Os usuários desejarem imprimir dados de outro aplicativo, como o bloco de notas, você pode fazer com que seu aplicativo apareça como um alvo de impressão na lista de destinos de impressão disponíveis do aplicativo.
 
@@ -1264,7 +1264,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Package>
 ```
 
-Essa extensão pode ser útil se você quiser criar uma interface do usuário de plataforma Universal do Windows que é executado em todos os dispositivos, mas quiser que os componentes de seu aplicativo Win32 continuem funcionando com confiança total.
+Esta extensão pode ser útil se você quiser criar uma interface do usuário de plataforma Universal do Windows que é executado em todos os dispositivos, mas desejar componentes do seu aplicativo Win32 continuem funcionando com confiança total.
 
 Basta crie um pacote de aplicativo do Windows para seu aplicativo Win32. Em seguida, adicione esta extensão ao arquivo de pacote do seu aplicativo UWP. Essas extensões indicam que você deseja iniciar um arquivo executável no pacote de aplicativo do Windows.  Se você quiser se comunicar entre seu aplicativo UWP e seu aplicativo Win32, você pode configurar um ou mais [serviços de aplicativo](../launch-resume/app-services.md) para fazer isso. Você pode ler mais sobre esse cenário [aqui ](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

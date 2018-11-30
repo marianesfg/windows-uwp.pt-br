@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tarefa em segundo plano, o serviço de aplicativo, conectado dispositivos, sistemas remotos
 ms.localizationpriority: medium
 ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7984090"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208451"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Tarefas de Inicialização, retomada e de segundo plano
 

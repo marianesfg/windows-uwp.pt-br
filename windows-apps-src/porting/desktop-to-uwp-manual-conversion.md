@@ -9,11 +9,11 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969119"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206599"
 ---
 # <a name="package-a-desktop-application-manually"></a>Empacotar um aplicativo da área de trabalho manualmente
 
@@ -84,7 +84,7 @@ Aqui está um exemplo de elemento **Identidade** com texto de espaço reservado 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Se você tiver reservado o nome do seu aplicativo na Microsoft Store, você pode obter o nome e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
+> Se você já reservou o nome do seu aplicativo na Microsoft Store, você pode obter o nome e o fornecedor usando o [Partner Center](https://partner.microsoft.com/dashboard). Se você pretende fazer o sideload seu aplicativo para outros sistemas, você pode fornecer seus próprios nomes para esses, desde que o nome do fornecedor que você escolher corresponda ao nome no certificado usado para assinar seu aplicativo.
 
 ### <a name="properties"></a>Propriedades
 
@@ -118,7 +118,7 @@ Para aplicativos da área de trabalho que você cria um pacote para, sempre defi
 ```
 
 ### <a name="capabilities"></a>Funcionalidades
-Para aplicativos da área de trabalho que você cria um pacote para, você terá de adicionar o ``runFullTrust`` funcionalidade.
+Para aplicativos da área de trabalho que você cria um pacote para, você precisará adicionar o ``runFullTrust`` funcionalidade.
 
 ```XML
 <Capabilities>
@@ -131,7 +131,7 @@ Preencha este modelo com informações que descrevem o seu aplicativo.
 
 ### <a name="application-element"></a>Elemento do aplicativo
 
-Para aplicativos da área de trabalho que você criar um pacote, o ``EntryPoint`` atributo do elemento Application é sempre ``Windows.FullTrustApplication``.
+Para aplicativos da área de trabalho que você cria um pacote, o ``EntryPoint`` atributo do elemento Application é sempre ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -174,7 +174,7 @@ Os ativos baseados no destino são para ícones e blocos que aparecem na barra d
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>Gerar um arquivo PRI (Índice de Recurso do Pacote)
 
-Se você cria ativos baseados no destino, conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
+Se você cria ativos baseados no destino conforme descrito na seção acima ou modificar qualquer um dos recursos visuais do seu aplicativo depois de criar o pacote, você precisará gerar um novo arquivo PRI.
 
 1.  Abra um **Prompt de comando de desenvolvedor para o VS 2017**.
 

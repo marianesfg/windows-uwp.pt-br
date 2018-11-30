@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, tributação, irs, receita federal dos Estados Unidos
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7991219"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207100"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Noções sobre os formulários fiscais da Receita Federal dos EUA emitidos pela Microsoft
 
